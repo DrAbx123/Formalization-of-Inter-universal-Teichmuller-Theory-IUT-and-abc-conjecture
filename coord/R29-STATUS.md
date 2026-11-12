@@ -346,3 +346,5 @@
 - 07:12：hull 第四批 5/5 green（C3DDictionaryAssembly/C3DIndexDataConsumer/PaperVRatioChain/PaperVRatioRows/StepXIEvidenceUpgrade，23:08:54-23:10:36Z）；historical PaperFaithfulHull 修 import 后 DONE 23:10:58Z（stale 消除，保留为 history）；hull 累计 25 份 green。
 
 - 07:13：批量入队 11 份（251 项）：qpilot 3（L7SSIneqArch/QAbsLogIdentity/DOrdConvert）、mainline 3（ArithmeticRelativeBridge **rfl 桥 localResidueDegree=relativeResidueDegree**/BadCharPrimeEquiv/BadCharDeg）、shehdd 5（QCANDOrderDefs/OrderDefEq/ResNormComap/S3137ThetaDefectFactor/BlockFactorNonpos）。mainline 的 rfl 桥可能消掉 AGREE 的一部分。
+
+- 07:14：abc 修 RawThetaLogSign（log=0 与 μ≤1 相容，改用 Real.log_le_log_iff 得 1≤μ）并 retouch；本批 RawThetaReadoutBounds + HullBoundConsumer/ThetaVNormNonneg/P7InterfaceStatus/HullGreenInterfaces 均 green。
