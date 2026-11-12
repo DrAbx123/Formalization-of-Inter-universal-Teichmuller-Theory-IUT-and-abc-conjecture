@@ -157,3 +157,5 @@
 - 06:00：**canonical 目标最终确认**：Mzk1Paper312StatementActual（import S3137）定义 Paper312Statement := qPilotLogVolumeReading P ≤ thetaPilotHullLogVolumeReal C3；q=−|log‖q‖|、Θ=log Haar(actualC3LogShellTensorRegion)（hull=region）；iff qThetaPilotLogVolumeComparison（rfl）与 iff regionLogVolume；comparison 仍 PENDING。S800 旧 hull / S801 equality / qVFam P4 hull 均为历史或旁支，P0 结论须以 S3137/Paper312Statement 为准。
 
 - 06:01：巡检：Mzk1PaperHullZeroLabelActual 最终 DONE 22:01:09Z（61s，旧 S800 hull 退化记录，引用 S779/S793）；7 个 teammate 已逐一唤醒派活（mainline RESNORM、qpilot DICT-B 实际对象、shehdd θ 侧对 S3137 raw、abc S3137 readings 审计、stage4 X_G×index 整合、lattice measure 端、stepxi P5-A5 c_j 实际化）。canonical 链确认为 S3137→Mzk1Paper312StatementActual→S3135。
+
+- 06:02：新文件（均入 watchdog 名单 98 项）：Mzk1DualIndexLinkActual（stage4：X≤L 紧开 + 商基数 hq ⇒ μX/μL=(∏p^{e_i})^{-1} 条件版，接 A2+diagonal cardinal）；Mzk1P5ThetaRootUnitActual（stepxi：paperRootThetaUnit=twoLthRootAt^{j²} 实际恒等式 + qRoot 形式 + hcomparison iff）；Mzk1P3DictBArithActual（qpilot：primeConductorLogDisc/nativeQArith 实际候选 + P3DictB 构造；logDisc 是 carrier 定义、Q_eq 命名输入，DICT-B 仍开）。

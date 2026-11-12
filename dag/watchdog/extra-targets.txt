@@ -92,3 +92,7 @@ tmp/sheaf/xif/paper/Mzk1PaperTargetNormalizationUnconditionalActual.lean
 tmp/sheaf/xif/paper/Mzk1DiagonalIndexActual.lean
 tmp/sheaf/xif/paper/Mzk1NormFactorDictionaryActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperHullZeroLabelActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperCorrectedTargetActual.lean
+tmp/sheaf/xif/paper/Mzk1DualIndexLinkActual.lean
+tmp/sheaf/xif/paper/Mzk1P5ThetaRootUnitActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictBArithActual.lean
