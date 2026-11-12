@@ -218,3 +218,5 @@
 - 06:25：reconciliation 文件重编 green（22:25:05Z，5s）：#2/#5 evidence 与 missing 条目均标 named-data interface only (CONDITIONAL, not progress)；C3S1902TransportData 仍无 inhabitant，qThetaPilotLogVolumeComparison PENDING。
 
 - 06:26：**批量化指令**（用户：看门狗 12 线程）：每 lane 2-4 份新文件/轮，全队 ≤10/轮，写完一次报路径，按日志逐条修；已广播 8 lane 的批次任务（mainline NORMFORMULA/RESDEG/AGREE、hull #7/#6/P4-C/transport 子情形、qpilot DICT-C 条件+文档/PaperLogQSource/D 接口、shehdd QCAND/packet-raw 桥/p-scaling/gate、abc #5/#6/#2/NORM-ARCH-C、stage4 φ/对角/置换/2x2 SNF、lattice glAct/对角 scaling/det/置换扩展、stepxi P5QNormalizationInput/phase/label 备注）。
+
+- 06:27：批量文件入队（113 项）：Mzk1GLHaarConditionalActual（lattice：ν=μ.map(glAct V) additive Haar + c=1 ⇒ compact closure 上不变）、Mzk1P5QNormalizationInputActual（stepxi：P5QNormalizationInput 结构 + p5_bridge_compare 推导）、Mzk1ThetaRawPacketFactorActual（abc：#5 因子链 raw θ=[C3 block:Q_p]×candidateNormalizedV + p-scaling；GAP-P7-THETA-V/-D/-DEG）。批量化模式已开：各 lane 2-4 份/轮，全队 ≤10/轮。

@@ -108,3 +108,6 @@ tmp/sheaf/xif/paper/Mzk1Ob33InterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1PrimeConductorBadCharActual.lean
 tmp/sheaf/xif/paper/Mzk1HolomorphicHullLogVolumeReconciliationActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictCDirectionActual.lean
+tmp/sheaf/xif/paper/Mzk1GLHaarConditionalActual.lean
+tmp/sheaf/xif/paper/Mzk1P5QNormalizationInputActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaRawPacketFactorActual.lean
