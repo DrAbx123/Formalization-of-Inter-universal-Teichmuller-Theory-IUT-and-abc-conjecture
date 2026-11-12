@@ -298,3 +298,9 @@ tmp/sheaf/xif/paper/Mzk1RestrictedProductReuseActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalHaarRegularActual.lean
 tmp/sheaf/xif/paper/Mzk1P3BadCharPipelineActual.lean
 tmp/sheaf/xif/paper/Mzk1P3ResDegBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagQuotCardActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33SourceChainActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonSignedConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVNormChainActual.lean
+tmp/sheaf/xif/paper/Mzk1C0NonnegInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1P7DocStatusActual.lean
