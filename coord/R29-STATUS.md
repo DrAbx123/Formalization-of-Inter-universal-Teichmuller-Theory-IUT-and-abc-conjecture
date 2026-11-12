@@ -308,3 +308,5 @@
 - 07:05：hull 第三批 5 份（C3DictionaryRows/C3DIndexData/PaperVFactor/PaperVFactorRows/StepXIContractSchema）入队（225 项），对应 C3-vs-D/paper V normalization/StepXIContract schema。
 
 - 07:05：lattice c=1 green（HaarScalarOneActual 23:02:22Z，54s；addHaarScalarFactor_eq_one_of_lattice，API 修正在 namespace MeasureTheory.Measure + dot 形式）；hνO 路线已给（Measure.map_apply 是 preimage → 证 L⁻¹'O=O），全 sets 留 GAP。
+
+- 07:06：shehdd 批 5/5 全绿（QCANDOrderCoeff/QCANDResNormLog/S3137ThetaDefectNorm/QPLACELiftUnique/P6C17GapLedger，22:53-23:02Z）；gate §17：extra=225 → clean 204 + ole-only 6 + stale 2 + red 13；P7 NOT PASSED。QCAND=ORDER+RESNORM，QPLACE=place-choice gap，QHALF 分解已证，Θ=S3137 raw 四层差异。
