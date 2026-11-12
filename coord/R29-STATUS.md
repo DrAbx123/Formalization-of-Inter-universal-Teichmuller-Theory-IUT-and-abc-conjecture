@@ -194,3 +194,5 @@
 - 06:16：NORM-ARCH-C 续（abc）：Mzk1NormArchCHArcActual（hArc ℚ=Σ、hToricArc ℚ=½Σ、hNon ℚ=Σ；degree-one 条件式）入队（105 项）。注：Mzk1DiagonalIndexActual 当前 FAIL（lattice 迭代）可能使依赖它的 Mzk1DiagonalDualActual 出现 RETRY TRANSIENT→FAIL。
 
 - 06:17：Mzk1DiagonalIndexActual 恢复 green（22:15:01Z，32s，natCard_quotient_diagLatticeSubmodule 保留；measure 端 4 步 GAP 未变）；审计仓 PROGRESS-AUDIT.md 追加 §5 "R29 执行波次结果（04:00–06:20）"（audit commit c11e4a3）。
+
+- 06:18：P7 防漏核对（abc，coord/P7-MISSING-7-VERIFY.md）：reconciliation 的 7 missing **无一完全 discharge**；#2/#3/#5 部分（A481LiteralIQCarrier 受限积构造、S3134ThetaHullDetNormalization det 归一化律+Mzk1WeightedDetPacket profile scaling、Mzk1PacketNormalizedHull/ThetaVAlignment/CompletionValuedThetaHullMuLog/ArchimedeanMetricBound/GlobalIQToC3HullTransport）；#1/#4/#6/#7 仍缺（尤其 #7 exact hull V 上界只有精确积公式无 upper bound/C0）。
