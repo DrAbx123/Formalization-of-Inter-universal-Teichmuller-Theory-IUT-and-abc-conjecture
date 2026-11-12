@@ -470,3 +470,5 @@
 - 08:29：lattice hOpos/hOfin 阻塞定位（topology 实例不定义相等，非 Pi 实例）；已给配方：在 `letI := Pi.topologicalSpace`/`Pi.measurableSpace` 下重述，K₀ 取 coordLattice 紧开包，hOfin=IsCompact.measure_lt_top、hOpos=开集正测；不跨 topology rw。
 
 - 08:30：stepxi PhaseExponentData green（23:47:58Z，74s）；ComparisonDerived green（hcomparison 定理化）；P5FinalSummary（P5NamedInputs 四项 + bridgeOfInputs + p5_final_comparison）待编；ROUTE3 §8.20 与 CANONICAL §21 已写。
+
+- 08:32：FLT helper 再修两处（ModuleTopology:538 补 IsOpenMap 参数；UniformRing 补 mapRingHom_coe）并 retouch 6 文件；lattice hOpos/hOfin 用 coordinateCompacts+addHaarMeasure_self=1 解决，已 retouch。
