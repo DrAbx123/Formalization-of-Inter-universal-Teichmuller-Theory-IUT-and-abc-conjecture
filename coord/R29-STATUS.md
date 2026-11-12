@@ -476,3 +476,5 @@
 - 08:34：UniformRing map_smul 顺序修正（smul 重写后 mapRingHom_coe）；ModuleTopology/Tower/UniformRing retouch（Tower olean 已在；此前日志交错）。shehdd ResidueFieldEquiv green（23:54:04Z）：localResidueDegree=1 归约到单个 residue-field 同构输入；gate §21 clean 309。
 
 - 08:36：**lattice B4 全 sets 闭合 green**：CanonicalHaarCoordLattice DONE 23:56:51Z（29s）——coordinateCompacts+addHaarMeasure_self=1+canonical_map_eq_of_image_eq_full（无任何假设）；剩 glAct 打包/对角 scaling/一般 SNF det。已派三步收尾。
+
+- 08:38：FLT helper 第四轮：ModuleTopology `IsTopologicalRing.isTopologicalAddGroup.ext_iff` → `IsTopologicalAddGroup.ext (inferInstance) (IsModuleTopology.topologicalAddGroup R S)`；UniformRing map_smul 改 `smul 重写 + congr 1 + exact mapRingHom_coe hf m`；均已 retouch。lattice GLActContinuous（glContinuousLinearEquiv）入队（344 项）。
