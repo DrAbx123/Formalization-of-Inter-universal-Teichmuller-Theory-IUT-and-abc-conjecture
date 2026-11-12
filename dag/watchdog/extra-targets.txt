@@ -295,3 +295,6 @@ tmp/external/ported/flt/FLT/NumberField/HeightOneSpectrum.lean
 tmp/sheaf/xif/paper/Mzk1SNFToolActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDCurveDataSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1RestrictedProductReuseActual.lean
+tmp/sheaf/xif/paper/Mzk1CanonicalHaarRegularActual.lean
+tmp/sheaf/xif/paper/Mzk1P3BadCharPipelineActual.lean
+tmp/sheaf/xif/paper/Mzk1P3ResDegBridgeActual.lean

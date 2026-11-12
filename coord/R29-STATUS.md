@@ -376,3 +376,5 @@
 - 07:28：**OuterRegular 实例来源定位**：Mathlib `regular_haarMeasure`（Haar/Basic.lean:548）+ `Regular extends OuterRegular`（Regular.lean:317）⇒ canonical `haarMeasure K₀` 自动 OuterRegular；lattice 的 map_eq_of_image_eq 可去条件（只剩 glAct 打包）。hull 第五批 5/5 green（C3DFieldLevelAssembly/C3DPlaceTupleData/C3DStatusConsumer/PaperVRatioReadings/StepXIEvidenceConsumer），hull 累计 ~30 份；外部搜索结论：paper normalization/C3-vs-D/hull V 上界无 FLT/tauceti 可复用，继续自写。
 
 - 07:29：**FLT 移植 pin 修复（Lead）**：Cofinite.lean 的 `Set.Countable.ofPred_finite` 与 RestrictedProduct/Equiv.lean 的 `dite_eq_right` 两处旧名已改（自写 countable 证明 + simp [i.2]）并 retouch；等上游 FLT 链绿后 mainline/abc 再 import。lattice 新 Mzk1CanonicalHaarRegularActual（canonical addHaarMeasure OuterRegular）入队（298 项）。
+
+- 07:30：mainline 2 份装配文件（P3BadCharPipeline 端到端 BADCHAR→SSIneqExplicit；P3ResDegBridge RESDEG↔范数等式，rfl 桥+comap）入队（300 项）；FLT 移植已修 4 处 pin（Cofinite countable 证明、Equiv dite、Tower 删未用 def、AdicValuation ENat.coe_le_coe），重编中。
