@@ -323,3 +323,5 @@ tmp/sheaf/xif/paper/Mzk1CanonicalHaarInvarianceActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonGapEstimateActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AgreeFLTActual.lean
 tmp/sheaf/xif/paper/Mzk1QLowerBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1BasisDetUnitActual.lean
+tmp/sheaf/xif/paper/Mzk1SNFDiagActual.lean
