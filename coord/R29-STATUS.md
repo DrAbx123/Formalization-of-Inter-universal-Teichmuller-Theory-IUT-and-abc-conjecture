@@ -438,3 +438,5 @@
 - 08:08：lattice CanonicalHaarCoordLattice（coordLattice 质量正有限 + canonical full map_eq）入队（328 项）；剩 glAct 打包与对角 scaling。
 
 - 08:09：stepxi **ComparisonDerived green（23:40:59Z）**——hcomparison 变定理；PhaseExponentData（label→phase exponent m 显式命名输入）入队（329 项）；P5 剩 3 个命名输入（root_image/analytic map/phase exponent）。
+
+- 08:10：**abc 重大简化**：comparison ⇔ ‖q‖ ≤ μ(theta hull)（μ>0）——canonical 比较完全化为测度下界；A≥R ⇔ ‖q‖≤μ 精确等价。文件入队（330 项）。派下一步：从 hull 包含关系 + measure_mono + 精确体积公式给 μ(hull) 下界，尝试推出 ‖q‖≤μ(hull) 的条件分支。

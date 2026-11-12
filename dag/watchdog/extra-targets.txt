@@ -327,3 +327,4 @@ tmp/sheaf/xif/paper/Mzk1BasisDetUnitActual.lean
 tmp/sheaf/xif/paper/Mzk1SNFDiagActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalHaarCoordLatticeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5PhaseExponentDataActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonConditionActual.lean
