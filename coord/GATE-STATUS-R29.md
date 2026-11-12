@@ -156,3 +156,12 @@
 - RED/pending：`Mzk1SourceNativeQActual`（latest FAIL 21:20:04Z）、`Mzk1P3DictionaryActual`（无 event）、`Mzk1P5ThetaBridgeActual`（无 event）、`Mzk1StepVVolumeActual`（无 event）。
 - Deferred 不变：`Mzk1FaithfulXiEContainmentActual`（DEFERRED/RED）、`Mzk1FaithfulEnlargementActual`（DEFERRED/不在 extra）。
 - P7：仍 NOT PASSED，lana `Iut` 链无 ole；`coord/P7-GATE-REVIEW.md` 结论不变。
+
+## 11. 2026-11-13 05:24 增量：P6 WeightedDetPacket 新绿
+
+- `Mzk1WeightedDetPacketActual`：**DONE EXIT=0 21:23:33Z（35s）**，ole 102,384 B；P6 §12 已更新为 green。该文件证明 packet 接口恒等式与条件 `N·M` 形式，`GAP-P6-C17-DICT` 仍是显式缺口。
+- 其他新 DONE（同窗口）：`Mzk1P3DictionaryActual` 21:21:37Z、`Mzk1P5ThetaBridgeActual` 21:21:34Z、`Mzk1MultiFactorBlockActual` 21:22:36Z。
+- 当前 extra-targets = **77**；分类：**clean green 63 + ole-only 6 + stale 2 + red 6**（仍有 START 在跑，最终以 log 最后一行修正）。
+- STALE：`Mzk1PaperFaithfulHullActual`（latest FAIL 21:23:58Z）、`Mzk1MatrixHaarBaseActual`（21:19:33Z 曾 DONE，但之后 21:22/21:23 又 FAIL，当前 latest START 21:24:20Z；在最新 DONE 前不列 clean）。
+- RED/pending：`Mzk1SourceNativeQActual`、`Mzk1StepVVolumeActual`、`Mzk1P5LabelShiftActual`、`Mzk1PaperFaithfulHullP4Actual`、`Mzk1PrimeConductorUnconditionalActual`、`Mzk1DualTransposeActual`（后四项 latest START，尚无结果）。
+- P7：仍 NOT PASSED（lana `Iut` 链无 ole）；P5-D/P6-A 的新绿不改变该结论。

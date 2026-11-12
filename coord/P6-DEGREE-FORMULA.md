@@ -188,13 +188,13 @@ olean: .lake/build/lib/lean/tmp/sheaf/xif/paper/Mzk1ProductFormulaDegreeActual.o
 
 | field | value |
 |---|---|
-| Lean | `tmp/sheaf/xif/paper/Mzk1WeightedDetPacketActual.lean`（新文件；**请 Lead 加入 watchdog 名单**；尚未自行编译） |
+| Lean | `tmp/sheaf/xif/paper/Mzk1WeightedDetPacketActual.lean`（新文件；已加入 watchdog 名单；**DONE EXIT=0 21:23:33Z**） |
 | 已证的 packet 接口 | `commonTensorDegree_eq_of_denominator_eq`；`weightedLogVolume_sub_eq_commonTensorDegree_mul_normalized_sub : P.weighted − Q.weighted = N·(P.normalized − Q.normalized)`（P/Q 同一 denominator family）；`c17_profileArithmeticDegree_adjustedDetTensorPower`（re-export `HullDeterminantLogVolumeReduction.profileArithmeticDegree_adjustedDetTensorPower`） |
 | 条件 (C17) | `weightedLogVolume_sub_eq_commonTensorDegree_mul_M`：若 `GAP_P6_C17_DICT` 成立且 `thetaActual − qActual = M`，则 `Q.weighted − P.weighted = N·M`；GAP 是显式定理假设，不是 structure 字段 |
 | 命名缺口 | `GAP-P6-C17-DICT`：`P.normalizedLogVolume = qActual ∧ Q.normalizedLogVolume = thetaActual`，其中 qActual/thetaActual 是实际 q/Θ normalized readings；**本包未构造这条实际识别**，因为不能把任意 packet 字段冒充 paper 读数。 |
 | 实际 q 侧已有输入 | `QVFamTensorCoefficientActual:76 qVFamTensorCoefficient = order(qVFamily)`；`QVFamRootFactorCorrectionActual:56 qVFamPaperRootCoefficient = order/(2l)`；`Mzk1DegreeBridgeActual` 的 q 侧 degree 桥、`Mzk1DegreeSumActual` 的 `globalPrimeStripWeight_nativeBadExplicitDivisorSum` 可作为 qActual 的候选读数，但尚需把它们显式接到 packet.normalizedLogVolume。 |
 | 实际 Θ 侧已有输入 | `BadPlacePaperRootThetaHullActual:45 paperRootThetaHullLog`/`:51 paperRootThetaFormulaLog`（带 `PaperRootHullFormulaGap`）；`qVFamPaperThetaTensorCoefficient`（RootFactorCorrection:61）。这些是实际 Θ 侧候选，但与 packet.normalizedLogVolume 的等式正是 GAP-P6-C17-DICT。 |
 | 诚实边界 | 没有把 `weightedDeterminantNormalization` Obligation 当证明；没有实际 q/Θ packet 冒充；没有新增结构字段/目标假设。 |
-| 验收 | 待 watchdog：`DONE EXIT=0` + olean + `#print axioms` trio；当前状态 **PENDING-BUILD**。 |
+| 验收 | **watchdog DONE EXIT=0 21:23:33Z（35s）**，olean 存在；源码 grep 无 sorry/admit/axiom。`#print axioms` 未运行（统一交给后续 gate 验收）。 |
 
 下一步：若 watchdog 首错在 import/API，按 log 修；若通过，再把 qActual 接到 `Mzk1DegreeBridgeActual`/`Mzk1DegreeSumActual` 的已有桥、thetaActual 接到 `paperRootThetaHullLog` 的 `PaperRootHullFormulaGap`，优先把 GAP-P6-C17-DICT 拆成两条更小的 named input。

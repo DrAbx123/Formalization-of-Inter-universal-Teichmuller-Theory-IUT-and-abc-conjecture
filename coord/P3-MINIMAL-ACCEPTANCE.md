@@ -105,19 +105,19 @@ log (μ(Λ_G)/μ(O_i)) = -d * (∑ i, c_i) * log p
 
 ## 5b.2 受限矩阵 Haar 基础（task-109，new file 待 watchdog）
 
-新文件：`tmp/sheaf/xif/paper/Mzk1MatrixHaarBaseActual.lean`（2,446B）；watchdog **DONE EXIT=0 @21:19:33Z（25s）**，olean 83,104B @05:19:33 fresh。
+新文件：`tmp/sheaf/xif/paper/Mzk1MatrixHaarBaseActual.lean`（3,642B）；watchdog **DONE EXIT=0 @21:24:48Z（27s）**，olean 147,104B @05:24:47 fresh。
 
 | 项 | 状态 | 说明 |
 |---|---|---|
 | 坐标格 `Z_p^d` | actual | `coordLattice := padicIntegerCoordinateLattice` |
 | GL_d(Z_p) 矩阵作用 | actual | `glMatrix`/`glAct`（矩阵扩展到 Q_p） |
 | `glAct_mem_coordLattice` | **DONE** | :49，积分矩阵 V '' Z_p^d ⊆ Z_p^d 逐坐标证明 |
-| `glAct_image_eq` | **GAP** | 反向包含需 `V⁻¹` 复合等式/矩阵乘向量 API |
+| `glAct_image_eq_of_mul_eq_one` | **DONE** | :81；显式逆 W、`V*W=1` ⇒ `V''Z_p^d=Z_p^d` |
 | Haar 不变 μ(V''S)=μ(S) | **GAP** | 需 Haar 唯一性 + lattice mass 归一化；未构造 |
 | 对角坐标缩放乘积公式 | **GAP** | 逐坐标 p^{e_i} 的 product-Haar 未证 |
 | 受限 det 公式 | **GAP** | 需 SNF/矩阵分解 + 上述 Haar 不变；doc §5b.1 |
 
-**build**：watchdog START 21:19:08Z → DONE EXIT=0 21:19:33Z（25s）；olean 83,104B fresh。未手编。
+**build**：watchdog START 21:24:20Z → DONE EXIT=0 21:24:48Z（27s）；olean 147,104B fresh。未手编。
 
 ## 6. 其他 GAP / 前提
 
