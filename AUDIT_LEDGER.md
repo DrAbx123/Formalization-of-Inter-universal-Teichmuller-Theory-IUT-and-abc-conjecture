@@ -28593,3 +28593,13 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P6-A.1 green：Mzk1DiagonalIndexActual DONE（21:52:34Z，25s）——Nat.card ((d→Z_p)⧸∏p^{e_i}) = ∏p^{e_i}（Submodule.quotientPi + natCard_quotient_span_padicInt_pow + Nat.card_pi）；μ scaling 前置 cardinal 完成，下一步 measure_eq_index_mul_intersection。
 - P6-B1 green：Mzk1WeightedDetPacketInstanceActual DONE（21:50:23Z，62s）——具体 qPacket/thetaPacket（signed q log、classical Θ 系数和、共同 denominator 2l、commonTensorDegree=(2l)^#Bad）；GAP_P6_C17_DICT_INST 作命名 Prop（q 侧可望先闭合）。
 - P6-NORM：Mzk1NormArchDegreeActual DONE（GAP-NORM-ARCH 接口）；Mzk1NormFactorDictionaryActual 入队（paperCRoot=order/(2l)、paperArchFactor=1/(2l)、T re-export；GAP-NORM-ARCH-C：1/[K:Q] 无实际对象）。
+
+## 2026-11-13 — P4-C 统一容器判定（1 条）
+
+- 文档 `coord/P4C-UNIFIED-CONTAINER.md`：块级输出 hull（ind3OutputHull=rootNormHull、paperFaithfulThetaHull）各自正/有限 green；但 Ind1/2/3 实际作用在 S1902Carrier（Mzk1ThetaPilotObjectActual.lean:84-115）/FinalLValuedCarrier（PaperFinalLValuedTensorCarrierActual.lean:45,66-74），无 stage→qVFamTensorBlock map（Ind3StageToOutputHullGap:156-164）；FinalL 非有限维无 Haar。
+- 判定：不把 Ind2 μ2l 轨道/Ind3 stage 像塞进块级容器，不声称 ind3OutputHull 等于 stage 像容器；精确 GAP-P4C-STAGE-BLOCK / IND2-MAP / HAAR / HULL-ID 已列。
+## 2026-11-13 — R29 关键审计：S800 j=0 污染 ⇒ paperHullLog=0（1 条）
+
+- hull 的 Mzk1PaperHullZeroLabelActual（131 行，待 watchdog 验证）给出：rootThetaRegion_zeroLabel = F(0)O = R*O；paperPossibleImages 含该 j=0 项 ⇒ 每个 candidate ⊇ R*O；c=0 本身是 candidate ⇒ leastLambdaOHull = R*O；R*O = O_hol（StepV 定理）⇒ paperHullLog = 0 且与 q 阶数 m 无关。
+- 结论：S800 的 qPilotPaperRegionLog ≤ paperHullLog 无条件成立是**弱化/近平凡**（右侧恒为 0），不是 paper 的 q^{j²} 缩放比较；Mzk1PaperTargetNormalizationUnconditionalActual 的 PaperTargetNormalization 不可作为 paper 目标的证据。修正方向：用 P4 的 paperFaithfulThetaHull（PaperNonzeroLabel/paperRootCoefficient）作为组件目标，其 log-volume 比较才是真内容（待构造/判定）。
+- 待文件 green 后补 §19/P0-CNORM-CONSUMERS/ledger 的最终记录。
