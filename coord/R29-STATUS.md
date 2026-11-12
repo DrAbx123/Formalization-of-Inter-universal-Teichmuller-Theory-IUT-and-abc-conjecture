@@ -268,3 +268,5 @@
 - 06:47：shehdd batch 5 全绿（QCANDOrderResidue/QCANDAssembly/S3137ThetaRawEq/S3137ThetaPacketRawGap/C17QPLACEChoiceGap）+ WeightedDetPacketInstance（QCAND 追加后 DONE 22:44:52Z）；QCAND 精确化为 ORDER+RESNORM，QPLACE 仍未证（choice）。gate §16：extra=177 → clean 160 + ole-only 6 + stale 1（PaperFaithfulHull）+ red 10；P7 NOT PASSED。
 
 - 06:48：stepxi P5 三份 green：QNormalizationInput（22:37:38，70s）、PhaseRelation（22:40:17，79s）、CJCondition（22:46:19，75s）；LabelZero 可选未 green。派下一步：从 root_image 用 map_zpow 推导 phase 关系（减少命名 data）、修/删 LabelZero。
+
+- 06:49：stage4 green：DiagCardF/Diag2x2/DiagEmbeddingEquiv/PermMatrix/DualIndexSource/DiagVolumeCond（6 份）；DiagEmbeddingInj/DiagonalDual 已修并 retouch；φ 主链在 green 基座上建 e'。
