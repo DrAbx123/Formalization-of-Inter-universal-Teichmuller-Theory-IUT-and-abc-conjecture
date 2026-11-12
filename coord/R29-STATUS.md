@@ -428,3 +428,5 @@
 - 08:03：hull ExactHullVLocalZero 去 HaarStrict 依赖（改用 rootExtensionClosedBall_measure_pos/lt_top）、Paper312ActualDonorC3 改 R=fiveLabel + 直接用 S2717C3 R … D；均已 retouch。
 
 - 08:04：abc 修 GapEstimate（显式 hmpos）+ 新 QLowerBound（A=|log q|、A>0、‖q‖≤c⇒-log c≤A）入队（326 项）；下一步 A 下界 + R 上界 ⇒ A≥R 的显式充分条件。
+
+- 08:05 巡检：stage4/lattice/stepxi 空闲已唤醒（φ 体积+SNF batch；hOpos/hOfin+glAct+diag scaling；unit zpow coercion + PhaseExponentData）；IntegralClosure + Completion/BaseChange 已 retouch；mainline 草稿 Mzk1P3AgreeFLTActual 已在名单等 FLT olean。
