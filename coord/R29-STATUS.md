@@ -408,3 +408,5 @@
 - 07:48：qpilot QAbsLog green（23:29:22Z）；WeightDegreeOne 入队（321 项）——UNRAM=1+RESIDUE=1+FINITE+AGREE ⇒ weight=1，把 GAP-PC-WEIGHT 归约到 UNRAM/RESIDUE（FLT 定理已定位待 olean）。hull 依赖 HaarStrictActual 缺 olean，已加入队列（320 项）。
 
 - 07:49：stepxi hunit green（23:26:10Z）；P5ComparisonDerived（cOfPhase + comparison_cOfPhase）待编。派下一步：用实际 μ2l 单位构造 phase_j 并证 phase_pow，把 cOfPhase 展开为完全具体形式（目标：P5 只剩 root_image + toRoot 两个命名输入）。
+
+- 07:50：lattice canonical OuterRegular 仍 FAIL——已给精确写法（`haveI : (addHaarMeasure K₀).Regular := regular_addHaarMeasure`; 再 `Regular.toOuterRegular`/inferInstance/⟨outerRegular⟩），说明 class Regular extends OuterRegular（Regular.lean:317）且 additive 实例名由 to_additive 生成。
