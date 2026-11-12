@@ -28603,3 +28603,11 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - hull 的 Mzk1PaperHullZeroLabelActual（131 行，待 watchdog 验证）给出：rootThetaRegion_zeroLabel = F(0)O = R*O；paperPossibleImages 含该 j=0 项 ⇒ 每个 candidate ⊇ R*O；c=0 本身是 candidate ⇒ leastLambdaOHull = R*O；R*O = O_hol（StepV 定理）⇒ paperHullLog = 0 且与 q 阶数 m 无关。
 - 结论：S800 的 qPilotPaperRegionLog ≤ paperHullLog 无条件成立是**弱化/近平凡**（右侧恒为 0），不是 paper 的 q^{j²} 缩放比较；Mzk1PaperTargetNormalizationUnconditionalActual 的 PaperTargetNormalization 不可作为 paper 目标的证据。修正方向：用 P4 的 paperFaithfulThetaHull（PaperNonzeroLabel/paperRootCoefficient）作为组件目标，其 log-volume 比较才是真内容（待构造/判定）。
 - 待文件 green 后补 §19/P0-CNORM-CONSUMERS/ledger 的最终记录。
+
+## 2026-11-13 — R29 旧账核对：j=0/paper hull 已在 S779/S793/S800/S801 处理过（1 条）
+
+- S779RootHullNonzeroFixActual：NonzeroLabel := {j : SignedLabel // j.1 ≠ 0}；rootThetaImageSetNonzero/HullNonzero/rootMinimalRegion；zero_region_subset_old_paperRootThetaHull（j=0 项 ⊆ 旧 hull）。
+- S793PaperLeastLambdaOHullActual：PaperNonzeroLabel；paperRootThetaImageNZ；paperLambdaOCandidates；paperLeastLambdaOHull；paperLeastLambdaOHull_eq_minimal；OldUnionEqualsLeastLambdaOHull : Prop（旧并 = 新 least hull，命名 GAP）。
+- S800LeastLambdaOHullActual：paperPossibleImages := rootThetaImageSet（rootThetaImageSet 展开为 ⋃ j : SignedLabel，含 j=0）⇒ 其 paperHullLog 用的是旧（含 0）hull；paperHullLog/qPilotPaperRegionLog/qPilotPaperRegionLog_le_paperHullLog。
+- S801PaperHullLogActual：用 S793 hull 证 paperLeastLambdaOHull_eq_paperQPilotRegion、paperHullLog_eq_paperQPilotRegionLog；PaperHullLogFormulaData（paperRootCoefficientFamily 的 ArithmeticTuplePureFractionalScalingData）；paperQPilotLogPaperOrder_le_paperHullLog_of_data（paper-order qPilot ≤ 正确 hull log，条件于 scaling data）。
+- 结论/修正：hull 的 Mzk1PaperHullZeroLabelActual 的退化结论适用于 **S800 旧 hull**（引用 S779/S793，非首次）；P0/P4 的 paper-faithful 组件目标必须改用 S793/S801 的 NonzeroLabel least hull；其剩余缺口 = S801 PaperHullLogFormulaData + paperQPilotLog 实际读数识别。已派 hull 出对比表并修正 P0 验收口径。
