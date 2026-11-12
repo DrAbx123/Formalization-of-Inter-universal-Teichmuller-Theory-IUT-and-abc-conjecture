@@ -418,3 +418,5 @@
 - 07:55：hull **ExactHullVMainTerm green（23:33:31Z，107s）**——`normalizedLog_hull_nonpos` + `normalizedLog_hull_le_mainTerm` 实际主项界定理化；Paper312/LocalZero 已 retouch（补 opens、等 HaarStrict）。IntegralClosure 再修两处 pin：`IsFractionRing.finrank_eq → IsIntegralClosure.rank`（Mathlib/DedekindDomain/IntegralClosure.lean:191 的改名）+ induction 补 zero 分支，retouch 待重编。
 
 - 07:56：lattice **canonical OuterRegular green（23:33:34Z，27s）**；新 CanonicalHaarInvariance（`canonical_map_eq_of_image_eq`，无 [OuterRegular] 假设，用 Regular 实例 + OuterRegular.map）入队（322 项）；仅剩 hOpos/hOfin 与 glAct 打包。
+
+- 07:57：abc ComparisonGapEstimate（gap=logμ−qRead；comparison↔0≤gap↔exp(qRead)≤μ；μ<1 支 gap∈[0,A] 且 qRead<0）入队（323 项）。IntegralClosure 已修两处 pin 待重编；Completion/BaseChange 等其 olean。
