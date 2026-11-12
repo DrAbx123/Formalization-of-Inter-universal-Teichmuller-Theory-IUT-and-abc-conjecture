@@ -456,3 +456,5 @@
 - 08:18：stage4 XGGLFinal（surface 组合）入队（339 项）；下一步把 b.det b 简单实例换成 SNF bM/b 换基并接一般 X_G；ROUTE1/2 文档已更新。
 
 - 08:19：abc HullMeasureLowerBound（actualUnitRegion ⊆ thetaPilotHull + measure_mono ⇒ μ(unit)≤μ(hull) ⇒ ‖q‖≤μ(unit) ⇒ comparison 等）入队（340 项）；general 化为具体测度下界 μ(unitRegion)。ComparisonCondition import 修后 retouch。
+
+- 08:20：**stage4 重大发现**：仓库已有 `natCard_quotient_eq_prod_pow_valuation_of_smithNormalForm`（PadicLatticeIndexFormula）——配 Mathlib SNF 即得一般 N≤M 商 cardinal + 体积比 ∏|a_i|_p；GeneralSNFVolumeActual 入队（341 项）；绿后接 X_G 与一般受限 det 公式。
