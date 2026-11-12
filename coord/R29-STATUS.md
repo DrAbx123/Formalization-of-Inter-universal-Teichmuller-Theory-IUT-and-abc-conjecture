@@ -142,3 +142,6 @@
 - 05:52：P6：Mzk1NormFactorDictionaryActual（abc：paperCRoot=S3050Unit 系数、paperArchFactor=1/(2l)、T re-export；GAP-NORM-ARCH-C 记录 1/[K:Q] 无实际对象）入队；stage4 反向 reindex 得到 Mathlib reindex_trans/reindex_symm 提示；shehdd 下一步拆 GAP_P6_C17_DICT_INST 的 q 侧（qPacket.normalized = qActualNormalized）。
 
 - 05:52：**P6-A.1 关键**：Mzk1DiagonalIndexActual DONE 21:52:34Z（25s）——Nat.card ((d→Z_p)⧸∏p^{e_i}) = ∏p^{e_i}（quotientPi 路线），μ scaling 的前置 cardinal 已 green；lattice 接着套 measure_eq_index_mul_intersection。**P0-A**：Mzk1PaperTargetNormalizationUnconditionalActual DONE 21:51:48Z（63s）——paperTargetNormalization 与 paperM_nonneg 的 pos/fin 被 S778+Mzk1PaperBlockTargetActual discharge，得到无条件块级 paper 目标（口径仍为 leastLambdaOHull/含 j=0，未混用 P4 NonzeroHull）。
+
+- 05:54：P4-C 判定（hull）：块级输出 hull 正/有限 green，但 Ind2/Ind3 stage 像无法进块级容器（作用在 S1902Carrier/FinalLValuedCarrier；无 stage→qVFam map；FinalL 无限维无 Haar；无 trace/norm 桥）→ coord/P4C-UNIFIED-CONTAINER.md（GAP-P4C-STAGE-BLOCK/IND2-MAP/HAAR/HULL-ID）。**重要审计任务已派 hull**：验证 j=0 污染推论——S800 least hull 含 R·O_hol（q 无关），若 hull = R·O_hol 则 paperHullLog 与 m 无关，本轮 “unconditional paper target” 是退化/弱化陈述，不是 paper 的 q^{j²} 比较；需写定理+file:line 并给修正后的 paper-faithful 组件目标。
+- 05:54：P5-A4（stepxi）尚未 green：paperPhaseUnit_pow 的 Units.coe_mk0/pow_mul 与 labelExp elaboration 冲突，已记录精确失败点（ROUTE3-CTHETA §8.7）；建议拆小步先 green paperPhaseUnit 再补结构。
