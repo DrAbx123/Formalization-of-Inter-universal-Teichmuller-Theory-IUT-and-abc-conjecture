@@ -249,3 +249,10 @@ tmp/sheaf/xif/paper/Mzk1C17QCANDOrderDefEqActual.lean
 tmp/sheaf/xif/paper/Mzk1C17QCANDResNormComapActual.lean
 tmp/sheaf/xif/paper/Mzk1S3137ThetaDefectFactorActual.lean
 tmp/sheaf/xif/paper/Mzk1S3137ThetaBlockFactorNonposActual.lean
+tmp/sheaf/xif/paper/Mzk1QuantitativeTargetNonnegActual.lean
+tmp/sheaf/xif/paper/Mzk1P7CodeInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1DischargeSummaryActual.lean
+tmp/sheaf/xif/paper/Mzk1LogSignChainActual.lean
+tmp/sheaf/xif/paper/Mzk1HullBoundTransferLibActual.lean
+tmp/sheaf/xif/paper/Mzk1P3TameFromConductorActual.lean
+tmp/sheaf/xif/paper/Mzk1P3AgreeResidueFieldActual.lean
