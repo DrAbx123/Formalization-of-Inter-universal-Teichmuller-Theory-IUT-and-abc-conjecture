@@ -310,3 +310,5 @@
 - 07:05：lattice c=1 green（HaarScalarOneActual 23:02:22Z，54s；addHaarScalarFactor_eq_one_of_lattice，API 修正在 namespace MeasureTheory.Measure + dot 形式）；hνO 路线已给（Measure.map_apply 是 preimage → 证 L⁻¹'O=O），全 sets 留 GAP。
 
 - 07:06：shehdd 批 5/5 全绿（QCANDOrderCoeff/QCANDResNormLog/S3137ThetaDefectNorm/QPLACELiftUnique/P6C17GapLedger，22:53-23:02Z）；gate §17：extra=225 → clean 204 + ole-only 6 + stale 2 + red 13；P7 NOT PASSED。QCAND=ORDER+RESNORM，QPLACE=place-choice gap，QHALF 分解已证，Θ=S3137 raw 四层差异。
+
+- 07:07：派 abc 合并 P7-MISSING-7-VERIFY：每条 missing → 可寻址接口（hull 新接口文件）→ 剩余缺口三段式，与 P7GapRegister 的 10 个 GAP code 对齐（全部仍标未 discharge）。
