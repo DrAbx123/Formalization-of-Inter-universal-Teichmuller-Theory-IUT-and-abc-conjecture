@@ -258,3 +258,5 @@
 - 06:42：hull lane 8 份中 7 green（StepXIComparisonEvidence/ReconciliationGapRows/StepXIContractEvidenceMap/C3S1902HaarScaleData/C3S1902IndexFiberData/ExactHullVLocalBound/P4CExternalStageContainer）；ExactHullVUpperBound 已 retouch 重编（源码补导入/Bad Nonempty 实例）。
 
 - 06:43：qpilot round2 全 green（DictCEquivUnderL7/DictQWeightDiff/DictCBoxFormula，22:42:03-04Z）；round3 3 份入队（DictDLogDiscBound/DictQNonneg/DictCReverseNativeDExact；171 项）。
+
+- 06:44：abc 5 份 green（ComparisonGapArithmetic/GeneralComparisonInterface/StepXIEvidenceLink/IQCarrierStatus/ArchFactorRatio 修复后 DONE 22:43:14-16Z）；HullUpperBoundTransfer 方向错误已修正（上界不能推下界，改为传递定理）并 retouch。
