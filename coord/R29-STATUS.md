@@ -388,3 +388,5 @@
 - 07:36：**FLT 链收敛**：AdicValuation DONE（我的 ENat.coe_le_coe 修复生效）；已把 RestrictedProduct/FiniteAdeleRing/HeightOneSpectrum 等 8 个非必需文件移出队列（abc 改 Mathlib 自带 Πʳ），只保留 AGREE 所需 AdicValuation/IntegralClosure/Completion-Finite + BaseChange/MaximalIdeal/ValuationSubring/WithZeroMulInt/Countable 并 retouch（IntegralClosure 之前失败=缺 BaseChange.olean，已补）。watchdog 306→298。stage4：e'/map 二次确认 green，QuotCard/Volume/SNFTool 待编。
 
 - 07:37：hull **直接证 gap**：Paper312ActualDonorC3（Paper312Statement 实例化到实际 donor C3=S2717C3…D，C3-I/VALUE 缺口消掉，只剩 PaperQPilotObjectActual inhabitant）、ExactHullVLocalZero（rootImageRadius≤1 ⇒ local log 差≤0）、ExactHullVMainTerm（hull⊆unit + mainTerm≥0 ⇒ normalizedLog_hull ≤ mainTerm）入队（301 项）。
+
+- 07:38：**“有 gap 就证”推进**：abc 3 份（ComparisonSufficient μ≥1⇒comparison、HullC0Candidate 具体 C0、ComparisonContrapositive 失败⇒μ<1）、shehdd 2 份（QCANDOrderK1、QCANDResNormDegreeOne 条件证明）入队（306 项）；stepxi hunit green（23:26:10Z，82s，不再需 hunit 假设）并给出 comparison 规范解 c_j:=phase_j⁻¹·qRoot^(-((l+1)n))；analytic 域映射不可构造的精确理由已写 §8.18。

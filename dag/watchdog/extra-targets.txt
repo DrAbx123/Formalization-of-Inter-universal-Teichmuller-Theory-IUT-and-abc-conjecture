@@ -299,3 +299,8 @@ tmp/sheaf/xif/paper/Mzk1P7DocStatusActual.lean
 tmp/sheaf/xif/paper/Mzk1Paper312ActualDonorC3Actual.lean
 tmp/sheaf/xif/paper/Mzk1ExactHullVLocalZeroActual.lean
 tmp/sheaf/xif/paper/Mzk1ExactHullVMainTermActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonSufficientActual.lean
+tmp/sheaf/xif/paper/Mzk1HullC0CandidateActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonContrapositiveActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDOrderK1Actual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDResNormDegreeOneActual.lean
