@@ -402,3 +402,5 @@
 - 07:44：stage4 DiagQuotCard green（23:25:39Z，50s；diagQuotEquiv + natCard_quotient_coordSmall）；DiagVolumeProved/SNFTool 已 retouch（SNF 补 open Module 后 Basis 未识别，提示 open Submodule + 显式 R）。
 
 - 07:45：**mainline 定位 AGREE 直接定理**：FLT `DedekindDomain/Completion/BaseChange.lean:685 ramificationIdx_eq_ramificationIdx`（AGREE-RAM）、:721 `inertiaDeg_eq_inertiaDeg`（AGREE-FIELD）——无需自写！已把该文件及闭包 8 个缺失文件加入 watchdog（318 项）并 retouch。BADCHAR-PRIME 对任意 T 不可证（缺 C 实际构造），按 §14 记录。
+
+- 07:46：abc ComparisonGeneralBranches（comparison ↔ qRead≤log μ；μ≥1 或 μ<1∧logμ≥qRead 两支；logμ<qRead⇒¬comparison）入队（319 项）；Contrapositive retouch。μ<1 支剩 A≥R 实质下界=general 核心。
