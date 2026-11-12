@@ -232,3 +232,5 @@
 - 06:33：hull lane 批量 8 份（3 份已入 + 新增 5：C3S1902IndexFiberData/C3S1902HaarScaleData/ExactHullVLocalBound/StepXIComparisonEvidence/ReconciliationGapRows）入 watchdog（132 项）；④ 单 place inhabitant 仍不写 Lean（精确缺口在 C3-S1902-CARRIER-GAP §6）。
 
 - 06:34：qpilot 批量 5 份入队（DictCBoxFromL6/DictCReverseL7/DictCCounterexample/DictDLogDisc/DictQPacket；137 项）；DICT-C 文档已改“非等价；reverse 归约到 L7”，且 reverse 条件定理中 box 是未使用假设。
+
+- 06:30 巡检：8 lane 全 running（无需唤醒）；watchdog 队列 pending≈21/max12（批量文件在排），最近 BATCH DONE {done:2,failed:5}；新绿：StepXIComparisonEvidence/ReconciliationGapRows（hull）、ThetaRawPacketFactor（abc）；失败批次由 owner 按 per-file 日志修（PermMatrix/DiagCardF/Diag2x2/DiagonalDual 等）。
