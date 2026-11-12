@@ -119,6 +119,18 @@ log (μ(Λ_G)/μ(O_i)) = -d * (∑ i, c_i) * log p
 
 **build**：watchdog START 21:24:20Z → DONE EXIT=0 21:24:48Z（27s）；olean 147,104B fresh。未手编。
 
+### 5b.3 Haar 不变当前精确条件（task-109）
+
+已被证明的格部分：`glAct_image_eq_of_mul_eq_one`（显式逆 `W`，`V*W=1`）给出 `V '' Z_p^d = Z_p^d`。
+
+要得到 `μ(V '' S)=μ(S)`，还需以下条件/步骤（未完成，标 GAP）：
+1. **连续线性等价**：把 `glAct V` 打包成 `ContinuousLinearEquiv`（需 `V,W` 双向逆且有限维 Q_p 连续性）；当前只有矩阵/`mulVec` 作用。
+2. **Haar 传输**：定义 `ν = μ.map (glAct V)`，证明 `[IsAddHaarMeasure ν]`；需 `Measurable`/连续与加法同胚。
+3. **归一化**：用 `measure_isAddInvariant_eq_smul_of_isCompact_closure` 得 `ν = c • μ`（c=`addHaarScalarFactor ν μ`）；在 `coordLattice` 上 `ν O = μ O`（用 1）⇒ c=1。
+4. **全 sets 推广**：uniqueness 直接给 compact closure 集；全集需内正则/regular 扩展。
+
+**精确条件版**：若暂时不构造 `ContinuousLinearEquiv`，可把 `hν : IsAddHaarMeasure (μ.map (glAct V))`、`hmeas`、`c=1` 作为显式条件；等价地 `μ(V''Z_p^d)=μ(Z_p^d)` 是 c=1 的归一化条件。本文件**不**把该条件写成无条件定理。
+
 ## 6. 其他 GAP / 前提
 
 - `Mzk1PaperFaithfulHullActual`：watchdog FAIL EXIT=1（2026-11-12T20:19:39Z；无 olean）；当前 source 8,188B/4:21:32 local。不能 import；本文件用 `paperFaithfulThetaHullNZ := closure paperRootThetaImageNZ`，并明确不是该文件的定理。

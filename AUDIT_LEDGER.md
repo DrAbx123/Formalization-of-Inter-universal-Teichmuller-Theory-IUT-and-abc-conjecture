@@ -28568,3 +28568,9 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P5：Mzk1P5CompareActual DONE（21:28:00Z）——toRoot(analytic ratio)=c·qRoot^{j²}（两个命名输入 CONDITIONAL）；Mzk1P5BridgeIntegrationActual 已写（P5AnalyticRootBridge 结构 + μ2l 相位对齐）待编译。
 - P6-B1：Mzk1WeightedDetPacketInstanceActual 已写（具体 qPacket/thetaPacket：signed q log、classical Θ 系数和、共同 denominator 2l；GAP_P6_C17_DICT_INST 命名假设），待编译。
 - 巡检：10 分钟定时唤醒提醒已建（每 600s），持续把 inactive teammate 唤醒派活。
+
+## 2026-11-13 — R29 第七波：P3-E 素导子类真实定理类里程碑 + scaling data / 块级 paper 目标（1 条）
+
+- P3-E（P3 最小交付）green：Mzk1PrimeConductorUnconditionalActual DONE EXIT=0（21:32:45Z，62s）——把 paperGap_of_primeConductor 的抽象 hD 换成对实际 nativeDExact T arch = Σ_b nativeBadLocalWeight·baseQLogMagnitude + arch 的定理：nativeDExact_L7_of_conditions（GAP-PC-WEIGHT: ∀b weight=1；GAP-PC-LOGSUM: log p ≤ Σ baseQLogMagnitude；arch≥0）⇒ DExactLowerTarget；primeConductor_ssIneqExplicit_of_actual ⇒ SSIneqExplicit，只依赖外部 Mestre–Oesterlé 参数（显式 Prop 参数，未当已证、无 axiom/sorry）。剩余：两个内容缺口的实际来源、素导子 Θ-data 合法性。
+- qpilot：Mzk1StepVScalingDataActual 已写——stepVScalingDataOfGenerator（用 arithmeticTuplePureFractionalScalingData_ofGenerator 从实际 generators 生产 scaling data）⇒ stepVRegion_volume_eq_ofGenerator；缺 StepVQRootSourceGap（qroot^{label²} 的 norm + 零因子 unit generators）。
+- hull：Mzk1PaperBlockTargetActual 已写——leastLambdaOHull paperPossibleImages ⊆ qPilotPaperRegion、qPilotPaperRegion/paperHull measure_lt_top、qPilotPaperRegionLog_le_paperHullLog_unconditional（discharge S800 pos/fin）；明确 S800 paperHullLog（least λ-O hull at rootHalf）≠ P4 的 paperFaithfulThetaHull（NonzeroHull），不混用。

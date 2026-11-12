@@ -78,3 +78,5 @@ tmp/sheaf/xif/paper/Mzk1DualTransposeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5CompareActual.lean
 tmp/sheaf/xif/paper/Mzk1P5BridgeIntegrationActual.lean
 tmp/sheaf/xif/paper/Mzk1WeightedDetPacketInstanceActual.lean
+tmp/sheaf/xif/paper/Mzk1StepVScalingDataActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperBlockTargetActual.lean
