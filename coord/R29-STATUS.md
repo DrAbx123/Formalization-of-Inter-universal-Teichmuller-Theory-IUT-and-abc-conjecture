@@ -115,3 +115,5 @@
 
 - 05:33：**P3-E green（P3 最小交付里程碑）**：Mzk1PrimeConductorUnconditionalActual DONE 21:32:45Z（62s）——把 paperGap_of_primeConductor 的抽象 hD 换成实际 nativeDExact 的定理；nativeDExact_L7_of_conditions（条件 GAP-PC-WEIGHT：w_b=1；GAP-PC-LOGSUM：log p ≤ Σ baseQLogMagnitude；arch≥0）⇒ DExactLowerTarget；primeConductor_ssIneqExplicit_of_actual ⇒ SSIneqExplicit，仅依赖外部 Mestre–Oesterlé 参数（未当已证、无 axiom/sorry）。剩余：两个内容缺口的实际来源 + 素导子 Θ-data 合法性。
 - 05:33：新文件 Mzk1StepVScalingDataActual（qpilot：generators ⇒ scaling data ⇒ volume identity；缺 generator 来源 StepVQRootSourceGap）；Mzk1PaperBlockTargetActual（hull：S800 块级 paper 目标 pos/fin discharge；不混用 P4 hull，差异记 GAP）。
+
+- 05:36：P3 进一步收窄：Mzk1StepVScalingDataActual DONE 21:35:24Z（StepV volume identity 归约到 generators：stepVScalingDataOfGenerator + stepVRegion_volume_eq_ofGenerator；唯一缺口 StepVQRootSourceGap = qroot^{label²} 的 actual generators + norm 等式）。mainline 下一步 GAP-PC-WEIGHT（tame 情形 localCompletionDegree=1）。
