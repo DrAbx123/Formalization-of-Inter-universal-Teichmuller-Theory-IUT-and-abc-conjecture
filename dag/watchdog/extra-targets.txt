@@ -100,3 +100,4 @@ tmp/sheaf/xif/paper/Mzk1PrimeConductorResNormActual.lean
 tmp/sheaf/xif/paper/Mzk1C3S1902BridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1DualIndexSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQCoeffActual.lean
+tmp/sheaf/xif/paper/Mzk1NormArchCAbcActual.lean

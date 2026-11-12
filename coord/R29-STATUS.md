@@ -178,3 +178,5 @@
 - 06:12：X_G 商来源（stage4）：精确缺口链写入 coord/XG-DIAGONAL-SOURCE-GAP.md（L=basisIntegralLattice、XG↔对偶格、GAP-DUAL-SNF、商同构、紧开）；已批准先做对角/置换最小情形（XG=∏p^{-e_i}Z_p → 商 → 条件体积），一般 SNF 留 GAP。
 
 - 06:13：P3-E GAP 树定稿：SSIneqExplicit（外部 Mestre–Oesterlé）⇒ GAP-PC-WEIGHT（FINITE/AGREE/UNRAM-RESIDUE）+ GAP-PC-RESNORM（RESDEG/BADCHAR，Mzk1PrimeConductorResNormActual green 归约）；stage4 的 XG 商来源缺口链记录（GAP-DUAL-SNF 核心），已批准对角/置换最小情形。shehdd 接 gate 刷新 + QPLACE lift_comap 尝试。
+
+- 06:12：stage4 X_G 对角情形取向确认：large=∏p^{-e_i}Z_p、small=∏Z_p（standard trace pairing 下 (diag(p^e)Z_p^d)^#=∏p^{-e_i}Z_p）；商等价 large⧸small ≃ (d→Z_p)⧸∏p^{e_i}，card=∏p^{e_i}，μ(small)/μ(large)=(∏p^{e_i})^{-1}；一般 SNF 保持 GAP-DUAL-SNF。明确写 Mzk1DiagonalDualActual.lean。
