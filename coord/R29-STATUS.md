@@ -206,3 +206,5 @@
 - 06:21：P3-DICT Q 系数（qpilot）：Mzk1P3DictQCoeffActual DONE 22:20:48Z（57s）——paperQCoeff_eq_sL_AL 纯代数、nativePaperQ_eq_neg_sL_mul_A、nativeQArith_eq_weighted_sum；GAP_PC_QHALF（nativeQArith = baseQTotalLogMagnitude，加权 vs 无权重）已识别；派 qpilot 证“WEIGHT(weights=1) ⇒ QHALF”纯代数归约，联动 P6↔P3。
 
 - 06:22：P3-E 再细化：Mzk1PrimeConductorBadCharActual 入队（BADCHAR → NORMFORMULA/PRIME/DEG 三条；RESDEG 未证，需 relativeResidueDegree 与实际 inertiaDeg 比较 ⇒ GAP-PC-AGREE 一部）；mainline 下一步拼 NORMFORMULA。
+
+- 06:23：P6-A.1 置换子群 green：Mzk1PermutationHaarActual DONE 22:22:53Z（23s）——permAct_image_coordLattice、measure_pi_perm_coordLattice（μ(P_σ''Z_p^d)=μ(Z_p^d)）；一般 GL_d(Z_p) 不变性给计划：ν=μ.map(glAct V) 为 additive Haar ⇒ ν=c•μ，在 Z_p^d 上求值用 image 等号得 c=1。
