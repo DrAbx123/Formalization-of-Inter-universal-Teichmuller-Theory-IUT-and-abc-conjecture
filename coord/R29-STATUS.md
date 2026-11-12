@@ -464,3 +464,5 @@
 - 08:24：shehdd k=1 条件 ORDER/RESNORM 全绿（23:44:03Z/23:48:00Z）；剩余 `eSource=1`/`localResidueDegree=1` 定性为**不可约算术输入**（FLT 只给局部=全局与乘积=finrank，给不出值 1）；派 shehdd 写“residue-field 同构 ⇒ localResidueDegree=1”的充分条件版本 + 文档定性。gate §20：clean 306 + ole-only 20 + red 15。
 
 - 08:25：**FLT 链突破**：IntegralClosure DONE EXIT=0（23:47:27Z，43s）——if_neg/FaithfulSMul/finrank namespace 修复全部生效！Completion/BaseChange（AGREE-RAM :685 / AGREE-FIELD :721）将自动接编；mainline 的 Mzk1P3AgreeFLTActual 即可编 → 配合 WeightDegreeOne 关 GAP-PC-WEIGHT。
+
+- 08:27：FLT 4 个 helper pin 全修（ModuleTopology:406 IsModuleTopology.topologicalAddGroup / :537 IsQuotientMap.secondCountableTopology / UniformRing:37 删 coe_ofClass）并 retouch 6 文件；abc C3UnitHaarComparison（c3UnitHaar=μ(unitRegion) rfl、hull pos/lt_top、comparison_of_qnorm_le_c3UnitHaar）入队（343 项）。hull 最后一批 5/5 green，P 唯一缺口=C2/logKummer/logKummer_eq 三实际源。
