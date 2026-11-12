@@ -182,3 +182,5 @@
 - 06:12：stage4 X_G 对角情形取向确认：large=∏p^{-e_i}Z_p、small=∏Z_p（standard trace pairing 下 (diag(p^e)Z_p^d)^#=∏p^{-e_i}Z_p）；商等价 large⧸small ≃ (d→Z_p)⧸∏p^{e_i}，card=∏p^{e_i}，μ(small)/μ(large)=(∏p^{e_i})^{-1}；一般 SNF 保持 GAP-DUAL-SNF。明确写 Mzk1DiagonalDualActual.lean。
 
 - 06:13：XG 对角符号更正：XG=(diag(p^{e_i})Z_p^d)^#=∏p^{-e_i}Z_p；e_i≥0 时 XG⊇L（反向），e_i≤0 时 XG⊆L 且 index=∏p^{-e_i}、μ比=(∏p^{-e_i})^{-1}；建议用 f_i=−e_i≥0 参数化并写清符号约定，按 A2 实际假设方向选择一支。
+
+- 06:13：P5-A7 green（stepxi）：Mzk1P5CompareActual 修正 root_image := toRoot r = qRoot^l，DONE 22:12:49Z（63s）；精确关系 c_j·phase_j = qRoot^{-((l+1)n)}（n=j²）；c_j=1 不等价自然条件、phase 不能吸收 q 尺度；P5BridgeIntegration 缺 root_image 字段 → P5-A8 补。
