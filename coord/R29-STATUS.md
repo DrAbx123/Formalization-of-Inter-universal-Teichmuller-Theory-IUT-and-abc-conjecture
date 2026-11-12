@@ -164,3 +164,5 @@
 - 06:03：GAP-PC-RESNORM 归约 green：Mzk1PrimeConductorResNormActual 把 RESNORM 归约为 RESDEG（局部剩余次数=1）+ BADCHAR（residueNormBase b.1=C.p）；θ 侧 canonical 差异（GAP-P6-C17-THETA-S3137 四层）记录于 P6 §13.3。
 
 - 06:06：**P0 canonical 定位 green**：Mzk1PaperCorrectedTargetActual DONE 22:06:11Z（53s）——P0CanonicalTarget=Paper312Statement、p0Target_iff_comparison↔S3137 qThetaPilotLogVolumeComparison（PENDING）、iff_neg_abs_le/iff_regionLogVolume、P0Gap；三链对照写入 P0-CNORM-CONSUMERS §4-5 与 HANDOFF-OBJECT-TABLE §19；P0 验收口径改为 S3137 两读数+Paper312Statement；S800/S801/qVFam P4 仅历史/旁支。下一步 hull 攻 7 missing 的 #2/#5（用 Mzk1HullLogVolumeFormulaActual 的 normalizedLog_hull_eq_sum_diff 桥 C3 载体 Haar log ↔ 系数和）。
+
+- 06:07：P5-A5 green：Mzk1P5ThetaRootUnitActual DONE 22:07:30Z（58s）——paperRootThetaUnit j v0 = twoLthRootAt^{gaussExponent}（rfl）、pow_twoL 形式、actualP5Bridge_qRoot_eq（rfl）、hcomparison_qRoot_iff；P5 命名输入只剩 analytic 值比较（c_j/hcomparison）+ toRoot/r。P2/P6：Mzk1DualIndexLinkActual DONE 22:07:30Z（58s）——X≤L 紧开+商基数 ⇒ μX/μL=(∏p^{e_i})^{-1} 条件版。
