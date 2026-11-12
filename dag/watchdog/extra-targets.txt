@@ -231,3 +231,5 @@ tmp/sheaf/xif/paper/Mzk1C3DIndexDataConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperVRatioChainActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperVRatioRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIEvidenceUpgradeActual.lean
+tmp/sheaf/xif/paper/Mzk1P5CJDerivedActual.lean
+tmp/sheaf/xif/paper/Mzk1P5RootChoiceOrderActual.lean
