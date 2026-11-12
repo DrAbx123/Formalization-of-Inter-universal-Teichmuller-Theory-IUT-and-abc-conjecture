@@ -184,3 +184,11 @@ tmp/sheaf/xif/paper/Mzk1ContractEvidenceRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDLogDiscSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQPacketSignedActual.lean
 tmp/sheaf/xif/paper/Mzk1HaarScalarOneActual.lean
+tmp/sheaf/xif/paper/Mzk1P3FiniteCompletionActual.lean
+tmp/sheaf/xif/paper/Mzk1P3UnramResidueActual.lean
+tmp/sheaf/xif/paper/Mzk1P3AgreeDegreeActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDOrderCoeffActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDResNormLogActual.lean
+tmp/sheaf/xif/paper/Mzk1S3137ThetaDefectNormActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QPLACELiftUniqueActual.lean
+tmp/sheaf/xif/paper/Mzk1P6C17GapLedgerActual.lean
