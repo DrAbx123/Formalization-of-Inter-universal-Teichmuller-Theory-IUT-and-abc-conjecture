@@ -362,3 +362,5 @@
 - 07:14 巡检：hull/stepxi 空闲已唤醒（C3D 装配/paper V 读数/contract consumer；P5 hunit 可由 ThetaRootUnit rfl 推导→消假设 + P5 条件汇总 + §8.17）；本批 green：ArithmeticRelativeBridge（rfl 桥证出）与 BadCharDeg（23:13:40Z）；RawThetaLogSign/S3137ThetaDefectFactor/DiagEquivProved FAIL 待修。
 
 - 07:20：用户指令广播（Mathlib 缺 → 查 tmp/external/ported 与 GitHub → tools/port_* 转码 → 自写；禁 axiom/sorry），按 lane 给出各自阻塞点与搜索方向；hull 第五批 5 份入队（264 项）。
+
+- 07:21：stepxi Mzk1P5HunitDerivedActual（在 instantiate 桥下证 hunit，消掉 phase_relation 的 hunit 假设）入队（265 项）。
