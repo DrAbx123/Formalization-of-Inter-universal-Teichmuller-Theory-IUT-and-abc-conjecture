@@ -213,3 +213,8 @@ tmp/sheaf/xif/paper/Mzk1P3DictL7NativeTargetActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictL7ArchMonotoneActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDSourceRefinedActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQSourceBuilderActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVConsumerChainActual.lean
+tmp/sheaf/xif/paper/Mzk1RawThetaReadoutBoundsActual.lean
+tmp/sheaf/xif/paper/Mzk1DegreeSignConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1ArchFactorMonotoneActual.lean
+tmp/sheaf/xif/paper/Mzk1P7GapRegisterActual.lean
