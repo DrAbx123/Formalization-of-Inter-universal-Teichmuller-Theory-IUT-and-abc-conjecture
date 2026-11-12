@@ -126,3 +126,5 @@
 - 05:42：P3-E 细化：Mzk1PrimeConductorWeightOneActual DONE 21:39:20Z（GAP-PC-WEIGHT → GAP-PC-FINITE/AGREE/UNRAM-RESIDUE 三条）；P6：Mzk1GaloisNormInvarianceActual DONE 21:40:11Z（C13 norm_galois_apply_eq）；P2/P6：Mzk1DualTransposeActual comap 形式 green（(eL)^# = L^#.comap(e.leftAdjoint)，不需 e 可逆）。qpilot 记录 StepVQRootSourceGap 精确 source-map 缺口（rootMap/norm 保持/unit generators/istar 对齐）。下一步分工：mainline GAP-PC-LOGSUM（localLogMagnitude=order·log p ⇒ Σorder≥1）、qpilot DICT-B、stage4 X_G 矩阵形式。
 
 - 05:43：P3-E 再收窄：Mzk1PrimeConductorLogSumActual 已写（GAP-PC-LOGSUM → GAP-PC-RESNORM：坏位 residue norm = C.p；∑|log q_b|=(∑order)·log p ⇒ log p ≤ sum）；qpilot 的 DICT-B 结构 Mzk1P3DictBActual（INTERFACE only，GAP 保留）；Mzk1NormFunctorialityActual 编译中。
+
+- 05:45（用户口径）：先证我们能证的；Mestre–Oesterlé 未形式化部分不急（保持显式外部参数）。优先：GAP-PC-WEIGHT 子缺口 / RESNORM / DICT-B-C 实际对象 / StepVQRootSource / Haar 不变 / X_G / C18 / P5 label-phase 条件链。

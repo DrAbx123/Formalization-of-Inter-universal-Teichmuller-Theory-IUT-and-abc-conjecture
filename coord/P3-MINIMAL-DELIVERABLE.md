@@ -35,3 +35,7 @@
 - 该素导子类是“具有原文量词的输入类”的一个真实子类；定理只依赖外部已发表定理参数 + 两个显式内容缺口，无 sorry/axiom，无目标假设。
 - 不得把它报告为“3.12 已证”或 ABC 进展；它是 P3 的局部最小交付示例，其余输入类/全称命题仍缺上述内容。
 - 下一步：GAP-PC-WEIGHT（mainline）→ GAP-PC-LOGSUM；DICT-B/C（mainline/abc）；StepVQRootSourceGap（qpilot）。
+
+## 4. 优先口径（2026-11-13 05:45 用户决定）
+
+先证我们对象上能证的内容缺口；Mestre–Oesterlé 的形式化不急，保持为显式外部 Prop 参数（不进公理闭包）。
