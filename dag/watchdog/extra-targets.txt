@@ -120,3 +120,8 @@ tmp/sheaf/xif/paper/Mzk1StepXIContractEvidenceMapActual.lean
 tmp/sheaf/xif/paper/Mzk1P4CExternalStageContainerActual.lean
 tmp/sheaf/xif/paper/Mzk1P5PhaseRelationActual.lean
 tmp/sheaf/xif/paper/Mzk1P5CJConditionActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagCardFActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagEmbeddingInjActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagVolumeCondActual.lean
+tmp/sheaf/xif/paper/Mzk1Diag2x2Actual.lean
+tmp/sheaf/xif/paper/Mzk1PermMatrixActual.lean
