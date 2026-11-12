@@ -257,3 +257,8 @@ tmp/sheaf/xif/paper/Mzk1HullBoundTransferLibActual.lean
 tmp/sheaf/xif/paper/Mzk1P3TameFromConductorActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AgreeResidueFieldActual.lean
 tmp/sheaf/xif/paper/Mzk1RestrictedDetNonconditionalActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DFieldLevelAssemblyActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DPlaceTupleDataActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DStatusConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperVRatioReadingsActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIEvidenceConsumerActual.lean
