@@ -450,3 +450,5 @@
 - 08:14：stage4 BasisDetUnit/SNFDiag green（23:43:22Z）；GLAct 补 import、SNFDiagEquiv 降级 data wrapper；已给两提示：DiagVolumeProved 加 [MeasurableSpace (d→Q_p)]/[BorelSpace] 变量；SNFDiagEquiv span 版用 Submodule.map_subtype_top + bN.span_eq + map_span。
 
 - 08:16：IntegralClosure 再修：`:112 if_pos→if_neg`（by_cases 剩余分支 hx:¬x=0）；`:199` 补 `haveI FaithfulSMul A B := FaithfulSMul.of_field_isFractionRing`（Algebra.IsIntegral A B 已在变量中）。已 retouch。qpilot round8/9 全 green（WeightDegreeOne 合流 UNRAM/RESIDUE），stage4 BasisDetUnit/SNFDiag green。
+
+- 08:17：**stage4 φ/SNF 链全 green**：DiagVolumeProved 23:45:39（非条件体积比）、SNFDiagEquiv 23:45:02（snf_eq_span_diag）、GLAct 23:45:08（GL 保格）、BasisDetUnit/SNFDiag/SNFTool green；派最后拼装：一般 X_G 的 GL_d(Zp)-等价 + 一般受限 det 公式（U/W 显式 + det 恒等 + GL 传递）。
