@@ -458,3 +458,5 @@
 - 08:19：abc HullMeasureLowerBound（actualUnitRegion ⊆ thetaPilotHull + measure_mono ⇒ μ(unit)≤μ(hull) ⇒ ‖q‖≤μ(unit) ⇒ comparison 等）入队（340 项）；general 化为具体测度下界 μ(unitRegion)。ComparisonCondition import 修后 retouch。
 
 - 08:20：**stage4 重大发现**：仓库已有 `natCard_quotient_eq_prod_pow_valuation_of_smithNormalForm`（PadicLatticeIndexFormula）——配 Mathlib SNF 即得一般 N≤M 商 cardinal + 体积比 ∏|a_i|_p；GeneralSNFVolumeActual 入队（341 项）；绿后接 X_G 与一般受限 det 公式。
+
+- 08:21：hull 第七批 4/5 green（MainTermActualNonneg 23:45:42Z、MainTermActualBound 23:46:22Z、PActualCostAudit、C0MainTermRows）；PaperQPilotActualComponents universe 修后 retouch。**#7 实际 V 上界定理化**：V ≤ (1/4)l(log disc+log cond)，C0=0，mainTerm 非负来自 CurveData Nats。P inhabitant 精确缺口（C2/logKummer/logKummer_eq + 类型不匹配）待写入 CANONICAL。
