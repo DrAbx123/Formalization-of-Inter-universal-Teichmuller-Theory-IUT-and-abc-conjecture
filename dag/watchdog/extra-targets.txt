@@ -208,3 +208,8 @@ tmp/sheaf/xif/paper/Mzk1GeneralComparisonConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1PacketNormalizedBoundActual.lean
 tmp/sheaf/xif/paper/Mzk1P7DischargedListActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVFactorInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQHALFWeightOneSummaryActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictL7NativeTargetActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictL7ArchMonotoneActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDSourceRefinedActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQSourceBuilderActual.lean
