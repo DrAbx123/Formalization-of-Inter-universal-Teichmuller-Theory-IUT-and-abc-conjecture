@@ -162,3 +162,5 @@
 
 - 06:03：S3137 readings 审计（abc，coord/P6-S3137-READINGS-AUDIT.md）：q 侧 S3137 qRead=-|log‖q‖| 与 paperQPilotLogVolume_multi/sourceQPilotSignedLog 同口径相等（S1487 已具体化）；Θ 侧 S3137 θ=log μ(hull) = -RTarget = -S2717ThetaHullLogVolume（纯符号约定差）；comparison ⇔ A ≥ R ⇔ 0 ≤ MTarget（green 等价归约，非证明）；差异=raw log-volume 无 1/(2l)、1/[K:Q]（后者无对象）。精确缺口：GAP-S3137-Q-INHABIT/QID/C3-THETA/NORM-ARCH-C；比较 Prop 仍 pending。
 - 06:03：GAP-PC-RESNORM 归约 green：Mzk1PrimeConductorResNormActual 把 RESNORM 归约为 RESDEG（局部剩余次数=1）+ BADCHAR（residueNormBase b.1=C.p）；θ 侧 canonical 差异（GAP-P6-C17-THETA-S3137 四层）记录于 P6 §13.3。
+
+- 06:06：**P0 canonical 定位 green**：Mzk1PaperCorrectedTargetActual DONE 22:06:11Z（53s）——P0CanonicalTarget=Paper312Statement、p0Target_iff_comparison↔S3137 qThetaPilotLogVolumeComparison（PENDING）、iff_neg_abs_le/iff_regionLogVolume、P0Gap；三链对照写入 P0-CNORM-CONSUMERS §4-5 与 HANDOFF-OBJECT-TABLE §19；P0 验收口径改为 S3137 两读数+Paper312Statement；S800/S801/qVFam P4 仅历史/旁支。下一步 hull 攻 7 missing 的 #2/#5（用 Mzk1HullLogVolumeFormulaActual 的 normalizedLog_hull_eq_sum_diff 桥 C3 载体 Haar log ↔ 系数和）。
