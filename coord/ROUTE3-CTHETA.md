@@ -268,4 +268,85 @@ the object-level P5-A bridge remains BLOCKED.
 - This identity is the one analytic-to-exponent alignment available; it does not
   close the object-level analytic/root/Kummer bridge.
 
+
+### 8.4 Label-indexed analytic shift (P5-A follow-up)
+
+File: tmp/sheaf/xif/paper/Mzk1P5LabelShiftActual.lean.
+- thetaLabelExponent j = positive integer representative of ThetaLabel j;
+- analyticThetaLabelPoint i r j = i * r^(thetaLabelExponent j);
+- oddThetaFraction_eval_thetaLabel:
+    oddTheta q (analyticThetaLabelPoint i r j) / oddTheta q i
+      = r^(-(thetaLabelExponent j ^ 2));
+- thetaLabelExponent_pos and thetaLabelExponent_injective.
+Build: START 2026-11-12T21:24:20.577Z;
+DONE EXIT=0 2026-11-12T21:25:19.728Z (59s);
+olean size 62520 B, mtime 2026-11-12T21:25:18Z;
+axioms for both theorems: [propext, Classical.choice, Quot.sound], no sorryAx.
+
+This is the label-indexed normalization layer only; it does not construct the
+analytic/root/Kummer/line-bundle bridge. It supplies the correct j-indexing for
+the C7 missing label map.
+
+
+### 8.5 task-120: two named inputs + conditional comparison
+
+File: tmp/sheaf/xif/paper/Mzk1P5CompareActual.lean (header marks CONDITIONAL
+(named inputs)).
+
+Named input 1 (AnalyticRootMap): a ring map L -> R, an analytic root r, a
+target root qRoot, and root_image : toRoot r = qRoot. No existence/construction
+is asserted.
+
+Named input 2 (ThetaValueComparison): a constant c and, for every ThetaLabel j,
+
+  toRoot (r^(-(j^2))) = c * qRoot^(j^2).
+
+Conditional theorem p5_compare_conditional:
+
+  toRoot ( oddTheta q (i*r^j) / oddTheta q i )
+    = c * qRoot^(j^2),
+
+using the label-indexed analytic normalization and the named comparison. The
+constant c is explicit; the exponent is exactly j^2 on both sides.
+
+Status of the six previous gaps is now:
+- localized into the two named inputs: analytic/root field map and the
+  normalized comparison constant;
+- still separate: (3) line-bundle section/trivialization, (4) Kummer class
+  identification, (5) general C7 point shift/label map, (6) constant/trivialization
+  comparison for tau_P^*L tensor tau_-P^*L tensor L^-2.
+The two inputs are NOT constructed; no toy field, no fake bridge, no sorry/axiom.
+The conditional theorem is conditional transport of the exponent equality, not
+an unconditional analytic/root identification.
+
+Build evidence:
+- START 2026-11-12T21:27:04.150Z; DONE EXIT=0 2026-11-12T21:28:00.689Z (57s).
+- olean: .lake/build/lib/lean/tmp/sheaf/xif/paper/Mzk1P5CompareActual.olean
+  (size 205432 B, mtime 2026-11-12T21:28:00Z).
+- #print axioms p5_compare_conditional: [propext, Classical.choice, Quot.sound];
+  no sorryAx.
+
+
+### 8.6 task-121: P5AnalyticRootBridge (named structure)
+
+File: tmp/sheaf/xif/paper/Mzk1P5BridgeIntegrationActual.lean (header:
+CONDITIONAL (named structure)).
+
+The structure collects all remaining bridge data explicitly:
+- toRoot : L -> RootExtension at a place v0;
+- r and qRoot (qRoot = twoLthRootAt), root_image;
+- constants c_j and phases phase_j, with phase_pow (phase_j^(2l)=1);
+- comparison : toRoot (r^(-(j^2))) = c_j * phase_j * paperRootThetaUnit j.
+
+Conditional theorems:
+- p5_bridge_compare: the actual analytic normalized ratio maps to
+  c_j * phase_j * paperRootThetaUnit j;
+- p5_bridge_muPoint: when phase_j is synchronized to primitiveMu2lRoot^m_j,
+  the same expression is c_j * paperRootThetaMuPoint m_j.
+
+All fields are named inputs; none is constructed. In particular the analytic
+field map and the phase/constant sources remain GAPs. The theorem is a
+conditional root-unit dictionary at a fixed place v0; it does not assert the
+line bundle/Kummer/global bridge.
+
 End of report.

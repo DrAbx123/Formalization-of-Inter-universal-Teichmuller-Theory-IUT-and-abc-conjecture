@@ -171,6 +171,25 @@ abc L7: (1-1/l)logp <= D_exact
 - 另缺 StepV scalar 与 arithmeticTupleNormalizedLogVolume 的实际 per-label image 等式（同 task-95 §5.2）。
 
 
+
+### 5.5 task-116：per-label StepV actual region + exceptional 集
+
+新文件：tmp/sheaf/xif/paper/Mzk1StepVVolumeActual.lean（watchdog **DONE EXIT=0**，21:30:45Z，61s；olean 106,320B）。
+
+已构造（机器验证 green）：
+  stepVRegion label := thetaTensorScaledRegion (c i = if i=istar then stepVLambda p label jValue l else 0)
+  stepVRegion_volume_eq_of_scalingData：
+    ArithmeticTuplePureFractionalScalingData c
+    => arithmeticTupleNormalizedLogVolume (stepVRegion label) = S3029StepVTerm label
+  ramifiedExceptional := {i | p-2 < logShellRamificationExponent_i}
+  S3029ExceptionalTerm_ramified：exceptional 取 ramifiedExceptional 时逐字对齐。
+
+剩余唯一源对象（volume identity 的最后一块）：
+  ArithmeticTuplePureFractionalScalingData for the one-factor coefficient stepVLambda：
+  需要 qroot^{label²} 的 p-power/unit 数据；
+  以及非 istar 因子系数 0 的 actual unit 数据（localGenerator 范数 1、commonExponent/order_eq 等）。
+  该 datum 尚未构造；不能把它作为假设换 green。
+
 ### 5.4 task-111：actual D_exact 与 L7→L6 接口
 
 新文件：tmp/sheaf/xif/paper/Mzk1DExactActual.lean（watchdog **DONE EXIT=0**，21:12:30Z，57s；olean 26,176B）。

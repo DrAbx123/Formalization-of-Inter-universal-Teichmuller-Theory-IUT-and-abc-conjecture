@@ -388,3 +388,41 @@ Build relay:
   j=0 term unless R=F(c_root) (task-83 §10).
 - P4 uses 0<mu<top before any toReal/log; the file only states the existing rootNormHull
   finite/positive facts for ind3OutputHull, not a new inequality.
+## 15. P4-POS resolution (task-94/110): split file, positivity via S1023, finiteness via S920
+
+Because the old P4 additions made the P0 file fragile, the delivery is split:
+- `tmp/sheaf/xif/paper/Mzk1PaperFaithfulHullActual.lean` is restored to the P0-only
+  green version (132 lines; old olean 204400 bytes).
+- P4 is in **`tmp/sheaf/xif/paper/Mzk1PaperFaithfulHullP4Actual.lean`** (141 lines, 6434 bytes).
+
+Build evidence (watchdog):
+- `Mzk1PaperFaithfulHullP4Actual.lean` DONE EXIT=0 @2026-11-12T21:31:22Z (98s);
+  olean 150512 bytes, mtime 21:31:22Z.
+- source mtime 21:28:53Z.
+
+Proved (machine-checked):
+- `paperFaithfulThetaHull_eq_nonzeroHull`: paperFaithful hull = S806
+  `paperRootThetaHullNonzero` (same PaperNonzeroLabel, same qVFamPaperThetaTensorCoefficient).
+- `paperFaithfulThetaHull_measure_lt_top`: nonzero hull subset canonical unit reference
+  (`s920PaperRegion_subset_O`), canonical is compact, `IsCompact.measure_lt_top`.
+- `fractional_lattice_open`: F(paperRootCoefficientFamily) open via S1023
+  `s923FractionalLatticeOpen_actual` (which uses S1022 local span-top and S1015 tensor openness).
+- `fractional_subset_scaled`: F ⊆ F*O_hol via 1 ∈ O_hol.
+- `scaledRegion_subset_paperHull`: F*O_hol ⊆ paperFaithful hull.
+- `paperFaithfulThetaHull_measure_pos`: open F has positive Haar (IsOpen.measure_pos), measure_mono.
+
+Therefore GAP-P4-POS is **resolved without the coefficient bridge**:
+`qVFamPaperRootCoefficient = rootHalfCoefficient` / S1074NormCompatibilityOne / e=1 is NOT used.
+The positivity uses the paper coefficient's own fractional lattice openness (S1023 actual), not qPilot.
+
+Remaining caveat: S1023 depends on S1022 local span-top, whose proof is in the tree; no new
+assumption was added. Finiteness depends on S920's paperNonzero hull containment; no equality
+to qPilot/rootHalf is asserted.
+
+## 16. task-94 / task-110 status
+
+- task-94 (P4 finiteness): finiteness completed in the split P4 file; originally accepted as
+  finiteness-only, now also positivity completed in the same P4 file.
+- task-110 (P4-POS): closed by the independent S1023 openness route; no coefficient bridge used.
+- task-115 remains: discharge S800 qPilotPaperRegionLog_le_paperHullLog pos/fin using the P4 file,
+  and identify which hull S800's paperHullLog uses (rootThetaHull vs NonzeroHull) before mixing.

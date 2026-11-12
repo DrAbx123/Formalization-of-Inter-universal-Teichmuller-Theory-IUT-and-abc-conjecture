@@ -28552,3 +28552,19 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P6-A.1：Mzk1MatrixHaarBaseActual 再 green（21:24:48Z，27s）——glMatrix_mul/glAct_mul/one/glAct_image_eq_of_mul_eq_one（显式逆矩阵 ⇒ 保格等号）；Haar 不变/对角缩放/受限 det 公式仍 GAP。
 - 新文件（待编译）：Mzk1PrimeConductorUnconditionalActual（hD→nativeDExact 条件化 + GAP-PC-WEIGHT/LOGSUM；SSIneqExplicit 仅依赖外部 Mestre–Oesterlé）、Mzk1P5LabelShiftActual（label 归一化指数）、Mzk1DualTransposeActual（GAP-DUAL-TRANSPOSE 配对形式；首编 FAIL）、Mzk1PaperFaithfulHullP4Actual（P4 拆分）、Mzk1StepVVolumeActual（per-label region + exceptional filter；首编 FAIL）。
 - 周期 git：main repo 968d6c3eb/f5e144e7c/026750e46；audit repo 646a239。Gate：extra=77，clean 63 + ole-only 6 + stale 2 + red 6（shehdd）。
+
+## 2026-11-13 — task-94/110 P4 green（1 条）
+
+- P4 拆分文件 `tmp/sheaf/xif/paper/Mzk1PaperFaithfulHullP4Actual.lean` watchdog **DONE EXIT=0** @2026-11-12T21:31:22Z（98s）；olean 150512B mtime 21:31:22Z；源码 141 行/6434B。
+- green 定理：`paperFaithfulThetaHull_eq_nonzeroHull`、`paperFaithfulThetaHull_measure_lt_top`（S920 非零 hull 子集 canonical + 紧）、`fractional_lattice_open`（S1023 `s923FractionalLatticeOpen_actual`）、`fractional_subset_scaled`、`scaledRegion_subset_paperHull`、`paperFaithfulThetaHull_measure_pos`（IsOpen.measure_pos + measure_mono）。
+- **GAP-P4-POS 解除**：正性走 paper 系数自身的 F(c_root) 开性（S1023/S1022/S1015），不使用 `qVFamPaperRootCoefficient = rootHalfCoefficient`、不用 S1074 norm compatibility/e=1。有限性走 S920 paperNonzero hull 包含 + canonical 紧。
+- `Mzk1PaperFaithfulHullActual.lean` 恢复 P0-only 132 行（旧 green olean 204400B）。文档 HANDOFF-OBJECT-TABLE §15-16 已追加；task-94/110 标 completed。
+- 下一步 task-115：S800 qPilotPaperRegionLog_le_paperHullLog 的 pos/fin 需按 paperHullLog 的实际 hull 对齐（根 hull vs NonzeroHull），不得混用。
+## 2026-11-13 — R29 第六波：P4 正性/有限性双绿 + StepVVolume + DualTranspose（1 条）
+
+- **P4 里程碑**：Mzk1PaperFaithfulHullP4Actual DONE EXIT=0（21:31:22Z，98s）——paperFaithfulThetaHull_eq_nonzeroHull（S806）、measure_lt_top（S920 + canonical 紧）、fractional_lattice_open（S1023 实际开）、fractional_subset_scaled、scaledRegion_subset_paperHull、measure_pos（IsOpen.measure_pos + measure_mono）。GAP-P4-POS 解除；P0 文件恢复 green 版、P4 独立成文件。
+- P3：Mzk1StepVVolumeActual DONE（21:30:45Z，61s）——stepVRegion（istar 系数 stepVLambda）、stepVRegion_volume_eq_of_scalingData（条件于 actual ArithmeticTuplePureFractionalScalingData）、ramifiedExceptional={i | p−2 < ramificationExp i}、S3029ExceptionalTerm_ramified 逐字对齐。唯一剩余源对象 = one-factor coefficient 的 scaling data。
+- P2/P6：Mzk1DualTransposeActual DONE（21:28:54Z，27s）——(L.map e)^# 配对形式与 leftAdjoint 形式；逆/像等式仍 GAP。
+- P5：Mzk1P5CompareActual DONE（21:28:00Z）——toRoot(analytic ratio)=c·qRoot^{j²}（两个命名输入 CONDITIONAL）；Mzk1P5BridgeIntegrationActual 已写（P5AnalyticRootBridge 结构 + μ2l 相位对齐）待编译。
+- P6-B1：Mzk1WeightedDetPacketInstanceActual 已写（具体 qPacket/thetaPacket：signed q log、classical Θ 系数和、共同 denominator 2l；GAP_P6_C17_DICT_INST 命名假设），待编译。
+- 巡检：10 分钟定时唤醒提醒已建（每 600s），持续把 inactive teammate 唤醒派活。
