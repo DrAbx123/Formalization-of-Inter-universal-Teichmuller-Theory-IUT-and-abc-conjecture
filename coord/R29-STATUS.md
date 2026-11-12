@@ -404,3 +404,5 @@
 - 07:45：**mainline 定位 AGREE 直接定理**：FLT `DedekindDomain/Completion/BaseChange.lean:685 ramificationIdx_eq_ramificationIdx`（AGREE-RAM）、:721 `inertiaDeg_eq_inertiaDeg`（AGREE-FIELD）——无需自写！已把该文件及闭包 8 个缺失文件加入 watchdog（318 项）并 retouch。BADCHAR-PRIME 对任意 T 不可证（缺 C 实际构造），按 §14 记录。
 
 - 07:46：abc ComparisonGeneralBranches（comparison ↔ qRead≤log μ；μ≥1 或 μ<1∧logμ≥qRead 两支；logμ<qRead⇒¬comparison）入队（319 项）；Contrapositive retouch。μ<1 支剩 A≥R 实质下界=general 核心。
+
+- 07:48：qpilot QAbsLog green（23:29:22Z）；WeightDegreeOne 入队（321 项）——UNRAM=1+RESIDUE=1+FINITE+AGREE ⇒ weight=1，把 GAP-PC-WEIGHT 归约到 UNRAM/RESIDUE（FLT 定理已定位待 olean）。hull 依赖 HaarStrictActual 缺 olean，已加入队列（320 项）。
