@@ -28617,3 +28617,28 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - 用户提醒仓库有 3000+ S 文件，需确认版本。核查结果：当前 canonical 目标链为 S3132PaperHullSetPropertiesActual（actualPaperHull_eq_unitRegion/paperHullHaarReadout/paperHullRealLogVolume，raw Haar 未归一化）+ S3137QThetaPilotLogVolumeReadingsActual（qPilotLogVolumeReading=-|log q| GREEN；thetaPilotHullLogVolumeReal GREEN raw；qThetaPilotLogVolumeComparison PENDING）+ Mzk1HolomorphicHullLogVolumeReconciliationActual 的 12-row 义务表（6 discharged/7 missing：paper normalization、IQ carrier 实现、(Ob3-3)、multiradial comparison、theta raw Haar vs paper normalized V、exact hull V 上界、StepXIContract linkage）。
 - S793/S779 的 NonzeroLabel 修正与 S801 的 paperHullLog=paperQPilotRegionLog 属历史链（S800 旧 hull 含 j=0）；不是当前目标对象。hull 的 Mzk1PaperHullZeroLabel 应作为“旧 S800 定义退化”的历史记录并引用 S779/S793。
 - 行动：P0/P4 目标重指 S3137 readings + S3132 actualPaperHull；我们的 Mzk1PaperTargetNormalization/Mzk1PaperBlockTargetActual 等基于 S800 旧 hull 的结论全部标历史/旧口径。
+
+## 2026-11-13 — canonical P0 三链对照 / j=0 历史归档（1 条）
+
+- canonical：S3137 `qPilotLogVolumeReading=-|log q|`、`thetaPilotHullLogVolumeReal`（raw Haar, hull=actual region）→ `Mzk1Paper312StatementActual.Paper312Statement` → S3135；唯一 gap `qThetaPilotLogVolumeComparison` PENDING。
+- 历史 S800：`paperPossibleImages` 为 SignedLabel（含 j=0）的 rootThetaImageSet；`Mzk1PaperHullZeroLabelActual` 证 least hull=R*O=O_hol、`paperHullLog=0`（q 阶数无关）；引用 S779 zero_region_subset_old_paperRootThetaHull 与 S793 OldUnionEqualsLeastLambdaOHull，不称首次发现。
+- 历史 S801：NonzeroLabel 正确 hull，`paperHullLog=paperQPilotRegionLog` 为 equality/trivial region-log；实质公式目标需 `PaperHullLogFormulaData`。
+- qVFam P4：paperFaithful 正/有限为 side result，不是 canonical C3 log-shell 载体。
+- 文档 `coord/P0-CNORM-CONSUMERS.md` §4-5、`HANDOFF-OBJECT-TABLE` §19 已写三链对照；`Mzk1PaperCorrectedTargetActual.lean` 已改定位为 canonical S3137/Mzk1Paper312。
+## 2026-11-13 — canonical P0 positioning green（1 条）
+
+- `tmp/sheaf/xif/paper/Mzk1PaperCorrectedTargetActual.lean` watchdog **DONE EXIT=0** @2026-11-12T22:06:11Z（53s）；olean 201504B mtime 22:06:11Z。
+- green：`P0CanonicalTarget := Paper312Statement C3 P`、`p0Target_iff_comparison`（iff S3137 `qThetaPilotLogVolumeComparison`，PENDING）、`p0Target_iff_neg_abs_le`、`p0Target_iff_regionLogVolume`、`P0Gap`。
+- 文档 `coord/P0-CNORM-CONSUMERS.md` §4-5、`HANDOFF-OBJECT-TABLE` §19 已写：canonical S3137/Mzk1Paper312/S3135 vs historical S800/S801 vs qVFam P4 三链对照；S800 j=0 退化（paperHullLog=0）由 `Mzk1PaperHullZeroLabelActual` 记录并引 S779/S793；S801 region-log equality 为历史旁支；qVFam P4 为 side result；P0 唯一实质 gap=`qThetaPilotLogVolumeComparison`（S3137 PENDING）。
+更正：canonical P0 positioning 条目 olean 大小应为 **82448B**（不是 201504B）；DONE 22:06:11Z、source 3514B 不变。
+
+## 2026-11-13 — C3 vs S1902 carrier 判定（1 条）
+
+- `coord/C3-S1902-CARRIER-GAP.md`：S3137 C3 block = ArithmeticTensorTupleBlock C3.tensorPlaces C3.tensorTuple (C3LogShellTensorPacketActual:58-59)，Haar=addHaar (:96-98)，region=tensorIntegralRegion (:74-78)；S1902 carrier = (b:Bad)→rootNormedExtension T b (S1902:104; PaperRootExtensionProductHaar:35-36)，Haar=Measure.pi rootExtensionHaar (:39-41)，hull=rootExtensionProductImageHull (S1902:112)。
+- 判定：不同载体/测度/归一化；`Mzk1HullLogVolumeFormulaActual` 的 productHaar/normalizedLog formula 不能直接用于 S3137 `thetaPilotHullLogVolumeReal`；S1902 文件自述不识别 completion-valued hull（S342）。
+- GAP：C3-S1902-INDEX/FIBER/REGION/HAAR/PAPERNORM；已写 CANONICAL-TARGET-MAP §20。
+## 2026-11-13 — R29 P5 根阶障碍（重要数学修正）+ C3 载体缺口（1 条）
+
+- P5-A6（stepxi）：analytic r 满足 r²=q，实际 qRoot=twoLthRootAt 满足 qRoot^(2l)=q。若命名输入 root_image : toRoot r = qRoot，则要求 qRoot^(2(l−1))=1，l≥5 时非平凡 q_v 不成立 ⇒ 正确根像应为 qRoot^l（(qRoot^l)²=q）。c_j=1 不等价于自然条件：等价于 phase_j=qRoot^{-(2j²)}，而 phase∈μ2l 无法吸收 q 尺度；正确代数形式 c_j·phase_j=qRoot^{-((l+1)j²)}。结论：P5 必须保留真实 q-normalization/root-order 命名输入；不得写 c_j=1 定理。已派 P5-A7 修正 root_image 并重证（ROUTE3-CTHETA §8.9/§8.10）。
+- #2/#5 载体判定（hull）：S3137 C3 载体（ArithmeticTensorTupleBlock，raw addHaar）与 S1902/Hughes5 carrier（(b)→rootNormedExtension，Measure.pi，normalized-by-unit-product）在 index/fiber/region/Haar/归一化五层均不同；记录 GAP-C3-S1902-INDEX/FIBER/REGION/HAAR/PAPERNORM（coord/C3-S1902-CARRIER-GAP.md）；Mzk1C3S1902BridgeActual 条件 transport（C3S1902TransportData，显式字段无 inhabitant）入队。
+- GAP-S3137-C3 识别（abc）：S3137 C3 与 S2717C3 同旧 schema（缺 I 等式+C3 值等式）；S1487 C3 为 L-schema（无旧 schema 构造/逆）；PaperQPilotObjectActual 无 green 构造；donor base-place 缺口。验收口径：跨对象读数相等是条件式。

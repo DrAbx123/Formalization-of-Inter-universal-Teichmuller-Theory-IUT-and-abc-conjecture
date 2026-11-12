@@ -171,3 +171,6 @@
 
 - 06:09：GAP-S3137-C3/THETA 巡检（abc，coord/P6-S3137-C3-IDENTIFICATION.md）：S3137 C3 与 S2717C3 同属旧 schema SourcePilotRegionData（字段逐一对应，缺 index I 等式 + C3 值等式）；S1487 C3 是 L-schema SourcePilotRegionDataL（无旧 schema 构造/逆）；PaperQPilotObjectActual 无 green 构造；donor base-place 缺口。精确缺口：GAP-S3137-C3-I/-VALUE/-INHABIT/-L/-DONOR-BASE。验收口径：S3137 读数只依赖 P.line.C3.q 与 actualC3LogShellTensorHaar/Region，跨对象读数相等是条件式。
 - 06:09：mainline GAP-PC-RESNORM 归约 green：Mzk1PrimeConductorResNormActual DONE 22:08:50Z（RESNORM→RESDEG+BADCHAR）。hull 条件 transport Mzk1C3S1902BridgeActual 入队（C3S1902TransportData，显式字段无 inhabitant）。
+
+- 06:11：**P5 根阶障碍（stepxi，重要修正）**：r²=q 而 twoLthRootAt^(2l)=q ⇒ toRoot r 应为 twoLthRootAt^l（r↦qRoot 会要求 qRoot^(2(l−1))=1，实际不成立）；c_j=1 不等价于自然条件（等价于 phase_j=qRoot^{-(2j²)}，μ2l 无法吸收 q 尺度）；正确形式 c_j·phase_j=qRoot^{-((l+1)j²)}。已记 ROUTE3-CTHETA §8.9；派 stepxi P5-A7 修正 root_image 为 qRoot^l 并重证。**结论：P5 的命名输入必须保留一个真实 q-normalization/root-order 输入，不能消掉。**
+- 06:11：新文件入队（102 项）：Mzk1DualIndexSourceActual（stage4：商等价 φ ⇒ X_G 体积，φ 为显式输入）、Mzk1P3DictQCoeffActual（qpilot：((l+1)/24)logq=sL·AL 纯代数 green；PaperLogQSource 为命名缺口）。
