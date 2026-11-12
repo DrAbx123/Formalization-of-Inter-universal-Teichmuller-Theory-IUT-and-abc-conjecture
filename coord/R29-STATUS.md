@@ -166,3 +166,5 @@
 - 06:06：**P0 canonical 定位 green**：Mzk1PaperCorrectedTargetActual DONE 22:06:11Z（53s）——P0CanonicalTarget=Paper312Statement、p0Target_iff_comparison↔S3137 qThetaPilotLogVolumeComparison（PENDING）、iff_neg_abs_le/iff_regionLogVolume、P0Gap；三链对照写入 P0-CNORM-CONSUMERS §4-5 与 HANDOFF-OBJECT-TABLE §19；P0 验收口径改为 S3137 两读数+Paper312Statement；S800/S801/qVFam P4 仅历史/旁支。下一步 hull 攻 7 missing 的 #2/#5（用 Mzk1HullLogVolumeFormulaActual 的 normalizedLog_hull_eq_sum_diff 桥 C3 载体 Haar log ↔ 系数和）。
 
 - 06:07：P5-A5 green：Mzk1P5ThetaRootUnitActual DONE 22:07:30Z（58s）——paperRootThetaUnit j v0 = twoLthRootAt^{gaussExponent}（rfl）、pow_twoL 形式、actualP5Bridge_qRoot_eq（rfl）、hcomparison_qRoot_iff；P5 命名输入只剩 analytic 值比较（c_j/hcomparison）+ toRoot/r。P2/P6：Mzk1DualIndexLinkActual DONE 22:07:30Z（58s）——X≤L 紧开+商基数 ⇒ μX/μL=(∏p^{e_i})^{-1} 条件版。
+
+- 06:08：#2/#5 载体判定（hull）：S3137 C3 载体 ≠ S1902/Hughes5 carrier（index/fiber/region/Haar/归一化均不同）→ coord/C3-S1902-CARRIER-GAP.md（GAP-C3-S1902-INDEX/FIBER/REGION/HAAR/PAPERNORM）；CANONICAL-TARGET-MAP §20 已追加。已让 hull 写条件 transport 接口（C3S1902TransportData，显式字段、不构造 inhabitant、不冒充比较）；stage4 的 X_G×diagonal 条件版 green（μX/μL=(∏p^{e_i})^{-1}）。
