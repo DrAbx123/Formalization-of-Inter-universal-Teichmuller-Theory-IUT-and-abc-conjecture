@@ -306,3 +306,5 @@
 - 07:04：stepxi PhaseDerived green（root_image_zpow：toRoot(r^N)=qRoot^(l*N)，23:01:07Z，70s）；phase 残留（c_j·phase_j·qRoot^((l+1)n)=1）是纯证明工程，已给精确脚本提示；LabelZero 已确认不在名单。
 
 - 07:05：hull 第三批 5 份（C3DictionaryRows/C3DIndexData/PaperVFactor/PaperVFactorRows/StepXIContractSchema）入队（225 项），对应 C3-vs-D/paper V normalization/StepXIContract schema。
+
+- 07:05：lattice c=1 green（HaarScalarOneActual 23:02:22Z，54s；addHaarScalarFactor_eq_one_of_lattice，API 修正在 namespace MeasureTheory.Measure + dot 形式）；hνO 路线已给（Measure.map_apply 是 preimage → 证 L⁻¹'O=O），全 sets 留 GAP。
