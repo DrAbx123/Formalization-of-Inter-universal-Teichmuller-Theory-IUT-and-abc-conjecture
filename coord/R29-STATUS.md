@@ -106,3 +106,5 @@
 - **P6**：Mzk1MatrixHaarBaseActual 迭代中（GL_d(Z_p) 保格 green；Haar 不变/对角缩放/det 公式 GAP）；Mzk1DualTransposeActual 已写（GAP-DUAL-TRANSPOSE 配对形式起点）。
 - **P4**：hull 拆分 Mzk1PaperFaithfulHullP4Actual（P0 文件恢复版仍 FAIL 21:23:58，hull 迭代中）。
 - **周期 git**：main repo commit 968d6c3eb（coord/ 文档 + AUDIT_LEDGER + watchdog 配置）；audit repo commit 646a239。
+
+- 05:29：Mzk1P5CompareActual DONE 21:28:00Z（P5-A2 条件比较定理：toRoot(analytic ratio)=c·qRoot^{j²}，两个命名输入）；Mzk1DualTransposeActual DONE 21:28:54Z（GAP-DUAL-TRANSPOSE 配对形式/leftAdjoint 起点）。Mzk1PaperFaithfulHullP4Actual、Mzk1PrimeConductorUnconditionalActual、Mzk1SourceNativeQActual、Mzk1StepVVolumeActual 仍在迭代。
