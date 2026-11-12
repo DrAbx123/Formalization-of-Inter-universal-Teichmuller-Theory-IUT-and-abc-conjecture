@@ -472,3 +472,5 @@
 - 08:30：stepxi PhaseExponentData green（23:47:58Z，74s）；ComparisonDerived green（hcomparison 定理化）；P5FinalSummary（P5NamedInputs 四项 + bridgeOfInputs + p5_final_comparison）待编；ROUTE3 §8.20 与 CANONICAL §21 已写。
 
 - 08:32：FLT helper 再修两处（ModuleTopology:538 补 IsOpenMap 参数；UniformRing 补 mapRingHom_coe）并 retouch 6 文件；lattice hOpos/hOfin 用 coordinateCompacts+addHaarMeasure_self=1 解决，已 retouch。
+
+- 08:34：UniformRing map_smul 顺序修正（smul 重写后 mapRingHom_coe）；ModuleTopology/Tower/UniformRing retouch（Tower olean 已在；此前日志交错）。shehdd ResidueFieldEquiv green（23:54:04Z）：localResidueDegree=1 归约到单个 residue-field 同构输入；gate §21 clean 309。
