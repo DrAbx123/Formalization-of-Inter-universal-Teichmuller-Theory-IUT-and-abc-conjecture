@@ -150,3 +150,8 @@ tmp/sheaf/xif/paper/Mzk1P3L7AssemblyActual.lean
 tmp/sheaf/xif/paper/Mzk1P3GapLedgerActual.lean
 tmp/sheaf/xif/paper/Mzk1P3NormFormulaActual.lean
 tmp/sheaf/xif/paper/Mzk1P5LabelZeroSeparateActual.lean
+tmp/sheaf/xif/paper/Mzk1P7Missing7StatusActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33GapInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaFactorArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1ArchFactorRatioActual.lean
+tmp/sheaf/xif/paper/Mzk1HullBoundConstantActual.lean

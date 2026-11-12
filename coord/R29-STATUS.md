@@ -242,3 +242,5 @@
 - 06:34：用户指令：上下文上限是幻觉，不得因上下文缩减工作/留 TODO/提前收尾；从 workspace 重读丢失细节，保持每 lane 5-10 份完整文件、修到绿。已广播全队。
 
 - 06:35：批量 green 潮：P3GapLedger/P3NormFormula/P3ResNormSlack/P3BadCharPrime DONE（22:34:50-56Z，各 ~50-55s，mainline 批）；StepXIEvidenceInterface 首编 FAIL（abc 修）；watchdog 12 线程续排。
+
+- 06:36：abc 批 5 份入队（157 项）；已 DONE：ArchFactorDegreeOne（22:35:27Z）、HullUpperBoundInterface（22:35:15Z）、ThetaRawPacketFactor；StepXIEvidence 修 def 后待重编；新文档 coord/P7-BATCH-STATUS.md。
