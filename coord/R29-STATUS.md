@@ -444,3 +444,5 @@
 - 08:11：stage4 GLAct（glAct_mem_coordSmall）与 SNFDiagEquiv（snf_eq_span_diag）入队（332 项）；DiagVolumeProved 23:41 START 待结果。
 
 - 08:12：IntegralClosure 修正 namespace——`Algebra.IsAlgebraic.finrank_of_isFractionRing`（非裸名）；stepxi P5FinalSummary（P5NamedInputs 四项 + bridgeOfInputs + p5_final_comparison）入队（333 项）。
+
+- 08:13：hull 5 份（P inhabitant 条件构造器 + 成本审计：C2/logKummer/logKummer_eq 三实际源缺失且类型不匹配；#7 mainTerm 实际来源 disc/cond ⇒ V≤(1/4)l(log disc+log cond), C0=0）入队（338 项）。

@@ -331,3 +331,8 @@ tmp/sheaf/xif/paper/Mzk1ComparisonConditionActual.lean
 tmp/sheaf/xif/paper/Mzk1GLActActual.lean
 tmp/sheaf/xif/paper/Mzk1SNFDiagEquivActual.lean
 tmp/sheaf/xif/paper/Mzk1P5FinalSummaryActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotActualComponentsActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotActualCostAuditActual.lean
+tmp/sheaf/xif/paper/Mzk1MainTermActualNonnegActual.lean
+tmp/sheaf/xif/paper/Mzk1MainTermActualBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1C0MainTermRowsActual.lean
