@@ -238,3 +238,14 @@ tmp/sheaf/xif/paper/Mzk1RawThetaLogSignActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVNormNonnegActual.lean
 tmp/sheaf/xif/paper/Mzk1P7InterfaceStatusActual.lean
 tmp/sheaf/xif/paper/Mzk1HullGreenInterfacesActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictL7SSIneqArchActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQAbsLogIdentityActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDOrdConvertActual.lean
+tmp/sheaf/xif/paper/Mzk1P3ArithmeticRelativeBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1P3BadCharPrimeEquivActual.lean
+tmp/sheaf/xif/paper/Mzk1P3BadCharDegActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDOrderDefsActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDOrderDefEqActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDResNormComapActual.lean
+tmp/sheaf/xif/paper/Mzk1S3137ThetaDefectFactorActual.lean
+tmp/sheaf/xif/paper/Mzk1S3137ThetaBlockFactorNonposActual.lean
