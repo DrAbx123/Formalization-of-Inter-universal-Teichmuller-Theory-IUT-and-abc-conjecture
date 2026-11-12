@@ -111,3 +111,10 @@ tmp/sheaf/xif/paper/Mzk1P3DictCDirectionActual.lean
 tmp/sheaf/xif/paper/Mzk1GLHaarConditionalActual.lean
 tmp/sheaf/xif/paper/Mzk1P5QNormalizationInputActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaRawPacketFactorActual.lean
+tmp/sheaf/xif/paper/Mzk1GLActBundlingActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagonalProductScalingConditionActual.lean
+tmp/sheaf/xif/paper/Mzk1RestrictedDetConditionalActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagonalPermutationActual.lean
+tmp/sheaf/xif/paper/Mzk1ExactHullVUpperBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIContractEvidenceMapActual.lean
+tmp/sheaf/xif/paper/Mzk1P4CExternalStageContainerActual.lean

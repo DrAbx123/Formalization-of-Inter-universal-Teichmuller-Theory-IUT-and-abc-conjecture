@@ -222,3 +222,5 @@
 - 06:27：批量文件入队（113 项）：Mzk1GLHaarConditionalActual（lattice：ν=μ.map(glAct V) additive Haar + c=1 ⇒ compact closure 上不变）、Mzk1P5QNormalizationInputActual（stepxi：P5QNormalizationInput 结构 + p5_bridge_compare 推导）、Mzk1ThetaRawPacketFactorActual（abc：#5 因子链 raw θ=[C3 block:Q_p]×candidateNormalizedV + p-scaling；GAP-P7-THETA-V/-D/-DEG）。批量化模式已开：各 lane 2-4 份/轮，全队 ≤10/轮。
 
 - 06:28：**更正**：批量化=每人 ~10 份/轮（不是全队 10 份）；watchdog 12 线程一次并行 12 文件；已广播 8 lane 放开生产（每 lane 5-10 份小文件/轮）。
+
+- 06:29：批量入队 7 份（120 项）：lattice 4（GLActBundling/DiagonalProductScalingCondition/RestrictedDetConditional/DiagonalPermutation）、hull 3（ExactHullVUpperBound/StepXIContractEvidenceMap/P4CExternalStageContainer）；stage4 因 universe 阻塞本轮未产出，给修法（显式 d 参数/泛化 Type u）。
