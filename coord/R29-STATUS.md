@@ -372,3 +372,5 @@
 - 07:25：qpilot 找到实际 Δ_min：`Iut.Abc.Counting.CurveData.disc`（Basic.lean:106-116）→ Mzk1P3DictDCurveDataSourceActual（disc=p^e 命名输入下构造 PrimeConductorCurve + logDisc=log disc）；D 侧 source 从纯命名降为“实际 CurveData.disc + 支撑等式”接口。入队（296 项）。
 
 - 07:26：abc 发现 **Mathlib 自带 RestrictedProduct**（Topology/Algebra/RestrictedProduct/Basic.lean:79，`Πʳ`），复用文件 Mzk1RestrictedProductReuse（IQRestrictedProductCarrier skeleton，GAP-P7-IQ-LITERAL 保留）入队（297 项）；自写版标 DEPRECATED-BY-REUSE。
+
+- 07:28：**OuterRegular 实例来源定位**：Mathlib `regular_haarMeasure`（Haar/Basic.lean:548）+ `Regular extends OuterRegular`（Regular.lean:317）⇒ canonical `haarMeasure K₀` 自动 OuterRegular；lattice 的 map_eq_of_image_eq 可去条件（只剩 glAct 打包）。hull 第五批 5/5 green（C3DFieldLevelAssembly/C3DPlaceTupleData/C3DStatusConsumer/PaperVRatioReadings/StepXIEvidenceConsumer），hull 累计 ~30 份；外部搜索结论：paper normalization/C3-vs-D/hull V 上界无 FLT/tauceti 可复用，继续自写。
