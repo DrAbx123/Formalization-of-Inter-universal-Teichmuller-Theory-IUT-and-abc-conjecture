@@ -364,3 +364,5 @@
 - 07:20：用户指令广播（Mathlib 缺 → 查 tmp/external/ported 与 GitHub → tools/port_* 转码 → 自写；禁 axiom/sorry），按 lane 给出各自阻塞点与搜索方向；hull 第五批 5 份入队（264 项）。
 
 - 07:21：stepxi Mzk1P5HunitDerivedActual（在 instantiate 桥下证 hunit，消掉 phase_relation 的 hunit 假设）入队（265 项）。
+
+- 07:22：**SNF 发现（无需移植）**：Mathlib 有 `Submodule.smithNormalForm`（FreeModule/PID.lean:40），ℤ_[p] 是 DVR ⇒ 继承 PID 类（DiscreteValuationRing/Basic:115 + PadicIntegers:521）⇒ GAP-DUAL-SNF 可直接用 Mathlib！已告知 stage4；DiagVolumeProved 入队（266 项），DiagEquivProved retouch。另：GitHub 搜索显示 anthropics/fermats-last-theorem 可用作 ramification 移植参考；reservoir NormalForms 与 SNF 无关。
