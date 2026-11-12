@@ -414,3 +414,5 @@
 - 07:52：**FLT 突破**：Mathlib/RingTheory/Localization/BaseChange DONE（23:32:18Z，induction zero 修复生效）；IntegralClosure START 23:32:18。之后 Completion/BaseChange（ramificationIdx_eq_ramificationIdx/inertiaDeg_eq_inertiaDeg）将自动接编——mainline 准备 Mzk1P3AgreeFLTActual。stage4 DiagVolumeProved/SNFTool 已 retouch。
 
 - 07:53：hull 3 份首错修复（补 imports/opens、P 参数由 S2711I 决定、s1902UnitRegion simp）并已 retouch；等 HaarStrict olean 与新 run。
+
+- 07:55：hull **ExactHullVMainTerm green（23:33:31Z，107s）**——`normalizedLog_hull_nonpos` + `normalizedLog_hull_le_mainTerm` 实际主项界定理化；Paper312/LocalZero 已 retouch（补 opens、等 HaarStrict）。IntegralClosure 再修两处 pin：`IsFractionRing.finrank_eq → IsIntegralClosure.rank`（Mathlib/DedekindDomain/IntegralClosure.lean:191 的改名）+ induction 补 zero 分支，retouch 待重编。
