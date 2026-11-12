@@ -214,3 +214,5 @@
 - 06:24：QHALF⇐WEIGHT green（qpilot）：Mzk1P3DictQCoeffActual DONE 22:23:30Z——GAP_PC_QHALF_of_weight_one、nativeSignedLogQ_eq_twoL_mul_qPacket_of_weight_one（条件归约，非新假设）；P6 的 q-half 现归约到 P3 的 GAP-PC-WEIGHT。qpilot 接 DICT-C 方向分析。
 
 - 06:25：**DICT-C 判定（qpilot）**：Mzk1P3DictCDirectionActual——`boxSlack_nonneg_of_L6`（L6 + l≥5 + S,T≥0 ⇒ 0≤boxSlack）green；**反例 `boxSlack_nonneg_not_implies_L6`**（p=2,e=1,l=5,D=S=T=Q=0：boxSlack=0 但 log2≤0 假）⇒ DICT-C **不是双向代数等价**；reverse 需 D=D_exact + e·logp 下界（L7/DExactLowerTarget）。P3-TARGET-EQUIV §6/§9 将更新。
+
+- 06:25：reconciliation 文件重编 green（22:25:05Z，5s）：#2/#5 evidence 与 missing 条目均标 named-data interface only (CONDITIONAL, not progress)；C3S1902TransportData 仍无 inhabitant，qThetaPilotLogVolumeComparison PENDING。
