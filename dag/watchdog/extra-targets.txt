@@ -106,3 +106,4 @@ tmp/sheaf/xif/paper/Mzk1NormArchCHArcActual.lean
 tmp/sheaf/xif/paper/Mzk1PermutationHaarActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33InterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1PrimeConductorBadCharActual.lean
+tmp/sheaf/xif/paper/Mzk1HolomorphicHullLogVolumeReconciliationActual.lean
