@@ -169,3 +169,9 @@ tmp/sheaf/xif/paper/Mzk1HullUpperBoundTransferActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDLogDiscBoundActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQNonnegActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictCReverseNativeDExactActual.lean
+tmp/sheaf/xif/paper/Mzk1ExactHullVAssemblyActual.lean
+tmp/sheaf/xif/paper/Mzk1Cor312SignedArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1ArchFactorProductActual.lean
+tmp/sheaf/xif/paper/Mzk1HullBoundAddTransferActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonTargetInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1P7CountsActual.lean
