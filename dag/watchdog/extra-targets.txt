@@ -218,3 +218,8 @@ tmp/sheaf/xif/paper/Mzk1RawThetaReadoutBoundsActual.lean
 tmp/sheaf/xif/paper/Mzk1DegreeSignConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1ArchFactorMonotoneActual.lean
 tmp/sheaf/xif/paper/Mzk1P7GapRegisterActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DictionaryRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DIndexDataActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperVFactorActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperVFactorRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIContractSchemaActual.lean
