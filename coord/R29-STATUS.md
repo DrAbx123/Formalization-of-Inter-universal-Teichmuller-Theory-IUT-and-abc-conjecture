@@ -264,3 +264,5 @@
 - 06:45：hull lane 8/8 green（含 ExactHullVUpperBound）；新 ExactHullVAssembly（#7 装配）入队；abc 第三批 5 份入队；watchdog 177 项。
 
 - 06:46：stage4 2 新 green：DiagCardF（22:44:01，46s）、DiagEmbeddingEquiv（22:45:40，36s，改为 definition-only 稳定版）；DiagEmbeddingInj/Diag2x2 重写、DiagonalDual 改 CONDITIONAL wrapper；φ 下一步在 stable 基座上重建 e'=LinearEquiv.ofBijective → map=coordDual → mapQ 商。
+
+- 06:47：shehdd batch 5 全绿（QCANDOrderResidue/QCANDAssembly/S3137ThetaRawEq/S3137ThetaPacketRawGap/C17QPLACEChoiceGap）+ WeightedDetPacketInstance（QCAND 追加后 DONE 22:44:52Z）；QCAND 精确化为 ORDER+RESNORM，QPLACE 仍未证（choice）。gate §16：extra=177 → clean 160 + ole-only 6 + stale 1（PaperFaithfulHull）+ red 10；P7 NOT PASSED。
