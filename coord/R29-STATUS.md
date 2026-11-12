@@ -138,3 +138,5 @@
 - 05:48：P4 收口：Mzk1PaperBlockTargetActual DONE 21:47:37Z（78s）——S800 块级 paper 目标 qPilotPaperRegionLog_le_paperHullLog 的 pos/fin 无条件 discharge（leastLambdaOHull over rootThetaImageSet rootHalfCoefficient；含 j=0，与 P4 的 NonzeroHull 口径不同，未混用）；task-94/110/115 全部 completed，GAP-P4-POS 解除。hull 接 P0-A（c_norm 消费者审计 + paper-faithful 替代接口）。
 
 - 05:50：P6-B1 green：Mzk1WeightedDetPacketInstanceActual DONE 21:50:23Z（具体 q/theta packet 实例；GAP-P6-C17-DICT-INST 命名缺口）；P6-A.1：Mzk1DiagonalIndexActual 已写（∏ p^{e_i} 商的 cardinal = ∏ p^{e_i}，quotientPi 路线），待编译后接 μ scaling。P3：Mzk1P3DictBActual 首编 FAIL（qpilot 修）；Ind1 桥单向包含首编 FAIL（stage4 修）。
+
+- 05:52：P6：Mzk1NormFactorDictionaryActual（abc：paperCRoot=S3050Unit 系数、paperArchFactor=1/(2l)、T re-export；GAP-NORM-ARCH-C 记录 1/[K:Q] 无实际对象）入队；stage4 反向 reindex 得到 Mathlib reindex_trans/reindex_symm 提示；shehdd 下一步拆 GAP_P6_C17_DICT_INST 的 q 侧（qPacket.normalized = qActualNormalized）。
