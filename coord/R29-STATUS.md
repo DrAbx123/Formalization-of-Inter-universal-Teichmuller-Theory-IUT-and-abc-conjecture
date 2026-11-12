@@ -434,3 +434,5 @@
 - 08:06：hull 3/3 green（Paper312ActualDonorC3 23:39:19Z、ExactHullVLocalZero 23:39:18Z、VMainTerm 23:33:31Z）——C3-I/VALUE 固定为实际 donor C3，只剩 PaperQPilotObjectActual inhabitant；#7 实际 local/main-term 界 green。派下一步：尝试构造 PaperQPilotObjectActual inhabitant + C0/mainTerm 来源。
 
 - 08:07：stage4 SNFTool green（23:33:54Z，28s，exists_smith_normal_form）；BasisDetUnit/SNFDiag 入队（328 项）；DiagVolumeProved 修变量/open/hle 后 retouch。
+
+- 08:08：lattice CanonicalHaarCoordLattice（coordLattice 质量正有限 + canonical full map_eq）入队（328 项）；剩 glAct 打包与对角 scaling。
