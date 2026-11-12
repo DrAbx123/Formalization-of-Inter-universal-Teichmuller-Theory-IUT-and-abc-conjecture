@@ -223,3 +223,6 @@ tmp/sheaf/xif/paper/Mzk1C3DIndexDataActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperVFactorActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperVFactorRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIContractSchemaActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictBDArithNativeActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDOrdInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQHALFRegressionActual.lean
