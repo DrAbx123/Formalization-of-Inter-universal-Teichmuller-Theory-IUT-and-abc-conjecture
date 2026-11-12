@@ -412,3 +412,5 @@
 - 07:50：lattice canonical OuterRegular 仍 FAIL——已给精确写法（`haveI : (addHaarMeasure K₀).Regular := regular_addHaarMeasure`; 再 `Regular.toOuterRegular`/inferInstance/⟨outerRegular⟩），说明 class Regular extends OuterRegular（Regular.lean:317）且 additive 实例名由 to_additive 生成。
 
 - 07:52：**FLT 突破**：Mathlib/RingTheory/Localization/BaseChange DONE（23:32:18Z，induction zero 修复生效）；IntegralClosure START 23:32:18。之后 Completion/BaseChange（ramificationIdx_eq_ramificationIdx/inertiaDeg_eq_inertiaDeg）将自动接编——mainline 准备 Mzk1P3AgreeFLTActual。stage4 DiagVolumeProved/SNFTool 已 retouch。
+
+- 07:53：hull 3 份首错修复（补 imports/opens、P 参数由 S2711I 决定、s1902UnitRegion simp）并已 retouch；等 HaarStrict olean 与新 run。
