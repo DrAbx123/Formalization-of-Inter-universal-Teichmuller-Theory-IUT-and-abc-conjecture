@@ -28574,3 +28574,22 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P3-E（P3 最小交付）green：Mzk1PrimeConductorUnconditionalActual DONE EXIT=0（21:32:45Z，62s）——把 paperGap_of_primeConductor 的抽象 hD 换成对实际 nativeDExact T arch = Σ_b nativeBadLocalWeight·baseQLogMagnitude + arch 的定理：nativeDExact_L7_of_conditions（GAP-PC-WEIGHT: ∀b weight=1；GAP-PC-LOGSUM: log p ≤ Σ baseQLogMagnitude；arch≥0）⇒ DExactLowerTarget；primeConductor_ssIneqExplicit_of_actual ⇒ SSIneqExplicit，只依赖外部 Mestre–Oesterlé 参数（显式 Prop 参数，未当已证、无 axiom/sorry）。剩余：两个内容缺口的实际来源、素导子 Θ-data 合法性。
 - qpilot：Mzk1StepVScalingDataActual 已写——stepVScalingDataOfGenerator（用 arithmeticTuplePureFractionalScalingData_ofGenerator 从实际 generators 生产 scaling data）⇒ stepVRegion_volume_eq_ofGenerator；缺 StepVQRootSourceGap（qroot^{label²} 的 norm + 零因子 unit generators）。
 - hull：Mzk1PaperBlockTargetActual 已写——leastLambdaOHull paperPossibleImages ⊆ qPilotPaperRegion、qPilotPaperRegion/paperHull measure_lt_top、qPilotPaperRegionLog_le_paperHullLog_unconditional（discharge S800 pos/fin）；明确 S800 paperHullLog（least λ-O hull at rootHalf）≠ P4 的 paperFaithfulThetaHull（NonzeroHull），不混用。
+
+## 2026-11-13 — task-115 block paper target green（1 条）
+
+- `tmp/sheaf/xif/paper/Mzk1PaperBlockTargetActual.lean` watchdog **DONE EXIT=0** @2026-11-12T21:47:37Z（78s）；olean 140680B mtime 21:47:36Z；117 行/5392B。
+- 定理：`lambdaORegion_zero_mem_candidate`、`leastLambdaOHull_subset_lambdaORegion_zero`、`lambdaORegion_zero_measure_lt_top`（F(0)=R，R*O_hol=O_hol，canonical 紧）、`paperHull_measure_lt_top`、`qPilotPaperRegionLog_le_paperHullLog_unconditional`。
+- 口径：S800 `paperHullLog` 用 `leastLambdaOHull` over `rootThetaImageSet rootHalfCoefficient`（SignedLabel 含 j=0），**不是** P4 的 `paperFaithfulThetaHull`（PaperNonzeroLabel/paperRootCoefficient）；本包不用 P4 做 hfin，不混用；差异已写 rows/doc §17。
+- 文档 HANDOFF-OBJECT-TABLE §17-18 已追加，保留历史。
+## 2026-11-13 — P0-A unconditional paper target green（1 条）
+
+- `tmp/sheaf/xif/paper/Mzk1PaperTargetNormalizationUnconditionalActual.lean` watchdog **DONE EXIT=0** @2026-11-12T21:51:48Z（63s）；olean 111776B mtime 21:51:48Z；67 行。
+- green：`paperTargetNormalization_unconditional : PaperTargetNormalization`、`paperM_nonneg_unconditional : 0 ≤ paperM`。证明用 S778 `qPilotPaperRegion_measure_pos` + `Mzk1PaperBlockTargetActual.paperHull_measure_lt_top` 真正 discharge 旧条件版 `paperTargetNormalization_of_pos_fin` 的 pos/fin；不改旧文件、不用系数桥。
+- 审计 `coord/P0-CNORM-CONSUMERS.md`：列出仍用 c_norm 的 green 消费者（QVFamNormalizedCoefficientActual、RootNormalizedContainment、RootHullContainmentInequality、Ind3OutputHullQPilotActual 等）file:line、paper-faithful 判定与替代接口；明确 c_norm=order 只是模型，paper q_v 系数 c_root=order/(2l)，S1074 e=1 是 pending gap。
+更正：P0-A 条目中 olean 大小应为 **53512B**（不是 111776B）；DONE 21:51:48Z 与 source 67 行/2655B 不变。
+## 2026-11-13 — R29 第八波：无条件块级 paper 目标 + 对角 index cardinal + P6-B1 具体 packet（1 条）
+
+- P0-A green：Mzk1PaperTargetNormalizationUnconditionalActual DONE（21:51:48Z，63s）——用 S778 qPilotPaperRegion_measure_pos + Mzk1PaperBlockTargetActual.paperHull_measure_lt_top discharge pos/fin，得 paperTargetNormalization 与 paperM_nonneg 无条件（块级、口径为 leastLambdaOHull 含 j=0；不混用 P4 NonzeroHull）。
+- P6-A.1 green：Mzk1DiagonalIndexActual DONE（21:52:34Z，25s）——Nat.card ((d→Z_p)⧸∏p^{e_i}) = ∏p^{e_i}（Submodule.quotientPi + natCard_quotient_span_padicInt_pow + Nat.card_pi）；μ scaling 前置 cardinal 完成，下一步 measure_eq_index_mul_intersection。
+- P6-B1 green：Mzk1WeightedDetPacketInstanceActual DONE（21:50:23Z，62s）——具体 qPacket/thetaPacket（signed q log、classical Θ 系数和、共同 denominator 2l、commonTensorDegree=(2l)^#Bad）；GAP_P6_C17_DICT_INST 作命名 Prop（q 侧可望先闭合）。
+- P6-NORM：Mzk1NormArchDegreeActual DONE（GAP-NORM-ARCH 接口）；Mzk1NormFactorDictionaryActual 入队（paperCRoot=order/(2l)、paperArchFactor=1/(2l)、T re-export；GAP-NORM-ARCH-C：1/[K:Q] 无实际对象）。

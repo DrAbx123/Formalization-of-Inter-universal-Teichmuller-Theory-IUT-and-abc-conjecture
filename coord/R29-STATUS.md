@@ -140,3 +140,5 @@
 - 05:50：P6-B1 green：Mzk1WeightedDetPacketInstanceActual DONE 21:50:23Z（具体 q/theta packet 实例；GAP-P6-C17-DICT-INST 命名缺口）；P6-A.1：Mzk1DiagonalIndexActual 已写（∏ p^{e_i} 商的 cardinal = ∏ p^{e_i}，quotientPi 路线），待编译后接 μ scaling。P3：Mzk1P3DictBActual 首编 FAIL（qpilot 修）；Ind1 桥单向包含首编 FAIL（stage4 修）。
 
 - 05:52：P6：Mzk1NormFactorDictionaryActual（abc：paperCRoot=S3050Unit 系数、paperArchFactor=1/(2l)、T re-export；GAP-NORM-ARCH-C 记录 1/[K:Q] 无实际对象）入队；stage4 反向 reindex 得到 Mathlib reindex_trans/reindex_symm 提示；shehdd 下一步拆 GAP_P6_C17_DICT_INST 的 q 侧（qPacket.normalized = qActualNormalized）。
+
+- 05:52：**P6-A.1 关键**：Mzk1DiagonalIndexActual DONE 21:52:34Z（25s）——Nat.card ((d→Z_p)⧸∏p^{e_i}) = ∏p^{e_i}（quotientPi 路线），μ scaling 的前置 cardinal 已 green；lattice 接着套 measure_eq_index_mul_intersection。**P0-A**：Mzk1PaperTargetNormalizationUnconditionalActual DONE 21:51:48Z（63s）——paperTargetNormalization 与 paperM_nonneg 的 pos/fin 被 S778+Mzk1PaperBlockTargetActual discharge，得到无条件块级 paper 目标（口径仍为 leastLambdaOHull/含 j=0，未混用 P4 NonzeroHull）。
