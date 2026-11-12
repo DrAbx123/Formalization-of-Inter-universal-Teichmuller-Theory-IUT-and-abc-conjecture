@@ -28642,3 +28642,17 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P5-A6（stepxi）：analytic r 满足 r²=q，实际 qRoot=twoLthRootAt 满足 qRoot^(2l)=q。若命名输入 root_image : toRoot r = qRoot，则要求 qRoot^(2(l−1))=1，l≥5 时非平凡 q_v 不成立 ⇒ 正确根像应为 qRoot^l（(qRoot^l)²=q）。c_j=1 不等价于自然条件：等价于 phase_j=qRoot^{-(2j²)}，而 phase∈μ2l 无法吸收 q 尺度；正确代数形式 c_j·phase_j=qRoot^{-((l+1)j²)}。结论：P5 必须保留真实 q-normalization/root-order 命名输入；不得写 c_j=1 定理。已派 P5-A7 修正 root_image 并重证（ROUTE3-CTHETA §8.9/§8.10）。
 - #2/#5 载体判定（hull）：S3137 C3 载体（ArithmeticTensorTupleBlock，raw addHaar）与 S1902/Hughes5 carrier（(b)→rootNormedExtension，Measure.pi，normalized-by-unit-product）在 index/fiber/region/Haar/归一化五层均不同；记录 GAP-C3-S1902-INDEX/FIBER/REGION/HAAR/PAPERNORM（coord/C3-S1902-CARRIER-GAP.md）；Mzk1C3S1902BridgeActual 条件 transport（C3S1902TransportData，显式字段无 inhabitant）入队。
 - GAP-S3137-C3 识别（abc）：S3137 C3 与 S2717C3 同旧 schema（缺 I 等式+C3 值等式）；S1487 C3 为 L-schema（无旧 schema 构造/逆）；PaperQPilotObjectActual 无 green 构造；donor base-place 缺口。验收口径：跨对象读数相等是条件式。
+
+## 2026-11-13 — C3↔S1902 conditional transport interface（1 条）
+
+- `tmp/sheaf/xif/paper/Mzk1C3S1902BridgeActual.lean` watchdog **DONE EXIT=0** @2026-11-12T22:22:09Z（60s）；olean 265416B；110 行/4940B。
+- `structure C3S1902TransportData` 字段：blockEquiv、region_eq、haarScale/pos、haar_apply；**无 inhabitant**。
+- green：`hull_measure_toReal_pos`、`unit_measure_toReal_pos`、`thetaRead_eq_s1902_normalized_add_correction`（raw θ read = S1902 normalized log + log haarScale + log unit mass）。
+- 定位：reconciliation #5/#2 的可寻址接口，不是进展；不塞 qTheta comparison，不声称载体识别已构造。
+- `coord/C3-S1902-CARRIER-GAP.md` §5 已追加。
+## 2026-11-13 — R29 第九波：置换 Haar / QPLACE 拆分 / 条件 transport / Ob3-3 接口（1 条）
+
+- P6-A.1：Mzk1PermutationHaarActual DONE 22:22:53Z——permAct_image_coordLattice（置换保 Z_p^d）、measure_pi_perm_coordLattice；置换子群 green，一般 GL_d(Z_p) Haar 不变仍 GAP（计划：ν=μ.map(glAct V) 为 additive Haar ⇒ ν=c*μ；Z_p^d 上 image 等号 ⇒ c=1）。
+- P6 (C17)：Mzk1WeightedDetPacketInstance DONE 22:22:09Z——QPLACE（fkDescentShadow = nativeBadLift.lift，同载体 FinitePlace A.F）与 QCAND 显式化；QHALF_of_QPLACE_QCAND PROVED；类型更正：sectionFiniteLift 返回 FinitePlace A.K，不能与 nativeBadLift.lift（A.F）字面相等；S1413ShadowEqualsNative 未证。
+- P0 #2/#5：Mzk1C3S1902BridgeActual DONE 22:22:09Z——条件 transport 接口（C3S1902TransportData: blockEquiv/region_eq/haarScale/haar_apply，无 inhabitant）；thetaRead_eq_s1902_normalized_add_correction；真正缺口=inhabitant + paper normalization 字典。
+- P7 #3：Mzk1Ob33InterfaceActual DONE 22:23:05Z——Ob33SourceIdentification named input + 条件 weighted 对齐 + 非空实例；GAP-P7-OB33-SRC 保留（非 discharge）。
