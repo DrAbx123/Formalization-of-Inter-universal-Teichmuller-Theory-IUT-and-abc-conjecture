@@ -118,3 +118,5 @@ tmp/sheaf/xif/paper/Mzk1DiagonalPermutationActual.lean
 tmp/sheaf/xif/paper/Mzk1ExactHullVUpperBoundActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIContractEvidenceMapActual.lean
 tmp/sheaf/xif/paper/Mzk1P4CExternalStageContainerActual.lean
+tmp/sheaf/xif/paper/Mzk1P5PhaseRelationActual.lean
+tmp/sheaf/xif/paper/Mzk1P5CJConditionActual.lean
