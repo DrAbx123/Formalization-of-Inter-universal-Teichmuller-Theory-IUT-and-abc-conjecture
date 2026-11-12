@@ -130,3 +130,5 @@
 - 05:45（用户口径）：先证我们能证的；Mestre–Oesterlé 未形式化部分不急（保持显式外部参数）。优先：GAP-PC-WEIGHT 子缺口 / RESNORM / DICT-B-C 实际对象 / StepVQRootSource / Haar 不变 / X_G / C18 / P5 label-phase 条件链。
 
 - 05:44：P5-A3 green：Mzk1P5BridgeIntegrationActual DONE 21:43:11Z（53s）——P5AnalyticRootBridge 结构（toRoot/r/qRoot/thetaUnit/c/phase/phase_pow/comparison 全显式）+ 条件定理 p5_bridge_compare = c_j·phase_j·thetaUnit_j；GAP：thetaUnit 未证等于实际 paperRootThetaUnit、phase 未证等于 paperRootThetaMuPoint、analytic↔root 未构造（named-structure 层）。P5BridgeIntegration 的 per-file log 里早期 sorryAx 是临时尝试残留，最终 DONE 源无 sorry/axiom。
+
+- 05:46：P6-NORM：Mzk1NormFunctorialityActual DONE 21:45:33Z（C18 det_restrictScalars_eq_norm_det + norm_norm_rel）；Mzk1NormArchDegreeActual 已写（archNormalizedDegree/archNormalizedDegree_of_degree_zero/principalUnit；剩 paper 1/[K:Q]、1/(2l) 与 c 的识别 GAP-NORM-ARCH）。
