@@ -192,3 +192,8 @@ tmp/sheaf/xif/paper/Mzk1C17QCANDResNormLogActual.lean
 tmp/sheaf/xif/paper/Mzk1S3137ThetaDefectNormActual.lean
 tmp/sheaf/xif/paper/Mzk1C17QPLACELiftUniqueActual.lean
 tmp/sheaf/xif/paper/Mzk1P6C17GapLedgerActual.lean
+tmp/sheaf/xif/paper/Mzk1QuantitativeTargetChainActual.lean
+tmp/sheaf/xif/paper/Mzk1SignedLogIdentityActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaRawReadoutArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonDataStatusActual.lean
+tmp/sheaf/xif/paper/Mzk1P7MissingItemsActual.lean
