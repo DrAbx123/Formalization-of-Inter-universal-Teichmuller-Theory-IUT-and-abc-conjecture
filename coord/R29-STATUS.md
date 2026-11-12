@@ -358,3 +358,5 @@
 - 07:18：lattice 新 RestrictedDetNonconditional（restricted_det_volume_of_image_eq 非条件 + restricted_diag_index）入队（259 项）。
 
 - 07:19：stage4 e'/map **green**（DiagEquivProved DONE 23:06:11，olean 262,112B）；重写商/card：integerProductEquiv_map_comap、diagQuotEquiv（LinearEquiv 商）、natCard_quotient_coordSmall=∏p^{f_i}，已 retouch；下一步把商等价交给 XG_volume_ratio（可用 natCard_congr 直接喂 hq）。FactorPermutation 改 subset-only。
+
+- 07:14 巡检：hull/stepxi 空闲已唤醒（C3D 装配/paper V 读数/contract consumer；P5 hunit 可由 ThetaRootUnit rfl 推导→消假设 + P5 条件汇总 + §8.17）；本批 green：ArithmeticRelativeBridge（rfl 桥证出）与 BadCharDeg（23:13:40Z）；RawThetaLogSign/S3137ThetaDefectFactor/DiagEquivProved FAIL 待修。
