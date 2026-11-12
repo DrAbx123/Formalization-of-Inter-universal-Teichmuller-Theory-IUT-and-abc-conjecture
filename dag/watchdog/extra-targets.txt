@@ -256,3 +256,4 @@ tmp/sheaf/xif/paper/Mzk1LogSignChainActual.lean
 tmp/sheaf/xif/paper/Mzk1HullBoundTransferLibActual.lean
 tmp/sheaf/xif/paper/Mzk1P3TameFromConductorActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AgreeResidueFieldActual.lean
+tmp/sheaf/xif/paper/Mzk1RestrictedDetNonconditionalActual.lean
