@@ -234,3 +234,5 @@
 - 06:34：qpilot 批量 5 份入队（DictCBoxFromL6/DictCReverseL7/DictCCounterexample/DictDLogDisc/DictQPacket；137 项）；DICT-C 文档已改“非等价；reverse 归约到 L7”，且 reverse 条件定理中 box 是未使用假设。
 
 - 06:30 巡检：8 lane 全 running（无需唤醒）；watchdog 队列 pending≈21/max12（批量文件在排），最近 BATCH DONE {done:2,failed:5}；新绿：StepXIComparisonEvidence/ReconciliationGapRows（hull）、ThetaRawPacketFactor（abc）；失败批次由 owner 按 per-file 日志修（PermMatrix/DiagCardF/Diag2x2/DiagonalDual 等）。
+
+- 06:32：stage4 批量失败根因定位：Mzk1DiagonalIndexActual 遗留未使用实例变量 [TopologicalSpace/MeasurableSpace (d→Q_p)] 导致依赖文件 synthInstanceFailed；已删除该两行并 retouch stage4 的 4 份文件；Diag2x2 另有 unsolved goals 待 owner 修。shehdd 批量 5 份入队（145 项）。
