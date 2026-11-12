@@ -226,3 +226,8 @@ tmp/sheaf/xif/paper/Mzk1StepXIContractSchemaActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictBDArithNativeActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDOrdInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQHALFRegressionActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DDictionaryAssemblyActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DIndexDataConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperVRatioChainActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperVRatioRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIEvidenceUpgradeActual.lean
