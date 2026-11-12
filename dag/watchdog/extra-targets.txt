@@ -125,3 +125,8 @@ tmp/sheaf/xif/paper/Mzk1DiagEmbeddingInjActual.lean
 tmp/sheaf/xif/paper/Mzk1DiagVolumeCondActual.lean
 tmp/sheaf/xif/paper/Mzk1Diag2x2Actual.lean
 tmp/sheaf/xif/paper/Mzk1PermMatrixActual.lean
+tmp/sheaf/xif/paper/Mzk1C3S1902IndexFiberDataActual.lean
+tmp/sheaf/xif/paper/Mzk1C3S1902HaarScaleDataActual.lean
+tmp/sheaf/xif/paper/Mzk1ExactHullVLocalBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIComparisonEvidenceActual.lean
+tmp/sheaf/xif/paper/Mzk1ReconciliationGapRowsActual.lean
