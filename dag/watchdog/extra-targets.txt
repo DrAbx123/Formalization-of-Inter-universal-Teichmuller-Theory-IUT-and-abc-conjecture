@@ -319,3 +319,4 @@ tmp/external/ported/flt/FLT/Hacks/RightActionInstances.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonGeneralBranchesActual.lean
 tmp/sheaf/xif/paper/Mzk1HaarStrictActual.lean
 tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneActual.lean
+tmp/sheaf/xif/paper/Mzk1CanonicalHaarInvarianceActual.lean

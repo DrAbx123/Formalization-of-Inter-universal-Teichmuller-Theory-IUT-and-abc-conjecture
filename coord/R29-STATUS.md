@@ -416,3 +416,5 @@
 - 07:53：hull 3 份首错修复（补 imports/opens、P 参数由 S2711I 决定、s1902UnitRegion simp）并已 retouch；等 HaarStrict olean 与新 run。
 
 - 07:55：hull **ExactHullVMainTerm green（23:33:31Z，107s）**——`normalizedLog_hull_nonpos` + `normalizedLog_hull_le_mainTerm` 实际主项界定理化；Paper312/LocalZero 已 retouch（补 opens、等 HaarStrict）。IntegralClosure 再修两处 pin：`IsFractionRing.finrank_eq → IsIntegralClosure.rank`（Mathlib/DedekindDomain/IntegralClosure.lean:191 的改名）+ induction 补 zero 分支，retouch 待重编。
+
+- 07:56：lattice **canonical OuterRegular green（23:33:34Z，27s）**；新 CanonicalHaarInvariance（`canonical_map_eq_of_image_eq`，无 [OuterRegular] 假设，用 Regular 实例 + OuterRegular.map）入队（322 项）；仅剩 hOpos/hOfin 与 glAct 打包。
