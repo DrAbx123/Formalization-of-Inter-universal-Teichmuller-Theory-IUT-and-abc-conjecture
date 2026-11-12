@@ -122,3 +122,5 @@
 - 05:37：Mzk1MatrixHaarBaseActual 再 green（21:36:13Z）：diagAct 逐坐标 p^{e_i} 作用 + diagAct_image_coordLattice（坐标像等式）；Haar 不变/product scaling/det 仍 GAP。Mzk1PrimeConductorWeightOneActual（GAP-PC-WEIGHT 细化为三条）待编译；Mzk1PaperBlockTargetActual/Mzk1WeightedDetPacketInstanceActual/DualTranspose 迭代中。
 
 - 05:40：Mzk1PrimeConductorWeightOneActual DONE（59s，GAP-PC-WEIGHT 细化为 FINITE/AGREE/UNRAM-RESIDUE 三条）；Mzk1GaloisNormInvarianceActual DONE（27s，C13 norm_galois_apply_eq）；Mzk1DualTransposeActual 再 DONE（27s）。失败迭代：P5BridgeIntegration（stepxi）、WeightedDetPacketInstance（shehdd）、PaperBlockTarget（hull）。
+
+- 05:42：P3-E 细化：Mzk1PrimeConductorWeightOneActual DONE 21:39:20Z（GAP-PC-WEIGHT → GAP-PC-FINITE/AGREE/UNRAM-RESIDUE 三条）；P6：Mzk1GaloisNormInvarianceActual DONE 21:40:11Z（C13 norm_galois_apply_eq）；P2/P6：Mzk1DualTransposeActual comap 形式 green（(eL)^# = L^#.comap(e.leftAdjoint)，不需 e 可逆）。qpilot 记录 StepVQRootSourceGap 精确 source-map 缺口（rootMap/norm 保持/unit generators/istar 对齐）。下一步分工：mainline GAP-PC-LOGSUM（localLogMagnitude=order·log p ⇒ Σorder≥1）、qpilot DICT-B、stage4 X_G 矩阵形式。
