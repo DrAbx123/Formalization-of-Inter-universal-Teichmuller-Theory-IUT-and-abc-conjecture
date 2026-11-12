@@ -262,3 +262,5 @@
 - 06:44：abc 5 份 green（ComparisonGapArithmetic/GeneralComparisonInterface/StepXIEvidenceLink/IQCarrierStatus/ArchFactorRatio 修复后 DONE 22:43:14-16Z）；HullUpperBoundTransfer 方向错误已修正（上界不能推下界，改为传递定理）并 retouch。
 
 - 06:45：hull lane 8/8 green（含 ExactHullVUpperBound）；新 ExactHullVAssembly（#7 装配）入队；abc 第三批 5 份入队；watchdog 177 项。
+
+- 06:46：stage4 2 新 green：DiagCardF（22:44:01，46s）、DiagEmbeddingEquiv（22:45:40，36s，改为 definition-only 稳定版）；DiagEmbeddingInj/Diag2x2 重写、DiagonalDual 改 CONDITIONAL wrapper；φ 下一步在 stable 基座上重建 e'=LinearEquiv.ofBijective → map=coordDual → mapQ 商。
