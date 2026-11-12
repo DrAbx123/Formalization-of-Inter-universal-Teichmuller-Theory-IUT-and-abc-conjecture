@@ -338,3 +338,5 @@
 - 07:18：hull 决定 Mzk1PaperFaithfulHullActual 保留为 historical P0-only 并修到 green（补 4 个 open 的 import），不删不 DEFERRED；已 retouch。
 
 - 07:19：自算 gate targets=240 → clean 223 + ole-only 6 + stale 3 + red 3（+5 无事件新入队）；RED=FactorPermutationLattice/C3DIndexDataConsumer/P5CJDerived；STALE=PaperFaithfulHull/DiagEquivProved/HaarScalarOne。已 retouch 3+1 并通知 stage4/hull/stepxi。qpilot round6 全绿（QHALFRegression 修 open）。
+
+- 07:10 巡检：qpilot/shehdd 空闲已唤醒（L7 装配/2l 因子/D source；QCAND 定义级/S3137 defect/gate）；RawThetaLogSign、HaarScalarOne FAIL 已 retouch+通知；本批 green：HullGreenInterfaces/P7InterfaceStatus/ThetaVNormNonneg/HullBoundConsumer（23:10:30Z）。
