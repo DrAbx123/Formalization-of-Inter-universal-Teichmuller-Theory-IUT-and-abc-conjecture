@@ -192,3 +192,5 @@
 - 06:16：stage4 Mzk1DiagonalDualActual 推进：coordDual_le_coordSmall、natCard_diagQuotient_f 已写；GAP(2) 商等价提示——若 coordDual 与 Mzk1DiagonalIndexActual.diagLatticeSubmodule 同 ambient（d→Z_p 上的 Submodule.pi），则商就是同一个，φ=refl/quotEquivOfEq，不需要 mkQ。
 
 - 06:16：NORM-ARCH-C 续（abc）：Mzk1NormArchCHArcActual（hArc ℚ=Σ、hToricArc ℚ=½Σ、hNon ℚ=Σ；degree-one 条件式）入队（105 项）。注：Mzk1DiagonalIndexActual 当前 FAIL（lattice 迭代）可能使依赖它的 Mzk1DiagonalDualActual 出现 RETRY TRANSIENT→FAIL。
+
+- 06:17：Mzk1DiagonalIndexActual 恢复 green（22:15:01Z，32s，natCard_quotient_diagLatticeSubmodule 保留；measure 端 4 步 GAP 未变）；审计仓 PROGRESS-AUDIT.md 追加 §5 "R29 执行波次结果（04:00–06:20）"（audit commit c11e4a3）。
