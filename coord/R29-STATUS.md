@@ -422,3 +422,5 @@
 - 07:57：abc ComparisonGapEstimate（gap=logμ−qRead；comparison↔0≤gap↔exp(qRead)≤μ；μ<1 支 gap∈[0,A] 且 qRead<0）入队（323 项）。IntegralClosure 已修两处 pin 待重编；Completion/BaseChange 等其 olean。
 
 - 08:00：IntegralClosure 4 处 pin 全修（if_pos hx / Set.coe_setOf / IsIntegralClosure.rank / induction zero）；mainline 草稿 Mzk1P3AgreeFLTActual 入队（324 项，依赖 FLT olean 会 retry）。
+
+- 08:02：IntegralClosure `finrank` 修正：`IsFractionRing.finrank_eq` 的正确替代是 Mathlib/RingTheory/Algebraic/Integral.lean:549 的 `finrank_of_isFractionRing`（非 IsIntegralClosure.rank——那个要 PID）；已改并 retouch。Completion/BaseChange 待其绿。
