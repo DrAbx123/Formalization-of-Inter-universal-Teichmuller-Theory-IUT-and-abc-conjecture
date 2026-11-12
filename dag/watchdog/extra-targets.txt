@@ -160,3 +160,9 @@ tmp/sheaf/xif/paper/Mzk1P3DictQWeightDiffActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictCBoxFormulaActual.lean
 tmp/sheaf/xif/paper/Mzk1P3NormFormulaProofActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AgreeActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagEmbeddingEquivActual.lean
+tmp/sheaf/xif/paper/Mzk1ComparisonGapArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1GeneralComparisonInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIEvidenceLinkActual.lean
+tmp/sheaf/xif/paper/Mzk1IQCarrierStatusActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUpperBoundTransferActual.lean
