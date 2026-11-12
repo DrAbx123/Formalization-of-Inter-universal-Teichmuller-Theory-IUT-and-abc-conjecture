@@ -286,3 +286,5 @@
 - 06:56：abc 第五批 5 份（QuantitativeTargetChain/SignedLogIdentity/ThetaRawReadoutArithmetic/ComparisonDataStatus/P7MissingItems）入队（199 项）；上批 6 份全 green（ArchFactorProduct 修复 DONE 22:50:51Z 等）。
 
 - 06:57：hull 下一批 6 份（PaperNormalizationDictionary/PaperIQCarrierInterface/StepXIContractLinkage/P4CInd2StageMap/P4CInd3StageMap/PaperNormalizationRows）入队（205 项），对应 7-missing #2/#5/#6 与 P4-C stage map。
+
+- 06:58：stage4 φ 主链 e'+map 重写完成（修正 Submodule.mem_pi/map 字段/mem_span_singleton），已 retouch 重编；DiagonalDual 22:51:17 green（CONDITIONAL wrapper）。
