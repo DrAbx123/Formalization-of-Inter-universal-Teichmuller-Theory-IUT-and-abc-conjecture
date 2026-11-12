@@ -454,3 +454,5 @@
 - 08:17：**stage4 φ/SNF 链全 green**：DiagVolumeProved 23:45:39（非条件体积比）、SNFDiagEquiv 23:45:02（snf_eq_span_diag）、GLAct 23:45:08（GL 保格）、BasisDetUnit/SNFDiag/SNFTool green；派最后拼装：一般 X_G 的 GL_d(Zp)-等价 + 一般受限 det 公式（U/W 显式 + det 恒等 + GL 传递）。
 
 - 08:18：stage4 XGGLFinal（surface 组合）入队（339 项）；下一步把 b.det b 简单实例换成 SNF bM/b 换基并接一般 X_G；ROUTE1/2 文档已更新。
+
+- 08:19：abc HullMeasureLowerBound（actualUnitRegion ⊆ thetaPilotHull + measure_mono ⇒ μ(unit)≤μ(hull) ⇒ ‖q‖≤μ(unit) ⇒ comparison 等）入队（340 项）；general 化为具体测度下界 μ(unitRegion)。ComparisonCondition import 修后 retouch。
