@@ -236,3 +236,5 @@
 - 06:30 巡检：8 lane 全 running（无需唤醒）；watchdog 队列 pending≈21/max12（批量文件在排），最近 BATCH DONE {done:2,failed:5}；新绿：StepXIComparisonEvidence/ReconciliationGapRows（hull）、ThetaRawPacketFactor（abc）；失败批次由 owner 按 per-file 日志修（PermMatrix/DiagCardF/Diag2x2/DiagonalDual 等）。
 
 - 06:32：stage4 批量失败根因定位：Mzk1DiagonalIndexActual 遗留未使用实例变量 [TopologicalSpace/MeasurableSpace (d→Q_p)] 导致依赖文件 synthInstanceFailed；已删除该两行并 retouch stage4 的 4 份文件；Diag2x2 另有 unsolved goals 待 owner 修。shehdd 批量 5 份入队（145 项）。
+
+- 06:33：mainline 第 6 份 Mzk1P3NormFormulaActual（NORMFORMULA 形式化 + 与 AbsNormPowerFormula rfl 等价）入队（151 项）；stepxi QNormalizationInput 已 retouch 重编；P3 RESDEG⟺residue-norm 等价文件（ResNormSlack）等 6 份在队列。
