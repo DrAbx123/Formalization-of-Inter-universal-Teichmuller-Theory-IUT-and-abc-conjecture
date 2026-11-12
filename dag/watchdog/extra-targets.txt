@@ -155,3 +155,6 @@ tmp/sheaf/xif/paper/Mzk1Ob33GapInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaFactorArithmeticActual.lean
 tmp/sheaf/xif/paper/Mzk1ArchFactorRatioActual.lean
 tmp/sheaf/xif/paper/Mzk1HullBoundConstantActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCEquivUnderL7Actual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQWeightDiffActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCBoxFormulaActual.lean
