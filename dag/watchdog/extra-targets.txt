@@ -83,3 +83,5 @@ tmp/sheaf/xif/paper/Mzk1PaperBlockTargetActual.lean
 tmp/sheaf/xif/paper/Mzk1PrimeConductorWeightOneActual.lean
 tmp/sheaf/xif/paper/Mzk1GaloisNormInvarianceActual.lean
 tmp/sheaf/xif/paper/Mzk1NormFunctorialityActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictBActual.lean
+tmp/sheaf/xif/paper/Mzk1PrimeConductorLogSumActual.lean
