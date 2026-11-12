@@ -136,3 +136,5 @@
 - 05:47：P2 X_G 列配对形式 green：Mzk1DualTransposeActual DONE 21:46:57Z——mem_padicIntegralTraceDualLattice_span_range_iff（x∈(span_Zp(range v))^# ↔ ∀i, B x (v i)∈Z_p，即 X_G=(G·Z_p^r)^# 列条件）+ basis 情形对齐；Mzk1MatrixHaarBaseActual DONE 21:46:58Z（diagAct 坐标像）；Mzk1P5BridgeIntegrationActual DONE 21:47:30Z（P5-A3 条件结构层，GAP 限定）。stage4 下一步：factorPermutationBlockEquiv 保持整数格（Ind1→p-adic 整数格桥）。
 
 - 05:48：P4 收口：Mzk1PaperBlockTargetActual DONE 21:47:37Z（78s）——S800 块级 paper 目标 qPilotPaperRegionLog_le_paperHullLog 的 pos/fin 无条件 discharge（leastLambdaOHull over rootThetaImageSet rootHalfCoefficient；含 j=0，与 P4 的 NonzeroHull 口径不同，未混用）；task-94/110/115 全部 completed，GAP-P4-POS 解除。hull 接 P0-A（c_norm 消费者审计 + paper-faithful 替代接口）。
+
+- 05:50：P6-B1 green：Mzk1WeightedDetPacketInstanceActual DONE 21:50:23Z（具体 q/theta packet 实例；GAP-P6-C17-DICT-INST 命名缺口）；P6-A.1：Mzk1DiagonalIndexActual 已写（∏ p^{e_i} 商的 cardinal = ∏ p^{e_i}，quotientPi 路线），待编译后接 μ scaling。P3：Mzk1P3DictBActual 首编 FAIL（qpilot 修）；Ind1 桥单向包含首编 FAIL（stage4 修）。

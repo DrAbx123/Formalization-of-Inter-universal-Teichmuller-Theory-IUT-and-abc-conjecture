@@ -88,3 +88,5 @@ tmp/sheaf/xif/paper/Mzk1PrimeConductorLogSumActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchDegreeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5BridgeInstantiateActual.lean
 tmp/sheaf/xif/paper/Mzk1FactorPermutationLatticeActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperTargetNormalizationUnconditionalActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagonalIndexActual.lean
