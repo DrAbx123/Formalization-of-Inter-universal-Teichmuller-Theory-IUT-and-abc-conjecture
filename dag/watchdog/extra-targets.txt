@@ -138,3 +138,8 @@ tmp/sheaf/xif/paper/Mzk1P3DictQPacketActual.lean
 tmp/sheaf/xif/paper/Mzk1ArchFactorDegreeOneActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUpperBoundInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIEvidenceInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDOrderResidueActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QCANDAssemblyActual.lean
+tmp/sheaf/xif/paper/Mzk1S3137ThetaRawEqActual.lean
+tmp/sheaf/xif/paper/Mzk1S3137ThetaPacketRawGapActual.lean
+tmp/sheaf/xif/paper/Mzk1C17QPLACEChoiceGapActual.lean
