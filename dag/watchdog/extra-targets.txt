@@ -86,3 +86,4 @@ tmp/sheaf/xif/paper/Mzk1NormFunctorialityActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictBActual.lean
 tmp/sheaf/xif/paper/Mzk1PrimeConductorLogSumActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchDegreeActual.lean
+tmp/sheaf/xif/paper/Mzk1P5BridgeInstantiateActual.lean
