@@ -203,3 +203,8 @@ tmp/sheaf/xif/paper/Mzk1StepXIContractLinkageActual.lean
 tmp/sheaf/xif/paper/Mzk1P4CInd2StageMapActual.lean
 tmp/sheaf/xif/paper/Mzk1P4CInd3StageMapActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperNormalizationRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1ArchFactorComparisonActual.lean
+tmp/sheaf/xif/paper/Mzk1GeneralComparisonConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1PacketNormalizedBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1P7DischargedListActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVFactorInterfaceActual.lean
