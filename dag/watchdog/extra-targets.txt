@@ -130,3 +130,8 @@ tmp/sheaf/xif/paper/Mzk1C3S1902HaarScaleDataActual.lean
 tmp/sheaf/xif/paper/Mzk1ExactHullVLocalBoundActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIComparisonEvidenceActual.lean
 tmp/sheaf/xif/paper/Mzk1ReconciliationGapRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCBoxFromL6Actual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCReverseL7Actual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCCounterexampleActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDLogDiscActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQPacketActual.lean
