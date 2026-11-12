@@ -95,3 +95,14 @@
 - gate 表（shehdd）：extra=71/72 时 clean green 59 + ole-only 6 + stale 2 + red 4；MatrixHaarBase 下一轮移入 clean。
 
 - gate 快照（shehdd 05:20）：extra-targets=72；**clean green 60** + ole-only 6 + stale 2 + red 4。STALE：Mzk1PaperFaithfulHullActual（P4 正性迭代）、Mzk1MultiFactorBlockActual（P2 scaffold 迭代）；RED/pending：Mzk1SourceNativeQActual、Mzk1P3DictionaryActual、Mzk1P5ThetaBridgeActual、Mzk1StepVVolumeActual（待编译）。P7 NOT PASSED 不变。
+
+
+## 9. 05:25 增量（第二口气）
+
+- **P6-A green**：Mzk1WeightedDetPacketActual DONE EXIT=0（21:23:33Z，35s）——同一 denominator family 的 weighted 差 = N·normalized 差；GAP-P6-C17-DICT 作为定理假设（非 structure 字段）；q/Θ 实际读数候选清单在 P6 doc §12。
+- **P2**：Mzk1MultiFactorBlockActual DONE（21:22:36Z）——G 列张成/行满秩向量形式（integerBasis/generatorColumn/fullGeneratorMatrix）green；SNF 数值、S/X_G、交叉核对、Ind1 桥为 GAP。
+- **P3**：Mzk1P3DictionaryActual DONE（21:21:37Z，DICT-A）；task-118 文件 Mzk1PrimeConductorUnconditionalActual 已写（hD→实际 nativeDExact 的条件化 + GAP-PC-WEIGHT/LOGSUM；SSIneqExplicit 只依赖外部 MestreOesterlé 参数）。
+- **P5**：Mzk1P5ThetaBridgeActual DONE（21:21:34Z）；P5LabelShift 文件已写。
+- **P6**：Mzk1MatrixHaarBaseActual 迭代中（GL_d(Z_p) 保格 green；Haar 不变/对角缩放/det 公式 GAP）；Mzk1DualTransposeActual 已写（GAP-DUAL-TRANSPOSE 配对形式起点）。
+- **P4**：hull 拆分 Mzk1PaperFaithfulHullP4Actual（P0 文件恢复版仍 FAIL 21:23:58，hull 迭代中）。
+- **周期 git**：main repo commit 968d6c3eb（coord/ 文档 + AUDIT_LEDGER + watchdog 配置）；audit repo commit 646a239。
