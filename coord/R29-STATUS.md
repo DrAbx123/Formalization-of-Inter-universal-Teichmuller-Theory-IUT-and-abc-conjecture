@@ -420,3 +420,5 @@
 - 07:56：lattice **canonical OuterRegular green（23:33:34Z，27s）**；新 CanonicalHaarInvariance（`canonical_map_eq_of_image_eq`，无 [OuterRegular] 假设，用 Regular 实例 + OuterRegular.map）入队（322 项）；仅剩 hOpos/hOfin 与 glAct 打包。
 
 - 07:57：abc ComparisonGapEstimate（gap=logμ−qRead；comparison↔0≤gap↔exp(qRead)≤μ；μ<1 支 gap∈[0,A] 且 qRead<0）入队（323 项）。IntegralClosure 已修两处 pin 待重编；Completion/BaseChange 等其 olean。
+
+- 08:00：IntegralClosure 4 处 pin 全修（if_pos hx / Set.coe_setOf / IsIntegralClosure.rank / induction zero）；mainline 草稿 Mzk1P3AgreeFLTActual 入队（324 项，依赖 FLT olean 会 retry）。
