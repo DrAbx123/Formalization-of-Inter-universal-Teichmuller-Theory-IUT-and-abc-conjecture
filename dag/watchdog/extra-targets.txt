@@ -149,7 +149,6 @@ tmp/sheaf/xif/paper/Mzk1P3ResDegActual.lean
 tmp/sheaf/xif/paper/Mzk1P3L7AssemblyActual.lean
 tmp/sheaf/xif/paper/Mzk1P3GapLedgerActual.lean
 tmp/sheaf/xif/paper/Mzk1P3NormFormulaActual.lean
-tmp/sheaf/xif/paper/Mzk1P5LabelZeroSeparateActual.lean
 tmp/sheaf/xif/paper/Mzk1P7Missing7StatusActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33GapInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaFactorArithmeticActual.lean
@@ -175,3 +174,4 @@ tmp/sheaf/xif/paper/Mzk1ArchFactorProductActual.lean
 tmp/sheaf/xif/paper/Mzk1HullBoundAddTransferActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonTargetInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1P7CountsActual.lean
+tmp/sheaf/xif/paper/Mzk1P5PhaseDerivedActual.lean

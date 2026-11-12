@@ -270,3 +270,5 @@
 - 06:48：stepxi P5 三份 green：QNormalizationInput（22:37:38，70s）、PhaseRelation（22:40:17，79s）、CJCondition（22:46:19，75s）；LabelZero 可选未 green。派下一步：从 root_image 用 map_zpow 推导 phase 关系（减少命名 data）、修/删 LabelZero。
 
 - 06:49：stage4 green：DiagCardF/Diag2x2/DiagEmbeddingEquiv/PermMatrix/DualIndexSource/DiagVolumeCond（6 份）；DiagEmbeddingInj/DiagonalDual 已修并 retouch；φ 主链在 green 基座上建 e'。
+
+- 06:50：stepxi 新文件 Mzk1P5PhaseDerivedActual（从 root_image 用 map_zpow₀ 证 toRoot(r^N)=qRoot^(l*N)）入队；LabelZeroSeparate 已删并移出名单。
