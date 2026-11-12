@@ -13,14 +13,14 @@
 
 ## P1 — 真实张量块与作用矩阵（§8.2 第二步）
 
-状态：多因子块 P1 green（Mzk1MultiFactorBlockActual：整数格/Qp 基/迹对偶基/factorPermutationBlockEquiv/generatedLattice_full/generatorMatrix）。
+状态：多因子块 P1 green + **P2 列张成/行满秩向量形式 green**（integerBasis/generatorColumn/generatorColumn_span_top/fullGeneratorMatrix；DONE 21:22:36Z）。
 剩余：
 - P1-A：G 矩阵行满秩（列索引改 Option G × L0BasisIndex 后证列张成；SNF 用于指数/体积）。
 - P1-B：factorPermutationBlockEquiv 的整数格保持性 + 与来源 Ind1 的等价（当前仅块级 reindex）。
 
 ## P2 — 同一 G 的路线一/二联合诊断（§8.2 第三步）
 
-状态：路线一判别完成（Mzk1Route1OrbitLatticeActual：公共标量、rank≤1、无 m 增益；§4.8 停止条件成立）；路线二工具（B3/scalar B4/B5/B6/B7/B8/actual Gram S/XG）green/条件 green。
+状态：路线一判别完成（公共标量停止条件成立）；路线二工具 green/条件 green；P2 列张成 green；GL_d(Z_p) 保格等号 green（Mzk1MatrixHaarBaseActual）；GAP-DUAL-TRANSPOSE 起点文件已写（Mzk1DualTransposeActual）。
 剩余：
 - P2-A：G^T S 交格 X_G 的体积公式（接 Mzk1DualIntersectionActual 的 XG）。
 - P2-B：交叉核对：路线一有限商指数与路线二对偶交格相对体积给同一数值（不能各造一份增益）。
@@ -29,7 +29,7 @@
 
 ## P3 — 选定一个真正的新定量引理（§8.2 第四步）
 
-状态：StepV 链（Mzk1StepVReductionActual）、局部 2l 换算（Mzk1S3050ConstantSourceActual）、S3014ProcessionData（Mzk1StepVProcessionActual 条件）、S3029AlignmentData（Mzk1StepVAlignmentActual）、D_exact 条件 L7⇒L6（Mzk1DExactActual）、M≥0⟺L6 条件归约（Mzk1TargetReductionActual 修中）green/条件。
+状态：StepV 链、局部 2l 换算、S3014ProcessionData（**StepVExtraNonneg 已闭合**）、S3029AlignmentData、D_exact 条件 L7⇒L6、M≥0⟺L6 条件归约、**DICT-A（Mzk1P3DictionaryActual）** 均 green/条件；素导子类 hD 文件已写（Mzk1PrimeConductorUnconditionalActual，编译迭代）。
 剩余：
 - P3-A：GAP-P3-DICT —— 实际对象上 M = c·(T(l)·D − e·log p) 的字典（§8.2 P3 的核心）。
 - P3-B：StepVExtraNonneg 实际来源（qpilot 新文件 Mzk1StepVExtraNonnegActual 待编译；different/exceptional 非负）。
