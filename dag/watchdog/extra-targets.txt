@@ -148,3 +148,5 @@ tmp/sheaf/xif/paper/Mzk1P3BadCharPrimeActual.lean
 tmp/sheaf/xif/paper/Mzk1P3ResDegActual.lean
 tmp/sheaf/xif/paper/Mzk1P3L7AssemblyActual.lean
 tmp/sheaf/xif/paper/Mzk1P3GapLedgerActual.lean
+tmp/sheaf/xif/paper/Mzk1P3NormFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1P5LabelZeroSeparateActual.lean
