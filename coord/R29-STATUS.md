@@ -370,3 +370,5 @@
 - 07:24：**移植重大发现**：tmp/external/ported/flt 已含 AGREE 所需素材（AdicValuation：inertiaDeg_asIdeal_completionIdeal、ResidueFieldEquivCompletionResidueField；IntegralClosure：ramificationIdx 结果）与 RestrictedProduct/FiniteAdeleRing（abc 的 IQ 载体）。其依赖闭包仅 28 个 FLT 文件、无外部依赖，已全部加入 watchdog（295 项）编译；stage4 SNF 工具（Mathlib smithNormalForm）也入队。
 
 - 07:25：qpilot 找到实际 Δ_min：`Iut.Abc.Counting.CurveData.disc`（Basic.lean:106-116）→ Mzk1P3DictDCurveDataSourceActual（disc=p^e 命名输入下构造 PrimeConductorCurve + logDisc=log disc）；D 侧 source 从纯命名降为“实际 CurveData.disc + 支撑等式”接口。入队（296 项）。
+
+- 07:26：abc 发现 **Mathlib 自带 RestrictedProduct**（Topology/Algebra/RestrictedProduct/Basic.lean:79，`Πʳ`），复用文件 Mzk1RestrictedProductReuse（IQRestrictedProductCarrier skeleton，GAP-P7-IQ-LITERAL 保留）入队（297 项）；自写版标 DEPRECATED-BY-REUSE。

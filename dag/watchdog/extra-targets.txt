@@ -294,3 +294,4 @@ tmp/external/ported/flt/FLT/NumberField/Completion/Finite.lean
 tmp/external/ported/flt/FLT/NumberField/HeightOneSpectrum.lean
 tmp/sheaf/xif/paper/Mzk1SNFToolActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDCurveDataSourceActual.lean
+tmp/sheaf/xif/paper/Mzk1RestrictedProductReuseActual.lean
