@@ -147,3 +147,5 @@
 - 05:54：P5-A4（stepxi）尚未 green：paperPhaseUnit_pow 的 Units.coe_mk0/pow_mul 与 labelExp elaboration 冲突，已记录精确失败点（ROUTE3-CTHETA §8.7）；建议拆小步先 green paperPhaseUnit 再补结构。
 
 - 05:55：**j=0 污染审计（hull）**：新文件 Mzk1PaperHullZeroLabelActual 证 rootThetaRegion_zeroLabel = F(0)O = R*O、leastLambdaOHull = R*O = O_hol、paperHullLog = 0 且与 q 阶数无关 ⇒ S800 的 unconditional paper target 是弱化/近平凡；P0 验收口径需改用 P4 的 NonzeroHull（paperFaithfulThetaHull）。入 watchdog 名单（94 项）。
+
+- 05:55：P5-A4 green：Mzk1P5BridgeInstantiateActual DONE 21:54:34Z（61s）——thetaUnit:=paperRootThetaUnit、phase:=primitiveMu2lRoot^m 实际上化，3 GAP → 1（剩 c_j/hcomparison 命名输入）。P3：Mzk1P3DictBActual DONE 21:54:39Z（65s）——DICT-B 接口层（INTERFACE，GAP-P3-DICT 保留，DICT-C 仍开）。NormFactorDictionary 首编 FAIL（abc 修）。
