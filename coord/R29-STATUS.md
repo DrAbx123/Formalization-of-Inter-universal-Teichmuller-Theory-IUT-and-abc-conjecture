@@ -254,3 +254,5 @@
 - 06:41：mainline 又 2 份入队（NormFormulaProof 正式证明尝试、Agree iff 形式化；162 项）；其前 6 份（ResNormSlack/BadCharPrime/ResDeg/L7Assembly/GapLedger/NormFormula）全 green。
 
 - 06:42：abc 第二批 5 份（#1 算术/named interface、#6 linkage schema、#2 状态表、#7 上界转移）入队（168 项）；stage4 DiagEmbeddingEquiv 入队（163→168），DiagCardF/DiagonalDual 已 retouch 待重编。
+
+- 06:42：hull lane 8 份中 7 green（StepXIComparisonEvidence/ReconciliationGapRows/StepXIContractEvidenceMap/C3S1902HaarScaleData/C3S1902IndexFiberData/ExactHullVLocalBound/P4CExternalStageContainer）；ExactHullVUpperBound 已 retouch 重编（源码补导入/Bad Nonempty 实例）。
