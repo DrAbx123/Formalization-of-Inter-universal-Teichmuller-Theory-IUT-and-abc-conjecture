@@ -466,3 +466,5 @@
 - 08:25：**FLT 链突破**：IntegralClosure DONE EXIT=0（23:47:27Z，43s）——if_neg/FaithfulSMul/finrank namespace 修复全部生效！Completion/BaseChange（AGREE-RAM :685 / AGREE-FIELD :721）将自动接编；mainline 的 Mzk1P3AgreeFLTActual 即可编 → 配合 WeightDegreeOne 关 GAP-PC-WEIGHT。
 
 - 08:27：FLT 4 个 helper pin 全修（ModuleTopology:406 IsModuleTopology.topologicalAddGroup / :537 IsQuotientMap.secondCountableTopology / UniformRing:37 删 coe_ofClass）并 retouch 6 文件；abc C3UnitHaarComparison（c3UnitHaar=μ(unitRegion) rfl、hull pos/lt_top、comparison_of_qnorm_le_c3UnitHaar）入队（343 项）。hull 最后一批 5/5 green，P 唯一缺口=C2/logKummer/logKummer_eq 三实际源。
+
+- 08:29：lattice hOpos/hOfin 阻塞定位（topology 实例不定义相等，非 Pi 实例）；已给配方：在 `letI := Pi.topologicalSpace`/`Pi.measurableSpace` 下重述，K₀ 取 coordLattice 紧开包，hOfin=IsCompact.measure_lt_top、hOpos=开集正测；不跨 topology rw。
