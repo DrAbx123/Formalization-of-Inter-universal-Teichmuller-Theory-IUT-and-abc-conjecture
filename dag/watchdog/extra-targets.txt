@@ -166,3 +166,6 @@ tmp/sheaf/xif/paper/Mzk1GeneralComparisonInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIEvidenceLinkActual.lean
 tmp/sheaf/xif/paper/Mzk1IQCarrierStatusActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUpperBoundTransferActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDLogDiscBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQNonnegActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictCReverseNativeDExactActual.lean
