@@ -174,3 +174,5 @@
 
 - 06:11：**P5 根阶障碍（stepxi，重要修正）**：r²=q 而 twoLthRootAt^(2l)=q ⇒ toRoot r 应为 twoLthRootAt^l（r↦qRoot 会要求 qRoot^(2(l−1))=1，实际不成立）；c_j=1 不等价于自然条件（等价于 phase_j=qRoot^{-(2j²)}，μ2l 无法吸收 q 尺度）；正确形式 c_j·phase_j=qRoot^{-((l+1)j²)}。已记 ROUTE3-CTHETA §8.9；派 stepxi P5-A7 修正 root_image 为 qRoot^l 并重证。**结论：P5 的命名输入必须保留一个真实 q-normalization/root-order 输入，不能消掉。**
 - 06:11：新文件入队（102 项）：Mzk1DualIndexSourceActual（stage4：商等价 φ ⇒ X_G 体积，φ 为显式输入）、Mzk1P3DictQCoeffActual（qpilot：((l+1)/24)logq=sL·AL 纯代数 green；PaperLogQSource 为命名缺口）。
+
+- 06:12：X_G 商来源（stage4）：精确缺口链写入 coord/XG-DIAGONAL-SOURCE-GAP.md（L=basisIntegralLattice、XG↔对偶格、GAP-DUAL-SNF、商同构、紧开）；已批准先做对角/置换最小情形（XG=∏p^{-e_i}Z_p → 商 → 条件体积），一般 SNF 留 GAP。
