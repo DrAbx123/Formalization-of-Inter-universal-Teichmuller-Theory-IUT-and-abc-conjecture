@@ -200,3 +200,5 @@
 - 06:20：巡检：8 人中 mainline/abc/stage4/lattice 空闲已唤醒（BADCHAR/RESDEG、#3 条件接口、φ 构造、置换不变 Haar）；P5BridgeInstantiate/P5ThetaRootUnit 保持 green（22:19:31Z）；C3S1902Bridge/WeightedDetPacket/FactorPermutation 仍 FAIL 迭代。
 
 - 06:20：P5-A8 green（stepxi）：P5AnalyticRootBridge 新增 root_image := toRoot r = qRoot^l（显式命名输入），P5BridgeIntegration DONE 22:15:35Z、P5BridgeInstantiate DONE 22:18:10Z、P5ThetaRootUnit DONE 22:19:31Z；桥版本 (CJ-L) c_j·phase_j = qRoot^{-((l+1)n)}；c_j=1 不写。ROUTE3-CTHETA §8.11 已更新。
+
+- 06:21：新文件入队（107 项）：Mzk1PermutationHaarActual（lattice：置换子群保 Z_p^d + Measure.pi 质量不变；一般矩阵 Haar 仍 GAP）、Mzk1Ob33InterfaceActual（abc：#3 named input Ob33SourceIdentification + 条件对齐定理 + 非空实例；GAP-P7-OB33-SRC 记录）。
