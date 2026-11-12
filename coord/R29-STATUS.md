@@ -328,3 +328,5 @@
 - 07:13：hull 第四批 5 份（C3DDictionaryAssembly/C3DIndexDataConsumer/PaperVRatioChain/PaperVRatioRows/StepXIEvidenceUpgrade）入队（233 项）。
 
 - 07:14：stepxi 下批 2 份（P5CJDerived：从 phase_relation 推 CJ 条件等价定理版；P5RootChoiceOrder：r↦qRoot^l 平方相容 vs r↦qRoot 的阶数障碍）入队（235 项）。
+
+- 07:15：自算 gate（log+olean）：targets=235 → clean 217 + ole-only 6 + stale 2 + red 3；RED=FactorPermutationLattice/RawThetaReadoutBounds/P3DictQHALFRegression（已 retouch + 通知 owners）；STALE=PaperFaithfulHull(historical, 待删/修)/HaarScalarOne。
