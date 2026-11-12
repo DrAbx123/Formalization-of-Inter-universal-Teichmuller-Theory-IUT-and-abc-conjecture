@@ -188,3 +188,5 @@
 - 06:14：stage4 Mzk1DiagonalDualActual（f:=-e≥0 参数化条件包装；coordSmall/coordDual 定义 + diagonal_dual_volume_ratio 条件定理；GAP：coordDual≤coordSmall 成员证明、商 φ 实际构造）入队（104 项）；已给提示（成员用 Ideal.pow_le_self；商用 Submodule.mkQ 核=coordDual 的商泛性质，不必写坐标映射）。
 
 - 06:15：gate 刷新（shehdd）：extra=104 → clean 91 + ole-only 6 + stale 2 + red 5；P7 NOT PASSED。QPLACE：comap 形式 PROVED（qplace_comap_eq，Mzk1WeightedDetPacketInstance DONE 22:12:50Z）；place equality 不可证（两个不同 Classical.choose，S605:6-9 同类 gap）→ QPLACE/QCAND 将显式化为命名 Prop 并在 QPLACE∧QCAND 下推出 QHALF 分解。NORM-ARCH-C-K（abc）：abc 基域 ℚ、heightWeight=1/toric=1/2；ABCBridge 用抽象 ABCHeightWeightAdditiveBoundV2，未直接消费 hArc → 接入点=IV arch 字典桥或 RationalDifferent degree-one 实例化。
+
+- 06:16：stage4 Mzk1DiagonalDualActual 推进：coordDual_le_coordSmall、natCard_diagQuotient_f 已写；GAP(2) 商等价提示——若 coordDual 与 Mzk1DiagonalIndexActual.diagLatticeSubmodule 同 ambient（d→Z_p 上的 Submodule.pi），则商就是同一个，φ=refl/quotEquivOfEq，不需要 mkQ。
