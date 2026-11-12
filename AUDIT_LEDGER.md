@@ -28611,3 +28611,9 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - S800LeastLambdaOHullActual：paperPossibleImages := rootThetaImageSet（rootThetaImageSet 展开为 ⋃ j : SignedLabel，含 j=0）⇒ 其 paperHullLog 用的是旧（含 0）hull；paperHullLog/qPilotPaperRegionLog/qPilotPaperRegionLog_le_paperHullLog。
 - S801PaperHullLogActual：用 S793 hull 证 paperLeastLambdaOHull_eq_paperQPilotRegion、paperHullLog_eq_paperQPilotRegionLog；PaperHullLogFormulaData（paperRootCoefficientFamily 的 ArithmeticTuplePureFractionalScalingData）；paperQPilotLogPaperOrder_le_paperHullLog_of_data（paper-order qPilot ≤ 正确 hull log，条件于 scaling data）。
 - 结论/修正：hull 的 Mzk1PaperHullZeroLabelActual 的退化结论适用于 **S800 旧 hull**（引用 S779/S793，非首次）；P0/P4 的 paper-faithful 组件目标必须改用 S793/S801 的 NonzeroLabel least hull；其剩余缺口 = S801 PaperHullLogFormulaData + paperQPilotLog 实际读数识别。已派 hull 出对比表并修正 P0 验收口径。
+
+## 2026-11-13 — R29 版本更正：canonical target chain = S3132/S3137（非 S800/S801）（1 条）
+
+- 用户提醒仓库有 3000+ S 文件，需确认版本。核查结果：当前 canonical 目标链为 S3132PaperHullSetPropertiesActual（actualPaperHull_eq_unitRegion/paperHullHaarReadout/paperHullRealLogVolume，raw Haar 未归一化）+ S3137QThetaPilotLogVolumeReadingsActual（qPilotLogVolumeReading=-|log q| GREEN；thetaPilotHullLogVolumeReal GREEN raw；qThetaPilotLogVolumeComparison PENDING）+ Mzk1HolomorphicHullLogVolumeReconciliationActual 的 12-row 义务表（6 discharged/7 missing：paper normalization、IQ carrier 实现、(Ob3-3)、multiradial comparison、theta raw Haar vs paper normalized V、exact hull V 上界、StepXIContract linkage）。
+- S793/S779 的 NonzeroLabel 修正与 S801 的 paperHullLog=paperQPilotRegionLog 属历史链（S800 旧 hull 含 j=0）；不是当前目标对象。hull 的 Mzk1PaperHullZeroLabel 应作为“旧 S800 定义退化”的历史记录并引用 S779/S793。
+- 行动：P0/P4 目标重指 S3137 readings + S3132 actualPaperHull；我们的 Mzk1PaperTargetNormalization/Mzk1PaperBlockTargetActual 等基于 S800 旧 hull 的结论全部标历史/旧口径。
