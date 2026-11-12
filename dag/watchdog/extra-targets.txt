@@ -328,3 +328,5 @@ tmp/sheaf/xif/paper/Mzk1SNFDiagActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalHaarCoordLatticeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5PhaseExponentDataActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonConditionActual.lean
+tmp/sheaf/xif/paper/Mzk1GLActActual.lean
+tmp/sheaf/xif/paper/Mzk1SNFDiagEquivActual.lean
