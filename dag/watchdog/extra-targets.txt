@@ -304,3 +304,4 @@ tmp/sheaf/xif/paper/Mzk1HullC0CandidateActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonContrapositiveActual.lean
 tmp/sheaf/xif/paper/Mzk1C17QCANDOrderK1Actual.lean
 tmp/sheaf/xif/paper/Mzk1C17QCANDResNormDegreeOneActual.lean
+tmp/sheaf/xif/paper/Mzk1P5ComparisonDerivedActual.lean
