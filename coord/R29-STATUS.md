@@ -210,3 +210,5 @@
 - 06:23：P6-A.1 置换子群 green：Mzk1PermutationHaarActual DONE 22:22:53Z（23s）——permAct_image_coordLattice、measure_pi_perm_coordLattice（μ(P_σ''Z_p^d)=μ(Z_p^d)）；一般 GL_d(Z_p) 不变性给计划：ν=μ.map(glAct V) 为 additive Haar ⇒ ν=c•μ，在 Z_p^d 上求值用 image 等号得 c=1。
 
 - 06:23：多 lane green：lattice Mzk1PermutationHaarActual（22:22:53Z，置换保 Z_p^d + 置换不变测度；一般 GL 不变性计划 ν=c*μ、Z_p^d 求值 c=1）；shehdd Mzk1WeightedDetPacketInstance（22:22:09Z，QPLACE/QCAND 显式化 + QHALF_of_QPLACE_QCAND；更正：sectionFiniteLift 返回 FinitePlace A.K 而 nativeBadLift.lift 返回 A.F，字面不可相等，同载体 QPLACE 用 fkDescentShadow；S1413ShadowEqualsNative 未证）；hull Mzk1C3S1902BridgeActual（22:22:09Z，条件 transport green；C3S1902TransportData 无 inhabitant；reconciliation 字符串标 ADDRESSABLE INTERFACE, not progress）；abc Mzk1Ob33InterfaceActual（22:23:05Z，#3 named input 条件对齐，GAP-P7-OB33-SRC 非 discharge）。
+
+- 06:24：QHALF⇐WEIGHT green（qpilot）：Mzk1P3DictQCoeffActual DONE 22:23:30Z——GAP_PC_QHALF_of_weight_one、nativeSignedLogQ_eq_twoL_mul_qPacket_of_weight_one（条件归约，非新假设）；P6 的 q-half 现归约到 P3 的 GAP-PC-WEIGHT。qpilot 接 DICT-C 方向分析。
