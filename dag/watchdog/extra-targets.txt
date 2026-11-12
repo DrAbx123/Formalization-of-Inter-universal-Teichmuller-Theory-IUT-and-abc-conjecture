@@ -158,3 +158,5 @@ tmp/sheaf/xif/paper/Mzk1HullBoundConstantActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictCEquivUnderL7Actual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQWeightDiffActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictCBoxFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1P3NormFormulaProofActual.lean
+tmp/sheaf/xif/paper/Mzk1P3AgreeActual.lean
