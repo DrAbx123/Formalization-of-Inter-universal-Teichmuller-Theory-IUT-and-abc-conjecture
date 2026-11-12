@@ -446,3 +446,5 @@
 - 08:12：IntegralClosure 修正 namespace——`Algebra.IsAlgebraic.finrank_of_isFractionRing`（非裸名）；stepxi P5FinalSummary（P5NamedInputs 四项 + bridgeOfInputs + p5_final_comparison）入队（333 项）。
 
 - 08:13：hull 5 份（P inhabitant 条件构造器 + 成本审计：C2/logKummer/logKummer_eq 三实际源缺失且类型不匹配；#7 mainTerm 实际来源 disc/cond ⇒ V≤(1/4)l(log disc+log cond), C0=0）入队（338 项）。
+
+- 08:14：stage4 BasisDetUnit/SNFDiag green（23:43:22Z）；GLAct 补 import、SNFDiagEquiv 降级 data wrapper；已给两提示：DiagVolumeProved 加 [MeasurableSpace (d→Q_p)]/[BorelSpace] 变量；SNFDiagEquiv span 版用 Submodule.map_subtype_top + bN.span_eq + map_span。
