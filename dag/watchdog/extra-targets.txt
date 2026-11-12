@@ -330,3 +330,4 @@ tmp/sheaf/xif/paper/Mzk1P5PhaseExponentDataActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonConditionActual.lean
 tmp/sheaf/xif/paper/Mzk1GLActActual.lean
 tmp/sheaf/xif/paper/Mzk1SNFDiagEquivActual.lean
+tmp/sheaf/xif/paper/Mzk1P5FinalSummaryActual.lean
