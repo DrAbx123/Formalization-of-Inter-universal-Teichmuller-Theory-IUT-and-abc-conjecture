@@ -246,3 +246,5 @@
 - 06:36：abc 批 5 份入队（157 项）；已 DONE：ArchFactorDegreeOne（22:35:27Z）、HullUpperBoundInterface（22:35:15Z）、ThetaRawPacketFactor；StepXIEvidence 修 def 后待重编；新文档 coord/P7-BATCH-STATUS.md。
 
 - 06:38：qpilot 首批 5 份全 green（DictCBoxFromL6/DictCReverseL7/DictCCounterexample/DictDLogDisc/DictQPacket，22:36:14-40Z）；新 3 份入队（DictCEquivUnderL7/DictQWeightDiff/DictCBoxFormula；160 项）；DICT-C 定稿：非等价、reverse 归约 L7、条件等价需 L7+side。
+
+- 06:38：stepxi 认为 PhaseRelation/CJ 未调度——核对：两份在名单 121/122 行，已 START 22:38:58；CJ 失败仅因 PhaseRelation olean 缺失，PhaseRelation 旧 log 是改 import 前的 QNormalization 依赖错误（源 mtime 06:37:46，已 retouch）；两份重新入队。
