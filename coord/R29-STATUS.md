@@ -452,3 +452,5 @@
 - 08:16：IntegralClosure 再修：`:112 if_pos→if_neg`（by_cases 剩余分支 hx:¬x=0）；`:199` 补 `haveI FaithfulSMul A B := FaithfulSMul.of_field_isFractionRing`（Algebra.IsIntegral A B 已在变量中）。已 retouch。qpilot round8/9 全 green（WeightDegreeOne 合流 UNRAM/RESIDUE），stage4 BasisDetUnit/SNFDiag green。
 
 - 08:17：**stage4 φ/SNF 链全 green**：DiagVolumeProved 23:45:39（非条件体积比）、SNFDiagEquiv 23:45:02（snf_eq_span_diag）、GLAct 23:45:08（GL 保格）、BasisDetUnit/SNFDiag/SNFTool green；派最后拼装：一般 X_G 的 GL_d(Zp)-等价 + 一般受限 det 公式（U/W 显式 + det 恒等 + GL 传递）。
+
+- 08:18：stage4 XGGLFinal（surface 组合）入队（339 项）；下一步把 b.det b 简单实例换成 SNF bM/b 换基并接一般 X_G；ROUTE1/2 文档已更新。
