@@ -332,3 +332,5 @@
 - 07:15：自算 gate（log+olean）：targets=235 → clean 217 + ole-only 6 + stale 2 + red 3；RED=FactorPermutationLattice/RawThetaReadoutBounds/P3DictQHALFRegression（已 retouch + 通知 owners）；STALE=PaperFaithfulHull(historical, 待删/修)/HaarScalarOne。
 
 - 07:16：abc 修 RawThetaReadoutBounds（Real.log_nonpos 需 0≤μ，改 le_of_lt h0）并 retouch；P7-MISSING-7-VERIFY §7 接口状态已更新为 green interface, inhabitant still missing（7 条仍全未 discharge）。
+
+- 07:17：abc 第八批 5 份（HullBoundConsumer/RawThetaLogSign/ThetaVNormNonneg/P7InterfaceStatus/HullGreenInterfaces）入队（240 项）。

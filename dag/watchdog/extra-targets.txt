@@ -233,3 +233,8 @@ tmp/sheaf/xif/paper/Mzk1PaperVRatioRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1StepXIEvidenceUpgradeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5CJDerivedActual.lean
 tmp/sheaf/xif/paper/Mzk1P5RootChoiceOrderActual.lean
+tmp/sheaf/xif/paper/Mzk1HullBoundConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1RawThetaLogSignActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVNormNonnegActual.lean
+tmp/sheaf/xif/paper/Mzk1P7InterfaceStatusActual.lean
+tmp/sheaf/xif/paper/Mzk1HullGreenInterfacesActual.lean
