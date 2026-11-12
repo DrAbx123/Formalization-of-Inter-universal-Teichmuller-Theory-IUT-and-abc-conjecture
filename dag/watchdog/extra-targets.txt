@@ -181,3 +181,6 @@ tmp/sheaf/xif/paper/Mzk1PaperLogQArithActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaDimensionProductActual.lean
 tmp/sheaf/xif/paper/Mzk1P7PartialStatusActual.lean
 tmp/sheaf/xif/paper/Mzk1ContractEvidenceRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictDLogDiscSourceActual.lean
+tmp/sheaf/xif/paper/Mzk1P3DictQPacketSignedActual.lean
+tmp/sheaf/xif/paper/Mzk1HaarScalarOneActual.lean
