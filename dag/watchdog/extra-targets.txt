@@ -105,3 +105,4 @@ tmp/sheaf/xif/paper/Mzk1DiagonalDualActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchCHArcActual.lean
 tmp/sheaf/xif/paper/Mzk1PermutationHaarActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33InterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1PrimeConductorBadCharActual.lean
