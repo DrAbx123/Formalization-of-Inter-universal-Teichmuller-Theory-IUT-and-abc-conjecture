@@ -1,0 +1,111 @@
+{
+  "$schema_note": "aibi-owned IUTI/IUTII node fragment (single writer; shared coord/target-chain.iuti-ii.json is concurrently overwritten)",
+  "owner": "abc/aibi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "Kummer.LogShellCarrierArithmetic",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Theta.ModLProjection",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Frobenius.UnitsTransport",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationLaw",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "IUTII.Kummer.Absolute.summary",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.arrows",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.closure",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.unicity",
+      "status": "PROVED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Section0.pathComposition",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.group",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Frobenius.UnitsIndex",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Theta.PacketIndex",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeTheater.LinkIndex",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Kummer.LogShellIndex",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Skeleton.AddendaIndex",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "Section0.combinatorics",
+      "status": "CONDITIONAL",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "IUTII.Kummer.Absolute",
+      "status": "GAP",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "IUTII.Kummer.SourceThetaPilot",
+      "status": "NAMED",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "theta-etth:A5",
+      "status": "CONDITIONAL",
+      "note": "abc/aibi single-writer registry (watchdog evidence only)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationLaw.extra",
+      "status": "CONDITIONAL",
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); abc/aibi single-writer registry (watchdog evidence only)"
+    }
+  ]
+}

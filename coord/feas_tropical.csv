@@ -1,0 +1,4 @@
+function,structure,sub/super,convex,numeric
+f_L=Σ(V+gap),modular (additive),submod=超模=等号,Lovász 线性；M/L convex 平凡,0/179970 Lovász violations
+f_N=f_L−(sF−1)ΣA,modular,同上,同上,0/179970
+"f_D=max(0,−f_N)","disjoint-subadditive（12,354/12,354）",非全局 submodular,Lovász 型凸性不成立,6/179970 violations

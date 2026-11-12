@@ -1,0 +1,15 @@
+{
+  "node": "auto:Mzk1Lemma22BaseProviderStatementsActual",
+  "kind": "def",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Lemma22BaseProviderStatementsActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Lemma22BaseProviderStatementsActual.lean": [
+      "BaseGoodProviderStatement",
+      "baseGoodProviderStatement_of_baseGood"
+    ]
+  },
+  "note": "A472 real Lean: base provider statement layer + realised by PROVED baseGood_exists; new file only, no sorry; watchdog to verify"
+}

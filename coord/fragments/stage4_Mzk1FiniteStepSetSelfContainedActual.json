@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetSelfContainedActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetSelfContainedActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 self-contained real chain: finite step-set degree bound (only green deps); new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1T3GapPackageActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1T3GapPackageActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

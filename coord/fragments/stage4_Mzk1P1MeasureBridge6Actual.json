@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge6Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge6Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A473 real Lean: maxDegP subset/erase laws; new file only, no sorry; watchdog to verify"
+}

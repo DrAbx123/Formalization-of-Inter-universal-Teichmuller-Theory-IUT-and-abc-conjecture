@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteF0ImageSelfActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteF0ImageSelfActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 self-contained real: f0/crit image degree bounds (green deps only); new file only, no sorry; watchdog to verify"
+}

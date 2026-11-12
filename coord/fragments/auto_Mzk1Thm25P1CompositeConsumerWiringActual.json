@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Thm25P1CompositeConsumerWiringActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Thm25P1CompositeConsumerWiringActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

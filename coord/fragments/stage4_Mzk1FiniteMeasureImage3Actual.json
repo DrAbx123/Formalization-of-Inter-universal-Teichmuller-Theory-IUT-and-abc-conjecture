@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImage3Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImage3Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: degree-preserving image equality; new file only, no sorry; watchdog to verify"
+}

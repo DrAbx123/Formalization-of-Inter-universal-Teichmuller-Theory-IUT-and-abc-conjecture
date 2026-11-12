@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1E5DisplayInputsStatementActualV2",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5DisplayInputsStatementActualV2.lean"
+  ],
+  "declarations": {},
+  "note": "watchdog EXIT0 read-only; DAG-only registration"
+}

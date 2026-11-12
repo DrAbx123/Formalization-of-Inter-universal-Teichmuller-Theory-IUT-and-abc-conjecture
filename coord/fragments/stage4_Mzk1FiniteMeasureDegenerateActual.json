@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureDegenerateActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureDegenerateActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: degenerate finite measure values; new file only, no sorry; watchdog to verify"
+}

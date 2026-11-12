@@ -1,0 +1,4055 @@
+{
+  "section": "lattice",
+  "owner": "lattice",
+  "description": "A471 lattice: paper<->implementation statement mapping edges (reuse existing DAG nodes only; local short ids for new nodes only when real gaps; evidence observed_source/planned)",
+  "nodes": [
+    {
+      "id": "IUT312TopInterface",
+      "kind": "statement",
+      "title": "IUT 3.12 top-statement interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUT312TopInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUT312TopInterfaceActual.lean": [
+          "ABCProportionalHeightBound",
+          "IUT312Conclusion",
+          "IUT312TopStatement"
+        ]
+      },
+      "note": "paper-scope interface, genuine projections; PENDING-VERIFY; maps to iut-pre-abc:Gap.iut312TopStatement"
+    },
+    {
+      "id": "APTInterface",
+      "kind": "statement",
+      "title": "APT transport interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1APTInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1APTInterfaceActual.lean": [
+          "APTTransportData",
+          "APTTransport",
+          "APTTransport_eq_source"
+        ]
+      },
+      "note": "genuine small APT interface; PENDING-VERIFY; maps to iut-skeleton:APT"
+    },
+    {
+      "id": "HDDObject",
+      "kind": "def",
+      "title": "HDD decomposition data + combined readout",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HDDObjectActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HDDObjectActual.lean": [
+          "HDDDecomposition",
+          "HDD",
+          "HDD_fst",
+          "HDD_snd"
+        ]
+      },
+      "note": "DEF-level genuine object; PENDING-VERIFY; maps to iut-skeleton:HDD"
+    },
+    {
+      "id": "GaussianLGP",
+      "kind": "def",
+      "title": "Gaussian/LGP compatibility interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GaussianLGPActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GaussianLGPActual.lean": [
+          "ThetaFunction",
+          "LGPCompatibility",
+          "LGPCompatibility_refl",
+          "LGPCompatibility_symm"
+        ]
+      },
+      "note": "DEF-level genuine interface; PENDING-VERIFY; maps to iut-skeleton:Gaussian"
+    },
+    {
+      "id": "PrimeStripObject",
+      "kind": "def",
+      "title": "Prime-strip object",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripObjectActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripObjectActual.lean": [
+          "PrimeStrip",
+          "PrimeStrip.carrierOf",
+          "PrimeStrip.labelOf",
+          "PrimeStrip.carrierOf_eq"
+        ]
+      },
+      "note": "DEF-level genuine object; PENDING-VERIFY; maps to iut-skeleton:PrimeStrips"
+    },
+    {
+      "id": "LogShellObject",
+      "kind": "def",
+      "title": "Log-shell object",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellObjectActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellObjectActual.lean": [
+          "LogShellData",
+          "LogShellData.base_mem",
+          "LogShellData.pStar_apply"
+        ]
+      },
+      "note": "DEF-level genuine object; PENDING-VERIFY; maps to iut-skeleton:LogShell"
+    },
+    {
+      "id": "SHEInterface",
+      "kind": "statement",
+      "title": "SHE source-hull-extension interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SHEInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SHEInterfaceActual.lean": [
+          "SHEData",
+          "SHEData.extend_mem_hull"
+        ]
+      },
+      "note": "genuine SHE interface; PENDING-VERIFY; maps to iut-skeleton:SHE"
+    },
+    {
+      "id": "H7Ob9Interface",
+      "kind": "statement",
+      "title": "H7/Ob9 two-sided bound interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1H7Ob9InterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1H7Ob9InterfaceActual.lean": [
+          "TwoSidedBound",
+          "TwoSidedBound.trans",
+          "TwoSidedBound.mono"
+        ]
+      },
+      "note": "genuine two-sided bound lemmas; PENDING-VERIFY; maps to iut-skeleton:H7Ob9"
+    },
+    {
+      "id": "IPLInterface",
+      "kind": "statement",
+      "title": "IPL monotone family interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IPLInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IPLInterfaceActual.lean": [
+          "IPLFamilyData",
+          "IPLFamilyData.family_mono"
+        ]
+      },
+      "note": "genuine IPL interface; PENDING-VERIFY; maps to iut-skeleton:IPL"
+    },
+    {
+      "id": "ThetaLinkInterface",
+      "kind": "statement",
+      "title": "Theta-link bi-inverse interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkInterfaceActual.lean": [
+          "ThetaLinkData",
+          "ThetaLinkData.left_inv_apply",
+          "ThetaLinkData.right_inv_apply"
+        ]
+      },
+      "note": "genuine theta-link interface; PENDING-VERIFY; maps to iut-skeleton:Thetas"
+    },
+    {
+      "id": "Thm311Algorithm",
+      "kind": "statement",
+      "title": "Theorem 3.11 multiradial algorithm interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Thm311AlgorithmActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Thm311AlgorithmActual.lean": [
+          "MultiradialAlgorithm",
+          "MultiradialAlgorithm.applyOf",
+          "MultiradialAlgorithm.applyOf_eq"
+        ]
+      },
+      "note": "genuine algorithm interface; PENDING-VERIFY; maps to iut-skeleton:Thm311"
+    },
+    {
+      "id": "HeightVolumeComparison",
+      "kind": "statement",
+      "title": "Height vs volume comparison interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HeightVolumeComparisonActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HeightVolumeComparisonActual.lean": [
+          "HeightVolumeComparison",
+          "HeightVolumeComparison.height_le_volume",
+          "HeightVolumeComparison.height_le_of_volume_le"
+        ]
+      },
+      "note": "genuine height/volume lemmas; PENDING-VERIFY; maps to iut-skeleton:HeightVolume; EXIT0 (watchdog)"
+    },
+    {
+      "id": "Cor312Bounds",
+      "kind": "statement",
+      "title": "Cor 3.12 log-volume bound interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean": [
+          "Cor312Bounds",
+          "Cor312Bounds.combined",
+          "Cor312Bounds.combined_le_slack_add"
+        ]
+      },
+      "note": "genuine bound lemma; PENDING-VERIFY; maps to iut-skeleton:Cor312; EXIT0 (watchdog)"
+    },
+    {
+      "id": "H5HullBound",
+      "kind": "statement",
+      "title": "H5 hull log-volume bound interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1H5HullBoundActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1H5HullBoundActual.lean": [
+          "H5HullBound",
+          "H5HullBound.scale_mem"
+        ]
+      },
+      "note": "genuine hull closure lemma; PENDING-VERIFY; maps to iut-skeleton:H5; EXIT0 (watchdog)"
+    },
+    {
+      "id": "TargetABCInterface",
+      "kind": "statement",
+      "title": "Target ABC interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TargetABCInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TargetABCInterfaceActual.lean": [
+          "ABCTargetData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY (watchdog compile); maps to iut-skeleton:TargetABC; EXIT0 (watchdog)"
+    },
+    {
+      "id": "K1K2Interface",
+      "kind": "statement",
+      "title": "K1/K2 packet degree reduction interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1K1K2InterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1K1K2InterfaceActual.lean": [
+          "K1K2Data"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY (watchdog compile); maps to iut-skeleton:K1K2; EXIT0 (watchdog)"
+    },
+    {
+      "id": "HullDetTensor",
+      "kind": "statement",
+      "title": "Hull determinant tensor interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullDetTensorV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullDetTensorV2Actual.lean": [
+          "DetData",
+          "DetData.det_mul_apply"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY (watchdog compile); maps to iut-skeleton:HullDet | REDIRECTED to V2 after EXIT=1 (A473 route-around; original file had missing [Mul M] [One M] instance binders)"
+    },
+    {
+      "id": "Section0Graph",
+      "kind": "def",
+      "title": "Section 0 successor graph and reachability",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphActual.lean": [
+          "Reach"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY (watchdog compile); maps to iut-skeleton:Section0; EXIT0 (watchdog)"
+    },
+    {
+      "id": "FrobenioidInterface",
+      "kind": "statement",
+      "title": "Frobenioid carrier interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidInterfaceActual.lean": [
+          "FrobenioidCarrier"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:Frobenioid; EXIT0 (watchdog)"
+    },
+    {
+      "id": "KummerInterface",
+      "kind": "statement",
+      "title": "Kummer correspondence interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerInterfaceActual.lean": [
+          "KummerMapData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:Kummer; EXIT0 (watchdog)"
+    },
+    {
+      "id": "HodgeTheaterInterface",
+      "kind": "statement",
+      "title": "Hodge theater interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterInterfaceActual.lean": [
+          "HodgeTheaterData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:HodgeTheater; EXIT0 (watchdog)"
+    },
+    {
+      "id": "InitialThetaInterface",
+      "kind": "def",
+      "title": "Initial Theta data interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaInterfaceActual.lean": [
+          "InitialThetaData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:InitialTheta; EXIT0 (watchdog)"
+    },
+    {
+      "id": "StepXIContract",
+      "kind": "statement",
+      "title": "Step (xi) contract interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractActual.lean": [
+          "StepXIContractData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:StepXI"
+    },
+    {
+      "id": "QPilotInterface",
+      "kind": "statement",
+      "title": "q-pilot/Theta-pilot comparison interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1QPilotActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1QPilotActual.lean": [
+          "PilotComparisonData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:QPilot"
+    },
+    {
+      "id": "IUT4EstimatesInterface",
+      "kind": "statement",
+      "title": "IUT IV Thm1.10 estimates interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUT4EstimatesInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUT4EstimatesInterfaceActual.lean": [
+          "IUT4EstimateData"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:IUT4Estimates"
+    },
+    {
+      "id": "IUT4Sec2Interface",
+      "kind": "statement",
+      "title": "IUT IV Section 2 comparison interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUT4Sec2InterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUT4Sec2InterfaceActual.lean": [
+          "IUT4Sec2Data"
+        ]
+      },
+      "note": "genuine Lean interface; PENDING-VERIFY; maps to iut-skeleton:IUT4Sec2"
+    },
+    {
+      "id": "IndeterminacyInterface",
+      "kind": "statement",
+      "title": "Indeterminacy step interface (Ind1/2/3)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean": [
+          "IndStepData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-skeleton:Ind1"
+    },
+    {
+      "id": "IndeterminacyInterface2",
+      "kind": "statement",
+      "title": "Indeterminacy step interface (Ind1/2/3) Ind2 map",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean": [
+          "Ind2Data"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-skeleton:Ind2"
+    },
+    {
+      "id": "IndeterminacyInterface3",
+      "kind": "statement",
+      "title": "Indeterminacy step interface (Ind1/2/3) Ind3 map",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyInterfaceActual.lean": [
+          "Ind3Data"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-skeleton:Ind3"
+    },
+    {
+      "id": "FrobeniusTranslation",
+      "kind": "def",
+      "title": "Frobenius picture translation data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusTranslationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusTranslationActual.lean": [
+          "trans"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:FrobeniusPicture.graph"
+    },
+    {
+      "id": "Section0SaturatedPairs",
+      "kind": "def",
+      "title": "Section 0 saturated path pairs",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedPairsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedPairsActual.lean": [
+          "SaturatedPaths"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.saturated"
+    },
+    {
+      "id": "Section0SaturatedPairs2",
+      "kind": "def",
+      "title": "Section 0 saturated path pairs (paper mapping)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedPairsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedPairsActual.lean": [
+          "SaturatedPaths"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-skeleton:Section0"
+    },
+    {
+      "id": "PrimeStripsFDLaws",
+      "kind": "statement",
+      "title": "F/D prime-strip data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFDActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFDActual.lean": [
+          "FPrimeStrip"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PrimeStrips.FD"
+    },
+    {
+      "id": "FrobenioidExample36Laws",
+      "kind": "statement",
+      "title": "Example 3.6 source model backend",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidExample36Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidExample36Actual.lean": [
+          "SourceModel"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Frobenioid.Example36"
+    },
+    {
+      "id": "AbsoluteKummerLaws",
+      "kind": "statement",
+      "title": "Absolute Kummer map laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerLawsActual.lean": [
+          "AbsoluteKummer"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Kummer.absolute"
+    },
+    {
+      "id": "HodgeTheaterFamilyLaws",
+      "kind": "statement",
+      "title": "Hodge theater family link laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterFamilyActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterFamilyActual.lean": [
+          "TheaterFamily"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:HodgeTheater.family"
+    },
+    {
+      "id": "InitialThetaDataLaws",
+      "kind": "def",
+      "title": "Initial Theta data (Def 3.1)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaDataActual.lean": [
+          "InitialThetaData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:InitialTheta.data"
+    },
+    {
+      "id": "LogShellInvariantsLaws",
+      "kind": "def",
+      "title": "Log-shell invariants",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellInvariantsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellInvariantsActual.lean": [
+          "LogShellInvariants"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:LogShell.I"
+    },
+    {
+      "id": "Section0CountablyOrderedData",
+      "kind": "def",
+      "title": "Section 0 countably ordered data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0CountablyOrderedDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0CountablyOrderedDataActual.lean": [
+          "CountablyOrdered"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.countablyOrdered"
+    },
+    {
+      "id": "ThetaPilotCarrierLaws",
+      "kind": "statement",
+      "title": "Theta-pilot carrier",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotCarrierActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotCarrierActual.lean": [
+          "ThetaPilotCarrier"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:ThetaPilot.carrier"
+    },
+    {
+      "id": "Section0OrientedGraphData",
+      "kind": "def",
+      "title": "Section 0 oriented graph data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrientedGraphDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrientedGraphDataActual.lean": [
+          "OrientedGraph"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.orientedGraph"
+    },
+    {
+      "id": "HodgeTheaterCoreData",
+      "kind": "def",
+      "title": "Hodge theater core data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterCoreDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterCoreDataActual.lean": [
+          "HodgeTheaterCore"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:HodgeTheater.core"
+    },
+    {
+      "id": "LogShellFrobeniusData",
+      "kind": "def",
+      "title": "Log-shell Frobenius iterate data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellFrobeniusDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellFrobeniusDataActual.lean": [
+          "FrobeniusIterateData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:LogShell.logFrobenius"
+    },
+    {
+      "id": "QPilotDivisorData",
+      "kind": "def",
+      "title": "q-pilot arithmetic divisor degree data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1QPilotDivisorDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1QPilotDivisorDataActual.lean": [
+          "DivisorDegree"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:QPilot.arithmeticDivisor"
+    },
+    {
+      "id": "PrimeStripsFrobCategory",
+      "kind": "def",
+      "title": "Prime-strip Frobenioid category data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFrobenioidCategoryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFrobenioidCategoryActual.lean": [
+          "CatData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PrimeStrips.frobenioidCategory"
+    },
+    {
+      "id": "PrimeStripsFxDAction",
+      "kind": "def",
+      "title": "FxD action data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFxDActionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsFxDActionActual.lean": [
+          "ActionData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PrimeStrips.FxDAction"
+    },
+    {
+      "id": "KummerContinuity",
+      "kind": "statement",
+      "title": "Absolute Kummer continuity interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerContinuityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerContinuityActual.lean": [
+          "ContinuityData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Kummer.continuity"
+    },
+    {
+      "id": "KummerRootSystems",
+      "kind": "def",
+      "title": "Kummer root systems data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerRootSystemsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerRootSystemsActual.lean": [
+          "RootSystem"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Kummer.rootSystems"
+    },
+    {
+      "id": "HodgeTheaterLinks",
+      "kind": "def",
+      "title": "Hodge theater links data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterLinksActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterLinksActual.lean": [
+          "TheaterLinks"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:HodgeTheater.links"
+    },
+    {
+      "id": "InitialThetaCStage",
+      "kind": "def",
+      "title": "Initial Theta C-stage data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaCStageActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaCStageActual.lean": [
+          "CStageData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:InitialTheta.cStage"
+    },
+    {
+      "id": "KummerSummaryData",
+      "kind": "statement",
+      "title": "Absolute Kummer summary data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerSummaryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerSummaryActual.lean": [
+          "KummerSummary"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Kummer.summary"
+    },
+    {
+      "id": "HodgeTheaterConcreteData",
+      "kind": "def",
+      "title": "Concrete Hodge theater data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterConcreteActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterConcreteActual.lean": [
+          "ConcreteTheater"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:HodgeTheater.concrete"
+    },
+    {
+      "id": "InitialThetaDef31Data",
+      "kind": "def",
+      "title": "Initial Theta Definition 3.1 data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaDef31Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaDef31Actual.lean": [
+          "Def31Data"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:InitialTheta.definition31"
+    },
+    {
+      "id": "Section0PathsData",
+      "kind": "def",
+      "title": "Section 0 path data (lists of steps)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathsDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathsDataActual.lean": [
+          "Path"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.paths"
+    },
+    {
+      "id": "Section0SaturatedSetsData",
+      "kind": "def",
+      "title": "Section 0 saturated sets data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSetsDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSetsDataActual.lean": [
+          "SaturatedSet"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.saturatedSets"
+    },
+    {
+      "id": "LogShellPStarData",
+      "kind": "def",
+      "title": "Log-shell p*/invariants data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellPStarActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellPStarActual.lean": [
+          "PStarData"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:LogShell.pStar"
+    },
+    {
+      "id": "FrobenioidTransportData",
+      "kind": "def",
+      "title": "Frobenioid transport data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidTransportActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidTransportActual.lean": [
+          "TransportData"
+        ]
+      },
+      "note": "genuine Lean lemma/interface; PENDING-VERIFY; maps to iut-pre-abc:Frobenioid.transport"
+    },
+    {
+      "id": "DetScalingLaws",
+      "kind": "theorem",
+      "title": "Determinant scaling and inverse laws (Mathlib)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetScalingInvLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetScalingInvLawsActual.lean": [
+          "det_smul_scaling"
+        ]
+      },
+      "note": "genuine Lean lemma/interface; PENDING-VERIFY; maps to e-deep:E2.detScalingLaws"
+    },
+    {
+      "id": "DetInvLaws",
+      "kind": "theorem",
+      "title": "Determinant inverse law (Mathlib)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetScalingInvLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetScalingInvLawsActual.lean": [
+          "det_inv_law"
+        ]
+      },
+      "note": "genuine Lean lemma/interface; PENDING-VERIFY; maps to e-deep:E2.detInvLaws"
+    },
+    {
+      "id": "DetBasicLaws",
+      "kind": "theorem",
+      "title": "Basic determinant laws (Mathlib)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetBasicLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetBasicLawsActual.lean": [
+          "det_mul_law",
+          "det_one_law",
+          "det_pow_law",
+          "det_transpose_law",
+          "det_diagonal_law"
+        ]
+      },
+      "note": "genuine Mathlib determinant proofs; PENDING-VERIFY; maps to HullDet/detScalingLaws"
+    },
+    {
+      "id": "FinsetVolumeLaws",
+      "kind": "theorem",
+      "title": "Finite product/sum laws (Mathlib)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetVolumeLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetVolumeLawsActual.lean": [
+          "prod_pos_law"
+        ]
+      },
+      "note": "genuine Mathlib lemmas; PENDING-VERIFY; maps to iut-skeleton:HullDet"
+    },
+    {
+      "id": "EstimateChainLaws",
+      "kind": "theorem",
+      "title": "Elementary estimate chains (Mathlib)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EstimateChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EstimateChainActual.lean": [
+          "chain_le_four"
+        ]
+      },
+      "note": "genuine Mathlib lemmas; PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.FrobeniusPicture.arrowFacts",
+      "kind": "def",
+      "title": "Frobenius picture arrow facts",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "arrow",
+          "arrow_functional"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.arrowFacts"
+    },
+    {
+      "id": "Map.FrobeniusPicture.graphAut",
+      "kind": "def",
+      "title": "Frobenius picture automorphisms",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "PictureAut",
+          "PictureAut.injective"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.graphAut"
+    },
+    {
+      "id": "Map.FrobeniusPicture.translationClass",
+      "kind": "def",
+      "title": "Frobenius translation class",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "translationAut"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.translationClass"
+    },
+    {
+      "id": "Map.FrobeniusPicture.translationLaw",
+      "kind": "theorem",
+      "title": "Frobenius translation law",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "translationAut_comp"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.translationLaw"
+    },
+    {
+      "id": "Map.FrobeniusPicture.pictureObjects",
+      "kind": "def",
+      "title": "Frobenius picture objects",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "arrow"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.pictureObjects"
+    },
+    {
+      "id": "Map.FrobeniusPicture.pathVertices",
+      "kind": "def",
+      "title": "Frobenius path vertices",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "translationAut"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.pathVertices"
+    },
+    {
+      "id": "Map.FrobeniusPicture.oppositeArrows",
+      "kind": "theorem",
+      "title": "Frobenius opposite arrows (no self-loop)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureLawsActual.lean": [
+          "arrow_no_self"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.FrobeniusPicture.oppositeArrows"
+    },
+    {
+      "id": "Map.ThetaLink.procession",
+      "kind": "def",
+      "title": "Theta-link procession",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean": [
+          "Procession"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.ThetaLink.procession"
+    },
+    {
+      "id": "Map.ThetaLink.quotient",
+      "kind": "def",
+      "title": "Theta-link quotient idempotence",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean": [
+          "Procession.proj_idem_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.ThetaLink.quotient"
+    },
+    {
+      "id": "Map.ThetaLink.symmetry",
+      "kind": "def",
+      "title": "Theta-link symmetry data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean": [
+          "SymmetricThetaLink"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.ThetaLink.symmetry"
+    },
+    {
+      "id": "Map.ThetaLink.unitLaws",
+      "kind": "theorem",
+      "title": "Theta-link unit law",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkLawsActual.lean": [
+          "SymmetricThetaLink.left_inv_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.ThetaLink.unitLaws"
+    },
+    {
+      "id": "Map.MuN.torsion",
+      "kind": "theorem",
+      "title": "mu_N torsion law",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MuNLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MuNLawsActual.lean": [
+          "rootsOfUnityPow_mem"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.MuN.torsion"
+    },
+    {
+      "id": "Map.MuN.rootsOfUnityFacts",
+      "kind": "theorem",
+      "title": "roots of unity facts",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MuNLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MuNLawsActual.lean": [
+          "rootsOfUnityMul_mem"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.MuN.rootsOfUnityFacts"
+    },
+    {
+      "id": "Map.LogShell.invariants",
+      "kind": "def",
+      "title": "log-shell invariants",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean": [
+          "ScalingData"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.LogShell.invariants"
+    },
+    {
+      "id": "Map.LogShell.scalingPow",
+      "kind": "theorem",
+      "title": "log-shell scaling power law",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean": [
+          "ScalingData.scale_mul_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.LogShell.scalingPow"
+    },
+    {
+      "id": "Map.LogShell.invariantImage",
+      "kind": "theorem",
+      "title": "log-shell invariant image",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingActual.lean": [
+          "ScalingData.invariant_scale_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.LogShell.invariantImage"
+    },
+    {
+      "id": "Map.Section0.orderCat",
+      "kind": "def",
+      "title": "Section 0 order category",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean": [
+          "OrderCat"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Section0.orderCat"
+    },
+    {
+      "id": "Map.Section0.saturatedClosure",
+      "kind": "def",
+      "title": "Section 0 saturated closure",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean": [
+          "GraphCore"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Section0.saturatedClosure"
+    },
+    {
+      "id": "Map.Section0.orientedGraphCore",
+      "kind": "def",
+      "title": "Section 0 oriented graph core",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean": [
+          "GraphCore",
+          "GraphCore.mem_adjPairs"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Section0.orientedGraphCore"
+    },
+    {
+      "id": "Map.Section0.adjacentPairs",
+      "kind": "def",
+      "title": "Section 0 adjacent pairs",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean": [
+          "GraphCore.adjPairs"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Section0.adjacentPairs"
+    },
+    {
+      "id": "Map.Section0.orderwise",
+      "kind": "theorem",
+      "title": "Section 0 orderwise transitivity",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCategoryLawsActual.lean": [
+          "OrderCat.trans_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Section0.orderwise"
+    },
+    {
+      "id": "Map.KummerLogShell.bridge",
+      "kind": "def",
+      "title": "Kummer/log-shell bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean": [
+          "KummerLogShellBridge"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.KummerLogShell.bridge"
+    },
+    {
+      "id": "Map.Kummer.rootCompatibility",
+      "kind": "theorem",
+      "title": "Kummer root compatibility",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean": [
+          "RootCompatibility",
+          "RootCompatibility.comm_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Kummer.rootCompatibility"
+    },
+    {
+      "id": "Map.Kummer.powSubgroup",
+      "kind": "def",
+      "title": "Kummer power subgroup",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerLogShellBridgeActual.lean": [
+          "PowSubgroup",
+          "PowSubgroup.mul_mem_apply"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Kummer.powSubgroup"
+    },
+    {
+      "id": "Map.HodgeTheater.familyTransport",
+      "kind": "def",
+      "title": "Hodge theater family transport",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterTransportLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterTransportLawsActual.lean": [
+          "FamilyTransport"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.HodgeTheater.familyTransport"
+    },
+    {
+      "id": "Map.HodgeTheater.linkCategoryLaws",
+      "kind": "theorem",
+      "title": "Hodge theater link category laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterTransportLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterTransportLawsActual.lean": [
+          "rel",
+          "rel_refl",
+          "rel_symm",
+          "rel_trans",
+          "rel_symm_iff"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.HodgeTheater.linkCategoryLaws | A475 evidence: HTLink.rel exact-string 0 repo hits; actual decls in Mzk1HodgeTheaterTransportLawsActual.lean are rel/rel_refl/rel_symm/rel_trans/rel_symm_iff (namespace HTLink)"
+    },
+    {
+      "id": "Map.PrimeStrips.exponentVector",
+      "kind": "def",
+      "title": "Prime-strip exponent vector",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean": [
+          "ExponentVector"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.PrimeStrips.exponentVector"
+    },
+    {
+      "id": "Map.PrimeStrips.categorySkeleton",
+      "kind": "def",
+      "title": "Prime-strip category skeleton",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean": [
+          "CategorySkeleton"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.PrimeStrips.categorySkeleton"
+    },
+    {
+      "id": "Map.PrimeStrips.valueKernel",
+      "kind": "def",
+      "title": "Prime-strip value kernel",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean": [
+          "ValueKernel"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.PrimeStrips.valueKernel"
+    },
+    {
+      "id": "Map.PrimeStrips.valueGroupAction",
+      "kind": "def",
+      "title": "Prime-strip value group action",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsCategoryLawsActual.lean": [
+          "ValueGroupAction"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.PrimeStrips.valueGroupAction"
+    },
+    {
+      "id": "Map.Frobenioid.ramificationData",
+      "kind": "def",
+      "title": "Frobenioid ramification data",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationDataActual.lean": [
+          "RamificationData"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Frobenioid.ramificationData"
+    },
+    {
+      "id": "Map.Frobenioid.unitsMapLaws",
+      "kind": "def",
+      "title": "Frobenioid units map laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationDataActual.lean": [
+          "UnitsMapData"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Frobenioid.unitsMapLaws"
+    },
+    {
+      "id": "Map.Theta.powerKernelGeneric",
+      "kind": "def",
+      "title": "Theta power kernel generic",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelOrbicurveActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelOrbicurveActual.lean": [
+          "PowerKernel"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.Theta.powerKernelGeneric"
+    },
+    {
+      "id": "Map.InitialTheta.orbicurveSignature",
+      "kind": "def",
+      "title": "Initial Theta orbicurve signature",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelOrbicurveActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelOrbicurveActual.lean": [
+          "OrbicurveSignature"
+        ]
+      },
+      "note": "genuine Lean interface/record; PENDING-VERIFY (watchdog); maps to abc.InitialTheta.orbicurveSignature"
+    },
+    {
+      "id": "Map.E4Example36Correspondence",
+      "kind": "statement",
+      "title": "Example 3.6 correspondence laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean": [
+          "Example36Correspondence",
+          "Example36Correspondence.forward_backward_apply"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:E4.example36CorrespondenceLaws"
+    },
+    {
+      "id": "Map.Section0Branches",
+      "kind": "statement",
+      "title": "Section 0 branches",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean": [
+          "Section0Branches",
+          "Section0Branches.branch_idem_apply"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:Section0.branches"
+    },
+    {
+      "id": "Map.PrimeStripsStripDegree",
+      "kind": "statement",
+      "title": "Prime-strip strip degree",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean": [
+          "StripDegree",
+          "StripDegree.degree_nonneg"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PrimeStrips.stripDegree"
+    },
+    {
+      "id": "Map.PaperPreObjectsTypedInterfaces",
+      "kind": "statement",
+      "title": "Paper pre-objects typed interfaces",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean": [
+          "TypedInterface",
+          "TypedInterface.pred_prop"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PaperPreObjects.typedInterfaces"
+    },
+    {
+      "id": "Map.PaperTargetsAbcStatement",
+      "kind": "statement",
+      "title": "Paper targets ABC statement",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCExtraInterfacesActual.lean": [
+          "ABCTargetStatement",
+          "ABCTargetStatement.comparison_le"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to iut-pre-abc:PaperTargets.abcStatement"
+    },
+    {
+      "id": "Reuse.FixedBetaChoice",
+      "kind": "statement",
+      "title": "Reuse: StepProviderFixedBetaChoiceInput (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean": [
+          "StepProviderFixedBetaChoiceInput"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-stage4:C.gap.fixedBetaChoice"
+    },
+    {
+      "id": "Reuse.F4bNumMaxStrict",
+      "kind": "statement",
+      "title": "Reuse: FiniteNumMaxStrictStatement (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1F4bFiniteReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1F4bFiniteReuseActual.lean": [
+          "FiniteNumMaxStrictStatement"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-stage4:C.gap.f4bNumMaxStrict"
+    },
+    {
+      "id": "Reuse.SchemeSideMaps",
+      "kind": "statement",
+      "title": "Reuse: SchemeSideMapsData/sectionMap/placePoint (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsActual.lean": [
+          "SchemeSideMapsData",
+          "schemeSideMaps_sectionMap",
+          "schemeSideMaps_placePoint"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-stage4:D.gap.schemeSideMaps"
+    },
+    {
+      "id": "Reuse.ProblemDApplicability",
+      "kind": "statement",
+      "title": "Reuse: ProblemDApplicabilityInput (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/GenEll21GeometricCoreConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/GenEll21GeometricCoreConsumerActual.lean": [
+          "ProblemDApplicabilityInput"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-stage4:D.gap.problemDApplicability"
+    },
+    {
+      "id": "Reuse.QPilotPrecise",
+      "kind": "statement",
+      "title": "Reuse: QPilotPreciseData (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1QPilotPreciseDataActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1QPilotPreciseDataActual.lean": [
+          "QPilotPreciseData",
+          "qPilotPreciseData_of_candidate",
+          "qPilotPreciseData_nonempty"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-abc:Gap.qPilotPreciseConstruction"
+    },
+    {
+      "id": "Reuse.ThetaPilotIQ",
+      "kind": "statement",
+      "title": "Reuse: thetaPilot IQ containment (existing)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddThetaPilotIQConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddThetaPilotIQConsumerActual.lean": [
+          "thetaPilot_IQ_containment",
+          "thetaPilotIQRows",
+          "thetaPilotIQRows_length"
+        ]
+      },
+      "note": "REUSE existing asset (A475 repo search); PENDING-VERIFY; maps to iut-pre-abc:Gap.thetaPilotIQContainment"
+    },
+    {
+      "id": "Reuse.Cor312LogComparison",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Cor312LogComparison",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/RootThetaCompletionHullActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/RootThetaCompletionHullActual.lean": [
+          "logComparison"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:Cor312.logComparison"
+    },
+    {
+      "id": "Reuse.FrobeniusUnitsReuse",
+      "kind": "statement",
+      "title": "Reuse: Reuse.FrobeniusUnitsReuse",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean": [
+          "unitsMapOfRingHom_comp",
+          "unitsMapOfRingHom_comp_apply",
+          "unitsMapOfRingHom_id_apply"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:Frobenius.UnitsReuseCorollaries"
+    },
+    {
+      "id": "Reuse.Section0PathComposition",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Section0PathComposition",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean": [
+          "pdAppend",
+          "pdOfEdge",
+          "pdLength"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:Section0.pathCompositionCorollaries"
+    },
+    {
+      "id": "Reuse.HodgeThetaLinkGraphArrow",
+      "kind": "statement",
+      "title": "Reuse: Reuse.HodgeThetaLinkGraphArrow",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:HodgeThetaLinkGraph.arrowCorollaries"
+    },
+    {
+      "id": "Reuse.HodgeThetaLinkGraphTranslation",
+      "kind": "statement",
+      "title": "Reuse: Reuse.HodgeThetaLinkGraphTranslation",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:HodgeThetaLinkGraph.translationCorollaries"
+    },
+    {
+      "id": "Reuse.HodgeThetaLinkGraphClosure",
+      "kind": "statement",
+      "title": "Reuse: Reuse.HodgeThetaLinkGraphClosure",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:HodgeThetaLinkGraph.closureCorollaries"
+    },
+    {
+      "id": "Reuse.HodgeThetaLinkGraphUnicity",
+      "kind": "statement",
+      "title": "Reuse: Reuse.HodgeThetaLinkGraphUnicity",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:HodgeThetaLinkGraph.unicityCorollaries"
+    },
+    {
+      "id": "Reuse.KummerAbsoluteTrioConsumer",
+      "kind": "statement",
+      "title": "Reuse: Reuse.KummerAbsoluteTrioConsumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioConsumerActual.lean": [
+          "absoluteKummerTrioRows_length'",
+          "absoluteKummerTrioRows_nonempty"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:Kummer.AbsoluteTrioConsumer"
+    },
+    {
+      "id": "Reuse.ThetaModLProjectionCorollaries",
+      "kind": "statement",
+      "title": "Reuse: Reuse.ThetaModLProjectionCorollaries",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionCorollariesActual.lean": [
+          "modLThetaProjection_apply_one",
+          "modLThetaProjection_congr"
+        ]
+      },
+      "note": "REUSE existing asset (A475 exhaustive search); maps to iut-pre-abc:Theta.ModLProjectionCorollaries"
+    },
+    {
+      "id": "Reuse.KummerLogShellCarrierCorollaries",
+      "kind": "statement",
+      "title": "Reuse: Reuse.KummerLogShellCarrierCorollaries",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellCarrierStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellCarrierStatementActual.lean": [
+          "LogShellCarrierData",
+          "PreLogShellData",
+          "UnitLayerData"
+        ]
+      },
+      "note": "REUSE: exact LogShellCarrierCorollaries 0 hits; equivalent carrier interface in Mzk1PaperLogShellCarrierStatementActual.lean; maps to iut-pre-abc:Kummer.LogShellCarrierCorollaries"
+    },
+    {
+      "id": "Reuse.Section0PathProjections",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Section0PathProjections",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean": [
+          "pdReverse",
+          "pdLength"
+        ]
+      },
+      "note": "REUSE: exact pathProjections 0 hits; equivalent path reverse/length decls; maps to iut-pre-abc:Section0.pathProjections"
+    },
+    {
+      "id": "Reuse.IndConsumerBundle2",
+      "kind": "statement",
+      "title": "Reuse: Reuse.IndConsumerBundle2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullIndConsumerBundle2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullIndConsumerBundle2Actual.lean": [
+          "indBundle2_ids",
+          "indBundle2_statuses",
+          "indBundle2Rows"
+        ]
+      },
+      "note": "REUSE existing asset (A475 search); maps to hull:HULL.IND.CONSUMER.BUNDLE2"
+    },
+    {
+      "id": "Reuse.H5H7ConsumerBatch",
+      "kind": "statement",
+      "title": "Reuse: Reuse.H5H7ConsumerBatch",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullTreeH5H7ConsumerBatchActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullTreeH5H7ConsumerBatchActual.lean": [
+          "treeH5H7Batch_frozen",
+          "treeH5H7Batch_hullFacts",
+          "treeH5H7BatchRows"
+        ]
+      },
+      "note": "REUSE existing asset (A475 search); maps to hull:HULL.TREE.H5H7.CONSUMER.BATCH"
+    },
+    {
+      "id": "Reuse.DonorReuseAdapters",
+      "kind": "statement",
+      "title": "Reuse: Reuse.DonorReuseAdapters",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/S3137M1ConcreteDonorIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3137M1ConcreteDonorIndexActual.lean": [
+          "S3137M1ConcreteDonorDecls",
+          "S3137M1ConcreteDonorDecls_length",
+          "S3137M1ConcreteDonorIndexRecord"
+        ]
+      },
+      "note": "REUSE existing asset (A475 search); maps to hull:X.DONOR.REUSE.ADAPTERS"
+    },
+    {
+      "id": "Map.EtThGapV2",
+      "kind": "statement",
+      "title": "V2/V3 route: Map.EtThGapV2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThGapStatementV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThGapStatementV2Actual.lean": [
+          "EtThGeometricRealization",
+          "EtThFrobenioidManifestation",
+          "EtThActualThetaTransformation",
+          "EtThRealizationGap",
+          "EtThRealizationGap.geometricRealization_of"
+        ]
+      },
+      "note": "route-around of red skeleton (A473/A475); maps to e-deep:E4.etthGap"
+    },
+    {
+      "id": "Map.BookkeepingLemmasV3",
+      "kind": "statement",
+      "title": "V2/V3 route: Map.BookkeepingLemmasV3",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasV3Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasV3Actual.lean": [
+          "hullLeImageVolume_trans",
+          "normalization_mul_pos",
+          "C9Stage",
+          "C9Stage.index",
+          "C9Stage.index_lt_nine"
+        ]
+      },
+      "note": "route-around of red skeleton (A473/A475); maps to foundation:bookkeeping.lemmas"
+    },
+    {
+      "id": "Map.DetChainedConsumer",
+      "kind": "theorem",
+      "title": "Chained determinant consumers (smul-mul, product power)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetChainedConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetChainedConsumerActual.lean": [
+          "det_smul_mul",
+          "det_pow_mul"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HullDet"
+    },
+    {
+      "id": "Map.KummerComposeChain",
+      "kind": "theorem",
+      "title": "Chained Kummer/injectivity consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerComposeChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerComposeChainActual.lean": [
+          "injective_comp_chain",
+          "injective_of_leftInverse_chain",
+          "injective_postcomp_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:Kummer"
+    },
+    {
+      "id": "Map.EstimateChainedConsumer",
+      "kind": "theorem",
+      "title": "Chained estimate/order consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EstimateChainedConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EstimateChainedConsumerActual.lean": [
+          "height_chain_le",
+          "sum_chain_le",
+          "mul_nonneg_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.DetBlockChainConsumer",
+      "kind": "theorem",
+      "title": "Chained determinant block consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetBlockChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetBlockChainConsumerActual.lean": [
+          "det_mul_assoc_chain",
+          "det_mul_one_chain",
+          "det_one_mul_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HullDet"
+    },
+    {
+      "id": "Map.FinsetSumChainConsumer",
+      "kind": "theorem",
+      "title": "Chained finite-sum consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumChainConsumerActual.lean": [
+          "sum_add_chain",
+          "sum_chain2",
+          "sum_add_nonneg_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.HeightVolumeAddChain",
+      "kind": "theorem",
+      "title": "Chained height/volume addition consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HeightVolumeAddChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HeightVolumeAddChainActual.lean": [
+          "height_volume_add_chain",
+          "height_volume_add_chain3",
+          "height_volume_nonneg_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.ThetaComposeChain",
+      "kind": "theorem",
+      "title": "Chained Theta-link composition consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaComposeChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaComposeChainActual.lean": [
+          "ThetaLinkBi",
+          "ThetaLinkBi.compose",
+          "ThetaLinkBi.compose_left_inv"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:Thetas"
+    },
+    {
+      "id": "Map.FinsetProdChainConsumer",
+      "kind": "theorem",
+      "title": "Chained finite-product consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetProdChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetProdChainConsumerActual.lean": [
+          "prod_chain_le",
+          "prod_pos_chain",
+          "prod_nonneg_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.BijectiveComposeChain",
+      "kind": "theorem",
+      "title": "Chained bijective-composition consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BijectiveComposeChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BijectiveComposeChainActual.lean": [
+          "bijective_comp_chain",
+          "bijective_of_leftInverse_chain",
+          "equiv_comp_bijective_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:Kummer"
+    },
+    {
+      "id": "Map.RatOrderChainConsumer",
+      "kind": "theorem",
+      "title": "Chained rational order consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RatOrderChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RatOrderChainConsumerActual.lean": [
+          "add_lt_add_chain",
+          "lt_chain2",
+          "mul_le_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.MulBoundChainConsumer",
+      "kind": "theorem",
+      "title": "Chained multiplication bound consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MulBoundChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MulBoundChainConsumerActual.lean": [
+          "mul_le_mul_chain",
+          "sq_le_sq_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.FinsetSumProductChain",
+      "kind": "theorem",
+      "title": "Chained Finset sum-of-products consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumProductChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumProductChainActual.lean": [
+          "sum_mul_le_chain",
+          "sum_sq_le_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.PowChainConsumer",
+      "kind": "theorem",
+      "title": "Chained power-order consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PowChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PowChainConsumerActual.lean": [
+          "pow_le_pow_chain",
+          "sq_le_sq_chain2"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.AbsChainConsumer",
+      "kind": "theorem",
+      "title": "Chained absolute-value consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsChainConsumerActual.lean": [
+          "abs_le_chain",
+          "abs_sub_comm_chain",
+          "sq_abs_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.MonotoneChainConsumer",
+      "kind": "theorem",
+      "title": "Chained monotonicity consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MonotoneChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MonotoneChainConsumerActual.lean": [
+          "monotone_comp_chain",
+          "monotone_add_const_chain",
+          "monotone_mul_nonneg_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.DetTransposeMulChain",
+      "kind": "theorem",
+      "title": "Chained determinant transpose consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DetTransposeMulChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DetTransposeMulChainActual.lean": [
+          "det_transpose_mul_chain",
+          "det_transpose_self_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HullDet"
+    },
+    {
+      "id": "Map.FinsetProductBoundChain",
+      "kind": "theorem",
+      "title": "Chained finite-product bound consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetProductBoundChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetProductBoundChainActual.lean": [
+          "prod_bounds_chain",
+          "prod_pos_le_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    },
+    {
+      "id": "Map.EquivComposeChainConsumer",
+      "kind": "theorem",
+      "title": "Chained equivalence-composition consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EquivComposeChainConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EquivComposeChainConsumerActual.lean": [
+          "trans_symm_apply_chain",
+          "trans_apply_symm_chain",
+          "symm_comp_apply_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:Kummer"
+    },
+    {
+      "id": "Map.KummerRightInverseChain",
+      "kind": "theorem",
+      "title": "Chained right-inverse composition",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerRightInverseChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerRightInverseChainActual.lean": [
+          "rightInverse_comp_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:Kummer"
+    },
+    {
+      "id": "Map.FinsetSumPosChain",
+      "kind": "theorem",
+      "title": "Chained finite-sum positivity consumers",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumPosChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumPosChainActual.lean": [
+          "sum_pos_chain",
+          "sum_nonneg_pos_chain"
+        ]
+      },
+      "note": "chained consumer (combines existing theorems; real math content); PENDING-VERIFY; maps to iut-skeleton:HeightVolume"
+    }
+  ],
+  "edges": [
+    {
+      "from": "iut-skeleton:Cor312",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Cor312",
+      "to": "iutiii:IUTIII.COR312.WIRING",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Thm311",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Thm311",
+      "to": "iutiii:IUTIII.THM311.TWO_ACTION",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:StepXI",
+      "to": "iutiii:IUTIII.STEPXI.CONTRACT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:StepXI",
+      "to": "iutiii:IUTIII.STEPXI.PARAMETRIC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Ind1",
+      "to": "iutiii:IUTIII.IND1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Ind2",
+      "to": "iutiii:IUTIII.IND2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Ind3",
+      "to": "iutiii:IUTIII.IND3",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:H5",
+      "to": "e-deep:E2.H5framing",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:H5",
+      "to": "iutiii:HULL.H5.WRAPPER",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:H7Ob9",
+      "to": "e-deep:E3.ob9Interface",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:H7Ob9",
+      "to": "iutiii:HULL.H7.OB9.WRAPPER",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HullDet",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HullDet",
+      "to": "iutiii:PAPER.S3182.COR312_HULLDET",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HDD",
+      "to": "iutiii:PAPER.S3182.COR312_HULLDET",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:LogShell",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:LogShell",
+      "to": "e-deep:logshell-frobenius-power",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Thetas",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Thetas",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:PrimeStrips",
+      "to": "iut-pre-abc:PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:PrimeStrips",
+      "to": "iut-pre-abc:PrimeStrips.frobenioidCategory",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Frobenioid",
+      "to": "iut-pre-abc:Frobenioid.Example36",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Frobenioid",
+      "to": "iut-pre-abc:Frobenioid.transport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Kummer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Kummer",
+      "to": "iut-pre-abc:Kummer.continuity",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Kummer",
+      "to": "iut-pre-abc:Kummer.summary",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HodgeTheater",
+      "to": "iut-pre-abc:HodgeTheater.core",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HodgeTheater",
+      "to": "iut-pre-abc:HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HodgeTheater",
+      "to": "iut-pre-abc:HodgeTheater.links",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:InitialTheta",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:InitialTheta",
+      "to": "iut-pre-abc:InitialTheta.definition31",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Section0",
+      "to": "iut-pre-abc:Section0.countablyOrdered",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Section0",
+      "to": "iut-pre-abc:Section0.paths",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Gaussian",
+      "to": "iut-pre-abc:InitialTheta.cStage",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:QPilot",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:QPilot",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:IUT4Estimates",
+      "to": "e-deep:E5.iutivAdd",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:IUT4Estimates",
+      "to": "e-deep:E5.iutivSection1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:IUT4Sec2",
+      "to": "e-deep:E5.iutivSection2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:IUT4Sec2",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:HeightVolume",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:TargetABC",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:TargetABC",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:Cor312",
+      "to": "iuti-ii:IUTIII.Interface.Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-skeleton:APT",
+      "to": "foundation:B2c.adapterUnconditional",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312TopInterface",
+      "to": "iut-pre-abc:Gap.iut312TopStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312TopInterface",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "APTInterface",
+      "to": "iut-skeleton:APT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HDDObject",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "GaussianLGP",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripObject",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellObject",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "SHEInterface",
+      "to": "iut-skeleton:SHE",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "H7Ob9Interface",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IPLInterface",
+      "to": "iut-skeleton:IPL",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ThetaLinkInterface",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311Algorithm",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HeightVolumeComparison",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312Bounds",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "H5HullBound",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "TargetABCInterface",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "K1K2Interface",
+      "to": "iut-skeleton:K1K2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HullDetTensor",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0Graph",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobenioidInterface",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerInterface",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterInterface",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaInterface",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXIContract",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "QPilotInterface",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT4EstimatesInterface",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT4Sec2Interface",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IndeterminacyInterface",
+      "to": "iut-skeleton:Ind1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IndeterminacyInterface2",
+      "to": "iut-skeleton:Ind2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IndeterminacyInterface3",
+      "to": "iut-skeleton:Ind3",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobeniusTranslation",
+      "to": "iut-pre-abc:FrobeniusPicture.graph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0SaturatedPairs",
+      "to": "iut-pre-abc:Section0.saturated",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0SaturatedPairs2",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFDLaws",
+      "to": "iut-pre-abc:PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFDLaws",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobenioidExample36Laws",
+      "to": "iut-pre-abc:Frobenioid.Example36",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobenioidExample36Laws",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "AbsoluteKummerLaws",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "AbsoluteKummerLaws",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterFamilyLaws",
+      "to": "iut-pre-abc:HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterFamilyLaws",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaDataLaws",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaDataLaws",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellInvariantsLaws",
+      "to": "iut-pre-abc:LogShell.I",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellInvariantsLaws",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0CountablyOrderedData",
+      "to": "iut-pre-abc:Section0.countablyOrdered",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0CountablyOrderedData",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ThetaPilotCarrierLaws",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ThetaPilotCarrierLaws",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0OrientedGraphData",
+      "to": "iut-pre-abc:Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0OrientedGraphData",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterCoreData",
+      "to": "iut-pre-abc:HodgeTheater.core",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterCoreData",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellFrobeniusData",
+      "to": "iut-pre-abc:LogShell.logFrobenius",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellFrobeniusData",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "QPilotDivisorData",
+      "to": "iut-pre-abc:QPilot.arithmeticDivisor",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "QPilotDivisorData",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFrobCategory",
+      "to": "iut-pre-abc:PrimeStrips.frobenioidCategory",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFrobCategory",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFxDAction",
+      "to": "iut-pre-abc:PrimeStrips.FxDAction",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStripsFxDAction",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerContinuity",
+      "to": "iut-pre-abc:Kummer.continuity",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerContinuity",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerRootSystems",
+      "to": "iut-pre-abc:Kummer.rootSystems",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerRootSystems",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterLinks",
+      "to": "iut-pre-abc:HodgeTheater.links",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterLinks",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaCStage",
+      "to": "iut-pre-abc:InitialTheta.cStage",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaCStage",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerSummaryData",
+      "to": "iut-pre-abc:Kummer.summary",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerSummaryData",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterConcreteData",
+      "to": "iut-pre-abc:HodgeTheater.concrete",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheaterConcreteData",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaDef31Data",
+      "to": "iut-pre-abc:InitialTheta.definition31",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialThetaDef31Data",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0PathsData",
+      "to": "iut-pre-abc:Section0.paths",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0PathsData",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0SaturatedSetsData",
+      "to": "iut-pre-abc:Section0.saturatedSets",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0SaturatedSetsData",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellPStarData",
+      "to": "iut-pre-abc:LogShell.pStar",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShellPStarData",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobenioidTransportData",
+      "to": "iut-pre-abc:Frobenioid.transport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobenioidTransportData",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetScalingLaws",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetScalingLaws",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetInvLaws",
+      "to": "e-deep:E2.detInvLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetInvLaws",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetBasicLaws",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "DetBasicLaws",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FinsetVolumeLaws",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FinsetVolumeLaws",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "EstimateChainLaws",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "EstimateChainLaws",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.arrowFacts",
+      "to": "iut-pre-abc:FrobeniusPicture.arrowFacts",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.graphAut",
+      "to": "iut-pre-abc:FrobeniusPicture.graphAut",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.translationClass",
+      "to": "iut-pre-abc:FrobeniusPicture.translationClass",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.translationLaw",
+      "to": "iut-pre-abc:FrobeniusPicture.translationLaw",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.pictureObjects",
+      "to": "iut-pre-abc:FrobeniusPicture.pictureObjects",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.pathVertices",
+      "to": "iut-pre-abc:FrobeniusPicture.pathVertices",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FrobeniusPicture.oppositeArrows",
+      "to": "iut-pre-abc:FrobeniusPicture.oppositeArrows",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ThetaLink.procession",
+      "to": "iut-pre-abc:ThetaLink.procession",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ThetaLink.quotient",
+      "to": "iut-pre-abc:ThetaLink.quotient",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ThetaLink.symmetry",
+      "to": "iut-pre-abc:ThetaLink.symmetry",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ThetaLink.unitLaws",
+      "to": "iut-pre-abc:ThetaLink.unitLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.MuN.torsion",
+      "to": "iut-pre-abc:MuN.torsion",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.MuN.rootsOfUnityFacts",
+      "to": "iut-pre-abc:MuN.rootsOfUnityFacts",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.LogShell.invariants",
+      "to": "iut-pre-abc:LogShell.invariants",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.LogShell.scalingPow",
+      "to": "iut-pre-abc:LogShell.scalingPow",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.LogShell.invariantImage",
+      "to": "iut-pre-abc:LogShell.invariantImage",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0.orderCat",
+      "to": "iut-pre-abc:Section0.orderCat",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0.saturatedClosure",
+      "to": "iut-pre-abc:Section0.saturatedClosure",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0.orientedGraphCore",
+      "to": "iut-pre-abc:Section0.orientedGraphCore",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0.adjacentPairs",
+      "to": "iut-pre-abc:Section0.adjacentPairs",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0.orderwise",
+      "to": "iut-pre-abc:Section0.orderwise",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.KummerLogShell.bridge",
+      "to": "iut-pre-abc:KummerLogShell.bridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Kummer.rootCompatibility",
+      "to": "iut-pre-abc:Kummer.rootCompatibility",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Kummer.powSubgroup",
+      "to": "iut-pre-abc:Kummer.powSubgroup",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.HodgeTheater.familyTransport",
+      "to": "iut-pre-abc:HodgeTheater.familyTransport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.HodgeTheater.linkCategoryLaws",
+      "to": "iut-pre-abc:HodgeTheater.linkCategoryLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PrimeStrips.exponentVector",
+      "to": "iut-pre-abc:PrimeStrips.exponentVector",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PrimeStrips.categorySkeleton",
+      "to": "iut-pre-abc:PrimeStrips.categorySkeleton",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PrimeStrips.valueKernel",
+      "to": "iut-pre-abc:PrimeStrips.valueKernel",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PrimeStrips.valueGroupAction",
+      "to": "iut-pre-abc:PrimeStrips.valueGroupAction",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Frobenioid.ramificationData",
+      "to": "iut-pre-abc:Frobenioid.ramificationData",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Frobenioid.unitsMapLaws",
+      "to": "iut-pre-abc:Frobenioid.unitsMapLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Theta.powerKernelGeneric",
+      "to": "iut-pre-abc:Theta.powerKernelGeneric",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.InitialTheta.orbicurveSignature",
+      "to": "iut-pre-abc:InitialTheta.orbicurveSignature",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.E4Example36Correspondence",
+      "to": "iut-pre-abc:E4.example36CorrespondenceLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.Section0Branches",
+      "to": "iut-pre-abc:Section0.branches",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PrimeStripsStripDegree",
+      "to": "iut-pre-abc:PrimeStrips.stripDegree",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PaperPreObjectsTypedInterfaces",
+      "to": "iut-pre-abc:PaperPreObjects.typedInterfaces",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PaperTargetsAbcStatement",
+      "to": "iut-pre-abc:PaperTargets.abcStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Reuse.FixedBetaChoice",
+      "to": "iut-pre-stage4:C.gap.fixedBetaChoice",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.F4bNumMaxStrict",
+      "to": "iut-pre-stage4:C.gap.f4bNumMaxStrict",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.SchemeSideMaps",
+      "to": "iut-pre-stage4:D.gap.schemeSideMaps",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.ProblemDApplicability",
+      "to": "iut-pre-stage4:D.gap.problemDApplicability",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.QPilotPrecise",
+      "to": "iut-pre-abc:Gap.qPilotPreciseConstruction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.ThetaPilotIQ",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind3",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "iut-skeleton:K1K2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.H5.CLASSB.STATEMENT",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.H5.CLASSB.STATEMENT",
+      "to": "iut-skeleton:ClassB",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.H7.DEEPOB9.STATEMENT",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTI.FROBENIUS.STATEMENT",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTI.INITIALTHETA.STATEMENT",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.THETALINK.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.KUMMER.STATEMENT",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP11.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP12.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP14.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP15.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP18.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.THM110.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PNT.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.UNDILATED.INPUT.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.QPILOT.PRECISE.STATEMENT",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.IQ.STATEMENT",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.SECTION0.SATURATED.STATEMENT",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.ETTH11.ROWS567.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.ABSTOPIII.5855.STATEMENT",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "to": "iut-skeleton:hCor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "to": "iut-skeleton:hSlack",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "to": "iut-skeleton:ClassB",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.SOURCES.1995.2015.STATEMENT",
+      "to": "iut-skeleton:Sources1995_2015",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Reuse.Cor312LogComparison",
+      "to": "iut-pre-abc:Cor312.logComparison",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.FrobeniusUnitsReuse",
+      "to": "iut-pre-abc:Frobenius.UnitsReuseCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.Section0PathComposition",
+      "to": "iut-pre-abc:Section0.pathCompositionCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.HodgeThetaLinkGraphArrow",
+      "to": "iut-pre-abc:HodgeThetaLinkGraph.arrowCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.HodgeThetaLinkGraphTranslation",
+      "to": "iut-pre-abc:HodgeThetaLinkGraph.translationCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.HodgeThetaLinkGraphClosure",
+      "to": "iut-pre-abc:HodgeThetaLinkGraph.closureCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.HodgeThetaLinkGraphUnicity",
+      "to": "iut-pre-abc:HodgeThetaLinkGraph.unicityCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.KummerAbsoluteTrioConsumer",
+      "to": "iut-pre-abc:Kummer.AbsoluteTrioConsumer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.ThetaModLProjectionCorollaries",
+      "to": "iut-pre-abc:Theta.ModLProjectionCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.KummerLogShellCarrierCorollaries",
+      "to": "iut-pre-abc:Kummer.LogShellCarrierCorollaries",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.Section0PathProjections",
+      "to": "iut-pre-abc:Section0.pathProjections",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:HodgeThetaLinkGraph.translationApplyCorollaries",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Kummer.LogShellCarrierTreeCorollaries",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:Frobenioid.UnitsMapCorollaries",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "e-deep:hull.Mzk1R9HullRayBundleActual",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:D.SCHEME.SIDE.MAPS",
+      "to": "lattice:Reuse.SchemeSideMaps",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.TREE.R9.BATCH.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Reuse.IndConsumerBundle2",
+      "to": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Reuse.H5H7ConsumerBatch",
+      "to": "hull:HULL.TREE.H5H7.CONSUMER.BATCH",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Map.EtThGapV2",
+      "to": "e-deep:E4.etthGap",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.BookkeepingLemmasV3",
+      "to": "foundation:bookkeeping.lemmas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "iut-skeleton:K1K2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.TREE.H5H7.CONSUMER.BATCH",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.R9.BATCH.CONSUMER",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:D.SCHEME.SIDE.MAPS",
+      "to": "Reuse.SchemeSideMaps",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.DetChainedConsumer",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.KummerComposeChain",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.EstimateChainedConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.DetBlockChainConsumer",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FinsetSumChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.HeightVolumeAddChain",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ThetaComposeChain",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FinsetProdChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.BijectiveComposeChain",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.RatOrderChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.MulBoundChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FinsetSumProductChain",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.PowChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.AbsChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.MonotoneChainConsumer",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.DetTransposeMulChain",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FinsetProductBoundChain",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.EquivComposeChainConsumer",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.KummerRightInverseChain",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.FinsetSumPosChain",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    }
+  ]
+}

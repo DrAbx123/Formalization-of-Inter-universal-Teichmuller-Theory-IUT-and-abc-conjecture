@@ -1,0 +1,7 @@
+# Second axiom audit (2026-10-25)
+
+paperC6ImageLog_le_theta => [propext, Classical.choice, Quot.sound]
+valuesBoundedPos_actual => [propext, Classical.choice, Quot.sound]
+c9BridgeGap_false => [propext, Classical.choice, Quot.sound]
+
+No sorryAx.

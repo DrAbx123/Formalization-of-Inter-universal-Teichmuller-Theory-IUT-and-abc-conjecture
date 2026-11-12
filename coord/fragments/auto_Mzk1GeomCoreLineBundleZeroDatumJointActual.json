@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1GeomCoreLineBundleZeroDatumJointActual",
+  "kind": "auto-registered",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleZeroDatumJointActual.lean"
+  ],
+  "note": "silent loop registration; verify via watchdog log only"
+}

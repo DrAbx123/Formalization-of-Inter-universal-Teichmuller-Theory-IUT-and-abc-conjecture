@@ -1,0 +1,20 @@
+{
+  "node": "iutiii:iutiii:IUTIII.COR312.WIRING",
+  "kind": "bridge",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Cor312TargetWiringActual.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "certificateOfContract",
+      "certificate_conclusion",
+      "mochizuki_route_conclusion",
+      "q_positive_target",
+      "all_routes_conclusion",
+      "cor312TargetWiringRows_length"
+    ]
+  },
+  "statement": "interface/wiring node",
+  "note": "watchdog EXIT0 observed in tmp/xif_guarded_results.log; no manual compile; PROVED per A459 read-only verification"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Cor312ToABCConsumerActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Cor312ToABCConsumerActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

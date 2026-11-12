@@ -1,0 +1,1149 @@
+{
+  "section": "zzz-lattice",
+  "owner": "lattice",
+  "description": "A475 lattice: late-loaded mapping nodes for zz-stepxi targets (loads after zz-stepxi)",
+  "nodes": [
+    {
+      "id": "Map.ZZStepXISourceContract",
+      "kind": "statement",
+      "title": "zz-stepxi interface StepXI.sourceContract",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "SourceContract"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:StepXI.sourceContract"
+    },
+    {
+      "id": "Map.ZZGapReductionSource",
+      "kind": "statement",
+      "title": "zz-stepxi interface GapReduction.sourceData",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "GapReductionSource"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:GapReduction.sourceData"
+    },
+    {
+      "id": "Map.ZZGapInputsAssembly",
+      "kind": "statement",
+      "title": "zz-stepxi interface GapInputs.assembly",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "GapInputsAssembly"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:GapInputs.assembly"
+    },
+    {
+      "id": "Map.ZZStepXIFiniteCertificate",
+      "kind": "statement",
+      "title": "zz-stepxi interface StepXI.finiteCertificate",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "FiniteCertificate"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:StepXI.finiteCertificate"
+    },
+    {
+      "id": "Map.ZZABCLogAdditiveEquiv",
+      "kind": "statement",
+      "title": "zz-stepxi interface ABCLog.additiveEquiv",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "ABCLogAdditiveEquiv"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:ABCLog.additiveEquiv"
+    },
+    {
+      "id": "Map.ZZH5DetInvConsumer",
+      "kind": "statement",
+      "title": "zz-stepxi interface H5.detInvConsumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "H5DetInvConsumer"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:H5.detInvConsumer"
+    },
+    {
+      "id": "Map.ZZG0LogMonotonicity",
+      "kind": "statement",
+      "title": "zz-stepxi interface G0.log.monotonicity",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "G0LogMonotonicity"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:G0.log.monotonicity"
+    },
+    {
+      "id": "Map.ZZHWNonnegConstant",
+      "kind": "statement",
+      "title": "zz-stepxi interface HW.add.nonnegConstant",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "HWNonnegConstant"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:HW.add.nonnegConstant"
+    },
+    {
+      "id": "Map.ZZBookkeepingV2",
+      "kind": "statement",
+      "title": "zz-stepxi interface foundation.bookkeepingV2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "BookkeepingV2"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:foundation.bookkeepingV2"
+    },
+    {
+      "id": "Map.ZZSection0OrderLaws",
+      "kind": "statement",
+      "title": "zz-stepxi interface Section0.orderLawsV2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "Section0OrderLaws"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:Section0.orderLawsV2"
+    },
+    {
+      "id": "Map.ZZSection0PrePathLaws",
+      "kind": "statement",
+      "title": "zz-stepxi interface Section0.prePathLawsV2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "Section0PrePathLaws"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:Section0.prePathLawsV2"
+    },
+    {
+      "id": "Map.ZZF0Composition",
+      "kind": "statement",
+      "title": "zz-stepxi interface F0.compositionV2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ZZStepXIInterfacesActual.lean": [
+          "F0Composition"
+        ]
+      },
+      "note": "genuine Lean interface/lemmas; PENDING-VERIFY; maps to zz-stepxi:F0.compositionV2"
+    },
+    {
+      "id": "Reuse.PreObjectInterfacesBundle",
+      "kind": "statement",
+      "title": "Reuse: Reuse.PreObjectInterfacesBundle",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectInterfacesBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectInterfacesBundleActual.lean": [
+          "PreObjectInterfacesBundle",
+          "preBundle_hodge_link",
+          "preBundle_frob_logMap",
+          "preBundle_initialTheta_mem",
+          "preObjectInterfacesRows"
+        ]
+      },
+      "note": "REUSE existing asset (A475 search); maps to zz-stepxi:PreObject.interfacesBundle"
+    },
+    {
+      "id": "Reuse.Section0SymmClosure",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Section0SymmClosure",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSymmActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSymmActual.lean": [
+          "IsSymmetricallySaturatedPathPairSet",
+          "covertSet_isSymmetricallySaturated",
+          "symmetricallySaturated_isSaturated"
+        ]
+      },
+      "note": "REUSE: exact symmClosure 0 hits; equivalent saturated-symmetry structure in Mzk1Section0SaturatedSymmActual.lean; maps to zz-stepxi:Section0.symmClosure"
+    },
+    {
+      "id": "Reuse.Example36Consumer",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Example36Consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1E4Example36ConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1E4Example36ConsumerActual.lean": [
+          "example36_thetaCarrier_consumer",
+          "example36_theater_distinct_consumer",
+          "example36_q_mem_consumer"
+        ]
+      },
+      "note": "REUSE existing asset (A475 search); maps to zz-stepxi:E4.example36Consumer"
+    },
+    {
+      "id": "Reuse.StepXIStatementInputs",
+      "kind": "statement",
+      "title": "Reuse: Reuse.StepXIStatementInputs",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractActual.lean": [
+          "StepXIContractData"
+        ]
+      },
+      "note": "REUSE: exact statementInputs 0 hits; StepXI contract interface in Mzk1StepXIContractActual.lean; maps to zz-stepxi:StepXI.statementInputs"
+    },
+    {
+      "id": "Reuse.Cor312Wiring",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Cor312Wiring",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean": [
+          "Cor312Bounds",
+          "Cor312Bounds.combined",
+          "Cor312Bounds.combined_le_slack_add"
+        ]
+      },
+      "note": "REUSE: exact wiringConsumer 0 hits; Cor312 bounds interface used; maps to zz-stepxi:Cor312.wiringConsumer; EXIT0 (watchdog)"
+    },
+    {
+      "id": "Reuse.Cor312Assembly",
+      "kind": "statement",
+      "title": "Reuse: Reuse.Cor312Assembly",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312BoundsActual.lean": [
+          "Cor312Bounds",
+          "Cor312Bounds.combined",
+          "Cor312Bounds.combined_le_slack_add"
+        ]
+      },
+      "note": "REUSE: exact assemblyBundle 0 hits; Cor312 bounds interface used; maps to zz-stepxi:Cor312.assemblyBundle; EXIT0 (watchdog)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Map.ZZStepXISourceContract",
+      "to": "zz-stepxi:StepXI.sourceContract",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZGapReductionSource",
+      "to": "zz-stepxi:GapReduction.sourceData",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZGapInputsAssembly",
+      "to": "zz-stepxi:GapInputs.assembly",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZStepXIFiniteCertificate",
+      "to": "zz-stepxi:StepXI.finiteCertificate",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZABCLogAdditiveEquiv",
+      "to": "zz-stepxi:ABCLog.additiveEquiv",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZH5DetInvConsumer",
+      "to": "zz-stepxi:H5.detInvConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZG0LogMonotonicity",
+      "to": "zz-stepxi:G0.log.monotonicity",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZHWNonnegConstant",
+      "to": "zz-stepxi:HW.add.nonnegConstant",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZBookkeepingV2",
+      "to": "zz-stepxi:foundation.bookkeepingV2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZSection0OrderLaws",
+      "to": "zz-stepxi:Section0.orderLawsV2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Map.ZZF0Composition",
+      "to": "zz-stepxi:F0.compositionV2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "zz-stepxi:Section0.graphLawsV2",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:thetapilot-iq-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:hull-ob9-consumer",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:ind1-quotient-consumer",
+      "to": "iut-skeleton:Ind1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:abc-logbound-form",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:absolute-kummer-trio-consumer",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:ind3-closure-laws",
+      "to": "iut-skeleton:Ind3",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:abc-frontier-form-equivalences",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:qpilot-log-volume-summary",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:frobenius-graphaut-consumer",
+      "to": "iuti-ii-abc2:HodgeThetaLinkGraph.closure",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:etth-gap-consumer",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:k1k2-boundary-consumer",
+      "to": "iuti-ii:IUTII.Kummer.SourceThetaPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:stepxi-finite-certificate-consumer",
+      "to": "zzz-lattice:Map.ZZStepXIFiniteCertificate",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:frontier-height-consumer",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:abc-additive-form-consumer",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:cor312-tree-route-consumer",
+      "to": "iutiii:hull.Mzk1TreeCor312RouteAuditActual",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:frey-tate-candidate-consumer",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:abc-invariant-coprimality-consumer",
+      "to": "mainline:abc-invariant-coprimality",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Reuse.Cor312Assembly",
+      "to": "zz-stepxi:Cor312.assemblyBundle",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:frey-odd-reduction",
+      "to": "iuti-ii:IUTI.HodgeTheater.Family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:frey-conductor-two-adic",
+      "to": "iuti-ii:IUTII.Kummer.MonoAnalytic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:frey-two-adic-minimal",
+      "to": "iuti-ii:IUTII.Kummer.MonoAnalytic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-log-equivalence",
+      "to": "iuti-ii:IUTII.Frobenioid.CurveGalois",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-height-weight-additive",
+      "to": "iutiv-abc:G2.c",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-bridge-nonempty-iff",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-rational-point-dictionary",
+      "to": "B3-rational24-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-prime-support",
+      "to": "B4c-c-stepprovider",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-invariant-local-height",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:iuttoabc-equivalences",
+      "to": "iutiv-abc:G0.iff_log",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-statement-defs",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-heightweight-refutation",
+      "to": "routes:abcfrontier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:t2-comparison-gap-statement",
+      "to": "legacy-dag:legacy:l0.4-log-comparison",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:t3-frontier-from-comparison",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-invariant-radical-bridge",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:rational-local-height-decomposition",
+      "to": "B3-rational24-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:theta-bound-to-heightweight",
+      "to": "iutiv-abc:G2.c",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:frey-odd-conductor-height-criterion",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:cor312-pointwise-membership-weakening",
+      "to": "iutiv-abc:G3.pw",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:frey-two-adic-conductor-exponent-cases",
+      "to": "iuti-ii:IUTII.Kummer.MonoAnalytic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:frey-two-adic-minimal-discriminant-valuation",
+      "to": "iuti-ii:IUTI.InitialTheta.Places",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-gap-reduced",
+      "to": "iutiv-abc:G3.route.gapReduced",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-pointwise-reduced",
+      "to": "iutiv-abc:G3.route.pointwiseReduced",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-gap-reduced-v2",
+      "to": "iutiv-abc:G3.route.gapReduced",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-pointwise-weakened",
+      "to": "iutiv-abc:G3.route.pointwiseReduced",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-frontier-realLine",
+      "to": "iutiv-abc:G3.realLine.consumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:additive-refreeze-route",
+      "to": "foundation:D.gap.finiteMap",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:t2-additive-statement",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:t0-equivalence-chain",
+      "to": "iuti-ii-abc2:HodgeThetaLinkGraph.translationLaw",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:iut312TopStatement",
+      "to": "zz-mapping:Map.ShehddIUT312TopStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:qPilotPreciseData",
+      "to": "lattice:Reuse.QPilotPrecise",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:tatej-invariant-norm-consumer",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:frontier-shortcut-refuted-consumer",
+      "to": "iutiv-abc:G3.consumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:logshell-identification-consumer",
+      "to": "iuti-ii:XIF.Consumer.AbsTopIII01",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:frontier-reduction-consumer",
+      "to": "iutiv-abc:G3.red",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:matrix-logdet-laws-consumer",
+      "to": "E-theta-etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "shehdd:elliptic-height-criteria-consumer",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "zz-qpilot:QP.gaussianLGP",
+      "to": "lattice:GaussianLGP",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "zz-qpilot:QP.logShellThetaCarrierCompat",
+      "to": "theta-etth:CMLF2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:QPilot.fractionArithmetic",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:Cor312.heightArithmetic",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.finsetCardArithmetic",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Cor312.logVolumeMonotone",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:InitialTheta.chiArithmetic",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:LogShell.natParity",
+      "to": "iut-skeleton:SHE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:LogShell.natPowMonotone",
+      "to": "iut-skeleton:SHE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:Section0.listPathFacts",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:HodgeTheater.linkCompositionLaws",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.divisibilityArithmetic",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.mulMonotone",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.finsetSum",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Cor312.intArithmetic",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.dvdMulChained",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:aptSkeletonStatement",
+      "to": "iut-skeleton:APT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:stepXIContractAssembly",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:stepXIScaling",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:targetABCShape",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:h5HullRayInter",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:section0IccAdjacent",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:heightWeightMonotone",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:hullDetExp",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:h5HullRayUnbounded",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:qPilotSkeleton",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:h5HullRayUnion",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:cor312ConclusionFacts",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:h5HullRayPartition",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:absolute-kummer-kernel-consumer",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:kummer-ratio-cocycle-consumer",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.absThetaData",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.thetaPilotPrecise",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.etthRow6FrobenioidManifestation",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "zz-qpilot:QP.etthRow7ThetaTransformation",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "zz-qpilot:QP.stepXIThetaPacket",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QPX.stepXINamedInputs",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QPX.skeletonHDDReuse",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-stepxi:Chain.abcBridge",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-stepxi:Chain.stepXI",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.gaussianLGP",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut-pre-abc:Section0.natOrderArithmetic",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:LogShell.natDivMod",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Section0.natSubArithmetic",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Section0.natMaxMin",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:Cor312.natAbsArithmetic",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:PrimeStrips.gcdArithmetic",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mainline:abc-freyj-criteria",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:abc-residue-discriminant",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:frey-conductor-odd",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:frey-residue-quadratic-splitting",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "mainline:cor312StatementShape",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:interface-form-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:label-shared-boundary-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:qparameter-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:genell-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:tauceti-alignment-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:invariant-radical-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:tate-parameter-unit-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:theta-displacement-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:kummer-roots-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:hodge-family-laws-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:elliptic-torsion-galois-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:norm-log-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:local-logshell-datum-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:kummer-map-kernel-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:logshell-carrier-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:radical-laws-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "shehdd:badprime-tate-input-consumer",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.absTopIII02Convolution",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QPX.reuseIndex",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-stepxi:Section0.saturatedClosureV2",
+      "to": "iut-skeleton:Section0",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QP.thetaPilotPrecise",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "zz-qpilot:QPX.stepXINamedInputs",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "observed_source"
+    }
+  ]
+}

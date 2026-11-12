@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetSelfMonoActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetSelfMonoActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 self-contained real chain: monotone iterates and max degrees (green deps only); new file only, no sorry; watchdog to verify"
+}

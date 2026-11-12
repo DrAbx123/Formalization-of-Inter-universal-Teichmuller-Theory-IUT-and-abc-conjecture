@@ -1,0 +1,10 @@
+{
+  "node": "foundation:D.RRcanonicalDegree",
+  "kind": "conditional",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreRRCanonicalDegreeActual.lean"
+  ],
+  "declarations": {},
+  "note": "registered by silent loop; verification via watchdog log only (A459/A462)"
+}

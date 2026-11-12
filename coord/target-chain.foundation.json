@@ -1,0 +1,1397 @@
+{
+  "section": "foundation",
+  "nodes": [
+    {
+      "id": "B1.fold",
+      "kind": "bottom",
+      "title": "Problem A fold beta-avoiding Belyi (all finite S)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean": [
+          "betaAvoiding_all"
+        ]
+      },
+      "note": "27144B E07D7038 CITABLE 23 probe_ok; axioms trio"
+    },
+    {
+      "id": "B2.finiteBetaBase",
+      "kind": "bottom",
+      "title": "finite-beta corrected Belyi base (W1)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean": [
+          "not_betaAvoidingBelyiBaseInput",
+          "betaAvoidingBelyiBaseInputCorrected_proved",
+          "Mzk1Lemma24Target_finite_beta"
+        ]
+      },
+      "note": "10430B 691DFC7F CITABLE 16 probe_ok; original infinity-beta statement refuted"
+    },
+    {
+      "id": "B2c.adapterUnconditional",
+      "kind": "bridge",
+      "title": "finite-beta base wired unconditionally into consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Consumer24AdapterUnconditionalActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Consumer24AdapterUnconditionalActual.lean": [
+          "FiniteBetaCorrectedBase",
+          "finiteBetaCorrectedBase_proved",
+          "H24BaseConcreteFinite",
+          "h24BaseConcrete_finite_proved",
+          "h24BaseConcrete_finite"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "B3.rationalBottom",
+      "kind": "bottom",
+      "title": "rational 2.4 target finite-beta (unconditional)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Rational24TargetBottomActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Rational24TargetBottomActual.lean": [
+          "rational24TargetFiniteBeta_proved",
+          "Mzk1Lemma24Target_finite_beta_bottom",
+          "baseProviderRestatedFinite_proved"
+        ]
+      },
+      "note": "5781B A4D82E80 CITABLE 11 probe_ok"
+    },
+    {
+      "id": "B4.Cdegree",
+      "kind": "bottom",
+      "title": "C measure/degree layer (paper Lemma 2.4 nested induction bookkeeping)",
+      "status": "BOTTOM",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean": [
+          "measure_stepSet_lt",
+          "nested_induction_terminates",
+          "paperScopeLemma24Statement_of_providers"
+        ]
+      },
+      "note": "37958B 76D71E7D CITABLE 43 probe_ok; 28 theorems; providers explicit"
+    },
+    {
+      "id": "B4b.baseCase",
+      "kind": "bottom",
+      "title": "C BaseCaseProvider (identity polynomial)",
+      "status": "BOTTOM",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean": [
+          "baseCaseProvider_proved"
+        ]
+      },
+      "note": "4728B 14F5F5A7 CITABLE 4 probe_ok"
+    },
+    {
+      "id": "B5.separation",
+      "kind": "bottom",
+      "title": "paper Lemma 2.3 rational separation",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Lemma23SeparationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Lemma23SeparationActual.lean": [
+          "s3135_separation_rat",
+          "s3135_separation_rat_value"
+        ]
+      },
+      "note": "6624B 1AC876CD CITABLE 5 probe_ok; Qbar statement named; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "B5.moebius",
+      "kind": "bottom",
+      "title": "paper Lemma 2.3 P1/Moebius rational form",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Lemma23MoebiusActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Lemma23MoebiusActual.lean": [
+          "s3135_mobius_separation"
+        ]
+      },
+      "note": "6400B 66D16886 CITABLE 8 probe_ok; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "B6.Dbase",
+      "kind": "bottom",
+      "title": "D-BASE RR-independent pencil layer + scheme vacuity fix",
+      "status": "BOTTOM",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFoundationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFoundationActual.lean": [
+          "zero_divisor_exists",
+          "exists_simple_pole_function",
+          "exists_function_with_zero_divisor",
+          "degree_punctureDivisor"
+        ]
+      },
+      "note": "14032B 0F74F433 CITABLE 15 probe_ok; zero_divisor_exists is RR-conditional (hRR/hdual)"
+    },
+    {
+      "id": "B6b.DRR",
+      "kind": "bottom",
+      "title": "D-RR zero divisor via proved function-field RR",
+      "status": "BOTTOM",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRProvedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRProvedActual.lean": [
+          "zero_divisor_exists_proved"
+        ]
+      },
+      "note": "15877B 813224A5 CITABLE 14 probe_ok; hRR+hdual discharged; flt_core root only"
+    },
+    {
+      "id": "B7.RRinterface",
+      "kind": "bottom",
+      "title": "function-field RR interface (flt_core)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRInterfaceActual.lean": [
+          "functionFieldRiemannRoch_interface"
+        ]
+      },
+      "note": "8895B 7BD88E7D CITABLE 9 probe_ok; degree_canonicalDivisor 2g-2"
+    },
+    {
+      "id": "C.stepProviderPrime",
+      "kind": "bridge",
+      "title": "C StepProvider' (beta'=f0 beta)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean": [
+          "exists_maxDegP_finite",
+          "f0MapAt",
+          "f0MapAt_eq",
+          "stepSetP1",
+          "mem_stepSetP1_of_mem"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "C.cvCompositionF",
+      "kind": "theorem",
+      "title": "CVCompositionLawF + minpoly step transport",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean": [
+          "cvCompositionLawF_proved",
+          "stepTransport_of_goal_proved"
+        ]
+      },
+      "note": "2752B 706859EC CITABLE 5 probe_ok"
+    },
+    {
+      "id": "C.f0Geometry",
+      "kind": "theorem",
+      "title": "f0 polynomial geometry (minpoly map/critical values)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1F0StepGeometryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1F0StepGeometryActual.lean": [
+          "f0Poly",
+          "polyMapQbar",
+          "f0Map",
+          "f0Map_infty",
+          "f0Map_finite"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "C.degreeFoundation",
+      "kind": "theorem",
+      "title": "Lemma 2.4 degree foundation",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Lemma24DegreeFoundationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Lemma24DegreeFoundationActual.lean": [
+          "reducedDegreeOfPoint",
+          "fieldOfDefinition",
+          "fieldOfDefinition_finrank",
+          "maxReducedDegree",
+          "degreeMeasure"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "D.rrBridge",
+      "kind": "bridge",
+      "title": "RR zero divisor datum + bridge of maps",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRBridgeActual.lean": [
+          "zeroDivisorDatum_nonempty_of_RR",
+          "bridge_of_maps"
+        ]
+      },
+      "note": "5752B 506DCCD8 CITABLE 4 | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "D.bridgeLegacy",
+      "kind": "bridge",
+      "title": "scheme/field legacy bridge wiring",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeLegacyActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeLegacyActual.lean": [
+          "fibreOverZeroEq_of_bridge",
+          "restatedWitness_of_bridge",
+          "recast_of_bridge",
+          "bridgeLegacyRows",
+          "bridgeLegacyRows_length"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "D.bridgeInterface",
+      "kind": "interface",
+      "title": "D bridge interface",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean": [
+          "ZeroDivisorDatum",
+          "FibreBridgeAbstract",
+          "zeroSet_eq_of_abstract",
+          "zeroDivisorDatum_zeroSet_eq",
+          "bridgeInterfaceRows"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "D.gap.finiteMap",
+      "kind": "named_input",
+      "title": "D remaining: finite map to P1 + line bundle iso",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFiniteMapRouteActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFiniteMapRouteActual.lean": [
+          "finiteMapData_of_construction",
+          "preciseWitness_of_route",
+          "recast_of_route"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleInterfaceActual.lean": [
+          "finrank_functionFieldSections_eq",
+          "degree_eq_of_interface",
+          "sectionImage_mem"
+        ]
+      },
+      "status": "NAMED",
+      "note": "typed interface/route layers only: interface fields PROVED; actual finite-map construction + O(D) sheaf/psi* pullback/uniformizer-order compatibility + psi^*O(1)=O(D) iso content NAMED (A446 D PARTIAL); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "HOLD.binding",
+      "kind": "named_input",
+      "title": "Thm2.5 binding HOLD (no un-HOLD)",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Thm25UnconditionalActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Thm25UnconditionalActual.lean": [
+          "lemma22FullStatementShape_unconditional",
+          "thm25_of_lemma24_and_geometricCore",
+          "mzk1Thm25UnconditionalRows",
+          "mzk1Thm25UnconditionalRows_length"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "GATE.v157",
+      "kind": "target",
+      "title": "canonical gate V150 + v157 stable rows",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/IUTExternal35GateV150Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/IUTExternal35GateV150Actual.lean": [
+          "gateRowsV150",
+          "IUTExternalPrerequisiteGateRecordV150"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "D.lineBundleBridge",
+      "kind": "bridge",
+      "title": "Line-bundle/order compatibility bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleBridgeActual.lean": [
+          "LineBundleOrderCompatibility",
+          "iso_image_f_eq_sectionMap",
+          "order_pos_iff",
+          "Tplaces_order_pos"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: probe EXIT0 211106; main file EXIT line not yet observed; keep CONDITIONAL until main EXIT0 appears"
+    },
+    {
+      "id": "D.finiteMapChart",
+      "kind": "interface",
+      "title": "Typed finite-map chart interface (16 fields)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFiniteMapChartInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFiniteMapChartInterfaceActual.lean": [
+          "FiniteMapChartData",
+          "FiniteMapChartData.toFiniteMapData",
+          "FiniteMapChartData.coe_U_eq_compl",
+          "finiteMapChartGapText"
+        ]
+      },
+      "note": "PROVED pin: main EXIT0 results:211108 SIZE 6042+ ; probe EXIT0 results:211164. finiteMapData_of_construction? (chart interface) toFiniteMapData/coe_U_eq_compl PROVED; construction of 16 fields remains named gap."
+    },
+    {
+      "id": "D.zeroDatumFibre",
+      "kind": "theorem",
+      "title": "RR zero-divisor datum => scheme fibre (conditional)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreZeroDatumFibreActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreZeroDatumFibreActual.lean": [
+          "fibreOverZeroEq_of_zeroDatum",
+          "restatedWitness_of_zeroDatum",
+          "recast_of_zeroDatum",
+          "zeroDatumFibreRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) [A484 downgrade] [PIN watchdog DONE0]"
+    },
+    {
+      "id": "bookkeeping.lemmas",
+      "kind": "conditional",
+      "title": "Skeleton bookkeeping lemmas (hull transitivity, C9 stage injectivity)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasActual.lean": [
+          "hullLeImageVolume_trans",
+          "hullLeImageVolume_antisymm",
+          "normalization_mul_pos",
+          "C9Stage.index_lt_eight",
+          "index_lt_eight"
+        ]
+      },
+      "note": "genuine small lemmas about registered skeleton defs; PENDING-VERIFY (watchdog compile); not the named gap; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "D.RRcanonicalDegree",
+      "kind": "theorem",
+      "title": "Canonical degree 2g-2 and dual vanishing (named interface inputs)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRCanonicalDegreeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRCanonicalDegreeActual.lean": [
+          "canonical_degree_eq_two_genus_sub_two",
+          "hdual_of_canonical_degree",
+          "canonicalDegreeRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd).; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "D.lineBundleZeroDatumJoint",
+      "kind": "theorem",
+      "title": "Joint line-bundle + zero-datum consumer (fibre/order/degree)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleZeroDatumJointActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleZeroDatumJointActual.lean": [
+          "ledgerRows",
+          "ledgerRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [A469: declarations corrected to actual file-level names]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "foundation:D.chartDatumWitness",
+      "kind": "theorem",
+      "title": "Chart + zero-datum => restated precise witness (conditional)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartDatumWitnessActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartDatumWitnessActual.lean": [
+          "chartDatum_fibre",
+          "chartDatum_restatedWitness",
+          "chartDatum_recast",
+          "chartDatumRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd).; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "foundation:D.chartBridgeLineBundle",
+      "kind": "theorem",
+      "title": "Chart+bridge+line-bundle bundle (witness/order/degree)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartBridgeLineBundleConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartBridgeLineBundleConsumerActual.lean": [
+          "ledgerRows",
+          "ledgerRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [A469: declarations corrected to actual file-level names]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "bookkeeping.lemmas2",
+      "kind": "conditional",
+      "title": "Skeleton bookkeeping lemmas 2 (N8/Remaining label index injectivity/bounds)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmas2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmas2Actual.lean": [
+          "RemainingGapLabel.index_lt_ten",
+          "index_lt_ten"
+        ]
+      },
+      "status": "PROVED",
+      "note": "VERIFIED (results-log/olean evidence; shehdd): genuine small lemmas; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) [PIN watchdog DONE0] [A484 downgrade] [PIN watchdog DONE0]; PROVED (lattice EXIT0 check)"
+    },
+    {
+      "id": "hull.Mzk1RRPunctureDegreeActual",
+      "kind": "theorem",
+      "title": "Mzk1RRPunctureDegreeActual (watchdog-verified)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRPunctureDegreeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRPunctureDegreeActual.lean": [
+          "rr_puncture_degree",
+          "rr_single_degree",
+          "rr_place_degree_one",
+          "rrPunctureRows",
+          "rrPunctureRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "hull.Mzk1RRInterfaceBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1RRInterfaceBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRInterfaceBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "D.chartBasicFacts",
+      "kind": "theorem",
+      "title": "Chart interface basic facts (green dep)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartBasicFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartBasicFactsActual.lean": [
+          "chartBasic_m",
+          "chartBasic_U",
+          "chartBasic_mem_iff",
+          "chartBasic_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "D.RRnegativeDegree",
+      "kind": "theorem",
+      "title": "flt_core RR negative-degree consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRNegativeDegreeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRNegativeDegreeConsumerActual.lean": [
+          "rr_neg_ell_zero",
+          "rr_neg_ell_bundle"
+        ]
+      },
+      "note": "PENDING-VERIFY: flt_core negative-degree facts re-exported (green dep)."
+    },
+    {
+      "id": "C.f0CompositionLaws",
+      "kind": "theorem",
+      "title": "f0 geometric layer: polynomial P1(Qbar) map composition laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1F0CompositionLawsActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1F0CompositionLawsActualV2.lean": [
+          "polyMapQbar_comp"
+        ]
+      },
+      "note": "PENDING-VERIFY: real proofs (Option-level map composition + aeval_comp) | A493: V2 copy (old file stuck in killed/failed state; same content)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreRRProvedBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreRRProvedBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRProvedBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "D.RRgreenConsumer",
+      "kind": "theorem",
+      "title": "flt_core RR green consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRGreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRGreenConsumerActual.lean": [
+          "rrGreen_canonical_bound",
+          "rrGreen_puncture_degree"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreLineBundleJointGenericActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreLineBundleJointGenericActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleJointGenericActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreChartLineBundleJointActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreChartLineBundleJointActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartLineBundleJointActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreChartWitnessActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreChartWitnessActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartWitnessActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreLineBundleZeroDatumJointGenericActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreLineBundleZeroDatumJointGenericActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleZeroDatumJointGenericActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1GeomCoreChartDatumLineBundleDegreeActual",
+      "kind": "theorem",
+      "title": "Mzk1GeomCoreChartDatumLineBundleDegreeActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreChartDatumLineBundleDegreeActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "D.lineBundleInterfaceConsumer",
+      "kind": "theorem",
+      "title": "Line-bundle interface consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DLineBundleInterfaceConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DLineBundleInterfaceConsumerActual.lean": [
+          "dLineBundleInterfaceConsumer_finrank",
+          "dLineBundleInterfaceConsumer_degreeImage"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: finrank/section-image consumer of the line-bundle interface. [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "D.geomCoreAllGreen",
+      "kind": "theorem",
+      "title": "D GeomCore all-green bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DGeomCoreAllGreenActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DGeomCoreAllGreenActual.lean": [
+          "dGeomCoreAllGreen_witness",
+          "dGeomCoreAllGreen_chart",
+          "dGeomCoreAllGreenRows",
+          "dGeomCoreAllGreenRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: restated witness + chart degree bundle (conditional). [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRCanonicalDegreeConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1RRCanonicalDegreeConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRCanonicalDegreeConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRCanonicalDegreeConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1RRCanonicalDegreeConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRCanonicalDegreeConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRCanonicalDegreeGreenActual",
+      "kind": "theorem",
+      "title": "Mzk1RRCanonicalDegreeGreenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRCanonicalDegreeGreenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRPunctureGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1RRPunctureGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRPunctureGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "bookkeeping.rational",
+      "kind": "conditional",
+      "title": "Rational arithmetic bookkeeping lemmas (lt chain / mul_pos / add_nonneg)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RationalArithmeticBookkeepingActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RationalArithmeticBookkeepingActual.lean": [
+          "lt_of_le_of_lt_bookkeeping",
+          "lt_of_lt_of_le_bookkeeping",
+          "mul_pos_bookkeeping",
+          "add_nonneg_bookkeeping",
+          "nonneg_of_pos_bookkeeping"
+        ]
+      },
+      "note": "genuine Mathlib-backed arithmetic lemmas; PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumJointGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumJointGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumJointGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DJointGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DJointGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DJointGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "p1.specialSet",
+      "kind": "theorem",
+      "title": "P1Point (Option K) + specialSet {inf,0,1}: definitions and membership/finite lemmas",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P1SpecialSetActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P1SpecialSetActual.lean": [
+          "P1Point",
+          "P1Point.infty",
+          "P1Point.ofFinite",
+          "specialSet",
+          "infty_mem_specialSet",
+          "zero_mem_specialSet",
+          "one_mem_specialSet",
+          "specialSet_finite"
+        ]
+      },
+      "note": "corrected-target P1/specialSet definitions + genuine lemmas; PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartClusterRollupConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartClusterRollupConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartClusterRollupConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRCanonicalDegreeGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1RRCanonicalDegreeGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRCanonicalDegreeGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRPunctureClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1RRPunctureClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRPunctureClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1RRClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumWitnessGreenActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumWitnessGreenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumWitnessGreenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartLineBundleRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartLineBundleRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartLineBundleRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1DClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "p1.cardinality",
+      "kind": "theorem",
+      "title": "specialSet cardinality 3 / infty != 0 / 0 != 1 (genuine finite computation)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P1CardinalityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P1CardinalityActual.lean": [
+          "specialSet",
+          "infty_ne_finite_zero",
+          "finite_zero_ne_finite_one",
+          "specialSet_finite",
+          "infty_mem_specialSet",
+          "zero_mem_specialSet",
+          "one_mem_specialSet"
+        ]
+      },
+      "status": "PROVED",
+      "note": "PROVED: tmp/sheaf/xif/paper/Mzk1P1CardinalityActual.lean EXIT0 (watchdog compile); genuine lemmas"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster3Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster3Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster3Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumClusterConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumClusterConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumClusterConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster4Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster4Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster4Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartLineBundleCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartLineBundleCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartLineBundleCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartLineBundleClusterConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartLineBundleClusterConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartLineBundleClusterConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DLineBundleClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1DLineBundleClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DLineBundleClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DZeroDatumClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1DZeroDatumClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DZeroDatumClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1RRCanonicalDegreeCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1RRCanonicalDegreeCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRCanonicalDegreeCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster10Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster10Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster10Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster5Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster5Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster5Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster6Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster6Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster6Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster7Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster7Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster7Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster8Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster8Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster8Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartCluster9Actual",
+      "kind": "theorem",
+      "title": "Mzk1DChartCluster9Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartCluster9Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartDatumGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartDatumGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartDatumGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DChartWitnessGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DChartWitnessGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DChartWitnessGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1DZeroDatumGenericGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1DZeroDatumGenericGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DZeroDatumGenericGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "estimate.inequalities",
+      "kind": "theorem",
+      "title": "Elementary estimate inequalities: square_nonneg / 2ab<=a^2+b^2 / ab<=(a^2+b^2)/2 / (a+b)^2<=2(a^2+b^2)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EstimateInequalitiesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EstimateInequalitiesActual.lean": [
+          "square_nonneg_bookkeeping",
+          "two_mul_le_sq_add_sq",
+          "mul_le_half_sq_add_sq",
+          "sq_add_le_two_sq_add_sq"
+        ]
+      },
+      "status": "PROVED",
+      "note": "PROVED: tmp/sheaf/xif/paper/Mzk1EstimateInequalitiesActual.lean EXIT0 (watchdog compile); genuine lemmas"
+    }
+  ],
+  "edges": [
+    {
+      "from": "B2.finiteBetaBase",
+      "to": "B1.fold",
+      "kind": "proof"
+    },
+    {
+      "from": "B2c.adapterUnconditional",
+      "to": "B2.finiteBetaBase",
+      "kind": "proof"
+    },
+    {
+      "from": "B3.rationalBottom",
+      "to": "B2.finiteBetaBase",
+      "kind": "proof"
+    },
+    {
+      "from": "B4b.baseCase",
+      "to": "B4.Cdegree",
+      "kind": "proof"
+    },
+    {
+      "from": "B4b.baseCase",
+      "to": "B2.finiteBetaBase",
+      "kind": "proof"
+    },
+    {
+      "from": "C.stepProviderPrime",
+      "to": "C.f0Geometry",
+      "kind": "proof"
+    },
+    {
+      "from": "C.stepProviderPrime",
+      "to": "C.degreeFoundation",
+      "kind": "proof"
+    },
+    {
+      "from": "C.cvCompositionF",
+      "to": "C.stepProviderPrime",
+      "kind": "proof"
+    },
+    {
+      "from": "B6b.DRR",
+      "to": "B6.Dbase",
+      "kind": "proof"
+    },
+    {
+      "from": "B6b.DRR",
+      "to": "B7.RRinterface",
+      "kind": "proof"
+    },
+    {
+      "from": "D.rrBridge",
+      "to": "B6b.DRR",
+      "kind": "interface"
+    },
+    {
+      "from": "D.bridgeLegacy",
+      "to": "D.bridgeInterface",
+      "kind": "interface"
+    },
+    {
+      "from": "D.bridgeInterface",
+      "to": "B6.Dbase",
+      "kind": "interface"
+    },
+    {
+      "from": "D.gap.finiteMap",
+      "to": "D.bridgeInterface",
+      "kind": "gap"
+    },
+    {
+      "from": "GATE.v157",
+      "to": "B1.fold",
+      "kind": "statement"
+    },
+    {
+      "from": "GATE.v157",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "HOLD.binding",
+      "to": "C.stepProviderPrime",
+      "kind": "statement"
+    },
+    {
+      "from": "D.lineBundleBridge",
+      "to": "D.bridgeInterface",
+      "kind": "interface"
+    },
+    {
+      "from": "D.finiteMapChart",
+      "to": "D.gap.finiteMap",
+      "kind": "interface"
+    },
+    {
+      "from": "D.zeroDatumFibre",
+      "to": "D.lineBundleBridge",
+      "kind": "proof"
+    },
+    {
+      "from": "D.chartBasicFacts",
+      "to": "D.finiteMapChart",
+      "kind": "proof"
+    },
+    {
+      "from": "D.RRnegativeDegree",
+      "to": "D.rrBridge",
+      "kind": "proof"
+    },
+    {
+      "from": "C.f0CompositionLaws",
+      "to": "C.f0Geometry",
+      "kind": "proof"
+    },
+    {
+      "from": "B5.separation",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "B5.moebius",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "bookkeeping.lemmas",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "D.RRcanonicalDegree",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "D.lineBundleZeroDatumJoint",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "foundation:D.chartDatumWitness",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "foundation:D.chartBridgeLineBundle",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "bookkeeping.lemmas2",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1RRPunctureDegreeActual",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1RRInterfaceBundleActual",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreRRProvedBundleActual",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "D.RRgreenConsumer",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreLineBundleJointGenericActual",
+      "to": "B2.finiteBetaBase",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreChartLineBundleJointActual",
+      "to": "D.bridgeInterface",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreChartWitnessActual",
+      "to": "D.bridgeInterface",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreLineBundleZeroDatumJointGenericActual",
+      "to": "D.lineBundleZeroDatumJoint",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1GeomCoreChartDatumLineBundleDegreeActual",
+      "to": "D.bridgeInterface",
+      "kind": "statement"
+    },
+    {
+      "from": "D.lineBundleInterfaceConsumer",
+      "to": "D.gap.finiteMap",
+      "kind": "proof"
+    },
+    {
+      "from": "D.geomCoreAllGreen",
+      "to": "foundation:D.chartDatumWitness",
+      "kind": "proof"
+    }
+  ],
+  "generated": "2026-11-11T02:10:00+08:00"
+}

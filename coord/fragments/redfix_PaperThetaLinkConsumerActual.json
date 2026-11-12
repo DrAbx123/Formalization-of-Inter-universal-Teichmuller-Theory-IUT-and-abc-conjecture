@@ -1,0 +1,9 @@
+{
+  "node": "redfix:PaperThetaLinkConsumerActual",
+  "kind": "consumer",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/PaperThetaLinkConsumerActual.lean"
+  ],
+  "note": "minimal red fix: import LogKummerCorrespondenceFromSource (actualIPLData) + drop named I args on actualPaperThetaLinkData/actualPaperKummerEvaluation (implicit inference); queued to watchdog only"
+}

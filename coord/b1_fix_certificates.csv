@@ -1,0 +1,51 @@
+N,curve,r_f,deg_phi,n_newforms,n_other,found,type,support,max_prime,degree,absP,ratio_absP_over_rf,rf_divides,le_N3,le_N2,le_N1,coeffs,primes,vals,min_g_all,reason,r_f_newform_opt,ratio_absP_over_ropt,absP_ge_ropt,ropt_divides,class_size
+11,11a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,3
+11,11a2,5,5,1,0,True,constant1,0,0,0,1,0.2,False,True,True,True,[1],[],[],,,1,1.0,True,True,3
+11,11a3,5,5,1,0,True,constant1,0,0,0,1,0.2,False,True,True,True,[1],[],[],,,1,1.0,True,True,3
+14,14a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,6
+14,14a2,2,2,1,0,True,constant1,0,0,0,1,0.5,False,True,True,True,[1],[],[],,,1,1.0,True,True,6
+14,14a3,3,3,1,0,True,constant1,0,0,0,1,0.333333,False,True,True,True,[1],[],[],,,1,1.0,True,True,6
+14,14a4,3,3,1,0,True,constant1,0,0,0,1,0.333333,False,True,True,True,[1],[],[],,,1,1.0,True,True,6
+14,14a5,6,6,1,0,True,constant1,0,0,0,1,0.166667,False,True,True,True,[1],[],[],,,1,1.0,True,True,6
+14,14a6,6,6,1,0,True,constant1,0,0,0,1,0.166667,False,True,True,True,[1],[],[],,,1,1.0,True,True,6
+15,15a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a2,2,2,1,0,True,constant1,0,0,0,1,0.5,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a3,2,2,1,0,True,constant1,0,0,0,1,0.5,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a4,2,2,1,0,True,constant1,0,0,0,1,0.5,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a5,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a6,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a7,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+15,15a8,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,8
+17,17a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,4
+17,17a2,2,2,1,0,True,constant1,0,0,0,1,0.5,False,True,True,True,[1],[],[],,,1,1.0,True,True,4
+17,17a3,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,4
+17,17a4,4,4,1,0,True,constant1,0,0,0,1,0.25,False,True,True,True,[1],[],[],,,1,1.0,True,True,4
+19,19a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,3
+19,19a2,3,3,1,0,True,constant1,0,0,0,1,0.333333,False,True,True,True,[1],[],[],,,1,1.0,True,True,3
+19,19a3,3,3,1,0,True,constant1,0,0,0,1,0.333333,False,True,True,True,[1],[],[],,,1,1.0,True,True,3
+21,21a1,1,1,1,0,True,constant1,0,0,0,1,1.0,True,True,True,True,[1],[],[],,,1,1.0,True,True,6
+101,101a1,2,2,2,1,True,qp_combination,2,3,7,2,1.0,True,True,True,True,"[16, -3]","[2, 3]","[14, 74]",2,,2,1.0,True,True,1
+102,102b5,128,128,3,6,True,qp_combination,2,31,7,1024,8.0,True,True,True,False,"[907, 1]","[11, 31]","[-5120, 4644864]",1024,,16,64.0,True,True,6
+105,105a2,8,8,2,5,True,qp_combination,1,2,7,32,4.0,True,True,True,True,[1],[2],[32],32,,4,8.0,True,True,4
+106,106c2,144,144,4,5,True,qp_combination,1,3,7,48,0.333333,False,True,True,True,[1],[3],[48],48,,48,1.0,True,True,2
+110,110c1,28,28,4,6,True,qp_combination,2,29,8,1008,36.0,True,True,True,False,"[17, 11]","[7, 29]","[35280, -54432]",1008,,28,36.0,True,True,2
+114,114a4,72,72,3,8,True,qp_combination,2,47,8,576,8.0,True,True,True,False,"[-62, 3]","[7, 47]","[-56448, -1166400]",576,,12,48.0,True,True,4
+115,115a1,10,10,3,3,True,qp_combination,2,7,8,10,1.0,True,True,True,True,"[-15, 7]","[2, 7]","[-220, -470]",10,,10,1.0,True,True,1
+123,123a1,20,20,4,4,True,qp_combination,1,2,9,40,2.0,True,True,True,True,[1],[2],[40],40,,20,2.0,True,True,2
+129,129b4,30,30,4,5,True,qp_combination,2,11,9,15,0.5,False,True,True,True,"[306, -1]","[2, 11]","[-60, -18375]",15,,15,1.0,True,True,4
+130,130b3,32,32,3,7,True,qp_combination,2,7,9,32,1.0,True,True,True,True,"[-5, -1]","[3, 7]","[96, -512]",32,,8,4.0,True,True,4
+138,138b1,16,16,4,7,True,qp_combination,2,43,9,8192,512.0,True,True,True,False,"[-823, -3]","[13, 43]","[-131072, 35954688]",8192,,16,512.0,True,True,4
+138,138c4,32,32,4,7,True,qp_combination,2,17,10,1024,32.0,True,True,True,False,"[16, 1]","[5, 17]","[-2048, 33792]",1024,,8,128.0,True,True,4
+141,141c3,24,24,6,6,True,qp_combination,2,37,10,48,2.0,True,True,True,True,"[-27706340, 11]","[5, 37]","[2880, 7254023568]",48,,6,8.0,True,True,4
+142,142c2,18,18,5,6,True,qp_combination,1,3,10,81,4.5,False,True,True,True,[-1],[3],[-81],81,,9,9.0,True,True,2
+154,154a1,24,24,4,9,True,qp_combination,3,31,11,2304,96.0,True,True,True,False,"[-23595, -9680, 2]","[5, 17, 31]","[1209600, -2949120, -3483648]",2304,,24,96.0,True,True,2
+154,154c2,32,32,4,9,True,qp_combination,2,31,11,2048,64.0,True,True,True,False,"[197111, 5117]","[29, 31]","[-33554432, 1292544000]",2048,,16,128.0,True,True,2
+158,158b1,8,8,6,7,True,qp_combination,2,11,11,64,8.0,True,True,True,True,"[-2755, -3]","[5, 11]","[3392, -3115008]",64,,8,8.0,True,True,1
+158,158e2,12,12,6,7,True,qp_combination,2,13,12,24,2.0,True,True,True,True,"[-174323, 22107]","[11, 13]","[1886208, 14873544]",24,,6,4.0,True,True,2
+170,170a1,16,16,6,10,True,qp_combination,2,31,13,1024,64.0,True,True,True,False,"[-1508, -157]","[11, 31]","[360448, -3462144]",1024,,16,64.0,True,True,2
+170,170c2,252,252,6,10,True,qp_combination,2,29,13,27216,108.0,True,True,True,False,"[-316, 1]","[13, 29]","[-272160, -85975344]",27216,,84,324.0,True,True,2
+174,174b2,196,196,5,9,True,qp_combination,2,41,13,112,0.571429,False,True,True,True,"[-9510082, -237]","[11, 41]","[-157696, 6327856080]",112,,28,4.0,True,True,2
+178,178a1,32,32,4,6,True,qp_combination,2,5,13,32,1.0,True,True,True,True,"[1477, 6]","[3, 5]","[416, -102400]",32,,32,1.0,True,True,2
+182,182a3,720,720,5,11,True,qp_combination,2,47,14,1440,2.0,True,True,True,False,"[232607029, -506093]","[37, 47]","[2865807360, 1317162924000]",1440,,180,8.0,True,True,4
+182,182e1,140,140,5,11,True,qp_combination,2,17,14,560,4.0,True,True,True,False,"[29729, 192602]","[11, 17]","[-341787600, 52756480]",560,,140,4.0,True,True,1
+186,186b2,100,100,4,8,True,qp_combination,2,41,14,80,0.8,False,True,True,True,"[-3983189, -15571]","[13, 41]","[-6512400, 1665925120]",80,,20,4.0,True,True,2

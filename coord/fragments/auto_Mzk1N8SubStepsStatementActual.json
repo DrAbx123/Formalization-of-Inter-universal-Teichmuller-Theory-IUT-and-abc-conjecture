@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1N8SubStepsStatementActual",
+  "kind": "statement",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent loop registration"
+}

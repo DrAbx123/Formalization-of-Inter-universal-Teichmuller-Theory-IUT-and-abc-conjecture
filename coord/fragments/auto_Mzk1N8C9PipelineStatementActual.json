@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1N8C9PipelineStatementActual",
+  "kind": "statement",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent loop registration"
+}

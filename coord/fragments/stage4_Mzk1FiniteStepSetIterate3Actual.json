@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetIterate3Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetIterate3Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real consumer: unconditional iterated step-set bound; new file only, no sorry; watchdog to verify"
+}

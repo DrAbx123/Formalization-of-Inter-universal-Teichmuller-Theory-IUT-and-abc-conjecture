@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasurePosActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasurePosActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain: positivity/nonemptiness of finite max-degree (green deps only); new file only, no sorry; watchdog to verify"
+}

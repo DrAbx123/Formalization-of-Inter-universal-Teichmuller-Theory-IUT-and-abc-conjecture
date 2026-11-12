@@ -1,0 +1,305 @@
+{
+  "$schema_note": "aibi single-writer IUTI/IUTII fragment (new file; does not touch shared fragments); local short node ids",
+  "owner": "abc/aibi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "Kummer.LogShellCarrierArithmetic",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean": [
+          "sourceLogShellStar_odd",
+          "sourceLogShellStar_dvd",
+          "sourceLogShellStar_dvd_sq",
+          "SourceLogShellDatum.pStar_dvd"
+        ]
+      },
+      "note": "log-shell p/p* arithmetic; watchdog EXIT0"
+    },
+    {
+      "id": "Theta.ModLProjection",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionActual.lean": [
+          "modLThetaProjection_apply",
+          "modLEllipticProjection_apply",
+          "modLThetaProjection_eq_comp",
+          "modLEllipticProjection_eq_comp"
+        ]
+      },
+      "note": "mod-l projection class computation; watchdog EXIT0"
+    },
+    {
+      "id": "Frobenius.UnitsTransport",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean": [
+          "unitsMapOfRingHom_comp",
+          "unitsMapOfRingHom_injective",
+          "unitsMapOfRingHom_comp_assoc",
+          "unitsMapOfRingHom_zpow"
+        ]
+      },
+      "note": "global-unit functoriality; watchdog EXIT0"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationLaw",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one"
+        ]
+      },
+      "note": "translation group law; watchdog EXIT0"
+    },
+    {
+      "id": "IUTII.Kummer.Absolute.summary",
+      "kind": "bridge",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioSummaryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioSummaryActual.lean": [
+          "absoluteKummerTrioRows",
+          "absoluteKummerTrioRows_length"
+        ]
+      },
+      "note": "Absolute Kummer trio consumer index; watchdog EXIT0"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.arrows",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowFactsActual.lean": [
+          "frobeniusPictureArrow_iff",
+          "frobeniusPictureArrow_unique",
+          "frobeniusPictureArrow_comp",
+          "frobeniusPictureArrow_comp_iff"
+        ]
+      },
+      "note": "Gamma arrow facts; watchdog EXIT0"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.closure",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureActual.lean": [
+          "FrobeniusPictureGraphAut_inv",
+          "FrobeniusPictureGraphAut_mul",
+          "FrobeniusPictureGraphAut_pow"
+        ]
+      },
+      "note": "graph automorphism closure; watchdog EXIT0"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.unicity",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityActual.lean": [
+          "chainTranslation_eq_iff",
+          "chainTranslation_eq_one_iff",
+          "graphAut_translation_unique",
+          "chainTranslation_ne_one_iff"
+        ]
+      },
+      "note": "translation parameter uniqueness; watchdog EXIT0"
+    },
+    {
+      "id": "Section0.pathComposition",
+      "kind": "theorem",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean": [
+          "PathData",
+          "pdLength",
+          "pdNil",
+          "pdAppend",
+          "pdReverse",
+          "pdOfEdge",
+          "pdAppend_length",
+          "pdOfEdge_append"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Section-0 path composition flattened rewrite queued [PENDING-VERIFY: watchdog compile queued]; EXIT0 (watchdog compile) WATCHDOG EXIT0 => PROVED (trimmed append theorems)."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.group",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutGroupActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutGroupActual.lean": [
+          "frobeniusGraphAutGroup",
+          "mem_frobeniusGraphAutGroup",
+          "chainTranslation_mem_graphAutGroup"
+        ]
+      },
+      "note": "Aut(Gamma) subgroup; queued [PENDING-VERIFY: watchdog compile queued]"
+    },
+    {
+      "id": "Frobenius.UnitsIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsIndexActual.lean": [
+          "frobeniusUnitsRows",
+          "frobeniusUnitsRows_length"
+        ]
+      },
+      "note": "units consumer index; queued [PENDING-VERIFY: watchdog compile queued]"
+    },
+    {
+      "id": "Theta.PacketIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPacketIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPacketIndexActual.lean": [
+          "thetaPacketRows",
+          "thetaPacketRows_length"
+        ]
+      },
+      "note": "theta packet index; queued [PENDING-VERIFY: watchdog compile queued]"
+    },
+    {
+      "id": "HodgeTheater.LinkIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterIndexActual.lean": [
+          "hodgeTheaterRows",
+          "hodgeTheaterRows_length"
+        ]
+      },
+      "note": "Hodge theater link index; queued [PENDING-VERIFY: watchdog compile queued]"
+    },
+    {
+      "id": "Kummer.LogShellIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierIndexActual.lean": [
+          "logShellCarrierRows",
+          "logShellCarrierRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): log-shell carrier index; queued [PENDING-VERIFY: watchdog compile queued]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Skeleton.AddendaIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonAddendaIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonAddendaIndexActual.lean": [
+          "skeletonAddendaRows",
+          "skeletonAddendaRows_length"
+        ]
+      },
+      "note": "addenda integration index; queued [PENDING-VERIFY: watchdog compile queued]"
+    },
+    {
+      "id": "Section0.combinatorics",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean": [
+          "section0ObjectRows",
+          "section0ObjectRows_length"
+        ]
+      },
+      "note": "Section-0 combinatorics; direct-compile green, watchdog stale-red; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "theta-etth:A5",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean": [
+          "OrderwiseConnected",
+          "CountablyOrdered",
+          "OrientedGraph",
+          "section0ObjectRows"
+        ]
+      },
+      "note": "Section-0 objects; direct compile green, watchdog stale-red; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Theta.QuotientIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaQuotientIndexActual.lean",
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaQuotientIndexActual.lean": [
+          "thetaQuotientRows",
+          "thetaQuotientRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): EtaleThetaQuotient consumer row index (10 rows). [PENDING-VERIFY: watchdog compile queued]; EXIT0 (watchdog compile)"
+    }
+  ],
+  "edges": []
+}

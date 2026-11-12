@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1R9RayMonotonicityActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9RayMonotonicityActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

@@ -1,0 +1,262 @@
+[
+ {
+  "tag": "const-all",
+  "n": 4154,
+  "features": [
+   "const"
+  ],
+  "lambda": [
+   0.010951500000000003
+  ],
+  "t": 5.5811675,
+  "objective": 5.5811675,
+  "max_abs_resid": 5.5811675,
+  "mean_abs_resid": 2.8021828632643238,
+  "rmse": 2.9896450129064482,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.7071067811865476,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "const-adm",
+  "n": 2604,
+  "features": [
+   "const"
+  ],
+  "lambda": [
+   0.49926000000000004
+  ],
+  "t": 5.092859000000001,
+  "objective": 5.092859000000001,
+  "max_abs_resid": 5.092859000000001,
+  "mean_abs_resid": 2.596758100230415,
+  "rmse": 2.775233443573459,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.7071067811865476,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "agg-all",
+  "n": 4154,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "avg"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.003860220408739975
+  ],
+  "t": 5.577486429552989,
+  "objective": 5.577486429552989,
+  "max_abs_resid": 5.577486429552989,
+  "mean_abs_resid": 2.8038037632004302,
+  "rmse": 2.991138744523696,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.745982527526014,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "agg-adm",
+  "n": 2604,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "avg"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.009272867096485254,
+   0.0,
+   0.19949405321180494
+  ],
+  "t": 4.982648922131672,
+  "objective": 4.982648922131672,
+  "max_abs_resid": 4.982648922131672,
+  "mean_abs_resid": 2.5227251051333806,
+  "rmse": 2.716892107885557,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.6778205401750902,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "agg2-all",
+  "n": 4154,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "invsqrt",
+   "avg",
+   "nbad_arch"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.003860220408739975,
+   0.0
+  ],
+  "t": 5.577486429552989,
+  "objective": 5.577486429552989,
+  "max_abs_resid": 5.577486429552989,
+  "mean_abs_resid": 2.8038037632004302,
+  "rmse": 2.991138744523696,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.745982527526014,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "agg2-adm",
+  "n": 2604,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "invsqrt",
+   "avg",
+   "nbad_arch"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.009272867096485254,
+   0.0,
+   0.0,
+   0.19949405321180494,
+   0.0
+  ],
+  "t": 4.982648922131672,
+  "objective": 4.982648922131672,
+  "max_abs_resid": 4.982648922131672,
+  "mean_abs_resid": 2.5227251051333806,
+  "rmse": 2.716892107885557,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.6778205401750902,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "poly-all",
+  "n": 4154,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "invsqrt",
+   "avg",
+   "nbad_arch",
+   "logN2",
+   "nbad2",
+   "cross",
+   "arch"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.003860220408739975,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "t": 5.577486429552989,
+  "objective": 5.577486429552989,
+  "max_abs_resid": 5.577486429552989,
+  "mean_abs_resid": 2.8038037632004302,
+  "rmse": 2.991138744523696,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.745982527526014,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ },
+ {
+  "tag": "poly-adm",
+  "n": 2604,
+  "features": [
+   "const",
+   "logN",
+   "nbad",
+   "tame",
+   "invp",
+   "invsqrt",
+   "avg",
+   "nbad_arch",
+   "logN2",
+   "nbad2",
+   "cross",
+   "arch"
+  ],
+  "lambda": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.20577601098463483,
+   0.0,
+   0.000872710722659895,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "t": 4.980900016278336,
+  "objective": 4.980900016278336,
+  "max_abs_resid": 4.980900016278337,
+  "mean_abs_resid": 2.522719034839572,
+  "rmse": 2.7170553107445006,
+  "cov_1e-6": 0.0,
+  "cov_1e-3": 0.0,
+  "cov_0.01": 0.0,
+  "dual_norm": 0.6446338383769598,
+  "dual_sign_ok": false,
+  "status": "LP_OK"
+ }
+]

@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureUnionActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureUnionActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: finite numMax union bound; new file only, no sorry; watchdog to verify"
+}

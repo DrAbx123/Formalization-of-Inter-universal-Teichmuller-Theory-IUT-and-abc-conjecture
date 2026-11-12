@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureEraseActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureEraseActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: erase/insert bounds; new file only, no sorry; watchdog to verify"
+}

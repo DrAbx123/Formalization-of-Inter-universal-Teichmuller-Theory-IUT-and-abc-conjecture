@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImageConstActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImageConstActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: constant image measure value; new file only, no sorry; watchdog to verify"
+}

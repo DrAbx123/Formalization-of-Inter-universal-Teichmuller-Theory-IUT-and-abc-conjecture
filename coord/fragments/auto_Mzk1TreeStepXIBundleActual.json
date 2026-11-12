@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1TreeStepXIBundleActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1TreeStepXIBundleActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only"
+}

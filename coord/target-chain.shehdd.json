@@ -1,0 +1,2181 @@
+{
+  "section": "shehdd — IUT 3.12 prerequisite evidence (single writer)",
+  "description": "New nodes/edges registered by shehdd from existing Lean assets; evidence=observed_source when source imports/declarations were read.",
+  "owner": "shehdd",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "iutii-link-routing",
+      "kind": "theorem",
+      "title": "typed IUTII->IUTIII link drives Cor 3.12 route wiring (composition consumer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddIUTIIILinkRoutingActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddIUTIIILinkRoutingActual.lean": [
+          "iutiiLinkContract",
+          "iutiiLink_conclusion_and_positivity",
+          "iutiiLink_allRoutes",
+          "iutiiLink_routeCertificate_conclusion"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes only existing PROVED consumers: Mzk1IUTIIILinkActual (IUTIIToStepXILink -> contract/conclusion/q-positivity) + Mzk1Cor312TargetWiringActual (contract -> route certificate -> Cor312Conclusion). No new assumptions; ipl/she/apt remain explicit evidence fields (NAMED)."
+    },
+    {
+      "id": "abc-frontier-form-equivalences",
+      "kind": "theorem",
+      "title": "ABCFrontier <=> ABC log form / additive height-weight form (composition consumer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddABCFrontierFormEquivalencesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddABCFrontierFormEquivalencesActual.lean": [
+          "abcLogConjecture_of_frontier",
+          "abcHeightWeightAdditive_of_frontier",
+          "abcFrontier_iff_abcLogConjecture",
+          "abcFrontier_iff_abcHeightWeightAdditive"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes existing PROVED equivalences: abcFrontier_iff_abcConjecture + abcConjecture_iff_abcLogConjecture + abcConjecture_iff_ABCHeightWeightAdditiveBoundV2. No new assumptions."
+    },
+    {
+      "id": "iut312-top-statement",
+      "kind": "target",
+      "title": "IUT III Cor 3.12 statement layer: qSigned <= thetaSigned (paper inequality mapping)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddIUT312TopStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddIUT312TopStatementActual.lean": [
+          "IUT312TopStatement",
+          "iut312TopStatement_iff_cor312Conclusion",
+          "iut312TopStatement_of_contract",
+          "iut312TopStatement_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Statement-level mapping of paper Cor 3.12 (-|log Theta| >= -|log q|) to Lean StepXIContract chain; contract => statement PROVED via tree cor312_of_constructed_stepXI. Paper objects (Theta-pilot/q-pilot/hull/Kummer/multiradial/Ind) remain NAMED elsewhere (iut-skeleton, e-deep, EtTh, AbsTopIII nodes)."
+    },
+    {
+      "id": "geomcore-route-consumer",
+      "kind": "theorem",
+      "title": "finite-map route => precise GeometricCore witness AND old recast (combined consumer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddGeomCoreRouteConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddGeomCoreRouteConsumerActual.lean": [
+          "route_precise_and_recast",
+          "geomCoreRouteConsumerRows",
+          "geomCoreRouteConsumerRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes Mzk1GeomCoreFiniteMapRouteActual.preciseWitness_of_route + recast_of_route; finite-map construction and line-bundle iso remain NAMED gaps (finiteMapRouteGapText). No new assumptions. Edge adjusted after owner rewrite of iut-pre-stage4 fragment (D.witness.precise removed): consumer now hangs on foundation:D.bridgeLegacy (existing PROVED bridge-legacy node)."
+    },
+    {
+      "id": "qpilot-log-volume-summary",
+      "kind": "theorem",
+      "title": "q-pilot normalized log-volume summary (Tate j comparison composition)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQPilotLogVolumeSummaryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQPilotLogVolumeSummaryActual.lean": [
+          "qPilotLogVolume_summary",
+          "tateJInvariantLogVolume_summary",
+          "qPilot_norm_mul_j_norm_one",
+          "qPilotLogVolumeRows",
+          "qPilotLogVolumeRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes PROVED TateQPilotJComparison facts (positivity, log l.value, j=q-pilot log-volume, additive zero, multiplicative norm 1). General Theta-pilot/hull objects NAMED elsewhere."
+    },
+    {
+      "id": "ind3-closure-laws",
+      "kind": "theorem",
+      "title": "(Ind3) upper-semi possible-image closure laws (isLowerClosed <-> closure = self)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInd3ClosureLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInd3ClosureLawsActual.lean": [
+          "isLowerClosed_iff_lowerClosure_eq_self",
+          "lowerClosure_le_iff_carrier_subset",
+          "lowerClosure_eq_self_of_isLowerClosed",
+          "ind3ClosureRows",
+          "ind3ClosureRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Adds order-theoretic closure laws to Ind3Reduction possible images; analytic (Ind3) log-Kummer carriers remain NAMED (Ind3.lean audit note)."
+    },
+    {
+      "id": "hull-frozen-spec-consumer",
+      "kind": "theorem",
+      "title": "frozen hull/det log-volume spec consumer API (tensor/rescale/hull-average projections)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddHullFrozenSpecConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddHullFrozenSpecConsumerActual.lean": [
+          "frozen_spec_log_tensor",
+          "frozen_spec_log_rescale",
+          "frozen_spec_hull_average",
+          "frozen_spec_holds",
+          "hullFrozenSpecRows",
+          "hullFrozenSpecRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Consumer projections of HullDeterminantLogVolumeFrozenSpec + its holds instance; reuses tree packet lemmas (Volume.lean) and hull average sandwich. No new assumptions."
+    },
+    {
+      "id": "interface-form-consumer",
+      "kind": "theorem",
+      "title": "Cor312ToABCBridgeInterface => ABC log form / additive form / height bound (consumer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInterfaceFormConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInterfaceFormConsumerActual.lean": [
+          "abcLogConjecture_of_interface",
+          "abcHeightWeightAdditive_of_interface",
+          "interface_heightBound_and_additive",
+          "interfaceFormRows",
+          "interfaceFormRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes cor312ToABCBridge_abcConjecture/heightBound with the proved ABC log/additive equivalences; interface itself remains the named G2 input."
+    },
+    {
+      "id": "label-shared-boundary-consumer",
+      "kind": "theorem",
+      "title": "finite-label cardinality / zero-label consumer (Cor 4.10(i) label bookkeeping)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddLabelSharedBoundaryConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddLabelSharedBoundaryConsumerActual.lean": [
+          "signedLabel_cardinality_consumer",
+          "nonzeroFiniteLabel_cardinality_consumer",
+          "zeroLabel_toFiniteLabel_zero",
+          "zeroLabel_weight_zero",
+          "labelSharedBoundaryRows",
+          "labelSharedBoundaryRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceSharedBoundary/SourceLabelWeightedDiagonal/SignedLabelEquiv label assets. Paper Cor 4.10(i) verbatim label-identification statement not found in declaration index (search evidence in coord/SURVEY-shehdd.md); closest assets are the finite-label dictionary + SourceLogShellInvariantImageIdentification."
+    },
+    {
+      "id": "thetapilot-iq-consumer",
+      "kind": "theorem",
+      "title": "one-place Theta-pilot IQ containment consumer (possible image -> IQ packet)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddThetaPilotIQConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddThetaPilotIQConsumerActual.lean": [
+          "thetaPilot_IQ_containment",
+          "thetaPilot_productMap_tprod",
+          "thetaPilotIQRows",
+          "thetaPilotIQRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceThetaPilotIQContainment (one-place reduction); full all-place paper tensor remains outside current tree scope (docstring)."
+    },
+    {
+      "id": "qparameter-consumer",
+      "kind": "theorem",
+      "title": "q-parameter Def 3.1(b) local log bookkeeping consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQParameterConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQParameterConsumerActual.lean": [
+          "qCandidate_log_summary",
+          "qCandidate_exp_and_abs",
+          "qCandidate_pow_magnitude",
+          "selected_q_log_summary",
+          "qParameterConsumerRows",
+          "qParameterConsumerRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ArithmeticQPilotLogVolume/BaseChange q-parameter laws; all-bad-places identification stays repo-current-limit per tree docstring."
+    },
+    {
+      "id": "hull-ob9-consumer",
+      "kind": "theorem",
+      "title": "H7/Ob9 two-sided implies one-sided consumer bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddHullOb9ConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddHullOb9ConsumerActual.lean": [
+          "hull_ob9_onesided_of_twosided",
+          "hull_ob9_twosided_full",
+          "hullOb9ConsumerRows",
+          "hullOb9ConsumerRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes Hull12 one-sided transfer + Hull13 one-sided/two-sided consumers; deep arbitrary-iterate independence remains NAMED."
+    },
+    {
+      "id": "ind1-quotient-consumer",
+      "kind": "theorem",
+      "title": "(Ind1) formal-quotient consumer laws (projection/lift/uniqueness)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInd1QuotientConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInd1QuotientConsumerActual.lean": [
+          "ind1_quotient_absorbs",
+          "ind1_lift_mk",
+          "ind1_lift_unique",
+          "ind1QuotientRows",
+          "ind1QuotientRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Ind1Reduction quotient transport laws; IUT source procession/Aut carriers remain NAMED (Ind1 audit note)."
+    },
+    {
+      "id": "abc-logbound-form",
+      "kind": "theorem",
+      "title": "ABC log-bound <=> radical-power form consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddABCLogBoundFormActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddABCLogBoundFormActual.lean": [
+          "abcLogBound_rpow_consumer",
+          "abcLogConjecture_iff_rpow",
+          "abcConjecture_iff_rpow",
+          "radical_log_weight_consumer",
+          "abcLogBoundFormRows",
+          "abcLogBoundFormRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes LogarithmicBoundEquivalence per-epsilon rpow equivalence + IUTToABC log equivalence; no new assumptions. Edge adjusted: T6-abc-log-form node absent in merged DAG; hangs on existing mainline:abc-log-equivalence."
+    },
+    {
+      "id": "absolute-kummer-trio-consumer",
+      "kind": "theorem",
+      "title": "absolute/etale Kummer trio consumer (kernel criterion + quotient injectivity + local constancy)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddAbsoluteKummerTrioConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddAbsoluteKummerTrioConsumerActual.lean": [
+          "absoluteKummer_trio_summary",
+          "nthPowerSubgroup_mem_consumer",
+          "absoluteKummerTrioRows",
+          "absoluteKummerTrioRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses IUTII/Kummer AbsoluteKummer{Injection,Quotient,Continuity} proved laws."
+    },
+    {
+      "id": "frobenius-graphaut-consumer",
+      "kind": "theorem",
+      "title": "Frobenius-picture graph automorphism closure + translation classification consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFrobeniusGraphAutConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFrobeniusGraphAutConsumerActual.lean": [
+          "frobenius_graphAut_closure_summary",
+          "frobenius_graphAut_translation_parameter",
+          "frobenius_chainTranslation_injective",
+          "frobeniusGraphAutRows",
+          "frobeniusGraphAutRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceThetaLinkGraphAutomorphismReduction + Mzk1FrobeniusGraphAutClosureActual group laws."
+    },
+    {
+      "id": "etth-gap-consumer",
+      "kind": "theorem",
+      "title": "EtTh realization gap / deep-input consumer bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddEtThGapConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddEtThGapConsumerActual.lean": [
+          "etTh_gap_components",
+          "etTh_gap_of_components",
+          "etTh_realization_holds",
+          "etThGapConsumerRows",
+          "etThGapConsumerRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Mzk1EtThGapStatementActual + Mzk1EtThRealizationConsumerActual; GeometricCore remains the single named hypothesis."
+    },
+    {
+      "id": "k1k2-boundary-consumer",
+      "kind": "theorem",
+      "title": "K1/K2 ray-presentation boundary + source vertical realization consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddK1K2BoundaryConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddK1K2BoundaryConsumerActual.lean": [
+          "raypresentation_univ_consumer",
+          "negLogVolume_hind3_consumer",
+          "k1_boundary_of_negLogVolume_ray",
+          "k1k2BoundaryRows",
+          "k1k2BoundaryRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Theorem311/SourceK1K2CardReduction proved boundary assembly (h=-logVolume ray presentation)."
+    },
+    {
+      "id": "stepxi-finite-certificate-consumer",
+      "kind": "theorem",
+      "title": "StepXI finite certificate ordered-chain/hull-average consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddStepXIFiniteCertificateConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddStepXIFiniteCertificateConsumerActual.lean": [
+          "finiteCertificate_ordered_chain",
+          "finiteCertificate_average_le_hull",
+          "finiteCertificateRows",
+          "finiteCertificateRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Volume.lean FiniteHull/WeightedValues/StepXIFiniteCertificate; source-facing hull construction remains the tree Obligation note."
+    },
+    {
+      "id": "frontier-height-consumer",
+      "kind": "theorem",
+      "title": "ABCFrontier => bridge interface / per-epsilon height bound / ABC consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddABCFrontierHeightConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddABCFrontierHeightConsumerActual.lean": [
+          "frontier_bridgeInterface",
+          "frontier_heightBound",
+          "frontier_abc_and_heightBound",
+          "frontierHeightRows",
+          "frontierHeightRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Composes bridgeInterface_of_frontier/abcConjecture_of_frontier with cor312ToABCBridge_heightBound; frontier premise stays a hypothesis."
+    },
+    {
+      "id": "abc-additive-form-consumer",
+      "kind": "theorem",
+      "title": "additive height-weight form consumer (constant extraction + uniform-valuation=>ABC)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddABCAdditiveFormConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddABCAdditiveFormConsumerActual.lean": [
+          "abcAdditive_exists_constant",
+          "abcConjecture_of_uniform_valuation_bound",
+          "abcConjecture_iff_additive_consumer",
+          "abcAdditiveRows",
+          "abcAdditiveRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCHeightArithmeticWeightComparison equivalences/API; uniform-valuation route is the documented vacuous retained implication."
+    },
+    {
+      "id": "cor312-tree-route-consumer",
+      "kind": "theorem",
+      "title": "Cor 3.12 tree route-certificate consumer (3 routes + q positivity)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddCor312TreeRouteConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddCor312TreeRouteConsumerActual.lean": [
+          "routeCertificate_conclusion",
+          "threeRoutes_conclusion",
+          "contract_q_pilot_positive",
+          "contract_conclusion",
+          "cor312TreeRouteRows",
+          "cor312TreeRouteRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Tree-only consumer (Contract/Routes/Comparison); contract construction from IUT source data remains the tree Obligation."
+    },
+    {
+      "id": "frey-tate-candidate-consumer",
+      "kind": "theorem",
+      "title": "Frey/Tate q-parameter candidate analytic consumer (q=j^-1, arithmetic certificate)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFreyTateQCandidateConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFreyTateQCandidateConsumerActual.lean": [
+          "freyTate_candidate_summary",
+          "freyTate_candidate_norm_summary",
+          "freyTate_candidate_arithmeticCertificate",
+          "freyTateCandidateRows",
+          "freyTateCandidateRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses FreyTateAnalyticInput/ParameterComparison (q=j^-1, ||q||<1, <=1/9, arithmetic certificate)."
+    },
+    {
+      "id": "abc-invariant-coprimality-consumer",
+      "kind": "theorem",
+      "title": "ABC invariant coprimality + cancellation bound consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddABCInvariantCoprimalityConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddABCInvariantCoprimalityConsumerActual.lean": [
+          "abcInvariant_coprime_summary",
+          "abcInvariant_cancellation_summary",
+          "abcInvariant_cancellation_eq_gcd",
+          "abcInvariantCoprimalityRows",
+          "abcInvariantCoprimalityRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCInvariantCoprimality pairwise/product coprimality and cancellation bounds."
+    },
+    {
+      "id": "tatej-invariant-norm-consumer",
+      "kind": "theorem",
+      "title": "Tate j-invariant norm consumer (||j||=||q||^-1, jΔ=c4^3)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddTateJInvariantNormConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddTateJInvariantNormConsumerActual.lean": [
+          "tateJInvariant_norm_summary",
+          "tateJInvariant_norm_pos_and_ne_zero",
+          "tateJInvariantNormRows",
+          "tateJInvariantNormRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Foundations/Geometry/TateJInvariantNorm proved norm laws."
+    },
+    {
+      "id": "frontier-shortcut-refuted-consumer",
+      "kind": "theorem",
+      "title": "refuted frontier shortcut consumer (F4a + reduced variants empty)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFrontierShortcutRefutedConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFrontierShortcutRefutedConsumerActual.lean": [
+          "frontier_shortcuts_refuted",
+          "frontier_f4a_counterexample",
+          "frontierShortcutRows",
+          "frontierShortcutRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCFrontierHeightWeightRefutation + SingletonReduction refutations; unreduced frontier unaffected (equivalent to ABC)."
+    },
+    {
+      "id": "logshell-identification-consumer",
+      "kind": "theorem",
+      "title": "log-shell invariant image identification consumer (bridge card consequences)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddLogShellIdentificationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddLogShellIdentificationConsumerActual.lean": [
+          "logShellIdentification_consumer",
+          "logShellIdentification_upperSemi",
+          "logShellIdentificationRows",
+          "logShellIdentificationRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceLogShellAbsTopIIIBridge bridge-card equivalences/consequences; source arithmetic fact remains the named card."
+    },
+    {
+      "id": "frontier-reduction-consumer",
+      "kind": "theorem",
+      "title": "frontier reduction implications with refuted premises (vacuous routes)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFrontierReductionConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFrontierReductionConsumerActual.lean": [
+          "frontier_reductions_with_empty_premises",
+          "frontier_reduction_routes_vacuous",
+          "frontierReductionRows",
+          "frontierReductionRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Connects ABCFrontierReductions implications with ABCFrontierHeightWeightRefutation empty-premise results."
+    },
+    {
+      "id": "matrix-logdet-laws-consumer",
+      "kind": "theorem",
+      "title": "matrix log-det law bundle (mul / smul / Kronecker / pow)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddMatrixLogDetLawsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddMatrixLogDetLawsConsumerActual.lean": [
+          "matrixLogDet_laws_consumer",
+          "matrixLogDetRows",
+          "matrixLogDetRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses HullDeterminantLogVolumeReduction matrix log-det laws for (Ob3-2)/(Ob3-3) bookkeeping."
+    },
+    {
+      "id": "elliptic-height-criteria-consumer",
+      "kind": "theorem",
+      "title": "ABC elliptic height criteria consumer (4 criteria equivalences)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddEllipticHeightCriteriaConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddEllipticHeightCriteriaConsumerActual.lean": [
+          "elliptic_height_criteria_equivalent",
+          "freyProduct_iff_legendreDenominator",
+          "ellipticHeightCriteriaRows",
+          "ellipticHeightCriteriaRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCEllipticHeightCriterion proved equivalences for Frey/Legendre j product/denominator criteria."
+    },
+    {
+      "id": "genell-consumer",
+      "kind": "theorem",
+      "title": "GenEll Thm 2.1 / IUT IV §2 / H6xMzk1 consumer bundle",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddGenEllConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddGenEllConsumerActual.lean": [
+          "genEll_theorem21_iff_consumer",
+          "genEll_section2_cor23_consumer",
+          "genEll_abcAll_consumer",
+          "h6_mzk1_interface_consumer",
+          "genEllConsumerRows",
+          "genEllConsumerRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses GenEll05/09/10b proved conditionals; paper-input directions stay named. Dropped unresolved edge targets: e-deep:E5.genEllConsumer,e-deep:E5.genEllReduction"
+    },
+    {
+      "id": "tauceti-alignment-consumer",
+      "kind": "theorem",
+      "title": "Tau Ceti / log-form ABC alignment consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddTauCetiAlignmentConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddTauCetiAlignmentConsumerActual.lean": [
+          "tauCeti_iff_abcLogConjecture",
+          "radical_aliases_consumer",
+          "tauCeti_nat_form_consumer",
+          "tauCetiAlignmentRows",
+          "tauCetiAlignmentRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses AbcStatementAlignmentActual + LogarithmicBoundEquivalence radical/log equivalences. Dropped unresolved edge targets: mainline:abc-tau-ceti-alignment"
+    },
+    {
+      "id": "absolute-kummer-kernel-consumer",
+      "kind": "theorem",
+      "title": "absolute Kummer kernel = n-th powers consumer (kernel/quotient bundle)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddAbsoluteKummerKernelConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddAbsoluteKummerKernelConsumerActual.lean": [
+          "absoluteKummerMap_ker_eq_nthPowerSubgroup",
+          "absoluteKummer_kernel_and_quotient_consumer",
+          "absoluteKummerKernelRows",
+          "absoluteKummerKernelRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Identifies kernel of absoluteKummerMap with nthPowerSubgroup; reuses AbsoluteKummerInjection/Quotient."
+    },
+    {
+      "id": "invariant-radical-consumer",
+      "kind": "theorem",
+      "title": "ABC invariant radical/log comparison consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInvariantRadicalConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInvariantRadicalConsumerActual.lean": [
+          "invariant_den_radical_bounds_consumer",
+          "invariant_den_primeFactors_consumer",
+          "invariant_den_logRadical_consumer",
+          "natRadical_double_consumer",
+          "invariantRadicalRows",
+          "invariantRadicalRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCInvariantRadicalBridge radical/log comparison laws."
+    },
+    {
+      "id": "tate-parameter-unit-consumer",
+      "kind": "theorem",
+      "title": "Tate parameter unit / deck action consumer (q-pilot local uniformization)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddTateParameterUnitConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddTateParameterUnitConsumerActual.lean": [
+          "tateParameterUnit_deck_fixed_consumer",
+          "tateParameterUnit_pow_consumer",
+          "tateParameterUnitRows",
+          "tateParameterUnitRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses TateUniformizationContract unit laws (ne_one/pow/algEquiv_map/deckSubgroup map)."
+    },
+    {
+      "id": "kummer-ratio-cocycle-consumer",
+      "kind": "theorem",
+      "title": "Kummer ratio Galois cocycle consumer (Gal -> mu_n)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddKummerRatioCocycleConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddKummerRatioCocycleConsumerActual.lean": [
+          "kummerRatio_cocycle_consumer",
+          "kummerRatioCocycleRows",
+          "kummerRatioCocycleRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses KummerGaloisClass kummerRatio/kummerRatioHom laws."
+    },
+    {
+      "id": "theta-displacement-consumer",
+      "kind": "theorem",
+      "title": "theta-link displacement consumer (q/scale displacement + equivalence)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddThetaDisplacementConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddThetaDisplacementConsumerActual.lean": [
+          "thetaDisplacement_link_consumer",
+          "thetaDisplacement_equivalence_consumer",
+          "thetaDisplacementRows",
+          "thetaDisplacementRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceThetaLinkDisplacementReduction displacement laws."
+    },
+    {
+      "id": "kummer-roots-consumer",
+      "kind": "theorem",
+      "title": "Kummer roots / absolute-Galois fixed points consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddKummerRootsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddKummerRootsConsumerActual.lean": [
+          "kummer_root_and_chosenRoot_consumer",
+          "absoluteGalois_fixed_mem_base_consumer",
+          "kummerRootsRows",
+          "kummerRootsRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses AlgebraicClosureKummerRoots + chosenRoot_spec."
+    },
+    {
+      "id": "hodge-family-laws-consumer",
+      "kind": "theorem",
+      "title": "Hodge theater family laws consumer (theta packet constancy/distinctness)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddHodgeFamilyLawsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddHodgeFamilyLawsConsumerActual.lean": [
+          "family_thetaPacket_eq_consumer",
+          "family_distinct_consumer",
+          "hodgeFamilyLawsRows",
+          "hodgeFamilyLawsRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceHodgeTheaterFamilyLawsReduction laws."
+    },
+    {
+      "id": "elliptic-torsion-galois-consumer",
+      "kind": "theorem",
+      "title": "elliptic torsion Galois-action consumer (point action + l-torsion representation)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddEllipticTorsionGaloisConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddEllipticTorsionGaloisConsumerActual.lean": [
+          "galoisActionOnPoint_hom_consumer",
+          "ltorsion_galois_representation_consumer",
+          "ellipticTorsionRows",
+          "ellipticTorsionRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses EllipticTorsion Galois-action/representation assets (IUT I Def 3.1(b) layer)."
+    },
+    {
+      "id": "norm-log-consumer",
+      "kind": "theorem",
+      "title": "norm/log degree consumer (multiplicativity + log norm)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddNormLogConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddNormLogConsumerActual.lean": [
+          "unitNormLogDegree_consumer",
+          "normLogRows",
+          "normLogRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses NormLog unitNormLogDegree laws."
+    },
+    {
+      "id": "local-logshell-datum-consumer",
+      "kind": "theorem",
+      "title": "actual local log-shell datum consumer (pStar/pre/logShell/integralLogShell)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddLocalLogShellDatumConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddLocalLogShellDatumConsumerActual.lean": [
+          "localLogShellDatum_consumer",
+          "localLogShellDatumRows",
+          "localLogShellDatumRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceLocalLogShellDatum actual common-prime-completion carrier laws."
+    },
+    {
+      "id": "kummer-map-kernel-consumer",
+      "kind": "theorem",
+      "title": "classical Kummer map kernel consumer (kernel = n-th powers, root choice)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddKummerMapKernelConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddKummerMapKernelConsumerActual.lean": [
+          "kummerMap_kernel_consumer",
+          "kummer_trivial_and_root_choice_consumer",
+          "kummerMapKernelRows",
+          "kummerMapKernelRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses KummerGaloisClass classical Kummer injectivity statements (FiniteDimensional+IsGalois context)."
+    },
+    {
+      "id": "logshell-carrier-consumer",
+      "kind": "theorem",
+      "title": "frozen log-shell carrier consumer (inclusions/closure/invScaled/IQSpan)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddLogShellCarrierConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddLogShellCarrierConsumerActual.lean": [
+          "logShellCarrier_consumer",
+          "logShellCarrier_kummer_consumer",
+          "logShellCarrierRows",
+          "logShellCarrierRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses SourceLogShellCarrier frozen carrier laws."
+    },
+    {
+      "id": "radical-laws-consumer",
+      "kind": "theorem",
+      "title": "natRadical arithmetic laws consumer (multiplicativity/power/divisibility)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddRadicalLawsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddRadicalLawsConsumerActual.lean": [
+          "natRadical_basic_consumer",
+          "natRadical_mul_consumer",
+          "natRadical_pow_dvd_consumer",
+          "radicalLawsRows",
+          "radicalLawsRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses Foundations/Arithmetic/Radical laws."
+    },
+    {
+      "id": "badprime-tate-input-consumer",
+      "kind": "theorem",
+      "title": "odd bad-prime Frey/Tate analytic input consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddBadPrimeTateInputConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddBadPrimeTateInputConsumerActual.lean": [
+          "frey_badprime_candidate_ne_zero_consumer",
+          "frey_badprime_candidate_norm_lt_one_consumer",
+          "frey_badprime_candidate_ne_one_consumer",
+          "exists_tate_input_consumer",
+          "badPrimeTateRows",
+          "badPrimeTateRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses ABCModelHeightComparison bad-prime candidate facts; no uniformization claim."
+    },
+    {
+      "id": "tate-canonical-coefficients-consumer",
+      "kind": "theorem",
+      "title": "Tate canonical equation coefficients/invariants consumer (q-series model)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddTateCanonicalCoefficientsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddTateCanonicalCoefficientsConsumerActual.lean": [
+          "tateCanonical_consumer",
+          "tateCanonical_relations_consumer",
+          "tateCanonicalRows",
+          "tateCanonicalRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses TateCurveArithmetic canonical coefficients/relations."
+    },
+    {
+      "id": "frey-weierstrass-consumer",
+      "kind": "theorem",
+      "title": "Frey Weierstrass model invariant/scaling/ellipticity consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFreyWeierstrassConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFreyWeierstrassConsumerActual.lean": [
+          "freyWeierstrass_invariants_consumer",
+          "freyWeierstrass_scaling_consumer",
+          "freyWeierstrass_isElliptic_consumer",
+          "freyWeierstrassRows",
+          "freyWeierstrassRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses FreyWeierstrassCurve invariant/scaling/ellipticity laws."
+    },
+    {
+      "id": "punctured-curve-consumer",
+      "kind": "theorem",
+      "title": "punctured elliptic curve map/baseChange consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddPuncturedCurveConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddPuncturedCurveConsumerActual.lean": [
+          "punctured_curve_jInvariant_consumer",
+          "punctured_curve_map_consumer",
+          "punctured_curve_baseChange_consumer",
+          "puncturedCurveRows",
+          "puncturedCurveRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses PuncturedEllipticCurve map/baseChange laws."
+    },
+    {
+      "id": "tate-delta-estimates-consumer",
+      "kind": "theorem",
+      "title": "Tate discriminant decomposition / constant norm estimates consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddTateDeltaEstimatesConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddTateDeltaEstimatesConsumerActual.lean": [
+          "deltaValue_decomposition_consumer",
+          "deltaValue_series_consumer",
+          "deltaValue_constant_bounds_consumer",
+          "tateDeltaRows",
+          "tateDeltaRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses TateCurveDiscriminantEstimates decomposition/bounds."
+    },
+    {
+      "id": "local-log-inverse-consumer",
+      "kind": "theorem",
+      "title": "local logarithm inverse/preimage consumer (log1p ball, scale bounds, integral logShell)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddLocalLogInverseConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddLocalLogInverseConsumerActual.lean": [
+          "log1p_preimage_consumer",
+          "logShellScale_bounds_consumer",
+          "norm_one_add_consumer",
+          "unitLog_surjective_consumer",
+          "integers_subset_integralLogShell_consumer",
+          "localLogInverseRows",
+          "localLogInverseRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses LogarithmLocalInverse analytic inverse laws (ProperSpace section for integral log-shell)."
+    },
+    {
+      "id": "integral-unit-log-consumer",
+      "kind": "theorem",
+      "title": "integral unit logarithm consumer (mul/pow/principal/exponent independence)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddIntegralUnitLogConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddIntegralUnitLogConsumerActual.lean": [
+          "unitLog_hom_consumer",
+          "unitLog_principal_consumer",
+          "unitLog_exponent_independence_consumer",
+          "integralUnitLogRows",
+          "integralUnitLogRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). Reuses IntegralUnitLogarithm constructed unitLog laws."
+    },
+    {
+      "id": "qpilot-exp-chain",
+      "kind": "theorem",
+      "title": "q-pilot/j-invariant log-volume exponential chain (exp volumes, additive law)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQPilotExpChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQPilotExpChainActual.lean": [
+          "qPilotLogVolume_exp_eq_prime",
+          "tateJInvariantLogVolume_exp_eq_norm",
+          "qPilotLogVolume_add_tateJInvariantLogVolume",
+          "exp_add_eq_prime_mul_norm",
+          "one_lt_exp_qPilotLogVolume"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain consequences of TateQPilotJComparison log-volume laws (A476: real theorems only, no bookkeeping rows)."
+    },
+    {
+      "id": "frontier-forms-chain",
+      "kind": "theorem",
+      "title": "ABCFrontier <-> log/additive ABC forms chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFrontierFormsChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFrontierFormsChainActual.lean": [
+          "abcLogConjecture_of_frontier",
+          "abcHeightWeightAdditive_of_frontier",
+          "abcFrontier_iff_abcLogConjecture",
+          "abcFrontier_iff_additive"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain composition of abcFrontier_iff_abcConjecture with the proved ABC form equivalences (A476: real theorems only)."
+    },
+    {
+      "id": "interface-radical-power-chain",
+      "kind": "theorem",
+      "title": "Cor312ToABCBridgeInterface => radical-power / log-form ABC chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInterfaceRadicalPowerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInterfaceRadicalPowerChainActual.lean": [
+          "radicalPowerBound_of_interface",
+          "logBound_of_interface",
+          "heightBound_and_radicalPower_of_interface"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain: cor312ToABCBridge_abcConjecture + abcConjecture_iff_rpow/abcLogConjecture (A476: real theorems only)."
+    },
+    {
+      "id": "frontier-elliptic-criteria-chain",
+      "kind": "theorem",
+      "title": "ABCFrontier => four elliptic height criteria chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddFrontierEllipticCriteriaChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddFrontierEllipticCriteriaChainActual.lean": [
+          "freyJProductHeightCriterion_of_frontier",
+          "legendreJProductHeightCriterion_of_frontier",
+          "freyJDenominatorHeightCriterion_of_frontier",
+          "legendreJDenominatorHeightCriterion_of_frontier",
+          "abcFrontier_iff_freyJProductHeightCriterion"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain: abcConjecture_of_frontier + four ABC<->criterion equivalences (A476: real theorems only)."
+    },
+    {
+      "id": "qpilot-norm-inverse-chain",
+      "kind": "theorem",
+      "title": "q/j norm inverse and negated-log-volume exponential chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQPilotNormInverseChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQPilotNormInverseChainActual.lean": [
+          "qNorm_eq_inv_jNorm",
+          "qNorm_eq_inv_prime",
+          "exp_neg_qPilotLogVolume",
+          "exp_neg_tateJInvariantLogVolume",
+          "log_qNorm_add_log_jNorm"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from TateQPilotJComparison/TateJInvariantNorm laws (A476: real theorems only)."
+    },
+    {
+      "id": "interface-elliptic-criteria-chain",
+      "kind": "theorem",
+      "title": "Cor312ToABCBridgeInterface => four elliptic height criteria chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddInterfaceEllipticCriteriaChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddInterfaceEllipticCriteriaChainActual.lean": [
+          "freyJProductHeightCriterion_of_interface",
+          "legendreJProductHeightCriterion_of_interface",
+          "freyJDenominatorHeightCriterion_of_interface",
+          "legendreJDenominatorHeightCriterion_of_interface"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain: interface ABCConjecture + four criterion equivalences (A476: real theorems only)."
+    },
+    {
+      "id": "theta-gaussian-chain",
+      "kind": "theorem",
+      "title": "theta Gaussian kernel/value/square-sum chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddThetaGaussianChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddThetaGaussianChainActual.lean": [
+          "gaussExponent_chain",
+          "thetaValue_chain",
+          "realThetaValue_chain",
+          "gaussianSquareSum_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from GaussianKernel/GaussianSquareSum laws (A476: real theorems only)."
+    },
+    {
+      "id": "oddtheta-sign-chain",
+      "kind": "theorem",
+      "title": "odd theta sign character/exponent chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddOddThetaSignChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddOddThetaSignChainActual.lean": [
+          "oddThetaSign_chain",
+          "oddThetaExponent_term_chain",
+          "oddThetaSign_special_values"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from OddTheta sign/exponent laws (A476: real theorems only)."
+    },
+    {
+      "id": "oddtheta-term-chain",
+      "kind": "theorem",
+      "title": "odd theta backward-term/summability/nonvanishing chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddOddThetaTermChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddOddThetaTermChainActual.lean": [
+          "oddThetaTerm_backward_chain",
+          "oddTheta_backward_summable_chain",
+          "oddTheta_nonvanishing_chain",
+          "oddThetaExponent_lower_bound_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from OddTheta term/decay/nonvanishing laws (A476: real theorems only)."
+    },
+    {
+      "id": "chosen-root-val-chain",
+      "kind": "theorem",
+      "title": "chosen Kummer root field-level power chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddChosenRootValChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddChosenRootValChainActual.lean": [
+          "chosenRoot_val_pow",
+          "root_fixed_mem_base_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New field-level chain from chosenRoot_spec/fixed_by_absoluteGalois_mem_base (A476: real theorems only)."
+    },
+    {
+      "id": "oddtheta-shift-norm-chain",
+      "kind": "theorem",
+      "title": "odd theta shift/fraction norm-level chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddOddThetaShiftNormChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddOddThetaShiftNormChainActual.lean": [
+          "oddTheta_shift_norm_chain",
+          "oddTheta_fraction_norm_chain",
+          "oddTheta_fraction_norm_value_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New norm-level chain from OddThetaShift/OddThetaNormalization laws (A476: real theorems only)."
+    },
+    {
+      "id": "signed-label-inverse-chain",
+      "kind": "theorem",
+      "title": "signed-label dictionary right-inverse/bijunction chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddSignedLabelInverseChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddSignedLabelInverseChainActual.lean": [
+          "representative_toFiniteLabel",
+          "toFiniteLabel_bijective_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New inverse-direction chain from SignedLabelEquiv laws (A476: real theorems only)."
+    },
+    {
+      "id": "oddtheta-algebra-chain",
+      "kind": "theorem",
+      "title": "odd theta exponent/sign/coefficient algebra and tsum reindexing chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddOddThetaAlgebraChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddOddThetaAlgebraChainActual.lean": [
+          "oddThetaExponent_double_chain",
+          "oddThetaSign_algebra_chain",
+          "oddTheta_root_coefficient_chain",
+          "oddTheta_tsum_reindex_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from OddThetaTermAlgebra/OddThetaShiftSum laws (A476: real theorems only)."
+    },
+    {
+      "id": "signed-label-neg-chain",
+      "kind": "theorem",
+      "title": "signed label negation/theta evenness chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddSignedLabelNegChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddSignedLabelNegChainActual.lean": [
+          "signedLabel_neg_theta_chain",
+          "signedLabel_toFl_neg_chain",
+          "signedLabel_neg_val_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from SignedLabel negation/Gaussian theta laws (A476: real theorems only)."
+    },
+    {
+      "id": "bad-support-chain",
+      "kind": "theorem",
+      "title": "odd bad-prime support nonemptiness/valuation chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddBadSupportChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddBadSupportChainActual.lean": [
+          "abcOddBadPrimeSupport_chain",
+          "odd_bad_prime_valuation_chain",
+          "exists_odd_prime_valuation_neg_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from ABCNonemptyOddBadSupport laws (A476: real theorems only)."
+    },
+    {
+      "id": "primitive-triple-chain",
+      "kind": "theorem",
+      "title": "ABC primitive-triple radical chain (coprime + multiplicative + positive)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddPrimitiveTripleChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddPrimitiveTripleChainActual.lean": [
+          "abcTriple_radical_chain",
+          "radical_cast_pos_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from PrimitiveTriple radical laws + natRadical alias (A476: real theorems only)."
+    },
+    {
+      "id": "section-map-chain",
+      "kind": "theorem",
+      "title": "place-partition label iff + section-map bijectivity chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddSectionMapChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddSectionMapChainActual.lean": [
+          "placePartition_label_iff_chain",
+          "sectionMap_bijective_chain",
+          "sectionRightInverse_bijective_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from SourceDefinition31Boundary laws (A476: real theorems only)."
+    },
+    {
+      "id": "integral-units-chain",
+      "kind": "theorem",
+      "title": "integral units norm-one/integer-ring/compactness chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddIntegralUnitsChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddIntegralUnitsChainActual.lean": [
+          "unit_norm_and_integer_chain",
+          "unitOfNormOne_chain",
+          "units_topology_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from IntegralUnits laws (A476: real theorems only)."
+    },
+    {
+      "id": "qnorm-power-chain",
+      "kind": "theorem",
+      "title": "Tate q-norm power-decay chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQNormPowerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQNormPowerChainActual.lean": [
+          "qNorm_bounds_chain",
+          "exp_log_qNorm_chain",
+          "qNorm_pow_succ_lt_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from TateCurvePadicEstimates q-norm laws (A476: real theorems only)."
+    },
+    {
+      "id": "qcandidate-pow-chain",
+      "kind": "theorem",
+      "title": "q-candidate positive-power contraction chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/ShehddQCandidatePowChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/ShehddQCandidatePowChainActual.lean": [
+          "qCandidate_pow_chain",
+          "qCandidate_pow_norm_chain"
+        ]
+      },
+      "note": "PENDING-VERIFY (watchdog compile). New chain from FinitePlaceQCandidate data + q-norm estimates (A476: real theorems only)."
+    }
+  ],
+  "edges": [
+    {
+      "from": "iutii-link-routing",
+      "to": "iutiii:IUTIII.COR312.WIRING",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iutii-link-routing",
+      "to": "iutiii:IUTIII.IUTII_LINK_GAP",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-frontier-form-equivalences",
+      "to": "T3-abc-frontier",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-frontier-form-equivalences",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-frontier-form-equivalences",
+      "to": "mainline:abc-height-weight-additive",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut312-top-statement",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "iut312-top-statement",
+      "to": "iut-pre-abc:Gap.iut312TopStatement",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "geomcore-route-consumer",
+      "to": "foundation:D.gap.finiteMap",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "geomcore-route-consumer",
+      "to": "foundation:D.bridgeLegacy",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-log-volume-summary",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-log-volume-summary",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ind3-closure-laws",
+      "to": "iutiii:IUTIII.IND3",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ind3-closure-laws",
+      "to": "iut-skeleton:Ind3",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull-frozen-spec-consumer",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull-frozen-spec-consumer",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-form-consumer",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-form-consumer",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-form-consumer",
+      "to": "mainline:abc-height-weight-additive",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "label-shared-boundary-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "label-shared-boundary-consumer",
+      "to": "iut-skeleton:Cor312",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "thetapilot-iq-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "thetapilot-iq-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qparameter-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qparameter-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull-ob9-consumer",
+      "to": "e-deep:E3.twoSided",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull-ob9-consumer",
+      "to": "e-deep:E3.oneSided",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ind1-quotient-consumer",
+      "to": "iutiii:IUTIII.IND1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ind1-quotient-consumer",
+      "to": "iut-skeleton:Ind1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-logbound-form",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-logbound-form",
+      "to": "T0-abc-target",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "absolute-kummer-trio-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "absolute-kummer-trio-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frobenius-graphaut-consumer",
+      "to": "iut-pre-abc:FrobeniusPicture.graph",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frobenius-graphaut-consumer",
+      "to": "iut-pre-abc:FrobeniusPicture.translationClass",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "etth-gap-consumer",
+      "to": "e-deep:E4.etthConsumer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "etth-gap-consumer",
+      "to": "e-deep:E4.etthGap",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "k1k2-boundary-consumer",
+      "to": "iut-skeleton:K1K2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "k1k2-boundary-consumer",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "stepxi-finite-certificate-consumer",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "stepxi-finite-certificate-consumer",
+      "to": "iutiii:IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-height-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-height-consumer",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-additive-form-consumer",
+      "to": "mainline:abc-height-weight-additive",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-additive-form-consumer",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "cor312-tree-route-consumer",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "cor312-tree-route-consumer",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frey-tate-candidate-consumer",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frey-tate-candidate-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-invariant-coprimality-consumer",
+      "to": "mainline:abc-invariant-coprimality",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "abc-invariant-coprimality-consumer",
+      "to": "T0-abc-target",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tatej-invariant-norm-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tatej-invariant-norm-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-shortcut-refuted-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "logshell-identification-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "logshell-identification-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-reduction-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-reduction-consumer",
+      "to": "mainline:abc-frontier-heightweight-refutation",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "matrix-logdet-laws-consumer",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "matrix-logdet-laws-consumer",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "elliptic-height-criteria-consumer",
+      "to": "mainline:abc-freyj-criteria",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "elliptic-height-criteria-consumer",
+      "to": "T0-abc-target",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "genell-consumer",
+      "to": "T0-abc-target",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tauceti-alignment-consumer",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "absolute-kummer-kernel-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "absolute-kummer-kernel-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "invariant-radical-consumer",
+      "to": "mainline:abc-invariant-radical-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "invariant-radical-consumer",
+      "to": "T0-abc-target",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-parameter-unit-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-parameter-unit-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-ratio-cocycle-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-ratio-cocycle-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "theta-displacement-consumer",
+      "to": "iut-pre-abc:HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "theta-displacement-consumer",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "theta-displacement-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-roots-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-roots-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hodge-family-laws-consumer",
+      "to": "iut-pre-abc:HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hodge-family-laws-consumer",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hodge-family-laws-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "elliptic-torsion-galois-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "elliptic-torsion-galois-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "elliptic-torsion-galois-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "norm-log-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "norm-log-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "norm-log-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "local-logshell-datum-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "local-logshell-datum-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "local-logshell-datum-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-map-kernel-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "kummer-map-kernel-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "logshell-carrier-consumer",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "logshell-carrier-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "logshell-carrier-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "radical-laws-consumer",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "radical-laws-consumer",
+      "to": "mainline:abc-invariant-radical-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "badprime-tate-input-consumer",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "badprime-tate-input-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-canonical-coefficients-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-canonical-coefficients-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frey-weierstrass-consumer",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frey-weierstrass-consumer",
+      "to": "T3-abc-frontier",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "punctured-curve-consumer",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "punctured-curve-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-delta-estimates-consumer",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "tate-delta-estimates-consumer",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "local-log-inverse-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "local-log-inverse-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "integral-unit-log-consumer",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "integral-unit-log-consumer",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-exp-chain",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-exp-chain",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-forms-chain",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-forms-chain",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-radical-power-chain",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-radical-power-chain",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-elliptic-criteria-chain",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "frontier-elliptic-criteria-chain",
+      "to": "mainline:abc-freyj-criteria",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-norm-inverse-chain",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qpilot-norm-inverse-chain",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-elliptic-criteria-chain",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "interface-elliptic-criteria-chain",
+      "to": "mainline:abc-freyj-criteria",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "theta-gaussian-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "oddtheta-sign-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "oddtheta-term-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "chosen-root-val-chain",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "chosen-root-val-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "oddtheta-shift-norm-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "signed-label-inverse-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "oddtheta-algebra-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "signed-label-neg-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "bad-support-chain",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "bad-support-chain",
+      "to": "T3-abc-frontier",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "primitive-triple-chain",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "primitive-triple-chain",
+      "to": "mainline:abc-invariant-radical-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "section-map-chain",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "section-map-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "integral-units-chain",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "integral-units-chain",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qnorm-power-chain",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qnorm-power-chain",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qcandidate-pow-chain",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "qcandidate-pow-chain",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "observed_source"
+    }
+  ],
+  "search_evidence": "A475 exhaustive search (decl index 1,572,263 decls; LeanFormal/tmp/.lake/papers/coord; multi-variant grep): early \"gaps\" (Cor4.10 label identification, Theta-pilot Def3.8, q-parameter Def3.1(b), H6 precise, Sources1995, scheme-side maps) all have adaptable repo assets (see coord/SURVEY-shehdd.md section 7). No math-breakthrough gaps are claimed; verbatim paper statements absent from declaration index and tree scope limits are recorded as repo-current-limit with 0-hit evidence."
+}

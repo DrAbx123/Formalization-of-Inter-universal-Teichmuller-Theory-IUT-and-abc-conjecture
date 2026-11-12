@@ -1,0 +1,9 @@
+{
+  "node": "redfix:S3131R2ReductionActual",
+  "kind": "conditional",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/S3131R2ReductionActual.lean"
+  ],
+  "note": "minimal red fix: replace dependent rw [hval] inside Units.mk0 with Units equality hunit (ext; exact hval) then rw [hunit]; queued to watchdog only"
+}

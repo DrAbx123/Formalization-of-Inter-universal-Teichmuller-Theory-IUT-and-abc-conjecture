@@ -1,0 +1,1670 @@
+{
+ "section": "mainline",
+ "nodes": [
+  {
+   "id": "frey-odd-reduction",
+   "kind": "theorem",
+   "title": "Frey curve p-adic integral model/discriminant (odd prime)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyOddReduction.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyOddReduction.lean": [
+     "freyPadicIntegralModel",
+     "freyPadicCurve",
+     "freyPadicIntegralModel_eq_int_map",
+     "freyPadicCurve_discriminant"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): ABC Frey conductor-torsion layer; awaiting watchdog fresh EXIT0 + probe trio | A460: watchdog probe _MainlineFreyProbeActual EXIT0: trio [propext, Classical.choice, Quot.sound]; tree file olean fresh [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "frey-split-multiplicative",
+   "kind": "theorem",
+   "title": "Frey residue field/splitting polynomial (split multiplicative cases)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreySplitMultiplicativeReduction.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreySplitMultiplicativeReduction.lean": [
+     "FreyResidueField",
+     "freyResidue_prime_eq_zero",
+     "freyMultiplicativeSplittingPolynomial_eq"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): depends on FreyOddReduction; awaiting fresh | A460: watchdog probe _MainlineFreyProbeActual EXIT0: trio [propext, Classical.choice, Quot.sound]; tree file olean fresh [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "frey-conductor-two-adic",
+   "kind": "theorem",
+   "title": "Frey conductor two-adic layer",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyConductorTwoAdic.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyConductorTwoAdic.lean": [
+     "conductorExponentTwoAdic_eq_zero_of_hasGoodReduction",
+     "conductorExponentTwoAdic_eq_two_of_not_hasGoodReduction_not_hasMultiplicativeReduction"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile) | A460: watchdog probe _MainlineFreyProbeActual EXIT0: trio [propext, Classical.choice, Quot.sound]; tree file olean fresh [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | merged dup: PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "frey-two-adic-minimal",
+   "kind": "theorem",
+   "title": "Frey two-adic halving model/discriminant (minimal reduction)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicMinimalReduction.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicMinimalReduction.lean": [
+     "freyTwoAdicHalvingChange",
+     "freyTwoAdicHalvingModel",
+     "freyTwoAdicHalvingModel_discriminant"
+    ]
+   },
+   "note": "imports FreqConductorTwoAdic; awaiting fresh + it depends on FreyConductorTwoAdic (import verified) | A460: watchdog probe _MainlineFreyProbeActual EXIT0: trio [propext, Classical.choice, Quot.sound]; tree file olean fresh [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "abc-log-equivalence",
+   "kind": "theorem",
+   "title": "ABC log/rpow equivalence (ABCLogConjecture form)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/LogarithmicBoundEquivalence.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/LogarithmicBoundEquivalence.lean": [
+     "logLeIffLeExpMulRpow",
+     "ABCLogBound",
+     "ABCLogConjecture",
+     "abcLogHeightBound_exists_iff_rpow_exists"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): equivalences proved in kernel; awaiting watchdog fresh EXIT0 + probe trio | A460: watchdog probe _MainlineABCEquivProbeActual EXIT0; trio [propext,Classical.choice,Quot.sound]; equivalences proved (criteria/bound themselves not claimed) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "abc-height-weight-additive",
+   "kind": "theorem",
+   "title": "ABC <=> additive height-weight bound (proved equivalence; bound refuted unconditionally)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean": [
+     "ABCHeightWeightAdditiveBoundV2",
+     "abcConjecture_iff_ABCHeightWeightAdditiveBoundV2"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): abcConjecture_iff_ABCHeightWeightAdditiveBoundV2 proved (trio); V2 bound itself not claimed; unconditional shape refuted in file doc; awaiting watchdog fresh | A460: watchdog probe _MainlineABCEquivProbeActual EXIT0; trio [propext,Classical.choice,Quot.sound]; equivalences proved (criteria/bound themselves not claimed) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "abc-freyj-criteria",
+   "kind": "theorem",
+   "title": "ABC <=> Frey J product/denominator height criteria",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCEllipticHeightCriterion.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCEllipticHeightCriterion.lean": [
+     "abcConjecture_iff_freyJProductHeightCriterion",
+     "abcConjecture_iff_freyJDenominatorHeightCriterion",
+     "abcConjecture_iff_legendreJProductHeightCriterion"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): equivalences proved; height criteria are alternative statements not proved; awaiting watchdog fresh + probe | A460: watchdog probe _MainlineABCEquivProbeActual EXIT0; trio [propext,Classical.choice,Quot.sound]; equivalences proved (criteria/bound themselves not claimed) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+  },
+  {
+   "id": "abc-bridge-nonempty-iff",
+   "kind": "theorem",
+   "title": "Cor312ToABCBridgeInterface nonempty <-> ABCConjecture (T1/T2 wiring)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1ABCBridgeNonemptyIffActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ABCBridgeNonemptyIffActual.lean": [
+     "mainline_cor312Interface_nonempty_iff_abcConjecture",
+     "mainline_abcConjecture_of_nonempty",
+     "mainline_nonempty_of_abcConjecture"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: new re-export file; proof via Cor312ToABCBridgeInterface proved equivalence; watchdog compile pending | A489: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "abc-rational-point-dictionary",
+   "kind": "theorem",
+   "title": "ABC rational point dictionary (x=a/c, triple predicates)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalPointDictionary.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalPointDictionary.lean": [
+     "isABCTriple_iff_positivePrimitiveAdditiveTriple",
+     "abcRationalPoint",
+     "ratDivNatCast_num"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: tree module; add to extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "abc-prime-support",
+   "kind": "theorem",
+   "title": "ABC arithmetic prime support / weight (radical link)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalPrimeSupport.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalPrimeSupport.lean": [
+     "arithmeticPrimeSupport",
+     "natRadical_cast_log_eq_sum_primeFactors",
+     "arithmeticWeight_abcRationalPoint"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-invariant-local-height",
+   "kind": "theorem",
+   "title": "ABC invariant local height (logHeight identity via max 0 (-v))",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantLocalHeight.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantLocalHeight.lean": [
+     "abcRationalPoint_logHeight₁_eq_sum_max_zero_neg_padicValRat",
+     "abcRationalPoint_log_abs_le_zero"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-residue-discriminant",
+   "kind": "theorem",
+   "title": "ABC residue discriminant (ZMod p, zero iff p | discriminant)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/ABCResidueDiscriminant.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/ABCResidueDiscriminant.lean": [
+     "abcResidueDiscriminant",
+     "abcResidueDiscriminant_eq_zero_iff_dvd_discriminant"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "iuttoabc-equivalences",
+   "kind": "theorem",
+   "title": "IUTToABC equivalences (log/arithmetic-weight-height forms)",
+   "status": "PROVED",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean": [
+     "abcConjecture_iff_abcLogConjecture",
+     "abcConjecture_iff_abcArithmeticWeightHeightBound"
+    ]
+   },
+   "note": "VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "abc-statement-defs",
+   "kind": "target",
+   "title": "ABC statement definitions (ABCInequality/ABCConjecture/radical)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Statement.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Statement.lean": [
+     "ABCInequality",
+     "ABCConjecture",
+     "radical"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: def-level target statement; ABCConjecture itself open (DEF only in chain)"
+  },
+  {
+   "id": "abc-frontier-heightweight-refutation",
+   "kind": "theorem",
+   "title": "ABCFrontier height-weight additive clause refuted (not_FrontierHeightWeightClause)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierHeightWeightRefutation.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierHeightWeightRefutation.lean": [
+     "not_FrontierHeightWeightClause",
+     "oneAdd_tenth_mul_arithmeticWeight_lt_logHeight₁_one_eight_nine"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: negative result; blocks additive factorization route (DAG-BLOCKED candidate proof, not proof of ABC)"
+  },
+  {
+   "id": "t2-comparison-gap-statement",
+   "kind": "theorem",
+   "title": "T2 decomposition: named point + two comparison gap Props (IUT IV section 2)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1T2ComparisonGapStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1T2ComparisonGapStatementActual.lean": [
+     "HeightRegionGap",
+     "RegionWeightGap",
+     "t2_gap_statement_iff",
+     "t2_region_logVolume_lt_top"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "t3-frontier-from-comparison",
+   "kind": "theorem",
+   "title": "T2 -> T3: comparison family yields frontier clauses + ABC (composition)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1T3FrontierFromComparisonActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1T3FrontierFromComparisonActual.lean": [
+     "frontierHeightClause_of_comparison",
+     "frontierRegionClause_of_comparison",
+     "abcConjecture_of_comparisonFamily"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "abc-invariant-coprimality",
+   "kind": "theorem",
+   "title": "ABC invariant polynomial/coprimality (J-invariant denominator data)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantCoprimality.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantCoprimality.lean": [
+     "abcInvariantPolynomial",
+     "abcInvariantNumerator",
+     "abcInvariantDenominator"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-invariant-radical-bridge",
+   "kind": "theorem",
+   "title": "ABC J-invariant denominator vs radical (double/dedup)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantRadicalBridge.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantRadicalBridge.lean": [
+     "IsABCTriple.abcJInvariant_den_radical_le_product",
+     "abcInvariant_natRadical_double_le_twice"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "rational-local-height-decomposition",
+   "kind": "theorem",
+   "title": "Rational local height decomposition (log numerator-denominator)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalLocalHeightDecomposition.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Arithmetic/RationalLocalHeightDecomposition.lean": [
+     "real_log_nat_eq_sum_factorization",
+     "real_log_nat_eq_sum_padicValNat",
+     "rat_log_abs_eq_log_num_natAbs_sub_log_den"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "theta-bound-to-heightweight",
+   "kind": "theorem",
+   "title": "Theta bound -> height/weight (normalized volume comparison)",
+   "status": "PROVED",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ThetaBoundToHeightWeight.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ThetaBoundToHeightWeight.lean": [
+     "heightWeightBound_of_normalizedVolumeComparison",
+     "exists_oneAdd_sq_le_oneAdd"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "frey-odd-conductor-height-criterion",
+   "kind": "theorem",
+   "title": "Frey odd conductor/height criterion (odd bad prime support)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/FreyOddConductorHeightCriterion.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/FreyOddConductorHeightCriterion.lean": [
+     "IsABCTriple.abcJInvariant_den_radical_eq_twoPow_mul_oddConductor",
+     "IsABCTriple.mem_abcOddBadPrimeSupport_iff_dvd_oddConductor"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "cor312-pointwise-membership-weakening",
+   "kind": "theorem",
+   "title": "Cor312 pointwise membership weakening (frontier pointwise weakened clause)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean": [
+     "FrontierPointSplitFinitenessClause",
+     "ABCFrontierPointwiseWeakened",
+     "pointwiseWeakened_of_pointwiseReduced"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "frey-conductor-odd",
+   "kind": "theorem",
+   "title": "Frey conductor odd-prime exponents (good/multiplicative reduction)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyConductorOdd.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyConductorOdd.lean": [
+     "conductorExponentOdd_eq_zero_of_hasGoodReduction",
+     "conductorExponentOdd_eq_one_of_hasMultiplicativeReduction"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "frey-residue-quadratic-splitting",
+   "kind": "theorem",
+   "title": "Residue quadratic splitting for Frey curves",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyResidueQuadraticSplitting.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyResidueQuadraticSplitting.lean": [
+     "quadraticRootExtension_finrank",
+     "irreducible_X_sq_sub_C_of_no_squareRoot"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "frey-two-adic-conductor-exponent-cases",
+   "kind": "theorem",
+   "title": "Two-adic conductor exponent cases for halving model",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicConductorExponentCases.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicConductorExponentCases.lean": [
+     "freyTwoAdicHalvingModel_conductorExponentTwoAdic_eq_zero_of_congruences",
+     "freyTwoAdicHalvingModel_conductorExponentTwoAdic_eq_ite_of_congruences"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "frey-two-adic-split-multiplicative",
+   "kind": "theorem",
+   "title": "Two-adic split multiplicative halving model",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicSplitMultiplicative.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicSplitMultiplicative.lean": [
+     "freyTwoAdicHalvingModel_integralModel_coeffs",
+     "freyTwoAdicHalvingModel_splittingPolynomial_toZMod"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "frey-two-adic-minimal-discriminant-valuation",
+   "kind": "theorem",
+   "title": "Two-adic minimal discriminant valuation",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicMinimalDiscriminantValuation.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicMinimalDiscriminantValuation.lean": [
+     "valuation_Δ_aux_le_of_isMinimal",
+     "padicInt_valuation_natCast_eq_padicValNat"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: Frey conductor-torsion layer (tree asset); add extras; status after watchdog EXIT0"
+  },
+  {
+   "id": "abc-frontier",
+   "kind": "bridge",
+   "title": "ABCFrontier + bridgeInterface_of_frontier + abcConjecture_of_frontier (equivalent-strength route)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+     "ABCFrontier",
+     "bridgeInterface_of_frontier",
+     "abcConjecture_of_frontier"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: equivalent-strength to ABC (DAG-BLOCKED note); registered for chain map only"
+  },
+  {
+   "id": "abc-frontier-gap-reduced",
+   "kind": "bridge",
+   "title": "ABCFrontierGapReduced (gap-reduction inputs) -> frontier",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean": [
+     "ABCFrontierGapReduced",
+     "ABCFrontier.reduce_gapReductionInputs",
+     "abcConjecture_of_frontierGapReduced"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-frontier-pointwise-reduced",
+   "kind": "bridge",
+   "title": "ABCFrontierPointwiseReduced -> frontier (pointwise residual route; refuted premise noted)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean": [
+     "ABCFrontierPointwiseReduced",
+     "ABCFrontier.reduce_pointwiseResidual",
+     "abcConjecture_of_frontierPointwiseReduced"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-frontier-gap-reduced-v2",
+   "kind": "bridge",
+   "title": "ABCFrontierGapReducedV2 singleton weight/region route",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean": [
+     "ABCFrontierGapReducedV2",
+     "ABCFrontier.reduce_gapReductionInputsV2",
+     "abcConjecture_of_frontierGapReducedV2"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "abc-frontier-pointwise-weakened",
+   "kind": "bridge",
+   "title": "ABCFrontierPointwiseWeakened repaired route",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean": [
+     "ABCFrontierPointwiseWeakened",
+     "ABCFrontier.reduce_pointwiseWeakenedResidual",
+     "abcConjecture_of_frontierPointwiseWeakened"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY"
+  },
+  {
+   "id": "t3-gap-package",
+   "kind": "theorem",
+   "title": "T2 two-gap package -> frontier clauses -> ABC (composition)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1T3GapPackageActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1T3GapPackageActual.lean": [
+     "frontierHeightClause_of_heightRegionGap",
+     "frontierRegionClause_of_regionWeightGap",
+     "abcConjecture_of_gapPackage",
+     "gapPackage_of_comparisonFamily",
+     "abcConjecture_of_gapExistence"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real composition; gap Props imported from Mzk1T2ComparisonGapStatementActual (unproved paper links) | A489: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "abc-frontier-realLine",
+   "kind": "bridge",
+   "title": "ABCFrontierRealLine calibration route (real-line fixture F4 + reduce_realLine)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+     "ABCFrontierRealLine",
+     "realLineFrontierPoint",
+     "realLineFrontier_heightComparison",
+     "ABCFrontier.reduce_realLine",
+     "abcConjecture_of_frontierRealLine"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: calibration-carrier route; F4 fixture proved in tree, other clauses unproved"
+  },
+  {
+   "id": "additive-refreeze-route",
+   "kind": "theorem",
+   "title": "Additive re-freeze V2 route: ABC iff additive height-weight form (and log form)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1AdditiveRefreezeRouteActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1AdditiveRefreezeRouteActual.lean": [
+     "abcConjecture_of_additiveV2",
+     "additiveV2_of_abcConjecture",
+     "abcConjecture_iff_abcLogConjecture_reexport"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "t2-additive-statement",
+   "kind": "theorem",
+   "title": "T2 additive (v2) two-gap decomposition + V2/ABC consumers",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1T2AdditiveStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1T2AdditiveStatementActual.lean": [
+     "AdditiveHeightGap",
+     "AdditiveRegionWeightGap",
+     "additive_gap_statement_iff",
+     "additiveV2_of_additiveFamily",
+     "abcConjecture_of_additiveFamily"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "t0-equivalence-chain",
+   "kind": "theorem",
+   "title": "T0: interface nonempty iff weight-height / additiveV2 / log forms (composed equivalences)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1T0EquivalenceChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1T0EquivalenceChainActual.lean": [
+     "nonempty_iff_abcArithmeticWeightHeightBound",
+     "nonempty_iff_additiveV2",
+     "nonempty_iff_abcLog"
+    ]
+   },
+   "note": "PENDING-VERIFY: composition of tree equivalences (real proofs) | PARK: universe-level friction (Nonempty.{2} vs {u+2}) persisted after 2 attempts; low-value re-export chain kept CONDITIONAL; not attacked further."
+  },
+  {
+   "id": "v2-unfold",
+   "kind": "theorem",
+   "title": "Additive V2 unfolding + interface <-> V2 linkage",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1V2UnfoldActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1V2UnfoldActual.lean": [
+     "additiveV2_unfold",
+     "additiveV2_of_interface",
+     "interface_of_additiveV2"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real compositions (V2 contract itself equivalent to ABC) | A489: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "iut312TopStatement",
+   "kind": "theorem",
+   "title": "IUT 3.12 top statement at Step-XI contract boundary (+ conclusion shape)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1IUT312TopStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1IUT312TopStatementActual.lean": [
+     "IUT312TopStatement",
+     "iut312TopStatement_of_contract",
+     "iut312TopStatement_iff",
+     "iut312_qPositive_of_contract",
+     "IUT312ConclusionShape",
+     "iut312ConclusionShape_of_top"
+    ]
+   },
+   "note": "PENDING-VERIFY: real consequences of tree StepXI contract; contract construction unfinished. Maps to existing node iut-pre-abc:Gap.iut312TopStatement (GAP) and iutiii:IUTIII.STEPXI.CONTRACT. | A477: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "aptSkeletonStatement",
+   "kind": "theorem",
+   "title": "Skeleton APT statement (contract-slot identification re-export)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1APTSkeletonStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1APTSkeletonStatementActual.lean": [
+     "SkeletonAPTStatement",
+     "skeletonAPTStatement_iff",
+     "skeletonAPTStatement_of_transport",
+     "skeletonAPT_evidence"
+    ]
+   },
+   "note": "PENDING-VERIFY: re-export of tree APT contract-slot identification; maps to existing node iut-skeleton:APT."
+  },
+  {
+   "id": "stepXIContractAssembly",
+   "kind": "theorem",
+   "title": "Explicit Step-XI contract assembly constructor + conclusion/positivity projections",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepXIContractAssemblyActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1StepXIContractAssemblyActual.lean": [
+     "assembleStepXIContract",
+     "assembleStepXIContract_conclusion",
+     "assembleStepXIContract_q_positive",
+     "assembleStepXIContract_ipl"
+    ]
+   },
+   "note": "PENDING-VERIFY: real constructor; maps to existing iutiii:IUTIII.STEPXI.CONTRACT. | A477: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "bridgeInterfaceAssembly",
+   "kind": "theorem",
+   "title": "Bridge-interface assembly from comparison family (+ ABC/height-bound consumers)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1BridgeInterfaceAssemblyActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1BridgeInterfaceAssemblyActual.lean": [
+     "assembleBridgeInterface",
+     "nonempty_bridgeInterface_of_comparisonFamily",
+     "abcConjecture_of_comparisonFamily",
+     "heightBound_of_comparisonFamily"
+    ]
+   },
+   "note": "PENDING-VERIFY: real assembly; maps to existing iutiv-abc:G2/G2.b/G2.d/T2-bridge-interface. | A477: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "stepXIScaling",
+   "kind": "theorem",
+   "title": "Positive rescaling of Step-XI contract preserves ordered data and Cor3.12 conclusion",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepXIScalingActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1StepXIScalingActual.lean": [
+     "scaleStepXIContract",
+     "scaleStepXIContract_conclusion",
+     "scaleStepXIContract_q_positive",
+     "scaleStepXIContract_ipl",
+     "scaleStepXIContract_one"
+    ]
+   },
+   "note": "PENDING-VERIFY: real construction; maps to iutiii:IUTIII.STEPXI.CONTRACT."
+  },
+  {
+   "id": "v2UnfoldLaws",
+   "kind": "theorem",
+   "title": "Additive V2 elimination/introduction and epsilon=1 specialization",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1V2UnfoldLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1V2UnfoldLawsActual.lean": [
+     "v2_apply",
+     "v2_of_bounds",
+     "v2_at_one"
+    ]
+   },
+   "note": "PENDING-VERIFY: unfolding laws; maps to iutiv-abc:HW.add."
+  },
+  {
+   "id": "targetABCShape",
+   "kind": "theorem",
+   "title": "TargetABC height/weight shape + ABC/V2 equivalences",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1TargetABCShapeActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1TargetABCShapeActual.lean": [
+     "TargetABCHeightWeight",
+     "targetABC_iff_abcConjecture",
+     "v2_iff_targetABC",
+     "targetABC_of_v2",
+     "v2_of_targetABC"
+    ]
+   },
+   "note": "PENDING-VERIFY: real shape equivalence; maps to iut-skeleton:TargetABC / iutiv-abc:G0.iff_hw / HW.add."
+  },
+  {
+   "id": "h5HullRayInter",
+   "kind": "theorem",
+   "title": "Intersection of hull log-volume rays = ray at min",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayInterActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayInterActual.lean": [
+     "hull09_ray_inter"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "section0IccAdjacent",
+   "kind": "theorem",
+   "title": "Adjacent pairs inside integer intervals",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Section0IccAdjacentActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Section0IccAdjacentActual.lean": [
+     "adjacent_left_mem_Icc",
+     "adjacent_succ_mem_Icc",
+     "adjacent_pair_mem_Icc"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "freyCriteriaChain",
+   "kind": "theorem",
+   "title": "Frey/Legendre J criterion equivalence chains",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1FreyCriteriaChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1FreyCriteriaChainActual.lean": [
+     "abc_iff_freyJDenominator_chain",
+     "freyJDenominator_vs_product",
+     "abc_iff_legendreJProduct_chain",
+     "legendreJDenominator_vs_product"
+    ]
+   },
+   "note": "PENDING-VERIFY: compositions of tree equivalences"
+  },
+  {
+   "id": "heightWeightMonotone",
+   "kind": "theorem",
+   "title": "Monotone uniform-valuation height comparison",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1HeightWeightMonotoneActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1HeightWeightMonotoneActual.lean": [
+     "height_le_mul_arithmeticWeight_of_le_bound"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "hullDetExp",
+   "kind": "theorem",
+   "title": "exp/log inverse laws for hull determinant log-volume",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1HullDetExpActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1HullDetExpActual.lean": [
+     "matrixLogDet_exp_posDef",
+     "matrixLogDet_eq_zero_iff_det_eq_one"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "h5HullRayUnbounded",
+   "kind": "theorem",
+   "title": "Hull log-volume rays are unbounded below",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayUnboundedActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayUnboundedActual.lean": [
+     "hull09_ray_not_bddBelow"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "qPilotSkeleton",
+   "kind": "theorem",
+   "title": "q-pilot skeleton statement (positivity/q<1/negative signed log)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1QPilotSkeletonStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1QPilotSkeletonStatementActual.lean": [
+     "QPilotSkeletonStatement",
+     "qPilotSkeletonStatement_proved",
+     "qPilotSkeleton_q_ne_zero",
+     "qPilotSkeleton_qNorm_lt_one"
+    ]
+   },
+   "note": "PENDING-VERIFY: bundles concrete tree q-pilot facts; maps to iut-pre-abc:QPilot (GAP)."
+  },
+  {
+   "id": "abcLogEquiv",
+   "kind": "theorem",
+   "title": "ABCLogConjecture iff bound family / rpow family + monotonicity",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1ABCLogEquivActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ABCLogEquivActual.lean": [
+     "abcLogConjecture_iff_boundFamily",
+     "abcLogBound_mono",
+     "abcLogConjecture_iff_rpowFamily"
+    ]
+   },
+   "note": "PENDING-VERIFY: maps to iutiv-abc:G0.log."
+  },
+  {
+   "id": "h5HullRayUnion",
+   "kind": "theorem",
+   "title": "Union of hull log-volume rays = ray at max",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayUnionActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayUnionActual.lean": [
+     "hull09_ray_union"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "cor312ConclusionFacts",
+   "kind": "theorem",
+   "title": "Cor312Conclusion unfolding/ordered-chain facts",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Cor312ConclusionFactsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Cor312ConclusionFactsActual.lean": [
+     "cor312Conclusion_iff",
+     "cor312Conclusion_ordered",
+     "contract_q_negative",
+     "contract_conclusion_of_ordered"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "qPilotPreciseData",
+   "kind": "theorem",
+   "title": "q-pilot precise data structure + every candidate satisfies it",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1QPilotPreciseDataActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1QPilotPreciseDataActual.lean": [
+     "QPilotPreciseData",
+     "qPilotPreciseData_of_candidate",
+     "qPilotPreciseData_nonempty"
+    ]
+   },
+   "note": "PENDING-VERIFY: maps to iut-pre-abc:Gap.qPilotPreciseConstruction (GAP)."
+  },
+  {
+   "id": "h5HullRayPartition",
+   "kind": "theorem",
+   "title": "Hull ray partitions: disjoint from Ioi, union with Ioi is univ",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayPartitionActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayPartitionActual.lean": [
+     "hull09_ray_disjoint_Ioi",
+     "hull09_ray_union_Ioi"
+    ]
+   },
+   "note": "PENDING-VERIFY"
+  },
+  {
+   "id": "frobeniusGraphAutSubgroup",
+   "kind": "theorem",
+   "title": "Frobenius-picture graph automorphisms as subgroup (translations)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutSubgroupActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutSubgroupActual.lean": [
+     "FrobeniusPictureAutSubgroup",
+     "mem_frobeniusAutSubgroup_iff",
+     "frobeniusAutSubgroup_eq_translations"
+    ]
+   },
+   "note": "PENDING-VERIFY: maps to iut-pre-abc:FrobeniusPicture.graph / iutiii:IUTIII.* graph aut."
+  },
+  {
+   "id": "p1PointLaws",
+   "kind": "theorem",
+   "title": "P1(Qbar) point injectivity and infty distinctness",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1PointLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1PointLawsActual.lean": [
+     "P1Point.ofFinite_injective",
+     "P1Point.infty_ne_ofFinite",
+     "P1Point.ofFinite_ne_infty"
+    ]
+   },
+   "note": "PENDING-VERIFY: real; maps to iuti-ii initial-theta P1 interface."
+  },
+  {
+   "id": "cor312StatementShape",
+   "kind": "theorem",
+   "title": "Cor 3.12 statement shape iff S2717 upper gap",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Cor312StatementShapeActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Cor312StatementShapeActual.lean": [
+     "Cor312StatementShape",
+     "cor312StatementShape_iff_upperGap",
+     "upperGap_of_cor312Statement",
+     "cor312Statement_of_upperGap"
+    ]
+   },
+   "note": "PENDING-VERIFY: maps to e-deep:E5.s2717 / iutiii:IUTIII.COR312.TARGET."
+  },
+  {
+   "id": "v2ToABCTarget",
+   "kind": "theorem",
+   "title": "Additive V2 -> ABC/log/height-weight forms (composition consumers)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1V2ToABCTargetActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1V2ToABCTargetActual.lean": [
+     "abcConjecture_of_v2",
+     "v2_of_abcConjecture",
+     "abcLogConjecture_of_v2",
+     "abcArithmeticWeightHeightBound_of_v2"
+    ]
+   },
+   "note": "PENDING-VERIFY: maps to iutiv-abc:HW.add / G0.iff_log / G0.iff_hw."
+  },
+  {
+   "id": "greenChainReuse",
+   "kind": "theorem",
+   "title": "Reuse-chain: E5 display/slack + ABC, G3 rows, obligation ids",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1GreenChainReuseActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1GreenChainReuseActual.lean": [
+     "e5_display_slack_reuse",
+     "e5_display_and_abc_reuse",
+     "g3_bridges_rows_reuse",
+     "obligation_ids_reuse"
+    ]
+   },
+   "note": "PENDING-VERIFY: reuses stepxi green V2 assets (Mzk1E5DisplaySlackActualV2 / Mzk1G3BridgesActualV2 / Mzk1Cor312ObligationConsumerActual)."
+  },
+  {
+   "id": "greenV2Reuse",
+   "kind": "theorem",
+   "title": "Reuse-chain: additive height / G3 pointwiseWeakened / S2717 rows (green V2 assets)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1GreenV2ReuseActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1GreenV2ReuseActual.lean": [
+     "exists_additive_constant_reuse",
+     "undilatedHeightBound_of_additiveBound_volume_reuse",
+     "gapReduced_of_pointwiseWeakened_reuse",
+     "abcConjecture_of_pointwiseWeakened_via_gap_reuse",
+     "pointwiseReduced_empty_reuse",
+     "s2717_consumer_rows_length_reuse"
+    ]
+   },
+   "note": "PENDING-VERIFY: reuses Mzk1E5AdditiveHeightActualV2 / Mzk1G3PointwiseWeakenedActualV2 / Mzk1E5S2717ConsumerActualV2."
+  },
+  {
+   "id": "gapInputsToAdditive",
+   "kind": "theorem",
+   "title": "Chain consumer: G2.e gap inputs -> additive V2 / log form / height-weight form",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1GapInputsToAdditiveActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1GapInputsToAdditiveActual.lean": [
+     "v2_of_gapInputs",
+     "logConjecture_of_gapInputs",
+     "heightWeightBound_of_gapInputs"
+    ]
+   },
+   "note": "PENDING-VERIFY: composed conclusion (new): gap inputs imply all three accepted ABC forms via proved equivalences."
+  },
+  {
+   "id": "displayABCChain",
+   "kind": "theorem",
+   "title": "Chain consumers: display ∧ ABC from CTheta+gapInputs and from additive V2",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1DisplayABCChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1DisplayABCChainActual.lean": [
+     "display_and_abc_of_cTheta_gapInputs",
+     "displayF_and_abc_of_additiveV2"
+    ]
+   },
+   "note": "PENDING-VERIFY: new conjunctions combining independent proved conditional consumers."
+  },
+  {
+   "id": "formsBundle",
+   "kind": "theorem",
+   "title": "Bundle: all four accepted ABC forms equivalent (new conjunction/iff)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1FormsBundleActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1FormsBundleActual.lean": [
+     "all_forms_of_abc",
+     "abc_of_any_form",
+     "abc_iff_any_form"
+    ]
+   },
+   "note": "PENDING-VERIFY: new iff composed from proved equivalences."
+  },
+  {
+   "id": "cor312GapBundle",
+   "kind": "theorem",
+   "title": "Composition: S2717 upper gap + G2.e gap inputs => Cor312 shape ∧ ABC",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Cor312GapBundleActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Cor312GapBundleActual.lean": [
+     "cor312_and_abc_of_upperGap_and_gapInputs"
+    ]
+   },
+   "note": "PENDING-VERIFY: new conjunction of independent conditional consumers."
+  },
+  {
+   "id": "additiveV2UndilatedChain",
+   "kind": "theorem",
+   "title": "Chain: additive V2 + volume dominance + (c) => undilated height bound ∧ ABC",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1AdditiveV2UndilatedChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1AdditiveV2UndilatedChainActual.lean": [
+     "undilatedHeight_and_region_imp_abc"
+    ]
+   },
+   "note": "PENDING-VERIFY: new conjunction via undilated paper route."
+  },
+  {
+   "id": "scaledAssemblyChain",
+   "kind": "theorem",
+   "title": "Chain: assemble Step-XI contract then positively rescale => Cor3.12 conclusion",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1ScaledAssemblyChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ScaledAssemblyChainActual.lean": [
+     "scaled_assembly_conclusion",
+     "scaled_assembly_ipl"
+    ]
+   },
+   "note": "PENDING-VERIFY: new composition of two mainline constructors."
+  },
+  {
+   "id": "hullVolumeFiniteChain",
+   "kind": "theorem",
+   "title": "Hull log-volume finiteness iff real threshold (EReal dictionary)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1HullVolumeFiniteChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1HullVolumeFiniteChainActual.lean": [
+     "hull_logVolume_lt_top_iff_exists_real",
+     "hull_logVolume_exists_real_of_lt_top"
+    ]
+   },
+   "note": "PENDING-VERIFY: new iff via EReal lemmas; consumes tree hull_logVolume_lt_top."
+  },
+  {
+   "id": "logFormChain",
+   "kind": "theorem",
+   "title": "New equivalence: log form ↔ additive V2 (+ cross-form consumers)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1LogFormChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1LogFormChainActual.lean": [
+     "heightWeight_of_logConjecture",
+     "v2_of_logConjecture",
+     "logConjecture_iff_v2"
+    ]
+   },
+   "note": "PENDING-VERIFY: new iff composed from proved ABC equivalences."
+  },
+  {
+   "id": "comparisonRegionChain",
+   "kind": "theorem",
+   "title": "Structural subset/unfold lemmas for normalizedComparisonRegion",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1ComparisonRegionChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ComparisonRegionChainActual.lean": [
+     "scaleShift_unitRegion_subset_normalizedComparisonRegion",
+     "scaleShift_logShellPoint_subset_normalizedComparisonRegion",
+     "normalizedComparisonRegion_unfold"
+    ]
+   },
+   "note": "PENDING-VERIFY: real structural lemmas consumed by region-volume comparisons."
+  },
+  {
+   "id": "paperRouteResidualChain",
+   "kind": "theorem",
+   "title": "Construction: undilated (b)+(c) => PaperRouteResidualData + ABC (paper route)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1PaperRouteResidualChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1PaperRouteResidualChainActual.lean": [
+     "paperRouteResidualData_of_undilatedBounds",
+     "abcConjecture_of_undilatedBounds_residual"
+    ]
+   },
+   "note": "PENDING-VERIFY: genuinely new construction + composition (no re-export only)."
+  },
+  {
+   "id": "residualComparisonChain",
+   "kind": "theorem",
+   "title": "Residual data -> comparison family / bridge / height bound / ABC (new packaging)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1ResidualComparisonChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ResidualComparisonChainActual.lean": [
+     "comparisonFamily_of_paperRouteResidualData",
+     "bridgeInterface_of_paperRouteResidualData",
+     "heightBound_of_paperRouteResidualData",
+     "abcConjecture_of_paperRouteResidualData"
+    ]
+   },
+   "note": "PENDING-VERIFY: new consumers of S3131 residual data."
+  },
+  {
+   "id": "undilatedComparisonChain",
+   "kind": "theorem",
+   "title": "Direct chain: undilated (b)+(c) => comparison family / bridge interface",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1UndilatedComparisonChainActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1UndilatedComparisonChainActual.lean": [
+     "comparisonFamily_of_undilatedBounds",
+     "bridgeInterface_of_undilatedBounds"
+    ]
+   },
+   "note": "PENDING-VERIFY: composition of the two new mainline constructions."
+  }
+ ],
+ "edges": [
+  {
+   "from": "frey-split-multiplicative",
+   "to": "frey-odd-reduction",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-two-adic-minimal",
+   "to": "frey-conductor-two-adic",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-conductor-two-adic",
+   "to": "frey-odd-reduction",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-invariant-local-height",
+   "to": "abc-rational-point-dictionary",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-prime-support",
+   "to": "abc-rational-point-dictionary",
+   "kind": "proof"
+  },
+  {
+   "from": "iuttoabc-equivalences",
+   "to": "abc-log-equivalence",
+   "kind": "statement"
+  },
+  {
+   "from": "abc-height-weight-additive",
+   "to": "iuttoabc-equivalences",
+   "kind": "statement"
+  },
+  {
+   "from": "t3-frontier-from-comparison",
+   "to": "t2-comparison-gap-statement",
+   "kind": "statement"
+  },
+  {
+   "from": "theta-bound-to-heightweight",
+   "to": "abc-height-weight-additive",
+   "kind": "statement"
+  },
+  {
+   "from": "frey-odd-conductor-height-criterion",
+   "to": "frey-odd-reduction",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-invariant-radical-bridge",
+   "to": "abc-invariant-coprimality",
+   "kind": "proof"
+  },
+  {
+   "from": "rational-local-height-decomposition",
+   "to": "abc-invariant-local-height",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-conductor-odd",
+   "to": "frey-odd-reduction",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-conductor-two-adic",
+   "to": "frey-odd-reduction",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-residue-quadratic-splitting",
+   "to": "frey-split-multiplicative",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-two-adic-conductor-exponent-cases",
+   "to": "frey-two-adic-minimal",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-two-adic-split-multiplicative",
+   "to": "frey-two-adic-minimal",
+   "kind": "proof"
+  },
+  {
+   "from": "frey-two-adic-minimal-discriminant-valuation",
+   "to": "frey-two-adic-minimal",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-gap-reduced",
+   "to": "abc-frontier",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-pointwise-reduced",
+   "to": "abc-frontier-gap-reduced",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-gap-reduced-v2",
+   "to": "abc-frontier-gap-reduced",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-pointwise-weakened",
+   "to": "abc-frontier-gap-reduced",
+   "kind": "proof"
+  },
+  {
+   "from": "t3-frontier-from-comparison",
+   "to": "abc-frontier",
+   "kind": "statement"
+  },
+  {
+   "from": "t3-gap-package",
+   "to": "t2-comparison-gap-statement",
+   "kind": "proof"
+  },
+  {
+   "from": "t3-gap-package",
+   "to": "t3-frontier-from-comparison",
+   "kind": "statement"
+  },
+  {
+   "from": "abc-frontier-realLine",
+   "to": "abc-frontier",
+   "kind": "proof"
+  },
+  {
+   "from": "additive-refreeze-route",
+   "to": "abc-height-weight-additive",
+   "kind": "statement"
+  },
+  {
+   "from": "t2-additive-statement",
+   "to": "abc-height-weight-additive",
+   "kind": "statement"
+  },
+  {
+   "from": "t0-equivalence-chain",
+   "to": "abc-bridge-nonempty-iff",
+   "kind": "proof"
+  },
+  {
+   "from": "v2-unfold",
+   "to": "t0-equivalence-chain",
+   "kind": "statement"
+  },
+  {
+   "from": "abc-freyj-criteria",
+   "to": "iuttoabc-equivalences",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-freyj-criteria",
+   "to": "abc-invariant-radical-bridge",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-residue-discriminant",
+   "to": "abc-statement-defs",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-heightweight-refutation",
+   "to": "abc-frontier-gap-reduced-v2",
+   "kind": "proof"
+  },
+  {
+   "from": "abc-frontier-heightweight-refutation",
+   "to": "cor312-pointwise-membership-weakening",
+   "kind": "proof"
+  },
+  {
+   "from": "cor312-pointwise-membership-weakening",
+   "to": "abc-frontier-gap-reduced",
+   "kind": "proof"
+  },
+  {
+   "from": "iuttoabc-equivalences",
+   "to": "abc-statement-defs",
+   "kind": "proof"
+  },
+  {
+   "from": "t0-equivalence-chain",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "abc-frontier-realLine",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "iut312TopStatement",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "aptSkeletonStatement",
+   "to": "iut312TopStatement",
+   "kind": "statement"
+  },
+  {
+   "from": "stepXIContractAssembly",
+   "to": "iut312TopStatement",
+   "kind": "proof"
+  },
+  {
+   "from": "bridgeInterfaceAssembly",
+   "to": "abc-bridge-nonempty-iff",
+   "kind": "proof"
+  },
+  {
+   "from": "stepXIScaling",
+   "to": "stepXIContractAssembly",
+   "kind": "proof"
+  },
+  {
+   "from": "v2UnfoldLaws",
+   "to": "v2-unfold",
+   "kind": "proof"
+  },
+  {
+   "from": "targetABCShape",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "h5HullRayInter",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "section0IccAdjacent",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "freyCriteriaChain",
+   "to": "abc-freyj-criteria",
+   "kind": "proof"
+  },
+  {
+   "from": "heightWeightMonotone",
+   "to": "abc-height-weight-additive",
+   "kind": "proof"
+  },
+  {
+   "from": "h5HullRayUnbounded",
+   "to": "h5HullRayInter",
+   "kind": "proof"
+  },
+  {
+   "from": "qPilotSkeleton",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "abcLogEquiv",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "h5HullRayUnion",
+   "to": "h5HullRayInter",
+   "kind": "proof"
+  },
+  {
+   "from": "cor312ConclusionFacts",
+   "to": "stepXIContractAssembly",
+   "kind": "proof"
+  },
+  {
+   "from": "qPilotPreciseData",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "h5HullRayPartition",
+   "to": "h5HullRayUnion",
+   "kind": "proof"
+  },
+  {
+   "from": "frobeniusGraphAutSubgroup",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "p1PointLaws",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "cor312StatementShape",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "v2ToABCTarget",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "greenChainReuse",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "greenV2Reuse",
+   "to": "greenChainReuse",
+   "kind": "statement"
+  },
+  {
+   "from": "gapInputsToAdditive",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "displayABCChain",
+   "to": "gapInputsToAdditive",
+   "kind": "proof"
+  },
+  {
+   "from": "formsBundle",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "cor312GapBundle",
+   "to": "displayABCChain",
+   "kind": "proof"
+  },
+  {
+   "from": "additiveV2UndilatedChain",
+   "to": "gapInputsToAdditive",
+   "kind": "proof"
+  },
+  {
+   "from": "scaledAssemblyChain",
+   "to": "stepXIContractAssembly",
+   "kind": "proof"
+  },
+  {
+   "from": "hullVolumeFiniteChain",
+   "to": "abc-statement-defs",
+   "kind": "statement"
+  },
+  {
+   "from": "logFormChain",
+   "to": "formsBundle",
+   "kind": "proof"
+  },
+  {
+   "from": "comparisonRegionChain",
+   "to": "gapInputsToAdditive",
+   "kind": "statement"
+  },
+  {
+   "from": "paperRouteResidualChain",
+   "to": "abc-statement-defs",
+   "kind": "proof"
+  },
+  {
+   "from": "residualComparisonChain",
+   "to": "paperRouteResidualChain",
+   "kind": "proof"
+  },
+  {
+   "from": "undilatedComparisonChain",
+   "to": "paperRouteResidualChain",
+   "kind": "proof"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge18Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge18Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: insert-infinity degree law; new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Thm110SlackActual",
+  "kind": "statement",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Thm110SlackActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent loop registration"
+}

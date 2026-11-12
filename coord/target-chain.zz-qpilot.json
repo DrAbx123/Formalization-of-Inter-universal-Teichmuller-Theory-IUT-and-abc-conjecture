@@ -1,0 +1,1119 @@
+{
+  "nodes": [
+    {
+      "id": "QP.absThetaData",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "absolute theta data (Θ-pilot absolute theta function data) carrier",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteThetaDataCarrierActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteThetaDataCarrierActual.lean": [
+          "AbsoluteThetaDataCarrier",
+          "absoluteThetaDataCarrier",
+          "absoluteThetaDataCarrier_nonempty",
+          "absoluteThetaData_gaussian_eq_qExpansion",
+          "absoluteThetaDataCarrier_concrete_q",
+          "absoluteThetaDataCarrier_concrete_q_mem",
+          "absoluteThetaDataRows",
+          "absoluteThetaDataRows_length"
+        ]
+      },
+      "note": "no single Lean object; anchors theta-etth:T1-T5/E5/X1 + iut-pre-abc:InitialTheta.data; SURVEY-qpilot #5,#7 | carrier constructed (Mzk1AbsoluteThetaDataCarrierActual); paper construction NAMED",
+      "paper": "[IUTchIII] §1 absolute theta data"
+    },
+    {
+      "id": "QP.gaussianLGP",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "Gaussian/LGP compatibility (theta × log compatibility)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GaussianLGPInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GaussianLGPInterfaceActual.lean": [
+          "GaussianLGPModel",
+          "gaussianLGPModel",
+          "gaussianLGPModel_nonempty",
+          "gaussianLGPModel_theater_q",
+          "gaussianLGPModel_q_mem",
+          "gaussianLGPModel_thetaValue_pos",
+          "gaussianLGPModel_card_signedLabel",
+          "gaussianLGPModel_normalization",
+          "gaussianLGPRows",
+          "gaussianLGPRows_length"
+        ]
+      },
+      "note": "no compatibility theorem; anchors theta-etth:T5, iut-skeleton:Gaussian, iut-pre-abc:HodgeTheater.concrete; SURVEY #6,#8 | Gaussian/LGP interface carrier constructed (Mzk1GaussianLGPInterfaceActual); paper LGP compatibility NAMED",
+      "paper": "[AbsTopIII] Gaussian/LGP compatibility"
+    },
+    {
+      "id": "QP.absTopIII02Convolution",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII02 Gaussian/theta convolution objects",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII02ThetaConvolutionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII02ThetaConvolutionActual.lean": [
+          "gaussianThetaKernel",
+          "gaussianThetaKernel_neg",
+          "gaussianThetaKernel_nonneg",
+          "gaussianThetaConvolution",
+          "gaussianThetaConvolution_nonneg",
+          "AbsTopIII02ConvolutionModel",
+          "absTopIII02ConvolutionModel",
+          "absTopIII02ConvolutionModel_nonempty",
+          "absTopIII02ConvolutionModel_kernel_apply",
+          "absTopIII02Rows",
+          "absTopIII02Rows_length"
+        ]
+      },
+      "note": "no dedicated Lean object; partial anchors theta-etth:T5; SURVEY #17 | finite Gaussian theta convolution model constructed (Mzk1AbsTopIII02ThetaConvolutionActual); paper convolution theorem NAMED",
+      "paper": "[AbsTopIII02] theta convolution"
+    },
+    {
+      "id": "QP.thetaPilotPrecise",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "precise theta-pilot object construction (paper precision)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotPreciseInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotPreciseInterfaceActual.lean": [
+          "xmuChainSupply",
+          "xmuChainEquiv",
+          "xmuChainEquiv_image_logShell",
+          "xmuLeftPacketMap",
+          "xmuPacketMap",
+          "xmuOnePlaceFamily",
+          "thetaPilotProductComparison",
+          "thetaPilotIQPacketSubmodule",
+          "thetaPilotGenerator_mem_IQ",
+          "thetaPilotPreciseRows",
+          "thetaPilotPreciseRows_length"
+        ]
+      },
+      "note": "no single Lean object; anchors theta-etth:T1-T5/E5/X1 + iut-pre-abc:InitialTheta.data; SURVEY-qpilot #5,#7 | X-mu chain supply precision interface constructed (Mzk1ThetaPilotPreciseInterfaceActual); paper object construction NAMED",
+      "paper": "[IUTchIII] Def 1.1/theta-pilot"
+    },
+    {
+      "id": "QP.etthDeepAnabelian",
+      "kind": "named_input",
+      "status": "CONDITIONAL",
+      "title": "EtTh ten class-B deep inputs (absolute anabelian / bi-Kummer)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThDeepAnabelianInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThDeepAnabelianInputsActual.lean": [
+          "EtThDeepAnabelianInputs",
+          "etThDeepAnabelianInputs_ids",
+          "etThDeepAnabelianInputRows",
+          "etThDeepAnabelianInputRows_length"
+        ]
+      },
+      "note": "statement rows only; reuse iut-pre-abc:Gap.etthDeepInputs, theta-etth:EDA/IKT | ten deep inputs as explicit named-hypothesis bundle + id linkage (Mzk1EtThDeepAnabelianInputsActual)",
+      "paper": "[EtTh] §1,§4"
+    },
+    {
+      "id": "QP.etthRow5GeometricRealization",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "EtTh row 5: geometric realization of theta groups",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRow5GeometricRealizationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRow5GeometricRealizationActual.lean": [
+          "EtThRow5GeometricRealizationInput",
+          "etThRow5GeometricRealization_of_input",
+          "etThRow5InputRows",
+          "etThRow5InputRows_length"
+        ]
+      },
+      "note": "no proof; conditional bundle with explicit named row-5 input (Mzk1EtThRow5GeometricRealizationActual); carrier-level anchors theta-etth:P58R/R2, e-deep:E4.etthConsumer",
+      "paper": "[EtTh] Thm 2.2"
+    },
+    {
+      "id": "QP.etthRow6FrobenioidManifestation",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "EtTh row 6: Frobenioid-theoretic manifestation",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6Row7InputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6Row7InputsActual.lean": [
+          "EtThRow6ManifestationInput",
+          "EtThRow7ThetaTransformationInput",
+          "etThRow6Manifestation_of_input",
+          "etThRow7ThetaTransformation_of_input",
+          "etThRow6Row7Rows",
+          "etThRow6Row7Rows_length"
+        ]
+      },
+      "note": "no proof; carrier-level anchors theta-etth:P58R/ETR/X1/P58IDR | explicit named-input bundle Mzk1EtThRow6Row7InputsActual (EtThRow6ManifestationInput)",
+      "paper": "[EtTh] Thm 2.3"
+    },
+    {
+      "id": "QP.etthRow7ThetaTransformation",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "EtTh row 7: actual theta transformation on realized object",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6Row7InputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6Row7InputsActual.lean": [
+          "EtThRow6ManifestationInput",
+          "EtThRow7ThetaTransformationInput",
+          "etThRow6Manifestation_of_input",
+          "etThRow7ThetaTransformation_of_input",
+          "etThRow6Row7Rows",
+          "etThRow6Row7Rows_length"
+        ]
+      },
+      "note": "no proof; statement rows theta-etth:ETR | explicit named-input bundle Mzk1EtThRow6Row7InputsActual (EtThRow7ThetaTransformationInput)",
+      "paper": "[EtTh] Thm 2.3/Cor"
+    },
+    {
+      "id": "QP.logShellThetaCarrierCompat",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "log-shell / theta carrier compatibility (theta-link log-shell)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellThetaCarrierCompatActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellThetaCarrierCompatActual.lean": [
+          "CMLFCarrierHom",
+          "CMLFCarrierHom.id",
+          "CMLFCarrierHom.comp",
+          "CMLFCarrierHom.image_unitLayer",
+          "CMLFCarrierHom.image_preLogShell",
+          "CMLFCarrierHom.image_logShell",
+          "logShellThetaCarrierRows",
+          "logShellThetaCarrierRows_length"
+        ]
+      },
+      "note": "partial: iut-pre-abc:KummerLogShell.bridge + theta-etth:IKT/CMLF; SURVEY #22 | model-level image-preservation constructed in fresh file Mzk1LogShellThetaCarrierCompatActual (replaces unstable CMLFImage route); paper CMLF compatibility NAMED",
+      "paper": "[IUTchIII] Def 1.1 + theta-link log-shell"
+    },
+    {
+      "id": "QP.absTopIII05Prop58i",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII Prop 5.8(i) anabelian reconstruction (paper aggregation)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iAlgorithmInputActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iAlgorithmInputActual.lean": [
+          "Prop58iAlgorithmInput",
+          "prop58iTarget_of_algorithmInput",
+          "prop58iAlgorithmRows",
+          "prop58iAlgorithmRows_length"
+        ]
+      },
+      "note": "reuse theta-etth:P58I/P58IC/P58IT/P58ALG + iut-pre-abc:Gap.absTopIII58_55; named algorithm remains | group-theoretic algorithm as explicit named hypothesis with derivation of reconstruction target (Mzk1Prop58iAlgorithmInputActual)",
+      "paper": "[AbsTopIII] Prop 5.8(i)"
+    },
+    {
+      "id": "QP.absTopIII05Prop58ii",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII Prop 5.8(ii) Gamma^x_non diagram (paper aggregation)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiPhaseAggregationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiPhaseAggregationActual.lean": [
+          "prop58iiPhaseRows",
+          "prop58iiPhaseRows_length",
+          "prop58iiPhaseRows_vertex_count",
+          "prop58iiPhaseRows_arrow_count",
+          "prop58iiPhaseRows_bridge_count"
+        ]
+      },
+      "note": "reuse theta-etth:P58/P58IDR/P58VA/P58BR/CMLF/CMLFI; paper CMLF categories NAMED | phase aggregation file Mzk1Prop58iiPhaseAggregationActual (model phases; paper diagram/CMLF categories NAMED)",
+      "paper": "[AbsTopIII] Prop 5.8(ii)"
+    },
+    {
+      "id": "QP.absTopIII05Cor55",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII Cor 5.5 D^bullet diagram (paper aggregation)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor55GlobalPanalocalInputActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor55GlobalPanalocalInputActual.lean": [
+          "Cor55GlobalPanalocalInput",
+          "cor55GlobalPanalocal_of_input",
+          "cor55AuxiliaryModel_nonempty",
+          "cor55GlobalPanalocalRows",
+          "cor55GlobalPanalocalRows_length"
+        ]
+      },
+      "note": "reuse theta-etth:C55D/P58BR/SAT/SATS/SATC; D^bullet construction NAMED | auxiliary L/L-dagger model + explicit global/panalocal named input (Mzk1Cor55GlobalPanalocalInputActual)",
+      "paper": "[AbsTopIII] Cor 5.5"
+    },
+    {
+      "id": "QP.stepXIThetaPacket",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "IUTIII StepXI theta-packet bridge + muN quotient (tree asset)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIThetaPacketInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIThetaPacketInterfaceActual.lean": [
+          "stepXIPositivePacket",
+          "stepXILogVolume_eq_sum",
+          "stepXILogVolume_eq_log_det",
+          "stepXIMuNQuotient",
+          "stepXIMuNQuotientMap_surjective",
+          "stepXIWeightNLog_pow",
+          "StepXIThetaPacketInterface",
+          "stepXIThetaPacketRows",
+          "stepXIThetaPacketRows_length"
+        ]
+      },
+      "note": "reuse iutiii:IUTIII.STEPXI.THETA_PACKET_BRIDGE/LOGSHELL_MUN, theta-etth:I1/I2/I3 | StepXI interface file Mzk1StepXIThetaPacketInterfaceActual (tree re-exports + typed interface)",
+      "paper": "[IUTchIII] Step (xi)"
+    },
+    {
+      "id": "QPX.reuseIndex",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "Cross-region reuse index (A475 exhaustive-search adaptations)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIVReuseIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIVReuseIndexActual.lean": [
+          "IUTIVGapBundle",
+          "iutivGap_bridge_of",
+          "crossRegionReuseRows",
+          "crossRegionReuseRows_length"
+        ]
+      },
+      "note": "A475: exhaustive search found existing assets for IUT IV §1->§2, stage-4 schemeSideMaps, R9 audit, H7/Ob9; this file reuses the EXIT0 asset (oleans absent for others -> anchors only). No duplicated theory, no 'needs breakthrough' claim."
+    },
+    {
+      "id": "QPX.skeletonCarriers",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "iut-skeleton DEF carrier bundle from existing assets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTSkeletonCarriersActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTSkeletonCarriersActual.lean": [
+          "IUTSkeletonCarriers",
+          "iutSkeletonCarriers",
+          "iutSkeletonCarriers_nonempty",
+          "iutSkeletonReuseRows",
+          "iutSkeletonReuseRows_length"
+        ]
+      },
+      "note": "A475 reuse: bundles SourceLogShellDatum/ThetaQuotient/gaussianHodgeTheater/Example36 correspondence/frobeniusPictureGraph for iut-skeleton DEF nodes; no new theory"
+    },
+    {
+      "id": "QPX.stepXINamedInputs",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "IUT IV stepxi §1/§2 inputs routed through existing Sec1Sec2 gap asset",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIVStepXINamedInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIVStepXINamedInputsActual.lean": [
+          "StepXISec1Sec2Input",
+          "stepxi_sec1_display",
+          "stepxi_sec2_estimate",
+          "stepxi_sec1_to_sec2",
+          "stepXINamedInputRows",
+          "stepXINamedInputRows_length"
+        ]
+      },
+      "note": "A475 reuse: existing Mzk1IUTIVSec1Sec2GapActual (EXIT0) is imported and projected; 10 stepxi paper inputs stay named inside the existing bundle; no duplication"
+    },
+    {
+      "id": "QPX.hullStubReuse",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "iutiii hull stub reuse (R9/Ob9 tree assets)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIIHullStubReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIIIHullStubReuseActual.lean": [
+          "r9DownRay",
+          "r9PointMembershipAudit",
+          "r9PointwiseVolIff",
+          "iqHullCertificateReuse",
+          "iqHullCor312ConclusionReuse",
+          "certificateHullWiringReuse",
+          "certificateHullWiringRealizationReuse",
+          "HullR9AuditConsumer",
+          "hullR9AuditConsumer_of_input",
+          "hullStubReuseRows",
+          "hullStubReuseRows_length"
+        ]
+      },
+      "note": "A475 reuse of tree CardHullRealR9PointMembershipAudit/CertificateHullWiring(Realization) for iutiii stub nodes; hull statement NAMED"
+    },
+    {
+      "id": "QPX.schemeSideTreeReuse",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "stage4 scheme-side maps reuse (tree height + Card AMPL assets)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsTreeReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsTreeReuseActual.lean": [
+          "iutivWeightReuse",
+          "iutivAbsNormReuse",
+          "cardAMPLThetaBoundSupplyReuse",
+          "cardAMPLCertificateReuse",
+          "sourceD0RootReuse",
+          "schemeSideReuseRows",
+          "schemeSideReuseRows_length"
+        ]
+      },
+      "note": "A475 reuse of tree ArithmeticDivisorDegree/Definition31D0D11Aligned/CardAMPLThetaBoundSupply; existing Mzk1SchemeSideMapsActual recorded as anchor"
+    },
+    {
+      "id": "QPX.iut312TargetReuse",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "IUT 3.12 target statement linked to existing ABCBridge assets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUT312TargetReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUT312TargetReuseActual.lean": [
+          "abcTargetReuse",
+          "abcInequalityReuse",
+          "cor312BridgeHeightBoundReuse",
+          "abcConjectureOfFrontierReuse",
+          "abcFrontierIffReuse",
+          "iut312TargetReuseRows",
+          "iut312TargetReuseRows_length"
+        ]
+      },
+      "note": "A475 reuse: ABCBridge Statement/Cor312ToABCBridgeInterface/ABCFrontier tree oleans re-exported; target assembly remains paper-level NAMED"
+    },
+    {
+      "id": "QPX.skeletonHDDReuse",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "iut-skeleton HDD reuse (SHE/HDD/local-lattice assets)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonHDDReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonHDDReuseActual.lean": [
+          "sourceSHEHDDCompatibilityReuse",
+          "s1215LogShiftReadoutReuse",
+          "s1238HDDLocalLatticeTypeReuse",
+          "hddObjectReuse",
+          "skeletonHDDReuseRows",
+          "skeletonHDDReuseRows_length"
+        ]
+      },
+      "note": "A475: reuses S1215/S1238/S1154 olean assets + adapted HDD object; skeleton HDD node anchored"
+    },
+    {
+      "id": "QPX.skeletonServices",
+      "kind": "interface",
+      "status": "CONDITIONAL",
+      "title": "iut-skeleton service-node carriers from existing olean assets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTSkeletonServiceCarriersActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTSkeletonServiceCarriersActual.lean": [
+          "thm311FiniteLabelReuse",
+          "aptCarrierReuse",
+          "qPilotLogVolumeReuse",
+          "h5HullClosureReuse",
+          "ind1ActionReuse",
+          "ind2TensorEquivReuse",
+          "ind3OutputHullReuse",
+          "iut4WeightReuse",
+          "iut4Sec2GapReuse",
+          "skeletonServiceRows",
+          "skeletonServiceRows_length"
+        ]
+      },
+      "note": "A475 reuse: imports existing olean assets for Thm311/APT/IPL/SHE/QPilot/HullDet/H5/Ind1-3/IUT4Estimates/IUT4Sec2; skeleton service nodes anchored; paper statements NAMED"
+    }
+  ],
+  "edges": [
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.absThetaData",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.gaussianLGP",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.absTopIII02Convolution",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.thetaPilotPrecise",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.etthDeepAnabelian",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.etthRow5GeometricRealization",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.etthRow6FrobenioidManifestation",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.etthRow7ThetaTransformation",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.logShellThetaCarrierCompat",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.absTopIII05Prop58i",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.absTopIII05Prop58ii",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.absTopIII05Cor55",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut-pre-abc:IUT312.statement",
+      "to": "QP.stepXIThetaPacket",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "QP.absThetaData",
+      "to": "theta-etth:T1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absThetaData",
+      "to": "theta-etth:T5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absThetaData",
+      "to": "theta-etth:E5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absThetaData",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.gaussianLGP",
+      "to": "theta-etth:T5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.gaussianLGP",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.gaussianLGP",
+      "to": "iut-pre-abc:HodgeTheater.concrete",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII02Convolution",
+      "to": "QP.gaussianLGP",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "QP.absTopIII02Convolution",
+      "to": "theta-etth:T5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.thetaPilotPrecise",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.thetaPilotPrecise",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.thetaPilotPrecise",
+      "to": "theta-etth:TPI",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthDeepAnabelian",
+      "to": "iut-pre-abc:Gap.etthDeepInputs",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthDeepAnabelian",
+      "to": "theta-etth:EDA",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthDeepAnabelian",
+      "to": "theta-etth:IKT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow5GeometricRealization",
+      "to": "e-deep:E4.etthConsumer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow5GeometricRealization",
+      "to": "theta-etth:R2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow5GeometricRealization",
+      "to": "QP.etthDeepAnabelian",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "QP.etthRow6FrobenioidManifestation",
+      "to": "theta-etth:P58R",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow6FrobenioidManifestation",
+      "to": "theta-etth:ETR",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow6FrobenioidManifestation",
+      "to": "theta-etth:X1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow7ThetaTransformation",
+      "to": "theta-etth:ETR",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.etthRow7ThetaTransformation",
+      "to": "QP.etthRow6FrobenioidManifestation",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "QP.logShellThetaCarrierCompat",
+      "to": "iut-pre-abc:KummerLogShell.bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.logShellThetaCarrierCompat",
+      "to": "iut-pre-abc:LogShell.invariants",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.logShellThetaCarrierCompat",
+      "to": "theta-etth:IKT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.logShellThetaCarrierCompat",
+      "to": "theta-etth:CMLF",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58i",
+      "to": "theta-etth:P58I",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58i",
+      "to": "theta-etth:P58IC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58i",
+      "to": "theta-etth:P58IT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58i",
+      "to": "theta-etth:P58ALG",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58i",
+      "to": "iut-pre-abc:Gap.absTopIII58_55",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58ii",
+      "to": "theta-etth:P58",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58ii",
+      "to": "theta-etth:P58IDR",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58ii",
+      "to": "theta-etth:P58VA",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58ii",
+      "to": "theta-etth:P58BR",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Prop58ii",
+      "to": "theta-etth:CMLF",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Cor55",
+      "to": "theta-etth:C55D",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Cor55",
+      "to": "theta-etth:P58BR",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Cor55",
+      "to": "theta-etth:SAT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.absTopIII05Cor55",
+      "to": "theta-etth:SATS",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.stepXIThetaPacket",
+      "to": "iutiii:IUTIII.STEPXI.THETA_PACKET_BRIDGE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.stepXIThetaPacket",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.stepXIThetaPacket",
+      "to": "theta-etth:I1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.stepXIThetaPacket",
+      "to": "theta-etth:I2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QP.stepXIThetaPacket",
+      "to": "theta-etth:I3",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.reuseIndex",
+      "to": "iut-pre-stepxi:GAP.sec1_to_sec2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.reuseIndex",
+      "to": "iut-pre-stage4:D.gap.schemeSideMaps",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.reuseIndex",
+      "to": "iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.reuseIndex",
+      "to": "iutiii:IUTIII.HULL.H7.OB9.BUNDLE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonCarriers",
+      "to": "iut-skeleton:ClassB",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.prop11",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.prop12",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.prop14",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.prop15",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.prop18",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1.thm110actual",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S2.pnt",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S2.arithmeticTransition",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1b.heightInput",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:S1c.undilatedInput",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.stepXINamedInputs",
+      "to": "iut-pre-stepxi:GAP.sec1_to_sec2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.hullStubReuse",
+      "to": "iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.hullStubReuse",
+      "to": "iutiii:IUTIII.HULL.H7.OB9.BUNDLE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.schemeSideTreeReuse",
+      "to": "iut-pre-stage4:D.gap.schemeSideMaps",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.schemeSideTreeReuse",
+      "to": "iutiii:IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "iut-pre-abc:IUT312.statement",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "iut-pre-abc:Gap.iut312TopStatement",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "T3-abc-frontier",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.iut312TargetReuse",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonHDDReuse",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonHDDReuse",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:APT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:IPL",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:SHE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:Ind1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:Ind2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:Ind3",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPX.skeletonServices",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    }
+  ],
+  "meta": {
+    "adapted_removed": 3316,
+    "note": " [A478: removed 3316 *Adapted nodes (files kept on disk, no longer DAG/queue)]"
+  }
+}

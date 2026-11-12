@@ -1,0 +1,2 @@
+file	category	route_tags	key_declarations	citable_compile	proposed_master_route	suggested_owner	priority	note
+LeanFormal/IUT/Audit/Diagnostics/LegacyContracts.lean	route	unmapped	Side,Copy,PrimeStrip	OLEAN_FRESH	Audit/diagnostics (legacy contracts; coverage-only, no route claim)	shehdd	P2	uncovered by any coord route doc (A440); add coverage row after owner confirms semantic role

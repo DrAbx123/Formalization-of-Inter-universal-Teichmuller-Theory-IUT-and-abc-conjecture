@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1PaperQThetaComparisonStatementActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1PaperQThetaComparisonStatementActual.lean"
+  ],
+  "declarations": {},
+  "note": "watchdog EXIT0 read-only; DAG-only registration"
+}

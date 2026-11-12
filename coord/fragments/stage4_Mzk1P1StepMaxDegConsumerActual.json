@@ -1,0 +1,14 @@
+{
+  "node": "auto:Mzk1P1StepMaxDegConsumerActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1StepMaxDegConsumerActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1StepMaxDegConsumerActual.lean": [
+      "exists_maxDegP_stepSetP1_le"
+    ]
+  },
+  "note": "A472 real Lean: consumer of f4a+bounded-degree selection; new file only, no sorry; watchdog to verify"
+}

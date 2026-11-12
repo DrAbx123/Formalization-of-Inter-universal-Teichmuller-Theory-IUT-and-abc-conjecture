@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1StepXIGreenConsumer6Actual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer6Actual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

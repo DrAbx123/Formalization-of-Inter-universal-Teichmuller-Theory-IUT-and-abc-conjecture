@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureDecreaseAssemblyActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureDecreaseAssemblyActual.lean"
+  ],
+  "declarations": {},
+  "note": "A473 real Lean: P1 measure decrease assembly from f4a+numMax gap; new file only, no sorry; watchdog to verify"
+}

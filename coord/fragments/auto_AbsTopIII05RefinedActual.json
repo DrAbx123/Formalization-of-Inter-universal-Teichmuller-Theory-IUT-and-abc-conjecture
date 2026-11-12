@@ -1,0 +1,9 @@
+{
+  "node": "auto:AbsTopIII05RefinedActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

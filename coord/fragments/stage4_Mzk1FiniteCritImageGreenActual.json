@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteCritImageGreenActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteCritImageGreenActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain: crit image degree bound from green image/aeval lemmas; new file only, no sorry; watchdog to verify"
+}

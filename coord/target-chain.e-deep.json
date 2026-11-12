@@ -1,0 +1,908 @@
+{
+ "section": "e-deep",
+ "nodes": [
+  {
+   "id": "E1.absTopIII05Refined",
+   "kind": "conditional",
+   "title": "AbsTopIII05 refined deep inputs D1-D4 (typed)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+     "Prop58iLocalFieldReconstruction",
+     "Prop58iiLogShellReconstruction",
+     "Cor55LogFrobeniusCompatibility",
+     "OrientedGraphAnabelianData"
+    ]
+   },
+   "note": "10562B 08816FDE CITABLE 16 probe_ok; D3/D4 anchors discharged; algorithm parts named | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "E1.absTopIII05Inputs",
+   "kind": "named_input",
+   "title": "AbsTopIII05 DeepInput x4 (paper-scope named)",
+   "status": "NAMED",
+   "files": [
+    "tmp/sheaf/xif/paper/AbsTopIII05ReconstructionInputsActual.lean",
+    "tmp/sheaf/xif/paper/Mzk1AbsTopIII05PaperScopeStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/AbsTopIII05ReconstructionInputsActual.lean": [
+     "absTopIIIDeepInputs"
+    ],
+    "tmp/sheaf/xif/paper/Mzk1AbsTopIII05PaperScopeStatementActual.lean": [
+     "Prop58iReconstruction",
+     "Prop58iiLogShellDiagram",
+     "Cor55Compatibility",
+     "Section0OrientedGraphData",
+     "AbsTopIII05PaperScopeStatement"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): paper-scope statement skeleton linked (Prop5.8(i)(ii)/Cor5.5/Section-0); named inputs remain; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E1.logShellBridge",
+   "kind": "tree_asset",
+   "title": "SourceLogShellAbsTopIIIBridge (invariant image identification)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean": [
+     "SourceLogShellInvariantImageIdentification"
+    ]
+   },
+   "note": "18827B 24 decls; prior inventory; not rechecked"
+  },
+  {
+   "id": "E2.H5framing",
+   "kind": "theorem",
+   "title": "H5 hull/volume framing (Hull09)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean": [
+     "hull09_scalingUnits_subset_hull",
+     "hull09_hull_eq_closure",
+     "hull09DetTensorBookkeeping_exponent",
+     "hull09_ray_mem_iff"
+    ]
+   },
+   "note": "5405B; gaps named"
+  },
+  {
+   "id": "E2.h5Gap",
+   "kind": "named_input",
+   "title": "H5 O(-)^{-1} normalization + hull<=image-volume inequality",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5GapStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5GapStatementActual.lean": [
+     "OminusInverseNormalization"
+    ]
+   },
+   "status": "NAMED",
+   "note": "VERIFIED (results-log/olean evidence; shehdd): H5 O^x stabilization + hull<=image-volume + SG3b tensor-Haar; statement skeleton NAMED (no proof); see file comments; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E2.frobeniusPower",
+   "kind": "tree_asset",
+   "title": "LogShellFrobeniusPower/Consumer family",
+   "status": "PROVED",
+   "files": [
+    "LeanFormal/IUT/Foundations/AlgebraicGeometry/LogShellFrobeniusPower.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/Foundations/AlgebraicGeometry/LogShellFrobeniusPower.lean": [
+     "localUnitFrobenius_iterate",
+     "localUnitFrobenius_iterate_log"
+    ]
+   },
+   "note": "tree asset; not rechecked [PIN: EXIT=0 in results log]; EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "E3.ob9Interface",
+   "kind": "theorem",
+   "title": "H7/Ob9 interface + rep-class congruence",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Hull08Ob9LogLinkActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Hull08Ob9LogLinkActual.lean": [
+     "hull_ob9_interface",
+     "hull_ob9_repClass_congr"
+    ]
+   },
+   "note": "5921B"
+  },
+  {
+   "id": "E3.oneSided",
+   "kind": "theorem",
+   "title": "H7/Ob9 one-sided upper bound transfer",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Hull12Ob9BoundTransferActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Hull12Ob9BoundTransferActual.lean": [
+     "hull12_upperBound_transfer"
+    ]
+   },
+   "note": "4453B"
+  },
+  {
+   "id": "E3.twoSided",
+   "kind": "conditional",
+   "title": "H7/Ob9 two-sided bound framework",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean": [
+     "hull13_twoSided_bound"
+    ]
+   },
+   "note": "5260B 79F714C0 probe_ok; deep both-sided named | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "E3.deepOb9",
+   "kind": "named_input",
+   "title": "H7 arbitrary-iterate independence (deep Ob9)",
+   "files": [
+    "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean": [
+     "HullH7Ob9TwoSidedInputs"
+    ]
+   },
+   "status": "NAMED",
+   "note": "deep Ob9 both-sided bound: existing Hull13 two-sided framework (upper projection proved); full arbitrary-iterate bound NAMED; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E4.etthConsumer",
+   "kind": "conditional",
+   "title": "EtTh realization consumer (11-row inventory, conditional)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean": [
+     "etThRealization_thm25Consumer_conditional"
+    ]
+   },
+   "note": "11293B C12C6CAC CITABLE 14 probe_ok | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "E4.example36",
+   "kind": "tree_asset",
+   "title": "Example36 theta/Frobenioid/Tate source models",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTII/Frobenioid/Example36TateUniformization.lean",
+    "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceEtaleThetaTheory.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTII/Frobenioid/Example36TateUniformization.lean": [
+     "concreteFiveTateParameter",
+     "concreteFiveTateParameter_norm",
+     "concreteFiveTateCurve_eq",
+     "concreteFiveTateCurve_isElliptic",
+     "concreteFiveTateCurve_delta_ne_zero"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+  },
+  {
+   "id": "E4.etthGap",
+   "kind": "named_input",
+   "title": "EtTh02 10 deep inputs + EtTh11 rows 5-7 (geometric realization/Frobenioid manifestation/actual theta transform)",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1EtThGapStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1EtThGapStatementActual.lean": [
+     "EtThGeometricRealization"
+    ]
+   },
+   "status": "NAMED",
+   "note": "EtTh realization three class-B rows; statement skeleton NAMED (row-6 named); no proof; PENDING-VERIFY (watchdog compile)"
+  },
+  {
+   "id": "E5.iutivAdd",
+   "kind": "tree_asset",
+   "title": "IUT IV ArithmeticDivisorDegree (weights/degrees/pullback)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean": [
+     "heightWeight",
+     "hTerm"
+    ]
+   },
+   "note": "94950B tree asset; not rechecked; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+  },
+  {
+   "id": "E5.iutivSection1",
+   "kind": "tree_asset",
+   "title": "IUT IV Section1 estimates",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean": [
+     "iutIVProp17"
+    ]
+   },
+   "note": "13808B tree asset"
+  },
+  {
+   "id": "E5.iutivSection2",
+   "kind": "tree_asset",
+   "title": "IUT IV Section2 PNT/theta estimates",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/Section2.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/Section2.lean": [
+     "iutIVProp21i"
+    ]
+   },
+   "note": "27185B tree asset"
+  },
+  {
+   "id": "E5.stepV",
+   "kind": "tree_asset",
+   "title": "IUT IV StepV procession average estimates",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean": [
+     "processionAverage_le"
+    ]
+   },
+   "note": "12974B tree asset"
+  },
+  {
+   "id": "E5.display",
+   "kind": "conditional",
+   "title": "IUT IV final display thm110_final_display (conditional on hCor312+hSlack)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean": [
+     "thm110_final_display"
+    ]
+   },
+   "note": "6921B; conditional | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "E5.uniformHeightConsumer",
+   "kind": "conditional",
+   "title": "uniform height consumer (undilated height bound)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/S3171UniformHeightConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3171UniformHeightConsumerActual.lean": [
+     "undilatedHeightBound_of_valuation_bound"
+    ]
+   },
+   "note": "4449B; E-5 (b)/(c) named | A463: watchdog EXIT0 present for all files; promoted"
+  },
+  {
+   "id": "E5.comparisonGaps",
+   "kind": "named_input",
+   "title": "two named IUT IV section2 comparison fields",
+   "status": "NAMED",
+   "files": [
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+     "arithmeticWeight_nonneg",
+     "hullLogVolume_ofReal_toReal",
+     "abcRationalPoint_logHeight_unbounded",
+     "below",
+     "no_heightDictionary_into_finiteHull"
+    ]
+   },
+   "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E5.s2717",
+   "kind": "conditional",
+   "title": "Cor312 target equivalence to single analytic endpoint S2717UpperGap",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S2717Cor312FullTargetActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S2717Cor312FullTargetActual.lean": [
+     "S2717UpperGap",
+     "PaperCor312Full",
+     "S2717_full_iff_hupper"
+    ]
+   },
+   "note": "13906B; S2804 real reduction to S2717UpperGap"
+  },
+  {
+   "id": "E5.srcUnitRegion",
+   "kind": "tree_asset",
+   "title": "SourceUnitRegionHaarData / IQCarrier concrete model",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceUnitRegionHaarDataActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceUnitRegionHaarDataActual.lean": [
+     "sourceHaarActualOriginalInput"
+    ]
+   },
+   "note": "tree asset; carrier identification/degree-faithful value-hull unsatisfiable per stepxi"
+  },
+  {
+   "id": "E5.carrierGap",
+   "kind": "named_input",
+   "title": "Cor312 carrier/literal IQ(S±) + hull normalization",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5CarrierGapStatementActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1E5CarrierGapStatementActual.lean": [
+     "UndilatedHeightBound"
+    ]
+   },
+   "status": "NAMED",
+   "note": "VERIFIED (results-log/olean evidence; shehdd): IUT IV section1 uniform height-vs-volume carrier gap; statement skeleton NAMED (b/c + height-volume); no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E3.baseTwoSided",
+   "kind": "conditional",
+   "title": "H7 both-sided bounds at base representative (conditional)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Hull13BothSidedBaseActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Hull13BothSidedBaseActual.lean": [
+     "HullH7Ob9BaseTwoSidedInputs",
+     "hull13_baseTwoSided",
+     "hull13_baseTwoSided_upper",
+     "hull13_baseTwoSided_lower"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): pending pin: conditional assembly of base/iterate two-sided bounds; deep Ob9 both-sided transfer remains explicit named field. [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "hull.Mzk1R9PointMembershipConsumerActual",
+   "kind": "theorem",
+   "title": "Mzk1R9PointMembershipConsumerActual (watchdog-verified)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9PointMembershipConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1R9PointMembershipConsumerActual.lean": [
+     "hullLogVolumeRay_eq_downRay",
+     "hullLogVolumeRay_consumer_iff",
+     "r9ConsumerRows",
+     "r9ConsumerRows_length"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "hull.Mzk1R9HullConsumerActual",
+   "kind": "theorem",
+   "title": "Mzk1R9HullConsumerActual (watchdog-verified)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9HullConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1R9HullConsumerActual.lean": [
+     "hull09_ray_mem_r9",
+     "hull09_ray_r9_set",
+     "r9HullRows",
+     "r9HullRows_length"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E2.hullClosureLaws",
+   "kind": "theorem",
+   "title": "H5 hull closure laws (theta images subset hull, one/mul closed)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullClosureLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullClosureLawsActual.lean": [
+     "hull09_possibleThetaPilotImage_subset_hull",
+     "hull09_hull_one_mem",
+     "hull09_hull_mul_mem",
+     "hull09_generators_subset_hull",
+     "hull09_hull_pow_mem"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A482: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "E5.undilatedABCBridge",
+   "kind": "theorem",
+   "title": "E-5 consumer: (b) UndilatedHeightBound + (c) UndilatedRegionBound => ABCConjecture",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5UndilatedABCBridgeActualV2.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1E5UndilatedABCBridgeActualV2.lean": [
+     "abcConjecture_of_undilatedBounds",
+     "heightComparisonFamily_of_undilatedBound",
+     "regionVolumeFamily_of_undilatedBound",
+     "undilatedHeightBound_of_valuation_bound_re"
+    ]
+   },
+   "note": "PENDING-VERIFY: re-export consumer; (b)/(c) remain named paper inputs (no proof of them) | A493: V2 copy (old file stuck in killed/failed state; same content)"
+  },
+  {
+   "id": "E2.detScalingLaws",
+   "kind": "theorem",
+   "title": "H5 det scaling composition laws (compose lambda*O scaling; PosDef preservation)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5DetScalingLawsActualV2.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5DetScalingLawsActualV2.lean": [
+     "hull06_det_scaling_compose",
+     "hull06_det_scaling_posDef",
+     "hull06_det_scaling_inv",
+     "hull06_det_pow",
+     "hull06_det_posDet",
+     "hull06MatrixLogDet_eq_log_det"
+    ]
+   },
+   "note": "PENDING-VERIFY: real proofs composing tree matrixLogDet_smul_posDef | A493: V2 copy (old file stuck in killed/failed state; same content)"
+  },
+  {
+   "id": "E3.sandwichLaws",
+   "kind": "theorem",
+   "title": "H7/Ob9 two-sided sandwich projections (lower/sandwich from conditional consumer)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H7Ob9SandwichLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H7Ob9SandwichLawsActual.lean": [
+     "hull13_twoSided_lower_projection",
+     "hull13_twoSided_sandwich",
+     "hull13_twoSided_lower_le_upper"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "E4.kernelLatticeLaws",
+   "kind": "theorem",
+   "title": "EtTh power-kernel lattice laws (anti-mono transitivity; theta->elliptic comap)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1EtThKernelLatticeLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1EtThKernelLatticeLawsActual.lean": [
+     "etTh11_thetaPowerKernel_mono_trans",
+     "etTh11_ellipticPowerKernel_mono_trans",
+     "etTh11_thetaKernel_le_ellipticComap",
+     "etTh11_thetaPowerKernel_le_one",
+     "etTh11_ellipticPowerKernel_le_one"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+  },
+  {
+   "id": "hull.Mzk1R9HullBasicFactsActual",
+   "kind": "theorem",
+   "title": "Mzk1R9HullBasicFactsActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9HullBasicFactsActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "hull.Mzk1R9HullRayLatticeActual",
+   "kind": "theorem",
+   "title": "Mzk1R9HullRayLatticeActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9HullRayLatticeActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "hull.Mzk1R9HullRayBundleActual",
+   "kind": "theorem",
+   "title": "Mzk1R9HullRayBundleActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9HullRayBundleActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "E2.detInvLaws",
+   "kind": "theorem",
+   "title": "H5 determinant laws: logDet identity and inverse",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5DetInvLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5DetInvLawsActual.lean": [
+     "matrixLogDet_one",
+     "matrixLogDet_inv_posDef"
+    ]
+   },
+   "note": "PENDING-VERIFY: real proofs (det_one/log_one, det_inv/log_inv)"
+  },
+  {
+   "id": "hull.Mzk1IQHullConsumerActual",
+   "kind": "theorem",
+   "title": "Mzk1IQHullConsumerActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1IQHullConsumerActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "hull.Mzk1IQHullMonotonicityActual",
+   "kind": "theorem",
+   "title": "Mzk1IQHullMonotonicityActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1IQHullMonotonicityActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "hull.Mzk1R9RayMonotonicityActual",
+   "kind": "theorem",
+   "title": "Mzk1R9RayMonotonicityActual.lean (watchdog DONE0)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1R9RayMonotonicityActual.lean"
+   ],
+   "declarations": {},
+   "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+  },
+  {
+   "id": "E4.example36CorrespondenceLaws",
+   "kind": "theorem",
+   "title": "Example36<->EtTh correspondence bundle laws (carrier projections, theater distinctness, q range)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1Example36CorrespondenceLawsActualV2.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1Example36CorrespondenceLawsActualV2.lean": [
+     "etthExample36_correspondence_thetaCarrier",
+     "etthExample36_theater_distinct",
+     "etthExample36_correspondence_q_mem"
+    ]
+   },
+   "note": "PENDING-VERIFY: real corollaries; row-6 Frobenioid manifestation remains NAMED | A493: V2 copy (old file stuck in killed/failed state; same content)"
+  },
+  {
+   "id": "iutii-example36-backend-balance",
+   "kind": "theorem",
+   "title": "Example36 source model backend balance (Frobenioid)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackendBalance.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackendBalance.lean": [
+     "nsmul_neg_ring",
+     "effectiveFinite_eq_zero_of_not_mem"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): tree file; watchdog EXIT0; probe pending"
+  },
+  {
+   "id": "iuti-source-def31-dual-alignment",
+   "kind": "theorem",
+   "title": "IUTI source Definition31 dual contract alignment",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31DualContractAlignment.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31DualContractAlignment.lean": [
+     "sourceDefinition31Arithmetic_spec",
+     "arithmetic_agreement"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): tree file; watchdog EXIT0; probe pending"
+  },
+  {
+   "id": "logshell-frobenius-power",
+   "kind": "theorem",
+   "title": "LogShell Frobenius power/iterate lemmas",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/Foundations/AlgebraicGeometry/LogShellFrobeniusPower.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/Foundations/AlgebraicGeometry/LogShellFrobeniusPower.lean": [
+     "localUnitFrobenius_iterate",
+     "localUnitFrobenius_iterate_log"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): tree file; watchdog EXIT0 after prior fails; probe pending"
+  },
+  {
+   "id": "E5.displayInputsStatement",
+   "kind": "theorem",
+   "title": "E5 display inputs decomposition (hCor312 + hSlack); final display consumer",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5DisplayInputsStatementActualV2.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1E5DisplayInputsStatementActualV2.lean": [
+     "Cor312GapHyp",
+     "SlackHyp",
+     "displayInputs_iff",
+     "final_display_of_inputs"
+    ]
+   },
+   "note": "PENDING-VERIFY: structural iff + re-export; both hypotheses remain named paper inputs | A493: V2 copy (old file stuck in killed/failed state; same content) | A495: EXIT0+olean fresh; promoted"
+  },
+  {
+   "id": "E2.hullRayLaws",
+   "kind": "theorem",
+   "title": "H5 hull log-volume ray closure laws (downward closed; self-membership)",
+   "status": "PROVED",
+   "files": [
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayLawsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1H5HullRayLawsActual.lean": [
+     "hull09_ray_downward",
+     "hull09_ray_self",
+     "hull09_ray_iff",
+     "hull09_ray_mono_param",
+     "hull09_ray_eq_Iic",
+     "hull09_ray_subset_of_le"
+    ]
+   },
+   "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real proofs from mem_hullLogVolumeRay_iff | A489: EXIT0+olean fresh; promoted"
+  }
+ ],
+ "edges": [
+  {
+   "from": "E1.absTopIII05Refined",
+   "to": "E1.logShellBridge",
+   "kind": "proof"
+  },
+  {
+   "from": "E1.absTopIII05Refined",
+   "to": "E1.absTopIII05Inputs",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.H5framing",
+   "to": "E2.frobeniusPower",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.h5Gap",
+   "to": "E2.H5framing",
+   "kind": "gap"
+  },
+  {
+   "from": "E3.twoSided",
+   "to": "E3.oneSided",
+   "kind": "statement"
+  },
+  {
+   "from": "E3.twoSided",
+   "to": "E3.ob9Interface",
+   "kind": "interface"
+  },
+  {
+   "from": "E3.deepOb9",
+   "to": "E3.twoSided",
+   "kind": "gap"
+  },
+  {
+   "from": "E4.etthConsumer",
+   "to": "E4.example36",
+   "kind": "statement"
+  },
+  {
+   "from": "E4.etthConsumer",
+   "to": "E4.etthGap",
+   "kind": "gap"
+  },
+  {
+   "from": "E5.display",
+   "to": "E5.iutivSection1",
+   "kind": "statement"
+  },
+  {
+   "from": "E5.display",
+   "to": "E5.uniformHeightConsumer",
+   "kind": "interface"
+  },
+  {
+   "from": "E5.uniformHeightConsumer",
+   "to": "E5.comparisonGaps",
+   "kind": "gap"
+  },
+  {
+   "from": "E5.comparisonGaps",
+   "to": "E5.iutivSection2",
+   "kind": "statement"
+  },
+  {
+   "from": "E5.s2717",
+   "to": "E5.comparisonGaps",
+   "kind": "statement"
+  },
+  {
+   "from": "E5.s2717",
+   "to": "E5.stepV",
+   "kind": "statement"
+  },
+  {
+   "from": "E5.srcUnitRegion",
+   "to": "E5.carrierGap",
+   "kind": "gap"
+  },
+  {
+   "from": "E5.carrierGap",
+   "to": "E5.display",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.hullClosureLaws",
+   "to": "E2.H5framing",
+   "kind": "proof"
+  },
+  {
+   "from": "E5.undilatedABCBridge",
+   "to": "E5.uniformHeightConsumer",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.detScalingLaws",
+   "to": "E2.H5framing",
+   "kind": "proof"
+  },
+  {
+   "from": "E3.sandwichLaws",
+   "to": "E3.twoSided",
+   "kind": "proof"
+  },
+  {
+   "from": "E4.kernelLatticeLaws",
+   "to": "E4.etthConsumer",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.detInvLaws",
+   "to": "E2.H5framing",
+   "kind": "proof"
+  },
+  {
+   "from": "E4.example36CorrespondenceLaws",
+   "to": "E4.etthConsumer",
+   "kind": "statement"
+  },
+  {
+   "from": "iutii-example36-backend-balance",
+   "to": "E4.example36CorrespondenceLaws",
+   "kind": "statement"
+  },
+  {
+   "from": "iuti-source-def31-dual-alignment",
+   "to": "E1.logShellBridge",
+   "kind": "statement"
+  },
+  {
+   "from": "logshell-frobenius-power",
+   "to": "E2.frobeniusPower",
+   "kind": "proof"
+  },
+  {
+   "from": "E5.displayInputsStatement",
+   "to": "E5.display",
+   "kind": "statement"
+  },
+  {
+   "from": "E5.iutivAdd",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "E3.baseTwoSided",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9PointMembershipConsumerActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9HullConsumerActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9HullBasicFactsActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9HullRayLatticeActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9HullRayBundleActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1IQHullConsumerActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1IQHullMonotonicityActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "hull.Mzk1R9RayMonotonicityActual",
+   "to": "E2.H5framing",
+   "kind": "statement"
+  },
+  {
+   "from": "E2.hullRayLaws",
+   "to": "E2.H5framing",
+   "kind": "proof"
+  }
+ ],
+ "generated": "2026-11-11T00:55:00+08:00"
+}

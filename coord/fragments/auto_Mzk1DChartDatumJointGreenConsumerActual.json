@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1DChartDatumJointGreenConsumerActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1DChartDatumJointGreenConsumerActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

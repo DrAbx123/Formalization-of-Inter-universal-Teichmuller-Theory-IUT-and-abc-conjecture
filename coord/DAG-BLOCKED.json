@@ -1,0 +1,636 @@
+{
+  "meta": {
+    "purpose": "DAG nodes that must NOT be attacked directly: self-refuted, chain-broken, or already proved via a detour",
+    "updated": "2026-11-11",
+    "maintained_by": "lattice (DAG registration/docs role; Lead workflow A448+)",
+    "categories": {
+      "OBSTRUCTION": "recorded obstruction; route blocked by math/content gap",
+      "SELF-REFUTED": "claim false (counterexample/kernel-checked refutation); do not re-attack",
+      "CHAIN-BROKEN": "downstream chain invalid or equivalent-strength shortcut; not a cheap route",
+      "ALREADY-PROVED-DETOUR": "proved via detour/alternate route; do not re-attack",
+      "PRAGMATIC-DEAD-END": "parked by judgement (not refuted): 1-2 attempts no progress or key construction absent; Lead may reopen"
+    },
+    "policy": "Nodes here must NOT be attacked directly; pick an actionable node from coord/DAG-NEXT.md instead. Maintained with DAG-NEXT/declaration-dag sync; see coord/SKELETON-GAPS.md DAG section for docs. | PRAGMATIC-DEAD-END is allowed: do not exhaustively prove impossibility; park early and switch routes.",
+    "counts": {
+      "note": "A508 route-necessity classification; blocked_total=90",
+      "blocked_total": 90
+    },
+    "note": "A470: blocked ids aligned with declaration-dag ids for routes:*; legacy:* entries document legacy chains without DAG nodes and are kept as route-level notes.",
+    "a497_a498_verdict": "qTheta chain VOID; Cor312Conclusion alone not 3.12 evidence; hcomp two IUT IV comparisons are the only named content; vacuous declarations do not count toward 3.12 progress.",
+    "a499_object_gate": "objects 1-12: no object-level _constructed theorem -> upper-layer wiring does not count toward 3.12 progress (see coord/OBJECT-STATUS-A499.md)",
+    "takkun_reference_only": "Takkun objects are skeletal/data-pattern/partial-real; conclusions (MultiradialRepresentation, cor312, hull_bound, containment, (P)) are audit data, not evidence; object gate A499 applies.",
+    "a502_shell_files": [
+      "Mzk1PaperLogThetaLatticeStatementActual",
+      "Mzk1ThetaLinkInterfaceActual(+Adapted)",
+      "Mzk1InitialThetaDataActual(+Adapted)",
+      "Mzk1HodgeTheaterCoreDataActual(+Adapted)",
+      "Ind1UnitAction(refl)",
+      "HDDDecomp/FourTriangleSynthesis(interface)"
+    ],
+    "a502_reusable_own_objects": [
+      "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean: HodgeTheater/HodgeTheaterLink/ThreeTheaterSystem",
+      "LeanFormal/IUT/IUTI/HodgeTheater/PrimeStripCore.lean: DPrimeStrip/DhPrimeStrip/DhPrimeStripEquiv",
+      "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean: SourceLogShellDatum/logShell/unitLayer",
+      "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellCompactCarrier.lean: carrier/logShell",
+      "LeanFormal/IUT/IUTIII/Theorem311/SourceProcessionCapsuleData.lean: LogShellFamily/TensorPacket",
+      "tmp/sheaf/xif/paper/Mzk1LiteralIQCarrierActual/A483b/Mzk1LiteralIQHullFiniteness: literalHull/litHaar/hull finite",
+      "S3137ThetaHullVolumeScalingActual: thetaPilotHullLogVolumeReal actual C3 Haar",
+      "LogThetaLatticeActual/S3137LogThetaLattice*: lattice from OriginalInput interface"
+    ],
+    "a503_shell_interception": "New shells intercepted: unified-object-skeleton identity wrapper, PaperOrderPiNormalization:=True, TestNs Foo:=True, statement Prop-identity layer. Non-shell real/partial objects: ThetaPilotObject/O2ThetaObject/HullDetObject/A503HeightRegion/ThetaPilotIndependentReadout/A499QPilot/Padic-Hcomp-PrimeStrip adapters.",
+    "a507_mathlib436_gap_impact": "Mathlib 4.36.0-rc2 new math (logSeries, Padic Measure/Amice, FiniteAdeleRing, AdicValuation completion/ramification, ValuativeRel completion) does NOT change any named gap status: no new hcomp comparisons, independent theta-pilot readout, hull_bound/containment/(P), or PNT/Chebyshev. See coord/MATHLIB-4.36-GAP-IMPACT.md.",
+    "a508_3_12_critical_path": [
+      "named-gap:independent-theta-pilot-readout",
+      "named-gap:literal-hull-finiteness",
+      "named-gap:takkun-containment",
+      "gate:objects-not-constructed"
+    ],
+    "a508_abc_chain_gaps": [
+      "named-gap:hcomp-iut4-comparisons",
+      "named-gap:request-P-received-hull",
+      "named-gap:takkun-hull-bound",
+      "abcbridge:Cor312EpsilonArithmeticComparison.twoNamedGaps"
+    ],
+    "a508_neither": [
+      "named-gap:contract-provenance",
+      "named-gap:external-lana-reference",
+      "vacuity:qTheta-chain",
+      "shell:*",
+      "interface:hdddecomp-fourtriangle"
+    ],
+    "a508_verdict": "Paper route: 3.12 = Thm3.11 (dsc+APT+IPL) + Thm3.11.5 (hull+det + SHE + IPL) + q/Theta comparison; hcomp/request-P/takkun-hull-bound/PNT are ABC/Stage5 only; independent theta readout + literal hull finiteness are 3.12 objects; contract-provenance is our artifact (neither)."
+  },
+  "blocked": [
+    {
+      "id": "routes:third_point",
+      "reason": "SELF-REFUTED: thirdPointClaim_false counterexample S={0,1,3}, beta=4",
+      "note": " [id fixed from routes:routes:third_point]"
+    },
+    {
+      "id": "routes:tauceti_canonical",
+      "reason": "OBSTRUCTION: canonical TauCeti step controls S/CV but not beta; recorded obstruction",
+      "note": " [id fixed from routes:routes:tauceti_canonical]"
+    },
+    {
+      "id": "routes:old_xif_24",
+      "reason": "CHAIN-BROKEN/lesson: degenerate interface target (old xif attempt)",
+      "note": " [id fixed from routes:routes:old_xif_24]"
+    },
+    {
+      "id": "N1-beta-base-named",
+      "reason": "SELF-REFUTED: original BetaAvoidingBelyiBaseInput false at beta=inf; corrected finite-beta version proved instead"
+    },
+    {
+      "id": "iutiv-abc:G3.route.pointwiseReduced",
+      "reason": "SELF-REFUTED: not_ABCFrontierPointwiseReduced proves premise empty; repaired route is pointwiseWeakened"
+    },
+    {
+      "id": "routes:fold",
+      "reason": "ALREADY PROVED (detour complete): betaAvoiding_all proved via fold; do not re-attack",
+      "note": " [id fixed from routes:routes:fold]"
+    },
+    {
+      "id": "routes:abcfrontier",
+      "reason": "CHAIN-BROKEN as a shortcut: ABCFrontier is equivalent strength to ABC (abcFrontier_iff_abcConjecture), not a cheap route",
+      "note": " [id fixed from routes:routes:abcfrontier]"
+    },
+    {
+      "id": "foundation:C.stepProviderPrime",
+      "reason": "PRAGMATIC-DEAD-END: f4b numMaxP strict count blocked; Classical.choose/finitePart route triggers watchdog no-diagnostic failure; direct degree-bound route only gives maxDegP non-increase; new P1 counting theory needed (no existing assets). Approved by Lead A457.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "keep F4NumMaxStrictInput named (C stays CONDITIONAL); switch to Dbridge-rr / e-deep:E3.twoSided"
+    },
+    {
+      "id": "foundation:D.rrBridge",
+      "reason": "PRAGMATIC-DEAD-END: scheme-side maps sectionMap Gamma(C,U)->F and placePoint P->C have no existing assets in repo/ported/Mathlib; requires new scheme<->function-field bridge theory. RR->datum and bridge builder already green. Approved by Lead A458.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "keep scheme bridge named (D stays PARTIAL); switch to e-deep:E3.twoSided or DEF nodes"
+    },
+    {
+      "id": "e-deep:E3.twoSided",
+      "reason": "PRAGMATIC-DEAD-END: explicit lower bound for (Ind3) iterate and both-sided transfer to base = deep Ob9 input; no existing lower-bound assets in repo/ported; needs new IUT IV lower bound theory. Approved Lead A459.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "switch to foundation:D.bridgeInterface or T0 DEF nodes"
+    },
+    {
+      "id": "foundation:D.bridgeInterface",
+      "reason": "PRAGMATIC-DEAD-END: FibreBridgeAbstract construction depends on same scheme side maps (sectionMap/placePoint) and scheme<->function-field bridge; no assets. Interface + zeroSet_eq already green. Approved Lead A459.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "switch to T0 DEF or DAG-NEXT DEF/interface nodes"
+    },
+    {
+      "id": "legacy:OLEAN_MISSING-SourcePsi-chain",
+      "reason": "PRAGMATIC-DEAD-END: 8 of 11 OLEAN_MISSING are n8 old-layout orphans (unmapped) whose deps live only in tmp/n8-20261018 root; would require porting ~9 legacy modules + compiling ~50-file legacy chain, off target-chain. Approved Lead A460.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "skip legacy chain; spend effort on DAG nodes; note some red index entries (ABCGap2FiniteC3Supply shadowing fixed, SourceDefinition31DualContractAlignment/SourceK1K2CardReduction) are actually fresh -> stale index, update index"
+    },
+    {
+      "id": "iutiv-abc:IQHull",
+      "reason": "PRAGMATIC-DEAD-END: two watchdog compile failures; clamped ENNReal log-volume vs LocalFieldProductHull real normalizedLogVolume/measure/instance bridging repeatedly mismatched; would need rewriting logVolume/measure adapter layer. Approved Lead A461.",
+      "category": "PRAGMATIC-DEAD-END",
+      "alternative": "switch to G2/G3/E5 route nodes; keep IQHull parked for later reopen"
+    },
+    {
+      "id": "legacy-sourcepsi-olean-chain",
+      "reason": "n8 old-layout orphan tree (SourcePsiResidueRingFinite/…/UniformizerAbsorption/ReductionSpecialFiber/ReductionModelComparison/AdicCompletionFractionField) absent from current root; porting costs ~9 modules + ~50-file legacy compile and is not on target-chain path. PARKED per Lead A460.",
+      "kind": "PRAGMATIC-DEAD-END",
+      "recorded_by": "shehdd",
+      "at": "2026-11-10T17:00:31.853Z"
+    },
+    {
+      "id": "legacy-tmp-red-rows",
+      "reason": "11 repo-route-index EXIT1 rows all point to absent tmp/*.lean sources (stale index) → marked STALE_NO_SOURCE in index; no proof work possible.",
+      "kind": "PRAGMATIC-DEAD-END",
+      "recorded_by": "shehdd",
+      "at": "2026-11-10T17:00:31.853Z"
+    },
+    {
+      "id": "mainline:abc-frontier-gap-reduced",
+      "reason": "SELF-REFUTED: not_ABCFrontierGapReduced (ABCFrontierHeightWeightRefutation.lean:75) proves the F4a conjunct fails on the calibration carrier; route premise uninhabited",
+      "category": "SELF-REFUTED",
+      "alternative": "use gapReductionInputsV2? also refuted (not_ABCFrontierGapReducedV2:80); switch to additive re-freeze / T2 gap statement route"
+    },
+    {
+      "id": "mainline:abc-frontier-gap-reduced-v2",
+      "reason": "SELF-REFUTED: not_ABCFrontierGapReducedV2 (ABCFrontierHeightWeightRefutation.lean:80) refutes the V2 frontier premise",
+      "category": "SELF-REFUTED",
+      "alternative": "keep as documentation only; no route"
+    },
+    {
+      "id": "mainline:abc-frontier-pointwise-reduced",
+      "reason": "SELF-REFUTED premise: not_ABCFrontierPointwiseReduced (ABCFrontierSingletonReduction.lean:156) proves pointwise premise empty; implication valid but uninhabited",
+      "category": "SELF-REFUTED",
+      "alternative": "use pointwiseWeakened repaired route"
+    },
+    {
+      "id": "redfix:S3128Stage1PaperSGapLeastActual",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "red file depends on qVFamTensorBlock whose defining module is not in the S909 import chain; the only files using it (BadPlaceHalfRootSupplyActual) are marked INVALID AS PAPER OBJECT; fixing requires redefining a model object (fake) — parked by stage4",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "iutiv-abc:G3.route.gapReduced",
+      "reason": "REFUTED: ABCFrontierHeightWeightRefutation.not_ABCFrontierGapReduced proves the gap-reduced frontier empty"
+    },
+    {
+      "id": "iutiv-abc:G3.route.gapReducedV2",
+      "reason": "REFUTED: not_ABCFrontierGapReducedV2 (ABCFrontierHeightWeightRefutation)"
+    },
+    {
+      "id": "iutiv-abc:G3.route.pointwiseWeakened",
+      "reason": "REFUTED: not_ABCFrontierPointwiseWeakened (ABCFrontierHeightWeightRefutation)"
+    },
+    {
+      "id": "iutiv-abc:G3.single",
+      "reason": "CHAIN-BROKEN: its reduced frontier clauses are refuted (not_ABCFrontierGapReducedV2); implications valid but premises empty"
+    },
+    {
+      "id": "iutiv-abc:G3.red",
+      "reason": "CHAIN-BROKEN: ABCFrontierReductions clauses refuted via not_ABCFrontierGapReduced/PointwiseWeakened"
+    },
+    {
+      "id": "redfix:S3131R2ReductionActual",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "upstream refactor changed qVFamNormalizedGenerator type (CommonPrimeCompletion) vs Units.mk0 expected adicCompletion/NormalizedCompletion; hval rfl and dependent rewrite both break; fixing needs owner of QVFamNormalizedGeneratorSupplyActual semantics",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "redfix:S3131R2ReductionV2Actual",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "qVFamNormalizedGenerator imports unresolved/renamed after upstream refactor and depends on S3131Nu_qVFamNormalizedGenerator_eq_exponent from the parked R2 file; same semantic gap",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "n8-legacy-tmp-pipeline",
+      "reason": "tmp/n8-20261018 (2258 lean,0 results) + tmp/n8-20261020 (113) + tmp/sheaf/n8 (878 lean,23 EXIT0/2 EXIT1/853 no-result) are archived old pipeline (no changes in last hour); Group1Statement.lean duplicates LeanFormal decls; fixing has no target-path value. Keep archived read-only (coord/N8-LEGACY-ARCHIVE.md).",
+      "kind": "PRAGMATIC-DEAD-END",
+      "recorded_by": "shehdd",
+      "at": "2026-11-10T17:39:31.392Z"
+    },
+    {
+      "id": "legacy-dag-fragment",
+      "reason": "coord/target-chain.legacy-dag.json (89 nodes/164 edges: PROVED 18, CONDITIONAL 18, GAP 15, NAMED 38) is historical; dag_next excludes legacy-dag: prefix; keep frozen, no new nodes.",
+      "kind": "PRAGMATIC-DEAD-END",
+      "recorded_by": "shehdd",
+      "at": "2026-11-10T17:39:31.392Z"
+    },
+    {
+      "id": "sorries:n8-closure:C1InfiniteUnitQuotientAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: no production surjectivity theorem for the archimedean completion-degree monoid hom; proving it needs the Completion=ℝ/ℂ case analysis not exposed by native localFieldAt instances (file doc). n8 C1 route superseded by xif paper-layer conditional assets.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C1QuotientConsumerProbe",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: c1OldStripMonIdentification (old prime-strip Mon ≃* PlaceUnitMonoid) has no production donor in OriginalInput; quotient-by-kernel data actual but full-strip identification blocked.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C3CompleteSourceReduction",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: three named C3 sub-obligations (C3SourceObligation, NativeTensorLandingObligation, NativeKummerActionObligation) lack production inhabitants: no actual tensor landing donor tied to q, no Kummer action over the native strip.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C3GaloisUnitFixedAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: fixedness needs base-AlgEquiv transport between NormalizedCompletion and Completion for the Galois action; no production transport declaration exists (file doc).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C3SourceGaloisActionAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: same base transport NormalizedCompletion↔Completion gap for the Galois unit action (duplicate obligation of C3GaloisUnitFixedAttempt).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C3TensorConstruction",
+      "category": "OBSTRUCTION",
+      "reason": "T1 (A480 triage) but same exact no-go as NativeC3: the only source insertion finitePadicTensorTprod is injective and D-dependent, cannot identify all q(D) with one tensor unit; choosing tensorPlaces over F gives a different frozen block.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C5Native",
+      "category": "OBSTRUCTION",
+      "reason": "PARTIALLY FIXED A480: nativePermittedActual_nonempty proved via the actual zero signed label (real Lean proof); remaining nativeAPTMissing_nonempty needs actual SourceOneColumnArithmeticHolomorphicStructure + SourceTheorem311MultiradialAlgorithm + SourceAlgorithmicParallelTransport (no inhabitants).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C9P6Closure",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: p6SourceClosure_nonempty needs the actual over-F tensor layer + P6 source closure donor; no production donor. Route superseded by xif paper-layer.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:C9PaperClosure",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: paperC9Comparison and paperC9Output_nonempty are the open C9 comparison/content obligations; P6 route obligations are themselves named gaps (circular).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:FiniteObservationHull",
+      "category": "ALREADY-PROVED-DETOUR",
+      "reason": "FIXED A480: TheoremA_hull_obligation proved: both sides are ⊤ since 1 ∈ O and U spans ⊤ (real Lean proof). Module now sorry-free.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:IPLFamilyData",
+      "category": "ALREADY-PROVED-DETOUR",
+      "reason": "FIXED A480: iplFamilyData_nonempty proved by the identity F-prime-strip equivalence refl at column (0,0) (real Lean proof). Module now sorry-free.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:N8RouteClosure",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: p6HullSetup_nonempty and p6ComparisonObligation have no production P6/C9 donors; n8 route chain blocked upstream.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:NativeC3",
+      "category": "OBSTRUCTION",
+      "reason": "T1 (A480 triage, 18 external consumers) but blocked: NativeTensorLandingDonor requires one tensorLanding uniform over ALL NativeQDonor D with tensorLanding_q for each; production has no source comparison F-completion → Fmod-completion tensor block with uniform q landing. A constant/empty-tensor construction would be a forged instance (rejected by A480 quality rules).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6Bridge",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: p6BridgeDonorsExist needs the actual P6 bridge donor package; no production donor in the frozen tree.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6ChainA",
+      "category": "ALREADY-PROVED-DETOUR",
+      "reason": "FIXED A480 (Tier1): globalLqDonor_nonempty proved by the canonical global readout (readout := fun _ => C9QPilotRegion.qPilotSignedLog X; readout_eq_local := rfl); module now sorry-free.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6ChainB",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: missing_sl_to_complete_alpha requires the complete-α transport not available from P6 chain data.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6Comparison",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: sourceAllowedOutput_nonempty needs actual allowed-output data; no production donor (comparison layer).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6EllOutBridgeAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: missing_p6EllOutBridge (ellOut membership bridge) has no production donor; the equivalence layer above it is proved.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6IndInvarianceAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: p6IndInvarianceData construction gap: no production Ind-data over the P6 chain.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6L",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: p6ReadoutExists_obligation requires an actual P6L readout donor; none in tree.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6RelaxedGlobalReadout",
+      "category": "ALREADY-PROVED-DETOUR",
+      "reason": "FIXED A480: missing_archReadout proved structurally from the actual archimedean adm (archAdm_closedBall from properness); weights/dimension/value are free structure fields. Module sorry-free.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6SHEInd",
+      "category": "ALREADY-PROVED-DETOUR",
+      "reason": "FIXED A480: p6IndData_nonempty proved with the admissible trivial action (ind1=ind2=1, ind3=id; invariance/upper-bound by simp/subset_rfl); structure leaves actions unconstrained beyond these laws. Module sorry-free.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:P6SourceVolumeCarrierMapAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: sourceVolumeCarrierAlignment needs an actual source Haar-volume carrier model; no production alignment (same family as UnitSphereReadoutDonorActual).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:PaperNormalizedVolume",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION/NOT-DERIVABLE: PaperNormalizedVolumeData has globalVolume and localVolume.normalizedVolume as independent fields; the C6 global normalization identity needs the production C6 volume construction, which is absent (cannot be derived from the structure fields).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:PaperValuesBoundedReduction",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: P6LReadoutBound obligation has no production donor (values-bounded bridge blocked upstream at P6L/readout).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:SourceAlgorithmCompatibility",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: needs actual C2/C3/C4 data + common C4/algorithm bridge + Remark 3.10.2 composite; no production instance.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:SourceAllowedOutputActualAttempt",
+      "category": "OBSTRUCTION",
+      "reason": "T1 (A480 triage) but the package SourceAllowedActualData requires P6BridgeDonors (itself blocked, see sorries:n8-closure:P6Bridge) plus C2/C3/C4/T11/C6 actual data; conditional reduction sourceAllowedOutput_nonempty_of_actualData is already proved.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:SourcePilotApproximation",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: C9 source statement (actual values bounded + q-approximation for same C4/C5/C6/C7/C8 construction) has no production proof; requires C8 signed hull log-volume donor.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:SourcePilotApproximationIQ",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: same C9 statement in IQ form; requires actual IQ hull/degree donors over the same construction.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:TargetSignature",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: n8_targetOutput_nonempty needs actual IPL/SHE/APT algorithm compatibility, constructive multiradial output, arithmetic-degree/Ob3-3 comparison; no non-trivial exact production types exist.",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "sorries:n8-closure:UnitSphereReadoutDonorActual",
+      "category": "OBSTRUCTION",
+      "reason": "OBSTRUCTION: native localFieldAt exposes no archimedean branch instance; the additive-Haar unit-sphere mass-zero fact is not provable from the given abstract instances (and a mass_pos donor cannot exist there; conditional no-go already proved).",
+      "recorded_by": "hull",
+      "at": "2026-11-11T04:05:00+08:00"
+    },
+    {
+      "id": "xif-sorry:S1794FiberFunctorProductActual",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "xif S1794 五字段残差 sorries: PreservesPullbacksField/PreservesFiniteCoproductsField/PreservesEpisField/PreservesQuotientsByFiniteGroupsField/ReflectsIsosField 均为 fibre functor 的深 category-theory/descent 结论（createsColimitFullSubcategoryInclusion、faithful flatness descent、finite group quotient orbit）；现有 Mathlib/仓库无对应 API，A480 审计后登记为 dead-end（不隐藏、不删历史）；若后续有 fibre-functor 资产可重开",
+      "note": "A480: audit confirmed 5 real code sorries; task A blocked. Keep CONDITIONAL, no fake proof. | A480 closing audit 2026-11-11 04:06: still GAP in formal olean DAG (status verified); IUTExternal32GateV36Actual & S2748 PROVED after rebuild (not blocked). No unblock requested."
+    },
+    {
+      "id": "xif-sorry:S2432PrestackCloseActual",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "xif S2432 test_slicePushNaturality 为 Grothendieck 拓扑 over-category slicePush 的 pseudofunctor coherence naturality（依赖 S2103/S2093/S2029 的 pseudofunctorOver 具体 coherent 结构），Mathlib 无 slicePush naturality 现成定理；A480 审计后登记 dead-end",
+      "note": "A480: 1 real code sorry; keep CONDITIONAL. | A480 closing audit 2026-11-11 04:06: still GAP in formal olean DAG (status verified); IUTExternal32GateV36Actual & S2748 PROVED after rebuild (not blocked). No unblock requested."
+    },
+    {
+      "id": "xif-sorry:_S2519HIdProbe",
+      "category": "PRAGMATIC-DEAD-END",
+      "reason": "xif _S2519HIdProbe: goal `S2517Map (S1641CoverMapId C) = 𝟙 (S2517Obj C)` needs lift-id coherence for S2517Witness.lift / S1742HomOfStrongTrans on the identity cover map; S1742 provides only roundtrip (S1742HomOfStrongTrans_strongTransOfHom) and congr, S2517 provides no S2517MapHom_id/lift_id lemma; S2514 identity assets cover finite-etale identity cover, not this lift law; proving requires pseudofunctor coherence not present in repo. A480: registered as pragmatic dead-end, keep probe history.",
+      "note": "A480 closing: IUTExternal32 false-positive prose fixed; _S2519 real probe sorry remains blocked with precise reason. | A480 closing audit 2026-11-11 04:06: still GAP in formal olean DAG (status verified); IUTExternal32GateV36Actual & S2748 PROVED after rebuild (not blocked). No unblock requested."
+    },
+    {
+      "id": "olean:tmp/sheaf/xif/paper/S2432PrestackCloseActual",
+      "reason": "SORRY-BLOCKED: test_slicePushNaturality needs SlicePushNaturality / S2437PullHomCoherence — compatibility of GrothendieckTopology.overMapPullbackComp with Over.iteratedSliceEquivOverMapIso, absent in Mathlib v4.32.2; explicit missing comparison recorded in S2436SlicePushProofActual/S2437PullHomCoherenceActual (no rfl/simp reduction, no repo inhabitant).",
+      "note": "module has 1 real sorry; not edited; owner may reopen if the compatibility lemma is added."
+    },
+    {
+      "id": "xif:S1794.fiberFunctorFiveFields",
+      "reason": "BLOCKED (OBSTRUCTION): five PreGaloisCategory.FiberFunctor fields for CommAlgCat.FiniteEtale.fiber K Omega (preservesPullbacks / preservesFiniteCoproducts / preservesEpis / preservesQuotientsByFiniteGroups / reflectsIsos) are exact residuals; categorical preservation statements not derivable from the finite-etale product decomposition. Requires first constructing GaloisCategory (FiniteEtale K)^op + FiberFunctor instance, absent in Mathlib 4.32.2 for general base field K.",
+      "note": "File: tmp/sheaf/xif/paper/S1794FiberFunctorProductActual.lean (5 sorrys at the five named Props). Search evidence (A477/A480): LeanFormal FiberFunctor hits=38 (SourceAnabelioidBridge, FiniteEtaleCoverFiber.geometricFiberFunctor, SourceEtaleStackInstanceSupplyReduction, SourceDefinition31OrbicurveInstance) none for CommAlgCat.FiniteEtale.fiber K Omega; Mathlib grep: only separably-closed base case (FiniteEtale.fiberIsoFiniteSpec / equivOfIsSepClosed) and action-category fundamental-group theory, no FiberFunctor instance for fiber K Omega; LeanFormal/IUT/IUTII/Frobenioid/Example36FiberAutomorphism.lean:367-382 documents the same three missing instances as NOT constructed. Next: build the Galois-category/fiber-functor instances (S1745 tensor/Pi cocones, S1770 fixed points, Mathlib tensor universal property), then discharge fields by projection. | A480 unblock attempt (abc): checked Mathlib 4.32.2 has NO GaloisCategory/FiberFunctor instance for (CommAlgCat.FiniteEtale K)^op over general K (Mathlib/RingTheory/Etale: 0 GaloisCategory hits; Mathlib/CategoryTheory/Galois only abstract classes + action-category fundamental-group theory; only separably-closed base case FiniteEtale.equivOfIsSepClosed exists). Building the instance requires Lenstra G1-G6: pullback preservation = tensor-product universal property + full-subcategory colimit identification (S1745 gives tensorCocone point/isColimit and Pi cocone pieces, not the packaged PreservesLimitsOfShape proofs); finite coproducts = Pi-cone comparison (S1745 finiteEtale_piFan_pt gives point computation only); epis = monomorphism/injection + separably-closed extension (needs formal base-change exactness); quotients by finite groups = fixed points (S1770 has fixedSubalgebra/invariants objects, not PreservesColimitsOfShape); reflects isos = faithful flatness descent. All five remain exact residuals; construction is a multi-session major task, not a single-file fix. No fake instance/axiom added. | A480 G1 attempt: located the needed Mathlib tensor API Algebra.TensorProduct.liftEquiv (usages: Mathlib/Algebra/Algebra/Ring/Constructions.lean:220-222; also CommAlgCat/Monoidal.lean:47) for the universal property Hom_K(B⊗_A C,Ω) ≃ Hom_K(B,Ω) ×_{Hom_K(A,Ω)} Hom_K(C,Ω); remaining G1 inputs to pin down are (i) createsColimitFullSubcategoryInclusion (Mathlib/CategoryTheory/Limits/...) to identify pushout cocone in the full subcategory, (ii) packaging the bibjection as PreservesLimitsOfShape WalkingCospan for CommAlgCat.FiniteEtale.fiber. No single-file blind proof attempted to avoid unverified red output; next session should read liftEquiv signature + the creates-colimit API then write G1 file."
+    },
+    {
+      "id": "lana:Iut.Wall.NumericalWall",
+      "reason": "NAMED GAP (not obstructed): the explicit-route final numerical core Iut.Wall.NumericalWall D is a named hypothesis/gap, not proved and not claimed. Formalized equivalences only relocate it: Checks.lean numericalWall_iff gives NumericalWall D <-> Corollary312Variant (concreteVariantData D); A490 files give NumericalWall D <-> qPilot.lhs <= rhsData.rhs and Corollary312Variant <-> qPilot.lhs <= rhsData.rhs (via hullActual_exists_adelic_inHullOfImage_logVol + logVol_le_rhs).",
+      "note": "Files: tmp/sheaf/xif/paper/A490NumericalWallRhsReductionActual.lean (numericalWall_iff_qPilot_le_rhs, corollary312Variant_iff_qPilot_le_rhs), A490WallNumericalAlignmentActual.lean (numericalWall_of_wall), A490WallThetaShiftAlignmentActual.lean (wall_thetaShift_logVol). Reading alignment: NumericalWall is stated only via qPilot.lhs/rhsData.rhs fields; no proof of NumericalWall or of the inequality is claimed. Next: prove qPilot.lhs <= rhsData.rhs on the archScale region (or refute), or use it as the named gap in the wall squad assembly."
+    },
+    {
+      "id": "abcbridge:Cor312EpsilonArithmeticComparison.twoNamedGaps",
+      "reason": "NAMED CONTENT GAPS (the only real content gaps of the Cor 3.12 -> ABC bridge): (Gap 1) height_le_normalizedRegionVolume and (Gap 2) regionVolume_le_normalizedWeight of Cor312EpsilonArithmeticComparison (LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean:224-251). These are exactly the two IUT IV comparison links; the bridge theorem cor312ToABCBridge_heightBound consumes only these two fields.",
+      "note": "Per A497: do NOT use the qTheta readout chain as evidence. Mzk1QPilotR4Stage5AlignActual defines thetaPilotLogImage := qPilotLogImage / (2*l), so q < theta / target_le_theta are arithmetic identities; step3115_comparison_proved and Cor312Conclusion built on it are vacuous (see entry xif:qThetaReadoutCircular). The genuine interface remains Cor312ToABCBridgeInterface, whose inhabitation is equivalent to ABCConjecture; the only named unproved fields are Gap 1 and Gap 2 above. Next: instantiate logShellPoint from the literal carrier/hull interface (LiteralCarrierAxiomsV3) and attempt Gap 1/Gap 2, or keep them as the named gap for the endgame.",
+      "route_necessity": "ABC"
+    },
+    {
+      "id": "xif:qThetaReadoutCircular",
+      "reason": "SELF-REFUTED/CIRCULAR (A497): Mzk1QPilotR4Stage5AlignActual defines thetaPilotLogImage T b := qPilotLogImage T b / (2 * l.value) (theta readout defined as q divided by 2l). Hence qThetaReadout_ordered, qThetaStepXIContract.targetSigned := thetaSigned, and target_le_theta := rfl are arithmetic identities, not paper content. step3115_comparison_proved and the Cor312Conclusion derived through it are vacuous.",
+      "note": "Do not use this chain as evidence for Cor 3.12. The genuine content gap is abcbridge:Cor312EpsilonArithmeticComparison.twoNamedGaps (two IUT IV comparisons). Independent theta-pilot readout must be redefined from literal hull/thetaPilot region log-volume (A497 item 2), not q/(2l). Files remain on disk for history; not deleted."
+    },
+    {
+      "id": "vacuity:qtheta-thetaPilotLogImage",
+      "category": "CHAIN-BROKEN",
+      "reason": "A497 vacuity: Mzk1QPilotR4Stage5AlignActual.thetaPilotLogImage := qPilotLogImage/(2ℓ) — Θ-pilot 读法定义为 q/(2ℓ)，故 qPilotLogImage_lt_thetaPilotLogImage / qThetaReadout_ordered 只是负数除法算术恒等式（q<0，2ℓ>1），不编码独立 Θ-pilot。",
+      "note": "Do not use as 3.12 evidence; keep history.",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "vacuity:qthetaStepXIContract",
+      "category": "CHAIN-BROKEN",
+      "reason": "A497: qThetaStepXIContract.targetSigned := thetaSigned（两者都是 q/(2ℓ) 派生），target_le_theta := le_rfl，q_le_target := le_of_lt(< vacuous ordering>) → 该 contract 的 Cor312Conclusion 是空转。",
+      "note": "StepXIContract 本身也不阻止 target:=theta；结构过弱，见 VACUITY-AUDIT-A497。",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "vacuity:step3115_comparison_proved",
+      "category": "CHAIN-BROKEN",
+      "reason": "A497: Mzk1Step3115ComparisonActual.step3115_comparison_proved 由 qThetaHDD（hullReadout=qPilotLogImage, detReadout=thetaPilotLogImage=q/(2ℓ)）经 qThetaReadout_ordered 得出，是算术恒等式，非 paper Step (xi-f) hull≤det 内容。",
+      "note": "不得作 3.12 证据；hull lane 的真实比较在 HullDetStep3115（packetLogVolume vs -log|q|，独立读法）但仍是抽象 HullDetState，不是 paper 对象。",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "vacuity:qThetaFourTriangleSynthesis",
+      "category": "CHAIN-BROKEN",
+      "reason": "A497: qThetaFourTriangleSynthesis 的 step3115_comparison := qThetaReadout_ordered（空转）；hull_eq/theta_eq 为 rfl。基于其的 cor312Conclusion_qThetaSynthesis/cor312Conclusion_qThetaHullDet 不能计入 3.12 进度。",
+      "note": "R4LiteralAssembly/Endgame 本身不空转，但若消费该 S，Cor312Conclusion 分量空转。",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "named-gap:hcomp-iut4-comparisons",
+      "category": "OBSTRUCTION",
+      "reason": "A508: hcomp 两条 IUT IV §2 比较（height_le_normalizedRegionVolume / regionVolume_le_normalizedWeight）是 ABC/height 阶段（Formalization Stage 5, L124-125）的唯一真内容；不是 3.12 前提（IUT III Cor 3.12 proof L10354-11210 不引用 IUT IV）。route=ABC；不再列为 3.12 链内容。",
+      "note": "named gap; track in coord/NAMED-GAPS-A497.md.",
+      "route_necessity": "ABC"
+    },
+    {
+      "id": "named-gap:independent-theta-pilot-readout",
+      "category": "OBSTRUCTION",
+      "reason": "A508: 独立 Θ-pilot 读法（-|log Θ| 的定义对象：possible images union 的 holomorphic hull 的 procession-normalized log-volume）是 3.12 路线需要的 OBJECT（IUT III L10324-10338；Formalization 4th △ L549-580）；不是“额外 hull comparison 假设”（comparison 即 Cor 3.12 本身，IUT III Step (xi-f) L10888-10898 形式推出）。",
+      "note": "named gap; replacement for vacuous thetaPilotLogImage.",
+      "route_necessity": "3.12"
+    },
+    {
+      "id": "vacuity:qTheta-chain",
+      "category": "CHAIN-BROKEN",
+      "reason": "A497/A498 merged verdict: 整个 qTheta 链 VOID — thetaPilotLogImage:=qPilotLogImage/(2ℓ); qThetaReadout_ordered/qThetaStepXIContract/qThetaFourTriangleSynthesis/step3115_comparison_proved/qTheta_r4_literal_assembly( Cor312 分量)/QThetaAlign qTheta 对齐均是空转；Cor312Conclusion 单独不可作 3.12 证据（StepXIContract 允许 target:=theta, target_le_theta:=rfl）；唯一 named 真内容 = hcomp 两条 IUT IV §2 比较。不得计 3.12 进度。",
+      "note": "see coord/VACUITY-AUDIT-A497.md, coord/MAIN-CHAIN-AUDIT-A496.md, coord/NAMED-GAPS-A497.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "gate:objects-not-constructed",
+      "category": "CHAIN-BROKEN",
+      "reason": "A499 gate: 对象 1–12 均无对象级 `_constructed` 定理（扫描无 *_constructed 对象构造；cor312_of_constructed_stepXI 只是 contract 消费）。在对应对象 `_constructed` 出现前，其上层 wiring（qTheta/step3115/R4/endgame/QThetaAlign 等）不得计入 3.12 进度。详见 coord/OBJECT-STATUS-A499.md。",
+      "note": "object-first; wiring 后行",
+      "route_necessity": "3.12"
+    },
+    {
+      "id": "named-gap:takkun-containment",
+      "category": "OBSTRUCTION",
+      "reason": "A508: Takkun PilotVolumeData.containment 是 Thm 3.11(iii)↔Cor 3.12 的桥（若走 Takkun 路线）；属 3.12 路线对象/桥接，不是 ABC 阶段。",
+      "note": "coord/TAKKUN-FAITHFULNESS.md",
+      "route_necessity": "3.12"
+    },
+    {
+      "id": "named-gap:request-P-received-hull",
+      "category": "OBSTRUCTION",
+      "reason": "A508: (P) = IUT IV Thm 1.10 Step(v) 接收侧体積評価（REQUEST 标题/第11/45行）；属 IUT IV 数值（Stage 5），不是 3.12 前提。",
+      "note": "coord/TAKKUN-FAITHFULNESS.md",
+      "route_necessity": "ABC"
+    },
+    {
+      "id": "named-gap:takkun-hull-bound",
+      "category": "OBSTRUCTION",
+      "reason": "A508: Takkun hull_bound 自述为 [IUT-IV] Prop 1.1–1.9 p 进体积计算（Takkun Thm311.lean L30/L123）；属 IUT IV/Stage 5，不是 paper 3.11.5 路线输入。",
+      "note": "coord/TAKKUN-FAITHFULNESS.md",
+      "route_necessity": "ABC"
+    },
+    {
+      "id": "shell:logtheta-lattice-prop",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: Mzk1PaperLogThetaLatticeStatementActual.LogThetaLattice (lattice : Prop) : Prop := lattice 空壳；无 lattice/Θ-link/log-link 对象；不得计对象或 3.12 进度。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "shell:thetalink-interface-equiv",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: Mzk1ThetaLinkInterfaceActual.ThetaLinkData = 互逆映射（S≃T），不是 Θ-link（无 Θ值/2ℓ根/Ind1-3/归一化）。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "shell:initialtheta-interface-data",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: Mzk1InitialThetaDataActual.InitialThetaData = family+distinguished 壳 + rfl 引理，不是 IUT I Def 3.1 initial Θ-data。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "shell:hodge-theater-core-shell",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: xif Mzk1HodgeTheaterCoreDataActual.HodgeTheaterCore = source/target/link 3 字段壳；真实 HodgeTheater 在 LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean。引用必须带路径，勿混名。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "interface:hdddecomp-fourtriangle",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: HDDDecomp 仅 hullReadout/detReadout 函数字段；FourTriangleSynthesis 的 step3115_comparison 为未证字段；属接线接口，不是 hull/det 对象。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "shell:ind1-unit-action-refl",
+      "category": "CHAIN-BROKEN",
+      "reason": "A502: Ind1ActionLawsActual.Ind1UnitAction := PolyIsoAction.refl（恒等作用）；实际 Ind1 作用仅为参数化 C.polyIso 接口，不是 Ind1 Aut(G_v) 构造。",
+      "note": "coord/OWN-SHELL-AUDIT-A502.md",
+      "route_necessity": "neither"
+    },
+    {
+      "id": "shell:unified-object-skeleton",
+      "category": "CHAIN-BROKEN",
+      "reason": "A503: Mzk1UnifiedObjectSkeletonActual.UnifiedMultiradialSkeleton — unifiedSkeletonOf 的 lat/logChain/shell/thetaChain/indet 全为参数，_constructed 定理均为 := rfl 投影；identity wrapper，不是新对象。",
+      "note": "coord/SHELL-INTERCEPT-A503.md"
+    },
+    {
+      "id": "shell:paperorderpi-true",
+      "category": "CHAIN-BROKEN",
+      "reason": "A503: S850LocalQParameterNormalizationActual.PaperOrderPiNormalization : Prop := True；True 空壳，规范化未定义。",
+      "note": "coord/SHELL-INTERCEPT-A503.md"
+    },
+    {
+      "id": "shell:testns-foo-true",
+      "category": "CHAIN-BROKEN",
+      "reason": "A503: TestNs.lean/TestNsAdapted.lean Foo (a:ℤ) : Prop := True 测试垃圾；不应在 xif/paper 主树当对象。",
+      "note": "coord/SHELL-INTERCEPT-A503.md"
+    },
+    {
+      "id": "shell:statement-prop-identity-layer",
+      "category": "CHAIN-BROKEN",
+      "reason": "A503: Mzk1EtThGapStatementActual(+Adapted/V2)、Mzk1AbsTopIII05PaperScopeStatementActual、Mzk1PaperLogThetaLatticeStatementActual 等 def X (p:Prop):Prop := p 陈述层空壳；不得作对象/进度证据。",
+      "note": "coord/SHELL-INTERCEPT-A503.md"
+    },
+    {
+      "id": "named-gap:literal-hull-finiteness",
+      "category": "OBSTRUCTION",
+      "route_necessity": "3.12",
+      "reason": "A508: Cor 3.12 断言 -|log Θ| ∈ R（IUT III L10351；compactness ⇒ finite L10408-10411）；literal hull log-volume 有限性是 3.12 陈述/证明前提。",
+      "note": "coord/ROUTE-NECESSITY-A508.md"
+    },
+    {
+      "id": "named-gap:contract-provenance",
+      "category": "OBSTRUCTION",
+      "route_necessity": "neither",
+      "reason": "A508: 我们 StepXIContract 的自有 artifact（Contract.lean:32-44 允许 targetSigned:=thetaSigned）；不是 paper 步骤；应重做/绕过 contract，不计 paper necessity。",
+      "note": "coord/ROUTE-NECESSITY-A508.md"
+    }
+  ]
+}

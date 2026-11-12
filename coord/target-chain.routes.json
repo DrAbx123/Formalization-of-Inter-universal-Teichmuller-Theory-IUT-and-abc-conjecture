@@ -1,0 +1,1721 @@
+{
+  "$schema_note": "Historical/alternative route fragment for coord/target-chain (Lead A438); each route node records what was tried, counterexamples/obstructions, what remains valid, and the lesson. Only verified files/declaration names written; statuses from prior audits.",
+  "generated_by": "abc/aibi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "fold",
+      "kind": "theorem",
+      "title": "Fold route for beta-avoiding rational Belyi base (SUCCEEDED)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean",
+        "tmp/sheaf/xif/paper/_Mzk1BetaFoldProbeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean": [
+          "CV01",
+          "BetaAvoidingAt",
+          "Interior",
+          "InteriorGood",
+          "FoldTriple",
+          "belyi_strictAntiOn_real",
+          "belyi_eval_rho",
+          "belyi_cv01",
+          "cv01_comp_affine"
+        ]
+      },
+      "note": "Successful route: Belyi polynomial fold over rational S with beta avoidance at finite beta; supplies B1 fold + B2 finite-beta corrected base (used by stepxi Rational24TargetBottomActual). Lesson: finite-beta restriction is essential (unrestricted base false at infinity)."
+    },
+    {
+      "id": "third_point",
+      "kind": "named_input",
+      "title": "Third-point route as literally stated (FALSIFIED)",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingThirdPointActual.lean",
+        "tmp/sheaf/xif/paper/_Mzk1BetaThirdPointProbeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingThirdPointActual.lean": [
+          "thirdPointClaim_false",
+          "belyiPolynomial_odd_scale_avoids",
+          "exists_card_image_lt_beta_of_third_point"
+        ]
+      },
+      "note": "Counterexample/obstruction: thirdPointClaim_false with S={0,1,3}, beta=4 (both orientations): the plan STEP 2 as stated is FALSE. Surviving useful facts: odd-scale avoidance lemmas and exists_card_image_lt_beta_of_third_point. Lesson: state the avoidance claim with explicit orientation/sign data; do not assume 'third point always works'."
+    },
+    {
+      "id": "tauceti_canonical",
+      "kind": "theorem",
+      "title": "TauCeti canonical Belyi step (PROVED but insufficient for beta control)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BelyiCanonicalActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1GChoiceAvoidCanonicalActual.lean",
+        "tmp/external/ported/tauceti_belyi_core/TauCeti/Algebra/Polynomial/Belyi.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BelyiCanonicalActual.lean": [
+          "belyi_eval_zero",
+          "belyi_eval_one",
+          "belyi_natDegree_pos",
+          "belyi_card_collapse",
+          "belyi_criticalValues_subset",
+          "belyi_exists_polynomial_eval"
+        ]
+      },
+      "note": "Canonical B_{m,n} consumer: evaluation at 0/1, nonconstancy, card collapse, critical values in {0,1}, Belyi existence for rational S. OBSTRUCTION: Belyification controls q(S) and CV but gives NO control of q(beta) at a prescribed beta; post-composition by maps keeping {0,1} in itself cannot move q(beta) out. Hence usable for S/CV side only, not as beta-avoiding step (this is what forced the finite-beta fold route). | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "abcfrontier",
+      "kind": "named_input",
+      "title": "ABCFrontier alternative route (conditional interface)",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierHeightWeightRefutation.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierPointwisePremiseReduction.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+          "FrontierHeightComparisonClause",
+          "FrontierRegionComparisonClause",
+          "ABCFrontier",
+          "bridgeInterface_of_frontier",
+          "abcConjecture_of_frontier",
+          "realLineFrontierPoint",
+          "realLineFrontier_heightComparison"
+        ]
+      },
+      "note": "Alternative route via the single Prop ABCFrontier -> ABCConjecture; height-weight refutation file records an obstruction for one naive height comparison clause; reductions/singleton/pointwise-premise files reduce the frontier premise. Lesson: keep ABCFrontier as ONE named Prop, never assume its clauses true."
+    },
+    {
+      "id": "old_xif_24",
+      "kind": "named_input",
+      "title": "Old xif 2.4 interface target (DEGENERATE; superseded)",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Lemma24AssemblyActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1Lemma24ProofActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1Lemma24StatementShapeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Lemma24AssemblyActual.lean": [
+          "Mzk1Lemma24Goal",
+          "Mzk1Lemma24Step",
+          "mzk1Lemma24_assembly"
+        ]
+      },
+      "note": "Obstruction/lesson: the old Mzk1Lemma24Goal (exists targetSet, exists unramifiedAt at the stage4 interface with unlinked mapPoints/ratFunc) is degenerate — witness mapPoints=id, targetSet=S, unramifiedAt=complement of targetSet satisfies it whenever beta notin S. Assembly was formally green but does NOT close paper Lemma 2.4; superseded by the restated C-point target (routes:restated_24)."
+    },
+    {
+      "id": "restated_24",
+      "kind": "theorem",
+      "title": "Restated C-point 2.4 route (CV law PROVED; base finite-beta; Full Qbar named)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/RestatedLemma24InterfaceActual.lean",
+        "tmp/sheaf/xif/paper/RestatedLemma24InductionActual.lean",
+        "tmp/sheaf/xif/paper/RestatedLemma24CVLawActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionStepProviderActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/RestatedLemma24InterfaceActual.lean": [
+          "specialSet",
+          "criticalValuesOverC",
+          "Mzk1Lemma24Target",
+          "CVInvariant",
+          "CVCompositionLawStatement",
+          "SpecialSetPreservationStatement"
+        ],
+        "tmp/sheaf/xif/paper/RestatedLemma24InductionActual.lean": [
+          "s3135_CVInvariant_comp",
+          "BetaAvoidingBelyiBaseInput",
+          "BetaAvoidingBelyiBaseInputFinite",
+          "s3135_betaAvoidingBelyiBase_false",
+          "RestatedStep",
+          "RestatedInductionAssemblyStatement"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean": [
+          "cvCompositionLawF_proved",
+          "stepTransport_of_goal_proved"
+        ]
+      },
+      "note": "Restated target with fixed specialSet {0,1,infinity}, C-point CV; CV composition law PROVED (cvCompositionLawF_proved via derivative_comp) and special-set preservation PROVED; spec repair: unrestricted BetaAvoidingBelyiBaseInput FALSE at beta=infinity (s3135_betaAvoidingBelyiBase_false), corrected finite-beta input. Full Qbar reduction remains NAMED (AlgebraicNestedInductionInput). | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "problemC_nested",
+      "kind": "theorem",
+      "title": "Problem C nested (maxDeg,numMax) induction engine",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionStepProviderActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseDischargedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean": [
+          "degQ",
+          "maxDeg",
+          "numMax",
+          "degQ_aeval_le",
+          "degQ_critValue_lt",
+          "degQ_moebius",
+          "maxDeg_stepSet_le",
+          "numMax_stepSet_lt",
+          "measure_stepSet_lt",
+          "induction_with_invariant",
+          "BaseCaseProvider",
+          "StepProvider",
+          "paperScopeLemma24Statement_of_providers"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean": [
+          "exists_rat_eq_of_degP_le_one",
+          "baseCaseProvider_proved"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionStepProviderActual.lean": [
+          "f0Map_comp",
+          "stepSetP",
+          "stepTransport_of_goal"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseDischargedActual.lean": [
+          "paperScopeLemma24Statement_of_stepProvider",
+          "algebraicNestedInductionInput_of_stepProvider"
+        ]
+      },
+      "note": "Real (D,N) measure engine with proved degree facts, step decrease, well-founded induction, UNCONDITIONAL base provider (baseCaseProvider_proved), and base-discharged assembly paperScopeLemma24Statement_of_stepProvider (new file). ONLY remaining named input: geometric StepProvider (normalised f0 construction + analytic avoidance; minpoly side + stepTransport_of_goal proved conditional). VERIFIED (shehdd): Mzk1NestedInductionBaseDischargedActual EXIT=0 in results log; probe EXIT0 pending. CITABLE PIN: Mzk1NestedInductionBaseDischargedActual 2801B sha 9759D2DE EXIT0 + probe EXIT0 (watchdog results log). | A475: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "problemE_absTopIII05",
+      "kind": "named_input",
+      "title": "Problem E AbsTopIII05 refined deep-input route",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean",
+        "tmp/sheaf/xif/paper/AbsTopIII01LogShellActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+          "Prop58iLocalFieldReconstruction",
+          "Prop58iiLogShellReconstruction",
+          "Cor55LogFrobeniusCompatibility",
+          "OrientedGraphAnabelianData",
+          "S3171RouteSlot"
+        ]
+      },
+      "note": "D3/D4 anchors discharged from tree (SourceLogShellAbsTopIIIBridge, chainTranslation_graphAut); Prop 5.8(i)(ii) reconstruction and Cor 5.5 global/panalocal log-Frobenius remain class-B named. No AbsTopIII/anabelian formalization in Mathlib/TauCeti (grep 0) — do not attempt direct port without paper-object layer."
+    },
+    {
+      "id": "hull_h5_ob9",
+      "kind": "interface",
+      "title": "Problem E H5 O^x-/+Ob9 conditional hull route",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean",
+        "tmp/sheaf/xif/paper/Hull08Ob9LogLinkActual.lean",
+        "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean": [
+          "hull09_scalingUnits_subset_hull",
+          "hull09_hull_eq_closure",
+          "hull09DetTensorBookkeeping_exponent",
+          "hull09_ray_mem_iff"
+        ],
+        "tmp/sheaf/xif/paper/Hull08Ob9LogLinkActual.lean": [
+          "HullOb9Inputs",
+          "hull_ob9_interface",
+          "hull_ob9_repClass_congr"
+        ],
+        "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean": [
+          "HullH7Ob9TwoSidedInputs",
+          "hull13_twoSided_bound",
+          "hull13_twoSided_upper_projection"
+        ]
+      },
+      "note": "H5 gaps and Ob9 log-link interface partially PROVED (scaling units subset hull, rep-class congruence, one-sided/upper projection two-sided bound framework); both-sided arbitrary-iterate bound and full O(-)^{-1} normalization remain named. Tensor Haar product blocker recorded (coord/SG3B_TENSOR_HAAR_BLOCKER.md); C3 fractional region blocker (coord/S2826_C3_REGION_FRACTIONAL.md). | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "four_triangles",
+      "kind": "theorem",
+      "title": "Paper four-triangle statement bundle (BPS multiradial / dsc / HDD / SHE comparison)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperFourTrianglesStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperFourTrianglesStatementActual.lean": [
+          "Triangle1BPSMultiradial",
+          "Triangle2Descent",
+          "Triangle3HDD",
+          "Triangle4SHEComparison",
+          "FourTrianglesStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): statement skeleton only; paper content named; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "stage1_5",
+      "kind": "theorem",
+      "title": "Official Stage 1-5 definitions/bookkeeping",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperStageDefinitionsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperStageDefinitionsActual.lean": [
+          "PaperStage",
+          "PaperStage.index1",
+          "PaperStage.index1_bounded",
+          "PaperStageScope"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): stage definitions/bookkeeping only; paper content named; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "problemC_nested_betaTrack",
+      "kind": "conditional",
+      "title": "Paper-shaped beta-tracking StepProvider + assembly (Problem C)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingGeometricActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingActual.lean": [
+          "BetaTrackingStepProvider",
+          "paperScopeLemma24Statement_of_betaTrackingProviders"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingGeometricActual.lean": [
+          "BetaTrackingGeometricData",
+          "BetaTrackingGeometricInput",
+          "betaTrackingStepProvider_of_geometric",
+          "paperScopeLemma24Statement_of_geometric",
+          "paperScopeLemma24Statement_of_geometric_dischargedBase"
+        ]
+      },
+      "note": "NEW (shehdd): paper-shaped step provider (S' independent of beta; beta' with backward transport); assembly PROVED conditional on base + beta-tracking step; geometric construction NAMED. PENDING-VERIFY. PLUS geometric reduction: BetaTrackingGeometricData -> BetaTrackingStepProvider PROVED via stepTransport_of_goal (CV law); construction of data NAMED. FIX: beta file needed open Mzk1P1MorphismInterfaceActual (P1Point unknown); geometric file same; both touched, watchdog recompile pending. BASE DISCHARGED: paperScopeLemma24Statement_of_geometric_dischargedBase uses baseCaseProvider_proved; only CV law + geometric step data remain hypotheses."
+    },
+    {
+      "id": "alternatives",
+      "kind": "theorem",
+      "title": "Route alternatives register (direct-readout/eta/stages/N8/model-B/label)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RouteAlternativesStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RouteAlternativesStatementActual.lean": [
+          "RouteAlternative",
+          "RouteAlternative.index",
+          "RouteAlternative.index_lt_six",
+          "RouteStatus"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): route labels/status register only; no route proved; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "stage5_estimates",
+      "kind": "theorem",
+      "title": "[ExpEst] effective/numeric estimates (Stage 5)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ExplicitEstimatesStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ExplicitEstimatesStatementActual.lean": [
+          "EffectiveErrorBound",
+          "EffectiveConstantPositive",
+          "FinalNumericComparison",
+          "ExpEstStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Stage 5 estimates statement skeleton; effective constants/error terms named; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "four_triangle_species",
+      "kind": "theorem",
+      "title": "Paper §4 four-triangle species/mutation diagram (labels + mutation obligations)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperSpeciesMutationStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperSpeciesMutationStatementActual.lean": [
+          "PaperSpecies",
+          "PaperSpecies.index",
+          "PaperSpecies.index_lt_nine",
+          "MutationObligation"
+        ]
+      },
+      "note": "species labels/mutation obligations only; paper content named; PENDING-VERIFY (watchdog compile); visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "paper_vocabulary",
+      "kind": "theorem",
+      "title": "Paper vocabulary register (terms + source-ledger placeholders)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperVocabularyStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperVocabularyStatementActual.lean": [
+          "PaperTerm",
+          "PaperTerm.index",
+          "PaperTerm.index_lt_ten",
+          "PaperTermSource"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): vocabulary labels/source-ledger placeholders only; no proof claims; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "hodge_theater",
+      "kind": "theorem",
+      "title": "Hodge theater / prime-strip / D-Theta bridge / LGP objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperHodgeTheaterStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperHodgeTheaterStatementActual.lean": [
+          "HodgeTheaterCarrier",
+          "PrimeStripProcession",
+          "DThetaBridge",
+          "LGPCompatibility",
+          "HodgeTheaterStatement"
+        ]
+      },
+      "note": "Hodge theater paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "frobenius_picture",
+      "kind": "theorem",
+      "title": "Frobenius picture / graph automorphism / Section-0 oriented graph objects",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobeniusPictureStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobeniusPictureStatementActual.lean": [
+          "FrobeniusPictureArrow",
+          "GraphAutomorphism",
+          "OrientedGraphStructure",
+          "PathSaturationData",
+          "FrobeniusPictureStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Frobenius picture/Section-0 statement skeleton; content named; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "frobenioid",
+      "kind": "theorem",
+      "title": "Frobenioid objects / log-Frobenius / Example 3.6 correspondence (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobenioidStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobenioidStatementActual.lean": [
+          "FrobenioidCarrier",
+          "LogFrobeniusAction",
+          "DivisorUnitData",
+          "Example36Correspondence",
+          "FrobenioidStatement"
+        ]
+      },
+      "note": "Frobenioid paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "log_shell",
+      "kind": "theorem",
+      "title": "Log-shell / unit groups / log map / diagram functoriality (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellStatementActual.lean": [
+          "LogShellCarrier",
+          "UnitGroupData",
+          "LogMapStructure",
+          "LogShellDiagramFunctoriality",
+          "LogShellStatement"
+        ]
+      },
+      "note": "log-shell paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "initial_theta",
+      "kind": "theorem",
+      "title": "Initial Theta data / theta values / prime-strips / pilot objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperInitialThetaStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperInitialThetaStatementActual.lean": [
+          "InitialThetaArithmeticData",
+          "ThetaValueData",
+          "PrimeStripCarrier",
+          "PilotObjectData",
+          "InitialThetaStatement"
+        ]
+      },
+      "note": "initial Theta paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "iutiv_section2",
+      "kind": "theorem",
+      "title": "IUT IV Section 2 estimates objects (regional volume / tensor metric / height comparison)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVSection2StatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVSection2StatementActual.lean": [
+          "RegionalLogVolumeEstimate",
+          "ArchimedeanTensorMetricData",
+          "HeightComparisonEstimate",
+          "IUTIVSection2Statement"
+        ]
+      },
+      "note": "IUT IV Section2 paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "genell",
+      "kind": "theorem",
+      "title": "GenEll layer objects (Generalized Elliptic Curve / geometric core / noncritical Belyi input)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperGenEllStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperGenEllStatementActual.lean": [
+          "GenEllCarrier",
+          "GenEllGeometricCore",
+          "NoncriticalBelyiExistence",
+          "GenEllStatement"
+        ]
+      },
+      "note": "GenEll paper-scope statement skeleton; content named; PENDING-VERIFY; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "theorem311_assembly",
+      "kind": "theorem",
+      "title": "Theorem 3.11 assembly objects (source P1P2 / H1H2 / LGP / hull-det normalization)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperTheorem311AssemblyStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperTheorem311AssemblyStatementActual.lean": [
+          "SourceP1P2Bundle",
+          "H1H2Hypotheses",
+          "LGPCompatibility",
+          "HullDetNormalization",
+          "Theorem311AssemblyStatement"
+        ]
+      },
+      "note": "Theorem 3.11 assembly paper-scope statement skeleton; content named; PENDING-VERIFY"
+    },
+    {
+      "id": "cor312",
+      "kind": "theorem",
+      "title": "Corollary 3.12 target objects (hull-data / epsilon comparison height+region)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperCor312StatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperCor312StatementActual.lean": [
+          "HullData",
+          "EpsilonComparisonHeight",
+          "EpsilonComparisonRegion",
+          "Cor312Statement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Cor312 paper-scope statement skeleton; interface fields named; PENDING-VERIFY; EXIT0 (watchdog compile) | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "stepxi",
+      "kind": "theorem",
+      "title": "Step (xi) objects (theta-packet / holomorphic hull / determinant normalization / q-Theta membership)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperStepXIStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperStepXIStatementActual.lean": [
+          "ThetaPacketBridge",
+          "HolomorphicHullData",
+          "DeterminantNormalization",
+          "QThetaMembership",
+          "StepXIStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): StepXI paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "iutiv_section1",
+      "kind": "theorem",
+      "title": "IUT IV Section 1 display/estimates objects (Thm1.10 / height dictionary / (b) / (c))",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVSection1StatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVSection1StatementActual.lean": [
+          "Thm110Display",
+          "HeightDictionaryData",
+          "UniformHeightVolumeInput",
+          "RegionRelativeHullInput",
+          "IUTIVSection1Statement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT IV Section1 paper-scope statement skeleton; content named; PENDING-VERIFY | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "anabelian",
+      "kind": "theorem",
+      "title": "Anabelian / tempered fundamental group / anabelioid objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperAnabelianStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperAnabelianStatementActual.lean": [
+          "TemperedFundamentalGroup",
+          "AnabelianReconstruction",
+          "AnabelioidCarrier",
+          "AnabelianStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): anabelian paper-scope statement skeleton; content named (no Mathlib/TauCeti assets); PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "hodge_arakelov",
+      "kind": "theorem",
+      "title": "Hodge-Arakelov comparison / theta-convolution / Gaussian indefinite theta (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperHodgeArakelovStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperHodgeArakelovStatementActual.lean": [
+          "HodgeArakelovComparison",
+          "ThetaConvolutionData",
+          "GaussianIndefiniteTheta",
+          "HodgeArakelovStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Hodge-Arakelov paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "iut1",
+      "kind": "theorem",
+      "title": "IUT I source objects / Hodge theater / initial Theta source contract (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIStatementActual.lean": [
+          "SourceObjectData",
+          "HodgeTheaterConstruction",
+          "InitialThetaSourceContract",
+          "IUTIStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT I paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "iut2",
+      "kind": "theorem",
+      "title": "IUT II Frobenioid / prime-strip / Kummer / theta-link objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIStatementActual.lean": [
+          "FrobenioidPrimeStripData",
+          "KummerCorrespondence",
+          "ThetaLinkProcession",
+          "IUTIIStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT II paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "iut3",
+      "kind": "theorem",
+      "title": "IUT III HDD / Theorem 3.11 assembly / Cor 3.12 target objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIStatementActual.lean": [
+          "HDDHullDet",
+          "Thm311Assembly",
+          "Cor312Target",
+          "IUTIIIStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT III paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "iut4",
+      "kind": "theorem",
+      "title": "IUT IV estimates / uniform height-vs-volume / final ABC bridge objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVStatementActual.lean": [
+          "IUTIVEstimates",
+          "UniformHeightVolume",
+          "FinalABCBridge",
+          "IUTIVStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT IV paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "log_theta_lattice",
+      "kind": "theorem",
+      "title": "Log-theta lattice / LGP-Gaussian compatibility / q-Theta pilot objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogThetaLatticeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogThetaLatticeStatementActual.lean": [
+          "LogThetaLattice",
+          "LGPCompatibility",
+          "QThetaPilotComparison",
+          "LogThetaLatticeStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): log-theta lattice paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "initial_theta_quantifiers",
+      "kind": "theorem",
+      "title": "Initial Theta full quantifier contract / distinct theater family / source boundary (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperInitialThetaQuantifiersStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperInitialThetaQuantifiersStatementActual.lean": [
+          "FullQuantifierContract",
+          "DistinctTheaterFamily",
+          "SourceInputBoundary",
+          "InitialThetaQuantifiersStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): initial Theta quantifier paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "theta_hull",
+      "kind": "theorem",
+      "title": "Theta-hull / theta bound supply / hull log-volume comparison (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaHullStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaHullStatementActual.lean": [
+          "ThetaHull",
+          "HullThetaBoundSupply",
+          "HullLogVolumeComparison",
+          "ThetaHullStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): theta-hull paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "etth",
+      "kind": "theorem",
+      "title": "Étale Theta objects (étale theta / mono-theta env / theta quotient / mod-l projection)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperEtThStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperEtThStatementActual.lean": [
+          "EtaleThetaObject",
+          "MonoThetaEnvironment",
+          "ThetaGroupQuotient",
+          "ModLThetaProjection",
+          "EtThStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): EtTh paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A486: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "abstopiii",
+      "kind": "theorem",
+      "title": "Absolute anabelian / log-shell / log-Frobenius / D-category objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperAbsTopIIIStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperAbsTopIIIStatementActual.lean": [
+          "AbsoluteGaloisLogShellData",
+          "GroupTheoreticReconstruction",
+          "LogFrobeniusCompatibility",
+          "AbsTopIIIStatement"
+        ]
+      },
+      "note": "AbsTopIII paper-scope statement skeleton; content named; PENDING-VERIFY"
+    },
+    {
+      "id": "example36",
+      "kind": "theorem",
+      "title": "Example 3.6 theta/Tate source-generation / Frobenioid boundary objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperExample36StatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperExample36StatementActual.lean": [
+          "Example36ThetaSource",
+          "TateUniformizationData",
+          "FrobenioidBoundaryModel",
+          "Example36Statement"
+        ]
+      },
+      "note": "Example 3.6 paper-scope statement skeleton; content named/tree-asset; PENDING-VERIFY"
+    },
+    {
+      "id": "kummer",
+      "kind": "theorem",
+      "title": "Kummer map / vertical log-Kummer / absolute Kummer objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperKummerStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperKummerStatementActual.lean": [
+          "KummerMapData",
+          "VerticalLogKummerCorrespondence",
+          "AbsoluteKummerData",
+          "KummerStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Kummer paper-scope statement skeleton; content named; PENDING-VERIFY | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "abcbridge",
+      "kind": "theorem",
+      "title": "ABCBridge objects (ABC target / Cor312ABC interface / frontier route)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperABCBridgeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperABCBridgeStatementActual.lean": [
+          "ABCConjectureStatement",
+          "Cor312ABCBridgeInterface",
+          "FrontierRoute",
+          "ABCBridgeStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): ABCBridge paper-scope statement skeleton; interface/conditional; PENDING-VERIFY | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "theta_link",
+      "kind": "theorem",
+      "title": "Theta-link / source evaluation orbit / unit power uniqueness objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaLinkStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaLinkStatementActual.lean": [
+          "ThetaLinkObject",
+          "SourceEvaluationOrbit",
+          "UnitPowerUniqueness",
+          "ThetaLinkStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): theta-link paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile) | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "log_shell_frobenius",
+      "kind": "theorem",
+      "title": "Log-shell Frobenius iterate / principal-unit Frobenius / scaling law (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellFrobeniusStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellFrobeniusStatementActual.lean": [
+          "LogFrobeniusIterate",
+          "PrincipalUnitLogShellFrobenius",
+          "FrobeniusScalingLaw",
+          "LogShellFrobeniusStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): log-shell Frobenius paper-scope statement skeleton; tree assets exist; PENDING-VERIFY; EXIT0 (watchdog compile) | A488: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "riemann_roch",
+      "kind": "theorem",
+      "title": "Riemann-Roch / line bundle O(D) / pencil zero-divisor objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperRiemannRochStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperRiemannRochStatementActual.lean": [
+          "RiemannRochData",
+          "LineBundleDivisorData",
+          "PencilZeroDivisor",
+          "RiemannRochStatement"
+        ]
+      },
+      "note": "RR paper-scope statement skeleton; RR proved via flt_core separately; PENDING-VERIFY"
+    },
+    {
+      "id": "theta_pilot",
+      "kind": "theorem",
+      "title": "q/Theta pilot objects and pilot log-volume comparison (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaPilotStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaPilotStatementActual.lean": [
+          "QPilotObject",
+          "ThetaPilotObject",
+          "PilotLogVolumeComparison",
+          "ThetaPilotStatement"
+        ]
+      },
+      "note": "theta pilot paper-scope statement skeleton; content named; PENDING-VERIFY"
+    },
+    {
+      "id": "prime_strip",
+      "kind": "theorem",
+      "title": "F/D prime-strip objects and procession data (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperPrimeStripStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperPrimeStripStatementActual.lean": [
+          "FPrimeStrip",
+          "DPrimeStrip",
+          "ProcessionData",
+          "PrimeStripStatement"
+        ]
+      },
+      "note": "prime-strip paper-scope statement skeleton; content named; PENDING-VERIFY"
+    },
+    {
+      "id": "iutiii_hull",
+      "kind": "theorem",
+      "title": "IUT III holomorphic hull / determinant log-volume / theta bound supply objects",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIHullStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIHullStatementActual.lean": [
+          "HolomorphicHull",
+          "HullDeterminantLogVolume",
+          "ThetaBoundSupply",
+          "IUTIIIHullStatement"
+        ]
+      },
+      "note": "IUT III hull paper-scope statement skeleton; tree assets exist; PENDING-VERIFY"
+    },
+    {
+      "id": "comparison",
+      "kind": "theorem",
+      "title": "IUT IV comparison-invariance / measure-invariance / region comparison objects",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVComparisonStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVComparisonStatementActual.lean": [
+          "ComparisonInvariance",
+          "MeasureInvariance",
+          "RegionComparison",
+          "IUTIVComparisonStatement"
+        ]
+      },
+      "note": "IUT IV comparison paper-scope statement skeleton; residual hypotheses named; PENDING-VERIFY"
+    },
+    {
+      "id": "theta_power_kernel",
+      "kind": "theorem",
+      "title": "Theta/elliptic power kernel + mod-l theta projection quotient laws (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaPowerKernelStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperThetaPowerKernelStatementActual.lean": [
+          "ThetaPowerKernel",
+          "EllipticPowerKernel",
+          "ModLThetaProjection",
+          "ThetaPowerKernelStatement"
+        ]
+      },
+      "note": "theta power kernel paper-scope statement skeleton; tree assets exist; PENDING-VERIFY"
+    },
+    {
+      "id": "estimate_bridge",
+      "kind": "theorem",
+      "title": "IUT IV estimate bridge / height dictionary bridge / region input bridge objects",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVEstimateBridgeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVEstimateBridgeStatementActual.lean": [
+          "EstimateBridge",
+          "HeightDictionaryBridge",
+          "RegionInputBridge",
+          "EstimateBridgeStatement"
+        ]
+      },
+      "note": "IUT IV estimate bridge paper-scope statement skeleton; content named; PENDING-VERIFY"
+    },
+    {
+      "id": "final_inequality",
+      "kind": "theorem",
+      "title": "IUT IV final log-volume/height inequality / normalization-determinant / q-Theta membership objects",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVFinalInequalityStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIVFinalInequalityStatementActual.lean": [
+          "FinalInequality",
+          "NormalizationDeterminant",
+          "QThetaMembership",
+          "FinalInequalityStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT IV final inequality paper-scope statement skeleton; content named; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "hull_ray",
+      "kind": "theorem",
+      "title": "Hull ray / hull lattice / ray membership objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperHullRayStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperHullRayStatementActual.lean": [
+          "HullRay",
+          "HullLattice",
+          "RayMembership",
+          "HullRayStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): hull ray paper-scope statement skeleton; tree assets exist; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "frobenioid_log",
+      "kind": "theorem",
+      "title": "Frobenioid log structure / monoid action / divisor group objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobenioidLogStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperFrobenioidLogStatementActual.lean": [
+          "FrobenioidLogStructure",
+          "MonoidActionData",
+          "DivisorGroupData",
+          "FrobenioidLogStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Frobenioid log paper-scope statement skeleton; content named; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "log_shell_carrier",
+      "kind": "theorem",
+      "title": "Log-shell carrier / pre-log-shell / unit layer objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellCarrierStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellCarrierStatementActual.lean": [
+          "LogShellCarrierData",
+          "PreLogShellData",
+          "UnitLayerData",
+          "LogShellCarrierStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): log-shell carrier paper-scope statement skeleton; tree asset; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "hull_log_volume",
+      "kind": "theorem",
+      "title": "Hull log-volume / determinant reduction / theta bound supply objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperHullLogVolumeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperHullLogVolumeStatementActual.lean": [
+          "HullLogVolume",
+          "DeterminantLogVolumeReduction",
+          "ThetaBoundSupplyForHull",
+          "HullLogVolumeStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): hull log-volume paper-scope statement skeleton; tree assets exist; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "operations",
+      "kind": "theorem",
+      "title": "IUT III operations: SHE / APT / IPL operation objects and compatibility",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIOperationsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperIUTIIIOperationsStatementActual.lean": [
+          "SHEOperation",
+          "APTOperation",
+          "IPLOperation",
+          "IUTIIIOperationsStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): IUT III operations paper-scope statement skeleton; content named; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "mu_n_quotient",
+      "kind": "theorem",
+      "title": "mu_N quotient / quotient map / N-weight log-volume objects (paper-scope)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperMuNQuotientStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperMuNQuotientStatementActual.lean": [
+          "MuNQuotient",
+          "QuotientMapData",
+          "WeightNLogVolume",
+          "MuNQuotientStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): muN quotient paper-scope statement skeleton; tree asset; PENDING-VERIFY | A492: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "log_shell_diagram",
+      "kind": "theorem",
+      "title": "Log-shell diagram: Gamma^non / functorial algorithm / local field data (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellDiagramStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperLogShellDiagramStatementActual.lean": [
+          "GammaNonDiagram",
+          "LogShellFunctorialAlgorithm",
+          "LocalFieldData",
+          "LogShellDiagramStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): log-shell diagram paper-scope statement skeleton; named only; PENDING-VERIFY; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "principal_units",
+      "kind": "theorem",
+      "title": "Principal units / unit layer / pre-log-shell objects (paper-scope)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperPrincipalUnitsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperPrincipalUnitsStatementActual.lean": [
+          "PrincipalUnits",
+          "UnitLayer",
+          "PreLogShell",
+          "PrincipalUnitsStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): principal units paper-scope statement skeleton; tree asset; PENDING-VERIFY; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "qtheta_comparison",
+      "kind": "theorem",
+      "title": "q/Theta pilot comparison / normalized log-volume / final inequality link objects",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperQThetaComparisonStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperQThetaComparisonStatementActual.lean": [
+          "QThetaComparison",
+          "NormalizedLogVolume",
+          "FinalInequalityLink",
+          "QThetaComparisonStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): q/Theta comparison paper-scope statement skeleton; content named; PENDING-VERIFY; EXIT0 (watchdog compile)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "fold",
+      "to": "tauceti_canonical",
+      "kind": "proof"
+    },
+    {
+      "from": "fold",
+      "to": "third_point",
+      "kind": "gap"
+    },
+    {
+      "from": "restated_24",
+      "to": "tauceti_canonical",
+      "kind": "proof"
+    },
+    {
+      "from": "restated_24",
+      "to": "fold",
+      "kind": "proof"
+    },
+    {
+      "from": "problemC_nested",
+      "to": "restated_24",
+      "kind": "interface"
+    },
+    {
+      "from": "old_xif_24",
+      "to": "restated_24",
+      "kind": "gap"
+    },
+    {
+      "from": "abcfrontier",
+      "to": "problemE_absTopIII05",
+      "kind": "interface"
+    },
+    {
+      "from": "hull_h5_ob9",
+      "to": "problemE_absTopIII05",
+      "kind": "interface"
+    },
+    {
+      "from": "problemC_nested_betaTrack",
+      "to": "problemC_nested",
+      "kind": "statement"
+    },
+    {
+      "from": "four_triangles",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "stage1_5",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "alternatives",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "stage5_estimates",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "four_triangle_species",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "paper_vocabulary",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "hodge_theater",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "frobenius_picture",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "frobenioid",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "log_shell",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "initial_theta",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv_section2",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "genell",
+      "to": "restated_24",
+      "kind": "statement"
+    },
+    {
+      "from": "iut1",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut1",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut2",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut2",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut2",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut3",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut3",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut3",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut3",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut3",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut4",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut4",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iut4",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "abcbridge",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "abcbridge",
+      "to": "iut-skeleton:Cor312",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "cor312",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "cor312",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "cor312",
+      "to": "iut-skeleton:StepXI",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "theorem311_assembly",
+      "to": "iut-skeleton:Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theorem311_assembly",
+      "to": "iut-skeleton:Ind1",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "theorem311_assembly",
+      "to": "iut-skeleton:Ind2",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "theorem311_assembly",
+      "to": "iut-skeleton:Ind3",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "stepxi",
+      "to": "iut-skeleton:StepXI",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "stepxi",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "stepxi",
+      "to": "iut-skeleton:QPilot",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_hull",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_hull",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull_ray",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull_ray",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull_log_volume",
+      "to": "iut-skeleton:H5",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull_log_volume",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iutiii_hull",
+      "to": "iut-skeleton:HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "iutiii_hull",
+      "to": "iut-skeleton:HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_shell_carrier",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_shell_diagram",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_shell_frobenius",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_shell_carrier",
+      "to": "log_shell_diagram",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_shell_frobenius",
+      "to": "log_shell_carrier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_link",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_theta_lattice",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "log_theta_lattice",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_pilot",
+      "to": "iut-skeleton:QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "prime_strip",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "kummer",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "frobenioid_log",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hodge_arakelov",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hodge_theater",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "initial_theta",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "initial_theta_quantifiers",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "etth",
+      "to": "iut-skeleton:Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "etth",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "abstopiii",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "abstopiii",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "anabelian",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "anabelian",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "example36",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "operations",
+      "to": "iut-skeleton:SHE",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "operations",
+      "to": "iut-skeleton:APT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "operations",
+      "to": "iut-skeleton:IPL",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "mu_n_quotient",
+      "to": "iut-skeleton:LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "riemann_roch",
+      "to": "iut-skeleton:Section0",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "comparison",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "estimate_bridge",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "final_inequality",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "final_inequality",
+      "to": "iut-skeleton:hSlack",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_power_kernel",
+      "to": "iut-skeleton:Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_hull",
+      "to": "hull_ray",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull_log_volume",
+      "to": "hull_ray",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_power_kernel",
+      "to": "etth",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "theta_link",
+      "to": "log_theta_lattice",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "initial_theta_quantifiers",
+      "to": "initial_theta",
+      "kind": "statement",
+      "evidence": "planned"
+    }
+  ]
+}

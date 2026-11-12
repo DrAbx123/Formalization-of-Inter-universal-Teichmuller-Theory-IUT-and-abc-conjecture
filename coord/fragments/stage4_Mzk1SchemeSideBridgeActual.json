@@ -1,0 +1,16 @@
+{
+  "node": "auto:Mzk1SchemeSideBridgeActual",
+  "kind": "def",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1SchemeSideBridgeActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1SchemeSideBridgeActual.lean": [
+      "SchemeSideBridgeMaps",
+      "SchemeSideBridgeCompatibility",
+      "SchemeSideBridgeInput"
+    ]
+  },
+  "note": "A475 证据: schemeSide 全仓 0；sectionMap 仅 SourceDefinition31Boundary.lean(不同语义)；placePoint 仅 flt external → 本语义仓库当前缺失(附0命中)，非需数学突破。"
+}

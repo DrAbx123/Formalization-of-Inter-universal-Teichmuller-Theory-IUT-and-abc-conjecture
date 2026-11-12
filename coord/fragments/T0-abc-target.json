@@ -1,0 +1,24 @@
+{
+  "node": "T0-abc-target",
+  "kind": "target",
+  "status": "PROVED",
+  "files": [
+    "LeanFormal/IUT/ABCBridge/Statement.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "radical_zero",
+      "radical_pos",
+      "radical_dvd_self",
+      "radical_eq_one_iff",
+      "abcInequality_is_explicit"
+    ],
+    "defs": [
+      "ABCInequality",
+      "ABCConjecture",
+      "IsABCTriple"
+    ]
+  },
+  "statement": "integer ABC conjecture statement layer over Mathlib radical/primitive additive triples",
+  "note": "statement-layer DEF node; no proof of ABC claimed; queued for watchdog; pins 14041"
+}

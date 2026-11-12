@@ -1,0 +1,19 @@
+{
+  "node": "foundation:foundation:D.finiteMapChart",
+  "kind": "bridge",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreFiniteMapChartInterfaceActual.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "FiniteMapChartData",
+      "FiniteMapChartData.toFiniteMapData",
+      "FiniteMapChartData.coe_U_eq_compl",
+      "FiniteMapChartData.toFiniteMapData_m",
+      "finiteMapChartRows_length"
+    ]
+  },
+  "statement": "interface/wiring node",
+  "note": "watchdog EXIT0 observed in tmp/xif_guarded_results.log; no manual compile; PROVED per A459 read-only verification"
+}

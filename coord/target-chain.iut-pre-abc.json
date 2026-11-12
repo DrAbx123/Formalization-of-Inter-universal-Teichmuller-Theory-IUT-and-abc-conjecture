@@ -1,0 +1,2874 @@
+{
+  "$schema_note": "IUT I/II prerequisite-object DAG for IUT 3.12 sentence; semantic nodes; true-gap nodes explicit; intra-fragment edges only (cross-fragment reuse documented in SURVEY-abc.md); aibi-owned fragment",
+  "owner": "abc/aibi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "IUT312.statement",
+      "kind": "target",
+      "status": "GAP",
+      "title": "IUTchIII Corollary 3.12 (abc bound) top statement",
+      "files": [],
+      "note": "Target of the goal sentence; conditional on all pre-objects below.",
+      "declarations": {}
+    },
+    {
+      "id": "HodgeTheater.core",
+      "kind": "def",
+      "status": "DEF",
+      "title": "Hodge theater object (HodgeTheater/HodgeTheaterLink)",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean"
+      ],
+      "note": "structure + link category",
+      "declarations": {}
+    },
+    {
+      "id": "HodgeTheater.family",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "source Hodge theater family with link laws",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamily.lean"
+      ],
+      "note": "SourceHodgeTheaterFamily/theater_injective/link_*",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.graph",
+      "kind": "def",
+      "status": "DEF",
+      "title": "oriented graph Gamma of the Frobenius picture (vertices Z, arrows n->n+1)",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "note": "FrobeniusPictureArrow",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.arrowFacts",
+      "kind": "theorem",
+      "status": "PROVED",
+      "title": "Gamma arrow facts (functional/no self-loop/comp shift)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowFactsActual.lean"
+      ],
+      "note": "watchdog EXIT0",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.graphAut",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "graph automorphisms of Gamma",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "note": "FrobeniusPictureGraphAut",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.translationClass",
+      "kind": "theorem",
+      "status": "TREE_ASSET",
+      "title": "Aut(Gamma) = translations (graphAut_eq_translation)",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "note": "tree theorem",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.translationLaw",
+      "kind": "theorem",
+      "status": "PROVED",
+      "title": "translations form group by additive parameter",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean"
+      ],
+      "note": "watchdog EXIT0",
+      "declarations": {}
+    },
+    {
+      "id": "InitialTheta.data",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "Initial Theta data and Definition 3.1 clusters",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceInitialThetaData.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31RootLemmas.lean"
+      ],
+      "note": "source initial theta + D0-D11",
+      "declarations": {}
+    },
+    {
+      "id": "InitialTheta.cStage",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "concrete initial-theta C-stage (cStage)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceEtaleThetaBridge.lean"
+      ],
+      "note": "cStage/packet/parameter/quotient",
+      "declarations": {}
+    },
+    {
+      "id": "PrimeStrips.FD",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "prime-strips (F/D) object layer",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripsConstruction.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidCategorySkeleton.lean"
+      ],
+      "note": "prime strip construction + Frobenioid category skeleton",
+      "declarations": {}
+    },
+    {
+      "id": "Frobenioid.Example36",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "Example 3.6 source model/curve/Tate stack",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackend.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateUniformization.lean"
+      ],
+      "note": "source model + Tacte uniformization",
+      "declarations": {}
+    },
+    {
+      "id": "Frobenioid.transport",
+      "kind": "theorem",
+      "status": "PROVED",
+      "title": "Example36 global-unit transport functoriality",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean"
+      ],
+      "note": "watchdog EXIT0",
+      "declarations": {}
+    },
+    {
+      "id": "ThetaLink.procession",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "theta-link procession/assembly (thetaLink laws)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean"
+      ],
+      "note": "thetaLink_* laws",
+      "declarations": {}
+    },
+    {
+      "id": "ThetaLink.quotient",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "EtaleThetaQuotient (theta/elliptic quotients, power kernels)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean"
+      ],
+      "note": "thetaDerivedSubgroup/thetaPowerKernel etc",
+      "declarations": {}
+    },
+    {
+      "id": "LogShell.I",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "log-shell I = (p*)^-1 log(O^x) carrier",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean"
+      ],
+      "note": "SourceLogShellDatum preLogShell/logShell/unitLayer",
+      "declarations": {}
+    },
+    {
+      "id": "LogShell.pStar",
+      "kind": "theorem",
+      "status": "PROVED",
+      "title": "p* arithmetic (odd=p, even=p^2, divisibility)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean"
+      ],
+      "note": "watchdog EXIT0",
+      "declarations": {}
+    },
+    {
+      "id": "Kummer.absolute",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "absolute Kummer class map + roots-of-unity fixedness",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean"
+      ],
+      "note": "absoluteKummerMap",
+      "declarations": {}
+    },
+    {
+      "id": "Kummer.continuity",
+      "kind": "theorem",
+      "status": "TREE_ASSET",
+      "title": "local constancy/continuity of absolute Kummer class",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean"
+      ],
+      "note": "isLocallyConstant/continuous_absoluteKummerMap",
+      "declarations": {}
+    },
+    {
+      "id": "Kummer.summary",
+      "kind": "bridge",
+      "status": "PROVED",
+      "title": "consumer index for Absolute Kummer trio",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioSummaryActual.lean"
+      ],
+      "note": "watchdog EXIT0 row index",
+      "declarations": {}
+    },
+    {
+      "id": "MuN.torsion",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "mu_N torsion packets (roots of unity/Kummer compat)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/CompatibleRoots.lean",
+        "LeanFormal/IUT/IUTII/Kummer/NatRootSystem.lean"
+      ],
+      "note": "root systems/compatible roots",
+      "declarations": {}
+    },
+    {
+      "id": "QPilot",
+      "kind": "def",
+      "status": "GAP",
+      "title": "q-pilot object (arithmetic q/Hodge-Arakelov side)",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/ArithmeticQPilotBaseChange.lean"
+      ],
+      "note": "IUTIII arithmetic q-pilot; paper-level named",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.countablyOrdered",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "countably ordered sets / orderwise connected subsets",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "direct-compile green; watchdog stale",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.orientedGraph",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "oriented graphs/underlying graph/branches/Order(E)",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "direct-compile green; watchdog stale",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.paths",
+      "kind": "theorem",
+      "status": "PROVED",
+      "title": "pre-path/path composition (edge-sequence model)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean"
+      ],
+      "note": "watchdog EXIT0 (trimmed version)",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.saturated",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "saturated sets of path pairs",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "IsSaturatedPathPairSet defined; full theory named",
+      "declarations": {}
+    },
+    {
+      "id": "HodgeTheater.links",
+      "kind": "theorem",
+      "status": "DEF",
+      "title": "Hodge theater link category (refl/symm/trans laws)",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean"
+      ],
+      "note": "HodgeTheaterLink refl/symm/trans/symm_symm",
+      "declarations": {}
+    },
+    {
+      "id": "HodgeTheater.concrete",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "concrete Gaussian Hodge theater examples",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/ConcreteHodgeTheaterExample.lean"
+      ],
+      "note": "gaussianHodgeTheater/gaussianThreeTheaterSystem",
+      "declarations": {}
+    },
+    {
+      "id": "FrobeniusPicture.pictureObjects",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "Frobenius/etale pictures of Hodge theaters",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+      ],
+      "note": "Prop58ii... deep data; class-B named",
+      "declarations": {}
+    },
+    {
+      "id": "InitialTheta.definition31",
+      "kind": "theorem",
+      "status": "TREE_ASSET",
+      "title": "Definition 3.1 root lemmas/quantifiers (D0-D11)",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31RootLemmas.lean"
+      ],
+      "note": "root lemmas cluster",
+      "declarations": {}
+    },
+    {
+      "id": "PrimeStrips.frobenioidCategory",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "prime-strip Frobenioid category skeleton",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidCategorySkeleton.lean"
+      ],
+      "note": "DivisorialMonoidOnHom/elementaryFrobenioidMapFunctor",
+      "declarations": {}
+    },
+    {
+      "id": "ThetaLink.unitLaws",
+      "kind": "theorem",
+      "status": "TREE_ASSET",
+      "title": "theta-link unit/generator representation laws",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean"
+      ],
+      "note": "thetaLink_unitPower/generator/representation/unique",
+      "declarations": {}
+    },
+    {
+      "id": "LogShell.invariants",
+      "kind": "theorem",
+      "status": "TREE_ASSET",
+      "title": "log-shell invariant image identification (unitLayer/for all log)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean"
+      ],
+      "note": "InvariantImageIdentification iff unitLayer/forall_log",
+      "declarations": {}
+    },
+    {
+      "id": "Kummer.rootSystems",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "Kummer root systems and compatible roots",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/NatRootSystem.lean",
+        "LeanFormal/IUT/IUTII/Kummer/CompatibleRoots.lean"
+      ],
+      "note": "root systems/compatible roots",
+      "declarations": {}
+    },
+    {
+      "id": "QPilot.arithmeticDivisor",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "ArithmeticDivisorDegree height-weight machinery",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean"
+      ],
+      "note": "heightWeight/hTerm (IUTIV Estimates/ArithmeticDivisorDegree.lean) [path corrected to Estimates/]",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.orderCat",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "Order(E) category of a preorder + oriented-graph core",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "OrderCat/FrobeniusPicture graph; direct-compile green",
+      "declarations": {}
+    },
+    {
+      "id": "Section0.saturatedClosure",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "saturated path-pair set intersection/closure lemmas",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "IsSaturatedPathPairSet; full theory named",
+      "declarations": {}
+    },
+    {
+      "id": "PrimeStrips.FxDAction",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "F^D/O^x action on prime-strips and Frobenius value action",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36FrobeniusValueAction.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/SourceKappaOrbitUnitsActionSupply.lean"
+      ],
+      "note": "FrobeniusValueAction + kappa orbit units action",
+      "declarations": {}
+    },
+    {
+      "id": "LogShell.logFrobenius",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "log-Frobenius action on the Example36 log-shell lattice",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogShellFrobeniusAction.lean"
+      ],
+      "note": "log-shell Frobenius action",
+      "declarations": {}
+    },
+    {
+      "id": "ThetaPilot.carrier",
+      "kind": "def",
+      "status": "NAMED",
+      "title": "Theta-pilot/q-pilot precise carrier (X-mu packet, IQ containment)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellXMuPacket.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean"
+      ],
+      "note": "X-mu packet real; theta-pilot IQ containment named paper content",
+      "declarations": {}
+    },
+    {
+      "id": "KummerLogShell.bridge",
+      "kind": "bridge",
+      "status": "TREE_ASSET",
+      "title": "Absolute Kummer to log-shell bridge (invariant image identification)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean"
+      ],
+      "note": "InvariantImageIdentification iff unitLayer/forall_log",
+      "declarations": {}
+    },
+    {
+      "id": "HodgeTheater.familyTransport",
+      "kind": "def",
+      "status": "TREE_ASSET",
+      "title": "Hodge theater family laws/transport objects",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamilyLawsReduction.lean"
+      ],
+      "note": "family laws reduction/transport",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.qPilotPreciseConstruction",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Precise q-pilot object construction (paper-level, IUTIII Cor 3.12 prerequisite)",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean"
+      ],
+      "note": "A475 exhaustive grep: existing assets found — IUTDispute.lean:28 qPilot : Ω, :31 q_is_theta; Project.lean imports LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotLogVolume/BaseChange/GlobalNormalization (LeanFormal hits 357, coord 1921). Reuse these; not a missing-theory gap.",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.thetaPilotIQContainment",
+      "kind": "named_input",
+      "status": "CONDITIONAL",
+      "title": "Theta-pilot IQ containment (source theta pilot)",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean"
+      ],
+      "note": "A475 grep: existing assets — IUTDispute.lean thetaPilot; Cor312PointwiseResidualSupply.lean:199 ThetaPilotCarrier, :201 ThetaPilotPoint (LeanFormal hits 1121, tmp/sheaf 4972). Reuse instead of new theory.",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.section0SaturatedTheory",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Section-0 saturated path-pair set theory (full combinatorics)",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "note": "A475: partial implementation exists in my new file Mzk1Section0SaturatedSetsActual.lean (Saturated/univ/empty/inter/iInter) plus Mzk1Section0PathCompositionActual; reuse these instead of claiming missing theory.",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.absTopIII58_55",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII Prop 5.8 (i)(ii) + Cor 5.5 anabelian reconstruction/global-panalocal",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+      ],
+      "note": "A475 grep: schemeSideMaps/sectionMap existing in InitialTheta/Definition31D0D11Aligned.lean (LeanFormal hits 265, tmp/sheaf 403): xFExact.sectionMap etc. Reuse; D1-D4 typed interface exists in AbsTopIII05RefinedActual.",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.etthDeepInputs",
+      "kind": "named_input",
+      "status": "CONDITIONAL",
+      "title": "EtTh 10 class-B deep inputs (EtTh02)",
+      "files": [
+        "tmp/sheaf/xif/paper/EtTh02DeepInputsActual.lean"
+      ],
+      "note": "A475 grep: fixedBetaChoice/StepProvider interfaces exist (tmp/sheaf Mzk1StepProviderPrimeActual.lean StepProviderFixedBetaChoiceInput; Mzk1StepProviderGapStatementsActual); EtTh02 interface file exists. Reuse, do not re-create.",
+      "declarations": {}
+    },
+    {
+      "id": "Gap.iut312TopStatement",
+      "kind": "target",
+      "status": "GAP",
+      "title": "IUTchIII Corollary 3.12 top statement (abc bound) assembly",
+      "files": [],
+      "note": "Top statement assembly still open, but existing Cor312 assets found: LeanFormal IUTIII Corollary312/StepXI chain + ArithmeticQPilot* imports; GT Cor312 references (hits large). Not a missing-theory claim; assembly node remains GAP pending wiring.",
+      "declarations": {}
+    },
+    {
+      "id": "E4.example36CorrespondenceLaws",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Example36<->EtTh correspondence bundle laws (thetaCarrier/theater distinctness/q-mem)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Example36CorrespondenceLawsActualV2.lean",
+        "tmp/sheaf/xif/paper/Mzk1Example36EtThCorrespondenceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Example36CorrespondenceLawsActualV2.lean": [
+          "etthExample36_correspondence_thetaCarrier",
+          "etthExample36_theater_distinct",
+          "etthExample36_correspondence_q_mem"
+        ]
+      },
+      "note": "E4 area: correspondence laws file currently watchdog EXIT1 (stale-log mismatch; force-fresh requeued); parent correspondence bundle file EXIT0."
+    },
+    {
+      "id": "Section0.saturatedSets",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Section-0 saturated sets of path pairs (edge-sequence model)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSetsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSetsActual.lean": [
+          "EdgePath",
+          "epLength",
+          "epMap",
+          "epLength_map",
+          "PathPair",
+          "pairLength",
+          "pairMap",
+          "pairLength_map",
+          "EdgePreserving",
+          "Saturated",
+          "saturated_univ",
+          "saturated_empty",
+          "saturated_inter",
+          "saturated_iInter",
+          "saturated_mapsTo"
+        ]
+      },
+      "note": "FIXED vacuous definition (previous Saturated := ... P = P trivial): now invariance of membership under edge-preserving maps; univ/empty/inter/iInter closed + MapsTo corollary. Watchdog queued."
+    },
+    {
+      "id": "MuN.rootsOfUnityFacts",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "mu_N roots-of-unity torsion facts (closure/divisibility/membership)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RootsOfUnityFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RootsOfUnityFactsActual.lean": [
+          "mem_rootsOfUnity_mul",
+          "rootsOfUnity_le_of_dvd",
+          "rootsOfUnity_mem_iff"
+        ]
+      },
+      "note": "New Lean file (no sorry): roots of unity closure, divisibility monotonicity, membership criterion. Watchdog queued."
+    },
+    {
+      "id": "Section0.orientedGraphCore",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Section-0 oriented graph core (opposite involutive, hom composition)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1OrientedGraphCoreActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1OrientedGraphCoreActual.lean": [
+          "OGraph",
+          "ogOpposite",
+          "ogOpposite_V",
+          "ogOpposite_E",
+          "ogOpposite_opposite",
+          "OGraphHom",
+          "ogHomId",
+          "ogHomComp",
+          "ogHomId_toFun",
+          "ogHomComp_toFun",
+          "ogHomComp_map"
+        ]
+      },
+      "note": "New Lean file (no sorry): oriented graph opposite/hom core laws. Watchdog queued."
+    },
+    {
+      "id": "PrimeStrips.exponentVector",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Prime-strip exponent-vector value group (additive order laws)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripExponentActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripExponentActual.lean": [
+          "ExpVec",
+          "evZero",
+          "evAdd",
+          "evNeg",
+          "evLE",
+          "evAdd_comm",
+          "evAdd_assoc",
+          "evAdd_zero",
+          "evZero_add",
+          "evAdd_neg",
+          "evLE_refl",
+          "evLE_trans",
+          "evLE_antisymm",
+          "evAdd_mono"
+        ]
+      },
+      "note": "New Lean file (no sorry): value-group exponent vectors with pointwise order/additive laws (prime-strip F/D content). Watchdog queued."
+    },
+    {
+      "id": "HodgeTheater.linkCategoryLaws",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Hodge theater link equivalence-relation laws (refl/symm/trans interface)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterLinkLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterLinkLawsActual.lean": [
+          "HTLink",
+          "htRelRefl",
+          "htRelSymm",
+          "htRelTrans",
+          "htRelSymmIff",
+          "htRelSymmSymm",
+          "htRelTransSymm"
+        ]
+      },
+      "note": "New Lean file (no sorry): Hodge-theater link equivalence laws as a reusable interface. Watchdog queued."
+    },
+    {
+      "id": "PrimeStrips.categorySkeleton",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Prime-strip Frobenioid category skeleton laws (id/comp/assoc, opposite)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripCategorySkeletonActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripCategorySkeletonActual.lean": [
+          "CatSkel",
+          "catOp",
+          "catOp_obj",
+          "catOp_op",
+          "catOp_comp",
+          "id_comp_apply",
+          "comp_id_apply",
+          "comp_assoc_apply"
+        ]
+      },
+      "note": "New Lean file (no sorry): category-skeleton laws + opposite involutive (prime-strip Frobenioid skeleton pre-object). Watchdog queued."
+    },
+    {
+      "id": "LogShell.scalingPow",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Log-shell scaling power bookkeeping (p^n laws)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingPowActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellScalingPowActual.lean": [
+          "lsScale",
+          "lsScale_zero",
+          "lsScale_succ",
+          "lsScale_add",
+          "lsScale_mono",
+          "lsScale_pos",
+          "lsScale_ne_zero"
+        ]
+      },
+      "note": "New Lean file (no sorry): p^n scaling laws for log-shell (p*)^-1 normalization. Watchdog queued."
+    },
+    {
+      "id": "Kummer.rootCompatibility",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Kummer n-th root compatibility via roots of unity",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerRootCompatibilityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerRootCompatibilityActual.lean": [
+          "KummerRoot",
+          "kummerRoot_ratio_mem_rootsOfUnity",
+          "kummerRoot_mul_rootsOfUnity"
+        ]
+      },
+      "note": "New Lean file (no sorry): Kummer root ratio in roots of unity; multiplication by root of unity yields another root. Watchdog queued."
+    },
+    {
+      "id": "Theta.powerKernelGeneric",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Theta power kernels: generic l-th power torsion subgroups",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelGenericActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelGenericActual.lean": [
+          "powTorsion",
+          "mem_powTorsion_iff",
+          "powTorsion_one",
+          "powTorsion_le_of_dvd",
+          "powTorsion_le"
+        ]
+      },
+      "note": "New Lean file (no sorry): generic l-th power torsion subgroup laws (subgroup-level counterpart of thetaPowerKernel/ellipticPowerKernel). Watchdog queued."
+    },
+    {
+      "id": "InitialTheta.orbicurveSignature",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Orbicurve signatures and chi bookkeeping (Initial Theta pre-object)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1OrbicurveSignatureActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1OrbicurveSignatureActual.lean": [
+          "OrbicurveSignature",
+          "chi",
+          "typeOneOne",
+          "typeOneOne_genus",
+          "typeOneOne_punctures",
+          "typeOneOne_chi",
+          "chi_eq"
+        ]
+      },
+      "note": "New Lean file (no sorry): orbicurve signature data + chi formula; type (1,1) example. Watchdog queued."
+    },
+    {
+      "id": "FrobeniusPicture.pathVertices",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Gamma vertex chains / arrow steps",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPicturePathActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPicturePathActual.lean": [
+          "gammaArrow",
+          "chainVertex",
+          "chainVertex_succ",
+          "chainVertex_eq",
+          "chainVertex_arrow",
+          "chainVertex_strictMono"
+        ]
+      },
+      "note": "New Lean file: vertex chains along Gamma arrows."
+    },
+    {
+      "id": "Section0.adjacentPairs",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Adjacent pairs on Z",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0AdjacentActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0AdjacentActual.lean": [
+          "Adjacent",
+          "adjacent_iff",
+          "adjacent_irrefl",
+          "adjacent_functional",
+          "adjacent_comp",
+          "adjacent_succ"
+        ]
+      },
+      "note": "New Lean file: adjacent-pair laws."
+    },
+    {
+      "id": "Frobenioid.ramificationData",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Ramification-index transport data",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidRamificationActual.lean": [
+          "RamificationData",
+          "unitTransport",
+          "unitTransport_zero",
+          "unitTransport_add",
+          "unitTransport_one",
+          "unitTransport_pos",
+          "index_pos"
+        ]
+      },
+      "note": "New Lean file: ramification transport arithmetic."
+    },
+    {
+      "id": "LogShell.invariantImage",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Log-shell invariant-image interface",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellInvariantActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellInvariantActual.lean": [
+          "LogShellCarrier",
+          "LogShellInvariant",
+          "LogShellInvariant.zero_mem_carrier",
+          "LogShellInvariant.mem_carrier_of_mem_logImage",
+          "LogShellInvariant.mem_carrier_of_mem_unitLayer",
+          "LogShellInvariant.add_mem_logImage"
+        ]
+      },
+      "note": "FIXED vacuous field (Set.univ membership removed): carrier now genuine Set with 0-membership and logImage closed under addition; containment/closure lemmas derived."
+    },
+    {
+      "id": "ThetaLink.symmetry",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Theta-link unit-equivalence symmetry",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkSymmetryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkSymmetryActual.lean": [
+          "ThetaLinkData",
+          "tlSymm",
+          "tlSymm_symm",
+          "tlSymm_apply"
+        ]
+      },
+      "note": "New Lean file: theta-link symmetry data."
+    },
+    {
+      "id": "PrimeStrips.valueKernel",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Value-map kernels on finite prime sets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripValueKernelActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripValueKernelActual.lean": [
+          "evKernelIn",
+          "evKernelIn_subset",
+          "mem_evKernelIn_iff",
+          "evKernelIn_empty",
+          "evKernelIn_union"
+        ]
+      },
+      "note": "New Lean file: Finset value-kernel laws."
+    },
+    {
+      "id": "Section0.orderwise",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Orderwise connected subsets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderwiseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderwiseActual.lean": [
+          "OrderwiseConnected",
+          "orderwiseConnected_univ",
+          "orderwiseConnected_Icc",
+          "orderwiseConnected_Icc_self"
+        ]
+      },
+      "note": "New Lean file: orderwise connectivity (univ, Icc)."
+    },
+    {
+      "id": "Frobenioid.unitsMapLaws",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Units-map composition laws",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidUnitsMapLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidUnitsMapLawsActual.lean": [
+          "unitsMap_comp",
+          "unitsMap_id",
+          "unitsMap_comp_apply",
+          "unitsMap_coe"
+        ]
+      },
+      "note": "New Lean file: Units.map functoriality."
+    },
+    {
+      "id": "PrimeStrips.valueGroupAction",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Integer action on exponent vectors",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsValueGroupActionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsValueGroupActionActual.lean": [
+          "ExpVec",
+          "vgAct",
+          "vgAct_apply",
+          "vgAct_zero",
+          "vgAct_add",
+          "vgAct_add_prime"
+        ]
+      },
+      "note": "New Lean file: value-group action laws."
+    },
+    {
+      "id": "FrobeniusPicture.oppositeArrows",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Opposite arrow relation on Gamma",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureOppositeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureOppositeActual.lean": [
+          "gammaArrowOp",
+          "gammaArrowOp_iff",
+          "gammaArrowOp_irrefl",
+          "gammaArrowOp_functional",
+          "gammaArrowOp_comp",
+          "gammaArrowOp_opposite"
+        ]
+      },
+      "note": "New Lean file: opposite oriented-graph arrow laws."
+    },
+    {
+      "id": "Kummer.powSubgroup",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "l-th power submonoid/range facts",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerPowSubgroupActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerPowSubgroupActual.lean": [
+          "powSubgroup",
+          "mem_powSubgroup_iff",
+          "one_mem_powSubgroup",
+          "powSubgroup_zero"
+        ]
+      },
+      "note": "New Lean file: power-range submonoid laws."
+    },
+    {
+      "id": "Section0.branches",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Branches of an oriented edge (flip involution)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0BranchActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0BranchActual.lean": [
+          "Branch",
+          "flip",
+          "flip_flip",
+          "flip_ne",
+          "flip_injective",
+          "flip_surjective"
+        ]
+      },
+      "note": "New Lean file: branch flip laws."
+    },
+    {
+      "id": "PrimeStrips.stripDegree",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Degree sums of exponent vectors",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripDegreeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripDegreeActual.lean": [
+          "stripDegree",
+          "stripDegree_zero",
+          "stripDegree_add",
+          "stripDegree_mono",
+          "stripDegree_neg",
+          "stripDegree_sub"
+        ]
+      },
+      "note": "New Lean file: sum-degree laws for prime strips."
+    },
+    {
+      "id": "PaperPreObjects.typedInterfaces",
+      "kind": "def",
+      "status": "CONDITIONAL",
+      "title": "IUT 3.12 pre-objects: typed statement interfaces + concrete bundle",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperPreObjectInterfacesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperPreObjectInterfacesActual.lean": [
+          "QPilotData",
+          "ThetaPilotData",
+          "HodgeTheaterData",
+          "FrobeniusPictureData",
+          "LogShellData",
+          "KummerClassData",
+          "ThetaLinkData",
+          "PaperPreObjectBundle",
+          "paperPreObjectBundleExample",
+          "paperPreObjectBundleExample_qpilot_q_pos",
+          "paperPreObjectBundleExample_qpilot_q_lt_one",
+          "paperPreObjectBundleExample_logshell_pos"
+        ]
+      },
+      "note": "New Lean file (no sorry): paper-layer typed data interfaces for IUT 3.12 pre-objects + explicit non-vacuous bundle example."
+    },
+    {
+      "id": "PaperTargets.abcStatement",
+      "kind": "target",
+      "status": "DEF",
+      "title": "Typed abc statement interface + Cor 3.12 bound shape",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PaperTargetStatementsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PaperTargetStatementsActual.lean": [
+          "radical",
+          "radical_zero",
+          "radical_pos",
+          "ABCConjectureStatement",
+          "Cor312BoundShape",
+          "cor312BoundShape_pos",
+          "abc_of_cor312_forall"
+        ]
+      },
+      "note": "New Lean file (no sorry): typed abc/Cor312 statement shapes; conditional reduction proved (Cor312-bound family => abc shape)."
+    },
+    {
+      "id": "Cor312.logComparison",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Logarithmic comparison lemmas for height/log-shell estimates",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogComparisonLemmasActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogComparisonLemmasActual.lean": [
+          "log_mul_pos",
+          "log_le_log_of_pos",
+          "log_inv_of_pos",
+          "log_div_of_pos",
+          "log_zpow_of_pos",
+          "log_pow_of_pos",
+          "log_pos_of_one_lt",
+          "log_nonpos_of_pos_le_one"
+        ]
+      },
+      "note": "New Lean file (no sorry): Real.log arithmetic used in IUT IV height/log-volume comparisons."
+    },
+    {
+      "id": "Frobenius.UnitsReuseCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of global-unit transport (compose/injectivity/zpow)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsReuseCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsReuseCorollariesActual.lean": [
+          "unitsMapOfRingHom_comp_apply₂",
+          "unitsMapOfRingHom_comp_injective",
+          "unitsMapOfRingHom_zpow_zero",
+          "unitsMapOfRingHom_id_apply₂",
+          "unitsMapOfRingHom_congr_comp"
+        ]
+      },
+      "note": "New Lean file (no sorry): adapts existing EXIT0 declarations from Mzk1FrobeniusUnitsTransportActual (reuse, not duplicate theory)."
+    },
+    {
+      "id": "Section0.pathCompositionCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of path composition (threefold length, reverse twice, nil endpoints)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionCorollariesActual.lean": [
+          "pdLength_append_three",
+          "pdReverse_length_twice",
+          "pdLength_append_nil'",
+          "pdLength_nil_append'"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 PathComposition addendum declarations."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.arrowCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of Gamma arrow facts (four-step shift, three-step composition iff)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowCorollariesActual.lean": [
+          "frobeniusPictureArrow_four",
+          "frobeniusPictureArrow_comp_iff_three",
+          "frobeniusPictureArrow_succ_succ",
+          "frobeniusPictureArrow_iterate_succ"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 arrow-fact declarations."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of the translation group law (associativity/inverse/commutativity)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationCorollariesActual.lean": [
+          "chainTranslation_add_add",
+          "chainTranslation_add_apply₂",
+          "chainTranslation_neg_add",
+          "chainTranslation_neg_add_left",
+          "chainTranslation_add_comm",
+          "chainTranslation_add_apply_comm"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 translation-law declarations."
+    },
+    {
+      "id": "Kummer.AbsoluteTrioConsumer",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse consumer facts for the Absolute Kummer trio row index",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioConsumerActual.lean": [
+          "absoluteKummerTrioRows_length'",
+          "absoluteKummerTrioRows_nonempty",
+          "absoluteKummerTrioRows_head",
+          "absoluteKummerTrioRows_length_pos"
+        ]
+      },
+      "note": "New Lean file (no sorry): consumer corollaries of the EXIT0 summary index."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.closureCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of graph-aut closure (inv/pow/mul)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureCorollariesActual.lean": [
+          "frobeniusPictureGraphAut_inv_inv",
+          "frobeniusPictureGraphAut_pow_two",
+          "frobeniusPictureGraphAut_pow_succ",
+          "frobeniusPictureGraphAut_mul_left",
+          "frobeniusPictureGraphAut_inv_iff"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 closure declarations."
+    },
+    {
+      "id": "Theta.ModLProjectionCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of mod-l theta/elliptic projection rules",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionCorollariesActual.lean": [
+          "modLThetaProjection_apply_one",
+          "modLEllipticProjection_apply_one",
+          "modLThetaProjection_congr",
+          "modLEllipticProjection_congr",
+          "modLThetaProjection_eq_comp_apply",
+          "modLEllipticProjection_eq_comp_apply"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 mod-l projection declarations."
+    },
+    {
+      "id": "Kummer.LogShellCarrierCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of log-shell p* arithmetic (pow/divisibility forms)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierReuseActual.lean": [
+          "sourceLogShellStar_dvd_sq'",
+          "sourceLogShellStar_eq_pow'",
+          "SourceLogShellDatum.pStar_eq_or_pow",
+          "SourceLogShellDatum.pStar_dvd_p'",
+          "SourceLogShellDatum.pStar_dvd_sq'",
+          "sourceLogShellStar_mul_self_dvd"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 log-shell arithmetic declarations."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.unicityCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse corollaries of translation-parameter uniqueness (symm/injective/param)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityCorollariesActual.lean": [
+          "graphAut_translation_unique'",
+          "chainTranslation_eq_iff_symm",
+          "chainTranslation_injective'",
+          "chainTranslation_eq_one_iff'",
+          "chainTranslation_ne_one_iff'",
+          "graphAut_translation_param"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses EXIT0 unicity declarations."
+    },
+    {
+      "id": "Section0.pathProjections",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Projection/computation lemmas for section-0 path data",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathProjectionsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathProjectionsActual.lean": [
+          "pdLength_eq_edges_length",
+          "pdAppend_start",
+          "pdAppend_end",
+          "pdAppend_edges",
+          "pdReverse_start",
+          "pdReverse_end",
+          "pdReverse_edges",
+          "pdOfEdge_edges",
+          "pdOfEdge_start",
+          "pdOfEdge_end"
+        ]
+      },
+      "note": "New Lean file (no sorry): rfl-level projections of path-data builders."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationApplyCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse computation corollaries for chain translations (tree asset)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationApplyCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationApplyCorollariesActual.lean": [
+          "chainTranslation_apply_zero'",
+          "chainTranslation_apply_one",
+          "chainTranslation_apply_neg",
+          "chainTranslation_apply_comp",
+          "chainTranslation_apply_add'",
+          "graphAut_one'",
+          "graphAut_translation_apply"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses tree SourceThetaLinkGraphAutomorphismReduction declarations."
+    },
+    {
+      "id": "Kummer.LogShellCarrierTreeCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse computation corollaries for log-shell carrier (tree asset)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierTreeCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierTreeCorollariesActual.lean": [
+          "SourceLogShellDatum.pStar_eq_star",
+          "SourceLogShellDatum.pStar_pos'",
+          "SourceLogShellDatum.pStar_dvd_p_star",
+          "SourceLogShellDatum.pStar_mul_dvd_sq"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses tree SourceLogShellCarrier declarations."
+    },
+    {
+      "id": "Frobenioid.UnitsMapCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Reuse monoid-hom corollaries for the global-unit map (tree asset)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidUnitsMapCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobenioidUnitsMapCorollariesActual.lean": [
+          "unitsMapOfRingHom_one'",
+          "unitsMapOfRingHom_mul'",
+          "unitsMapOfRingHom_pow'",
+          "unitsMapOfRingHom_one_apply",
+          "unitsMapOfRingHom_mul_apply"
+        ]
+      },
+      "note": "New Lean file (no sorry): reuses tree Example36 unitsMapOfRingHom."
+    },
+    {
+      "id": "QPilot.fractionArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "q-pilot rational fraction arithmetic (q<1 power decay)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1QPilotFractionArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1QPilotFractionArithmeticActual.lean": [
+          "qpow_pos",
+          "qpow_succ_lt",
+          "qpow_lt_qpow_of_lt",
+          "qpow_lt_one"
+        ]
+      },
+      "note": "New Lean file (no sorry): rational q<1 power arithmetic for q-pilot."
+    },
+    {
+      "id": "Cor312.heightArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Integer height arithmetic (natAbs triangle/congruence)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HeightArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HeightArithmeticActual.lean": [
+          "height",
+          "height_zero",
+          "height_neg",
+          "height_add_le",
+          "height_mul",
+          "height_sub_le",
+          "height_nonneg",
+          "height_eq_zero_iff"
+        ]
+      },
+      "note": "New Lean file (no sorry): natAbs-based height arithmetic for Cor 3.12 estimates."
+    },
+    {
+      "id": "PrimeStrips.finsetCardArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Finite-cardinality arithmetic for prime sets",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetCardArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetCardArithmeticActual.lean": [
+          "card_union_disjoint'",
+          "card_inter_le_left'",
+          "card_sdiff_of_subset",
+          "card_union_le",
+          "card_insert_of_notMem"
+        ]
+      },
+      "note": "New Lean file (no sorry): Finset cardinality laws for prime sets."
+    },
+    {
+      "id": "Cor312.logVolumeMonotone",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Log-volume monotonicity facts",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogVolumeMonotoneActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogVolumeMonotoneActual.lean": [
+          "log_nonneg_of_one_le",
+          "log_two_pos",
+          "log_lt_log_of_pos",
+          "log_le_zero_of_pos_le_one",
+          "log_one'",
+          "log_eq_zero_iff"
+        ]
+      },
+      "note": "New Lean file (no sorry): Real.log monotonicity wrappers for log-volume estimates."
+    },
+    {
+      "id": "InitialTheta.chiArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Orbifold Euler-characteristic integer arithmetic",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChiArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChiArithmeticActual.lean": [
+          "chiInt",
+          "chiInt_zero_zero",
+          "chiInt_typeOneOne",
+          "chiInt_add_puncture",
+          "chiInt_add_genus",
+          "chiInt_nonpos_of_large"
+        ]
+      },
+      "note": "New Lean file (no sorry): chi integer arithmetic for orbicurve signatures."
+    },
+    {
+      "id": "LogShell.natParity",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Parity arithmetic for log-shell p/p* case analysis",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatParityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatParityActual.lean": [
+          "nat_mod_two_eq_zero_or_one",
+          "odd_eq_two_mul_add_one",
+          "even_eq_two_mul",
+          "mod_two_ne_one_iff_even",
+          "mod_two_eq_one_or_even"
+        ]
+      },
+      "note": "New Lean file (no sorry): parity dichotomy used by sourceLogShellStar odd/even cases."
+    },
+    {
+      "id": "LogShell.natPowMonotone",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural-power monotonicity laws for log-shell scaling",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatPowMonotoneActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatPowMonotoneActual.lean": [
+          "pow_le_pow_right'",
+          "pow_lt_pow_right'",
+          "pow_pos'",
+          "pow_succ_pos",
+          "pow_ne_zero'",
+          "one_pow'",
+          "pow_zero'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat power monotonicity wrappers."
+    },
+    {
+      "id": "Section0.listPathFacts",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "List-path arithmetic for edge sequences",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ListPathFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ListPathFactsActual.lean": [
+          "length_append'",
+          "length_reverse'",
+          "reverse_reverse'",
+          "append_nil'",
+          "nil_append'",
+          "append_assoc'",
+          "length_append_three"
+        ]
+      },
+      "note": "New Lean file (no sorry): List arithmetic wrappers used by path composition."
+    },
+    {
+      "id": "HodgeTheater.linkCompositionLaws",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Relation-composition laws (associativity/identity/monotonicity)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RelationCompositionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RelationCompositionActual.lean": [
+          "relComp",
+          "relComp_assoc",
+          "relId",
+          "relComp_id_left",
+          "relComp_id_right",
+          "relComp_mono"
+        ]
+      },
+      "note": "New Lean file (no sorry): relation composition monoidoid laws for Hodge-theater links."
+    },
+    {
+      "id": "FrobeniusPicture.permGroupLaws",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Permutation-group laws for Frobenius-picture automorphisms",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PermGroupLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PermGroupLawsActual.lean": [
+          "perm_pow_succ",
+          "perm_pow_succ'",
+          "perm_inv_mul_cancel",
+          "perm_mul_inv_cancel",
+          "perm_inv_inv'",
+          "perm_pow_two",
+          "perm_pow_three"
+        ]
+      },
+      "note": "New Lean file (no sorry): generic Equiv.Perm power/inverse laws."
+    },
+    {
+      "id": "PrimeStrips.divisibilityArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Divisibility arithmetic for exponent/degree bookkeeping",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DivisibilityArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DivisibilityArithmeticActual.lean": [
+          "dvd_trans'",
+          "dvd_antisymm'",
+          "one_dvd'",
+          "dvd_zero'",
+          "dvd_add'",
+          "dvd_sub'",
+          "dvd_mul_right'",
+          "dvd_mul_left'",
+          "dvd_mul_of_dvd_left'",
+          "dvd_mul_of_dvd_right'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat divisibility wrappers."
+    },
+    {
+      "id": "PrimeStrips.mulMonotone",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural multiplication monotonicity (strip degree estimates)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatMulMonotoneActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatMulMonotoneActual.lean": [
+          "nat_mul_le_mul'",
+          "nat_mul_le_mul_right'",
+          "nat_mul_le_mul_left'",
+          "nat_mul_lt_mul_of_pos_right'",
+          "nat_mul_lt_mul_of_pos_left'",
+          "nat_mul_pos'",
+          "nat_mul_eq_zero_iff'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat multiplication monotonicity wrappers."
+    },
+    {
+      "id": "PrimeStrips.finsetSum",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Finset-sum laws for strip degrees",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumActual.lean": [
+          "sum_singleton'",
+          "sum_insert'",
+          "sum_zero'",
+          "sum_congr'",
+          "sum_le_sum'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Finset sum wrappers used by stripDegree."
+    },
+    {
+      "id": "Cor312.intArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Integer ring arithmetic wrappers",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IntArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IntArithmeticActual.lean": [
+          "int_add_assoc'",
+          "int_add_comm'",
+          "int_add_neg_cancel'",
+          "int_sub_eq_add_neg'",
+          "int_neg_neg'",
+          "int_mul_comm'",
+          "int_mul_add'",
+          "int_add_mul'",
+          "int_sub_self'",
+          "int_add_sub_cancel'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Int arithmetic wrappers."
+    },
+    {
+      "id": "PrimeStrips.dvdMulChained",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chained divisibility under multiplication/powers",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DvdMulChainedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DvdMulChainedActual.lean": [
+          "dvd_mul_right_of_dvd'",
+          "dvd_mul_left_of_dvd'",
+          "dvd_mul_of_dvd_mul'",
+          "dvd_mul_of_dvd_of_dvd'",
+          "dvd_pow_of_dvd'"
+        ]
+      },
+      "note": "New Lean file (no sorry): divisibility transport along multiplication and powers."
+    },
+    {
+      "id": "Section0.natOrderArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural-order arithmetic wrappers",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatOrderArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatOrderArithmeticActual.lean": [
+          "zero_le'",
+          "le_add_right'",
+          "le_add_left'",
+          "le_trans'",
+          "lt_of_lt_of_le'",
+          "le_of_lt'",
+          "add_le_add'",
+          "add_lt_add'",
+          "add_le_add_right'",
+          "add_lt_add_right'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat order arithmetic wrappers."
+    },
+    {
+      "id": "LogShell.natDivMod",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural division/modulo identities for log-shell levels",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatDivModActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatDivModActual.lean": [
+          "div_mul_le'",
+          "mod_lt'",
+          "div_add_mod'",
+          "mod_add_div'",
+          "div_eq_of_lt'",
+          "mod_eq_of_lt'",
+          "div_le_self'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat div/mod identity wrappers."
+    },
+    {
+      "id": "Section0.natSubArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural subtraction/cancellation arithmetic",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatSubArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatSubArithmeticActual.lean": [
+          "add_sub_cancel'",
+          "add_sub_cancel_left'",
+          "sub_add_cancel'",
+          "sub_le_self'",
+          "sub_eq_zero_of_le'",
+          "sub_self'",
+          "zero_sub'",
+          "sub_le_sub_left'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat subtraction wrappers."
+    },
+    {
+      "id": "Section0.natMaxMin",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural max/min arithmetic wrappers",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatMaxMinActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatMaxMinActual.lean": [
+          "le_max_left'",
+          "le_max_right'",
+          "min_le_left'",
+          "min_le_right'",
+          "max_comm'",
+          "min_comm'",
+          "max_self'",
+          "min_self'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat max/min wrappers."
+    },
+    {
+      "id": "Cor312.natAbsArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Integer natAbs arithmetic",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatAbsArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatAbsArithmeticActual.lean": [
+          "natAbs_eq'",
+          "natAbs_ofNat'",
+          "natAbs_neg_ofNat'",
+          "natAbs_nonneg'",
+          "natAbs_eq_self",
+          "natAbs_zero'",
+          "natAbs_one'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Int.natAbs wrappers."
+    },
+    {
+      "id": "PrimeStrips.gcdArithmetic",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Gcd arithmetic for divisibility bookkeeping",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatGcdActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatGcdActual.lean": [
+          "gcd_dvd_left'",
+          "gcd_dvd_right'",
+          "dvd_gcd'",
+          "gcd_comm'",
+          "gcd_pos_of_pos_left'",
+          "gcd_pos_of_pos_right'",
+          "gcd_self'",
+          "gcd_one_left'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat.gcd wrappers."
+    },
+    {
+      "id": "PrimeStrips.primeFacts",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Basic prime facts for prime-strip levels",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatPrimeFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatPrimeFactsActual.lean": [
+          "prime_two'",
+          "prime_three'",
+          "not_prime_one'",
+          "prime_pos'",
+          "prime_two_le'",
+          "prime_ne_zero'",
+          "prime_ne_one'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat.Prime basic facts."
+    },
+    {
+      "id": "Section0.natOrderStrict",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Strict natural-order facts",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatOrderStrictActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatOrderStrictActual.lean": [
+          "le_antisymm'",
+          "lt_irrefl'",
+          "lt_asymm'",
+          "lt_of_le_of_ne'",
+          "le_of_not_lt'",
+          "not_lt_of_le'",
+          "not_le_of_lt'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat strict-order wrappers."
+    },
+    {
+      "id": "PrimeStrips.mulIdentities",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Natural multiplication identities",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NatMulIdentitiesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NatMulIdentitiesActual.lean": [
+          "mul_one'",
+          "one_mul'",
+          "mul_zero'",
+          "zero_mul'",
+          "mul_comm'",
+          "mul_assoc'",
+          "mul_left_comm'",
+          "mul_right_comm'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Nat mul identities."
+    },
+    {
+      "id": "PrimeStrips.sumRange",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Sums over initial Nat ranges",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumRangeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FinsetSumRangeActual.lean": [
+          "sum_range_succ'",
+          "sum_range_zero'",
+          "sum_range_one'"
+        ]
+      },
+      "note": "New Lean file (no sorry): Finset.range sum laws."
+    },
+    {
+      "id": "Kummer.rootOfUnityDifference",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: two n-th roots of a unit differ by an n-th root of unity (existence + uniqueness)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerRootChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerRootChainActual.lean": [
+          "kummerRoot_eq_mul_rootsOfUnity",
+          "kummerRoot_eq_mul_rootsOfUnity_unique"
+        ]
+      },
+      "note": "Real chained consumer: combines KummerRoot data with rootsOfUnity ratio lemma to produce a new uniqueness conclusion."
+    },
+    {
+      "id": "PrimeStrips.degreeNonneg",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: nonneg/zero-characterisation of strip degrees",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeChainActual.lean": [
+          "stripDegree_nonneg",
+          "stripDegree_le_of_pointwise",
+          "stripDegree_zero_iff"
+        ]
+      },
+      "note": "Real chained consumer: derives nonnegativity and sum-zero characterisation from stripDegree lemmas."
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationPower",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: powers of graph automorphisms are translations; powers preserve arrows",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TranslationPowerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TranslationPowerChainActual.lean": [
+          "chainTranslation_pow",
+          "frobeniusGraphAut_pow_arrow",
+          "frobeniusGraphAut_pow_eq_translation"
+        ]
+      },
+      "note": "Real chained theorem: combines translation group law, unicity parameterisation and closure under powers to identify n-th powers of graph automorphisms as translations k*n and to transfer arrows along powers."
+    },
+    {
+      "id": "MuN.rootsOfUnityPowTorsionBridge",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain bridge: roots of unity = power-torsion kernels in K^×; triviality and divisibility",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MuNBridgeChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MuNBridgeChainActual.lean": [
+          "rootsOfUnity_eq_powTorsion",
+          "rootsOfUnity_one_eq_bot",
+          "rootsOfUnity_le_of_dvd'"
+        ]
+      },
+      "note": "Real chained bridge: identifies Mathlib rootsOfUnity with my powTorsion kernel, then derives triviality and divisibility monotonicity."
+    },
+    {
+      "id": "Kummer.rootDifferencePowTorsion",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: Kummer root differences lie in power-torsion (with uniqueness)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerPowTorsionChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerPowTorsionChainActual.lean": [
+          "kummerRoot_ratio_mem_powTorsion",
+          "kummerRoot_eq_mul_powTorsion_unique"
+        ]
+      },
+      "note": "Real chained theorem: transports the root-of-unity difference result across the rootsOfUnity = powTorsion bridge."
+    },
+    {
+      "id": "Section0.saturatedLength",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: fixed-total-length path-pair sets are saturated",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedLengthChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedLengthChainActual.lean": [
+          "saturated_lengthSet",
+          "saturated_lengthSet_le"
+        ]
+      },
+      "note": "Real chained consumer: uses Saturated definition and pairLength_map invariance to prove concrete saturated families."
+    },
+    {
+      "id": "ThetaLink.symmetryComposition",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: theta-link unit-equivalence data compose (category laws)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkSymmetryChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaLinkSymmetryChainActual.lean": [
+          "tlComp",
+          "tlComp_unitEquiv",
+          "tlComp_apply",
+          "tlComp_id_left",
+          "tlComp_assoc"
+        ]
+      },
+      "note": "Real chained theorem: composition of theta-link data with unit laws and associativity proved from MulEquiv.trans."
+    },
+    {
+      "id": "Section0.saturatedLengthCorollaries",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: intersections/MapsTo corollaries for saturated length families",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SaturatedLengthCorollariesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SaturatedLengthCorollariesActual.lean": [
+          "saturated_lengthSet_inter",
+          "mapsTo_lengthSet",
+          "mapsTo_lengthSet_le"
+        ]
+      },
+      "note": "Real chained consumer: composes saturated_inter/saturated_mapsTo with concrete length families."
+    },
+    {
+      "id": "Section0.saturatedLengthInterMapsTo",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: MapsTo for intersections of saturated length families",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SaturatedLengthInterChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SaturatedLengthInterChainActual.lean": [
+          "mapsTo_lengthSet_inter",
+          "saturated_lengthSet_univ_inter"
+        ]
+      },
+      "note": "Real chained consumer: composes saturated_mapsTo with the inter/Univ closure of length families."
+    },
+    {
+      "id": "PrimeStrips.degreeExponentBridge",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Bridge chain: strip degree of exponent-vector add/zero/neg",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeExponentChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeExponentChainActual.lean": [
+          "stripDegree_evAdd",
+          "stripDegree_evZero",
+          "stripDegree_evNeg",
+          "stripDegree_evAdd_evNeg"
+        ]
+      },
+      "note": "Real bridge theorem: connects exponent-vector operations (add/zero/neg) with degree sums."
+    },
+    {
+      "id": "PrimeStrips.kernelChain",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain bridge: value-kernel of elementary exponent operations",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripKernelChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripKernelChainActual.lean": [
+          "evKernelIn_evZero",
+          "evKernelIn_neg",
+          "evKernelIn_neg_evNeg",
+          "evKernelIn_empty_eq"
+        ]
+      },
+      "note": "Real chained consumer: evaluates kernel sets of zero/neg exponent maps."
+    },
+    {
+      "id": "PrimeStrips.degreeNegNonpos",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Chain: nonpositive degree of negated nonnegative exponent vectors",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeNegChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StripDegreeNegChainActual.lean": [
+          "stripDegree_evNeg_nonpos",
+          "stripDegree_evZero_eq_zero",
+          "stripDegree_evAdd_evNeg_zero"
+        ]
+      },
+      "note": "Real chained theorem: combines evNeg bridge, nonneg degree and sign rules to bound negated degrees."
+    }
+  ],
+  "edges": [
+    {
+      "from": "IUT312.statement",
+      "to": "Frobenioid.transport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "LogShell.I",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "ThetaLink.procession",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "Kummer.continuity",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater.family",
+      "to": "HodgeTheater.core",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FrobeniusPicture.graphAut",
+      "to": "FrobeniusPicture.graph",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FrobeniusPicture.translationClass",
+      "to": "FrobeniusPicture.graphAut",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FrobeniusPicture.translationLaw",
+      "to": "FrobeniusPicture.graphAut",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FrobeniusPicture.arrowFacts",
+      "to": "FrobeniusPicture.graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "InitialTheta.cStage",
+      "to": "InitialTheta.data",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.FD",
+      "to": "Frobenioid.Example36",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ThetaLink.procession",
+      "to": "ThetaLink.quotient",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaLink.procession",
+      "to": "FrobeniusPicture.translationClass",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaLink.procession",
+      "to": "InitialTheta.cStage",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LogShell.I",
+      "to": "LogShell.pStar",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.absolute",
+      "to": "MuN.torsion",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.continuity",
+      "to": "Kummer.absolute",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.summary",
+      "to": "Kummer.continuity",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.summary",
+      "to": "Kummer.absolute",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Frobenioid.transport",
+      "to": "Frobenioid.Example36",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.orientedGraph",
+      "to": "Section0.countablyOrdered",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.paths",
+      "to": "Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.saturated",
+      "to": "Section0.paths",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaLink.quotient",
+      "to": "Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.I",
+      "to": "Section0.countablyOrdered",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater.links",
+      "to": "HodgeTheater.core",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HodgeTheater.concrete",
+      "to": "HodgeTheater.core",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FrobeniusPicture.pictureObjects",
+      "to": "HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialTheta.definition31",
+      "to": "InitialTheta.data",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.frobenioidCategory",
+      "to": "PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaLink.unitLaws",
+      "to": "ThetaLink.procession",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LogShell.invariants",
+      "to": "LogShell.I",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.rootSystems",
+      "to": "MuN.torsion",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPilot.arithmeticDivisor",
+      "to": "QPilot",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.orderCat",
+      "to": "Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.saturatedClosure",
+      "to": "Section0.saturated",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.FxDAction",
+      "to": "PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LogShell.logFrobenius",
+      "to": "LogShell.I",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaPilot.carrier",
+      "to": "QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "KummerLogShell.bridge",
+      "to": "Kummer.absolute",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "KummerLogShell.bridge",
+      "to": "LogShell.I",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HodgeTheater.familyTransport",
+      "to": "HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "Gap.qPilotPreciseConstruction",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "Gap.thetaPilotIQContainment",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "Gap.absTopIII58_55",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "Gap.iut312TopStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Gap.absTopIII58_55",
+      "to": "Gap.thetaPilotIQContainment",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Gap.section0SaturatedTheory",
+      "to": "Section0.saturated",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Gap.etthDeepInputs",
+      "to": "ThetaPilot.carrier",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "evidence": "observed_source",
+      "to": "Frobenioid.Example36",
+      "kind": "statement",
+      "from": "E4.example36CorrespondenceLaws"
+    },
+    {
+      "evidence": "observed_source",
+      "to": "ThetaLink.procession",
+      "kind": "interface",
+      "from": "E4.example36CorrespondenceLaws"
+    },
+    {
+      "from": "Section0.saturatedSets",
+      "to": "Section0.paths",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "MuN.rootsOfUnityFacts",
+      "to": "MuN.torsion",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.orientedGraphCore",
+      "to": "Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.exponentVector",
+      "to": "PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater.linkCategoryLaws",
+      "to": "HodgeTheater.family",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.categorySkeleton",
+      "to": "PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.scalingPow",
+      "to": "LogShell.I",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Kummer.rootCompatibility",
+      "to": "Kummer.absolute",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Theta.powerKernelGeneric",
+      "to": "ThetaLink.quotient",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialTheta.orbicurveSignature",
+      "to": "InitialTheta.data",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobeniusPicture.pathVertices",
+      "to": "FrobeniusPicture.graph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.adjacentPairs",
+      "to": "Section0.countablyOrdered",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Frobenioid.ramificationData",
+      "to": "Frobenioid.transport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.invariantImage",
+      "to": "LogShell.invariants",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ThetaLink.symmetry",
+      "to": "ThetaLink.unitLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.valueKernel",
+      "to": "PrimeStrips.FD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.orderwise",
+      "to": "Section0.orientedGraph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Frobenioid.unitsMapLaws",
+      "to": "Frobenioid.transport",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.valueGroupAction",
+      "to": "PrimeStrips.FxDAction",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobeniusPicture.oppositeArrows",
+      "to": "FrobeniusPicture.graph",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Kummer.powSubgroup",
+      "to": "Kummer.absolute",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.branches",
+      "to": "Section0.orientedGraphCore",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.stripDegree",
+      "to": "PrimeStrips.exponentVector",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PaperPreObjects.typedInterfaces",
+      "to": "IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PaperTargets.abcStatement",
+      "to": "IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.logComparison",
+      "to": "IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "evidence": "observed_source",
+      "kind": "statement",
+      "from": "Gap.qPilotPreciseConstruction",
+      "to": "QPilot"
+    },
+    {
+      "evidence": "observed_source",
+      "kind": "statement",
+      "from": "Gap.thetaPilotIQContainment",
+      "to": "ThetaPilot.carrier"
+    },
+    {
+      "evidence": "observed_source",
+      "kind": "interface",
+      "from": "Gap.absTopIII58_55",
+      "to": "KummerLogShell.bridge"
+    },
+    {
+      "evidence": "observed_source",
+      "kind": "statement",
+      "from": "Gap.section0SaturatedTheory",
+      "to": "Section0.saturatedSets"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.closureCorollaries",
+      "to": "FrobeniusPicture.graphAut",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Theta.ModLProjectionCorollaries",
+      "to": "ThetaLink.quotient",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.LogShellCarrierCorollaries",
+      "to": "LogShell.pStar",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.unicityCorollaries",
+      "to": "FrobeniusPicture.translationLaw",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.pathProjections",
+      "to": "Section0.paths",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.translationApplyCorollaries",
+      "to": "FrobeniusPicture.translationClass",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.LogShellCarrierTreeCorollaries",
+      "to": "LogShell.I",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Frobenioid.UnitsMapCorollaries",
+      "to": "Frobenioid.transport",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPilot.fractionArithmetic",
+      "to": "QPilot",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.heightArithmetic",
+      "to": "Cor312.logComparison",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.finsetCardArithmetic",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.logVolumeMonotone",
+      "to": "Cor312.logComparison",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialTheta.chiArithmetic",
+      "to": "InitialTheta.orbicurveSignature",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.natParity",
+      "to": "LogShell.scalingPow",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.natPowMonotone",
+      "to": "LogShell.scalingPow",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.listPathFacts",
+      "to": "Section0.paths",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater.linkCompositionLaws",
+      "to": "HodgeTheater.linkCategoryLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "FrobeniusPicture.permGroupLaws",
+      "to": "FrobeniusPicture.graphAut",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.divisibilityArithmetic",
+      "to": "PrimeStrips.exponentVector",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.mulMonotone",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.finsetSum",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.intArithmetic",
+      "to": "Cor312.heightArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.dvdMulChained",
+      "to": "PrimeStrips.divisibilityArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.natOrderArithmetic",
+      "to": "Section0.orderwise",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell.natDivMod",
+      "to": "LogShell.natParity",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.natSubArithmetic",
+      "to": "Section0.natOrderArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.natMaxMin",
+      "to": "Section0.natOrderArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.natAbsArithmetic",
+      "to": "Cor312.heightArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.gcdArithmetic",
+      "to": "PrimeStrips.divisibilityArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.primeFacts",
+      "to": "PrimeStrips.divisibilityArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.natOrderStrict",
+      "to": "Section0.natOrderArithmetic",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.mulIdentities",
+      "to": "PrimeStrips.mulMonotone",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips.sumRange",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Kummer.rootOfUnityDifference",
+      "to": "Kummer.rootCompatibility",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.degreeNonneg",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.translationPower",
+      "to": "FrobeniusPicture.translationClass",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "MuN.rootsOfUnityPowTorsionBridge",
+      "to": "Theta.powerKernelGeneric",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "MuN.rootsOfUnityPowTorsionBridge",
+      "to": "MuN.rootsOfUnityFacts",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.rootDifferencePowTorsion",
+      "to": "Kummer.rootOfUnityDifference",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Kummer.rootDifferencePowTorsion",
+      "to": "MuN.rootsOfUnityPowTorsionBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.saturatedLength",
+      "to": "Section0.saturatedSets",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ThetaLink.symmetryComposition",
+      "to": "ThetaLink.symmetry",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.saturatedLengthCorollaries",
+      "to": "Section0.saturatedLength",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Section0.saturatedLengthInterMapsTo",
+      "to": "Section0.saturatedLengthCorollaries",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.degreeExponentBridge",
+      "to": "PrimeStrips.exponentVector",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.degreeExponentBridge",
+      "to": "PrimeStrips.stripDegree",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.kernelChain",
+      "to": "PrimeStrips.valueKernel",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.degreeNegNonpos",
+      "to": "PrimeStrips.degreeExponentBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PrimeStrips.degreeNegNonpos",
+      "to": "PrimeStrips.degreeNonneg",
+      "kind": "proof",
+      "evidence": "observed_source"
+    }
+  ]
+}

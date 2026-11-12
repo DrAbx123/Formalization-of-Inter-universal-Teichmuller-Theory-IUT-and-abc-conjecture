@@ -1,0 +1,1953 @@
+{
+  "section": "zz-hull-edges",
+  "generated": "2026-11-10T18:37:18.150Z",
+  "owner": "hull",
+  "method": "A471/A472 companion edge-only fragment for hull cross-fragment reuse (processed last by merge3); nodes live in target-chain.hull.json.",
+  "nodes": [],
+  "edges": [
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "routes:theorem311_assembly",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind1",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "iut-skeleton:K1K2",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.H5.CLASSB.STATEMENT",
+      "to": "iut-skeleton:H5",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.H7.DEEPOB9.STATEMENT",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "iut-skeleton:HDD",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "iut-skeleton:IPL",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "iut-skeleton:SHE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "iut-skeleton:APT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "to": "iutiii:IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "to": "iutiii:IUTIII.IUTII_LINK_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "routes:theorem311_assembly",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.TWO_ACTION",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.ARITH_HOLO_LANDING",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind1",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iut-skeleton:Ind3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iutiii:IUTIII.IND1",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iutiii:IUTIII.IND2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iutiii:IUTIII.IND3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.IND_OBLIGATIONS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "iut-skeleton:K1K2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "iutiii:IUTIII.THM311.PACKET_DEGREE_LEDGER_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iuti-ii:IUTII.Kummer.LogShellCarrier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iuti-ii:IUTII.Kummer.SourceThetaPilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "iutiii:IUTIII.HULL.R9_AUDIT_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "iutiii:IUTIII.HULL.H7.OB9.BUNDLE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "iutiii:HULL.H7.OB9.WRAPPER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iut-pre-abc:LogShell.I",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "iut-pre-abc:MuN.torsion",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-pre-abc:HodgeTheater.core",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-pre-abc:HodgeTheater.links",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.FROBENIUS.STATEMENT",
+      "to": "iut-pre-abc:FrobeniusPicture.graph",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.FROBENIUS.STATEMENT",
+      "to": "iut-pre-abc:FrobeniusPicture.translationClass",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.INITIALTHETA.STATEMENT",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.INITIALTHETA.STATEMENT",
+      "to": "iut-pre-abc:InitialTheta.definition31",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "to": "iut-pre-abc:PrimeStrips.FD",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "to": "iut-pre-abc:Frobenioid.Example36",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.THETALINK.STATEMENT",
+      "to": "iut-pre-abc:ThetaLink.procession",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.THETALINK.STATEMENT",
+      "to": "iut-pre-abc:ThetaLink.quotient",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.KUMMER.STATEMENT",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.KUMMER.STATEMENT",
+      "to": "iut-pre-abc:MuN.torsion",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "to": "iut-pre-abc:LogShell.I",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "to": "iut-pre-abc:LogShell.invariants",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "to": "iut-pre-abc:LogShell.logFrobenius",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-pre-abc:QPilot.arithmeticDivisor",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "hull:PRE.IUTII.THETALINK.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "to": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:D.SCHEME.SIDE.MAPS",
+      "to": "foundation:D.bridgeInterface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:D.SCHEME.SIDE.MAPS",
+      "to": "foundation:D.finiteMapChart",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:D.SCHEME.SIDE.MAPS",
+      "to": "iut-pre-stage4:D.gap.schemeSideMaps",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "to": "iut-skeleton:hCor312",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "to": "iut-skeleton:hSlack",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.HCOR312.HSLACK.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:D.SCHEME.SIDE.MAPS",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-pre-abc:IUT312.statement",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-pre-abc:Gap.iut312TopStatement",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "to": "iut-skeleton:ClassB",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "to": "hull:PRE.H5.CLASSB.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "to": "hull:PRE.H7.DEEPOB9.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SOURCES.1995.2015.STATEMENT",
+      "to": "iut-skeleton:Sources1995_2015",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SOURCES.1995.2015.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop18",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "hull:PRE.SOURCES.1995.2015.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP11.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop11",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP12.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop12",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP14.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop14",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP15.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop15",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP18.STATEMENT",
+      "to": "iut-pre-stepxi:S1.prop18",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.THM110.STATEMENT",
+      "to": "iut-pre-stepxi:S1.thm110actual",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PNT.STATEMENT",
+      "to": "iut-pre-stepxi:S2.pnt",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "iut-pre-stepxi:S2.arithmeticTransition",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "iut-pre-stepxi:GAP.sec1_to_sec2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "to": "iut-pre-stepxi:S1b.heightInput",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.UNDILATED.INPUT.STATEMENT",
+      "to": "iut-pre-stepxi:S1c.undilatedInput",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.PROP11.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.PROP12.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.PROP14.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.PROP15.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.THM110.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "to": "hull:PRE.IUTIV.PNT.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "hull:PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "hull:PRE.IUTIV.UNDILATED.INPUT.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.ABSTOPIII.5855.STATEMENT",
+      "to": "iut-pre-abc:Gap.absTopIII58_55",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.QPILOT.PRECISE.STATEMENT",
+      "to": "iut-pre-abc:Gap.qPilotPreciseConstruction",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.IQ.STATEMENT",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SECTION0.SATURATED.STATEMENT",
+      "to": "iut-pre-abc:Gap.section0SaturatedTheory",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ABSTOPIII.5855.STATEMENT",
+      "to": "iut-pre-abc:LogShell.invariants",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.QPILOT.PRECISE.STATEMENT",
+      "to": "iut-pre-abc:QPilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETAPILOT.IQ.STATEMENT",
+      "to": "iut-pre-abc:ThetaPilot.carrier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SECTION0.SATURATED.STATEMENT",
+      "to": "iut-pre-abc:Section0.orientedGraph",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SECTION0.SATURATED.STATEMENT",
+      "to": "iut-pre-abc:Section0.saturated",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.ABSTOPIII.5855.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.QPILOT.PRECISE.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.THETAPILOT.IQ.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-pre-abc:Gap.qPilotPreciseConstruction",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-pre-abc:Gap.section0SaturatedTheory",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.H5.CLASSB.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group6-hull-degree",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.H7.DEEPOB9.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group6-hull-degree",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group6-hull-degree",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group5-ipl-she-apt",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group4-theorem311-multiradial",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IND123.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group4-theorem311-multiradial",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.K1K2.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group2-log-k1k2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group2-log-k1k2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group3-q-theta-pilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group3-q-theta-pilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group6-hull-degree",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "legacy-dag:legacy:cor312-bridge-construction",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "legacy-dag:legacy:n8-c10-assembly",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.CLASSB.REALIZATION.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group6-hull-degree",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "iut-skeleton:HullDet",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.H5.CLASSB.STATEMENT",
+      "to": "iut-skeleton:HullDet",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "iut-skeleton:H5",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "iut-skeleton:H7Ob9",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "iut-skeleton:StepXI",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "to": "iut-skeleton:StepXI",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "to": "iut-skeleton:Thm311",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-skeleton:Cor312",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUT312.TOP.STATEMENT",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "iut-skeleton:TargetABC",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "to": "iut-pre-abc:Gap.etthDeepInputs",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "to": "e-deep:E4.etthGap",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group3-q-theta-pilot",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.ETTH11.ROWS567.STATEMENT",
+      "to": "e-deep:E4.etthGap",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "to": "hull:PRE.THETALINK.LOGSHELL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.ETTH11.ROWS567.STATEMENT",
+      "to": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "hull:PRE.ETTH11.ROWS567.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "to": "iut-skeleton:PrimeStrips",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.FROBENIUS.STATEMENT",
+      "to": "iut-pre-abc:FrobeniusPicture.graph",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.INITIALTHETA.STATEMENT",
+      "to": "iut-skeleton:InitialTheta",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "to": "iut-skeleton:Frobenioid",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.THETALINK.STATEMENT",
+      "to": "iut-skeleton:Thetas",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.KUMMER.STATEMENT",
+      "to": "iut-skeleton:Kummer",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "to": "iut-skeleton:LogShell",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.PILOTS.STATEMENT",
+      "to": "iut-skeleton:QPilot",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.PROP11.STATEMENT",
+      "to": "iut-skeleton:IUT4Estimates",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "to": "iut-skeleton:IUT4Sec2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "to": "iut-skeleton:HeightVolume",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.SECTION0.SATURATED.STATEMENT",
+      "to": "iut-skeleton:Section0",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTI.HODGETHEATER.STATEMENT",
+      "to": "iut-skeleton:Gaussian",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "to": "e-deep:E3.ob9Interface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "to": "iut-skeleton:Ind1",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "to": "iut-skeleton:Ind2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "to": "iut-skeleton:Ind3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IND.CONSUMER.BUNDLE2",
+      "to": "iutiii:IUTIII.THM311.IND_OBLIGATIONS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "to": "iut-skeleton:StepXI",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "to": "iutiii:IUTIII.STEPXI.CONTRACT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "to": "iutiii:IUTIII.COR312.TARGET",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "to": "iut-pre-abc:LogShell.I",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "to": "iutiii:IUTIII.IUTII_LINK_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "to": "hull:PRE.IUTII.LOGSHELL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "to": "hull:HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "e-deep:E5.s2717",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "hull:PRE.H5.CLASSB.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "to": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.H5H7.CONSUMER.BATCH",
+      "to": "e-deep:E2.H5framing",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.H5H7.CONSUMER.BATCH",
+      "to": "e-deep:E3.ob9Interface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "to": "iutiii:IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "to": "iutiii:IUTIII.STEPXI.OBLIGATIONS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "to": "hull:HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "to": "hull:HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.R9.BATCH.CONSUMER",
+      "to": "e-deep:E2.hullRayLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.R9.BATCH.CONSUMER",
+      "to": "iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.R9.BATCH.CONSUMER",
+      "to": "hull:R9.AUDIT.CONSUMER.BUNDLE",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "to": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:HULL.TREE.H5H7.CONSUMER.BATCH",
+      "to": "hull:HULL.DET.TENSOR.TREE.CONSUMER",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "mainline:frey-split-multiplicative",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "mainline:abc-log-equivalence",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "mainline:abc-height-weight-additive",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "mainline:abc-frontier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "routes:abcbridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:ORDERF",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:SATC",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:CMLF2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:E4A",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:P58IN",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "theta-etth:P58AG",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "e-deep:E4.etthGap",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c1-source-input-binding",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c2-source-log-kummer",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c5-algorithm-compatibility",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c7-holomorphic-hull",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c9-final-evaluation-capsule",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-group5-ipl-she-apt",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "legacy-dag:legacy:n8-c10-assembly",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:G0",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:G0.log",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:N1",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:N2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:G3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:G3.route.pointwiseReduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:HW.add",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:IQHull",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:StepXI",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:GapReduction",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:GapSupply",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "iutiv-abc:PointwiseResidual",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.THETA.ETTH.GAP.STATEMENT",
+      "to": "hull:PRE.ETTH02.DEEP.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.LEGACY.N8.GAP.STATEMENT",
+      "to": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.IUTIV.ABC.STATEMENT",
+      "to": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "to": "hull:PRE.IUT312.TOP.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "T2-bridge-interface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "T0-abc-target",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "mainline:abc-frontier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "mainline:abc-frontier-gap-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "mainline:abc-frontier-pointwise-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "mainline:abc-height-weight-additive",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.ABC.CLOSURE",
+      "to": "hull:PRE.IUT312.TOP.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.HULLRAY.LATTICE",
+      "to": "iutiii:IUTIII.HULL.R9.RAY.BUNDLE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.HULLRAY.LATTICE",
+      "to": "iutiii:IUTIII.HULL.R9.RAY.LATTICE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.HULLRAY.LATTICE",
+      "to": "hull:PRE.H5.CLASSB.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iut-skeleton:SHE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iut-skeleton:K1K2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iutiii:IUTIII.IND3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "iutiii:IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "hull:X.CHAIN.ABC.CLOSURE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE",
+      "to": "hull:X.CHAIN.HULLRAY.LATTICE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "iutiii:IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "iutiii:IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "mainline:frey-odd-reduction",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "mainline:frey-split-multiplicative",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "iutiii:IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "T2-bridge-interface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "hull:PRE.H5.CLASSB.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.INFERRED.REUSE2",
+      "to": "hull:X.CHAIN.INFERRED.REUSE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "mainline:abc-frontier-gap-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "mainline:abc-frontier-pointwise-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "mainline:abc-frontier",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "T2-bridge-interface",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "hull:X.CHAIN.ABC.CLOSURE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CHAIN.FRONTIER.CLAUSES",
+      "to": "hull:X.MAINLINE.ABCFREY.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "iutiii:IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "iutiii:IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "iut-pre-abc:Gap.thetaPilotIQContainment",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "iutiii:IUTIII.HULL.INTERFACE.FACTS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "e-deep:E2.H5framing",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "hull:PRE.H5.CLASSB.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "to": "hull:PRE.THETAPILOT.IQ.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.DET.TENSOR",
+      "to": "iutiii:IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.DET.TENSOR",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.DET.TENSOR",
+      "to": "e-deep:E2.detInvLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.DET.TENSOR",
+      "to": "hull:PRE.HDD.DECOMPOSITION.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.ABC.FRONTIER.FORMS",
+      "to": "mainline:abc-frontier-gap-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.ABC.FRONTIER.FORMS",
+      "to": "mainline:abc-frontier-pointwise-reduced",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.ABC.FRONTIER.FORMS",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.ABC.FRONTIER.FORMS",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.ABC.FRONTIER.FORMS",
+      "to": "hull:X.CHAIN.ABC.CLOSURE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IND3.THM311",
+      "to": "iutiii:IUTIII.IND3",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IND3.THM311",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IND3.THM311",
+      "to": "iut-skeleton:Thm311",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IND3.THM311",
+      "to": "hull:PRE.IND123.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IND3.THM311",
+      "to": "hull:PRE.MULTIRADIAL.STATEMENT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IQ.SHE",
+      "to": "iut-pre-abc:LogShell.invariants",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IQ.SHE",
+      "to": "iutiii:IUTIII.STEPXI.OBLIGATIONS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IQ.SHE",
+      "to": "iut-skeleton:SHE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IQ.SHE",
+      "to": "iut-skeleton:LogShell",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.IQ.SHE",
+      "to": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.VOLUME.XMU.HULL",
+      "to": "iutiii:IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.VOLUME.XMU.HULL",
+      "to": "iut-pre-abc:LogShell.I",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.VOLUME.XMU.HULL",
+      "to": "iutiii:IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.VOLUME.XMU.HULL",
+      "to": "iut-skeleton:K1K2",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.VOLUME.XMU.HULL",
+      "to": "hull:X.CONSUMER.IQ.SHE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.MUN",
+      "to": "iut-pre-abc:Kummer.absolute",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.MUN",
+      "to": "iut-pre-abc:MuN.torsion",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.MUN",
+      "to": "iutiii:IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.MUN",
+      "to": "iutiii:IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.MUN",
+      "to": "hull:X.CONSUMER.IQ.SHE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.AMPL.PROCESSION",
+      "to": "iutiii:IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.AMPL.PROCESSION",
+      "to": "iutiii:IUTIII.STEPXI.PARAMETRIC",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.AMPL.PROCESSION",
+      "to": "iutiii:IUTIII.STEPXI.CONTRACT",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.AMPL.PROCESSION",
+      "to": "hull:X.CONSUMER.DET.TENSOR",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.AMPL.PROCESSION",
+      "to": "hull:X.CONSUMER.IND3.THM311",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.H1H2.BRIDGE",
+      "to": "iut-pre-abc:HodgeTheater.core",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.H1H2.BRIDGE",
+      "to": "iut-pre-abc:PrimeStrips.FD",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.H1H2.BRIDGE",
+      "to": "iutiii:IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.H1H2.BRIDGE",
+      "to": "iut-skeleton:HodgeTheater",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.H1H2.BRIDGE",
+      "to": "hull:X.CONSUMER.IND3.THM311",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "to": "iutiii:IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "to": "iutiii:IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "to": "iutiii:IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "to": "hull:X.CONSUMER.CHAIN.PACKAGE",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "hull:X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "to": "hull:X.CONSUMER.KUMMER.MUN",
+      "kind": "interface",
+      "evidence": "observed_source"
+    }
+  ]
+}

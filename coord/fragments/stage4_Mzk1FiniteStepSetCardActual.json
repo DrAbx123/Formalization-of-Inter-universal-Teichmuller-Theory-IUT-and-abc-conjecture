@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetCardActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetCardActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real consumer: cardinality bound for finite step set; new file only, no sorry; watchdog to verify"
+}

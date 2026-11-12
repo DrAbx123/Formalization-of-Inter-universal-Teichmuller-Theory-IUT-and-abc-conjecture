@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1F0StepGeometryActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1F0StepGeometryActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

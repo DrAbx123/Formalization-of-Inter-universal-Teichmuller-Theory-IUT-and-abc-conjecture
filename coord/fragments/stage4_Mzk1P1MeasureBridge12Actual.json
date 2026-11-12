@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge12Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge12Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A474 real Lean: measure cardinality bounds; new file only, no sorry; watchdog to verify"
+}

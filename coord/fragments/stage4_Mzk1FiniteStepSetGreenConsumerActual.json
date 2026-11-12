@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetGreenConsumerActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetGreenConsumerActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real consumer: re-export PROVED finite f4a/f4b-step lemmas; new file only, no sorry; watchdog to verify"
+}

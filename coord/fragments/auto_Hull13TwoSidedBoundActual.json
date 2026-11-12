@@ -1,0 +1,9 @@
+{
+  "node": "auto:Hull13TwoSidedBoundActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Hull13TwoSidedBoundActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

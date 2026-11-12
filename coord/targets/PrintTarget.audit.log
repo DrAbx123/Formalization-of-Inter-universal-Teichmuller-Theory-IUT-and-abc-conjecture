@@ -1,0 +1,8 @@
+def LeanFormal.IUT.N8Closure.PaperP6FullTarget.PaperP6FullTarget : {l : PrimeGeFive} →
+  SourceInitialThetaData l → Prop :=
+fun {l} S => N8Closure.PaperP6Target2.PaperP6Target S ∧ N8Closure.PaperP6FullTarget.PaperValuesBoundedTarget S
+def LeanFormal.IUT.N8Closure.PaperP6FullTarget.PaperP6FullTarget : {l : LeanFormal.IUT.PrimeGeFive} →
+  (S : LeanFormal.IUT.InitialThetaSource.SourceInitialThetaData.{0} l) → Prop :=
+fun {l : LeanFormal.IUT.PrimeGeFive} (S : LeanFormal.IUT.InitialThetaSource.SourceInitialThetaData.{0} l) =>
+  And (@LeanFormal.IUT.N8Closure.PaperP6Target2.PaperP6Target l S)
+    (@LeanFormal.IUT.N8Closure.PaperP6FullTarget.PaperValuesBoundedTarget l S)

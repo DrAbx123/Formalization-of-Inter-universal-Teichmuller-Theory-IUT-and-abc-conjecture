@@ -1,0 +1,16 @@
+{
+  "node": "auto:Mzk1P1MeasureBridgeActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridgeActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridgeActual.lean": [
+      "maxDegP_image_ofFinite_reexport",
+      "numMaxP_image_ofFinite_reexport",
+      "maxDegP_insert_infty_image"
+    ]
+  },
+  "note": "A472 real Lean: P1 measure bridge lemmas (image of finite + insert infinity); new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,21 @@
+{
+  "node": "foundation:foundation:D.lineBundleBridge",
+  "kind": "bridge",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleBridgeActual.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "iso_image_f_eq_sectionMap",
+      "order_pos_iff",
+      "Tplaces_order_pos"
+    ],
+    "defs": [
+      "LineBundleOrderCompatibility"
+    ],
+    "named": []
+  },
+  "statement": "line-bundle/order compatibility bridge (scheme-to-Divisor side)",
+  "note": "queued to DAG watchdog only; no manual compile; status to PROVED after watchdog EXIT0; pins 14041"
+}

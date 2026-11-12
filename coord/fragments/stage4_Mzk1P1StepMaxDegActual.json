@@ -1,0 +1,16 @@
+{
+  "node": "auto:Mzk1P1StepMaxDegActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1StepMaxDegActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1StepMaxDegActual.lean": [
+      "maxDegP_image_step_le",
+      "maxDegP_crit_image_le",
+      "maxDegP_stepSetP1_le"
+    ]
+  },
+  "note": "A472 real Lean: f4a maxDegP non-increase for concrete stepSetP1; new file only, no sorry; watchdog to verify"
+}

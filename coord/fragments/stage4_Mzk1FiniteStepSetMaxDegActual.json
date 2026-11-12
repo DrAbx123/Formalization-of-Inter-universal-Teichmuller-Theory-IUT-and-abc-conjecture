@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetMaxDegActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetMaxDegActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: finite step-set max-degree bound (f4a finite ingredient); new file only, no sorry; watchdog to verify"
+}

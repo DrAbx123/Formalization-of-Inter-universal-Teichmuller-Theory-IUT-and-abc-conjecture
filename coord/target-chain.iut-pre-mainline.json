@@ -1,0 +1,6 @@
+{
+ "section": "iut-pre-mainline",
+ "description": "A470: 50 node candidates all mapped to existing DAG nodes (see coord/SURVEY-mainline.md §mapping); duplicate nodes removed per Lead instruction; no new nodes retained.",
+ "nodes": [],
+ "edges": []
+}

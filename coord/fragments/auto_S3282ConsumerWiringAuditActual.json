@@ -1,0 +1,9 @@
+{
+  "node": "auto:S3282ConsumerWiringAuditActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/S3282ConsumerWiringAuditActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

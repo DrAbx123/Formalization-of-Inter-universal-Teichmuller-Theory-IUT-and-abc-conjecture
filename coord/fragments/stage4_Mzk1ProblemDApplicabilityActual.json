@@ -1,0 +1,19 @@
+{
+  "node": "auto:Mzk1ProblemDApplicabilityActual",
+  "kind": "def",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1ProblemDApplicabilityActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1ProblemDApplicabilityActual.lean": [
+      "ProblemDApplicabilityData",
+      "card_ge_of_data",
+      "divisor_eq_of_data",
+      "ProblemDApplicabilityInput",
+      "problemDApplicabilityRows",
+      "problemDApplicabilityRows_length"
+    ]
+  },
+  "note": "watchdog EXIT0 observed (real Lean, no sorry); DAG promotion (A476 real consumer only)"
+}

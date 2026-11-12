@@ -1,0 +1,10 @@
+{
+  "node": "B7-rr-proved",
+  "kind": "conditional",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1RRProvedActual.lean"
+  ],
+  "declarations": {},
+  "note": "registered by silent loop; verification via watchdog log only (A459/A462)"
+}

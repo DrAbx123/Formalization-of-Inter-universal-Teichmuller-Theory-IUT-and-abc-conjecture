@@ -1,0 +1,7 @@
+# Axiom audit (2026-10-25)
+
+paperP6FullTarget_actual depends on axioms: [propext, Classical.choice, Quot.sound]
+paperValuesBoundedTarget_actual depends on axioms: [propext, Classical.choice, Quot.sound]
+paperP6Target_actual depends on axioms: [propext, Classical.choice, Quot.sound]
+
+No sorryAx.

@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureEmptyActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureEmptyActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain: degree-zero characterisation (base case); new file only, no sorry; watchdog to verify"
+}

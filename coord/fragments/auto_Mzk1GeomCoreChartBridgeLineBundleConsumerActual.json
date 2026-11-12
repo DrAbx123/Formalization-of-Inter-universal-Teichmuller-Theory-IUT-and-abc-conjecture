@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1GeomCoreChartBridgeLineBundleConsumerActual",
+  "kind": "auto-registered",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreChartBridgeLineBundleConsumerActual.lean"
+  ],
+  "note": "silent loop registration; verify via watchdog log only"
+}

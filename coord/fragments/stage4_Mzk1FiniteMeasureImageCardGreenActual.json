@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImageCardGreenActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImageCardGreenActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain consumer: image cardinality/numMax bound (green deps only); new file only, no sorry; watchdog to verify"
+}

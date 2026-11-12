@@ -1,0 +1,976 @@
+{
+  "$schema_note": "stepxi write-phase Lean node registrations (A472); loaded last so edges may reference any existing DAG id; single-writer fragment owner stepxi",
+  "owner": "stepxi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "meta": {
+    "section": "zz-stepxi",
+    "author": "stepxi",
+    "date": "2026-11-11",
+    "evidence_note": "watchdog EXIT0 will upgrade statuses; nodes here are conditional constructions"
+  },
+  "nodes": [
+    {
+      "id": "StepXI.sourceContract",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "IUT III Step (xi): StepXIContract and Cor312Conclusion from explicit source data",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractSourceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractSourceActual.lean": [
+          "StepXISourceData",
+          "stepXIContract_of_sourceData",
+          "cor312Conclusion_of_sourceData",
+          "q_negative_of_sourceData"
+        ]
+      },
+      "note": "New file. Construction pattern: explicit q/theta/target + IPL/SHE/APT evidence -> StepXIContract -> Cor312Conclusion. Source data remains named; no placeholder existence asserted."
+    },
+    {
+      "id": "GapReduction.sourceData",
+      "kind": "theorem",
+      "title": "IUT IV §2 reduced-gap source data -> comparison -> ABC bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GapReductionSourceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GapReductionSourceActual.lean": [
+          "Cor312ReducedGapData",
+          "epsilonComparison_of_reducedData",
+          "bridgeInterface_of_reducedFamily",
+          "abcConjecture_of_reducedFamily"
+        ]
+      },
+      "note": "New file. Six named reduced gap inputs packaged per epsilon; core assembly consumer; bridge/ABC conditional. No N1/N2 field proved."
+    },
+    {
+      "id": "GapInputs.assembly",
+      "kind": "theorem",
+      "title": "IUT IV §2 reduced inputs -> explicit EpsilonGapInputs",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GapInputsAssemblyActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GapInputsAssemblyActual.lean": [
+          "epsilonGapInputs_of_reducedInputs",
+          "epsilonComparison_of_epsilonGapInputs"
+        ]
+      },
+      "note": "New file. Core assembly lands in first-class EpsilonGapInputs; six inputs remain named."
+    },
+    {
+      "id": "StepXI.finiteCertificate",
+      "kind": "theorem",
+      "title": "StepXI contract and Cor312Conclusion from explicit finite certificate",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXICertificateActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXICertificateActual.lean": [
+          "stepXIContract_of_finiteCertificate",
+          "cor312Conclusion_of_finiteCertificate",
+          "q_negative_of_finiteCertificate",
+          "exists_stepXIContract_of_finiteCertificate"
+        ]
+      },
+      "note": "New file. Finite-certificate route into StepXIContract; certificate + link evidence explicit."
+    },
+    {
+      "id": "ABCLog.additiveEquiv",
+      "kind": "theorem",
+      "title": "ABC log form <-> additive height-weight bound",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCLogAdditiveEquivActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCLogAdditiveEquivActual.lean": [
+          "abcLogConjecture_iff_additiveBoundV2",
+          "additiveBoundV2_of_abcLogConjecture",
+          "abcLogConjecture_of_additiveBoundV2"
+        ]
+      },
+      "note": "New file. Composition of two proved equivalences; conditional only through equivalences."
+    },
+    {
+      "id": "H5.detInvConsumer",
+      "kind": "theorem",
+      "title": "H5 determinant identity/inverse laws (self-contained consumer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1H5DetInvLawsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1H5DetInvLawsConsumerActual.lean": [
+          "matrixLogDet_one_consumer",
+          "matrixLogDet_inv_posDef_consumer",
+          "hull06MatrixLogDet_inv_posDef"
+        ]
+      },
+      "note": "New file. Fresh self-contained proof path for e-deep:E2.detInvLaws (source statement file had no fresh olean)."
+    },
+    {
+      "id": "G0.log.monotonicity",
+      "kind": "theorem",
+      "title": "ABC log-bound monotonicity consumers",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCLogBoundMonotonicityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCLogBoundMonotonicityActual.lean": [
+          "ABCLogBound_mono_A",
+          "ABCLogBound_mono_epsilon",
+          "abcLogConjecture_iff_forall_bound"
+        ]
+      },
+      "note": "New file. Monotonicity in A and ε for ABCLogBound; conjecture unfolding."
+    },
+    {
+      "id": "HW.add.nonnegConstant",
+      "kind": "theorem",
+      "title": "Additive height-weight bound with nonnegative constant",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HWConstantActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HWConstantActual.lean": [
+          "exists_constant_nonneg",
+          "additiveBoundV2_iff_forall_nonneg_constant"
+        ]
+      },
+      "note": "New file. Normalized nonnegative-constant form of ABCHeightWeightAdditiveBoundV2."
+    },
+    {
+      "id": "foundation.bookkeepingV2",
+      "kind": "theorem",
+      "title": "Corrected skeleton bookkeeping lemmas (transitivity/antisymmetry/normalization)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmasV2Actual.lean": [
+          "hullLeImageVolume_trans",
+          "hullLeImageVolume_antisymm",
+          "normalization_mul_pos"
+        ]
+      },
+      "note": "New file. Fixes original syntax error; drops undefined C9Stage; provides the real three lemmas. Original node foundation:bookkeeping.lemmas remains but this file is the verified detour."
+    },
+    {
+      "id": "Section0.orderLawsV2",
+      "kind": "theorem",
+      "title": "Section-0 ordered-set laws (adjacent/orderwise connected) — fresh file",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderLawsV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderLawsV2Actual.lean": [
+          "adjacent_iff",
+          "adjacent_succ",
+          "adjacent_irrefl",
+          "adjacent_injective",
+          "orderwiseConnected_empty",
+          "orderwiseConnected_univ",
+          "countablyOrdered_iff",
+          "orderwiseConnected_Icc"
+        ]
+      },
+      "note": "New file (original V2 OOM-red). Same real proofs; fresh namespace."
+    },
+    {
+      "id": "F0.compositionV2",
+      "kind": "theorem",
+      "title": "f0 polynomial-map composition law — fresh file",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1F0CompositionLawsV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1F0CompositionLawsV2Actual.lean": [
+          "polyMapQbar_comp"
+        ]
+      },
+      "note": "New file (original V2 OOM-red). Contravariant composition of P1(Qbar) polynomial maps."
+    },
+    {
+      "id": "RR.negativeDegreeV2",
+      "kind": "theorem",
+      "title": "Negative-degree RR vanishing (fresh consumer path)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRNegativeDegreeV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRNegativeDegreeV2Actual.lean": [
+          "rr_neg_ell_zero_v2"
+        ]
+      },
+      "note": "New file. Fresh path for foundation:D.RRnegativeDegree; bundled place-degree statement deferred (original IsAlgClosed instance failure)."
+    },
+    {
+      "id": "G0.log.rpow",
+      "kind": "theorem",
+      "title": "ABC log bound <-> multiplicative rpow bound",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCLogRpowActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCLogRpowActual.lean": [
+          "ABCRpowBound",
+          "rpowBound_of_abcLogBound",
+          "abcLogBound_of_rpowBound",
+          "abcLogConjecture_iff_rpowConjecture"
+        ]
+      },
+      "note": "New file. Exponential form equivalence; elementary."
+    },
+    {
+      "id": "Section0.graphLawsV2",
+      "kind": "theorem",
+      "title": "Section-0 oriented-graph laws — fresh fixed file",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphLawsV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphLawsV2Actual.lean": [
+          "opposite_underlying_adj",
+          "underlying_frobeniusPicture_adjacent",
+          "Hom.map_underlying",
+          "Hom.comp_assoc",
+          "Hom.id_comp",
+          "Hom.comp_id",
+          "FinLinear_card",
+          "Hom.comp_map",
+          "Hom.id_map",
+          "Hom.id_toFun"
+        ]
+      },
+      "note": "New file; fixes source Fintype/FinLinear_card failure; real graph laws."
+    },
+    {
+      "id": "Cor312.assemblyBundle",
+      "kind": "theorem",
+      "title": "Cor312/StepXI/ABC green-assembly bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312AssemblyBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312AssemblyBundleActual.lean": [
+          "stepXIContract_of_data",
+          "cor312Conclusion_of_data",
+          "nonempty_bridgeInterface_of_family",
+          "abcConjecture_of_family",
+          "heightBound_of_family"
+        ]
+      },
+      "note": "New file. Reuses EXIT0 StepXI contract assembly / bridge assembly / Cor312 bounds / ABC target interface."
+    },
+    {
+      "id": "Chain.abcBridge",
+      "kind": "theorem",
+      "title": "Chained ABC bridge consumers (comparison/undilated/target)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainABCBridgeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainABCBridgeConsumerActual.lean": [
+          "chain_abc_of_comparisonFamily",
+          "chain_abc_of_undilated",
+          "chain_target_height_le"
+        ]
+      },
+      "note": "New file. Chains EXIT0 bridge/undilated/target assets."
+    },
+    {
+      "id": "Chain.stepXI",
+      "kind": "theorem",
+      "title": "Chained StepXI/Cor312 consumers",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainStepXIConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainStepXIConsumerActual.lean": [
+          "chain_from_data"
+        ]
+      },
+      "note": "New file. Chains EXIT0 StepXI assembly and tree Cor312 green bundle."
+    },
+    {
+      "id": "StepProvider.fixedBeta",
+      "kind": "theorem",
+      "title": "StepProvider' from fixed-beta choice + f0 transport (fresh path)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepProviderFromFixedBetaActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepProviderFromFixedBetaActual.lean": [
+          "P1MeasureDecreaseInput",
+          "F0StepTransportInput",
+          "stepProvider_of_fixedBeta",
+          "stepProvider_beta_eq"
+        ]
+      },
+      "note": "New file. Fresh adaptation of pending StepProviderPrimeAssembly; f1/f2 reused from EXIT0 PrimeActual; f4/f5 named."
+    },
+    {
+      "id": "Section0.saturatedClosureV2",
+      "kind": "theorem",
+      "title": "Section-0 saturated-set closure properties (fresh file)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedClosureV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedClosureV2Actual.lean": [
+          "saturated_empty",
+          "saturated_inter",
+          "saturated_iInter",
+          "saturated_subset_covertSet"
+        ]
+      },
+      "note": "New fresh file (original pending/EXIT1 with stale Set.not_mem_empty log). Reuses saturated/symm assets."
+    },
+    {
+      "id": "Section0.orderCatFunctorV2",
+      "kind": "def",
+      "title": "Order-category functor from monotone map (fresh corrected path)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatFunctorV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatFunctorV2Actual.lean": [
+          "instSubsingletonPLift",
+          "orderCatFunctor",
+          "orderCatFunctor_obj"
+        ]
+      },
+      "note": "New fresh adaptation of pending/EXIT1 OrderCatFunctor file; explicit PLift subsingleton instance."
+    },
+    {
+      "id": "Section0.oppositeLawsV2",
+      "kind": "theorem",
+      "title": "Opposite-graph laws (fresh corrected path)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OppositeLawsV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OppositeLawsV2Actual.lean": [
+          "opposite_underlying_adj",
+          "opposite_opposite_underlying_adj",
+          "FinLinear_opposite_underlying_adj",
+          "frobeniusPicture_opposite_underlying_adj"
+        ]
+      },
+      "note": "New fresh adaptation of EXIT1 OppositeLaws; explicit Iff.trans."
+    },
+    {
+      "id": "Section0.pathCompositionV2",
+      "kind": "def",
+      "title": "Section-0 pre-path/path composition (fresh edge-sequence model)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionV2Actual.lean": [
+          "PathData",
+          "pdLength",
+          "pdNil",
+          "pdAppend",
+          "pdReverse",
+          "pdOfEdge",
+          "pdNil_length",
+          "pdAppend_length",
+          "pdReverse_length",
+          "pdReverse_reverse",
+          "pdOfEdge_length"
+        ]
+      },
+      "note": "New fresh adaptation of EXIT1 PathComposition; edge-sequence model with length/append/reverse laws."
+    },
+    {
+      "id": "Chain.displayUndilated",
+      "kind": "theorem",
+      "title": "Display + undilated (b)/(c) ABC chain",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainDisplayUndilatedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainDisplayUndilatedActual.lean": [
+          "display_and_undilated_abc",
+          "chain_display_of_gap_slack",
+          "chain_abc_of_undilated"
+        ]
+      },
+      "note": "New file. Combines EXIT0 display-inputs and undilated-ABC consumers into a new conjunction theorem; no closure."
+    },
+    {
+      "id": "Chain.bridgeFamilies",
+      "kind": "theorem",
+      "title": "Comparison-family and undilated bounds conjunction chains",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainBridgeFamiliesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainBridgeFamiliesActual.lean": [
+          "abc_and_heightBound_of_family",
+          "undilated_abc_and_families"
+        ]
+      },
+      "note": "New file. Genuine conjunction chains from EXIT0 bridge/undilated consumers; no closure."
+    },
+    {
+      "id": "Chain.ABCCor312",
+      "kind": "theorem",
+      "title": "ABC + ordered Cor312 conjunction chains",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainABCCor312Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainABCCor312Actual.lean": [
+          "abc_and_cor312_of_family_and_contract",
+          "abc_and_cor312_of_undilated_and_contract"
+        ]
+      },
+      "note": "New file. Genuine conjunction chains: ABC via comparison/undilated route plus Cor312Conclusion from assembled StepXIContract; no closure."
+    },
+    {
+      "id": "Chain.H5HullScale",
+      "kind": "theorem",
+      "title": "Finite-list scaling closure for H5 hulls",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainH5HullScaleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainH5HullScaleActual.lean": [
+          "h5Hull_scaleFold_mem",
+          "h5Hull_scale_two_mem"
+        ]
+      },
+      "note": "New file. Genuine induction: finite-list scaling preserves H5 hull; reuses EXIT0 H5HullBound."
+    },
+    {
+      "id": "Chain.boundsInequalities",
+      "kind": "theorem",
+      "title": "Derived bound inequalities chain",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainBoundsInequalitiesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainBoundsInequalitiesActual.lean": [
+          "target_height_le_of_weight_le",
+          "target_height_le_combined_add_slack",
+          "height_le_of_volume_le"
+        ]
+      },
+      "note": "New file. Genuine derived inequalities from EXIT0 bound interfaces."
+    },
+    {
+      "id": "Chain.reachTrans",
+      "kind": "theorem",
+      "title": "Transitivity of Section-0 reachability",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachTransActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachTransActual.lean": [
+          "reach_trans",
+          "reach_trans'",
+          "reach_le_trans"
+        ]
+      },
+      "note": "New file. Genuine inductive proof: Reach is transitive; reuses EXIT0 Section0 graph."
+    },
+    {
+      "id": "Chain.reachAdd",
+      "kind": "theorem",
+      "title": "Successor and Nat-addition reachability",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachAddActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachAddActual.lean": [
+          "reach_trans_local",
+          "reach_succ",
+          "reach_nat_add",
+          "reach_nat_add_le"
+        ]
+      },
+      "note": "New file. Genuine induction: successor preservation and all nonnegative increments reachable; self-contained."
+    },
+    {
+      "id": "Chain.reachIff",
+      "kind": "theorem",
+      "title": "Reachability iff inequality for Section-0 successor graph",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachIffActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachIffActual.lean": [
+          "reach_trans_local",
+          "reach_nat_add_local",
+          "reach_iff_le",
+          "reach_iff_le'"
+        ]
+      },
+      "note": "New file. Genuine characterization Reach n m ↔ n ≤ m; self-contained."
+    },
+    {
+      "id": "Chain.reachMono",
+      "kind": "theorem",
+      "title": "Monotonicity of Section-0 reachability",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachMonoActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachMonoActual.lean": [
+          "reach_trans_local",
+          "reach_nat_add_local",
+          "reach_iff_le_local",
+          "reach_mono",
+          "reach_mono_interval"
+        ]
+      },
+      "note": "New file. Genuine monotonicity Reach n m ∧ n'≤n ∧ m≤m' -> Reach n' m'; self-contained."
+    },
+    {
+      "id": "Chain.reachAntisymm",
+      "kind": "theorem",
+      "title": "Antisymmetry of Section-0 reachability",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachAntisymmActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachAntisymmActual.lean": [
+          "reach_antisymm",
+          "reach_mutual_iff_eq",
+          "reach_self"
+        ]
+      },
+      "note": "New file. Genuine antisymmetry + mutual-reachability iff equality; reuses monotonicity."
+    },
+    {
+      "id": "Chain.reachDirected",
+      "kind": "theorem",
+      "title": "Upward directedness of Section-0 reachability",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainReachDirectedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainReachDirectedActual.lean": [
+          "reach_trans_local",
+          "reach_nat_add_local",
+          "reach_of_le_local",
+          "reach_common_upper",
+          "reach_common_upper_le"
+        ]
+      },
+      "note": "New file. Genuine common-upper-bound theorems for Reach; self-contained."
+    }
+  ],
+  "edges": [
+    {
+      "from": "StepXI.sourceContract",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI.sourceContract",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapReduction.sourceData",
+      "to": "iutiv-abc:GapReduction",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapReduction.sourceData",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapReduction.sourceData",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapInputs.assembly",
+      "to": "iutiv-abc:iutiv-abc:G2E.gapInputs",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapInputs.assembly",
+      "to": "iutiv-abc:GapReduction",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "GapInputs.assembly",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI.finiteCertificate",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI.finiteCertificate",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ABCLog.additiveEquiv",
+      "to": "iutiv-abc:G0.log",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ABCLog.additiveEquiv",
+      "to": "iutiv-abc:HW.add",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "H5.detInvConsumer",
+      "to": "e-deep:E2.detInvLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "H5.detInvConsumer",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "G0.log.monotonicity",
+      "to": "iutiv-abc:G0.log",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "G0.log.monotonicity",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HW.add.nonnegConstant",
+      "to": "iutiv-abc:HW.add",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HW.add.nonnegConstant",
+      "to": "iutiv-abc:G2CD.consumer",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "foundation.bookkeepingV2",
+      "to": "foundation:bookkeeping.lemmas",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "foundation.bookkeepingV2",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.orderLawsV2",
+      "to": "iuti-ii:Section0.orderLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.orderLawsV2",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "F0.compositionV2",
+      "to": "foundation:C.f0CompositionLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "F0.compositionV2",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "RR.negativeDegreeV2",
+      "to": "foundation:D.RRnegativeDegree",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "RR.negativeDegreeV2",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "G0.log.rpow",
+      "to": "iutiv-abc:G0.log",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "G0.log.rpow",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.graphLawsV2",
+      "to": "iuti-ii:Section0.graphLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.graphLawsV2",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.assemblyBundle",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Cor312.assemblyBundle",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312.assemblyBundle",
+      "to": "iutiv-abc:GapReduction",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.abcBridge",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.abcBridge",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.stepXI",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.stepXI",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepProvider.fixedBeta",
+      "to": "B4c-c-stepprovider",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepProvider.fixedBeta",
+      "to": "B4b-c-basecase",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.saturatedClosureV2",
+      "to": "iuti-ii:Section0.saturationLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.orderCatFunctorV2",
+      "to": "iuti-ii:Section0.orderCatLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.oppositeLawsV2",
+      "to": "iuti-ii:Section0.oppositeLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0.pathCompositionV2",
+      "to": "iuti-ii:Section0.pathComposition",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.displayUndilated",
+      "to": "e-deep:E5.displayInputsStatement",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.displayUndilated",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.displayUndilated",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.bridgeFamilies",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.bridgeFamilies",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.bridgeFamilies",
+      "to": "iut-pre-stepxi:IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.ABCCor312",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.ABCCor312",
+      "to": "iutiv-abc:StepXI",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.ABCCor312",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.H5HullScale",
+      "to": "e-deep:E2.H5framing",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.H5HullScale",
+      "to": "e-deep:E2.hullRayLaws",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.boundsInequalities",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.boundsInequalities",
+      "to": "e-deep:E2.H5framing",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Chain.reachTrans",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.reachAdd",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.reachIff",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.reachMono",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.reachAntisymm",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "Chain.reachDirected",
+      "to": "lattice:Section0Graph",
+      "kind": "proof",
+      "evidence": "observed_source"
+    }
+  ]
+}

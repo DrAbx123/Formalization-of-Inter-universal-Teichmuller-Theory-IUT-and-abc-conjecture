@@ -1,0 +1,10 @@
+{
+  "node": "N2-alg-nested",
+  "kind": "named_input",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/LayerAAlgebraicInductionActual.lean"
+  ],
+  "declarations": {},
+  "note": "registered by silent loop; verification via watchdog log only"
+}

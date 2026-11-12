@@ -1,0 +1,179 @@
+dir	module	thm	def	struct	abbrev	olean	pending	iface	sorry	axiom	imports	consumers
+IUTIV	ArchimedeanMultiTensorMetric	32	3	0	1	OK	0	0	0	0	ArchimedeanTensorMetric	
+IUTIV	ArchimedeanTensorMetric	13	1	0	0	OK	0	0	0	0		ArchimedeanMultiTensorMetric
+IUTIV	ArithmeticDivisorDegree	104	24	0	3	OK	0	0	0	0	FinitePlaceCompletionDegreeGlobal	StepVDivisorAverage
+IUTIV	DifferentDegreeUpperBound	12	0	0	0	OK	0	0	0	0	DifferentTowerEstimate	
+IUTIV	DifferentTameEquality	4	0	0	0	OK	0	0	0	0	DifferentTowerEstimate	
+IUTIV	DifferentTowerEstimate	3	0	0	0	OK	0	0	0	0		DifferentDegreeUpperBound;DifferentTameEquality
+IUTIV	ElementaryEstimates	6	0	0	0	OK	0	0	0	0		
+IUTIV	Section1	6	1	0	0	OK	1	0	0	0		StepVProcessionAverage
+IUTIV	Section2	11	2	0	0	OK	1	0	0	0		
+IUTIV	StepVDistinguishedSlotAverage	4	0	0	0	OK	0	0	0	0	StepVProcessionAverage	
+IUTIV	StepVDivisorAverage	2	0	0	0	OK	0	0	0	0	ArithmeticDivisorDegree	StepVDivisorAverageAxiomProbe
+IUTIV	StepVDivisorAverageAxiomProbe	0	0	0	0	OK	0	0	0	0	StepVDivisorAverage	
+IUTIV	StepVProcessionAverage	8	0	0	0	OK	0	0	0	0	Section1	StepVDistinguishedSlotAverage;StepVProcessionAverageAxiomProbe
+IUTIV	StepVProcessionAverageAxiomProbe	0	0	0	0	OK	0	0	0	0	StepVProcessionAverage	
+Arithmetic	ABCHeightArithmeticWeightComparison	6	2	0	0	OK	0	0	0	0	ABCInvariantLocalHeight;RationalPrimeSupport;IUTToABC	Cor312ComparisonGapReduction;Cor312ToABCBridgeInterface
+Arithmetic	ABCInvariantCoprimality	31	5	0	0	OK	0	0	0	0	PrimitiveTriple	ABCInvariantHeight;ABCInvariantLocalValuations;FreyOddReduction
+Arithmetic	ABCInvariantHeight	18	0	0	0	OK	0	0	0	0	Statement;RationalPointDictionary;ABCInvariantCoprimality	ABCInvariantLocalHeight;ABCModelHeightComparison
+Arithmetic	ABCInvariantLocalHeight	22	0	0	0	OK	0	0	0	0	RationalLocalHeightDecomposition;ABCInvariantHeight;RationalPrimeSupport;RationalBoundaryPrimeSupport	ABCHeightArithmeticWeightComparison;Cor312GapDictionaryLayer
+Arithmetic	ABCInvariantLocalValuations	39	0	0	0	OK	0	0	0	0	ABCInvariantCoprimality	ABCInvariantRadicalBridge;RationalLocalHeightDecomposition;FreyConductorTwoAdic;FreyDiscriminantRadical;FreyTateAnalyticInput
+Arithmetic	ABCInvariantRadicalBridge	11	0	0	0	OK	0	0	0	0	ABCInvariantLocalValuations	ABCNonemptyOddBadSupport;ABCEllipticHeightCriterion
+Arithmetic	ABCNonemptyOddBadSupport	26	1	0	0	OK	0	0	0	0	ABCInvariantRadicalBridge	ABCModelHeightComparison;FreyConductorOdd;FreyTateAnalyticInput
+Arithmetic	LogarithmicBoundEquivalence	8	2	0	0	OK	0	0	0	0	Statement;RationalPointDictionary;RationalPrimeSupport	IUTToABC
+Arithmetic	PrimitiveTriple	4	1	0	0	OK	0	0	0	0	Statement	ABCInvariantCoprimality;RationalPointDictionary
+Arithmetic	RationalBoundaryPrimeSupport	13	0	0	0	OK	0	0	0	0	RationalBoundaryValuations	ABCInvariantLocalHeight;Cor312GapDictionaryLayer
+Arithmetic	RationalBoundaryValuations	8	0	0	0	OK	0	0	0	0	RationalPrimeSupport	RationalBoundaryPrimeSupport;RationalLocalHeightDecomposition
+Arithmetic	RationalDifferent	9	0	0	0	OK	0	0	0	0		
+Arithmetic	RationalLocalHeightDecomposition	18	0	0	0	OK	0	0	0	0	RationalPointDictionary;ABCInvariantLocalValuations;RationalBoundaryValuations	ABCInvariantLocalHeight
+Arithmetic	RationalPointDictionary	17	2	0	0	OK	0	0	0	0	Statement;PrimitiveTriple	ABCInvariantHeight;LogarithmicBoundEquivalence;RationalLocalHeightDecomposition;RationalPrimeSupport;FreyWeierstrassCurve;LegendreWeierstrassCurve
+Arithmetic	RationalPrimeSupport	4	1	0	0	OK	0	0	0	0	RationalPointDictionary	ABCHeightArithmeticWeightComparison;ABCInvariantLocalHeight;LogarithmicBoundEquivalence;RationalBoundaryValuations
+Bridge	ABCEllipticHeightCriterion	7	4	0	0	OK	0	0	0	0	IUTToABC;ABCInvariantRadicalBridge;ABCModelHeightComparison	FreyOddConductorHeightCriterion
+Bridge	ABCFrontier	9	7	0	0	OK	0	1	0	0	Cor312ToABCBridgeInterface;IUTToABC;UnprovedTarget	ABCFrontierReductions
+Bridge	ABCFrontierHeightWeightRefutation	8	0	0	0	OK	0	0	0	0	ABCFrontierSingletonReduction;Cor312PointwiseMembershipWeakening	
+Bridge	ABCFrontierPointwisePremiseReduction	15	0	0	0	OK	0	0	0	0	ABCFrontierReductions;Cor312PointwiseResidualSupply	
+Bridge	ABCFrontierReductions	4	13	0	0	OK	0	1	0	0	ABCFrontier;Cor312ComparisonGapReduction;Cor312ToABCBridgeInterface	ABCFrontierPointwisePremiseReduction;ABCFrontierSingletonReduction;ABCGap2FiniteC3Supply;Cor312PointwiseMembershipWeakening
+Bridge	ABCFrontierSingletonReduction	6	5	0	0	OK	0	1	0	0	ABCFrontierReductions;Cor312ComparisonGapReduction;Cor312ToABCBridgeInterface	ABCFrontierHeightWeightRefutation
+Bridge	ABCGap2FiniteC3Supply	1	0	0	0	MISSING	0	0	1	0	Cor312ComparisonGapReduction;Cor312ComparisonGapSupplyLayer;ABCFrontierReductions	
+Bridge	Cor312CarrierRealizationSpec	16	4	2	0	OK	0	0	0	0	Cor312GapDictionaryLayer	
+Bridge	Cor312ComparisonGapReduction	17	3	0	0	OK	0	1	0	0	Cor312ToABCBridgeInterface;ABCHeightArithmeticWeightComparison	ABCFrontierReductions;ABCFrontierSingletonReduction;ABCGap2FiniteC3Supply;Cor312ComparisonGapSupplyLayer;Cor312GapDictionaryLayer
+Bridge	Cor312ComparisonGapSupplyLayer	8	0	0	0	OK	0	0	0	0	Cor312ComparisonGapReduction	ABCGap2FiniteC3Supply;Cor312GapDictionaryLayer;Cor312PointwiseMembershipWeakening;Cor312PointwiseResidualSupply
+Bridge	Cor312GapDictionaryLayer	13	0	0	0	OK	0	0	0	0	Cor312ComparisonGapReduction;Cor312ComparisonGapSupplyLayer;ABCInvariantLocalHeight;RationalBoundaryPrimeSupport	Cor312CarrierRealizationSpec
+Bridge	Cor312PointwiseMembershipWeakening	10	4	0	0	OK	0	0	0	0	ABCFrontierReductions;Cor312ComparisonGapSupplyLayer	ABCFrontierHeightWeightRefutation
+Bridge	Cor312PointwiseResidualSupply	13	2	1	0	OK	0	1	0	0	Cor312ComparisonGapSupplyLayer	ABCFrontierPointwisePremiseReduction
+Bridge	Cor312ToABCBridgeInterface	19	3	5	0	OK	0	1	0	0	ABCHeightArithmeticWeightComparison;IUTToABC;ThetaBoundToHeightWeight	ABCFrontier;ABCFrontierReductions;ABCFrontierSingletonReduction;Cor312ComparisonGapReduction
+Bridge	Cor312ToABCCards	1	12	1	0	OK	1	1	0	0	IUTToABC	
+Bridge	FreyOddConductorHeightCriterion	12	1	0	0	OK	0	0	0	0	ABCEllipticHeightCriterion;FreyConductorOdd	
+Bridge	IUTToABC	2	1	0	0	OK	1	0	0	0	Statement;LogarithmicBoundEquivalence	ABCHeightArithmeticWeightComparison;ABCEllipticHeightCriterion;ABCFrontier;Cor312ToABCBridgeInterface;Cor312ToABCCards
+Bridge	ThetaBoundToHeightWeight	2	0	0	0	OK	0	0	0	0		Cor312ToABCBridgeInterface
+Galois	EllipticDivisionField	41	2	0	0	OK	0	0	0	0		EllipticTorsionAlgebraicity;EllipticTorsionConsumerWiring
+Galois	EllipticDivisionPolynomialEvaluation	12	0	0	0	OK	0	0	0	0		EllipticPrimeTorsionCardinality;EllipticTorsionAlgebraicity;FreyTwoTorsion;LegendreLevelTwoStructure
+Galois	EllipticPrimeTorsionCardinality	9	0	0	0	OK	0	0	0	0	EllipticDivisionPolynomialEvaluation	
+Galois	EllipticPrimeTorsionGalois	22	6	0	0	OK	0	0	0	0		
+Galois	EllipticTorsionAlgebraicity	11	1	0	0	OK	0	0	0	0	EllipticDivisionPolynomialEvaluation;EllipticDivisionField	EllipticTorsionConsumerWiring
+Galois	EllipticTorsionConsumerWiring	10	0	0	0	OK	0	0	0	0	EllipticDivisionField;EllipticTorsionAlgebraicity	
+Geometry	ABCModelHeightComparison	17	0	0	0	OK	0	0	0	0	ABCInvariantHeight;ABCNonemptyOddBadSupport;FreyTateAnalyticInput;FreyWeierstrassCurve;LegendreWeierstrassCurve	ABCEllipticHeightCriterion
+Geometry	ABCResidueDiscriminant	38	1	0	0	OK	0	0	0	0	Statement;FreyWeierstrassCurve	FreyOddReduction
+Geometry	AdicCompletionChineseRemainder	18	1	0	0	OK	0	0	0	0	FinitePlaceAdicCompletionRingEquiv	AdicCompletionChineseRemainderAxiomProbe
+Geometry	AdicCompletionChineseRemainderAxiomProbe	0	0	0	0	MISSING	0	0	0	0	AdicCompletionChineseRemainder	
+Geometry	AdicCompletionRingEquivAxiomProbe	0	0	0	0	MISSING	0	0	0	0	FinitePlaceAdicCompletionRingEquiv	
+Geometry	AdicCompletionValuationUniqueness	4	0	0	0	OK	0	0	0	0	FinitePlaceCompletionLocalInputs	RelativeCompletionFinrankReduction
+Geometry	BoundedDegreeLegendreIsomorphisms	16	0	0	0	OK	0	0	0	0	LegendreParameterIsomorphisms;LegendreQuadraticParameterFields	
+Geometry	FinitePlaceAdicCompletionRingEquiv	11	0	0	0	OK	0	0	0	0	FinitePlaceCompletionQuotientPow	AdicCompletionChineseRemainder;AdicCompletionRingEquivAxiomProbe
+Geometry	FinitePlaceArithmeticIQHull	7	1	0	0	OK	0	0	0	0	FinitePlaceArithmeticIQTensor	FinitePlaceArithmeticIQHullTransport
+Geometry	FinitePlaceArithmeticIQHullTransport	4	0	0	0	OK	0	0	0	0	FinitePlaceArithmeticIQHull	FinitePlaceArithmeticIQHullVolume
+Geometry	FinitePlaceArithmeticIQHullVolume	4	2	0	0	OK	0	0	0	0	FinitePlaceArithmeticIQHullTransport	FinitePlaceArithmeticPacketVolume
+Geometry	FinitePlaceArithmeticIQTensor	6	4	0	1	OK	0	0	0	0	FinitePlaceCompletionPacketLogShell	FinitePlaceArithmeticIQHull;FinitePlaceArithmeticTensorBlocks;FinitePlaceFullPrimePacket;FinitePlaceSelectedPrimePacket
+Geometry	FinitePlaceArithmeticPacketVolume	6	2	0	2	OK	0	0	0	0	FinitePlaceFullPrimePacket;FinitePlaceArithmeticIQHullVolume	FinitePlaceSelectedPrimePacket
+Geometry	FinitePlaceArithmeticTensorBlockFields	5	1	0	0	OK	0	0	0	0	FinitePlaceArithmeticTensorBlocks	FinitePlaceArithmeticTensorBlockHull;FinitePlaceArithmeticTupleHullTransport;FinitePlaceHolomorphicIntegerIndex
+Geometry	FinitePlaceArithmeticTensorBlockHull	5	1	0	0	OK	0	0	0	0	FinitePlaceArithmeticTensorBlockFields	FinitePlaceSelectedPrimeWeightedHullVolume
+Geometry	FinitePlaceArithmeticTensorBlocks	9	4	0	1	OK	0	0	0	0	FinitePlaceArithmeticIQTensor	FinitePlaceArithmeticTensorBlockFields;FinitePlaceIntegralLogTensorLattice;FinitePlaceRelativePadicDegrees;FinitePlaceSelectedPrimePacket
+Geometry	FinitePlaceArithmeticTupleCanonicalHull	7	2	0	2	OK	0	0	0	0	FinitePlaceArithmeticTupleHullPullback;FinitePlaceArithmeticTupleHullVolume	FinitePlaceCompactHullScaling;FinitePlaceHolomorphicIntegralClosure;FinitePlaceIntegralTensorCovolume;FinitePlaceIQHullInterface;FinitePlaceNormalizedUnitScalingLogVolume;FinitePlaceSelectedPrimeWeightedHullVolume
+Geometry	FinitePlaceArithmeticTupleHullPullback	7	2	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleHullTransport	FinitePlaceArithmeticTupleCanonicalHull
+Geometry	FinitePlaceArithmeticTupleHullTransport	6	1	0	0	OK	0	0	0	0	FinitePlaceArithmeticTensorBlockFields	FinitePlaceArithmeticTupleHullPullback;FinitePlaceArithmeticTupleHullVolume
+Geometry	FinitePlaceArithmeticTupleHullVolume	4	2	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleHullTransport	FinitePlaceArithmeticTupleCanonicalHull
+Geometry	FinitePlaceCommonPrimeCompletion	2	2	0	1	OK	0	0	0	0	FinitePlaceSourceLogShell	FinitePlaceCompletionPacket;FinitePlaceRelativeCommonPrime;RationalCommonPrimeFinrank
+Geometry	FinitePlaceCompactHullScaling	13	0	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull	FinitePlaceIQHullInterfaceScaledUnit;FinitePlaceIQHullLogShellRegion;FinitePlaceIQHullSharpUpperBound;FinitePlaceStepVAssembly
+Geometry	FinitePlaceCompletionDegree	19	5	0	0	OK	0	0	0	0	FinitePlaceCompletionNormTransport	FinitePlaceCompletionDegreeGlobal;FinitePlaceCompletionLocalInputs;RationalCommonPrimeFinrank;RelativeCompletionFinrankReduction
+Geometry	FinitePlaceCompletionDegreeGlobal	8	2	0	1	OK	0	0	0	0	FinitePlaceCompletionDegree	ArithmeticDivisorDegree;RelativeCompletionFinrankReduction
+Geometry	FinitePlaceCompletionLocalInputs	26	3	0	0	OK	1	0	0	0	FinitePlaceCompletionDegree	AdicCompletionValuationUniqueness;FinitePlaceCompletionQuotientPow;RelativeCompletionFinrankReduction
+Geometry	FinitePlaceCompletionLocalStructureInstances	0	0	0	0	OK	0	0	0	0	RelativeCompletionFinrankReduction	
+Geometry	FinitePlaceCompletionNormTransport	24	6	0	0	OK	0	0	0	0		FinitePlaceCompletionDegree;FinitePlacePadicScalarStructure
+Geometry	FinitePlaceCompletionPacket	1	2	0	0	OK	0	0	0	0	FinitePlaceCommonPrimeCompletion	FinitePlaceCompletionPacketLogShell
+Geometry	FinitePlaceCompletionPacketLogShell	5	2	0	0	OK	0	0	0	0	FinitePlaceCompletionPacket	FinitePlaceArithmeticIQTensor
+Geometry	FinitePlaceCompletionQuotientPow	5	0	0	0	OK	0	0	0	0	FinitePlaceCompletionLocalInputs	FinitePlaceAdicCompletionRingEquiv;FinitePlaceCompletionQuotientPowAxiomProbe
+Geometry	FinitePlaceCompletionQuotientPowAxiomProbe	0	0	0	0	OK	0	0	0	0	FinitePlaceCompletionQuotientPow	
+Geometry	FinitePlaceFractionalAbsorption	19	0	0	1	OK	0	0	0	0	FinitePlaceHolomorphicIntegralClosure;FinitePlaceIntegerTensorComparison	FinitePlaceFractionalAbsorptionAxiomProbe;FinitePlaceStepVAssembly
+Geometry	FinitePlaceFractionalAbsorptionAxiomProbe	0	0	0	0	OK	0	0	0	0	FinitePlaceFractionalAbsorption	
+Geometry	FinitePlaceFractionalTensorLattice	26	4	0	4	OK	0	0	0	0	FinitePlaceIntegralLogTensorLattice;FinitePlaceIntegerTensorComparison	FinitePlaceLocalInclusionTensorization;FinitePlaceNormalizedUnitScalingLogVolume;FinitePlaceThetaPilotScaledRegion
+Geometry	FinitePlaceFullPrimePacket	5	4	0	1	OK	0	0	0	0	FinitePlaceArithmeticIQTensor	FinitePlaceArithmeticPacketVolume;FinitePlaceSelectedPrimePacket
+Geometry	FinitePlaceHolomorphicDifferentBase	6	0	0	0	MISSING	0	0	0	0	FinitePlaceHolomorphicIntegerIndex	
+Geometry	FinitePlaceHolomorphicIntegerIndex	13	3	0	0	OK	0	0	0	0	FinitePlaceIntegerTensorComparison;FinitePlaceArithmeticTensorBlockFields	FinitePlaceHolomorphicDifferentBase
+Geometry	FinitePlaceHolomorphicIntegralClosure	6	0	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull	FinitePlaceFractionalAbsorption;FinitePlaceNormalizedUnitScalingLogVolume;FinitePlaceThetaPilotScaledRegion
+Geometry	FinitePlaceIntegerTensorComparison	11	5	0	2	OK	0	0	0	0	FinitePlaceIntegralTensorCovolume	FinitePlaceFractionalAbsorption;FinitePlaceFractionalTensorLattice;FinitePlaceHolomorphicIntegerIndex;FinitePlaceLogShellScalingAssembly
+Geometry	FinitePlaceIntegralLogTensorLattice	7	1	0	2	OK	0	0	0	0	FinitePlaceArithmeticTensorBlocks	FinitePlaceFractionalTensorLattice;FinitePlaceIntegralTensorCovolume;FinitePlaceLogShellScalingAssembly;FinitePlaceUnscaledLogTensorLattice
+Geometry	FinitePlaceIntegralTensorCovolume	7	4	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull;FinitePlaceIntegralLogTensorLattice	FinitePlaceIntegerTensorComparison;FinitePlaceSelectedPrimeIntegralTensorVolume
+Geometry	FinitePlaceIQHullCertificateActual	6	1	0	0	OK	0	0	0	0	FinitePlaceIQHullInterfaceScaledUnit	
+Geometry	FinitePlaceIQHullInterface	9	1	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull	FinitePlaceIQHullInterfaceScaledUnit;FinitePlaceIQHullLogShellRegion;FinitePlaceIQHullSharpUpperBound;P1CarrierDesignActual
+Geometry	FinitePlaceIQHullInterfaceScaledUnit	3	0	0	0	OK	0	0	0	0	FinitePlaceIQHullInterface;FinitePlaceCompactHullScaling	FinitePlaceIQHullCertificateActual;FinitePlaceIQHullSharpUpperBound
+Geometry	FinitePlaceIQHullLogShellRegion	18	3	0	0	OK	0	0	0	0	FinitePlaceIQHullInterface;FinitePlaceCompactHullScaling	
+Geometry	FinitePlaceIQHullSharpUpperBound	12	2	0	0	OK	0	0	0	0	FinitePlaceIQHullInterfaceScaledUnit;FinitePlaceIQHullInterface;FinitePlaceCompactHullScaling	FinitePlaceIQHullSignedLogVolume
+Geometry	FinitePlaceIQHullSignedCertificate	3	4	0	0	OK	0	0	0	0	FinitePlaceIQHullSignedLogVolume	FinitePlaceIQHullSignedCertificateNonvacuous
+Geometry	FinitePlaceIQHullSignedCertificateNonvacuous	15	3	0	0	OK	0	0	0	0	FinitePlaceIQHullSignedCertificate	
+Geometry	FinitePlaceIQHullSignedLogVolume	11	2	0	0	OK	0	0	0	0	FinitePlaceIQHullSharpUpperBound	FinitePlaceIQHullSignedCertificate
+Geometry	FinitePlaceLocalInclusionTensorization	3	0	0	2	STALE	0	0	0	0	FinitePlaceFractionalTensorLattice;FinitePlaceUnscaledLogTensorLattice	
+Geometry	FinitePlaceLogShellDiscrepancy	6	2	0	0	OK	0	0	0	0	FinitePlaceSourceLogShell	
+Geometry	FinitePlaceLogShellScalingAssembly	20	4	0	0	OK	0	0	1	0	FinitePlaceIntegerTensorComparison;FinitePlaceIntegralLogTensorLattice	
+Geometry	FinitePlaceNormalizedCompletion	1	3	0	0	OK	0	0	0	0	FinitePlacePadicScalarStructure	FinitePlaceNormalizedIntegers;FinitePlaceSourceAlgebraicClosure
+Geometry	FinitePlaceNormalizedIntegers	4	2	0	0	OK	0	0	0	0	FinitePlaceNormalizedCompletion	FinitePlaceSourceLogShell
+Geometry	FinitePlaceNormalizedUnitScalingLogVolume	18	6	1	2	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull;FinitePlaceFractionalTensorLattice;FinitePlaceHolomorphicIntegralClosure	FinitePlaceStepVAssembly
+Geometry	FinitePlacePadicScalarStructure	4	3	0	2	OK	0	0	0	0	FinitePlaceCompletionNormTransport	FinitePlaceNormalizedCompletion
+Geometry	FinitePlaceRelativeCommonPrime	5	2	0	0	OK	0	0	0	0	FinitePlaceCommonPrimeCompletion	FinitePlaceRelativeNormalizedCompletion;FinitePlaceSelectedPrimePacket
+Geometry	FinitePlaceRelativeNormalizedCompletion	8	3	0	0	OK	0	0	0	0	FinitePlaceRelativeCommonPrime	FinitePlaceRelativePadicDegrees;RationalCommonPrimeFinrank
+Geometry	FinitePlaceRelativePadicDegrees	9	2	0	1	OK	0	0	0	0	FinitePlaceRelativeNormalizedCompletion;RelativeCompletionFinrankReduction;FinitePlaceArithmeticTensorBlocks	FinitePlaceSelectedPrimeWeights
+Geometry	FinitePlaceSelectedPrimeIntegralTensorVolume	5	2	0	0	OK	0	0	0	0	FinitePlaceIntegralTensorCovolume;FinitePlaceSelectedPrimeWeightedHullVolume	
+Geometry	FinitePlaceSelectedPrimePacket	1	3	0	2	OK	0	0	0	0	FinitePlaceRelativeCommonPrime;FinitePlaceFullPrimePacket;FinitePlaceArithmeticIQTensor;FinitePlaceArithmeticPacketVolume;FinitePlaceArithmeticTensorBlocks	FinitePlaceSelectedPrimeWeights
+Geometry	FinitePlaceSelectedPrimeWeightedHullVolume	7	3	0	0	OK	0	0	0	0	FinitePlaceArithmeticTupleCanonicalHull;FinitePlaceArithmeticTensorBlockHull;FinitePlaceSelectedPrimeWeightedVolume	FinitePlaceSelectedPrimeIntegralTensorVolume
+Geometry	FinitePlaceSelectedPrimeWeightedVolume	3	1	0	1	OK	0	0	0	0	FinitePlaceSelectedPrimeWeights	FinitePlaceSelectedPrimeWeightedHullVolume
+Geometry	FinitePlaceSelectedPrimeWeights	3	0	0	2	OK	0	0	0	0	FinitePlaceRelativePadicDegrees;FinitePlaceSelectedPrimePacket	FinitePlaceSelectedPrimeWeightedVolume
+Geometry	FinitePlaceSourceAlgebraicClosure	0	2	0	0	OK	0	0	0	0	FinitePlaceNormalizedCompletion	FinitePlaceSourceGaloisLogShell
+Geometry	FinitePlaceSourceAlgebraicUnitPerfection	6	1	0	2	OK	0	0	0	0	FinitePlaceSourceGaloisLogShell	FinitePlaceSourceIndTopology
+Geometry	FinitePlaceSourceGaloisLayers	0	6	0	1	OK	0	0	0	0	FinitePlaceSourceIndCofinality	
+Geometry	FinitePlaceSourceGaloisLogShell	7	3	0	1	OK	0	0	0	0	FinitePlaceSourceAlgebraicClosure;FinitePlaceSourceLogShell	FinitePlaceSourceAlgebraicUnitPerfection
+Geometry	FinitePlaceSourceIndCofinality	6	4	0	0	OK	0	0	0	0	FinitePlaceSourceIndTopology	FinitePlaceSourceGaloisLayers
+Geometry	FinitePlaceSourceIndTopology	2	1	0	2	OK	0	0	0	0	FinitePlaceSourceAlgebraicUnitPerfection	FinitePlaceSourceIndCofinality;FinitePlaceSourceUnitPerfectionField
+Geometry	FinitePlaceSourceLogKernel	4	1	0	0	OK	0	0	0	0	FinitePlaceSourceLogShell	FinitePlaceSourceUnitPerfection
+Geometry	FinitePlaceSourceLogShell	11	4	0	0	OK	0	0	0	0	FinitePlaceNormalizedIntegers	FinitePlaceCommonPrimeCompletion;FinitePlaceLogShellDiscrepancy;FinitePlaceSourceGaloisLogShell;FinitePlaceSourceLogKernel
+Geometry	FinitePlaceSourceUnitPerfection	3	2	0	1	OK	0	0	0	0	FinitePlaceSourceLogKernel	
+Geometry	FinitePlaceSourceUnitPerfectionField	1	0	0	0	OK	0	0	0	0	FinitePlaceSourceIndTopology	
+Geometry	FinitePlaceStepVAssembly	29	3	0	0	OK	0	0	0	0	FinitePlaceFractionalAbsorption;FinitePlaceNormalizedUnitScalingLogVolume;FinitePlaceUnscaledLogTensorLattice;FinitePlaceStepVRealBound;FinitePlaceCompactHullScaling	FinitePlaceStepVAssemblyAxiomProbe;FinitePlaceStepVJInvariant
+Geometry	FinitePlaceStepVAssemblyAxiomProbe	0	0	0	0	OK	0	0	0	0	FinitePlaceStepVAssembly	
+Geometry	FinitePlaceStepVJInvariant	1	0	0	0	OK	0	0	0	0	FinitePlaceStepVAssembly	FinitePlaceStepVJInvariantAxiomProbe;FinitePlaceStepVLambda
+Geometry	FinitePlaceStepVJInvariantAxiomProbe	0	0	0	0	OK	0	0	0	0	FinitePlaceStepVJInvariant	
+Geometry	FinitePlaceStepVLambda	22	6	0	0	OK	0	0	0	0	FinitePlaceStepVJInvariant	
+Geometry	FinitePlaceStepVRealBound	2	0	0	0	OK	0	0	0	0		FinitePlaceStepVAssembly
+Geometry	FinitePlaceTensorIndexArithmetic	18	0	0	6	OK	0	0	0	0		
+Geometry	FinitePlaceThetaPilotScaledRegion	4	2	0	0	STALE	0	0	0	0	FinitePlaceFractionalTensorLattice;FinitePlaceHolomorphicIntegralClosure	
+Geometry	FinitePlaceUnscaledLogTensorLattice	15	0	0	2	OK	0	0	0	0	FinitePlaceIntegralLogTensorLattice	FinitePlaceLocalInclusionTensorization;FinitePlaceStepVAssembly
+Geometry	FreyConductorOdd	9	0	0	0	OK	0	0	0	0	FreyOddReduction;ABCNonemptyOddBadSupport	FreyOddConductorHeightCriterion
+Geometry	FreyConductorTwoAdic	17	0	0	0	OK	0	0	0	0	FreyOddReduction;ABCInvariantLocalValuations	FreyTwoAdicConductorExponentCases;FreyTwoAdicMinimalReduction;FreyTwoAdicOggSaitoConditional
+Geometry	FreyDiscriminantRadical	7	0	0	0	OK	0	0	0	0	FreyWeierstrassCurve;ABCInvariantLocalValuations	
+Geometry	FreyLegendreComparison	27	6	0	0	OK	0	0	0	0	FreyWeierstrassCurve;LegendreWeierstrassCurve;LegendreQuadraticParameterFields	
+Geometry	FreyMinimalBaselineCards	0	1	1	0	OK	0	0	0	0	FreyTwoAdicCaseTableCards	
+Geometry	FreyOddReduction	34	2	0	1	OK	0	0	0	0	ABCResidueDiscriminant;ABCInvariantCoprimality	FreyConductorOdd;FreyConductorTwoAdic;FreySplitMultiplicativeReduction
+Geometry	FreyResidueQuadraticSplitting	10	0	0	1	OK	0	0	0	0	FreySplitMultiplicativeReduction	
+Geometry	FreySplitMultiplicativeReduction	34	1	0	1	OK	0	0	0	0	FreyOddReduction	FreyResidueQuadraticSplitting
+Geometry	FreySplittingFields	19	0	0	0	OK	0	0	0	0	LegendreQuadraticParameterFields;QuadraticTwistArithmetic	
+Geometry	FreyTateAnalyticInput	48	2	0	0	OK	0	0	0	0	ABCInvariantLocalValuations;ABCNonemptyOddBadSupport;FreyWeierstrassCurve	ABCModelHeightComparison;FreyTateParameterComparison
+Geometry	FreyTateParameterComparison	14	1	1	0	OK	0	0	0	0	FreyTateAnalyticInput	
+Geometry	FreyTwoAdicAdditiveCaseValueCard	5	0	0	0	OK	0	0	0	0	FreyTwoAdicMinimalDiscriminantValuation	FreyTwoAdicK1RowAnalysis;FreyTwoAdicMinimalityCriterion
+Geometry	FreyTwoAdicCaseCShiftedHalving	5	2	0	0	OK	0	0	0	0	FreyTwoAdicK1RowAnalysis	
+Geometry	FreyTwoAdicCaseTableCards	0	2	2	0	OK	0	0	0	0	TateOggSaitoTwoAdicCards	FreyMinimalBaselineCards;FreyTwoAdicCaseTableParity
+Geometry	FreyTwoAdicCaseTableParity	4	0	0	0	OK	0	0	0	0	FreyTwoAdicCaseTableCards	
+Geometry	FreyTwoAdicConductorExponentCases	5	0	0	0	OK	0	0	0	0	FreyConductorTwoAdic;FreyTwoAdicMinimalReduction	
+Geometry	FreyTwoAdicK1RowAnalysis	7	1	0	0	OK	0	0	0	0	FreyTwoAdicMinimalDiscriminantValuation;FreyTwoAdicAdditiveCaseValueCard	FreyTwoAdicCaseCShiftedHalving
+Geometry	FreyTwoAdicMinimalDiscriminantValuation	12	0	0	0	OK	0	0	0	0	FreyTwoAdicMinimalReduction	FreyTwoAdicAdditiveCaseValueCard;FreyTwoAdicK1RowAnalysis;FreyTwoAdicMinimalityCriterion
+Geometry	FreyTwoAdicMinimalityCriterion	2	1	0	0	OK	0	0	0	0	FreyTwoAdicMinimalDiscriminantValuation;FreyTwoAdicAdditiveCaseValueCard	FreyTwoAdicNoUniformizerChange
+Geometry	FreyTwoAdicMinimalReduction	21	5	0	0	OK	0	0	0	0	FreyConductorTwoAdic	FreyTwoAdicConductorExponentCases;FreyTwoAdicMinimalDiscriminantValuation;FreyTwoAdicSplitMultiplicative
+Geometry	FreyTwoAdicNoUniformizerChange	25	0	0	1	OK	0	0	0	0	FreyTwoAdicMinimalityCriterion	
+Geometry	FreyTwoAdicOggSaitoBranchAnalysis	15	1	0	0	OK	0	0	0	0	FreyTwoAdicOggSaitoConditional	
+Geometry	FreyTwoAdicOggSaitoConditional	4	1	0	0	OK	0	0	0	0	TateOggSaitoTwoAdicCards;FreyConductorTwoAdic	FreyTwoAdicOggSaitoBranchAnalysis
+Geometry	FreyTwoAdicSplitMultiplicative	6	0	0	0	OK	0	0	0	0	FreyTwoAdicMinimalReduction	
+Geometry	FreyTwoTorsion	24	7	0	0	OK	0	0	0	0	FreyWeierstrassCurve;EllipticDivisionPolynomialEvaluation	
+Geometry	FreyWeierstrassCurve	43	3	0	0	OK	0	0	0	0	RationalPointDictionary	ABCModelHeightComparison;ABCResidueDiscriminant;FreyDiscriminantRadical;FreyLegendreComparison;FreyTateAnalyticInput;FreyTwoTorsion;QuadraticTwistArithmetic
+Geometry	LegendreJFunctionDivisor	24	7	0	0	OK	0	0	0	0		
+Geometry	LegendreJTwoAdicValuation	0	0	0	0	OK	0	0	0	0	LegendreWeierstrassCurve	
+Geometry	LegendreLevelTwoStructure	27	7	0	0	OK	0	0	0	0	LegendreWeierstrassCurve;LegendreQuadraticParameterFields;EllipticDivisionPolynomialEvaluation	
+Geometry	LegendreParameterGalois	22	5	0	0	OK	0	0	0	0	LegendreQuadraticParameterFields	
+Geometry	LegendreParameterIsomorphisms	16	5	0	0	OK	0	0	0	0	LegendreWeierstrassCurve;LegendreParameterSymmetry	BoundedDegreeLegendreIsomorphisms
+Geometry	LegendreParameterSymmetry	23	3	0	0	OK	0	0	0	0		LegendreParameterIsomorphisms
+Geometry	LegendreProjectiveMap	43	14	1	0	OK	0	0	0	0		
+Geometry	LegendreQuadraticParameterFields	26	13	0	0	OK	0	0	0	0		BoundedDegreeLegendreIsomorphisms;FreyLegendreComparison;FreySplittingFields;LegendreLevelTwoStructure;LegendreParameterGalois
+Geometry	LegendreWeierstrassCurve	30	1	0	0	OK	0	0	0	0	RationalPointDictionary	ABCModelHeightComparison;FreyLegendreComparison;LegendreJTwoAdicValuation;LegendreLevelTwoStructure;LegendreParameterIsomorphisms
+Geometry	P1CarrierDesignActual	9	5	0	1	OK	0	0	1	0	FinitePlaceIQHullInterface	
+Geometry	QuadraticTwistArithmetic	12	2	0	0	OK	0	0	0	0	FreyWeierstrassCurve	FreySplittingFields
+Geometry	RationalCommonPrimeFinrank	4	0	0	0	OK	0	0	0	0	FinitePlaceCommonPrimeCompletion;FinitePlaceCompletionDegree;FinitePlaceRelativeNormalizedCompletion	
+Geometry	RelativeCompletionFinrankReduction	20	0	0	0	OK	0	0	0	0	AdicCompletionValuationUniqueness;FinitePlaceCompletionDegree;FinitePlaceCompletionDegreeGlobal;FinitePlaceCompletionLocalInputs	FinitePlaceCompletionLocalStructureInstances;FinitePlaceRelativePadicDegrees
+Geometry	TateOggSaitoTwoAdicCards	0	1	2	0	OK	0	0	0	0		FreyTwoAdicCaseTableCards;FreyTwoAdicOggSaitoConditional
+ABCBridge	Statement	5	3	0	1	OK	0	1	0	0		ABCInvariantHeight;LogarithmicBoundEquivalence;PrimitiveTriple;RationalPointDictionary;IUTToABC;ABCResidueDiscriminant;UnprovedTarget
+ABCBridge	UnprovedTarget	0	1	0	0	OK	1	0	1	0	Statement	ABCFrontier

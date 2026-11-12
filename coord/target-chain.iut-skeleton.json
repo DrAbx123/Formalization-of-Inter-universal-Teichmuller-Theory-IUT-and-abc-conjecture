@@ -1,0 +1,608 @@
+{
+  "section": "iut-skeleton",
+  "description": "IUT paper-scope statement skeleton (SHEAF stage 1/2): definitions/theorems from IUT I-IV with statement_dependencies and proof_dependencies (planned evidence)",
+  "nodes": [
+    {
+      "id": "TargetABC",
+      "kind": "target",
+      "title": "ABC conjecture target (height/weight comparison)",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Statement.lean"
+      ],
+      "declarations": [],
+      "note": "paper target; not a proved claim source: IUT IV final; ABC"
+    },
+    {
+      "id": "Cor312",
+      "kind": "theorem",
+      "title": "IUT III Corollary 3.12 (hull + det / log-volume bound)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean"
+      ],
+      "declarations": [],
+      "note": "main theorem target of IUT III source: IUT III Cor 3.12"
+    },
+    {
+      "id": "Thm311",
+      "kind": "theorem",
+      "title": "IUT III Theorem 3.11 (multiradial algorithm / hull)",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": [],
+      "note": "stage theorem for Cor 3.12 source: IUT III Thm 3.11"
+    },
+    {
+      "id": "StepXI",
+      "kind": "theorem",
+      "title": "IUT III Step (xi) (theta-packet bridge + hull determinant)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": [],
+      "note": "StepXI contract and transports source: IUT III Step (xi)"
+    },
+    {
+      "id": "Ind1",
+      "kind": "theorem",
+      "title": "Theorem 3.11 Indeterminacy 1",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "indeterminacy component source: IUT III Thm 3.11 Ind1"
+    },
+    {
+      "id": "Ind2",
+      "kind": "theorem",
+      "title": "Theorem 3.11 Indeterminacy 2",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "indeterminacy component source: IUT III Thm 3.11 Ind2"
+    },
+    {
+      "id": "Ind3",
+      "kind": "theorem",
+      "title": "Theorem 3.11 Indeterminacy 3",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "indeterminacy component source: IUT III Thm 3.11 Ind3"
+    },
+    {
+      "id": "H5",
+      "kind": "theorem",
+      "title": "Hull H5 (O^x hull log-volume)",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": [],
+      "note": "H5 hull statement source: IUT III H5"
+    },
+    {
+      "id": "H7Ob9",
+      "kind": "theorem",
+      "title": "Hull H7 / Ob9 two-sided bound",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": [],
+      "note": "two-sided hull inputs source: IUT III H7/Ob9"
+    },
+    {
+      "id": "HDD",
+      "kind": "def",
+      "title": "Hull-determinant decomposition (HDD = (hull+det) o dsc)",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "paper four-triangle decomposition source: IUT paper sec4"
+    },
+    {
+      "id": "HullDet",
+      "kind": "theorem",
+      "title": "Hull determinant tensor and comparison",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "hull det comparison source: IUT III Hull06/Hull10"
+    },
+    {
+      "id": "K1K2",
+      "kind": "theorem",
+      "title": "K1/K2 packet degree reduction",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2CardReduction.lean"
+      ],
+      "declarations": [],
+      "note": "packet degree reduction source: IUT III K1/K2; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "SHE",
+      "kind": "theorem",
+      "title": "SHE transport (source hull extension)",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "SHE component of StepXI source: IUT III SHE"
+    },
+    {
+      "id": "APT",
+      "kind": "theorem",
+      "title": "APT transport (arithmetic prime transport)",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "APT component of StepXI source: IUT III APT"
+    },
+    {
+      "id": "IPL",
+      "kind": "theorem",
+      "title": "IPL transport (inertia prime limits)",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "IPL component of StepXI source: IUT III IPL"
+    },
+    {
+      "id": "LogShell",
+      "kind": "def",
+      "title": "log-shell I(G) and principal units",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "log-shell carrier source: IUT II log-shell"
+    },
+    {
+      "id": "Thetas",
+      "kind": "def",
+      "title": "Theta-link / procession (theta data)",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "theta-link carriers source: IUT II theta-link"
+    },
+    {
+      "id": "PrimeStrips",
+      "kind": "def",
+      "title": "F/D prime-strips and procession data",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "prime-strip data source: IUT II prime-strips"
+    },
+    {
+      "id": "Frobenioid",
+      "kind": "def",
+      "title": "Frobenioid-theoretic carriers",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "Frobenioid carrier source: IUT II Frobenioid"
+    },
+    {
+      "id": "Kummer",
+      "kind": "theorem",
+      "title": "Kummer correspondence / absolute Kummer map",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean"
+      ],
+      "declarations": [],
+      "note": "Kummer theory inputs source: IUT II Kummer"
+    },
+    {
+      "id": "HodgeTheater",
+      "kind": "def",
+      "title": "Hodge theater and Frobenius picture",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "Hodge theater carrier source: IUT I Hodge theater"
+    },
+    {
+      "id": "InitialTheta",
+      "kind": "def",
+      "title": "initial Theta data (arithmetic holomorphic)",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "initial theta source: IUT I initial Theta"
+    },
+    {
+      "id": "Section0",
+      "kind": "def",
+      "title": "Section 0 oriented graph / saturated path pairs",
+      "status": "DEF",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "declarations": {},
+      "note": "Section 0 combinatorics source: IUT I Section 0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Gaussian",
+      "kind": "def",
+      "title": "Gaussian / LGP compatibility",
+      "status": "DEF",
+      "files": [],
+      "declarations": {},
+      "note": "Gaussian tail and LGP source: IUT II/III Gaussian-LGP"
+    },
+    {
+      "id": "QPilot",
+      "kind": "theorem",
+      "title": "q-pilot and Theta-pilot log-volume comparison",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "q/Theta pilot comparison source: IUT III pilot"
+    },
+    {
+      "id": "IUT4Estimates",
+      "kind": "theorem",
+      "title": "IUT IV Thm 1.10 estimates / (b) uniform / (c) region",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": [],
+      "note": "IUT IV estimates source: IUT IV Thm 1.10"
+    },
+    {
+      "id": "IUT4Sec2",
+      "kind": "theorem",
+      "title": "IUT IV Section 2 comparison / height dictionary",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "IUT IV sec2 comparison source: IUT IV sec2"
+    },
+    {
+      "id": "HeightVolume",
+      "kind": "theorem",
+      "title": "height vs volume comparison chain",
+      "status": "CONDITIONAL",
+      "files": [],
+      "declarations": {},
+      "note": "height/volume reduction source: IUT IV / ABC bridge"
+    },
+    {
+      "id": "Sources1995_2015",
+      "kind": "named_input",
+      "title": "source theorems 1995-2015 (Faltings et al.)",
+      "status": "NAMED",
+      "files": [],
+      "declarations": {},
+      "note": "legitimate external source inputs source: paper references"
+    },
+    {
+      "id": "hCor312",
+      "kind": "named_input",
+      "title": "named input hCor312 (Theorem 3.11 display inequality)",
+      "status": "NAMED",
+      "files": [],
+      "declarations": {},
+      "note": "class-A named display hypothesis source: paper Thm 1.10 display"
+    },
+    {
+      "id": "hSlack",
+      "kind": "named_input",
+      "title": "named input hSlack (Cor 3.12 gap -> final inequality)",
+      "status": "NAMED",
+      "files": [],
+      "declarations": {},
+      "note": "class-A named slack hypothesis source: paper Cor 3.12 -> final"
+    },
+    {
+      "id": "ClassB",
+      "kind": "named_input",
+      "title": "class-B realization rows (geometric/Frobenioid manifestation)",
+      "status": "NAMED",
+      "files": [],
+      "declarations": {},
+      "note": "paper-internal class-B inputs source: paper row-6 realization"
+    }
+  ],
+  "edges": [
+    {
+      "from": "TargetABC",
+      "to": "IUT4Estimates",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "TargetABC",
+      "to": "IUT4Sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "Thm311",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "HDD",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "StepXI",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "Thm311",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "HullDet",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "hCor312",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Cor312",
+      "to": "hSlack",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "H5",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "H7Ob9",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "Ind1",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "Ind2",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "Ind3",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "K1K2",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thm311",
+      "to": "Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI",
+      "to": "SHE",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI",
+      "to": "APT",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI",
+      "to": "IPL",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "StepXI",
+      "to": "QPilot",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "H5",
+      "to": "LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "H5",
+      "to": "PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "H7Ob9",
+      "to": "HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HDD",
+      "to": "HullDet",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HullDet",
+      "to": "H7Ob9",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "K1K2",
+      "to": "PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "K1K2",
+      "to": "Kummer",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "QPilot",
+      "to": "Gaussian",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "QPilot",
+      "to": "Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT4Estimates",
+      "to": "IUT4Sec2",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT4Sec2",
+      "to": "HeightVolume",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT4Estimates",
+      "to": "Sources1995_2015",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell",
+      "to": "PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "LogShell",
+      "to": "Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thetas",
+      "to": "PrimeStrips",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thetas",
+      "to": "HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Thetas",
+      "to": "Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips",
+      "to": "HodgeTheater",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PrimeStrips",
+      "to": "Frobenioid",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Frobenioid",
+      "to": "Kummer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "Kummer",
+      "to": "LogShell",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater",
+      "to": "Section0",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "HodgeTheater",
+      "to": "InitialTheta",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "InitialTheta",
+      "to": "Section0",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Section0",
+      "to": "Sources1995_2015",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "Gaussian",
+      "to": "Thetas",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "ClassB",
+      "to": "Frobenioid",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "HeightVolume",
+      "to": "ClassB",
+      "kind": "proof",
+      "evidence": "planned"
+    }
+  ]
+}

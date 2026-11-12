@@ -1,0 +1,36 @@
+{
+  "node": "foundation:C.stepProviderPrime",
+  "kind": "bridge",
+  "status": "CONDITIONAL",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "exists_maxDegP_finite",
+      "stepSetP1",
+      "mem_stepSetP1_of_mem",
+      "mem_stepSetP1_of_conj",
+      "mem_stepSetP1_of_crit",
+      "degQ_le_of_mem_conjSet",
+      "maxDegP_stepSetP1_le",
+      "measure_stepSetP1_lt_of_named",
+      "stepProvider'_of_inputs"
+    ],
+    "named": [
+      "F4NumMaxStrictInput",
+      "F0StepTransportInput",
+      "StepProviderFixedBetaChoiceInput"
+    ]
+  },
+  "edges": [
+    "f1 -> exists_maxDegP_finite",
+    "f2 -> stepSetP1",
+    "f4a -> maxDegP_stepSetP1_le",
+    "f4b NAMED -> measure_stepSetP1_lt_of_named",
+    "f5 NAMED -> stepProvider'_of_inputs"
+  ],
+  "statement": "StepProvider' (beta'=f0 beta) from f1/f2/f4a PROVED + f4b/f5 NAMED",
+  "note": "SHEAF fragment; no closure; gate NOT PASSED; binding HOLD; pins 14041 ; file green (watchdog EXIT0) but f4b F4NumMaxStrictInput and f5 F0StepTransportInput remain NAMED; not PROVED per honesty",
+  "updated": "2026-11-11T01:00+08:00"
+}

@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureFiniteReuseActual",
+  "kind": "def",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureFiniteReuseActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 reuse/evidence real Lean; new file only, no sorry; watchdog to verify"
+}

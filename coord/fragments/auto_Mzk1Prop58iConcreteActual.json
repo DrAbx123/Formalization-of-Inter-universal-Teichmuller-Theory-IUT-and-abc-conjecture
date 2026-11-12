@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Prop58iConcreteActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Prop58iConcreteActual.lean"
+  ],
+  "note": "watchdog EXIT0 observed read-only; silent loop registration"
+}

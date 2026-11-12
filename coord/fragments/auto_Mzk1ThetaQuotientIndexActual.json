@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1ThetaQuotientIndexActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1ThetaQuotientIndexActual.lean"
+  ],
+  "declarations": {},
+  "note": "watchdog EXIT0 read-only; DAG-only registration"
+}

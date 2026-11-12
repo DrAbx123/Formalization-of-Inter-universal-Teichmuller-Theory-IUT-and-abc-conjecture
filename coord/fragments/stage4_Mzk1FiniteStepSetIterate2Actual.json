@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetIterate2Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetIterate2Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: iterated bound at max degree; new file only, no sorry; watchdog to verify"
+}

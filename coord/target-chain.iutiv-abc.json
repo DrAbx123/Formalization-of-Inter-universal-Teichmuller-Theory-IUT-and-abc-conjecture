@@ -1,0 +1,1903 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-11T01:55:00+08:00",
+  "generated_by": "stepxi (史蒂)",
+  "scope": "S10 IUTIV + ABCBridge declaration-level chain (subset; full module/edge TSV in coord/skeleton-iutiv-abcbrige-edges.tsv)",
+  "canonical_pin": {
+    "gate": "FINAL PIN V150@18248/CFC6CE08",
+    "status": "GATE NOT PASSED; binding HOLD; L8 FROZEN",
+    "registry": "14041",
+    "record": "18800"
+  },
+  "direction": "edge from = dependent, edge to = dependency (statement|proof|interface|gap)",
+  "nodes": [
+    {
+      "id": "G0",
+      "kind": "target",
+      "title": "ABCConjecture (final target definition)",
+      "status": "DEF",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Statement.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Statement.lean": [
+          "ABCConjecture"
+        ]
+      },
+      "note": "final target of the ABC bridge; definition only here"
+    },
+    {
+      "id": "G0.log",
+      "kind": "target",
+      "title": "ABCLogConjecture (logarithmic form, proved equivalent)",
+      "status": "DEF",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Arithmetic/LogarithmicBoundEquivalence.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Arithmetic/LogarithmicBoundEquivalence.lean": [
+          "ABCLogConjecture"
+        ]
+      },
+      "note": "equivalent log form; not the final target"
+    },
+    {
+      "id": "G0.iff_log",
+      "kind": "theorem",
+      "title": "abcConjecture_iff_abcLogConjecture (proved equivalence)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean": [
+          "abcConjecture_iff_abcLogConjecture"
+        ]
+      },
+      "note": "equivalence between ABCConjecture and ABCLogConjecture; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G0.iff_hw",
+      "kind": "theorem",
+      "title": "abcConjecture_iff_abcArithmeticWeightHeightBound (proved equivalence)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean": [
+          "abcConjecture_iff_abcArithmeticWeightHeightBound"
+        ]
+      },
+      "note": "ABCConjecture iff ABC-style height bound; used by G1; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G1",
+      "kind": "theorem",
+      "title": "cor312ToABCBridge_abcConjecture (conditional bridge theorem)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "cor312ToABCBridge_abcConjecture"
+        ]
+      },
+      "note": "conditional on an inhabitant of G2; no gap proved | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "G2",
+      "kind": "interface",
+      "title": "Cor312ToABCBridgeInterface (carrier + hullData + per-epsilon comparison)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "Cor312ToABCBridgeInterface"
+        ]
+      },
+      "note": "structure; construction from named paper inputs only (see tmp Mzk1Cor312ToABCConsumerActual, parked) | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "G2.b",
+      "kind": "theorem",
+      "title": "cor312ToABCBridge_heightBound (ABC style height bound)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "cor312ToABCBridge_heightBound"
+        ]
+      },
+      "note": "proved from G2c + G2e fields | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "G2.c",
+      "kind": "theorem",
+      "title": "heightWeightBound_of_normalizedVolumeComparison",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ThetaBoundToHeightWeight.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ThetaBoundToHeightWeight.lean": [
+          "heightWeightBound_of_normalizedVolumeComparison"
+        ]
+      },
+      "note": "real-number assembly (ThetaBoundToHeightWeight); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G2.d",
+      "kind": "bridge",
+      "title": "cor312ToABCBridgeInterface_nonempty_iff_abcConjecture (strength calibration)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "cor312ToABCBridgeInterface_nonempty_iff_abcConjecture"
+        ]
+      },
+      "note": "Nonempty interface iff ABC; shows interface strength exactly ABC, no hidden closure; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G2.e",
+      "kind": "interface",
+      "title": "Cor312EpsilonArithmeticComparison (per-epsilon IUT IV section 2 comparison data)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "Cor312EpsilonArithmeticComparison"
+        ]
+      },
+      "note": "structure with logShellPoint + two named comparison fields N1/N2 | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "N1",
+      "kind": "named_input",
+      "title": "height_le_normalizedRegionVolume (IUT IV sec2 gap 1: height comparison)",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "arithmeticWeight_nonneg",
+          "hullLogVolume_ofReal_toReal",
+          "abcRationalPoint_logHeight_unbounded",
+          "below",
+          "no_heightDictionary_into_finiteHull"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "N2",
+      "kind": "named_input",
+      "title": "regionVolume_le_normalizedWeight (IUT IV sec2 gap 2: region log-volume computation)",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "arithmeticWeight_nonneg",
+          "hullLogVolume_ofReal_toReal",
+          "abcRationalPoint_logHeight_unbounded",
+          "below",
+          "no_heightDictionary_into_finiteHull"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "IQHull",
+      "kind": "interface",
+      "title": "IQHullLogVolumeInterface + hull_logVolume_lt_top (Cor 3.12 hull/finiteness interface)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullCompactnessReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullCompactnessReduction.lean": [
+          "IQHullLogVolumeInterface",
+          "hull_logVolume_lt_top"
+        ]
+      },
+      "note": "finiteness is PROVED from fields; intended carrier IQ(...) is NOT formalized"
+    },
+    {
+      "id": "LFP",
+      "kind": "tree_asset",
+      "title": "LocalFieldProductHull (product local-field hull/log-volume, real)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductHull.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductHull.lean": [
+          "measure_hull_lt_top",
+          "normalizedLogVolume_unitRegion",
+          "normalizedLogVolume_le_hull",
+          "hull_closure"
+        ]
+      },
+      "note": "real analytic prerequisite for Remark 3.9.5; IQ identification is separate (statement dependency, not Lean import)"
+    },
+    {
+      "id": "StepXI",
+      "kind": "interface",
+      "title": "StepXIContract / Cor312Conclusion (IUT III 3.11->3.12 contract)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean": [
+          "StepXIContract",
+          "Cor312Conclusion"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): contract structure only; stepXIContractConstruction is PENDING (not a proved claim)"
+    },
+    {
+      "id": "GapReduction",
+      "kind": "interface",
+      "title": "Cor312ComparisonGapReduction (reduced gap inputs -> epsilon comparison assembly)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapReduction.lean": [
+          "cor312GapAssembly_epsilonComparisonOfReducedInputs",
+          "cor312Gap2_hull_logVolume_le_normalizedComparisonRegion",
+          "cor312Gap2_region_logVolume_le_add_of_subadditive"
+        ]
+      },
+      "note": "IFACE assembly; reduced inputs still named"
+    },
+    {
+      "id": "GapSupply",
+      "kind": "tree_asset",
+      "title": "Cor312ComparisonGapSupplyLayer (supply of reduced gap inputs)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapSupplyLayer.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapSupplyLayer.lean": [
+          "cor312GapSupply_sourceInterface_hsplit",
+          "cor312GapSupply_sourceInterface_hptfin",
+          "cor312GapSupply_sourceGap1_of_valuationBound_degreeDictionary"
+        ]
+      },
+      "note": "conditional supply layer (named paper inputs remain)"
+    },
+    {
+      "id": "GapDict",
+      "kind": "tree_asset",
+      "title": "Cor312GapDictionaryLayer (dictionary identities)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312GapDictionaryLayer.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312GapDictionaryLayer.lean": [
+          "cor312GapDict_singletonVolume_toReal_eq_max",
+          "cor312GapDict_weightDictionary_iff_scalingSeparated"
+        ]
+      },
+      "note": "dictionary layer, not the comparison gap proof"
+    },
+    {
+      "id": "PointwiseResidual",
+      "kind": "interface",
+      "title": "Cor312PointwiseResidualSupply (pointwise residual supply)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseResidualSupply.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseResidualSupply.lean": [
+          "cor312Pointwise_spikeCarrier_logVolume_singleton",
+          "cor312Pointwise_sourceInterface_hptfin"
+        ]
+      },
+      "note": "pointwise IFACE reduction"
+    },
+    {
+      "id": "G3",
+      "kind": "bridge",
+      "title": "ABCFrontier (frontier comparison clauses)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+          "FrontierHeightComparisonClause",
+          "FrontierRegionComparisonClause",
+          "ABCFrontier",
+          "bridgeInterface_of_frontier"
+        ]
+      },
+      "note": "frontier clauses are the named content; bridgeInterface_of_frontier builds G2 from ABCFrontier"
+    },
+    {
+      "id": "G3.f",
+      "kind": "theorem",
+      "title": "abcConjecture_of_frontier (+ RealLine variant)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+          "abcConjecture_of_frontier",
+          "abcConjecture_of_frontierRealLine",
+          "ABCFrontierRealLine"
+        ]
+      },
+      "note": "conditional endpoints from frontier; frontier clauses not proved"
+    },
+    {
+      "id": "G3.red",
+      "kind": "bridge",
+      "title": "ABCFrontierReductions (gap/pointwise reduced frontier clauses)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean": [
+          "FrontierHeightWeightClause",
+          "FrontierWeightRegionClause",
+          "FrontierUnitNormalizationClause",
+          "FrontierSplitClause",
+          "ABCFrontierGapReduced",
+          "abcConjecture_of_frontierGapReduced",
+          "abcConjecture_of_frontierPointwiseReduced"
+        ]
+      },
+      "note": "reductions to G3 clauses; no clause proved"
+    },
+    {
+      "id": "G3.single",
+      "kind": "bridge",
+      "title": "ABCFrontierSingletonReduction (singleton/region finiteness clauses)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean": [
+          "FrontierSingletonWeightVolumeClause",
+          "FrontierRegionFinitenessClause",
+          "ABCFrontierGapReducedV2",
+          "abcConjecture_of_frontierGapReducedV2"
+        ]
+      },
+      "note": "further reduced frontier clauses; conditional"
+    },
+    {
+      "id": "G3.pw",
+      "kind": "bridge",
+      "title": "Cor312PointwiseMembershipWeakening (pointwise weakened frontier)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean": [
+          "ABCFrontierPointwiseWeakened",
+          "abcConjecture_of_frontierPointwiseWeakened"
+        ]
+      },
+      "note": "pointwise weakened clause; conditional"
+    },
+    {
+      "id": "HW.add",
+      "kind": "bridge",
+      "title": "ABCHeightWeightAdditiveBoundV2 / equivalence",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean": [
+          "ABCHeightWeightAdditiveBoundV2",
+          "abcConjecture_iff_ABCHeightWeightAdditiveBoundV2"
+        ]
+      },
+      "note": "additive height-weight form; equivalence proved; does NOT feed G3 frontier (ABCFrontierHeightWeightRefutation blocks that route)"
+    },
+    {
+      "id": "IUTIV.ADD",
+      "kind": "tree_asset",
+      "title": "ArithmeticDivisorDegree (Def 1.9 / height box, real)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean": [
+          "weight",
+          "localDegree",
+          "degLinearMap",
+          "deg_apply",
+          "ndegLinearMap",
+          "ndeg_apply",
+          "pullback",
+          "deg_pullback",
+          "ndeg_pullback",
+          "absValAt"
+        ]
+      },
+      "note": "REAL proved (citable probe trio); direct reuse for arithmetic divisor/degree layer"
+    },
+    {
+      "id": "IUTIV.S1",
+      "kind": "tree_asset",
+      "title": "Section1 (Prop 1.7 weighted averages, real)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/Section1.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/Section1.lean": [
+          "iutIVProp17",
+          "iutIVProp17_middle",
+          "iutIVProp17_value"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): REAL proved (Section1 Obligation is a pending bookkeeping row only)"
+    },
+    {
+      "id": "IUTIV.S2",
+      "kind": "tree_asset",
+      "title": "Section2 (Prop 2.1 / Prop 1.6 explicit theta bounds, real)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/Section2.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/Section2.lean": [
+          "iutIVProp21i_log_le_self",
+          "iutIVProp21ii_theta_two_sided_eventually",
+          "iutIVProp16_primeCounting_le_four_thirds_eventually",
+          "iutIVProp16_index_le_four_thirds_nthPrime"
+        ]
+      },
+      "note": "REAL proved; explicit Prop 2.2 numerical PNT constants remain GAP"
+    },
+    {
+      "id": "IUTIV.StepV",
+      "kind": "tree_asset",
+      "title": "StepVProcessionAverage (Thm 1.10 step (v) real algebra)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean": [
+          "collectionBound",
+          "sum_collectionBound",
+          "processionAverage_eq",
+          "processionAverage_le"
+        ]
+      },
+      "note": "REAL proved real-number algebra; arithmetic inputs free"
+    },
+    {
+      "id": "IUTIV.Arch",
+      "kind": "tree_asset",
+      "title": "ArchimedeanTensorMetric (complex tensor metric, real)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanTensorMetric.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanTensorMetric.lean": [
+          "complexTensorToProd_inner",
+          "complexTensorToProd_norm_sq",
+          "complexTensorToProd_bijective",
+          "complexTensor_continuousRingEquiv_inner"
+        ]
+      },
+      "note": "REAL partial Prop 1.5; general |I| / lambda^|I| B_I extension needed; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "GAP.sec1_to_sec2",
+      "kind": "named_input",
+      "title": "MISSING EDGE: IUT IV section 1 display -> section 2 comparison",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIVSec1Sec2GapActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIVSec1Sec2GapActual.lean": [
+          "Sec1DisplayObligation"
+        ]
+      },
+      "status": "PROVED",
+      "note": "IUT IV Section1->Section2 transition obligations; statement-level gap register GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) [PIN: watchdog DONE EXIT=0]; probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "IUTIV.S1.display",
+      "kind": "theorem",
+      "title": "S3171IUTIVSection1DisplayActual.thm110_final_display (IUT IV Thm 1.10 display, conditional)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean": [
+          "Thm110DisplayInputs",
+          "thm110_final_display"
+        ]
+      },
+      "note": "stated in tmp paper layer; conditional on Thm110DisplayInputs (hCor312 from Cor 3.12 route (b)/(c), hSlack = paper step-(v) arithmetic class B). Not connected to N1/N2 by any Lean theorem (GAP.sec1_to_sec2). | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "G3.route.gapReduced",
+      "kind": "interface",
+      "title": "ABCFrontierGapReduced route (gap-reduction inputs -> ABCFrontier)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean": [
+          "ABCFrontierGapReduced",
+          "ABCFrontier.reduce_gapReductionInputs",
+          "bridgeInterface_of_frontierGapReduced",
+          "abcConjecture_of_frontierGapReduced"
+        ]
+      },
+      "note": "route: ABCFrontierGapReduced -> ABCFrontier (reduce_gapReductionInputs) -> Cor312ToABCBridgeInterface (bridgeInterface_of_frontierGapReduced) -> ABCConjecture (abcConjecture_of_frontierGapReduced). Conditional; no sub-clause proved at source level."
+    },
+    {
+      "id": "G3.route.gapReducedV2",
+      "kind": "interface",
+      "title": "ABCFrontierGapReducedV2 route (F4b-refined gap frontier)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean": [
+          "FrontierSingletonWeightVolumeClause",
+          "FrontierRegionFinitenessClause",
+          "ABCFrontierGapReducedV2",
+          "ABCFrontier.reduce_gapReductionInputsV2",
+          "bridgeInterface_of_frontierGapReducedV2",
+          "abcConjecture_of_frontierGapReducedV2"
+        ]
+      },
+      "note": "refines F4b into FrontierSingletonWeightVolumeClause + FrontierRegionFinitenessClause; reduce_gapReductionInputsV2 -> ABCFrontier; conditional, no sub-clause proved."
+    },
+    {
+      "id": "G3.route.pointwiseReduced",
+      "kind": "interface",
+      "title": "ABCFrontierPointwiseReduced route (REFUTED premise)",
+      "status": "GAP",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean": [
+          "ABCFrontierPointwiseReduced",
+          "ABCFrontier.reduce_pointwiseResidual"
+        ],
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean": [
+          "not_ABCFrontierPointwiseReduced"
+        ]
+      },
+      "note": "REFUTED: not_ABCFrontierPointwiseReduced proves the pointwise frontier is empty (unit-membership incompatible with unbounded weights, AFS:143-160 / IQCarrierConcreteModel:531). The implication ABCFrontierPointwiseReduced -> ABCFrontier remains valid but its premise is uninhabited, so this is NOT a usable alternative route."
+    },
+    {
+      "id": "G3.route.pointwiseWeakened",
+      "kind": "bridge",
+      "title": "ABCFrontierPointwiseWeakened route (repaired pointwise frontier)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean": [
+          "ABCFrontierPointwiseWeakened",
+          "pointwiseWeakened_of_pointwiseReduced",
+          "pointwiseWeakened_to_gapReduced",
+          "ABCFrontier.reduce_pointwiseWeakenedResidual",
+          "abcConjecture_of_frontierPointwiseWeakened"
+        ]
+      },
+      "note": "repairs the refuted pointwise route by replacing membership with split/finiteness; pointwiseWeakened_to_gapReduced lands in G3.route.gapReduced; conditional."
+    },
+    {
+      "id": "IQHull.consumer",
+      "kind": "theorem",
+      "title": "IQ hull interface consumer bundle (paper layer)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IQHullConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IQHullConsumerActual.lean": [
+          "iqHull_imageSet_le",
+          "iqHull_finite",
+          "iqHull_lower_bound",
+          "iqHull_bundle",
+          "iqHullConsumerRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): pending pin: consumer bundle PROVED from IQHullLogVolumeInterface; interface data + ValueHullCompactnessInput remain named. [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G2CD.consumer",
+      "kind": "bridge",
+      "title": "G2.c/G2.d consumer: height bound + strength calibration",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G2CDConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G2CDConsumerActual.lean": [
+          "ABCHeightWeightAdditiveBoundV2_of_bridgeInterface",
+          "exists_heightBound_constant_of_bridgeInterface",
+          "bridgeInterface_nonempty_iff_abcConjecture",
+          "abcConjecture_of_bridgeInterface",
+          "bridgeInterface_nonempty_of_abcConjecture"
+        ]
+      },
+      "note": "new green file (CITABLE 7): G2.c consumer via cor312ToABCBridge_heightBound; G2.d strength iff; conditional on interface inhabitant; no closure.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "StepV.paperForm",
+      "kind": "theorem",
+      "title": "StepV paper-form final inequality (exact restatement)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepVPaperActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepVPaperActual.lean": [
+          "stepV_paperForm_le",
+          "stepV_paperForm_le_l",
+          "stepVPaperRows"
+        ]
+      },
+      "note": "new green file (CITABLE 4): paper-form Step (v) inequality with l=2n+1>=5; restatement of processionAverage_le; real-number layer only.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIV.S1.slack",
+      "kind": "theorem",
+      "title": "Thm 1.10 slack reduction: hSlack replaced by explicit logQ bound",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Thm110SlackActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Thm110SlackActual.lean": [
+          "thm110Slack_of_logQ_bound",
+          "thm110DisplayInputs_of_logQ_bound",
+          "thm110_final_display_of_logQ_bound",
+          "thm110SlackRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog results 211163. Conditional reduction: hCor312 remains named; hSlack replaced by explicit logQ bound under nonnegativity. No closure."
+    },
+    {
+      "id": "S3131.heightReduction",
+      "kind": "tree_asset",
+      "title": "(b) undilated height reduction",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3131PaperRouteHeightReductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3131PaperRouteHeightReductionActual.lean": [
+          "UndilatedHeightBound",
+          "heightComparisonFamily_of_undilated"
+        ]
+      },
+      "note": "real reduction: undilated height bound -> (b) family."
+    },
+    {
+      "id": "S3131.regionReduction",
+      "kind": "tree_asset",
+      "title": "(c) undilated region-volume reduction",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3131PaperRouteRegionReductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3131PaperRouteRegionReductionActual.lean": [
+          "UndilatedRegionBound",
+          "regionVolumeFamily_of_undilated"
+        ]
+      },
+      "note": "real reduction: undilated region bound -> (c) family."
+    },
+    {
+      "id": "e-deep:E5.uniformHeightConsumer",
+      "kind": "conditional",
+      "title": "E-5 (b) uniform height consumer (unit-B specialization) + S3131 reductions",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3171UniformHeightConsumerActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1E5UniformHeightActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3171UniformHeightConsumerActual.lean": [
+          "uniformHeightComparison_of_valuation_bound",
+          "undilatedHeightBound_of_valuation_bound",
+          "heightComparisonFamily_of_valuation_bound"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1E5UniformHeightActual.lean": [
+          "undilatedHeightBound_of_unit_valuation_bound",
+          "heightComparisonFamily_of_unit_valuation_bound",
+          "e5UnitConsumerRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog 211162 (new unit-B file). Consumer chain PROVED conditionally on named valuation/volume inputs; no closure. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "IQHull.monotonicity",
+      "kind": "theorem",
+      "title": "IQ hull monotonicity consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IQHullMonotonicityActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IQHullMonotonicityActual.lean": [
+          "iqHull_image_subset",
+          "iqHull_scaleShift_mono",
+          "iqHull_finite_and_lower",
+          "iqHullMonoRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "iutiv-abc:S1.displayCTheta",
+      "kind": "theorem",
+      "title": "S1.display: CThetaPaper >= -1 -> hCor312 -> display (explicit logQ bound)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1S1DisplayCThetaActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1S1DisplayCThetaActualV2.lean": [
+          "hCor312_of_CThetaPaper_ge_neg_one",
+          "thm110_final_display_of_CThetaPaper_logQ",
+          "s1DisplayCThetaRows"
+        ]
+      },
+      "note": "EXIT0 211754 (V2; original name stuck in failed state). hCor312 derived from real CThetaPaper lower bound; logQ bound for hSlack; no closure."
+    },
+    {
+      "id": "iutiv-abc:E5.displaySlack",
+      "kind": "conditional",
+      "title": "E5.display: display + ABC from explicit logQ bound and undilated interfaces",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1E5DisplaySlackActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1E5DisplaySlackActualV2.lean": [
+          "thm110_final_display_of_logQ_slack",
+          "thm110_display_and_abc_of_logQ_bound",
+          "e5DisplaySlackRows"
+        ]
+      },
+      "note": "EXIT0 211752 (V2). Conditional consumer."
+    },
+    {
+      "id": "iutiv-abc:G3.routeConsumer",
+      "kind": "bridge",
+      "title": "G3 route consumers: gapReduced/V2/pointwiseWeak -> ABC; pointwiseReduced refuted",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3RouteConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3RouteConsumerActual.lean": [
+          "abcConjecture_of_gapReduced",
+          "abcConjecture_of_gapReducedV2",
+          "abcConjecture_of_pointwiseWeakened",
+          "pointwiseReduced_refuted",
+          "g3RouteRows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0] | EXIT0 211482; implications valid but G3 frontier premises (gapReduced/V2/pointwiseWeakened) are REFUTED by ABCFrontierHeightWeightRefutation. [PIN watchdog DONE0]"
+    },
+    {
+      "id": "iutiv-abc:G2E.consumer",
+      "kind": "interface",
+      "title": "G2.e consumers: data -> bridge interface -> ABC; named comparison fields",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G2EEpsilonActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G2EEpsilonActual.lean": [
+          "bridgeInterface_of_data",
+          "heightBound_of_data",
+          "abcConjecture_of_data",
+          "epsilonComparison_named_fields",
+          "g2eRows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0] | EXIT0 211481; data construction + conditional height/ABC consumers; named fields remain."
+    },
+    {
+      "id": "iutiv-abc:G3.gapV2ToGap",
+      "kind": "bridge",
+      "title": "G3 route relation: GapReducedV2 -> GapReduced -> ABC",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3GapReducedV2ToGapActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3GapReducedV2ToGapActual.lean": [
+          "gapReduced_of_gapReducedV2",
+          "abcConjecture_of_gapReducedV2_via_gap",
+          "g3GapRouteRows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0] | EXIT0 211480; route relation proved, but V2 premise refuted (not_ABCFrontierGapReducedV2). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "iutiv-abc:G3.pointwiseRoute",
+      "kind": "bridge",
+      "title": "G3 route: pointwiseWeakened -> gapReduced -> ABC (premise REFUTED)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3PointwiseWeakenedActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3PointwiseWeakenedActualV2.lean": [
+          "gapReduced_of_pointwiseWeakened",
+          "abcConjecture_of_pointwiseWeakened_via_gap",
+          "pointwiseReduced_empty",
+          "g3PointwiseRows"
+        ]
+      },
+      "note": "EXIT0 211744 (V2); implications proved but pointwiseWeakened premise refuted by not_ABCFrontierPointwiseWeakened. [PIN watchdog DONE0]"
+    },
+    {
+      "id": "iutiv-abc:G2.frontierRoute",
+      "kind": "bridge",
+      "title": "G2/G3 consumer: frontier -> bridge interface -> ABC",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G2FrontierActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G2FrontierActual.lean": [
+          "bridgeInterface_of_frontierRoute",
+          "abcConjecture_of_frontierRoute",
+          "abcConjecture_of_frontier_direct",
+          "g2FrontierRows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0] | EXIT0 211478; frontier -> bridge -> ABC; ABCFrontier itself equivalent strength to ABC (not a cheap route). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "iutiv-abc:G3.refutation",
+      "kind": "theorem",
+      "title": "G3 frontier routes REFUTED (consumer record)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3RefutationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3RefutationConsumerActual.lean": [
+          "gapReduced_refuted",
+          "gapReducedV2_refuted",
+          "pointwiseWeakened_refuted",
+          "pointwiseReduced_refuted",
+          "g3RefutationRows"
+        ]
+      },
+      "note": "PROVED refutations from ABCFrontierHeightWeightRefutation; frontier routes blocked. [A475 downgrade]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "iutiv-abc:G2E.gapInputs",
+      "kind": "interface",
+      "title": "G2.e explicit EpsilonGapInputs structure -> comparison -> ABC",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G2EGapInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G2EGapInputsActual.lean": [
+          "EpsilonGapInputs",
+          "epsilonComparison_of_gapInputs",
+          "bridgeInterface_of_gapInputs",
+          "abcConjecture_of_gapInputs",
+          "g2EGapInputRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog 211390. Explicit named gap inputs first-class; construction/conditional ABC consumer."
+    },
+    {
+      "id": "iutiv-abc:S1.displayF",
+      "kind": "theorem",
+      "title": "Correct F-version of Thm 1.10 display",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1S1DisplayFActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1S1DisplayFActual.lean": [
+          "thm110_final_display_F_bound",
+          "s1DisplayFRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog 211403. Corrects tautological F version; conditional on display inputs + log domination + nonnegative coefficient."
+    },
+    {
+      "id": "mainline:abcLog.consumer",
+      "kind": "theorem",
+      "title": "ABC <-> ABCLog consumer re-exports",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ABCLogConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ABCLogConsumerActual.lean": [
+          "abcLogConjecture_of_abcConjecture",
+          "abcConjecture_of_abcLogConjecture",
+          "abcLogRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog 211402."
+    },
+    {
+      "id": "iutiv-abc:E5.regionConsumer",
+      "kind": "conditional",
+      "title": "E5 (c) region consumer: undilated bounds -> (b)/(c) -> ABC",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1E5RegionConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1E5RegionConsumerActual.lean": [
+          "regionVolumeFamily_of_undilatedBound",
+          "heightComparisonFamily_of_undilatedBound",
+          "abcConjecture_of_undilatedBounds",
+          "e5RegionRows"
+        ]
+      },
+      "note": "EXIT0 per watchdog 211419."
+    },
+    {
+      "id": "StepXI.consumer",
+      "kind": "theorem",
+      "title": "StepXI interface consumer (tree)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIInterfaceConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIInterfaceConsumerActual.lean": [
+          "stepXIInterfaceConsumer_bundle",
+          "stepXIInterfaceConsumer_qpositive"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: StepXI contract/route/q-positive consumer of tree Contract (green deps). [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIAllSourceBundlesActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIAllSourceBundlesActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIAllSourceBundlesActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIConstructionIndJointActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConstructionIndJointActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConstructionIndJointActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIConstructionRouteActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConstructionRouteActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConstructionRouteActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIConsumerBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConsumerBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConsumerBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIContractConstructionActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIContractConstructionActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractConstructionActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenRouteActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenRouteActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenRouteActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIObligationRouteJointActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIObligationRouteJointActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIObligationRouteJointActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G3.consumer",
+      "kind": "theorem",
+      "title": "ABCFrontier consumer (bridge + ABC conditional)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrontierConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrontierConsumerActual.lean": [
+          "frontierConsumer_bridge",
+          "frontierConsumer_abc"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: frontier->bridge->ABC conditional closure consumed; F4/F5 named. [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "HW.consumer",
+      "kind": "theorem",
+      "title": "ABC height/weight v2 consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HWComparisonConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HWComparisonConsumerActual.lean": [
+          "hwConsumer_iff",
+          "hwConsumer_exists"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: ABCConjecture ↔ v2 bound + epsilon consumer consumed from tree. [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G3.realLine.consumer",
+      "kind": "theorem",
+      "title": "ABCFrontierRealLine consumer (reduce + ABC)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrontierRealLineConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrontierRealLineConsumerActual.lean": [
+          "frontierRealLine_consumer",
+          "frontierRealLine_abc"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real-line frontier reduction consumed (conditional). [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "GapReduction.consumer",
+      "kind": "theorem",
+      "title": "Cor312ToABCBridgeInterface consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BridgeInterfaceConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BridgeInterfaceConsumerActual.lean": [
+          "bridgeInterfaceConsumer_abc"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: interface -> ABC conditional closure consumed. [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "G0.log.consumer",
+      "kind": "theorem",
+      "title": "Logarithmic-bound equivalence consumer audit",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G0LogConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G0LogConsumerActual.lean": [
+          "g0LogConsumerRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: audit consumer of LogBound shapes; G0 target open. [PIN watchdog DONE0]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1HWConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1HWConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HWConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIContractGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIContractGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenObligationConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenObligationConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenObligationConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenRouteConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenRouteConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenRouteConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "iutiv-abc:G3.frontierEquiv",
+      "kind": "theorem",
+      "title": "G3: ABCFrontier <-> ABC strength equivalence",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3FrontierEquivActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3FrontierEquivActual.lean": [
+          "abcFrontier_iff_abcConjecture_consumer",
+          "abcFrontierRealLine_iff_abcConjecture_consumer",
+          "abcConjecture_of_abcFrontier",
+          "abcFrontier_of_abcConjecture",
+          "g3FrontierEquivRows"
+        ]
+      },
+      "note": "EXIT0 211623; frontier equivalent strength to ABC (not a cheap shortcut)."
+    },
+    {
+      "id": "hull.Mzk1StepXIConsumerGreenBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConsumerGreenBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConsumerGreenBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "iutiv-abc:G2E.gapInputsIff",
+      "kind": "theorem",
+      "title": "G2.e: EpsilonGapInputs <-> Cor312EpsilonArithmeticComparison (existential)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G2EGapInputsIffActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G2EGapInputsIffActual.lean": [
+          "gapInputs_of_epsilonComparison",
+          "nonempty_gapInputs_iff_nonempty_comparison",
+          "g2EGapInputsIffRows"
+        ]
+      },
+      "note": "EXIT0 211658; definitional equivalence of explicit gap inputs and comparison structure."
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterRollupConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterRollupConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterRollupConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "iutiv-abc:E5.additiveHeight",
+      "kind": "bridge",
+      "title": "E5/HW.add bridge: additive height bound + volume dominance -> undilated height",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1E5AdditiveHeightActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1E5AdditiveHeightActualV2.lean": [
+          "undilatedHeightBound_of_additiveBound_volume",
+          "exists_additive_constant",
+          "heightComparisonFamily_of_additiveBound_volume",
+          "e5AdditiveRowsV2"
+        ]
+      },
+      "note": "EXIT0 211753 (V2); explicit volume dominance; conditional."
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer5Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer5Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer5Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "iutiv-abc:G3.bridgesV2",
+      "kind": "bridge",
+      "title": "G3 bridges: gapReduced/V2 -> interface -> ABC (premises REFUTED)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1G3BridgesActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1G3BridgesActualV2.lean": [
+          "bridgeInterface_of_gapReduced",
+          "bridgeInterface_of_gapReducedV2",
+          "abcConjecture_of_gapReduced_bridge",
+          "abcConjecture_of_gapReducedV2_bridge",
+          "g3BridgesRows"
+        ]
+      },
+      "note": "EXIT0 211745 (V2); defs/implications valid but both frontier premises refuted. [PIN watchdog DONE0]"
+    },
+    {
+      "id": "e-deep:E5.s2717",
+      "kind": "conditional",
+      "title": "Cor312 target equivalence to single analytic endpoint S2717UpperGap (aliases)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1E5S2717ConsumerActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1E5S2717ConsumerActualV2.lean": [
+          "S2717_hupper_of_full_consumer",
+          "S2717_full_of_hupper_consumer",
+          "S2717_full_iff_hupper_consumer",
+          "e5S2717RowsV2"
+        ]
+      },
+      "note": "EXIT0 211755 (V2). S2717UpperGap remains named."
+    },
+    {
+      "id": "hull.Mzk1InterfaceClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1InterfaceClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InterfaceClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer3Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer3Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer3Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer6Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer6Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer6Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer10Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer10Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer10Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer8Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer8Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer8Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer9Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer9Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer9Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    }
+  ],
+  "edges": [
+    {
+      "from": "G1",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G1",
+      "to": "G2",
+      "kind": "proof"
+    },
+    {
+      "from": "G1",
+      "to": "G2.b",
+      "kind": "proof"
+    },
+    {
+      "from": "G1",
+      "to": "G0.iff_hw",
+      "kind": "proof"
+    },
+    {
+      "from": "G2.b",
+      "to": "G2.c",
+      "kind": "proof"
+    },
+    {
+      "from": "G2.b",
+      "to": "G2.e",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.b",
+      "to": "N1",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.b",
+      "to": "N2",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.c",
+      "to": "G2.e",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.c",
+      "to": "N1",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.c",
+      "to": "N2",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.d",
+      "to": "G2",
+      "kind": "interface"
+    },
+    {
+      "from": "G2.d",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G2",
+      "to": "G2.e",
+      "kind": "statement"
+    },
+    {
+      "from": "G2",
+      "to": "IQHull",
+      "kind": "interface"
+    },
+    {
+      "from": "G2.e",
+      "to": "N1",
+      "kind": "statement"
+    },
+    {
+      "from": "G2.e",
+      "to": "N2",
+      "kind": "statement"
+    },
+    {
+      "from": "IQHull",
+      "to": "LFP",
+      "kind": "statement"
+    },
+    {
+      "from": "G0.iff_log",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G0.iff_log",
+      "to": "G0.log",
+      "kind": "proof"
+    },
+    {
+      "from": "G0.iff_hw",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G0.iff_hw",
+      "to": "HW.add",
+      "kind": "statement"
+    },
+    {
+      "from": "G3",
+      "to": "G2",
+      "kind": "interface"
+    },
+    {
+      "from": "G3.f",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.f",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.red",
+      "to": "G3",
+      "kind": "statement"
+    },
+    {
+      "from": "G3.red",
+      "to": "GapReduction",
+      "kind": "interface"
+    },
+    {
+      "from": "G3.single",
+      "to": "G3.red",
+      "kind": "statement"
+    },
+    {
+      "from": "G3.pw",
+      "to": "G3.red",
+      "kind": "statement"
+    },
+    {
+      "from": "G3.pw",
+      "to": "GapSupply",
+      "kind": "interface"
+    },
+    {
+      "from": "GapReduction",
+      "to": "G2.e",
+      "kind": "interface"
+    },
+    {
+      "from": "GapReduction",
+      "to": "G2",
+      "kind": "interface"
+    },
+    {
+      "from": "GapSupply",
+      "to": "GapReduction",
+      "kind": "statement"
+    },
+    {
+      "from": "GapDict",
+      "to": "GapSupply",
+      "kind": "statement"
+    },
+    {
+      "from": "PointwiseResidual",
+      "to": "GapSupply",
+      "kind": "statement"
+    },
+    {
+      "from": "N1",
+      "to": "GAP.sec1_to_sec2",
+      "kind": "gap"
+    },
+    {
+      "from": "N2",
+      "to": "GAP.sec1_to_sec2",
+      "kind": "gap"
+    },
+    {
+      "from": "N1",
+      "to": "IUTIV.S2",
+      "kind": "statement"
+    },
+    {
+      "from": "N2",
+      "to": "IUTIV.StepV",
+      "kind": "statement"
+    },
+    {
+      "from": "N2",
+      "to": "IUTIV.ADD",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIV.StepV",
+      "to": "IUTIV.S1",
+      "kind": "proof"
+    },
+    {
+      "from": "StepXI",
+      "to": "G2",
+      "kind": "interface"
+    },
+    {
+      "from": "GAP.sec1_to_sec2",
+      "to": "IUTIV.S1.display",
+      "kind": "gap"
+    },
+    {
+      "from": "G3.route.gapReduced",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.gapReduced",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.gapReduced",
+      "to": "G2",
+      "kind": "interface"
+    },
+    {
+      "from": "G3.route.gapReducedV2",
+      "to": "G3.route.gapReduced",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.gapReducedV2",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.pointwiseReduced",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.pointwiseWeakened",
+      "to": "G3.route.gapReduced",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.pointwiseWeakened",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.route.pointwiseWeakened",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "G2CD.consumer",
+      "to": "G2.c",
+      "kind": "proof"
+    },
+    {
+      "from": "G2CD.consumer",
+      "to": "G2.d",
+      "kind": "proof"
+    },
+    {
+      "from": "G2CD.consumer",
+      "to": "G0",
+      "kind": "proof"
+    },
+    {
+      "from": "StepV.paperForm",
+      "to": "IUTIV.StepV",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIV.S1.slack",
+      "to": "IUTIV.S1.display",
+      "kind": "statement"
+    },
+    {
+      "from": "e-deep:E5.uniformHeightConsumer",
+      "to": "S3131.heightReduction",
+      "kind": "statement"
+    },
+    {
+      "from": "e-deep:E5.uniformHeightConsumer",
+      "to": "S3131.heightReduction",
+      "kind": "proof"
+    },
+    {
+      "from": "S3131.heightReduction",
+      "to": "S3131.regionReduction",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:S1.displayCTheta",
+      "to": "IUTIV.S1.display",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:E5.displaySlack",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:G3.routeConsumer",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:G2E.consumer",
+      "to": "G2.e",
+      "kind": "interface"
+    },
+    {
+      "from": "iutiv-abc:G3.gapV2ToGap",
+      "to": "G3.single",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:G3.pointwiseRoute",
+      "to": "G3.red",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:G2.frontierRoute",
+      "to": "G3",
+      "kind": "interface"
+    },
+    {
+      "from": "iutiv-abc:G2E.gapInputs",
+      "to": "G2.e",
+      "kind": "interface"
+    },
+    {
+      "from": "iutiv-abc:S1.displayF",
+      "to": "IUTIV.S1.display",
+      "kind": "statement"
+    },
+    {
+      "from": "mainline:abcLog.consumer",
+      "to": "G0.log",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:E5.regionConsumer",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIV.Arch",
+      "to": "G0",
+      "kind": "statement"
+    },
+    {
+      "from": "IQHull.consumer",
+      "to": "G0",
+      "kind": "statement"
+    },
+    {
+      "from": "IQHull.monotonicity",
+      "to": "G0",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:G3.refutation",
+      "to": "G0",
+      "kind": "statement"
+    },
+    {
+      "from": "StepXI.consumer",
+      "to": "StepXI",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.consumer",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "HW.consumer",
+      "to": "HW.add",
+      "kind": "proof"
+    },
+    {
+      "from": "G3.realLine.consumer",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "GapReduction.consumer",
+      "to": "GapReduction",
+      "kind": "proof"
+    },
+    {
+      "from": "G0.log.consumer",
+      "to": "G0.log",
+      "kind": "proof"
+    },
+    {
+      "from": "iutiv-abc:G3.frontierEquiv",
+      "to": "G3",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:G2E.gapInputsIff",
+      "to": "G2.e",
+      "kind": "interface"
+    },
+    {
+      "from": "iutiv-abc:E5.additiveHeight",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:E5.additiveHeight",
+      "to": "HW.add",
+      "kind": "statement"
+    },
+    {
+      "from": "iutiv-abc:G3.bridgesV2",
+      "to": "G3",
+      "kind": "proof"
+    },
+    {
+      "from": "e-deep:E5.s2717",
+      "to": "e-deep:E5.display",
+      "kind": "statement"
+    }
+  ],
+  "notes": [
+    "Only files/declarations confirmed present (grep/read/olean/checker evidence) are listed; no unproved gap is asserted as proved.",
+    "N1/N2 are structure fields of Cor312EpsilonArithmeticComparison, hence listed with empty declaration arrays and their projection names in note.",
+    "GAP.sec1_to_sec2 represents a MISSING paper-level edge; it has no file/declaration and must not be read as a declaration node.",
+    "Full 178-module coverage (IUTIV 14 + ABCBridge 164) and olean status: coord/SKELETON-IUTIV-ABCBRIDGE.md and coord/skeleton-iutiv-abcbrige-edges.tsv; MISSING oleans: ABCGap2FiniteC3Supply, 2 AdicCompletion probes, FinitePlaceHolomorphicDifferentBase; STALE: FinitePlaceLocalInclusionTensorization, FinitePlaceThetaPilotScaledRegion.",
+    "This JSON is a chain subset for dag/target-chain.json merge; it does not edit the canonical gate and makes no closure claims."
+  ]
+}

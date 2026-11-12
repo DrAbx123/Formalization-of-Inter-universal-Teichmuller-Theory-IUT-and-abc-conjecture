@@ -1,0 +1,36 @@
+# IUTIV/ABCBridge skeleton pins (stepxi 史蒂) — canonical gate + artifact hashes
+
+Canonical gate pin (coord/STATE.md 23:59): FINAL PIN V150@18248/CFC6CE08
+Registry: 14041 / record 18800
+Status: GATE NOT PASSED; binding HOLD; L8 FROZEN; no gate edit.
+
+Artifact hashes (sha256), sizes, lines:
+- SKELETON-IUTIV-ABCBRIDGE.md | bytes=19550 | lines=259 | sha256=1ed0c2c7e4e4fe22e7e63b649fbb522122088b3dad0fe72c5554f6ec8c754083
+- FOUNDATIONS-IUTIV.md | bytes=27297 | lines=228 | sha256=68a143b377c58d59151991f4b4bfc600009d8d8ab77fb93e8a17f3e2c0c1e2c4
+- skeleton-iutiv-abcbrige-edges.tsv | bytes=25128 | lines=179 | sha256=300af6c2be2a7c04f89d0c7b6bc38b28ceacc94dcd77ee8a15b1574db394b267
+
+Rules: the TSV stays the 178-row module/edge source (header row + rows; no pin column
+to keep machine parsing stable). Pin/status lives HERE and in SKELETON doc §7.
+Update this sidecar only when the canonical gate pin or an artifact changes; module
+graph rows change only when a module is added/removed or its olean status flips.
+
+- target-chain.iutiv-abc.json | bytes=28326 | lines=876 | sha256=91a54bd44c240d3adfd976588b86be7cf73a719cd2f5d1716368e47f736d361a (A437; 36 nodes / 52 edges after A438)
+
+- REPO-ROUTE-INDEX.md | bytes=237469 | sha256=d6bd933921cf423eb34c9e44caa13454bb09a6b4b83d076d50080b72860b8091 (A440; 897 files)
+- repo-route-index-data.json | bytes=493065 | sha256=84e3001fdc2c2eacc0c871c837cb76391abd4e4b57c1adb024292cf816f47a93
+
+- uncovered-leanformal-triage.tsv | bytes=13578 | sha256=496a2032df77b97c04dd6feab65c236f14bd7221c97e6b03fb776701e6dd6530 (A440 follow-up; 37 uncovered LeanFormal files, proposed owner/route)
+
+- uncovered-leanformal-triage.hull.tsv | bytes=7121 | sha256=d8e2c31a4481d7495d36a71538697bc97a487deb178311633d53b57a746db1e6 (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-triage.lattice.tsv | bytes=1579 | sha256=27dfa48e583c02bc3d57422bb65c85f7d3a38a138c7683efa1018f88592ab4ca (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-triage.mainline.tsv | bytes=1197 | sha256=51970e3e51a29be432150837e1b5d01e38a650e317f2eb4724011225d832ac75 (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-triage.qpilot.tsv | bytes=2729 | sha256=5ddf452f63dad23107a0feec4a99a02a4e0dcf5040aa2446633905ecf23ac2b9 (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-triage.shehdd.tsv | bytes=383 | sha256=d2b5c519b06400171ccb626411e578d30a027e103436c51bb37010873e94fb0d (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-triage.stage4.tsv | bytes=1119 | sha256=0aa621edcbf08c656dfc51624a7baaa91f3a7b5468a2e609d13c040b83816007 (A440 follow-up per-owner/coverage rows)
+
+- uncovered-leanformal-coverage-rows.md | bytes=8634 | sha256=84bb2a88f7005135e4074c96f01884fa15e28abc15e447b9d8bfe9e36bb37786 (A440 follow-up per-owner/coverage rows)

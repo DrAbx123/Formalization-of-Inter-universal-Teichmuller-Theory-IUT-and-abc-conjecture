@@ -1,0 +1,10 @@
+{
+  "node": "e-deep:E1.absTopIII05Inputs",
+  "kind": "named_input",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/AbsTopIII05ReconstructionInputsActual.lean"
+  ],
+  "declarations": {},
+  "note": "registered by silent loop; verification via watchdog log only"
+}

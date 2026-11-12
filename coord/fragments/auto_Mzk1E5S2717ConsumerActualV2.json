@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1E5S2717ConsumerActualV2",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5S2717ConsumerActualV2.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

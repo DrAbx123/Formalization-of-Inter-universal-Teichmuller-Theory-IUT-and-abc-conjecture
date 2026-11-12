@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge20Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge20Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: union-insert distribution laws; new file only, no sorry; watchdog to verify"
+}

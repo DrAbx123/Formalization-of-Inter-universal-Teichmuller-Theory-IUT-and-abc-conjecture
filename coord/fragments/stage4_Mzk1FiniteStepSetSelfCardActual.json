@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetSelfCardActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetSelfCardActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 self-contained real chain: step-set cardinality bound (green deps only); new file only, no sorry; watchdog to verify"
+}

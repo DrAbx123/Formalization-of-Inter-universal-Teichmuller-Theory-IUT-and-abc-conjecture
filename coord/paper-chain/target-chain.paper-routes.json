@@ -1,0 +1,1184 @@
+{
+ "section": "paper-routes",
+ "generated": "2026-11-11T00:30:00+08:00",
+ "source": "papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt (Stage 1-5 lines 116-134; §4 skeletal Lean code lines 443-585)",
+ "method": "paper-routes extended (A440): IUT III text (Inter-universal Teichmuller Theory III.txt: §0-§3 lines 48-51; Thm 3.11 refs 244-740; Cor 3.12 refs 420-899; §4 skeletal code 443-585) + IUT IV text (IUT IV.txt: §0-§3 lines 37-40; Prop 1.1-1.8/Thm 1.10 lines 400-745; §2 lines 39/920) + repo IUTIII/Corollary312/{Routes,Comparison,Obligations}, StepXI/{Contract,IPL,SHE,APT}, Theorem311/* and IUTIV/Estimates/*; declaration names grep-verified; unformalized nodes status NAMED/GAP with notes.",
+ "nodes": [
+  {
+   "id": "paper:stage1",
+   "kind": "target",
+   "title": "Stage 1: [IUTchIII] Thm 3.11 => Cor 3.12",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+     "Cor312Route",
+     "Cor312RouteCertificate",
+     "Cor312RouteCertificate.conclusion",
+     "mochizuki3115Construction",
+     "mochizuki3115ToCor312"
+    ],
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+     "cor312Conclusion_of_contract"
+    ],
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean": [
+     "StepXIContract",
+     "Cor312Conclusion",
+     "cor312_of_constructed_stepXI",
+     "q_positive_of_constructed_stepXI"
+    ]
+   },
+   "note": "Paper Formalization of IUT (2026-04) lines 116-125: Stage 1 is Thm 3.11 => Cor 3.12; Lean layer is typed route boundary (Cor312RouteCertificate) + conditional StepXIContract; no closure."
+  },
+  {
+   "id": "paper:stage2",
+   "kind": "target",
+   "title": "Stage 2: Proof of [IUTchIII] Thm 3.11 modulo [IUTchI-II]",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean": [
+     "SourceAlgorithmicParallelTransport",
+     "SourceAPTStatement",
+     "SourceAPTSlotAssembly",
+     "aptSlot_evidence",
+     "sourceAlgorithmicParallelTransport",
+     "sourceAPTTransportSupply"
+    ]
+   },
+   "note": "Paper lines 118/126-134: Stage 2 is the real focus; Lean source-algorithm/APT interface exists but the IUTchI-II modulo layer is not formalized (NAMED)."
+  },
+  {
+   "id": "paper:stage3",
+   "kind": "target",
+   "title": "Stage 3: [IUTchI-II] modulo earlier results (1995-2015)",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "Paper lines 119-123. No IUTIII import edge to IUTII (grep verified across 190 files); IUTchI-II theta/log-shell objects exist in LeanFormal/IUT/IUTII tree but are not linked into the IUTIII route. GAP."
+  },
+  {
+   "id": "paper:stage4",
+   "kind": "target",
+   "title": "Stage 4: earlier results (1995-2015) [pGC],[GeoAn],[AbsAnb],[AbsTopIII],[Frobenioid]",
+   "status": "NAMED",
+   "files": [
+    "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean",
+    "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+     "RefinedDeepInputs",
+     "AbsTopIII05RefinedActual"
+    ],
+    "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean": [
+     "hull09_scalingUnits_subset_hull",
+     "hull09_hull_eq_closure"
+    ]
+   },
+   "note": "Paper lines 121-124 and 134: earlier-results layer is paper/named; tree has AbsTopIII/hull anchors and qpilot refined AbsTopIII05 (CITABLE 16) but no unified Stage-4 formalization."
+  },
+  {
+   "id": "paper:stage5",
+   "kind": "target",
+   "title": "Stage 5: Numerical aspects ([IUTchIV], [ExpEst])",
+   "status": "NAMED",
+   "files": [
+    "tmp/sheaf/xif/paper/S3171IUTIVSection1StatementActual.lean",
+    "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean",
+    "tmp/sheaf/xif/paper/S3171UniformHeightConsumerActual.lean"
+   ],
+   "declarations": {},
+   "note": "Paper lines 124/134: Stage 5 = IUTchIV/ExpEst numerical layer; paper-layer S3171 IUT IV section 1 files exist (conditional statement/display/consumer), ExpEst not formalized. NAMED."
+  },
+  {
+   "id": "paper:thm311",
+   "kind": "target",
+   "title": "[IUTchIII] Theorem 3.11 (1st/2nd/3rd triangles)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean"
+   ],
+   "declarations": {},
+   "note": "Theorem 3.11 decomposed as (dsc)+(APT+IPL) => 1st/2nd/3rd triangles (paper lines 516-530, 560-575). Lean: source-algorithm/APT interface only; no single theorem311 conclusion theorem."
+  },
+  {
+   "id": "paper:BPS",
+   "kind": "interface",
+   "title": "BPS (base point scheme / gluing data)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1BPSComponentConsumerActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1BPSIPLComponentConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1BPSComponentConsumerActual.lean": [
+     "S3128Stage1BPSComponentConsumerData",
+     "S3128Stage1BPSComponentConsumer_transition_refl",
+     "S3128Stage1BPSComponentConsumer_ipl_factorization"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1BPSIPLComponentConsumerActual.lean": [
+     "S3128Stage1BPSIPL_ofPerm_component",
+     "S3128Stage1BPSIPL_ipl_factorization",
+     "S3128Stage1BPSIPL_ipl_inverse"
+    ]
+   },
+   "note": "Paper lines 460-472 (BPS as glued data input to the multiradial algorithm). Lean: component/transition data consumers only; no scheme-level BPS object. CONDITIONAL."
+  },
+  {
+   "id": "paper:mltRep",
+   "kind": "theorem",
+   "title": "mlt.rep (multiradial representation)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1MultiradialThetaActual.lean",
+    "tmp/sheaf/xif/paper/S3128MultiradialInd1Actual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1MultiradialThetaActual.lean": [
+     "S3128Stage1MultiradialTheta_subset_paperSHull",
+     "S3128Stage1MultiradialUnion_subset_paperSHull"
+    ],
+    "tmp/sheaf/xif/paper/S3128MultiradialInd1Actual.lean": [
+     "PrcAutomorphism.ofPerm_perm",
+     "PrcAutomorphism.ofPerm_component",
+     "PrcAutomorphism.id_component",
+     "PrcAutomorphism.comp_perm"
+    ]
+   },
+   "note": "Paper lines 472-509 (BPS -> multiradial algo -> mlt.rep). No declaration named mltRep; Lean expresses image containment (subset paperSHull) and Ind1 automorphism layer."
+  },
+  {
+   "id": "paper:hullDet",
+   "kind": "theorem",
+   "title": "hull+det operation",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1HullDetReadoutActual.lean",
+    "tmp/sheaf/xif/paper/S3128HDDPremiseActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean": [
+     "HullDeterminantLogVolumeFrozenSpec",
+     "hullDeterminantLogVolumeFrozenSpec_holds",
+     "hullDeterminantLogVolumeReduction",
+     "packetLogVolume_eq_matrixLogDet"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1HullDetReadoutActual.lean": [
+     "S3128Stage1HDDHullReadout",
+     "S3128Stage1HDDHullReadout_eq_source",
+     "S3128Stage1HDDHullReadout_eq_hull",
+     "S3128Stage1HDDDetReadout_spec"
+    ],
+    "tmp/sheaf/xif/paper/S3128HDDPremiseActual.lean": [
+     "S3128Stage1HDD_frozenSpec",
+     "S3128Stage1HDD_integralSpan_eq_hull"
+    ]
+   },
+   "note": "Paper lines 528-538 (hull+det operation). Tree: HullDeterminantLogVolumeFrozenSpec + det-tensor bookkeeping; paper layer: Stage1 HDD hull/det readouts. TREE_ASSET (conditional frozen spec)."
+  },
+  {
+   "id": "paper:dsc",
+   "kind": "bridge",
+   "title": "descent arrow (dsc)",
+   "status": "GAP",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean": [
+     "S3128Stage1SHECompositionPremise",
+     "S3128Stage1SHECompositionPremise_holds",
+     "S3128Stage1SHE_readout_theta"
+    ]
+   },
+   "note": "Paper lines 516-528: dsc is the descent arrow from the 4th triangle data. No declaration named dsc; closest is Stage1 SHE/HDD composition premise. GAP (object not formalized)."
+  },
+  {
+   "id": "paper:HDD",
+   "kind": "bridge",
+   "title": "(HDD) := (hull+det) o (dsc)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128HDDPremiseActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1SHEHDDChainActual.lean",
+    "tmp/sheaf/xif/paper/S3128SHEHDDInterfaceActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128HDDPremiseActual.lean": [
+     "S3128Stage1HDD_frozenSpec",
+     "S3128Stage1HDD_integralSpan_eq_hull"
+    ],
+    "tmp/sheaf/xif/paper/S3128SHEHDDInterfaceActual.lean": [
+     "S3128Stage1SHEHDDFourthJointPremise",
+     "S3128Stage1SHEHDDFourthJointPremise_holds",
+     "S3128Stage1HDDLocalLattice",
+     "S3128Stage1HDDLocalLattice_lattice"
+    ]
+   },
+   "note": "Paper lines 528-532 (HDD = hull+det composed with dsc). Lean: frozen HDD spec + SHE/HDD chain/interface (premise/lattice); no arrow named HDD. CONDITIONAL."
+  },
+  {
+   "id": "paper:SHE",
+   "kind": "bridge",
+   "title": "SHE-arrow (SHE)",
+   "status": "GAP",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SHE.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean": [
+     "she"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean": [
+     "S3128Stage1SHECompositionPremise",
+     "S3128Stage1SHECompositionPremise_holds"
+    ]
+   },
+   "note": "Tree StepXI/SHE.lean is a 90-byte stub; Obligations.she is an Obligation record only; paper layer has SHE composition premise (conditional). GAP at the arrow level."
+  },
+  {
+   "id": "paper:APT",
+   "kind": "theorem",
+   "title": "(APT)+(IPL) for Thm 3.11",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+    "tmp/sheaf/xif/paper/S3128IPLAPTInterfaceActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean": [
+     "SourceAlgorithmicParallelTransport",
+     "SourceAPTStatement",
+     "SourceAPTSlotAssembly",
+     "aptSlot_evidence",
+     "sourceAlgorithmicParallelTransport"
+    ],
+    "tmp/sheaf/xif/paper/S3128IPLAPTInterfaceActual.lean": [
+     "S3128Stage1APT_quotientEquiv_mk",
+     "S3128Stage1IPL_compat_and_inverse"
+    ]
+   },
+   "note": "Paper lines 538-585 ((APT),(IPL) in 3.11 and 3.11.5). Tree APT has real source-algorithm transport declarations; interface/conditional."
+  },
+  {
+   "id": "paper:IPL",
+   "kind": "bridge",
+   "title": "input prime-strip link (IPL)",
+   "status": "GAP",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/IPL.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean",
+    "tmp/sheaf/xif/paper/S3128IPLAPTInterfaceActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean": [
+     "ipl"
+    ],
+    "tmp/sheaf/xif/paper/S3128IPLAPTInterfaceActual.lean": [
+     "S3128Stage1IPL_compat_and_inverse"
+    ]
+   },
+   "note": "Tree StepXI/IPL.lean is a 90-byte stub; Obligations.ipl is an Obligation record only; paper layer has IPL/APT compatibility theorem. GAP at the link level."
+  },
+  {
+   "id": "paper:qPilot",
+   "kind": "theorem",
+   "title": "q-pilot (q-pilot log-volume model)",
+   "status": "PROVED",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/TateQPilotJComparison.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/ArithmeticQPilotLogVolume.lean"
+   ],
+   "declarations": {},
+   "note": "Real q-pilot log-volume model and Tate-J comparison (TREE_ASSET/PROVED lemmas); used by the Cor 3.12 comparison side (paper lines 555-565)."
+  },
+  {
+   "id": "paper:thetaPilot",
+   "kind": "named_input",
+   "title": "Theta-pilot",
+   "status": "NAMED",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1PaperSHullClosureThetaConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean": [
+     "S3128Stage1SHE_readout_theta"
+    ]
+   },
+   "note": "Paper lines 555-565: the Theta-pilot corresponding to (HDD) vs q-pilot corresponding to (SHE). Lean: theta readouts/carriers only (SHE readout theta, paperSHull closure theta); no Theta-pilot object. NAMED."
+  },
+  {
+   "id": "paper:thm311_5",
+   "kind": "theorem",
+   "title": "3.11.5 = checkpoints 3.11 + Rmk 3.9.5",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+     "mochizuki3115Construction",
+     "mochizuki3115ToCor312",
+     "Cor312RouteCertificate.conclusion"
+    ]
+   },
+   "note": "Paper lines 570-585: 3.11.5 = 3.11 + Rmk 3.9.5 (moving hull+det into an intermediate checkpoint; never appears in published papers). Lean: Obligation records mochizuki3115Construction/mochizuki3115ToCor312; no theorem. CONDITIONAL."
+  },
+  {
+   "id": "paper:cor312comparison",
+   "kind": "target",
+   "title": "Cor 3.12: comparison of q-,Theta-pilots",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1ComparisonDataConsumerActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1FourthTriangleConsumerActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+     "cor312Conclusion_of_contract"
+    ],
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+     "Cor312RouteCertificate",
+     "Cor312RouteCertificate.conclusion"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1ComparisonDataConsumerActual.lean": [
+     "S3128Stage1ComparisonData_hullSigned",
+     "S3128Stage1ComparisonData_qPilotMag",
+     "S3128Stage1ComparisonData_condition"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1FourthTriangleConsumerActual.lean": [
+     "S3128Stage1FourthTriangleConsumerData",
+     "S3128Stage1FourthTriangleConsumerData_qPilotMagnitude",
+     "S3128Stage1FourthTriangleConsumerData_hullLogVolume",
+     "S3128Stage1FourthTriangleConsumer_comparison_iff"
+    ]
+   },
+   "note": "Paper lines 555-585: final comparison of q-/Theta-pilots (Stage1 target). Lean: cor312Conclusion_of_contract + route certificate + Stage1 comparison/fourth-triangle consumers (hullSigned/qPilotMag/condition). CONDITIONAL."
+  },
+  {
+   "id": "paper:iutivExpEst",
+   "kind": "named_input",
+   "title": "[IUTchIV]/[ExpEst] numerical inputs",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "Paper lines 124/134: Stage 5 numerical inputs from IUTchIV and ExpEst; paper-layer S3171 IUT IV section 1 statement/display/consumer exist (cited in stage5 node), ExpEst not formalized. NAMED."
+  },
+  {
+   "id": "paper:iut3sec0",
+   "kind": "interface",
+   "title": "IUT III §0 Notations and Conventions",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT III text line 48 (§0 Notations and Conventions). No dedicated Lean module; conventions are implicit in tree interfaces. NAMED."
+  },
+  {
+   "id": "paper:iut3sec1",
+   "kind": "theorem",
+   "title": "IUT III §1 The Log-theta-lattice",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/InitialThetaInputCore.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceDThetaConstruction.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceLogShellFamilyDependent.lean"
+   ],
+   "declarations": {},
+   "note": "IUT III text line 49 (§1). Tree: InitialThetaInputCore + SourceDThetaConstruction + SourceLogShellFamilyDependent (built); log-theta-lattice as a single object is not formalized into one interface. CONDITIONAL."
+  },
+  {
+   "id": "paper:iut3sec2",
+   "kind": "theorem",
+   "title": "IUT III §2 Multiradial Theta Monoids",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceFiniteMultiradial.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithm.lean"
+   ],
+   "declarations": {},
+   "note": "IUT III text line 50 (§2). Tree assets: multiradial algorithm + finite multiradial + two-action equivalence (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut3sec3",
+   "kind": "theorem",
+   "title": "IUT III §3 Multiradial Logarithmic Gaussian Procession Monoids",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceProcessionCapsuleData.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceProcessionFromContract.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceProcessionRecordExistence.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceProcessionBoundary.lean"
+   ],
+   "declarations": {},
+   "note": "IUT III text line 51 (§3). Tree assets: procession capsule/record/boundary construction (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut3prop3_1",
+   "kind": "named_input",
+   "title": "IUT III Proposition 3.1 (F-/D-prime-strips)",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT III text line 592 references Proposition 3.1 (homomorphic F-/D-prime-strips). No declaration named after it verified in the tree. NAMED."
+  },
+  {
+   "id": "paper:iut3prop3_2",
+   "kind": "named_input",
+   "title": "IUT III Proposition 3.2 (mono-analytic F^⊢-/D^⊢-prime-strips)",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT III text line 593 references Proposition 3.2 (mono-analytic prime-strips). Not separately formalized. NAMED."
+  },
+  {
+   "id": "paper:iut3prop3_9",
+   "kind": "theorem",
+   "title": "IUT III Proposition 3.9 ((iii) tensor packets of log-shells)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceLogShellFamilyDependent.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean"
+   ],
+   "declarations": {},
+   "note": "IUT III text line 823 references Proposition 3.9, (iii) (log-shell tensor packets). Tree: log-shell family + muN quotient carrier (built); no single Prop-3.9 declaration verified. TREE_ASSET."
+  },
+  {
+   "id": "paper:iut3thm311_11",
+   "kind": "target",
+   "title": "IUT III Theorem 3.11 (i)-(iii)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind1.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind2.lean",
+    "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean": [
+     "SourceAlgorithmicParallelTransport",
+     "SourceAPTStatement",
+     "SourceAPTSlotAssembly",
+     "aptSlot_evidence"
+    ]
+   },
+   "note": "IUT III Theorem 3.11 (text references at lines 244/248/370/675/716/740; (i) (Ind1)(Ind2), (ii) (Ind3) and mutual compatibility). Lean: source-algorithm/APT interface + Ind1/Ind2/Ind3 assets; no single theorem311 conclusion theorem. CONDITIONAL."
+  },
+  {
+   "id": "paper:iut3cor312",
+   "kind": "target",
+   "title": "IUT III Corollary 3.12 (q-pilot/Theta-pilot comparison)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+     "cor312Conclusion_of_contract"
+    ],
+    "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+     "Cor312RouteCertificate",
+     "Cor312RouteCertificate.conclusion"
+    ],
+    "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean": [
+     "ipl",
+     "she",
+     "apt"
+    ]
+   },
+   "note": "IUT III Corollary 3.12 text references (lines 420/457/825/860/875/885/892/899). Lean: conditional contract + route certificate + obligations; no closure. CONDITIONAL."
+  },
+  {
+   "id": "paper:triangle1",
+   "kind": "theorem",
+   "title": "§4 first triangle △ (via (dsc))",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1FourthTriangleConsumerActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1FourthTriangleConsumerActual.lean": [
+     "S3128Stage1FourthTriangleConsumerData",
+     "S3128Stage1FourthTriangleConsumer_comparison_iff"
+    ]
+   },
+   "note": "Paper §4 lines 506-520: first triangle via descent arrow (dsc). Lean: Stage1 fourth-triangle consumer data (conditional); no triangle object. CONDITIONAL."
+  },
+  {
+   "id": "paper:triangle2",
+   "kind": "theorem",
+   "title": "§4 second triangle △ (via (dsc)+(APT)+(IPL))",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1APTCompConsumer2Actual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1IPLAPTConsumerActual.lean"
+   ],
+   "declarations": {},
+   "note": "Paper §4 lines 520-540: second triangle. Lean: APT composition / IPL-APT consumers (files exist, conditional). CONDITIONAL."
+  },
+  {
+   "id": "paper:triangle3",
+   "kind": "theorem",
+   "title": "§4 third triangle △ (via (HDD))",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1SHEHDDChainActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1SHEHDDSpecActual.lean"
+   ],
+   "declarations": {},
+   "note": "Paper §4 lines 528-538: third triangle via (HDD) = (hull+det)∘(dsc). Lean: SHE/HDD chain/interface (built conditional). CONDITIONAL."
+  },
+  {
+   "id": "paper:triangle4",
+   "kind": "theorem",
+   "title": "§4 fourth triangle △ (via (HDD)∘(SHE) and IPL)",
+   "status": "CONDITIONAL",
+   "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1FourthJointCompleteActual.lean",
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean"
+   ],
+   "declarations": {
+    "tmp/sheaf/xif/paper/S3128Stage1FourthJointCompleteActual.lean": [
+     "S3128Stage1FourthJointComplete"
+    ],
+    "tmp/sheaf/xif/paper/S3128Stage1SHECompositionActual.lean": [
+     "S3128Stage1SHECompositionPremise",
+     "S3128Stage1SHECompositionPremise_holds",
+     "S3128Stage1SHE_readout_theta"
+    ]
+   },
+   "note": "Paper §4 lines 538-585: fourth triangle expresses (HDD)∘(SHE) and the IPL bookkeeping; 3.11.5=>3.12. Lean: FourthJointComplete + SHE composition premise (conditional); no triangle object. CONDITIONAL."
+  },
+  {
+   "id": "paper:iut4sec0",
+   "kind": "interface",
+   "title": "IUT IV §0 Notations and Conventions",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT IV text line 37 (§0). No dedicated Lean module. NAMED."
+  },
+  {
+   "id": "paper:iut4sec1",
+   "kind": "theorem",
+   "title": "IUT IV §1 Log-volume Estimates",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTowerEstimate.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentDegreeUpperBound.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/ElementaryEstimates.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean": [
+     "iutIVSection1",
+     "iutIVProp17_betaAvg",
+     "iutIVProp17_lambdaE_pow",
+     "iutIVProp17_weightedTupleSum",
+     "iutIVProp17_betaTupleSum",
+     "iutIVProp17_middle"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean": [
+     "iutIVProp13i_normalizedDifferent_eq_of_tame",
+     "iutIVProp13i_normalizedDifferent_eq_of_tame"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/ElementaryEstimates.lean": [
+     "iutIVThm110_e1_arithmeticMean",
+     "iutIVThm110_e2_arithmeticMeanSquares",
+     "iutIVThm110_e3_card_GL2_modPrime"
+    ]
+   },
+   "note": "IUT IV §1 text lines 38/400-745 (Prop 1.1-1.8, Thm 1.10). Lean: Estimates tree files built (Section1 is Obligation record + Prop1.7 weighted-average lemmas; different-ideal estimates; elementary estimates). CONDITIONAL/TREE_ASSET aggregate."
+  },
+  {
+   "id": "paper:iut4prop1_1",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.1 (Multiple Tensor Products and Differents)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentDegreeUpperBound.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentDegreeUpperBound.lean": [
+     "not_map_dvd_differentIdeal_of_degree_not_mem",
+     "dvr_maximalIdeal_ne_bot",
+     "dvr_factorCount_pow_maximalIdeal"
+    ]
+   },
+   "note": "IUT IV text line 400/439 (Prop 1.1). Lean: different-ideal degree/tame machinery (built); no declaration named prop1_1 verified. TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_2",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.2 (Differents and Logarithms)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTowerEstimate.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean": [
+     "exists_trace_ne_zero_of_nilpotent_ker",
+     "not_pow_ramificationIdx'_dvd_differentIdeal_of_tame",
+     "count_differentIdeal_eq_of_tame"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTowerEstimate.lean": [
+     "count_differentIdeal_tower",
+     "ramificationIdx'_sub_one_le_count_differentIdeal"
+    ]
+   },
+   "note": "IUT IV text line 451/514/525/539/557 (Prop 1.2). Lean: different/logarithm count lemmas (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_3",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.3 (Estimates of Differents)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTowerEstimate.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/DifferentTameEquality.lean": [
+     "iutIVProp13i_normalizedDifferent_eq_of_tame"
+    ]
+   },
+   "note": "IUT IV text line 568/654/745 (Prop 1.3). Lean: normalizedDifferent_ge / eq_of_tame (built; exact Prop-1.3 numbering not in names). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_4",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.4 (Nonarchimedean Normalized Log-volume Estimates)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/StepVDivisorAverage.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean": [
+     "weight",
+     "absNorm_eq_cardQuot",
+     "localDegree",
+     "degLinearMap",
+     "deg"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/StepVDivisorAverage.lean": [
+     "weight_finite_eq_inertiaDeg_mul_log",
+     "eDegreeUnnormalized_eq_weightedAverage"
+    ]
+   },
+   "note": "IUT IV text line 656/745 (Prop 1.4). Lean: arithmetic divisor degree + weighted average of divisor degree (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_5",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.5 (Archimedean metrics/log-volumes)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanTensorMetric.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanMultiTensorMetric.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanTensorMetric.lean": [
+     "complexTensorToProd",
+     "complexProdInner",
+     "complexTensorToProd_inner",
+     "complexTensorToProd_injective"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/ArchimedeanMultiTensorMetric.lean": [
+     "directSumComplexInner",
+     "tensorMetric",
+     "conjTwist",
+     "conjTwist_apply"
+    ]
+   },
+   "note": "IUT IV text line 73 references Proposition 1.5 (complex archimedean local fields). Lean: archimedean tensor metric files (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_6",
+   "kind": "named_input",
+   "title": "IUT IV Proposition 1.6 (elementary weighted-average general nonsense)",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT IV text line 76 references Proposition 1.6. No declaration mapping verified; nearest Prop1.7 weighted-average lemmas are in Estimates/Section1.lean. NAMED."
+  },
+  {
+   "id": "paper:iut4prop1_7",
+   "kind": "theorem",
+   "title": "IUT IV Proposition 1.7 (weighted averages)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/Section1.lean": [
+     "iutIVProp17_betaAvg",
+     "iutIVProp17_lambdaE_pow",
+     "iutIVProp17_weightedTupleSum",
+     "iutIVProp17_betaTupleSum",
+     "iutIVProp17_middle"
+    ]
+   },
+   "note": "IUT IV text line 76 (Prop 1.7 weighted averages). Lean: Section1.lean explicit Prop1.7 lemmas (built). TREE_ASSET."
+  },
+  {
+   "id": "paper:iut4prop1_8",
+   "kind": "named_input",
+   "title": "IUT IV Proposition 1.8 (elementary facts on elliptic curves)",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT IV text line 77 references Proposition 1.8 (elliptic curves); formalization lives in the separate GenEll paper-layer chain (GenEll01-09/15-17) and is not mapped 1:1. NAMED."
+  },
+  {
+   "id": "paper:iut4prop1_9",
+   "kind": "named_input",
+   "title": "IUT IV Proposition 1.9",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT IV §1 remaining proposition; no dedicated tree declaration verified. NAMED."
+  },
+  {
+   "id": "paper:iut4thm1_10",
+   "kind": "target",
+   "title": "IUT IV Theorem 1.10 (elliptic curves in sufficiently general position)",
+   "status": "CONDITIONAL",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/ElementaryEstimates.lean",
+    "tmp/sheaf/xif/paper/GenEll05Theorem21Actual.lean",
+    "tmp/sheaf/xif/paper/GenEllP0AbcStatusActual.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/ElementaryEstimates.lean": [
+     "iutIVThm110_e1_arithmeticMean",
+     "iutIVThm110_e2_arithmeticMeanSquares",
+     "iutIVThm110_e3_card_GL2_modPrime",
+     "iutIVThm110_e5_adjoin_sqrtNegOne_finrank_le_two",
+     "iutIVThm110_e6_logBounds"
+    ],
+    "tmp/sheaf/xif/paper/GenEll05Theorem21Actual.lean": [
+     "Theorem21ReductionInputs",
+     "theorem21_i_implies_ii"
+    ]
+   },
+   "note": "IUT IV text line 87 (Thm 1.10) and line 394 (explicit log-volume estimates). Lean: Estimates elementary bound components + GenEll paper-layer reduction chain (conditional); full Thm1.10 remains paper/named. CONDITIONAL."
+  },
+  {
+   "id": "paper:iut4sec2",
+   "kind": "theorem",
+   "title": "IUT IV §2 Diophantine Inequalities (comparison of q-/Theta-pilots)",
+   "status": "TREE_ASSET",
+   "files": [
+    "LeanFormal/IUT/IUTIV/Estimates/Section2.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean",
+    "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean"
+   ],
+   "declarations": {
+    "LeanFormal/IUT/IUTIV/Estimates/Section2.lean": [
+     "iutIVSection2",
+     "iutIVProp21i_log_le_self",
+     "iutIVProp21ii_theta_ge_two_thirds_eventually",
+     "iutIVProp21ii_prime_notMem_of_theta_lower",
+     "iutIVProp21ii_exists_prime_notMem_le_two_mul"
+    ],
+    "LeanFormal/IUT/IUTIV/Estimates/StepVProcessionAverage.lean": [
+     "collectionBound",
+     "sum_collectionBound",
+     "processionAverage_eq",
+     "processionAverage_le"
+    ]
+   },
+   "note": "IUT IV text line 39 (§2 Diophantine Inequalities) and line 920-926 (final comparison). Lean: Section2 Prop2.1 lemmas + StepV procession averages (built); the Cor312->ABC comparison consumer is paper-layer S3180/S3183 (conditional). TREE_ASSET/conditional."
+  },
+  {
+   "id": "paper:iut4sec3",
+   "kind": "named_input",
+   "title": "IUT IV §3 Inter-universal Formalism: Language of Species",
+   "status": "NAMED",
+   "declarations": {},
+   "note": "IUT IV text line 40 (§3). Species-language formalism is not formalized in this repo; no file/decl. NAMED/GAP."
+  }
+ ],
+ "edges": [
+  {
+   "from": "paper:stage2",
+   "to": "paper:stage1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage3",
+   "to": "paper:stage2",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage4",
+   "to": "paper:stage3",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage5",
+   "to": "paper:stage1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage5",
+   "to": "paper:iutivExpEst",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:dsc",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:APT",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:IPL",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:thm311",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:dsc",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:hullDet",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:SHE",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:IPL",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:mltRep",
+   "to": "paper:BPS",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:HDD",
+   "to": "paper:hullDet",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:HDD",
+   "to": "paper:dsc",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:HDD",
+   "to": "paper:mltRep",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:HDD",
+   "to": "paper:SHE",
+   "kind": "interface"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:thm311_5",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:qPilot",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:thetaPilot",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:HDD",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:SHE",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:SHE",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:IPL",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:dsc",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:thetaPilot",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:stage3",
+   "to": "paper:stage2",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:stage5",
+   "to": "paper:iutivExpEst",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:stage2",
+   "to": "paper:thm311",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage1",
+   "to": "paper:cor312comparison",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:cor312comparison",
+   "to": "paper:iut3cor312",
+   "kind": "proof"
+  },
+  {
+   "from": "paper:iut3cor312",
+   "to": "paper:iut3thm311_11",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3thm311_11",
+   "to": "paper:iut3sec3",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3thm311_11",
+   "to": "paper:iut3prop3_9",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3sec3",
+   "to": "paper:iut3sec2",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3sec2",
+   "to": "paper:iut3sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3sec1",
+   "to": "paper:iut3sec0",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3prop3_2",
+   "to": "paper:iut3sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut3prop3_1",
+   "to": "paper:iut3sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle1",
+   "to": "paper:dsc",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle2",
+   "to": "paper:dsc",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle2",
+   "to": "paper:APT",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle2",
+   "to": "paper:IPL",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle3",
+   "to": "paper:HDD",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle4",
+   "to": "paper:HDD",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle4",
+   "to": "paper:SHE",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:triangle4",
+   "to": "paper:IPL",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:triangle1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:triangle2",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311",
+   "to": "paper:triangle3",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:thm311_5",
+   "to": "paper:triangle4",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:stage5",
+   "to": "paper:iut4sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_2",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_3",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_4",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_5",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4thm1_10",
+   "to": "paper:iut4prop1_7",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4prop1_2",
+   "to": "paper:iut4prop1_1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4prop1_3",
+   "to": "paper:iut4prop1_2",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4prop1_4",
+   "to": "paper:iut4prop1_3",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4prop1_5",
+   "to": "paper:iut4prop1_4",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4prop1_7",
+   "to": "paper:iut4prop1_6",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4sec2",
+   "to": "paper:iut4sec1",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4sec2",
+   "to": "paper:iut4thm1_10",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4sec3",
+   "to": "paper:iut4sec0",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:iut4sec2",
+   "to": "paper:iut4sec3",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:iut4prop1_8",
+   "to": "paper:iut4thm1_10",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:iut4prop1_9",
+   "to": "paper:iut4thm1_10",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:iut3prop3_1",
+   "to": "paper:iut3thm311_11",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:iut3prop3_2",
+   "to": "paper:iut3thm311_11",
+   "kind": "gap"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+function,curves_all_submodular,curves_all_supermodular,note
+L=Σ(V+gap),12354,12354,"additive: both, equality"
+N=Σ(V+gap)−(sF−1)ΣA,12354,12354,"additive: both, equality"
+"D=max(0,−N)",12354,12351,submodular; 3 super violations
+maxV(S),12354,356,submodular; not super generally
+maxGap(S),12354,3512,submodular; super only 3512
+ratio=(V+gap)/((sF−1)A),12354,3512,submod checks; super only 3512

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1StepProviderPrimeActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+  ],
+  "note": "silent loop mechanical registration; verify via watchdog log only"
+}

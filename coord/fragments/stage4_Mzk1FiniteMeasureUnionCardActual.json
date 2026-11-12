@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureUnionCardActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureUnionCardActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: union cardinality bounds; new file only, no sorry; watchdog to verify"
+}

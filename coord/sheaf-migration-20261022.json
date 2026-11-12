@@ -1,0 +1,86 @@
+{
+  "migration": "sheaf-methodology-migration-20261022",
+  "date": "2026-10-22",
+  "upstream": {
+    "repository": "https://github.com/frenzymath/SHEAF",
+    "commit": "6e5abd804e1b0c8d4626349e3508103c97452711",
+    "adaptation": "Original Chinese project instructions based on upstream methodology; no upstream scripts copied."
+  },
+  "archives": [
+    {
+      "former_active_path": "agents.md",
+      "archive_path": "coord/archive-20261022/agents.md",
+      "sha256": "9fb60d8a6f4b0053ee0a7ab52bfc6e27547203ad6d66eef3a8d88662feb46c91"
+    },
+    {
+      "former_active_path": "MULTI_AGENT_ARCHITECTURE.md",
+      "archive_path": "coord/archive-20261022/MULTI_AGENT_ARCHITECTURE.md",
+      "sha256": "5a2ad75436382143a1c9a52b57911e57b085fb6e48b3b3aa752ad34fca1416f0"
+    },
+    {
+      "former_active_path": "logs/coordination/l03-proof-focused-methodology-20261022.md",
+      "archive_path": "coord/archive-20261022/l03-proof-focused-methodology-20261022.md",
+      "sha256": "66fdb644ff15c37a1e77339bb6f73f6e80def517042e7893cdb6e8d006cafec8"
+    }
+  ],
+  "lean_toolchain": "leanprover/lean4:v4.32.2",
+  "mathlib_rev": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "scope": "Methodology, target/DAG registry and manual queue. No Lean proof edits, scheduler installation or theorem acceptance. Documentation edits performed by root; one read-only method review completed and a second DAG review was interrupted after user correction.",
+  "active_files": [
+    "agents.md",
+    "SHEAF.md",
+    "GOAL.md",
+    "SETUP.md",
+    "coord/STATE.md",
+    "coord/queue.md",
+    "coord/targets-review.md",
+    "coord/TASK_TEMPLATE.md",
+    "dag/README.md",
+    "coord/SCHEDULING.md"
+  ],
+  "compatibility_redirects": [
+    "MULTI_AGENT_ARCHITECTURE.md",
+    "logs/coordination/l03-proof-focused-methodology-20261022.md"
+  ],
+  "dag_node_files": [
+    "dag/nodes/abc-target.json",
+    "dag/nodes/abc-definition.json",
+    "dag/nodes/cor312-bridge-definition.json",
+    "dag/nodes/cor312-conditional-abc.json",
+    "dag/nodes/cor312-bridge-construction.json",
+    "dag/nodes/l03-g2-milestone.json"
+  ],
+  "git_note": "Archives are under coord because /logs is ignored; historical research evidence remains in its original workspace paths.",
+  "validation": {
+    "date": "2026-10-22",
+    "archive_hashes_matched": 3,
+    "archives_not_git_ignored": true,
+    "markdown_documents_checked": 13,
+    "local_links_resolved": 49,
+    "json_nodes_checked": 6,
+    "edges_checked": 6,
+    "missing_references": 0,
+    "cycles": 0,
+    "false_locked_or_closed_nodes": 0,
+    "evidence_hashes_matched": 3,
+    "toolchain_pins_unchanged": true,
+    "math_compilation": "not_run_documentation_migration",
+    "comparator": "not_installed_or_run_by_this_migration",
+    "scheduling_scope": "No fixed project agent/group cap; root-only requirement applies solely to this chat."
+  },
+  "scheduling": {
+    "agent_count_limit": null,
+    "group_count_limit": null,
+    "coordination_model": "SHEAF coordinator / maintainer / leads / workers; groups claim tasks and workers continue adjacent ready tasks without per-task root dispatch",
+    "parallelism_basis": [
+      "stage-specific readiness",
+      "independent deliverables",
+      "unique mutable-file owners",
+      "frozen interface versions",
+      "review/integration/build throughput",
+      "actual tool and compute resources"
+    ],
+    "chat_execution_constraint": "This documentation-editing chat is root-only; this is not a project-wide single-agent setting.",
+    "automatic_scheduler_installed": false
+  }
+}

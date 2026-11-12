@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1PaperLogShellFrobeniusStatementActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1PaperLogShellFrobeniusStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "section": "EXAMPLE",
+    "author": "section-owner",
+    "date": "2026-11-11",
+    "notes": "Replace with section-specific chain fragment; mainline merges into dag/target-chain.json. No proofs here; refs only."
+  },
+  "nodes": [
+    {
+      "id": "SECTION-NODE-1",
+      "kind": "target",
+      "title": "Node title (paper object / theorem / bottom lemma)",
+      "status": "DEF|PROVED|CONDITIONAL|NAMED|TREE_ASSET",
+      "files": [
+        "Path/To/File.lean"
+      ],
+      "declarations": {
+        "Path/To/File.lean": [
+          "declarationName1",
+          "declarationName2"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "SECTION-NODE-1",
+      "to": "B1-fold",
+      "kind": "proof"
+    }
+  ]
+}

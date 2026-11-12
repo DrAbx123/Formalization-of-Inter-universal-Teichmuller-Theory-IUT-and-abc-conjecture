@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1StepProviderPrimeConsumerActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeConsumerActual.lean"
+  ],
+  "declarations": {},
+  "note": "A473 real Lean: StepProvider' consumer from proved f1/f2/f4a + named f4b/f5; new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,146 @@
+{
+ "$schema_note": "Paper-structure nodes for IUT I/II, Frobenioids, Combinatorial Anabelian, EtTh, GenEll, NCBel, Hodge-Arakelov (Lead A440); paper: prefix; mapped to repo IUTI/IUTII/Foundations/xif nodes; unformalized = GAP/NAMED. Only verified paper txt paths written; no declarations (paper layer has no Lean decls).",
+ "generated_by": "abc/aibi",
+ "frozen_pins": {
+  "registry": 14041,
+  "gate": "NOT PASSED",
+  "binding": "HOLD"
+ },
+ "nodes": [
+  {
+   "id": "paper:IUT-I",
+   "kind": "tree_asset",
+   "title": "IUT I — Hodge theaters, theta-link, étale-theta (Theorem A/B, §I1-I4)",
+   "status": "TREE_ASSET",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Inter-universal Teichmuller Theory I.txt"
+   ],
+   "declarations": {},
+   "note": "Paper text 506KB; main structure: Hodge theaters, theta-link, log-shell/anabelian preliminaries (Theorem A Frobenius-pictures of Theta-Hodge theaters; Theorem B etale pictures). Mapped to repo nodes IUTI.HodgeTheater.* + IUTII.Kummer.LogShellCarrier; unformalized paper content = GAP."
+  },
+  {
+   "id": "paper:IUT-II",
+   "kind": "tree_asset",
+   "title": "IUT II — Frobenius/étale pictures of Hodge theaters, étale theta functions (Prop 1.2-1.6)",
+   "status": "TREE_ASSET",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt"
+   ],
+   "declarations": {},
+   "note": "Paper text 488KB; Theorem A (Frobenius-pictures), Theorem B (etale-pictures), Prop 1.2 group/frobenioid-theoretic constructions, Prop 1.3 cyclotomic rigidity, Prop 1.4 etale theta functions, Prop 1.5 mono-theta environments, Prop 1.6 cores/cuspidalizations. Mapped to IUTII.Theta.* / IUTII.Kummer.*; scheme-level content GAP."
+  },
+  {
+   "id": "paper:Frobenioids-I-II",
+   "kind": "tree_asset",
+   "title": "Frobenioids I+II — Frobenioid theory (Example 3.6 etc.)",
+   "status": "TREE_ASSET",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/The Geometry of Frobenioids I.txt",
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/The Geometry of Frobenioids II.txt"
+   ],
+   "declarations": {},
+   "note": "Paper texts 331KB+191KB; maps to IUTII.Frobenioid Example36 suite (real source model/curve/Tate/log-shell transport stack) + PrimeStripFrobenioid*; abstract Frobenioid category theory beyond example = GAP."
+  },
+  {
+   "id": "paper:CombAnabelian",
+   "kind": "named_input",
+   "title": "Combinatorial Anabelian Topics I-IV — combinatorial anabelian geometry",
+   "status": "GAP",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Combinatorial Anabelian Topics I.txt",
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Combinatorial Anabelian Topics II.txt",
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Combinatorial Anabelian Topics III.txt",
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Combinatorial Anabelian Topics IV.txt"
+   ],
+   "declarations": {},
+   "note": "Four paper texts (317KB/407KB/251KB/320KB). No repo formalization matching these statements; Foundations anabelian layer is interface-level only (IUT-EXTERNAL-OBJECTS-INVENTORY). Registered GAP; do not assume any combinatorial anabelian theorem."
+  },
+  {
+   "id": "paper:EtTh",
+   "kind": "tree_asset",
+   "title": "Étale Theta Function and Frobenioid-theoretic manifestations",
+   "status": "TREE_ASSET",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/The Etale Theta Function and its Frobenioid-theoretic Manifestations.txt"
+   ],
+   "declarations": {},
+   "note": "Paper text 301KB; maps to IUTII.Theta.EtaleThetaQuotient/ThetaLink/ConcreteBridge + xif EtTh00-13 rows. Ten class-B deep inputs (EtTh02) remain named."
+  },
+  {
+   "id": "paper:GenEll",
+   "kind": "conditional",
+   "title": "Generic Elliptic Curves I — Theorem 2.1 reduction (ii)=>(i)",
+   "status": "CONDITIONAL",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/The Hodge-Arakelov Theory of Elliptic Curves.txt"
+   ],
+   "declarations": {},
+   "note": "GenEll Thm 2.1 = reduction, not ABC proof: (i)=>(ii) class-A proved; (ii)=>(i) depends on the [Mzk1] noncritical Belyi deep input (stage4 Thm 2.5/Cor 3.1-3.2). Mapped to GenEll01-09 + GenEll05bChainWiringActual; deep input named."
+  },
+  {
+   "id": "paper:NCBel",
+   "kind": "conditional",
+   "title": "Noncritical Belyi Maps — Lemma 2.1-2.4, Thm 2.5, Cor 3.1-3.2",
+   "status": "CONDITIONAL",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/Noncritical Belyi Maps.txt"
+   ],
+   "declarations": {},
+   "note": "Paper text 18KB; Lemma 2.1 (Belyi polynomial CV {0,1}), 2.2 (Belyi reduction), 2.3 (separation/normalization), 2.4 (nested (m,d) induction, algebraic inputs), Thm 2.5/Cor 3.1-3.2. Repo: Mzk1Lemma21/22/23/24 xif files + restated C-point interface; 2.3 rational separation PROVED (Mzk1Lemma23SeparationActual), 2.4 rational base-only + algebraic nested induction NAMED, Mzk1Cor31Cor32ProofActual conditional per mainline."
+  },
+  {
+   "id": "paper:HodgeArakelov",
+   "kind": "named_input",
+   "title": "Hodge-Arakelov theory of elliptic curves (survey/monographs)",
+   "status": "GAP",
+   "files": [
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/A Survey of the Hodge-Arakelov Theory of Elliptic Curves I.txt",
+    ".claude/worktrees/roadmap-2026-11-review-cddd5f/papers/motizuki_corpus/text/A Survey of the Hodge-Arakelov Theory of Elliptic Curves II.txt"
+   ],
+   "declarations": {},
+   "note": "Paper texts 103KB+65KB; Hodge-Arakelov comparison theory not formalized in tree; mapped only through Foundations/Theta q-series assets; GAP."
+  }
+ ],
+ "edges": [
+  {
+   "from": "paper:IUT-II",
+   "to": "paper:IUT-I",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:Frobenioids-I-II",
+   "to": "paper:IUT-II",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:EtTh",
+   "to": "paper:Frobenioids-I-II",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:EtTh",
+   "to": "paper:IUT-II",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:GenEll",
+   "to": "paper:NCBel",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:NCBel",
+   "to": "paper:Frobenioids-I-II",
+   "kind": "statement"
+  },
+  {
+   "from": "paper:HodgeArakelov",
+   "to": "paper:GenEll",
+   "kind": "gap"
+  },
+  {
+   "from": "paper:CombAnabelian",
+   "to": "paper:IUT-I",
+   "kind": "gap"
+  }
+ ]
+}

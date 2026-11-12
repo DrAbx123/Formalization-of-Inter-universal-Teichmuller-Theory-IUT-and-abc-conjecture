@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureFilterActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureFilterActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: filter bound for finite measure; new file only, no sorry; watchdog to verify"
+}

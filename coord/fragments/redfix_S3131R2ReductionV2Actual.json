@@ -1,0 +1,9 @@
+{
+  "node": "redfix:S3131R2ReductionV2Actual",
+  "kind": "conditional",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/S3131R2ReductionV2Actual.lean"
+  ],
+  "note": "minimal red fix: add import QVFamNormalizedGeneratorSupplyActual (qVFamNormalizedGenerator/_ne_zero); queued to watchdog only"
+}

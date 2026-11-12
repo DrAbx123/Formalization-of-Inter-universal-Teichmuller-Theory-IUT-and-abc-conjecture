@@ -1,0 +1,12 @@
+{
+  "node": "iutiv-abc:IUTIV.S1.display",
+  "kind": "theorem",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean"
+  ],
+  "declarations": {
+    "proved": []
+  },
+  "note": "watchdog EXIT0 SIZE=6921 observed in results log; no manual compile; PROVED read-only"
+}

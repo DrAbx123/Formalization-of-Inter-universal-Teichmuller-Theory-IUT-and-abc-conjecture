@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1GeomCoreLineBundleBridgeActual",
+  "kind": "auto-registered",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreLineBundleBridgeActual.lean"
+  ],
+  "note": "silent loop mechanical registration; verify via watchdog log only"
+}

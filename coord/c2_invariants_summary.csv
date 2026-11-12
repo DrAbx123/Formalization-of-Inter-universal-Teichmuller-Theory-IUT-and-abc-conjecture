@@ -1,0 +1,13 @@
+metric,value
+N_total,11308
+N_semistable,4154
+rows_written,4154
+LIMIT,2000
+a_p_limit,10000
+elapsed_seconds,100.74
+deg_nonnull,4154
+tamagawa_nonnull,4154
+torsion_nonnull,4154
+bad_primes_total,12547
+a_p_entries_total,5092719
+source,Sage 10.9 + CremonaDatabase (conductor <= 9999)

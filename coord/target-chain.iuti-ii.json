@@ -1,0 +1,1589 @@
+{
+  "$schema_note": "Problem E skeleton node graph (IUTI+IUTII) for coord/target-chain; declaration-level; only files/declarations verified present in this survey (grep/Test-Path), statuses TREE_ASSET not re-built.",
+  "generated_by": "abc/aibi, Lead A437",
+  "repo_root": "D:/lean",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "nodes": [
+    {
+      "id": "IUTI.HodgeTheater.Core",
+      "kind": "tree_asset",
+      "title": "Hodge theater core (HodgeTheater, links, refl/symm/trans)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/ConcreteHodgeTheaterExample.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/ConcreteIntegralHodgeTheaterExample.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean": [
+          "HodgeTheater",
+          "HodgeTheaterLink",
+          "refl",
+          "symm",
+          "trans",
+          "symm_symm"
+        ],
+        "LeanFormal/IUT/IUTI/HodgeTheater/ConcreteHodgeTheaterExample.lean": [
+          "gaussianHodgeTheater",
+          "gaussianHodgeTheater_q",
+          "gaussianThreeTheaterSystem"
+        ]
+      },
+      "note": "Real structure + link category laws; concrete Gaussian examples. TREE ASSET per inventory (olean not rechecked in A437)."
+    },
+    {
+      "id": "IUTI.HodgeTheater.Family",
+      "kind": "tree_asset",
+      "title": "SourceHodgeTheaterFamily + link laws",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamily.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamilyLawsReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamilySourceReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterHistoriesReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamily.lean": [
+          "SourceHodgeTheaterFamily",
+          "theater",
+          "theater_injective",
+          "theater_eq_iff",
+          "link_refl_at",
+          "link_symm_at",
+          "link_trans_at",
+          "link_q",
+          "link_scale",
+          "link_q_symm",
+          "link_scale_symm",
+          "link_q_trans",
+          "link_scale_trans"
+        ]
+      },
+      "note": "Family structure with injectivity and link congruence/transitivity laws; source reduction files carry the reduction layer."
+    },
+    {
+      "id": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "tree_asset",
+      "title": "Frobenius-picture Gamma and graph automorphisms (theta-link combinatorics)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkDisplacementReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkArithmeticDisplacementReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkDivisorMonoidDisplacementReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean": [
+          "FrobeniusPictureArrow",
+          "FrobeniusPictureGraphAut",
+          "graphAut_step",
+          "graphAut_translation",
+          "chainTranslation",
+          "chainTranslation_graphAut"
+        ]
+      },
+      "note": "Gamma = oriented graph on Z with n -> n+1; automorphisms classified as translations (graphAut_translation); consumed by CITABLE xif AbsTopIII05RefinedActual D4."
+    },
+    {
+      "id": "IUTI.HodgeTheater.Definition31Carriers",
+      "kind": "tree_asset",
+      "title": "Definition 3.1 carrier/gate reductions",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31CarrierConsolidation.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31A2GateReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31DualContractAlignment.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31NativeContractBridgeReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31SignQuotientSupplyReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceClauseAssemblyUnitsReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31CarrierConsolidation.lean": [
+          "stageConstructionTraceOfSource",
+          "toSource_stageConstructionTraceOfSource",
+          "stageConstructionTraceOfSource_toSource",
+          "toSource_injective",
+          "stageConstructionTraceOfSource_injective"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile); visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTI.HodgeTheater.GeometricCore",
+      "kind": "tree_asset",
+      "title": "Geometric core field units / etale stack supply / theater realization",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceGeometricCoreFieldUnitsReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceEtaleStackInstanceSupplyReduction.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceTheaterRealization.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceObligations.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceGeometricCoreFieldUnitsReduction.lean": [
+          "SourceGeometricCoreBaseUnit",
+          "SourceGeometricCoreInvolutionUnit",
+          "SourceGeometricCoreSignQuotientUnit",
+          "SourceGeometricCoreGroupUnit",
+          "SourceGeometricCoreKSideUnit"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTI.InitialTheta.Data",
+      "kind": "tree_asset",
+      "title": "Initial Theta data + arithmetic prelude/completion/clause constructors",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceInitialThetaData.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceArithmeticPrelude.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceCompletion.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceClauseConstructors.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceInitialThetaData.lean": [
+          "SourceOrbicurveSignature",
+          "typeOneOne",
+          "typeOneLTorsion",
+          "typeOneLTorsionPlusMinus",
+          "typeOneOne_genus",
+          "typeOneOne_punctures",
+          "typeOneOne_stackyOrders"
+        ]
+      },
+      "note": "Orbicurve signatures (concrete typeOne examples with rfl genus/puncture lemmas) + initial theta data."
+    },
+    {
+      "id": "IUTI.InitialTheta.Definition31",
+      "kind": "tree_asset",
+      "title": "Definition 3.1 root lemmas / quantifiers / boundary / D0-D11",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31RootLemmas.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/Definition31D0D11Aligned.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/Definition31D0D11FromSource.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D3D4Root.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D4D9Supply.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D5D8Root.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31RootLemmas.lean": [
+          "rootSplitLift",
+          "rootResidual",
+          "rootSplitLift_apply",
+          "rootSplitLift_projection",
+          "rootSplitLift_one"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTI.InitialTheta.Places",
+      "kind": "tree_asset",
+      "title": "Place partition / local valuation / local Tate boundary",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31PlacePartition.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourcePlacePartitionReduction.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31LocalValuationSections.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourcePlaceSelection.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceLocalTateBoundary.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31PlacePartition.lean": [
+          "d3PlacePartition",
+          "placeConstruction_of_selection",
+          "partition_spec",
+          "d3PlacePartition_badLabel_prime_odd",
+          "sourceDefinition31PlacePartitionAssembly"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTI.InitialTheta.Torsion",
+      "kind": "tree_asset",
+      "title": "Orbicurve/torsion/sign quotient constructions",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31OrbicurveInstance.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceSignQuotientConstruction.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionCarrierReduction.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionRankOneQuotient.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionTransport.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31OrbicurveInstance.lean": [
+          "terminalConstantFiber_toDescentData_faithful",
+          "terminalConstantFiber_toDescentData_full",
+          "terminalConstantFiber_toDescentData_essSurj",
+          "terminalConstantFiber_toDescentData_isEquivalence",
+          "terminalConstantFiber_isStackFor_ofArrows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Frobenioid.SourceModel",
+      "kind": "tree_asset",
+      "title": "Example 3.6 source model backend/balance/divisor/functor",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackend.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackendBalance.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackendBalanceGroup.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelDivisor.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelFunctor.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/ConcreteSourceFrobenioidBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceModelBackend.lean": [
+          "BottomBase",
+          "bottomPoint",
+          "BottomFSM",
+          "bottomBase_hom_eq_id",
+          "bottomBase_arrow_epi",
+          "EffectiveDivisor"
+        ]
+      },
+      "note": "Source model backend (bottom base, effective divisors) and bridge; consumed by Theta ConcreteSourceEtaleThetaBridge."
+    },
+    {
+      "id": "IUTII.Frobenioid.CurveGalois",
+      "kind": "tree_asset",
+      "title": "Example36 curve/projective closure/Galois category/GSet-etale equivalence",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveScheme.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveProjectiveClosure.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveProjectiveClosureDirectGlue.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveConnectedness.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveEtaleCovers.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveGaloisCategory.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GSetEtaleEquivalenceAssembly.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GSetToEtaleAlgebra.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveScheme.lean": [
+          "curveEquationPolynomial",
+          "curveCoordinateIdeal",
+          "curveCoordinateRing",
+          "curveScheme",
+          "curveScheme_isAffine"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Frobenioid.TateUniformization",
+      "kind": "tree_asset",
+      "title": "Example36 Tate uniformization / Tate module / elliptic curve anabelioid",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateUniformization.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateGaloisAction.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateModuleProfinite.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateInverseJCanonical.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36EllipticCurveTateHigherLevel.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36EllipticCurveAnabelioid.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36EllipticCurveSourcePiCard.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36TateUniformization.lean": [
+          "concreteFiveTateParameter",
+          "concreteFiveTateParameter_norm",
+          "concreteFiveTateCurve_eq",
+          "concreteFiveTateCurve_isElliptic",
+          "concreteFiveTateCurve_delta_ne_zero"
+        ]
+      },
+      "note": "Concrete Tate curve/parameter with norm/elliptic/delta lemmas; Tate module profinite and Galois action."
+    },
+    {
+      "id": "IUTII.Frobenioid.ThetaLogShell",
+      "kind": "tree_asset",
+      "title": "Example36 theta theory (source etale theta, theta generator, theta series) + log-shell lattice/Frobenius",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceEtaleThetaTheory.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceThetaGenerator.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36ThetaGeneratorFeasibility.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36ThetaSeries.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogShellLattice.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogShellFrobeniusAction.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogDomainActual.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogKummerMap.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceEtaleThetaTheory.lean": [
+          "fivePrimeLabel",
+          "sourceTheater_curve_eq_split",
+          "sourceCurve_eq_sourceOnce",
+          "sourceCurve_delta"
+        ],
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36LogShellLattice.lean": [
+          "concreteLogShellField",
+          "concreteRationalPrime",
+          "principalUnitLogShell_mem_iff",
+          "unitLog_principalUnit_eq_log1p",
+          "coe_principalUnitLogShell_eq_range_log1p"
+        ]
+      },
+      "note": "Source etale theta theory + concrete log-shell lattice (principal-unit log-shell membership, log1p lemmas) used by AbsTopIII log-shell and Cor312 StepXI hull."
+    },
+    {
+      "id": "IUTII.Frobenioid.Transport",
+      "kind": "tree_asset",
+      "title": "Example36 Frobenioid transport + prime-strip Frobenioid category skeleton/cards",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36FrobenioidTransport.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidCategorySkeleton.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidCards.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidSkeletonCards.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidValueGroupRationality.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripsFrobenioidLinks.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/SourceKappaOrbitUnitsActionSupply.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/SourceKappaOrbitFactorizationProvider.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36FrobenioidTransport.lean": [
+          "unitsMapOfRingHom",
+          "unitsMapOfRingHom_apply_coe",
+          "PlaceLocalizationTransport",
+          "deltaAdd_transport",
+          "deltaAdd_transport_infinite",
+          "ramificationIndex_pos_int"
+        ],
+        "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripFrobenioidCategorySkeleton.lean": [
+          "DivisorialMonoidOnHom",
+          "comp",
+          "elementaryFrobenioidHomMap",
+          "elementaryFrobenioidMapFunctor",
+          "elementaryFrobenioidMapFunctor_comp_base",
+          "elementaryFrobenioidMapFunctor_id"
+        ]
+      },
+      "note": "IUTII->IUTIII Frobenioid transport interface (unit transport, place localisation, delta-add transport, prime-strip Frobenioid category skeleton)."
+    },
+    {
+      "id": "IUTII.Frobenioid.CompletionLocal",
+      "kind": "tree_asset",
+      "title": "Example36 completion/local-field data + global place/imprimitive layers",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CompletionEmbeddingActual.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CompletionIntoAlgCl.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CompletionIsometry.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CompletionNormFormula.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GaussianSplitPlaceArithmetic.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GlobalPlaceData.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GlobalIdealFamily.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36NumberFieldPlaceData.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36CompletionEmbeddingActual.lean": [
+          "completionPadicPrime",
+          "completionAlgebraIsAlgebraic",
+          "completionModuleIsTorsionFree",
+          "exists_injective_completionEmbedding_place",
+          "completion_eq_adicCompletion"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Kummer.LogShellCarrier",
+      "kind": "tree_asset",
+      "title": "SourceLogShell carrier/datum (p, p*, pre-log-shell, log-shell, unit layer)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLocalLogShellDatum.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellActionCompatibility.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellActualTensorSpan.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCodomainClosure.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean": [
+          "sourceLogShellStar",
+          "SourceLogShellDatum",
+          "pStar",
+          "preLogShell",
+          "logShell",
+          "unitLayer",
+          "codomainKummerContained",
+          "zero_mem_preLogShell"
+        ]
+      },
+      "note": "Real log-shell carriers; consumed by AbsTopIII01/05 xif files and Cor312 StepXI."
+    },
+    {
+      "id": "IUTII.Kummer.LogShellAbsTopIII",
+      "kind": "bridge",
+      "title": "SourceLogShellAbsTopIIIBridge (invariant-image identification)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean": [
+          "SourceLogShellInvariantImageIdentification",
+          "invariantImageIdentification_iff_unitLayer_subset",
+          "codomainKummerContained_of_invariantImageIdentification"
+        ]
+      },
+      "note": "Bridge between invariant image and unit layer; anchors discharged in CITABLE AbsTopIII05RefinedActual D3."
+    },
+    {
+      "id": "IUTII.Kummer.Packets",
+      "kind": "tree_asset",
+      "title": "Log-shell tensor packets / muN quotient / XMu packet",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellIQTensorPacket.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellXMuPacket.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellTensorLegCompletion.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrierTwistContainer.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellIQTensorPacket.lean": [
+          "sourceLogShell_span_pi_eq_pi_span",
+          "sourceLogShellDirectSumPacketSet",
+          "sourceLogShellIQDirectSumPacket",
+          "sourceLogShellIQDirectSumPacket_eq_span_pi",
+          "sourceLogShellIQDirectSumPacket_mem_iff"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Kummer.Classes",
+      "kind": "tree_asset",
+      "title": "Kummer classes/roots: CyclotomicTower, kummerClass, root systems, compatible roots",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/KummerClass.lean",
+        "LeanFormal/IUT/IUTII/Kummer/KummerGaloisClass.lean",
+        "LeanFormal/IUT/IUTII/Kummer/CanonicalKummerMap.lean",
+        "LeanFormal/IUT/IUTII/Kummer/CompatibleRoots.lean",
+        "LeanFormal/IUT/IUTII/Kummer/KummerPolynomial.lean",
+        "LeanFormal/IUT/IUTII/Kummer/KummerRootRatio.lean",
+        "LeanFormal/IUT/IUTII/Kummer/NatRootSystem.lean",
+        "LeanFormal/IUT/IUTII/Kummer/RationalRootSystem.lean",
+        "LeanFormal/IUT/IUTII/Kummer/RootRealization.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/KummerClass.lean": [
+          "CyclotomicTower",
+          "one",
+          "mul",
+          "action",
+          "kummerClass",
+          "kummerClass_one"
+        ]
+      },
+      "note": "Kummer theory layer consumed by EtTh theta packets and Cor312."
+    },
+    {
+      "id": "IUTII.Kummer.Absolute",
+      "kind": "tree_asset",
+      "title": "Absolute/etale Kummer (continuity, injection, quotient, germs)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerQuotient.lean",
+        "LeanFormal/IUT/IUTII/Kummer/ConcreteEtaleKummerBridge.lean",
+        "LeanFormal/IUT/IUTII/Kummer/ContinuousKummerGerm.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/LocalUnitKummerInjectivity.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean": [
+          "isLocallyConstant_absoluteKummerMap",
+          "continuous_absoluteKummerMap"
+        ]
+      },
+      "note": "BUILD GAP RESOLVED (shehdd, evidence-only): all 6 files have fresh oleans (AbsoluteKummerContinuity/Injection/Quotient, ConcreteEtaleKummerBridge, ContinuousKummerGerm, LocalUnitKummerInjectivity; runtime-status all_fresh=true). Asset tree available; no new math."
+    },
+    {
+      "id": "IUTII.Kummer.MonoAnalytic",
+      "kind": "tree_asset",
+      "title": "Mono-analytic log-shell formal log / arch psi-CNS / compact carrier / mixed packet",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellFormalLogMul.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellArchPsiCnsCalibration.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellCompactCarrier.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellMixedPacket.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellPadicLog.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticIndTopModuleData.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellFormalLogMul.lean": [
+          "geomLog_coeff",
+          "geomLog_mul_one_add_X",
+          "geomLog_eq_inv_one_add_X",
+          "deriv_log_eq_geomLog",
+          "geomLog_subst_mul_eq_one"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Kummer.SourceThetaPilot",
+      "kind": "named_input",
+      "title": "Source theta pilot IQ containment / K1K2 boundary / unit-log tensor landing",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceUnitLogTensorLanding.lean",
+        "LeanFormal/IUT/IUTII/Kummer/K1K2BoundaryReduction.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceK1K2ArchUpperSemiBridge.lean",
+        "LeanFormal/IUT/IUTII/Kummer/LocalFieldRigidity.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean": [
+          "possibleImage_subset_of_generator_mem",
+          "sourceLogShellOnePlaceFamily",
+          "SourceThetaPilotOnePlacePacket",
+          "sourceThetaPilotProductMap",
+          "sourceThetaPilotProductMap_tprod"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTII.Theta.EtaleThetaQuotient",
+      "kind": "tree_asset",
+      "title": "EtaleThetaQuotient (theta derived subgroup/commutator kernel/quotient/power kernels)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean": [
+          "thetaDerivedSubgroup",
+          "thetaCommutatorKernel",
+          "thetaCommutatorKernel_le_derivedSubgroup",
+          "ThetaQuotient",
+          "EllipticAbelianization",
+          "thetaPowerKernel",
+          "ellipticPowerKernel",
+          "ModLThetaQuotient"
+        ]
+      },
+      "note": "Real quotient/power-kernel objects; consumed by IUTIII EtTh realization and Cor312."
+    },
+    {
+      "id": "IUTII.Theta.ThetaLink",
+      "kind": "tree_asset",
+      "title": "FiniteThetaPacket + ThetaLinkAssembly/SourceCover + UnitGeneratedMonoidComparison",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/FiniteThetaPacket.lean",
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean",
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean",
+        "LeanFormal/IUT/IUTII/Theta/UnitGeneratedMonoidComparison.lean",
+        "LeanFormal/IUT/IUTII/Theta/EtaleTateDirection.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean": [
+          "thetaLink_unitPower",
+          "thetaLink_embeddedUnit",
+          "thetaLink_generator",
+          "thetaLinkSymm_apply",
+          "thetaLink_source_representation",
+          "thetaLink_target_representation",
+          "thetaLink_unique",
+          "thetaLink_unitEquiv_ext"
+        ]
+      },
+      "note": "Theta-link unit/generator representation laws and uniqueness; interface to IUTIII theta packet."
+    },
+    {
+      "id": "IUTII.Theta.ConcreteBridge",
+      "kind": "bridge",
+      "title": "ConcreteSourceEtaleThetaBridge / ConcreteSourceHistoryLinkBridge (cStage, packet, parameter, quotient, theater)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceEtaleThetaBridge.lean",
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceHistoryLinkBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceEtaleThetaBridge.lean": [
+          "cStage",
+          "packet",
+          "parameter",
+          "quotient",
+          "finiteLabel",
+          "roots",
+          "theater",
+          "sourceModel"
+        ]
+      },
+      "note": "Concrete bridge tying initial-theta C-stage/packet/theater/source model; consumed by xif EtTh* and AbsTopIII theta."
+    },
+    {
+      "id": "IUTIII.Interface.EtThRealization",
+      "kind": "interface",
+      "title": "IUTIII StepXI EtTh realization consumers (CertificateHullWiring, CardAMPLThetaBoundSupply)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean": [
+          "CardAMPLThetaBoundSupply",
+          "realVolume_le",
+          "ofReal_le_theta_of_imageSet_lower",
+          "exists_hull_eq_ofReal",
+          "of_realVolume_le"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.Interface.LogShellHull",
+      "kind": "interface",
+      "title": "IUTIII StepXI HolomorphicHull log-shell/hull comparison",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean": [
+          "CardAMPLThetaBoundSupply",
+          "realVolume_le",
+          "ofReal_le_theta_of_imageSet_lower",
+          "exists_hull_eq_ofReal",
+          "of_realVolume_le"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.Interface.Cor312",
+      "kind": "interface",
+      "title": "IUTIII Corollary312 top comparison/APT routes",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+          "cor312Conclusion_of_contract"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "XIF.Consumer.AbsTopIII05Refined",
+      "kind": "target",
+      "title": "xif AbsTopIII05RefinedActual (CITABLE 16, D1-D4 typed, D3/D4 anchors)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+          "Prop58iLocalFieldReconstruction",
+          "Prop58iiLogShellReconstruction",
+          "Cor55LogFrobeniusCompatibility",
+          "OrientedGraphAnabelianData",
+          "S3171RouteSlot"
+        ]
+      },
+      "note": "CITABLE 16 decls 10562B sha 08816FDE (prior audit); consumes SourceLogShellAbsTopIIIBridge (D3) and SourceThetaLinkGraphAutomorphismReduction (D4)."
+    },
+    {
+      "id": "XIF.Consumer.AbsTopIII01",
+      "kind": "target",
+      "title": "xif AbsTopIII01LogShellActual (log-shell laws)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII01LogShellActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII01LogShellActual.lean": [
+          "absTopIII_sourceLogShellStar_eq_logShellScale",
+          "absTopIII_logShell_zero_mem",
+          "absTopIII_logShell_add_mem",
+          "absTopIII_invariant_unitLog_mem_logShell",
+          "AbsTopIIILogShellAnchor"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "XIF.Consumer.EtThRows",
+      "kind": "target",
+      "title": "xif EtTh07/EtTh11/Mzk1EtThRealizationConsumer (theta realization rows/consumer)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/EtTh07ConcreteBridgeActual.lean",
+        "tmp/sheaf/xif/paper/EtTh11ThetaRealizationRowsActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/EtTh07ConcreteBridgeActual.lean": [
+          "EtThConcreteBridgeLevel",
+          "etTh_sourceModel_eq_boundary_model",
+          "etThConcreteBridge_sourceFrobenioid_eq_boundary",
+          "etThThetaLogVolume",
+          "etThThetaLogScale"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "Section0.combinatorics",
+      "kind": "theorem",
+      "title": "Section-0 combinatorics extensions (underlying graph, branches, pre-paths/paths, saturated path-pair sets)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean": [
+          "UnderlyingGraph",
+          "underlying",
+          "Branch",
+          "PrePath",
+          "Path",
+          "PathPair",
+          "IsSaturatedPathPairSet"
+        ]
+      },
+      "note": "Declarations-level extension of the Section-0 object layer; paths are morphisms from FinLinear n; saturated path-pair sets defined by invariance under edge-type-preserving vertex maps. Full paper combinatorics (path composition/length additivity, saturated-set theory) remains NAMED. [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] [A469: declarations corrected to actual file-level names] | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "IUTII.Kummer.Absolute.trio",
+      "kind": "tree_asset",
+      "title": "Absolute Kummer trio (Injection / Quotient / Continuity) — BUILD PROVED",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerQuotient.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean": [
+          "RootsOfUnityFixed",
+          "rootsOfUnity_fixed_of_mem_base",
+          "chosenRoot_spec",
+          "absoluteKummerMap_eq_one_iff"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+    },
+    {
+      "id": "Frobenius.UnitsTransport",
+      "kind": "theorem",
+      "title": "Frobenius transport: global-unit map functoriality/injectivity (Example36)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36FrobenioidTransport.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean": [
+          "unitsMapOfRingHom_comp",
+          "unitsMapOfRingHom_comp_apply",
+          "unitsMapOfRingHom_injective",
+          "unitsMapOfRingHom_id_apply"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Addendum to Example36FrobenioidTransport (unitsMapOfRingHom already has apply_coe/one/mul/pow/id in the tree file); new composition/injectivity/identity-apply lemmas for composing place-localization transport data along towers. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. [A479: status normalized PENDING-VERIFY->CONDITIONAL]; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Section0.pathComposition",
+      "kind": "theorem",
+      "title": "Section-0 pre-path/path composition bookkeeping (edge-sequence model)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PathCompositionActual.lean": [
+          "PathData",
+          "length",
+          "nil",
+          "append",
+          "reverse",
+          "pdLength",
+          "pdNil",
+          "pdAppend",
+          "pdReverse",
+          "pdOfEdge",
+          "pdAppend_nil",
+          "pdNil_append",
+          "pdReverse_length",
+          "pdReverse_reverse",
+          "pdReverse_nil",
+          "pdOfEdge_length",
+          "pdOfEdge_append"
+        ]
+      },
+      "note": "FIXED after watchdog EXIT1: clean rewrite (PathData/length/nil/append/reverse/ofEdge; risky assoc proofs dropped); requeued.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.closure",
+      "kind": "theorem",
+      "title": "Frobenius-picture graph automorphism group closure (inverse/product/powers)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureActual.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureActual.lean": [
+          "FrobeniusPictureGraphAut_inv",
+          "FrobeniusPictureGraphAut_mul",
+          "FrobeniusPictureGraphAut_pow"
+        ]
+      },
+      "note": "FIXED after watchdog EXIT1: multiplication proof via h2 then h1; Int-zpow dropped (Nat pow kept); requeued.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Kummer.LogShellCarrierArithmetic",
+      "kind": "theorem",
+      "title": "Log-shell carrier: p/p* arithmetic (odd=p, even=p^2, divisibility)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean": [
+          "sourceLogShellStar_odd",
+          "sourceLogShellStar_even",
+          "sourceLogShellStar_self_or_sq",
+          "sourceLogShellStar_dvd",
+          "SourceLogShellDatum.pStar_dvd",
+          "SourceLogShellDatum.pStar_self_or_sq",
+          "sourceLogShellStar_ne_zero",
+          "sourceLogShellStar_dvd_sq",
+          "SourceLogShellDatum.pStar_dvd_sq",
+          "SourceLogShellDatum.pStar_ne_zero'",
+          "sourceLogShellStar_eq_pow",
+          "sourceLogShellStar_pos'",
+          "SourceLogShellDatum.pStar_pos'"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Addendum to the tree log-shell carrier: p* = p for odd p, p* = p^2 for even p; p* is p or p^2; p | p*; used in the (p*)^-1 log-shell normalization. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. Extended: nonzero and p* | p^2 facts. [A479: status normalized PENDING-VERIFY->CONDITIONAL] WATCHDOG EXIT0 => PROVED (Mzk1LogShellCarrierArithmeticActual). [A484 downgrade] WATCHDOG EXIT0 => PROVED. [A485 downgrade]"
+    },
+    {
+      "id": "Theta.ModLProjection",
+      "kind": "theorem",
+      "title": "Mod-l theta/elliptic projections: class computation and factorization lemmas",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionActual.lean",
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaModLProjectionActual.lean": [
+          "modLThetaProjection_apply",
+          "modLEllipticProjection_apply",
+          "modLThetaProjection_eq_comp",
+          "modLEllipticProjection_eq_comp"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Addendum to EtaleThetaQuotient: computation of the mod-l theta/elliptic projections on group elements (two-stage quotient class) and definitional factorization through the quotient projections. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. [A479: status normalized PENDING-VERIFY->CONDITIONAL] WATCHDOG EXIT0 => PROVED (Mzk1ThetaModLProjectionActual). [A484 downgrade] WATCHDOG EXIT0 => PROVED. [A485 downgrade]"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.unicity",
+      "kind": "theorem",
+      "title": "Translation parameter uniqueness for Frobenius-picture graph automorphisms",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityActual.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GraphAutTranslationUnicityActual.lean": [
+          "chainTranslation_eq_iff",
+          "chainTranslation_eq_one_iff",
+          "graphAut_translation_unique",
+          "chainTranslation_injective_param",
+          "chainTranslation_ne_one_iff"
+        ]
+      },
+      "note": "FIXED after watchdog EXIT1: uniqueness arg order; ne_one_iff via not_congr; requeued.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "Section0.saturationLaws",
+      "kind": "theorem",
+      "title": "Section-0 saturated path-pair set lattice laws (empty/univ/compl/inter/union)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturationLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturationLawsActual.lean": [
+          "isSaturated_empty",
+          "isSaturated_univ",
+          "isSaturated_compl",
+          "isSaturated_inter",
+          "isSaturated_union"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd) | A484: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "IUTII.Kummer.Absolute.summary",
+      "kind": "bridge",
+      "title": "Absolute Kummer trio: consumer-facing summary aliases (Injection/Quotient/Continuity)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioSummaryActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean",
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerQuotient.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioSummaryActual.lean": [
+          "absoluteKummerTrioRows",
+          "absoluteKummerTrioRows_length"
+        ]
+      },
+      "note": "FIXED after watchdog EXIT1: alias declarations replaced by import point + absoluteKummerTrioRows row index; requeued.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.arrows",
+      "kind": "theorem",
+      "title": "Frobenius-picture arrow relation: elementary facts (functional/irreflexive/successor)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowFactsActual.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusPictureArrowFactsActual.lean": [
+          "frobeniusPictureArrow_iff",
+          "frobeniusPictureArrow_ne_self",
+          "frobeniusPictureArrow_unique",
+          "frobeniusPictureArrow_succ",
+          "frobeniusPictureArrow_target",
+          "frobeniusPictureArrow_comp",
+          "frobeniusPictureArrow_comp_iff",
+          "frobeniusPictureArrow_comp_three"
+        ]
+      },
+      "note": "FIXED after watchdog EXIT1: shift theorem removed (comp/comp_iff/comp_three kept); requeued.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.translationLaw",
+      "kind": "theorem",
+      "title": "Frobenius-picture translations: group law (additive parameter)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainTranslationLawActual.lean": [
+          "chainTranslation_add",
+          "chainTranslation_add_apply",
+          "chainTranslation_zero_eq_one",
+          "chainTranslation_mul_one",
+          "chainTranslation_zero_apply",
+          "chainTranslation_zero_add",
+          "chainTranslation_add_zero"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): Group law of the Frobenius-picture translations: chainTranslation (k+l) = chainTranslation k * chainTranslation l, pointwise form, zero=identity, right identity. Complements unicity/closure nodes. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. [A479: status normalized PENDING-VERIFY->CONDITIONAL] WATCHDOG EXIT0 => PROVED (Mzk1ChainTranslationLawActual). [A484 downgrade] WATCHDOG EXIT0 => PROVED. [A485 downgrade]"
+    },
+    {
+      "id": "Section0.graphLaws",
+      "kind": "theorem",
+      "title": "Section-0 oriented-graph categorical laws (opposite/underlying, Hom assoc/ids, FinLinear card)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphLawsActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphLawsActualV2.lean": [
+          "opposite_underlying_adj",
+          "underlying_frobeniusPicture_adjacent",
+          "Hom.map_underlying",
+          "Hom.comp_assoc",
+          "Hom.id_comp",
+          "Hom.comp_id",
+          "FinLinear_card",
+          "Hom.comp_map",
+          "Hom.id_map",
+          "Hom.id_toFun",
+          "Hom.comp_toFun_apply"
+        ]
+      },
+      "note": "PENDING-VERIFY: real proofs over constructed Section-0 graph objects | A493: V2 copy (old file stuck in killed/failed state; same content)"
+    },
+    {
+      "id": "Section0.orderLaws",
+      "kind": "theorem",
+      "title": "Section-0 ordered-set laws (adjacent pairs; orderwise connectedness; countable iff)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderLawsActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderLawsActualV2.lean": [
+          "adjacent_iff",
+          "adjacent_succ",
+          "adjacent_irrefl",
+          "adjacent_injective",
+          "orderwiseConnected_empty",
+          "orderwiseConnected_univ",
+          "orderwiseConnected_Icc",
+          "countablyOrdered_iff"
+        ]
+      },
+      "note": "PENDING-VERIFY: real proofs over constructed order objects | A493: V2 copy (old file stuck in killed/failed state; same content)"
+    },
+    {
+      "id": "Skeleton.AddendaIndex",
+      "kind": "interface",
+      "title": "IUTI/IUTII skeleton: single import point for the addenda modules (9 rows)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SkeletonAddendaIndexActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SkeletonAddendaIndexActual.lean": [
+          "skeletonAddendaRows",
+          "skeletonAddendaRows_length",
+          "skeletonPendingVerifyNodes",
+          "skeletonPendingVerifyNodes_length"
+        ]
+      },
+      "note": "Consumer integration import point: imports the nine IUTI/IUTII addenda modules and lists (module, fragment node) pairs; length theorem checks the 9 rows. No new math beyond the imported modules. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. [A479: status normalized PENDING-VERIFY->CONDITIONAL]"
+    },
+    {
+      "id": "Section0.cor55OrderLaws",
+      "kind": "theorem",
+      "title": "Cor-5.5 L/L-dagger order laws (strict mono embedding, coe le/ne/bot)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor55OrderLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor55OrderLawsActual.lean": [
+          "cor55_L_embedding_strictMono",
+          "cor55_some_le_some",
+          "cor55_some_ne_bot",
+          "cor55_square_le_some"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real order-law proofs on WithBot Z model | A491: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "Section0.prePathLaws",
+      "kind": "theorem",
+      "title": "Section-0 pre-path/path/path-pair definitional wrapper laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0PrePathLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0PrePathLawsActual.lean": [
+          "PrePath_def",
+          "Path_def",
+          "PathPair_def",
+          "pathPair_fst",
+          "isSaturatedPathPairSet_iff"
+        ]
+      },
+      "note": "PENDING-VERIFY: definitional re-exports"
+    },
+    {
+      "id": "Section0.orderCatLaws",
+      "kind": "theorem",
+      "title": "Order(E) category laws (hom subsingleton; id/comp normal forms)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatLawsActual.lean": [
+          "orderCat_id_eq",
+          "orderCat_comp_eq"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real categorical normal-form proofs | A491: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "Section0.finLinearLaws",
+      "kind": "theorem",
+      "title": "FinLinear oriented graph edge laws (edge iff succ; forward/irreflexive; vertex bound)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0FinLinearLawsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0FinLinearLawsActual.lean": [
+          "FinLinear_edge_iff",
+          "FinLinear_edge_forward",
+          "FinLinear_edge_irrefl",
+          "FinLinear_vertex_lt_succ"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real proofs on Fin (n+1) PLift edges | A489: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "HodgeThetaLinkGraph.group",
+      "kind": "theorem",
+      "title": "Aut(Gamma) as a Subgroup of Equiv.Perm Z (translations included)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutGroupActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutClosureActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusGraphAutGroupActual.lean": [
+          "frobeniusGraphAutGroup",
+          "mem_frobeniusGraphAutGroup",
+          "chainTranslation_mem_graphAutGroup",
+          "frobeniusGraphAutGroup_inv_mem",
+          "frobeniusGraphAutGroup_mem_iff_range",
+          "frobeniusGraphAutGroup_coe_eq_range"
+        ]
+      },
+      "note": "Group-object packaging of the Frobenius-picture graph automorphisms: Subgroup (Equiv.Perm Int) with carrier the graph automorphism predicate, closure by one/mul/inv from the closure addendum; translation membership theorem. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt. [A479: status normalized PENDING-VERIFY->CONDITIONAL]"
+    },
+    {
+      "id": "Section0.oppositeLaws",
+      "kind": "theorem",
+      "title": "Opposite-graph underlying laws (involution; FinLinear/Frobenius reversed adjacency)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OppositeLawsActualV2.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OppositeLawsActualV2.lean": [
+          "opposite_opposite_underlying_adj",
+          "FinLinear_opposite_underlying_adj",
+          "frobeniusPicture_opposite_underlying_adj"
+        ]
+      },
+      "note": "PENDING-VERIFY: real proofs | A493: V2 copy (old file stuck in killed/failed state; same content)"
+    },
+    {
+      "id": "Section0.graphAut",
+      "kind": "theorem",
+      "title": "Oriented-graph automorphism subgroup + Frobenius-picture embedding",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphAutActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0GraphAutActual.lean": [
+          "GraphAut",
+          "mem_graphAut_iff",
+          "frobeniusPictureGraphAut_mem"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: real subgroup construction | A489: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "Theta.PacketIndex",
+      "kind": "interface",
+      "title": "IUTII Theta: finite packet / theta-link consumer row index (9 rows)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPacketIndexActual.lean",
+        "LeanFormal/IUT/IUTII/Theta/FiniteThetaPacket.lean",
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPacketIndexActual.lean": [
+          "thetaPacketRows",
+          "thetaPacketRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); Consumer import point for the IUTII Theta finite packet / theta-link facts: imports the tree modules and indexes 9 declarations (unit-power/embedded-unit/generator/symm/representations/uniqueness/ext). No new math. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt."
+    },
+    {
+      "id": "Frobenius.UnitsIndex",
+      "kind": "interface",
+      "title": "Example36 Frobenius transport: global-unit consumer row index (11 rows)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsIndexActual.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36FrobenioidTransport.lean",
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsTransportActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusUnitsIndexActual.lean": [
+          "frobeniusUnitsRows",
+          "frobeniusUnitsRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); Consumer import/index for the global-unit map of Example36 Frobenius transport (tree facts + addendum functoriality/injectivity/powers). No new math. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt."
+    },
+    {
+      "id": "HodgeTheater.LinkIndex",
+      "kind": "interface",
+      "title": "IUTI Hodge theater: link-category consumer row index (9 rows)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterIndexActual.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean",
+        "LeanFormal/IUT/IUTI/HodgeTheater/ConcreteHodgeTheaterExample.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterIndexActual.lean": [
+          "hodgeTheaterRows",
+          "hodgeTheaterRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); Consumer index for the Hodge-theater core/link structures (refl/symm/trans/symm_symm) and the Gaussian concrete examples. No new math. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt."
+    },
+    {
+      "id": "Kummer.LogShellIndex",
+      "kind": "interface",
+      "title": "IUT-II log-shell carrier: consumer row index (10 rows)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierIndexActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean",
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierArithmeticActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierIndexActual.lean": [
+          "logShellCarrierRows",
+          "logShellCarrierRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY escalated to CONDITIONAL (validator fix by shehdd); Consumer index for the log-shell carrier (star/pStar/preLogShell/logShell/unitLayer/codomain containment) and the p* arithmetic addendum. No new math. Status PENDING-VERIFY: watchdog compile queued via dag/watchdog/extra-targets.txt.; EXIT0 (watchdog compile)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "IUTI.HodgeTheater.Family",
+      "to": "IUTI.HodgeTheater.Core",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTI.InitialTheta.Data",
+      "to": "IUTI.HodgeTheater.Family",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTI.InitialTheta.Definition31",
+      "to": "IUTI.InitialTheta.Data",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTI.InitialTheta.Places",
+      "to": "IUTI.InitialTheta.Definition31",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTI.InitialTheta.Torsion",
+      "to": "IUTI.InitialTheta.Definition31",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.SourceModel",
+      "to": "IUTI.HodgeTheater.GeometricCore",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Frobenioid.ThetaLogShell",
+      "to": "IUTII.Frobenioid.SourceModel",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.TateUniformization",
+      "to": "IUTII.Frobenioid.SourceModel",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.CurveGalois",
+      "to": "IUTII.Frobenioid.SourceModel",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.Transport",
+      "to": "IUTII.Frobenioid.CurveGalois",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.Transport",
+      "to": "IUTII.Frobenioid.SourceModel",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Frobenioid.CompletionLocal",
+      "to": "IUTI.InitialTheta.Places",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.LogShellCarrier",
+      "to": "IUTII.Frobenioid.ThetaLogShell",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.LogShellAbsTopIII",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTII.Kummer.Packets",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Kummer.Classes",
+      "to": "IUTII.Kummer.Packets",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.MonoAnalytic",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.Absolute",
+      "to": "IUTII.Kummer.Classes",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.SourceThetaPilot",
+      "to": "IUTII.Kummer.Packets",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTII.Theta.EtaleThetaQuotient",
+      "to": "IUTII.Kummer.Classes",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Theta.ThetaLink",
+      "to": "IUTII.Theta.EtaleThetaQuotient",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTII.Theta.ConcreteBridge",
+      "to": "IUTII.Theta.ThetaLink",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Theta.ConcreteBridge",
+      "to": "IUTII.Frobenioid.SourceModel",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Theta.ConcreteBridge",
+      "to": "IUTI.InitialTheta.Data",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.EtThRealization",
+      "to": "IUTII.Theta.ConcreteBridge",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.EtThRealization",
+      "to": "IUTII.Theta.EtaleThetaQuotient",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.LogShellHull",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.LogShellHull",
+      "to": "IUTII.Frobenioid.ThetaLogShell",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.Cor312",
+      "to": "IUTIII.Interface.EtThRealization",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.Interface.Cor312",
+      "to": "IUTIII.Interface.LogShellHull",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.Interface.Cor312",
+      "to": "IUTII.Frobenioid.Transport",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.Interface.Cor312",
+      "to": "IUTII.Kummer.SourceThetaPilot",
+      "kind": "gap"
+    },
+    {
+      "from": "XIF.Consumer.AbsTopIII05Refined",
+      "to": "IUTII.Kummer.LogShellAbsTopIII",
+      "kind": "interface"
+    },
+    {
+      "from": "XIF.Consumer.AbsTopIII05Refined",
+      "to": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "interface"
+    },
+    {
+      "from": "XIF.Consumer.AbsTopIII01",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "interface"
+    },
+    {
+      "from": "XIF.Consumer.EtThRows",
+      "to": "IUTII.Theta.ConcreteBridge",
+      "kind": "interface"
+    },
+    {
+      "from": "XIF.Consumer.EtThRows",
+      "to": "IUTII.Theta.EtaleThetaQuotient",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTII.Kummer.Absolute.trio",
+      "to": "IUTII.Kummer.Absolute",
+      "kind": "statement"
+    },
+    {
+      "from": "Frobenius.UnitsTransport",
+      "to": "IUTII.Frobenioid.Transport",
+      "kind": "statement"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.closure",
+      "to": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "statement"
+    },
+    {
+      "from": "Kummer.LogShellCarrierArithmetic",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "statement"
+    },
+    {
+      "from": "Theta.ModLProjection",
+      "to": "IUTII.Theta.EtaleThetaQuotient",
+      "kind": "statement"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.unicity",
+      "to": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "statement"
+    },
+    {
+      "from": "Section0.saturationLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTII.Kummer.Absolute.summary",
+      "to": "IUTII.Kummer.Absolute",
+      "kind": "interface"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.arrows",
+      "to": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "statement"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.translationLaw",
+      "to": "IUTI.HodgeTheater.ThetaLinkGraph",
+      "kind": "statement"
+    },
+    {
+      "from": "Section0.graphLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "Section0.orderLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "Skeleton.AddendaIndex",
+      "to": "IUTII.Kummer.Absolute.summary",
+      "kind": "interface"
+    },
+    {
+      "from": "Section0.cor55OrderLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "Section0.prePathLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "Section0.orderCatLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "Section0.finLinearLaws",
+      "to": "Section0.combinatorics",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTI.HodgeTheater.Definition31Carriers",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "statement"
+    },
+    {
+      "from": "Section0.pathComposition",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "statement"
+    },
+    {
+      "from": "HodgeThetaLinkGraph.group",
+      "to": "HodgeThetaLinkGraph.closure",
+      "kind": "statement"
+    },
+    {
+      "from": "Section0.oppositeLaws",
+      "to": "Section0.graphLaws",
+      "kind": "proof"
+    },
+    {
+      "from": "Section0.graphAut",
+      "to": "Section0.graphLaws",
+      "kind": "proof"
+    },
+    {
+      "from": "Theta.PacketIndex",
+      "to": "IUTII.Theta.ThetaLink",
+      "kind": "interface"
+    },
+    {
+      "from": "Frobenius.UnitsIndex",
+      "to": "Frobenius.UnitsTransport",
+      "kind": "interface"
+    },
+    {
+      "from": "HodgeTheater.LinkIndex",
+      "to": "IUTI.HodgeTheater.Family",
+      "kind": "interface"
+    },
+    {
+      "from": "Kummer.LogShellIndex",
+      "to": "IUTII.Kummer.LogShellCarrier",
+      "kind": "interface"
+    }
+  ]
+}

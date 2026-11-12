@@ -1,0 +1,9 @@
+'LeanFormal.IUT.N8Closure.PaperP6FullTarget.paperP6FullTarget_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.N8Closure.PaperP6FullTarget.paperValuesBoundedTarget_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.N8Closure.PaperP6Target2.paperP6Target_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

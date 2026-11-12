@@ -1,0 +1,714 @@
+{
+  "$schema_note": "IUT IV prerequisite-object DAG for the IUT 3.12 target sentence (Lead A469/A470); REUSE existing DAG ids, only true gaps are new local nodes; single-writer fragment owner stepxi",
+  "owner": "stepxi",
+  "frozen_pins": {
+    "registry": 14041,
+    "gate": "NOT PASSED",
+    "binding": "HOLD"
+  },
+  "meta": {
+    "section": "iut-pre-stepxi",
+    "author": "stepxi",
+    "date": "2026-11-11",
+    "evidence_note": "edges carry planned/observed_source; no proofs claimed"
+  },
+  "nodes": [
+    {
+      "id": "IUT312.statement",
+      "kind": "target",
+      "status": "GAP",
+      "title": "IUTchIII Corollary 3.12 (abc bound) top statement",
+      "files": [],
+      "declarations": {},
+      "note": "Goal-sentence target; reuse all pre-object nodes below; not proved.",
+      "paper": "[IUTchIII] Cor 3.12"
+    },
+    {
+      "id": "GAP.sec1_to_sec2",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "missing transfer: IUT IV Thm 1.10 display -> §2 comparison fields N1/N2",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "Sec1ToSec2GapStatement",
+          "sec1_sec2_transfer"
+        ]
+      },
+      "note": "Reuses deep statement layer and Mzk1IUTIVSec1Sec2GapActual; no bridge theorem.",
+      "paper": "[IUT IV] §1->§2"
+    },
+    {
+      "id": "S1.prop11",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Prop 1.1 tensor-packet ring structure",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp11Statement",
+          "prop11_tensorRing"
+        ]
+      },
+      "note": "Reuses Type-level deep statement layer (supersedes Prop statement file).",
+      "paper": "[IUT IV] Prop 1.1"
+    },
+    {
+      "id": "S1.prop12",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Prop 1.2 arithmetic estimate",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp12Statement",
+          "prop12_estimate"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] Prop 1.2"
+    },
+    {
+      "id": "S1.prop14",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Prop 1.4 local log-volume estimate",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp14Statement",
+          "prop14_localLog"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] Prop 1.4"
+    },
+    {
+      "id": "S1.prop15",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Prop 1.5 general archimedean estimate",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp15Statement",
+          "prop15_archimedean"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] Prop 1.5"
+    },
+    {
+      "id": "S1.prop18",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Prop 1.8 elliptic/Serre input",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp18Statement",
+          "prop18_serre"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] Prop 1.8"
+    },
+    {
+      "id": "S1.thm110actual",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "IUT IV Thm 1.10 actual log-volume estimate (beyond display shape)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVThm110ActualStatement",
+          "thm110_actual"
+        ]
+      },
+      "note": "Reuses deep statement layer; actual estimate remains named.",
+      "paper": "[IUT IV] Thm 1.10"
+    },
+    {
+      "id": "S2.pnt",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "explicit Prop 2.2 PNT constants (not just eventuality forms)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp22PNTStatement",
+          "pnt_constants"
+        ]
+      },
+      "note": "Reuses deep statement layer; explicit PNT constants named.",
+      "paper": "[IUT IV] Prop 2.2"
+    },
+    {
+      "id": "S2.arithmeticTransition",
+      "kind": "named_input",
+      "status": "GAP",
+      "title": "arithmetic transition / theta-link comparison objects (IUT III->IV linkage)",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVSec2ArithmeticTransitionStatement",
+          "sec2_transition"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT III/IV] linkage"
+    },
+    {
+      "id": "S1b.heightInput",
+      "kind": "named_input",
+      "status": "NAMED",
+      "title": "uniform valuation bound (H1) + comparison-region volume dominance",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "HeightInputStatement",
+          "height_uniform"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] §1 (b)"
+    },
+    {
+      "id": "S1c.undilatedInput",
+      "kind": "named_input",
+      "status": "NAMED",
+      "title": "(c) undilated region-volume bound / split point bound",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "UndilatedInputStatement",
+          "undilated_bound"
+        ]
+      },
+      "note": "Reuses deep statement layer.",
+      "paper": "[IUT IV] §1 (c)"
+    }
+  ],
+  "edges": [
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.srcUnitRegion",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.stepV",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.s2717",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "GAP.sec1_to_sec2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.prop11",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.prop12",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.prop14",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.prop15",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.prop18",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1.thm110actual",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S2.pnt",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S2.arithmeticTransition",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1b.heightInput",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "S1c.undilatedInput",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "GAP.sec1_to_sec2",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "GAP.sec1_to_sec2",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop11",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop12",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop14",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop15",
+      "to": "e-deep:E5.iutivSection1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop18",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.thm110actual",
+      "to": "e-deep:E5.display",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S2.pnt",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "S2.arithmeticTransition",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1b.heightInput",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1c.undilatedInput",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.display",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "gap",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.comparisonGaps",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "T1-cor312-abc-bridge",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.s2717",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "T1-cor312-abc-bridge",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.display",
+      "to": "S1.thm110actual",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.srcUnitRegion",
+      "to": "e-deep:E5.srcUnitRegion",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.carrierGap",
+      "to": "IUT312.statement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.iutivAdd",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.iutivSection1",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.iutivSection2",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.displayInputsStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "e-deep:E5.carrierGap",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T2-bridge-interface",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "T4-iut4-arithmetic-degree",
+      "to": "e-deep:E5.iutivAdd",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "T5-iut4-prop17",
+      "to": "e-deep:E5.iutivSection1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "T6-iut4-theta-two-sided",
+      "to": "e-deep:E5.iutivSection2",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.stepV",
+      "to": "T5-iut4-prop17",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.displayInputsStatement",
+      "to": "e-deep:E5.display",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.comparisonGaps",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.uniformHeightConsumer",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.display",
+      "to": "e-deep:E5.displayInputsStatement",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.carrierGap",
+      "to": "e-deep:E5.srcUnitRegion",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.s2717",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "S2.pnt",
+      "to": "e-deep:E5.iutivSection2",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "S2.arithmeticTransition",
+      "to": "e-deep:E5.carrierGap",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.thm110actual",
+      "to": "e-deep:E5.undilatedABCBridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "S1.prop14",
+      "to": "e-deep:E5.uniformHeightConsumer",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.comparisonGaps",
+      "to": "T2-bridge-interface",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.undilatedABCBridge",
+      "to": "T0-abc-target",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.iutivSection2",
+      "to": "e-deep:E5.display",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.stepV",
+      "to": "e-deep:E5.display",
+      "kind": "proof",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.iutivAdd",
+      "to": "e-deep:E5.iutivSection1",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "e-deep:E5.displayInputsStatement",
+      "to": "e-deep:E5.comparisonGaps",
+      "kind": "gap",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.comparisonGaps",
+      "to": "e-deep:E5.display",
+      "kind": "gap",
+      "evidence": "planned"
+    },
+    {
+      "from": "e-deep:E5.uniformHeightConsumer",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T4-iut4-arithmetic-degree",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IUT312.statement",
+      "to": "T5-iut4-prop17",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.prop11",
+      "to": "hull:PRE.IUTIV.PROP11.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.prop12",
+      "to": "hull:PRE.IUTIV.PROP12.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.prop14",
+      "to": "hull:PRE.IUTIV.PROP14.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.prop15",
+      "to": "hull:PRE.IUTIV.PROP15.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.prop18",
+      "to": "hull:PRE.IUTIV.PROP18.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1.thm110actual",
+      "to": "hull:PRE.IUTIV.THM110.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S2.pnt",
+      "to": "hull:PRE.IUTIV.PNT.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S2.arithmeticTransition",
+      "to": "hull:PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "GAP.sec1_to_sec2",
+      "to": "hull:PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1b.heightInput",
+      "to": "hull:PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "S1c.undilatedInput",
+      "to": "hull:PRE.IUTIV.UNDILATED.INPUT.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    }
+  ]
+}

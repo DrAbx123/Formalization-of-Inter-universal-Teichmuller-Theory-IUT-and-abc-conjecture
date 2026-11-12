@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1L04LogComparisonStatementActual",
+  "kind": "statement",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1L04LogComparisonStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent loop registration"
+}

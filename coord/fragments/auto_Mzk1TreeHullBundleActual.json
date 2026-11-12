@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1TreeHullBundleActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1TreeHullBundleActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only"
+}

@@ -1,0 +1,14 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge2Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge2Actual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge2Actual.lean": [
+      "numMaxP_insert_infty_image"
+    ]
+  },
+  "note": "A472 real Lean: numMax P1 bridge (infinity not maximal for maxDeg>=2); new file only, no sorry; watchdog to verify"
+}

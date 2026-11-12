@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1StepXIInterfaceConsumerActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepXIInterfaceConsumerActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

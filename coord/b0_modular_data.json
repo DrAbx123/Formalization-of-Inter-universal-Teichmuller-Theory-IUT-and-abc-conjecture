@@ -1,0 +1,2544 @@
+{
+ "NMAX": 30,
+ "PMAX": 25,
+ "curves": [
+  {
+   "N": 11,
+   "conductor": 11,
+   "curve": "11a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 11,
+   "conductor": 11,
+   "curve": "11a2",
+   "deg_eq_rf": true,
+   "deg_phi": "5",
+   "is_semistable": true,
+   "r_f": "5",
+   "squarefree": true
+  },
+  {
+   "N": 11,
+   "conductor": 11,
+   "curve": "11a3",
+   "deg_eq_rf": true,
+   "deg_phi": "5",
+   "is_semistable": true,
+   "r_f": "5",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a2",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a3",
+   "deg_eq_rf": true,
+   "deg_phi": "3",
+   "is_semistable": true,
+   "r_f": "3",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a4",
+   "deg_eq_rf": true,
+   "deg_phi": "3",
+   "is_semistable": true,
+   "r_f": "3",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a5",
+   "deg_eq_rf": true,
+   "deg_phi": "6",
+   "is_semistable": true,
+   "r_f": "6",
+   "squarefree": true
+  },
+  {
+   "N": 14,
+   "conductor": 14,
+   "curve": "14a6",
+   "deg_eq_rf": true,
+   "deg_phi": "6",
+   "is_semistable": true,
+   "r_f": "6",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a2",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a3",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a4",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a5",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a6",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a7",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 15,
+   "conductor": 15,
+   "curve": "15a8",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 17,
+   "conductor": 17,
+   "curve": "17a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 17,
+   "conductor": 17,
+   "curve": "17a2",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 17,
+   "conductor": 17,
+   "curve": "17a3",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 17,
+   "conductor": 17,
+   "curve": "17a4",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 19,
+   "conductor": 19,
+   "curve": "19a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 19,
+   "conductor": 19,
+   "curve": "19a2",
+   "deg_eq_rf": true,
+   "deg_phi": "3",
+   "is_semistable": true,
+   "r_f": "3",
+   "squarefree": true
+  },
+  {
+   "N": 19,
+   "conductor": 19,
+   "curve": "19a3",
+   "deg_eq_rf": true,
+   "deg_phi": "3",
+   "is_semistable": true,
+   "r_f": "3",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a1",
+   "deg_eq_rf": true,
+   "deg_phi": "1",
+   "is_semistable": true,
+   "r_f": "1",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a2",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a3",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a4",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a5",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 21,
+   "conductor": 21,
+   "curve": "21a6",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 26,
+   "conductor": 26,
+   "curve": "26a1",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 26,
+   "conductor": 26,
+   "curve": "26a2",
+   "deg_eq_rf": true,
+   "deg_phi": "6",
+   "is_semistable": true,
+   "r_f": "6",
+   "squarefree": true
+  },
+  {
+   "N": 26,
+   "conductor": 26,
+   "curve": "26a3",
+   "deg_eq_rf": true,
+   "deg_phi": "6",
+   "is_semistable": true,
+   "r_f": "6",
+   "squarefree": true
+  },
+  {
+   "N": 26,
+   "conductor": 26,
+   "curve": "26b1",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 26,
+   "conductor": 26,
+   "curve": "26b2",
+   "deg_eq_rf": true,
+   "deg_phi": "14",
+   "is_semistable": true,
+   "r_f": "14",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a1",
+   "deg_eq_rf": true,
+   "deg_phi": "2",
+   "is_semistable": true,
+   "r_f": "2",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a2",
+   "deg_eq_rf": true,
+   "deg_phi": "4",
+   "is_semistable": true,
+   "r_f": "4",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a3",
+   "deg_eq_rf": true,
+   "deg_phi": "6",
+   "is_semistable": true,
+   "r_f": "6",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a4",
+   "deg_eq_rf": true,
+   "deg_phi": "8",
+   "is_semistable": true,
+   "r_f": "8",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a5",
+   "deg_eq_rf": true,
+   "deg_phi": "8",
+   "is_semistable": true,
+   "r_f": "8",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a6",
+   "deg_eq_rf": true,
+   "deg_phi": "12",
+   "is_semistable": true,
+   "r_f": "12",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a7",
+   "deg_eq_rf": true,
+   "deg_phi": "24",
+   "is_semistable": true,
+   "r_f": "24",
+   "squarefree": true
+  },
+  {
+   "N": 30,
+   "conductor": 30,
+   "curve": "30a8",
+   "deg_eq_rf": true,
+   "deg_phi": "24",
+   "is_semistable": true,
+   "r_f": "24",
+   "squarefree": true
+  }
+ ],
+ "elapsed_sec": "2.93",
+ "errors": [],
+ "known_checks": {
+  "11a1": {
+   "conductor": 11,
+   "congruence_number": "1",
+   "expected_deg_phi": 1,
+   "modular_degree": "1",
+   "ok": true,
+   "semistable": true
+  },
+  "14a1": {
+   "conductor": 14,
+   "congruence_number": "1",
+   "expected_deg_phi": 1,
+   "modular_degree": "1",
+   "ok": true,
+   "semistable": true
+  },
+  "37a1": {
+   "conductor": 37,
+   "congruence_number": "2",
+   "expected_deg_phi": 2,
+   "modular_degree": "2",
+   "ok": true,
+   "semistable": true
+  }
+ },
+ "levels": {
+  "11": {
+   "N": 11,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    }
+   },
+   "n_curves": 3,
+   "n_semistable": 3,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -2,
+      -1,
+      2,
+      1,
+      2,
+      -2,
+      0,
+      -2,
+      -2,
+      1,
+      -2,
+      4,
+      4,
+      -1,
+      -4,
+      -2,
+      4,
+      0,
+      2
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 11,
+     "q_expansion": "q - 2*q^2 - q^3 + 2*q^4 + q^5 + 2*q^6 - 2*q^7 - 2*q^9 - 2*q^10 + q^11 - 2*q^12 + 4*q^13 + 4*q^14 - q^15 - 4*q^16 - 2*q^17 + 4*q^18 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 3,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(1,8)",
+     "(1,9)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - 2*q^2 - q^3 + 2*q^4 + q^5 + O(q^6)"
+    ]
+   }
+  },
+  "14": {
+   "N": 14,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -4,
+       0
+      ],
+      [
+       0,
+       -4
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       6,
+       0
+      ],
+      [
+       0,
+       6
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       2
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 6,
+   "n_semistable": 6,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      -2,
+      1,
+      0,
+      2,
+      1,
+      -1,
+      1,
+      0,
+      0,
+      -2,
+      -4,
+      -1,
+      0,
+      1,
+      6,
+      -1,
+      2,
+      0
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 14,
+     "q_expansion": "q - q^2 - 2*q^3 + q^4 + 2*q^6 + q^7 - q^8 + q^9 - 2*q^12 - 4*q^13 - q^14 + q^16 + 6*q^17 - q^18 + 2*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 5,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(2,11) - (7,1) + (7,2)",
+     "(2,13) - (7,1) + (7,2)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^2 - 2*q^3 + q^4 + O(q^6)"
+    ]
+   }
+  },
+  "15": {
+   "N": 15,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -4,
+       0
+      ],
+      [
+       0,
+       -4
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       2
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 8,
+   "n_semistable": 8,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      0,
+      3,
+      1,
+      -1,
+      -4,
+      1,
+      -2,
+      0,
+      -1,
+      -1,
+      2,
+      -1,
+      4,
+      -1
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 15,
+     "q_expansion": "q - q^2 - q^3 - q^4 + q^5 + q^6 + 3*q^8 + q^9 - q^10 - 4*q^11 + q^12 - 2*q^13 - q^15 - q^16 + 2*q^17 - q^18 + 4*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 5,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(3,4) - (5,2) + (5,3)",
+     "(5,1) - (5,2)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^2 - q^3 - q^4 + q^5 + O(q^6)"
+    ]
+   }
+  },
+  "17": {
+   "N": 17,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -4,
+       0
+      ],
+      [
+       0,
+       -4
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    }
+   },
+   "n_curves": 4,
+   "n_semistable": 4,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      0,
+      -1,
+      -2,
+      0,
+      4,
+      3,
+      -3,
+      2,
+      0,
+      0,
+      -2,
+      -4,
+      0,
+      -1,
+      1,
+      3,
+      -4,
+      2
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 17,
+     "q_expansion": "q - q^2 - q^4 - 2*q^5 + 4*q^7 + 3*q^8 - 3*q^9 + 2*q^10 - 2*q^13 - 4*q^14 - q^16 + q^17 + 3*q^18 - 4*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 3,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(1,14)",
+     "(1,15)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^2 - q^4 - 2*q^5 + O(q^6)"
+    ]
+   }
+  },
+  "19": {
+   "N": 19,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       3
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       3
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -4,
+       0
+      ],
+      [
+       0,
+       -4
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -3,
+       0
+      ],
+      [
+       0,
+       -3
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 3,
+   "n_semistable": 3,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      0,
+      -2,
+      -2,
+      3,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      3,
+      4,
+      -4,
+      0,
+      -6,
+      4,
+      -3,
+      0,
+      1,
+      -6
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 19,
+     "q_expansion": "q - 2*q^3 - 2*q^4 + 3*q^5 - q^7 + q^9 + 3*q^11 + 4*q^12 - 4*q^13 - 6*q^15 + 4*q^16 - 3*q^17 + q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 3,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(1,15)",
+     "(1,17)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - 2*q^3 - 2*q^4 + 3*q^5 + O(q^6)"
+    ]
+   }
+  },
+  "21": {
+   "N": 21,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0
+      ],
+      [
+       0,
+       -1
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0
+      ],
+      [
+       0,
+       -2
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -6,
+       0
+      ],
+      [
+       0,
+       -6
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0
+      ],
+      [
+       0,
+       4
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 6,
+   "n_semistable": 6,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      1,
+      -1,
+      -2,
+      -1,
+      -1,
+      3,
+      1,
+      2,
+      4,
+      -1,
+      -2,
+      1,
+      -2,
+      -1,
+      -6,
+      -1,
+      4,
+      2
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 21,
+     "q_expansion": "q - q^2 + q^3 - q^4 - 2*q^5 - q^6 - q^7 + 3*q^8 + q^9 + 2*q^10 + 4*q^11 - q^12 - 2*q^13 + q^14 - 2*q^15 - q^16 - 6*q^17 - q^18 + 4*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 5,
+    "cuspidal_dim": 2,
+    "integral_basis": [
+     "(3,5) - (7,2) + (7,3)",
+     "(7,1) - (7,2)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^2 + q^3 - q^4 - 2*q^5 + O(q^6)"
+    ]
+   }
+  },
+  "26": {
+   "N": 26,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0,
+       1,
+       -1
+      ],
+      [
+       1,
+       1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       -1
+      ],
+      [
+       0,
+       0,
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       0,
+       -2,
+       2
+      ],
+      [
+       -2,
+       -3,
+       2,
+       0
+      ],
+      [
+       -2,
+       0,
+       -1,
+       2
+      ],
+      [
+       0,
+       0,
+       0,
+       1
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0,
+       1,
+       -1
+      ],
+      [
+       1,
+       -1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       -2,
+       -1
+      ],
+      [
+       0,
+       0,
+       0,
+       -3
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0,
+       1,
+       -1
+      ],
+      [
+       1,
+       1,
+       -1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       -1
+      ],
+      [
+       0,
+       0,
+       0,
+       -1
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       2,
+       0,
+       -4,
+       4
+      ],
+      [
+       -4,
+       -2,
+       4,
+       0
+      ],
+      [
+       -4,
+       0,
+       2,
+       4
+      ],
+      [
+       0,
+       0,
+       0,
+       6
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0,
+       -1,
+       1
+      ],
+      [
+       -1,
+       -1,
+       1,
+       0
+      ],
+      [
+       -1,
+       0,
+       0,
+       1
+      ],
+      [
+       0,
+       0,
+       0,
+       1
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -3,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       -3,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       -3,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       -3
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       0,
+       2,
+       -2
+      ],
+      [
+       2,
+       6,
+       -2,
+       0
+      ],
+      [
+       2,
+       0,
+       4,
+       -2
+      ],
+      [
+       0,
+       0,
+       0,
+       2
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       0,
+       -2,
+       2
+      ],
+      [
+       -2,
+       -4,
+       2,
+       0
+      ],
+      [
+       -2,
+       0,
+       -2,
+       2
+      ],
+      [
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 5,
+   "n_semistable": 5,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      1,
+      1,
+      -3,
+      -1,
+      -1,
+      -1,
+      -2,
+      3,
+      6,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      -3,
+      2,
+      2,
+      -3
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 26,
+     "q_expansion": "q - q^2 + q^3 + q^4 - 3*q^5 - q^6 - q^7 - q^8 - 2*q^9 + 3*q^10 + 6*q^11 + q^12 + q^13 + q^14 - 3*q^15 + q^16 - 3*q^17 + 2*q^18 + 2*q^19 + O(q^20)"
+    },
+    {
+     "coeffs_1_20": [
+      1,
+      1,
+      -3,
+      1,
+      -1,
+      -3,
+      1,
+      1,
+      6,
+      -1,
+      -2,
+      -3,
+      -1,
+      1,
+      3,
+      1,
+      -3,
+      6,
+      6,
+      -1
+     ],
+     "degree": null,
+     "index": 1,
+     "level": 26,
+     "q_expansion": "q + q^2 - 3*q^3 + q^4 - q^5 - 3*q^6 + q^7 + q^8 + 6*q^9 - q^10 - 2*q^11 - 3*q^12 - q^13 + q^14 + 3*q^15 + q^16 - 3*q^17 + 6*q^18 + 6*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 7,
+    "cuspidal_dim": 4,
+    "integral_basis": [
+     "(2,5) - (13,1) + (13,2)",
+     "(2,21) - (13,1) + (13,2)",
+     "(2,23) - (13,1) + (13,2)",
+     "(2,25) - (13,1) + (13,2)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^3 + q^4 - 2*q^5 + O(q^6)",
+     "q^2 - 2*q^3 + q^5 + O(q^6)"
+    ]
+   }
+  },
+  "30": {
+   "N": 30,
+   "T_p": {
+    "2": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -1,
+       1,
+       -1,
+       -1,
+       2,
+       0
+      ],
+      [
+       0,
+       0,
+       -1,
+       0,
+       2,
+       0
+      ],
+      [
+       0,
+       1,
+       -2,
+       0,
+       2,
+       0
+      ],
+      [
+       1,
+       0,
+       -1,
+       0,
+       0,
+       1
+      ],
+      [
+       0,
+       0,
+       -1,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       -1,
+       0,
+       -1
+      ]
+     ]
+    },
+    "3": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       -1,
+       0,
+       0,
+       0,
+       -1
+      ],
+      [
+       0,
+       0,
+       -1,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       -1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       -1,
+       0,
+       0
+      ],
+      [
+       0,
+       -1,
+       1,
+       0,
+       -1,
+       0
+      ],
+      [
+       -1,
+       0,
+       1,
+       0,
+       0,
+       0
+      ]
+     ]
+    },
+    "5": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       1,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       0,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       -1,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       -1,
+       0,
+       0,
+       0
+      ]
+     ]
+    },
+    "7": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       2,
+       0,
+       0,
+       0,
+       2
+      ],
+      [
+       0,
+       -2,
+       2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       2,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       2,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       2,
+       0,
+       -2,
+       0,
+       0,
+       -2
+      ]
+     ]
+    },
+    "11": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       -2,
+       -2,
+       0,
+       0,
+       0,
+       -2
+      ],
+      [
+       0,
+       -2,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       -4,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       2,
+       0,
+       -4,
+       0
+      ],
+      [
+       -2,
+       0,
+       2,
+       0,
+       0,
+       -2
+      ]
+     ]
+    },
+    "13": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       -2,
+       0,
+       0,
+       0,
+       -2
+      ],
+      [
+       0,
+       0,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       -2,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       2,
+       0,
+       -2,
+       0
+      ],
+      [
+       -2,
+       0,
+       2,
+       0,
+       0,
+       0
+      ]
+     ]
+    },
+    "17": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       4,
+       -2,
+       0,
+       0,
+       0,
+       -2
+      ],
+      [
+       0,
+       4,
+       -2,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       4,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       0,
+       -2,
+       2,
+       0,
+       2,
+       0
+      ],
+      [
+       -2,
+       0,
+       2,
+       0,
+       0,
+       4
+      ]
+     ]
+    },
+    "19": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       4,
+       0,
+       0,
+       0,
+       4
+      ],
+      [
+       0,
+       0,
+       4,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       4,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       4,
+       0,
+       0
+      ],
+      [
+       0,
+       4,
+       -4,
+       0,
+       4,
+       0
+      ],
+      [
+       4,
+       0,
+       -4,
+       0,
+       0,
+       0
+      ]
+     ]
+    },
+    "23": {
+     "base_ring": "Rational Field",
+     "integral": true,
+     "matrix": [
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "n_curves": 8,
+   "n_semistable": 8,
+   "newforms": [
+    {
+     "coeffs_1_20": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -4,
+      -1,
+      1,
+      1,
+      0,
+      1,
+      2,
+      4,
+      -1,
+      1,
+      6,
+      -1,
+      -4,
+      -1
+     ],
+     "degree": null,
+     "index": 0,
+     "level": 30,
+     "q_expansion": "q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + q^12 + 2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 + O(q^20)"
+    }
+   ],
+   "squarefree": true,
+   "symbols": {
+    "ambient_dim": 13,
+    "cuspidal_dim": 6,
+    "integral_basis": [
+     "(5,2) + (6,5) - (6,19) + (15,1) - (15,2)",
+     "(5,3) + (6,5) - (6,19) - (10,3) + (10,11)",
+     "(5,4) + (6,5) - (6,19) + (15,1) - (15,2)",
+     "(6,1) - (6,19)",
+     "(6,13) - (6,19)",
+     "(10,1) - (10,11)"
+    ],
+    "integral_coords": [
+     [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "q_integral_basis": [
+     "q - q^4 + O(q^6)",
+     "q^2 - q^4 + O(q^6)",
+     "q^3 + q^4 - q^5 + O(q^6)"
+    ]
+   }
+  }
+ },
+ "sage_version": "SageMath version 10.9, Release Date: 2026-05-04"
+}

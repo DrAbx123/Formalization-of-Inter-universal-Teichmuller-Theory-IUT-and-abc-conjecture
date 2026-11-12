@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetMemActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetMemActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real consumer: step-set membership lemmas; new file only, no sorry; watchdog to verify"
+}

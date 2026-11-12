@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureConsumerActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureConsumerActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: finite measure subset corollaries; new file only, no sorry; watchdog to verify"
+}

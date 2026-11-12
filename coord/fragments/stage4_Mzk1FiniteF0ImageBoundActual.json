@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteF0ImageBoundActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteF0ImageBoundActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: f0 image degree bound via PROVED degQ_aeval_le; new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImageCardActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImageCardActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: image cardinality bound for finite measure; new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:S3139FieldCCopyActionActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/S3139FieldCCopyActionActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

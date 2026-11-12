@@ -1,0 +1,9 @@
+{
+  "node": "auto:Statement",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "LeanFormal/IUT/ABCBridge/Statement.lean"
+  ],
+  "note": "silent loop mechanical registration; verify via watchdog log only"
+}

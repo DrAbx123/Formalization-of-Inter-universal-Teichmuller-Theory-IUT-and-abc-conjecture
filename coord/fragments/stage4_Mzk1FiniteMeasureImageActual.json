@@ -1,0 +1,16 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImageActual",
+  "kind": "theorem",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImageActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImageActual.lean": [
+      "maxDeg_image_le",
+      "finiteMeasureImageRows",
+      "finiteMeasureImageRows_length"
+    ]
+  },
+  "note": "watchdog EXIT0 observed (real Lean, no sorry); DAG promotion (A476 real consumer only)"
+}

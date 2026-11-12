@@ -1,0 +1,145 @@
+{
+ "meta": {
+  "generated_by": "Lead A445",
+  "purpose": "external (web) route/method candidates found by searching the internet; evidence indexes only, no proof claims"
+ },
+ "nodes": [
+  {
+   "id": "web:LANA-project",
+   "kind": "named_input",
+   "title": "LANA: computer-assisted verification of IUT (ZEN Univ., 3 universities)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "zen.ac.jp news; project announcement + interim report 'Project LANA Interim Report on IUT Theory' reporting evaluation, remaining issues, relation to Scholze-Stix report. URL: https://zen.ac.jp/news/zmcpostevent0717e [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:LANA-interim-report",
+   "kind": "named_input",
+   "title": "Project LANA interim report on IUT (evaluation / remaining issues / Scholze-Stix relation)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "same as LANA; report category: verification roadmap; route relevance: independent IUT formalization effort [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:IUT-validation-contested-bound",
+   "kind": "named_input",
+   "title": "A Validation of IUT: The Contested Bound, Instantiated from Source (Zenodo, 2026)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Zenodo record 23573490 (v3, 2026-10-22); route: validate contested bound by instantiating source; external audit route [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:bridge-certificate",
+   "kind": "named_input",
+   "title": "The Bridge Certificate: line-level audit instrument for inter-theoretic transfer arguments (4 applications to abc literature)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Zenodo record 21960958 (2026-08); route: line-level audit of inter-theoretic transfer; 4 applications = 4 candidate transfer routes/checks [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:IUT-comes-home",
+   "kind": "named_input",
+   "title": "Inter-Universal Teichmuller Theory Comes Home (Zenodo, 2026)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Zenodo records 22876500 / 22883559 (2026-09); route: alternative presentation/route document (external) [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:Joshi-FAQ-abc",
+   "kind": "named_input",
+   "title": "Kirti Joshi: FAQ about the proof of the abc-conjecture (HAL)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "hal.science hal-05363791; route: alternative account/approach to abc proof, independent of IUT; candidate compare-route [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:Scholze-Stix-report",
+   "kind": "named_input",
+   "title": "Scholze-Stix critical report on IUT (why the abc proof is contested)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "referenced by LANA interim report; route: obstruction/critique; relevant to which transfer steps are considered unjustified [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:Hayashi-impossibility",
+   "kind": "named_input",
+   "title": "Hayashi: structural impossibility/obstruction document on IUT (Zenodo)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Zenodo hayashi_iut_structural_impossibility; route: obstruction analysis; lessons for formalization boundary conditions [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:Mochizuki-formalization-report",
+   "kind": "named_input",
+   "title": "Mochizuki: On the Formalization of IUT (2026-04 progress report, RIMS)",
+   "status": "NAMED",
+   "files": [
+    "papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt"
+   ],
+   "declarations": {},
+   "note": "official Stage 1-5 + §4 skeletal Lean code for 3.11.5 => 3.12; local corpus copy; URL: kurims.kyoto-u.ac.jp/~motizuki/Formalization of IUT (2026-04 version).pdf [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:LeanForm-ZFC-ShoSaito",
+   "kind": "named_input",
+   "title": "Sho Saito: LeanForm of ZFC as first-order theory (species/mutations enabler, per Mochizuki report)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "mentioned in Formalization report §2; route: formalize ZFC/species/mutations for abstract functorial algorithms; not in MathLib [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:abc-formalization-community",
+   "kind": "named_input",
+   "title": "Community/autoformalization route for Stages 4-5 (earlier results + numerical estimates)",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Formalization report explicitly says Stages 4-5 may be amenable to research groups via machine-based autoformalization; route candidate [status normalized from EXTERNAL]"
+  },
+  {
+   "id": "web:IUT-animations",
+   "kind": "named_input",
+   "title": "IUAni1/IUAni2 animations: multiradial representation and q-pilot log-volume",
+   "status": "NAMED",
+   "files": [],
+   "declarations": {},
+   "note": "Farcot-Fesenko-Mochizuki animations referenced in Formalization report; route: conceptual exposition of multiradial representation / q-pilot computation (candidate spec source) [status normalized from EXTERNAL]"
+  }
+ ],
+ "edges": [
+  {
+   "from": "web:LANA-interim-report",
+   "to": "web:LANA-project",
+   "kind": "statement"
+  },
+  {
+   "from": "web:IUT-validation-contested-bound",
+   "to": "web:Scholze-Stix-report",
+   "kind": "gap"
+  },
+  {
+   "from": "web:bridge-certificate",
+   "to": "web:Scholze-Stix-report",
+   "kind": "gap"
+  },
+  {
+   "from": "web:IUT-comes-home",
+   "to": "web:Scholze-Stix-report",
+   "kind": "gap"
+  },
+  {
+   "from": "web:Joshi-FAQ-abc",
+   "to": "web:Scholze-Stix-report",
+   "kind": "gap"
+  }
+ ]
+}

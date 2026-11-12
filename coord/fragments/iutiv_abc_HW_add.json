@@ -1,0 +1,12 @@
+{
+  "node": "iutiv-abc:HW.add",
+  "kind": "bridge",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean"
+  ],
+  "declarations": {
+    "proved": []
+  },
+  "note": "CONDITIONAL node queued to DAG watchdog (no manual compile); PENDING-VERIFY"
+}

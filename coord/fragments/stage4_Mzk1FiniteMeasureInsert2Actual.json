@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureInsert2Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureInsert2Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: finite numMax insertion bound; new file only, no sorry; watchdog to verify"
+}

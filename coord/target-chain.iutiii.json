@@ -1,0 +1,2195 @@
+{
+  "section": "S11-IUTIII",
+  "generated": "2026-11-11T02:10:00+08:00",
+  "method": "tree assets from source+olean; paper-layer pins reference AUDIT_LEDGER; no full-tree checker run",
+  "nodes": [
+    {
+      "id": "IUTIII.COR312.TARGET",
+      "kind": "target",
+      "title": "Corollary 3.12 (IUTIII)",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+          "cor312Conclusion_of_contract"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+          "Cor312Conclusion"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean": [
+          "StepXIContract",
+          "Cor312Conclusion"
+        ]
+      },
+      "note": "Cor 3.12 derived from StepXIContract (contract fields conditional); no closure."
+    },
+    {
+      "id": "IUTIII.STEPXI.CONTRACT",
+      "kind": "interface",
+      "title": "Step XI contract interface",
+      "status": "DEF",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean": [
+          "StepXIContract",
+          "Cor312Conclusion"
+        ]
+      },
+      "note": "named/conditional contract fields; consumed by S3180."
+    },
+    {
+      "id": "IUTIII.STEPXI.PARAMETRIC",
+      "kind": "theorem",
+      "title": "Parametric Step XI",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ParametricStepXI.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ParametricStepXI.lean": [
+          "ParametricStepXI"
+        ]
+      },
+      "note": "tree built (olean); declaration-name listed for orientation."
+    },
+    {
+      "id": "IUTIII.STEPXI.CONTRACT_SOURCE_REDUCTION",
+      "kind": "tree_asset",
+      "title": "Contract source reduction",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ContractSourceReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ContractSourceReduction.lean": [
+          "ofHullWeights",
+          "ofHullUniform",
+          "ofAbsoluteDegreeNormalizedSignedLog",
+          "finiteLinkEvidenceOfHullTarget",
+          "cor312Conclusion_of_hullTargetLinkEvidence"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.CERTIFICATE_HULL_WIRING",
+      "kind": "theorem",
+      "title": "Certificate hull wiring",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiringRealization.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiringSigned.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean": [
+          "ofReal_le_toReal_of_ne_top",
+          "toReal_le_of_le_ofReal",
+          "iqHullRealVolume",
+          "iqHullRealVolume_nonneg",
+          "iqHull_logVolume_hull_eq_ofReal"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.THETA_PACKET_BRIDGE",
+      "kind": "bridge",
+      "title": "Theta packet bridge (tree)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ThetaPacketBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ThetaPacketBridge.lean": [
+          "toPositivePacket",
+          "toPositivePacket_positive",
+          "toPositivePacket_det_eq_prod",
+          "toPositivePacket_logVolume_eq_log_det",
+          "toPositivePacket_logVolume_eq_sum"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "bridge",
+      "title": "Source log-shell muN quotient carrier",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean": [
+          "muNQuotient",
+          "muNQuotientMap",
+          "muNQuotientMap_ker",
+          "muNQuotientMap_surjective",
+          "muNPowEnd"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "tree_asset",
+      "title": "Source hull compactness reduction",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullCompactnessReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullCompactnessReduction.lean": [
+          "IQHullLogVolumeInterface",
+          "imageSet_logVolume_le_hull",
+          "hull_logVolume_lt_top",
+          "lower_bound_and_finiteness",
+          "singletonRealWitness",
+          "iqHullLogVolume"
+        ]
+      },
+      "note": "H5 hull log-volume interface (tree; iqHullLogVolume is an Obligation record)."
+    },
+    {
+      "id": "IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "tree_asset",
+      "title": "Source hull interface discharge",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullInterfaceDischarge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullInterfaceDischarge.lean": [
+          "hull_logVolume_realRepresentation",
+          "haarContractionInterface",
+          "ValueHullCompactnessInput",
+          "sourceHullVolume_lt_top_of_compactnessInput",
+          "iqHullInterfaceDischarge"
+        ]
+      },
+      "note": "compactness input + discharge obligation (named layer)."
+    },
+    {
+      "id": "IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "theorem",
+      "title": "CardHull real geometry reduction (H5 engine)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeometryReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeometryReduction.lean": [
+          "sourceScalingUnits_subset_sourceHolomorphicHull",
+          "sourceHolomorphicHull_eq_closure",
+          "sourceHullVolume_eq_imageVolume_iff",
+          "sourceHullVolume_le_imageVolume_iff_forall_pointVolume_le",
+          "sourceHullVolume_le_imageVolume_of_candidate"
+        ]
+      },
+      "note": "H5 hull-vs-image-volume engine (Hull09 wrappers cite :94/:108)."
+    },
+    {
+      "id": "IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "theorem",
+      "title": "Hull determinant log-volume reduction (det tensor)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean": [
+          "HullDeterminantLogVolumeFrozenSpec",
+          "hullDeterminantLogVolumeFrozenSpec_holds",
+          "packetLogVolume_eq_matrixLogDet"
+        ]
+      },
+      "note": "det-tensor bookkeeping (Hull06/Hull09 consume)."
+    },
+    {
+      "id": "IUTIII.HULL.OMODULE_COMPACTNESS",
+      "kind": "tree_asset",
+      "title": "OModule compactness layer",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/OModuleCompactnessLayer.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/OModuleCompactnessLayer.lean": [
+          "SourceOModuleLayer",
+          "SourceOneCircUCompactness",
+          "sourceOModuleCompactness_haarData",
+          "sourceOModuleCompactness_haarData_unitRegion",
+          "sourceOModuleCompactness_haarData_scaling"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.HULL.R9_AUDIT_GAP",
+      "kind": "tree_asset",
+      "title": "CardHull R9 point-membership audit (no olean)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealR9PointMembershipAudit.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealR9PointMembershipAudit.lean": [
+          "downRay",
+          "mem_downRay_iff_le",
+          "mem_iUnion_downRay_iff_exists_le",
+          "csSup_image_le_iff_forall_le",
+          "witness_iff_le_csSup_of_isGreatest"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "theorem",
+      "title": "Theorem 3.11 multiradial output algorithm",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithm.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmReduction.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmGeneralRouteNormalForm.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithm.lean": [
+          "multiradialAlgorithm"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.THM311.TWO_ACTION",
+      "kind": "theorem",
+      "title": "Theorem 3.11 two-action equivalence anchor",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean": [
+          "sourceColumnProcession",
+          "SourceTheorem311MultiradialPresentation",
+          "processionAction_mul",
+          "nonempty_iff",
+          "SourceTheorem311MultiradialAlgorithm"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.THM311.ARITH_HOLO_LANDING",
+      "kind": "theorem",
+      "title": "Arithmetic holomorphic landing anchor",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean": [
+          "in",
+          "SourceOneColumnArithmeticHolomorphicStructure",
+          "localizationInclusion_one",
+          "localizationInclusion_mul",
+          "nonempty"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "kind": "interface",
+      "title": "SourceTheorem311MultiradialAlgorithm adapter",
+      "status": "DEF",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean": [
+          "SourceTheorem311MultiradialAlgorithm",
+          "SourceTheorem311TwoActionEquivalence"
+        ]
+      },
+      "note": "Theorem 3.11 source-algorithm interface (proved reflexivity/transitivity layer + Props)."
+    },
+    {
+      "id": "IUTIII.THM311.CONCRETE_FINITE_MODEL",
+      "kind": "theorem",
+      "title": "Concrete finite route model",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/ConcreteFiniteModel.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/ConcreteFiniteModelTransport.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/ConcreteRouteNormalForm.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/ConcreteRouteUniqueness.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/ConcreteFiniteModel.lean": [
+          "finiteLabel",
+          "algebraicLevel",
+          "theater",
+          "packet",
+          "quotient"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.THM311.K1K2_CARD_GAP",
+      "kind": "tree_asset",
+      "title": "SourceK1K2 card reduction (no olean)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2CardReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2CardReduction.lean": [
+          "labelledKummerIdentity",
+          "labelledKummerIdentity_map",
+          "labelledKummerIdentity_inverse",
+          "labelledKummerIdentityFamily",
+          "upUnbounded_univ"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "IUTIII.THM311.PACKET_DEGREE_LEDGER_GAP",
+      "kind": "tree_asset",
+      "title": "Source packet degree ledger (no olean)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/SourcePacketDegreeLedger.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/SourcePacketDegreeLedger.lean": [
+          "ThetaPacketLedger",
+          "thetaPacketLedgerAt",
+          "thetaPacketLedgerAt_source",
+          "thetaPacketLedgerAt_q_positive",
+          "thetaPacketLedgerAt_scale_source"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "IUTIII.IND1",
+      "kind": "theorem",
+      "title": "(Ind1) indeterminacy",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind1.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind1Reduction.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind1QuotientTransport.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind1.lean": [
+          "ind1"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile); visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.IND2",
+      "kind": "theorem",
+      "title": "(Ind2) indeterminacy",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind2.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind2Reduction.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind2AlienCopySeparation.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind2.lean": [
+          "ind2"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile); visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.IND3",
+      "kind": "theorem",
+      "title": "(Ind3) indeterminacy / upper semi",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3Reduction.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3UpperSemiConstruction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3.lean": [
+          "ind3"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "PAPER.S3180.ABC_CONDITIONAL",
+      "kind": "conditional",
+      "title": "ABC conditional assembly (S3180)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3180ConditionalAssemblyActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3180ConditionalAssemblyActual.lean": [
+          "conditionalAssembly_with_hullDet"
+        ]
+      },
+      "note": "imports IUTIII StepXI.Contract; conditional on hull/det + q!=1 readouts. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "PAPER.S3182.COR312_HULLDET",
+      "kind": "conditional",
+      "title": "Cor 3.12 hull+det assembly (S3182)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/S3182Cor312HullDetAssemblyActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/S3182Cor312HullDetAssemblyActual.lean": [
+          "HullDetAssemblyInputs",
+          "Cor312HullDetConclusion",
+          "cor312_hullDet_conditional"
+        ]
+      },
+      "note": "conditional on HullDetAssemblyInputs. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "HULL.H5.WRAPPER",
+      "kind": "interface",
+      "title": "Hull09 H5 O^x gap rows",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Hull09H5GapsActual.lean": [
+          "hull09_scalingUnits_subset_hull",
+          "hull09_hull_eq_closure",
+          "hull09DetTensorBookkeeping",
+          "hull09_ray_mem_iff"
+        ]
+      },
+      "note": "class-A items proved; class-B named: O(-)^-1 normalization + hull<=image-volume inequality. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "HULL.H7.OB9.WRAPPER",
+      "kind": "interface",
+      "title": "Hull10/12/13 H7 Ob9 consumers",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Hull10H7Ob9ConsumerActual.lean",
+        "tmp/sheaf/xif/paper/Hull12Ob9BoundTransferActual.lean",
+        "tmp/sheaf/xif/paper/Hull13H7Ob9ComparisonConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Hull10H7Ob9ConsumerActual.lean": [
+          "HullH7Ob9ConsumerInputs",
+          "hull10_h7ob9_consumer"
+        ],
+        "tmp/sheaf/xif/paper/Hull12Ob9BoundTransferActual.lean": [
+          "hull12_upperBound_transfer"
+        ],
+        "tmp/sheaf/xif/paper/Hull13H7Ob9ComparisonConsumerActual.lean": [
+          "HullH7Ob9ComparisonInputs",
+          "hull13_h7ob9_comparison"
+        ]
+      },
+      "note": "one-sided transfer/consumer proved; deep arbitrary-iterate Ob9 named. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "HULL.E.ASSEMBLY",
+      "kind": "interface",
+      "title": "Hull E inputs conditional assembly",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullEInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullEInputsActual.lean": [
+          "HullEH5NamedInputs",
+          "HullEH7NamedInput",
+          "HullEH5ProvedComponents",
+          "HullEGenEllIntermediateConclusion",
+          "hullE_genEll_intermediate",
+          "hullE_cor312"
+        ]
+      },
+      "note": "H5/H7 named inputs explicit; output Cor312 + base bound + H5 components. | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "IUTIII.IUTII_LINK_GAP",
+      "kind": "named_input",
+      "title": "IUTII theta/log-shell -> IUTIII StepXI contract link",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean",
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean",
+        "tmp/sheaf/xif/paper/Mzk1IUTIILinkGapStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkActual.lean": [
+          "IUTIIToStepXILink",
+          "IUTIIToStepXILink.toContract",
+          "cor312Conclusion_of_IUTIIToStepXILink",
+          "q_positive_of_IUTIIToStepXILink"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1IUTIILinkGapStatementActual.lean": [
+          "IUTIIDataProjection",
+          "FrobenioidEtThLinkCompatibility",
+          "LogShellTransport",
+          "IUTIILinkGapStatement"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): link-gap statement skeleton linked; obligations remain GAP; PENDING-VERIFY (watchdog compile) [PIN: watchdog DONE EXIT=0] [A475 downgrade]"
+    },
+    {
+      "id": "IUTIII.COR312.WIRING",
+      "kind": "theorem",
+      "title": "Cor 3.12 target paper-layer wiring",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312TargetWiringActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312TargetWiringActual.lean": [
+          "certificateOfContract",
+          "certificate_conclusion",
+          "mochizuki_route_conclusion",
+          "q_positive_target",
+          "all_routes_conclusion"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/Routes.lean": [
+          "Cor312RouteCertificate.conclusion"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/Comparison.lean": [
+          "cor312Conclusion_of_contract"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean": [
+          "Cor312Conclusion",
+          "q_positive_of_constructed_stepXI"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): PENDING-VERIFY: main EXIT0 results:211172; probe pending (Mzk1Cor312TargetWiringProbeActual) [PIN: EXIT=0 in results log] [A468: downgraded; full evidence (EXIT0+olean fresh+no suspect sorry) missing] [PIN: watchdog DONE EXIT=0] [A475 downgrade] [PIN watchdog DONE0] [A477 downgrade] [PIN watchdog DONE0] [A480 downgrade: evidence incomplete] [PIN watchdog DONE0] [A484 downgrade] [PIN watchdog DONE0] [A485 downgrade] [PIN watchdog DONE0] [A486 downgrade] [PIN watchdog DONE0] [A487 downgrade: evidence incomplete] [PIN watchdog DONE0] [A488 downgrade] [PIN watchdog DONE0] [A490 downgrade] [PIN watchdog DONE0] [A492 downgrade] [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "theorem",
+      "title": "Typed StepXI contract construction from source data",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractConstructionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractConstructionActual.lean": [
+          "StepXIContractSourceData",
+          "StepXIContractSourceData.toContract",
+          "sourceData_contract_exists",
+          "sourceData_cor312",
+          "sourceData_q_positive",
+          "sourceData_routeCertificate"
+        ]
+      },
+      "note": "PROVED: EXIT=0 results log (Mzk1StepXIContractConstructionActual); typed source data -> StepXIContract + Cor312/q-positive/route certificate PROVED.; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.OBLIGATIONS",
+      "kind": "interface",
+      "title": "StepXI obligation chain consumer (IPL/SHE/APT)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312ObligationConsumerActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312ObligationConsumerActual.lean": [
+          "ipl_id",
+          "she_id",
+          "apt_id",
+          "ipl_depends",
+          "she_depends",
+          "apt_depends",
+          "contract_evidence_fields"
+        ],
+        "LeanFormal/IUT/IUTIII/Corollary312/Obligations.lean": [
+          "ipl",
+          "she",
+          "apt"
+        ]
+      },
+      "note": "PROVED: EXIT=0 results log (Mzk1Cor312ObligationConsumerActual); IPL/SHE/APT ids+dependency chains+contract evidence PROVED. [A468: downgraded; full evidence (EXIT0+olean fresh+no suspect sorry) missing] [PIN: watchdog DONE EXIT=0] [A475 downgrade] [PIN watchdog DONE0] [A477 downgrade] [PIN watchdog DONE0] [A480 downgrade: evidence incomplete] [PIN watchdog DONE0] [A484 downgrade] [PIN watchdog DONE0] [A485 downgrade] [PIN watchdog DONE0] [A486 downgrade] [PIN watchdog DONE0] [A487 downgrade: evidence incomplete] [PIN watchdog DONE0] [A488 downgrade] [PIN watchdog DONE0] [A490 downgrade] [PIN watchdog DONE0] [A492 downgrade] [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.STEPXI.CONSUMER.BUNDLE",
+      "kind": "theorem",
+      "title": "Combined StepXI consumer bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConsumerBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIConsumerBundleActual.lean": [
+          "stepXI_bundle",
+          "stepXIBundleRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.THM311.IND_OBLIGATIONS",
+      "kind": "interface",
+      "title": "Ind1/Ind2/Ind3 obligation consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyObligationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IndeterminacyObligationConsumerActual.lean": [
+          "ind1_id",
+          "ind2_id",
+          "ind3_id",
+          "ind1_depends",
+          "ind2_depends",
+          "ind3_depends",
+          "indeterminacy_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "HULL.H7.OB9.BUNDLE",
+      "kind": "theorem",
+      "title": "H7/Ob9 consumer bundle",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Hull7Ob9BundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Hull7Ob9BundleActual.lean": [
+          "hull7ob9_bundle",
+          "hull7ob9_base_upper",
+          "hull7ob9Rows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY: Cor312+Ind1/Ind2+Ind3+base upper bundle PROVED; deep Ob9 named.; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "hull.Mzk1TreeIQHullFactsActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeIQHullFactsActual (watchdog-verified)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullFactsActual.lean": [
+          "tree_iqHull_image_subset",
+          "tree_iqHull_finite",
+          "tree_iqHull_scaleShift_le",
+          "tree_iqHull_lower_bound",
+          "tree_iqHull_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ComparisonActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ComparisonActual (watchdog-verified)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ComparisonActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ComparisonActual.lean": [
+          "tree_contract_cor312",
+          "tree_route_cor312",
+          "tree_q_positive",
+          "tree_all_routes_cor312",
+          "treeCor312Rows"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "hull.Mzk1TreeStepXIObligationBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeStepXIObligationBundleActual (watchdog-verified)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIObligationBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIObligationBundleActual.lean": [
+          "tree_ipl_id",
+          "tree_she_id",
+          "tree_apt_id",
+          "tree_ipl_status",
+          "tree_she_status"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "IUTIII.HULL.R9.RAY.BUNDLE",
+      "kind": "theorem",
+      "title": "R9/H5 ray bundle (equality/membership/unbounded)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayBundleActual.lean": [
+          "r9Hull_ray_eq",
+          "r9Hull_mem_iff",
+          "downRay_unbounded",
+          "r9Hull_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.HULL.R9.RAY.LATTICE",
+      "kind": "theorem",
+      "title": "R9/H5 down-ray lattice facts (green-dep)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayLatticeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayLatticeActual.lean": [
+          "r9Ray_inter",
+          "r9Ray_union",
+          "r9Ray_mono",
+          "r9Ray_lattice_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.STEPXI.OBLIGATION_ROUTE.JOINT",
+      "kind": "theorem",
+      "title": "StepXI construction+obligation+route joint",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIObligationRouteJointActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIObligationRouteJointActual.lean": [
+          "stepXIObligationRoute_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.IUTII_LINK.SOURCEDATA.ROUTE",
+      "kind": "theorem",
+      "title": "IUTII link -> StepXI source data -> routes",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkSourceDataRouteActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkSourceDataRouteActual.lean": [
+          "linkSourceData_cor312",
+          "linkSourceData_allRoutes",
+          "linkSourceData",
+          "linkSourceDataRouteRows",
+          "linkSourceDataRouteRows_length"
+        ]
+      },
+      "note": "PENDING-VERIFY: link->source data->Cor312/all routes PROVED (green deps)."
+    },
+    {
+      "id": "hull.Mzk1StepXIConstructionIndJointActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConstructionIndJointActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConstructionIndJointActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto-registered from watchdog DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312RouteAuditActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312RouteAuditActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312RouteAuditActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto-registered from watchdog DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5DetTensorBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5DetTensorBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5DetTensorBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto-registered from watchdog DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeIndeterminacyFactsActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeIndeterminacyFactsActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeIndeterminacyFactsActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto-registered from watchdog DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeStepXIBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeStepXIBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto-registered from watchdog DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.ALLSOURCE.BUNDLE",
+      "kind": "theorem",
+      "title": "StepXI all-source bundles (source data + IUTII link)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIAllSourceBundlesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIAllSourceBundlesActual.lean": [
+          "stepXI_allSources_bundle",
+          "stepXI_allSources_certificates"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.COR312.ROUTE_OBLIGATION.JOINT",
+      "kind": "theorem",
+      "title": "Tree route+obligation joint",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312RouteObligationJointActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312RouteObligationJointActual.lean": [
+          "tree_routeObligation_bundle",
+          "tree_routeObligation_allRoutes"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "hull.Mzk1Hull13BothSidedBaseActual",
+      "kind": "theorem",
+      "title": "Mzk1Hull13BothSidedBaseActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Hull13BothSidedBaseActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1IUTIIILinkProbeActual",
+      "kind": "theorem",
+      "title": "Mzk1IUTIIILinkProbeActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkProbeActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeHullBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeHullBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeHullBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeRouteDegreeFactsActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeRouteDegreeFactsActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeRouteDegreeFactsActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.HULL.R9.BASIC.FACTS",
+      "kind": "theorem",
+      "title": "R9/H5 basic facts bundle (green deps)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1R9HullBasicFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1R9HullBasicFactsActual.lean": [
+          "r9HullBasic_eq",
+          "r9HullBasic_mem",
+          "r9HullBasic_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.STEPXI.GREEN.CONSUMER",
+      "kind": "theorem",
+      "title": "StepXI green-dep consumer bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumerActual.lean": [
+          "stepXIGreen_contracts",
+          "stepXIGreen_ids",
+          "stepXIGreen_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.COR312.CERT.CONSUMER",
+      "kind": "theorem",
+      "title": "Tree Cor312 certificate consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312CertificateConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312CertificateConsumerActual.lean": [
+          "tree_cert_contract_cor312",
+          "tree_cert_q_positive",
+          "tree_cert_bundle"
+        ]
+      },
+      "note": "PENDING-VERIFY: tree-only facts PROVED."
+    },
+    {
+      "id": "IUTIII.HULL.INTERFACE.FACTS",
+      "kind": "theorem",
+      "title": "H5 interface + det frozen facts",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeHullInterfaceFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeHullInterfaceFactsActual.lean": [
+          "treeHullFacts_interface",
+          "treeHullFacts_frozen",
+          "treeHullFacts_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "named_input",
+      "title": "R9 audit consumer (stub; missing edge target in hull R9 graph)",
+      "status": "GAP",
+      "files": [],
+      "declarations": {},
+      "note": "stub node added by lattice DAG maintenance to resolve dangling R9 edges; content GAP; PENDING-VERIFY"
+    },
+    {
+      "id": "hull.Mzk1Cor312TargetWiringProbeActual",
+      "kind": "theorem",
+      "title": "Mzk1Cor312TargetWiringProbeActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312TargetWiringProbeActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.HULL13.GREEN.CONSUMER",
+      "kind": "theorem",
+      "title": "Hull13 both-sided base green consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Hull13GreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Hull13GreenConsumerActual.lean": [
+          "hull13Green_bundle",
+          "hull13Green_upper",
+          "hull13Green_lower"
+        ]
+      },
+      "note": "PENDING-VERIFY: conditional base two-sided bundle from green Hull13BothSidedBase."
+    },
+    {
+      "id": "IUTIII.TREE.GREEN.BUNDLES",
+      "kind": "theorem",
+      "title": "Tree green bundles consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenBundlesConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenBundlesConsumerActual.lean": [
+          "treeGreen_bundle",
+          "treeGreen_allRoutes"
+        ]
+      },
+      "note": "PENDING-VERIFY: frozen det + contract + all routes from green tree bundles."
+    },
+    {
+      "id": "IUTIII.TREE.COR312.GREEN.FACTS",
+      "kind": "theorem",
+      "title": "Tree Cor312 green facts",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenFactsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenFactsActual.lean": [
+          "treeCor312Green_allRoutes",
+          "treeCor312Green_routeEnum",
+          "treeCor312Green_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.TREE.IQHULL.GREEN.CONSUMER",
+      "kind": "theorem",
+      "title": "Tree IQ hull green consumer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullGreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullGreenConsumerActual.lean": [
+          "treeIQHullGreen_bundle",
+          "treeIQHullGreen_finite"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.STEPXI.GREEN.ROUTE",
+      "kind": "theorem",
+      "title": "StepXI green route bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenRouteActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenRouteActual.lean": [
+          "stepXIGreenRoute_bundle"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd). [PIN watchdog DONE0]"
+    },
+    {
+      "id": "IUTIII.HULL.H7.OB9.BUNDLE",
+      "kind": "named_input",
+      "title": "H7/Ob9 bundle (stub; missing edge target in hull H7 graph)",
+      "status": "GAP",
+      "files": [],
+      "declarations": {},
+      "note": "stub node added by lattice DAG maintenance to resolve dangling H7/Ob9 edges; content GAP; PENDING-VERIFY"
+    },
+    {
+      "id": "IUTIII.TREE.COR312.GREEN.CERT",
+      "kind": "theorem",
+      "title": "Tree Cor312 green certificate consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenCertificateActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenCertificateActual.lean": [
+          "treeCor312GreenCert_contract",
+          "treeCor312GreenCert_route",
+          "treeCor312GreenCert_bundle"
+        ]
+      },
+      "note": "PENDING-VERIFY: tree-only green bundle PROVED."
+    },
+    {
+      "id": "IUTIII.TREE.STEPXI.GREEN.BUNDLE",
+      "kind": "theorem",
+      "title": "Tree StepXI green bundle consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIGreenBundleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIGreenBundleActual.lean": [
+          "treeStepXIGreen_bundle",
+          "treeStepXIGreen_allRoutes"
+        ]
+      },
+      "note": "PENDING-VERIFY: tree-only green bundle PROVED."
+    },
+    {
+      "id": "hull.Mzk1Cor312WiringCertificateConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1Cor312WiringCertificateConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312WiringCertificateConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.STEPXI.GREEN.ALL",
+      "kind": "theorem",
+      "title": "StepXI green all-in-one consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenAllActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenAllActual.lean": [
+          "stepXIGreenAll_cor312",
+          "stepXIGreenAll_qpositive",
+          "stepXIGreenAll_obligations",
+          "stepXIGreenAll_bundle"
+        ]
+      },
+      "note": "PENDING-VERIFY: green bundle PROVED."
+    },
+    {
+      "id": "IUTIII.TREE.GREEN.CERT.ALL",
+      "kind": "theorem",
+      "title": "Tree all-routes green certificate",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenCertificateAllActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenCertificateAllActual.lean": [
+          "treeGreenCertAll"
+        ]
+      },
+      "note": "PENDING-VERIFY: green bundle PROVED."
+    },
+    {
+      "id": "hull.Mzk1StepXIConstructionRouteActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConstructionRouteActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConstructionRouteActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "IUTIII.R9.RAY.DEEP.CONSUMER",
+      "kind": "theorem",
+      "title": "R9 ray deep consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayBundleDeepConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1R9HullRayBundleDeepConsumerActual.lean": [
+          "r9RayDeep_bundle",
+          "r9RayDeep_mono"
+        ]
+      },
+      "note": "PENDING-VERIFY: green-dep bundle PROVED.; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.COR312.WIRING.GREEN",
+      "kind": "theorem",
+      "title": "Cor312 wiring green consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor312WiringGreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor312WiringGreenConsumerActual.lean": [
+          "cor312WiringGreen_certificate",
+          "cor312WiringGreen_allRoutes"
+        ]
+      },
+      "note": "PENDING-VERIFY: green-dep bundle PROVED.; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "IUTIII.TREE.COR312.OBLIGATION.GREEN",
+      "kind": "theorem",
+      "title": "Tree Cor312 obligation green consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ObligationGreenConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ObligationGreenConsumerActual.lean": [
+          "treeCor312ObGreen_bundle"
+        ]
+      },
+      "note": "PENDING-VERIFY: green-dep bundle PROVED.; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "hull.Mzk1IUTIIILinkConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1IUTIIILinkConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeDetFrozenActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeDetFrozenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeDetFrozenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeDownRayLatticeActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeDownRayLatticeActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeDownRayLatticeActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeR9HullRayActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeR9HullRayActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeR9HullRayActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1IUTIIIThetaLinkBridgeActual",
+      "kind": "theorem",
+      "title": "Mzk1IUTIIIThetaLinkBridgeActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIIThetaLinkBridgeActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0 [A480 downgrade: evidence incomplete] [PIN watchdog DONE0] [A484 downgrade] [PIN watchdog DONE0] [A485 downgrade] [PIN watchdog DONE0] [A486 downgrade] [PIN watchdog DONE0] [A487 downgrade: evidence incomplete] [PIN watchdog DONE0] [A488 downgrade] [PIN watchdog DONE0]; EXIT0 (watchdog compile) [A490 downgrade] [PIN watchdog DONE0] [A492 downgrade] [PIN watchdog DONE0]"
+    },
+    {
+      "id": "hull.Mzk1StepXIContractGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIContractGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIContractGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenObligationConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenObligationConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenObligationConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenRouteConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenRouteConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenRouteConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ComparisonGreenAllActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ComparisonGreenAllActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ComparisonGreenAllActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ComparisonGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ComparisonGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ComparisonGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenFactsConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenFactsConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenFactsConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenRouteActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenRouteActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenRouteActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeGreenAllConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeGreenAllConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenAllConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeGreenAllRoutes2Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeGreenAllRoutes2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeGreenAllRoutes2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5GreenAllActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5GreenAllActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5GreenAllActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5InterfaceGreenActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5InterfaceGreenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5InterfaceGreenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeStepXICertificateGreenActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeStepXICertificateGreenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXICertificateGreenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1IUTIIILinkSourceDataGreenActual",
+      "kind": "theorem",
+      "title": "Mzk1IUTIIILinkSourceDataGreenActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkSourceDataGreenActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIConsumerGreenBundleActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIConsumerGreenBundleActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIConsumerGreenBundleActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIInterfaceConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIInterfaceConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIInterfaceConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeIQHullGreenAllActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeIQHullGreenAllActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullGreenAllActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1IUTIIILinkClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1IUTIIILinkClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIILinkClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterRollupConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterRollupConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterRollupConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5InterfaceConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5InterfaceConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5InterfaceConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeClusterRollupActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeClusterRollupActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeClusterRollupActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIClusterConsumer2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIClusterConsumer2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIClusterConsumer2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer5Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer5Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer5Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5DetClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5DetClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5DetClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeIQHullClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeIQHullClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeIQHullClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenCluster2Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenCluster2Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenCluster2Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer3Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer3Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer3Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer6Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer6Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer6Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ClusterConsumer3Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ClusterConsumer3Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ClusterConsumer3Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenConsumer5Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenConsumer5Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenConsumer5Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5DetConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5DetConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5DetConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1TreeH5InterfaceClusterActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeH5InterfaceClusterActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeH5InterfaceClusterActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer10Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer10Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer10Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer8Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer8Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer8Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1StepXIGreenConsumer9Actual",
+      "kind": "theorem",
+      "title": "Mzk1StepXIGreenConsumer9Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer9Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312ClusterConsumer4Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312ClusterConsumer4Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312ClusterConsumer4Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenConsumer6Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenConsumer6Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenConsumer6Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenConsumer8Actual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenConsumer8Actual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenConsumer8Actual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeCor312GreenFactsConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeCor312GreenFactsConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeCor312GreenFactsConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeHullInterfaceGreenConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeHullInterfaceGreenConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeHullInterfaceGreenConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeR9RaySetActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeR9RaySetActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeR9RaySetActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeStepXIGreenAllActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeStepXIGreenAllActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIGreenAllActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    },
+    {
+      "id": "hull.Mzk1TreeStepXIGreenBundleConsumerActual",
+      "kind": "theorem",
+      "title": "Mzk1TreeStepXIGreenBundleConsumerActual.lean (watchdog DONE0)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TreeStepXIGreenBundleConsumerActual.lean"
+      ],
+      "declarations": {},
+      "note": "auto DONE0"
+    }
+  ],
+  "edges": [
+    {
+      "from": "IUTIII.COR312.TARGET",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONTRACT",
+      "to": "IUTIII.STEPXI.PARAMETRIC",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONTRACT",
+      "to": "IUTIII.STEPXI.CONTRACT_SOURCE_REDUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.CERTIFICATE_HULL_WIRING",
+      "to": "IUTIII.HULL.SOURCE_INTERFACE_DISCHARGE",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.STEPXI.CERTIFICATE_HULL_WIRING",
+      "to": "IUTIII.STEPXI.THETA_PACKET_BRIDGE",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.STEPXI.CERTIFICATE_HULL_WIRING",
+      "to": "IUTIII.STEPXI.LOGSHELL_MUN",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "to": "IUTIII.THM311.TWO_ACTION",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "to": "IUTIII.THM311.ARITH_HOLO_LANDING",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.THM311.CONCRETE_FINITE_MODEL",
+      "to": "IUTIII.THM311.OUTPUT_ALGORITHM",
+      "kind": "proof"
+    },
+    {
+      "from": "PAPER.S3180.ABC_CONDITIONAL",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "interface"
+    },
+    {
+      "from": "PAPER.S3180.ABC_CONDITIONAL",
+      "to": "PAPER.S3182.COR312_HULLDET",
+      "kind": "proof"
+    },
+    {
+      "from": "PAPER.S3182.COR312_HULLDET",
+      "to": "HULL.E.ASSEMBLY",
+      "kind": "interface"
+    },
+    {
+      "from": "HULL.H7.OB9.WRAPPER",
+      "to": "IUTIII.IND3",
+      "kind": "proof"
+    },
+    {
+      "from": "HULL.H5.WRAPPER",
+      "to": "IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "proof"
+    },
+    {
+      "from": "HULL.H5.WRAPPER",
+      "to": "IUTIII.HULL.DET_LOG_VOLUME",
+      "kind": "proof"
+    },
+    {
+      "from": "HULL.H5.WRAPPER",
+      "to": "IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "proof"
+    },
+    {
+      "from": "HULL.E.ASSEMBLY",
+      "to": "HULL.H5.WRAPPER",
+      "kind": "interface"
+    },
+    {
+      "from": "HULL.E.ASSEMBLY",
+      "to": "HULL.H7.OB9.WRAPPER",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONTRACT",
+      "to": "IUTIII.IUTII_LINK_GAP",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTIII.HULL.OMODULE_COMPACTNESS",
+      "to": "HULL.H5.WRAPPER",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTIII.HULL.R9_AUDIT_GAP",
+      "to": "IUTIII.HULL.CARD_GEOMETRY",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTIII.THM311.K1K2_CARD_GAP",
+      "to": "IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTIII.THM311.PACKET_DEGREE_LEDGER_GAP",
+      "to": "IUTIII.THM311.SOURCE_ALGORITHM_INTERFACE",
+      "kind": "gap"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.STEPXI.OBLIGATIONS",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONSUMER.BUNDLE",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.COR312.WIRING",
+      "to": "IUTIII.COR312.TARGET",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.IUTII_LINK_GAP",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.THM311.IND_OBLIGATIONS",
+      "to": "IUTIII.COR312.TARGET",
+      "kind": "interface"
+    },
+    {
+      "from": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.OBLIGATION_ROUTE.JOINT",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.IUTII_LINK.SOURCEDATA.ROUTE",
+      "to": "IUTIII.IUTII_LINK_GAP",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.ALLSOURCE.BUNDLE",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.COR312.ROUTE_OBLIGATION.JOINT",
+      "to": "IUTIII.COR312.WIRING",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.HULL.R9.BASIC.FACTS",
+      "to": "IUTIII.HULL.R9.AUDIT_CONSUMER",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.GREEN.CONSUMER",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.COR312.CERT.CONSUMER",
+      "to": "IUTIII.COR312.WIRING",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.HULL.INTERFACE.FACTS",
+      "to": "IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.HULL13.GREEN.CONSUMER",
+      "to": "IUTIII.HULL.H7.OB9.BUNDLE",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.GREEN.BUNDLES",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.COR312.GREEN.FACTS",
+      "to": "IUTIII.COR312.WIRING",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.IQHULL.GREEN.CONSUMER",
+      "to": "IUTIII.HULL.SOURCE_COMPACTNESS",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.GREEN.ROUTE",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.COR312.GREEN.CERT",
+      "to": "IUTIII.COR312.WIRING",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.STEPXI.GREEN.BUNDLE",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.STEPXI.GREEN.ALL",
+      "to": "IUTIII.STEPXI.CONTRACT.CONSTRUCTION",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.TREE.GREEN.CERT.ALL",
+      "to": "IUTIII.COR312.WIRING",
+      "kind": "proof"
+    },
+    {
+      "from": "IUTIII.IND1",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.IND2",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "HULL.H7.OB9.BUNDLE",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeIQHullFactsActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeCor312ComparisonActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeStepXIObligationBundleActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.HULL.R9.RAY.BUNDLE",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.HULL.R9.RAY.LATTICE",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1StepXIConstructionIndJointActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeCor312RouteAuditActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeH5DetTensorBundleActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeIndeterminacyFactsActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeStepXIBundleActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1Hull13BothSidedBaseActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1IUTIIILinkProbeActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeHullBundleActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeRouteDegreeFactsActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1Cor312TargetWiringProbeActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1Cor312WiringCertificateConsumerActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1StepXIConstructionRouteActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.R9.RAY.DEEP.CONSUMER",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.COR312.WIRING.GREEN",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "IUTIII.TREE.COR312.OBLIGATION.GREEN",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1IUTIIILinkConsumerActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeDetFrozenActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeDownRayLatticeActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    },
+    {
+      "from": "hull.Mzk1TreeR9HullRayActual",
+      "to": "IUTIII.STEPXI.CONTRACT",
+      "kind": "statement"
+    }
+  ]
+}

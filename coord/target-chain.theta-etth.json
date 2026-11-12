@@ -1,0 +1,3655 @@
+{
+  "nodes": [
+    {
+      "id": "T1",
+      "kind": "tree_asset",
+      "title": "Odd theta series core (q-series, signs, terms)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/Foundations/Theta/OddTheta.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/Foundations/Theta/OddTheta.lean": [
+          "oddThetaExponent",
+          "oddThetaSign",
+          "oddThetaTerm",
+          "oddTheta",
+          "oddThetaSign_eq_pow",
+          "norm_oddThetaSign",
+          "oddThetaSign_add",
+          "oddThetaExponent_coe",
+          "norm_oddThetaTerm",
+          "tendsto_quadraticExponential_mul_geometric",
+          "oddThetaExponent_natCast",
+          "tendsto_norm_oddThetaTerm_nat",
+          "summable_oddThetaTerm_nat",
+          "oddThetaExponent_neg_nat",
+          "norm_oddThetaTerm_neg_nat",
+          "summable_oddThetaTerm_neg_nat",
+          "summable_oddThetaTerm",
+          "OddThetaRootData",
+          "OddThetaRootData.r_ne_zero",
+          "OddThetaRootExistenceData",
+          "OddThetaPacketNormalization"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "T2",
+      "kind": "tree_asset",
+      "title": "Odd theta negative decay",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNegativeDecay.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNegativeDecay.lean": [
+          "tendsto_quadraticExponential_mul_geometric_neg",
+          "oddThetaExponent_neg_succ",
+          "oddThetaSign_neg_succ",
+          "oddThetaTerm_neg_succ",
+          "summable_oddThetaTerm_neg"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "T3",
+      "kind": "tree_asset",
+      "title": "Odd theta term algebra / shift coefficients",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/Foundations/Theta/OddThetaTermAlgebra.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/Foundations/Theta/OddThetaTermAlgebra.lean": [
+          "two_dvd_mul_succ_self",
+          "two_mul_oddThetaExponent_coe",
+          "two_mul_oddThetaExponent_add",
+          "oddThetaSign_sq",
+          "oddThetaSign_eq_shift",
+          "q_pow_eq_root_zpow",
+          "oddThetaShiftCoefficient",
+          "oddThetaTerm_shift",
+          "oddThetaTerm_shift_inv"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "T4",
+      "kind": "tree_asset",
+      "title": "Odd theta nonvanishing / normalization / shift laws",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNonvanishing.lean",
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNormalization.lean",
+        "LeanFormal/IUT/Foundations/Theta/OddThetaShift.lean",
+        "LeanFormal/IUT/Foundations/Theta/OddThetaShiftSum.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNonvanishing.lean": [
+          "oddThetaExponent_one_le_of_not_mem",
+          "oddTheta_ne_zero_at_i"
+        ],
+        "LeanFormal/IUT/Foundations/Theta/OddThetaNormalization.lean": [
+          "oddThetaSign_mul_i_zpow_neg_two_mul",
+          "oddThetaFraction_eval",
+          "oddThetaFraction_eval_unconditional"
+        ],
+        "LeanFormal/IUT/Foundations/Theta/OddThetaShift.lean": [
+          "oddTheta_shift"
+        ],
+        "LeanFormal/IUT/Foundations/Theta/OddThetaShiftSum.lean": [
+          "tsum_addRight_eq_tsum",
+          "tsum_const_mul_addRight_eq",
+          "summable_oddThetaTerm_addRight",
+          "oddTheta_shift_tsum_of_pointwise"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "T5",
+      "kind": "tree_asset",
+      "title": "Signed labels / Gaussian kernel / Gaussian square sum",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/Foundations/Theta/SignedLabelEquiv.lean",
+        "LeanFormal/IUT/Foundations/Theta/GaussianKernel.lean",
+        "LeanFormal/IUT/Foundations/Theta/GaussianSquareSum.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/Foundations/Theta/SignedLabelEquiv.lean": [
+          "toFiniteLabel",
+          "toFiniteLabel_apply",
+          "toFiniteLabel_neg",
+          "abs_sub_lt_label",
+          "toFiniteLabel_injective",
+          "representative",
+          "representative_toFl",
+          "equiv",
+          "equiv_injective",
+          "equiv_surjective",
+          "translate",
+          "translate_add",
+          "translate_inverse",
+          "translate_cancel",
+          "translate_neg",
+          "translate_bijective",
+          "card_signedLabel",
+          "card_signedLabel_eq_card_fl",
+          "sum_translate",
+          "prod_translate",
+          "sum_translate_eq_sum_of_comp",
+          "prod_translate_eq_prod_of_comp",
+          "neg_translate_equiv"
+        ],
+        "LeanFormal/IUT/Foundations/Theta/GaussianKernel.lean": [
+          "gaussExponent",
+          "gaussExponent_nonneg",
+          "gaussExponent_succ_sub",
+          "thetaValue",
+          "thetaValue_eq_of_eq_neg",
+          "thetaValue_div_zero",
+          "realThetaValue",
+          "realThetaValue_pos",
+          "log_realThetaValue",
+          "SignedLabel",
+          "neg",
+          "neg_involutive",
+          "toFl",
+          "toFl_neg",
+          "theta_neg",
+          "thetaGaussianKernel"
+        ],
+        "LeanFormal/IUT/Foundations/Theta/GaussianSquareSum.lean": [
+          "gaussianSquareSum",
+          "gaussianSquareSum_formula",
+          "normalizedGaussianDegree",
+          "normalizedGaussianDegree_eq_factor",
+          "gaussianSquareSumNormalization"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "E1",
+      "kind": "tree_asset",
+      "title": "Etale theta quotient / power kernels / mod-l projections",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/EtaleThetaQuotient.lean": [
+          "thetaDerivedSubgroup",
+          "thetaCommutatorKernel",
+          "ThetaQuotient",
+          "EllipticAbelianization",
+          "thetaCommutatorKernel_le_derivedSubgroup",
+          "thetaToElliptic",
+          "thetaToElliptic_mk",
+          "thetaPowerKernel",
+          "ellipticPowerKernel",
+          "ModLThetaQuotient",
+          "ModLEllipticAbelianization",
+          "modLThetaProjection",
+          "modLEllipticProjection",
+          "modLThetaProjection_surjective",
+          "modLEllipticProjection_surjective",
+          "thetaToElliptic_maps_powerKernel",
+          "modLThetaToElliptic",
+          "modLThetaToElliptic_mk",
+          "thetaToElliptic_surjective",
+          "modLThetaToElliptic_surjective",
+          "thetaCenter",
+          "thetaCenter_le_center",
+          "etaleThetaQuotient"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "E2",
+      "kind": "tree_asset",
+      "title": "Finite theta packet (scale/log-volume)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/FiniteThetaPacket.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/FiniteThetaPacket.lean": [
+          "FiniteThetaPacket",
+          "ofQ",
+          "scale_pos",
+          "scale_ne_zero",
+          "scale_neg",
+          "log_scale",
+          "logVolume",
+          "logVolume_eq_sum",
+          "logVolume_ofQ",
+          "logVolume_neg_invariant",
+          "finiteThetaPacket"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "E3",
+      "kind": "tree_asset",
+      "title": "Theta-link assembly / source cover / unit-generated monoid comparison",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean",
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean",
+        "LeanFormal/IUT/IUTII/Theta/UnitGeneratedMonoidComparison.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkAssembly.lean": [
+          "thetaLink",
+          "thetaLink_unitPower",
+          "thetaLink_embeddedUnit",
+          "thetaLink_generator",
+          "thetaLinkSymm",
+          "thetaLinkSymm_apply",
+          "thetaLink_source_representation",
+          "thetaLink_target_representation",
+          "thetaLink_unique",
+          "thetaLink_unitEquiv_ext",
+          "sourceEvaluationOrbit",
+          "targetEvaluationOrbit",
+          "sourceSquaredLabelOrbit",
+          "targetSquaredLabelOrbit",
+          "CarriesRootSubgroup",
+          "thetaLink_image_sourceEvaluationOrbit",
+          "thetaLink_image_sourceSquaredLabelOrbit",
+          "thetaLink_synchronized_evaluation",
+          "thetaLink_natural"
+        ],
+        "LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean": [
+          "connectedTemperedObjectProperty",
+          "ConnectedTemperedCover",
+          "connectedTemperedInclusion",
+          "connectedTemperedUnderlying",
+          "connectedTemperedCover_isTempered",
+          "connectedTemperedCover_isGeometricallyConnected",
+          "connectedTemperedCover_geometricPoint_nonempty",
+          "BaseFieldCoverModel",
+          "BaseCover",
+          "baseCoverObject",
+          "baseCoverInclusion",
+          "baseCover_isTempered",
+          "baseCover_isGeometricallyConnected",
+          "YddotSlice",
+          "ThetaProductData",
+          "productMap",
+          "productMap_fst",
+          "productMap_snd",
+          "productMap_id",
+          "productMap_comp",
+          "productFunctor",
+          "SliceFactorization",
+          "productFunctor_full",
+          "ThetaCoverSubcategory",
+          "thetaEquivalence",
+          "BaseFieldProductIdentification",
+          "sliceObjectIsoIdentityOfIsIsoHom",
+          "thetaCover_mem_of_isIso_hom",
+          "isTempered_of_isEmpty_geometricPoint",
+          "not_isGeometricallyConnected_of_isEmpty_geometricPoint",
+          "isTempered_and_not_isGeometricallyConnected_of_isEmpty"
+        ],
+        "LeanFormal/IUT/IUTII/Theta/UnitGeneratedMonoidComparison.lean": [
+          "unitGeneratedSubmonoid",
+          "mem_unitGeneratedSubmonoid",
+          "unitPowerElement",
+          "unitPowerElement_coe",
+          "embeddedUnit",
+          "embeddedUnit_coe",
+          "distinguishedGenerator",
+          "distinguishedGenerator_coe",
+          "unitPowerElement_eq",
+          "unitPower_eq_iff",
+          "existsUnique_unitPower",
+          "unitPowerRepresentation",
+          "unitPowerRepresentation_injective",
+          "unitPowerRepresentation_surjective",
+          "unitPowerEquiv",
+          "unitPowerEquiv_apply",
+          "comparisonEquiv",
+          "comparisonEquiv_unitPower",
+          "comparisonEquiv_embeddedUnit",
+          "comparisonEquiv_generator",
+          "comparisonEquiv_coe_unitPower",
+          "inducedMonoidMap",
+          "inducedMonoidMap_coe",
+          "inducedMonoidMap_unitPower",
+          "comparisonEquiv_natural"
+        ]
+      },
+      "note": "; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "E4",
+      "kind": "tree_asset",
+      "title": "Concrete source etale theta bridge / etale Tate direction",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceEtaleThetaBridge.lean",
+        "LeanFormal/IUT/IUTII/Theta/EtaleTateDirection.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Theta/ConcreteSourceEtaleThetaBridge.lean": [
+          "cStage",
+          "packet",
+          "parameter",
+          "quotient",
+          "finiteLabel",
+          "roots",
+          "theater",
+          "sourceModel",
+          "reduction",
+          "quotientEquiv",
+          "generator",
+          "thetaScale",
+          "thetaLogScale",
+          "thetaLogVolume",
+          "AlgebraicFiniteThetaLevel",
+          "algebraicFiniteThetaLevel",
+          "level_packet_eq_stage",
+          "level_reduction_eq_packet",
+          "level_theater_eq_stage",
+          "level_sourceFrobenioid_eq_model",
+          "reduction_apply",
+          "reduction_zero",
+          "reduction_add",
+          "reduction_neg",
+          "reduction_sub",
+          "reduction_zsmul",
+          "reduction_surjective",
+          "reduction_kernel",
+          "reduction_zero_iff_multiple",
+          "reduction_eq_iff_multiple",
+          "reduction_add_multiple",
+          "reduction_sub_multiple",
+          "quotientEquiv_apply_mk",
+          "quotientEquiv_zero",
+          "quotientEquiv_add",
+          "quotientEquiv_neg",
+          "quotientEquiv_zsmul",
+          "quotientEquiv_injective",
+          "quotientEquiv_surjective",
+          "quotientEquiv_bijective"
+        ],
+        "LeanFormal/IUT/IUTII/Theta/EtaleTateDirection.lean": [
+          "integralTateReduction",
+          "integralTateReduction_apply",
+          "integralTateReduction_surjective",
+          "integralTateReduction_kernel",
+          "canonicalTateGenerator",
+          "canonicalTateGenerator_order",
+          "canonicalTateGenerator_ne_zero",
+          "canonicalTateLevel",
+          "canonicalTateLevel_eq_top",
+          "finiteEtaleTateDirection"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "E5",
+      "kind": "tree_asset",
+      "title": "Example36 Frobenioid boundary model (analytic theta carrier/series)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceThetaDivisor.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceThetaGenerator.lean",
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36ThetaSeries.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceThetaDivisor.lean": [
+          "carrierThetaTau",
+          "carrierThetaTau_im",
+          "carrierThetaTau_im_pos",
+          "carrierThetaTau_core",
+          "carrierThetaTau_exp",
+          "carrierTheta_term_eq",
+          "analyticThetaValue",
+          "analyticThetaValue_eq_tsum_nat",
+          "thetaRealValue",
+          "summable_thetaNatTerm",
+          "thetaNatSum_pos",
+          "thetaRealValue_pos",
+          "analyticThetaValue_eq_ofReal",
+          "analyticThetaValue_ne_zero",
+          "analyticThetaValue_re",
+          "analyticThetaValue_concrete_eq_jacobiThetaQ",
+          "analyticTheta_ne_zero_concrete",
+          "thetaQAdicQuotient",
+          "summable_thetaQAdicQuotientTerm",
+          "thetaQAdicQuotient_pos",
+          "thetaRealValue_eq_one_add_q_mul",
+          "analyticThetaValue_eq_one_add_q_mul",
+          "thetaQAdicQuotient_ne_zero",
+          "jacobiThetaQ_eq_one_add_q_mul",
+          "gaussianThetaCoeff",
+          "gaussianThetaCoeff_zero",
+          "gaussianThetaFormalSeries",
+          "gaussianThetaFormalSeries_constantCoeff",
+          "gaussianThetaFormalSeries_isUnit",
+          "gaussianThetaFormalSeries_order",
+          "gaussianThetaCoeff_pos_iff",
+          "analyticThetaZeroSet",
+          "analyticThetaZeroSet_empty",
+          "analyticThetaDivisor_trivial",
+          "thetaQUnit",
+          "thetaUnit",
+          "thetaUnit_eq_qUnit_pow",
+          "thetaUnit_neg",
+          "thetaUnit_zero",
+          "realThetaValue_pow_q"
+        ],
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36SourceThetaGenerator.lean": [
+          "AnalyticThetaCarrier",
+          "analyticThetaQExpansion",
+          "analyticThetaCarrierConcrete",
+          "analyticThetaQExpansion_concrete_eq",
+          "analyticThetaQExpansion_concrete_hasSum",
+          "analyticThetaCarrierConcrete_q_eq",
+          "analyticThetaTransport",
+          "analyticThetaTransport_nontrivial",
+          "analyticSourceThetaGeneratorData",
+          "analyticSourceThetaGeneratorData_specialValue_eq_qExpansionTerm",
+          "analyticSourceThetaGeneratorData_nonempty",
+          "analyticThetaTheater",
+          "analyticThetaTheater_injective",
+          "analyticThetaTheaterLink",
+          "analyticDistinctThetaHistoryData",
+          "analyticDistinctThetaHistoryData_thetaTransport",
+          "analyticDistinctThetaHistoryData_nonempty",
+          "SourceCurveEtaleThetaIdentificationCard",
+          "analyticSourceCurveEtaleThetaIdentificationData",
+          "analyticSourceCurveEtaleThetaIdentificationData_nonempty",
+          "example36SourceThetaGenerator_summary",
+          "example36SourceThetaGenerator"
+        ],
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36ThetaSeries.lean": [
+          "thetaTau",
+          "thetaTau_im",
+          "thetaTau_im_pos",
+          "thetaTau_core",
+          "exp_neg_log_five",
+          "thetaTau_exp",
+          "gaussianFiveThetaQ_lt_one",
+          "gaussianFiveThetaQ_abs_lt_one",
+          "thetaTau_exp_neg_pi_im",
+          "jacobiThetaQ",
+          "qExpansionTerm",
+          "qExpansionTerm_eq_ofReal",
+          "jacobiTheta_term_eq",
+          "hasSum_qExpansionTerm",
+          "jacobiThetaQ_eq_tsum_qExpansionTerm",
+          "summable_qExpansionTerm",
+          "norm_jacobiThetaQ_sub_one_le",
+          "jacobiThetaQ_ne_zero",
+          "jacobiThetaQ_re_pos",
+          "packetScale_eq_qExpansionTerm",
+          "SourceThetaAnalyticGeneratorCard",
+          "in",
+          "missingSourceThetaAnalyticRelation",
+          "example36ThetaSeries_summary",
+          "example36ThetaSeries"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L1",
+      "kind": "tree_asset",
+      "title": "Source log-shell datum/carrier (p, p*, preLogShell, logShell, unitLayer)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean": [
+          "sourceLogShellStar",
+          "sourceLogShellStar_pos",
+          "SourceLogShellDatum",
+          "pStar",
+          "pStar_pos",
+          "pStar_ne_zero",
+          "pStar_ne_zero_cast",
+          "preLogShell",
+          "logShell",
+          "unitLayer",
+          "codomainKummerContained",
+          "zero_mem_preLogShell",
+          "add_mem_preLogShell",
+          "logMap_pow_val",
+          "pow_smul_mem_preLogShell",
+          "preLogShell_subset_logShell",
+          "preLogShell_subset_unitLayer",
+          "invariant_unitLog_mem_preLogShell",
+          "invariant_unitLog_mem_logShell",
+          "zero_mem_logShell",
+          "add_mem_logShell",
+          "codomainKummerContained_iff",
+          "kummerImages_mem_logShell",
+          "invScaledPreLogShell",
+          "logShell_eq_invScaledPreLogShell",
+          "IQSpan",
+          "logShell_subset_IQSpan",
+          "preLogShell_subset_IQSpan",
+          "zero_mem_IQSpan",
+          "pStar_inv_cast",
+          "pStar_inv_mul_mem_IQSpan",
+          "IQSpan_eq_span_preLogShell",
+          "toNonarchimedeanUpperSemi",
+          "codomain_kummerImages_bounded",
+          "sourceLogShell_span_union",
+          "hullDominates_of_sourceLogShell",
+          "sourceLogShellCalibrationLogMap",
+          "sourceLogShellCalibrationDatum",
+          "sourceLogShellCalibration_pStar_eq",
+          "sourceLogShellCalibrationLogMap_apply"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L2",
+      "kind": "tree_asset",
+      "title": "AbsTopIII bridge: invariant image identification + calibration",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean": [
+          "SourceLogShellInvariantImageIdentification",
+          "invariantImageIdentification_iff_unitLayer_subset",
+          "invariantImageIdentification_iff_forall_log_mem",
+          "codomainKummerContained_of_invariantImageIdentification",
+          "invariantImageIdentification_of_invariants_eq_top",
+          "invariantImageIdentification_iff_invariants_eq_top_of_injective",
+          "invScaledUnitLayer",
+          "logShell_eq_invScaledUnitLayer_of_invariantImageIdentification",
+          "kummerImages_mem_logShell_of_invariantImageIdentification",
+          "toNonarchimedeanUpperSemi_of_invariantImageIdentification",
+          "codomain_kummerImages_bounded_of_invariantImageIdentification",
+          "sourceLogShellCalibration_invariantImageIdentification",
+          "sourceLogShellPStarMultiplesInvariants",
+          "sourceLogShellPStarMultiplesDatum",
+          "sourceLogShellPStarMultiples_pStar_eq",
+          "sourceLogShellPStarMultiples_powStable",
+          "sourceLogShellPStarMultiples_codomain_via_closure",
+          "sourceLogShellPStarMultiples_not_identification",
+          "sourceLogShellCollapsedLogMap",
+          "sourceLogShellCollapsedLogDatum",
+          "sourceLogShellCollapsedLog_pStar_eq",
+          "sourceLogShellCollapsedLog_identification",
+          "sourceLogShellCollapsedLog_not_powStable",
+          "sourceLogShellAbsTopIIIBridge"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L3",
+      "kind": "tree_asset",
+      "title": "Mono-analytic log-shell calibration carriers (arch/p-adic)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellArchPsiCnsCalibration.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellCompactCarrier.lean",
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellPadicLog.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellArchPsiCnsCalibration.lean": [
+          "archSegment",
+          "archSegment_isCompact",
+          "archSegment_isClosed",
+          "archSegment_subset_closedBall_one",
+          "signFactor",
+          "signFactor_zero",
+          "signFactor_one",
+          "signFactor_mem_archSegment",
+          "neg_mem_archSegment",
+          "half_mem_archSegment",
+          "neg_half_mem_archSegment",
+          "half_ne_neg_half",
+          "archHalfOrbit",
+          "archHalfOrbit_eq",
+          "archHalfOrbit_subset_archSegment",
+          "archSegment_eq_smulOne_image",
+          "archimedeanLogKummerUpperSemiSignCalibration",
+          "signFactor_zero_ne_one",
+          "signCalibration_kummer_nontrivial",
+          "monoAnalyticLogShellArchPsiCnsCalibration"
+        ],
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellCompactCarrier.lean": [
+          "MonoAnalyticLogShellCompactCarrier",
+          "preLogShell",
+          "logShell",
+          "unitLayer",
+          "codomainKummerContained",
+          "invariants_isCompact",
+          "preLogShell_isCompact",
+          "logShell_isCompact",
+          "preLogShell_isClosed",
+          "logShell_isClosed",
+          "zero_mem_preLogShell",
+          "zero_mem_logShell",
+          "preLogShell_subset_unitLayer",
+          "codomainKummerContained_iff",
+          "toNonarchimedeanUpperSemi_of_carrier",
+          "codomain_kummerImages_bounded",
+          "padicIntMulPrimeAddHom",
+          "padicIntMulPrimeAddHom_continuous",
+          "padicIntTrivialLogMap",
+          "padicIntLogShellCalibration",
+          "padicIntLogShellCalibration_logShell_isCompact",
+          "padicIntLogShellCalibration_logShell_isClosed",
+          "padicIntLogShellCalibration_codomainKummerContained",
+          "padicIntLogShellCalibrationUpperSemi",
+          "monoAnalyticLogShellCompactCarrier"
+        ],
+        "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellPadicLog.lean": [
+          "padicFormalLog_coeff",
+          "padicFormalLog_derivative",
+          "padicFormalLog_hasSubst",
+          "padicFormalExp_rescale_add",
+          "padicLogTerm",
+          "padicLogSeries",
+          "padicLog_denom_norm_inv_le",
+          "padicLogMajorant",
+          "padicLogMajorant_summable",
+          "padicLogTerm_norm_le",
+          "padicLogSeries_summable",
+          "padicLogSeries_hasSum",
+          "padicLogSeries_zero",
+          "padicLogSeries_continuousOn_closedBall",
+          "padicLogSeries_continuousOn_ball",
+          "padicLogSeries_continuousAt_of_norm_lt_one",
+          "monoAnalyticLogShellPadicLogSeries"
+        ]
+      },
+      "note": "; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "L4",
+      "kind": "tree_asset",
+      "title": "Absolute Kummer injection (class map, kernel = n-th powers)",
+      "status": "PROVED",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerInjection.lean": [
+          "RootsOfUnityFixed",
+          "rootsOfUnity_fixed_of_mem_base",
+          "chosenRoot",
+          "chosenRoot_spec",
+          "absoluteKummerMap",
+          "absoluteKummerMap_eq_one_iff"
+        ]
+      },
+      "note": " | EXIT0 (watchdog)"
+    },
+    {
+      "id": "L5",
+      "kind": "tree_asset",
+      "title": "Absolute Kummer continuity (locally constant / continuous)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerContinuity.lean": [
+          "isLocallyConstant_absoluteKummerMap",
+          "continuous_absoluteKummerMap"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L6",
+      "kind": "tree_asset",
+      "title": "Absolute Kummer quotient K^x/(K^x)^n injection",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerQuotient.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/AbsoluteKummerQuotient.lean": [
+          "nthPowerSubgroup",
+          "absoluteKummerMapQuotient",
+          "absoluteKummerMapQuotient_injective"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L7",
+      "kind": "tree_asset",
+      "title": "Theta-pilot IQ containment (source log-shell tensor generator)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean": [
+          "possibleImage_subset_of_generator_mem",
+          "sourceLogShellOnePlaceFamily",
+          "SourceThetaPilotOnePlacePacket",
+          "sourceThetaPilotProductMap",
+          "sourceThetaPilotProductMap_tprod",
+          "sourceThetaPilotTensorIQPacket",
+          "sourceThetaPilotIQPacket",
+          "possibleImage_subset_sourceThetaPilotIQPacket",
+          "sourceThetaPilotProductMap_image_subset_tensorIQPacket",
+          "sourceLogShellTensorGenerator",
+          "sourceThetaPilotProductMap_sourceLogShellTensorGenerator",
+          "sourceLogShellTensorGenerator_mem_sourceThetaPilotIQPacket"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "A1",
+      "kind": "theorem",
+      "title": "AbsTopIII01 concrete log-shell laws",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII01LogShellActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII01LogShellActual.lean": [
+          "absTopIII_sourceLogShellStar_eq_logShellScale",
+          "absTopIII_logShell_zero_mem",
+          "absTopIII_logShell_add_mem",
+          "absTopIII_invariant_unitLog_mem_logShell",
+          "AbsTopIIILogShellAnchor",
+          "AbsTopIIILogShellAnchors",
+          "AbsTopIIILogShellAnchors_length"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "A2",
+      "kind": "theorem",
+      "title": "AbsTopIII04 log-Frobenius unit landing (Def 3.1(iv))",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII04LogFrobeniusActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII04LogFrobeniusActual.lean": [
+          "absTopIII_logFrobenius_scale",
+          "absTopIII_logFrobenius_unit_landing",
+          "def31IVRows",
+          "def31IVRows_length"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "A3",
+      "kind": "named_input",
+      "title": "AbsTopIII05 four named deep inputs (D1-D4) record",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05ReconstructionInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05ReconstructionInputsActual.lean": [
+          "DeepInputKind",
+          "DeepInput",
+          "absTopIIIDeepInputs",
+          "absTopIIIDeepInputs_length",
+          "absTopIIIDeepInputs_none_proved"
+        ]
+      },
+      "note": "four deep inputs; partially refined by P58I (D1 concrete) and P58 (D2/D3/D4 typed); deep group-theoretic content NAMED | EXIT0 (watchdog)"
+    },
+    {
+      "id": "A4",
+      "kind": "conditional",
+      "title": "AbsTopIII05Refined: typed D1-D4 interfaces (tree-anchored D3/D4)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+          "Prop58iLocalFieldReconstruction",
+          "Prop58iiLogShellReconstruction",
+          "Cor55LogFrobeniusCompatibility",
+          "cor55_treeBridgeAnchor",
+          "OrientedGraphAnabelianData",
+          "orientedGraph_treeZActionAnchor",
+          "RefinedDeepInputs",
+          "refinedDeepInputKinds",
+          "refinedDeepInputKinds_eq_original",
+          "S3171RouteSlot",
+          "s3171RouteSlot_display_and_abc",
+          "absTopIII05Refined_with_s3171RouteSlot",
+          "absTopIII05RefinedConsumptionRows",
+          "absTopIII05RefinedConsumptionRows_length",
+          "absTopIII05RefinedStatus",
+          "absTopIII05RefinedStatus_length"
+        ]
+      },
+      "note": " | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "A5",
+      "kind": "interface",
+      "title": "AbsTopIII05 Section-0 objects (countably ordered sets / oriented graphs / L,Ldagger) - file EXIT=1 under repair",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05Section0ObjectsActual.lean": [
+          "OrderwiseConnected",
+          "CountablyOrdered",
+          "countablyOrdered_int",
+          "countablyOrdered_Icc",
+          "Adjacent",
+          "OrderCat",
+          "OrientedGraph",
+          "opposite",
+          "opposite_opposite",
+          "Hom",
+          "id",
+          "comp",
+          "FinLinear",
+          "frobeniusPictureGraph",
+          "frobeniusPictureGraph_adjacent",
+          "frobeniusPictureGraphAut_to_adjacency",
+          "Cor55L",
+          "Cor55Ldagger",
+          "cor55_square_lt",
+          "cor55_L_embeds",
+          "section0ObjectRows",
+          "section0ObjectRows_length"
+        ]
+      },
+      "note": "A445 accepted: CITABLE 31, EXIT0 11621, sha 970AA5AA (extended by other owner: UnderlyingGraph/Branch/PrePath/Path/PathPair/IsSaturatedPathPairSet) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A477: EXIT0+olean fresh; promoted"
+    },
+    {
+      "id": "G1",
+      "kind": "tree_asset",
+      "title": "Section-0 oriented graph Gamma (Frobenius picture) automorphism reduction",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkGraphAutomorphismReduction.lean": [
+          "FrobeniusPictureArrow",
+          "FrobeniusPictureGraphAut",
+          "graphAut_step",
+          "step_graphAut",
+          "graphAut_iff_stepPreserving",
+          "chainTranslation_graphAut",
+          "chainTranslation_injective",
+          "graphAut_translation",
+          "graphAut_eq_translation",
+          "graphAut_one",
+          "graphAut_comp",
+          "graphAut_symm",
+          "adjacentSwap_fixes_other_vertices",
+          "adjacentSwap_switches_and_fixes",
+          "no_automorphism_switches_adjacent_vertices",
+          "adjacentSwap_not_graphAut",
+          "graphAut_index_translation",
+          "labelPreservingTranslation_iff",
+          "thetaLinkGraphAutomorphismReduction"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "I1",
+      "kind": "tree_asset",
+      "title": "IUTIII theta packet bridge (positive packet log-volume)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ThetaPacketBridge.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ThetaPacketBridge.lean": [
+          "toPositivePacket",
+          "toPositivePacket_positive",
+          "toPositivePacket_det_eq_prod",
+          "toPositivePacket_logVolume_eq_log_det",
+          "toPositivePacket_logVolume_eq_sum",
+          "toPositivePacket_neg_invariant",
+          "toPositivePacket_det_rescale",
+          "toPositivePacket_logVolume_rescale",
+          "finiteThetaPacketBridge"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "I2",
+      "kind": "tree_asset",
+      "title": "IUTIII Cor 3.12 theta-bound supply (CardAMPLThetaBoundSupply)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean": [
+          "CardAMPLThetaBoundSupply",
+          "realVolume_le",
+          "ofReal_le_theta_of_imageSet_lower",
+          "exists_hull_eq_ofReal",
+          "of_realVolume_le",
+          "nonempty_iff",
+          "singletonRealSupply",
+          "certificate",
+          "linkEvidence",
+          "cor312Conclusion",
+          "cardAMPLThetaBoundSupply"
+        ]
+      },
+      "note": "; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "I3",
+      "kind": "tree_asset",
+      "title": "IUTIII source log-shell muN quotient carrier",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean": [
+          "muNQuotient",
+          "muNQuotientMap",
+          "muNQuotientMap_ker",
+          "muNQuotientMap_surjective",
+          "muNPowEnd",
+          "weightNLog",
+          "weightNLog_pow",
+          "sourceLogShellWeightNQuotient"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "R2",
+      "kind": "conditional",
+      "title": "EtTh realization consumer (class-B bundle wired conditionally)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean": [
+          "etThRealizationDeepRows",
+          "etThRealizationDeepRows_length",
+          "etThRealizationBlockerRows",
+          "etThRealizationBlockerRows_length",
+          "EtThRealizationInput",
+          "EtThRealizationInput.holds",
+          "EtThRealizationInput.holds_of_input",
+          "EtThThm25ConsumerInputs",
+          "etThRealization_thm25Consumer_conditional",
+          "etThRealization_holds_of_consumerInputs",
+          "etThRealization_genEllSection2Consumer_conditional",
+          "etThRealization_genEll_abc_conditional",
+          "etThRealizationConsumerRows",
+          "etThRealizationConsumerRows_length"
+        ]
+      },
+      "note": " | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "R1",
+      "kind": "interface",
+      "title": "EtTh00-13 paper rows (theta values/transformation/quotient/realization rows)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/EtTh00Stage0LedgerActual.lean",
+        "tmp/sheaf/xif/paper/EtTh01OddThetaSeriesActual.lean",
+        "tmp/sheaf/xif/paper/EtTh01StatementActual.lean",
+        "tmp/sheaf/xif/paper/EtTh02DeepInputsActual.lean",
+        "tmp/sheaf/xif/paper/EtTh02ShiftLawActual.lean",
+        "tmp/sheaf/xif/paper/EtTh03EtaleThetaGroupActual.lean",
+        "tmp/sheaf/xif/paper/EtTh03TreeReuseActual.lean",
+        "tmp/sheaf/xif/paper/EtTh04QPilotDataActual.lean",
+        "tmp/sheaf/xif/paper/EtTh04RouteWiringActual.lean",
+        "tmp/sheaf/xif/paper/EtTh05FrobenioidBoundaryActual.lean",
+        "tmp/sheaf/xif/paper/EtTh05PaperInputsActual.lean",
+        "tmp/sheaf/xif/paper/EtTh06ThetaGroupObjectActual.lean",
+        "tmp/sheaf/xif/paper/EtTh06ThetaQuotientActual.lean",
+        "tmp/sheaf/xif/paper/EtTh07ConcreteBridgeActual.lean",
+        "tmp/sheaf/xif/paper/EtTh07ThetaFunctionValuesActual.lean",
+        "tmp/sheaf/xif/paper/EtTh08ThetaTransformationActual.lean",
+        "tmp/sheaf/xif/paper/EtTh09StatusActual.lean",
+        "tmp/sheaf/xif/paper/EtTh09ThetaShiftCorollariesActual.lean",
+        "tmp/sheaf/xif/paper/EtTh10ThetaQuotientLawsActual.lean",
+        "tmp/sheaf/xif/paper/EtTh11ThetaRealizationRowsActual.lean",
+        "tmp/sheaf/xif/paper/EtTh12ThetaQuotientKernelRowsActual.lean",
+        "tmp/sheaf/xif/paper/EtTh13ModLFactorizationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/EtTh00Stage0LedgerActual.lean": [
+          "EtThRow",
+          "etThRows",
+          "etThRows_length",
+          "etThPin",
+          "etThPin_eq"
+        ],
+        "tmp/sheaf/xif/paper/EtTh01OddThetaSeriesActual.lean": [
+          "etTh_oddThetaSign_eq_pow",
+          "etTh_norm_oddThetaSign",
+          "etTh_oddThetaSign_add"
+        ],
+        "tmp/sheaf/xif/paper/EtTh01StatementActual.lean": [
+          "of",
+          "EtaleThetaKummerClass",
+          "MonoThetaEnvironment",
+          "EtaleThetaObject",
+          "EtThPaperComponents"
+        ],
+        "tmp/sheaf/xif/paper/EtTh02DeepInputsActual.lean": [
+          "EtThDeepInput",
+          "etThDeepInputs",
+          "etThDeepInputs_all_unproved",
+          "etThDeepInputs_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh02ShiftLawActual.lean": [
+          "EtThShiftAnchor",
+          "etThShiftAnchors",
+          "etThShiftAnchors_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh03EtaleThetaGroupActual.lean": [
+          "etTh_thetaCommutatorKernel_normal",
+          "etTh_thetaCommutatorKernel_le_derivedSubgroup",
+          "etTh_integralTateReduction_surjective",
+          "etTh_integralTateReduction_kernel"
+        ],
+        "tmp/sheaf/xif/paper/EtTh03TreeReuseActual.lean": [
+          "etThTreeReuse"
+        ],
+        "tmp/sheaf/xif/paper/EtTh04QPilotDataActual.lean": [
+          "EtThQPilotData",
+          "etThQPilotDataOfModel",
+          "etThQPilotDataOfModel_theta",
+          "etThQPilotData_canonicalReadout",
+          "etThQPilotData_canonicalReadout_theta"
+        ],
+        "tmp/sheaf/xif/paper/EtTh04RouteWiringActual.lean": [
+          "etThRouteWiring"
+        ],
+        "tmp/sheaf/xif/paper/EtTh05FrobenioidBoundaryActual.lean": [
+          "etThFrobenioidBoundary",
+          "etThFrobenioidBoundary_nonempty",
+          "etThFrobenioidModel",
+          "etThFrobenioidModel_nonempty",
+          "etThFrobenioidBoundary_kernel",
+          "etThFrobenioidBoundary_model_input_eq",
+          "etThFrobenioidBoundaryReuse"
+        ],
+        "tmp/sheaf/xif/paper/EtTh05PaperInputsActual.lean": [
+          "EtThPaperInput",
+          "etThPaperInputs",
+          "etThPaperInputs_length",
+          "etThPaperInputs_none_proved"
+        ],
+        "tmp/sheaf/xif/paper/EtTh06ThetaGroupObjectActual.lean": [
+          "etTh_thetaCommutatorKernel_normal",
+          "etTh_thetaToElliptic_mk",
+          "etTh_thetaPowerKernel_normal",
+          "etTh_ellipticPowerKernel_normal",
+          "EtThThetaGroupObject",
+          "etThThetaGroupObject",
+          "etThThetaGroupObject_apply"
+        ],
+        "tmp/sheaf/xif/paper/EtTh06ThetaQuotientActual.lean": [
+          "EtThThetaQuotientLayer",
+          "etThThetaQuotientLayer",
+          "etThThetaQuotientReuse"
+        ],
+        "tmp/sheaf/xif/paper/EtTh07ConcreteBridgeActual.lean": [
+          "EtThConcreteBridgeLevel",
+          "etThConcreteBridgeLevel",
+          "etTh_sourceModel_eq_boundary_model",
+          "etThConcreteBridge_sourceFrobenioid_eq_boundary",
+          "etThThetaLogVolume",
+          "etThThetaLogScale",
+          "etThConcreteBridgeReuse"
+        ],
+        "tmp/sheaf/xif/paper/EtTh07ThetaFunctionValuesActual.lean": [
+          "etTh_oddThetaSign_zero",
+          "etTh_oddThetaSign_neg_one",
+          "etTh_oddThetaTerm_zero",
+          "etTh_oddThetaTerm_neg_one",
+          "etTh_oddThetaExponent_zero",
+          "etTh_oddThetaExponent_neg_one"
+        ],
+        "tmp/sheaf/xif/paper/EtTh08ThetaTransformationActual.lean": [
+          "etTh08_thetaToElliptic_surjective",
+          "etTh08_thetaToElliptic_maps_powerKernel",
+          "etTh08_modLThetaProjection_surjective",
+          "etTh08_modLEllipticProjection_surjective",
+          "etTh08_modLThetaToElliptic_surjective",
+          "etTh08_thetaCenter_le_center",
+          "ThetaShiftData",
+          "etTh08_thetaShift_quotient_eval",
+          "EtTh08Row",
+          "etTh08Rows",
+          "etTh08Rows_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh09StatusActual.lean": [
+          "etTh09StatusRows",
+          "etTh09OpenGates",
+          "etTh09Ids"
+        ],
+        "tmp/sheaf/xif/paper/EtTh09ThetaShiftCorollariesActual.lean": [
+          "etTh09_shift_zero",
+          "etTh09_shift_one",
+          "etTh09_shift_neg_one",
+          "etTh09_shift_two",
+          "etTh09_shift_one_quotient",
+          "etTh09Rows",
+          "etTh09Rows_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh10ThetaQuotientLawsActual.lean": [
+          "etTh10_modLThetaProjection_eq",
+          "etTh10_modLEllipticProjection_eq",
+          "etTh10_thetaPowerKernel_le_comap",
+          "etTh10_modLThetaToElliptic_mk",
+          "etTh10Rows",
+          "etTh10Rows_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh11ThetaRealizationRowsActual.lean": [
+          "etTh11_thetaPowerKernel_mono",
+          "etTh11_ellipticPowerKernel_mono",
+          "etTh11_modLThetaProjection_surjective",
+          "etTh11_modLThetaToElliptic_surjective",
+          "etTh11Rows",
+          "etTh11Rows_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh12ThetaQuotientKernelRowsActual.lean": [
+          "etTh12_thetaToElliptic_eq_map",
+          "etTh12_thetaToElliptic_mk'",
+          "etTh12_thetaCenter_eq_ker",
+          "etTh12_thetaCommutatorKernel_le_derived",
+          "etTh12_thetaCenter_le_center",
+          "etTh12Rows",
+          "etTh12Rows_length"
+        ],
+        "tmp/sheaf/xif/paper/EtTh13ModLFactorizationActual.lean": [
+          "etTh13_modLThetaFactor",
+          "etTh13_modLThetaFactor_comp",
+          "etTh13_modLEllipticFactor",
+          "etTh13_modLEllipticFactor_comp",
+          "etTh13Rows",
+          "etTh13Rows_length"
+        ]
+      },
+      "note": " | A463: watchdog EXIT0 present for all files; promoted"
+    },
+    {
+      "id": "L8",
+      "kind": "tree_asset",
+      "title": "Source local log-shell datum (p*, logShell interface)",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLocalLogShellDatum.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLocalLogShellDatum.lean": [
+          "sourceLogShellStar_eq_logShellScale",
+          "sourceLocalLogShellDatum",
+          "sourceLocalLogShellDatum_preLogShell",
+          "sourceLocalLogShellDatum_preLogShell_eq_range_unitLogHom",
+          "sourceLocalLogShellDatum_logShell_eq_integralLogShell",
+          "sourceLocalLogShellDatum_zero_mem_logShell",
+          "sourceLocalLogShellDatum_unitLog_one_mem_logShell"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L9",
+      "kind": "tree_asset",
+      "title": "Source log-shell codomain closure",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCodomainClosure.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCodomainClosure.lean": [
+          "SourceLogShellPowStable",
+          "SourceLogShellPrimePowStable",
+          "powStable_of_primePowStable",
+          "codomainKummerContained_of_powStable",
+          "codomainKummerContained_of_primePowStable",
+          "codomainKummerContained_of_invariants_eq_top",
+          "codomainKummerContained_iff_powStar_log_mem",
+          "kummerImages_mem_logShell_of_powStable",
+          "toNonarchimedeanUpperSemi_of_powStable",
+          "codomain_kummerImages_bounded_of_powStable",
+          "sourceLogShellScaledLatticeInvariants",
+          "sourceLogShellScaledLatticeLogMap",
+          "sourceLogShellScaledLatticeDatum",
+          "sourceLogShellScaledLatticeModel_pStar_eq",
+          "sourceLogShellScaledLatticeLogMap_apply",
+          "sourceLogShellScaledLatticeModel_one_mem_unitLayer",
+          "sourceLogShellScaledLatticeModel_doublePStarPow_mem",
+          "sourceLogShellScaledLatticeModel_not_powStable",
+          "sourceLogShellScaledLatticeModel_not_codomain",
+          "sourceLogShellCalibration_primePowStable",
+          "sourceLogShellCalibration_codomainKummerContained_via_closure",
+          "sourceLogShellCodomainClosure"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "L10",
+      "kind": "tree_asset",
+      "title": "Source log-shell IQ tensor packet",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellIQTensorPacket.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellIQTensorPacket.lean": [
+          "sourceLogShell_span_pi_eq_pi_span",
+          "sourceLogShellDirectSumPacketSet",
+          "sourceLogShellIQDirectSumPacket",
+          "sourceLogShellIQDirectSumPacket_eq_span_pi",
+          "sourceLogShellIQDirectSumPacket_mem_iff",
+          "sourceLogShellIQDirectSumPacket_single_mem",
+          "sourceLogShellIQDirectSumPacket_pStar_inv_mul_mem",
+          "sourceLogShell_piCongrRight_image_pi",
+          "sourceLogShellIQDirectSumPacket_map_of_image",
+          "sourceLogShellTensorProductSetOn",
+          "sourceLogShellTensorProductSet",
+          "sourceLogShell_mul_mem_span_mul_of_mem",
+          "sourceLogShell_mul_mem_span_mul",
+          "sourceLogShell_prod_mem_span_prodSet",
+          "sourceLogShellTensorProductSet_span_eq",
+          "sourceLogShellIQTensorPacket_eq_span_prod_iq",
+          "sourceLogShell_prod_eq_nested",
+          "sourceLogShellNestedTensorProductSet",
+          "sourceLogShellNestedTensorProductSet_eq_flatten",
+          "sourceLogShellNestedTensorProductSet_span_eq",
+          "sourceLogShell_prod_image_ringEquiv",
+          "sourceLogShellRealLatticeLogMap",
+          "sourceLogShellRealLatticeLogMap_apply",
+          "sourceLogShellRealLatticeDatum",
+          "sourceLogShellRealLattice_pStar_eq",
+          "sourceLogShellRealLattice_preLogShell_eq",
+          "sourceLogShellRealLattice_logShell_mem_iff",
+          "sourceLogShellRealLattice_inv_pStar_mem_logShell",
+          "sourceLogShellRealLattice_logShell_subset_ratCast",
+          "sourceLogShell_span_subset_ratCast",
+          "sourceLogShellRealLattice_sqrt_two_not_mem_IQSpan",
+          "sourceLogShellRealLatticeTwoPlacePrime",
+          "sourceLogShellRealLatticeTwoPlaceFamily",
+          "sourceLogShellRealLatticeTwoPlaceFamily_K",
+          "sourceLogShellRealLatticeTwoPlaceElement",
+          "sourceLogShellRealLatticeTwoPlaceSqrtTwoElement",
+          "sourceLogShellRealLatticeTwoPlace_piece_mem",
+          "sourceLogShellRealLatticeTwoPlacePacket_mem",
+          "sourceLogShellRealLatticeTwoPlacePacket_sqrt_two_not_mem",
+          "sourceLogShellRealLatticeTwoPlacePacket_single_mem"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "P58",
+      "kind": "interface",
+      "title": "Prop 5.8(ii) concrete diagram-object layer (Gamma^x_non/CMLF model; deep parts named)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiDiagramActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiDiagramActual.lean": [
+          "at",
+          "CMLFCarrier",
+          "NonDiagramModel",
+          "preLogShell_subset_unitLayer",
+          "nonDiagramModel",
+          "unitLayer_subset_logShell_of_invariantImageIdentification",
+          "logShell_eq_invScaled_of_invariantImageIdentification",
+          "Prop58iiNamedInput",
+          "Prop58iiDiagramObject",
+          "Prop58iiDiagramObject.vertexRelations",
+          "Cor55DiagramRow",
+          "cor55DiagramRows",
+          "cor55DiagramRows_length",
+          "prop58iiModelRows",
+          "prop58iiModelRows_length",
+          "calibration_vertexRelations"
+        ]
+      },
+      "note": "A437(2) delivered: concrete model vertices + proved inclusions; N1-N3 named | A444 pin: CITABLE 15, EXIT0 10359, sha 1BC1070E [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A463: watchdog EXIT0 present for all files; promoted [A464: downgraded; olean-fresh evidence missing] | A466: watchdog EXIT0 + olean fresh for all files; promoted [A466 downgrade: evidence incomplete] | A475: EXIT0+olean fresh; promoted [A475 downgrade] | A477: EXIT0+olean fresh; promoted [A477 downgrade] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "X1",
+      "kind": "conditional",
+      "title": "Example36 <-> EtTh correspondence (carrier-level bundle + theta kernel links)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Example36EtThCorrespondenceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Example36EtThCorrespondenceActual.lean": [
+          "etthExample36_qExpansion_eq_kernel",
+          "etthExample36_concrete_q",
+          "etthExample36_concrete_q_mem",
+          "etthExample36_concrete_expansion_eq_jacobi",
+          "etthExample36_thetaGeneratorCard_nonempty",
+          "etthExample36_theater_injective",
+          "Example36EtThCorrespondence",
+          "example36EtThCorrespondence",
+          "example36EtThCorrespondence_nonempty",
+          "example36EtThCorrespondenceRows",
+          "example36EtThCorrespondenceRows_length"
+        ]
+      },
+      "note": "A444 pin: CITABLE 10, EXIT0 6964, sha B56585A9; carrier-level correspondence proved; EtTh row-6 manifestation remains NAMED (outside node declarations) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A463: watchdog EXIT0 present for all files; promoted [A464: downgraded; olean-fresh evidence missing] | A466: watchdog EXIT0 + olean fresh for all files; promoted [A466 downgrade: evidence incomplete] | A475: EXIT0+olean fresh; promoted [A475 downgrade] | A477: EXIT0+olean fresh; promoted [A477 downgrade] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58I",
+      "kind": "conditional",
+      "title": "Prop 5.8(i) concrete invariant layer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iConcreteActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iConcreteActual.lean": [
+          "paperPStar",
+          "sourceLogShellStar_eq_paperPStar",
+          "paperPStar_pos",
+          "Prop58iConcreteInvariants",
+          "preLogShell_subset_unitLayer",
+          "prop58iConcreteInvariants",
+          "Prop58iConcreteInvariants.toD1",
+          "prop58iD1",
+          "Prop58iNamedInput",
+          "Prop58iConcreteObject",
+          "calibrationConcreteInvariants",
+          "prop58iConcreteRows",
+          "prop58iConcreteRows_length"
+        ]
+      },
+      "note": "concrete invariants + pStar formula + preLogShell⊆unitLayer proved; group-theoretic part NAMED | EXIT0 file + probe (tmp/xif_guarded_results.log) | EXIT0 (watchdog results log) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A463: watchdog EXIT0 present for all files; promoted [A464: downgraded; olean-fresh evidence missing] | A466: watchdog EXIT0 + olean fresh for all files; promoted [A466 downgrade: evidence incomplete] | A475: EXIT0+olean fresh; promoted [A475 downgrade] | A477: EXIT0+olean fresh; promoted [A477 downgrade] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58IC",
+      "kind": "conditional",
+      "title": "Concrete instantiations of refined D1-D4 interfaces",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05RefinedConcreteActual.lean"
+      ],
+      "note": "VERIFIED (results-log/olean evidence; shehdd): refinedDeepInputsConcrete for any D + bridge h; calibration instance Nonempty; deep parts NAMED | EXIT0 file (results log); probe pending DAG | EXIT0 (watchdog results log) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A463: watchdog EXIT0 present for all files; promoted [A464: downgraded; olean-fresh evidence missing] | A466: watchdog EXIT0 + olean fresh for all files; promoted [A466 downgrade: evidence incomplete] | A475: EXIT0+olean fresh; promoted [A475 downgrade] | A477: EXIT0+olean fresh; promoted [A477 downgrade] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05RefinedConcreteActual.lean": [
+          "concreteD1",
+          "concreteD2",
+          "concreteD3",
+          "concreteD4",
+          "refinedDeepInputsConcrete",
+          "concreteD4_combinatorialData",
+          "refinedDeepInputsConcrete_d2_functorial",
+          "refinedDeepInputsConcrete_d3_global",
+          "refinedDeepInputsConcrete_calibration",
+          "refinedConcreteRows",
+          "refinedConcreteRows_length"
+        ]
+      }
+    },
+    {
+      "id": "IKT",
+      "kind": "interface",
+      "title": "iuti-ii Kummer/Theta interface asset layer",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerThetaInterfaceActual.lean"
+      ],
+      "note": "Kummer facts re-exported + ThetaQuotientInterface/KummerLayerInterface + theta-pilot facts; EtTh deep rigidity NAMED | EXIT0 file (results log); probe stale (old failure), DAG requeued | EXIT0 (watchdog results log) [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0] | A463: watchdog EXIT0 present for all files; promoted [A464: downgraded; olean-fresh evidence missing] | A466: watchdog EXIT0 + olean fresh for all files; promoted [A466 downgrade: evidence incomplete] | A475: EXIT0+olean fresh; promoted [A475 downgrade] | A477: EXIT0+olean fresh; promoted [A477 downgrade] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerThetaInterfaceActual.lean": [
+          "kummerClass",
+          "kummerClass_continuous",
+          "kummerQuotient_injective",
+          "ThetaQuotientInterface",
+          "thetaQuotientInterface",
+          "thetaCommutatorKernel_le_derived",
+          "KummerLayerInterface",
+          "kummerLayerInterface",
+          "thetaPilot_orbit_containment",
+          "thetaPilot_generator_mem",
+          "kummerThetaInterfaceRows",
+          "kummerThetaInterfaceRows_length"
+        ]
+      }
+    },
+    {
+      "id": "P58R",
+      "kind": "conditional",
+      "title": "EtTh row-6 carrier-level realization package",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6RealizationActual.lean"
+      ],
+      "note": "Example36<->EtTh bundle + Kummer quotient injection + theta-to-elliptic surjectivity; Frobenioid manifestation/theta transformation NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRow6RealizationActual.lean": [
+          "EtThRow6RealizationCarrier",
+          "etThRow6RealizationCarrier",
+          "etThRow6RealizationCarrier_nonempty",
+          "etThRow6Rows",
+          "etThRow6Rows_length"
+        ]
+      }
+    },
+    {
+      "id": "A3R",
+      "kind": "interface",
+      "title": "Refinement map for the four AbsTopIII05 deep inputs",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05DeepInputsRefinedActual.lean"
+      ],
+      "note": "refined anchor map + kind linkage; deep anabelian parts NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05DeepInputsRefinedActual.lean": [
+          "refinedAnchor",
+          "refinedAnchors",
+          "absTopIIIDeepInputs_kinds_eq_refined",
+          "refinedAnchors_length",
+          "deepInputRefinementRows",
+          "deepInputRefinementRows_length"
+        ]
+      }
+    },
+    {
+      "id": "SAT",
+      "kind": "interface",
+      "title": "Section-0 saturated path-pair sets (honest combinatorics)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedActual.lean"
+      ],
+      "note": "co-verticial pairs + abstract PathComposition + saturated-set conditions (a)-(e) + coverticial set saturated; concrete pre-path composition NAMED | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedActual.lean": [
+          "PrePath.initial",
+          "PrePath.terminal",
+          "PathSigma",
+          "PathPairSigma",
+          "PathSigma.initial",
+          "PathSigma.terminal",
+          "Coverticial",
+          "covertSet",
+          "PathComposition",
+          "IsSaturatedPathPairSet",
+          "covertSet_isSaturated"
+        ]
+      }
+    },
+    {
+      "id": "TPI",
+      "kind": "interface",
+      "title": "Source theta-pilot packet interface (iuti-ii)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotPacketInterfaceActual.lean"
+      ],
+      "note": "re-exports one-place family/packet/product map/generator/IQ membership/orbit containment; source-to-arithmetic comparison NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)",
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotPacketInterfaceActual.lean": [
+          "onePlaceLogShellFamily",
+          "onePlacePacket",
+          "productComparison",
+          "productComparison_tprod",
+          "tensorGenerator",
+          "productComparison_tensorGenerator",
+          "iqPacket",
+          "tensorGenerator_mem_iqPacket",
+          "possibleImage_orbitContainment",
+          "thetaPilotPacketRows",
+          "thetaPilotPacketRows_length"
+        ]
+      }
+    },
+    {
+      "id": "ETR",
+      "kind": "interface",
+      "title": "EtTh realization rows summary with anchors",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationRowsSummaryActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationRowsSummaryActual.lean": [
+          "EtThRealizationRowStatus",
+          "etthRealizationRowStatus",
+          "etthRealizationRowStatus_length",
+          "etthRealizationRowStatus_A_rows",
+          "etthRealizationRowStatus_B_rows",
+          "etthRealizationSummaryRows",
+          "etthRealizationSummaryRows_length"
+        ]
+      },
+      "note": "rows 1-4 A-class proved/reused; rows 5-7 class-B named with carrier-level anchors (IKT/P58R/X1) | A484: EXIT0+olean fresh; promoted [A484 downgrade] | EXIT0 (watchdog) [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "ILB",
+      "kind": "bridge",
+      "title": "IUT-II Kummer/Theta -> IUT-III StepXI carrier bridge",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIIIThetaLinkBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIIIThetaLinkBridgeActual.lean": [
+          "IUTIIIThetaLinkCarrier",
+          "iutiiiThetaLinkCarrier",
+          "iutiiiThetaLinkCarrier_nonempty",
+          "iutiiiThetaLinkRows",
+          "iutiiiThetaLinkRows_length"
+        ]
+      },
+      "note": "carrier-level bridge; deep source-to-arithmetic comparison NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "EDA",
+      "kind": "interface",
+      "title": "EtTh ten deep inputs with anchors",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThDeepInputsAnchorsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThDeepInputsAnchorsActual.lean": [
+          "EtThDeepInputAnchor",
+          "etThDeepInputAnchors",
+          "etThDeepInputAnchors_ids_eq",
+          "etThDeepInputAnchors_length"
+        ]
+      },
+      "note": "all ten EtTh deep inputs NAMED with carrier-level/tree anchors; id linkage proved | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "SATS",
+      "kind": "interface",
+      "title": "Section-0 symmetrically saturated path-pair sets",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSymmActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedSymmActual.lean": [
+          "IsSymmetricallySaturatedPathPairSet",
+          "covertSet_isSymmetricallySaturated",
+          "saturated_subset_covert",
+          "symmetricallySaturated_isSaturated",
+          "saturatedSymmRows",
+          "saturatedSymmRows_length"
+        ]
+      },
+      "note": "condition (f) formalized; covertSet sym-saturated; saturated⊆covert; projection; concrete composition NAMED | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58IMG",
+      "kind": "theorem",
+      "title": "Prop 5.8(i)/(ii) exact image descriptions",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iImagesActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iImagesActual.lean": [
+          "preLogShell_eq_image_invariants",
+          "unitLayer_eq_image_units",
+          "logShell_eq_pStar_invScaled_preLogShell",
+          "preLogShell_subset_unitLayer",
+          "prop58iImageRows",
+          "prop58iImageRows_length"
+        ]
+      },
+      "note": "set equalities for preLogShell/unitLayer/logShell + inclusion | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "PSTAR",
+      "kind": "theorem",
+      "title": "p* invariants and log-shell scale identification",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PStarScaleActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PStarScaleActual.lean": [
+          "pStar_eq_logShellScale",
+          "pStar_pos",
+          "pStar_two",
+          "pStar_odd_prime",
+          "pStar_eq_paperPStar",
+          "pStarRows",
+          "pStarRows_length"
+        ]
+      },
+      "note": "p* cases + p=2/odd + paper case split + logShellScale link | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "TRIB",
+      "kind": "interface",
+      "title": "Absolute Kummer trio typed bundle",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerTrioActual.lean": [
+          "kummerMapTrio",
+          "kummerKernelTrio",
+          "kummerLocallyConstantTrio",
+          "kummerContinuousTrio",
+          "kummerQuotientTrio",
+          "nthPowerSubgroupTrio",
+          "AbsoluteKummerTrio",
+          "absoluteKummerTrio",
+          "absoluteKummerTrio_nonempty",
+          "absoluteKummerTrioRows",
+          "absoluteKummerTrioRows_length"
+        ]
+      },
+      "note": "bundle of Kummer class/kernel/locally-constant/continuity/quotient injection (tree proofs re-exported) | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "CMLF",
+      "kind": "interface",
+      "title": "Concrete CMLF log-coordinate model category",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiCMLFActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiCMLFActual.lean": [
+          "CMLFHom",
+          "CMLFHom.id",
+          "CMLFHom.comp",
+          "CMLFObject",
+          "cmlfModelRows",
+          "cmlfModelRows_length"
+        ]
+      },
+      "note": "CMLFHom objects/morphisms/id/comp constructed; paper CMLF_TS categories + Gamma^x_non diagram NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58IT",
+      "kind": "conditional",
+      "title": "Prop 5.8(i) reconstruction target (model form)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iTargetActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iTargetActual.lean": [
+          "prop58iReconstructionTarget",
+          "prop58iReconstructionTarget_iff_bridge",
+          "calibration_reconstructionTarget",
+          "target_implies_kummerInclusion",
+          "target_implies_logShell_eq",
+          "prop58iTargetRows",
+          "prop58iTargetRows_length"
+        ]
+      },
+      "note": "target unitLayer=preLogShell ⇔ bridge; calibration instance; consequences; algorithm NAMED | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "LIN",
+      "kind": "theorem",
+      "title": "Linear oriented graphs of integer intervals",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0LinearGraphActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0LinearGraphActual.lean": [
+          "intIntervalGraph",
+          "intIntervalGraph_edge_iff",
+          "intIntervalGraph_underlying_adj",
+          "intIntervalGraph_edge_adjacent",
+          "intIntervalGraph_vertices_nonempty",
+          "linearGraphRows",
+          "linearGraphRows_length"
+        ]
+      },
+      "note": "interval linear graph construction + adjacency/underlying/adjacent/nonempty proofs; general countably ordered case NAMED | A488: EXIT0+olean fresh; promoted [A488 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "ORDERF",
+      "kind": "theorem",
+      "title": "Functors of order categories Order(E)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatFunctorActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0OrderCatFunctorActual.lean": [
+          "orderCatFunctor",
+          "orderCatFunctor_id_obj",
+          "orderCatFunctorOfStrictMono",
+          "orderCatFunctorRows",
+          "orderCatFunctorRows_length"
+        ]
+      },
+      "note": "monotone map -> functor; object/id components; strict mono instance | PARKED (typeclass friction)"
+    },
+    {
+      "id": "TPK",
+      "kind": "interface",
+      "title": "Etale theta power-kernel / projection interface",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPowerKernelActual.lean": [
+          "thetaPowerKernel_normalT",
+          "ellipticPowerKernel_normalT",
+          "thetaToElliptic_maps_powerKernelT",
+          "modLThetaToEllipticT",
+          "modLThetaToElliptic_surjectiveT",
+          "thetaToElliptic_surjectiveT",
+          "thetaCommutatorKernel_le_derivedT",
+          "thetaPowerKernelRows",
+          "thetaPowerKernelRows_length"
+        ]
+      },
+      "note": "power kernels/normality/maps/surjectivity re-exported; geometric realization NAMED | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "COM",
+      "kind": "theorem",
+      "title": "Order-isomorphism invariance of countably ordered sets",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0CountablyOrderedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0CountablyOrderedActual.lean": [
+          "orderwiseConnected_image",
+          "countablyOrdered_of_orderIso",
+          "countablyOrdered_iff_of_orderIso",
+          "countablyOrdered_of_iso_int",
+          "countablyOrderedRows",
+          "countablyOrderedRows_length"
+        ]
+      },
+      "note": "orderwise connectedness image + CountablyOrdered invariance/iff + iso-to-Z instance | A488: EXIT0+olean fresh; promoted [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58IDR",
+      "kind": "theorem",
+      "title": "Gamma^x_non diagram model vertex descriptions",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiDiagramRowsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiDiagramRowsActual.lean": [
+          "nonDiagramModel_invariantImage",
+          "nonDiagramModel_unitImage",
+          "nonDiagramModel_logShell",
+          "nonDiagramModel_inclusion",
+          "diagramVertexRows",
+          "diagramVertexRows_length"
+        ]
+      },
+      "note": "vertex sets = exact image descriptions; inclusion edge proved; paper diagram NAMED | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58BR",
+      "kind": "theorem",
+      "title": "Prop 5.8(ii) bridge consequence rows",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiBridgeRowsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiBridgeRowsActual.lean": [
+          "bridge_codomainKummerContained",
+          "bridge_logShell_eq",
+          "bridge_kummerImages_mem",
+          "calibration_bridge",
+          "bridgeDiagramRows",
+          "bridgeDiagramRows_length"
+        ]
+      },
+      "note": "bridge consequences as diagram edges; Cor 5.5 global/panalocal NAMED; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | A477: EXIT0+olean fresh; promoted [A477 downgrade] | EXIT0 (watchdog) [A480 downgrade: evidence incomplete] | A484: EXIT0+olean fresh; promoted [A484 downgrade] | A485: EXIT0+olean fresh; promoted [A485 downgrade] | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58VA",
+      "kind": "interface",
+      "title": "Gamma^x_non diagram model vertices/arrows",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiVertexArrowsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiVertexArrowsActual.lean": [
+          "NonDiagramVertex",
+          "vertexSet",
+          "arrow_invariant_le_unit",
+          "arrow_unit_le_logShell",
+          "arrow_logShell_eq_invScaled",
+          "nonDiagramVertex_card",
+          "vertexArrowRows",
+          "vertexArrowRows_length"
+        ]
+      },
+      "note": "4 vertices + 3 proved arrows; paper diagram NAMED; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency) | EXIT0 (watchdog)"
+    },
+    {
+      "id": "C55D",
+      "kind": "interface",
+      "title": "Cor-5.5 auxiliary ordered-set typed model (L, L-dagger)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiCor55RowsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiCor55RowsActual.lean": [
+          "Cor55DaggerModel",
+          "cor55DaggerModelConcrete",
+          "cor55DaggerModel_nonempty",
+          "cor55AuxRows",
+          "cor55AuxRows_length"
+        ]
+      },
+      "note": "typed L/Ldagger model + concrete instance; seven-row D^bullet construction NAMED | A486: EXIT0+olean fresh; promoted [A486 downgrade] | EXIT0 (watchdog) [A488 downgrade] | A490: EXIT0+olean fresh; promoted [A490 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "P58ALG",
+      "kind": "interface",
+      "title": "Computable Prop 5.8(i) invariant extraction (parameter-level)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iInvariantsAlgorithmActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iInvariantsAlgorithmActual.lean": [
+          "LocalFieldInvariantsData",
+          "LocalFieldInvariantsData.residueChar",
+          "LocalFieldInvariantsData.pStar",
+          "LocalFieldInvariantsData.residueCardinality",
+          "LocalFieldInvariantsData.absoluteDegree",
+          "LocalFieldInvariantsData.ramificationIndex",
+          "LocalFieldInvariantsData.pthRootsOrder",
+          "LocalFieldInvariantsData.pStar_eq_sourceLogShellStar",
+          "LocalFieldInvariantsData.residueCardinality_eq",
+          "LocalFieldInvariantsData.absoluteDegree_eq",
+          "LocalFieldInvariantsData.pthRootsOrder_eq",
+          "calibrationInvariantsData",
+          "calibrationInvariantsData_pStar",
+          "invariantsAlgorithmRows",
+          "invariantsAlgorithmRows_length"
+        ]
+      },
+      "note": "p,p*,p^f,[k:Qp],e,p^m computable extraction + correctness; group-theoretic algorithm NAMED | A488: EXIT0+olean fresh; promoted [A488 downgrade] | A492: EXIT0+olean fresh; promoted [A492 downgrade] | EXIT0 (watchdog)"
+    },
+    {
+      "id": "SATC",
+      "kind": "theorem",
+      "title": "Section-0 saturated set closure properties",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedClosureActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0SaturatedClosureActual.lean": [
+          "saturated_empty",
+          "saturated_inter",
+          "saturated_iInter",
+          "saturated_subset_covertSet",
+          "saturatedClosureRows",
+          "saturatedClosureRows_length"
+        ]
+      },
+      "note": "empty/intersection/iInter closure + subset covert; paper gamma-equal closure NAMED"
+    },
+    {
+      "id": "CMLF2",
+      "kind": "interface",
+      "title": "Log-shell/theta carrier compatibility (model-level, replacement route)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellThetaCarrierCompatActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellThetaCarrierCompatActual.lean": [
+          "CMLFCarrierHom",
+          "CMLFCarrierHom.id",
+          "CMLFCarrierHom.comp",
+          "CMLFCarrierHom.image_unitLayer",
+          "CMLFCarrierHom.image_preLogShell",
+          "CMLFCarrierHom.image_logShell",
+          "logShellThetaCarrierRows",
+          "logShellThetaCarrierRows_length"
+        ]
+      },
+      "note": "replaces CMLFI route (import/compile instability); invariant-preserving CMLF homs + unitLayer/preLogShell/logShell image preservation under p* compatibility; paper CMLF/Gamma^x_non compatibility NAMED"
+    },
+    {
+      "id": "E4A",
+      "kind": "interface",
+      "title": "EtTh class-B gap anchors (rows 5-7) with named hypotheses",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThClassBGapAnchorsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThClassBGapAnchorsActual.lean": [
+          "EtThClassBGapInputs",
+          "etThClassB_row5",
+          "etThClassB_row6",
+          "etThClassB_row7",
+          "etThClassBGapRows",
+          "etThClassBGapRows_length"
+        ]
+      },
+      "note": "explicit named-input bundle + conditional consumers; carrier anchors R2/P58R/ETR/X1; class-B statements NAMED"
+    },
+    {
+      "id": "A4N",
+      "kind": "interface",
+      "title": "AbsTopIII05 four deep inputs as explicit named hypotheses",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05NamedInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIII05NamedInputsActual.lean": [
+          "AbsTopIII05NamedInputs",
+          "absTopIII05_D1",
+          "absTopIII05_D2",
+          "absTopIII05_D3",
+          "absTopIII05_D4",
+          "absTopIII05NamedInputRows",
+          "absTopIII05NamedInputRows_length"
+        ]
+      },
+      "note": "D1-D4 named shapes + conditional consumers; concrete/refined anchors from P58I/P58/P58BR/A3R"
+    },
+    {
+      "id": "TKL",
+      "kind": "interface",
+      "title": "Theta-pilot / absolute-Kummer link interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotKummerLinkActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotKummerLinkActual.lean": [
+          "ThetaPilotKummerLink",
+          "thetaPilotKummerLink",
+          "thetaPilotKummerLink_nonempty",
+          "thetaPilotKummerLinkRows",
+          "thetaPilotKummerLinkRows_length"
+        ]
+      },
+      "note": "KummerLayerInterface + ThetaQuotientInterface + packet/precision rows bundle; source-to-arithmetic comparison NAMED"
+    },
+    {
+      "id": "P58IN",
+      "kind": "interface",
+      "title": "Gamma^x_non diagram explicit named input",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiDiagramInputActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiDiagramInputActual.lean": [
+          "Prop58iiDiagramInput",
+          "prop58iiDiagram_of_input",
+          "nonDiagramModel_nonempty",
+          "prop58iiDiagramInputRows",
+          "prop58iiDiagramInputRows_length"
+        ]
+      },
+      "note": "Prop58iiDiagramInput named hypothesis + conditional consumer + NonDiagramModel nonempty; paper diagram NAMED"
+    },
+    {
+      "id": "EGS",
+      "kind": "interface",
+      "title": "EtTh realization gap table (deep inputs + rows + class-B)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationGapRowsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationGapRowsActual.lean": [
+          "etThRealizationGapRows",
+          "etThRealizationGapRows_length",
+          "etThRealizationGapRows_deepInputs_count",
+          "etThRealizationGapRows_rows_count",
+          "etThRealizationGapRows_classB_count"
+        ]
+      },
+      "note": "combined gap table rows + counts; class-B/deep inputs NAMED"
+    },
+    {
+      "id": "SPC",
+      "kind": "interface",
+      "title": "Source theta-pilot comparison explicit named input",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SourceThetaPilotComparisonInputActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SourceThetaPilotComparisonInputActual.lean": [
+          "SourceThetaPilotComparisonInput",
+          "sourceThetaPilotComparison_of_input",
+          "sourceThetaPilotComparisonRows",
+          "sourceThetaPilotComparisonRows_length"
+        ]
+      },
+      "note": "source-to-arithmetic comparison as explicit named hypothesis + conditional consumer; precision/packet tree facts reused"
+    },
+    {
+      "id": "P58AG",
+      "kind": "interface",
+      "title": "Prop 5.8(ii) phase aggregation",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiPhaseAggregationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iiPhaseAggregationActual.lean": [
+          "prop58iiPhaseRows",
+          "prop58iiPhaseRows_length",
+          "prop58iiPhaseRows_vertex_count",
+          "prop58iiPhaseRows_arrow_count",
+          "prop58iiPhaseRows_bridge_count"
+        ]
+      },
+      "note": "phase rows aggregation over P58/P58IDR/P58VA/P58BR/CMLF/CMLF2; paper Gamma^x_non/CMLF categories NAMED"
+    },
+    {
+      "id": "X1C",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Example36<->EtTh consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Example36ConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Example36ConsumerChainActual.lean": [
+          "consumer_example36_q",
+          "consumer_example36_kernel",
+          "consumer_example36_nonempty",
+          "consumer_example36_row_count",
+          "example36ConsumerRows",
+          "example36ConsumerRows_length"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "IKTC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Kummer/theta interface consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1KummerThetaConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1KummerThetaConsumerChainActual.lean": [
+          "consumer_kummer_quotient_injective",
+          "consumer_theta_surjective",
+          "consumer_thetaPilot_generator_mem",
+          "KummerThetaConsumer",
+          "kummerThetaConsumer",
+          "kummerThetaConsumer_nonempty"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "P58IC2",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Prop 5.8(i) consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Prop58iConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Prop58iConsumerChainActual.lean": [
+          "consumer_target_kummerInclusion",
+          "consumer_target_logShell_eq",
+          "consumer_preLogShell_image",
+          "consumer_pStar",
+          "consumer_calibration_pStar"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "P58IIC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Prop 5.8(ii) consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1P58iiConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1P58iiConsumerChainActual.lean": [
+          "consumer_nonDiagramModel_nonempty",
+          "consumer_unitImage",
+          "consumer_arrow",
+          "consumer_bridge_logShell"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "SEC0C",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Section-0 consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Section0ConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Section0ConsumerChainActual.lean": [
+          "consumer_covertSet_isSaturated",
+          "consumer_covertSet_isSymmSaturated",
+          "consumer_countablyOrdered_int",
+          "consumer_pStar_paper",
+          "consumer_intervalGraph_nonempty"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "ETHC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "EtTh rows/deep-inputs consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThConsumerChainActual.lean": [
+          "consumer_rows_length",
+          "consumer_A_rows",
+          "consumer_B_rows",
+          "consumer_deep_ids",
+          "consumer_deep_length"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "LSC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "log-shell image consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellConsumerChainActual.lean": [
+          "consumer_unitLayer_image",
+          "consumer_logShell_pStar",
+          "consumer_preLogShell_unitLayer",
+          "consumer_kummer_quotient_injective"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "TPC2",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "theta-pilot consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaPilotConsumerChainActual.lean": [
+          "consumer_thetaPilot_generator",
+          "consumer_link_nonempty",
+          "consumer_packet_rows_length"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "AT3C",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "AbsTopIII05 consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIIIConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIIIConsumerChainActual.lean": [
+          "consumer_refined_anchors_length",
+          "consumer_kinds_eq",
+          "consumer_target_logShell",
+          "consumer_diagramModel"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "CMLFC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "CMLF model consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1CMLFConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1CMLFConsumerChainActual.lean": [
+          "consumer_comp_mapK",
+          "consumer_comp_mapUnits",
+          "consumer_id_mapK",
+          "consumer_pStar_pos",
+          "consumer_cmlf_rows"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "RFC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "refined concrete D1-D4 consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RefinedConcreteConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RefinedConcreteConsumerActual.lean": [
+          "consumer_calibration_refined",
+          "consumer_D4_combinatorial",
+          "consumer_rows_length",
+          "consumer_concreteD1"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "R6C",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "EtTh row-6 carrier consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Row6ConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Row6ConsumerChainActual.lean": [
+          "consumer_row6_nonempty",
+          "consumer_row6_theta_surjective",
+          "consumer_row6_quotient_injective",
+          "consumer_row6_rows_length"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "TRIC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "absolute Kummer trio consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TrioConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TrioConsumerChainActual.lean": [
+          "consumer_trio_nonempty",
+          "consumer_trio_kummerMap_apply",
+          "consumer_trio_rows_length",
+          "consumer_thetaToElliptic_surjective"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "BRC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "bridge layer consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BridgeConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BridgeConsumerChainActual.lean": [
+          "consumer_bridge_kummer",
+          "consumer_bridge_logShell",
+          "consumer_target_iff_bridge",
+          "consumer_bridge_rows"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved assets; no new axiom/sorry"
+    },
+    {
+      "id": "TPKC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "theta power-kernel consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1TPKConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1TPKConsumerChainActual.lean": [
+          "consumer_thetaPowerKernel_normal",
+          "consumer_ellipticPowerKernel_normal",
+          "consumer_thetaPowerKernel_le",
+          "consumer_modL_surjective",
+          "consumer_commutator_le_derived"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved/tree assets; no new axiom/sorry"
+    },
+    {
+      "id": "C55C",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Cor5.5 auxiliary + saturated closure consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Cor55ConsumerChainActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Cor55ConsumerChainActual.lean": [
+          "consumer_cor55_model",
+          "consumer_cor55_rows",
+          "consumer_saturated_empty",
+          "consumer_saturated_subset_covert",
+          "consumer_saturated_inter"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved/tree assets; no new axiom/sorry"
+    },
+    {
+      "id": "TSC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "tree theta/Gaussian series consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaSeriesConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaSeriesConsumerActual.lean": [
+          "consumer_realThetaValue_zero",
+          "consumer_realThetaValue_pos",
+          "consumer_gaussExponent_nonneg",
+          "consumer_gaussianSquareSum",
+          "consumer_normalizedGaussianDegree"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved/tree assets; no new axiom/sorry"
+    },
+    {
+      "id": "LSB2",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "log-shell bridge consumer chain 2",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellBridgeConsumer2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellBridgeConsumer2Actual.lean": [
+          "consumer_calibration_bridge",
+          "consumer_calibration_target",
+          "consumer_target_iff_bridge",
+          "consumer_bridge_logShell",
+          "consumer_preLogShell_image"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of proved/tree assets; no new axiom/sorry"
+    },
+    {
+      "id": "OTC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "tree odd-theta consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1OddThetaTreeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1OddThetaTreeConsumerActual.lean": [
+          "consumer_oddTheta_ne_zero",
+          "consumer_oddThetaFraction",
+          "consumer_oddThetaFraction_unconditional",
+          "consumer_oddThetaSign",
+          "consumer_oddThetaExponent"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "SLC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "tree signed-label consumer chain",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SignedLabelConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SignedLabelConsumerActual.lean": [
+          "consumer_card_signedLabel",
+          "consumer_sum_translate",
+          "consumer_equiv_bijective",
+          "consumer_translate_inverse"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "ETBC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "concrete etale theta bridge consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtaleThetaBridgeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtaleThetaBridgeConsumerActual.lean": [
+          "consumer_reduction_add",
+          "consumer_reduction_zero",
+          "consumer_reduction_surjective",
+          "consumer_quotientEquiv_bijective",
+          "consumer_level_packet_eq_stage"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "HTBC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "concrete Gaussian Hodge theater consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HodgeTheaterConsumerActual.lean": [
+          "consumer_gaussianTheater_q",
+          "consumer_threeTheater_q"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "SXIPC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "StepXI theta-packet bridge consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepXIThetaPacketConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepXIThetaPacketConsumerActual.lean": [
+          "consumer_positive",
+          "consumer_logVolume_eq_sum",
+          "consumer_logVolume_eq_log_det",
+          "consumer_neg_invariant"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "QPLC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "arithmetic q-pilot log-volume consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1QPilotConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1QPilotConsumerActual.lean": [
+          "consumer_qNorm_pos",
+          "consumer_qNorm_lt_one",
+          "consumer_localSignedLog_neg",
+          "consumer_localLogMagnitude_pos"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "ITC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "initial theta data consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1InitialThetaConsumerActual.lean": [
+          "consumer_typeOneOne_genus",
+          "consumer_typeOneOne_punctures",
+          "consumer_typeOneOne_stackyOrders",
+          "consumer_typeOneLTorsion_genus",
+          "consumer_typeOneLTorsionPlusMinus_genus"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "OTSHC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "odd theta shift/summation consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1OddThetaShiftConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1OddThetaShiftConsumerActual.lean": [
+          "consumer_oddTheta_shift",
+          "consumer_tsum_addRight",
+          "consumer_summable_shift",
+          "consumer_oddThetaExponent_neg_succ",
+          "consumer_oddThetaTerm_neg_succ"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "LSCC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "source log-shell carrier consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LogShellCarrierConsumerActual.lean": [
+          "consumer_pStar_pos",
+          "consumer_pStar_ne_zero",
+          "consumer_pStar_ne_zero_cast",
+          "consumer_preLogShell_subset_unitLayer",
+          "consumer_logShell_def"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree/EXIT0 assets; no new axiom/sorry"
+    },
+    {
+      "id": "ABTC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "tree AbsTopIII invariant-image bridge consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIIIBridgeTreeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsTopIIIBridgeTreeConsumerActual.lean": [
+          "consumer_iff_unitLayer_subset",
+          "consumer_iff_forall_log_mem",
+          "consumer_codomainKummer",
+          "consumer_calibration"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree/EXIT0 assets; no new axiom/sorry"
+    },
+    {
+      "id": "AKQC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "absolute Kummer quotient/continuity consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerQuotientConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1AbsoluteKummerQuotientConsumerActual.lean": [
+          "consumer_quotient_injective",
+          "consumer_continuous"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree/EXIT0 assets; no new axiom/sorry"
+    },
+    {
+      "id": "MUNC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "muN log-shell quotient consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MuNQuotientConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MuNQuotientConsumerActual.lean": [
+          "consumer_muNQuotientMap_ker",
+          "consumer_muNQuotientMap_surjective",
+          "consumer_weightNLog_pow",
+          "consumer_weightNLog_def",
+          "consumer_muNPowEnd"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "GITC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Gaussian initial theta arithmetic consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GaussianInitialThetaConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GaussianInitialThetaConsumerActual.lean": [
+          "consumer_gaussianPolynomial_irreducible",
+          "consumer_gaussianField_sqrtNegOne",
+          "consumer_gaussianIdentityThetaTower",
+          "consumer_gaussianPuncturedCurve"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "PLC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "PrimeGeFive label consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeLabelConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeLabelConsumerActual.lean": [
+          "consumer_prime",
+          "consumer_ge_five",
+          "consumer_ne_two",
+          "consumer_odd",
+          "consumer_factPrime"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "OTTC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "odd theta term algebra consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1OddThetaTermConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1OddThetaTermConsumerActual.lean": [
+          "consumer_oddThetaSign_sq",
+          "consumer_two_mul_oddThetaExponent_add",
+          "consumer_oddThetaTerm_shift",
+          "consumer_oddThetaTerm_shift_inv"
+        ]
+      },
+      "note": "A476 real consumer chain: composed projections of tree olean assets; no new axiom/sorry"
+    },
+    {
+      "id": "FAC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "Example36 log-shell Frobenius action consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusActionConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1FrobeniusActionConsumerActual.lean": [
+          "consumer_principalUnitFrobenius",
+          "consumer_principalUnitFrobeniusMonoidHom",
+          "consumer_principalUnitLogShellFrobenius",
+          "consumer_frobeniusAction_summary",
+          "consumer_principalUnitLogShell_p_mul_mem"
+        ]
+      },
+      "note": "A476 consumer re-export: genuine objects/lemmas of tree assets; no new axiom/sorry"
+    },
+    {
+      "id": "PSC",
+      "kind": "theorem",
+      "status": "CONDITIONAL",
+      "title": "prime-strip construction consumer",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PrimeStripsConsumerActual.lean": [
+          "consumer_FPrimeStripLink",
+          "consumer_link_refl",
+          "consumer_link_trans",
+          "consumer_finiteToGlobalUnitLink",
+          "consumer_finiteToGlobalIntegralLink",
+          "consumer_finiteIntegralToGlobalUnitLink"
+        ]
+      },
+      "note": "A476 consumer re-export: genuine objects/lemmas of tree assets; no new axiom/sorry"
+    }
+  ],
+  "edges": [
+    {
+      "from": "T2",
+      "to": "T1",
+      "kind": "proof"
+    },
+    {
+      "from": "T3",
+      "to": "T1",
+      "kind": "proof"
+    },
+    {
+      "from": "T4",
+      "to": "T2",
+      "kind": "proof"
+    },
+    {
+      "from": "T4",
+      "to": "T3",
+      "kind": "proof"
+    },
+    {
+      "from": "E2",
+      "to": "T5",
+      "kind": "proof"
+    },
+    {
+      "from": "E5",
+      "to": "T1",
+      "kind": "proof"
+    },
+    {
+      "from": "L2",
+      "to": "L9",
+      "kind": "proof"
+    },
+    {
+      "from": "L5",
+      "to": "L4",
+      "kind": "proof"
+    },
+    {
+      "from": "L6",
+      "to": "L4",
+      "kind": "proof"
+    },
+    {
+      "from": "L7",
+      "to": "L10",
+      "kind": "proof"
+    },
+    {
+      "from": "A1",
+      "to": "L8",
+      "kind": "proof"
+    },
+    {
+      "from": "A2",
+      "to": "L8",
+      "kind": "proof"
+    },
+    {
+      "from": "A4",
+      "to": "A3",
+      "kind": "proof"
+    },
+    {
+      "from": "A4",
+      "to": "L2",
+      "kind": "proof"
+    },
+    {
+      "from": "A4",
+      "to": "G1",
+      "kind": "proof"
+    },
+    {
+      "from": "A5",
+      "to": "G1",
+      "kind": "proof"
+    },
+    {
+      "from": "I1",
+      "to": "E2",
+      "kind": "proof"
+    },
+    {
+      "from": "I3",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "R2",
+      "to": "R1",
+      "kind": "proof"
+    },
+    {
+      "from": "R1",
+      "to": "T1",
+      "kind": "proof"
+    },
+    {
+      "from": "R1",
+      "to": "E1",
+      "kind": "proof"
+    },
+    {
+      "from": "R1",
+      "to": "E4",
+      "kind": "proof"
+    },
+    {
+      "from": "L8",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "L9",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "L10",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "P58",
+      "to": "L2",
+      "kind": "proof"
+    },
+    {
+      "from": "X1",
+      "to": "E5",
+      "kind": "proof"
+    },
+    {
+      "from": "X1",
+      "to": "R1",
+      "kind": "proof"
+    },
+    {
+      "from": "P58I",
+      "to": "A4",
+      "kind": "proof"
+    },
+    {
+      "from": "P58I",
+      "to": "L2",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IC",
+      "to": "A4",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IC",
+      "to": "P58I",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IC",
+      "to": "P58",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IC",
+      "to": "G1",
+      "kind": "proof"
+    },
+    {
+      "from": "IKT",
+      "to": "L4",
+      "kind": "proof"
+    },
+    {
+      "from": "IKT",
+      "to": "L5",
+      "kind": "proof"
+    },
+    {
+      "from": "IKT",
+      "to": "L6",
+      "kind": "proof"
+    },
+    {
+      "from": "IKT",
+      "to": "L7",
+      "kind": "proof"
+    },
+    {
+      "from": "IKT",
+      "to": "E1",
+      "kind": "proof"
+    },
+    {
+      "from": "P58R",
+      "to": "X1",
+      "kind": "proof"
+    },
+    {
+      "from": "P58R",
+      "to": "L4",
+      "kind": "proof"
+    },
+    {
+      "from": "P58R",
+      "to": "L5",
+      "kind": "proof"
+    },
+    {
+      "from": "P58R",
+      "to": "L6",
+      "kind": "proof"
+    },
+    {
+      "from": "P58R",
+      "to": "E1",
+      "kind": "proof"
+    },
+    {
+      "from": "A3R",
+      "to": "A3",
+      "kind": "proof"
+    },
+    {
+      "from": "A3R",
+      "to": "A4",
+      "kind": "proof"
+    },
+    {
+      "from": "A3R",
+      "to": "P58I",
+      "kind": "proof"
+    },
+    {
+      "from": "A3R",
+      "to": "P58",
+      "kind": "proof"
+    },
+    {
+      "from": "SAT",
+      "to": "A5",
+      "kind": "proof"
+    },
+    {
+      "from": "TPI",
+      "to": "L7",
+      "kind": "proof"
+    },
+    {
+      "from": "ETR",
+      "to": "R1",
+      "kind": "proof"
+    },
+    {
+      "from": "ETR",
+      "to": "R2",
+      "kind": "proof"
+    },
+    {
+      "from": "ETR",
+      "to": "P58R",
+      "kind": "proof"
+    },
+    {
+      "from": "ETR",
+      "to": "IKT",
+      "kind": "proof"
+    },
+    {
+      "from": "ILB",
+      "to": "IKT",
+      "kind": "proof"
+    },
+    {
+      "from": "ILB",
+      "to": "TPI",
+      "kind": "proof"
+    },
+    {
+      "from": "ILB",
+      "to": "I1",
+      "kind": "proof"
+    },
+    {
+      "from": "ILB",
+      "to": "I3",
+      "kind": "proof"
+    },
+    {
+      "from": "EDA",
+      "to": "R1",
+      "kind": "proof"
+    },
+    {
+      "from": "EDA",
+      "to": "X1",
+      "kind": "proof"
+    },
+    {
+      "from": "EDA",
+      "to": "IKT",
+      "kind": "proof"
+    },
+    {
+      "from": "EDA",
+      "to": "P58R",
+      "kind": "proof"
+    },
+    {
+      "from": "SATS",
+      "to": "SAT",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IMG",
+      "to": "P58I",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IMG",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "PSTAR",
+      "to": "L8",
+      "kind": "proof"
+    },
+    {
+      "from": "TRIB",
+      "to": "L4",
+      "kind": "proof"
+    },
+    {
+      "from": "TRIB",
+      "to": "L5",
+      "kind": "proof"
+    },
+    {
+      "from": "TRIB",
+      "to": "L6",
+      "kind": "proof"
+    },
+    {
+      "from": "CMLF",
+      "to": "L1",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IT",
+      "to": "P58I",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IT",
+      "to": "L2",
+      "kind": "proof"
+    },
+    {
+      "from": "LIN",
+      "to": "A5",
+      "kind": "proof"
+    },
+    {
+      "from": "ORDERF",
+      "to": "A5",
+      "kind": "proof"
+    },
+    {
+      "from": "TPK",
+      "to": "E1",
+      "kind": "proof"
+    },
+    {
+      "from": "COM",
+      "to": "A5",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IDR",
+      "to": "P58",
+      "kind": "proof"
+    },
+    {
+      "from": "P58IDR",
+      "to": "P58IMG",
+      "kind": "proof"
+    },
+    {
+      "from": "E3",
+      "to": "IKT",
+      "kind": "statement"
+    },
+    {
+      "from": "L3",
+      "to": "IKT",
+      "kind": "statement"
+    },
+    {
+      "from": "I2",
+      "to": "IKT",
+      "kind": "statement"
+    },
+    {
+      "from": "P58BR",
+      "to": "IKT",
+      "kind": "statement"
+    },
+    {
+      "from": "P58VA",
+      "to": "IKT",
+      "kind": "statement"
+    },
+    {
+      "from": "X1C",
+      "to": "theta-etth:X1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "X1C",
+      "to": "theta-etth:ETR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IKTC",
+      "to": "theta-etth:IKT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IKTC",
+      "to": "theta-etth:TRIB",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "IKTC",
+      "to": "theta-etth:TPI",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IC2",
+      "to": "theta-etth:P58I",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IC2",
+      "to": "theta-etth:P58IT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IC2",
+      "to": "theta-etth:P58IMG",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IC2",
+      "to": "theta-etth:P58ALG",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IIC",
+      "to": "theta-etth:P58",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IIC",
+      "to": "theta-etth:P58IDR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IIC",
+      "to": "theta-etth:P58VA",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "P58IIC",
+      "to": "theta-etth:P58BR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SEC0C",
+      "to": "theta-etth:SAT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SEC0C",
+      "to": "theta-etth:SATS",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SEC0C",
+      "to": "theta-etth:PSTAR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SEC0C",
+      "to": "theta-etth:A5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ETHC",
+      "to": "theta-etth:ETR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ETHC",
+      "to": "theta-etth:EDA",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSC",
+      "to": "theta-etth:P58IMG",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSC",
+      "to": "theta-etth:IKT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSC",
+      "to": "theta-etth:L1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TPC2",
+      "to": "theta-etth:TPI",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TPC2",
+      "to": "theta-etth:TKL",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TPC2",
+      "to": "theta-etth:IKT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AT3C",
+      "to": "theta-etth:A3R",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AT3C",
+      "to": "theta-etth:P58IT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AT3C",
+      "to": "theta-etth:P58",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "CMLFC",
+      "to": "theta-etth:CMLF",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "RFC",
+      "to": "theta-etth:P58IC",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "RFC",
+      "to": "theta-etth:A4",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "R6C",
+      "to": "theta-etth:P58R",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "R6C",
+      "to": "theta-etth:IKT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TRIC",
+      "to": "theta-etth:TRIB",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TRIC",
+      "to": "theta-etth:E1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "BRC",
+      "to": "theta-etth:P58BR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "BRC",
+      "to": "theta-etth:P58IT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "BRC",
+      "to": "theta-etth:L2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TPKC",
+      "to": "theta-etth:TPK",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TPKC",
+      "to": "theta-etth:E1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "C55C",
+      "to": "theta-etth:C55D",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "C55C",
+      "to": "theta-etth:SAT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "C55C",
+      "to": "theta-etth:SATC",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TSC",
+      "to": "theta-etth:T1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "TSC",
+      "to": "theta-etth:T5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSB2",
+      "to": "theta-etth:P58IMG",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSB2",
+      "to": "theta-etth:P58IT",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSB2",
+      "to": "theta-etth:L2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTC",
+      "to": "theta-etth:T2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTC",
+      "to": "theta-etth:T4",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SLC",
+      "to": "theta-etth:T5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SLC",
+      "to": "theta-etth:T1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ETBC",
+      "to": "theta-etth:E4",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ETBC",
+      "to": "theta-etth:L2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HTBC",
+      "to": "iut-pre-abc:HodgeTheater.concrete",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "HTBC",
+      "to": "theta-etth:T5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SXIPC",
+      "to": "theta-etth:I1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "SXIPC",
+      "to": "theta-etth:T5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPLC",
+      "to": "iut-pre-abc:QPilot.arithmeticDivisor",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "QPLC",
+      "to": "theta-etth:ETR",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ITC",
+      "to": "theta-etth:T1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ITC",
+      "to": "theta-etth:E4",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTSHC",
+      "to": "theta-etth:T1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTSHC",
+      "to": "theta-etth:T2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSCC",
+      "to": "theta-etth:L1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "LSCC",
+      "to": "theta-etth:L8",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ABTC",
+      "to": "theta-etth:L2",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "ABTC",
+      "to": "theta-etth:P58IMG",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AKQC",
+      "to": "theta-etth:L4",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AKQC",
+      "to": "theta-etth:L5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "AKQC",
+      "to": "theta-etth:L6",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "MUNC",
+      "to": "theta-etth:I3",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "MUNC",
+      "to": "theta-etth:L1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "GITC",
+      "to": "theta-etth:A1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "GITC",
+      "to": "iut-pre-abc:InitialTheta.data",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PLC",
+      "to": "theta-etth:T5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PLC",
+      "to": "theta-etth:E1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTTC",
+      "to": "theta-etth:T3",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "OTTC",
+      "to": "theta-etth:T1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FAC",
+      "to": "theta-etth:L8",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "FAC",
+      "to": "theta-etth:E5",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PSC",
+      "to": "iut-pre-abc:PrimeStrips.FD",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PSC",
+      "to": "theta-etth:L1",
+      "kind": "proof",
+      "evidence": "observed_source"
+    }
+  ]
+}

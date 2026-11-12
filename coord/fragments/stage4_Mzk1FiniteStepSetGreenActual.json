@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetGreenActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetGreenActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain: step-set degree bound chained over green image/aeval/crit lemmas; new file only, no sorry; watchdog to verify"
+}

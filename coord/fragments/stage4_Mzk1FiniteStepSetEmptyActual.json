@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetEmptyActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetEmptyActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain: empty-set step degree bound; new file only, no sorry; watchdog to verify"
+}

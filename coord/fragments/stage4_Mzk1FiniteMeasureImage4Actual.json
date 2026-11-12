@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteMeasureImage4Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteMeasureImage4Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A475 real Lean: identity image laws; new file only, no sorry; watchdog to verify"
+}

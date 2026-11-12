@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1RRInterfaceActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1RRInterfaceActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

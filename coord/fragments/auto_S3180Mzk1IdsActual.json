@@ -1,0 +1,9 @@
+{
+  "node": "auto:S3180Mzk1IdsActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/S3180Mzk1IdsActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

@@ -1,0 +1,17 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge3Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge3Actual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge3Actual.lean": [
+      "maxDegP_union",
+      "maxDegP_insert",
+      "maxDegP_mono",
+      "maxDegP_image_le_insert_infty"
+    ]
+  },
+  "note": "A472 real Lean: general P1 measure laws (union/insert/mono); new file only, no sorry; watchdog to verify"
+}

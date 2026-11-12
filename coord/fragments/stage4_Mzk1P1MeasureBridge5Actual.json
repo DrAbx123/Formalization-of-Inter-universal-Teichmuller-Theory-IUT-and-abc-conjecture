@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1P1MeasureBridge5Actual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1P1MeasureBridge5Actual.lean"
+  ],
+  "declarations": {},
+  "note": "A472/A473 real Lean batch; new file only, no sorry; watchdog to verify"
+}

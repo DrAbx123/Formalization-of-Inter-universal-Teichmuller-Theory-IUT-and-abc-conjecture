@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteF0ImageGreenActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteF0ImageGreenActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real chain consumer: f0 image bound from green maxDeg_image_le + degQ_aeval_le; new file only, no sorry; watchdog to verify"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1PaperAnabelianStatementActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1PaperAnabelianStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

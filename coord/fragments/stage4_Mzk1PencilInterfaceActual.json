@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1PencilInterfaceActual",
+  "kind": "def",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1PencilInterfaceActual.lean"
+  ],
+  "declarations": {},
+  "note": "A475: 复用候选 coord/ProblemD_GeometricCoreSkeleton.lean:67 PencilData (skeleton,含sorry仅研究壳) + tmp/external/flt-lean pencil 资产；paper-dir 独立定义。"
+}

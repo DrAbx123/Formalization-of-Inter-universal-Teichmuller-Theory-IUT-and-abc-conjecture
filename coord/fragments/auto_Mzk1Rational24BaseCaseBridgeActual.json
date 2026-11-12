@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Rational24BaseCaseBridgeActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Rational24BaseCaseBridgeActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

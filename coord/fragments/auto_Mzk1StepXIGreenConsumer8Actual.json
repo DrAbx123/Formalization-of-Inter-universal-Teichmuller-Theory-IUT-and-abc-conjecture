@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1StepXIGreenConsumer8Actual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepXIGreenConsumer8Actual.lean"
+  ],
+  "declarations": {},
+  "note": "watchdog EXIT0 read-only; DAG-only registration"
+}

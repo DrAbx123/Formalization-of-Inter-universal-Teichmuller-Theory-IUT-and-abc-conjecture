@@ -1,0 +1,21 @@
+base,k,H,T,Ind2,M_old,M_paper_formula,M_corrected_avg_nC2,note
+2,2,2.830215,0.000000,0.000000,2.830215,2.830215,1.415107,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,3,2.097807,0.583773,1.945910,3.459944,3.459944,1.438086,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,4,3.857836,0.482831,1.609438,4.984442,4.984443,2.250806,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,5,1.837877,1.030196,3.433987,4.241668,4.241668,1.605736,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,6,2.570285,0.583773,1.945910,3.932422,3.932422,1.674324,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,7,1.837877,1.453256,4.844187,5.228808,5.228808,1.887776,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,8,3.857836,1.332795,4.442651,6.967691,6.967692,2.817449,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,9,1.837877,1.870911,6.236370,6.203336,6.203336,2.166212,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,10,2.570285,1.749565,5.831882,6.652603,6.652602,2.451519,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+2,11,1.837877,2.287239,7.624131,7.174768,7.174769,2.443765,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,2,2.873537,0.000000,0.000000,2.873537,2.873537,1.436768,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,3,2.895198,0.769485,2.564949,4.690663,4.690662,1.960589,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,4,4.161087,0.482831,1.609438,5.287694,5.287694,2.402432,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,5,2.895198,1.438737,2.397895,3.854356,3.854356,1.207810,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,6,2.873537,1.353258,4.510860,6.031139,6.031139,2.338940,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,7,2.895198,2.099004,6.996681,7.792875,7.792875,2.846935,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,8,4.161087,1.596903,5.323010,7.887194,7.887194,3.145145,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,9,2.895198,2.758294,9.194313,9.331217,9.331217,3.286462,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,10,2.873537,2.671999,6.508769,6.710307,6.710307,2.019154,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums
+3,11,2.895198,3.417475,11.391582,10.869306,10.869305,3.725915,MODEL; uniform one-capsule; avg version divides by nC=2 only if H/Ind are per-capsule sums

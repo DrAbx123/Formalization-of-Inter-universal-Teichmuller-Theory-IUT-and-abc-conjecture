@@ -1,0 +1,12 @@
+{
+  "node": "iutiv-abc:G0.log",
+  "kind": "target",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "LeanFormal/IUT/ABCBridge/Arithmetic/LogarithmicBoundEquivalence.lean"
+  ],
+  "declarations": {
+    "proved": []
+  },
+  "note": "DEF/statement node queued to DAG watchdog (no manual compile); PENDING-VERIFY"
+}

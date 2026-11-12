@@ -1,0 +1,78 @@
+{
+  "section": "iut-pre-stage4",
+  "description": "IUT 3.12 prerequisite objects in C/D areas: SURVEY-stage4.md maps 33 paper objects; 29 reuse existing Lean assets/DAG nodes; only 4 true gaps are new nodes here. Existing objects are NOT duplicated.",
+  "nodes": [
+    {
+      "id": "C.gap.f4bNumMaxStrict",
+      "kind": "named_input",
+      "title": "P1 numMax strict decrease when maxDegP stable for the f0 step target",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean": [
+          "numMax_stepSet_lt",
+          "numMaxP",
+          "numMaxP_image_ofFinite"
+        ],
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean": [
+          "stepSetP1",
+          "exists_maxDegP_finite"
+        ]
+      },
+      "note": "仓库当前缺失 P1 版严格计数（A475/A477 grep 证据）；有限版 numMax_stepSet_lt 已证（EXIT0）；映射现有 DAG 节点 foundation:B4.Cdegree / problemC_nested；不新造"
+    },
+    {
+      "id": "C.gap.fixedBetaChoice",
+      "kind": "named_input",
+      "title": "alpha0/Galois choice for the fixed-beta StepProvider (beta notin S')",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepProviderFromFixedBetaActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepProviderFromFixedBetaActual.lean": [
+          "StepProvider'"
+        ]
+      },
+      "note": "fixedBeta 选择声明全仓 0 命中（A475/A477 证据）；已存在 StepProvider' 定义（Mzk1StepProviderFromFixedBetaActual:13）可复用；映射现有节点 problemC_nested"
+    },
+    {
+      "id": "D.gap.schemeSideMaps",
+      "kind": "named_input",
+      "title": "scheme-side maps sectionMap: Gamma(C,U)->F and placePoint: P->C (scheme<->function-field bridge)",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean",
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean": [
+          "FibreBridgeAbstract",
+          "ZeroDivisorDatum"
+        ],
+        "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean": [
+          "sectionMap_injective",
+          "sectionMap_surjective"
+        ]
+      },
+      "note": "本语义 schemeSideMaps 缺失（schemeSide 0；sectionMap 仅 SourceDefinition31Boundary 不同语义；placePoint 仅外部 flt）；映射现有 DAG 节点 D.bridgeInterface / D.rrBridge / B6b.DRR"
+    }
+  ],
+  "edges": [
+    {
+      "from": "D.gap.schemeSideMaps",
+      "to": "D.gap.problemDApplicability",
+      "kind": "gap",
+      "evidence": "planned"
+    },
+    {
+      "from": "C.gap.f4bNumMaxStrict",
+      "to": "C.gap.fixedBetaChoice",
+      "kind": "gap",
+      "evidence": "planned"
+    }
+  ]
+}

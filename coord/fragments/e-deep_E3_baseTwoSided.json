@@ -1,0 +1,20 @@
+{
+  "node": "e-deep:e-deep:E3.baseTwoSided",
+  "kind": "conditional",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Hull13BothSidedBaseActual.lean"
+  ],
+  "declarations": {
+    "proved": [
+      "hull13_baseTwoSided",
+      "hull13_baseTwoSided_upper",
+      "hull13_baseTwoSided_lower"
+    ],
+    "defs": [
+      "HullH7Ob9BaseTwoSidedInputs"
+    ]
+  },
+  "statement": "two-sided base transfer conditional on named lower/upper inputs",
+  "note": "queued to DAG watchdog only (no manual compile); PROVED after watchdog EXIT0; pins 14041"
+}

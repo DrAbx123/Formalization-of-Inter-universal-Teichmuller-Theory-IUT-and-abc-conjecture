@@ -1,0 +1,10 @@
+{
+  "node": "auto:Mzk1FiniteStepSetMonoActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1FiniteStepSetMonoActual.lean"
+  ],
+  "declarations": {},
+  "note": "A476 real consumer: monotonicity of step-set operator; new file only, no sorry; watchdog to verify"
+}

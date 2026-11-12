@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1GeomCoreChartDatumWitnessActual",
+  "kind": "auto-registered",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1GeomCoreChartDatumWitnessActual.lean"
+  ],
+  "note": "silent loop registration; verify via watchdog log only"
+}

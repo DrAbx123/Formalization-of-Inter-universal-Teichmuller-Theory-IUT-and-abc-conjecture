@@ -1,0 +1,9 @@
+{
+  "node": "auto:S3136Gap2AdditiveThetaFormActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/S3136Gap2AdditiveThetaFormActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

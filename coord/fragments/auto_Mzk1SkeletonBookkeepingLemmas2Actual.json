@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1SkeletonBookkeepingLemmas2Actual",
+  "kind": "auto-registered",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1SkeletonBookkeepingLemmas2Actual.lean"
+  ],
+  "note": "silent loop registration; verify via watchdog log only"
+}

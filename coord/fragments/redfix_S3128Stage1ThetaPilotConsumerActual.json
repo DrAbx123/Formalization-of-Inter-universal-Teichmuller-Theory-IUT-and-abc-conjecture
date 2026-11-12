@@ -1,0 +1,9 @@
+{
+  "node": "redfix:S3128Stage1ThetaPilotConsumerActual",
+  "kind": "consumer",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/S3128Stage1ThetaPilotConsumerActual.lean"
+  ],
+  "note": "minimal red fix: import BaseQLogVolumeActual (baseQLogMagnitude/globalQPilotLogMagnitude) + drop invalid (l := l) named args; queued to watchdog only"
+}

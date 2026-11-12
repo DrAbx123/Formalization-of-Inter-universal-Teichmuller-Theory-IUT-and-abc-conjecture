@@ -1,0 +1,16 @@
+{
+  "node": "auto:Mzk1StepProviderPrimeAssemblyActual",
+  "kind": "theorem",
+  "status": "PENDING-VERIFY",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeAssemblyActual.lean"
+  ],
+  "declarations": {
+    "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeAssemblyActual.lean": [
+      "P1MeasureDecreaseInput",
+      "F0StepTransportInput",
+      "stepProvider'_of_named"
+    ]
+  },
+  "note": "A472 real Lean: StepProvider' assembly from f4/f5 named inputs (f1/f2 proved); new file only, no sorry; watchdog to verify"
+}

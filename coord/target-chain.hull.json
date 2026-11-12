@@ -1,0 +1,1475 @@
+{
+  "section": "hull",
+  "generated": "2026-11-10T19:12:54.326Z",
+  "owner": "hull",
+  "method": "A472 single-writer fragment: only hull-owned new nodes; declarations mapping for existing DAG stub nodes; edges marked evidence.",
+  "nodes": [
+    {
+      "id": "R9.AUDIT.CONSUMER.BUNDLE",
+      "kind": "theorem",
+      "title": "R9 audit consumer bundle (implements IUTIII.HULL.R9.AUDIT_CONSUMER stub)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1R9AuditConsumerBundleActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1R9PointMembershipConsumerActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1R9HullConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1R9AuditConsumerBundleActual.lean": [
+          "r9AuditConsumerBundle_ray_eq",
+          "r9AuditConsumerBundle_mem",
+          "r9AuditConsumerBundle_unbounded",
+          "r9AuditConsumerBundle_bundle"
+        ]
+      },
+      "note": "A472: fills existing stub DAG node iutiii:IUTIII.HULL.R9.AUDIT_CONSUMER via real Lean consumer bundle; no sorry/axioms; registry frozen 14041."
+    },
+    {
+      "id": "H7.OB9.BUNDLE.STUB.CONSUMER",
+      "kind": "theorem",
+      "title": "H7/Ob9 bundle stub consumer (implements IUTIII.HULL.H7.OB9.BUNDLE stub)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1H7Ob9BundleStubConsumerActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1Hull13BothSidedBaseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1H7Ob9BundleStubConsumerActual.lean": [
+          "h7ob9Stub_cor",
+          "h7ob9Stub_upper",
+          "h7ob9Stub_lower"
+        ]
+      },
+      "note": "A472: fills existing stub DAG node iutiii:IUTIII.HULL.H7.OB9.BUNDLE; conditional on explicit named base lower bound; no closure claim."
+    },
+    {
+      "id": "PRE.H5.CLASSB.STATEMENT",
+      "kind": "named_input",
+      "title": "H5 class-B gap statement layer (hull<=image; O(-)^{-1} normalization)",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "H5ClassBGapStatements",
+          "h5ClassB_hull_le_image",
+          "h5ClassB_ominus"
+        ]
+      },
+      "note": "A472 statement node; no proof content; links to e-deep:E2.h5Gap. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 仓库搜索：OminusInverseNormalization/hull_le_image 无独立 Lean donor（范围 A+B 0 命中，仅自有 xif statement）——仓库当前缺失（附 SURVEY-hull-gap-search.md 证据）。 [A475 更新] CardHullRealGeometryReduction:278 sourceHullVolume_le_imageVolume_of_candidate 为条件判定 donor（复用）；无条件 hull≤image 无 Lean donor（仓库当前缺失，附 SURVEY 证据）。"
+    },
+    {
+      "id": "PRE.H7.DEEPOB9.STATEMENT",
+      "kind": "named_input",
+      "title": "H7/Ob9 deep two-sided statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "H7DeepOb9Statement",
+          "h7deep_twoSided",
+          "h7deep_baseLower"
+        ]
+      },
+      "note": "A472 statement node; links to e-deep:E3.deepOb9. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 仓库搜索：deepOb9 0 Lean donor（仅 tmp/survey_table.md）；tree 仅 Hull* 接口/条件输入——仓库当前缺失 deep arbitrary-iterate both-sided 独立证明（附证据）。"
+    },
+    {
+      "id": "PRE.HDD.DECOMPOSITION.STATEMENT",
+      "kind": "named_input",
+      "title": "HDD decomposition + determinant additivity statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "HDDDecompositionStatement",
+          "hdd_decomposition",
+          "hdd_detAdditivity"
+        ]
+      },
+      "note": "A472 statement node; links to routes:hull_log_volume / e-deep:E2.detScalingLaws. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 仓库搜索：HullDetAssembly/hullDetAssembly 0 Lean donor（coord 文档 7）；仅自有 S3182 条件组装——仓库当前缺失独立 HDD 分解 Lean 定理（附证据）。"
+    },
+    {
+      "id": "PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "kind": "named_input",
+      "title": "Step (xi) IPL/SHE/APT paper statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "StepXIObligationStatements",
+          "stepxi_ipl",
+          "stepxi_she",
+          "stepxi_apt"
+        ]
+      },
+      "note": "A472 statement node; links to iut-skeleton:IPL/SHE/APT + obligations records. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] SHE donor 存在（SourceSHETransportObligations.lean:165/191/197/257）；IPL 归档 donor（tmp/archive_sorry.../IPLFamilyData）；APT 仍为 stub（0 lean donor）。"
+    },
+    {
+      "id": "PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "kind": "named_input",
+      "title": "StepXIContract construction statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "StepXIContractConstructionStatement",
+          "stepxiConstruction_sourceData"
+        ]
+      },
+      "note": "A472 statement node; links to iutiii:IUTIII.STEPXI.CONTRACT.CONSTRUCTION. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "kind": "named_input",
+      "title": "IUTII -> IUTIII typed link statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "IUTIILinkStatement",
+          "iutiiLink_thetaCarrier"
+        ]
+      },
+      "note": "A472 statement node; links to iutiii:IUTIII.IUTII_LINK_GAP. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "kind": "named_input",
+      "title": "Theta-pilot construction statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "ThetaPilotConstructionStatement",
+          "thetaPilot_object"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:ThetaPilot.carrier. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "kind": "target",
+      "title": "Unconditional Cor 3.12 target from the three base axioms (statement layer)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "Cor312UnconditionalTarget",
+          "cor312UnconditionalTargetOfStatements"
+        ]
+      },
+      "note": "A472 first-sentence target statement node; no closure; all listed prerequisites are named/statement layers. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.MULTIRADIAL.STATEMENT",
+      "kind": "named_input",
+      "title": "Theorem 3.11 multiradial algorithm output statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "MultiradialOutputStatement",
+          "multiradial_output_object",
+          "multiradial_twoAction",
+          "multiradial_landing"
+        ]
+      },
+      "note": "A472 statement node; links to routes:theorem311_assembly / iutiii THM311 anchors. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IND123.STATEMENT",
+      "kind": "named_input",
+      "title": "Indeterminacy 1/2/3 paper statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "IndeterminacyStatements",
+          "ind_statements_ind1",
+          "ind_statements_ind2",
+          "ind_statements_ind3"
+        ]
+      },
+      "note": "A472 statement node; links to iutiii IND1/2/3 + obligation records. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.K1K2.STATEMENT",
+      "kind": "named_input",
+      "title": "K1/K2 packet statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "K1K2PacketStatements",
+          "k1k2_k1",
+          "k1k2_k2",
+          "k1k2_ledger",
+          "k1k2_card"
+        ]
+      },
+      "note": "A472 statement node; links to iutiii K1K2 card/packet gaps. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.THETALINK.LOGSHELL.STATEMENT",
+      "kind": "named_input",
+      "title": "Theta-link / log-shell compatibility statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "ThetaLinkLogShellStatements",
+          "thetaLink_carrier",
+          "logShell_muN"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc LogShell/ThetaLink. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTI.HODGETHEATER.STATEMENT",
+      "kind": "named_input",
+      "title": "Hodge theater / link category statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "HodgeTheaterStatement",
+          "hodgeTheater_linkLaws"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:HodgeTheater.core. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTI.FROBENIUS.STATEMENT",
+      "kind": "named_input",
+      "title": "Frobenius/etale picture statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "FrobeniusPictureStatement",
+          "frobeniusPicture_translation"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:FrobeniusPicture.graph. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTI.INITIALTHETA.STATEMENT",
+      "kind": "named_input",
+      "title": "Initial Theta / Definition 3.1 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "InitialThetaStatement",
+          "initialTheta_data"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:InitialTheta.data. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.PRIMESTRIPS.STATEMENT",
+      "kind": "named_input",
+      "title": "Prime-strips/Frobenioid statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "PrimeStripsStatement",
+          "primeStrips_frobenioid"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:PrimeStrips.FD. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.THETALINK.STATEMENT",
+      "kind": "named_input",
+      "title": "Theta-link procession statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "ThetaLinkStatement",
+          "thetaLink_assembly"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:ThetaLink.procession. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.KUMMER.STATEMENT",
+      "kind": "named_input",
+      "title": "Kummer/muN statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "KummerMuNStatement",
+          "kummerMuN_absolute"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:Kummer.absolute + MuN.torsion. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.LOGSHELL.STATEMENT",
+      "kind": "named_input",
+      "title": "Log-shell statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "LogShellStatement",
+          "logShell_invariants"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:LogShell.I/invariants/logFrobenius. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTII.PILOTS.STATEMENT",
+      "kind": "named_input",
+      "title": "q/Theta pilot source identification statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1PreObjectStatementLayerV2Actual.lean": [
+          "PilotSourceStatement",
+          "pilotSource_qpilot",
+          "pilotSource_thetapilot"
+        ]
+      },
+      "note": "A472 statement node; links to iut-pre-abc:QPilot + ThetaPilot.carrier. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "D.SCHEME.SIDE.MAPS",
+      "kind": "theorem",
+      "title": "Scheme-side maps interface (sectionMap/placePoint)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1SchemeSideMapsActual.lean": [
+          "SchemeSideMapsData",
+          "schemeSideMapsDataOfBridge",
+          "schemeSideMaps_sectionMap",
+          "schemeSideMaps_placePoint",
+          "schemeSideMapsRows_length"
+        ]
+      },
+      "note": "A472: implements iut-pre-stage4:D.gap.schemeSideMaps stub with real Lean structures; conditional on bridge data; no closure."
+    },
+    {
+      "id": "PRE.HCOR312.HSLACK.STATEMENT",
+      "kind": "named_input",
+      "title": "hCor312 / hSlack statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "HCor312Statement",
+          "HSlackStatement",
+          "Cor312NamedInputsBundle",
+          "hCor312_display",
+          "hSlack_final"
+        ]
+      },
+      "note": "A472: statement layer for iut-skeleton:hCor312 + hSlack named inputs; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUT312.TOP.STATEMENT",
+      "kind": "target",
+      "title": "IUT III Cor 3.12 top statement layer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUT312TopStatementData",
+          "iut312Top_hullDet",
+          "iut312Top_qTheta",
+          "iut312Top_abcReadout"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:IUT312.statement + Gap.iut312TopStatement stubs (statement layer); no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.CLASSB.REALIZATION.STATEMENT",
+      "kind": "named_input",
+      "title": "Class-B realization rows statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "ClassBRealizationRows",
+          "classB_geometric"
+        ]
+      },
+      "note": "A472: statement layer for iut-skeleton:ClassB; no proof content. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.SOURCES.1995.2015.STATEMENT",
+      "kind": "named_input",
+      "title": "1995-2015 source-theorem inputs statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "Sources1995_2015Inputs",
+          "sources_1995_2015_finiteness"
+        ]
+      },
+      "note": "A472: statement layer for iut-skeleton:Sources1995_2015; no proof content. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PROP11.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 1.1 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp11Statement",
+          "prop11_tensorRing"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PROP12.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 1.2 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp12Statement",
+          "prop12_estimate"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PROP14.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 1.4 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp14Statement",
+          "prop14_localLog"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PROP15.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 1.5 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp15Statement",
+          "prop15_archimedean"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PROP18.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 1.8 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp18Statement",
+          "prop18_serre"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.THM110.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Thm 1.10 actual statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVThm110ActualStatement",
+          "thm110_actual"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.PNT.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Prop 2.2 PNT statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVProp22PNTStatement",
+          "pnt_constants"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.SEC2.TRANSITION.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Section 2 arithmetic transition statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "IUTIVSec2ArithmeticTransitionStatement",
+          "sec2_transition"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.SEC1SEC2.GAP.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV Section 1->2 transfer gap statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "Sec1ToSec2GapStatement",
+          "sec1_sec2_transfer"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.HEIGHT.INPUT.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV (b) height input statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "HeightInputStatement",
+          "height_uniform"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.IUTIV.UNDILATED.INPUT.STATEMENT",
+      "kind": "named_input",
+      "title": "IUT IV (c) undilated input statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "UndilatedInputStatement",
+          "undilated_bound"
+        ]
+      },
+      "note": "A472 statement-layer implementation for an IUT IV estimate GAP/NAMED node; no proof content; no closure. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.ABSTOPIII.5855.STATEMENT",
+      "kind": "named_input",
+      "title": "AbsTopIII Prop 5.8(i)(ii)/Cor 5.5 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "AbsTopIII58_55Statement",
+          "absTopIII_prop58_i",
+          "absTopIII_cor55"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:Gap.absTopIII58_55 stub statement; no proof content. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] f4b/gap-reduced donor 存在于 ABCBridge/Bridge/ABCFrontierReductions.lean:77/102/119/136/157/177/199/221/232/243/256/273/294/301。"
+    },
+    {
+      "id": "PRE.QPILOT.PRECISE.STATEMENT",
+      "kind": "named_input",
+      "title": "q-pilot precise construction statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "QPilotPreciseConstructionStatement",
+          "qPilotPrecise_object"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:Gap.qPilotPreciseConstruction stub statement. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 仓库搜索：无同名 Lean 对象；语义 donor: SourceLogShellXMuPacket + SourceThetaPilotIQContainment（XMu/IQ packet）。"
+    },
+    {
+      "id": "PRE.THETAPILOT.IQ.STATEMENT",
+      "kind": "named_input",
+      "title": "Theta-pilot IQ containment statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "ThetaPilotIQContainmentStatement",
+          "thetaPilotIQ"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:Gap.thetaPilotIQContainment stub statement. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 仓库搜索：θ-pilot IQ containment donor 存在（SourceThetaPilotIQContainment.lean:126/141），非缺口；adapter hull:X.DONOR.REUSE.ADAPTERS 复用。"
+    },
+    {
+      "id": "PRE.SECTION0.SATURATED.STATEMENT",
+      "kind": "named_input",
+      "title": "Section 0 saturated theory statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "Section0SaturatedTheoryStatement",
+          "section0_graph"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:Gap.section0SaturatedTheory stub statement. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.ETTH02.DEEP.STATEMENT",
+      "kind": "named_input",
+      "title": "EtTh02 ten class-B deep inputs statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "EtTh02DeepInputs",
+          "etth02_thetaAnalytic",
+          "etth02_global"
+        ]
+      },
+      "note": "A472: implements iut-pre-abc:Gap.etthDeepInputs stub statement; no proof content. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "PRE.ETTH11.ROWS567.STATEMENT",
+      "kind": "named_input",
+      "title": "EtTh11 rows 5-7 statement layer",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "EtTh11Rows567",
+          "etth11_row5"
+        ]
+      },
+      "note": "A472: statement layer for EtTh11 residual deep rows; no proof content. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected]"
+    },
+    {
+      "id": "HULL.IND.CONSUMER.BUNDLE2",
+      "kind": "theorem",
+      "title": "Ind1/2/3 consumer bundle 2",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullIndConsumerBundle2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullIndConsumerBundle2Actual.lean": [
+          "indBundle2_ids",
+          "indBundle2_statuses",
+          "indBundle2_deps",
+          "indBundle2Rows_length"
+        ]
+      },
+      "note": "A473: real Lean consumer over green Ind files; no closure."
+    },
+    {
+      "id": "HULL.STEPXI.CONTRACT.TREE.CONSUMER",
+      "kind": "theorem",
+      "title": "StepXI contract tree consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullStepXIContractConsumerTreeActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/Contract.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullStepXIContractConsumerTreeActual.lean": [
+          "stepXIContractTree_cor312",
+          "stepXIContractTree_route",
+          "stepXIContractTree_qpositive"
+        ]
+      },
+      "note": "A473: real Lean consumer over tree StepXI wrappers."
+    },
+    {
+      "id": "HULL.IUTII.LOGSHELL.LINK.CONSUMER",
+      "kind": "theorem",
+      "title": "IUTII log-shell carrier + typed link consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullIUTIILinkCarrierConsumerActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullIUTIILinkCarrierConsumerActual.lean": [
+          "IUTIILogShellLinkData",
+          "iutiiLogShellLink_cor312",
+          "iutiiLogShellLink_qpositive"
+        ]
+      },
+      "note": "A473: relates real IUTII SourceLogShellDatum to the typed IUTII->IUTIII link; conditional."
+    },
+    {
+      "id": "HULL.COR312.GAP.SUPPLY.CONSUMER",
+      "kind": "theorem",
+      "title": "Cor312 gap supply consumer (five inputs)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1DeepStatementLayerV2Actual.lean": [
+          "Cor312GapSupplyData",
+          "gapSupply_hunit",
+          "gapSupply_hsplit",
+          "gapSupply_hptfin",
+          "gapSupply_hweightvol",
+          "gapSupply_hpoint"
+        ]
+      },
+      "note": "A473: consumer layer for Cor312 gap supply inputs; hunit/hweightvol/hpoint named. [A474 V2: supersedes earlier Prop-annotated statement file; Type-level corrected] [A475] 五个 gap 输入在 ABCFrontierReductions 中有 clause/reduction donors（FrontierUnitNormalizationClause:119, FrontierSplitClause:136, FrontierPointFinitenessClause:157, FrontierPointVolumeWeightClause:177, FrontierPointHeightClause:221）。"
+    },
+    {
+      "id": "HULL.TREE.H5H7.CONSUMER.BATCH",
+      "kind": "theorem",
+      "title": "Tree H5/H7 consumer batch",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullTreeH5H7ConsumerBatchActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullTreeH5H7ConsumerBatchActual.lean": [
+          "treeH5H7Batch_frozen",
+          "treeH5H7Batch_hullFacts"
+        ]
+      },
+      "note": "A473: real Lean batch over green tree H5 files."
+    },
+    {
+      "id": "HULL.STEPXI.PAPER.ASSETS.CONSUMER",
+      "kind": "theorem",
+      "title": "StepXI paper-assets consumer batch",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullStepXIPaperAssetsConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullStepXIPaperAssetsConsumerActual.lean": [
+          "stepXIPaperAssets_contract",
+          "stepXIPaperAssets_qpositive",
+          "stepXIPaperAssets_obligations"
+        ]
+      },
+      "note": "A473: real Lean batch over green StepXI construction/obligation files."
+    },
+    {
+      "id": "HULL.TREE.R9.BATCH.CONSUMER",
+      "kind": "theorem",
+      "title": "Tree R9/H5 batch consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullTreeR9BatchConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullTreeR9BatchConsumerActual.lean": [
+          "treeR9Batch_rayEq",
+          "treeR9Batch_mem",
+          "treeR9Batch_inter"
+        ]
+      },
+      "note": "A473: green tree R9/H5 batch consumer."
+    },
+    {
+      "id": "HULL.DET.TENSOR.TREE.CONSUMER",
+      "kind": "theorem",
+      "title": "Tree determinant-tensor consumer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullDetTensorTreeConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullDetTensorTreeConsumerActual.lean": [
+          "detTensorTree_frozenFromBundle",
+          "detTensorTree_frozenFromSingle"
+        ]
+      },
+      "note": "A473: green tree frozen det spec consumer."
+    },
+    {
+      "id": "X.MAINLINE.ABCFREY.STATEMENT",
+      "kind": "conditional",
+      "title": "Mainline ABC/Frey statement layer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1MainlineABCFreyStatementLayerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1MainlineABCFreyStatementLayerActual.lean": [
+          "FreyOddReductionStatement",
+          "FreySplitMultiplicativeStatement",
+          "ABCLogEquivalenceStatement",
+          "ABCHeightWeightStatement",
+          "ABCFrontierVariantStatement",
+          "mainlineABCFreyRows_length"
+        ]
+      },
+      "note": "A474 cross-region statement layer for mainline ABC/Frey conditional targets."
+    },
+    {
+      "id": "X.THETA.ETTH.GAP.STATEMENT",
+      "kind": "conditional",
+      "title": "Theta-EtTh gap statement layer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ThetaEtThGapStatementLayerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ThetaEtThGapStatementLayerActual.lean": [
+          "ThetaEtThGapStatement",
+          "order_frobenius",
+          "thetaEtThGapRows_length"
+        ]
+      },
+      "note": "A474 cross-region statement layer for theta-etth conditional interfaces."
+    },
+    {
+      "id": "X.LEGACY.N8.GAP.STATEMENT",
+      "kind": "gap",
+      "title": "Legacy N8 gap statement layer",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1LegacyN8GapStatementLayerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1LegacyN8GapStatementLayerActual.lean": [
+          "N8SourceInputsStatement",
+          "N8SourceKummerStatement",
+          "N8SourceOutputStatement",
+          "N8EvaluationStatement",
+          "N8Group456Statement",
+          "LegacyL0Statement",
+          "LegacyL1Statement",
+          "legacyN8GapRows_length"
+        ]
+      },
+      "note": "A474 cross-region statement layer for legacy N8 GAP nodes."
+    },
+    {
+      "id": "X.IUTIV.ABC.STATEMENT",
+      "kind": "conditional",
+      "title": "IUT-IV/ABC region statement layer",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1IUTIVABCStatementLayerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1IUTIVABCStatementLayerActual.lean": [
+          "G0TargetStatement",
+          "G3RouteStatement",
+          "HWStatement",
+          "IUTIVCarrierStatement",
+          "NamedInputsStatement",
+          "iutivabcRows_length"
+        ]
+      },
+      "note": "A474 cross-region statement layer for iutiv-abc region targets."
+    },
+    {
+      "id": "X.CHAIN.ABC.CLOSURE",
+      "kind": "theorem",
+      "title": "A475 chained adapters: Cor312/frontier -> ABC -> v2/log forms",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainABCClosureActual.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean",
+        "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainABCClosureActual.lean": [
+          "chain_cor312Bridge_abc",
+          "chain_cor312Bridge_log",
+          "chain_cor312Bridge_weightHeight",
+          "chain_gapReduced_abc",
+          "chain_gapReduced_weightHeight",
+          "chain_pointwise_abc",
+          "chain_pointwise_weightHeight",
+          "chain_realLine_abc",
+          "chainABCRows_length"
+        ]
+      },
+      "note": "A475: chain composition of existing donors (Cor312 bridge, frontier reductions, ABC equivalences); no axioms."
+    },
+    {
+      "id": "X.CHAIN.HULLRAY.LATTICE",
+      "kind": "theorem",
+      "title": "A475 chained adapters: H5 hull ray lattice laws via donor chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainHullRayLatticeActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1TreeR9HullRayActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1TreeDownRayLatticeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainHullRayLatticeActual.lean": [
+          "chain_hullRay_inter",
+          "chain_hullRay_union",
+          "chain_hullRay_mono",
+          "chainHullRayRows_length"
+        ]
+      },
+      "note": "A475: chains ray-identification donor with down-ray lattice donors; no axioms."
+    },
+    {
+      "id": "X.CHAIN.INFERRED.REUSE",
+      "kind": "theorem",
+      "title": "A475 inferred-type chained adapters (theta-IQ/SHE/hull/K1K2/Ind3/muN/det/ABC)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainInferredReuseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainInferredReuseActual.lean": [
+          "chain_thetaIQ_subset",
+          "chain_thetaIQ_product",
+          "chain_she_statement",
+          "chain_she_slot",
+          "chain_hull_haar_finite",
+          "chain_volumeClass",
+          "chain_volumeFiberIff",
+          "chain_ind3_carrier",
+          "chain_ind3_mem",
+          "chain_ind3_value",
+          "chain_absKummer_cont",
+          "chain_muN_ker",
+          "chain_muN_surj",
+          "chain_packetPower",
+          "chain_matrixLogDet_pow",
+          "chain_frontierGapReduced_abc",
+          "chain_frontierGapReduced_reduce",
+          "chainInferredRows_length"
+        ]
+      },
+      "note": "A475: lambda/application chains of existing donors; types inferred; no restated signatures; no axioms."
+    },
+    {
+      "id": "X.CHAIN.INFERRED.REUSE2",
+      "kind": "theorem",
+      "title": "A475 donor aliases/chains 2 (Frey/H5 hull/AMPL/absolute Kummer/labelled iso/bridge)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainInferredReuse2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainInferredReuse2Actual.lean": [
+          "chain_frey_eq_int_map",
+          "chain_frey_baseChange",
+          "chain_frey_integral",
+          "chain_hull_scaling_subset",
+          "chain_hull_eq_closure",
+          "chain_hull_candidate_le",
+          "chain_hull_local_logDegree",
+          "chain_ampl_realVolume",
+          "chain_ampl_ofReal_le",
+          "chain_ampl_exists_hull_eq",
+          "chain_absKummer_one_iff",
+          "chain_labelledKummerIso_nonempty",
+          "chain_bridge_heightBound",
+          "chain_realLine_abc",
+          "chainInferred2Rows_length"
+        ]
+      },
+      "note": "A475: inferred-type re-exports/chains of existing donors; H5 hull<=image only conditional candidate (:278); no axioms."
+    },
+    {
+      "id": "X.CHAIN.FRONTIER.CLAUSES",
+      "kind": "theorem",
+      "title": "A475 chained adapters: ABC frontier clauses + reduction slots",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ChainFrontierClausesActual.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ChainFrontierClausesActual.lean": [
+          "chain_frontier_clauses",
+          "chain_gapReduced_to_frontier",
+          "chain_pointwise_to_frontier",
+          "chain_bridge_of_gapReduced",
+          "chain_bridge_of_pointwise",
+          "chain_gapReduced_abc",
+          "chain_pointwise_abc",
+          "chain_realLine_abc",
+          "chainFrontierRows_length"
+        ]
+      },
+      "note": "A475: reuses frontier clause defs and reduction slots; chains to bridge interface/ABC; no axioms."
+    },
+    {
+      "id": "X.CONSUMER.CHAIN.PACKAGE",
+      "kind": "theorem",
+      "title": "Consumer chain: H5 hull-volume package + theta-pilot IQ package",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerChainPackageActual.lean",
+        "tmp/sheaf/xif/paper/Mzk1TreeHullInterfaceFactsActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerChainPackageActual.lean": [
+          "hull_volume_package",
+          "hull_realVolume_le_theta_of_logVolume",
+          "thetaPilot_iq_package",
+          "hull_logVolume_eq_ofReal_realVolume"
+        ]
+      },
+      "note": "A476 consumer: real conclusion combining tree hull facts + interface-correction equivalence + theta-pilot IQ donors."
+    },
+    {
+      "id": "X.CONSUMER.DET.TENSOR",
+      "kind": "theorem",
+      "title": "Consumer: packet log-volume mul/smul/pow from det tensor donor laws",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerDetTensorActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerDetTensorActual.lean": [
+          "packetLogVolume_mul_consumer",
+          "packetLogVolume_smul_consumer",
+          "packetLogVolume_pow_consumer"
+        ]
+      },
+      "note": "A476 consumer: real conclusions combining matrixLogDet mul/smul/pow laws with packetLogVolume_eq_matrixLogDet."
+    },
+    {
+      "id": "X.CONSUMER.ABC.FRONTIER.FORMS",
+      "kind": "theorem",
+      "title": "Consumer: gapReduced/pointwise frontier -> ABC log and v2 forms",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerABCFrontierFormsActual.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+        "LeanFormal/IUT/ABCBridge/Bridge/IUTToABC.lean",
+        "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerABCFrontierFormsActual.lean": [
+          "gapReduced_logConjecture",
+          "gapReduced_weightHeight",
+          "pointwise_logConjecture",
+          "pointwise_weightHeight",
+          "gapReduced_bridge_log"
+        ]
+      },
+      "note": "A476 consumer: frontier reduction slots composed with ABC equivalence forms; real conclusions."
+    },
+    {
+      "id": "X.CONSUMER.IND3.THM311",
+      "kind": "theorem",
+      "title": "Consumer: Ind3 upper-semi/valuations + Theorem 3.11 layer recovery",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerInd3Theorem311Actual.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/Indeterminacy/Ind3UpperSemiConstruction.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceTheorem311Assembly.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerInd3Theorem311Actual.lean": [
+          "ind3_value_mem_iff",
+          "ind3_stage_value_monotone",
+          "ind3_upperSemi_and_sharp",
+          "theorem311_layers_recovered",
+          "theorem311_assemble_t1_to_partI"
+        ]
+      },
+      "note": "A476 consumer: real conclusions combining Ind3 construction laws and Thm3.11 assembly recoveries."
+    },
+    {
+      "id": "X.CONSUMER.IQ.SHE",
+      "kind": "theorem",
+      "title": "Consumer: IQ direct-sum membership/decomposition + SHE supply slot",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerIQDirectSumSHEActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellIQTensorPacket.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSHETransportObligations.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerIQDirectSumSHEActual.lean": [
+          "iqDirectSum_membership_package",
+          "iqDirectSum_mem_span_pi",
+          "sheSupply_slot_consumer"
+        ]
+      },
+      "note": "A476 consumer: real conclusions combining IQ direct-sum decomposition/membership donors and SHE supply/slot donors."
+    },
+    {
+      "id": "X.CONSUMER.VOLUME.XMU.HULL",
+      "kind": "theorem",
+      "title": "Consumer: volume translation->fiber factor + XMu packet + hull representation package",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerVolumeXMuHullActual.lean",
+        "LeanFormal/IUT/IUTII/Kummer/SourceLogShellXMuPacket.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2VolumeTranslationLaw.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullInterfaceDischarge.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerVolumeXMuHullActual.lean": [
+          "volumeFiberFactorLaw_of_volumeTranslationData",
+          "xMuPacket_mem_span_pi",
+          "xMuPacket_single_fiber_package",
+          "hull_representation_finite_package"
+        ]
+      },
+      "note": "A476 consumer: real conclusions chaining volume laws, XMu packet decomposition/membership and hull representation/finiteness donors."
+    },
+    {
+      "id": "X.CONSUMER.KUMMER.MUN",
+      "kind": "theorem",
+      "title": "Consumer: labelled Kummer iso chain + muN quotient structure/power/law",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerKummerMuNActual.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2KummerPrimeLift.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceLogShellMuNQuotientCarrier.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerKummerMuNActual.lean": [
+          "labelledKummerIso_nonempty_chain",
+          "kummer_lift_injective_and_iso",
+          "muN_quotient_structure",
+          "muN_pow_end_chain",
+          "weightNLog_pow_consumer"
+        ]
+      },
+      "note": "A476 consumer: real conclusions combining Kummer prime-lift donors and muN quotient donors."
+    },
+    {
+      "id": "X.CONSUMER.AMPL.PROCESSION",
+      "kind": "theorem",
+      "title": "Consumer: AMPL supply package + procession wall package",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerAMPLProcessionActual.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardAMPLThetaBoundSupply.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceProcessionStepXI.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerAMPLProcessionActual.lean": [
+          "ampl_supply_package",
+          "wall_package"
+        ]
+      },
+      "note": "A476 consumer: real conjunctions combining AMPL supply laws and procession wall laws."
+    },
+    {
+      "id": "X.CONSUMER.H1H2.BRIDGE",
+      "kind": "theorem",
+      "title": "Consumer: DTheta bridge package + H2 construction package",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerH1H2BridgeActual.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2Construction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerH1H2BridgeActual.lean": [
+          "dTheta_bridge_package",
+          "h2_package_consumer"
+        ]
+      },
+      "note": "A476 consumer: real conjunctions combining DTheta bridge recovery laws and H2 package projection/compatibility laws."
+    },
+    {
+      "id": "X.CONSUMER.KUMMER.ID.HULL.COMPACT",
+      "kind": "theorem",
+      "title": "Consumer: labelled Kummer identity package + hull compactness/representation chain",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1ConsumerKummerIdentityHullCompactActual.lean",
+        "LeanFormal/IUT/IUTIII/Theorem311/SourceK1K2CardReduction.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullCompactnessReduction.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceHullInterfaceDischarge.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1ConsumerKummerIdentityHullCompactActual.lean": [
+          "labelledKummerIdentity_package",
+          "hull_compact_finiteness_package",
+          "hull_compact_representation_chain"
+        ]
+      },
+      "note": "A476 consumer: real conjunctions/chains combining Kummer identity laws and hull compactness/representation donors."
+    }
+  ],
+  "edges": [
+    {
+      "from": "R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "e-deep:E2.H5framing",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "R9.AUDIT.CONSUMER.BUNDLE",
+      "to": "E-hull-h5-h7",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "e-deep:E3.twoSided",
+      "kind": "proof",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "e-deep:E3.deepOb9",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "H7.OB9.BUNDLE.STUB.CONSUMER",
+      "to": "E-hull-h5-h7",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.H5.CLASSB.STATEMENT",
+      "to": "e-deep:E2.h5Gap",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.H7.DEEPOB9.STATEMENT",
+      "to": "e-deep:E3.deepOb9",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "e-deep:E2.detScalingLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.HDD.DECOMPOSITION.STATEMENT",
+      "to": "e-deep:E2.detInvLaws",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "to": "e-deep:E2.h5Gap",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "to": "e-deep:E3.deepOb9",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "to": "e-deep:E2.h5Gap",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "to": "e-deep:E2.h5Gap",
+      "kind": "interface",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.H5.CLASSB.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.H7.DEEPOB9.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.HDD.DECOMPOSITION.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.STEPXI.OBLIGATIONS.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.STEPXI.CONSTRUCTION.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.IUTII.IUTIII.LINK.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.THETAPILOT.CONSTRUCTION.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "e-deep:E2.h5Gap",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "e-deep:E3.deepOb9",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "T1-cor312-abc-bridge",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.THETALINK.LOGSHELL.STATEMENT",
+      "to": "e-deep:E1.logShellBridge",
+      "kind": "interface",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.IND123.STATEMENT",
+      "to": "PRE.MULTIRADIAL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.K1K2.STATEMENT",
+      "to": "PRE.MULTIRADIAL.STATEMENT",
+      "kind": "statement",
+      "evidence": "observed_source"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.MULTIRADIAL.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.IND123.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.K1K2.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    },
+    {
+      "from": "PRE.COR312.UNCONDITIONAL.TARGET",
+      "to": "PRE.THETALINK.LOGSHELL.STATEMENT",
+      "kind": "statement",
+      "evidence": "planned"
+    }
+  ]
+}

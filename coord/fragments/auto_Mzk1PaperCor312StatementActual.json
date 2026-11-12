@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1PaperCor312StatementActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1PaperCor312StatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

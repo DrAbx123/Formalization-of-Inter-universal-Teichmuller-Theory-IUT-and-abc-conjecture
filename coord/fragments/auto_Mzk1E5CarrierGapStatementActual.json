@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1E5CarrierGapStatementActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1E5CarrierGapStatementActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

@@ -1,0 +1,9 @@
+{
+  "node": "auto:Mzk1Consumer24AdapterUnconditionalActual",
+  "kind": "auto-registered",
+  "status": "PROVED",
+  "files": [
+    "tmp/sheaf/xif/paper/Mzk1Consumer24AdapterUnconditionalActual.lean"
+  ],
+  "note": "watchdog EXIT0 read-only; silent registration"
+}

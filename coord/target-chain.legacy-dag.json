@@ -1,0 +1,2296 @@
+{
+  "nodes": [
+    {
+      "id": "legacy:abc-definition",
+      "kind": "interface",
+      "title": "The existing Prop ABCConjecture quantifies epsilon, K, a, b, c using IsABCTriple and ABCInequality.",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Statement.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Statement.lean": [
+          "ABCConjecture"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=existing_unrevalidated"
+    },
+    {
+      "id": "legacy:abc-target",
+      "kind": "target",
+      "title": "For every real epsilon > 0 there is a real K > 0 such that every primitive positive additive natural-number triple (a,b,",
+      "status": "GAP",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Statement.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Statement.lean": [
+          "ABCConjecture"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=open"
+    },
+    {
+      "id": "legacy:c1-contract-d11-reduction",
+      "kind": "theorem",
+      "title": "NativeContractDatumExists X is constructed from the d11EntryData package, but the nativeD11PlaceSelection is a singleton",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/NativeContractDatumFromD11.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/NativeContractDatumFromD11.lean": [
+          "nativeContractDatumExists_of_d11Entry"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:c1-native-source-assembly",
+      "kind": "theorem",
+      "title": "Native SourceNativeInitialThetaData plus the exact source fields isolated by the clause constructors assembles a SourceD",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/NativeSourceAssembly.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/NativeSourceAssembly.lean": [
+          "toSourceData",
+          "nativeContractDatumExists_of_assembly",
+          "sourceInputBinding_nonempty_of_assembly"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:c1-source-input-binding-equivalence",
+      "kind": "theorem",
+      "title": "Nonempty (SourceInputBinding I) iff Nonempty (C1ActualData I). For the native input, NativeContractDatumExists + index e",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C1Components.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C1Components.lean": [
+          "C1ActualDataComponents",
+          "ofBinding",
+          "c1ActualDataOfComponents",
+          "nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:compute-route-feasibility-20261030",
+      "kind": "theorem",
+      "title": "For the same qualifying source C, original fixed q/Theta gluing and locked signed xi-f target, assess whether source rel",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:cor312-bridge-construction",
+      "kind": "theorem",
+      "title": "Construct an inhabitant of Cor312ToABCBridgeInterface at the universe of the actual source carrier, from the faithful IU",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:cor312-bridge-definition",
+      "kind": "interface",
+      "title": "Cor312ToABCBridgeInterface at universe u consists of carrier : Type u, hullData : IQHullLogVolumeInterface carrier, and ",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "Cor312ToABCBridgeInterface"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=existing_unrevalidated; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:cor312-conditional-abc",
+      "kind": "theorem",
+      "title": "For a fixed universe u and any D : Cor312ToABCBridgeInterface.{u}, ABCConjecture holds.",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "cor312ToABCBridge_abcConjecture"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=existing_unrevalidated; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:eta-tensor-naturality-actual",
+      "kind": "target",
+      "title": "Naturality of PiTensorProduct.subsingletonEquiv for tensorActionMul: tau(T_g x) = g * tau x. Consequently graphEquiv rea",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/EtaTensorAutomorphismActual3.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/EtaTensorAutomorphismActual3.lean": [
+          "tau_graphAction_obligation",
+          "tensorAutomorphismTarget_actual"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:gap-exploration-20261030",
+      "kind": "theorem",
+      "title": "For one qualifying original initial Theta datum T, identify the same-source q, specified K-place/root, IQ tensor packet,",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l0.2-local-field-variable-change",
+      "kind": "target",
+      "title": "For a finite place v and X : PuncturedEllipticCurve F with split multiplicative reduction, construct a local-field varia",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1L02LocalFieldVariableChangeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1L02LocalFieldVariableChangeStatementActual.lean": [
+          "LocalFieldChangeMap"
+        ]
+      },
+      "note": "statement skeleton added (L0.2 local field variable change; no proof); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l0.2-tate-parameter",
+      "kind": "target",
+      "title": "Existing L0.2 Tate/inverse-j/Delta/q_v chain is revalidated as a statement and its actual consumer is fixed; source Tate",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1L02TateParameterStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1L02TateParameterStatementActual.lean": [
+          "TateParameterData"
+        ]
+      },
+      "note": "statement skeleton added (paper-scope Tate parameter/local field variable change; no proof); legacy node file link; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l0.4-log-comparison",
+      "kind": "target",
+      "title": "L0.4 cross-field log comparison at the actual consumer map SourceLogLinkCompatibility.sourceTheaterScalarMap, culminatin",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1L04LogComparisonStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1L04LogComparisonStatementActual.lean": [
+          "LogVolumeComparison"
+        ]
+      },
+      "note": "statement skeleton added (paper-scope log-volume comparison/degree normalization; no proof); legacy node file link; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l0.4-sourceTheater-principalUnitLog-square",
+      "kind": "target",
+      "title": "For u : principalUnits (K := PadicScalarField concretePlace), sourceTheaterScalarMap (principalUnitLog u) = principalUni",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/l0.4/PrincipalUnitLogSquare.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/l0.4/PrincipalUnitLogSquare.lean": [
+          "sourceTheater_principalUnitLog_square"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:l0.5-source-theta",
+      "kind": "target",
+      "title": "L0.5 source Theta: actual ATheta, theta unit/divisor, Mq->MTheta, root/deck ambiguity, tempered synchronization, Kummer ",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1L05SourceThetaStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1L05SourceThetaStatementActual.lean": [
+          "InitialThetaData"
+        ]
+      },
+      "note": "statement skeleton added (L0.5 source theta; no proof); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:l03-g2-milestone",
+      "kind": "target",
+      "title": "On the actual base/category required by the source consumer, for every finite group G, every SingleObj G diagram in Fini",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l03-s1-scheme-orbicurve-comparison",
+      "kind": "target",
+      "title": "Given F field, X : HyperbolicOrbicurve F, S : SchemeOverField F, and an actual identification of X.stack.fiber with sche",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:l03-s2-hascolimits-transport",
+      "kind": "target",
+      "title": "For every finite group G, HasColimitsOfShape (SingleObj G) transports across a category equivalence E : FiniteEtaleCover",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/l03-g2/S2Transport.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/l03-g2/S2Transport.lean": [
+          "SchemeSideHasFiniteGroupQuotients",
+          "hasColimitsOfShape_orbicurve_of_equivalence",
+          "hasColimitsOfShape_orbicurve_of_scheme",
+          "hasColimitsOfShape_orbicurve_of_residual"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "legacy:l1-f1-equivalence",
+      "kind": "target",
+      "title": "Actual equivalence (CommAlgCat.FiniteEtale K)^op ≌ FiniteContinuousGaloisSetCategory K, with residual strict triangle, a",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GSetEtaleEquivalenceAssembly.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTII/Frobenioid/Example36GSetEtaleEquivalenceAssembly.lean": [
+          "finiteEtaleContinuousEquivalenceFinal"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=existing_proof_checked; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:l1-f7-tate-uniformization",
+      "kind": "target",
+      "title": "Tate uniformization: actual analytic bijection from K^x/q^Z to the Tate curve's nonzero affine points, on canonical norm",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/l1-f7/TateNormalizedPointData.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/l1-f7/TateNormalizedPointData.lean": [
+          "TateNormalizedPointData",
+          "normalizedTateQuotientPoint",
+          "TateUniformizationNormalizedPointMapGap"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=open; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-a1a2a3-input-boundary",
+      "kind": "theorem",
+      "title": "A1 (Theorem311Output), A2 (Prop3.9 packet/log laws), A3 (Remark3.9.5 vertical/hull laws) hold for every Theorem311Source",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C9A1A2A3Source.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C9A1A2A3Source.lean": [
+          "A1_A2_A3"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c0-target-signature",
+      "kind": "target",
+      "title": "N8 target input/output roles over actual OriginalInput and source hull/q.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/TargetSignature.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/TargetSignature.lean": [
+          "N8TargetInput",
+          "N8TargetOutput",
+          "n8_targetOutput_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c1-source-input-binding",
+      "kind": "target",
+      "title": "Actual place equivalence, selected v/R, prime-strip fiber value-group comparison.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceInputBinding.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceInputBinding.lean": [
+          "SourcePlaceRealization",
+          "SourceInputBinding",
+          "sourceInputBinding_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c1-sourcedegree-exact-obstructions",
+      "kind": "interface",
+      "title": "Current exact C1 and SourceDegree state: SourceDegree residual is unconditional on the C3 tensor block; C1 data/binding ",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceDegreeHullC3.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceDegreeHullC3.lean": [
+          "c8HullLogVolume_c3_eq_normalizedLogVolume",
+          "sourceDegreeHullReadoutIdentification_c3",
+          "sourceDegreeResidual_iff_actualDegree_eq_BHull_c3"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "legacy:n8-c10-assembly",
+      "kind": "target",
+      "title": "Actual N8 full output assembled from C0-C9; no C10 sorry.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/N8Closure.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/N8Closure.lean": [
+          "N8FullOutput",
+          "n8Assembly_closure"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]"
+    },
+    {
+      "id": "legacy:n8-c10-named-assembly",
+      "kind": "target",
+      "title": "ARCHIVED legacy C10 scaffold; NOT active paper N8 closure.",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/N8ClosureAchieved.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/N8ClosureAchieved.lean": [
+          "n8_named_closure"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-c2-source-log-kummer",
+      "kind": "target",
+      "title": "Actual finite-place unit log, torsion kernel, log-shell/pre-log-shell.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceLogKummerRealization.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceLogKummerRealization.lean": [
+          "SourceLogKummerData",
+          "sourceLogKummerData_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c3-over-f-tensor",
+      "kind": "target",
+      "title": "Corrected over-F C3 tensor target with actual tensor landing; frozen Fmod tensor target withdrawn/not identified.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C3OverFTensorTarget.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C3OverFTensorTarget.lean": [
+          "overFC3TensorTarget"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c3-source-pilot-region",
+      "kind": "target",
+      "title": "Actual q completion element, theta packet, Kummer class, tensor landing.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourcePilotRegion.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourcePilotRegion.lean": [
+          "SourcePilotRegionData",
+          "sourcePilotRegion_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c4-source-witnessed-output",
+      "kind": "target",
+      "title": "Source value-monoid witness layer with place/pilot/Ind action data and U.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceWitnessedOutput.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceWitnessedOutput.lean": [
+          "SourceWitnessedOutputData"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "target",
+      "title": "Actual IPL family + SHE/APT representations + permitted/pilot family.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceAlgorithmCompatibility.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceAlgorithmCompatibility.lean": [
+          "SourceAlgorithmCompatibilityData",
+          "sourceAlgorithmCompatibility_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c6-actual-iq-data",
+      "kind": "target",
+      "title": "Actual C6 IQ data on ArithmeticTensorTupleBlock with IQHullLogVolumeInterface.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C6ActualIQData.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C6ActualIQData.lean": [
+          "actual"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c7-holomorphic-hull",
+      "kind": "target",
+      "title": "Actual IQ hull family with T11 image, C5 permitted, qPilot membership.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceHolomorphicHull.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceHolomorphicHull.lean": [
+          "SourceHolomorphicHullData",
+          "sourceHolomorphicHullData_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "target",
+      "title": "For C6 on the actual C3 tensor block and actual B, SourceDegreeComparisonResidual is unconditionally equivalent to actua",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceDegreeHullC3.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceDegreeHullC3.lean": [
+          "c8HullLogVolume_c3_eq_normalizedLogVolume",
+          "sourceDegreeHullReadoutIdentification_c3",
+          "sourceDegreeResidual_iff_actualDegree_eq_BHull_c3"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c9-final-evaluation-capsule",
+      "kind": "theorem",
+      "title": "For fixed admissible source data, construct a paper-faithful common carrier E for actual final-evaluation outputs and th",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-c9-hull-carrier-compatibility",
+      "kind": "theorem",
+      "title": "For the current OriginalInput value-monoid hull, pointwise degree-faithfulness forces sourceHullVolume = top; therefore ",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C1FiniteHullObstruction.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C1FiniteHullObstruction.lean": [
+          "no_finite_sourceHullVolume_of_degreeFaithful"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-c9-output-region-source-route",
+      "kind": "theorem",
+      "title": "For the original admissible source data and its actual log-theta-lattice, identify complete output region families, the ",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-c9-p0",
+      "kind": "target",
+      "title": "P0 source input and index: native S, lattice L, place/tuple/procession indices",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p1",
+      "kind": "target",
+      "title": "P1 complete source output/representation: alpha, R_alpha, Ind1/2/3",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p2",
+      "kind": "target",
+      "title": "P2 unified global signed procession-normalized L on Adm regions",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p3",
+      "kind": "target",
+      "title": "P3 source hull H from U, admissible positive finite blocks, Theta finite",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p4",
+      "kind": "target",
+      "title": "P4 HullPoss enlargement and ValuesBounded <= Theta",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p5",
+      "kind": "target",
+      "title": "P5 equal-global-volume replacement and determinant/degree calibration",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p6",
+      "kind": "target",
+      "title": "P6 actual q input realization/one-sided approximation Q",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-p7",
+      "kind": "target",
+      "title": "P7 numeric close: Theta finite and Q<=Theta",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8C9PipelineStatementActual.lean": [
+          "N8C9Stage",
+          "N8C9Stage.index",
+          "N8C9Stage.index_lt_eight",
+          "N8C9StageStatement"
+        ]
+      },
+      "note": "C9 pipeline stage bookkeeping file linked; C9 content remains named; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-c9-paper-values",
+      "kind": "target",
+      "title": "C9 Q/Theta/Values paper-route objects with Q<=Theta reduction; exact named source gaps.",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C9PaperClosure.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C9PaperClosure.lean": [
+          "PaperC9Output"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-c9-pilot-approximation-iq",
+      "kind": "target",
+      "title": "Actual IQ Values/boundedness/q-approximation over C7/C8, using signed IQ hull readout.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourcePilotApproximationIQ.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourcePilotApproximationIQ.lean": [
+          "sourcePilotApproximationIQ_stage2"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-closure-audit",
+      "kind": "target",
+      "title": "SHEAF remediation audit chain for paper N8/C10; central compile manifest and registry/edges.",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/PaperC10Closure.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/PaperC10Closure.lean": [
+          "paperC10Conclusion"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-group1-source-objects",
+      "kind": "target",
+      "title": "N8 group1: actual prime-strip/Frobenioid/Hodge theater/source objects and their source links.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/Group1Statement.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/Group1Statement.lean": [
+          "sourceOriginalInputFrobenioidPresentation"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-group2-log-k1k2",
+      "kind": "target",
+      "title": "N8 group2: vertical log-Kummer correspondence and K1/K2 source realization/descent.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/group2-Statement.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/group2-Statement.lean": [
+          "descends_iff"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-group3-q-theta-pilot",
+      "kind": "target",
+      "title": "N8 group3: q/theta-pilot source identification, Kummer classes, arithmetic packet/tensor region image.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/group3-S1.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/group3-S1.lean": [
+          "thetaLift_mem_canonicalHull"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked [A462: downgraded PROVED->CONDITIONAL; watchdog EXIT0/olean-fresh evidence missing for file(s); re-promote after fresh EXIT0]; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-group4-kummer-log-volume-compat",
+      "kind": "target",
+      "title": "Kummer isomorphisms of tensor packets are precisely compatible with the respective log-volumes (separate from final one-",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/group4/LogVolumeCompatTypeProbe.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/group4/LogVolumeCompatTypeProbe.lean": [
+          "KummerLogVolumeCompatibility"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-group4-theorem311-multiradial",
+      "kind": "target",
+      "title": "N8 group4: Theorem 3.11 multiradial output with witness-preserving construction and Ind1-Ind3.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/group4/Statements.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/group4/Statements.lean": [
+          "concrete_profile_image_not_determined",
+          "exists_profile_univ_image"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-group5-ipl-she-apt",
+      "kind": "target",
+      "title": "N8 group5: IPL/SHE/APT cross-column transport and compatible construction.",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8IplSheAptStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8IplSheAptStatementActual.lean": [
+          "APTCompatibility"
+        ]
+      },
+      "note": "statement skeleton added (APT/SHE/IPL compatibility obligations; no proof, no free ipl/she/apt closure); legacy node file link; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-group6-hull-degree",
+      "kind": "target",
+      "title": "N8 group6: hull, arithmetic degree = normalized log-volume, Ob3-3/qSigned, final comparison.",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8HullDegreeStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8HullDegreeStatementActual.lean": [
+          "HullDegreeBound"
+        ]
+      },
+      "note": "statement skeleton added (N8 group6 hull-degree compatibility; no proof); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "legacy:n8-input-from-original",
+      "kind": "theorem",
+      "title": "Construct Theorem311Source.Input (DerivedPrerequisiteInput) from OriginalInput: SupplyP1P2Input boundaries (LGP, volume,",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8InputFromOriginalStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8InputFromOriginalStatementActual.lean": [
+          "OriginalInputProjection"
+        ]
+      },
+      "note": "statement skeleton added (N8 input derived from OriginalInput; no proof); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-p6-source-route",
+      "kind": "target",
+      "title": "P6 source-route: Chain A/B, hull, global L/ellOut, SHE/Ind, tensor, indices, comparison with exact named source gaps.",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/P6Comparison.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/P6Comparison.lean": [
+          "P6Exact",
+          "P6Epsilon"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-paper-c10-named-closure",
+      "kind": "target",
+      "title": "Paper C10 named-sorry closure: PaperC10Output with explicit finite Theta source and Q<=Theta conclusion; NOT target_acce",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/PaperC10Closure.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/PaperC10Closure.lean": [
+          "paperC10Conclusion"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-paper-named-closure",
+      "kind": "target",
+      "title": "Paper-route N8 named-sorry closure: PaperN8Output with Q/Theta/Values and bounds; NOT target_accepted.",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/PaperN8Closure.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/PaperN8Closure.lean": [
+          "paperN8Closure_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked_with_named_sorries"
+    },
+    {
+      "id": "legacy:n8-s3-c0",
+      "kind": "theorem",
+      "title": "C0 actual N8TargetOutput construction or false-target correction",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C0Base.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C0Base.lean": [
+          "target"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=target_inconsistent; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c1-a",
+      "kind": "theorem",
+      "title": "sourcePlaceIndexEquiv for arbitrary V",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c1-b",
+      "kind": "theorem",
+      "title": "sourceFiberMonEquiv",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c1-d1",
+      "kind": "theorem",
+      "title": "sourceSelectedPlace",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c1-d2",
+      "kind": "theorem",
+      "title": "sourceSelectedImageRealization",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c1-quotient",
+      "kind": "target",
+      "title": "Corrected C1 quotient fiber target: PlaceUnitMonoid / kernel (integral units finite, norm-one infinite) ≃* SourcePlaceVa",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/C1QuotientFiberData.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C1QuotientFiberData.lean": [
+          "c1PlaceQuotientFiberData"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency); EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c1",
+      "kind": "theorem",
+      "title": "actual SourceInputBinding place/selected/R/fiber equiv",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C1Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C1Actual.lean": [
+          "of",
+          "C1ActualData",
+          "C1ActualData.toPlaceRealization",
+          "sourceInputBindingOfActual",
+          "sourceInputBinding_nonempty_of_actual"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c2-action",
+      "kind": "theorem",
+      "title": "actual G_v action/action descent",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c2-arch",
+      "kind": "theorem",
+      "title": "actual archimedean source data",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c2-k1k2",
+      "kind": "theorem",
+      "title": "C1-indexed K1/K2 boundary",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c2-kummer",
+      "kind": "theorem",
+      "title": "actual Kummer/root-change",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c2",
+      "kind": "theorem",
+      "title": "actual SourceLogKummerData",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C2Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C2Actual.lean": [
+          "sourceLogKummerData_nonempty_actual",
+          "sourceLogKummerDataActual_localShell",
+          "sourceLogKummerDataActual_kernel"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c3",
+      "kind": "theorem",
+      "title": "actual SourcePilotRegionData",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C3Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C3Actual.lean": [
+          "SourcePilotRegionDonors",
+          "sourcePilotRegion_nonempty_of_donors"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c5",
+      "kind": "theorem",
+      "title": "actual SourceAlgorithmCompatibilityData",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C5Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C5Actual.lean": [
+          "target"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=stage3_writing; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c7",
+      "kind": "theorem",
+      "title": "actual SourceHolomorphicHullData",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C7Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C7Actual.lean": [
+          "C7ActualObligations",
+          "qPilotPoint_eq_tensorUnit",
+          "SourceHolomorphicHullData.ofObligations",
+          "obligationsOfHull",
+          "sourceHolomorphicHullData_nonempty_iff_obligations"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-s3-c9-qhull",
+      "kind": "theorem",
+      "title": "q-hull identity/inequality",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c9-unitref",
+      "kind": "theorem",
+      "title": "unit-reference normalization inequality",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c9-valueset",
+      "kind": "theorem",
+      "title": "actual output value set containing q",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-c9",
+      "kind": "theorem",
+      "title": "C9 target v3 (paper source route): construct Values/RawPoss/H/HullPoss/L, Q,Rq,Theta; prove ValuesBounded, Q realization",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/C9Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/C9Actual.lean": [
+          "actualQPilotRealReadout_eq"
+        ]
+      },
+      "note": "declarations filled from file scan (A459 registration); VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd)"
+    },
+    {
+      "id": "legacy:n8-s3-t11-packet",
+      "kind": "theorem",
+      "title": "ThetaScalePacketIdentification: thetaScale C3 n j = C3.thetaPacket.scale j",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8SubStepsStatementActual.lean": [
+          "N8SubStep",
+          "N8SubStep.index",
+          "N8SubStep.index_lt_twelve",
+          "N8SubStepStatement"
+        ]
+      },
+      "note": "N8 sub-step bookkeeping file linked; named content untouched; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:n8-s3-t11",
+      "kind": "theorem",
+      "title": "actual Real theta -> completion and C4 IQ alignment",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/n8/closure/T11Actual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/T11Actual.lean": [
+          "thetaCompletionActual",
+          "thetaScaleActual",
+          "thetaScaleActual_eq_source",
+          "thetaIQInterfaceActual",
+          "sourceThetaIQObligation_actual"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): declarations filled from file scan (A459 registration); PENDING-VERIFY (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-t10-ipl-family",
+      "kind": "target",
+      "title": "Actual FPrimeStrip poly-isomorphism family for IPL.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/IPLFamilyData.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/IPLFamilyData.lean": [
+          "IPLFamilyData",
+          "iplFamilyData_nonempty"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-t11-theta-to-iq",
+      "kind": "target",
+      "title": "Actual theta scale and theta completion interface into C6 IQ carrier.",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceThetaToIQ.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceThetaToIQ.lean": [
+          "SourceThetaIQInterface",
+          "sourceThetaIQObligation"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=statement_compiles"
+    },
+    {
+      "id": "legacy:n8-t8-iq-carrier",
+      "kind": "target",
+      "title": "Actual IQ carrier as rational tensor product of SourceLogShellDatum.IQSpan.",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/IQCarrier.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/IQCarrier.lean": [
+          "N8IQCarrier",
+          "N8IntegralPureTensors_span_eq_top"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=proof_body_checked; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:n8-target-input-v2",
+      "kind": "target",
+      "title": "Rebuild the N8 source theorem signature on the paper-qualified native initial data and actual dependent lattice. Retain ",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:source-compute-integration-20261030",
+      "kind": "theorem",
+      "title": "Specify a concrete source-faithful implementation route connecting actual algorithm output to full-poly strip arrows, so",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:sourcedegree-c3-from-source",
+      "kind": "theorem",
+      "title": "A concrete PaperNormalizedVolumeData on the C3 tensor block is built from actual paper local volume data plus PaperNorma",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/n8/closure/SourceDegreeFromSource.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/n8/closure/SourceDegreeFromSource.lean": [
+          "sourcePaperNormalizedVolumeData",
+          "sourceDegreeResidual_iff_actualDegree_eq_BHull_c3_fromSource"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=kernel_closed; EXIT0 (watchdog compile)"
+    },
+    {
+      "id": "legacy:supplement-gap-priorities-20261030",
+      "kind": "theorem",
+      "title": "For the same qualifying source datum and fixed q/Theta gluing, identify the actual algorithm-output/prime-strip provenan",
+      "status": "GAP",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1N8RemainingGapsStatementActual.lean": [
+          "RemainingGapLabel",
+          "RemainingGapLabel.index",
+          "RemainingGapLabel.index_lt_ten",
+          "RemainingGapStatement"
+        ]
+      },
+      "note": "remaining legacy gap label bookkeeping file linked; content remains named/GAP; no proof; VERIFIED (results-log EXIT0 + olean fresh; verified by shehdd); probe V2 EXIT0 (watchdog); skeleton EXIT0"
+    },
+    {
+      "id": "legacy:xif-source-construction",
+      "kind": "theorem",
+      "title": "Paper-level xi-f: from actual q-pilot object, signed 1,circ U hull, O-module, Ind1/2/3, SHE, IPL/APT and Theta-link data",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/PaperXiFCompileGate.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/PaperXiFCompileGate.lean": [
+          "paperXiF_assembly_conditional"
+        ]
+      },
+      "note": "legacy SHEAF DAG node; proof_status=conditional_proof_body_checked"
+    }
+  ],
+  "edges": [
+    {
+      "from": "legacy:abc-target",
+      "to": "legacy:abc-definition",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:abc-target",
+      "to": "legacy:cor312-conditional-abc",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:abc-target",
+      "to": "legacy:cor312-bridge-construction",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:c1-contract-d11-reduction",
+      "to": "legacy:c1-source-input-binding-equivalence",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:c1-native-source-assembly",
+      "to": "legacy:c1-contract-d11-reduction",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:c1-native-source-assembly",
+      "to": "legacy:c1-source-input-binding-equivalence",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:compute-route-feasibility-20261030",
+      "to": "legacy:xif-source-construction",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:cor312-bridge-construction",
+      "to": "legacy:cor312-bridge-definition",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:cor312-conditional-abc",
+      "to": "legacy:cor312-bridge-definition",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:cor312-conditional-abc",
+      "to": "legacy:abc-definition",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:eta-tensor-naturality-actual",
+      "to": "legacy:n8-c3-over-f-tensor",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:gap-exploration-20261030",
+      "to": "legacy:xif-source-construction",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l0.2-local-field-variable-change",
+      "to": "legacy:l0.2-tate-parameter",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l0.4-sourceTheater-principalUnitLog-square",
+      "to": "legacy:l0.4-log-comparison",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l03-s1-scheme-orbicurve-comparison",
+      "to": "legacy:l03-g2-milestone",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l03-s2-hascolimits-transport",
+      "to": "legacy:l03-s1-scheme-orbicurve-comparison",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c1-source-input-binding",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c1-source-input-binding",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c1-sourcedegree-exact-obstructions",
+      "to": "legacy:c1-source-input-binding-equivalence",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c1-sourcedegree-exact-obstructions",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c4-source-witnessed-output",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c6-actual-iq-data",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c7-holomorphic-hull",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c9-pilot-approximation-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-t11-theta-to-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c4-source-witnessed-output",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c6-actual-iq-data",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c7-holomorphic-hull",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-c9-pilot-approximation-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-assembly",
+      "to": "legacy:n8-t11-theta-to-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c4-source-witnessed-output",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c7-holomorphic-hull",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c10-named-assembly",
+      "to": "legacy:n8-c9-pilot-approximation-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c2-source-log-kummer",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c2-source-log-kummer",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c3-source-pilot-region",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c3-source-pilot-region",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c3-source-pilot-region",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c3-source-pilot-region",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c4-source-witnessed-output",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c4-source-witnessed-output",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c4-source-witnessed-output",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c4-source-witnessed-output",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c4-source-witnessed-output",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-c4-source-witnessed-output",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c5-algorithm-compatibility",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c6-actual-iq-data",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c6-actual-iq-data",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-c6-actual-iq-data",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-t11-theta-to-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-c6-actual-iq-data",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c7-holomorphic-hull",
+      "to": "legacy:n8-t11-theta-to-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-c8-degree-comparison-iq",
+      "to": "legacy:n8-c7-holomorphic-hull",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-final-evaluation-capsule",
+      "to": "legacy:n8-c9-hull-carrier-compatibility",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-final-evaluation-capsule",
+      "to": "legacy:n8-c9-output-region-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-hull-carrier-compatibility",
+      "to": "legacy:n8-c9-output-region-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-output-region-source-route",
+      "to": "legacy:n8-target-input-v2",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-paper-values",
+      "to": "legacy:n8-p6-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-pilot-approximation-iq",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-pilot-approximation-iq",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-closure-audit",
+      "to": "legacy:n8-paper-named-closure",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-closure-audit",
+      "to": "legacy:n8-paper-c10-named-closure",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-closure-audit",
+      "to": "legacy:n8-p6-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-closure-audit",
+      "to": "legacy:n8-c9-paper-values",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group4-kummer-log-volume-compat",
+      "to": "legacy:n8-group4-theorem311-multiradial",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-input-from-original",
+      "to": "legacy:n8-a1a2a3-input-boundary",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-input-from-original",
+      "to": "legacy:n8-a1a2a3-input-boundary",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-paper-c10-named-closure",
+      "to": "legacy:n8-paper-named-closure",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-paper-c10-named-closure",
+      "to": "legacy:n8-p6-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-paper-named-closure",
+      "to": "legacy:n8-p6-source-route",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-paper-named-closure",
+      "to": "legacy:n8-c9-paper-values",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c0",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c0",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c1-a",
+      "to": "legacy:n8-s3-c1",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1-b",
+      "to": "legacy:n8-s3-c1",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1-d1",
+      "to": "legacy:n8-s3-c1",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1-d2",
+      "to": "legacy:n8-s3-c1",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1",
+      "to": "legacy:n8-c0-target-signature",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c2-action",
+      "to": "legacy:n8-s3-c2",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c2-arch",
+      "to": "legacy:n8-s3-c2",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c2-k1k2",
+      "to": "legacy:n8-s3-c2",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c2-kummer",
+      "to": "legacy:n8-s3-c2",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c2",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c2",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c3",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c3",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c3",
+      "to": "legacy:n8-c1-source-input-binding",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c3",
+      "to": "legacy:n8-c2-source-log-kummer",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c5",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c5",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c5",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c5",
+      "to": "legacy:n8-t10-ipl-family",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-s3-t11",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-s3-t11",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c7",
+      "to": "legacy:n8-c5-algorithm-compatibility",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c9-qhull",
+      "to": "legacy:n8-s3-c9",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c9-unitref",
+      "to": "legacy:n8-s3-c9",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c9-valueset",
+      "to": "legacy:n8-s3-c9",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c9",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c9",
+      "to": "legacy:n8-s3-c3",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c9",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-c9",
+      "to": "legacy:n8-s3-c3",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-t11-packet",
+      "to": "legacy:n8-s3-t11",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-t11",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-t11",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-t11",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-s3-t11",
+      "to": "legacy:n8-c3-source-pilot-region",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-t10-ipl-family",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-t10-ipl-family",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:n8-t11-theta-to-iq",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-t11-theta-to-iq",
+      "to": "legacy:n8-t8-iq-carrier",
+      "kind": "proof"
+    },
+    {
+      "from": "legacy:source-compute-integration-20261030",
+      "to": "legacy:xif-source-construction",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:sourcedegree-c3-from-source",
+      "to": "legacy:n8-c8-degree-comparison-iq",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:supplement-gap-priorities-20261030",
+      "to": "legacy:xif-source-construction",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l0.5-source-theta",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l1-f1-equivalence",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:l1-f7-tate-uniformization",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p0",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p1",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p2",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p3",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p4",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p5",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p6",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-c9-p7",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group1-source-objects",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group2-log-k1k2",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group3-q-theta-pilot",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group5-ipl-she-apt",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-group6-hull-degree",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    },
+    {
+      "from": "legacy:n8-s3-c1-quotient",
+      "to": "legacy:n8-c10-assembly",
+      "kind": "statement"
+    }
+  ]
+}
