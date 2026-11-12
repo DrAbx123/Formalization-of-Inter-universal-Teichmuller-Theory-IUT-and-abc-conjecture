@@ -159,3 +159,6 @@
 - 06:01：巡检：Mzk1PaperHullZeroLabelActual 最终 DONE 22:01:09Z（61s，旧 S800 hull 退化记录，引用 S779/S793）；7 个 teammate 已逐一唤醒派活（mainline RESNORM、qpilot DICT-B 实际对象、shehdd θ 侧对 S3137 raw、abc S3137 readings 审计、stage4 X_G×index 整合、lattice measure 端、stepxi P5-A5 c_j 实际化）。canonical 链确认为 S3137→Mzk1Paper312StatementActual→S3135。
 
 - 06:02：新文件（均入 watchdog 名单 98 项）：Mzk1DualIndexLinkActual（stage4：X≤L 紧开 + 商基数 hq ⇒ μX/μL=(∏p^{e_i})^{-1} 条件版，接 A2+diagonal cardinal）；Mzk1P5ThetaRootUnitActual（stepxi：paperRootThetaUnit=twoLthRootAt^{j²} 实际恒等式 + qRoot 形式 + hcomparison iff）；Mzk1P3DictBArithActual（qpilot：primeConductorLogDisc/nativeQArith 实际候选 + P3DictB 构造；logDisc 是 carrier 定义、Q_eq 命名输入，DICT-B 仍开）。
+
+- 06:03：S3137 readings 审计（abc，coord/P6-S3137-READINGS-AUDIT.md）：q 侧 S3137 qRead=-|log‖q‖| 与 paperQPilotLogVolume_multi/sourceQPilotSignedLog 同口径相等（S1487 已具体化）；Θ 侧 S3137 θ=log μ(hull) = -RTarget = -S2717ThetaHullLogVolume（纯符号约定差）；comparison ⇔ A ≥ R ⇔ 0 ≤ MTarget（green 等价归约，非证明）；差异=raw log-volume 无 1/(2l)、1/[K:Q]（后者无对象）。精确缺口：GAP-S3137-Q-INHABIT/QID/C3-THETA/NORM-ARCH-C；比较 Prop 仍 pending。
+- 06:03：GAP-PC-RESNORM 归约 green：Mzk1PrimeConductorResNormActual 把 RESNORM 归约为 RESDEG（局部剩余次数=1）+ BADCHAR（residueNormBase b.1=C.p）；θ 侧 canonical 差异（GAP-P6-C17-THETA-S3137 四层）记录于 P6 §13.3。

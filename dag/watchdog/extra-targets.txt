@@ -96,3 +96,4 @@ tmp/sheaf/xif/paper/Mzk1PaperCorrectedTargetActual.lean
 tmp/sheaf/xif/paper/Mzk1DualIndexLinkActual.lean
 tmp/sheaf/xif/paper/Mzk1P5ThetaRootUnitActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictBArithActual.lean
+tmp/sheaf/xif/paper/Mzk1PrimeConductorResNormActual.lean
