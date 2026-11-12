@@ -396,3 +396,5 @@
 - 07:41：FLT：Completion/Finite DONE（23:27:07Z）；BaseChange.lean 修 `induction ... with` 缺 `zero` 分支（新 TensorProduct 归纳原理），retouch；IntegralClosure 等 BaseChange olean 后即编。AdicValuation 已 green。
 
 - 07:42：qpilot round8：DCurveDataSource green（23:24:08Z，本地镜像 CurveData.disc）；3 新文件入队（310 项）。关键归约：① disc=p^e 不可由 CurveData 消（弱化 log(disc)=e logp 仍命名）；② L7 ⇔ arch 下界（缺实际下界）；③ weight=(localCompletionDegree)⁻¹ ⇒ QHALF ⇔ localCompletionDegree=1（与 GAP-PC-UNRAM/RESIDUE 合流）。
+
+- 07:43：stage4 唤醒（φ 三件套 + SNF 一般构造：det unit ⇒ GL_d(Zp) 等价 ⇒ 非条件体积比；再交 5-10 份小文件）。FLT：BaseChange 修复后待重编（上次 FAIL 为编辑前 run），IntegralClosure 待其 olean。
