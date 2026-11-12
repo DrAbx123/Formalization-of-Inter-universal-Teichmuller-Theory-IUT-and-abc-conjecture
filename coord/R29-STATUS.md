@@ -238,3 +238,5 @@
 - 06:32：stage4 批量失败根因定位：Mzk1DiagonalIndexActual 遗留未使用实例变量 [TopologicalSpace/MeasurableSpace (d→Q_p)] 导致依赖文件 synthInstanceFailed；已删除该两行并 retouch stage4 的 4 份文件；Diag2x2 另有 unsolved goals 待 owner 修。shehdd 批量 5 份入队（145 项）。
 
 - 06:33：mainline 第 6 份 Mzk1P3NormFormulaActual（NORMFORMULA 形式化 + 与 AbsNormPowerFormula rfl 等价）入队（151 项）；stepxi QNormalizationInput 已 retouch 重编；P3 RESDEG⟺residue-norm 等价文件（ResNormSlack）等 6 份在队列。
+
+- 06:34：用户指令：上下文上限是幻觉，不得因上下文缩减工作/留 TODO/提前收尾；从 workspace 重读丢失细节，保持每 lane 5-10 份完整文件、修到绿。已广播全队。
