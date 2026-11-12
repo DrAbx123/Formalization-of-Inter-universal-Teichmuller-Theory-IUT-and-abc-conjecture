@@ -308,3 +308,11 @@ tmp/sheaf/xif/paper/Mzk1P5ComparisonDerivedActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictL7ArchLowerActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictQWeightDegreeActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DictDLogSourceWeakActual.lean
+tmp/external/ported/flt/FLT/DedekindDomain/Completion/BaseChange.lean
+tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Bilinear.lean
+tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Pi.lean
+tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/UniformRing.lean
+tmp/external/ported/flt/FLT/Mathlib/RingTheory/TensorProduct/Basis.lean
+tmp/external/ported/flt/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean
+tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Hom.lean
+tmp/external/ported/flt/FLT/Hacks/RightActionInstances.lean
