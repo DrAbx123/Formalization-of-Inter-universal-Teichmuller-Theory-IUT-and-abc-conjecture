@@ -436,3 +436,5 @@
 - 08:07：stage4 SNFTool green（23:33:54Z，28s，exists_smith_normal_form）；BasisDetUnit/SNFDiag 入队（328 项）；DiagVolumeProved 修变量/open/hle 后 retouch。
 
 - 08:08：lattice CanonicalHaarCoordLattice（coordLattice 质量正有限 + canonical full map_eq）入队（328 项）；剩 glAct 打包与对角 scaling。
+
+- 08:09：stepxi **ComparisonDerived green（23:40:59Z）**——hcomparison 变定理；PhaseExponentData（label→phase exponent m 显式命名输入）入队（329 项）；P5 剩 3 个命名输入（root_image/analytic map/phase exponent）。
