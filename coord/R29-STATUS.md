@@ -314,3 +314,5 @@
 - 07:07：派 abc 合并 P7-MISSING-7-VERIFY：每条 missing → 可寻址接口（hull 新接口文件）→ 剩余缺口三段式，与 P7GapRegister 的 10 个 GAP code 对齐（全部仍标未 discharge）。
 
 - 07:08：qpilot round5 全绿（QHALFWeightOneSummary/L7NativeTarget/L7ArchMonotone/DSourceRefined/QSourceBuilder，23:00:45-23:04:21Z）；派下批：L7→P3DictB D_arith、D source ord/e、QHALF weight-one 回归。
+
+- 07:09：**P5 phase_relation 已推导 green**（P5PhaseDerived 23:04:16Z，61s）：root_image_zpow + `hunit : thetaUnit_j=qRoot^(j²) ⇒ c_j·phase_j·qRoot^((l+1)n)=1`（zpow_add₀ 消去；axioms trio），不再只是命名字段。abc：升级 P7-MISSING-7-VERIFY 三列表（7 条全仍未 discharge，对齐 10 GAP code；hull PaperVFactor/C3DIndexData/StepXIContractSchema olean=False 待绿），修 ThetaVConsumerChain/RawThetaReadoutBounds 并 retouch。
