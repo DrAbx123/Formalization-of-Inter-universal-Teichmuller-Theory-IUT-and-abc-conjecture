@@ -28542,3 +28542,13 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - 新 DONE：Mzk1TargetReductionActual（21:14:34Z）、Mzk1DExactActual（21:12:30Z）、Mzk1AffineOrderActual（21:11:55Z；CoordinateRing Module.Finite/IsIntegral/DimLE1/Noetherian；缺 IsIntegrallyClosed）。
 - P7 复核（shehdd）：coord/P7-GATE-REVIEW.md —— P7/ABC gate NOT PASSED（lana Iut 链 olean 全缺；FINAL-ASSEMBLY 1/3/5 PENDING-EXTERNAL、2/4/6/7 skeleton/conditional；F4.c 为 ABC-strength；final_conditional_ABC RETRACTED/VACUOUS）。
 - P5-D：Mzk1P5DCNormGaloisCompletionActual（C13 Galois 乘积/不变性、C18 restriction-of-scalars completion）入编译名单。
+
+## 2026-11-13 — R29 第五波：P6-A/P3-A/P2 G 满秩/P5 归一化桥（1 条）
+
+- P6-A green：Mzk1WeightedDetPacketActual（DONE 21:23:33Z，35s）——commonTensorDegree_eq_of_denominator_eq；weightedLogVolume_sub_eq_commonTensorDegree_mul_normalized_sub；在显式 GAP-P6-C17-DICT + thetaActual−qActual=M 下 Q.weighted−P.weighted=N·M；re-export profileArithmeticDegree_adjustedDetTensorPower。GAP 为定理假设、非 structure 字段。
+- P3-A green：Mzk1P3DictionaryActual（DONE 21:21:37Z，71s）——boxSlack/boxSlack_eq、paperStepV_iff_slack_nonneg、T_pos_of_five_le、l6_iff_scaled（T(l) 分母字典）、targetM_nonneg_iff_paperBox/ iff_L6_of_dicts（条件 DICT-B/C）。
+- P2 green：Mzk1MultiFactorBlockActual 最终 DONE（21:22:36Z，33s）——integerBasis/integerBasis_span_top/generatorColumn/generatorColumn_span_top/fullGeneratorMatrix；G 列张成（行满秩向量形式）green。GAP：矩阵 SNF 数值、S/X_G 交格体积、route1/2 交叉核对、Ind1→p-adic 整数格桥。
+- P5 green：Mzk1P5ThetaBridgeActual（DONE 21:21:34Z，68s）——(oddThetaFraction eval) 条件恒等式 (oddTheta(q,i·r^j)/oddTheta(q,i))^{-1}=r^{j²}；对象级 analytic↔root↔Kummer 仍 BLOCKED（六项缺口，coord/ROUTE3-CTHETA.md §8）。
+- P6-A.1：Mzk1MatrixHaarBaseActual 再 green（21:24:48Z，27s）——glMatrix_mul/glAct_mul/one/glAct_image_eq_of_mul_eq_one（显式逆矩阵 ⇒ 保格等号）；Haar 不变/对角缩放/受限 det 公式仍 GAP。
+- 新文件（待编译）：Mzk1PrimeConductorUnconditionalActual（hD→nativeDExact 条件化 + GAP-PC-WEIGHT/LOGSUM；SSIneqExplicit 仅依赖外部 Mestre–Oesterlé）、Mzk1P5LabelShiftActual（label 归一化指数）、Mzk1DualTransposeActual（GAP-DUAL-TRANSPOSE 配对形式；首编 FAIL）、Mzk1PaperFaithfulHullP4Actual（P4 拆分）、Mzk1StepVVolumeActual（per-label region + exceptional filter；首编 FAIL）。
+- 周期 git：main repo 968d6c3eb/f5e144e7c/026750e46；audit repo 646a239。Gate：extra=77，clean 63 + ole-only 6 + stale 2 + red 6（shehdd）。
