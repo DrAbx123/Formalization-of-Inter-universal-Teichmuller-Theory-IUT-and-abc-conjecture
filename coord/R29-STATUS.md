@@ -184,3 +184,5 @@
 - 06:13：XG 对角符号更正：XG=(diag(p^{e_i})Z_p^d)^#=∏p^{-e_i}Z_p；e_i≥0 时 XG⊇L（反向），e_i≤0 时 XG⊆L 且 index=∏p^{-e_i}、μ比=(∏p^{-e_i})^{-1}；建议用 f_i=−e_i≥0 参数化并写清符号约定，按 A2 实际假设方向选择一支。
 
 - 06:13：P5-A7 green（stepxi）：Mzk1P5CompareActual 修正 root_image := toRoot r = qRoot^l，DONE 22:12:49Z（63s）；精确关系 c_j·phase_j = qRoot^{-((l+1)n)}（n=j²）；c_j=1 不等价自然条件、phase 不能吸收 q 尺度；P5BridgeIntegration 缺 root_image 字段 → P5-A8 补。
+
+- 06:14：stage4 Mzk1DiagonalDualActual（f:=-e≥0 参数化条件包装；coordSmall/coordDual 定义 + diagonal_dual_volume_ratio 条件定理；GAP：coordDual≤coordSmall 成员证明、商 φ 实际构造）入队（104 项）；已给提示（成员用 Ideal.pow_le_self；商用 Submodule.mkQ 核=coordDual 的商泛性质，不必写坐标映射）。
