@@ -197,3 +197,9 @@ tmp/sheaf/xif/paper/Mzk1SignedLogIdentityActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaRawReadoutArithmeticActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonDataStatusActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MissingItemsActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperNormalizationDictionaryActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperIQCarrierInterfaceActual.lean
+tmp/sheaf/xif/paper/Mzk1StepXIContractLinkageActual.lean
+tmp/sheaf/xif/paper/Mzk1P4CInd2StageMapActual.lean
+tmp/sheaf/xif/paper/Mzk1P4CInd3StageMapActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperNormalizationRowsActual.lean
