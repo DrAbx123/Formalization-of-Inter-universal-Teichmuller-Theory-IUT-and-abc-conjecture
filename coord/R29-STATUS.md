@@ -272,3 +272,5 @@
 - 06:49：stage4 green：DiagCardF/Diag2x2/DiagEmbeddingEquiv/PermMatrix/DualIndexSource/DiagVolumeCond（6 份）；DiagEmbeddingInj/DiagonalDual 已修并 retouch；φ 主链在 green 基座上建 e'。
 
 - 06:50：stepxi 新文件 Mzk1P5PhaseDerivedActual（从 root_image 用 map_zpow₀ 证 toRoot(r^N)=qRoot^(l*N)）入队；LabelZeroSeparate 已删并移出名单。
+
+- 06:51：stage4 新 Mzk1DiagEquivProvedActual（e'=integerProductEquiv + toCoordSmall_bijective，φ 主链第 1 步）入队；abc 第四批 5 份（DegreeBridgeArithmetic/PaperLogQArith/ThetaDimensionProduct/P7PartialStatus/ContractEvidenceRows）+ ArchFactorProduct 修复 retouch；watchdog 183 项。

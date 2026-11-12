@@ -175,3 +175,9 @@ tmp/sheaf/xif/paper/Mzk1HullBoundAddTransferActual.lean
 tmp/sheaf/xif/paper/Mzk1ComparisonTargetInterfaceActual.lean
 tmp/sheaf/xif/paper/Mzk1P7CountsActual.lean
 tmp/sheaf/xif/paper/Mzk1P5PhaseDerivedActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagEquivProvedActual.lean
+tmp/sheaf/xif/paper/Mzk1DegreeBridgeArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperLogQArithActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaDimensionProductActual.lean
+tmp/sheaf/xif/paper/Mzk1P7PartialStatusActual.lean
+tmp/sheaf/xif/paper/Mzk1ContractEvidenceRowsActual.lean
