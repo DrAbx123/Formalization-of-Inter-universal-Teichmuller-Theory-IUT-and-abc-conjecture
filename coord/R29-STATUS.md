@@ -366,3 +366,5 @@
 - 07:21：stepxi Mzk1P5HunitDerivedActual（在 instantiate 桥下证 hunit，消掉 phase_relation 的 hunit 假设）入队（265 项）。
 
 - 07:22：**SNF 发现（无需移植）**：Mathlib 有 `Submodule.smithNormalForm`（FreeModule/PID.lean:40），ℤ_[p] 是 DVR ⇒ 继承 PID 类（DiscreteValuationRing/Basic:115 + PadicIntegers:521）⇒ GAP-DUAL-SNF 可直接用 Mathlib！已告知 stage4；DiagVolumeProved 入队（266 项），DiagEquivProved retouch。另：GitHub 搜索显示 anthropics/fermats-last-theorem 可用作 ramification 移植参考；reservoir NormalForms 与 SNF 无关。
+
+- 07:24：**移植重大发现**：tmp/external/ported/flt 已含 AGREE 所需素材（AdicValuation：inertiaDeg_asIdeal_completionIdeal、ResidueFieldEquivCompletionResidueField；IntegralClosure：ramificationIdx 结果）与 RestrictedProduct/FiniteAdeleRing（abc 的 IQ 载体）。其依赖闭包仅 28 个 FLT 文件、无外部依赖，已全部加入 watchdog（295 项）编译；stage4 SNF 工具（Mathlib smithNormalForm）也入队。
