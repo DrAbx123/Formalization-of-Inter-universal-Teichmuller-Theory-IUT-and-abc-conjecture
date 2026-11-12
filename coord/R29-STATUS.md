@@ -117,3 +117,6 @@
 - 05:33：新文件 Mzk1StepVScalingDataActual（qpilot：generators ⇒ scaling data ⇒ volume identity；缺 generator 来源 StepVQRootSourceGap）；Mzk1PaperBlockTargetActual（hull：S800 块级 paper 目标 pos/fin discharge；不混用 P4 hull，差异记 GAP）。
 
 - 05:36：P3 进一步收窄：Mzk1StepVScalingDataActual DONE 21:35:24Z（StepV volume identity 归约到 generators：stepVScalingDataOfGenerator + stepVRegion_volume_eq_ofGenerator；唯一缺口 StepVQRootSourceGap = qroot^{label²} 的 actual generators + norm 等式）。mainline 下一步 GAP-PC-WEIGHT（tame 情形 localCompletionDegree=1）。
+
+- 05:37：**P6 GAP-SOURCE-NATIVE-Q green**：Mzk1SourceNativeQActual DONE 21:36:45Z（61s）——S1487 canonical 契约值 qParameter = ‖S1487Cand.q‖（rfl）、S1487_badQAbsLog_eq_abs_log_norm、桥接口 S1487NativeQIdentification、单 index 求和桥（[Unique bad] + 逐位识别 ⇒ OrigXiFPaperBadQAbsLog = nativeBadQAbsLogSum）；general index map 仍 GAP。
+- 05:37：Mzk1MatrixHaarBaseActual 再 green（21:36:13Z）：diagAct 逐坐标 p^{e_i} 作用 + diagAct_image_coordLattice（坐标像等式）；Haar 不变/product scaling/det 仍 GAP。Mzk1PrimeConductorWeightOneActual（GAP-PC-WEIGHT 细化为三条）待编译；Mzk1PaperBlockTargetActual/Mzk1WeightedDetPacketInstanceActual/DualTranspose 迭代中。

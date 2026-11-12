@@ -80,3 +80,4 @@ tmp/sheaf/xif/paper/Mzk1P5BridgeIntegrationActual.lean
 tmp/sheaf/xif/paper/Mzk1WeightedDetPacketInstanceActual.lean
 tmp/sheaf/xif/paper/Mzk1StepVScalingDataActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperBlockTargetActual.lean
+tmp/sheaf/xif/paper/Mzk1PrimeConductorWeightOneActual.lean
