@@ -336,3 +336,5 @@
 - 07:17：abc 第八批 5 份（HullBoundConsumer/RawThetaLogSign/ThetaVNormNonneg/P7InterfaceStatus/HullGreenInterfaces）入队（240 项）。
 
 - 07:18：hull 决定 Mzk1PaperFaithfulHullActual 保留为 historical P0-only 并修到 green（补 4 个 open 的 import），不删不 DEFERRED；已 retouch。
+
+- 07:19：自算 gate targets=240 → clean 223 + ole-only 6 + stale 3 + red 3（+5 无事件新入队）；RED=FactorPermutationLattice/C3DIndexDataConsumer/P5CJDerived；STALE=PaperFaithfulHull/DiagEquivProved/HaarScalarOne。已 retouch 3+1 并通知 stage4/hull/stepxi。qpilot round6 全绿（QHALFRegression 修 open）。
