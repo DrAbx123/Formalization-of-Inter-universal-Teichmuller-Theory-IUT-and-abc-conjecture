@@ -424,3 +424,5 @@ tmp/sheaf/xif/paper/Mzk1P7MultiradialWitnessActual.lean
 tmp/sheaf/xif/paper/Mzk1P3ArithInstancesActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVScaleOffsetGeneralActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MissingRowsWitnessActual.lean
+tmp/sheaf/xif/paper/Mzk1NormArchConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ThetaDegB2Actual.lean
