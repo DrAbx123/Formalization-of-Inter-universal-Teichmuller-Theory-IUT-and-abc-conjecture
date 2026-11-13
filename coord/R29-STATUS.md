@@ -1741,3 +1741,5 @@
 - 03:20：lattice 入队 `Mzk1IutIVProp14IndexCardActual`：`logShellIntegerIndex_eq_natCard`（rfl）+ `logShellIntegerIndex_eq_pow_of_card_eq`（Nat.card Γ=p^h ⇒ index=p^h），无 Gamma 依赖可编；Gamma 绿后代入 witness 填 `volume_ratio_eq_pow` 的 hμΛ。
 
 - 03:25：**hull 新文件 `Mzk1P0QHatHaarScalingActual`（待编）**：用 S865 `rootHaarFactor_normPow_actual` + `rootHaarFactor_eq_ratio` 直接证**无条件** `qhatHaarScaling : μ(c0QLattice_b)=ofReal(‖qhat_b‖^{d_b})·μ(O_b)`；Correspondence 已加 `qhatHaarScaling_actual` + `c0ProductQ_normalizedLog_eq_sum_qhat_actual`（无条件 scaling，仅 hQ/hO positivity）。若绿，#1 主缺口闭合；已让 hull 紧接 paper q 读数（−|log q|）与 theta readout 的锚定形式。
+
+- 03:30：qpilot 完成 Box readout 抽象 + S1915 instantiation 两源文件（`Mzk1IutIVProp14iiiBoxConsumerActual` 重写 `BoxReadout`；新 `Mzk1BoxReadoutS1915Actual`：`S1915BoxConsumer`/`boxReadoutOfS1915`/`s1915A0_le_box_of_bridge`/`s1902TensorCarrierGap`），等新 batch；bridge 显式条件不硬证。qhat scaling/correspondence olean 仍 False，等编。
