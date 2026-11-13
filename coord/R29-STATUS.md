@@ -888,3 +888,5 @@
 - 01:09：stage4 P7ThetaDegWeight 入队（470 项）：(a) thetaBlockLogFactor=-(Σlocal degree)·log p、(b) c3PacketNormalizedLogVolume 分母=Σ finrank E_j + p-scaling；#7 剩 (c)(d) 代数对接。
 
 - 01:12：stage4 P7ThetaDegCancel 入队（471 项）：(d) normalized=(1/∑deg)*log(μS)、(c) 实际区域 normalized=(1/∑deg)*thetaPilotHullLogVolumeReal；绿后 #7 (a)-(d) 收口（剩 B4 image bridge GAP）。
+
+- 01:16：lattice BadPlaceUnitMassProduct 回退后 **DONE 12:57:11Z（60s，ole 43,880B）**：generic Bad product eq_one green；nativeBadToKPlace 无 completionRationalPrime=p 证明、Completion 缺 ProperSpace ⇒ 实际 K b 不能无条件构造，GAP 精确。stage4 Weight 文件在编；Cancel 失败仅因缺 Weight.olean（时序），已 retouch。
