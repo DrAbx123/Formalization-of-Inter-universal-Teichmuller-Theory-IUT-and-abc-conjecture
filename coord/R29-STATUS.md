@@ -1159,3 +1159,5 @@
 - 00:22：**P0.5c GREEN**：`Mzk1P0SourceDataBridgeActual` DONE 15:50:45Z（35s）——`SourceCompletion C → T_C`；`donorsOf C S X hX e : NativeOriginalInputDonors X`（initial:=S.toSourceData，arithmetic rfl）；`originalInput_of_donors`；`QBridgeMissingInputs`。精确缺失深化为 5 组 SourceCompletion→D4D9Supply 字段（selection/D4 三组 card/D5/frozen contract clauses/D9 五槽）+ NativeLattice/index_equiv/place binding/q 值识别。已派 hull：固化为 `P05PaperInput`（论文输入包，合法性=原文 Definition 3.1 给定数据）→ donors → 原比较接口；唯一数学桥=q 值识别+theta factor。
 
 - 00:28：mainline 报告 P1 状态：lane 全 green（含 LocalGenerator statement 版待依赖）；`Mzk1P1LocalizedFractionalIdealActual` 15:54Z FAIL 首错=`IsScalarTower (𝓞k) (LocalRing) (LocalField)` 缺 import（Mathlib AdicValuation:903/971，已确认文件存在）；已转 shehdd 加 import+retouch；依赖 green 后 mainline 恢复 `localPrincipalGenerator_proved` 无假设构造并升 PROVED，R21Bridge 只剩 count↔valuation。
+
+- 00:32：shehdd 依赖首错精确修法（Lead 核实）：LocalRing/LocalField = underlyingPrime 的 adicCompletionIntegers/adicCompletion（DeterminantLogVolumeActual:43-50、LocalQParameter:29-33）；Mathlib `AdicValuation.lean:970 instance adicCompletion.instIsScalarTower'` 正是所需；加 import + 必要时 inferInstanceAs（abbrev 展开）+ retouch。
