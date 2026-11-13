@@ -972,3 +972,5 @@
 - 21:48：abc 收尾审计完成：AUDIT_LEDGER 追加 #7 全收口/#4 C3 候选/#10 citizen 清单；P7-MISSING 修正 6 处陈旧行（#1 统一 CONDITIONAL(HullQDictionary)；#7 DONE 5 文件；#4 PARTIAL+C3 候选；#5/#6/#7 按 plan）；无 Lean 改动。
 
 - 21:52：mainline Uncond 首错 relay（den.property R 显式、Finite.subset/HasFiniteSupport 展开、Associates.finite_factors binder 名；建议直接用 qpilot 的 fractional_count_weighted_hasFiniteSupport + finsum_sub_bridge）。
+
+- 21:54：mainline Uncond 唯一首错 = `:35 Subtype.coe_ne_zero` 不存在；已给出显式替代 + 建议直接用 qpilot FinsumSummable 的定理；已 retouch。
