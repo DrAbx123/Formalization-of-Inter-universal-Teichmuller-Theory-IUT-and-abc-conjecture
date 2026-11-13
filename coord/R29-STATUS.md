@@ -828,3 +828,5 @@
 - 23:06：qpilot 已把 #3 文档更新（actual bad-prime source / Ob33 det line 接线 / semantic Prop），并通知 shehdd/mainline 消费入口。
 
 - 23:09：qpilot 两个 source 文件 DONE（PaperQPilotLineBundleSource 12:32:28Z/ole 30,696B；Ob33DetLineFromBadPrimeSource 12:35:00Z/ole 24,032B）。mainline Ob33DetLineBridge（Ob33 度=relativeDetLog(H,O)+globalLogVolume O；RouteB gap⇔相对 det 形式；semantic identification⇔B4/B5 形式）入队（460 项）。LocalizedLineMul DONE 12:34:36Z（41s）。
+
+- 23:12：mainline DetLinePlaceB5Arch（archCKForK=1/[K:Q]、rfl 级 heightWeight、hArc_nonneg_for_K、mergedLogDegree+nonneg）入队（461 项）；P7-CONTRACT-MAP §6 记录第 4/5 步。

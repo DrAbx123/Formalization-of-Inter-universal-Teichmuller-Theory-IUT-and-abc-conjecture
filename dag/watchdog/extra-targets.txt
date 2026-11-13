@@ -458,3 +458,4 @@ tmp/sheaf/xif/paper/Mzk1PaperQPilotLineBundleSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegC3Actual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33DetLineFromBadPrimeSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33DetLineBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5ArchActual.lean
