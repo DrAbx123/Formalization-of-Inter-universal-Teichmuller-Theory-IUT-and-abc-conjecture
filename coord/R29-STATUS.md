@@ -1597,3 +1597,5 @@
 - 20:05：lattice 线 2 追加 `volume_ratio_eq_pow`（条件 h：h+f+m=s*d、μΛ=p^h μO、μL=p^{-(s*d)}μΛ ⇒ μL=p^{-(f+m)}μO）；h 待 shehdd `card_gamma_eq_pow`。提醒 lattice：`Mzk1SaturationBasesDataActual` 已 GREEN 20:59:46，A1SaturationBases 可编，别只等；已催 shehdd 先做 `#Γ=p^h` 具名定理。
 
 - 20:10：`Mzk1A1SaturationBasesActual` 上轮 20:59:33 FAIL 只是 SaturationBasesData.olean 尚未生成（20:59:46 才 DONE）的时间差；已 touch 源文件触发下一 cycle 重编。lattice §3.6 `volume_ratio_eq_pow` 条件版已写好，等 shehdd `card_gamma_eq_pow`。
+
+- 20:20：qpilot Prop14 Box wrapper 阻塞于 Iut 供体：`Iut/Concrete/LocalConstruct/Prop14Lattice` 闭包 90 文件、33 缺 olean；已把这 33 个路径原子加入 WL（含 Iut/Cor312/ThetaData/Anabelian 等），watchdog 会按依赖编译。期间 qpilot 继续 port NormalizedValuation/Uniformizer/DegreeIdentification。
