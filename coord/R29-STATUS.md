@@ -616,3 +616,5 @@
 - 19:22：C3S1902ConditionOne DONE 11:00:25Z（58s）；watchdog 健康（pending 5）。lattice 桥② 再给确定路线（LinearEquiv.toContinuousLinearEquiv）；shehdd 唤醒做 P7 最终汇总表 + gate §30。
 
 - 19:24：stage4 SNFMatrixUW root-namespace 修正 + Volume3 新版；均已 retouch。
+
+- 19:26：**stage4 Volume3 GREEN（11:01:35Z，56s）**——一般 SNF 体积比 `μ(N)/μ(M)=∏|a_i|_p`（条件：SNF witness + 紧开/正有限；hle 已由 change/exact 证明，非假设）。派收尾：接 canonical coordinateCompacts 消假设 + SNFMatrixUW 拼 det + 文档收尾。
