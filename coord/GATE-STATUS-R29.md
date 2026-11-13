@@ -608,3 +608,7 @@ red：`Mzk1P1DVRPrincipalLemmaActual`、`Mzk1P1LocalizedFractionalIdealActual`�
 | missing olean（新入队未跑） | 83 |
 
 判读：red/missing 主要是 8 lane ×20 mega-batch 的首轮依赖未编完（`object file ... does not exist`）；lane 按依赖顺序 retouch 后转绿，不需要改证明。继续要求小波次（5–8 文件/轮）、修红后立即 retouch、绿接绿。
+
+## §41 重启后快照（2026-11-14 04:12 CST）
+
+extra=800 clean=618 red=69 inprog=30 ole-only=20 missing=63。新 green：P0NativeS3137Final（17:10:58Z）、P0NativeQReadoutBridge（17:10:58Z）。red 主要为依赖链（P2 QNativeReadingCorrected↔Mathlib olean、P0-L NormCompat←QThetaComponent）与 P3 universe/参数小错。

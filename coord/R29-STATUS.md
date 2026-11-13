@@ -1252,3 +1252,5 @@
 - 04:26：watchdog 重启后队列恢复（17:08 出 DONE/FAIL）：新 green `P2UnitOperation`、`UnitMassC1Condition`、`S1902CarrierRfl`、`NativeBadPrimeIff`、**`P0NativeThetaBridgeProof`**、**`P0NativeReadoutPair`**；red 多为依赖链（P2 QNativeReadingCorrected→RootQhatNorm→QReadoutBridge）或小错（Function expected/unknown id/synth）。mainline 后台任务 failed 已唤醒；已按 lane relay 首错修法。
 
 - 04:30：桥 1 失败根因=上游 `Mzk1P1IdealMapCompletionIdealActual` 红（`:20:56 Unknown identifier LocalRing`，缺 `open LeanFormal.IUT.PaperDeterminantLogVolume`）；transient retry 用尽。已发 mainline 精确修法（open 或全限定），先修上游再 retouch 桥 1。LFI 16:56 retouch 仍在队列（pending ~97）。新 green：P0NativeHaarScale 17:09:44Z。
+
+- 04:12：gate §41：**extra 800 = clean 618 + red 69 + inprog 30 + oleonly 20 + missing 63**（重启后队列正常消费）。新 green P0NativeS3137Final/P0NativeQReadoutBridge（17:10:58Z）。red 分类 relay：abc=QNativeReadingCorrected（Mathlib olean 环境+Ambiguous term）；stage4=P3ReferenceMass 的 universe/Function expected；stepxi=norm 链依赖顺序（QThetaComponent→NormCompat→CommonPrimeNorm）。
