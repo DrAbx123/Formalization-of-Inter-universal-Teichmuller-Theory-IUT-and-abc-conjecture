@@ -1773,3 +1773,5 @@
 - 04:40：stage4 报 A1.6 formal product readout GREEN（4 new proof files；Delta/SignedReadout/Product/p-adic consumers）。唯一剩余数学缺口=qhat 格与 `J_s=π_F^{ceil(m/e)}O_F` 的 valuation/ramification 识别；已让 stage4 优先接 `Mzk1A1LatticeValuationActual.inverseLattice_eq_saturated` + `Mzk1A1LatticeInverseActual`，不加 hscale/hid。gate §20.17 已写。
 
 - 04:45：stepxi 写 `Mzk1StepVPhiMaxActual`（Φmax 定义、identity member、Nonempty、StepVPhiMaxContains、StepVActualInd1Ind2Action 无 inhabitant）；源端连续 β_a 仍缺，`coord/IND1-UNIT-QUOTIENT-GAP.md` 记录；两条 Ind1 通用文件修 p/q 类型后 retouch。gate §20.18 已写。
+
+- 04:50：root `QhatHaarScalingReuse` FAIL 仅在 `qhat_lattice_measure_pos` 的 `ENNReal.mul_pos` typeclass；`qhat_haar_scaling_actual`/`qhat_signed_readout_eq_log_norm` 已通过；hull copy 已改 `ENNReal.mul_pos_iff.mpr`。A2：授权 abc 只改 donor hq' 证法（保留陈述），给 ambient-coercion/显式 letI/`rfl` 三路探针（≤200k heartbeats），不许 4M 挂死；若仍阻塞则保留 agreement↔qVFamNormRatio=1 精确等价并报告。
