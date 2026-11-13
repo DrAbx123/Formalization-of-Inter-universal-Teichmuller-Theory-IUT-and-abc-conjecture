@@ -1661,3 +1661,5 @@
 - 23:40：mainline 3/5：`map_maxPowDividing_self`（桥 1 + map_pow + count）/`map_maxPowDividing_ne_self`（非自身 map=⊤）落盘；剩 `Finset.prod_eq_single` + `Associates.count` vs `countExponent` 对齐 ⇒ general IdealMapPowerStatement。watchdog 当前单 lean 编 QHatNormAgreementUnconditional（较慢）。
 
 - 23:45：watchdog 单 lean 编 `Mzk1P2QHatNormAgreementUnconditionalActual` 8min/CPU489s/RSS5.7GB 挂死，阻塞整批；已 kill pid 11932，watchdog 恢复（lean=0→重组）。已让 abc 加 maxHeartbeats/拆分/避免大项 inferInstanceAs 后重排。
+
+- 23:55：**决策**：Iut/TFG 104 个 WL 条目移除（缺失 olean 文件有真实旧错误，依赖沼泽）；Box wrapper 改按 plan §5.3 在 LeanFormal 现有真实 tensor 重写 1.4(iii) 第二上界（`IntegralTraceDualTensorInclusion`/`LocalDifferentUpperBound`/`SharpBounds`），不 import Iut。port：NormalizedValuation 再一轮，若仍卡 `Valuation.map` defeq 则冻结 7/10 + 精确缺口（class-B 已够 det-Haar/#10）。
