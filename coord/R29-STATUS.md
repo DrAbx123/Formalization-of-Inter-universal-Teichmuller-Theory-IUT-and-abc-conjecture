@@ -570,3 +570,5 @@
 - 09:40：**BaseChange olean 生成成功（2,917,416 B）**——Lead 用 `lake env lean -o .lake/build/lib/.../Completion/BaseChange.olean` 直接产出。mainline/qpilot/shehdd 已通知立即编 AgreeFLT/AGREEFLTBridge/UnramResidueBridge。
 
 - 09:48 巡检：**BaseChange olean 生效**——AgreeFLT 与 AGREEFLTBridge 已 START（00:48:19）；hull/stage4/lattice/stepxi 唤醒派活（input alignment、U*M*W、diag 桥②③、P5 audit 核对）。
+
+- 09:52：lattice 桥② 具体 `diagEquivCLM` 构造代码已给（f : d→ℕ，coordwise p^{f_i} 乘、逆 zpow、continuity continuous_pi）；桥③随后。
