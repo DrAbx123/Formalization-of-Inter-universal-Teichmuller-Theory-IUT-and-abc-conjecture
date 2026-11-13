@@ -752,3 +752,5 @@
 - 20:50：P7-GAP-ATTACK-PLAN #2 更新为 DISCHARGED(definition-level) + semantic GAP（paper-literal divisor/label/unit-group 未识别）。
 
 - 20:55：mainline DetLinePrincipalGenerator GREEN（12:07:19Z，40s）；abc LowerBound DONE 12:06:23Z；RawUpper DONE 12:07:47Z；abc 新 S1915DegreeFinrank（rfl 语义等式）入队（444 项）；移除已过时的 FLT TopologicalSpace/FiniteAdeleRing backport（#2 用 Mathlib 定义）；hull V-Dictionary/ThetaVScaleOffsetIdentity 仍修；stage4 三文件 retouch；qpilot 转 #2 semantic；shehdd 做 B5 index/SNF；stepxi 写 c0 有限+arch 分解。
+
+- 20:58：hull 更正：HullUBPaperVDictionary DONE 12:10:27Z（rawV=s1915ClosedForm, normV=normalizedLog, scale=1, offset=1）、ThetaVScaleOffsetIdentity DONE 12:10:27Z、RawUpper DONE 12:07:47Z、C3DDonorProjection DONE 12:05:14Z（#6 对 S2717C3 实例 DISCHARGED，一般 S3137 C3 另列）；C0Absorption/Discharge 已 retouch。P7 plan #6 更新。
