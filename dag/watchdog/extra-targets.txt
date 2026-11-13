@@ -361,7 +361,6 @@ tmp/sheaf/xif/paper/Mzk1PaperQPilotActualInputMismatchActual.lean
 tmp/sheaf/xif/paper/Mzk1GLCompActual.lean
 tmp/sheaf/xif/paper/Mzk1IndexCardBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5InternalConsistencyActual.lean
-tmp/sheaf/xif/paper/S366OneColumnActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AGREEFLTBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalDiagScalingActual.lean
 tmp/sheaf/xif/paper/Mzk1ChangeMatrixActual.lean
@@ -398,7 +397,6 @@ tmp/sheaf/xif/paper/Mzk1HullUBP7StatusActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MultiradialCarrierActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33SourceIdentificationActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalDiagUncondActual.lean
-tmp/sheaf/xif/paper/HullDetObjectActual.lean
 tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/RestrictedProduct/Equiv.lean
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegActual.lean
 tmp/sheaf/xif/paper/Mzk1PadicBallCeilActual.lean
@@ -461,3 +459,5 @@ tmp/sheaf/xif/paper/Mzk1Ob33DetLineBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5ArchActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchC3HaarScaleFormulaActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperLabelProjectionActual.lean
+tmp/sheaf/xif/paper/Mzk1HullDetObjectGapRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1LocalUnitMassProductActual.lean
