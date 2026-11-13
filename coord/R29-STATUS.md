@@ -1671,3 +1671,5 @@
 - 00:15：新 green：`Mzk1A5Ind1Ind3ConsumerActual` 21:53:05、**`Mzk1P1IdealMapNonVPrimeActual` 21:53:57、`Mzk1P1IdealMapFactorActual` 21:55:12**。IdealMapPower general 只剩 `prod_eq_single` 收缩 + `Associates.count`/`countExponent` 对齐。已派 mainline 收口、hull 继续 readout/weighted、shehdd Gamma+torsion+B5、lattice A1Padic、qpilot Box formal。
 
 - 00:20：shehdd GammaPGroup 第 4 次修：`g.toAdd` 取商元素 + `Quotient.inductionOn` + `ofAdd_nsmul` + `QuotientAddGroup.eq_zero_iff`，不再 `change qz`；等重编。绿后发 `card_gamma_eq_pow_actual` 给 lattice + torsion；B5ContractEvidence 等 `C17BothResidueFieldInputsGap` olean。
+
+- 00:25：mainline 4/5：`Mzk1P1IdealMapPowerGeneralProofActual.idealMapPowerStatement_general` 落盘，关键发现 RHS 与 `IdealMapPowerStatement` 定义逐字一致（无需 count 对齐）；证明用 finite-support 展开 + `prod_eq_single` + 非 v 因子 =⊤ + 主分支桥 1。绿后接 `idealLocalizedCount_of_bridges`（hmap/hspan/huni 三条件齐）→ B5Index 完整重接。
