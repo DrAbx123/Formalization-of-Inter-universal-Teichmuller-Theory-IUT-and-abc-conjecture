@@ -1739,3 +1739,5 @@
 - 03:15：**关键路径**：shehdd 找到 `S865RootHaarFactorNormPowActual.rootHaarFactor_normPow_actual`（已绿）——`rootHaarFactor lam = ofReal(‖lam‖^d)`。已给 hull 无条件证 `qhatHaarScaling` 的完整链：`c0QLattice=qhat•O` + `distribHaarChar_mul` + `rootHaarFactor` def + S865 + `Units.val_mk0` + `s1915LocalDegree=finrank`。这可能是 #1 主缺口的真正闭合路径。lattice：`logShellIntegerIndex=Nat.card Γ`（定义/rfl）→ Gamma 绿后填 `hμΛ`。
 
 - 03:20：lattice 入队 `Mzk1IutIVProp14IndexCardActual`：`logShellIntegerIndex_eq_natCard`（rfl）+ `logShellIntegerIndex_eq_pow_of_card_eq`（Nat.card Γ=p^h ⇒ index=p^h），无 Gamma 依赖可编；Gamma 绿后代入 witness 填 `volume_ratio_eq_pow` 的 hμΛ。
+
+- 03:25：**hull 新文件 `Mzk1P0QHatHaarScalingActual`（待编）**：用 S865 `rootHaarFactor_normPow_actual` + `rootHaarFactor_eq_ratio` 直接证**无条件** `qhatHaarScaling : μ(c0QLattice_b)=ofReal(‖qhat_b‖^{d_b})·μ(O_b)`；Correspondence 已加 `qhatHaarScaling_actual` + `c0ProductQ_normalizedLog_eq_sum_qhat_actual`（无条件 scaling，仅 hQ/hO positivity）。若绿，#1 主缺口闭合；已让 hull 紧接 paper q 读数（−|log q|）与 theta readout 的锚定形式。
