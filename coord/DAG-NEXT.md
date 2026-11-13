@@ -1,6 +1,6 @@
 # DAG NEXT — actionable nodes (no blocked/refuted/detoured)
 
-generated: 2026-11-13T16:23:22.048Z
+generated: 2026-11-13T16:24:41.549Z
 
 blocked/refuted/detoured excluded: 90
 

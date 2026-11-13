@@ -1105,3 +1105,16 @@ SourceNativeInitialThetaData (T) + b : Bad (nativePlaceSelection T)
   2. L tensor Haar region ↔ native tensor Haar region 的 landing/normalization 等式；
   3. P2 R1.2 系数整性（现有 unit-ball，非整性）；R1.3 `p2R13Exact_nonneg` 待 olean。
 - 文档：`coord/P0.5-COMPARISON-MAP.md`。
+
+### P2 批量包（6 文件，全部 GREEN，2026-11-13 16:22Z）
+
+| 文件 | DONE | 内容 |
+|---|---|---|
+| `Mzk1P2RelativeMassActual` | 15:34:31Z | (R1.3) `p2RExact=Σ d_b(log‖λ_b‖−log‖qhat_b‖)`；`= −Σ d_b log‖c_b‖`；`p2RExact_nonneg`；`p2RExact = c0RemainderV2 + p2RExactCorrection`（不假设相等） |
+| `Mzk1P2R13vsC0RemainderActual` | 15:49:54Z | `p2RExact − c0RemainderV2 = correction`；correction 的 `Σ d_b(2l log‖λ_b‖−log‖qhat_b‖)` 形式 |
+| `Mzk1P2LabelBlockCompleteActual` | 15:54:42Z | 实际秩一块 `(b,label)` 四来源：`p2BlockSourceQ`、`p2BlockSourceTheta`、`p2BlockLanding`、`p2BlockWeight`；`Q=λc`、`Q∈λO`、landing/weight 一致 |
+| `Mzk1P2QNativeSourceArrowActual` | 15:29:01Z | native qVFamily → root extension 的嵌入 `p2NativeQImage_eq_qhat`；首个缺口 `P2QNativeReadingGap`（native log reading = root qhat log norm 未证） |
+| `Mzk1P2ThetaAllowedImageActual` | 16:22:05Z | 每个实际 theta 值（ThetaLabel）∈ 允许 λO；λ∈λO；ThetaLabel theta image ⊆ λO |
+| `Mzk1P2WeightedSumActual` | 15:49:55Z | `p2RExact = W_λ−W_qhat`；`W_qhat−W_λ=Σ d_b log‖c_b‖`；`c0RemainderV2 = −(2l−1)W_λ` |
+
+**缺失映射仍成立**：native q 读数（实数 log）→ `qhat` 的 log 范数未证；theta 允许换根/单位操作未构造；旧 C3 `tensorLanding_q` 空类型（S1429）不可用；多索引张量落点未构造。本批把 R1.2 推进到实际秩一块/多标签有限和，把 R1.3 的真实质量差非负与 correction 精确对齐；未把 correction 冒充为零。
