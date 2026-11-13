@@ -1705,3 +1705,5 @@
 - 01:50：巡检新 green：**`Mzk1P1IdealMapFinprodExpandActual` 22:19:16**（三桥第一桥）、**`Mzk1GapDetHaarDegreeIdentificationActual` 22:20:10**（det-Haar/port 辅助）。已让 mainline 推 general proof→IdealLocalizedCount→B5Index+B5 evidence，qpilot 继续 BoxConsumer，shehdd Gamma/torsion，lattice A1Padic，stepxi A5 consumer。
 
 - 01:55：shehdd Gamma 第 7 次修：第一定理 `convert hy` 后 `field_simp [hp]; ring_nf`（幂/逆幂归一）；第二定理改 tactic `induction gamma using Quotient.inductionOn`，显式标注 `Multiplicative (LogShellIntegerQuotient)`；等 official → `card_gamma_eq_pow_actual` 给 lattice + torsion。
+
+- 02:00：hull 确认纠正：Final 仍 FAIL，Delta 保留独立证据；Delta 修 `ENNReal.toReal_mono hballtop.ne hμle`（大集 ne 参数）+ `hlamlog` + `mul_lt_top` 显式；correspondence 补 `Real.log_pow`，仍以 `qhatHaarScaling` 唯一显式 factor 条件、不依赖 Final。lattice：A1Padic 旧 log 待新 cycle，`{ι:Type}`/`[Module ℤ_[p]]` 字段输入已改；缺 `Module ℚ_[p]` 则交 stage4/L-side。
