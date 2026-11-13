@@ -1104,3 +1104,5 @@
 - 23:18：批量编译进展：**Mzk1P7ContractMapEvidenceRowsActual GREEN**（#8 证据行升级落地）；**Mzk1P1B5WithFvActual GREEN**（含 f_v 的 B5 输出）；**Mzk1NativeUnitMassOneActual GREEN**（#10 unitMass=1 条件/值）；**Mzk1P3HaarScaleDockingActual GREEN**；**Mzk1P1CountLocalValuationNativeActual GREEN**（native count↔valuation 桥）。hull P0 三件（NativeS3137Chain/NativeReadout/NativeEquiv）在修。
 
 - 23:24：新建 `coord/P7-VACUITY-MAP.md`（Lead 战略分类）：C3-free 有效（IQ/B5/NormArch/HullUB/T-only/ThetaV/UnitMass/NativeDictionary/P3 core）；C3-typed vacuous 需 re-type（#1 比较链/#3 Ob33/#4/#6/#7 表面/#8/#10 BlockEquiv）；#7 DONE 仅数学内容，有效载体=P3 core；#1 不得再宣称条件版收口。
+
+- 23:26：P7-GATE-REVIEW §19 追加“旧 C3 空类型影响与 P7 重新锚定”：C3-free 有效项 vs C3-typed vacuous 需 re-type 清单，指针 P7-VACUITY-MAP；#1 不再宣称条件版收口。
