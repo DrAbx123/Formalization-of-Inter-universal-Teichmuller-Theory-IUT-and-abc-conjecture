@@ -1613,3 +1613,5 @@
 - 21:05：shehdd 实际 Γ p-群文件 `IutIVProp14GammaPGroupActual` 已入队（三定理，按 lead shape；可能 API 名错等首错修）；在 official 前不许给 lattice 当已证 h。
 
 - 21:20：**#8 里程碑：`Mzk1P7ContractLinkageWiringActual` GREEN 21:16:03Z（99s）**——`contractOfContractFieldsActual` 真实 ipl/she/apt evidence + `cor312_of_contractFieldsActual : Cor312Conclusion`，signed assembly 真实 evidence 接线完成！另：A1SourceGeneratorExpansion 根因 `ThetaLabel/thetaLabelToSigned` 缺导入（PaperC3ThetaRootActual），A1SaturationBases 根因 `rootNormedExtension` 缺导入 + ℤ_p 基接口需改（stage4 障碍成立）；已发 hull/lattice 修法。
+
+- 21:25：lattice 线 2 新文件 `Mzk1PadicSaturationBasesActual`（`padicSaturationLogIndex` + `PadicSaturationBasesData`：`L₁,L₂ : Submodule ℤ_[p] E`、`b₁/b₂ : Module.Basis ι ℤ_[p]`）——stage4 实际 ℤ_p 格接口；旧 ℤ-基接口保留不再强推。`A1SaturationBases` 已补 import/open 并 retouch。
