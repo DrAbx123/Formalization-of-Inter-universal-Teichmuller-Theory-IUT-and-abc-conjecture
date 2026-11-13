@@ -1302,3 +1302,5 @@
 - 05:44：shehdd proof 小波次（status=0）：LocalizedLineNonzeroProof、PlaceVolumeSignFinal、CountValuationSign（localValuation 命名修好）、B5HproductDiagonal（determinantLine rw 修）、B5HproductGeneralAttempt（补 relativeDetLog open/rw hfin）、GeneratorValuationRelation、C17ResidueOneSinglePoint（补 BaseQFamilyActual open）；均已 retouch 等 official。
 
 - 05:48：新 green（DAG12 波次）：P2UnitNormAction（17:32:45Z）、P0LThetaMeasureRead（17:33:05Z）、P1GeneratorValuationRelation（17:33:07Z）、NativeThetaR13Bridge（17:33:08Z）、GapDetHaarSNFSplit（17:33:21Z）、DetHaarDegreeFactor（17:33:32Z）、P0LQReadoutSign（17:33:36Z）。shehdd 两个红：C17 引理定义/应用错、B5General 缺 relativeDetLog open（定义在 Mzk1DetLineConstructionActual:69）；已发精确修法。
+
+- 05:52：mainline CountMul 重写为 proof（countExponent_pow/zpow/inv/self/pow_self 全由 Mathlib count_* 证；proof files=5）；stepxi 新 green P0LQReadoutSign（17:33:36Z：qReadActual_neg/qReadActual_eq_neg_localLogMagnitude）、P0LThetaMeasureRead（17:33:05Z：thetaReadActual_eq_logMeasure）；NormalizationSign/QThetaStrict 已修待编。
