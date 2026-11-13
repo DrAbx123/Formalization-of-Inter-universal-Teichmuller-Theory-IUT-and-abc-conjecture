@@ -485,3 +485,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - `productQ_normalizedLog_eq_sum_a1LocalQLog`、`a1LocalQLog_eq_degree_log_radius_sub_degree_delta`、`totalDelta_nonneg`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、`productQ_normalizedLog_le_closedForm_sub_one`。
 - **剩余唯一数学缺口（stage4 判定）**：实际 qhat 格与 `J_s=π_F^{ceil(m/e)}O_F` 的 valuation/ramification 识别（measure-side identity 与 δ 已形式化）。优先接 `Mzk1A1LatticeValuationActual.inverseLattice_eq_saturated` + `Mzk1A1LatticeInverseActual` 的实际格等式；不得新增 `hscale/hid` 条件。
 - **边界**：A1.6 形式读数已绿，但上述格识别未证，故 A1.6 实际 valuation 版未标闭合。
+
+
+### 20.18 Ind1 中间对象：Φmax 与源端缺口（stepxi，2026-11-14 07:04）
+- **已写（待编）**：`Mzk1StepVPhiMaxActual`：
+  - `stepVPhiMax = {φ | ∀ u∈arithmeticTupleUnitLogLattice, φu∈lattice}`；
+  - `identity_mem_stepVPhiMax`、`stepVPhiMax_nonempty`（identity 实际成员）；
+  - `StepVPhiMaxContains Φ := Φ ⊆ stepVPhiMax`；
+  - `StepVActualInd1Ind2Action` 结构要求实际 Ind1/Ind2 族及 `⊆ Φmax` 证明，**无 inhabitant**，不伪造 `Nonempty`。
+- **源端缺口**：`FPrimeStripEquiv.isoMon` 有代数层，但抽象 `DPrimeStrip` 无实际整数单位/拓扑/local reciprocity/重构；连续 `β_a:U_F/tors→U_F'/tors` 仍不能无条件构造，精确记录在 `coord/IND1-UNIT-QUOTIENT-GAP.md`。
+- **通用后半段（待编）**：`Mzk1Ind1LogLatticeActionActual`（`SinglePlaceLogLatticeAction`，显式 `p`）、`Mzk1Ind1UnitQuotientActual`（`unitLogQuotientEquivOfMulEquiv`、`unitPerfectionMap_log_square`）。
+- **边界**：Φmax 只解决“上界作用族非空”，不证明实际 Ind1/Ind2 作用属于它；Step V 的实际 `hΦ` 仍需源端作用构造。
