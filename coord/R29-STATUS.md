@@ -900,3 +900,5 @@
 - 01:36：hull 文档核对完成：P7 §13 #5/#6/#9 一致；#9 最终 spec 段已加（V=scaledClosedFormR=normalizedLog+1；general C0=1；paper regime C0=0；C0=0⇔slack≥1；一般 disc=1 OPEN；arch 归 #10）；10 份 olean 存在（GeneralFinal 131,080B 等）；AUDIT_LEDGER 已追加。
 
 - 01:40：lattice NativeBadPrime（NativeBadPrimeData p := ∀b completionRationalPrime(...)=p 单一 named input；给定后构造 FinitePlaceAtPrime + CommonPrimeCompletion 上 unit-mass product eq_one）入队（473 项）；来源核查 Bad 只是 Fmod 有限坏位、无固定 p 等式。
+
+- 01:44：stage4 Weight 首错 relay：:54 No goals（删多余行）；:65 HSMul ℚ_[p] (Set ...) synth 超时（Set smul）→ 改写 `(fun x => c • x) '' S` 或 Set.image。Cancel 待 Weight olean。
