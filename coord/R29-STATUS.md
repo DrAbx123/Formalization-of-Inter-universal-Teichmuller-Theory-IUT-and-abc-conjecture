@@ -1120,3 +1120,5 @@
 - 23:24：新 green：`Mzk1P2PureTensorExpansionActual`、`Mzk1P0NativeConsumerP2Actual`（15:22:21Z/63s）。stage4/lattice 批次完成待机→按大包派下一阶段：stage4=P3 净量非负第一步（core p-scaling/R3.7 显式、不许假设 G≥log h）；lattice=#10 三 GAP 攻坚（blockEquiv inhabitant/unitMass=1/NativeBadPrimeData 来源）。
 
 - 23:28：**P0 里程碑达成（hull 报告）**：native 输入→core→readout/landing 端到端链 green（6 文件全 green；S3137Chain 15:23:56Z 7↔7 字段对照；NativeEquiv oldC3ImpossibleFields 3/migratableFields 5）；`NativeComparison` 仍 Prop OPEN；L-side 归 stepxi。已写入 tracker/plan/audit。
+
+- 23:32：P0 里程碑后派 P0.5 大包（hull 自主）：NativeComparison 从 Prop → 可证或单一精确缺失；对齐 native readout 与 S3137/L-side 读数、映射到 paper q≤θ、接 P2 R1.2/R1.3 与 qpilot det 供体。
