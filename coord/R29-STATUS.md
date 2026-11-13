@@ -1052,3 +1052,5 @@
 - 23:02：B4 最后两处 relay：mem_integers_iff 显式 K；y*p^e=x 用 mul_assoc+mul_comm+inv_mul_cancel_left₀ 或 field_simp；已 retouch。
 
 - 23:10：NormZpow 改法（删 congr 1；have hexp : toAdd=localValuation via exp_inj；rw [hexp] 后 rfl）；B4 :64 显式 mem_integers_iff；:69 field_simp [hpne]；已 retouch 两文件。
+
+- 23:14：**B4 GREEN**（stage4 Mzk1CanonicalDiagUncondFinalActual DONE 14:44:03Z，53s）——无条件 `canonical_diag_volume_ratio_uncond`（绕开 diagHomeo image bridge）⇒ **B4 image bridge GAP 可删**。已派 stage4 更新 P7/XG/AUDIT/task-87；hull 准备 gate §35 FINAL（预期 clean 473 + ole-only 20 = 493，red 0）。NormZpow 仍红待查。
