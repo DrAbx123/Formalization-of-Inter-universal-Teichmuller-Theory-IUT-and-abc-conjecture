@@ -762,3 +762,5 @@
 - 21:10：lattice B3 桥 GAP 记录 DONE 12:12:07Z（ole 29,096B）；两障碍：CountLocalizationBridge、NumberField.Completion 缺 ProperSpace/carrier 对齐。已建议：改用项目既有的 `FiniteDimensional.proper ℚ_[p]` 构造 ProperSpace，或把 normalizedHaar/ratio 直接陈述在实际 `CommonPrimeCompletion place` carrier 上（AbsTopIII07 normalizedHaar），NumberField.Completion 仅留对齐引理。
 
 - 21:14：qpilot #2 semantic：unit group/principal support green（12:13:19Z，ole 84,736B），principalDivisor（formal sum, 系数=v.valuation K k）已加。已建议直接构造负部（应用 Support.finite 于 k⁻¹ + valuation map_mul/map_one 得 val(k⁻¹)=val(k)⁻¹）⇒ 完整 principalDivisorFull 可无假设构造；label 映射来源继续查。
+
+- 21:18：lattice 按 ② 把 B3 ratio/localizedLine 桥改到 CommonPrimeCompletion（现成 ProperSpace/FiniteDimensional）重编；shehdd Ob33ArchMetric（archDetMetricWeight 用实际 archCK + principalDivisorExplicit；ArchimedeanDetMetricData 实际构造；MissingArchimedeanLineMetric 精确缺口）入队（449 项）。
