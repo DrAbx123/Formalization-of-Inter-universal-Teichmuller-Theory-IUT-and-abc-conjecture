@@ -1234,3 +1234,5 @@
 - 03:58：gate §40：**extra 784 = clean 606 + red 59 + inprog 16 + oleonly 20 + missing 83**；red/missing 多为 mega-batch 首轮依赖未编完（object file missing），lane 按依赖顺序 retouch 即转绿。已广播判读规则+小波次纪律。stepxi P0-L 波次里程碑：proof files=4（IndexNonempty/RegionNonempty/PaperInstanceFinal/QThetaArrowFinal），regionNonemptyGap 关闭。
 
 - 04:02：lattice 波次状态：proof=3（NativeBadPrimeIff/UnitMassNormalizedProof/RootExtensionCarrierRfl，待编）/status=39（承认超额，后续停写 status）。已绿 BlockEquivFiber（status 类）。blockEquiv 仍需 BlockProductAlignmentData；NativeBadModuliFixedPrime=paper 输入。Lead 要求只写 proof：unitMass normalized 真证、badPrime iff 真证、blockEquiv 用 core witness 实际字段尝试。pending ~97。
+
+- 04:05：**hull P0.6 proof green**：`Mzk1P0NativeLSideActual` DONE 16:55:37Z（125s，ole 43,600B）——native L-side 重建成功（nativeLSideBlock=qVFamTensorBlock、region/logVolume、`nativeLSideThetaReadout_eq`/`nativeLSideQReadout_eq` rfl、`nativeLComparison_of_theta_nonneg`）。已派 hull 下一波 proof：theta/q bridge 真定理、PaperComparisonInput（VIndexDatum 作 paper 字段）、NativeComparison 非负条件尝试；只报里程碑。**lattice**：承认 status 超额（39 status 已停写），新 proof=3（NativeBadPrimeIff/UnitMassNormalizedProof/RootExtensionCarrierRfl 待编）；blockEquiv 仍需 BlockProductAlignmentData。
