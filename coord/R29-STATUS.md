@@ -1328,3 +1328,5 @@
 - 06:24：**Lead 质量审计**：17:38–17:40 一批 P1 “Final/Rows/Summary” 文件全部 thms=0/rows=1（status 类），已登记 PROOF-STATUS-REGISTRY 并严令停写该类文件；要求下一波只写桥1 power/R21Bridge/residue-one/B5 FiniteIndexExpansion 的真 proof。
 
 - 06:28：lattice 三文件未编根因=watchdog batch 周期未结束（plan.json mtime 17:31:23、dirty 235、本 batch pending 97 仍在跑；17:38 新写的 ThetaRootNormalizedUnitMass 尚未进 plan）。三个 stuck 文件在 WL、mtime 已更新 ⇒ 下一 cycle（~17:43）自动被拾取，无需再 retouch。ENNReal.mul_pos 修法正确（无 PosMulStrictMono）。
+
+- 06:32：shehdd 转 proof 小波次：7 新 proof + GeneratorValuationRelation official green。新定理：B5FiniteIndexExpansionIff（FiniteIndexExpansion↔B5ProductFormulaBridge, arch=0）、C17ResNormDegreeGapOfResidueOne（两侧 residue-one ⇒ ResNormDegreeGap）、C17ResidueOneBothSides（nativeBase/qVFam 单点 log-residue iff）、P1PlaceVolumeZero（placeLogVolume=0↔‖generator‖=1）、P1GeneratorValuationSignIff、**P1R21BridgeEquivalence（r21Bridge↔countValuationBridge/r21ReductionTarget_of_countBridge）**、P1IdealMapPowerUnit（idealMapPower_one：单位理想 bridge1 特例）。
