@@ -666,3 +666,5 @@
 - 20:27：mainline 2 份（AgreeIntegration 去 hagree + P7ContractMap 12↔GAP/7↔GAP/条件装配 p7_conditional_contract）入队（409 项）；P7-CONTRACT-MAP.md 文档已写。
 
 - 20:29：hull #5 四层（Raw/Normalized/ScaleOffset/FourLayers）+ #6 实际 C3DKeyMap（actualDonorC3=S2717C3 字段）入队（414 项）；Dictionary/Composite 再 retouch。
+
+- 20:32：mainline P3FiniteFLT（FLT priority 1001 Module.Finite 实例 ⇒ GAP-PC-FINITE 条件定理）入队；Mzk1C3BlockMeasureActual 缺失 olean → 加名单+retouch；HullUBDictionary 再 retouch；Composite 报 invalid arg uC3 relay。

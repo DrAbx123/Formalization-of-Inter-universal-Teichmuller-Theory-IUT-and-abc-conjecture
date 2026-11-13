@@ -412,3 +412,5 @@ tmp/sheaf/xif/paper/Mzk1ThetaVLayerNormalizedActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVLayerScaleOffsetActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVFourLayersActual.lean
 tmp/sheaf/xif/paper/Mzk1C3DKeyMapActual.lean
+tmp/sheaf/xif/paper/Mzk1P3FiniteFLTActual.lean
+tmp/sheaf/xif/paper/Mzk1C3BlockMeasureActual.lean
