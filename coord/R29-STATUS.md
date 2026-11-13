@@ -1747,3 +1747,5 @@
 - 03:35：`Mzk1P0QHatNormExponentActual`（abc A2 donor）编译挂死：lean 06:33:46→06:40+，CPU 390s/RSS 4.9GB，阻塞整批；已 kill pid 32780。已让 abc 加 maxHeartbeats、改 `c0QHat_eq_q` 的 rw 为 `congrArg norm` term 证法，必要时拆文件；A2 两小文件仍按计划。
 
 - 03:40：用户指出一般 Ind1 正确方向：从原始单位群模挠作用经对数/有理化得保 log-lattice 线性作用，不能任意同维等价。已让 stepxi 按真实供体实现：`integralUnitMap`+`unitLog_map`+`map_mem_integralLogShell` → `unitLogPerfectionEquiv`（ℚ）→ `ContinuousRationalPadicScalars`（ℚ_p）→ `arithmeticTupleUnitLogLattice` 保格 → `Ind1ShellTransportFor`/`BoxReadout.Phi` 实际 Φ；先写单 place `Mzk1Ind1LogLatticeActionActual`。
+
+- 03:45：stepxi 按正确方向写单 place `Mzk1Ind1LogLatticeActionActual`：`SinglePlaceLogLatticeAction e he`（`unitMap=integralUnitMap`、`perfectionMap=unitPerfectionMap`、`logSquare=unitPerfectionMap_log_commute`、`shellPreserve=map_mem_integralLogShell`）+ `singlePlace_unitLog_map`/`singlePlace_shellPreserve`；全部用实际 e,he 不是同维等价。下一步 tensor 化到 `arithmeticTupleUnitLogLattice`/`Ind1ShellTransportFor`、接 BoxReadout.Φ。
