@@ -1308,3 +1308,5 @@
 - 05:56：shehdd `Mzk1P1GeneratorValuationRelationActual` DONE 17:33:06Z（ole 13,344B）——countValuationBridge_iff_spanGeneratorValuation + localValuation_eq_neg_count_of_bridge（count↔valuation 桥充要形式）；residue-one 已双向归约到单点 log-residue 等式（nativeBase+qVFam）。
 
 - 05:58：gate §43：**extra 823 = clean 648 + red 87 + inprog 26 + oleonly 20 + missing 42**。lattice 里程碑 proof=8/status=0，6 green（DetHaarDegreeFactor c=ofReal|detB|、BlockProductAlignment W/indexEquiv/factorEquiv、TensorCoreWitness、BadPrimeIff、RootExtensionCarrierRfl、ThetaRootCarrier）；ThetaRootCarrierHaar 补 open 待编、UnitMassNormalizedProof log 停在 1:24 待重抽。
+
+- 06:00：qpilot det-Haar milestone：2 green（GapDetHaarSNFSplit/SDetHaarDegreeFactor）+ 依赖链 retouch（GapDetHaarAssembly/DegreeIdentification）+ 新写 GapDetHaarMatrixSplit（det_eq_mul_prod_mul_of_split/isUnit_det_of_split/norm_det_eq_mul_prod_mul_of_split/snfMatrixSplit_det）；GAP-DET-HAAR 最后两步=matrix-level SNF 构造、diagonal factor 识别。已唤醒 shehdd/stepxi 下一波。
