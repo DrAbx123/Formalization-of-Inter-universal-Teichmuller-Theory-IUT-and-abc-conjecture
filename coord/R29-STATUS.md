@@ -1583,3 +1583,5 @@
 - 19:25：qpilot 报告 Order/Assembly tail 与 source 不符（旧 `Valuation.ofClass`/旧 map 顺序）。已删除两文件 per-file log 并 touch source，下一 batch 只看全新日志；若仍报旧内容再查 watchdog/缓存。port 非主线。
 
 - 19:30：`Mzk1SaturationBasesDataActual` GREEN 20:59:46Z（A1 链第二环）。`Mzk1A1SourceGeneratorExpansionActual` FAIL 20:59:52：`a1AllThetaLabels_mem_thetaLattice` unknown（名字/声明顺序）、`rootExtensionUnitBall` 未解析（autoImplicit，需 import/open 全限定）——已发 hull 修法。Order/Assembly 已用新 log 21:01:25 START。
+
+- 19:35：**port Order GREEN**（qpilot）：`haveI : Nontrivial (valueGroup (.ofClass v)) := nontrivial_valueGroup_of_surjective v hv`（`.ofClass` notation）+ `exists_eq_zpow_mul_unit_of_surjective` 用 `[IsRankOneDiscrete v]`/`haveI := ‹...›`；Assembly 改为显式 `hcompDW`/`hcompUDW` composition 等式等重编。
