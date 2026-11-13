@@ -1496,3 +1496,5 @@
 - 15:02：桥 2 最新两错：`:47 Submodule.map_coe at hx` 改 `Submodule.mem_map`（Map.lean:90）；`:83 Algebra.smul_def` 不匹配因 `↑c` 是 Subring coercion，先 `change (algebraMap LocalRing LocalField c) * pi ∈ span{pi}` 再 `← Algebra.smul_def` + smul_mem。stepxi A5 `Mzk1S3139FmodEmbeddingActual` GREEN（19:46:54Z）；lattice BlockAlignmentCard/BlockProductAlignmentObstruction green 19:47。
 
 - 15:08：用户要求多唤醒人。Team 成员上限 8 已满（spawn 报 limit 8），已把全部 8 lane 唤醒；另让 stage4 用一次性 subagent 做 A1 真/假 probe，stepxi 用两个一次性 subagent 做 A7 真/假与 A8 label probe（符合“lane 按需用一次性 agent、Lead 不直接使用”）。mainline 给出桥 2 :83 精确修法（`have h := Submodule.smul_mem …; rw [← Algebra.smul_def] at h; simpa [Subring.coe_mul] using h`）；shehdd C17/P1 3 新 proof。
+
+- 15:14：诊断 qpilot“watchdog 编译旧 source”=**误读累积日志**：CardQuotient source 无旧路径、log 最新尾部错误是 `:84 Free ℤ R` 实例缺失（真实 4.32 API 差），旧模块名是历史首错。已让 qpilot 只读 tail、修 Free ℤ R/读 Order tail。lattice #10 新增 2 green（BlockProductAlignmentObstruction/BlockAlignmentCard，proof green=15）；shehdd C17/P1 3 新 proof。
