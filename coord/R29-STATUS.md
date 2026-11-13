@@ -1464,3 +1464,5 @@
 - 13:22：TauCeti port 真 API 修法（4.32 已有所需实例）：① `IsCyclic (ℤᵐ⁰ˣ)` 可推导（`IsAddCyclic ℤ` Int/Basic:280 → `isCyclic_multiplicative` Cyclic:62 → `[IsCyclic G]→IsCyclic (WithZero G)ˣ` Cyclic:831），删手写 unitsExp/private instance；② `IsRankOneDiscrete.mk'`（Basic:275）用 `[IsCyclic (valueGroup (.ofClass v))] [Nontrivial …]`，在失败点前 `haveI := IsRankOneDiscrete.mk' v` 或显式加 `[IsRankOneDiscrete v]` 变量（描述级）；③ 注意 `.ofClass`。已发 qpilot。
 
 - 13:28：桥 2/CountSide 最新真错（03:17 log）：CountSide `:49 R21Bridge unknown` 因只 open 未 import `Mzk1P1GeneratorCountActual`（R21Bridge 定义 :69）；`:29` 应 `WithZero.log_exp (-1)` 而非 1；已发 shehdd。桥 2 `:45` map/span 目标改 `change …span image…; congr 1; ext x; simp [Algebra.linearMap_apply]`；`:72` 先 change 再 `simpa [Algebra.smul_def] using smul_mem`；`:82` 新增 Module instance stuck 待查；已发 mainline。
+
+- 13:34：桥 2 :45 根因：`Submodule.map` 是 `span (f '' p)`（不是 image 本身），mainline 的 hset 方向错。已给修法：去 hset，直接 `change span (Algebra.linearMap '' s) = span ((fun x=>↑x) '' s)` 后 `rfl`/`congr 1; simp [Algebra.linearMap_apply]`；`:72` 先 change 再 smul_mem。
