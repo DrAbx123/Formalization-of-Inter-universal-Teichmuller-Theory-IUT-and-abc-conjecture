@@ -179,6 +179,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 
 **NativeBadPrimeData 精确归约 green**：`Mzk1NativeBadPrimeSourceActual.lean`（DONE 15:27:26Z，olean 53,264B）——`nativeBadToKPlace_completionRationalPrime`（= underlying Bad place prime）；`NativeBadModuliFixedPrime p`（所有 Bad 模位固定 p）；`nativeBadPrimeData_of_moduliFixed`。实际来源 GAP 精确化为 `NativeBadModuliFixedPrime`。`Mzk1NativeNormalizedUnitMassOneActual`（DONE 15:37:29Z，olean 47,944B）记录 unnormalized GAP；**条件 normalized unitMass=1 green**：`Mzk1RootExtensionCarrierDataActual`（DONE 15:43:22Z，olean 54,752B）给出 `RootExtensionCarrierData`（逐 b SigmaFinite）；`Mzk1NativeNormalizedUnitMassConditionalActual`（DONE 15:48:26Z，olean 76,872B）在 `[∀b, SigmaFinite normalizedRootExtensionHaar]` 下证 `normalizedProduct_unitBall=1`、`normalizedUnitMass_eq_one`。实际 unitMass 显式因子 green：`Mzk1NativeUnitMassActualFactorActual.lean`（DONE 16:10:02Z，olean 58,392B）——`actualUnitMassENN = ∏_b rootUnitMass b`（条件 `[∀b,SigmaFinite rootExtensionHaar]`）、`toReal` 因子形式、`=1 ↔ ∏c_b=1`。normalized scalar 状态：`Mzk1NativeUnitMassNormalizedFactorActual`（DONE 16:38:23Z，olean 29,360B）记录 c⁻¹*actual=1 由因子定理直接得、c=1 仍 GAP；条件 normalized product=1 在 `Mzk1NativeNormalizedUnitMassConditionalActual`。
 
+**#10 unitMass 归一化 chain / blockEquiv 障碍（2026-11-14）**：`Mzk1NativeUnitMassNormalizedProofActual`（unitMassFactor_pos/lt_top/normalizedUnitMassScalar_eq_one）、`Mzk1RootUnitMassCitizenActual`（rootUnitBallMass pos/lt_top/ne0/netop + normalizedRootUnitBallMass_eq_one）、`Mzk1DetHaarDegreeFactorActual`（c_ne_top/c_eq_one_iff/c_le_one_iff/DetHaarTransportData.apply）、`Mzk1UnitMassDetHaarConsumerActual`（unitMassDetHaarFactor）已 green；`Mzk1ThetaRootNormalizedUnitMassActual`/`Mzk1ThetaRootCarrierHaarActual` 在正确载体 ThetaRootCarrier 上 normalized unitMass=1。blockEquiv 障碍：`Mzk1BlockIndexObstructionActual`（card 不等 ⇒ 无 indexEquiv）、`Mzk1BlockProductAlignmentObstructionActual`（IsEmpty index ⇒ 无 alignment）、`Mzk1BlockAlignmentCardActual`（D 存在 ⇒ card J=card Bad）；旧 base-completion 张量版另受 finrank 阻塞，正确载体为 ThetaRootCarrier，inhabitant 仍 GAP。
+
 **P1/native batch green（6 文件）**：`Mzk1NativeUnitMassOneActual`（exact `actualUnitMass=1` condition）、`Mzk1NativeBlockEquivCandidateActual`（blockEquiv citizen re-export）、`Mzk1P1FinitePlaceFvActual`（nativeBad f_v=relativeCompletionDegree under FINITE/AGREE）、`Mzk1P1LocalUnitProductTActual`（native carrier family）、`Mzk1P3HaarScaleDockingActual`（C_F*localUnitProduct formula docking）、`Mzk1P1CountLocalValuationNativeActual`（count+generator+valuation=-e+span 数据接口）；均 DONE。unitMass=1/blockEquiv/NativeBadPrimeData 来源仍精确 GAP。
 
 结论：10 个 GAP code 中 **#2 GAP-P7-IQ-LITERAL 已 definition-level DISCHARGED**；#1 GAP-P7-GENERAL-CMP 为 **CONDITIONAL(HullQDictionary)**（条件版 green 12:50:24Z）；#4 GAP-P7-MULTIRADIAL 为 PARTIAL（C3 候选源 13:19:40Z + production 缺失清单）；#10 GAP-NORM-ARCH-C-K 为 CONDITIONAL/PARTIAL（公式层 + citizen 清单 green，inhabitant 缺）；GAP-P7-CONTRACT 为条件接口（CONDITIONAL）；其余 OPEN/CONDITIONAL。除 #2 外没有因 UNRAM bridge green 自动关闭。
@@ -364,3 +366,23 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `localizedLine_maxIdeal_eq_span_uniformizer` 已重写（桥 1 + `maximalIdeal_eq_span_uniformizer` + `le_antisymm` 双向），等重编。
 - 绿后：#3 的 max-ideal `CountValuationBridge`/`R21Bridge` 无条件 → IdealMapPower general I → B5Index 重接。
 - #10：`Mzk1RootUnitMassCitizen` green（rootUnitBallMass pos/lt_top/ne0/netop、normalizedRootUnitBallMass_eq_one）；新 `Mzk1BlockAlignmentCard`（BlockProductAlignmentData 存在 ⇒ card J = card Bad，必要 cardinality 条件）。
+
+### 20.5 P7 当前数学缺口清单（2026-11-14 13:40 Lead）
+
+**A. 真正的数学缺口（需要新构造/新证明，不是 coercion）**
+1. **#1/#6/#10 共用：tensor vs product 载体对齐**——`BlockProductAlignmentData` inhabitant：`J ≃ Bad` + 逐因子 `E_j ≃ rootNormedExtension T (JEquiv j)`，以及 `NativeTensorLogComparison` 的 measure-scale factor 识别。有了它，#1 的 `E(ln μ/dim)` 归一化、#6 的 D 侧投影、#10 的 blockEquiv 同时落地。
+2. **#1：qhat norm 指数桥**——`‖c0QHat‖ = residueNormBase^{−exponent}`；现有 P2 `p2QHat_norm_eq_qVFamily_norm` 需等其 olean 恢复，或由 `c0QHat_eq_q` + `norm_algebraMap'` 直接证（`rootBase`/`Completion` coercion 是工程点）。
+3. **#1：hull/procession 归一化**——把 `c0QLattice_haar_eq`（class-B det-Haar 已给：`μ(qhat·O)=‖qhat‖^d·μ(O)`）、`productNormalizedLogPerDim_weighted`、`productUnitBall_logMass`、`logMass_eq_add_log_factor` 组合成 `nativeQReadout ≤ nativeThetaReadout`；剩余是 process-平均/跨族同源（`qVFamily ↔ C3 q`/`c0Remainder`）的精确对应。
+4. **#3 GAP-PC-RESDEG：residue-one**——单点 `localResidueDegree (nativeBaseSectionPlace T b) = 1`（C17 双侧已归约到单点 log-residue 等式）；这是 paper tame/split 算术输入，尚未证明。
+5. **#4 MULTIRADIAL production**——`C3FreeProductionMissing`：n / oR_LGP / dPrimeProcessions / logKummerTransport / ThetaMuLGP / IPL-SHE-APT / Ind1–3 的实际构造；`C3FreeKummerSource`（P0 core+ThetaRootCarrier）已 green，production 仍缺。
+6. **#9 HULL-UB 单点**——`disc=1 ∧ cond=1`：此时 paperBox=0，C0=0 不可能；需 C0=1 或 paper 数据排除（conductor/disc=1 的椭圆曲线不存在）。cond≥2 已由 `box_ge_one_of_cond_ge_two` green 覆盖。
+7. **#10 NativeBadModuliFixedPrime**——所有 Bad 模位固定同一 prime p，仍是 paper 输入；unitMass=1 的 det 因子链已 green（c=∏c_b、normalized citizen=1）。
+8. **#2 semantic label**——canonical theta-label `HeightOneSpectrum → ProcessionLabel l` 缺失（现有 rational-prime/residue-prime 投影），paper label 字典输入。
+
+**B. 纯工程/描述缺口（应在本轮/下轮消掉，不是数学）**
+- 桥 2 tail 的 `Submodule.map`/span/coeSubmodule coercion；max-ideal forward 的 `change`/`smul_mem`；`CountSideMaxIdeal` 的 import/`log_exp` 参数；`P1SpanGeneratorValuationMaxIdeal` 等 olean 依赖；import 循环/自导入清理；TauCeti port 的 `IsRankOneDiscrete`/`IsCyclic` API 描述级适配。
+
+**C. 外部/等价输入缺口（不是 P7 内部可证）**
+- `Cor312ToABCBridgeInterface`：LeanFormal 审计等价于 abc 本身（不可作为可证输入）；`RootExtensionHaarDetScaling` 目前为 class-B 标准定理（TauCeti port 完成后可内部化）；Mestre–Oesterlé surrogate 已登记（不在 signed 链）。
+
+结论：P7 的**真数学缺口只剩 A1–A8**；#5/#7 已 DONE，#9 paper regime DISCHARGED，#3 的桥 1/2 与 #10 unitMass 链已 green。P7 仍 **NOT PASSED**（target_accepted/独立审查/comparator 未运行）。
