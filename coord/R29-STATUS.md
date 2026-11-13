@@ -1815,3 +1815,5 @@
 - 06:35：abc 只读核对 #1 读数：`qhatLogReadout − qPilotLogVolumeReading = log(qVFamNormRatio)`（normalized vs adic norm）；一致 iff ratio=1（已知 PaperSourceCorrectionFreeFields 条件），不是新 gap，但最终 Q≤Θ 必须带该修正项或显式条件。已派 hull 写 `Mzk1P0QThetaReadoutNormCorrectionActual`（精确恒等式/符号/权重 + ratio=1 或 Σw log ratio≤0 条件），不改 S3137 定义。gate §20.29 已写。
 
 - 06:40：hull norm-correction 文件（待编）：精确 `qhatLogReadout−paperQSignedReadout=log ratio`；全局 `Σw log ratio`；最终只能得 `paperQ ≤ theta − Σw log ratio`；`Σw log ratio≥0` 时 paperQ≤theta，ratio=1 是 `PaperSourceCorrectionFreeFields.normRatio_one` 条件，不无条件。已让 mainline 查是否由实际 SourceNativeInitialThetaData 推出；abc 同步 ledger。gate §20.30 已写。
+
+- 06:45：**mainline 审计结论：`qVFamNormRatio=1` 不是 SourceNativeInitialThetaData 推出，而是原文 S45 `PaperSourceCorrectionFreeFields` 条件**（`paperXiFTargetStrict_of_fields` + `paperNormalizedComparison_exact_of_strict`）。因此 #1 的 Q≤Θ 不能无条件写；正确形式=(a) `PaperSourceCorrectionFreeFields T → paperQ≤theta` 或 (b) correction 形式 `paperQ≤theta−Σw log ratio`。已派 mainline 写显式条件版最终定理；hull 保留 correction + 条件版；abc 只读核对 `paperNormalized*` 定义与我们的 normalizedLog 的 bridge。gate §20.31 已写。

@@ -596,3 +596,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   若 `Σ w log ratio ≥ 0` 则 `paperQ≤theta`；若 `≤0` 只能写 `paperQ≤theta+C`，不得无条件 Q≤Θ。
 - **条件**：`ratio=1` 是 `PaperSourceCorrectionFreeFields.normRatio_one` 条件；未证由 `SourceNativeInitialThetaData` 自动给出。
 - **边界**：修正项显式保留，不吸收进 θ；#1 无条件形式依赖 ratio 条件/符号。
+
+
+### 20.31 关键结论：#1 的 Q≤Θ 依赖原文 S45 normalized-source 条件，不是无条件（mainline 审计，2026-11-14 23:45）
+- **`qVFamNormRatio=1` 不可由 `SourceNativeInitialThetaData` 推出**：它是同一 completion 上 normalized spectral norm 与 default valuation norm 之比；`qVFamNormRatio_eq_one_iff_norm_eq` 给精确等价，`BadPlaceSourceFieldsObstructionActual:82` 给 `Nonempty PaperSourceCorrectionFreeFields ↔ ¬NormRatioObstruction ∧ ¬RootHullScalingObstruction`，无供体证明障碍消失。
+- **它是原文 S45 的 normalized-source 条件**（`PaperSourceCorrectionFreeFields`：`normRatio_one` + `rootHull_scaling`），属于原目标合格输入，不是为凑绿新加假设；`paperXiFTargetStrict_of_fields ⇒ PaperXiFTargetStrict`，`paperNormalizedComparison_exact_of_strict` 给 paper-normalized Q≤Θ 无修正。
+- **影响**：#1 **不能无条件**写 Q≤Θ；正确形式二选一：
+  - (a) 显式条件定理 `PaperSourceCorrectionFreeFields T → paperQ≤theta`；
+  - (b) correction 形式 `paperQ≤theta−Σw log ratio`（不声明 ratio=1）。
+- **#1 当前定位**：product signed `Q≤Θ`（`Mzk1A1SignedReadoutProductActual` 23:02:24）是 correction 形式的基础；无条件 Q≤Θ 不存在；条件版依赖 S45。
