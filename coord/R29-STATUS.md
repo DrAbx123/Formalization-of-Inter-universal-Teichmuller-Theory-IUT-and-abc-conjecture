@@ -1380,3 +1380,5 @@
 - 10:00：shehdd 里程碑：4 official green（GeneratorValuationRelation 17:33:06Z、PlaceVolumeSignFinal 17:43:25Z、R21BridgeEquivalence、IdealMapPowerGeneral）+ 5 新 proof（IdealMapPowerGeneralPow、IdealMapPowerMaximal、B5ArchZero、B5FiniteIndexData、C17ResidueOneGeneralConsume）。lattice UnitMassDetHaarConsumer 修 `unfold unitMassFactor`→`change`，待重抽。
 
 - 10:02：gate §44：**extra 867 = clean 750 + red 64 + inprog 11 + oleonly 20 + missing 22**（clean 从 648→750）。`Mzk1MestreUseWiringActual` DONE 18:17:36Z（4 class-B surrogate 定理正式 green）。已唤醒 mainline/shehdd/lattice：桥1→CountIdealMapPower→R21Bridge；shehdd IdealMapPowerMaximal/B5 FiniteIndexData/residue消费；lattice UnitMassDetHaarConsumer/BlockProductAlignmentData/det-Haar 接线。
+
+- 10:06：用户指令“按指引攻 P7 gap”。已读 P7-GATE-REVIEW §13/§14 + P7-GAP-ATTACK-PLAN；写 §20 R29b 攻击表（10 gap 状态+下一步）：#1 hull（RouteC0→native readout，Dupuy–Hilado 归一化）、#3+#8 mainline（P1 供体证 SpanGeneratorValuationLemma/CountValuationBridge + contract rows 升级）、#4 stepxi（production 用 native/P3 填）、#6 stage4（native D 投影）、#9 hull（general disc=1 slack）、#10 lattice（unitMass=1/blockEquiv/T-local product）；#2/#5/#7 已 discharged/done。已派 mainline/hull/lattice/stepxi。

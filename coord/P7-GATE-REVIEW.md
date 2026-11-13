@@ -329,3 +329,22 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `Mzk1Ob33B5RowsFinalActual`：12 行 B5 ② 状态表。
 - `Mzk1P1LocalizedIsPrincipalInstanceAttemptActual`：直接 `inferInstance` **synthInstanceFailed**，确认 `(localizedLine I v).IsPrincipal` 不能从 DVR/PID 实例自动推断；文件改为 `MissingLocalizedIsPrincipalInstance` 精确缺口。
 - 结论：P1 线已归约到唯一精确缺失 `MissingLocalizedIsPrincipal` / `MissingLocalizedIsPrincipalInstance`；其余 generator/nonzero/sign/assembly 条件链均 green。
+
+## 20. R29b P7 GAP 攻击状态（2026-11-14 10:05 Lead）
+
+依据：`P7-GAP-ATTACK-PLAN.md` 优先级 + 当前 green 证据（P0 native / P1 / P2 / P3 / det-Haar / RouteC0）。
+
+| # | GAP code | 旧状态 | 当前更新 | 下一步（owner） |
+|---|---|---|---|---|
+| 1 | GAP-P7-GENERAL-CMP | CONDITIONAL(HullQDictionary) | native 路线替换：`thetaR13Defect` 证书（11 proof green，hull）；RouteC0 体积下界 `c0ProductHaar_mono` green；Dupuy–Hilado (1.1) 精确陈述已登记 | hull：C0→native readout 归一化（det-Haar+`E(ln μ/dim)`），目标 `nativeLComparison`；abc 支援 q 侧 |
+| 2 | GAP-P7-IQ-LITERAL | DISCHARGED definition-level + semantic PARTIAL | 无变化；label 映射仍是 paper 输入 | qpilot 低优先：label 映射精确缺口文档 |
+| 3 | GAP-P7-OB33-SRC | CONDITIONAL（B5② CountValuationBridge + residue-one） | P1 新 green：`localPrincipalGenerator_proved`（无假设）、`GeneratorValuationRelation`（countValuationBridge⇔spanGeneratorValuation）、`R21BridgeEquivalence`、`LocalizedIsPrincipalNoGap`；IdealMapPower 乘性/幂/self-count 已有 | mainline：用 P1 供体证 `SpanGeneratorValuationLemma` ⇒ `CountValuationBridge`；residue-one 用 C17 单点 log 归约；再接 Ob33 B5Index |
+| 4 | GAP-P7-MULTIRADIAL | PARTIAL（production 缺） | P0 native T + P2 multi-index + P3 tensor core 已 green；production 仍无 inhabitant | stepxi：把 production 字段用 native/P3 实际数据填（C3-free），保留精确缺失清单 |
+| 5 | GAP-P7-THETA-V | DISCHARGED | 无变化 | — |
+| 6 | GAP-P7-THETA-D | PARTIAL（S2717C3 discharged；一般 S3137 C3 桥） | C3 空类型（S1429）⇒ 需 re-anchor 到 native；`ThetaRootCarrier`/`TensorCoreWitness` green 提供 D 侧投影 | stage4：写 native D 投影定理（rfl 级）并更新状态为 re-anchored |
+| 7 | GAP-P7-THETA-DEG | DONE | 无变化 | — |
+| 8 | GAP-P7-CONTRACT | CONDITIONAL ASSEMBLY | P0.6 11 proof + P1/P2/P3 新证据可升级 `missing7ToGap` 行 | mainline：升级 `Mzk1P7ContractRowsBridgeActual` 行内容（#5/#7/B5①③/AGREE 标 PROVED，真 gap 保留） |
+| 9 | GAP-P7-HULL-UB | paper regime DISCHARGED；general disc=1 OPEN | 无新数据 | hull：general disc=1 的 slack≥1 尝试/精确条件文档 |
+| 10 | GAP-NORM-ARCH-C-K | CONDITIONAL/PARTIAL | 新 green：`NativeUnitMassNormalizedProof`（unitMassFactor_pos/lt_top/normalizedUnitMassScalar_eq_one）、`ThetaRootCarrierHaar`（normalized unitMass=1?）、`ThetaRootNormalizedUnitMass`、`DetHaarDegreeFactor`（c_ne_top/c_eq_one/c_le_one）、det-Haar external/TauCeti port 4/10 | lattice：unitMass=1 + blockEquiv inhabitant（ThetaRootCarrier）+ T-specific local unit product；qpilot：det-Haar port 后接 #10 |
+
+结论：P7 仍 **NOT PASSED**；#5/#7 DONE，#2 definition-level；#1/#3/#8 CONDITIONAL；#4/#6/#10 PARTIAL。本轮按上表逐项攻。
