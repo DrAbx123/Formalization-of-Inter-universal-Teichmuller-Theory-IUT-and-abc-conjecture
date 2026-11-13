@@ -1599,3 +1599,5 @@
 - 20:10：`Mzk1A1SaturationBasesActual` 上轮 20:59:33 FAIL 只是 SaturationBasesData.olean 尚未生成（20:59:46 才 DONE）的时间差；已 touch 源文件触发下一 cycle 重编。lattice §3.6 `volume_ratio_eq_pow` 条件版已写好，等 shehdd `card_gamma_eq_pow`。
 
 - 20:20：qpilot Prop14 Box wrapper 阻塞于 Iut 供体：`Iut/Concrete/LocalConstruct/Prop14Lattice` 闭包 90 文件、33 缺 olean；已把这 33 个路径原子加入 WL（含 Iut/Cor312/ThetaData/Anabelian 等），watchdog 会按依赖编译。期间 qpilot 继续 port NormalizedValuation/Uniformizer/DegreeIdentification。
+
+- 20:30：新 green：`Mzk1A1LatticeValuationActual` GREEN 21:09:38Z（A1 lattice valuation）、`IutIVProp14GroupCountActual` GREEN 21:10:08Z（线 2，泛型 card_gamma 接口）。已让 shehdd 证实际 `Γ` 的 `IsPGroup`（代表元 p^N z∈O）→ 实际 `#Γ=p^h`，lattice 的 volume_ratio 等 h 替换；唤醒 stepxi 继续 A5。
