@@ -522,3 +522,5 @@
 - 08:38：TensorProduct/Basis DONE（00:16:33Z，28s）；Bilinear :86 `TensorProduct.inductionOn` 未知 → 改 plain induction + zero 分支并 retouch（连同 BaseChange）。
 
 - 08:40：lattice 对角无条件化三桥配方已给（coordSmall=span single；diagEquiv f 像=coordDual f；紧开/正有限测）；Bilinear 修复版待编。
+
+- 08:42：lattice CoordSmallBridge（span{1}=1 ⇒ coordSmall=coordLattice）入队（370 项）；已给 diagEquiv 桥②配方。Bilinear/BaseChange 再 retouch。
