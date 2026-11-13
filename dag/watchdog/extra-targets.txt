@@ -455,3 +455,4 @@ tmp/sheaf/xif/paper/Mzk1HullUBGeneralFinalActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBArchCheckRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1CarrierEquivDataActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperQPilotLineBundleSourceActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ThetaDegC3Actual.lean
