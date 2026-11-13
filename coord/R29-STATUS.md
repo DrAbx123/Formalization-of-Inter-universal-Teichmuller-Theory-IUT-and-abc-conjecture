@@ -566,3 +566,5 @@
 - 09:30：BaseChange :210 goal 已提取（case h：v(a)^e = w(algebraMap a)）；relay shehdd 用 valuation_comap + WithVal.equiv simp 收尾；:389 加 RingHom.coe_range。
 
 - 09:36：**BaseChange Lead 直接修好并 COMPILE-OK（lean exit 0）**！:389 加 RingHom.coe_range；:222-226 改用 `rw [WithVal.equiv_symm_apply, WithVal.valued_toVal, ← WithVal.toVal_ofVal (valuation K v) a, WithVal.valued_toVal]` + valuation_comap 经 rw [w.2] at h。watchdog 下一轮生成 olean；mainline/shehdd/qpilot 已通知立即编 AgreeFLT/UnramResidueBridge/AGREEFLTBridge。
+
+- 09:40：**BaseChange olean 生成成功（2,917,416 B）**——Lead 用 `lake env lean -o .lake/build/lib/.../Completion/BaseChange.olean` 直接产出。mainline/qpilot/shehdd 已通知立即编 AgreeFLT/AGREEFLTBridge/UnramResidueBridge。
