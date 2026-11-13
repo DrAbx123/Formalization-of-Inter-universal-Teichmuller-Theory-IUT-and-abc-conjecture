@@ -1805,3 +1805,5 @@
 - 06:05：**三个新 GREEN：`Mzk1P0QHatHaarScalingActual` 23:31:02（hull scaling official）、`Mzk1P2QReadoutUnconditionalActual` 23:31:02、`Mzk1P2QHatNormRootBaseActual` 23:31:02（A2 件）**。hull 可收 Correspondence/最终 Q≤Θ；abc 报 A2 条件清单；mainline chain 等编。Gamma v12 等编。gate §20.26 已写。
 
 - 06:10：stepxi 确认 `Mzk1Ind1AlgebraicUnitQuotientActual` GREEN 23:26:17；UnitQuotient/LogLattice 红因旧 `#print axioms` 指向已删定理，已删 retouch；`continuous_of_addHom_fin_zpadic` 仍未落地（无 sorry），唯一 Ind1 源缺口=实际 `TimesMuQuotient((F.Mon v)ˣ)↔(Integers F)ˣ/tors` 识别 + β_a 来源。
+
+- 06:15：mainline 审计 3.12 三个真实输入：① C17 residue-field 输入 = section-lift `inertiaDeg'=1`，当前数据不可构造（真实 paper 输入）；可做逆命题 `inertiaDeg'=1⇒ResidueFieldEquiv`；② comparison 真实缺口=`C3S1902TransportData` 无 inhabitant（blockEquiv/region_eq/haarScale/haar_apply），已有 conditional 修正公式；③ IQ/(Ob3-3) paper carrier 语义/`[C3 block:Q_p]` 因子/C3-D 字典/ exact hull UB 仍 interface-only。已派 mainline 按成本顺序做 ①逆命题②最小 conditional comparison consumer③interface-only 清单。gate §20.27 已写。

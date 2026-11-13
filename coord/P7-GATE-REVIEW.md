@@ -560,3 +560,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1P0QHatHaarScalingActual` GREEN 23:31:02（105s）**：hull 侧无条件 scaling（`qhatHaarScaling_unconditional`、`qhat_signed_readout_eq_log_norm` 等）正式 official；root `QhatHaarScalingReuse` 23:15:02 也 green，双供体可用。
 - **`Mzk1P2QReadoutUnconditionalActual` GREEN 23:31:02（105s）**、**`Mzk1P2QHatNormRootBaseActual` GREEN 23:31:02（105s）**：A2 的 QReadout/RootBase 件 official；A2 仍以 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1` 精确条件等价为准，不宣称 normalized=adic 无条件。
 - 下一步：hull 用 scaling 收 `Correspondence`/最终 signed `Q≤Θ`；abc 报告 A2 最终条件清单；mainline 等 `Cor312B5IndexChain` 编。
+
+
+### 20.27 3.12 comparison/residue/carrier 缺口审计（mainline，2026-11-14 23:31）
+- **residue-field 输入**：`NativeBaseResidueFieldEquivInput`/`QVFamResidueFieldEquivInput` 等价于 section-lift 处 `inertiaDeg'=1`；`nativeBaseSectionPlace=sectionFiniteLift` 一般 place 不一定完全分歧，`Mzk1C17QPLACEChoiceGapActual` 已列为 conditional GAP ⇒ **当前数据不可构造**，是真实 paper C17 输入。可做逆命题 `inertiaDeg'=1 ⇒ ResidueFieldEquiv`（`Ideal.quotientMapₐ` + `FiniteDimensional.finrank_eq_one_iff_of_nonzero`）。
+- **comparison**：`qThetaPilotLogVolumeComparison C3 P := qPilotLogVolumeReading P ≤ thetaPilotHullLogVolumeReal C3`；真实缺口 = `C3S1902TransportData` 无 inhabitant（`blockEquiv : C3LogShellTensorBlock C3 ≃ S1902Carrier T`、`region_eq`、`haarScale>0`、`haar_apply`）。已有 conditional 修正公式 `thetaRead_eq_s1902_normalized_add_correction (D : C3S1902TransportData)`。
+- **paper carrier IQ/(Ob3-3)**：hull adjunction、det/packetDet/logVolume_tensorPower green；但 paper carrier realization、(Ob3-3) source identification、multiradial (xi-e)/(xi-f) data、theta raw Haar↔paper normalized V 因子 `[C3 block:Q_p]`、C3-D 字典、exact hull UB 仍 interface-only/PENDING。
+- **下一步**：① 逆命题 residue；② 最小 conditional comparison consumer；③ interface-only 字段清单。不得把 `C3S1902TransportData` 当已证 inhabitant。
