@@ -1635,3 +1635,5 @@
 - 22:20：进展汇总：lattice 新 `Mzk1A1PadicSaturationBasesActual`（`span_c0Q_le_span_lambda`、`a1PadicSaturationBasesData`，ℤ_p 基给 stage4）；mainline 落盘 `Mzk1P1IdealMapNonVPrimeActual.ideal_map_nonV_prime_eq_top`（IdealMapPower general ②）；stepxi 新增 `factorRegion_perm_mem`（fixed-place Ind1 factor-region 等变）。#8 真实 evidence 里程碑保持；路线一第一检查点保持。
 
 - 22:25：hull 新写 `Mzk1P0RouteC0GlobalReadoutActual`（待编）：`c0ProductQ_subset_thetaHull`、`c0ProductQ_haar_le_thetaHull`、`c0ProductQ_normalizedLog_le_thetaHull`、**`thetaHull_normalizedLog_eq_closedForm_sub_one`**（normalizedLog(hull)=s1915ClosedForm−1，去掉 +1 offset），把全局 q 格落点接到 paper normalized hull；下一步 A1.6 δ_b 显式/非负与权重对应。
+
+- 22:35：**A1.6 里程碑：`Mzk1A1SignedReadoutActual` GREEN 21:26:13Z（94s）**（有符号读数）。Iut/TFG 闭包开始编译（TFG files 有 transient retry，正常）。已派 hull（δ_b/权重/readout 串接）、mainline（finprod 同态性）、shehdd（Gamma/torsion）、lattice/stage4（p-adic 接口）、stepxi（A5）、qpilot（port）。
