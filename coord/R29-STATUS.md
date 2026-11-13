@@ -1675,3 +1675,5 @@
 - 00:25：mainline 4/5：`Mzk1P1IdealMapPowerGeneralProofActual.idealMapPowerStatement_general` 落盘，关键发现 RHS 与 `IdealMapPowerStatement` 定义逐字一致（无需 count 对齐）；证明用 finite-support 展开 + `prod_eq_single` + 非 v 因子 =⊤ + 主分支桥 1。绿后接 `idealLocalizedCount_of_bridges`（hmap/hspan/huni 三条件齐）→ B5Index 完整重接。
 
 - 00:30：巡检：11 lean 在跑，最近一批很多红是 pending 依赖/旧源；关键红：`Mzk1IutIVProp14iiiBoxFormal`、`A1Padic`/`GlobalReadout`/`A1Delta`、`Uniformizer`/`LocalFieldScaling`、B5/C17 下游。已唤醒 mainline（general IdealMapPower→B5Index）、shehdd（Gamma/torsion/B5）、lattice（A1Padic/A1Saturation tail）、stepxi（A5 consumer）。
+
+- 00:35：shehdd 修三红：Gamma `rw [← hg]`（目标 g 改 ofAdd gamma）、B5PlaceLogVolumeNormSign `neg_lt_zero`/`Real.log_pos_iff`、C17BothResidueFieldInputsGap 补 `QVFarmTensorCoefficientActual` import/open；B5ContractEvidence 等 C17 olean。
