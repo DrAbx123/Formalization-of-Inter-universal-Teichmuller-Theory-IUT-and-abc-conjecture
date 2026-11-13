@@ -583,3 +583,16 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **精确关系**：`qhatLogReadout − qPilotLogVolumeReading = Real.log (qVFamNormRatio)`（q 对象识别下）；一致 iff `qVFamNormRatio=1`（已知 `PaperSourceCorrectionFreeFields.normRatio_one`），不是新 gap；若 ratio≠1 必须显式保留 `log ratio` 修正。
 - **对 3.12 的影响**：最终 `Q≤Θ` 锚定不能直接把 `Σ d_b qhatLogReadout_b` 当 paper q 读数；必须写成带修正项的精确恒等式+条件，或显式条件形式。已派 hull 写 `Mzk1P0QThetaReadoutNormCorrectionActual`。
 - **边界**：A2 的 `P2QHatNormInstanceAgreement` 仍是独立 norm-instance coherence，不由此收口。
+
+
+### 20.30 #1 最终 Q≤Θ 的 norm-correction 条件（hull，2026-11-14 23:40）
+- 新文件 `Mzk1P0QThetaReadoutNormCorrectionActual`（待编）：
+  - `qhatLogReadout := (1/d)(log μ(c0QLattice)−log μ(O)) = log‖c0QHat‖`（normalized root norm）；
+  - `paperQSignedReadout := -localLogMagnitude (qVFamily T b)`（paper `-|log q|` 的 S3137 形式）；
+  - **精确恒等式**：`qhatLogReadout − paperQSignedReadout = Real.log(qVFamNormRatio)`（在 P2 norm-instance agreement 下，来自 `p2NativeQReading_eq_neg_log_qhat_add_ratio`）；
+  - **全局**：`qhatLogReadoutGlobal − paperQSignedReadoutGlobal = Σ_b nativeBadLocalWeight_b · log(qVFamNormRatio_b)`。
+- **最终形式**：`Σ w_b qhatLogReadout_b ≤ s1915ClosedForm−1` ⇒
+  `Σ w_b paperQSignedReadout_b ≤ (s1915ClosedForm−1) − Σ w_b log ratio_b`。
+  若 `Σ w log ratio ≥ 0` 则 `paperQ≤theta`；若 `≤0` 只能写 `paperQ≤theta+C`，不得无条件 Q≤Θ。
+- **条件**：`ratio=1` 是 `PaperSourceCorrectionFreeFields.normRatio_one` 条件；未证由 `SourceNativeInitialThetaData` 自动给出。
+- **边界**：修正项显式保留，不吸收进 θ；#1 无条件形式依赖 ratio 条件/符号。
