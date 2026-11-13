@@ -146,3 +146,11 @@
 - `Mzk1P2ProductFormulaCancelActual`（62,280B）：`principal_arch_eq_count`、`p2R13Exact_eq_neg_arch_of_arch_eq_weighted`、`arch_sub_weighted_eq_zero_of_eq`；
 - `Mzk1P2PureTensorExpansionActual`（56,424B）：`pureTensorSumFamily`、`pureTensor_finite_sum_expansion`、`labelBlockSum_expansion`、`labelBlockSum_qGen_mem`。
 - 精确缺口（List）：`nativeP2AlignmentMissing`（native places↔Bad、native block↔product carrier、arch metric）；`p2ArchWeightAlignmentMissing`（actual arch tensor log↔p2WeightedDetLog、sign/weight 约定）。
+
+## P0.5c 里程碑（2026-11-14 00:22）
+
+- `Mzk1P0SourceDataBridgeActual` DONE 15:50:45Z（35s，olean 39,928B）：`nativeThetaData C := C.toSourceNativeInitialThetaData`；`donorsOf C S X hX e : NativeOriginalInputDonors X`（`initial := S.toSourceData`，`initial_arithmetic` 用 rfl+hX）；`originalInput_of_donors : Nonempty OriginalInput`；`QBridgeMissingInputs`。
+- 装配链：`SourceCompletion C → T_C = toSourceNativeInitialThetaData → D4D9Supply C.arithmetic → SourceDefinition31Data (toSourceData, arithmetic rfl) → NativeOriginalInputDonors → OriginalInput`。
+- SourceCompletion→D4D9Supply 精确缺失 5 组：SourcePlaceSelection（signQuotient V/V_mod_bad）、D4ReductionSupply 三组 card、D5TorsionSupply（frozen datum+carrier/label）、contract 版 orbicurve/sections/cusp、D9CompatibilitySupply 五槽。
+- q alignment 最终最小缺口：NativeLattice + 上述 5 组 + index_equiv + NativePlaceBindingDonors + q 值识别；P2 侧 `P2QNativeReadingGap` + R1.2 整性。
+- θ alignment：factor 恒等式已证；缺 L/native tensor region 的 Haar 归一化/landing（对应 stepxi `LQThetaSourceArrowMissing`）。
