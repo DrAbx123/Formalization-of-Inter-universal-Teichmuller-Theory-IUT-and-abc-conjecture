@@ -940,3 +940,5 @@
 - 03:22：mainline FractionalExpansionBridge（fractionalLogVolumeExpansion_of_qpilot：用 qpilot 两定理 + FinsumSubBridge/Summable named input，#check 签名清单）入队（483 项）；**ContractRowsBridge DONE 13:29:25Z（54s）**（#8 行覆盖 green）；**BlockEquivData DONE 13:28:16Z（50s，ole 33,584B）**（#10 citizen 清单 green，inhabitant 仍缺）；Cancel FAIL 13:29:28 待查。
 
 - 03:26：stage4 Cancel 首错 relay：thetaPilotHullLogVolumeReal 定义在 AbsTopIII09ThetaHullScalingActual:57（缺 import/open）。
+
+- 03:32：巡检派活：hull 重跑 gate §33；qpilot 写 FinsumSubBridge+Summable 支撑（`FractionalIdeal.finite_factors`）；shehdd 接 relativePlaceIndex↔count 桥；lattice 用全限定名构造 BlockEquivData inhabitant；stepxi 核对 #1/#4/#10 文档。stage4 Cancel 已补 import/实例待重编。
