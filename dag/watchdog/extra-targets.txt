@@ -498,3 +498,4 @@ tmp/sheaf/xif/paper/Mzk1P0NativeTensorConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1P2LabelBlockCoefficientActual.lean
 tmp/sheaf/xif/paper/Mzk1P0NativeSourceCoreActual.lean
 tmp/sheaf/xif/paper/Mzk1S3137LReadoutActual.lean
+tmp/sheaf/xif/paper/Mzk1P2LabelBlockSumActual.lean
