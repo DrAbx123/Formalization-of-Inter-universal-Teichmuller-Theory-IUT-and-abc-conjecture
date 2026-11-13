@@ -676,3 +676,5 @@
 - 20:40：shehdd OB33 改本地重述（删 HullDetObject import，用 S3137 green 文件定义 ob33DetNormalizedLogVolume；raw/blockDim 等式 + 显式 identification）——绕开坏依赖，等编后 #3 → CONDITIONAL。
 
 - 20:42：lattice #10 abc 对接类型表 NormArchAbcHook（AbcArchFactorOutput + C3HaarScaleDocking named input；对接口不明确做显式接口，不冒充）入队（417 项）。
+
+- 20:45：FLT RestrictedProduct/Equiv right_inv 改 rcases+dsimp+dif_neg+congrArg 版（qpilot 报 beta 归约/覆盖率问题）；Equiv+TopologicalSpace retouch。
