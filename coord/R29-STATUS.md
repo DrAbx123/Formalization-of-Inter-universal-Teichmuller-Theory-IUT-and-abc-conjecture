@@ -592,3 +592,5 @@
 - 18:54：断点恢复记录：watchdog 于 02:29Z 停止（会话挂起），18:48 已重启（job pwsh-02afff25ef9a45fc，max=16），恢复编译 pending=41（含 AgreeFLT/InputAlignment/DiagEquivBridge/HaarStrict/FLT-Cofinite）。gate §26（断点前）= extra 386 / clean 358 + ole 20 + stale 0 + red 8；P7 NOT PASSED。UNRAM bridge（01:21:06Z）与 P7 双通道已在断点前落地。8 lane 全部唤醒。
 
 - 18:56：巡检：watchdog 正常（heartbeat 10:50:28Z，pending 8，恢复批次编译中）；shehdd/stepxi 已唤醒（gate §28 + P7 标注；P5 文档一致性收尾）。
+
+- 18:58：hull input alignment：Types/NativePlacesVsFinitePrimePlace/GapRows green；Named 改 HEq 字段（input_eq 无法跨 V 统一 universe）、Composite 同步改同 V 参数；均已 retouch。恢复批次：WeightOneChannels DONE（10:51:33Z，59s）——两条 weight=1 通道 green。
