@@ -1167,3 +1167,5 @@
 - 00:38：gate §39：**extra 576 = clean 549 + red 3 + inprog 3 + oleonly 20 + missing 1**；red=P1DVRPrincipalLemma/P1LocalizedFractionalIdeal（shehdd tower import 修复待重编）+ P3TensorCoreScalingConsistency（stage4）。P0-L 已达 9 文件 green（LQThetaMem/LNormalization/LRegionPos 条件部分落地：qComponentMemGap、lThetaNormFactor/Gap、regionOpen/Nonempty/PosGap 精确化）。
 
 - 00:42：**P0.5d 里程碑 GREEN**：`Mzk1P0PaperInputActual` DONE 15:57:24Z（63s）——`P05PaperInput`（SourceCompletion+D4D9Supply+N8NativeInput+hX+index_equiv+PlaceBinding，全部论文输入）→ donors/OriginalInput/binding；`LPaperInstance_of_paperComparison` green。剩三桥：q 值识别、theta 归一化、V-index 同一性。已派 hull P0.6 攻三桥。
+
+- 00:44：LFI 仍红（`:62 failed to synthesize` tower + :67/:68 rw 同根因）；已给 shehdd 手动 tower 实例法（constructor; intro x y z; simp only [Algebra.smul_def]; apply mul_assoc，同 Mathlib AdicValuation:970）+ import。唤醒 mainline：P1 最后一段 count↔valuation 大包（intValuation_eq_exp_neg_multiplicity + valuation_of_algebraMap，目标 R21Bridge ≤1 精确缺失）。新 green：P2LabelBlockComplete（abc 15:54:42Z，87s）、P3NetGainP2（stage4 15:57:24Z）。
