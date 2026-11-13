@@ -574,3 +574,5 @@
 - 09:52：lattice 桥② 具体 `diagEquivCLM` 构造代码已给（f : d→ℕ，coordwise p^{f_i} 乘、逆 zpow、continuity continuous_pi）；桥③随后。
 
 - 09:55：hull input alignment 5 份（types/named/composite/type-diff/gap rows）入队（381 项）；stage4 ChangeMatrixRing 修 simpa + Volume2 降级（GAP 精确：μ(M)=index*μ(N) 的 ENNReal coercion）；P5 audit 确认 DONE（olean 4,032B）、P5 收尾文档齐。
+
+- 09:57：**BaseChange olean 生效实证**：qpilot `Mzk1P3AGREEFLTBridgeActual` DONE 00:49:13Z（54s）——FLT import/#check 通过；mainline AgreeFLT FAIL 00:48:49（新首错，在修）。
