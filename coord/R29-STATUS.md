@@ -862,3 +862,5 @@
 - 00:15：lattice BadPlaceUnitMassProduct（Fintype Bad 实例化 product + eq_one）入队（466 项）；剩 K b=nativeBadToKPlace T b 的 local field/prime 对齐与 blockEquiv/unitMass citizen。
 
 - 00:18：stage4 B2 根因 = 缺 `import Mathlib.Data.Fintype.Pi`（非实例选择问题），删除 local instance 补 import 待重编；C3 特化已 green。
+
+- 00:22：**hull 修正 C0=0（之前结论过强）**：normalizedLog≤0 + paper regime(disc≥2∧cond≥1∧l≥5 ⇒ paperBox≥1) ⇒ `V=1+normalizedLog ≤ paperBox`，故 **paper regime 下 C0=0 可证**（paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one）；一般 CurveData(disc=1) 仍 OPEN；C0=1 为无条件实际界。C0Absorption/ObstacleRows/Composite 已 retouch。**abc #1 最终条件版** Mzk1P7ComparisonConditionalFinal（HullQDictionary 唯一 named input + margin-1 comparison；三源字段仅 docs）入队（467 项）。plan #1/#9 更新。
