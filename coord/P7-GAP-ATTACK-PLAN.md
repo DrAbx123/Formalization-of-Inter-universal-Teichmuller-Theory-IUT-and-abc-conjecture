@@ -8,15 +8,15 @@
 
 | # | code | 当前状态 | owner | 下一步（具体） |
 |---|---|---|---|---|
-| 1 | GAP-P7-GENERAL-CMP | OPEN；已精确化为 `comparison ⇔ ‖q‖ ≤ haarScale·∏_b μ_b(ball_b)`（abc C3S1902 链 green，CONDITIONAL on transport data） | abc | 攻乘积下界：θ-value 范数下界（rootNormedThetaValueInL 的 j=±1 指数）或 haarScale 显式值；再证 `1 ≤ haarScale·∏` 的条件分支（ConditionOne 已 green） |
-| 2 | GAP-P7-IQ-LITERAL | OPEN；Mathlib restricted product 已 rfl 识别（IQ skeleton = Πʳ）；FLT RestrictedProduct/Equiv 正在修 :620 | qpilot | FLT Equiv/TopologicalSpace/FiniteAdeleRing 链：等 olean 后做 `IQRestrictedProductCarrier ↔ FiniteAdeleRing` 的 Equiv/instance，或写精确缺口（哪些字段未 realization） |
-| 3 | GAP-P7-OB33-SRC | OPEN；det(x)M finite determinant 恒等式 green，source arithmetic-degree = normalized log-volume 识别未证 | shehdd | 查 OB33 接口（Mzk1Ob33*）与 source identity 定义；给出 identification 的显式 named input + 条件等价，或找实际构造；更新 P7 §13 |
+| 1 | GAP-P7-GENERAL-CMP | **OPEN/PARTIAL**；路线 A 已消除球质量未知：`rootExtension_ballMass_eq_radius_pow`（s1915_local_measure：μ(B_b)=r_b^{d_b}μ(O_b)，无 hball/ceil）DONE 11:52:14Z；`C3S1902BallMassFormula`（ballMassProduct_toReal_eq、comparison_iff_...haarScale·∏r^d·∏μ(O)，无 hball/hprod）在编 | abc | 用实际乘积重写 LowerBound 去 hprod/c；再攻 `‖q‖ ≤ haarScale·∏r^d·∏μ(O)`（q 来源、arch/infinite、paperBox 符号） |
+| 2 | GAP-P7-IQ-LITERAL | **PARTIAL**；FLT 链：Equiv GREEN（11:38:58Z）、Cofinite GREEN（11:55:19Z）；TopologicalSpace/FiniteAdeleRing 重编中。qpilot `IQFiniteAdeleRestricted`（真实 HeightOneSpectrum/adicCompletion/adicCompletionIntegers + 坐标映射/几乎处处整性/Πʳ compat）在编 | qpilot | 链绿后做 IQ↔FiniteAdeleRing Equiv/instance；在真实位置/纤维/整数参照上构造（B#2） |
+| 3 | GAP-P7-OB33-SRC | **CONDITIONAL**；`Mzk1Ob33SourceIdentificationActual` GREEN（11:40:50Z）：实际 detDegree = actualUnitLineBundleData.detData.globalLogVolume，`ob33DetNormalizedLogVolume` 本地定义 + 显式 identification；B4.4 det line：mainline DetLineConstruction GREEN（11:47:36Z，log D(H,O)=logH−logO） | shehdd | B5 逐位：localizedLine DVR 生成元 + Haar scaling（mainline DetLinePlaceB5 的 named-input 口径）；arch metric；然后用 relativeDetLog 替换 Ob33 命名 identification |
 | 4 | GAP-P7-MULTIRADIAL | PARTIAL；finite Q(i)-at-5 production green；general CarrierAlgorithmContract 无条件 green；RouteNormalForm named input；实际 production 缺失 | stepxi | 已完成：carrier 包 `Mzk1P7MultiradialCarrierActual`（finite model）、`Mzk1P7MultiradialGeneralBridgeActual`（general conditional）、精确缺口 `coord/P7-MULTIRADIAL-GAP.md`；下一步仅 actual n,oR_LGP/production 源 |
 | 5 | GAP-P7-THETA-V | **PARTIAL**（四层：L1 raw green `Mzk1ThetaVLayerRawActual`、L2 normalized green `Mzk1ThetaVLayerNormalizedActual`、L3 scale/offset CONDITIONAL `Mzk1ThetaVLayerScaleOffsetActual`、L4 OPEN；`Mzk1ThetaVFourLayersActual` DONE 11:19:54Z） | hull | 剩 L3 的 scale/offset 实际来源与 L4；一层一个定理 |
-| 6 | GAP-P7-THETA-D | **PARTIAL**（实际 C3D key map 已构造：`Mzk1C3DKeyMapActual`，`actualDonorC3 := S2717C3 R … D`，indexEquiv/dPlaceIndex/dPlaces/dTuple 全取实际 C3 字段） | hull | 剩 D 侧对齐：把 D 数据接到该 key map 形成双向字典；先条件字典再消去 |
-| 7 | GAP-P7-THETA-DEG | **OPEN/PARTIAL**（文件 `Mzk1P7ThetaDegActual` 已写，等 `Mzk1C3BlockMeasureActual` olean 后编；含 localCompletionDegree=finrank、c3TensorBlockDimension=∏、block nonpos+local degree 分解） | stage4 | 等依赖 olean 后重编 → 更新 P7 §13 为 CONDITIONAL/PARTIAL |
+| 6 | GAP-P7-THETA-D | **PARTIAL**（实际 C3D key map：`Mzk1C3DKeyMapActual`；D 右端投影 `Mzk1C3DDonorProjectionActual`（actualDonorC3 展开到 D 字段，7 个 rfl 定理）在编 ⇒ B4.1 steps 1-4 落地） | hull | D 侧对齐基本完成（投影=rfl）；剩余：把关键 map 与 paper V/字典消费者接起来（与 #9 C0=1 一致） |
+| 7 | GAP-P7-THETA-DEG | **PARTIAL（B2 在编）**；`Mzk1C3BlockMeasureActual` GREEN（11:44:02Z）；`Mzk1P7ThetaDegActual`（localCompletionDegree=finrank、block:Q_p=∏、block nonpos）与 `Mzk1P7ThetaDegB2Actual`（域分解 ⇒ finrank(block)=Σ finrank(E_j)、C3 block=Σ 实际 local degree）在重编。不再把 finrank 改名，按 B4.2 分块求和 | stage4 | B2 绿后写全 E_j↔local degree 对应（含重数）；更新 P7 §13 #7 |
 | 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（`Mzk1P7ContractMapActual` DONE 11:18:55Z，olean=True；AgreeFLT DONE 11:13:10Z） | mainline | 已完成：`recon12ToGap`/`missing7ToGap`/`gapCodesCovered`/`contract_fields_not_linked`/`p7_conditional_contract`；文档 `coord/P7-CONTRACT-MAP.md`。后续：等其它 GAP 关闭后把条件装配升级为 DISCHARGED |
-| 9 | GAP-P7-HULL-UB | **CONDITIONAL（C0=1）**；hull 更正：paper V = s1915ClosedForm = **1 + normalizedLog**（a_i=d_b, β=1），故 V ≤ paperBox + 1（C0=1，非 0）；仅 normalizedLog 侧 C0=0 | hull | 文件：`Mzk1HullUBPaperVRawBindingActual`（closedForm=1+normalizedLog）、`PaperVRawUpper`（V≤paperBox+1）、`B6Rows`。下一步：确定目标是否要求 C0=0；若是，把常数 1 的来源/吸收单列精确障碍，不假设 β=0 |
+| 9 | GAP-P7-HULL-UB | **CONDITIONAL（C0=1）**；paper V = s1915ClosedForm = 1+normalizedLog（a_i=d_b, β=1）；actual bound `s1915ClosedForm ≤ paperBox+1`；C0=0 的常数 1 障碍单列 | hull | C0=1 raw binding done；查 e 归一化常数能否吸收到 paperBox 的 C0 |
 | 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL**；显式 C_K + abc 接口 | lattice | `Mzk1NormArchCKActual`（DONE）：C_K/因子形式；`Mzk1NormArchAbcHookActual`（DONE 11:29:49Z）：显式接口 + degree-one `haarScale=1` 实例。缺失：一般 K 的 abc `haarScale` 与 C_K 公式来源 |
 
 ## 纪律
@@ -626,3 +626,69 @@ q 根关系/迹系数在这些运输下的对应。
 - 路线 C1 的实际 C3 系数（迹/SNF）待 C0 完成后由 stepxi/hull 接力。
 
 完成验收按本文件 §2：取消为了证明目标新增而未能从初始数据构造的输入；条件等价、计数表、conditional assembly 不计核销。
+
+<!-- BEGIN P7-REUSE-CORRECTION-20261113 -->
+## 查重补充：已有供体与建议任务的缩减（2026-11-13，当前 chat 单线程）
+
+用户追问是否已逐一检查全仓定理，以免安排重复证明。**准确回答：没有逐一定理检查全仓；上一轮是目标附近的有界核对，不能据此保证建议完全没有重复。** 本轮针对 A0/B0/C0/C1，补查主库 `LeanFormal`、`Iut`、`PadicLogVolume` 和 `tmp/sheaf` 中的相关声明，再阅读命中文件的实际陈述、定义与证明段。关键词检索只负责找候选，不等于全库语义查重。
+
+本轮的实际消费者是上文执行计划，目标是缩减“需要新证”的范围。阶段为研究/复用核对；未改 Lean、未运行编译、未调度 agent、未修改已有 owner。版本指纹记录于 `dag/nodes/p7-no-extra-input-routes-20261113.json` 的 `reuse_review`。旧调查与执行记录保留，以下是对本 chat 建议的修订。
+
+### 1. 明确应复用的部分
+
+| 原建议中的步骤 | 本轮核对到的已有声明 | 调整后的工作范围 |
+|---|---|---|
+| A0：实际球质量 | S1915 的 `s1915_local_measure` 上一轮已列为供体；当前 [Mzk1PadicBallCeilActual](D:/lean/tmp/sheaf/xif/paper/Mzk1PadicBallCeilActual.lean) 另已有 `rootExtension_ballMass_eq_radius_pow` 和 `rootExtension_ballMass_eq_p_rpow` | 不重证球质量，不另造同义包装。继续处理消费者的具体代入及实际 transport；本轮快照未见该文件 olean，已有源码由原 owner 验证 |
+| A0：把半径对数化为加权系数和 | 较早的 [Mzk1S1915ComparisonActual:69](D:/lean/tmp/sheaf/xif/paper/Mzk1S1915ComparisonActual.lean:69) 已有 `s1915ClosedForm_eq_one_sub_sum` | 不重做这段求和代数。注意该量是 `1 + normalizedLog`；转成实际相对 log 时需减去 1，不能偷换归一化 |
+| B0/#7：实际张量的域乘积分解 | 主库 [FinitePlaceArithmeticTensorBlockFields:25](D:/lean/LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticTensorBlockFields.lean:25) 的 `exists_arithmeticTensorTuple_fieldProduct`，第 39 行还有整包版本 | 已从真实 `places/tuple` 构造分解，并提供各域有限维、完备及双向连续性。**不再安排从头证明有限 étale 分解或连续性**；实例化到实际 C3，接入维数与源权重 |
+| B0/#7：域分解后的维数求和 | 当前 [Mzk1P7ThetaDegB2Actual:18](D:/lean/tmp/sheaf/xif/paper/Mzk1P7ThetaDegB2Actual.lean:18) 已有 `finrank_arithmeticTensorTupleBlock_eq_sum_fieldProduct` | 这个定理仍输入 `e`；上一行的主库存在定理可供应该参数。剩余是实例接入与对应版本验证，不是另设一个分解假设 |
+| C：q 区域到根侧 theta hull 的包含和 log 单调性 | 较早的 [RootHullContainmentInequalityActual:81](D:/lean/tmp/sheaf/xif/paper/RootHullContainmentInequalityActual.lean:81) 有 `qPilotClassicalRegion_subset_rootHull`，第 123 行有 log 比较；[RootQPilotContainmentActual:88](D:/lean/tmp/sheaf/xif/paper/RootQPilotContainmentActual.lean:88) 有根系数模型的包含 | 不重写这些一般包含/单调性证明。前者仍需实际系数次序、缩放数据、正质量及有限性；后者的根侧区域也未自动等于当前 P7 的两份区域 |
+| C0：显式根幂系数产生的局部及乘积包含 | 当前 [Mzk1RouteC0RootQLatticeActual:104](D:/lean/tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeActual.lean:104) 已有 `c0QLattice_subset_alpha`，第 127/131 行有乘积包含和 Haar 单调性 | 不另建第二份 C0。保留原 owner 的实现并验证；继续处理实际目标对应。`c0Remainder_nonneg` 已有证明体，但当前文件还没有把该表达式证明为两份实际 log 质量之差，不能把整条 (C5) 算完 |
+| C1：迹对偶、不同理想清分母、SNF/行列式指数 | [IntegralTraceDualTensorInclusion:993](D:/lean/LeanFormal/IUT/Foundations/LocalFields/IntegralTraceDualTensorInclusion.lean:993) 已有实际张量上的不同理想乘法包含；[IntegralTraceDualLattice:226](D:/lean/LeanFormal/IUT/Foundations/LocalFields/IntegralTraceDualLattice.lean:226) 已有商群基数与行列式赋值公式；`PadicLatticeIndexFormula` 已有有限自由情形的 SNF 公式 | 上一轮已把这些库列为工具，本轮明确到声明。不要重建一般理论；新证明只针对原目标的生成元、系数整性和精确损失能否被已有根阶数吸收 |
+| B0/#5/#9：S1915 读数的常数项 | 当前 [Mzk1HullUBPaperVRawBindingActual:25](D:/lean/tmp/sheaf/xif/paper/Mzk1HullUBPaperVRawBindingActual.lean:25) 已有 `closedForm_eq_one_add_normalizedLog`，第 43 行给出系数和 | 直接复用 `+1` 的真实公式，不再尝试任意取 offset=0。仍须核对这份读数如何对应独立给定的论文 V |
+
+其中有此前即存在的供体，也有上一轮之后版本发生变化的当前实现。`Mzk1PadicBallCeilActual` 已不同于上一节记录的 SHA；不能把所有新增源码都说成上一轮遗漏。另一方面，较早的域分解、包含及系数和公式，应当在交接里明确列出，上一版对此不够完整。
+
+### 2. 一个可以直接消去现有参数的复用连接
+
+`Mzk1P7ThetaDegB2Actual` 中的 `e` 不必一直作为外加输入保留。已有主库供体给出以下步骤：
+
+1. 用实际 C3 的 `places`、`tuple` 调用 `exists_arithmeticTensorTuple_fieldProduct`。
+2. 从存在见证取得 `J/E`、域与代数实例、`e`；将逐因子的 `FiniteDimensional` 证明安装为局部实例。
+3. 调用现有 B2 的维数定理，输出“实际 C3 存在这样的分解及维数等式”，或在消费者内直接消去存在量词。
+4. 若需要整个 packet，复用 `exists_arithmeticTensorBlock_fieldProducts` 与 `arithmeticBlockFieldAlgEquiv`；无需逐块再证明分类。
+
+这是基于已读声明的具体接入步骤，本轮未编译。它能消去“存在某个有限域分解”这一输入，**不能自动证明这些域因子就是另一个独立源端预先指定的因子，也不能自动给出论文的全部 degree 权重**；后两件事要使用相应的源映射证明。
+
+### 3. 查重后仍然需要推进的工作
+
+- **A0 收窄为消费者代入与 transport。** 当前 `Mzk1C3S1902QuantityActual` 仍停在球质量乘积，`ComparisonActual` 仍接受 `C3S1902TransportData`。`LowerBoundActual` 头部“未找到显式球质量公式”的文字已被供体证据推翻，应由原 owner 修正；不据此新开球质量研究任务。
+- **B0 收窄为同源识别。** 已有域分解、维数求和、相对 log 与常数项的代数不能重复建设。真正要补的是同一个原始输入到 C3、根侧对象及原文加权读数的箭头。
+- **C0 收窄为原目标对应及尚未接上的精确质量差。** 现有局部包含值得复用；仍要证明它比较的两份区域、归一化和标签确实是原目标需要的那些对象。标签并集的包含不自动给出逐标签平均的结论。
+- **C1 仅计算实际系数。** 先复用迹对偶/不同理想/SNF 定理，再核算实际 q 基在实际 theta 生成元中的系数。一般工具已经存在；目标相关的系数整性仍不能假设。
+
+已有 `coord/ROUTE-A-REUSE.md` 与 `coord/REUSE-AUDIT-HULL.md` 还记录了源 q 读数、HDD 高秩行列式等供体和对象差异。它们应作为后续查找入口，本轮没有把其中未逐项重核的记录升级成当前版本的证明验收。
+
+### 4. 对“是否重复安排”的最终说明
+
+**存在需要缩减的任务描述；不能回答“已经全查过，保证无重复”。** 本节已把确认有供体的基础步骤改为复用或接入。上方 Lead 的任务归属保持，旧记录不删除；本 chat 没有向其他 chat 发出新任务。
+
+后续从本建议提取具体证明任务时，记录“精确消费者目标—现有供体声明—对象/假设差异—最小剩余证明”。若供体完整覆盖目标，任务就是调用和验证；检索未找到则记录“本轮未找到”，不声称全仓不存在。仍以无额外困难假设地完成原目标为验收标准。
+
+本轮 `statement_compiles` / `proof_body_checked` / `kernel_closed` / `target_accepted` 均为 NOT_RUN；源码阅读及 olean 存在性不替代构建和语义验收。
+
+### 5. 用户补充的全仓索引：D:/lean/iut-audit-20261113
+
+已按用户补充查阅 [PROGRESS-AUDIT.md](D:/lean/iut-audit-20261113/PROGRESS-AUDIT.md)、[R29-HANDOFF-EXECUTION.md](D:/lean/iut-audit-20261113/R29-HANDOFF-EXECUTION.md)，并定向检索 sections 的文件/声明清单。该目录确有帮助：它覆盖的文件范围比上一轮直接源核对更广。其自述方法是“文件清单 + 首部声明 + olean 存在性 + 文档引文”的静态登记，不能把读过该索引说成已逐一定理检查完整证明。
+
+索引再次确认上面的旧供体，并进一步定位到下列内容；本轮已回到当前源码核对：
+
+- `sections/07-iut-modules.md` 登记了实际张量域分解和迹对偶主库；`sections/06b-mzk1-keyfiles.tsv` 已登记 `Mzk1S1915ComparisonActual`。这些应进入具体任务的复用清单。
+- `sections/07b-tmp-sheaf-inventory.txt` 定位到 [RootNormalizedContainmentActual.lean](D:/lean/tmp/sheaf/xif/paper/RootNormalizedContainmentActual.lean)：不仅有一般包含，还已有 `rootHalfCoefficient_le_norm`、`rootNormScalingData`、`qPilotNormRegion_subset_rootNormHull` 及 `qPilotNormLog_eq`。因此对这个 **c_norm/(2l) 的 qVFam 块模型**，系数次序与 normalized scaling data 也不应重新安排构造。余下 log 比较仍带正质量/有限性；它是否对应原文系数与当前 S3137 目标要另证。
+- 同一索引中的 `BadPlacePaperRootThetaHullActual` 使用 `order(q)/(2l)` 的另一份系数，并保留 `PaperRootHullFormulaGap.data/hull_eq`。不能因前一个 normalized 模型有证明，就把这两个字段算作已提供。
+- `tmp/sheaf/n8/closure/EtaPAdicDetHaarScalingActual.lean` 虽有对应产物记录，其主结论仍输入 `MissingPAdicLatticeIndexDetBridge`；`EtaBasisChangeDetIndexActual` 的行列式等式仍输入实际矩阵关系和单位行列式证明。它们能复用代数步骤，不能据文件名或 olean 把一般 det/Haar 桥从剩余任务中删除。
+
+`R29-HANDOFF-EXECUTION.md` §10 已区分 S3137/Paper312Statement 的当前比较与旧的含零标签 hull；这一现成版本说明应直接继承，避免重复完成旧模型再当成目标进展。本轮没有重做其历史调查，也未把其历史构建记录当作当前构建。
+
+检索说明：03 分片的部分 Markdown/TSV 含 NUL，普通 `rg` 会提示停止按文本搜索；本轮相关查找已用 `rg -a` 补查。因此对索引中未命中的名字，不作“仓库没有”的结论。
+<!-- END P7-REUSE-CORRECTION-20261113 -->
