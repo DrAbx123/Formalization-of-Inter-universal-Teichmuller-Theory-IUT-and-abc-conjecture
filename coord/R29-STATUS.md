@@ -1492,3 +1492,5 @@
 - 14:52：桥 2 :45 稳健证法发 mainline：`Submodule.map` carrier **就是 image**（Map.lean:53 map_coe rfl），用 `le_antisymm`：LHS→map_coe→subset_span；RHS→span_le→image⊆map→map_coe→⟨y,hy,rfl⟩；不依赖 change/congr。:85 已按 `rw [← Algebra.smul_def]` 修。shehdd 4 official green（CountSideMaxIdeal/SpanGeneratorValuationMaxIdeal/C17NativeBaseResidueOne/C17NativeBadResidueFieldGap）+2 新 proof；lattice 5 pending 首错批量修。
 
 - 14:56：新 green：`Mzk1S3139FmodEmbeddingActual`（19:46:54Z，A5 residual ③ Fmod embedding 进展）、`Mzk1P1R21BridgeMaxIdealActual`（19:39:40Z）、`Mzk1P1R21BridgeMaxIdealCountActual`（19:38:17Z）、`Mzk1P3CanonicalEqualityObstructionActual`（19:37:59Z）、`Mzk1C17NativeBaseResidueOneActual`（19:37:58Z）、`Mzk1C17NativeBadResidueFieldGapActual`（19:37:58Z）。桥 2 尾部已按 le_antisymm+map_coe 稳健证法修改，19:45:56 重编。
+
+- 15:02：桥 2 最新两错：`:47 Submodule.map_coe at hx` 改 `Submodule.mem_map`（Map.lean:90）；`:83 Algebra.smul_def` 不匹配因 `↑c` 是 Subring coercion，先 `change (algebraMap LocalRing LocalField c) * pi ∈ span{pi}` 再 `← Algebra.smul_def` + smul_mem。stepxi A5 `Mzk1S3139FmodEmbeddingActual` GREEN（19:46:54Z）；lattice BlockAlignmentCard/BlockProductAlignmentObstruction green 19:47。
