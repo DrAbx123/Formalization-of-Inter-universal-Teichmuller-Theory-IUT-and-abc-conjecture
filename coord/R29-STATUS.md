@@ -646,3 +646,5 @@
 - 20:05：abc #1 关键思路 relay：closedBall(p^{-s})=p^{⌈s⌉}·O ⇒ ball 质量 = p^{-⌈s⌉}·μ(O)（无需 rpow，用整数 scaling + Int.ceil；d 维加 [L:Q_p] 因子）；FLT RestrictedProduct/Equiv+TopologicalSpace+FiniteAdeleRing 三文件 retouch 触发 #2 链。
 
 - 20:07：FLT RestrictedProduct/Equiv、TopologicalSpace、FiniteAdeleRing 此前不在 watch list（降红时移除）→ 已加回（404 项）并 retouch；Equiv:620 已修 dif_neg。qpilot #2 链等 watchdog 依次编。
+
+- 20:08：FiniteAdeleRing 正确路径 = FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean（已加名单）；FLT 链 404 项，等 Equiv→TopologicalSpace→FiniteAdeleRing。
