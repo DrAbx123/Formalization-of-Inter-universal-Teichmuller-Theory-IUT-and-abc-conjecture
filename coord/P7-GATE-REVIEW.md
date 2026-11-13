@@ -554,3 +554,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   2. `NativeBaseResidueFieldEquivInput T`、`QVFamResidueFieldEquivInput T`：C17 条件形式 green，实际实例未构造。
   3. height 输入 `ResNormDegreeGap T`：B5 evidence 可在上述两个 residue 输入下给出；paper carrier IQ / (Ob3-3) 仍 interface-only（det/hull 恒等式 green，语义识别未证）。
 - **边界**：B5Index 层收口≠3.12 已证；comparison 与 residue/carrier 语义仍是 3.12 主缺口。
+
+
+### 20.26 新 GREEN：hull qhat scaling、A2 QReadout/RootBase（2026-11-14 23:31）
+- **`Mzk1P0QHatHaarScalingActual` GREEN 23:31:02（105s）**：hull 侧无条件 scaling（`qhatHaarScaling_unconditional`、`qhat_signed_readout_eq_log_norm` 等）正式 official；root `QhatHaarScalingReuse` 23:15:02 也 green，双供体可用。
+- **`Mzk1P2QReadoutUnconditionalActual` GREEN 23:31:02（105s）**、**`Mzk1P2QHatNormRootBaseActual` GREEN 23:31:02（105s）**：A2 的 QReadout/RootBase 件 official；A2 仍以 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1` 精确条件等价为准，不宣称 normalized=adic 无条件。
+- 下一步：hull 用 scaling 收 `Correspondence`/最终 signed `Q≤Θ`；abc 报告 A2 最终条件清单；mainline 等 `Cor312B5IndexChain` 编。
