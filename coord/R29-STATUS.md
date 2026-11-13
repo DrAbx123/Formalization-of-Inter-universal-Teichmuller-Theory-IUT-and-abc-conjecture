@@ -1743,3 +1743,5 @@
 - 03:25：**hull 新文件 `Mzk1P0QHatHaarScalingActual`（待编）**：用 S865 `rootHaarFactor_normPow_actual` + `rootHaarFactor_eq_ratio` 直接证**无条件** `qhatHaarScaling : μ(c0QLattice_b)=ofReal(‖qhat_b‖^{d_b})·μ(O_b)`；Correspondence 已加 `qhatHaarScaling_actual` + `c0ProductQ_normalizedLog_eq_sum_qhat_actual`（无条件 scaling，仅 hQ/hO positivity）。若绿，#1 主缺口闭合；已让 hull 紧接 paper q 读数（−|log q|）与 theta readout 的锚定形式。
 
 - 03:30：qpilot 完成 Box readout 抽象 + S1915 instantiation 两源文件（`Mzk1IutIVProp14iiiBoxConsumerActual` 重写 `BoxReadout`；新 `Mzk1BoxReadoutS1915Actual`：`S1915BoxConsumer`/`boxReadoutOfS1915`/`s1915A0_le_box_of_bridge`/`s1902TensorCarrierGap`），等新 batch；bridge 显式条件不硬证。qhat scaling/correspondence olean 仍 False，等编。
+
+- 03:35：`Mzk1P0QHatNormExponentActual`（abc A2 donor）编译挂死：lean 06:33:46→06:40+，CPU 390s/RSS 4.9GB，阻塞整批；已 kill pid 32780。已让 abc 加 maxHeartbeats、改 `c0QHat_eq_q` 的 rw 为 `congrArg norm` term 证法，必要时拆文件；A2 两小文件仍按计划。
