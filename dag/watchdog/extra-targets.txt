@@ -930,4 +930,12 @@ tmp/sheaf/xif/paper/Mzk1P1R21BridgeMaxIdealViaSpanActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBLocalThirdActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AlignmentNecessaryConditionActual.lean
 tmp/sheaf/xif/paper/Mzk1P3DetHaarScaleConsumerActual.lean
-tmp/sheaf/xif/paper/Mathlib436Port/AbsNorm436Port.lean\n
+tmp/sheaf/xif/paper/Mzk1SaturationIndexDataActual.lean
+tmp/sheaf/xif/paper/Mzk1A8EvalFamilyActual.lean
+tmp/sheaf/xif/paper/Mzk1A8BadResidueLabelActual.lean
+tmp/sheaf/xif/paper/Mathlib436Port/AbsNorm436Port.lean
+tmp/sheaf/xif/paper/Mzk1B5ResidueNormPowActual.lean
+tmp/sheaf/xif/paper/Mzk1A1LatticeInverseActual.lean
+tmp/sheaf/xif/paper/Mzk1A8BadRationalResidueBridgeActual.lean
+
+tmp/sheaf/xif/paper/Mzk1PFreeUnitMassActual.lean
