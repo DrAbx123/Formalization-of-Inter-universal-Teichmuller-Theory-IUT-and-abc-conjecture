@@ -1767,3 +1767,5 @@
 - 04:25：watchdog 在 22:56:28 batch 后停滞（lean=0、log 不更新、heartbeat 06:53），已 kill PID 13900、清 lock、重启（新 job pwsh-0b4e9c3f0a93420d，PID 33016），23:00:06 恢复新 batch，开始编 `QhatHaarScalingReuse`/`P14iiActual`/`WeightAlignment`/`SignedReadoutFinal` 等。用户问棘手程度：真正棘手=Ind1 源端连续 β_a（DPrimeStrip 抽象层缺拓扑/整数单位/isoMon，源端未找到无条件 inhabitant）；S1902 实际 packet signed readout 链次之（但 StepVAssembly hull 供体已绿，主要是 index/权重运输）；qhat scaling/#8/三桥/A2 等属编译或 API。
 
 - 04:30：巡检：watchdog 重启后 11 lean 在跑、log 07:00:52；已派 hull（四件 #1 定理 official 后写最终锚定 Q≤Θ consumer）、qpilot（Box actual packet 继续）、shehdd（Gamma/torsion/#C）、lattice（P14ii/IndexCard）、stepxi（源端 β_a 或 Φmax 定义+精确缺口）。
+
+- 04:35：**新 green `Mzk1A1SignedReadoutProductActual` 23:02:24（138s）**：#1 product 级 signed 收口——`productQ_normalizedLog_eq_sum_a1LocalQLog`、`a1LocalQLog_eq_degree_log_radius_sub_degree_delta`、`sum_a1LocalQLog_eq_degree_log_radius_sub_totalDelta`、`totalDelta_nonneg`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、**`productQ_normalizedLog_le_closedForm_sub_one`**。已让 hull 用无条件 qhat scaling 展开成 signed q 读数（−|log q|）并合最终 Q≤Θ。lattice IndexCard 补 MeasurableSpace K；Gamma 仍 olean 时间差。
