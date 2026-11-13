@@ -698,3 +698,5 @@
 - 19:45：lattice #5 L4 条件构造 ThetaVScaleOffsetGeneral（scale=1/offset=-k*qLogSum + closed form 条件）入队（425 项）；Equiv 在 change 后补 dsimp only 再 rw dif_neg。
 
 - 19:52：stepxi missing7 行2/7 构造（P7MissingRowsWitness）入队（426 项）；Equiv change 改 beta-reduced 直接 if 形式 + rw。
+
+- 19:55：Equiv right_inv 现只需 `change` + `rw [dif_neg hi]`（后续 hsub/congrArg 报 No goals ⇒ 目标已闭合）；已删多余两行并 retouch。
