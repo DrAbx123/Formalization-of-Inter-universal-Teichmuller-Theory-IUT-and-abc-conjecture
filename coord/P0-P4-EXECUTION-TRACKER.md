@@ -199,3 +199,23 @@
 - V-index：`NativePlaces`（NumberFieldPlace K 子类型）vs `FinitePrimePlace 2 7`（有理素数标签）类型/语义不同，树内无映射；只能作为 paper input 字段 `VIndexDatum` 或换 X 的 V 形式。
 - theta：factor 恒等式已有；精确缺失 = L tensor block（concretePlaces/concreteTuple over Fmod）↔ native block（qVFamTensorPlaces/Tuple over F）的 landing 等价 + haar scale。
 - Lead 方向：从 T 重建 L-side actual 对象（同 F/places/tuple），landing 按构造 rfl；旧 concrete-donor L-side 保留 historical。
+
+## 2026-11-14 04:20 现状（R30 前快照）
+
+### 已真证（本轮新增，节选）
+- P0: `Mzk1P0NativeLSideActual`（native L-side 重建）、`P0NativeThetaBridgeProof`、`P0NativeQReadoutBridge`、`P0NativeReadoutPair`、`P0NativeS3137Final`、`P0NativeHaarScale`、`NativeQDonor`（q 桥按构造）、`P0PaperInput`、`P0SourceDataBridge`。
+- P1: `principalValuation_proved` + **`principalValuationStatement_proved`（非条件）**、`uniformizerData_proved`、`valuation_uniformizer_eq_neg_one`、`countAdd_proved`、`localizedLine_isPrincipal_actual`（已真证，待 LFI official 重编）、`localizedLine_ne_bot_of_ne_zero`、`localGeneratorUncond_ne_zero`。
+- P2: R1.3 `p2RExact_nonneg`、det 系数、`p2QHat_eq_lambda_mul_coefficient`、`p2NativeBlock_logVolume_eq_nativeThetaReadout`、det-Haar 三真证（`p2_map_coordLattice_eq_scalar_smul`/`p2_scalar_eq_lattice_image`/`p2_lattice_preserving_scalar_one`）、`nativeProductEquiv_nativeBlock`、`weightedDetFinal_nonpos`、`P2UnitOperation`。
+- P3: `log_nativeMassL/Q`、`p2R13Exact_eq_sum_blockTerms`、`R37R13NativeMassIdentification_iff_coefficient`、净量/负例、`TensorCoreWitness`（lattice 的 P3 core witness）。
+- #10: `NativeBadPrimeIff`（`nativeBadPrimeData_iff_moduliFixed`）、`TensorCoreWitness`、`actualUnitMassENN=∏c_b`、normalized 条件版。
+
+### 剩余精确缺口（按优先级）
+1. **P1 IdealLocalizedCount**：`IdealMapMaximalBridge` 已写 proof attempt（上游 `IdealMapCompletionIdealActual` 需先绿，缺 `open PaperDeterminantLogVolume`）；随后 count 幂/generator/R21Bridge。
+2. **P1 residue-one**：`localResidueDegree (nativeBaseSectionPlace T b)=1`（tame/split multiplicative paper 输入或从 SourceReductionClause 推）。
+3. **P2 GAP-DET-HAAR**：SNF split + 三因子组装（其余步骤已真证）；`P2QNativeReadingGap` 符号修正后可证（abc 在修）。
+4. **P2 arch**：`P2ArchLogSourceIdentification`（actual global f 的 arch log = p2WeightedDetLog；exact iff 已有）。
+5. **P3**：`R37R13NativeMassIdentification`（依赖 tensor/product、q 读数、det-Haar 三供体）。
+6. **P0.5**：`ThetaReadoutBridge`/`VIndexBridge`（V 作为 paper 输入字段 `VIndexDatum`；theta 由 native L-side 重编按构造 rfl，待链）。
+7. **#10**：blockEquiv inhabitant = `BlockProductAlignmentData`（现有必要维度条件 `factorEquiv_finrank_eq`；W.E=base completion vs rootNormedExtension 的维度/同构字段）；`unitMass=1` 归一化（用 normalized scalar + det-Haar）。
+8. **旧 C3**：所有 C3-typed 文件 vacuous/historical（S1429 空类型）；P0 native/论文输入包为有效锚点。
+9. **验收层**：abc 端到端未闭合；target_accepted/独立审查/comparator NOT_RUN；P7 NOT PASSED。

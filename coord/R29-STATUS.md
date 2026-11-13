@@ -1256,3 +1256,5 @@
 - 04:12：gate §41：**extra 800 = clean 618 + red 69 + inprog 30 + oleonly 20 + missing 63**（重启后队列正常消费）。新 green P0NativeS3137Final/P0NativeQReadoutBridge（17:10:58Z）。red 分类 relay：abc=QNativeReadingCorrected（Mathlib olean 环境+Ambiguous term）；stage4=P3ReferenceMass 的 universe/Function expected；stepxi=norm 链依赖顺序（QThetaComponent→NormCompat→CommonPrimeNorm）。
 
 - 04:16：stepxi 报 `.olean.private` 读失败；Lead 核实=环境/并发 I/O（toolchain 2431 个 private、mathlib 有对应；watchdog 单实例 pid 2472/lock 一致、16 并发），watchdog 有 RETRY TRANSIENT，故非证明错。lattice 里程碑 proof=4（TensorCoreWitness + NativeBadPrimeIff 等 green）；BlockProductAlignmentData 结构方向正确，下一步试 inhabitant 构造/逐因子缺失。
+
+- 04:22：更新 P0-P4 tracker 的 R30 前快照：真证清单（P0 native L-side/theta-q bridge/S3137；P1 principalValuationStatement 非条件/localizedLine IsPrincipal/ne_bot；P2 R1.3/det/det-Haar 三真证/nativeProductEquiv；P3 mass 表达式/P3 core witness；#10 badPrime iff/TensorCoreWitness）+ 剩余精确缺口 9 条（P1 IdealCount/residue-one；P2 det-Haar SNF/q reading/arch global f；P3 R37R13；P0.5 theta/V；#10 blockEquiv/unitMass；验收层 NOT_RUN）。
