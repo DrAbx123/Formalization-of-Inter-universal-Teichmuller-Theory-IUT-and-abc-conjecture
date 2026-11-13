@@ -818,3 +818,5 @@
 - 22:50：abc Route A 收尾（5 文件全 DONE，唯一剩余 transport inhabitant）。已给 transport 具体入口：用 hull `Mzk1C3DKeyMapActual`/`Mzk1C3DDonorProjectionActual`（tensorIndex/PlaceIndex/Places/Tuple = donor D 的实际字段，全 rfl）作为分块识别右端，构造 `C3.tensorIndex ↔ Bad` 显式对应 + 局部域识别（CommonPrimeCompletion vs rootNormedExtension），剩余 Region/Haar apply 列精确缺口。
 
 - 22:53：stage4 P7ThetaDegC3（c3TensorBlockDimension_eq_sum_fieldProduct，域分解⇒block:Q_p=Σ实际local degree）入队（458 项）。
+
+- 22:56：qpilot Ob33DetLineFromBadPrimeSource（实际 bad-prime source 实例化 det line/data/degree + routeB_gap_iff_badPrimeSource_identification 等价 + 条件闭合）入队（459 项）。
