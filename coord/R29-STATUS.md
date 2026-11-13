@@ -962,3 +962,5 @@
 - 21:44：**Cancel GREEN（13:39:28Z，51s）——#7 (a)-(d) 全部收口**（域分解/求和/local degree/权重/归一化相消；p-scaling 引用既有 green；剩 B4 image bridge GAP）。mainline FractionalExpansionBridge 已用 `NumberField.FinitePlace.equivHeightOneSpectrum`+`finsum_comp_equiv` 升级（剩 hsumH/hsumO finite support）；新 Uncond 文件（Associates.finite_factors 证 HasFiniteSupport ⇒ FractionalLogVolumeExpansion 无条件）入队（486 项）。
 
 - 21:46：**#7 THETA-DEG 收口**——Cancel GREEN 13:39:28Z（51s），(a)-(d) 全部 DONE（B2/C3/Weight/Cancel 四文件）；plan/GATE 由 stage4 更新（唯一剩余 B4 canonical image bridge 精确 GAP，非 #7 内容）。
+
+- 21:55：`Mzk1HaarStrictActual` 的 import 子树（HaarStrictProof/HaarAnnulusCylinder/Cor312UnconditionalStrictAcceptance/AnnulusMeasurePositive/AnnulusStrictConsumer）均不在 watch 名单、无 green 逆向依赖 ⇒ 从 extra-targets 移除（源码保留，DEFERRED）；hull 写 HAARSTRICT-RED-GAP.md + AUDIT_LEDGER。gate red 将只剩 B5FinsumSummable（qpilot 修）。
