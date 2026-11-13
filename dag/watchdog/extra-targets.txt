@@ -416,3 +416,8 @@ tmp/sheaf/xif/paper/Mzk1P3FiniteFLTActual.lean
 tmp/sheaf/xif/paper/Mzk1C3BlockMeasureActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FinalAssemblyActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchAbcHookActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBPaperVIdentityActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBPaperVDischargeActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBPaperVDictionaryActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVScaleOffsetIdentityActual.lean
+tmp/sheaf/xif/paper/Mzk1P7MultiradialWitnessActual.lean
