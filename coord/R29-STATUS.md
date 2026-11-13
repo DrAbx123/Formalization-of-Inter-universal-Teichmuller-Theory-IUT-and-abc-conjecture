@@ -1086,3 +1086,5 @@
 - 23:15：**S3137LReadout GREEN**（hull 15:01:52Z，55s）。P0LPaperInstance 首错：LQThetaSourceArrow 需 import/open S3137LReadoutActual；Invalid arg I。P0NativeSourceCore 剩 :34 Function expected/:51 instance stuck/:52 Type mismatch，relay hull 逐行修。
 
 - 23:18：唤醒 stage4 修 P3TensorCore（P0 native consumer 的 core；首错多为 import/instance 不匹配）。
+
+- 23:22：派 abc = P2 R1.3 相对质量差非负（qhat=λc ⇒ R_exact=−Σd_b log‖c_b‖≥0；检查与 c0RemainderV2 差异，不假设相等）；qpilot = P2/路线二 det 系数（纯张量 ∏c_b norm≤1、log 求和、与 R1.3 对齐）。
