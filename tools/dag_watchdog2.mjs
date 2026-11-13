@@ -17,7 +17,7 @@ process.on('uncaughtException',(e)=>{ try{ appendFileSync('D:/lean/dag/watchdog/
 process.on('unhandledRejection',(e)=>{ try{ appendFileSync('D:/lean/dag/watchdog/crash.log', new Date().toISOString()+' REJECT '+(e&&e.stack||e)+String.fromCharCode(10)); }catch{} });
 const MAX=Number(process.env.DAG_MAX||12); const ONCE=process.env.DAG_ONCE==='1'; const CYCLE=Number(process.env.DAG_CYCLE_MS||5000); const GRAPH_MS=Number(process.env.DAG_GRAPH_MS||3600000);
 const RESULTS=join(ROOT,'tmp','xif_guarded_results.log'); const LOG=join(OUT,'watchdog.log'); const STATE=join(OUT,'state.json');
-const log=(s)=>{ const line=new Date().toISOString()+' '+s; appendFileSync(LOG,line+'\n'); console.log(line); };
+const log=(s)=>{ const line=new Date().toISOString()+' '+s; for(let i=0;i<8;i++){ try{ appendFileSync(LOG,line+'\n'); break; }catch(e){ if(i===7){ try{ appendFileSync(LOG+'.fallback',line+' ('+(e&&e.code)+')\n'); }catch{} } else { const t=Date.now(); while(Date.now()-t<25){} } } } console.log(line); };
 const state=()=>{ try{ return JSON.parse(readFileSync(STATE,'utf8')); }catch{ return {}; } }; const saveState=(s)=>writeFileSync(STATE,JSON.stringify(s,null,2));
 const runTool=(s)=>{ const r=spawnSync(process.execPath,[s],{cwd:ROOT,encoding:'utf8',maxBuffer:1024*1024*64}); if(r.status!==0) log('TOOL FAIL '+s+' code='+r.status+' '+(r.stderr||'').slice(0,300)); return r.status===0; };
 const oleanTarget=(p)=>{ const ported=ROOT+'/tmp/external/ported/';
