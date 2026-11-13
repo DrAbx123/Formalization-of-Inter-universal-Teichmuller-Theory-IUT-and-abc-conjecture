@@ -1196,3 +1196,5 @@
 
 - 02:30：**P1 里程碑**：`Mzk1P1PrincipalValuationProofActual` DONE 16:25:27Z（40s）——`principalValuationStatement_proved : PrincipalValuationStatement` **整体关闭（非条件）**。P1 剩 IdealLocalizedCount + generator 构造；已唤醒 mainline 攻 IdealLocalizedCount/R21Bridge，qpilot 落 det-Haar 短路线 `Mzk1P2DetHaarProofActual`。
 - gate 快照：extra 589 clean 561 red 5（P1DVRPrincipalLemma/P0LQThetaComponent/P0LRegionNonempty/NativeUnitMassNormalizedFactor/P3MassIdentification，均 WIP）+ inprog 2 + oleonly 20 + missing 1。
+
+- 02:36：stepxi P0-L 再攻：③ index green（LIndexNonempty 16:11:21Z）；region zero 缺 `finitePadicTensorTprod (fun _=>0)=0`（本质需 Nonempty：空 index 时 tprod=1≠0）；① edist→real norm + norm-instance。Lead 给精确修法：用 tensorIndex_nonempty 提供 Nonempty 再用 map_zero；isometry x 0 + map_zero + dist_eq_norm；dsimp [CommonPrimeCompletion] 统一实例。
