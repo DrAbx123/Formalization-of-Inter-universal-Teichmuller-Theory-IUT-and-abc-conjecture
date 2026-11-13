@@ -102,3 +102,27 @@ qThetaPilotLogVolumeComparison C3 P
   mergedLogDegree_B5 / mergedLogDegree_B5_nonneg（finite+arch 合并声明接上 PlaceB5Target）。
 - 剩余内容输入：LocalHaarScalingLaw（Haar scaling）、LocalPrincipalGenerator/CountLocalizationBridge
   （DVR 主理想生成元）、参照线丛 O 与非零见证 hH/hO（paper 除子识别后消去）。
+
+补充：Mzk1DetLinePlaceB5MergedActual — DONE 60s@13:03:49Z，olean=True。
+
+### 6.2 B5 展开与 arch 汇总（2026-11-13 后续 3）
+
+- Mzk1B5RelativeDetLogExpansionActual — DONE 55s@13:25:05Z，olean=True：
+  - FractionalLogVolumeExpansion（named input：fractional ideal log 展开）；
+  - relativeDetLog_eq_finsum_sub_of_expansions：log D(H,O) 写成两个有限位和的差；
+  - relativeDetLog_eq_single_finsum：给定 hsub（finsum 次可分配性）得单和形式；
+  - relativeDetLog_add_archMetricWeight_eq：+ archDetMetricWeight_eq_neg_archimedeanLogNorm 得 B5 arch 汇总（条件）。
+- Mzk1B5CountLocalValuationBridgeActual — DONE 33s@13:24:42Z，olean=True：
+  LocalNormGeneratorBridge、CountValuationBridge、placeLogVolume_eq_count_mul_log_residueNormBase、
+  placeLogVolume_eq_localLogVolume（含 residue-degree-one 等式 hchar）。
+- 剩余可关闭项：FractionalLogVolumeExpansion（等 qpilot Mzk1B5FractionalAbsNormFormulaActual +
+  Mzk1B5FractionalCountNumDenActual/count_eq_count_num_sub_count_den green 后替换）；
+  hsub（用 Summable + finsum_sub_distrib，支撑有限性来自 FractionalIdeal.finite_factors）；
+  LocalNormGeneratorBridge/CountValuationBridge 与 residue-one（GAP-PC-RESDEG）。
+
+## 7. #8 集成核对：margin7Rows vs missing7ToGap（2026-11-13 13:30Z）
+
+- 逐行比对 `Mzk1P7ContractMapActual.missing7ToGap`（7 行）与 `Mzk1P7ContractMarginConsumerActual.margin7Rows`：**item 名称、顺序完全一致**；gap code 仅第 5 行原不一致（margin7Rows 缺 `GAP-` 前缀/空格），已修正为 `"GAP-P7-THETA-V / GAP-P7-THETA-D / GAP-P7-THETA-DEG"`。
+- **Bridge green**：`tmp/sheaf/xif/paper/Mzk1P7ContractRowsBridgeActual.lean` **DONE 13:29:25Z（54s，olean=True）**：`margin7Rows_items_eq_missing7ToGap`、`margin7Rows_codes_eq_missing7ToGap`、`margin7Rows_length_eq_missing7ToGap`（全 rfl）。
+- **mainline 消费入口（green）**：`Mzk1P7ContractMarginConsumerActual`（DONE 13:14:31Z）：`comparison_of_margin_one`、`margin_one_theta_sub`、`p7_conditional_contract_of_margin_one`、`p7_conditional_contract_of_hullQDictionary`；用法示例：给 `hmargin : qPilotLogVolumeReading P + 1 ≤ thetaPilotHullLogVolumeReal C3`，调用 `p7_conditional_contract_of_margin_one C3 P hmargin` 得 `Cor312Conclusion (contractOfS3137Comparison C3 P (comparison_of_margin_one C3 P hmargin))`。
+- 状态：GAP-P7-CONTRACT 仍 **CONDITIONAL**；本次仅确认 7 行行码/顺序覆盖一致，rows 2–7 内容未变。

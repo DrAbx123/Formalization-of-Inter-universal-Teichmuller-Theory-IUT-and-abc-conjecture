@@ -330,3 +330,134 @@ End of P5 gate note.
 - `Mzk1C17UnramResidueBridgeActual`：**DONE 11:18:55Z（89s）**，含 `nativeBadLocalWeight_eq_one_of_unram_residue_bridge_agree`（不再需要 hagree）。
 - GAP-PC-WEIGHT 直接通道条件：FINITE + e=1 + f=1（AGREE 已关闭）。
 - 10 GAP-P7 codes 全部未 unconditional discharge；**P7 NOT PASSED**。
+
+## 32. 2026-11-13 21:14 巡检快照（478 项 gate 状态审计）
+
+- 扫描对象：`dag/watchdog/extra-targets.txt`（**478** 项）+ `dag/watchdog/watchdog.log` + 逐文件 per-log。
+- 判定规则：取每个 target 在 watchdog.log 的 **最新事件**；latest DONE 且 olean 存在 = clean DONE；latest FAIL = red；latest START/RETRY 无 terminal = in-progress；无 log 事件但 olean 存在 = ole-only/prebuilt；无 olean 且无 DONE = missing olean。
+- 当前快照：**clean DONE 451 + red FAIL 4 + in-progress 3 + ole-only/prebuilt 20 + missing olean 0 = 478**。
+- 与 §31 的差异：extra +61（417→478）；部分旧 red 已转 green，新增 P7/B5 文件进入重试/在编。
+- **P7 NOT PASSED**；10 个 GAP-P7 code 状态见 P7-GATE-REVIEW §13。
+
+### 32.1 red FAIL（4 项，均无 olean）
+
+| target | 最新 FAIL | 首错归类 |
+|---|---|---|
+| `tmp/sheaf/xif/paper/Mzk1P7ThetaDegCancelActual.lean` | 2026-11-13T13:10:11.603Z | 依赖时序：import `Mzk1P7ThetaDegWeightActual` olean 不存在（Weight 正在重编） |
+| `tmp/sheaf/xif/paper/Mzk1B5CountLocalValuationBridgeActual.lean` | 2026-11-13T13:10:39.757Z | 旧 API/交叉 lane：`residueNormBase` 未知、`k` 参数名失效、unsolved goals |
+| `tmp/sheaf/xif/paper/Mzk1B5RelativeDetLogExpansionActual.lean` | 2026-11-13T13:13:01.987Z | 语法/旧 API：`:11` unexpected identifier、`residueNormBase`/`finsum_sub` 未知、`k` 参数失效 |
+| `tmp/sheaf/xif/paper/Mzk1B5FractionalAbsNormFormulaActual.lean` | 2026-11-13T13:12:30.515Z | 语法：`:52/:80` unexpected token `>` |
+
+### 32.2 in-progress（3 项，最新事件 START，无 terminal）
+
+| target | 最新 START |
+|---|---|
+| `tmp/sheaf/xif/paper/Mzk1HaarStrictActual.lean` | 2026-11-13T13:13:18.974Z |
+| `tmp/sheaf/xif/paper/Mzk1P7ContractMarginConsumerActual.lean` | 2026-11-13T13:13:18.963Z |
+| `tmp/sheaf/xif/paper/Mzk1P7ThetaDegWeightActual.lean` | 2026-11-13T13:13:18.952Z |
+
+### 32.3 ole-only/prebuilt（20 项，olean 存在但 watchdog.log 无当前 run 事件）
+
+These are pre-seeded imports/old built files; olean presence alone is not a current-run certification.
+
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPossibleImagesActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPossibleImageGeometryActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotProcessionActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPlaceComparisonActual.lean`
+- `tmp/sheaf/xif/paper/S778PaperQPilotHalfRegionActual.lean`
+- `tmp/sheaf/xif/paper/OrigXiFPaperQPilotObjectActual.lean`
+- `tmp/external/ported/flt/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Module/Submodule/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/LinearAlgebra/Countable.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/Ideal/Quotient/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/LocalRing/MaximalIdeal/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/Valuation/ValuationSubring.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/Group/Units.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/MulAction.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/Valued/WithZeroMulInt.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Bases.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Pi.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Hom.lean`
+
+### 32.4 clean DONE（451 项）
+
+- 最新事件为 `DONE EXIT=0` 且 olean 存在；逐项 olean 路径 `.lake/build/lib/lean/<target without .lean>.olean` 已核。
+- 其中 1 项在快照时 source mtime 略晚于 olean（`Mzk1P7ContractMarginConsumerActual`，最新 START 13:13:18Z）：按规则归 in-progress 而不计入 451；该文件正在重编。
+
+### 32.5 原因归类汇总
+
+- **依赖时序**：`Mzk1P7ThetaDegCancelActual`（Weight olean 缺失；Weight 在 in-progress）；`Mzk1P7ContractMarginConsumerActual` 正在重编。
+- **旧 API/namespace 漂移**：B5 `residueNormBase`/`finsum_sub`/`k` 参数名；P7ThetaDegWeight 旧 namespace/instance（当前 in-progress）。
+- **语法/令牌**：`Mzk1B5FractionalAbsNormFormulaActual`（`>` unexpected）；`Mzk1B5RelativeDetLogExpansionActual`（`:11` unexpected identifier）。
+- **已知 GAP**：P7 #5/#6/#9 的 GAP 已在 P7-GATE-REVIEW §13 标注 CONDITIONAL/DISCHARGED 结构化状态；本表只统计 build 状态，不把 GAP 当 red。
+- **旧文件/历史**：`HullDetObjectActual` 已判定 obsolete/DEFERRED（coord/HULLDET-OBJECT-RED-GAP.md）；若仍在 extra-targets 应移除。
+
+### 32.6 备注
+
+- watchdog 为 append-only，START/FAIL/DONE 混排；本表按时间戳取最新事件，不依赖 per-log 尾部旧错误。
+- 20 个 ole-only 项主要包括 `tmp/external/ported/flt/...` 的预置导入文件与 6 个旧 paper 文件；它们不是当前 gate 的 red，但也不是当前 run 的 clean certification。
+
+## 33. 2026-11-13 21:32 巡检快照（483 项 gate 状态审计）
+
+- 扫描对象：`dag/watchdog/extra-targets.txt`（**483** 项）+ `watchdog.log` + per-file logs。
+- 判定：latest DONE + olean = clean；latest FAIL = red；latest START/RETRY 无 terminal = in-progress；无 log 事件但 olean 存在 = ole-only/prebuilt。
+- 当前快照：**clean DONE 460 + red FAIL 2 + in-progress 1 + ole-only/prebuilt 20 + missing olean 0 = 483**。
+- 相比 §32（21:14）：extra +5（478→483）；Cancel 已从 red 进入重试（latest START 13:30:51Z）；`B5RelativeDetLogExpansion` 不再在名单/已转 green；新入 `B5FractionalExpansionBridge` 为 red。
+- **P7 NOT PASSED**；build 状态审计，未改 Lean。
+
+### 33.1 red FAIL（2，均无 olean）
+
+| target | 最新 FAIL | 首错归类 |
+|---|---|---|
+| `tmp/sheaf/xif/paper/Mzk1HaarStrictActual.lean` | 2026-11-13T13:26:16Z | 旧 API/证明：`:74` `max_le hz2` unify 失败；`:76` 参数类型不匹配；`:110` placeholder/unsolved goals |
+| `tmp/sheaf/xif/paper/Mzk1B5FractionalExpansionBridgeActual.lean` | 2026-11-13T13:30:36Z | 依赖/API：`:37` 未知常量 `FractionalIdeal.count_eq_count_num_sub_count_den`；`:66` rewrite pattern 不存在 |
+
+### 33.2 in-progress（1）
+
+| target | 最新 START | 说明 |
+|---|---|---|
+| `tmp/sheaf/xif/paper/Mzk1P7ThetaDegCancelActual.lean` | 2026-11-13T13:30:51Z | 依赖 `Mzk1P7ThetaDegWeightActual` olean；Weight 尚缺，Cancel 在重试队列 |
+
+### 33.3 ole-only/prebuilt（20，olean 存在但 watchdog.log 无当前 run 事件）
+
+非 red，但也不是当前 run 的 clean 认证；主要为旧 paper 文件与 FLT ported Mathlib 预置导入：
+
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPossibleImagesActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPossibleImageGeometryActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotProcessionActual.lean`
+- `tmp/sheaf/xif/paper/GlobalThetaPilotPlaceComparisonActual.lean`
+- `tmp/sheaf/xif/paper/S778PaperQPilotHalfRegionActual.lean`
+- `tmp/sheaf/xif/paper/OrigXiFPaperQPilotObjectActual.lean`
+- `tmp/external/ported/flt/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Module/Submodule/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/LinearAlgebra/Countable.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/Ideal/Quotient/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/LocalRing/MaximalIdeal/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/Valuation/ValuationSubring.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/Group/Units.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/MulAction.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/Valued/WithZeroMulInt.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Topology/Bases.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Pi.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean`
+- `tmp/external/ported/flt/FLT/Mathlib/Algebra/Algebra/Hom.lean`
+
+### 33.4 clean DONE（460）
+
+- latest 事件 `DONE EXIT=0` 且 olean 存在；计数按 target 去重。
+- 与 §32 的 451 相比 +9：新入 green 的 target 与部分 red 转绿；具体逐项见 watchdog.log 最新 DONE 事件。
+
+### 33.5 原因归类
+
+- **依赖时序**：`P7ThetaDegCancel`（Weight olean 缺失，Cancel 在 START 重试）。
+- **旧 API/证明漂移**：`HaarStrict`（`max_le`/参数/placeholder 链）；`B5FractionalExpansionBridge`（旧 `FractionalIdeal` 常量名 + rewrite pattern）。
+- **已知 GAP**：P7 #5/#6/#9 的结构化 CONDITIONAL/DISCHARGED 状态见 P7-GATE-REVIEW §13；build red 与 GAP 状态分开统计。
+- **历史/obsolete**：`HullDetObjectActual` 若仍在名单应按 `coord/HULLDET-OBJECT-RED-GAP.md` 移除/DEFERRED。
+
+### 33.6 备注
+
+- watchdog.log append-only；本表按时间戳取每个 target 最新事件，不读 per-file log 尾部旧错误（per-log 只用于归类首错）。
+- 快照后如有新 START/DONE，计数会变化；本表记录 21:32 CST 时刻。

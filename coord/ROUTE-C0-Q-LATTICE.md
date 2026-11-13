@@ -294,3 +294,64 @@ for an actual P, or = hBox F x for a global x whose components are D.
 There is no such map/equality in the tree; this is the second missing arrow.
 
 End of idele height note.
+## C0 research conclusion (audit-ready, signed convention)
+
+Actual constructions (all green):
+1. q-lattice/measure (V1/V2): finite/arch;
+2. definitional bad idele data: `C0GlobalIdeleData`;
+3. candidate idele height: `c0IdeleHeight` (nonnegative finite+arch sums);
+4. signed candidate: `c0SignedIdeleHeight = -c0IdeleHeight`;
+5. conditional hBox equality: `c0IdeleHeight_eq_hBox_of_components`, and
+   signed form `c0SignedIdeleHeight_eq_neg_hBox_of_components`.
+
+Only missing source arrows:
+1. `C0GlobalIdeleData` -> global element/idele readout (component
+   identification);
+2. readout -> actual `qPilotLogVolumeReading P` (S3137).
+
+### Signed convention (important)
+
+- `c0IdeleHeight D >= 0` is the unsigned height;
+- `c0SignedIdeleHeight D := -c0IdeleHeight D` is the signed log-volume;
+- S3137 `qPilotLogVolumeReading P = -|log q| <= 0`;
+- therefore the consistent readout interfaces are
+  `readout D = -hBox F x` (under component identification) and
+  `readout D = qPilotLogVolumeReading P`.
+  The earlier unsigned `readout D = hBox F x` is NOT used: it would conflict
+  with the nonpositive q-pilot reading except at zero.
+
+`C0ReadoutIdentification` (file Mzk1C0ReadoutIdentificationActual.lean)
+GREEN DONE 2026-11-13T13:09:50.947Z (signed form, 60s; olean 101264 B);
+records exactly the second arrow:
+```
+readout : C0GlobalIdeleData T -> Real
+readout_eq_neg_hBox : C0HeightComponents T D x -> readout D = -hBox F x
+readout_eq_qPilot : readout D = qPilotLogVolumeReading P
+```
+with no inhabitant constructed.
+
+### Exact paper hBox component fields needed
+
+paper definitions (ArithmeticDivisorDegree.lean:1171,1220-1228):
+```
+hTerm v x = log (max (absValAt F v x) 1)
+hNon x = heightWeight * sum_{v in nonSupportFinset x} hTerm (finite v) x
+hArc x = heightWeight * sum_w hTerm (infinite w) x
+hBox x = hNon x + hArc x
+```
+Sufficient data fields for `C0HeightComponents T D x`:
+1. `x : T.arithmetic.F`;
+2. `finite_norm : forall b, norm (D.bad b) = adicAbv F ((nativeBadLift T).lift b) x`
+   plus `nonSupportFinset x ⊆ c0BadSupport T`;
+3. `arch_norm : forall w, norm ((D.arch w : w.Completion)) =
+   absValAt F (infinite w) x`.
+`C0HeightComponents` currently records the sum-level equalities
+`finite_eq : c0IdeleFiniteHeight D = hNon x`,
+`arch_eq : c0IdeleArchHeight D = hArc x`; these are the exact fields still
+to be discharged from the norm/support data.
+
+C0 route status: finite lattice/idele/height all actually constructed;
+signed conditional hBox equality green; readout exact interface (signed)
+written.  No comparison input, no axiom/sorry.
+
+End of C0 conclusion.

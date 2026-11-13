@@ -163,3 +163,35 @@ would require the actual analytic toRoot/Kummer source, which is the GAP.  Until
 then P5 must not be cited as canonical-target or Paper312 progress.
 
 End of P5 interface note.
+## 22. P7 GAP status snapshot (2026-11-13; not canonical progress unless stated)
+
+This section is a pointer for P7 work; only #1 is on the canonical S3137/Paper312
+comparison path, and even #1 is conditional on `HullQDictionary`.
+
+- #1 GAP-P7-GENERAL-CMP: **CONDITIONAL(HullQDictionary)**, conditional version
+  green 2026-11-13T12:50:24Z (`Mzk1P7ComparisonConditionalFinalActual`, ole
+  77,640 B).  `HullQDictionary` is the only named input (two scalar fields
+  theta_eq and q_eq_sum); `comparison_of_hullQDictionary`, margin-1 form and
+  `paperGap_of_hullQDictionary` are green.  Conditions outside the dictionary
+  are still OPEN: qVFamily↔C3 q same-source, ∏qVFamNormRatio=1, place-sum
+  identity, C3↔S1902 theta mass alignment.  Do not cite this as canonical
+  Paper312 progress without the dictionary.
+- #4 GAP-P7-MULTIRADIAL: **PARTIAL/OPEN**.  Finite Q(i)-at-5 model production
+  green; general conditional bridge green; C3 actual Kummer/Theta source
+  candidate extracted 2026-11-13T13:19:40Z (`Mzk1P7MultiradialProductionActual`,
+  ole 83,552 B) with actual kummerClass/rootChange/thetaPacket/tensor fields.
+  Actual production `n,oR_LGP` + processions/log-Kummer/ThetaMuLGP/IPL-SHE-APT
+  /Ind laws remain missing (`MultiradialProductionMissing`, no inhabitant).
+  This is NOT canonical-target progress.
+- #10 GAP-NORM-ARCH-C-K: **CONDITIONAL/PARTIAL**.  Formula layer green
+  (`Mzk1NormArchC3HaarScaleFormulaActual`, ole 115,824 B), general consumer
+  green, actual Hermitian metric+compatibility green; citizen checklist green
+  (`Mzk1C3S1902BlockEquivDataActual`, DONE 13:28:16Z, ole 33,584 B:
+  `C3S1902BlockEquivData` and `C3S1902UnitMassData`).  Inhabitants for
+  blockEquiv/unitMass are still missing; #10 only affects arch normalization/abc
+  docking, not HULL-UB finite-place bounds.
+
+Cross-reference: coord/P7-GATE-REVIEW.md rows #1/#4/#10,
+coord/P7-GAP-ATTACK-PLAN.md rows #1/#4/#10, coord/P7-MULTIRADIAL-GAP.md.
+
+End of P7 status snapshot.
