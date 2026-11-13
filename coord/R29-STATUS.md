@@ -1745,3 +1745,5 @@
 - 03:30：qpilot 完成 Box readout 抽象 + S1915 instantiation 两源文件（`Mzk1IutIVProp14iiiBoxConsumerActual` 重写 `BoxReadout`；新 `Mzk1BoxReadoutS1915Actual`：`S1915BoxConsumer`/`boxReadoutOfS1915`/`s1915A0_le_box_of_bridge`/`s1902TensorCarrierGap`），等新 batch；bridge 显式条件不硬证。qhat scaling/correspondence olean 仍 False，等编。
 
 - 03:35：`Mzk1P0QHatNormExponentActual`（abc A2 donor）编译挂死：lean 06:33:46→06:40+，CPU 390s/RSS 4.9GB，阻塞整批；已 kill pid 32780。已让 abc 加 maxHeartbeats、改 `c0QHat_eq_q` 的 rw 为 `congrArg norm` term 证法，必要时拆文件；A2 两小文件仍按计划。
+
+- 03:40：用户指出一般 Ind1 正确方向：从原始单位群模挠作用经对数/有理化得保 log-lattice 线性作用，不能任意同维等价。已让 stepxi 按真实供体实现：`integralUnitMap`+`unitLog_map`+`map_mem_integralLogShell` → `unitLogPerfectionEquiv`（ℚ）→ `ContinuousRationalPadicScalars`（ℚ_p）→ `arithmeticTupleUnitLogLattice` 保格 → `Ind1ShellTransportFor`/`BoxReadout.Phi` 实际 Φ；先写单 place `Mzk1Ind1LogLatticeActionActual`。
