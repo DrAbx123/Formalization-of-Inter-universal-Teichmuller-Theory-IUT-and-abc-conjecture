@@ -1799,3 +1799,5 @@
 - 05:50：shehdd Gamma v11：`congr 1` 后 `rw [← QuotientAddGroup.mk_nsmul]` 把 `p^k•mk z=0` 转 `mk((p^k)•z)=0`，再 `eq_zero_iff` + `mem_logShellIntegerSubgroup_iff`；第一定理已过，第二定理只剩该转换；retouch 等重编。
 
 - 05:55：**三个新 GREEN：`Mzk1Ob33B5IndexConsumerActual` 23:27:07（B5Index 完整消费链收口）、`Mzk1P2QHatNormAgreementUnconditionalActual` 23:27:06（A2 精确条件等价）、`Mzk1Ind1AlgebraicUnitQuotientActual` 23:26:17（β_a 代数核心）**。已派 mainline 报 B5Index 消费点并接 Cor312/3.12 链；abc 更新 ledger；hull 用 root scaling 收 Correspondence；qpilot §8；stepxi 连续引理/单位识别；shehdd Gamma。gate §20.24 已写。
+
+- 06:00：mainline 确认 **B5Index 完整消费链收口**（Consumer 23:27:07 + Rewire 20:48:46；仅 `SpanGeneratorValuationLemma` named input）；新 `Mzk1Cor312B5IndexChainActual` queued。**3.12 原文化仍缺**：① `qThetaPilotLogVolumeComparison`（theta Haar↔paper normalized V 因子/C3-D 字典，PENDING）；② 两个 C17 residue-field 实际实例；③ height `ResNormDegreeGap` 条件于前两者；paper carrier IQ/(Ob3-3) 仍 interface-only。已让 mainline 逐个攻 residue 输入/comparison consumer。gate §20.25 已写。

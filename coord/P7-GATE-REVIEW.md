@@ -544,3 +544,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1P2QHatNormAgreementUnconditionalActual` GREEN 23:27:06（95s）**：A2 以精确条件等价收口 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1`（= 已知 `PaperSourceCorrectionFreeFields` 条件），不是新 gap；不提供 `‖c0QHat‖ = qVFamDefaultNorm` 无条件等式。
 - **`Mzk1Ind1AlgebraicUnitQuotientActual` GREEN 23:26:17（46s）**：`fPrimeStripUnitQuotientEquiv = QuotientGroup.congr (Units.mapEquiv (a.isoMon v))`；β_a 的代数核心 official；实际 `W_F` 识别/连续性/源 action 仍是显式缺口。
 - **边界**：B5Index 消费链绿不等于 paper 3.12/ABC；A2 是条件等价；Ind1 一般 place 仍缺实际单位识别与 β_a 来源；`StepVActualInd1Ind2Action` 无 inhabitant。
+
+
+### 20.25 B5Index 层收口；3.12 原文化剩余输入（mainline，2026-11-14 23:27）
+- **B5Index 完整消费链**：`Mzk1Ob33B5IndexConsumerActual` 23:27:07（`b5Index_localizedCount_consumer`、`b5Index_placeSNFData_and_localizedCount`、`b5Index_placeSNFData_nonempty`）+ `Mzk1Ob33B5IndexRewireActual` 20:48:46 ⇒ B5Index 层无剩余缺口；仅 `SpanGeneratorValuationLemma` 是 index=-count 语义的 named input（`coord/P1-SPAN-GENERATOR-GAP.md`）。
+- **新文件** `Mzk1Cor312B5IndexChainActual`（queued）：`Cor312ChainInputs`（comparison + NativeBase/QVFam residue-field inputs）+ `cor312_chain_contract` + `cor312_chain_residue_gap` + `cor312_chain_b5Index`。
+- **3.12 原文化仍缺的真实输入**：
+  1. `qThetaPilotLogVolumeComparison C3 P`：`Mzk1HolomorphicHullLogVolumeReconciliationActual` 判 PENDING；theta 原始 Haar ↔ paper normalized V 的 [C3 block:Q_p] 因子与 C3-vs-D 字典缺；`Mzk1C3S1902BridgeActual` 只是 named data，无 inhabitant。
+  2. `NativeBaseResidueFieldEquivInput T`、`QVFamResidueFieldEquivInput T`：C17 条件形式 green，实际实例未构造。
+  3. height 输入 `ResNormDegreeGap T`：B5 evidence 可在上述两个 residue 输入下给出；paper carrier IQ / (Ob3-3) 仍 interface-only（det/hull 恒等式 green，语义识别未证）。
+- **边界**：B5Index 层收口≠3.12 已证；comparison 与 residue/carrier 语义仍是 3.12 主缺口。
