@@ -712,3 +712,5 @@
 - 19:50：C3BlockMeasure 第二处 `have hp :=` 也缺 by（:77-79）已修并 retouch；TopologicalSpace 再 retouch（Equiv.olean 已存在，前次失败是依赖时序）。
 
 - 19:52：stepxi 路线 C0 文件 RouteC0RootQLattice（c0Alpha/c0QHat=alpha^2l=algebraMap q/Q⊆H 格/有限乘积/Haar 单调/c0Remainder≥0，无 comparison 输入）入队（432 项）。
+
+- 19:55：FLT Cofinite 兼容修（Set.Finite.toFinset/coe_toFinset 替换旧 rintro），retouch Cofinite+TopologicalSpace；mainline DetLineConstruction + shehdd Ob33DetLine 入队（434 项）；hull B6 5 份 retouch。
