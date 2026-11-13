@@ -46,3 +46,18 @@
 ## 说明
 - 登记基于 Lead 抽检与 lane 自报；`proof` 文件不在此表。
 - 若某 status 文件后来补上实质定理，移到 proof（改名/备注）。
+
+### 追加登记（2026-11-14 06:24 Lead 审计：以下文件 0 theorem/纯 rows，状态类）
+
+| 文件 | 审计 |
+|---|---|
+| Mzk1P1LocalizedSpanFinalActual | thms=0, rows=1 |
+| Mzk1P1LocalGeneratorNonzeroFinalActual | thms=0, rows=1 |
+| Mzk1P1PlaceVolumeFinal2Actual | thms=0, rows=1 |
+| Mzk1P1HaarRatioFinalActual | thms=0, rows=1 |
+| Mzk1P1CountFromValuationAttemptFinalActual | thms=0, rows=1 |
+| Mzk1P1FractionalIdealCoeFinalActual | thms=0, rows=1 |
+| Mzk1P1RemainingSummaryActual | thms=0, rows=1 |
+| Mzk1B5BridgeGapRowsActual | rows（status） |
+| Mzk1P1IsPrincipalActualRowsActual | rows（status） |
+| Mzk1P1SignRowsFinalActual | rows（status） |
