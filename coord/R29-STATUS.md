@@ -678,3 +678,5 @@
 - 20:42：lattice #10 abc 对接类型表 NormArchAbcHook（AbcArchFactorOutput + C3HaarScaleDocking named input；对接口不明确做显式接口，不冒充）入队（417 项）。
 
 - 20:45：FLT RestrictedProduct/Equiv right_inv 改 rcases+dsimp+dif_neg+congrArg 版（qpilot 报 beta 归约/覆盖率问题）；Equiv+TopologicalSpace retouch。
+
+- 20:50：FLT Equiv 修：invFun else 分支 `y.2 ⟨i, by simpa using hi⟩` + right_inv `simp only [dif_neg hi]; congrArg b (Subtype.ext rfl)`；retouch。
