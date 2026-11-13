@@ -630,3 +630,5 @@
 - 19:39：stage4 UW 已 touch 重编；canonical 无条件 wrapper 设计中（复用 coordinateCompacts）。
 
 - 19:45：AgreeFLT 最新 3 错（:103 LiesOver over 字段方向、:109 inertiaDeg' 实例 defeq、:99 hrel 方向）已给精确修法；UW 需裸名 `basis_toMatrix_...`（root ns）；hull Named DONE 11:04:44Z、Composite retouch。
+
+- 19:50：用户指示“10 gap 逐个击破”。新建 `coord/P7-GAP-ATTACK-PLAN.md`：10 个 GAP code 各配 owner + 具体下一步 + 优先级（先 #9 HULL-UB、#8 CONTRACT、#1 GENERAL-CMP）。8 lane 已按计划分派：abc#1、qpilot#2、shehdd#3、stepxi#4、hull#5/6/9、stage4#7、lattice#10、mainline#8。
