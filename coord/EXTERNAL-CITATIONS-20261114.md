@@ -80,3 +80,10 @@ Last formalization TODO: connect this external law to the concrete Haar normaliz
 ## 9. IUT 3.12 相关外部分析（**注意：不是可引用定理，只是文献/语境**）
 - Zenodo 上有若干对 IUTchIII Cor 3.12 缺口/“validation”的分析与争论文章（如 *The Gap in IUTchIII, Corollary 3.12: From Attempted Repair to Structural Diagnosis*；*A Validation of IUT: The Contested Bound, Instantiated from Source*；*A LOCAL NON-CONTAINMENT IN STEP (V) OF IUT IV*）。这些是评论/争议文献，**不能作为 class-B 数学输入**，仅登记供语境参考；外部共识仍是 abc 未被证明。
 - 结论：没有外部定理能直接替代当前 signed Cor312 的比较不等式；唯一已发现可立即消费的外部机器验证结果是 TauCeti 的 p-adic Haar 缩放律（见 §7）。
+
+### Cor 3.12 的精确外部陈述（Dupuy–Hilado，已 fetch ar5iv HTML 全文）
+- T. Dupuy, A. Hilado, *The Statement of Mochizuki's Corollary 3.12: Initial Theta Data*（arXiv:2004.13228；原题含 First Two Indeterminacies）。
+- 精确不等式（1.1）：`−deĝ(P_q) ≤ −deĝ_lgp(P_hull(U_Θ))`；`U_Θ = Ind2·(Ind1·(O_L(−P_Θ))^{Ind3})`（1.2）。
+- 关键澄清：**log-volume 不是体积对数，而是归一化 p-adic/arch Haar 测度对数的加权平均**：`lnν_{L_p}(A_p) = E( ln μ_v(A_v) / dim L_v )`，再对 p 求和；`lnν_L(hull(U_Θ)) = −deĝ_lgp(P_hull(U_Θ))`。
+- 该文只给出陈述与 initial theta data 可计算性，**不给 Cor 3.12 的证明**；可用于校准我们的 native readout 归一化（除维数、p-平均、Ind/procession 平均）。
+- 结论：体积下界（route C0 已证 `μ(Q_root) ≤ μ(H_root)`）必须先经过上述归一化识别才能变成 `log q ≤ theta` 比较；没有外部定理可跳过这一步。
