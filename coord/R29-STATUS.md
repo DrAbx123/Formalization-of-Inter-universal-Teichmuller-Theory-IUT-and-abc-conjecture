@@ -644,3 +644,5 @@
 - 20:02：巡检：InputAlignmentNamed/SNFMatrixUW/DiagEquivBridge/IQCarrier/CanonicalDiagReduce green；HullUBDictionary 缺 HullUBPaperBox.olean（已 retouch）、Ob33SourceIdentification 缺 HullDetObject.olean（已加入 watch list，398 项）。AgreeFLT/Composite 仍迭代中。
 
 - 20:05：abc #1 关键思路 relay：closedBall(p^{-s})=p^{⌈s⌉}·O ⇒ ball 质量 = p^{-⌈s⌉}·μ(O)（无需 rpow，用整数 scaling + Int.ceil；d 维加 [L:Q_p] 因子）；FLT RestrictedProduct/Equiv+TopologicalSpace+FiniteAdeleRing 三文件 retouch 触发 #2 链。
+
+- 20:07：FLT RestrictedProduct/Equiv、TopologicalSpace、FiniteAdeleRing 此前不在 watch list（降红时移除）→ 已加回（404 项）并 retouch；Equiv:620 已修 dif_neg。qpilot #2 链等 watchdog 依次编。
