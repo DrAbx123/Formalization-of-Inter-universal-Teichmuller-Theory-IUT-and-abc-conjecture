@@ -1550,3 +1550,5 @@
 - 17:40：R21Uncond GREEN 确认（20:41:11Z）⇒ B5② max-ideal 无条件；mainline 新 `Mzk1P7ContractFieldsActualActual`（ContractFieldsActual 真实证据结构，替代 signed assembly 的 True 字段）。已唤醒 mainline（B5Index 重接 → #8 真实 evidence → IdealMapPower）与 shehdd（B5ContractEvidence 接 #8）、lattice（A1SaturationBases 20:42 START）。
 
 - 17:45：shehdd 2 新 proof：`Mzk1B5ContractEvidenceConsumerActual`（`residueNormBase_eq_pow_of_evidence`/`log_residueNormBase_eq_pow_of_evidence`/`resNormDegreeGap_of_evidence` 给 #8 contract 投影）、`Mzk1B5EvidenceHproductLinkActual`（`b5ProductFormulaBridge_of_data_and_arch_zero` 接 B5/hproduct 行）；已通知 mainline 可消费 `Mzk1B5ContractEvidenceActual`。
+
+- 17:50：mainline 新 `Mzk1Ob33B5IndexRewireActual`（`placeSNFDataActual`、`placeSNFDataActual_index_eq_neg_count_of_lemma`、`missingGeneralPlaceSNF_rewired` 无条件再导出）；stepxi A5：删非关键 `capsulePositionEquiv_refl`，保留 `capsulePositionEquiv`/`Ind1ShellTransportGap`，新增 Ind3 `capsuleFactorLogLink_subset`（局部 log-shell 包含）；qpilot：Order 显式 haveI 方案已发，Assembly 等新 cycle 再说。
