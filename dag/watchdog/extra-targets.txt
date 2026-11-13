@@ -432,3 +432,7 @@ tmp/sheaf/xif/paper/Mzk1HullUBB6RowsActual.lean
 tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeActual.lean
 tmp/sheaf/xif/paper/Mzk1DetLineConstructionActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33DetLineActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBC0AbsorptionActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBC0ObstacleRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5Actual.lean
+tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeV2Actual.lean

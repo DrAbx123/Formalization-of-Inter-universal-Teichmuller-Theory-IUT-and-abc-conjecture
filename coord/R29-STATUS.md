@@ -724,3 +724,5 @@
 - 19:55：mainline `Mzk1DetLineConstructionActual` GREEN（11:47:36Z，57s，relativeDetLine + globalLogVolume_relativeDetLine=B4/B5 全局）且 `Mzk1P3ArithInstancesActual` **DONE（11:50:30Z，33s，generic A 实例构造）**；lattice `Mzk1NormArchConsumerActual` GREEN（11:49:36Z，71s，去 heightWeight 假设的 arch 加权和入口）。Cofinite 新版待编。
 
 - 19:58：**路线 C0 核心 GREEN**（stepxi RouteC0RootQLattice DONE 11:49:40Z，ole 296,648B，trio，无 comparison 输入）：c0QHat=alpha^2l=algebraMap q、Q⊆H 格、有限乘积、Haar 单调、c0Remainder≥0。§5.2 三检查：q 来源 MATCH；theta 来源 FIRST MISMATCH（需把 H 换成 rootThetaFieldLambdaO，用 thetaOne_pow_norm_le_radius）；归一化 PARTIAL（余量应改 r_b=lambda radius + arch 项）。已派 C0 v2。mainline DetLineConstruction/ArithInstances green；B5 最小方案确认。
+
+- 20:00：mainline DetLinePlaceB5（LocalGeneratorData/PrincipalGenerator/HaarScalingLaw/PlaceB5Target named-input 口径）、stepxi RouteC0RootQLatticeV2（H=rootThetaFieldLambdaO + r_b=||lambda_b||）入队（438 项）；Cofinite 再 retouch（当前内容已是 rw 正向版）。
