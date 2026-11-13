@@ -1310,3 +1310,5 @@
 - 05:58：gate §43：**extra 823 = clean 648 + red 87 + inprog 26 + oleonly 20 + missing 42**。lattice 里程碑 proof=8/status=0，6 green（DetHaarDegreeFactor c=ofReal|detB|、BlockProductAlignment W/indexEquiv/factorEquiv、TensorCoreWitness、BadPrimeIff、RootExtensionCarrierRfl、ThetaRootCarrier）；ThetaRootCarrierHaar 补 open 待编、UnitMassNormalizedProof log 停在 1:24 待重抽。
 
 - 06:00：qpilot det-Haar milestone：2 green（GapDetHaarSNFSplit/SDetHaarDegreeFactor）+ 依赖链 retouch（GapDetHaarAssembly/DegreeIdentification）+ 新写 GapDetHaarMatrixSplit（det_eq_mul_prod_mul_of_split/isUnit_det_of_split/norm_det_eq_mul_prod_mul_of_split/snfMatrixSplit_det）；GAP-DET-HAAR 最后两步=matrix-level SNF 构造、diagonal factor 识别。已唤醒 shehdd/stepxi 下一波。
+
+- 06:04：hull P0.6 里程碑 **8 proof GREEN / status=0**：NativeLSide、NativeThetaBridgeProof、NativeQBridgeProof、NativeReadoutPair、NativeComparisonNonneg、NativeComparisonR13、**NativeThetaR13Bridge**（17:33:08Z）、**PaperInputV**（17:34:51Z，ole 54,576B：PaperInputV l + LPaperInstance_of_paperInputV）；待重编 5（PaperInputVConsumption/Final、ThetaR13Defect/Chain/Bound，依赖已绿）。Defect 证书：Bridge↔defect=0；defect≤thetaReadout；defect≥0⇒comparison（defect≤0 不成立）。
