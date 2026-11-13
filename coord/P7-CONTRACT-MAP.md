@@ -210,3 +210,19 @@ qThetaPilotLogVolumeComparison C3 P
 - 下一步：① `localizedLine (spanSingleton x) v = span O_v {algebraMap x}`（`coe_spanSingleton` +
   `Submodule.map_span` + `span_span_of_tower`）；② num ideal 素数分解后 localize；
   若 Mathlib 无 DVR principal 引理则把精确缺失引理名写入 R21Bridge 的 gap 表。
+
+### 6.6 P1 ① count↔valuation PROVED + tower instance 写法（2026-11-14）
+
+- **Mzk1P1PrincipalValuationProofActual — DONE 36s@16:19:14Z（重编 16:21:42Z），olean=True**：
+  `principalValuation_proved : localValuation v (algebraMap k K_v a) = -count_v(span{a})`（a≠0）。
+  证明链：`HeightOneSpectrum.algebraMap_adicCompletion`（hx）→
+  `valuedAdicCompletion_eq_valuation'` → `valuation_of_algebraMap` →
+  `intValuation_if_neg` → `WithZero.log_exp`。
+- 关键 instance 写法（已验证）：
+  `haveI : IsScalarTower (𝓞k) (NumberFieldFinitePlace.CompletionIntegers v) (NumberFieldFinitePlace.Completion v) :=
+   IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsScalarTower' (R := 𝓞k) (K := k) (v := underlyingPrime v)`。
+  `instIsScalarTower'` 无 S 参数；`LocalRing`/`LocalField` 是 abbrev 到 `CompletionIntegers`/`Completion`
+  （DeterminantLogVolumeActual:43/48），必须用全限定名统一。
+- 该写法已转给 shehdd 复用（他的 LFI 也卡同一 tower）。
+- 下一步：② IdealLocalizedCount（FLT `completionIdeal` + `intValuation_exists_uniformizer`）；③ R21Bridge 组合；
+  residue-one（GAP-PC-RESDEG/tame）单独列。
