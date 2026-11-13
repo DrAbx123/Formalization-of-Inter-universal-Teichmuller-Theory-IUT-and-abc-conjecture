@@ -153,3 +153,10 @@
   - `generatorColumn` / `generatorColumn_span_top`：**完整列族（L0 基列 + 有限像列）的 `ℚ_[p]`-span = ⊤**（矩阵行满秩的向量形式；L0 列已足以张成）；
   - `fullGeneratorMatrix`：完整列族在 `multiFactorQpBasis` 下的实际坐标矩阵。
 - 这解决了 §11.2 的缺口 1/2（列缺 L0、列张成）；**矩阵行列式/SNF 数值**仍未写（SNF 只用于指数/体积值，不是满秩本身）。
+
+
+## 12. task-87 收尾（2026-11-13 14:44Z）
+
+- #7 THETA-DEG：全收口（P7ThetaDeg/B2/C3/Weight/Cancel 全 DONE）。
+- B4：**DONE（14:44:03Z）**——`Mzk1CanonicalDiagUncondFinalActual` 无条件 `canonical_diag_volume_ratio_uncond`（olean 216,480B），绕开 diagHomeo image bridge。
+- task-87 的 P1/P2 预备与 X_G/对角双链均已收口；剩余为其他 lane 的 Ind1/一般 X_G 语义桥（不在本 lane 活动范围）。

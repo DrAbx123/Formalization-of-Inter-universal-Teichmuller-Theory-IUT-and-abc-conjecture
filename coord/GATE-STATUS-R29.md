@@ -506,3 +506,26 @@ These are pre-seeded imports/old built files; olean presence alone is not a curr
 - 恒等式：465 + 0 + 0 + 20 + 0 = **485**。
 - gate build 状态：**全绿（red=0）**；P7 状态仍 **NOT PASSED**（10 个 GAP-P7 code 的结构化状态见 P7-GATE-REVIEW §13，build green ≠ P7 gate pass）。
 - 备注：ole-only 20 项为旧 paper/FLT ported Mathlib 预置导入，有 olean 但无当前 run 事件；不是 red。
+
+## 35. 2026-11-13 22:49 巡检快照（B4 DONE；NormZpow 在修，red=1）
+
+- extra-targets = **493**；clean DONE = **472**；red FAIL = **1**（`Mzk1B5NormZpowActual`，14:48:39Z 最新 FAIL，源 22:48:04）；in-progress = 0；ole-only/prebuilt = **20**；missing olean = 0。
+- 恒等式：472 + 1 + 20 = 493。
+
+### 35.1 B4 DONE（image bridge GAP 删除）
+
+- `Mzk1CanonicalDiagUncondFinalActual`：**DONE EXIT=0 2026-11-13T14:44:03Z（53s）**；无条件 `canonical_diag_volume_ratio_uncond`。
+- 意义：`canonical_diag_volume_ratio` 的 hLc/hLo/hXc/hXo/hle 条件已从树内引理关闭；**B4 image bridge GAP 可删**（不再绕路）。
+- `Mzk1B5GeneratorNormBridgesActual`：DONE 14:33:40Z（32s）。
+- B4 从 GAP 列表移除；§13 #7 的 B4 image bridge 项按 DONE 处理。
+
+### 35.2 当前唯一 red
+
+| target | 最新 FAIL | 说明 |
+|---|---|---|
+| `Mzk1B5NormZpowActual` | 14:48:39Z | `rfl`/`rewrite` motive/pattern 失败（旧 API 级联），mainline 在修 |
+
+### 35.3 FINAL 预期
+
+- `Mzk1B5NormZpowActual` DONE 后：clean **473** + red **0** + ole-only **20** = **493**。
+- P7 仍 NOT PASSED；build green ≠ P7 gate pass。

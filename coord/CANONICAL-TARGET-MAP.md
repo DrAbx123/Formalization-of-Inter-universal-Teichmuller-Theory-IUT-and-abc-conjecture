@@ -195,3 +195,35 @@ Cross-reference: coord/P7-GATE-REVIEW.md rows #1/#4/#10,
 coord/P7-GAP-ATTACK-PLAN.md rows #1/#4/#10, coord/P7-MULTIRADIAL-GAP.md.
 
 End of P7 status snapshot.
+### 22.1 B5/B4 update (2026-11-13, latest)
+
+B5 status:
+- `Mzk1B5FractionalExpansionUncondActual` DONE 14:00:10Z, ole 168,560 B:
+  fractional log-volume expansion is unconditional (B5 ① complete).
+- `Mzk1B5FullProductFormulaActual` DONE 14:15:51Z, ole 56,208 B:
+  `full_product_formula_log = arch + finite product formula`.
+- `Mzk1B5FullProductFormulaCountActual` DONE 14:23:04Z, ole 118,112 B:
+  `finite_log_sum = -Σ count·log absNorm`, `arch_log = +Σ count·log absNorm`.
+- `Mzk1ThetaScalarAlignActual` DONE 14:11:26Z, ole 117,080 B:
+  #1 theta_eq reduced to the scalar equation
+  `(Σdeg)·packetNorm = s1915ClosedForm`.
+- `Mzk1C3S1902UnitMassCitizenActual` DONE 14:08:27Z, ole 42,104 B:
+  actual inhabitant `actualC3S1902UnitMassData : C3S1902UnitMassData T`;
+  `unitMass = (s1915UnitMass T).toReal`, positivity green; `unitMass=1` still GAP.
+
+Still pending:
+- B4: `Mzk1CanonicalDiagUncondFinalActual` has no olean yet (final pending);
+  canonical image bridge GAP remains until it is green.
+- B5 ②: `Mzk1B5GeneratorNormBridgesActual` green 14:26:00Z (ole 57,536 B) but
+  `NormZpowBridge` is still a def Prop (conditional); `Mzk1B5NormZpowActual`
+  is pending mainline.  Thus B5 ② (LocalNormGeneratorBridge/CountValuationBridge
+  + residue-one) is still not unconditional.
+
+#10 snapshot update: UnitMassData citizen is now inhabited (actual S1915 mass),
+but `unitMass=1`, blockEquiv actual inhabitant, and T-specific local unit-mass
+alignment remain missing; #10 stays CONDITIONAL/PARTIAL.
+
+#1 remains the only P7 row on the canonical S3137/Paper312 comparison path,
+and only under `HullQDictionary`.  P7 is still **NOT PASSED**.
+
+End of B5/B4 update.

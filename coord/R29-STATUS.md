@@ -1060,3 +1060,5 @@
 - 22:48：NormZpow 源码未落盘（mtime 22:44:13 早于 relay），已提醒 mainline 写 hexp 段并保存；已 retouch。
 
 - 22:52：NormZpow mainline 于 22:47:53 保存新内容（上轮 FAIL 在保存前），已 retouch 触发重编。
+
+- 23:00（关键转向）：`S1429CompletionRootObstructionActual.sourcePilotRegionData_isEmpty : IsEmpty (SourcePilotRegionData I)` 已证 ⇒ **旧 C3 类型为空**，先前所有以旧 C3 为参数的条件构造在空类型上 vacuous，不算原问题进展。按 P7-GAP-ATTACK-PLAN §0/P0-P4 重派：hull=P0 native source core 迁移映射+core 构造；mainline=P1 生成元/count（弃 NormZpow 重复文件）；shehdd=P1 有限生成元；qpilot=P0/P2 native 张量消费者；stage4=P3/P0 张量 core 抽取；abc=P2 (R1.2) 系数整性；lattice=#10 native 有限位字典。

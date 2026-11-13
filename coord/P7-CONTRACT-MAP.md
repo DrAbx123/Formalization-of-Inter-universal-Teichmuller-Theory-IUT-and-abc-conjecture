@@ -160,3 +160,39 @@ qThetaPilotLogVolumeComparison C3 P
   residue-one 等式（= GAP-PC-RESDEG/tame 的局部 norm/valuation 相容与 f=1）。
 - 注：Mzk1B5FractionalExpansionBridgeActual（13:37:39Z green）仍保留为 ① 的条件版
   （finite-support 输入），Uncond 文件是其无条件化；两者不冲突。
+
+
+## 8. Full product formula（finite+arch）及 count 加权形式（qpilot，2026-11-13）
+
+- **乘法/加法全局 product formula**：`tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaActual.lean`
+  **DONE 14:15:51Z（olean 56,208B）**：
+  `full_product_formula_log`：对 `x : K`、`x ≠ 0`，
+  `(∑ w : InfinitePlace K, w.mult * log(w x)) + (∑ᶠ w : FinitePlace K, log(w x)) = 0`。
+  证明：Mathlib `NumberField.prod_abs_eq_one` 取 log + `Real.log_mul/log_finprod/log_prod/log_pow`；
+  正性用 `InfinitePlace.pos_iff`/`FinitePlace.pos_iff`。
+- **count 加权推论**：`tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaCountActual.lean`
+  **DONE 14:23:04Z（olean 118,112B）**：
+  `finite_log_sum_eq_neg_count_sum`：
+  `∑ᶠ_w FinitePlace log(w x) = −∑ᶠ_v count_v(span{x})·log absNorm v`；
+  `arch_log_eq_count_sum`：
+  `∑_w InfinitePlace w.mult·log(w x) = ∑ᶠ_v count_v(span{x})·log absNorm v`（`x : 𝓞K`、`x ≠ 0`）。
+  关键桥：`FinitePlace.prod_eq_inv_abs_norm_int` 取 log；`|↑norm x| = ↑absNorm(span{x})`
+  （`Int.natCast_natAbs`/`Int.cast_abs`）；再用已 green 的 integer count formula；arch 用 `full_product_formula_log` 合并。
+- **意义**：#1 readout 的 arch 高度与 finite count 除子在 principal integral 情形是同一实际量；这是“同源箭头”的可证版本。
+- **任意 fractional ideal `I` 的精确缺口**：`full_product_formula_log` 的 arch 项由 `x : K` 的无限位绝对值和定义；
+  对任意 `I : LineBundle` 没有 canonical `x`，`relativeDetLog(H,O)` 的 arch 项消去需要：
+  (a) `PrincipalGeneratorData`（`H`/`O` 同时由同一个 `x` 的 principal/unit 表示），或
+  (b) 对每个无限位单独定义 `archDetMetricWeight(I)` 并证明与 `log absNorm` 的差分相容。
+  当前只有有限位 `FractionalLogVolumeExpansion`（已无条件）与 principal integral 的 arch=count 恒等式；
+  不宣称任意 `I` 的 arch+finite 全 product formula。
+
+### 6.5 B5 ② 状态收尾（2026-11-13 22:32）
+
+- **Norm 桥已证**：mainline `Mzk1B5GeneratorNormBridgesActual` **DONE 14:26:00Z（ole 57,536B）**；
+  `NormZpowBridge` 由 Mathlib `FinitePlace.norm_def` + `WithZeroMulInt.toNNReal_neg_apply` + `NNReal.coe_zpow` 证明（`normZpowBridge_of_ne_zero`），
+  并由 `localNormGeneratorBridge_of_normZpow` 实例化 `LocalNormGeneratorBridge`（需 `d.generator ≠ 0`）。
+- **Count 桥仍为精确缺失**：`CountValuationBridge`（等价于 `SpanGeneratorValuationLemma`）
+  `localValuation v d.generator = -countExponent v I` 不能从 `LocalGeneratorData.span_eq` 直接推出（无 DVR principal-generator/localization count 引理）。
+  见 `Mzk1Ob33B5CountUnconditionalAttemptActual`（GREEN 14:08:27Z，ole 60,104B）中的精确缺失引理名与条件后果。
+- **residue-one**（`GAP-PC-RESDEG` / tame）仍是 B5 ② 唯一算术假设；`placeLogVolume_eq_localLogVolume` 已以 `hchar` 显式记录。
+- 相关 green 状态：`Mzk1Ob33B5CountBridgeActual` 13:36:29Z ole152,688B；`Mzk1Ob33B5IndexActual` 12:43:51Z ole170,608B；`Mzk1Ob33ArchMetricActual` 12:40:01Z ole293,472B；`Mzk1Ob33B5AssemblyActual` 13:12:59Z ole86,352B。

@@ -4575,3 +4575,11 @@ CITABLE 10) -> Thm2.5 unconditional.  No new long tasks before pause; all files 
 - P7-GAP-ATTACK-PLAN.md 追加查重表及最小剩余任务；节点 p7-no-extra-input-routes-20261113.reuse_review。使用用户提供的 iut-audit-20261113 索引，但未声称全仓逐一定理核对。
 - 已有球质量/系数和、实际域乘积分解、normalized q 区域包含、迹/SNF 均应直接复用；当前 A/C0 实现保留原 owner，不重复新建。剩余重点是消费者接入与同一原输入的对象/读数对应。
 - 未改 Lean，四项证明验收 NOT_RUN；无新调度。下一步：原 owner 以现有域分解存在定理供应 B2 的 e，并复用已有 A/C0 实现核对实际消费者。
+
+
+## 2026-11-13 — 当前 chat：P7 源入口优先的下一轮建议
+
+- 已追加 P7-GAP-ATTACK-PLAN.md 的 P7-NEXT-ATTACK-SOURCE-FIRST-20261113；节点 p7-next-attack-source-first-20261113。单线程研究交付，未改 Lean/owner/调度。
+- 首要纠正：已有 S1429.sourcePilotRegionData_isEmpty，旧 C3 不能构造。复用已存在的 correct-domain roots、core/L/native 分层接回消费者；不重证 no-go，不把空类型条件定理计作原目标实现。
+- 三条攻法及完整步骤已写入计划：源 q 格的实际整系数；B5 count 指定生成元/加权 determinant；按素数分块的迹下降/精确指数。norm 桥、unitMass citizen 和 #7 已有成果直接复用。
+- 原 P7/3.12 未闭合；四项证明验收均 NOT_RUN。本轮下一步：P0 正确源消费者迁移；P1 有限生成元最小赋值证明局部生成元/count；随后验算一个真实标签块。

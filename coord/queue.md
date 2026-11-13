@@ -1354,3 +1354,11 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
 - [completed: research only] 已在 P7-GAP-ATTACK-PLAN.md 追加 P7-REUSE-CORRECTION-20261113，节点 p7-no-extra-input-routes-20261113.reuse_review。未调度新任务；原 owner 不变。
 - [reuse; supersedes broad wording above] A0 复用当前球质量和 S1915 系数和；B0/#7 复用 exists_arithmeticTensorTuple_fieldProduct；C0 复用当前根格证明体及旧 normalized 包含；C1 复用迹/不同理想/SNF。已有基础引理不再作为新证明任务。
 - [remaining] 验证现有实现并接消费者，消去 B2 的分解参数，完成同一原输入的 C3/root/paper 识别及实际比较。候选源码存在不等于 target_accepted。
+
+
+## 2026-11-13 — 当前 chat：P7 下一轮任务缩减（建议，未派发）
+
+- [completed: research only] P7-NEXT-ATTACK-SOURCE-FIRST-20261113 已追加至 P7-GAP-ATTACK-PLAN.md；节点 p7-next-attack-source-first-20261113。没有新 Lean 验收。
+- [supersedes earlier next-step suggestions in this chat] 不再新开旧 C3 inhabitant、B2 通用分解、norm 桥或 unitMass inhabitant 任务。S1429 已证旧 C3 为空；#7/norm/unitMass 复用当前实现。
+- [proposed; existing owners retained] P0：沿已有 N8 输入决定及 core/L/native 接回一个实际源 tensor/readout 消费者；P1：按 R2.1 的最小非零赋值证明 count 指定局部生成元，并带真实 f_v 接 B5；P2：实际标签块的 q/Theta 坐标与读数比较；分母/载体失配时做 P3 逐素数迹下降和指数计算。
+- 禁止用 margin-1 强字典、全 Bad 同 p、residue-one、normRatio product=1 或任意 arch/Haar 等式替代这些构造。整体 P7 仍开放；各既有 lane 归属和调度不变。

@@ -129,5 +129,5 @@ D. 最后接 Mzk1DualIndexSourceActual.XG_volume_ratio_of_quotient_equiv。
 ## 14. 更新（13:39Z）：#7 THETA-DEG 全收口
 
 - **#7 DONE**（4 文件证据）：`Mzk1P7ThetaDegActual`（localCompletionDegree=finrank，block 乘积识别）、`Mzk1P7ThetaDegB2Actual`（域分解 ⇒ finrank 求和 + packet 求和）、`Mzk1P7ThetaDegC3Actual`（C3 block:Q_p=Σ 实际 local degree）、`Mzk1P7ThetaDegWeightActual`（theta 权重=-(Σdeg)·log p，normalized 分母=Σdeg；p-scaling 引用既有 green）、`Mzk1P7ThetaDegCancelActual`（normalized=(1/Σdeg)·log(μS)；(1/Σdeg)·thetaPilotHullLogVolumeReal）。
-- **剩余仅 B4 image bridge GAP**：`diagHomeo f '' coordSmall = coordDual`（`Mzk1DiagEquivBridgeActual` 精确记录）；canonical compact/open 条件版 green。
+- **B4 DONE（14:44:03Z）**：`Mzk1CanonicalDiagUncondFinalActual`（olean 216,480B）——**无条件** `canonical_diag_volume_ratio_uncond`；hle/hLc/hLo/hXc/hXo 全部由 coordinate/fractional lattice 紧开性构造，**绕开 diagHomeo image bridge**。旧 `Mzk1DiagEquivBridgeActual` 仅作历史记录，不再作为 GAP。
 - 其他 green：A2 桥、U/W 矩阵、一般 SNF 体积条件版、DiagVolume、SNF 工具/DetUnit/Diag/GLAct。

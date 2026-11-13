@@ -99,7 +99,7 @@ GAP-P7-THETA-V：paper normalized V 的**实际定义/识别**未在 green 树�
   本文件的 candidateNormalizedV = c3PacketNormalizedLogVolume 只是 packet 归一化（÷ Q_p-dimension），
   未被证明等于 paper V。
 GAP-P7-THETA-D：C3-vs-D dictionary（S2807 的 actualC3LogShellTensorRegion (S2717C3 … D) ↔ S3137 的 C3）未构造。
-GAP-P7-THETA-DEG：**DONE（#7 全收口，2026-11-13 13:39Z，5 文件）**：`Mzk1P7ThetaDegActual`(12:20:07Z)、`Mzk1P7ThetaDegC3Actual`(12:33:19Z)、`Mzk1P7ThetaDegB2Actual`(12:54:15Z)、`Mzk1P7ThetaDegWeightActual`(13:22:49Z)、`Mzk1P7ThetaDegCancelActual`(13:39:28Z)；未闭仅 B4 image bridge（`Mzk1DiagEquivBridgeActual`）。旧“未识别”行保留为历史。
+GAP-P7-THETA-DEG：**DONE（#7 全收口，2026-11-13 13:39Z，5 文件）；B4 也 DONE（14:44:03Z，Mzk1CanonicalDiagUncondFinalActual 无条件 canonical_diag_volume_ratio_uncond）**：`Mzk1P7ThetaDegActual`(12:20:07Z)、`Mzk1P7ThetaDegC3Actual`(12:33:19Z)、`Mzk1P7ThetaDegB2Actual`(12:54:15Z)、`Mzk1P7ThetaDegWeightActual`(13:22:49Z)、`Mzk1P7ThetaDegCancelActual`(13:39:28Z)；未闭仅 B4 image bridge（`Mzk1DiagEquivBridgeActual`）。旧“未识别”行保留为历史。
   `FinitePlaceArithmeticTensorBlocks.lean:98` 的 finrank 乘积公式针对 ArithmeticTensorTupleBlock，不是 C3LogShellTensorBlock，不能直接套用。
 ```
 ## 7. 升级：缺失 → 可寻址接口 → 剩余缺口（与 GAP code 对齐）
@@ -233,3 +233,19 @@ GAP-P7-THETA-DEG：**DONE（#7 全收口，2026-11-13 13:39Z，5 文件）**：`
 - 若 paper 的 #1 需要更强 margin，可用 `comparison_margin_one` 直接给 `θread−qread = 1`。
 
 **三源字段 (a)(b)(c) 的等价说明（docs only）**：HullQDictionary 若要换成三源字段，需 (a) base q ↔ qVFamily 跨族映射、(b) `∏ qVFamNormRatio=1`（已知 `PaperSourceCorrectionFreeFields` 源字段，两个范数实例不同，不可由现有定义证）、(c) `Σ_b d_b order_b log residue_b = 2ℓ·order·log residue_base`；Lean 不新增同内容 structure，保持 HullQDictionary 最小 input。
+### theta_eq 的标量归约（Mzk1ThetaScalarAlignActual，2026-11-13 14:11:27Z GREEN）
+- **定义级事实**：`thetaPilotHullLogVolumeReal C3 = (c3TensorBlockDimension:ℝ) * c3PacketNormalizedLogVolume … thetaPilotHull`（由 `c3PacketNormalizedLogVolume := log μ / dim` 直接展开；`/tmp/sheaf/xif/paper/Mzk1ThetaScalarAlignActual.lean`）；
+- **#7 cancel 是定义级**：`c3PacketNormalizedLogVolume_actualRegion_eq_inv_sumDegree_mul_theta`（`Mzk1P7ThetaDegCancelActual:47-58`）只是该定义的除法重写，不含 C3 实际区域 mass 与 S1902 hull mass 的比较；
+- **theta_eq 精确降为单标量方程**：`theta_eq_iff_sumDegree_mul_packetNormalized_eq` 证明 `θread = s1915ClosedForm ↔ (Σ_j [E_j:Q_p])·c3PacketNormalizedLogVolume = s1915ClosedForm`；
+- **剩余 gap**：该标量方程仍需 C3↔S1902 hull 的 mass 识别（不是定义可证）；`theta_eq` 仍为 HullQDictionary 的 named input 之一，未 fake 成已证。
+### #1 同源箭头候选：qpilot B5 全乘积公式/Count（2026-11-13 14:23Z 记录）
+
+候选（均为 green，供 `q_eq_sum` / place-求和恒等式 (c) 复用）：
+- `Mzk1B5FullProductFormulaActual.full_product_formula_log`（**DONE 14:15:51Z**）：K 上完整乘积公式 log 形式；
+- `Mzk1B5FullProductFormulaCountActual.finite_log_sum_eq_neg_count_sum`、**`arch_log_eq_count_sum`**（**DONE 14:23:04Z**）：
+  `∑_w mult_w · log|w(x)| = ∑ᶠ_v count_v(span{x}) · log absNorm(v)`（arch_log = +Σ count·log absNorm）；
+- `Mzk1B5LocalGlobalProductFormulaActual.log_absNorm_eq_sum_count_mul_log`（**DONE 13:09:21Z**）：`log absNorm I = Σᶠ_v count_v(I)·log absNorm(v)`；
+- `Mzk1B5FractionalAbsNormFormulaActual.log_absNorm_fractional_eq_num_sub_den`（**DONE 13:16:43Z**）：分式理想版本。
+
+**用途与限制**：这些是**K 的整体 product formula / count 和**，与 #1 需要的 `q_eq_sum`（单 place C3 q 读数 = 坏位 qVFamily 加权和）形式相近，可作为 (c) 的候选供体；但它们作用在**同一元素的 K 位集合**上，而 qVFamily 是逐 bad 模位独立的 clause-B 参数（`QPilotZeroLocusDivisorActual:55-62`），且 C3 区域质量与 S1902 hull 质量仍未识别。
+**结论**：B5 FullProductFormula/Count 记录为 #1 的“同源箭头候选”，**尚未解** `C3↔S1902 mass identification`；HullQDictionary 仍为唯一 named input，不因该候选升级为已证。
