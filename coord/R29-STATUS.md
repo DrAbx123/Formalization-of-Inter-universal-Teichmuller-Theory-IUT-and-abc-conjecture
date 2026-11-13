@@ -966,3 +966,5 @@
 - 21:55：`Mzk1HaarStrictActual` 的 import 子树（HaarStrictProof/HaarAnnulusCylinder/Cor312UnconditionalStrictAcceptance/AnnulusMeasurePositive/AnnulusStrictConsumer）均不在 watch 名单、无 green 逆向依赖 ⇒ 从 extra-targets 移除（源码保留，DEFERRED）；hull 写 HAARSTRICT-RED-GAP.md + AUDIT_LEDGER。gate red 将只剩 B5FinsumSummable（qpilot 修）。
 
 - 21:42：**B5 FinsumSummable GREEN**（qpilot 13:40:11Z，ole 97,408B：finsum_sub_bridge + ideal/fractional count weighted HasFiniteSupport/Summable）⇒ mainline 的 FinsumSubBridge/hsumH/hsumO 可全部替换为定理，B5 ① 完全无条件。已派 mainline 改 Uncond 文件 + 更新 CONTRACT-MAP；abc 做收尾 AUDIT_LEDGER/P7-MISSING 一致性。
+
+- 21:45：hull **HaarStrict DEFERRED 审计完成**（coord/HAARSTRICT-RED-GAP.md + AUDIT_LEDGER）：371 行/17,136B/无 olean/最新 FAIL 13:26:16Z；首错旧 API（:74 max_le、:76 参数、:108-110 placeholder）；extra-targets 483 项中 0 直接 import、子树均不在 watch、无 watched green 逆向依赖 ⇒ 已从名单移除；gate red 只剩 B5 系（Uncond 在修）。

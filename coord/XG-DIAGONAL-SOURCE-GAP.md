@@ -125,3 +125,9 @@ D. 最后接 Mzk1DualIndexSourceActual.XG_volume_ratio_of_quotient_equiv。
 - **#7 THETA-DEG**：`Mzk1P7ThetaDegActual` DONE 12:20:07Z——`localCompletionDegree := Module.finrank ℚ_[p] (CommonPrimeCompletion place)`，`c3TensorBlockDimension = ∏ localCompletionDegree`。
 - **B2**：`Mzk1P7ThetaDegB2Actual` **DONE 12:54:15Z**——域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank block = ∑ finrank E_j`；packet = Σ_tuple Σ_j。**C3 特化** `Mzk1P7ThetaDegC3Actual` **DONE 12:33:19Z**：`c3TensorBlockDimension = Σ 实际 local degree`。
 - 依赖修复：`Mzk1C3BlockMeasureActual` DONE 11:44:02Z（`Nat.cast_pos` 取代 `exact_mod_cast`）。
+
+## 14. 更新（13:39Z）：#7 THETA-DEG 全收口
+
+- **#7 DONE**（4 文件证据）：`Mzk1P7ThetaDegActual`（localCompletionDegree=finrank，block 乘积识别）、`Mzk1P7ThetaDegB2Actual`（域分解 ⇒ finrank 求和 + packet 求和）、`Mzk1P7ThetaDegC3Actual`（C3 block:Q_p=Σ 实际 local degree）、`Mzk1P7ThetaDegWeightActual`（theta 权重=-(Σdeg)·log p，normalized 分母=Σdeg；p-scaling 引用既有 green）、`Mzk1P7ThetaDegCancelActual`（normalized=(1/Σdeg)·log(μS)；(1/Σdeg)·thetaPilotHullLogVolumeReal）。
+- **剩余仅 B4 image bridge GAP**：`diagHomeo f '' coordSmall = coordDual`（`Mzk1DiagEquivBridgeActual` 精确记录）；canonical compact/open 条件版 green。
+- 其他 green：A2 桥、U/W 矩阵、一般 SNF 体积条件版、DiagVolume、SNF 工具/DetUnit/Diag/GLAct。

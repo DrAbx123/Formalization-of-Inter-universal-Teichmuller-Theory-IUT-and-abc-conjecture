@@ -126,3 +126,17 @@ qThetaPilotLogVolumeComparison C3 P
 - **Bridge green**：`tmp/sheaf/xif/paper/Mzk1P7ContractRowsBridgeActual.lean` **DONE 13:29:25Z（54s，olean=True）**：`margin7Rows_items_eq_missing7ToGap`、`margin7Rows_codes_eq_missing7ToGap`、`margin7Rows_length_eq_missing7ToGap`（全 rfl）。
 - **mainline 消费入口（green）**：`Mzk1P7ContractMarginConsumerActual`（DONE 13:14:31Z）：`comparison_of_margin_one`、`margin_one_theta_sub`、`p7_conditional_contract_of_margin_one`、`p7_conditional_contract_of_hullQDictionary`；用法示例：给 `hmargin : qPilotLogVolumeReading P + 1 ≤ thetaPilotHullLogVolumeReal C3`，调用 `p7_conditional_contract_of_margin_one C3 P hmargin` 得 `Cor312Conclusion (contractOfS3137Comparison C3 P (comparison_of_margin_one C3 P hmargin))`。
 - 状态：GAP-P7-CONTRACT 仍 **CONDITIONAL**；本次仅确认 7 行行码/顺序覆盖一致，rows 2–7 内容未变。
+### 6.3 FractionalLogVolumeExpansion 已由 qpilot 定理推导（2026-11-13 后续 4）
+
+- Mzk1B5FractionalExpansionBridgeActual — DONE 56s@13:37:39Z，olean=True：
+  `fractionalLogVolumeExpansion_of_qpilot` 用 qpilot 的
+  `log_absNorm_fractional_eq_sum_diff`（num/den count 和之差）与
+  `count_eq_count_num_sub_count_den`（fractional count = num − den）
+  证明 `FractionalLogVolumeExpansion`。
+  条件只剩 `hsumH/hsumO : Function.HasFiniteSupport`（num/den count 加权和），
+  可由 `Ideal.finite_factors`/`Associates.finite_factors` 关闭（下一步）。
+  carrier 对齐用 `NumberField.FinitePlace.equivHeightOneSpectrum` 的 `finsum_comp_equiv`，
+  `residueNormBase v = Ideal.absNorm v.maximalIdeal.asIdeal` 为定义（rfl）。
+- ⇒ B5 汇总 ① 不再需要 named `FractionalLogVolumeExpansion`（改用该定理 + 两 finite-support）；
+  ③ arch 已证；剩余为 ② 的 `LocalNormGeneratorBridge`/`CountValuationBridge` 与
+  residue-one（GAP-PC-RESDEG/tame）。
