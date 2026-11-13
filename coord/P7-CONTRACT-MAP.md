@@ -241,3 +241,11 @@ qThetaPilotLogVolumeComparison C3 P
 - 桥 3 的 FLT API 已定位：`exists_uniformizer`（AdicValuation:472）、
   `maximalIdeal_eq_span_uniformizer`（:520）、`mem_completionIdeal_pow`（:571）。
 - 桥 1 是唯一实质缺口（ideal-map 幂）；桥 2 是 span/coercion 桥。
+
+## §7 P7 #8 行升级（2026-11-14）
+
+`Mzk1P7ContractRowsBridgeActual.missing7ToGapEvidence`：7 行实际状态（与主表同 item 名）：
+- #3 (Ob3-3) source identification：**PROVED**（`Mzk1Ob33DetLineBridgeActual` + B5 index generator，无假设）；
+- theta raw Haar vs paper V：**PARTIAL**（B5① 无条件、B5③ arch 已证、generator 已闭）；
+- 其余 5 行仍为真 GAP（comparison / IQ literal / multiradial / contract linkage / hull UB）。
+主 `missing7ToGap` 保留 historical/vacuous 语义，evidence 表为当前有效状态。
