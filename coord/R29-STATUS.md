@@ -894,3 +894,5 @@
 - 01:22：**C0IdeleHeight GREEN**（stepxi 12:58:33Z，63s，ole 76,040B，trio）：c0IdeleFiniteHeight=heightWeight*Σ_bad log max(norm q_v,1)、c0IdeleArchHeight、c0IdeleHeight=finite+arch、形式定理+非负；paper hBox 正是 heightWeight*(Σ_finite hTerm+Σ_arch hTerm)（hTerm=log max(absValAt,1)）⇒ **形式一致**，等号只缺全局 x 分量识别（D.bad b=algebraMap x 等），非 rfl。已派条件定理+readout 接口+ROUTE-C0 收口文档。
 
 - 01:26：abc P7ContractMarginConsumer 首错：:58/:65 `Unknown identifier T`（缺 binder/variable），已 relay；stage4 Weight 修复（删除无效 open、本地 MeasurableSpace/BorelSpace 实例、push_cast;ring）待重编；DetLinePlaceB5Arch DONE 12:58:34Z（64s）。
+
+- 01:32：mainline DetLinePlaceB5Merged（finiteB5Part+finite_eq_placeLogVolume_sub+mergedLogDegree_B5）入队（472 项）；Ob33DetLineBridge 确认 green（12:41:14Z，58s）。派 qpilot 攻 local-global product formula（Ideal.absNorm 分解 API，可能可证→直接关 B5 汇总缺口）、hull 收尾 #5/#6/#9 文档核对、lattice 查 nativeBadToKPlace 的 prime 等式。
