@@ -1394,3 +1394,5 @@
 - 10:30：hull #1 缺口②（qhat p 幂指数）可关闭：`c0QHat` 来自 `qVFamily`（FinitePlaceQCandidate 有 green 引理 `qNorm_eq_residueNormBase_zpow`，BaseQLogVolumeActual.baseQ_qNorm_eq 即用它），无需 QPLACE；给出 `c0QHat_norm_eq : ‖c0QHat‖ = residueNormBase^{−exponent}` 证法。QPLACE(sectionFiniteLift=nativeBadLift.lift) 只是 choice gap，与 exponent 无关。缺口①(rootNormedExtension≃坐标空间)、③(tensor/product)仍真。
 
 - 10:34：新 green 批：`Mzk1Ob33B5IndexActual`（18:22:05Z）、`Mzk1P1IdealMapPowerCountSelf`（18:26:38Z）、`Mzk1UnitMassDetHaarConsumer`（18:27:09Z，#10 unitMass→det-Haar 接线）、`Mzk1P0LQThetaJointSign`（18:27:45Z）、`Mzk1P0NativeThetaR13Bound`（18:27:47Z）、`Mzk1P2ProcessionAverage`（18:27:51Z）、`Mzk1P2QValueIdentification`（18:29:32Z）。桥 1 待下一次重编（hcoec 修法已落盘）。
+
+- 10:38：hull #1 缺口①也有现成 Mathlib：`LinearEquiv.toContinuousLinearEquiv`（Topology/Algebra/Module/FiniteDimension:371，需 T2+FiniteDimensional）+ `Module.finBasis`/`Basis.equivFun` ⇒ rootNormedExtension≃L[Qp](Fin d→Qp)；再用共轭+`LinearMap.det_conj`（:306）+`det_smul` scale，把 PAdicHaarDetScaling 搬到 root extension，得 log μ(qhat·O)=d·log‖qhat‖+log μ(O)。已发 hull。
