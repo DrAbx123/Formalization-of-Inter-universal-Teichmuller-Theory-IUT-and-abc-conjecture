@@ -32,3 +32,18 @@
 - 当前活跃链可直接消费的外部定理：**p-adic Haar det 缩放律**（关闭 GAP-DET-HAAR 的最后两步，条件：接受外部标准定理作为 class-B 输入，最后形式化）。
 - Mestre–Oesterlé 已按判定表在旧 §12.2 消费；当前 signed/native 链不消费它。
 - 其余外部定理仅影响旧 E7 路线；不影响当前 P0–P4。
+
+## p-adic Haar determinant scaling (class B, added 2026-11-14)
+
+Statement: for a finite-dimensional Q_p vector space E and a continuous Q_p-linear automorphism f, every additive Haar measure mu satisfies
+
+  mu.map f = ENNReal.ofReal (norm (det f)) * mu.
+
+Sources: Weil, *Basic Number Theory* (Haar measure on local fields); Bourbaki, *Integration*; Igusa (p-adic integration).
+
+Lean file: `tmp/sheaf/xif/paper/Mzk1PAdicHaarDetScalingExternalActual.lean`
+- `PAdicHaarDetScaling` : explicit Prop, class-B input (no fake proof)
+- `detHaar_degree_scaling_of_external` : direct consequence
+- `detHaarSNFReplacedByExternal` : SNF route retained as internal cross-check, not a gap
+
+Last formalization TODO: connect this external law to the concrete Haar normalization used in S3137/P3 consumers (same exact statement, different measure instance).
