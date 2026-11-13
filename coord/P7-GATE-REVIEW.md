@@ -637,3 +637,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - `qhatLogReadout_b − paperQSignedReadout_b = log(qVFamNormRatio_b)`（norm agreement 下）。
 - **警告**：`PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget` 虽 green，但经 `PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog`（**model**：perBQ/theta 系数 c_norm/(2l)）证明；审计已标 model，**不得作为原文 3.12 收口**。
 - **#1 状态**：paper-faithful 路线 = `Mzk1P1NormalizedSourceConditionalActual`（S45 条件）+ paper sums↔S3137 字典/bridge；剩余缺口：norm agreement（P2QHatNormInstanceAgreement）、权重 1/f vs d_b、paper sums 与 S3137 读数的精确对应；S45 条件显式。
+
+
+### 20.35 纠正：norm-instance agreement ≠ ratio=1/S45（2026-11-15 00:05）
+- `qhatLogReadout = −c_norm log p` 需要 **`P2QHatNormInstanceAgreement : ‖c0QHat_b‖ = qVFamNormalizedNorm_b`**（normalized norm 的 coherence），是独立 norm-instance 问题。
+- S45 的 `qVFamNormRatio=1` 是 **`qVFamNormalizedNorm = qVFamDefaultNorm`**（normalized vs adic），与上述不同；abc 已核对 `P2QHatNormInstanceAgreement` **不等价于** ratio=1。
+- 因此 #1 的 correction 全零需**同时**满足：(i) norm-instance agreement；(ii) S45 ratio=1。dictionary 文件中两者必须分开写，不能把 `qhatLogReadout` 的无条件形式建立在 S45 上。
+- 其余关系（`log r = −c_norm log p/(2l)`、`d_b log r = (1/(2l))d_b qhatLogReadout`）在 norm agreement 下成立；权重 1/f 与 d_b 仍分开。
