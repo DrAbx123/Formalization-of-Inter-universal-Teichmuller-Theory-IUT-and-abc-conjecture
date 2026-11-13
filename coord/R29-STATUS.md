@@ -788,3 +788,5 @@
 - 21:50：abc C3S1902NormalizedLog（(A5) 显式归一化对数，s1915ClosedForm=1−Σd_b c_b/(2l)log p_b）入队（452 项）；批量 retouch 9 份（NormalizedLog/LocalizedLineMul/B2/Composite/IQStructures/HaarBridge/CarrierAlign/ThetaVGeneralUncond/ArchMetric）；stepxi 派 C0GlobalIdele 有限支撑构造；stage4 B2 修复待编。
 
 - 21:53：stepxi C0GlobalIdele（c0GlobalFinite bad=q_v 否则 1、arch=1、finite_bad/good/arch_one）入队（453 项）；idele height/readout 保持精确 GAP。
+
+- 21:58：hull ThetaVGeneralUnconditional 首错 = qVFamTensorP 未导入（定义在 QVFamTensorCoefficientActual:51）已 relay；lattice carrier align 降为 GAP 记录（CommonPrimeCompletion def vs LocalField carrier，需显式 Set align），保留三 GAP；stage4 B2 拆主体。
