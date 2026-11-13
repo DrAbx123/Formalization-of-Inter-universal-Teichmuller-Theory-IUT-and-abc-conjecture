@@ -7,7 +7,7 @@
 
 | 旧名（文件） | 当前出现处 | 已有供体 | 状态 |
 |---|---|---|---|
-| `GAP-DET-HAAR`（`Mzk1GeneralDualVolumeActual`） | `p2TensorHaarDetTransportMissing`（`Mzk1P2TensorDetFactorActual`） | `Mzk1CanonicalDiagUncondFinalActual`（B4 对角比，无条件）；`Mzk1MatrixHaarBaseActual`（GL_d(ℤp) 保持 coordLattice）；`Mzk1SNFToolActual`/`Mzk1SNFMatrixUWActual`/`Mzk1SNFMatrixDiagActual`/`Mzk1GeneralSNFVolume3Actual`；Haar 唯一性 `MeasureTheory/Measure/Haar/Unique.lean` | **可攻**：B4+GL 不变+SNF+标量 ⇒ det-Haar 律 |
+| `GAP-DET-HAAR`（`Mzk1GeneralDualVolumeActual`） | `p2TensorHaarDetTransportMissing`（`Mzk1P2TensorDetFactorActual`） | `Mzk1CanonicalDiagUncondFinalActual`（B4 对角比，无条件）；`Mzk1MatrixHaarBaseActual`（GL_d(ℤp) 保持 coordLattice）；`Mzk1SNFToolActual`/`Mzk1SNFMatrixUWActual`/`Mzk1SNFMatrixDiagActual`/`Mzk1GeneralSNFVolume3Actual`；Haar 唯一性 `MeasureTheory/Measure/Haar/Unique.lean` | **PARTIAL（qpilot 2026-11-14）**：`Mzk1P2DetHaarProofActual` green：scalar factor = coordLattice image mass、lattice-preserving scalar=1；B4/GL donor green。剩余：任意 GL_d(Qp) 的 SNF 分解与三因子组合（见 `Mzk1GapDetHaarFinalActual.detHaarFinalMissing`）。未关闭。  |
 | `GAP-DUAL-TRANSPOSE`（`Mzk1GeneralDualVolumeActual`） | 路线二 det 对偶 | `Mzk1TraceDualVolumeActual`、`Mzk1GeneralDualVolumeActual.relativeHaarVolume_product_of_scaling` | 条件接口 green；数值待接 |
 | `GAP-B4`（`HullDetObjectActual` 谱系） | P3 det/net | `Mzk1CanonicalDiagUncondFinalActual`（14:44Z DONE）、`Mzk1P3NetGain*` | B4 对角情形已完成 |
 | `MissingLocalizedIsPrincipal`（P1） | 已关闭 | `Mzk1P1LocalizedFractionalIdealActual.localizedLine_isPrincipal_actual`（15:38Z） | **DONE** |
