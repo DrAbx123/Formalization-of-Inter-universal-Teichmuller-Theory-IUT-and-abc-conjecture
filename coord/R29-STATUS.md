@@ -718,3 +718,5 @@
 - 19:59：Cofinite `change sᶜ.Finite at h` 修（h 是 set-builder 成员不是谓词）；retouch。C0Absorption/ObstacleRows 已入队（436 项）。
 
 - 19:48：shehdd OB33 **GREEN**（ole 82,832B @11:40:50Z）：实际 detDegree 对象（unitLineBundleData.detData.globalLogVolume）+ 显式 identification；P7 §13 #3 OPEN→CONDITIONAL。DetLine 重写待编。
+
+- 19:52：Cofinite 修 rw 方向（`rw [h.coe_toFinset]`）并 retouch；已提醒 qpilot 不要编辑 FLT 文件（Lead 统一修，防并发覆盖）。
