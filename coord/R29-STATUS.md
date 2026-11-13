@@ -772,3 +772,5 @@
 - 21:24：qpilot #2 semantic：完整 principalDivisorFull（valuationInt/reciprocalSupport/divisorSupport/Int-Finsupp）+ support_subset 已写；PaperLabelMap 命名输入保留（T.arithmetic 无 canonical HeightOneSpectrum→paper label 投影，精确缺口）。
 
 - 21:28：**hull C0 三份全绿**（Absorption 12:17:20Z/90s、Discharge 12:17:19Z/89s、ObstacleRows 12:16:32Z/42s）：C0=0 ⇔ slack≥1、现有 bound 只给 slack≤0、e-常数 1 精确障碍；`1≤paperBox` 仅必要非充分且已删除错误推论。mainline LocalizedLineMul 因 extra-targets 并发写丢失 → 已补加+retouch（449 项）；已宣布 extra-targets 仅 Lead 编辑。
+
+- 21:31：hull #5 general-k 条件构造已 green（ThetaVScaleOffsetGeneral 11:57:32Z，ole 67,008B）；Composite 重写为 same-V 条件（input_eq+subst，跨 V 留给 input_heq）并 retouch；#5 unconditional 剩 closed-form identification GAP。
