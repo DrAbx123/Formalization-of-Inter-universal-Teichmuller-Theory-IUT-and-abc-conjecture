@@ -732,3 +732,5 @@
 - 20:08：shehdd Ob33DetLineConstructionLink 入队（440 项）；hull/qpilot/stage4/lattice 唤醒派 B#6/B#2 真实数据/B2 degree/ L4+L10 任务。Cofinite 11:55:02 重编中。
 
 - 20:10：**FLT Cofinite GREEN（11:55:19Z，17s，olean YES）**——TopologicalSpace/FiniteAdeleRing retouch；qpilot IQFiniteAdeleRestricted（真实有限位/局部域/整数参照 + 坐标映射/几乎处处整性/Πʳ compat）与 hull C3DDonorProjection（actualDonorC3 展开到 D 字段，dIndex/dPlaces/dTuple 全 rfl）入队（442 项）。
+
+- 20:14：按用户要求检查并刷新 `coord/P7-GAP-ATTACK-PLAN.md` 顶部表：#1 OPEN/PARTIAL（路线 A 球质量消除，BallMassFormula 在编）、#2 PARTIAL（FLT Equiv/Cofinite green，TopologicalSpace/FiniteAdeleRing 重编+IQFiniteAdeleRestricted 在编）、#3 CONDITIONAL（Ob33 实际 detDegree green）、#4 PARTIAL、#5 PARTIAL、#6 PARTIAL（D 右端投影在编）、#7 PARTIAL（C3BlockMeasure green，B2 在编）、#8 CONDITIONAL ASSEMBLY、#9 CONDITIONAL(C0=1)、#10 CONDITIONAL/PARTIAL；A/B/C 路线与 condition-realization 表保留。
