@@ -402,3 +402,4 @@ tmp/sheaf/xif/paper/HullDetObjectActual.lean
 tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/RestrictedProduct/Equiv.lean
 tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/RestrictedProduct/TopologicalSpace.lean
 tmp/external/ported/flt/FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean
+tmp/sheaf/xif/paper/Mzk1P7ThetaDegActual.lean
