@@ -1504,3 +1504,5 @@
 - 15:22：**TauCeti port 决策**：qpilot 诊断 4.32 `Ideal.cardQuot_mul` 需 `[Module.Free ℤ S]`，而 4.36 是广义 Dedekind 版本；LocalFieldScaling 的 O_K 非 ℤ-自由 ⇒ 非 API 重命名缺口。按用户“能补就补、实在用不了另说”：给 qpilot 1–2 波时间盒 inline 证 `card_quotient_range_mulVecLin_eq_pow`（用 Mathlib 4.32 `Submodule.smithNormalForm` PID + det 关系）；成则继续 port，否则冻结为“部分移植 + class-B PAdicHaarDetScaling（已 green）”并记录精确缺口。
 
 - 15:28：TauCeti port 时间盒结论：**冻结为“部分移植 4/10 + CardQuotient 4.36 广义定理缺口”**（4.32 `Ideal.cardQuot_mul` 需 `[Module.Free ℤ S]`；O_K 非 ℤ-自由，不能补 instance）；class-B `PAdicHaarDetScaling`（已 green）作为 det-Haar/#10 实际支撑，不再投入 port（除非用户批准 inline 广义 cardQuot_mul 立项）。det-Haar：`Mzk1GapDetHaarSNFSplit` green；MatrixSplit/DiagonalNorm 最新修复 retouch；Assembly/DegreeIdentification 等 SNFMatrixSplit olean。
+
+- 15:32：桥 2 RHS 分支剩余错：`(fun x => ↑x) y ∈ ↑(Submodule.map …)`，需先 `hfun : (fun x => ↑x) = ⇑(Algebra.linearMap …)`（rfl 或 funext+Algebra.linearMap_apply），再 `change … ∈ Submodule.map …`、`rw [Submodule.mem_map]`、`exact ⟨y,hy,rfl⟩`。已发 mainline；TauCeti port 正式冻结（部分移植+class-B）。
