@@ -1751,3 +1751,5 @@
 - 03:45：stepxi 按正确方向写单 place `Mzk1Ind1LogLatticeActionActual`：`SinglePlaceLogLatticeAction e he`（`unitMap=integralUnitMap`、`perfectionMap=unitPerfectionMap`、`logSquare=unitPerfectionMap_log_commute`、`shellPreserve=map_mem_integralLogShell`）+ `singlePlace_unitLog_map`/`singlePlace_shellPreserve`；全部用实际 e,he 不是同维等价。下一步 tensor 化到 `arithmeticTupleUnitLogLattice`/`Ind1ShellTransportFor`、接 BoxReadout.Φ。
 
 - 03:50：用户纠正 S1902：拆两步（每 p,j,tuple 保留 signed readout → 再套 Step-V hull 估计），`s1915A0` 含 `ENNReal.ofReal` 负 log 截断不能替代局部读数。已让 qpilot 重写 BoxReadout 为 `SignedLocalReadout` + `StepVHullEstimate`（用 `s1446Lower/UpperDegreeNormalizedSignedLog`），s1915A0 仅作下游截断聚合；hull 侧同样保留 signed q readout，不把 s1915A0 当 theta readout。hull 修 `qhatUnit` 显式 T/b 参数，scaling 文件等重编。
+
+- 03:55：**两个关键 GREEN：`Mzk1P1UniformizerPowerSpanActual` 22:43:33（第三桥 huni）、`Mzk1P7ContractB5EvidenceActual` 22:43:55（#8 B5 evidence 行收口！）**；`Mzk1A5Ind1Ind3Consumer` 22:49:04 重绿。三桥全齐，已 touch `Mzk1P1IdealLocalizedCountFinalActual`（上轮 22:43:07 FAIL 是 uniformizer olean 22:43:33 之前），等重编 → B5Index 完整重接。
