@@ -511,3 +511,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`IutIVProp14TorsionCountActual` GREEN 23:14:04（49s）**：`torsion_card_eq_of_congruenceCard` 条件版（hdecomp/hC/hGamma/hq/hcop ⇒ `∃m, #T=(q−1)p^m ∧ h+m=f(es−1)`）。
 - **`Mzk1IutIVProp14IndexCardActual` GREEN 23:14:10（55s）**：`logShellIntegerIndex_eq_natCard`（rfl）、`logShellIntegerIndex_eq_pow_of_card_eq`；Gamma 绿后可填 `volume_ratio_eq_pow` 的 `hμΛ`。
 - 下一步：hull 用 root scaling 供体完成 Correspondence/最终锚定；lattice 等 Gamma actual；shehdd 写 torsion actual + 实际 #C。
+
+
+### 20.21 §7.1 更正与 Box §8 的 K_v 路线（2026-11-14 07:21）
+- **§7.1 不成立**：`W_F ≅ ℤ_p^d` 作为抽象群存在 wild automorphism，抽象群同构**不自动连续**；`FPrimeStripEquiv` 只有 `isoPi/isoG/isoMon/compat*`，无 norm/valuation/topology；`TimesMuQuotient ((F.Mon v)ˣ)` 与实际 `(Integers F)ˣ/tors` 也无现成识别。因此 `fPrimeStripUnitQuotientEquiv` 仅是 β_a 的代数核心；连续性必须来自实际源箭头（§7.2 inertia 像/local reciprocity，或 §7.5 finite Kummer 逆极限），并登记为新源节点。不得给最终定理加自由 `Continuous` 字段。
+- **Box §8 路线**：优先于全局 carrier 等价。用 `SourceClauseC.torsion23_rational`/`representation_eq_canonical`/`kernel_field_identification` 与 `SourceClauseB.q_comparison` 的 Tate comparison（`points.pointEquiv` 单射/乘法、`points.galois_naturality`）：
+  1. E[2l] 在 K 上有理（lP∈E[2], 2P∈E[l], al+2b=1 组合）；
+  2. 传到 K_v（实际 torsion base-change/局部限制）；
+  3. Tate([α]) 被 G_{K_v} 固定 ⇒ σα/α=q^{mσ}；σ 固定 q + q 无限阶 ⇒ mσ=0 ⇒ α∈K_v；
+  4. θ_{b,j}=α^{j²}，`ord_p θ=j²/(2l)·ord_p q`；
+  5. principal-region normalized scalar readout 等式（§8.3），不声称 O_L 满射到 O_M。
+- 文件：`Mzk1BoxDistinguishedScalarActual`（qpilot）待写；`StepVActualInd1Ind2Action` 仍无 inhabitant。
