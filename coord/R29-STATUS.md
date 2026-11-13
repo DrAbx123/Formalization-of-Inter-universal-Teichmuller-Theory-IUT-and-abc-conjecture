@@ -1619,3 +1619,5 @@
 - 21:30：shehdd `IutIVProp14GroupCountInterfaceActual:24` 首错：`IsPGroup.exists_card_eq` 给 `Nat.card (Multiplicative Γ)`，需 `Nat.card_congr Multiplicative.toAdd` 转为 `Nat.card Γ`；已发精确修法。GammaPGroup 因该 olean 缺失失败，修后即可编。
 
 - 21:35：shehdd 修 `GroupCountInterface:24`（`Nat.card_congr Multiplicative.toAdd`），retouch 05:18:06Z；`torsion_card_eq` 的 `p^0` 占位暂保留（不冒充 §3.4），GammaPGroup 的 `card_gamma_eq_pow_actual` 等该接口 olean。
+
+- 21:40：hull 修 `ThetaLabel/thetaLabelToSigned` 根因（补 import/open `PaperC3ThetaRootActual`），源 mtime 21:17:45，等重编；预期剩余只在 `rootThetaMaxIndex_spec` coercion/`field_simp`/`norm_mul`。
