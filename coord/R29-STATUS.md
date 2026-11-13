@@ -1719,3 +1719,5 @@
 - 02:25：stepxi 整理 #4 最终消费文档 `coord/P7-MULTIRADIAL-CONSUMER-FINAL.md`（CapsulePosition 21:44:15 → Ind1Ind3Consumer 21:53:05 → MultiradialConsumer 22:24:24；Ind3 无条件；Ind1 fixed-place；一般 place 精确 shellEquiv gap 禁止 refl/toy），并同步 P7-MULTIRADIAL-GAP/A5-IND1-IND3-CONSUMER。
 
 - 02:30：mainline：general IdealMapPower GREEN（22:25:14，olean=True）确认；`Mzk1P1UniformizerPowerSpan` 用 `Subring.coe_mul`+`map_pow` 显式修；新 `Mzk1P1IdealLocalizedCountFinalActual.idealLocalizedCountStatement_proved`（三桥）；`Mzk1P7ContractB5Evidence` 补 `Mzk1C17QCANDResNormComapActual` import 后 retest；B5Consumer 22:25:12 green。hull：Correspondence 去 Final 依赖、本地定义 qhatLogReadout，`qhatHaarScaling` 唯一 factor 缺口。
+
+- 02:35：用户定调“马拉松最后500m，缺什么补什么”。已按硬缺口重新派工：hull→`qhatHaarScaling`（从 c0QLattice 球测度直接证，不绕 det-Haar）；stepxi→一般 place Ind1 定义级检查（places/placeEquiv 可能定义对齐，用 cast 填 shellEquiv，否则保留精确输入）；qpilot→BoxConsumer + carrier bridge（无现成等价就显式条件）；mainline→B5Index/B5 evidence 收口；abc→A2 QHatNorm/QReadout；shehdd→Gamma/torsion；stage4→A1.6 正式读数；lattice→P14ii actual h。
