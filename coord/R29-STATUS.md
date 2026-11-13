@@ -904,3 +904,5 @@
 - 01:44：stage4 Weight 首错 relay：:54 No goals（删多余行）；:65 HSMul ℚ_[p] (Set ...) synth 超时（Set smul）→ 改写 `(fun x => c • x) '' S` 或 Set.image。Cancel 待 Weight olean。
 
 - 01:47：stage4 Weight 修复：删多余 push_cast（:54）；定理陈述改 Set.image（proof `simpa [Set.smul_set_def]`）；待重编，Cancel 随后重试。
+
+- 01:50：**qpilot product formula 实际定理**：absNormReal_eq_finprod（Ideal.finprod_heightOneSpectrum_factorization + map_finprod）+ log_absNorm_eq_sum_count_mul_log（log|I|=Σᶠ_v count_v·log|v|）——可望关 B5 汇总缺口；Mzk1B5LocalGlobalProductFormula 入队（475 项）。stepxi C0ReadoutIdentification（readout_eq_hBox 条件 + readout_eq_qPilot 精确接口，无 inhabitant）入队；c0IdeleHeight_eq_hBox_of_components green 13:02:28Z（ole 96,616B）。lattice NativeBadPrime green 13:03:48Z（ole 53,304B，单一 named input + FinitePlaceAtPrime 构造）。
