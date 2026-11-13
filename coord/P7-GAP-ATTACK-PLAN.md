@@ -17,7 +17,7 @@
 | 7 | GAP-P7-THETA-DEG | **OPEN/PARTIAL**（文件 `Mzk1P7ThetaDegActual` 已写，等 `Mzk1C3BlockMeasureActual` olean 后编；含 localCompletionDegree=finrank、c3TensorBlockDimension=∏、block nonpos+local degree 分解） | stage4 | 等依赖 olean 后重编 → 更新 P7 §13 为 CONDITIONAL/PARTIAL |
 | 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（`Mzk1P7ContractMapActual` DONE 11:18:55Z，olean=True；AgreeFLT DONE 11:13:10Z） | mainline | 已完成：`recon12ToGap`/`missing7ToGap`/`gapCodesCovered`/`contract_fields_not_linked`/`p7_conditional_contract`；文档 `coord/P7-CONTRACT-MAP.md`。后续：等其它 GAP 关闭后把条件装配升级为 DISCHARGED |
 | 9 | GAP-P7-HULL-UB | **CONDITIONAL**；normalizedLog→paperBox actual green（`Mzk1HullUBPaperBoxActual`，C0=0）；paper V 差 RawNormalizedDictionary scale/offset | hull | 已完成实际 normalizedLog 侧 + 条件字典（`Mzk1HullUBDictionaryActual`）；下一步只拆 scale/offset 的实际来源（若 scale=1/offset=0 可升级 DISCHARGED） |
-| 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL**；`Mzk1NormArchCKActual.lean`（DONE 11:13:09Z）显式 C_K 已证 | lattice | 已构造 `archCK=1/[K:Q]`、`archCKToric=1/(2[K:Q])`，general-K `hArc/hNon/hToricArc` 因子形式 green；剩余 abc arch factor 输出对接（GAP） |
+| 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL**；显式 C_K + abc 接口 | lattice | `Mzk1NormArchCKActual`（DONE）：C_K/因子形式；`Mzk1NormArchAbcHookActual`（DONE）：`C3HaarScaleDocking` named input。缺失：abc `haarScale` 与 C_K 的公式来源 |
 
 ## 纪律
 - 每项只允许：定理化（green）、条件接口（显式 named input，CONDITIONAL）、精确缺口文档（OPEN + 障碍说明）。
@@ -33,3 +33,22 @@
 5. GAP-P7-IQ-LITERAL（#2，等 FLT Equiv）
 6. GAP-P7-MULTIRADIAL（#4，可能真缺）
 7. GAP-NORM-ARCH-C-K（#10）
+
+## 用户指示（2026-11-13 晚）：条件本身也要尽量构造（condition realization）
+
+不只“条件证明”，而是把 named input / 条件对象**实际塑造出来**（构造 inhabitant、实例、具体值）；只有确实做不到时才保留 named input + 精确障碍。
+
+| gap | 条件/命名输入 | 构造目标（优先） |
+|---|---|---|
+| #1 | C3S1902TransportData（blockEquiv/region_eq/haarScale/haar_apply） | 用实际 C3 数据构造 inhabitant；haarScale 用实际 Haar 比给出具体值；haar_apply 用实测度等式 |
+| #2 | FLT FiniteAdeleRing 实例/Equiv | Equiv 绿后直接构造 IQ↔FiniteAdeleRing 的 Equiv/instance |
+| #3 | Ob33ArithmeticDegreeIdentification detDegree | 查 source arithmetic degree 实际定义；若能证 = ob33DetNormalizedLogVolume 则消去 named input |
+| #4 | RouteNormalForm / general FiniteIndeterminacyDischarge | 尝试从 finite model + 实际 label/procession 数据构造 |
+| #5 | ThetaVScaleOffset scale offset | 从 raw/normalized 定义直接构造 scale/offset（若 paper V 定义为 normalizedLog 则 1/0） |
+| #6 | C3D dictionary D 侧 | 构造 D 侧 index/place/tuple 实际等式 |
+| #7 | localCompletionDegree 识别 | 用 Module.finrank 实际实例构造 identification |
+| #8 | 7 missing rows | 用已 green 的 C3/S3137 数据实例化每一行 |
+| #9 | RawNormalizedDictionary | 从 normalizedLog 与 paper V 实际定义构造 scale/offset；若 identity 则直接关闭 |
+| #10 | C3HaarScaleDocking | 查 C3S1902HaarScaleData 的 haarScale 来源；若 = 1/[K:Q]（如 [K:Q]=1）则构造 |
+
+纪律：构造必须是实际对象/实例/定义值，不得把“要被识别的对象”定义成“识别结果”（循环）；若原文确实如此定义，须在文档说明这是定义级识别而非定理。
