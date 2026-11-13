@@ -1014,3 +1014,5 @@
 - 22:22：stage4 B4 final 文件（canonical_diag_volume_ratio_uncond 无条件，mem_span_pow_iff/coordDual_eq_pi_fractional/coordDual_le_coordSmall/hLc/hLo/hXc/hXo）已按 lemma 列表写完，retouch；绿后 B4 image bridge GAP 删除。shehdd CountUnconditionalAttempt GREEN 14:08:27Z（ole 60,104B：SpanGeneratorValuationLemma 精确缺失+条件化后果）。
 
 - 22:28：**ThetaScalarAlign GREEN**（abc 14:11:27Z，54s）——theta_eq 降为标量方程 (Σdeg)·packetNorm=s1915ClosedForm。B4 final 三处首错 relay stage4（:98 缺 import Mzk1CanonicalDiagUncondActual；:71 rw 方向；:84 padicFractionalLattice 成员转换）。
+
+- 22:32：mainline norm bridge 首错 relay：`NumberField.underlyingPrime` → 项目名 `NumberFieldFinitePlace.underlyingPrime`（FinitePlaces.lean；用法见 SourceDefinition31PlacePartition:307）。abc ThetaScalarAlign GREEN（14:11:27Z）已记：theta_eq 降为标量方程 (Σdeg)·packetNorm=s1915ClosedForm。
