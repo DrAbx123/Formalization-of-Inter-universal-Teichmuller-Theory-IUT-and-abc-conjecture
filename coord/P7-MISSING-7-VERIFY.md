@@ -8,7 +8,7 @@
 
 | # | missing（原文） | 判定 | 依据（file:line） |
 |---|---|---|---|
-| 1 | general qTheta comparison (paper normalization, NOT mu(O)=1) | **仍缺（仅有条件归约）** | `Mzk1GapNormalizationActual:57/67/77`（theta≥0 / mu(O)=1 / single-index ⇒ comparison）；`Mzk1HullVolumeReuseActual:108`（tautological iff）；`Mzk1Cor312StrengthHullUpgradeActual:91`（definitional iff） |
+| 1 | general qTheta comparison (paper normalization, NOT mu(O)=1) | **CONDITIONAL(HullQDictionary)**（§12；唯一 named input 两标量，条件版 green 12:50:24Z） | `Mzk1GapNormalizationActual:57/67/77`（theta≥0 / mu(O)=1 / single-index ⇒ comparison）；`Mzk1HullVolumeReuseActual:108`（tautological iff）；`Mzk1Cor312StrengthHullUpgradeActual:91`（definitional iff） |
 | 2 | paper carrier IQ(S±; n, D^vdash) realization | **部分：A481 受限积构造 green；paper literal IQ 载体识别仍缺** | `A481LiteralIQCarrierActual.lean:17`（restricted product of local log-shells）；`IQCarrierFromSource.lean:6/42`（no literal IQ carrier type; identification missing）；`LiteralIQCarrierActual.lean:6/19/96`；`C3IQActualPacketGapActual.lean:54`（C3 side gap） |
 | 3 | (Ob3-3) source identification: arithmetic degree of det(x)M output = normalized log-volume | **部分：det 归一化律 green；source 识别仍缺** | `S3134ThetaHullDetNormalizationActual.lean:7/61`（Step (xi-d)/(Ob3-3) determinant normalization law on actual …）；`Mzk1WeightedDetPacketActual.lean:11/77`（Ob3-2/Ob3-3 profile-degree scaling re-export）；`Hull06DetTensorActual.lean:8/12`（prior art pointer）；未见“det(x)M 输出算术度 = normalized log-volume”的实际识别定理 |
 | 4 | multiradial production of (xi-e)/(xi-f) comparison data | **仍缺** | 仅有相邻 multiradial 对象：`Indet02BPSMultiradialUpToActual`（probe 名见 `_AutoProbe…:3`）、`Indet05RouteMultiradialClassActual`（`_AutoProbe…:3`）、`Mzk1PaperFourTrianglesStatementActual`（`Triangle1BPSMultiradial`）；**未找到** (xi-e)/(xi-f) comparison data 的 multiradial production 定理 |
@@ -37,7 +37,7 @@
 ## 3. 精确遗留（供下一步）
 
 ```
-#1 需要：paper normalization（不是 mu(O)=1）下的 general qTheta comparison；现有只有 sufficient reductions。
+#1：paper normalization（不是 mu(O)=1）下的 general comparison 已收为 **CONDITIONAL(HullQDictionary)**（§12，margin 1）；sufficient reductions 保留为历史。
 #2 需要：literal IQ(S+_{j+1}; n, D^vdash_{vQ}) 载体类型/识别等式（IQCarrierFromSource:42 明说树内无该类型；A481 只是受限积构造）。
 #3 需要：det(x)M 输出算术 degree = normalized log-volume 的 source identification（S3134 只到 det normalization law）。
 #4 需要：(xi-e)/(xi-f) comparison data 的 multiradial production；现有 Indet02/Indet05/four-triangles 只是相邻对象。
@@ -99,8 +99,7 @@ GAP-P7-THETA-V：paper normalized V 的**实际定义/识别**未在 green 树�
   本文件的 candidateNormalizedV = c3PacketNormalizedLogVolume 只是 packet 归一化（÷ Q_p-dimension），
   未被证明等于 paper V。
 GAP-P7-THETA-D：C3-vs-D dictionary（S2807 的 actualC3LogShellTensorRegion (S2717C3 … D) ↔ S3137 的 C3）未构造。
-GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘积（如 Σ_v [K_v:Q_p]）未识别；
-  树内只有 `c3TensorBlockDimension = Module.finrank ℚ_[p] block`（S3137C3:54），没有与局部次数的等式；
+GAP-P7-THETA-DEG：**DONE（#7 全收口，2026-11-13 13:39Z，5 文件）**：`Mzk1P7ThetaDegActual`(12:20:07Z)、`Mzk1P7ThetaDegC3Actual`(12:33:19Z)、`Mzk1P7ThetaDegB2Actual`(12:54:15Z)、`Mzk1P7ThetaDegWeightActual`(13:22:49Z)、`Mzk1P7ThetaDegCancelActual`(13:39:28Z)；未闭仅 B4 image bridge（`Mzk1DiagEquivBridgeActual`）。旧“未识别”行保留为历史。
   `FinitePlaceArithmeticTensorBlocks.lean:98` 的 finrank 乘积公式针对 ArithmeticTensorTupleBlock，不是 C3LogShellTensorBlock，不能直接套用。
 ```
 ## 7. 升级：缺失 → 可寻址接口 → 剩余缺口（与 GAP code 对齐）
@@ -109,11 +108,11 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 
 | missing | ① 可寻址接口（file:line） | ② 该接口缺的 inhabitant/实际来源 | ③ 仍算未 discharge？ | GAP code |
 |---|---|---|---|---|
-| #1 general qTheta comparison (paper normalization) | `Mzk1GeneralComparisonInterfaceActual.lean`（`GeneralQThetaComparison := q ≤ θ`，iff/consumer）；`Mzk1PaperNormalizationDictionaryActual.lean:19/26/29`（`PaperNormalizationData` + `paperLog_eq_raw_sub` + `Required := Nonempty …`）；`Mzk1GapNormalizationActual:57/67/77` 仅 sufficient reductions | `PaperNormalizationData` 的 inhabitant（rawLog/paperLog/blockDim+pos/shift/normalization_eq，其 `normalization_eq` 本身是 NAMED）；以及“paper normalization ≠ mu(O)=1”的 general 比较证明 | **是**（只有条件归约/接口） | `GAP-P7-GENERAL-CMP` |
+| #1 general qTheta comparison (paper normalization) | `Mzk1GeneralComparisonInterfaceActual.lean`（`GeneralQThetaComparison := q ≤ θ`，iff/consumer）；`Mzk1PaperNormalizationDictionaryActual.lean:19/26/29`（`PaperNormalizationData` + `paperLog_eq_raw_sub` + `Required := Nonempty …`）；`Mzk1GapNormalizationActual:57/67/77` 仅 sufficient reductions | `PaperNormalizationData` 的 inhabitant（rawLog/paperLog/blockDim+pos/shift/normalization_eq，其 `normalization_eq` 本身是 NAMED）；以及“paper normalization ≠ mu(O)=1”的 general 比较证明 | **CONDITIONAL(HullQDictionary)**（§12 条件版 green 12:50:24Z：唯一 named input 两标量，`comparison_of_hullQDictionary` margin 1） | `GAP-P7-GENERAL-CMP` |
 | #2 paper IQ(S±; n,D^⊢) realization | `Mzk1PaperIQCarrierInterfaceActual.lean:16/23`（`PaperIQCarrierData` + `carrier_mem_region` + `Required := Nonempty …`，rows 明写 inhabitant NOT constructed）；`A481LiteralIQCarrierActual:17`（受限积构造 green）；`IQCarrierFromSource:42`、`LiteralIQCarrierActual:6/96`（literal 类型缺失） | `PaperIQCarrierData` 的 inhabitant：literal `IQ(S+_{j+1}; n, D^vdash_{vQ})` 载体类型、与 actual IQ 的 carrier_eq；树内无该类型 | **是**（仅受限积构造） | `GAP-P7-IQ-LITERAL` |
 | #3 (Ob3-3) source identification: det(x)M 算术度 = normalized log-volume | `Mzk1Ob33InterfaceActual.lean`（`Ob33SourceIdentification detTheta thetaActual := detTheta = thetaActual`、`ob33_interface_weighted_eq`）；`Mzk1Ob33GapInterfaceActual.lean`（`Ob33SourceGap`）；`S3134ThetaHullDetNormalizationActual:65/77`（det law green）；`Mzk1WeightedDetPacketActual:80`（profile scaling green） | actual `det(x)M` 输出算术 degree = normalized log-volume 的 source identification 等式；`S3134` 的 `D.detData` 字段来源 | **是**（det 定律 + profile scaling 只是半边） | `GAP-P7-OB33-SRC` |
-| #4 multiradial production of (xi-e)/(xi-f) comparison data | `Mzk1ComparisonDataStatusActual.lean`（状态表：MISSING + Indet02/Indet05/four-triangles adjacent）；`Mzk1ComparisonGapArithmeticActual` 仅算术 | actual multiradial production 定理/对象（xi-e/xi-f comparison data 的产线）；树内无 | **是**（无 production 定理） | `GAP-P7-MULTIRADIAL` |
-| #5 theta raw Haar vs paper normalized V | `Mzk1ThetaRawPacketFactorActual.lean`（raw = `[C3 block:Q_p] × candidateNormalizedV`；p-scaling）；`Mzk1ThetaVFactorInterfaceActual.lean`（`ThetaVFactorIdentification raw dim paperV`）；`Mzk1PacketNormalizedBoundActual`/`Mzk1ThetaVConsumerChainActual`（norm=raw/dim 与 paperV=norm 条件链）；hull：`Mzk1PaperVFactorActual.lean:16/26`（`PaperVFactorData`，**green interface，inhabitant still missing**）；`Mzk1C3DIndexDataActual.lean:15/21`（`C3DIndexData`，**green interface，inhabitant still missing**）；`Mzk1PaperNormalizationRowsActual.lean:6/9` | `PaperVFactorData` inhabitant（c3Dim+c3Dim_eq、c3Dim_pos、logP；inhabitant NOT constructed）；`C3DIndexData` inhabitant（dIndex+equiv、dPlaceIndex、dPlaces、dTuple；NOT constructed）；`[C3 block:Q_p]` 与局部次数的等式；C3-vs-D dictionary | **是**（只有 candidate/条件链） | `GAP-P7-THETA-V` / `GAP-P7-THETA-D` / `GAP-P7-THETA-DEG` |
+| #4 multiradial production of (xi-e)/(xi-f) comparison data | `Mzk1ComparisonDataStatusActual.lean`（状态表：MISSING + Indet02/Indet05/four-triangles adjacent）；`Mzk1ComparisonGapArithmeticActual` 仅算术 | actual multiradial production 定理/对象（xi-e/xi-f comparison data 的产线）；树内无 | **PARTIAL**：C3 候选源 `Mzk1P7MultiradialProductionActual` **DONE 13:19:40Z**；实际 (xi-e)/(xi-f) production/缺失清单仍缺（`coord/P7-MULTIRADIAL-GAP.md`） | `GAP-P7-MULTIRADIAL` |
+| #5 theta raw Haar vs paper normalized V | `Mzk1ThetaRawPacketFactorActual.lean`（raw = `[C3 block:Q_p] × candidateNormalizedV`；p-scaling）；`Mzk1ThetaVFactorInterfaceActual.lean`（`ThetaVFactorIdentification raw dim paperV`）；`Mzk1PacketNormalizedBoundActual`/`Mzk1ThetaVConsumerChainActual`（norm=raw/dim 与 paperV=norm 条件链）；hull：`Mzk1PaperVFactorActual.lean:16/26`（`PaperVFactorData`，**green interface，inhabitant still missing**）；`Mzk1C3DIndexDataActual.lean:15/21`（`C3DIndexData`，**green interface，inhabitant still missing**）；`Mzk1PaperNormalizationRowsActual.lean:6/9` | `PaperVFactorData` inhabitant（c3Dim+c3Dim_eq、c3Dim_pos、logP；inhabitant NOT constructed）；`C3DIndexData` inhabitant（dIndex+equiv、dPlaceIndex、dPlaces、dTuple；NOT constructed）；`[C3 block:Q_p]` 与局部次数的等式；C3-vs-D dictionary | **PARTIAL**：V 字典 plan #5 DISCHARGED(general-k)；#7 THETA-DEG **DONE 13:39Z**（5 文件，B4 image bridge 余）；#6 THETA-D 为 S2717C3 实例 DISCHARGED/一般 C3 待桥 | `GAP-P7-THETA-V` / `GAP-P7-THETA-D` / `GAP-P7-THETA-DEG` |
 | #6 StepXIContract fields/linkage | `Mzk1StepXIContractLinkageActual.lean:7/11/15/16`（`ContractFieldLink`、`linkage`、`ContractFieldsLinked`、**`linkage_not_linked : ¬ ContractFieldsLinked`**（green 反面结论））；`Mzk1StepXIContractSchemaActual.lean:6/10/14/16`（`ContractFieldSchema`、`schema`、`evidence=[none,none,none]`、`evidence_unset`；**green interface，inhabitant still missing**）；`Mzk1StepXIEvidenceInterfaceActual`（ours schema） | 三个 obligation（holomorphicHull/determinantNormalization/logVolumeComparison）的 actual evidence（`Option String` 目前全 none）；linkage 的 evidence 非 none 的证明 | **是**（linkage_not_linked 明确未链接） | `GAP-P7-CONTRACT` |
 | #7 exact hull upper bound V <= (1/4)l(log d+log f)+C0 | `Mzk1HullUpperBoundInterfaceActual.lean`（`HullUpperBound` named Prop + consumer）；`Mzk1HullBoundAddTransferActual.lean`（mainTerm + 转移）；`Mzk1HullBoundConstantActual.lean`（mainTerm 非负）；`Mzk1HullUpperBoundTransferActual`（C0 单调/传递） | 实际 `V` 对象、`C0` 常数与该 upper bound 的证明（树内无定理）；接口只是命名/转移 | **是**（无 bound 定理） | `GAP-P7-HULL-UB` |
 
@@ -129,7 +128,7 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 | `Mzk1C3S1902LowerBoundActual.lean` | **DONE EXIT=0**（10:57:00Z，50s） | `comparison_of_qnorm_le_haarScale_mul_lowerBound`（注入任意 c≤∏μ_b(ball_b)） |
 | `Mzk1C3S1902ConditionOneActual.lean` | DONE 11:00:25Z，olean=True | `comparison_of_one_le_haarScale_mul_prod`（∏·haarScale≥1 且 ‖q‖≤1）、`comparison_of_haarScale_one_of_one_le_prod` |
 
-**状态**：#1 general 仍未证，但现在精确化为**具体局部质量乘积** `haarScale·∏_b μ_b(ball_b)`；其正性已证，具体正下界仍需 theta-value 范数下界（`rootImageRadius` 是 theta 范数 sup，`PaperRootExtensionThetaHullAuditActual:48-51`），无 p^{-ord} 显式公式。所有结果都 CONDITIONAL on `C3S1902TransportData`（无 inhabitant）。
+**状态**：#1 已收为 **CONDITIONAL(HullQDictionary)**（§12）；本段为路线 A 球质量链历史——精确化为**具体局部质量乘积** `haarScale·∏_b μ_b(ball_b)`；其正性已证，具体正下界仍需 theta-value 范数下界（`rootImageRadius` 是 theta 范数 sup，`PaperRootExtensionThetaHullAuditActual:48-51`），无 p^{-ord} 显式公式。所有结果都 CONDITIONAL on `C3S1902TransportData`（无 inhabitant）。
 ## 9. #1 GENERAL-CMP 攻击进展（P7-GAP-ATTACK-PLAN 负责项）
 
 | 文件 | 状态 | 内容 |
@@ -194,7 +193,7 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 
 ### ③ margin 1
 - `Mzk1S1915ComparisonActual:113-125`：`s1915ClosedForm = 1 + qReading`，故 `qThetaPilotLogVolumeComparison` 有严格 margin 1；
-- 但前提是 `HullQDictionary` inhabitant；当前未构造，因此 #1 仍 PARTIAL，不能标 DISCHARGED。
+- 但前提是 `HullQDictionary` inhabitant；当前未构造，因此 #1 为 **CONDITIONAL(HullQDictionary)**（§12，条件版 green 12:50:24Z），不能标 DISCHARGED。
 
 ### 建议下一步（按最小剩余）
 1. 优先证 (b) `∏ qVFamNormRatio = 1`（若它是 paper 的 product formula，可从 qVFam normalized generator 的范数乘积得到）；
