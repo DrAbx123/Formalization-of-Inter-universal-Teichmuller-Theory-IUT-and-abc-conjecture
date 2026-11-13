@@ -1183,3 +1183,5 @@
 - stepxi：LIndexNonempty GREEN 16:11:21Z（finitePrimePlace_two_seven_nonempty ⟨2,norm_num⟩ + tensorIndex_nonempty）；q norm instance mismatch 仍卡（CommonPrimeCompletion vs NormalizedCompletion 两个 norm 实例）；region zero tensor 缺 `finitePadicTensorTprod (fun _=>0)=0`。
 
 - 01:25：**用户指出重复项**——核对属实：当前 `p2TensorHaarDetTransportMissing` 是旧 `GAP-DET-HAAR`（`Mzk1GeneralDualVolumeActual` 已记录），且已有 SNF 工具链（SNFTool/SNFMatrixUW/SNFMatrixDiag/GeneralSNFVolume3）+ `Mzk1MatrixHaarBaseActual`（GL_d(ℤp) 保持 coordLattice）+ B4 无条件对角比 + Haar 唯一性。新建 `coord/GAP-DEDUP-LEDGER.md`；已派 qpilot 用 B4+GL不变+SNF+标量攻 GAP-DET-HAAR（目标新文件 Mzk1P2DetHaarActual），这是旧缺口的真正关闭而非新假设。
+
+- 01:30：mainline count↔valuation 两机械步骤：Lead 发 `#check` 原文（`instIsScalarTower'` **无 S 参数**；其二项固定 adicCompletionIntegers，`?S` 说明其 LocalRing 可能是另一个 abbrev；给全限定显式 instance）+ `IsScalarTower.algebraMap_apply` 签名与 hx 正确方向（`HeightOneSpectrum.algebraMap_adicCompletion` AdicValuation:884）。
