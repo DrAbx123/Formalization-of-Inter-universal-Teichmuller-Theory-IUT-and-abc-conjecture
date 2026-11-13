@@ -1621,3 +1621,5 @@
 - 21:35：shehdd 修 `GroupCountInterface:24`（`Nat.card_congr Multiplicative.toAdd`），retouch 05:18:06Z；`torsion_card_eq` 的 `p^0` 占位暂保留（不冒充 §3.4），GammaPGroup 的 `card_gamma_eq_pow_actual` 等该接口 olean。
 
 - 21:40：hull 修 `ThetaLabel/thetaLabelToSigned` 根因（补 import/open `PaperC3ThetaRootActual`），源 mtime 21:17:45，等重编；预期剩余只在 `rootThetaMaxIndex_spec` coercion/`field_simp`/`norm_mul`。
+
+- 21:45：Prop14 Box wrapper 依赖加深：`Iut/Anabelian/Tempered` 失败于 `TemperedFundamentalGroups.SemistableReduction.NodeEtaleGlueReduced.olean` 缺失；TFG 闭包 744 文件、71 缺 olean。已把 71 个 TFG 路径加入 WL（与 33 Iut 合计 104 目标）；已告知 qpilot 继续 port，若编译太慢转 plan §5.3（在 LeanFormal 真实 tensor 重写 1.4(iii) 第二上界，不用 Iut 供体）。
