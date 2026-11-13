@@ -1853,3 +1853,5 @@
 - 08:15：Gamma 第 14 次修：给 shehdd 改用 zpow 合并指数的证明（`zpow_add₀`/`zpow_natCast`/`zpow_neg`，避免 field_simp 卡住）；第二定理保留 `change ...; rw [eq_zero_iff]; exact hmem`。lattice HaarIndex `invalid binder annotation` 建议把 section variables 改成显式 theorem binders（正确顺序 MeasurableSpace 后 BorelSpace）或内联 wrapper。
 
 - 08:20：shehdd Gamma 第一定理按 lead 的 zpow 证明替换 field_simp（zpow_add₀/指数 ring=0/zpow_zero/one_mul/exact hy），第二定理保留 change/eq_zero_iff；retouch 等编，不再盲修。
+
+- 08:30：给 hull Correspondence 精确修法：`:129` 用 `Real.log_mul hpow.ne'`（非 positivity）；`:175 Nonempty (Bad ...)` 从 `nativePlaceSelection_nonempty` 构造 `haveI`（Bad 是 `{p // p∈V_mod_bad}`）；不改 s1915A0/model。
