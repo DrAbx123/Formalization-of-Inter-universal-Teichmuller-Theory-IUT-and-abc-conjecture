@@ -938,3 +938,5 @@
 - 03:10：**Weight GREEN**（stage4 13:22:49Z，56s——#7 (a)(b) DONE）；**CountLocalValuationBridge DONE 13:24:42Z（33s）**、**RelativeDetLogExpansion DONE 13:25:05Z（55s）**（mainline：② 桥+① 展开+③ arch 汇总，B5 汇总条件定理）；**FractionalCountNumDen DONE 13:26:56Z（26s）**（qpilot count=num−den）。已派 mainline 用 qpilot 两 fractional 文件替换 FractionalLogVolumeExpansion 输入并写 hsub Summable 支撑。
 
 - 03:22：mainline FractionalExpansionBridge（fractionalLogVolumeExpansion_of_qpilot：用 qpilot 两定理 + FinsumSubBridge/Summable named input，#check 签名清单）入队（483 项）；**ContractRowsBridge DONE 13:29:25Z（54s）**（#8 行覆盖 green）；**BlockEquivData DONE 13:28:16Z（50s，ole 33,584B）**（#10 citizen 清单 green，inhabitant 仍缺）；Cancel FAIL 13:29:28 待查。
+
+- 03:26：stage4 Cancel 首错 relay：thetaPilotHullLogVolumeReal 定义在 AbsTopIII09ThetaHullScalingActual:57（缺 import/open）。
