@@ -756,3 +756,5 @@
 - 20:58：hull 更正：HullUBPaperVDictionary DONE 12:10:27Z（rawV=s1915ClosedForm, normV=normalizedLog, scale=1, offset=1）、ThetaVScaleOffsetIdentity DONE 12:10:27Z、RawUpper DONE 12:07:47Z、C3DDonorProjection DONE 12:05:14Z（#6 对 S2717C3 实例 DISCHARGED，一般 S3137 C3 另列）；C0Absorption/Discharge 已 retouch。P7 plan #6 更新。
 
 - 21:02：三份新文件入队（447 项）：stepxi RouteC0GlobalDecomposition（c0FiniteLog+c0ArchPart+globalReadout 命名分解，global=finite+arch 为精确缺失源箭头）；shehdd Ob33B5Index（PlaceSNFData 只消费 mainline LocalGeneratorData + MissingGeneralPlaceSNF）；qpilot IQFiniteAdeleStructures（unit group/principal support/valuation 实际构造 + PaperLabelMap named input）。
+
+- 21:05：mainline LocalizedLineMul（localizedLine_eq_span_map + localizedLine_mul：map_mul/mul_def/span_mul_span/span_span）入队（448 项）。
