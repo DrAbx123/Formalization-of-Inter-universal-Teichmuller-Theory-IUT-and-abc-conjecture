@@ -1637,3 +1637,5 @@
 - 22:25：hull 新写 `Mzk1P0RouteC0GlobalReadoutActual`（待编）：`c0ProductQ_subset_thetaHull`、`c0ProductQ_haar_le_thetaHull`、`c0ProductQ_normalizedLog_le_thetaHull`、**`thetaHull_normalizedLog_eq_closedForm_sub_one`**（normalizedLog(hull)=s1915ClosedForm−1，去掉 +1 offset），把全局 q 格落点接到 paper normalized hull；下一步 A1.6 δ_b 显式/非负与权重对应。
 
 - 22:35：**A1.6 里程碑：`Mzk1A1SignedReadoutActual` GREEN 21:26:13Z（94s）**（有符号读数）。Iut/TFG 闭包开始编译（TFG files 有 transient retry，正常）。已派 hull（δ_b/权重/readout 串接）、mainline（finprod 同态性）、shehdd（Gamma/torsion）、lattice/stage4（p-adic 接口）、stepxi（A5）、qpilot（port）。
+
+- 22:40：mainline `Mzk1P1IdealMapFinsetProdActual` 落盘：`ideal_map_finset_prod`（Finset 归纳 + map_mul/map_top）+ 单 binder 形式；下一步用 finite support 展开 finprod 套 ② + prime-power/mul ⇒ general `IdealMapPowerStatement`。#8 保持。
