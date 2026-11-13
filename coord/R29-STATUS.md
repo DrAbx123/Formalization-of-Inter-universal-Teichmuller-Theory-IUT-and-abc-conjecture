@@ -1488,3 +1488,5 @@
 - 14:45：**A6 方法更新（user route）**：S1915 hull 每坏位 closedBall 0 r_b、r_b<1（`rootNormedThetaValueInL_norm_lt_one`）；坏位奇 residue char ⇒ H,1+H,2+H 两两不交且 ⊂ 单位球 ⇒ 相对质量≤1/3；乘积 ⇒ μ(hull)/μ(unit)≤(1/3)^{#Bad}；`s1915ClosedForm=1+log ratio≤1−#Bad·log3<0`；paperBox≥0 ⇒ V≤paperBox 对所有 disc/cond，C0=0 无条件，#9 可望整体 DISCHARGED。已派 hull 写 `Mzk1HullUBLocalThirdActual`+`Mzk1HullUBUnconditionalC0Actual`。
 
 - 14:46：巡检：watchdog 健康（log 03:43、lean=12、lock 存在）；19:43 一批红多为新 cycle 的依赖 olean 缺失（RootCoordEquiv/QThetaComponent/DetCoefficientFinal 等）。QThetaComponent 旧日志行号超过当前 47 行文件 ⇒ stale。已唤醒 mainline/qpilot/shehdd/abc/lattice/stepxi 下一波。
+
+- 14:52：桥 2 :45 稳健证法发 mainline：`Submodule.map` carrier **就是 image**（Map.lean:53 map_coe rfl），用 `le_antisymm`：LHS→map_coe→subset_span；RHS→span_le→image⊆map→map_coe→⟨y,hy,rfl⟩；不依赖 change/congr。:85 已按 `rw [← Algebra.smul_def]` 修。shehdd 4 official green（CountSideMaxIdeal/SpanGeneratorValuationMaxIdeal/C17NativeBaseResidueOne/C17NativeBadResidueFieldGap）+2 新 proof；lattice 5 pending 首错批量修。
