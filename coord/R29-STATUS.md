@@ -974,3 +974,5 @@
 - 21:52：mainline Uncond 首错 relay（den.property R 显式、Finite.subset/HasFiniteSupport 展开、Associates.finite_factors binder 名；建议直接用 qpilot 的 fractional_count_weighted_hasFiniteSupport + finsum_sub_bridge）。
 
 - 21:54：mainline Uncond 唯一首错 = `:35 Subtype.coe_ne_zero` 不存在；已给出显式替代 + 建议直接用 qpilot FinsumSummable 的定理；已 retouch。
+
+- 22:02：mainline Uncond 最新首错 = :57 rw 方向（finsum_sub_bridge 用错方向/形状），已 relay：`rw [finsum_sub_bridge]`（无 ←）+ 显式 f/g + finsum_congr + ring；:35 若仍在用显式 subtype 证明或直接调 qpilot 定理。
