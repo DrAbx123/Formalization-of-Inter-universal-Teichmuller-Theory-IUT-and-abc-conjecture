@@ -1685,3 +1685,5 @@
 - 00:55：mainline 修 finprodExpand motive：`ideal_eq_finset_prod_maxPowDividing := (factorization hI).symm.trans (finprod_eq_prod …)`（无 tactic）+ 新假设形式 `ideal_map_eq_finset_prod_map_of_eq`（RHS 不含 I），原定理作推论；general `idealMapPowerStatement_general` 应直接过。
 
 - 01:00：shehdd Gamma `:47` 改为 `Multiplicative.ofAdd 0` + `← ofAdd_nsmul`/`← ofAdd_zero` + `eq_zero_iff`；lattice A1Padic 改 `ι : Type` 且 `[Module ℤ_[p] (rootNormedExtension)]` 作字段输入（交 stage4/L-side），不再硬造 compHom。
+
+- 01:05：mainline finprodExpand 最终修法：`ideal_eq_finset_prod_maxPowDividing := (factorization hI).symm.trans (finprod_eq_prod …)`（无 tactic）+ 假设形式 `ideal_map_eq_finset_prod_map_of_eq`（RHS 不含 I，rw 安全），原定理作推论；等 finprodExpand/generalProof/uniformizerPowerSpan 编绿 ⇒ IdealLocalizedCount 三条件齐。
