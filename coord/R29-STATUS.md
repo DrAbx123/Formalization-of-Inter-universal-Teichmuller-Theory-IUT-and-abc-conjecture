@@ -1845,3 +1845,5 @@
 - 07:50：hull dictionary 权重更正：`paperWeight_eq_inv_localCompletionDegree`（1/[K_w:F_v]=1/(e·f)）；`d_b=[L:Q_p]` 与 paper weight 分列；degree tower 改为 `DegreeTowerInterface`（∃n, d_b=n·localCompletionDegree）作精确缺口，不冒充恒等式；log r/qhat 字典保持。dictionary 等编。
 
 - 07:55：mainline 重构 S3137 bridge 为四项显式输入：`S45SourceFields`、`QHatNormCoherence`（P2 独立 norm-instance）、`RootBaseCompletionGap`（rootBase↔K_w completion 同一性 GAP）、`PaperToS3137A1Data.a1_delta_paper`；最终 S3137 条件版按此链写，每项显式。P2 文件头错误注释已更正。已要求先修 NormalizedSourceConditional forall-instance，再编 chain/bridge 并报 exact 签名。gate §20.44 已写。
+
+- 08:05：abc 只读核对：`Mzk1A1TensorProdProbeActual.rootNormedExtension_finrank_tower` GREEN，tower `[L:Qp]=[F_v:Qp]*[L:F_v]` 可直接用、**不是 GAP**；`weight_conversion` 只剩单点 `[K_w:Qp]=[F_v:Qp]`（或 root extension 以 K_w 为基）的 F/K 局部兼容，仓库无此定理。gate §20.46 已写；mainline 条件版 `weight_conversion_cond` 的 hdF 即该点。

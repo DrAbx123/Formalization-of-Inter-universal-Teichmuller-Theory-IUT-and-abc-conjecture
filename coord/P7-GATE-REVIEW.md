@@ -720,3 +720,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **最终 S3137 条件版**将写：`S45SourceFields → QHatNormCoherence → RootBaseCompletionGap → PaperToS3137A1Data → qPilotLogVolumeReading P ≤ thetaPilotHullLogVolumeReal C3`，每项显式、未证即条件。
 - `Mzk1P2QNativeReadingCorrectedActual` 文件头已更正：`P2QHatNormInstanceAgreement` 是独立 coherence，不等价于 ratio=1。
 - **#1 状态**：paper-faithful 条件版；无条件 Q≤Θ 不存在。
+
+
+### 20.46 Tower is green; weight_conversion single local-compatibility point (abc, 2026-11-15 01:05)
+- **tower 不是 GAP**：`Mzk1A1TensorProdProbeActual.rootNormedExtension_finrank_tower`（olean=True）已证 `finrank Qp L = finrank Qp rootBase * finrank rootBase L`，即 `[L:Qp]=[F_v:Qp]*[L:F_v]`；实例链完整，可直接 `rw [Module.finrank_mul_finrank]`。
+- `rootBase = NormalizedCompletion (qVFamTensorPlace)` 是 **F-place** completion；`d_b=[L:Qp]` 以 F_v 为基。
+- `nativeBadLocalWeight = 1/[K_w:Qp]`（K-place）。tower 只给 `d_b=[F_v:Qp]*[L:F_v]`；要得 `d_b = n_b*[K_w:Qp]` 还需 **`[K_w:Qp]=[F_v:Qp]`**（或 root extension 以 K_w 为基）的 F/K 局部兼容。
+- 仓库当前**没有**该兼容定理；`weight_conversion` 剩余 GAP 就是这一点，不是 tower。
+- 已写入 `AUDIT_LEDGER.md`。
