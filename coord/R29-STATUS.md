@@ -1446,3 +1446,5 @@
 - 12:38：**桥 2 实质通过**（`localizedLine_eq_span_idealMap` PROVED；`localizedLine_maxIdeal_eq_span_uniformizer` 重写+等重编）；桥 1/2 完成后 max-ideal CountValuationBridge/R21Bridge 无条件 → IdealMapPower general I → B5Index。lattice #10 `RootUnitMassCitizen` green（rootUnitBallMass pos/lt_top/ne0/netop、normalizedRootUnitBallMass_eq_one）+ 新 `BlockAlignmentCard`（card J=card Bad 必要条）；shehdd B5/C17 3 新 proof（FiniteIndexDataDiagonalBridge 双向闭环、C17ResNormDegreeGapNativeEqQFam、IdealMapPowerMaximalApply）。
 
 - 12:42：stepxi milestone：5 新定理绿（QThetaStrict qReadActual_strict_below_theta_of_theta_nonneg 18:20:57Z；NormalizationJoint lThetaNormFactor_gt_theta/pos_of_theta_nonneg 18:20:29Z；QThetaJointSign qReadActual_lt_theta/le_theta_of_theta_nonneg 18:27:45Z）；Consumer finals 已标 RE-EXPORT 不计 proof；P7 C3Free 简化为 P0 core+ThetaRootCarrier inhabitant（rootChange/kummer 进 missing 清单），P2Data 修 opens，待编。
+
+- 12:46：桥 2 最新两错：`IsLocalization.coeSubmodule = span` 目标（需 coeSubmodule_def/eq_span）；`:69 Ideal.mem_span_singleton rw 失败`（目标有 `↑(Ideal.span)` coercion，先 `change` 再 rw）。CountSideMaxIdealActual 三错（unsolved goals/No goals/Invalid k）已发 shehdd；它是 max-ideal R21 上游。
