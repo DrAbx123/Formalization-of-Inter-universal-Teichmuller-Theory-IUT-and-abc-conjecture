@@ -572,3 +572,5 @@
 - 09:48 巡检：**BaseChange olean 生效**——AgreeFLT 与 AGREEFLTBridge 已 START（00:48:19）；hull/stage4/lattice/stepxi 唤醒派活（input alignment、U*M*W、diag 桥②③、P5 audit 核对）。
 
 - 09:52：lattice 桥② 具体 `diagEquivCLM` 构造代码已给（f : d→ℕ，coordwise p^{f_i} 乘、逆 zpow、continuity continuous_pi）；桥③随后。
+
+- 09:55：hull input alignment 5 份（types/named/composite/type-diff/gap rows）入队（381 项）；stage4 ChangeMatrixRing 修 simpa + Volume2 降级（GAP 精确：μ(M)=index*μ(N) 的 ENNReal coercion）；P5 audit 确认 DONE（olean 4,032B）、P5 收尾文档齐。

@@ -374,3 +374,8 @@ tmp/sheaf/xif/paper/Mzk1P5AxiomAuditActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FLTCompletionInputActual.lean
 tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneFinrankActual.lean
 tmp/sheaf/xif/paper/Mzk1ChangeMatrixRingActual.lean
+tmp/sheaf/xif/paper/Mzk1InputAlignmentTypesActual.lean
+tmp/sheaf/xif/paper/Mzk1InputAlignmentNamedActual.lean
+tmp/sheaf/xif/paper/Mzk1InputAlignmentCompositeActual.lean
+tmp/sheaf/xif/paper/Mzk1NativePlacesVsFinitePrimePlaceActual.lean
+tmp/sheaf/xif/paper/Mzk1InputAlignmentGapRowsActual.lean
