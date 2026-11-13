@@ -1667,3 +1667,5 @@
 - 00:05：**线 2 关键发现/复用**：qpilot 新 `Mzk1IutIVProp14iiiBoxFormalActual` 不 import Iut，直接复用已 GREEN 的 `FinitePlaceStepVAssembly.arithmeticTuple_stepV_normalizedLogVolume_le_paperBound`（实际 local different generators/δ·O_hol⊆R_I/componentVol Haar 上界），复述论文 (11) 上界；待编。**port 正式冻结 7/10**（NormalizedValuation 卡 4.32 `Valuation.map` 显式 monotone 与 `intValuation` defeq；class-B `PAdicHaarDetScaling` 已够 det-Haar/#10）。DegreeIdentification 等新 tail。
 
 - 00:10：hull 修 A1Delta/GlobalReadout 首错：`rootImageRadius`（PaperRootExtensionThetaHullAuditActual）/`rootNormedExtension`（PaperRootCompletionTensorActual）import/open 缺失致 autoImplicit；`thetaHull` 目标先 change 成 `s1902Hull` 再 rw；两文件 retouch 等下一轮 START。
+
+- 00:15：新 green：`Mzk1A5Ind1Ind3ConsumerActual` 21:53:05、**`Mzk1P1IdealMapNonVPrimeActual` 21:53:57、`Mzk1P1IdealMapFactorActual` 21:55:12**。IdealMapPower general 只剩 `prod_eq_single` 收缩 + `Associates.count`/`countExponent` 对齐。已派 mainline 收口、hull 继续 readout/weighted、shehdd Gamma+torsion+B5、lattice A1Padic、qpilot Box formal。
