@@ -1106,3 +1106,5 @@
 - 23:24：新建 `coord/P7-VACUITY-MAP.md`（Lead 战略分类）：C3-free 有效（IQ/B5/NormArch/HullUB/T-only/ThetaV/UnitMass/NativeDictionary/P3 core）；C3-typed vacuous 需 re-type（#1 比较链/#3 Ob33/#4/#6/#7 表面/#8/#10 BlockEquiv）；#7 DONE 仅数学内容，有效载体=P3 core；#1 不得再宣称条件版收口。
 
 - 23:26：P7-GATE-REVIEW §19 追加“旧 C3 空类型影响与 P7 重新锚定”：C3-free 有效项 vs C3-typed vacuous 需 re-type 清单，指针 P7-VACUITY-MAP；#1 不再宣称条件版收口。
+
+- 23:32：Lead QA：最近 63-64 个批量文件扫描 `sorry/admit/axiom/PUnit/: True` **0 命中**；新建 `coord/P0-P4-ACCEPTANCE.md`（通用+P0-P4 验收清单与 QA 命令）。
