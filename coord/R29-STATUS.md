@@ -1142,3 +1142,5 @@
 - 23:52：**P1 重大突破**：shehdd `Mzk1P1LocalizedFractionalIdealActual` DONE 15:38:22Z（31s）——`localizedFractionalIdeal_coe_eq`（FractionalIdeal.extended coercion = localizedLine）+ **`localizedLine_isPrincipal_actual : (localizedLine I v).IsPrincipal` 无假设证明**（DVR PID 实例）。⇒ P1 唯一缺失 `MissingLocalizedIsPrincipal` 关闭；LocalGeneratorData 可无假设构造；剩 count↔valuation + residue-one。已通知 mainline/shehdd 接线并更新文档。
 
 - 23:56：**P0-L 里程碑完成**（stepxi 六文件全 green：P0LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog）；`LPaperInstance=LPaper312Statement` 仍 Prop（条件化）；LQThetaSourceArrow 精确缺 q_mem_thetaRegion+normalization_eq；RegionMass 正性 regionMassPosGap。P0/P0-L 均完成，关键路径转向 P0.5 q/θ alignment + P2 R1.2 整性。
+
+- 23:58：P0-L 六文件全 green（LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog；LSourceIdent core_eq rfl）。已派 stepxi 下一大包：LQThetaSourceArrow 三缺口（q_mem_thetaRegion/normalization_eq/regionMassPosGap）+ roots/kummer 缺失接口。
