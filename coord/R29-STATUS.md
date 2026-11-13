@@ -1534,3 +1534,5 @@
 - 16:50：shehdd 修 `Mzk1Ob33B5IndexGeneratorActual`：补 `import Mzk1Ob33B5CountUnconditionalAttemptActual`、`SpanGeneratorValuationLemma` 全限定、`CountValuationBridge` 全限定 `Mzk1B5CountLocalValuationBridgeActual.CountValuationBridge d`；并恢复被并发覆盖丢失的 QPilot section + `qPilotLocalGeneratorBridge_proved`（带 `[Fintype (Bad …)]` + 显式 binder），retouch 04:27:42Z，等重编。
 
 - 16:55：AbsNorm436Port 加 `@[expose] public section`（修 module 文件声明不导出 → CardQuotient 的 `Unknown identifier cardQuot_mul_unrestricted` 根因）；已通知 qpilot 保持 module 风格、勿改非-module。hull LocalThird `:41` `Real.rpow_neg` 需 `0<x`（`lt_trans zero_lt_one hp`）；mainline R21Uncond `:47` 继续按 donor 分条 `refine`。
+
+- 17:05：新 green：`Mzk1HullUBLocalThirdActual`（A6 strict radius，20:33:18Z，110s）、`Mzk1Ob33B5IndexGeneratorActual`（B5Index 连接点，20:35:41Z，107s）、`Mzk1A5CapsulePositionActual`（20:34:51Z）、`CardQuotient`（20:34:31Z，port）。R21Uncond 最新错 `countValuationBridge_maxIdeal_of_span` 不存在，donor 是 `countValuationBridge_maxIdeal_of_generator`（已发 mainline 精确改法）。A6 LocalThird 绿 → 让 hull retouch LocalThirdBound → UnconditionalC0。
