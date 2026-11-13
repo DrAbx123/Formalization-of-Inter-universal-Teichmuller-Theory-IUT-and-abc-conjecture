@@ -1246,3 +1246,5 @@
 - 04:18：Lead 侦查 residue-one（GAP-PC-RESDEG）：已有供体 `Mzk1C17QCANDResNormDegreeOneActual`（resNorm_eq_of_localResidueDegree_one 条件证明）、`Mzk1C17QCANDResNormComapActual`、`BadPlaceRationalDegreeActual`；最小缺口=`localResidueDegree (nativeBaseSectionPlace T b)=1`（tame/split multiplicative paper 输入或从 SourceReductionClause 推）。已发 mainline，要求复用旧文件、不再写 residue 行表。
 
 - 04:20：shehdd LFI 本地类型检查 0 error（仅诊断；official 仍等 watchdog），source mtime 16:56:03 已 retouch。Lead 建 `coord/PROOF-STATUS-REGISTRY.md` 集中登记 status/aux 文件（含各 lane rows），milestone 只报 proof+新定理名；禁止手动 lean 验收、不删文件（除非无消费者）。
+
+- 04:22：**watchdog 停摆并已重启**：log 停在 16:59:15Z START，无 lean/lake 进程、lock pid=25776 失效、无 crash.log。删除 stale lock，`Start-Process cmd /c run_dag_watchdog.cmd` detached 重启；17:06:40Z 新日志恢复（START/RETRY 出现，node watchdog pid 18172/2472）。已广播：不手动编译、检查 per-file log、retouch 红文件、绿接绿。
