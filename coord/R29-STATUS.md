@@ -1789,3 +1789,5 @@
 - 05:25：用户核对纠正：§7.1 **成立**——有限秩 `ℤ_p^d→ℤ_p^{d'}` 任意加法群同态保持 `p^n` 倍子群（p^n 是整数），故自动连续；我此前 wild-hom 判断错误。gate §20.22 更正 §20.21；stepxi 改为写 `continuous_of_addHom_fin_zpadic` 并传输到 W_F，剩余唯一源缺口=实际单位识别 + β_a 来源，不再把连续性当新增节点。
 
 - 05:30：**四个新 GREEN：`Mzk1P1IdealLocalizedCountUnconditionalActual`/`FinalActual` 23:22:40（IdealLocalizedCount 无条件）、`Mzk1BoxReadoutLocalActual` 23:22:41（Box actual packet readout）、`Mzk1StepVPhiMaxActual` 23:21:48（Φmax）**。已派 mainline 接 B5Index；qpilot §8 distinguished scalar；hull 用 root scaling 供体；stepxi 连续引理/单位识别。gate §20.23 已写。
+
+- 05:35：mainline 报 **IdealLocalizedCount 无条件 GREEN 23:22:40**：`idealLocalizedCountStatement_proved (I) (hI) (v) : IdealLocalizedCountStatement I hI v`（`∃π e, e=Associates.count … ∧ localizedLine I v = span O_v {(π)^e}`）；消费点：statement/桥1/桥2/bridge3/general hmap → `idealLocalizedCount_of_bridges`。新 `Mzk1Ob33B5IndexConsumerActual`（3 定理，queued）把 statement 排成 B5Index 词汇 + `placeSNFData_nonempty`；绿后 B5Index 完整消费确认。#8 两半已收口；最终 Cor312 assembly 的 `cor312_of_s3137Comparison` 仍消费 comparison hypothesis（即 3.12 不等式本身）。
