@@ -1847,3 +1847,5 @@
 - 07:55：mainline 重构 S3137 bridge 为四项显式输入：`S45SourceFields`、`QHatNormCoherence`（P2 独立 norm-instance）、`RootBaseCompletionGap`（rootBase↔K_w completion 同一性 GAP）、`PaperToS3137A1Data.a1_delta_paper`；最终 S3137 条件版按此链写，每项显式。P2 文件头错误注释已更正。已要求先修 NormalizedSourceConditional forall-instance，再编 chain/bridge 并报 exact 签名。gate §20.44 已写。
 
 - 08:05：abc 只读核对：`Mzk1A1TensorProdProbeActual.rootNormedExtension_finrank_tower` GREEN，tower `[L:Qp]=[F_v:Qp]*[L:F_v]` 可直接用、**不是 GAP**；`weight_conversion` 只剩单点 `[K_w:Qp]=[F_v:Qp]`（或 root extension 以 K_w 为基）的 F/K 局部兼容，仓库无此定理。gate §20.46 已写；mainline 条件版 `weight_conversion_cond` 的 hdF 即该点。
+
+- 08:10：**新 GREEN：`Mzk1A1LatticeValuationIdentifyActual` 23:48:30（`inverseLambdaLattice_eq_inverseLattice`/`inverseLambdaLattice_eq_saturated_actual`，A1.6 qhat↔J_s 格识别）、`Mzk1P2QNativeReadingCorrectedActual` 23:49:11（P2 corrected reading/定义）**。已派 stage4 用 A1.6 完成实际 valuation 读数；mainline/hull/qpilot/shehdd/lattice/abc 各自继续。gate §20.47 已写。
