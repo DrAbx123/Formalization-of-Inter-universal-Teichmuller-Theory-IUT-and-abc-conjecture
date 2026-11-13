@@ -107,3 +107,11 @@
 - 原 6 文件全 GREEN；`inferInstance` 尝试 green 且确认失败（IsPrincipal 不能自动推断）。
 - 路线 A 新文件 `Mzk1P1DVRPrincipalLemmaActual`：单一缺失 `DVRFGPrincipalLemma : Module.Finite (LocalRing v) M → IsTorsionFree (LocalRing v) M → M.IsPrincipal` + `LocalizedLineFG`（后者可尝试由 Noetherian 消去）；`localizedLine_isPrincipal_of_dvrLemma` 条件归约已写。
 - 路线 B 卡同一缺口。P1 线 = 只剩 DVR 引理（+FG 输入）。
+
+## P3 净量阶段（2026-11-13 23:34）
+
+- `Mzk1P3NetGainLogActual`（15:27:24Z，80s）：`netQuantity G h C = G − log h + C`；A2 log 形式；`net = log massL − log massQ + C`；非负 ⇔ 源比较。
+- `Mzk1P3NetGainSourceGapActual`（15:32:20Z，62s）：精确恒等式；非负 ⇔ `sourceNetComparison`；**负例 `netQuantity 0 2 0 < 0` 证明无条件非负失败**，源比较命名为缺失原因。
+- `Mzk1P3TensorCoreScalingActual`（15:26:57Z，53s）：条件 core scaling 接口（显式 `hf : μ(f''S)=c·μS`）。
+- `Mzk1P3NetGainCorrectionsActual`（15:29:01Z，78s）：`NetCorrections`（normRatio/degreeWeight/referenceMassDiff），非负符号条件；P2 R1.3 接口。
+- 仍条件：core p-scaling（`FinitePadicTensor` 的 `SMul Set`/`NormedSpace` 实例超时），精确缺口保留。

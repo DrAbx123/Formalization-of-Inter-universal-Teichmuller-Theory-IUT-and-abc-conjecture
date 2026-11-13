@@ -1128,3 +1128,5 @@
 - 23:32：**P0.5 半端到端里程碑**（hull）：P0NativeComparison GREEN 15:29:00Z（olean 45,704B；nativeComparison_of_theta_nonneg/LComparison 转移/theta_nonneg）；精确缺失 ①q alignment T→I source ②θ landing/归一化 ③P2 R1.2 整性。**P1 收口**（shehdd）：6 文件全 green + inferInstance 确认失败；唯一缺失收缩为 `DVRFGPrincipalLemma`(+LocalizedLineFG)，条件归约已写。已派 hull P0.5 下一阶段（攻 q/θ alignment 并接 abc QNativeSourceArrow）。
 
 - 23:40：**P1 收口线索（Lead 侦查）**：`tmp/external/ported/flt/FLT/DedekindDomain/AdicValuation.lean:559` 已有 `IsDiscreteValuationRing (v.adicCompletionIntegers K)`；配 `DiscreteValuationRing.Basic:115` TFAE ⇒ `IsPrincipalIdealRing (LocalRing)`，再配 `FractionalIdeal/Operations.lean:788` 的 `isPrincipal` 实例 ⇒ 若把 `localizedLine I v` 识别为 FractionalIdeal 的 coercion，`MissingLocalizedIsPrincipal` 可直接得。已派 shehdd 按此攻。
+
+- 23:42：**P3 净量阶段 4 文件 GREEN**（stage4 自批）：P3NetGainLog（net=G−log h+C，非负⇔源比较）、P3NetGainSourceGap（精确恒等 + 负例证明无条件非负失败）、P3TensorCoreScaling（条件核心 scaling）、P3NetGainCorrections（normRatio/degreeWeight/referenceMassDiff，P2 R1.3 接口）。core p-scaling 仍条件（SMul Set/NormedSpace 实例超时）。
