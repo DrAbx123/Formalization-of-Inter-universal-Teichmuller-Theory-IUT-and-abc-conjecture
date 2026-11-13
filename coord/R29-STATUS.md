@@ -488,3 +488,5 @@
 - 08:04：hull 5 份（ArrowToLogKummerAdapter 类型不匹配 named adapter、concrete parts、SourceLogKummerData 5-field inventory presentFields=[]、raw/normalized 字典、5-row gap）入队（351 项）。
 
 - 08:05：shehdd ResidueWeightChain（residueFieldEquiv⇒degree=1⇒weight=1）入队；qpilot round10 2 份（WeightDegreeOneResidueEquiv/BadCharTameDegree）入队（354 项）；更正 qpilot 的 FLT 路径（在 ported/flt/FLT/DedekindDomain/Completion/BaseChange.lean，非 flt271）。
+
+- 08:07：abc C3UnitHaarComparison green（00:00:27Z）；C3S1902Quantity 补 PaperRootExtensionHaar import + 本地改名后 retouch；下一步查 ball 质量 p^{-ord} 型公式。
