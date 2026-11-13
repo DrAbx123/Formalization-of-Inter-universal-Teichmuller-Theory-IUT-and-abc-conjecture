@@ -644,3 +644,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - S45 的 `qVFamNormRatio=1` 是 **`qVFamNormalizedNorm = qVFamDefaultNorm`**（normalized vs adic），与上述不同；abc 已核对 `P2QHatNormInstanceAgreement` **不等价于** ratio=1。
 - 因此 #1 的 correction 全零需**同时**满足：(i) norm-instance agreement；(ii) S45 ratio=1。dictionary 文件中两者必须分开写，不能把 `qhatLogReadout` 的无条件形式建立在 S45 上。
 - 其余关系（`log r = −c_norm log p/(2l)`、`d_b log r = (1/(2l))d_b qhatLogReadout`）在 norm agreement 下成立；权重 1/f 与 d_b 仍分开。
+
+
+### 20.36 新 GREEN：A1 逆格范数 + bridge 待编（2026-11-15 00:10）
+- **`Mzk1A1InverseLatticeNormActual` GREEN 23:39:41（114s）**：`mem_lambdaLattice_iff`、`mem_qhatLattice_iff`、`inverseLambdaLattice_eq_normBall`、`qhatBall_subset_lambdaBall`；供 A1.6 qhat↔J_s/valuation 识别（stage4）。
+- `Mzk1P1NormalizedSourceConditionalActual`、`Mzk1P1PaperSumsToS3137BridgeActual`、`Mzk1P0QThetaReadoutDictionaryActual` 等仍 olean=False；bridge 三项 `weight_conversion`/`radius_log`/`haar_ratio` 为显式 GAP。
+- `Mzk1Cor312B5IndexChainActual` 修 `Invalid argument name k`（LocalRing/LocalField/PlaceSNFData named k）后等编。
+- **#1**：paper-faithful 条件版 (S45) 已 queue；S3137 reading form 仍需 bridge；model `actualPaperXiFTarget` 已确认不可用。

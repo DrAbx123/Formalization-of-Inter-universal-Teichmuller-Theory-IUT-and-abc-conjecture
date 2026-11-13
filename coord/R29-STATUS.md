@@ -1825,3 +1825,5 @@
 - 07:00：hull 写 `Mzk1P0QThetaReadoutDictionaryActual`（待编）：`qhatLogReadout=−c_norm log p`（norm agreement 下）、`log r=−c_norm log p/(2l)`、`d_b log r=(1/(2l))d_b qhatLogReadout`、`qhatLogReadout−paperQ=log ratio`。**警告**：`PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget` 虽 green，但依赖 model `PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog`（c_norm/(2l)），不能当 #1 收口。已派 hull 编译 dictionary 接 S3137 条件形式；mainline 继续 paper-faithful bridge；abc 只读核实并记 AUDIT。gate §20.34 已写。
 
 - 07:05：纠正 hull dictionary 条件：`qhatLogReadout=−c_norm log p` 需 `P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`），与 S45 的 `qVFamNormRatio=1`（normalized=adic）**不是同一命题**；correction 全零需两者同时满足。已要求 hull 在 dictionary 中分两独立字段，不得合并。gate §20.35 已写。
+
+- 07:10：**新 GREEN `Mzk1A1InverseLatticeNormActual` 23:39:41**（`inverseLambdaLattice_eq_normBall`/`qhatBall_subset_lambdaBall` 等，供 A1.6 格识别）。bridge/dictionary/conditional 文件仍 olean=False；mainline 三项 bridge GAP（weight_conversion/radius_log/haar_ratio）继续；Cor312B5IndexChain 修 named k 后等编；hull/stage4/qpilot/stepxi/shehdd 各自推进。gate §20.36 已写。
