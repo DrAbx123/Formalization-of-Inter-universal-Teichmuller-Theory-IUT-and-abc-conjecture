@@ -140,3 +140,23 @@ qThetaPilotLogVolumeComparison C3 P
 - ⇒ B5 汇总 ① 不再需要 named `FractionalLogVolumeExpansion`（改用该定理 + 两 finite-support）；
   ③ arch 已证；剩余为 ② 的 `LocalNormGeneratorBridge`/`CountValuationBridge` 与
   residue-one（GAP-PC-RESDEG/tame）。
+
+### 6.4 B5 ① 完全无条件（2026-11-13 后续 5）
+
+- Mzk1B5FractionalExpansionUncondActual — **DONE 52s@14:00:11Z，olean=True**：
+  `finitePlace_count_finsum_eq`（FinitePlace 和 = HeightOneSpectrum count 和，
+  `NumberField.FinitePlace.equivHeightOneSpectrum` + `finsum_comp_equiv`）；
+  `count_finsum_eq_num_sub_den`（点式 `count_eq_count_num_sub_count_den` +
+  `finsum_sub_bridge`，支撑用 `ideal_count_weighted_hasFiniteSupport`）；
+  **`fractionalLogVolumeExpansion_unconditional`**：`FractionalLogVolumeExpansion` 无条件成立。
+- 依赖（均 green）：Mzk1B5FinsumSummableActual（finsum_sub_bridge /
+  ideal_count_weighted_hasFiniteSupport / fractional_count_weighted_hasFiniteSupport / _summable）、
+  Mzk1B5FractionalAbsNormFormulaActual（log_absNorm_fractional_eq_sum_diff）、
+  Mzk1B5FractionalCountNumDenActual（count_eq_count_num_sub_count_den）、
+  Mzk1B5RelativeDetLogExpansionActual（FractionalLogVolumeExpansion 定义）、
+  Mzk1DetLinePrincipalGeneratorActual（countExponent）。
+- ⇒ B5 汇总中 ① 已无条件；③ arch 已证（archDetMetricWeight_eq_neg_archimedeanLogNorm）；
+  剩余内容输入仅 ② 的 `LocalNormGeneratorBridge` / `CountValuationBridge` 与
+  residue-one 等式（= GAP-PC-RESDEG/tame 的局部 norm/valuation 相容与 f=1）。
+- 注：Mzk1B5FractionalExpansionBridgeActual（13:37:39Z green）仍保留为 ① 的条件版
+  （finite-support 输入），Uncond 文件是其无条件化；两者不冲突。

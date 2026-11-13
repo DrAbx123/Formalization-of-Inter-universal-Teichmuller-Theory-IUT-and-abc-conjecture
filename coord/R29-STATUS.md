@@ -1000,3 +1000,5 @@
 - **路线 A 收尾**：A2 球质量（S1915 直接）/A5 显式归一化对数、s1915LocalDegree=finrank 语义等式 green；LowerBound 无 c/hprod；#1 剩 HullQDictionary 唯一 named input。
 - **DEFERRED**：`HullDetObjectActual`、`Mzk1HaarStrictActual`（旧 API，无 watched consumer；文档 coord/HULLDET-OBJECT-RED-GAP.md、coord/HAARSTRICT-RED-GAP.md）。
 - 未完成/未运行：target_accepted、独立审查、comparator（按 SHEAF 要求如实标注）；abc 猜想端到端未闭合，P7 NOT PASSED。
+
+- 22:14：mainline 确认 B5 ① 无条件 + CONTRACT-MAP §6.4 更新（FractionalLogVolumeExpansion 由 qpilot 三定理无条件推出；依赖文件清单已列）；B5 汇总仅剩 ② LocalNormGeneratorBridge/CountValuationBridge + residue-one（GAP-PC-RESDEG/tame）；mainline 收尾待机。
