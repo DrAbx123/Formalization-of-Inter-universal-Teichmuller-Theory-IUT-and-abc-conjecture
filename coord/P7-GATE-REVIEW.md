@@ -529,3 +529,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 因此 §7.1 的自动连续性**成立**；`§20.21` 中“wild homs ⇒ 自动连续性不成立”的判断错误，以本节为准。
 - **剩余 Ind1 源缺口**缩小为：`TimesMuQuotient ((F.Mon v)ˣ) ≃* (Integers F)ˣ/tors` 的实际识别，以及 `β_a` 来自实际源 action；连续性/ℤ_p 线性/ℚ_p 线性不是额外算术输入。
 - Lean 通用引理：`continuous_of_addHom_fin_zpadic`（`(Fin d → ℤ_[p]) →+ (Fin d' → ℤ_[p])` 连续），再由 `AddEquiv` 传输到 `W_F`。
+
+
+### 20.23 四个新 GREEN：IdealLocalizedCount 无条件、Box actual packet、Φmax（2026-11-14 23:21–23:22）
+- **`Mzk1P1IdealLocalizedCountUnconditionalActual` GREEN 23:22:40（118s）** 与 **`Mzk1P1IdealLocalizedCountFinalActual` GREEN 23:22:40（118s）**：`idealLocalizedCountStatement_proved : IdealLocalizedCountStatement` 无条件（三桥：general 22:25:14 / 桥 2 / uniformizer 22:43:33）；B5Index 完整重接的输入正式齐备。
+- **`Mzk1BoxReadoutLocalActual` GREEN 23:22:41（119s）**：Box actual packet readout（`PacketHullData`、`packetHull_normalizedLogVolume_le_box`、`signedLocalReadout`、`s1902SignedReadoutGap`）official；下一步 §8 distinguished scalar。
+- **`Mzk1StepVPhiMaxActual` GREEN 23:21:48（66s）**：`stepVPhiMax`、`identity_mem`、`nonempty`；`StepVActualInd1Ind2Action` 无 inhabitant。
+- **`IutIVProp14TorsionCountActual` 23:14:04 / `Mzk1IutIVProp14IndexCardActual` 23:14:10** 保持。
+- **边界**：IdealLocalizedCount 无条件已绿，但 B5Index 消费点仍需 mainline 接入；Box 的 actual packet readout 已绿，但 §8 distinguished scalar 与实际作用族/权重链未完成；paper 3.12/ABC 未证；#9/port 冻结。

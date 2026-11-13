@@ -1787,3 +1787,5 @@
 - 05:20：按 doc §8 重排 Box 主攻：`Mzk1BoxDistinguishedScalarActual`（qpilot）用 `SourceClauseC.torsion23_rational`/`kernel_field_identification` + `SourceClauseB.q_comparison` Tate 比较，证 E[2l] 在 K/K_v 有理 → q^{1/(2l)}∈K_v → θ=α^{j²} order j²/(2l) → principal-region normalized scalar readout；不声称 O_L 满射 O_M。stepxi 继续 §7.2/7.5 实际单位商源节点。§7.1 自动连续已核实不成立，gate §20.21 记录。
 
 - 05:25：用户核对纠正：§7.1 **成立**——有限秩 `ℤ_p^d→ℤ_p^{d'}` 任意加法群同态保持 `p^n` 倍子群（p^n 是整数），故自动连续；我此前 wild-hom 判断错误。gate §20.22 更正 §20.21；stepxi 改为写 `continuous_of_addHom_fin_zpadic` 并传输到 W_F，剩余唯一源缺口=实际单位识别 + β_a 来源，不再把连续性当新增节点。
+
+- 05:30：**四个新 GREEN：`Mzk1P1IdealLocalizedCountUnconditionalActual`/`FinalActual` 23:22:40（IdealLocalizedCount 无条件）、`Mzk1BoxReadoutLocalActual` 23:22:41（Box actual packet readout）、`Mzk1StepVPhiMaxActual` 23:21:48（Φmax）**。已派 mainline 接 B5Index；qpilot §8 distinguished scalar；hull 用 root scaling 供体；stepxi 连续引理/单位识别。gate §20.23 已写。
