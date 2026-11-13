@@ -1098,3 +1098,5 @@
 - 23:55（用户指正）：Lead 只负责大包/大方向与验收边界；具体文件、修复、入队全部由 lane 自主。已按 8 个大包领域重派（P0 native 迁移/P1 B5 生成元+#8/P1 localized generator/P2 系数+质量/P2 路线二/P3 core/P3-L/#10 native 字典），lane 里程碑报告制。
 
 - 23:12：gate §36 批量迁移期快照（Lead 扫描）：extra 548 = clean 485 + red 13（全为 P0-P3 新批次 WIP，无旧 gate 回归）+ inprog 16 + oleonly 20 + missing 14；注明旧 C3 空类型语义（旧 C3 green 仅 historical/vacuous，native 链才有效）。
+
+- 23:16：P0-P4 tracker 增加里程碑验收表（P0 native 端到端/P1 生成元-count/P2 R1.2 四来源+R1.3 质量差/P3 迹下降/P4 闭合）；Lead 只维护大包与验收，不逐文件指挥。
