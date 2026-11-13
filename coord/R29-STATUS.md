@@ -518,3 +518,5 @@
 - 08:34：stage4 A2 桥降级 marker（coercion ↑M.subtype vs M.toAddSubgroup.subtype 不匹配）；已给三招：Submodule.map_toAddSubgroup（Map.lean:494）、Submodule 版 comap_map 引理、商 setoid 可能 defeq（Nat.card_congr/Quotient.congr）。
 
 - 08:35：lattice CanonicalDiagScaling green（00:18:06Z，olean 69,728B；canonical_diag_volume_ratio 条件版）；已给无条件化配方（coordSmall=coordLattice measure=1；coordDual=f⁻¹(coordLattice) 紧开像+IsOpenPosMeasure+IsCompact.measure_lt_top）。
+
+- 08:38：TensorProduct/Basis DONE（00:16:33Z，28s）；Bilinear :86 `TensorProduct.inductionOn` 未知 → 改 plain induction + zero 分支并 retouch（连同 BaseChange）。
