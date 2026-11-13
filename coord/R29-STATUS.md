@@ -1456,3 +1456,5 @@
 - 13:00：调度：桥 2/CountSide 重编中（19:09 START）；`Mzk1P7MultiradialC3FreeActual` GREEN 19:05:00Z（stepxi #4）；`Mzk1HullUBC0CondTwo` GREEN 19:04:42Z。已唤醒 mainline/hull/shehdd/lattice/stepxi 下一波。
 
 - 13:06：桥 2 精确修法：`:45` 用 `rw [Submodule.map_span]`/congr+ext（`↑x`=algebraMap）替代 `Submodule.span_eq`；`:72` 删 `rw [map_mul]`（`(fun x=>↑x)` 是 Subtype.val 非 ring hom），用 `simpa [Algebra.smul_def, mul_comm, Subring.coe_mul] using Submodule.smul_mem _ c (subset_span …)`。CountSide log 与当前源码行号不匹配（旧/累计日志），让 shehdd 强制 retouch 对齐行号再修。
+
+- 13:14：hull #1 缺口①卡 `ContinuousSMul`/ContinuousLinearEquiv 实例；给省事合规路线：加 class-B `RootExtensionHaarDetScaling` Prop（root extension 上一般线性自同构 det-Haar 律，标准定理，不伪造），scalar 情形 det 用 `det_smul` 直接算 ⇒ `μ(qhat·O)=‖qhat‖^finrank μ(O)`；rootCoordEquiv+det_conj 保留为 TauCeti port 后内部化路线，不作为阻塞。缺口②等 P2 QNativeSourceArrow olean 或 c0QHat_eq_q+norm_algebraMap'。
