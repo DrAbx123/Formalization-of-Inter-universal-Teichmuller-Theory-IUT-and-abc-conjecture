@@ -872,3 +872,5 @@
 - 00:33：abc #1 收口完成：P7-MISSING §12 / plan #1 = CONDITIONAL(HullQDictionary)；margin-1（θread=qread+1）与 #7 paperBox（V≤paperBox C0=0 / ≤paperBox+1 C0=1）不冲突、不替代；三源字段 (a)(b)(c) docs-only，无新 structure/假设；无 sorry/axiom。
 
 - 00:36：qpilot PaperLabelBadIndexBridge **DONE 12:51:49Z（ole 65,824B）**：badRationalPrime=absNorm(nativeBadToKPlace b 的素下)、badRationalPrime_eq/function、BadThetaLabelMap；P7 §13 #2 label 写为“实际 Bad→Nat 桥 + theta-label 映射 GAP”。
+
+- 00:39：唤醒 abc（AUDIT_LEDGER 收尾 + 文档一致性 + #8 margin-1 消费者入口）、stage4（B2 结果/条件化）。
