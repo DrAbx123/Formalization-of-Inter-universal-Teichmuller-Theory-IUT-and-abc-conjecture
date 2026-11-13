@@ -924,3 +924,5 @@
 - 02:18：Weight 自 13:03:49 后无新 START（retry 上限），已 retouch 触发重编；Cancel 待其 olean。
 
 - 02:22：mainline RelativeDetLogExpansion（①relativeDetLog_eq_sum_count_diff；③+arch 项；FractionalLogVolumeExpansion named input）+ qpilot FractionalAbsNormFormula（absNorm_eq_num_div_den、log_absNorm_fractional_eq_num_sub_den/_sum_diff）入队（478 项）；待补 count=num/den count 差等式。abc 收尾三项：AUDIT_LEDGER 追加、P7-MISSING 修正 2 处陈旧状态、#8 消费者入口 DONE 13:08:36Z（comparison_of_margin_one 等）。
+
+- 02:32：Weight 修法 relay（陈述改回 `↑C3.p • S` 与 green 引理一致 + exact）；唤醒 hull（gate 状态表统计）、abc（#8 margin7Rows↔missing7ToGap 集成核对）、lattice（#10 blockEquiv citizen 构造）、stepxi（#4 MULTIRADIAL production 源）。
