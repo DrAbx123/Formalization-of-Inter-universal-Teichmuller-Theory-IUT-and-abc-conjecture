@@ -451,3 +451,5 @@ tmp/sheaf/xif/paper/Mzk1ThetaVGeneralUnconditionalActual.lean
 tmp/sheaf/xif/paper/Mzk1CommonPrimeCarrierAlignActual.lean
 tmp/sheaf/xif/paper/Mzk1C3S1902NormalizedLogActual.lean
 tmp/sheaf/xif/paper/Mzk1C0GlobalIdeleActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBGeneralFinalActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBArchCheckRowsActual.lean
