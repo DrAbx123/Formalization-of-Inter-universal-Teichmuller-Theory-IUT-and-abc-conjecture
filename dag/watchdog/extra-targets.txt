@@ -395,3 +395,6 @@ tmp/sheaf/xif/paper/Mzk1NormArchCKActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBPaperBoxActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBDictionaryActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBP7StatusActual.lean
+tmp/sheaf/xif/paper/Mzk1P7MultiradialCarrierActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33SourceIdentificationActual.lean
+tmp/sheaf/xif/paper/Mzk1CanonicalDiagUncondActual.lean
