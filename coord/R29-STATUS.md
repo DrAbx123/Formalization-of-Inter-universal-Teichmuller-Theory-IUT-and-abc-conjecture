@@ -1132,3 +1132,5 @@
 - 23:42：**P3 净量阶段 4 文件 GREEN**（stage4 自批）：P3NetGainLog（net=G−log h+C，非负⇔源比较）、P3NetGainSourceGap（精确恒等 + 负例证明无条件非负失败）、P3TensorCoreScaling（条件核心 scaling）、P3NetGainCorrections（normRatio/degreeWeight/referenceMassDiff，P2 R1.3 接口）。core p-scaling 仍条件（SMul Set/NormedSpace 实例超时）。
 
 - 23:48：P0.5 q alignment 侦查：`C10BridgeProof.lean:51` 的 `NativeOriginalInputDonors` 需 `initial : SourceDefinition31Data`，注释明言“No native→SourceDefinition31Data constructor exists in production”；`C1BridgeProof.NativeContractDatumExists` 列为精确缺失 donor。已派 hull：从 native 数据构造 SourceDefinition31Data（或最小字段集），可复用 C10DonorSearch/C1DonorCanonical/NativeClosure/SourceDefinition31PlacePartition。
+
+- 23:38：**P0 L-side 里程碑**（stepxi）：P0LPaperInstance DONE 15:27:26Z（82s，ole 89,128B，trio）；LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z；RegionMass 正性仍 GAP；SourceIdent/SignedLog 在修。已告知 hull：L 实例可用于 P0.5 的 hq/hθ alignment 等式。

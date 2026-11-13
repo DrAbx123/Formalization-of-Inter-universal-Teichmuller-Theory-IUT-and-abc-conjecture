@@ -115,3 +115,10 @@
 - `Mzk1P3TensorCoreScalingActual`（15:26:57Z，53s）：条件 core scaling 接口（显式 `hf : μ(f''S)=c·μS`）。
 - `Mzk1P3NetGainCorrectionsActual`（15:29:01Z，78s）：`NetCorrections`（normRatio/degreeWeight/referenceMassDiff），非负符号条件；P2 R1.3 接口。
 - 仍条件：core p-scaling（`FinitePadicTensor` 的 `SMul Set`/`NormedSpace` 实例超时），精确缺口保留。
+
+## P0 L-side 里程碑（2026-11-13 23:36）
+
+- `Mzk1P0LPaperInstanceActual` DONE 15:27:26Z（82s，ole 89,128B，axioms trio）；`Mzk1P0LReadoutInstanceActual`/`Mzk1P0LQThetaArrowActual`/`Mzk1P0LRegionMassActual` DONE 15:34:30Z。
+- RegionMass：Haar region < ⊤；**正性仍 GAP（regionMassPosGap）**。
+- SourceIdent/SignedLog 在修（SourceIdent 用 `sourcePilotRegionLToCore`；SignedLog 去 localSignedLog 泛型桥，保留 qRead eq/nonpos + thetaSigned）。
+- 全部已在 watch 名单（无需 Lead 交接）。
