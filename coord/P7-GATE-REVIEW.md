@@ -449,3 +449,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **即使强加每因子 algebra，等号情形也为假**：`qVFam_card_lt_finrank_of_algEquiv_pi`（card Bad < finrank block）、`qVFam_card_lt_rootBase_finrank_of_algEquiv_pi`、`qVFam_all_degree_one_of_card_eq_finrank`（等号 ⇒ 所有 root 因子 degree 1）、`no_algEquiv_rootNormedExtension_of_one_lt_finrank`（非平凡 root 扩张 ⇒ 无代数等价）。
 - **真实 per-place 事实**：`qVFamTensorBlock T b` 是 **base completion** `rootBase T b` 的一因子张量（同维数）；root extension 是另一对象 `rootTensorBlock T b`，维数 `[L_b:ℚ_p]=[K_b:ℚ_p]*[L_b:K_b]`（`rootNormedExtension_finrank_tower`）。
 - **结论**：A1 消费者必须走 per-place 维度/log-volume 关系（带 degree 因子）或格比较，**不能走代数等价**；路线 §1 的 `J` 逆像构造已由 `Mzk1A1LatticeInverseActual` GREEN 20:19:21Z 落地（`lambdaLattice`/`qhatLattice`/`inverseLambdaLattice`/`c0QHat_mem_lambdaLattice`/`qhatLattice_subset_lambdaLattice`/`qVFamily_mem_inverseLambdaLattice`）。
+
+### 20.13 两步走决定（用户 2026-11-14 17:15）：先原文化 3.12，#9 冻结
+- **Step 1（当前唯一主任务）**：按原文推出 3.12。关键路径 = #1 GENERAL-CMP（q vs theta 比较）+ #2 IQ-LITERAL + #3 OB33（已 PROVED）+ #4 MULTIRADIAL + #5–#7 THETA + #8 CONTRACT；#9 不在 3.12 依赖链（已核对：`Mzk1SignedCor312Assembly*`/`Mzk1Paper312StatementActual`/S3137 全部无 HullUB 引用；方向相反：3.12 是下界，HullUB 是上界）。
+- **#9/HULL-UB 冻结为主任务之外**：A6 只作为 Step 2 资产；已完成 `LocalThird`（strict radius，GREEN 20:33:18Z），`LocalThirdBound`/`UnconditionalC0` 若一轮内可绿则收尾后停，不再投入新证明。
+- **Step 2（推迟）**：IUT IV Thm 1.10 `R ≤ Box`；当前 #9 的 `paperBox` 是缩水 surrogate，Step 2 需换成真 Box（Prop 1.4 局部 log-volume、Prop 1.1–1.5、显式 PNT 等），届时再重做 #9，不现在改。
+- **人员调整**：hull 主力转 #1/A3（与 stage4 的 A1 格比较对接）；mainline 维持 R21Uncond→B5Index→#8 contract linkage；其余 lane 不变。
