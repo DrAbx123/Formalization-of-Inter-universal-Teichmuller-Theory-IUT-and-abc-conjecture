@@ -550,3 +550,5 @@
 - 09:09：shehdd gate §24（372/clean337/red15）；BaseChange 报错清单为旧 run 交错；已确认文件含我的两处修复（:388 zero 显式 f、:766 finrank_of_isFractionRing）；**把 BaseChange 交给 shehdd 接力修**（避免 lead 编辑冲突）。
 
 - 09:11：qpilot WeightDegreeOneFinrank（FLTCompletionFinrankInput+finrank=1⇒weight=1，不 import FLT）入队（375 项）；BaseChange 由 shehdd 接力（已告知 qpilot）。
+
+- 09:15：BaseChange 最新真 run 仅 2 错 relay shehdd：① :389 需加 RingHom.coe_range 到 simpa；② :210 valued_adicCompletionSemialgHom 末尾 simp/rw 不闭合（unused simp args）。已明确交由 shehdd 修。
