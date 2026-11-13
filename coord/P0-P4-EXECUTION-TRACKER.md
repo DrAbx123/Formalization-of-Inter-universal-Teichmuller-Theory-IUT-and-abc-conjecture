@@ -174,3 +174,9 @@
 - 新增 green：`Mzk1P2ArchLogSourceActual`（113,712B，exact iff：`archDetMetricWeight f = C_K·p2R13Exact ↔ archimedeanLogNorm f = p2WeightedDetLog`；`P2ArchLogSourceIdentification` 单一缺失）；`Mzk1P2TensorDetFactorActual`（80,560B：B2 `p2TensorFieldProduct`、`finrank=Σ`、scalar `p^finrank` det factor + 正性；缺 `p2TensorHaarDetTransportMissing`：任意 p-adic 线性等价的 Haar det 律/显式 basis det/log-volume 传输）。
 - 另三文件（NativeBlockAlignment/ArchWeightAlignment/R12WeightBridge）保持 green。
 - 剩余单一缺口：① 多因子 tensor↔product 的 p-adic Haar det 律（Mathlib 无）；② 实际 global element f 使 arch log = p2WeightedDetLog（源比较内容）。
+
+## P1 里程碑：principalValuation_proved GREEN（2026-11-14 01:35）
+
+- `Mzk1P1PrincipalValuationProofActual` DONE 16:19:14Z（36s）：`principalValuation_proved : localValuation (algebraMap a) = -count_v(span{a})`（PROVED）。
+- 证明用：`instIsScalarTower'` 显式实例 + `HeightOneSpectrum.algebraMap_adicCompletion` + `valuedAdicCompletion_eq_valuation'` + `valuation_of_algebraMap` + `intValuation_if_neg` + `WithZero.log_exp`。
+- 这是 P1 count↔valuation 链第一段（主理想）；剩余：`IdealLocalizedCount`（DVR principal / completionIdeal^count）+ residue-one。

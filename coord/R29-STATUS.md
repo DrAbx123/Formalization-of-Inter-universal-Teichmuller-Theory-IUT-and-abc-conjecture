@@ -1185,3 +1185,5 @@
 - 01:25：**用户指出重复项**——核对属实：当前 `p2TensorHaarDetTransportMissing` 是旧 `GAP-DET-HAAR`（`Mzk1GeneralDualVolumeActual` 已记录），且已有 SNF 工具链（SNFTool/SNFMatrixUW/SNFMatrixDiag/GeneralSNFVolume3）+ `Mzk1MatrixHaarBaseActual`（GL_d(ℤp) 保持 coordLattice）+ B4 无条件对角比 + Haar 唯一性。新建 `coord/GAP-DEDUP-LEDGER.md`；已派 qpilot 用 B4+GL不变+SNF+标量攻 GAP-DET-HAAR（目标新文件 Mzk1P2DetHaarActual），这是旧缺口的真正关闭而非新假设。
 
 - 01:30：mainline count↔valuation 两机械步骤：Lead 发 `#check` 原文（`instIsScalarTower'` **无 S 参数**；其二项固定 adicCompletionIntegers，`?S` 说明其 LocalRing 可能是另一个 abbrev；给全限定显式 instance）+ `IsScalarTower.algebraMap_apply` 签名与 hx 正确方向（`HeightOneSpectrum.algebraMap_adicCompletion` AdicValuation:884）。
+
+- 01:35：**P1 里程碑 GREEN**：`Mzk1P1PrincipalValuationProofActual` DONE 16:19:14Z（36s）——`principalValuation_proved : localValuation (algebraMap a) = -count_v(span{a})` PROVED（显式 tower instance + algebraMap_adicCompletion + valuedAdicCompletion_eq_valuation' + valuation_of_algebraMap + intValuation_if_neg + log_exp）。已派 mainline 攻 IdealLocalizedCount + residue-one；shehdd 复用成功样例修 LFI 并降 DVRPrincipalLemma 为历史；hull 攻 V-index/theta 桥。
