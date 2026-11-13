@@ -546,3 +546,5 @@
 - 09:05：BaseChange :388 换写法（显式 f 的 Set.mem_range_self + simpa map_zero）并 retouch；若仍 stuck 交 mainline 另证 zero 分支。abc Quantity 第五轮 prod_pos 修复已 retouch。
 
 - 09:07：hull 5/5 green（ActualInhabitantOfPacket 00:23:35Z、C2Closed 00:12:18、StripOneColumnClosed 00:23:34、ResidualInputs 00:05:48、InputMismatch 00:27:09）——**PActual 条件 inhabitant 已实际构造**；剩 NativeC1PaperSource packet+donor D+oneColumn actual(S366)+input alignment。
+
+- 09:09：shehdd gate §24（372/clean337/red15）；BaseChange 报错清单为旧 run 交错；已确认文件含我的两处修复（:388 zero 显式 f、:766 finrank_of_isFractionRing）；**把 BaseChange 交给 shehdd 接力修**（避免 lead 编辑冲突）。
