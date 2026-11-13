@@ -1350,3 +1350,5 @@
 - 08:20：qpilot 修 `GapDetHaarDiagonalNorm:21` 的 rw（prod_pow_eq_pow_sum 与负指数/Real.rpow 形状不匹配 → norm_prod→norm_p_pow→显式 prod 等式→rpow_neg），已 retouch 等重编；det-Haar 仍两点：matrix-level SNF、diagonal factor 识别。
 
 - 08:24：shehdd 2 official green（P1GeneratorValuationRelation 17:33:06Z、P1PlaceVolumeSignFinal 17:43:25Z，69,000B）+ 3 新 proof：**P1IdealMapPowerGeneral（ideal_map_pow_general: Ideal.map f (I^n)=(Ideal.map f I)^n + idealMapPowerStatement_of_count_map）**、C17ResidueOneWitness（ResidueOneArithmeticInput 命名输入 + resNormDegreeGap_of_...）、C17ResidueOneConsume（单点 log 等式 ⇒ localResidueDegree=1）。已提示 mainline 复用 ideal_map_pow_general 接 bridge1/count。
+
+- 08:30：**外部定理 web 调研**：新建 `coord/EXTERNAL-CITATIONS-20261114.md`。关键可用：标准 **p-adic Haar 线性变换缩放律** `μ.map f = ofReal‖det f‖ • μ`（Weil/Bourbaki/Igusa，待原文核对）→ 直接替代 GAP-DET-HAAR 的 matrix SNF+diagonal 两步，作为 class-B 外部输入。已派 qpilot 写 `Mzk1PAdicHaarDetScalingExternalActual`（显式 Prop + 接线 + rows 注明来源/待形式化）。Mestre–Oesterlé 元数据（Zbl 0693.14004/DOI）已登记、陈述仍待逐字核验；其余 E7 外部文献登记备用。
