@@ -349,3 +349,6 @@ tmp/sheaf/xif/paper/Mzk1PaperQPilotConcretePartsActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperLogKummerFieldsActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperNormalizationRawVsNormalizedActual.lean
 tmp/sheaf/xif/paper/Mzk1PaperNormalizationGapRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1C17ResidueWeightChainActual.lean
+tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneResidueEquivActual.lean
+tmp/sheaf/xif/paper/Mzk1P3BadCharTameDegreeActual.lean

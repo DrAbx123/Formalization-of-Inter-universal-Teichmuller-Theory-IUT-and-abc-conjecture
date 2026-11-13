@@ -486,3 +486,5 @@
 - 08:02：UniformRing DONE（23:59:50Z）；ModuleTopology 仍 FAIL（log 疑似旧 run 交错，已再 touch）；Completion/BaseChange 待其绿。lattice GLActContinuous green（23:59:59Z）、GLActContinuousAction 入队（346 项）；5 个空闲 lane 已唤醒派活。
 
 - 08:04：hull 5 份（ArrowToLogKummerAdapter 类型不匹配 named adapter、concrete parts、SourceLogKummerData 5-field inventory presentFields=[]、raw/normalized 字典、5-row gap）入队（351 项）。
+
+- 08:05：shehdd ResidueWeightChain（residueFieldEquiv⇒degree=1⇒weight=1）入队；qpilot round10 2 份（WeightDegreeOneResidueEquiv/BadCharTameDegree）入队（354 项）；更正 qpilot 的 FLT 路径（在 ported/flt/FLT/DedekindDomain/Completion/BaseChange.lean，非 flt271）。
