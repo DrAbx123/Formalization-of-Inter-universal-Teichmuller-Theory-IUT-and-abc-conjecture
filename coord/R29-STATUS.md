@@ -1585,3 +1585,5 @@
 - 19:30：`Mzk1SaturationBasesDataActual` GREEN 20:59:46Z（A1 链第二环）。`Mzk1A1SourceGeneratorExpansionActual` FAIL 20:59:52：`a1AllThetaLabels_mem_thetaLattice` unknown（名字/声明顺序）、`rootExtensionUnitBall` 未解析（autoImplicit，需 import/open 全限定）——已发 hull 修法。Order/Assembly 已用新 log 21:01:25 START。
 
 - 19:35：**port Order GREEN**（qpilot）：`haveI : Nontrivial (valueGroup (.ofClass v)) := nontrivial_valueGroup_of_surjective v hv`（`.ofClass` notation）+ `exists_eq_zpow_mul_unit_of_surjective` 用 `[IsRankOneDiscrete v]`/`haveI := ‹...›`；Assembly 改为显式 `hcompDW`/`hcompUDW` composition 等式等重编。
+
+- 19:40：**port 新 green**：`Order` GREEN 21:05:10Z（34s）、**Assembly GREEN 21:06:14Z**（98s，hcomp composition 修法生效）、`ContractFieldsActual` 21:06:14 重绿。Order 解锁 NormalizedValuation/Uniformizer/LocalFieldScaling（7/10 port green）；Assembly 可接 DegreeIdentification。已让 qpilot 继续，det-Haar/port 不抢 3.12 主线。
