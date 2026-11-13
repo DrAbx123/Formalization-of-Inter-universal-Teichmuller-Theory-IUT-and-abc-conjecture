@@ -1028,3 +1028,5 @@
 - 23:06：B4 仅剩 :80（Set coercion vs Submodule 成员，rw pattern 不匹配）→ relay `change ... ∈ Submodule.span ...` 再 rw；改完应绿。
 
 - 23:10：qpilot count 公式 goal 修法 relay（rw hlog → hnorm_eq → log_absNorm_eq_sum_count_mul_log(span{x}) → ring）；B4 change 已加待重编。
+
+- 23:18：**B5 FullProductFormulaCount GREEN**（qpilot 14:23:04Z：finite_log_sum=-∑count·log absNorm、arch_log=+∑count·log absNorm —— count 加权 full product formula，对 #1 readout 关键）。NormBridges 修法 relay（underlyingPrime 用 `NumberFieldFinitePlace.underlyingPrime`；unfold NormZpowBridge；删多余行）；B4 coercion 两处修法 relay。
