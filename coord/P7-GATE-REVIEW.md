@@ -455,3 +455,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **#9/HULL-UB 冻结为主任务之外**：A6 只作为 Step 2 资产；已完成 `LocalThird`（strict radius，GREEN 20:33:18Z），`LocalThirdBound`/`UnconditionalC0` 若一轮内可绿则收尾后停，不再投入新证明。
 - **Step 2（推迟）**：IUT IV Thm 1.10 `R ≤ Box`；当前 #9 的 `paperBox` 是缩水 surrogate，Step 2 需换成真 Box（Prop 1.4 局部 log-volume、Prop 1.1–1.5、显式 PNT 等），届时再重做 #9，不现在改。
 - **人员调整**：hull 主力转 #1/A3（与 stage4 的 A1 格比较对接）；mainline 维持 R21Uncond→B5Index→#8 contract linkage；其余 lane 不变。
+
+### 20.14 用户指令：回到 `P7-GAP-ATTACK-PLAN.md` 路线一（2026-11-14 18:40）
+- **不再用模型/包裹比较作为 #1**：`PaperLevelXiFTargetProofActual` 的 root hull 系数是 `c_norm/(2l)`、包含由 `cRoot≤cNorm` 直接给出（模型）；`BadPlaceProcessionNormalizedComparisonActual`/`Paper312Comparison` 也是该模型包裹；审计 `P7-GAP-ATTACK-PLAN:687/819` 已写明不能替代原文。
+- **按计划 §1 路线一执行**：用实际系数把 q 格送进 theta 源 hull。第一检查点（§1.2/1.5）：一个实际 `(p,tuple,label)` 上写 (R1.2) `g_a^q=Σ_i c_{ia}g_i^θ`，证 `c_{ia}` 整，从而 q 格 ⊆ theta hull；验收展示源 q、源 theta、落点、权重四个来源。
+- 供体：`Mzk1RouteC0RootQLatticeActual/V2`（R1.1）、`Mzk1A1LatticeInverse/Compare`、`Mzk1P2LabelBlockCompleteActual`、`Mzk1P2MultiIndexLandingActual`。
+- 执行顺序按计划 §7：A0 球质量（部分完成）→ B0 读数表 → C0 根侧 q 格 → C1 实际 G/q 基/迹/SNF 系数 → F 聚合；每包四问报告。
