@@ -122,3 +122,11 @@
 - RegionMass：Haar region < ⊤；**正性仍 GAP（regionMassPosGap）**。
 - SourceIdent/SignedLog 在修（SourceIdent 用 `sourcePilotRegionLToCore`；SignedLog 去 localSignedLog 泛型桥，保留 qRead eq/nonpos + thetaSigned）。
 - 全部已在 watch 名单（无需 Lead 交接）。
+
+## P1 突破：localizedLine IsPrincipal 已真证（2026-11-13 23:52）
+
+- `Mzk1P1LocalizedFractionalIdealActual` DONE 15:38:22Z（31s）：
+  - `localizedFractionalIdeal`（`FractionalIdeal.extended` 沿 𝓞k→LocalRing 的局部化）；
+  - `localizedFractionalIdeal_coe_eq`：其 Submodule coercion = `localizedLine I v`（PROVED）；
+  - **`localizedLine_isPrincipal_actual : (localizedLine I v).IsPrincipal`（PROVED，无额外假设；用 DVR ⇒ PID 的 FractionalIdeal `isPrincipal` 实例）**。
+- ⇒ P1 唯一缺失 `MissingLocalizedIsPrincipal` 关闭；`LocalGeneratorData` 可无假设构造（generator/span/非零）；P1 剩余 = count↔valuation（`localValuation v generator = -countExponent v I`）与 residue-one。
