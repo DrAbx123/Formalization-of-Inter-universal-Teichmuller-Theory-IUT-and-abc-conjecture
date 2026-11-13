@@ -1591,3 +1591,5 @@
 - 19:50：**两条线同步推进**（用户指令）：线 1 = 3.12（mainline #8 / hull #1 / abc A2 / stage4 A1 / stepxi #4）不变；线 2 = `coord/IUTIV-PROP14-TO-BOX-PLAN-20261114.md` 派给 idle：shehdd 写 `IutIVProp14GroupCountActual`（§3.2–3.4 同余商计数/QFE 实例）、lattice 写 `IutIVProp14VolumeActual`（§3.5–3.6 d=ef/μ 比/P14ii）、qpilot port 收尾后写 `Mzk1IutIVProp14iiiBoxActual`（§5 Box 直接入口）。两线文件 ownership 不重叠；Step 2 不替代 3.12 主线。
 
 - 19:55：lattice 线 2 第一叶：`IutIVProp14VolumeActual` 已写 `d_eq_e_mul_f_of_pow_eq`、`d_eq_ef_of_haar_scaling`（§3.5 d=ef 直接形式）；下一步 §3.6 μ 比/P14ii 与 §3.8 弱式，需 shehdd 的 `#Γ=p^h`/`#T` 接口。已让 shehdd 暴露具名 `card_gamma_eq_pow`/`torsion_card_eq`/`LogShellQFECardinalityHypothesis` 并同步 lattice；A1 链继续。
+
+- 20:00：线 2：shehdd `IutIVProp14GroupCountActual` 首版只把 congruence quotient cardinality 打包成命名输入 + 由输入构造 QFE 实例；已要求继续**真证**：`U/U_s≃(O/𝔪^{es})^×` + `cardQuot_pow_of_prime` ⇒ `#(U/U_s)=(q-1)q^{es-1}`、`#Γ=p^h`（IsPGroup）、`#T=(q-1)p^m`/`h+m=f(es-1)`，最后 QFE 实例无输入参数；与 lattice 对齐 `card_gamma_eq_pow`/`torsion_card_eq`。
