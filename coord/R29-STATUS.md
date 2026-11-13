@@ -1556,3 +1556,5 @@
 - 17:55：lattice 修 A1 三文件根因（`Basis` 是 `Module.Basis`，缺 `open Module` → autoImplicit）；retouch 后预期 LatticeSaturationIndex→SaturationBasesData→A1SaturationBases 链。hull `Mzk1P0NativeComparisonLatticeActual` 20:44:52 FAIL 是 `isDefEq` 心跳超时（:32），已让加 maxHeartbeats/拆 lemma。
 
 - 18:00：mainline 新 `Mzk1P7ContractLinkageWiringActual`：`contractOfContractFieldsActual`（`ipl := qThetaPilotLogVolumeComparison`、`she := qRead ≤0`、`apt := qRead ≤ thetaReadout`，用 `ContractFieldsActual` 真实 evidence 替换 `True` 字段）+ `cor312_of_contractFieldsActual : Cor312Conclusion`；依赖 `Mzk1P7ContractFieldsActualActual` 等 official。
+
+- 18:05：hull #1 语义修正定稿：`nativeThetaReadout` = 单因子 local shell raw Haar，不是 paper theta；paper theta 侧用 `s1915ClosedForm = 1 + Σ d_b log r_b`。已让 hull 写 `NativeThetaPaperReadoutGap`：明确 q 全局/逐 b，逐 b `log‖q_b‖≤log r_b`（`c0QHat=λ·c`），把 `1+Σ(d_b−1)log r_b` 的净符号作为 3.12 真正内容，输出 `nativeQReadoutGlobal ≤ s1915ClosedForm`（或精确 det/degree 因子）。
