@@ -146,3 +146,12 @@ production.
 Status remains PARTIAL/OPEN for actual production; no toy carrier is used.
 
 End of 2026-11-13 update.
+## Update 2026-11-14 14:10: A5 复核（Lead 查重）
+- **已存在非平凡 production（green）**：`tmp/sheaf/xif/paper/S3139SourceMultiradialQuotientActual.lean`（olean True）——
+  - `SourceMultiradialCarrier I := (sourceStepXICore I).GeneratedQuotient`（actual source core 的 Ind1/Ind2 商）；
+  - `sourceMultiradialMap`、`sourceMultiradialLogVolume`（descend）、`sourceMultiradialPossibleImage`、`sourceMultiradialLevel`；
+  - `sourceMultiradialMap_ind1`、`sourceMultiradialMap_ind2`（Ind1/Ind2 不变性）；
+  - `sourceMultiradialPossibleImage_ind3_upper`（Ind3 upper-semi）、`sourceMultiradialLogVolume_ind3_le`、`sourceMultiradialLevel_ind3`；
+  - `sourceMultiradialCarrier_nonempty`。
+- 另有 green：`MultiradialProcessionActual`（PrcMember/PrcTransition/PrcAutomorphism/Ind1TensorAction/thetaLabelOfFin/sourceThetaValue/sourceLGPMonoid/sourceLGPAction 等 14 defs）、`Indet02BPSMultiradialUpToActual`、`Indet05RouteMultiradialClassActual`、`S3139SourceMultiradialConsumerActual`、`S3139MultiradialProcessionConsumerActual`。
+- **因此旧结论“actual production 缺失”过时**：quotient-carrier 级 production 已有；真正剩余是 `SourceMultiradialMutationDemand`（first-triangle BPS → 该 quotient target，`S3139StageOneSeamsActual` 的 exact missing）以及完整 `n,oR_LGP` 输出类型/IPL-SHE-APT 兼容。

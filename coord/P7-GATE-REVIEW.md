@@ -408,3 +408,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - A3 hull/procession 归一化：class-B `RootExtensionHaarDetScaling` + Dupuy–Hilado `E(ln μ/dim)` + `addHaarScalarFactor` + `productNormalizedLog_sub`，逐块拼接；
 - #3 桥 2/max-ideal R21/general I：coercion/import/instance 级别；
 - #10 unitMass det 因子链：已 green（c=∏c_b、normalized citizen=1），只剩与 blockEquiv 的接口。
+
+### 20.8 A1/A5 查重结论（2026-11-14 14:10）
+- **A5 不是“没做过”**：`S3139SourceMultiradialQuotientActual` 已有 actual source quotient 级多径向 production（carrier/map/logVolume/possibleImage/level + Ind1/Ind2 invariance + Ind3 upper-semi + nonempty）；`MultiradialProcessionActual` 有 14 个 procession/action 定义。剩余缺口精确为：`SourceMultiradialMutationDemand`（BPS→quotient first-triangle mutation）+ 完整 `n,oR_LGP` 输出类型/IPL-SHE-APT 兼容。A5 方法**不再是“不明确”**，而是“扩展现有 production”。
+- **A1 确实没做过（非平凡版本）**：所有 `Mzk1BlockEquiv*`/`Mzk1BlockProductAlignmentData`/`Mzk1BlockHaarTransport*`/`Mzk1C3S1902BlockEquivActual` 等文件均为 **rows-only 状态存根**（只有 `rows`/`rows_length`）；`Mzk1C3S1902BlockEquivDataActual` 只定义 structure `C3S1902BlockEquivData` + `Required := Nonempty`（C3 空类型，vacuous），无 inhabitant；`Mzk1BlockProductAlignmentActual` 只定义 structure；`Mzk1P3NativeDReanchorActual` 只给 `thetaRootCarrier_eq_pi`（乘积形式 rfl）。⇒ A1 仍是真缺口，但方法已知道：要么证 tensor block 在 qVFamTensorTuple 处分裂因子就是 `rootNormedExtension`（tensor≃∏），要么改为 log-volume + det 因子关系。
