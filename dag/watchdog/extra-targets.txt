@@ -442,3 +442,6 @@ tmp/sheaf/xif/paper/Mzk1DetLinePrincipalGeneratorActual.lean
 tmp/sheaf/xif/paper/Mzk1FinitePlaceHaarRatioActual.lean
 tmp/sheaf/xif/paper/Mzk1LocalizedLineHaarBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1S1915DegreeFinrankActual.lean
+tmp/sheaf/xif/paper/Mzk1RouteC0GlobalDecompositionActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33B5IndexActual.lean
+tmp/sheaf/xif/paper/Mzk1IQFiniteAdeleStructuresActual.lean
