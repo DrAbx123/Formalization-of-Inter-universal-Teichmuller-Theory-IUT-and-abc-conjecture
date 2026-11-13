@@ -682,3 +682,5 @@
 - 20:50：FLT Equiv 修：invFun else 分支 `y.2 ⟨i, by simpa using hi⟩` + right_inv `simp only [dif_neg hi]; congrArg b (Subtype.ext rfl)`；retouch。
 
 - 20:55：**GAP-PC-FINITE 关闭（条件化）**（mainline P3FiniteFLT DONE 11:25:09Z，65s；FLT priority 1001 Module.Finite + let v/w 后 inferInstance）；用户新指示“条件本身也要构造”→ 已写入 P7-GAP-ATTACK-PLAN 末尾 condition realization 表，并分派 7 lane（hull#9/5/6、mainline T 实例、abc TransportData、shehdd OB33 detDegree、qpilot IQ Equiv、lattice haarScale 来源、stage4 #7、stepxi #4）。
+
+- 19:28：Equiv :623 congrArg 类型推断失败 → 显式 hsub : (⟨i, by simpa using hi⟩ : ↑Sᶜ) = i := Subtype.ext rfl；retouch。HullUBDictionary DONE 11:27:41Z（#9 条件字典 green）。
