@@ -1593,3 +1593,5 @@
 - 19:55：lattice 线 2 第一叶：`IutIVProp14VolumeActual` 已写 `d_eq_e_mul_f_of_pow_eq`、`d_eq_ef_of_haar_scaling`（§3.5 d=ef 直接形式）；下一步 §3.6 μ 比/P14ii 与 §3.8 弱式，需 shehdd 的 `#Γ=p^h`/`#T` 接口。已让 shehdd 暴露具名 `card_gamma_eq_pow`/`torsion_card_eq`/`LogShellQFECardinalityHypothesis` 并同步 lattice；A1 链继续。
 
 - 20:00：线 2：shehdd `IutIVProp14GroupCountActual` 首版只把 congruence quotient cardinality 打包成命名输入 + 由输入构造 QFE 实例；已要求继续**真证**：`U/U_s≃(O/𝔪^{es})^×` + `cardQuot_pow_of_prime` ⇒ `#(U/U_s)=(q-1)q^{es-1}`、`#Γ=p^h`（IsPGroup）、`#T=(q-1)p^m`/`h+m=f(es-1)`，最后 QFE 实例无输入参数；与 lattice 对齐 `card_gamma_eq_pow`/`torsion_card_eq`。
+
+- 20:05：lattice 线 2 追加 `volume_ratio_eq_pow`（条件 h：h+f+m=s*d、μΛ=p^h μO、μL=p^{-(s*d)}μΛ ⇒ μL=p^{-(f+m)}μO）；h 待 shehdd `card_gamma_eq_pow`。提醒 lattice：`Mzk1SaturationBasesDataActual` 已 GREEN 20:59:46，A1SaturationBases 可编，别只等；已催 shehdd 先做 `#Γ=p^h` 具名定理。
