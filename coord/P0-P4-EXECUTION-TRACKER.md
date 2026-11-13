@@ -86,7 +86,7 @@
 - P2（abc）：LabelBlockCoefficient、LabelBlockSum、RelativeMass（R1.3）green；R13vsC0/LabelBlockComplete/QNativeSourceArrow/ThetaAllowedImage/WeightedSum 在修。
 - P2（qpilot）：NativeTensorConsumer、DetCoefficient green；DetWeightedNonneg/TensorPairing/ProductFormulaCancel/PureTensorExpansion/NativeConsumerP2 在修。
 - P0（hull）：NativeSourceCore、NativeTensorLanding、MigrationRows、NativeEquiv green；NativeReadout/NativeS3137Chain 在修。
-- P0-L（stepxi）：S3137LReadout green；LPaperInstance DONE 15:27:26Z（ole 89,128B）、LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z、LSourceIdent DONE 15:35:44Z、LSignedLog DONE 15:40:51Z——六个 L-side 文件全 green。LPaper312Statement 实例仍为 Prop，首缺 = q 读数→theta hull containment/normalization（LQThetaSourceArrow）。
+- P0-L（stepxi）：S3137LReadout green；LPaperInstance DONE 15:27:26Z（ole 89,128B）、LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z、LSourceIdent DONE 15:35:44Z、LSignedLog DONE 15:40:51Z——六个 L-side 文件全 green。缺口攻击三文件：LQThetaMem DONE 15:54:41Z（ole 49,392B；qComponentMemGap 显式化，tensorUnit∈region 条件于该分量化，q 的 Completion 范数实例与 CommonPrimeCompletion fiber 不一致=首缺）、LNormalization DONE 15:44:43Z（ole 138,080B；lThetaNormFactor/lThetaNormalizationGap/LThetaNormalizationData，raw Haar 归一化仍缺）、LRegionPos DONE 15:57:23Z（ole 40,680B；regionMass_pos_of_isOpen_of_nonempty 条件化，IsOpen/nonempty 仍缺）。LPaper312Statement 实例仍 Prop，首缺 = q 分量进入 theta region + raw Haar 归一化。
 
 ## P0 里程碑达成（2026-11-13 23:24 CST）
 
