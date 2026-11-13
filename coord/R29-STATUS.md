@@ -1627,3 +1627,5 @@
 - 21:50：**线 2 里程碑：`IutIVProp14GroupCountInterfaceActual` GREEN 21:20:57Z（51s）**，`card_gamma_eq_pow` 可用；已让 shehdd retest GammaPGroupActual（三定理）、lattice 准备用实际 h 填 P14ii。唤醒 mainline（IdealMapPower/合同收尾）、hull（A1 expansion 重编）、stage4（A1SaturationBases/Padic 接口）、stepxi（A5）。
 
 - 22:00：lattice 新 `Mzk1IutIVProp14GroupCountBridgeActual`（`exists_h_card_gamma` + `volume_ratio_eq_pow_of_groupCount`），等 shehdd `isPGroup_logShellIntegerQuotient`/`card_gamma_eq_pow_actual` official 后把 h 设为实际 witness，P14ii 无条件化；未把 IsPGroup 当已证。
+
+- 22:10：**路线一第一检查点 GREEN：`Mzk1A1SourceGeneratorExpansionActual` DONE 21:21:43Z（98s）**——实际 q 生成元到 theta 源 hull 的四来源展开 machine-checked。另：`Mzk1PadicSaturationBasesActual` GREEN 21:21:38。A1SaturationBases 仍红待重编；已让 hull 按 §1.5 推源 q 格整体 ⊆ theta hull + 原目标读数，stage4 用 ℤ_p 基接口。shehdd GammaPGroup 等重编。
