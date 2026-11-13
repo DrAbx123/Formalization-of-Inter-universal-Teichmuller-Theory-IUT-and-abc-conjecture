@@ -1693,3 +1693,5 @@
 - 01:20：**线 1 里程碑：`Mzk1P0RouteC0GlobalReadoutActual` GREEN 22:15:26Z（99s）**——`c0ProductQ_normalizedLog_le_closedForm_sub_one : normalizedLog(c0ProductQ) ≤ s1915ClosedForm − 1` machine-checked（路线一的 normalized Q≤Θ consumer）。已派 hull 接 paper 读数定义（S3137 `qPilotLogVolumeReading`/actualQPilotSignedLogClassical ↔ s1915 normalized）、Delta 修绿、weighted 对齐；mainline 三桥收口；abc A2 拆分；qpilot Box consumer；stage4 A1.6；stepxi #4。
 
 - 01:25：hull Delta 修复中（`ENNReal.mul_lt_top` 显式两参 + `hλlog`→`hlamlog`）；GlobalReadout GREEN 保持；下一步 Delta 绿后 weighted→`s1915ClosedForm−1` 常数/权重对齐，再用 S865/rootHaarFactor 消 q positivity。
+
+- 01:30：**`Mzk1B5ContractEvidenceActual` GREEN 22:12:24Z（104s）**——#8 的 B5 evidence 依赖解锁；已让 mainline retest `Mzk1P7ContractB5EvidenceActual`。hull GlobalReadout GREEN 保持，Delta 待重编；已同意 paper 读数 correspondence 先查 det-Haar 缩放引理，缺则条件版+单点 factor 缺口。
