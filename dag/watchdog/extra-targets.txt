@@ -362,3 +362,6 @@ tmp/sheaf/xif/paper/Mzk1GLCompActual.lean
 tmp/sheaf/xif/paper/Mzk1IndexCardBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1P5InternalConsistencyActual.lean
 tmp/sheaf/xif/paper/S366OneColumnActual.lean
+tmp/sheaf/xif/paper/Mzk1P3AGREEFLTBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1CanonicalDiagScalingActual.lean
+tmp/sheaf/xif/paper/Mzk1ChangeMatrixActual.lean
