@@ -1214,3 +1214,5 @@
 - 03:15：**mega-batch 模式全面铺开**：watch 名单已 706 项（8 lane ×20 文件包陆续入队），8 lane 全 running。新 green：`Mzk1P2DetHaarProofActual` DONE 16:38:24Z（79s）——`p2_map_haar`/`p2_map_coordLattice_eq_scalar_smul`/`p2_scalar_eq_lattice_image`/`p2_lattice_preserving_scalar_one`，`detHaarSNFMissing` 仅 2 项（SNF split）；`Mzk1P3MassIdentificationActual` DONE 16:40:06Z（63s）——`log_nativeMassL/Q`、`p2R13Exact_eq_sum_blockTerms`、`R37R13NativeMassIdentification_iff_coefficient`、条件转移；`Mzk1NativeUnitMassNormalizedFactorActual` DONE 16:38:23Z（78s）。P1：`Mzk1P1IdealLocalizedCountProofActual` green；桥 1 已有现成 FLT 证明路线（uniformizer+maximalIdeal_eq_span_uniformizer）。
 
 - 03:18：mega-batch 编译中：watch 725 项（clean 566/red 17/inprog 16/ole 20/missing 106——new 文件排队）。shehdd 20 文件已入队；已将其被取代的 `Mzk1P1DVRPrincipalLemmaActual` 从名单移除（IsPrincipal 已真证，保留 historical 版本）。已唤醒 shehdd：LFI keystone 优先修绿 → 链式转绿 1-5 → 通知 mainline → 继续第二波 20 文件。
+
+- 03:22：用户强调“不要干等编译”。已向 8 lane 广播流水线纪律：每 5–8 文件立刻抽查 per-file log → 先修红（批量）→ 绿的立刻接下游继续写 → 同时写下一波 → 只报里程碑。目标：写/入队/修红/接绿/再写不停，编译队列永远有货。
