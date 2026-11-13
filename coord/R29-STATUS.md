@@ -688,3 +688,5 @@
 - 19:30：**条件构造首个大成功（hull）**：paper V(k=0) 定义上 = normalizedLog（paperThetaHullScaled 0 = fullRegion = s1902Hull rfl）⇒ scale=1/offset=0 是定义不是假设：#9 可 DISCHARGED(k=0)、#5 L3 actual GREEN。4 份新文件 + stepxi MultiradialWitness 入队（423 项）。
 
 - 19:32：lattice #10 条件构造：C3HaarScaleDocking_nonempty_of_finrank_one（[K:Q]=1 ⇒ haarScale=1=archCK）+ AbcArchFactorOutput_nonempty（DONE 11:29:49Z，olean 140,232B）；一般 K 核查：haarScale 为 arbitrary Real 无来源。Equiv 再改为 dsimp+rw 版。
+
+- 19:35：Equiv 改为 `change ((fun j => ...) (i:ι)) = b i` + rw dif_neg（避开 subtype ⇑ defeq 问题）；retouch。
