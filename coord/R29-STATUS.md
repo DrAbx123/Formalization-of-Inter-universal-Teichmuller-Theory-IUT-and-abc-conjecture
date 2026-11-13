@@ -600,3 +600,5 @@
 - 19:03：stage4 SNFMatrixDiag（两次 changeMatrix_one）与 Volume3（显式 hle 假设，GAP 精确为 Submodule.toAddSubgroup ≤ coercion）已 retouch。mainline AgreeFLT 首错 relay：`:61 ValuationSubring.maximalIdeal_ne_bot` 不存在，建议用 `completionIdeal_ne_bot`/`IsLocalRing.maximalIdeal_ne_bot` 路线（参考 BaseChange:706-708）。
 
 - 19:06：gate §28（恢复后）= extra 389 / clean 360 + ole 20 + stale 0 + red 9；P7 §11 已把 UNRAM bridge green 与双通道标好；stepxi P5 文档一致收尾。SNFMatrixDiag GREEN（10:53:16Z）；Volume3 显式 hle 插入后 retouch。AgreeFLT API 漂移精确定位：用 `IsLocalRing.maximalIdeal` + FLT `completionIdeal_ne_bot`（AdicValuation:265/:606）。
+
+- 19:08：stage4 SNFMatrixDiag green 确认；U/W 真换基短路线已给（U=bM.toMatrix S、W=S.toMatrix bN、Basis.toMatrix_mul_toMatrix + mul_assoc 组装 U*diag*W）；Volume3 待重编。
