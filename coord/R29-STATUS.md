@@ -1581,3 +1581,5 @@
 - 19:15：stepxi A5 追加 `capsulePositionEquiv_fst`、`capsuleLabelSucc_injective`、`capsuleTensorLogLink_subset`（dependent tensor log ⊆ arithmetic tensor log，Ind3 一个 packet 层）待编；Ind1 tensor-packet 缺口仍为 `Ind1ShellTransport` inhabitant（shellEquiv）。hull A1SourceGeneratorExpansion 已改成实际单 q 生成元 + 多 theta 标签（θ_j/λ∈O、θ_j∈lambdaLattice、qhat=λc），待编。
 
 - 19:25：qpilot 报告 Order/Assembly tail 与 source 不符（旧 `Valuation.ofClass`/旧 map 顺序）。已删除两文件 per-file log 并 touch source，下一 batch 只看全新日志；若仍报旧内容再查 watchdog/缓存。port 非主线。
+
+- 19:30：`Mzk1SaturationBasesDataActual` GREEN 20:59:46Z（A1 链第二环）。`Mzk1A1SourceGeneratorExpansionActual` FAIL 20:59:52：`a1AllThetaLabels_mem_thetaLattice` unknown（名字/声明顺序）、`rootExtensionUnitBall` 未解析（autoImplicit，需 import/open 全限定）——已发 hull 修法。Order/Assembly 已用新 log 21:01:25 START。
