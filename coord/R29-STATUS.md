@@ -964,3 +964,5 @@
 - 21:46：**#7 THETA-DEG 收口**——Cancel GREEN 13:39:28Z（51s），(a)-(d) 全部 DONE（B2/C3/Weight/Cancel 四文件）；plan/GATE 由 stage4 更新（唯一剩余 B4 canonical image bridge 精确 GAP，非 #7 内容）。
 
 - 21:55：`Mzk1HaarStrictActual` 的 import 子树（HaarStrictProof/HaarAnnulusCylinder/Cor312UnconditionalStrictAcceptance/AnnulusMeasurePositive/AnnulusStrictConsumer）均不在 watch 名单、无 green 逆向依赖 ⇒ 从 extra-targets 移除（源码保留，DEFERRED）；hull 写 HAARSTRICT-RED-GAP.md + AUDIT_LEDGER。gate red 将只剩 B5FinsumSummable（qpilot 修）。
+
+- 21:42：**B5 FinsumSummable GREEN**（qpilot 13:40:11Z，ole 97,408B：finsum_sub_bridge + ideal/fractional count weighted HasFiniteSupport/Summable）⇒ mainline 的 FinsumSubBridge/hsumH/hsumO 可全部替换为定理，B5 ① 完全无条件。已派 mainline 改 Uncond 文件 + 更新 CONTRACT-MAP；abc 做收尾 AUDIT_LEDGER/P7-MISSING 一致性。
