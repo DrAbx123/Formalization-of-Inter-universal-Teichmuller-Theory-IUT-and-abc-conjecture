@@ -1074,3 +1074,5 @@
 - 23:30：mainline NormZpow 降级为 green 语句版（NormZpowStatement GAP row，zpow motive 阻塞），保留条件 norm 桥；转 P1 生成元+count。已通知 hull 出 §35 FINAL（预期 red=0），并注明旧 C3 空类型使 C3-条件文件 vacuous/historical、gate green 仅 build 状态。
 
 - 23:35：abc P2LabelBlockSum（多标签有限和 R1.2 原型，add_mem ultrametric 关键）入队（501）；stepxi 派 P0 下一包（把 actualSourcePilotRegionDataL 的 q/θ 接到 LPaper312Statement；不构造旧 C3/不用 IsEmpty）。P2LabelBlockCoefficient/Ob33B5GeneratorCandidate/NormZpow 已 green。
+
+- 23:38：hull P0NativeSourceCore 首错（binder 名 T 不匹配）relay：按 #check 签名用位置参数或显式命名 binder。
