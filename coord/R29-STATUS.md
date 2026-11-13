@@ -1589,3 +1589,5 @@
 - 19:40：**port 新 green**：`Order` GREEN 21:05:10Z（34s）、**Assembly GREEN 21:06:14Z**（98s，hcomp composition 修法生效）、`ContractFieldsActual` 21:06:14 重绿。Order 解锁 NormalizedValuation/Uniformizer/LocalFieldScaling（7/10 port green）；Assembly 可接 DegreeIdentification。已让 qpilot 继续，det-Haar/port 不抢 3.12 主线。
 
 - 19:50：**两条线同步推进**（用户指令）：线 1 = 3.12（mainline #8 / hull #1 / abc A2 / stage4 A1 / stepxi #4）不变；线 2 = `coord/IUTIV-PROP14-TO-BOX-PLAN-20261114.md` 派给 idle：shehdd 写 `IutIVProp14GroupCountActual`（§3.2–3.4 同余商计数/QFE 实例）、lattice 写 `IutIVProp14VolumeActual`（§3.5–3.6 d=ef/μ 比/P14ii）、qpilot port 收尾后写 `Mzk1IutIVProp14iiiBoxActual`（§5 Box 直接入口）。两线文件 ownership 不重叠；Step 2 不替代 3.12 主线。
+
+- 19:55：lattice 线 2 第一叶：`IutIVProp14VolumeActual` 已写 `d_eq_e_mul_f_of_pow_eq`、`d_eq_ef_of_haar_scaling`（§3.5 d=ef 直接形式）；下一步 §3.6 μ 比/P14ii 与 §3.8 弱式，需 shehdd 的 `#Γ=p^h`/`#T` 接口。已让 shehdd 暴露具名 `card_gamma_eq_pow`/`torsion_card_eq`/`LogShellQFECardinalityHypothesis` 并同步 lattice；A1 链继续。
