@@ -1314,3 +1314,5 @@
 - 06:04：hull P0.6 里程碑 **8 proof GREEN / status=0**：NativeLSide、NativeThetaBridgeProof、NativeQBridgeProof、NativeReadoutPair、NativeComparisonNonneg、NativeComparisonR13、**NativeThetaR13Bridge**（17:33:08Z）、**PaperInputV**（17:34:51Z，ole 54,576B：PaperInputV l + LPaperInstance_of_paperInputV）；待重编 5（PaperInputVConsumption/Final、ThetaR13Defect/Chain/Bound，依赖已绿）。Defect 证书：Bridge↔defect=0；defect≤thetaReadout；defect≥0⇒comparison（defect≤0 不成立）。
 
 - 06:08：shehdd 下一波 5 proof（B5FiniteIndexExpansionIff：FiniteIndexExpansion↔B5ProductFormulaBridge 在 arch=0；C17ResNormDegreeGapOfResidueOne；C17ResidueOneBothSides；P1PlaceVolumeZero；P1GeneratorValuationSignIff）+ GeneratorValuationRelation official green。
+
+- 06:10：**大波次 12 green（节选）**：P1ValuationUniformizer（17:35:59Z）、P1LocalGeneratorUncond（17:36:29Z）、P1LocalizedIsPrincipalNoGap（17:36:30Z）、P1LocalizedFractionalIdealFix（17:36:31Z）、P0PaperInputV（17:34:51Z，ole 54,576B）、P0LNormalizationExplicit、P2WeightedSumFull、P3CorrectionsNumeric、P3MassLambdaQhat、lattice BlockProductAlignment（17:34:49Z）。watchdog 正常（12 lean）。

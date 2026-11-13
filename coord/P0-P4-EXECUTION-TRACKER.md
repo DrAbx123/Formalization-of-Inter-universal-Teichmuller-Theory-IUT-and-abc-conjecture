@@ -235,3 +235,11 @@
 新 green（9+）：`P3SNFMass`（17:25:56Z）、`P3TensorProductMass`（17:26:19Z）、`P3DetNet`（17:26:58Z）、`P3ReferenceMass`（17:27:10Z）、`P3P2Alignment`（17:27:10Z）、`P3DomainTrace`（17:27:13Z）、`P3SourceComparisonAttempt`（17:27:25Z）、`P3R37Net`（17:27:38Z）、`P3LogMassRegion`（17:27:44Z）；P1 `FractionalIdealPrincipal`（17:27:47Z）。
 - 内容：`referenceMassTerm := p2R13Exact` + 非负；`detNet := netQuantity G h p2WeightedDetLog` + detNet_le；`sourceComparison_of_native_block`；`r37Net`/`r37Net_nonneg_iff`/`r37Net_eq_log_ratio`；P3 SNF/乘积质量与 det 净量。
 - P3 剩余：`R37R13NativeMassIdentification`（依赖 p2NativeProductBlockMissing/q reading/det-Haar 三供体）；trace-duality 数值；core p-scaling 实例。
+
+## 06:08 波次 green（12 个，节选）
+- P1：`P1ValuationUniformizer`（17:35:59Z，valuation_uniformizer_eq_neg_one 正式绿）、`P1LocalGeneratorUncond`（17:36:29Z，无假设 generator）、`P1LocalizedIsPrincipalNoGap`（17:36:30Z）、`P1LocalizedFractionalIdealFix`（17:36:31Z）。
+- P0：`P0PaperInputV`（17:34:51Z，ole 54,576B）、`P0LNormalizationExplicit`（17:34:51Z）。
+- P2：`P2WeightedSumFull`（17:35:13Z）。
+- P3：`P3CorrectionsNumeric`（17:35:19Z）、`P3MassLambdaQhat`（17:35:59Z）。
+- lattice：`BlockProductAlignment`（17:34:49Z，W/indexEquiv/factorEquiv 字段）。
+- 正在编：BlockProductAlignmentData、其余 20+ 文件。
