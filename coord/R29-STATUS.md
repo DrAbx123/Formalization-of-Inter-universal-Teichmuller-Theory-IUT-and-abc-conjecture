@@ -1807,3 +1807,7 @@
 - 06:10：stepxi 确认 `Mzk1Ind1AlgebraicUnitQuotientActual` GREEN 23:26:17；UnitQuotient/LogLattice 红因旧 `#print axioms` 指向已删定理，已删 retouch；`continuous_of_addHom_fin_zpadic` 仍未落地（无 sorry），唯一 Ind1 源缺口=实际 `TimesMuQuotient((F.Mon v)ˣ)↔(Integers F)ˣ/tors` 识别 + β_a 来源。
 
 - 06:15：mainline 审计 3.12 三个真实输入：① C17 residue-field 输入 = section-lift `inertiaDeg'=1`，当前数据不可构造（真实 paper 输入）；可做逆命题 `inertiaDeg'=1⇒ResidueFieldEquiv`；② comparison 真实缺口=`C3S1902TransportData` 无 inhabitant（blockEquiv/region_eq/haarScale/haar_apply），已有 conditional 修正公式；③ IQ/(Ob3-3) paper carrier 语义/`[C3 block:Q_p]` 因子/C3-D 字典/ exact hull UB 仍 interface-only。已派 mainline 按成本顺序做 ①逆命题②最小 conditional comparison consumer③interface-only 清单。gate §20.27 已写。
+
+- 06:20：abc 更正 A2 精确区分：**无条件**=default/adic norm 读数；**已证**=标准 norm agreement 等价 ratio=1；**未证**=`P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`）是独立 norm-instance coherence，≠ratio=1。已更正 gate §20.28（§20.19/20.24/20.26 中不准确表述以此为准）；donor 已 revert/obsolete；RootBase 不依赖 donor。已请 abc 只读审计 #1 qhatLogReadout 与 paper q 读数的 norm-instance 一致性，写出精确缺口。
+
+- 06:25：mainline 任务①落盘：`Mzk1C17ResidueFieldEquivConstructActual.residueFieldEquiv_of_inertiaDeg_eq_one`（`Ideal.inertiaDeg' p P=1 ⇒ Nonempty((S⧸P)≃ₐ[R⧸p](R⧸p))`，用 `inertiaDeg'_algebraMap`+`quotientMapₐ`+`Finrank_eq_one_iff_of_nonzero`+`AlgEquiv.ofBijective`），已 queue；下一步②comparison 最小 consumer（读 `Mzk1GapNormalizationActual` 条件形式）③IQ/(Ob3-3) interface 清单。

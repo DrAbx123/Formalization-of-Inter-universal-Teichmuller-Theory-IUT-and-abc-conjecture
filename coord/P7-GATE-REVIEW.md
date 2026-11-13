@@ -567,3 +567,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **comparison**：`qThetaPilotLogVolumeComparison C3 P := qPilotLogVolumeReading P ≤ thetaPilotHullLogVolumeReal C3`；真实缺口 = `C3S1902TransportData` 无 inhabitant（`blockEquiv : C3LogShellTensorBlock C3 ≃ S1902Carrier T`、`region_eq`、`haarScale>0`、`haar_apply`）。已有 conditional 修正公式 `thetaRead_eq_s1902_normalized_add_correction (D : C3S1902TransportData)`。
 - **paper carrier IQ/(Ob3-3)**：hull adjunction、det/packetDet/logVolume_tensorPower green；但 paper carrier realization、(Ob3-3) source identification、multiradial (xi-e)/(xi-f) data、theta raw Haar↔paper normalized V 因子 `[C3 block:Q_p]`、C3-D 字典、exact hull UB 仍 interface-only/PENDING。
 - **下一步**：① 逆命题 residue；② 最小 conditional comparison consumer；③ interface-only 字段清单。不得把 `C3S1902TransportData` 当已证 inhabitant。
+
+
+### 20.28 更正 §20.19/§20.24/§20.26：A2 的精确区分（abc，2026-11-14 23:35）
+- **无条件**：`p2QNativeReading_defaultNorm` / `p2QReadoutBridge_defaultNorm`：default/adic norm 下 `localLogMagnitude (qVFamily T b) = -Real.log (qVFamDefaultNorm T b)`。
+- **已证等价**：`qVFamNormalizedNorm = qVFamDefaultNorm ↔ qVFamNormRatio = 1`（标准 norm agreement；对应已知 `PaperSourceCorrectionFreeFields.normRatio_one` 条件）。
+- **未证/独立问题**：`P2QHatNormInstanceAgreement` 即 `‖c0QHat‖ = qVFamNormalizedNorm`，是 **norm-instance coherence**，**不等价于** ratio=1；不得写成已由 ratio 条件收口。
+- donor `Mzk1P0QHatNormExponentActual` 的 hq'/ring 改动已 revert、标 obsolete/不可消费；`P2QHatNormRootBaseActual` 仅 re-export，不依赖 donor。
+- **对 #1 的影响**：`qhatLogReadout` 用 normalized norm；paper q 读数若走 default/adic norm，需要额外的 norm-instance coherence；该缺口必须显式记录，不能默认两者一致。
