@@ -381,3 +381,4 @@ tmp/sheaf/xif/paper/Mzk1NativePlacesVsFinitePrimePlaceActual.lean
 tmp/sheaf/xif/paper/Mzk1InputAlignmentGapRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1DiagEquivBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FLTMultiplicityActual.lean
+tmp/sheaf/xif/paper/Mzk1C17UnramResidueBridgeActual.lean
