@@ -1498,3 +1498,5 @@
 - 15:08：用户要求多唤醒人。Team 成员上限 8 已满（spawn 报 limit 8），已把全部 8 lane 唤醒；另让 stage4 用一次性 subagent 做 A1 真/假 probe，stepxi 用两个一次性 subagent 做 A7 真/假与 A8 label probe（符合“lane 按需用一次性 agent、Lead 不直接使用”）。mainline 给出桥 2 :83 精确修法（`have h := Submodule.smul_mem …; rw [← Algebra.smul_def] at h; simpa [Subring.coe_mul] using h`）；shehdd C17/P1 3 新 proof。
 
 - 15:14：诊断 qpilot“watchdog 编译旧 source”=**误读累积日志**：CardQuotient source 无旧路径、log 最新尾部错误是 `:84 Free ℤ R` 实例缺失（真实 4.32 API 差），旧模块名是历史首错。已让 qpilot 只读 tail、修 Free ℤ R/读 Order tail。lattice #10 新增 2 green（BlockProductAlignmentObstruction/BlockAlignmentCard，proof green=15）；shehdd C17/P1 3 新 proof。
+
+- 15:16：巡检：19:52 BATCH DONE (done 7/failed 35/skipped 1，多为依赖首轮)；桥 2 19:52:53 重编中。已唤醒 mainline（桥2结果→MaxIdealR21Uncond→IdealMapPower）与 lattice（#10 pending 3 + A1 接口）。
