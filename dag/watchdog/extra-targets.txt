@@ -379,3 +379,4 @@ tmp/sheaf/xif/paper/Mzk1InputAlignmentNamedActual.lean
 tmp/sheaf/xif/paper/Mzk1InputAlignmentCompositeActual.lean
 tmp/sheaf/xif/paper/Mzk1NativePlacesVsFinitePrimePlaceActual.lean
 tmp/sheaf/xif/paper/Mzk1InputAlignmentGapRowsActual.lean
+tmp/sheaf/xif/paper/Mzk1DiagEquivBridgeActual.lean
