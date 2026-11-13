@@ -575,3 +575,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **未证/独立问题**：`P2QHatNormInstanceAgreement` 即 `‖c0QHat‖ = qVFamNormalizedNorm`，是 **norm-instance coherence**，**不等价于** ratio=1；不得写成已由 ratio 条件收口。
 - donor `Mzk1P0QHatNormExponentActual` 的 hq'/ring 改动已 revert、标 obsolete/不可消费；`P2QHatNormRootBaseActual` 仅 re-export，不依赖 donor。
 - **对 #1 的影响**：`qhatLogReadout` 用 normalized norm；paper q 读数若走 default/adic norm，需要额外的 norm-instance coherence；该缺口必须显式记录，不能默认两者一致。
+
+
+### 20.29 #1 读数 norm-instance 修正项（abc 只读检查，2026-11-14 23:35）
+- `qhatLogReadout` / `qhat_signed_readout_eq_log_norm`：经 qhatHaarScaling 得 `= Real.log ‖c0QHat T b‖`，即 **normalized completion norm**。
+- `S3137 qPilotLogVolumeReading P = -|Real.log ‖P.line.C3.q.q‖|`：**raw Completion adic/default norm**（log<0 ⇒ 即 log(adic norm)）。
+- **精确关系**：`qhatLogReadout − qPilotLogVolumeReading = Real.log (qVFamNormRatio)`（q 对象识别下）；一致 iff `qVFamNormRatio=1`（已知 `PaperSourceCorrectionFreeFields.normRatio_one`），不是新 gap；若 ratio≠1 必须显式保留 `log ratio` 修正。
+- **对 3.12 的影响**：最终 `Q≤Θ` 锚定不能直接把 `Σ d_b qhatLogReadout_b` 当 paper q 读数；必须写成带修正项的精确恒等式+条件，或显式条件形式。已派 hull 写 `Mzk1P0QThetaReadoutNormCorrectionActual`。
+- **边界**：A2 的 `P2QHatNormInstanceAgreement` 仍是独立 norm-instance coherence，不由此收口。

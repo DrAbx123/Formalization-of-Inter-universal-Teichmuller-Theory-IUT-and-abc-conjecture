@@ -1811,3 +1811,5 @@
 - 06:20：abc 更正 A2 精确区分：**无条件**=default/adic norm 读数；**已证**=标准 norm agreement 等价 ratio=1；**未证**=`P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`）是独立 norm-instance coherence，≠ratio=1。已更正 gate §20.28（§20.19/20.24/20.26 中不准确表述以此为准）；donor 已 revert/obsolete；RootBase 不依赖 donor。已请 abc 只读审计 #1 qhatLogReadout 与 paper q 读数的 norm-instance 一致性，写出精确缺口。
 
 - 06:25：mainline 任务①落盘：`Mzk1C17ResidueFieldEquivConstructActual.residueFieldEquiv_of_inertiaDeg_eq_one`（`Ideal.inertiaDeg' p P=1 ⇒ Nonempty((S⧸P)≃ₐ[R⧸p](R⧸p))`，用 `inertiaDeg'_algebraMap`+`quotientMapₐ`+`Finrank_eq_one_iff_of_nonzero`+`AlgEquiv.ofBijective`），已 queue；下一步②comparison 最小 consumer（读 `Mzk1GapNormalizationActual` 条件形式）③IQ/(Ob3-3) interface 清单。
+
+- 06:35：abc 只读核对 #1 读数：`qhatLogReadout − qPilotLogVolumeReading = log(qVFamNormRatio)`（normalized vs adic norm）；一致 iff ratio=1（已知 PaperSourceCorrectionFreeFields 条件），不是新 gap，但最终 Q≤Θ 必须带该修正项或显式条件。已派 hull 写 `Mzk1P0QThetaReadoutNormCorrectionActual`（精确恒等式/符号/权重 + ratio=1 或 Σw log ratio≤0 条件），不改 S3137 定义。gate §20.29 已写。
