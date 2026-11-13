@@ -1691,3 +1691,5 @@
 - 01:15：**线 2 里程碑：`Mzk1IutIVProp14iiiBoxFormalActual` GREEN 22:14:39Z（53s）**——`prop14iii_box_formal` 给出 IUT IV Prop 1.4(iii) 第二上界 (11)：`μ_log(S) ≤ (−ord_p ϖ+Σ ord_p δ_i+1)log p+Σ_{i∈I*}(3+log e_i)`，复用绿色 `FinitePlaceStepVAssembly.arithmeticTuple_stepV_normalizedLogVolume_le_paperBound`，不 import Iut/TFG。线 2 的 Box 入口正式落地；下一步 consumer 接到 s1915 根 hull/P0 readout + 记录引用；port 冻结 7/10。
 
 - 01:20：**线 1 里程碑：`Mzk1P0RouteC0GlobalReadoutActual` GREEN 22:15:26Z（99s）**——`c0ProductQ_normalizedLog_le_closedForm_sub_one : normalizedLog(c0ProductQ) ≤ s1915ClosedForm − 1` machine-checked（路线一的 normalized Q≤Θ consumer）。已派 hull 接 paper 读数定义（S3137 `qPilotLogVolumeReading`/actualQPilotSignedLogClassical ↔ s1915 normalized）、Delta 修绿、weighted 对齐；mainline 三桥收口；abc A2 拆分；qpilot Box consumer；stage4 A1.6；stepxi #4。
+
+- 01:25：hull Delta 修复中（`ENNReal.mul_lt_top` 显式两参 + `hλlog`→`hlamlog`）；GlobalReadout GREEN 保持；下一步 Delta 绿后 weighted→`s1915ClosedForm−1` 常数/权重对齐，再用 S865/rootHaarFactor 消 q positivity。
