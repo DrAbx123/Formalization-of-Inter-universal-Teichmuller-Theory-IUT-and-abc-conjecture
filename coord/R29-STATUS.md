@@ -1639,3 +1639,5 @@
 - 22:35：**A1.6 里程碑：`Mzk1A1SignedReadoutActual` GREEN 21:26:13Z（94s）**（有符号读数）。Iut/TFG 闭包开始编译（TFG files 有 transient retry，正常）。已派 hull（δ_b/权重/readout 串接）、mainline（finprod 同态性）、shehdd（Gamma/torsion）、lattice/stage4（p-adic 接口）、stepxi（A5）、qpilot（port）。
 
 - 22:40：mainline `Mzk1P1IdealMapFinsetProdActual` 落盘：`ideal_map_finset_prod`（Finset 归纳 + map_mul/map_top）+ 单 binder 形式；下一步用 finite support 展开 finprod 套 ② + prime-power/mul ⇒ general `IdealMapPowerStatement`。#8 保持。
+
+- 22:45：shehdd 按 21:25 log 修 GammaPGroup 三处（`hu.symm`、`rw [hz, ← hlog, smul_eq_mul, hfac]`、`Quotient.inductionOn` 前先 `let gamma' : LogShellIntegerQuotient := gamma`），retouch 05:31Z，等首错；绿后发 lattice `card_gamma_eq_pow_actual`。
