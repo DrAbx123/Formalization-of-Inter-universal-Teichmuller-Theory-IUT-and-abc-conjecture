@@ -697,3 +697,15 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **旧文件头注释 `:14` 的 “exactly qVFamNormRatio=1” 错误**；`Mzk1P2QHatNormAgreementUnconditionalActual:85-88` 明确：本文件只证标准 agreement（normalized=default ↔ ratio=1），**不**声称 `P2QHatNormInstanceAgreement`（c0QHat normalized norm coherence）。
 - 最终 S3137 条件定理必须分列：① S45 `PaperSourceCorrectionFreeFields`（ratio=1/修正项）；② `P2QHatNormInstanceAgreement`（c0QHat=nomalized norm）。
 - **degree tower 的额外 GAP**：mainline 指出 `rootBase T b` 与 `(nativeBadToKPlace b).maximalIdeal.adicCompletion K` 的同一性不在树内（`Mzk1RouteBBridgeActual:18` 已标）；若不能证，`weight_conversion` 仍需显式 bridge，不得假设同一性。
+
+
+### 20.43 更正 §20.41：weight 换算需显式 field identification，不是纯 finrank tower（mainline，2026-11-15 00:50）
+- `rootBase T b = NormalizedCompletion (qVFamTensorPlace T b)` = **F_v completion**，不是 K_w；`rootNormedExtension = rootBase(rootNormedElement)`；
+- `d_b = finrank ℚ_p L = n_b·[F_v:Q_p]`（tower，`n_b=[L:F_v]`）；
+- `nativeBadLocalWeight = 1/[K_w:F_v]`；
+- 因此 `d_b·weight = [L:F_v]·[F_v:Q_p]/[K_w:F_v]`，要等于 `n_b` 需 **`[K_w:F_v] = [F_v:Q_p]`**（等价 K_w ≅ F_v 的度 1/完全分歧桥）。
+- 正确形式：条件定理
+  `(h : localCompletionDegree T.arithmetic (nativeBadToKPlace T b) = qVFamTensorRationalDegree T b) → s1915LocalDegree T b * nativeBadLocalWeight T b = Module.finrank (rootBase T b) (rootNormedExtension T b)`；
+  或保留 `PaperToS3137BridgeData.weight_conversion` 并标显式 GAP。
+- 可用供体：`BadPlaceRationalDegreeFactorActual:64`（qVFamTensorRationalDegree 的 degreeFactor 反推）；`Mzk1RouteBBridgeActual:18` 已标 K_w↔F_v 同一性不在树内。
+- **§20.41 的“weight_conversion 可由 degree tower 直接证”作废，以本节为准。**
