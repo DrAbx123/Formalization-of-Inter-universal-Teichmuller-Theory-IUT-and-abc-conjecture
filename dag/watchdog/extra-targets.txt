@@ -483,3 +483,8 @@ tmp/sheaf/xif/paper/Mzk1B5FractionalExpansionBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33B5CountBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1B5FinsumSummableActual.lean
 tmp/sheaf/xif/paper/Mzk1B5FractionalExpansionUncondActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33B5CountUnconditionalAttemptActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaScalarAlignActual.lean
+tmp/sheaf/xif/paper/Mzk1C3S1902UnitMassCitizenActual.lean
+tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1CanonicalDiagUncondFinalActual.lean
