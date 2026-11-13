@@ -606,3 +606,5 @@
 - 19:09：hull InputAlignmentNamed DONE 10:54:52Z（HEq 字段 + transport 显式 universe）；Composite 已 retouch（Named olean 已就绪）。
 
 - 19:10：stage4 SNFMatrixUW（basis_toMatrix_mul_linearMap_toMatrix_mul_basis_toMatrix：U*diag*W = 标准基矩阵 + det unit）入队（390 项）。
+
+- 19:12：恢复批次：**C3S1902LowerBound DONE 10:57:00Z（50s）**、**DiagEquivBridge DONE 10:58:06Z（52s，GAP 记录版）**；GeneralSNFVolume3/AgreeFLT 仍迭代。qpilot/shehdd/lattice 已唤醒派活（WEIGHT 实例化、candidate-order 攻击、diagEquiv 换构造路线/acceptance）。
