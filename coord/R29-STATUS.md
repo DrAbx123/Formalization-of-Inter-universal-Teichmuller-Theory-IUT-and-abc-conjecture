@@ -696,3 +696,5 @@
 - 19:41：巡检：FinalAssembly/NormArchAbcHook/MultiradialWitness green；C3BlockMeasure 已 retouch（旧 exact_mod_cast 行已修）；唤醒 stage4（重编链）、lattice（#5 L4 一般 scale/offset 构造）、stepxi（7 missing rows 逐行构造）。
 
 - 19:45：lattice #5 L4 条件构造 ThetaVScaleOffsetGeneral（scale=1/offset=-k*qLogSum + closed form 条件）入队（425 项）；Equiv 在 change 后补 dsimp only 再 rw dif_neg。
+
+- 19:52：stepxi missing7 行2/7 构造（P7MissingRowsWitness）入队（426 项）；Equiv change 改 beta-reduced 直接 if 形式 + rw。
