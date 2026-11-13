@@ -1032,3 +1032,5 @@
 - 23:18：**B5 FullProductFormulaCount GREEN**（qpilot 14:23:04Z：finite_log_sum=-∑count·log absNorm、arch_log=+∑count·log absNorm —— count 加权 full product formula，对 #1 readout 关键）。NormBridges 修法 relay（underlyingPrime 用 `NumberFieldFinitePlace.underlyingPrime`；unfold NormZpowBridge；删多余行）；B4 coercion 两处修法 relay。
 
 - 23:26：mainline B5GeneratorNormBridges **GREEN（14:26:00Z，35s）**，但 NormZpowBridge 仍是 def Prop（GAP row）——已提醒：green 只是条件定理，需把 e=residueNormBase 识别证掉或作单一 named input，rows 第 1 行改精确；#8 行升级同步。
+
+- 23:34：NormZpowBridge 证明链 relay（FinitePlace.norm_def:257 + WithZeroMulInt.toNNReal_neg_apply + NNReal.coe_zpow；e=residueNormBase 定义一致；需 x≠0，x=0 两边不等）；证成后 LocalNormGeneratorBridge 真实例化。
