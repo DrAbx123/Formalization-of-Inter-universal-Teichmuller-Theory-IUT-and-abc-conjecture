@@ -618,3 +618,5 @@
 - 19:24：stage4 SNFMatrixUW root-namespace 修正 + Volume3 新版；均已 retouch。
 
 - 19:26：**stage4 Volume3 GREEN（11:01:35Z，56s）**——一般 SNF 体积比 `μ(N)/μ(M)=∏|a_i|_p`（条件：SNF witness + 紧开/正有限；hle 已由 change/exact 证明，非假设）。派收尾：接 canonical coordinateCompacts 消假设 + SNFMatrixUW 拼 det + 文档收尾。
+
+- 19:30：AgreeFLT 新首错 relay：① Algebra.IsIntegral (𝓞k) (𝓞K) 用 Algebra.IsIntegral.tower_top (R:=ℤ)（NumberField/Basic:280）；② placeExtension (K := k) 参数名；③ :43/:82 级联。
