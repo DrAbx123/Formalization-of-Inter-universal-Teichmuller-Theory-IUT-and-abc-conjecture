@@ -87,3 +87,16 @@ Last formalization TODO: connect this external law to the concrete Haar normaliz
 - 关键澄清：**log-volume 不是体积对数，而是归一化 p-adic/arch Haar 测度对数的加权平均**：`lnν_{L_p}(A_p) = E( ln μ_v(A_v) / dim L_v )`，再对 p 求和；`lnν_L(hull(U_Θ)) = −deĝ_lgp(P_hull(U_Θ))`。
 - 该文只给出陈述与 initial theta data 可计算性，**不给 Cor 3.12 的证明**；可用于校准我们的 native readout 归一化（除维数、p-平均、Ind/procession 平均）。
 - 结论：体积下界（route C0 已证 `μ(Q_root) ≤ μ(H_root)`）必须先经过上述归一化识别才能变成 `log q ≤ theta` 比较；没有外部定理可跳过这一步。
+
+## TauCeti port 状态（2026-11-14，qpilot）
+
+- 复制的 10 个文件在 `tmp/sheaf/xif/paper/TauCetiPort/TauCeti/...`，import 已改为 `tmp.sheaf.xif.paper.TauCetiPort.TauCeti.…`。
+- GREEN 4/10：`RingTheory/DiscreteValuationRing/Basic`、`Data/Int/WithZero`、`RingTheory/Valuation/AbsoluteValue`、`RingTheory/Subring/SpanSingleton`。
+- 精确 API 缺口（Lean 4.32 vs 4.36）：`RingTheory/Valuation/Discrete/Order.lean:114` 需要 `v.IsRankOneDiscrete`，4.32 中 `IsRankOneDiscrete.mk'` 需显式 `[IsCyclic (valueGroup v)]`；port 仅带 `[Nontrivial (valueGroup v)]`。
+- 决策：按 Lead 指示不无限投入；保留 class-B 外部 `PAdicHaarDetScaling`（`Mzk1PAdicHaarDetScalingExternalActual`）作为 det-Haar/#10 的可用支撑；TauCeti port 记为“部分移植：4/10 green + Order 精确 API 缺口”。
+- 若后续补 Mathlib 4.32 的 `IsCyclic valueGroup` 局部实例，可继续 port。
+
+### 20.2 TauCeti port 决策（2026-11-14 12:10）
+- port 状态：**4/10 green**（DVDRing/Basic、Int/WithZero、Valuation/AbsoluteValue、Subring/SpanSingleton）；6 pending。
+- 真 API 缺口：`TauCetiPort/.../RingTheory/Valuation/Discrete/Order.lean:114` 需 `[IsCyclic (valueGroup v)]`（4.36 隐含实例，4.32 缺失）⇒ 按 Lead 决定**停止无限投入**，保留 class-B 外部 `PAdicHaarDetScaling` 支撑 det-Haar/#10，port 记为“部分移植 + 精确 API 缺口”。
+- det-Haar 继续走 class-B：MatrixSplit/DiagonalNorm 修复后接 `detHaar_map_of_factors`；内部 SNF 路线保留为交叉校验。

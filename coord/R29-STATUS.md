@@ -1432,3 +1432,5 @@
 - 12:04：gate §45 快照（见输出）。桥 2 文件待重编；TauCeti port import 已修 10 文件，4/10 green。
 
 - 12:08：mainline 桥 2 显式补参数（A=𝓞k,K=k,B=LocalRing k v,M=nonZeroDivisors 𝓞k,N=nonZeroDivisors(LocalRing),L=LocalField,f=algebraMap,hf=sourceNZLeComap v,I₀=J），等重编。
+
+- 12:10：qpilot 按 Lead 决策回退：TauCeti port 4/10 green，Order:114 真 API 缺口（4.32 缺 `IsCyclic valueGroup`），**停止无限投入**，保留 class-B `PAdicHaarDetScaling` 支撑 det-Haar/#10；port 记为部分移植+精确缺口（已写 EXTERNAL-CITATIONS §20.2）。det-Haar 继续 MatrixSplit/DiagonalNorm→`detHaar_map_of_factors`。
