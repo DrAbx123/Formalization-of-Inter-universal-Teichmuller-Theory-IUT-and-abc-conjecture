@@ -1603,3 +1603,5 @@
 - 20:30：新 green：`Mzk1A1LatticeValuationActual` GREEN 21:09:38Z（A1 lattice valuation）、`IutIVProp14GroupCountActual` GREEN 21:10:08Z（线 2，泛型 card_gamma 接口）。已让 shehdd 证实际 `Γ` 的 `IsPGroup`（代表元 p^N z∈O）→ 实际 `#Γ=p^h`，lattice 的 volume_ratio 等 h 替换；唤醒 stepxi 继续 A5。
 
 - 20:35：lattice 线 2：`p14ii_logVolume_cond`（条件 μL=p^{-(f+m)}μO ⇒ `(log μL-log μO)/d=-((f+m)/(ef))log p`，h 已消去）+ §3.8 `volume_ratio_le_pow` 已 retouch；只差实际 `#Γ=p^h` 填 μL 等式。A1SaturationBases 再 retouch 等 cycle。
+
+- 20:45：shehdd 定位线 2 卡口 donor：`IntegralLogShellSharpBounds.exists_unitLog_range_subset_pow_inv_smul`（∃b, unitLog u ∈ p^{-b}O）⇒ 对 shell 元 z=p^{-s}log u 取 k=b+s 得 p^k z∈O ⇒ 商中幂零 ⇒ Γ p-群 ⇒ `card_gamma_eq_pow_actual`。已发三条 Lean 骨架（`integralLogShell_pow_smul_mem_integers`、`isPGroup_logShellIntegerQuotient`、`card_gamma_eq_pow_actual`）；lattice 不得消费未证 hGamma。
