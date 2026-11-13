@@ -1410,3 +1410,5 @@
 - 11:08：stepxi 确认 P0L Final 类（ReadoutFinal/S3137LFinal/SourceIdentFinal/SignedLogFinal/TensorZero）均为 1–2 定理的 consumer re-export（非新证明），已加 header 且不按 proof 计数；P7 C3Free 修 `N8Closure.C3Roots` open/import + P2Data 改依赖 `P2MultiIndexLanding`，已 retouch。
 
 - 11:14：桥 1 hval 新错（`:46 rw pattern` + `:49 simpa type mismatch`）；已给 mainline 不用 rw/change 的等式拼接法（`h1 := valued_algebraMap_completionIntegers ...; h2 := ...; exact h1.trans h2`），并用显式 `LeanFormal...CompletionIntegers v` 避免 LocalRing abbrev coercion；备选走 `adicCompletion.exists_uniformizer` + `maximalIdeal_eq_span_uniformizer {π:CompletionIntegers}` 路线。hull P7 #9/#1 green（HullUBC0GeneralDiscOne 18:33:24Z、P0RouteC0Log 18:33:21Z）；缺口② QHatNormExponent、缺口① RootCoordEquiv、det 共轭 RootMulQHat 待编。
+
+- 11:20：用户提出 `log f ≥ 4/(l+5)` 眼熟——解释：来自 `paperBox=((l+5)/4)(logd+logf)`（f=cond），在 logd=0 时等价 paperBox≥1；因 l≥5 ⇒ 4/(l+5)≤0.4<log2，故 **cond≥2（且 disc≥1）⇒ paperBox≥(5/2)log2>1，C0=0 自动**，不需要 disc≥2。已派 hull 写 `box_ge_one_of_cond_ge_two`（推广旧的 disc≥2∧cond≥1 定理），把 #9 general 缩到唯一单点 `disc=1 ∧ cond=1`（paperBox=0，C0=0 不可能，需 C0=1/paper 排除）。
