@@ -1116,3 +1116,5 @@
 - 23:22：**lattice #10/P1 批量 6 文件全 DONE（自行入队/修红）**：NativeUnitMassOne/size30,424B、NativeBlockEquivCandidate 24,248B、P1FinitePlaceFv 48,352B、P1LocalUnitProductT 30,952B、P3HaarScaleDocking 88,200B、P1CountLocalValuationNative 192,856B；unitMass=1/blockEquiv/NativeBadPrimeData 来源仍精确 GAP。#10 §13/AUDIT_LEDGER 已更新。
 
 - 23:26：**mainline P1 批量 6 全 DONE**（LocalizedSpan 15:10:42Z、IdealLocalizedCount 15:10:43Z、PrincipalValuation 15:09:52Z、R21Bridge 15:17:47Z、B5WithFv 15:11:17Z、ContractMapEvidenceRows 15:10:57Z）；精确缺口各一：LocalizedSpan=coercion 链、PrincipalValuation=count↔intValuation、IdealLocalizedCount=DVR map=completionIdeal^count、R21=上述组合。已回：不覆盖旧 C3-typed 主表 missing7ToGap（historical/vacuous），保留 evidence 表。
+
+- 23:24：新 green：`Mzk1P2PureTensorExpansionActual`、`Mzk1P0NativeConsumerP2Actual`（15:22:21Z/63s）。stage4/lattice 批次完成待机→按大包派下一阶段：stage4=P3 净量非负第一步（core p-scaling/R3.7 显式、不许假设 G≥log h）；lattice=#10 三 GAP 攻坚（blockEquiv inhabitant/unitMass=1/NativeBadPrimeData 来源）。
