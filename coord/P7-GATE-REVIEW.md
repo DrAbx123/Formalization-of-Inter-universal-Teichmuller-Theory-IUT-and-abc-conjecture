@@ -651,3 +651,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `Mzk1P1NormalizedSourceConditionalActual`、`Mzk1P1PaperSumsToS3137BridgeActual`、`Mzk1P0QThetaReadoutDictionaryActual` 等仍 olean=False；bridge 三项 `weight_conversion`/`radius_log`/`haar_ratio` 为显式 GAP。
 - `Mzk1Cor312B5IndexChainActual` 修 `Invalid argument name k`（LocalRing/LocalField/PlaceSNFData named k）后等编。
 - **#1**：paper-faithful 条件版 (S45) 已 queue；S3137 reading form 仍需 bridge；model `actualPaperXiFTarget` 已确认不可用。
+
+
+### 20.37 theta_root_log 有绿色供体（S201）+ bridge 结构修正（2026-11-15 00:20）
+- **`rootImageRadius` 实际结构**：`rootImageRadius = Finset.univ.sup_j ‖rootNormedThetaValueInL b j‖`；`rootNormedThetaValueInL j = rootNormedElement^(gaussExponent j)`，故 `‖θ_j‖ = ‖rootNormedElement‖^(gaussExponent j)`（`norm_pow`）。`radius_log := log P − log rationalBaseNorm` 是**错误目标**，已删除；正确结构为 `theta_root_log`。
+- **`theta_root_log` 可证（非新源缺口）**：`S201RootThetaNormLActual.rootNormedElementNorm_pow_twoL`（`‖rootNormedElement‖^(2l)=‖sourceRootQUnit‖`）+ `rootNormedThetaValueInL_norm` + `rootNormedLogVolume=log‖rootNormedUnit‖` ⇒ `rootNormedLogVolume=(1/(2l))log‖(qVFamily T b).q‖`（normalized），再用 norm-instance agreement 接 `qVFamNormalizedNorm`。
+- **bridge 修正字段**：`theta_root_log`（可证）、`degree_tower`（`s1915LocalDegree = localCompletionDegree × local factor`，用 `Module.finrank_mul_finrank`）、`a1_delta_paper`（用 a1 定义展开）。
+- `Mzk1P1PaperSumsToS3137BridgeActual` 将按此重写；旧错误字段不保留。

@@ -1827,3 +1827,5 @@
 - 07:05：纠正 hull dictionary 条件：`qhatLogReadout=−c_norm log p` 需 `P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`），与 S45 的 `qVFamNormRatio=1`（normalized=adic）**不是同一命题**；correction 全零需两者同时满足。已要求 hull 在 dictionary 中分两独立字段，不得合并。gate §20.35 已写。
 
 - 07:10：**新 GREEN `Mzk1A1InverseLatticeNormActual` 23:39:41**（`inverseLambdaLattice_eq_normBall`/`qhatBall_subset_lambdaBall` 等，供 A1.6 格识别）。bridge/dictionary/conditional 文件仍 olean=False；mainline 三项 bridge GAP（weight_conversion/radius_log/haar_ratio）继续；Cor312B5IndexChain 修 named k 后等编；hull/stage4/qpilot/stepxi/shehdd 各自推进。gate §20.36 已写。
+
+- 07:15：mainline 更正 `radius_log` 不可成立（`rootImageRadius=sup_j‖rootNormedElement‖^{gaussExponent}`）；hull 已找到绿色供体 `S201RootThetaNormLActual.rootNormedElementNorm_pow_twoL` + `rootNormedThetaValueInL_norm`，故 `rootNormedLogVolume=(1/(2l))log‖q‖` 可证、`theta_root_log` 不是新源缺口。bridge 三字段改为 `theta_root_log`/`degree_tower`(finrank_mul_finrank)/`a1_delta_paper`；mainline 重写文件。gate §20.37 已写。
