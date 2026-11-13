@@ -1579,3 +1579,5 @@
 - 19:10：hull 修正 A1 展开：源数据 `qVFamTensorV := Unit`（单因子，单 q 生成元），多标签在 theta 侧；新证 `a1ThetaLabelCoefficient j = θ_j/λ ∈ O`（max 性/div_le_one）、`θ_j = λ*d_j`、逐标签 `θ_j∈lambdaLattice`、`qhat=λ*c`（c=p2Coefficient∈O）、`qhat∈lambdaLattice`、四来源; 无 if 构造/模型 comparison。待编。
 
 - 19:15：stepxi A5 追加 `capsulePositionEquiv_fst`、`capsuleLabelSucc_injective`、`capsuleTensorLogLink_subset`（dependent tensor log ⊆ arithmetic tensor log，Ind3 一个 packet 层）待编；Ind1 tensor-packet 缺口仍为 `Ind1ShellTransport` inhabitant（shellEquiv）。hull A1SourceGeneratorExpansion 已改成实际单 q 生成元 + 多 theta 标签（θ_j/λ∈O、θ_j∈lambdaLattice、qhat=λc），待编。
+
+- 19:25：qpilot 报告 Order/Assembly tail 与 source 不符（旧 `Valuation.ofClass`/旧 map 顺序）。已删除两文件 per-file log 并 touch source，下一 batch 只看全新日志；若仍报旧内容再查 watchdog/缓存。port 非主线。
