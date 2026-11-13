@@ -180,3 +180,8 @@
 - `Mzk1P1PrincipalValuationProofActual` DONE 16:19:14Z（36s）：`principalValuation_proved : localValuation (algebraMap a) = -count_v(span{a})`（PROVED）。
 - 证明用：`instIsScalarTower'` 显式实例 + `HeightOneSpectrum.algebraMap_adicCompletion` + `valuedAdicCompletion_eq_valuation'` + `valuation_of_algebraMap` + `intValuation_if_neg` + `WithZero.log_exp`。
 - 这是 P1 count↔valuation 链第一段（主理想）；剩余：`IdealLocalizedCount`（DVR principal / completionIdeal^count）+ residue-one。
+
+## P2 rank-one + det-Haar 状态（qpilot，2026-11-14 01:55）
+
+- `Mzk1P2RankOneChainActual` DONE 16:24:28Z（olean 210,904B）：`p2RankOneBlockEquiv`（qVFamTensorBlock ≃ₗ rootBase）、条件 `p2RankOneBlockIsometry`（`QVFamBlockNormPreserving` ⇒ 无 det 因子）、`p2RankOne_logVolume_eq_nativeThetaReadout`、`p2RankOne_R13_nonneg`、`p2RankOne_weightedDetLog_nonpos`、`p2RankOne_arch_criterion`、`RankOneComparisonCandidate`；missing：`QVFamBlockNormPreserving`/global f/multi-factor det。
+- `Mzk1P2DetHaarActual` DONE 16:25:20Z（olean 23,936B）：status/gap 文件，`detHaarMissing` 三步（SNF/diagonal 体积比/Haar 唯一性⇒‖det‖）；donors：`glContinuous_canonical_haar_invariant`、`canonical_diag_volume_ratio_uncond`、`general_snf_volume_ratio`；未冒充关闭。
