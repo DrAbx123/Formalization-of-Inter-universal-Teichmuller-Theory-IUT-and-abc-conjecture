@@ -1615,3 +1615,5 @@
 - 21:20：**#8 里程碑：`Mzk1P7ContractLinkageWiringActual` GREEN 21:16:03Z（99s）**——`contractOfContractFieldsActual` 真实 ipl/she/apt evidence + `cor312_of_contractFieldsActual : Cor312Conclusion`，signed assembly 真实 evidence 接线完成！另：A1SourceGeneratorExpansion 根因 `ThetaLabel/thetaLabelToSigned` 缺导入（PaperC3ThetaRootActual），A1SaturationBases 根因 `rootNormedExtension` 缺导入 + ℤ_p 基接口需改（stage4 障碍成立）；已发 hull/lattice 修法。
 
 - 21:25：lattice 线 2 新文件 `Mzk1PadicSaturationBasesActual`（`padicSaturationLogIndex` + `PadicSaturationBasesData`：`L₁,L₂ : Submodule ℤ_[p] E`、`b₁/b₂ : Module.Basis ι ℤ_[p]`）——stage4 实际 ℤ_p 格接口；旧 ℤ-基接口保留不再强推。`A1SaturationBases` 已补 import/open 并 retouch。
+
+- 21:30：shehdd `IutIVProp14GroupCountInterfaceActual:24` 首错：`IsPGroup.exists_card_eq` 给 `Nat.card (Multiplicative Γ)`，需 `Nat.card_congr Multiplicative.toAdd` 转为 `Nat.card Γ`；已发精确修法。GammaPGroup 因该 olean 缺失失败，修后即可编。
