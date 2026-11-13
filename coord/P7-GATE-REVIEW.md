@@ -386,3 +386,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `Cor312ToABCBridgeInterface`：LeanFormal 审计等价于 abc 本身（不可作为可证输入）；`RootExtensionHaarDetScaling` 目前为 class-B 标准定理（TauCeti port 完成后可内部化）；Mestre–Oesterlé surrogate 已登记（不在 signed 链）。
 
 结论：P7 的**真数学缺口只剩 A1–A8**；#5/#7 已 DONE，#9 paper regime DISCHARGED，#3 的桥 1/2 与 #10 unitMass 链已 green。P7 仍 **NOT PASSED**（target_accepted/独立审查/comparator 未运行）。
+
+### 20.6 A1 细化（stage4，2026-11-14 13:46）
+- **A1 的精确分层**：`Mzk1P3BlockProductAlignmentObstructionActual` 证：任意 `TensorCoreWitness` 有 `Fintype.card W.J ≤ finrank(tensor block)`；若 `card Bad > finrank block`，则 **不存在** `W.J ≃ Bad` ⇒ `BlockProductAlignmentData` 不可能。即 A1 只在 `card Bad ≤ finrank` 情形需要构造；**等号情形仍需逐因子 `E_j ≃ rootNormedExtension` 的实际识别**（真正的数学缺口）。
+- **measure-scale factor 已识别**：`Mzk1P3HaarScaleFactorLogActual.logMass_eq_add_log_addHaarScalarFactor`：两个 additive Haar 在同一开集上的 log mass 差 = `Real.log (Measure.addHaarScalarFactor)`（标准 Haar/det transport 常数）——A1 的 measure-scale factor 不再是 independent 假设。
+- `Mzk1P3ProductLogRatioActual.productNormalizedLog_sub`：product normalized log 差 = Σ 局部 normalized log 差（#1 hull readout 供体）。

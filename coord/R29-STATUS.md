@@ -1468,3 +1468,5 @@
 - 13:34：桥 2 :45 根因：`Submodule.map` 是 `span (f '' p)`（不是 image 本身），mainline 的 hset 方向错。已给修法：去 hset，直接 `change span (Algebra.linearMap '' s) = span ((fun x=>↑x) '' s)` 后 `rfl`/`congr 1; simp [Algebra.linearMap_apply]`；`:72` 先 change 再 smul_mem。
 
 - 13:40：用户问“目前 P7 数学缺口在哪里”。已写 `P7-GATE-REVIEW.md §20.5` 清单：**A 真数学缺口 A1–A8**（A1 tensor/product BlockProductAlignmentData+measure-scale；A2 qhat norm 指数桥；A3 hull/procession 归一化接 native readout；A4 #3 residue-one=paper tame/split；A5 #4 multirradial production；A6 #9 disc=1∧cond=1 单点；A7 #10 NativeBadModuliFixedPrime paper 输入；A8 #2 canonical theta-label）；**B 纯工程缺口**（桥2 coercion/CountSide import/max-ideal change/port API 适配）；**C 外部/等价输入**（Cor312ToABCBridgeInterface≡abc、RootExtensionHaarDetScaling class-B、MO surrogate）。
+
+- 13:46：stage4 3/3 green：`Mzk1P3BlockProductAlignmentObstructionActual`（card W.J ≤ finrank block；card Bad > finrank ⇒ 无 W.J≃Bad ⇒ 无 BlockProductAlignmentData；等号情形仍缺逐因子识别）、`Mzk1P3HaarScaleFactorLogActual`（log mass 差 = log addHaarScalarFactor，measure-scale factor 精确识别）、`Mzk1P3ProductLogRatioActual`（productNormalizedLog_sub）。已写 P7 §20.6 A1 细化，并把 3 供体发 hull（#1 拼接）与 stage4（等号情形构造）。
