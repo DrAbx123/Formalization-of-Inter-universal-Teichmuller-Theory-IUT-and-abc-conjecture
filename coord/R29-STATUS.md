@@ -588,3 +588,5 @@
 - 10:10：qpilot FinalWeightAssembly（FLT 全局 e*f=finrank 通道 ⇒ weight=1）入队（386 项）；FLTMultiplicity DONE 00:52:07Z、FLTFinrankSupply DONE 00:54:45Z。lattice DiagEquivBridge 首错已文本 relay（Lead 不再直接编译 lane 文件，用户已纠正）。
 
 - 18:52：watchdog 重启（max=16，job pwsh-02afff25ef9a45fc），已恢复 pending 编译。**shehdd UNRAM bridge DONE 01:21:06Z（ole 65,464B）**；P7 GAP-PC-WEIGHT 双通道写入 §10；gate §26 = extra 386 / clean 358 + ole 20 + stale 0 + red 8。qpilot WeightOneChannels、stage4 SNFMatrixDiag/GeneralSNFVolume3 入队（389 项）。
+
+- 18:54：断点恢复记录：watchdog 于 02:29Z 停止（会话挂起），18:48 已重启（job pwsh-02afff25ef9a45fc，max=16），恢复编译 pending=41（含 AgreeFLT/InputAlignment/DiagEquivBridge/HaarStrict/FLT-Cofinite）。gate §26（断点前）= extra 386 / clean 358 + ole 20 + stale 0 + red 8；P7 NOT PASSED。UNRAM bridge（01:21:06Z）与 P7 双通道已在断点前落地。8 lane 全部唤醒。
