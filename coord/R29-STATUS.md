@@ -584,3 +584,5 @@
 - 10:02：shehdd UnramResidueBridge（BC import + relativeCompletionDegree_eq_one_of_unram_residue + weight=1 bridge + #check :718/:751）入队（384 项）。
 
 - 10:05：qpilot FLTMultiplicity/FLTFinrankSupply（FLTCompletionFinrankInput_of_FLT_global 条件填充）入队（385 项）。
+
+- 10:10：qpilot FinalWeightAssembly（FLT 全局 e*f=finrank 通道 ⇒ weight=1）入队（386 项）；FLTMultiplicity DONE 00:52:07Z、FLTFinrankSupply DONE 00:54:45Z。lattice DiagEquivBridge 首错已文本 relay（Lead 不再直接编译 lane 文件，用户已纠正）。
