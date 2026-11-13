@@ -1181,3 +1181,5 @@
 
 - 01:18：**P2 native/arch 大包里程碑（qpilot 5/5 green）**：新增 P2ArchLogSource（113,712B，exact iff arch 判据）、P2TensorDetFactor（80,560B，B2 域分解+finrank 和+scalar p^finrank det factor；缺 p-adic Haar det 律）。剩余：多因子 det 律、实际 global arch f。已派 qpilot 先做单因子/纯张量特例把对齐链走通。
 - stepxi：LIndexNonempty GREEN 16:11:21Z（finitePrimePlace_two_seven_nonempty ⟨2,norm_num⟩ + tensorIndex_nonempty）；q norm instance mismatch 仍卡（CommonPrimeCompletion vs NormalizedCompletion 两个 norm 实例）；region zero tensor 缺 `finitePadicTensorTprod (fun _=>0)=0`。
+
+- 01:25：**用户指出重复项**——核对属实：当前 `p2TensorHaarDetTransportMissing` 是旧 `GAP-DET-HAAR`（`Mzk1GeneralDualVolumeActual` 已记录），且已有 SNF 工具链（SNFTool/SNFMatrixUW/SNFMatrixDiag/GeneralSNFVolume3）+ `Mzk1MatrixHaarBaseActual`（GL_d(ℤp) 保持 coordLattice）+ B4 无条件对角比 + Haar 唯一性。新建 `coord/GAP-DEDUP-LEDGER.md`；已派 qpilot 用 B4+GL不变+SNF+标量攻 GAP-DET-HAAR（目标新文件 Mzk1P2DetHaarActual），这是旧缺口的真正关闭而非新假设。
