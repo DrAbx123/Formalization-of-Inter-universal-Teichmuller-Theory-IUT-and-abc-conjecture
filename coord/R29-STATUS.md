@@ -622,3 +622,5 @@
 - 19:30：AgreeFLT 新首错 relay：① Algebra.IsIntegral (𝓞k) (𝓞K) 用 Algebra.IsIntegral.tower_top (R:=ℤ)（NumberField/Basic:280）；② placeExtension (K := k) 参数名；③ :43/:82 级联。
 
 - 19:33：FLT RestrictedProduct/Equiv :620 修：`simp [i.2]` → `rw [dif_neg i.2]; exact congrArg x.2 (Subtype.ext rfl)`（dite 负分支 + subtype proof irrelevance）；retouch。abc IQCarrierMathlibId 入队（392 项）。
+
+- 19:35：stage4 收尾三步确认（SNFMatrixUW + canonical 无条件 wrapper + 文档 §11/12）。
