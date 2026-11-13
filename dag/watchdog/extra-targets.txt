@@ -492,3 +492,4 @@ tmp/sheaf/xif/paper/Mzk1B5GeneratorNormBridgesActual.lean
 tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaCountActual.lean
 tmp/sheaf/xif/paper/Mzk1B5NormZpowActual.lean
 tmp/sheaf/xif/paper/Mzk1P3TensorCoreActual.lean
+tmp/sheaf/xif/paper/Mzk1NativeFinitePlaceDictionaryActual.lean
