@@ -1532,3 +1532,5 @@
 - 16:46：**A1 格比较再进一步**：`Mzk1A1LatticeCompareActual` DONE 20:23:34Z（`qhatLattice_eq_c0QLattice`、`c0QLattice_subset_lambdaLattice`、`qVFamily_mem_inverseLambdaLattice_compare`）。三处首错修法已发：hull `LocalThird:39` 先 `change (↑p) ^ (-(c/(2l))) < 1` 再 `rw [Real.rpow_neg]`；shehdd `Ob33B5IndexGenerator:56` 用全限定 `Mzk1B5CountLocalValuationBridgeActual.CountValuationBridge`；qpilot CardQuotient 加 `[Infinite R]` 或 `[CharZero R]`+`CharZero.infinite`。
 
 - 16:50：shehdd 修 `Mzk1Ob33B5IndexGeneratorActual`：补 `import Mzk1Ob33B5CountUnconditionalAttemptActual`、`SpanGeneratorValuationLemma` 全限定、`CountValuationBridge` 全限定 `Mzk1B5CountLocalValuationBridgeActual.CountValuationBridge d`；并恢复被并发覆盖丢失的 QPilot section + `qPilotLocalGeneratorBridge_proved`（带 `[Fintype (Bad …)]` + 显式 binder），retouch 04:27:42Z，等重编。
+
+- 16:55：AbsNorm436Port 加 `@[expose] public section`（修 module 文件声明不导出 → CardQuotient 的 `Unknown identifier cardQuot_mul_unrestricted` 根因）；已通知 qpilot 保持 module 风格、勿改非-module。hull LocalThird `:41` `Real.rpow_neg` 需 `0<x`（`lt_trans zero_lt_one hp`）；mainline R21Uncond `:47` 继续按 donor 分条 `refine`。
