@@ -1204,3 +1204,5 @@
 - 02:45：8 lane 全 running；red WIP：P0LRegionNonempty/P0RemainingBridgeData/NativeUnitMassNormalizedFactor/P0LQThetaComponent/P3MassIdentification/LFI。Lead 抽样首错并 relay：stage4 缺 s1915LocalDegree/rootNormedExtension 的 open/import；lattice rootUnitMass+unitMassFactor binder；hull donorsOf/paperOriginalInput binder 名 I。
 
 - 02:50：**P0.6 收口**（hull）：`Mzk1P0RemainingBridgeDataActual` DONE 16:31:11Z（75s，ole 64,928B；VIndexDatum+vIndexDatum_nonempty_iff）；q 桥已按构造关闭；V-index=paper V 形式选择（字段或换 X）；theta=缺 L(concrete Fmod)/native(qVFam F) landing+haar scale。Lead 正解方向：从 T 重建 L-side actual 对象（同 F/places/tuple），landing rfl；旧 concrete L-side historical。
+
+- 03:00：用户要求“每 lane 一次写 ~20 个包、写满编译队列再统一等/批量修”。已给 8 lane 各发 20 文件大包清单（hull P0.5/P0-L 重建 20；mainline P1 B5/R21 20；shehdd P1 localized/B5 20；abc P2 源箭头 20；qpilot det-Haar/路线二 20；stage4 P3 净量/质量识别 20；lattice #10 unitMass/blockEquiv 20；stepxi P0-L 收口 20）。纪律：先全写、自加 watchdog、批量等、绿上继续、红批量修、不重复旧文件。
