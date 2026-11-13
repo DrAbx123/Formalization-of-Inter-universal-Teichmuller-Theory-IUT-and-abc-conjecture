@@ -1713,3 +1713,5 @@
 - 02:10：新 green `Mzk1B5ContractEvidenceConsumerActual` 22:20:51（95s），B5 evidence 消费链齐；A5 consumer 改 alias/wrapper（去掉 Type 字段 universe 冲突）；batch 结束 lean=0，下一 plan cycle 待起。
 
 - 02:15：qpilot 报 DegreeIdentification GREEN 22:20:10 + BoxConsumer 源码修好（import/open、SourceNativeInitialThetaData 去 `.{0}`、结构补 DecidableEq/MeasurableSpace、`s1915A0` 展开显式）、待新 batch；引用记录已写 `coord/EXTERNAL-CITATIONS-20261114.md`（含 S1902Carrier↔ArithmeticTensorTupleBlock bridge 精确缺口）。
+
+- 02:20：**三个新 green（本人 verified）：`Mzk1A5MultiradialConsumerActual` 22:24:24、`Mzk1A1PadicSaturationBasesActual` 22:25:13、`Mzk1P1IdealMapPowerGeneralProofActual` 22:25:14（102s）**。general IdealMapPower 官方绿 ⇒ 三桥齐；已派 mainline 写 `IdealLocalizedCountStatement` + B5Index + retest B5 evidence；stage4 A1.6；hull Delta/correspondence；stepxi #4 文档。
