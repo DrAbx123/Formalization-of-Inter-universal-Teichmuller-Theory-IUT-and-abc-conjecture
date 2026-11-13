@@ -243,3 +243,11 @@
 - P3：`P3CorrectionsNumeric`（17:35:19Z）、`P3MassLambdaQhat`（17:35:59Z）。
 - lattice：`BlockProductAlignment`（17:34:49Z，W/indexEquiv/factorEquiv 字段）。
 - 正在编：BlockProductAlignmentData、其余 20+ 文件。
+
+## 外部定理在链上的实际位置（2026-11-14 06:50 Lead 核 import closure）
+
+- **Mestre–Oesterlé（E7/EMO）不在当前目标链上**：
+  - `Mzk1SignedCor312ContractActual` import closure = 3 文件（只有 `IUTIII.Corollary312.StepXI.Contract`），**不含 Mestre**；
+  - `Mzk1Paper312StatementActual` closure = 353 文件，**不含 Mestre**；
+  - 含 `MestreOesterleBound` 的只是旧 §12.2 素导子/L6 骨架：`Mzk1TargetReductionActual`（closure 757，含 `Mzk1PrimeConductorRouteActual`/`Mzk1DExactLowerActual`/`Mzk1ThetaDataLegalityActual`）、`Mzk1L7*`、`Mzk1P3*`、`Mzk1PrimeConductor*`；这些通过 acceptance/integration bundle 被 import，但 signed Cor312 目标定理不依赖它。
+- 若未来改走 §12.2 骨架，则 `MestreOesterleBound` 作为显式 `hMO` 假设出现在条件定理中（不是 axiom）；当前不在主链。
