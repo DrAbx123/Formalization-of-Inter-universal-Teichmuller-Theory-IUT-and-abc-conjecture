@@ -467,3 +467,4 @@ tmp/sheaf/xif/paper/Mzk1BadPlaceUnitMassProductActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ComparisonConditionalFinalActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ContractMarginConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1C0IdeleHeightActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ThetaDegWeightActual.lean
