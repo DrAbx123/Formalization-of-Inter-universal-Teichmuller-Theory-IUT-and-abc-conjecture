@@ -1008,3 +1008,5 @@
 - 22:22：hull 唤醒做 B4 closure 的只读引理定位（compact/open/le 的精确 lemma 名/参数/行号），代码归 stage4，避免重叠。
 
 - 22:30：新文件入队（+5）：shehdd CountUnconditionalAttempt（SpanGeneratorValuationLemma 精确缺失）；abc ThetaScalarAlign（theta_eq 降为标量方程 (Σdeg)·packetNorm=s1915ClosedForm）；lattice UnitMassCitizen（actualUnitMass= s1915UnitMass.toReal + Nonempty，unitMass=1 仍 GAP）；qpilot FullProductFormula（arch+finite 全局 product formula 结构定理）；stage4 CanonicalDiagUncondFinal（B4 条件由 coordinate/fractional lattices 构造，不用 diagHomeo）。
+
+- 22:15：hull 给出 B4 closure 全部精确 lemma（coordSmall compact/open 走 CoordSmallBridge+PadicIntegerProductLattice:38-46；coordDual 用 padicFractionalLattice 局部 compact/open + isCompact_univ_pi/isOpen_set_pi + prime_pow_smul_integers_eq_padicFractionalLattice 换算；hle 用 Submodule.pi_mono + mem_span_singleton）⇒ B4 可完全关闭、image bridge GAP 可删；已 relay stage4。mainline B5GeneratorNormBridges 入队（491）。
