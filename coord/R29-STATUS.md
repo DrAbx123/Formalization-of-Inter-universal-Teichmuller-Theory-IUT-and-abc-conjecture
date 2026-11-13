@@ -1270,3 +1270,5 @@
 - 04:38：lattice proof=5/status=0：TensorCoreWitness（17:07:47）、NativeBadPrimeIff（17:08:44）green；UnitMassNormalizedProof/RootExtensionCarrierRfl 已修待重抽；**新增 sharp 定理 `factorEquiv_finrank_eq` + `no_blockProductAlignment_of_finrank_ne`**（维度不同 ⇒ 无 BlockProductAlignment inhabitant）。Lead：不要旧载体找 Equiv；正路=定义 `ThetaRootTensor := FinitePadicTensor(rootNormedExtension)`（或 RootExtensionProductCarrier 为主对象）→ 与 S1902 carrier 定义级对齐 → 与 qVFamTensorBlock 的度因子关系交 P2 det-Haar。
 
 - 04:40：qpilot det-Haar 两 proof：`Mzk1GapDetHaarSNFSplitActual`（SNFMatrixSplit+snfMatrixSplit+exists_snfMatrixSplit，缺任意 GL_d 的 SNF basis 数据）、`Mzk1GapDetHaarAssemblyActual`（detHaar_map_of_factors 三因子组装代数核心；缺显式 SNF factor functions/c=‖det B‖ 识别）。watchdog 存活（16 lean、17:19 START、lock 2472）。
+
+- 04:44：lattice 纠正 ThetaRootTensor(张量积)≠S1902Carrier(函数积)，写 `Mzk1ThetaRootCarrierActual`（RootExtensionProductCarrier 为正确 product 载体；thetaRootCarrier_eq_s1902Carrier rfl、thetaRootCarrierEquiv 真构造）；下一波 unitBall/Haar 传输 + root product normalized unitMass + det-Haar 度因子。mainline 桥 1 上游首错：`intValuation_exists_uniformizer` 无 K 参数（去 `(K:=)`）；Mathlib olean 读失败为环境 I/O（文件已核存在）会连带假错。
