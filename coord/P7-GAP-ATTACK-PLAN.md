@@ -1118,3 +1118,10 @@ SourceNativeInitialThetaData (T) + b : Bad (nativePlaceSelection T)
 | `Mzk1P2WeightedSumActual` | 15:49:55Z | `p2RExact = W_λ−W_qhat`；`W_qhat−W_λ=Σ d_b log‖c_b‖`；`c0RemainderV2 = −(2l−1)W_λ` |
 
 **缺失映射仍成立**：native q 读数（实数 log）→ `qhat` 的 log 范数未证；theta 允许换根/单位操作未构造；旧 C3 `tensorLanding_q` 空类型（S1429）不可用；多索引张量落点未构造。本批把 R1.2 推进到实际秩一块/多标签有限和，把 R1.3 的真实质量差非负与 correction 精确对齐；未把 correction 冒充为零。
+
+---
+
+## #6 THETA-D native re-anchor（2026-11-14 01:5x，stage4）
+
+- `Mzk1P3NativeDReanchorActual`（待 watchdog 绿）：`ThetaRootCarrier` 定义级等于 bad-place root extension product（rfl）；`nativeDProjection` 由 tensor core witness 给出（`tensorCoreWitness.equiv`），并证 bijective；`BlockProductAlignmentData` 精确记录剩余构造：`J ≃ Bad` 与逐因子 `E_j ≃ rootNormedExtension`。
+- 状态：**#6 re-anchored（构造级）**；旧 C3 不再参与 carrier/projection；剩余唯一缺口为 `BlockProductAlignmentData` inhabitant。
