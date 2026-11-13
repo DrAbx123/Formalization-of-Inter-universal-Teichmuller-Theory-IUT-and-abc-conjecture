@@ -1136,3 +1136,5 @@
 - 23:38：**P0 L-side 里程碑**（stepxi）：P0LPaperInstance DONE 15:27:26Z（82s，ole 89,128B，trio）；LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z；RegionMass 正性仍 GAP；SourceIdent/SignedLog 在修。已告知 hull：L 实例可用于 P0.5 的 hq/hθ alignment 等式。
 
 - 23:42：mainline LocalizedSpan 阻塞（`coe_spanSingleton` 的 Set coercion 不可 rw）→ Lead 给绕开法：用 `FractionalIdeal.mem_spanSingleton`（Operations:575）与 `Submodule.mem_span_singleton` 直接做成员等价（同为 ∃r, r•x=z），不需要 Set-level bridge。
+
+- 23:46：lattice #10 本轮：NativeBadPrime 精确归约 green（→`NativeBadModuliFixedPrime`）；normalized unitMass=1 GAP（IntermediateField 缺 MeasurableSpace/SigmaFinite；Mzk1NativeNormalizedUnitMassOne DONE 15:37:29Z，localUnitMassScalar pos/finite green）；blockEquiv GAP。已派下一阶段大包：NativeBadModuliFixedPrime 来源/normalized 刻度接口/blockEquiv inhabitant。
