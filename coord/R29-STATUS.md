@@ -1338,3 +1338,5 @@
 - 06:52：stage4 P3 wave milestone：15 green（MassLambdaQhat/LogMassRegion/R37Net/TraceDualityCoefficientNumeric/CoreScalingExplicit/DomainTrace/NetBound/SourceComparisonAttempt/HaarMassLog/TensorProductMass/P2Alignment/ReferenceMass/CorrectionsNumeric/SNFMass/DetNet/MassIdentification）+ 6 小文件 pending retry。关键定理：R37R13NativeMassIdentification_iff_coefficient、p2Alignment_nativeLogVolume/detNonpos、sourceComparison_of_native_block、domainTraceCoefficient_projection、log_tensorProductMass、snfMassRatio_pos、detNet_le、r37Net_eq_log_ratio。
 
 - 07:56：**用户口径**：MO 输入能用就用，最后形式化；不要能用但不用。已建 `coord/MESTRE-USE-DIRECTIVE.md`；派 mainline 逐项判定当前活动缺口可否消费 `MestreOesterleBound`（thetaR13Defect/NativeComparison/R21Bridge/IdealLocalizedCount/residue-one/det-Haar/arch/R37R13/blockEquiv/unitMass），能接线就写显式 hMO 小文件，不能则写精确非适用性说明。
+
+- 08:00：用户要求激活其他 lane。已唤醒 hull/qpilot/shehdd/lattice/stepxi 并派下一波大包：hull=P0.6 待编+readout/defect 界+LPaper 最终链；qpilot=matrix SNF/diagonal factor/关闭 GAP-DET-HAAR；shehdd=ideal-map power/residue-one/B5 FiniteIndexExpansion；lattice=ThetaRootCarrierHaar/unitMass/data/app；stepxi=NormalizationSign/QThetaStrict/QTheta 链/联合符号。全部 proof-only 小波次。
