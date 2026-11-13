@@ -1482,3 +1482,5 @@
 - 14:28：按查重结论派发：mainline=max-ideal R21 无条件（CountSide+SGVMaxIdeal 已绿）；hull=A2 用 P2QNativeSourceArrow 供体 + A3 供体拼接 + A6 精确 case；shehdd=A4 用 C17ResidueWeightChain 条件定理，剩 residue-field 同构；stepxi=A5 填 3 个 residual Nonempty（优先 SourceFmodRealEmbedding）；stage4=A1 等号情形；lattice=#10；qpilot=port。
 
 - 14:32：lattice #10 新 proof `Mzk1RootUnitMassOneCriterionActual`（rootUnitBallMass_eq_one_iff_prod：root unitBall mass=1 ↔ ∏c_b=1，conditional SigmaFinite；rootUnitBallMass_eq_one_iff_normalized），待编；pending 4 重抽中。
+
+- 14:36：**watchdog 死亡并重启**：19:29:16 后 log 停止、无 node/lean、lock 残留 32736（crash.log 无新条目，原因未明）；清理 stale lock 后以 background job `pwsh-32c6dd50430f4617` 重启，19:36:40 已恢复 START/lean=12/lock=13900。另：**class-B `Mzk1PAdicHaarDetScalingExternalActual` GREEN**（PAdicHaarDetScaling + detHaar_degree_scaling_of_external + degree_factor_of_external，外部标准定理接线）。shehdd A4 新 proof 2（NativeBaseResidueOne/NativeBadResidueFieldGap：ResidueFieldEquiv ⇒ f=1/weight=1 精确输入链）。mainline max-ideal 无条件链文件 `Mzk1P1MaxIdealR21UncondActual`（maxIdeal_countValuationBridge_uncond/maxIdeal_r21Bridge_uncond）+ 桥 2 :83 修好；hull RootDetHaar 遇 exit 3221226505（资源/栈崩溃，非证明错误）待重试。
