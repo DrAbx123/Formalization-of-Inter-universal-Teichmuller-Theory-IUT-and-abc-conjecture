@@ -554,3 +554,5 @@
 - 09:15：BaseChange 最新真 run 仅 2 错 relay shehdd：① :389 需加 RingHom.coe_range 到 simpa；② :210 valued_adicCompletionSemialgHom 末尾 simp/rw 不闭合（unused simp args）。已明确交由 shehdd 修。
 
 - 09:19 巡检：BaseChange 00:29:17 FAIL（shehdd 在修，剩 :389/:210）；C3S1902LowerBound FAIL（依赖 Quantity）；CoordSmallBridge FAIL（lattice 修）。stage4/stepxi 唤醒（hμM/U*M*W、P5AxiomAudit DONE/InternalConsistency 定稿）。
+
+- 09:21：stage4 ChangeMatrixRing（changeMatrix_mul/flip/one）入队（376 项）；GeneralSNFVolume2 hμM 再修待编。BaseChange 待 shehdd。
