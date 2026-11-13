@@ -1092,3 +1092,5 @@
 - 23:30（批量模式）：8 lanes 各领 6 文件批量包（hull P0；mainline P1；shehdd P1；abc P2；qpilot P2/路线二；stage4 P3；lattice #10/P1；stepxi P0-L），先全部写再统一等编译（用户指示：多线程批量）。
 
 - 23:34：新建 `coord/P0-P4-EXECUTION-TRACKER.md`（8 lane × 6 文件批量追踪表 + 旧 C3 空类型纪律）；abc P2RelativeMass 入队（504）。
+
+- 23:48（用户指正）：取消 Lead 入队交接层——每个 lane 自己用 `Add-Content` 原子追加 extra-targets + 自己 retouch；Lead 已一次性补入 35 个近 45 分钟新文件（名单 539 项）。lane 批量写/修与编译并行，不再单独等待。
