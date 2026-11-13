@@ -1100,3 +1100,5 @@
 - 23:12：gate §36 批量迁移期快照（Lead 扫描）：extra 548 = clean 485 + red 13（全为 P0-P3 新批次 WIP，无旧 gate 回归）+ inprog 16 + oleonly 20 + missing 14；注明旧 C3 空类型语义（旧 C3 green 仅 historical/vacuous，native 链才有效）。
 
 - 23:16：P0-P4 tracker 增加里程碑验收表（P0 native 端到端/P1 生成元-count/P2 R1.2 四来源+R1.3 质量差/P3 迹下降/P4 闭合）；Lead 只维护大包与验收，不逐文件指挥。
+
+- 23:18：批量编译进展：**Mzk1P7ContractMapEvidenceRowsActual GREEN**（#8 证据行升级落地）；**Mzk1P1B5WithFvActual GREEN**（含 f_v 的 B5 输出）；**Mzk1NativeUnitMassOneActual GREEN**（#10 unitMass=1 条件/值）；**Mzk1P3HaarScaleDockingActual GREEN**；**Mzk1P1CountLocalValuationNativeActual GREEN**（native count↔valuation 桥）。hull P0 三件（NativeS3137Chain/NativeReadout/NativeEquiv）在修。
