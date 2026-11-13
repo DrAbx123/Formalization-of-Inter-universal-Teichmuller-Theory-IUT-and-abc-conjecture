@@ -422,3 +422,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **A7**：只有 `nativeBadPrimeData_iff_moduliFixed` 归约；**无真/假判定**；Bad 是 Fmod 坏位、不同 residue char 可并存，可能为假；方法不明确。
 - **A8**：`Mzk1PaperLabelProjectionActual`（`candidateLabelOfPlace`、`PaperLabelProjectionInterface` struct）与 `Mzk1PaperLabelBadIndexBridgeActual`（`BadThetaLabelMap` struct）green，但 **`BadThetaLabelMap` 无 inhabitant**；`thetaLabelOfFin` 只在 finite labels。方法不明确（paper label 映射）。
 - **A1**：仍无 inhabitant（旧文件为 rows-only/C3-vacuous structure）；方法二选一：tensor≃∏ 的因子识别（可能为假）或 log-volume+det 因子。
+
+### 20.10 A6 方法更新（2026-11-14 14:45，user-provided route）
+- **方法变为明确**：S1915 hull 每坏位是 `closedBall 0 r_b`，`r_b<1`（`rootNormedThetaValueInL_norm_lt_one` 可证），坏位 residue char 奇 ⇒ 三平移 `H,1+H,2+H` 两两不交且都在单位球内 ⇒ 相对 Haar 质量 ≤1/3。
+- 乘积 ⇒ `μ(hull)/μ(unit) ≤ (1/3)^{#Bad}`；`s1915ClosedForm = 1 + log(μ(hull)/μ(unit)) ≤ 1 − (#Bad)·log3 < 0`（#Bad nonempty 可证）。
+- 而 `paperBox ≥ 0`（disc,cond≥1）⇒ `V ≤ paperBox` 对**所有** disc/cond 成立，`C0=0` 无条件；#9 可望整体 DISCHARGED，不再需要排除 `disc=1∧cond=1`。
+- 已派 hull 实现：`Mzk1HullUBLocalThirdActual`（严格半径 + 1/3 界）+ `Mzk1HullUBUnconditionalC0Actual`（乘积 + 闭式 + 收口）。
