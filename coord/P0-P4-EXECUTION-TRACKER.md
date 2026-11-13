@@ -191,3 +191,11 @@
 - `Mzk1P1PrincipalValuationProofActual` DONE 16:25:27Z（40s，olean=True）：`principalValuation_proved` + **`principalValuationStatement_proved : PrincipalValuationStatement`（named Prop 整体关闭，非条件）**。
 - 证明链：`algebraMap_adicCompletion`（hx）→ `valuedAdicCompletion_eq_valuation'` → `valuation_of_algebraMap` → `intValuation_if_neg` → `WithZero.log_exp`；instance：`instIsScalarTower'` 全限定。
 - P1 三条 statement：PrincipalValuation **PROVED**；LocalizedSpan 由 IsPrincipal 路线取代；IdealLocalizedCount GAP（下一步 FLT completionIdeal + uniformizer）。R21Bridge 距闭合 = IdealLocalizedCount + generator 构造。
+
+## P0.6 收口结论（hull，2026-11-14 02:50）
+
+- 新 GREEN：`Mzk1P0RemainingBridgeDataActual` DONE 16:31:11Z（75s，olean 64,928B）：`VIndexDatum P := {equiv : NativePlaces P.X.S ≃ FinitePrimePlace 2 7}` + `vIndexDatum_nonempty_iff`。
+- q 桥：已由 `NativeQDonor` 按构造关闭（donorQReadout=nativeQReadout rfl）。
+- V-index：`NativePlaces`（NumberFieldPlace K 子类型）vs `FinitePrimePlace 2 7`（有理素数标签）类型/语义不同，树内无映射；只能作为 paper input 字段 `VIndexDatum` 或换 X 的 V 形式。
+- theta：factor 恒等式已有；精确缺失 = L tensor block（concretePlaces/concreteTuple over Fmod）↔ native block（qVFamTensorPlaces/Tuple over F）的 landing 等价 + haar scale。
+- Lead 方向：从 T 重建 L-side actual 对象（同 F/places/tuple），landing 按构造 rfl；旧 concrete-donor L-side 保留 historical。

@@ -1202,3 +1202,5 @@
 - 02:42：LFI 仍红：`underlyingPrime` unknown（缺 open NumberFieldFinitePlace）+ `introN` 失败（改了 `localizedMap_eq_algebraMap` 原证明）+ unsolved。Lead 给修法：恢复 15:38 绿版 `apply IsLocalization.ringHom_ext; ext a; simp [localizedMap, IsLocalization.map_eq, IsScalarTower.algebraMap_apply]`，只在前加 `haveI` + open。另唤醒 mainline 开始 IdealLocalizedCount（FLT completionIdeal + uniformizer + ideal map power，缺则单引理名）。
 
 - 02:45：8 lane 全 running；red WIP：P0LRegionNonempty/P0RemainingBridgeData/NativeUnitMassNormalizedFactor/P0LQThetaComponent/P3MassIdentification/LFI。Lead 抽样首错并 relay：stage4 缺 s1915LocalDegree/rootNormedExtension 的 open/import；lattice rootUnitMass+unitMassFactor binder；hull donorsOf/paperOriginalInput binder 名 I。
+
+- 02:50：**P0.6 收口**（hull）：`Mzk1P0RemainingBridgeDataActual` DONE 16:31:11Z（75s，ole 64,928B；VIndexDatum+vIndexDatum_nonempty_iff）；q 桥已按构造关闭；V-index=paper V 形式选择（字段或换 X）；theta=缺 L(concrete Fmod)/native(qVFam F) landing+haar scale。Lead 正解方向：从 T 重建 L-side actual 对象（同 F/places/tuple），landing rfl；旧 concrete L-side historical。
