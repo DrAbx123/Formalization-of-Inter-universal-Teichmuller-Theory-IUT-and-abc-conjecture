@@ -740,3 +740,5 @@
 - 20:25：**#2 pivot**：Mathlib 自带 `IsDedekindDomain.FiniteAdeleRing R K := Πʳ v, [v.adicCompletion K, v.adicCompletionIntegers K]`（RingTheory/DedekindDomain/FiniteAdeleRing.lean:94），与 qpilot IQFiniteAdeleRestricted 载体同形 ⇒ #2 可 rfl/Equiv.refl 直接构造，不需 FLT backport 链（TopologicalSpace 手写 singleAddMonoidHom 不再阻塞 #2）。
 
 - 20:30：巡检：**Ob33DetLineConstructionLink DONE（12:00:35Z）**、**IQFiniteAdeleRestricted DONE（12:01:23Z，32s）**；C3S1902BallMassFormula/C3DDonorProjection/C0/Dictionary/ThetaVScaleOffsetIdentity/InputAlignmentComposite/P7ThetaDeg/B2/CanonicalDiagUncond 已 retouch。qpilot 转 Mathlib FiniteAdeleRing 识别；mainline 写 PrincipalGenerator；hull/stage4/lattice/stepxi 派活。
+
+- 20:35：mainline DetLinePrincipalGenerator（countExponent/uniformizer/CountLocalizationBridge named input + count→span 桥路线）、lattice FinitePlaceHaarRatio（LocalHaarScalingLaw ⇒ 比值=||a||）入队（444 项）。stepxi C0 arch/infinite 计划已写：arch 因子可构造、C0→global 源箭头缺失（精确 GAP）。
