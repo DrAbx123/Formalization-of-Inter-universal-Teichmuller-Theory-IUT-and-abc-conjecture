@@ -493,3 +493,7 @@ tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaCountActual.lean
 tmp/sheaf/xif/paper/Mzk1B5NormZpowActual.lean
 tmp/sheaf/xif/paper/Mzk1P3TensorCoreActual.lean
 tmp/sheaf/xif/paper/Mzk1NativeFinitePlaceDictionaryActual.lean
+tmp/sheaf/xif/paper/Mzk1Ob33B5GeneratorCandidateActual.lean
+tmp/sheaf/xif/paper/Mzk1P0NativeTensorConsumerActual.lean
+tmp/sheaf/xif/paper/Mzk1P2LabelBlockCoefficientActual.lean
+tmp/sheaf/xif/paper/Mzk1P0NativeSourceCoreActual.lean
