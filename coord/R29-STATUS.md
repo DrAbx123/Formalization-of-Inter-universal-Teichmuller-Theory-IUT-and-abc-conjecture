@@ -1755,3 +1755,5 @@
 - 03:55：**两个关键 GREEN：`Mzk1P1UniformizerPowerSpanActual` 22:43:33（第三桥 huni）、`Mzk1P7ContractB5EvidenceActual` 22:43:55（#8 B5 evidence 行收口！）**；`Mzk1A5Ind1Ind3Consumer` 22:49:04 重绿。三桥全齐，已 touch `Mzk1P1IdealLocalizedCountFinalActual`（上轮 22:43:07 FAIL 是 uniformizer olean 22:43:33 之前），等重编 → B5Index 完整重接。
 
 - 04:00：hull 确认 scaled-readout 纪律；scaling 文件修 `qhatUnit_coe` 非法 named binder（`(T:=T)`→显式 typed），`qhatUnit/qhatUnit_smul_unitBall` Function expected 应消；后续：scaling official → `qhatLogReadout=log‖qhat‖` → `=-|log q|`（q norm<1）→ 逐项 signed 比较 `Σ d_b qhatLogReadout_b ≤ Σ d_b log r_b = s1915ClosedForm−1`，不经过 s1915A0。
+
+- 04:05：qpilot 新 `Mzk1BoxReadoutLocalActual`（SignedLocalReadout 用 s1446Upper + StepVHullEstimate.signed_sum 显式字段）。已提醒：`a0` 可用绿色 `arithmeticTupleHullUnitLogVolume` + `arithmeticTupleCanonicalRegions_relativeLogVolume` 一半落定理；`signed_sum` 试用绿色 `arithmeticTupleFieldHull_addHaar_logVolume_decomposition_change`，若只给整体不逐因子则保留为单点显式字段并写清所需引理，不假证。
