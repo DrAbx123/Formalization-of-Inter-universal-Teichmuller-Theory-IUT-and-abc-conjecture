@@ -624,3 +624,5 @@
 - 19:33：FLT RestrictedProduct/Equiv :620 修：`simp [i.2]` → `rw [dif_neg i.2]; exact congrArg x.2 (Subtype.ext rfl)`（dite 负分支 + subtype proof irrelevance）；retouch。abc IQCarrierMathlibId 入队（392 项）。
 
 - 19:35：stage4 收尾三步确认（SNFMatrixUW + canonical 无条件 wrapper + 文档 §11/12）。
+
+- 19:37：shehdd gate §30（extra 392，clean 363 + ole 20 + stale 2 + red 7）；P7 §13 终表：10 GAP codes 全未 unconditional discharge（THETA-DEG partial，CONTRACT conditional interface）；P7 NOT PASSED。已询问 mainline AgreeFLT 的实际首错/修法应用情况。
