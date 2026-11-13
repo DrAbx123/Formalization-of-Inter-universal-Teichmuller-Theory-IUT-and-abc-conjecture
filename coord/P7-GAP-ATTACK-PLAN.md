@@ -16,7 +16,7 @@
 | 6 | GAP-P7-THETA-D | **PARTIAL**（实际 C3D key map 已构造：`Mzk1C3DKeyMapActual`，`actualDonorC3 := S2717C3 R … D`，indexEquiv/dPlaceIndex/dPlaces/dTuple 全取实际 C3 字段） | hull | 剩 D 侧对齐：把 D 数据接到该 key map 形成双向字典；先条件字典再消去 |
 | 7 | GAP-P7-THETA-DEG | **OPEN/PARTIAL**（文件 `Mzk1P7ThetaDegActual` 已写，等 `Mzk1C3BlockMeasureActual` olean 后编；含 localCompletionDegree=finrank、c3TensorBlockDimension=∏、block nonpos+local degree 分解） | stage4 | 等依赖 olean 后重编 → 更新 P7 §13 为 CONDITIONAL/PARTIAL |
 | 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（`Mzk1P7ContractMapActual` DONE 11:18:55Z，olean=True；AgreeFLT DONE 11:13:10Z） | mainline | 已完成：`recon12ToGap`/`missing7ToGap`/`gapCodesCovered`/`contract_fields_not_linked`/`p7_conditional_contract`；文档 `coord/P7-CONTRACT-MAP.md`。后续：等其它 GAP 关闭后把条件装配升级为 DISCHARGED |
-| 9 | GAP-P7-HULL-UB | **DISCHARGED（paper V at k=0）**；paper V = normalizedLog(fullRegion)=normalizedLog(s1902Hull)；actual dictionary scale=1/offset=0 | hull | L4 actual V done；一般 k 的 scale=qLogSum 属 THETA-V L4 扩展 |
+| 9 | GAP-P7-HULL-UB | **CONDITIONAL（C0=1）**；hull 更正：paper V = s1915ClosedForm = **1 + normalizedLog**（a_i=d_b, β=1），故 V ≤ paperBox + 1（C0=1，非 0）；仅 normalizedLog 侧 C0=0 | hull | 文件：`Mzk1HullUBPaperVRawBindingActual`（closedForm=1+normalizedLog）、`PaperVRawUpper`（V≤paperBox+1）、`B6Rows`。下一步：确定目标是否要求 C0=0；若是，把常数 1 的来源/吸收单列精确障碍，不假设 β=0 |
 | 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL**；显式 C_K + abc 接口 | lattice | `Mzk1NormArchCKActual`（DONE）：C_K/因子形式；`Mzk1NormArchAbcHookActual`（DONE 11:29:49Z）：显式接口 + degree-one `haarScale=1` 实例。缺失：一般 K 的 abc `haarScale` 与 C_K 公式来源 |
 
 ## 纪律
@@ -608,6 +608,8 @@ q 根关系/迹系数在这些运输下的对应。
 本轮状态：statement_compiles = NOT_RUN；proof_body_checked = NOT_RUN；kernel_closed = NOT_RUN；target_accepted = NOT_RUN；独立审查 = NOT_RUN（同一助手自查）。没有把候选路线或旧 olean 的存在性写成新的数学验收。
 
 本轮可交接的新增内容是：S1915 精确质量公式到现有 P7 消费者的复用链；从根关系产生整数系数的 q 格比较；同源字典/相对行列式的构造步骤；以及一般分歧球的 ceil 公式、Haar 比例与 degree 权重之间的具体修正。**最终仍以消除所有非原文输入、完整证明原目标为准。**
+
+**并行更新说明。** 追加期间，原表另将 #9 标为“DISCHARGED（paper V at k=0）”，并给 #10 增加次数为 1 的实例。本轮未重新验收这些更新对应的全部源码及原文语义；本节对先前接口的判断以上表指纹为界，不覆盖新增记录。若 k=0 的来源识别已通过验收，应直接复用并从 B0 中扣除这一已完成部分；一般 k、一般原输入范围及一般 K 的归一化仍须按实际目标逐项处理，不能由特例自动推广。下一包仍建议先完成 A0 的具体接线。
 
 <!-- END P7-NO-EXTRA-INPUT-ROUTES-20261113 -->
 
