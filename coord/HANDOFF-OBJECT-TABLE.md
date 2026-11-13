@@ -426,3 +426,48 @@ to qPilot/rootHalf is asserted.
 - task-110 (P4-POS): closed by the independent S1023 openness route; no coefficient bridge used.
 - task-115 remains: discharge S800 qPilotPaperRegionLog_le_paperHullLog pos/fin using the P4 file,
   and identify which hull S800's paperHullLog uses (rootThetaHull vs NonzeroHull) before mixing.
+## 17. task-115: S800 block paper target unconditional (least lambda-O hull at rootHalf)
+
+File: `tmp/sheaf/xif/paper/Mzk1PaperBlockTargetActual.lean` (117 lines, 5392 bytes).
+Watchdog: DONE EXIT=0 @2026-11-12T21:47:37Z (78s); olean 140680 bytes mtime 21:47:36Z.
+
+Object distinction (important, not mixed):
+- S800 `paperHullLog` uses `leastLambdaOHull paperPossibleImages`, where
+  `paperPossibleImages = rootThetaImageSet ... rootHalfCoefficient` and rootThetaImageSet is
+  over SignedLabel (includes j=0); candidate regions are F(c)O at arbitrary c.
+- P4 `paperFaithfulThetaHull` is closure over **PaperNonzeroLabel** at
+  `qVFamPaperTensorCoefficient = j^2 qVFamPaperRootCoefficient`; it is NOT this S800 hull.
+  This task does not identify them; P4 is not used for S800 hfin.
+
+Unconditional discharge:
+- `lambdaORegion_zero_mem_candidate`: the constant-zero coefficient candidate F(0)O contains
+  every root region (coefficients j^2 rootHalf >= 0 and F antitone).
+- `leastLambdaOHull_subset_lambdaORegion_zero`: least hull ⊆ F(0)O.
+- `lambdaORegion_zero_measure_lt_top`: F(0)=R and R*O_hol=O_hol
+  (`arithmeticTupleFractionalLattice_zero`, `arithmeticTupleValuationIntegerLattice_mul_holomorphicLattice`),
+  O_hol compact via canonical unit reference; `IsCompact.measure_lt_top`.
+- `paperHull_measure_lt_top`: least hull finite.
+- `qPilotPaperRegionLog_le_paperHullLog_unconditional`: S800 pos/fin hypotheses discharged
+  (positivity via green qPilotPaperRegion_measure_pos).
+
+GAP: no equality between S800 least hull and P4 paperFaithful hull; if a later target uses
+P4's NonzeroHull as paper hull, a separate identification/restriction is required.
+
+## 18. task-94/110/115 status
+
+- task-94 completed: P4 finiteness (split P4 file green).
+- task-110 completed: P4 positivity via S1023 openness, coefficient bridge avoided.
+- task-115 completed: S800 block target pos/fin discharged; object mismatch explicitly recorded.
+## 19. Canonical P0 target、历史 S800/S801、qVFam P4 三链对照
+
+Canonical: S3137 `qPilotLogVolumeReading` / `thetaPilotHullLogVolumeReal` → `Mzk1Paper312StatementActual.Paper312Statement` → S3135;
+gap = `qThetaPilotLogVolumeComparison` (PENDING).
+
+Historical S800: `paperPossibleImages=rootThetaImageSet` over SignedLabel incl j=0; S800 least hull = R*O = O_hol;
+`paperHullLog=0` (Mzk1PaperHullZeroLabelActual, with S779/S793 old-audit references). This is a historical degeneration, not P0.
+Historical S801: correct NonzeroLabel least hull; `paperHullLog=paperQPilotRegionLog` (equality/trivial region-log),
+substantive formula needs `PaperHullLogFormulaData`; not canonical P0.
+qVFam P4: `paperFaithfulThetaHull` (PaperNonzeroLabel, qVFam block) finite/positive; side result, not C3 log-shell carrier.
+
+P0 acceptance accordingly: use S3137 readings + Paper312Statement; the only real gap is qThetaPilotLogVolumeComparison;
+the S800/S801/qVFam results are archived as historical/side and must not be written into P0 conclusions.

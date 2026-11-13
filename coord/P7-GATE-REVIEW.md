@@ -90,3 +90,130 @@ watchdog 当前 state 中与本链相关的外部失败仍是 lana/lana_tgfree�
 - `coord/R29-GREEN-AUDIT.md`（35 个 R29 green 文件的条件/空洞风险）；
 - `.lake/build/lib/lean/Iut/**`（均缺）；`tmp/sheaf/xif/paper/Mzk1SSIneqConsumerChainActual.lean:2`、`Mzk1FinalABCBridgeActual.lean:2`、`Mzk1StepXIMinimalStatementActual.lean:2`；
 - `Mzk1FinalConditionalVacuityActual.lean:43-47`（hfull_unsatisfiable）；`S3135FinalAssemblyGateV4CandidateActual.lean:111-114`（sorryItems）。
+### 附：P7 MISSING 中的两个不可约算术输入（2026-11-13）
+
+- `eSource = 1`：所选 bad place 的 section ramification index = 1；不是 Mathlib/FLT 可推的定理，是**算术非平凡性输入**。
+- `localResidueDegree = 1`：所选 bad place 的 residue degree = 1；同上。
+- 可查充分条件：显式 residue-field algebra equivalence（`ResidueFieldEquiv`）或 `F=ℚ` + residue field ≅ `ℚ_p`；反面来源见 `BadPlaceRationalDegreeFactorActual.RationalDegreeGreaterOneSource`。
+
+- 链文件 `Mzk1C17ResidueWeightChainActual`（DONE 00:04:45Z）：`ResidueFieldEquiv ⇒ localResidueDegree=1 ⇒ nativeBadLocalWeight=1`（条件链）；实际同构/算术输入仍未证。
+
+## 9. P7 MISSING 最终 4 输入（2026-11-13）
+
+1. QPLACE / place choice：fkDescentShadow (nativePlaceSelection T) b.1 = (nativeBadLift T).lift b（或等价 F-place identity）；
+2. eSource = 1：所选 bad place 的 section ramification index = 1（不可由 FLT/Mathlib 推出）；
+3. candidate-order 独立输入：(badPlaceQCandidate (nativePlaceSelection T) b).order = (sectionQ T b).order；
+4. residue-field 同构输入：ResidueFieldEquiv（⇒ localResidueDegree=1）；实际同构未构造。
+
+> 说明：第 2、3、4 项是算术/对象输入；第 1 项是 Classical.choose place 选择缺口。FLT 只可能帮助全局→局部的 degree 运输，不能给具体值 1。
+
+## 10. GAP-PC-WEIGHT 双通道状态（2026-11-13 19:00）
+
+- **直接通道（green conditional）**：`Mzk1C17UnramResidueBridgeActual`（DONE 01:21:06Z，64s，ole 65,464B）；`relativeCompletionDegree_eq_one_of_unram_residue`（e=f=1 ⇒ degree=1）+ `nativeBadLocalWeight_eq_one_of_unram_residue_bridge`（+FINITE/AGREE ⇒ weight=1）。
+- **FLT finrank 通道（green conditional）**：`Mzk1P3AGREEFLTBridgeActual`（DONE 00:49:13Z）+ `Mzk1P3FLTMultiplicityActual`（FLT :751 wrapper，DONE 00:52:07Z）+ `Mzk1P3FLTFinrankSupplyActual`（DONE 00:54:45Z）+ `Mzk1P3FinalWeightAssemblyActual`（DONE 00:57:13Z）：FLT 全局 e*f=finrank + factor/finrank 对齐 + FINITE/AGREE + finrank=1 ⇒ `nativeBadLocalWeight=1`。两条通道并列于 `Mzk1P3WeightOneChannelsActual`（DONE 10:51:33Z，olean 73,616B）。仍为 conditional：v/w 构造与 factor/finrank 对齐是显式输入，不是无条件 INSTANCE。
+- residue-field 充分通道：`ResidueFieldEquiv ⇒ inertiaDeg'=1 ⇒ localResidueDegree=1 ⇒ weight=1`（`Mzk1C17ResidueFieldEquivActual` + `Mzk1C17ResidueWeightChainActual`）。
+
+## 11. P5 conditional root-unit dictionary vs P7 gate (2026-11-13)
+
+- P5 final carrier: Mzk1P5FinalSummaryActual (DONE 2026-11-12T23:53:16.767Z;
+  P5NamedInputs four fields + bridgeOfInputs + p5_final_comparison).
+- Axiom audit: Mzk1P5AxiomAuditActual DONE 2026-11-13T00:25:03.516Z; all
+  printed theorems use only propext/Classical.choice/Quot.sound (root choice
+  only propext/Quot.sound); no sorryAx.
+- Internal consistency: Mzk1P5InternalConsistencyActual DONE 00:13:57Z as
+  conditional packaging only; L=RootExtension,toRoot=id is blocked by the
+  Field-instance diamond and is NOT the analytic bridge.
+- P5 is NOT a canonical S3137/Paper312 target and NOT part of the P7 ABC
+  gate.  The P5 root-unit comparison remains conditional on the actual
+  analytic toRoot/place-Kummer map and the paper label->phase exponent
+  dictionary; the separate P5 C-Divisor/C-Theta gaps (Weil divisor/order-at-O,
+  general line-bundle trivialization) remain as recorded in earlier sections.
+- Therefore P7 gate status is unchanged by P5 green: gate NOT passed; P5 may
+  be cited only as a conditional root-unit dictionary, not as canonical/P7
+  progress.
+
+End of P5/P7 alignment note.
+## 11. 最新 gate 同步（2026-11-13 18:54）
+
+- `Mzk1C17UnramResidueBridgeActual`：**GREEN DONE 01:21:06Z（64s，ole 65,464B）**；无 sorry/axiom。
+- GAP-PC-WEIGHT 双通道：
+  1. 直接通道（green conditional）：`relativeCompletionDegree_eq_one_of_unram_residue` + `nativeBadLocalWeight_eq_one_of_unram_residue_bridge`；
+  2. FLT finrank 通道：BaseChange :751 `ramificationIdx_mul_inertiaDeg_eq_finrank` 已 import/#check；实例化到项目 place 仍需 local/global place 对齐输入，未声称接通。
+- residue-field 充分通道：`ResidueFieldEquiv ⇒ inertiaDeg'=1 ⇒ localResidueDegree=1 ⇒ weight=1`（`Mzk1C17ResidueFieldEquivActual` + `Mzk1C17ResidueWeightChainActual`）。
+- 剩余 4 算术输入不变：QPLACE、`eSource=1`、candidate-order 等式、residue-field 同构（⇒ localResidueDegree=1）。
+- gate 快照：extra=**389**，clean **360** + ole-only **20** + stale **0** + red **9**；**P7 NOT PASSED**。
+
+## 12. 恢复批次后 gate（2026-11-13 19:05）
+
+- extra-targets = **391**；**clean 363 + ole-only 20 + stale 0 + red 8**；P7 **NOT PASSED**。
+- `Mzk1C17UnramResidueBridgeActual` 保持 green（01:21:06Z，ole 65,464B）。
+- candidate-order 输入：**无定义级等式**；S1413 `sectionQ_order` 只给 `sectionQ.order=eSource*shadowQ.order`，S2680 的 `hQ` 是显式假设。详见 `coord/CANDIDATE-ORDER-OBSTRUCTION.md`。
+- AgreeFLT 最新首错仍未变（`ValuationSubring.maximalIdeal` 字段缺失等），交 mainline。
+- 剩余 4 算术输入不变：QPLACE、`eSource=1`、candidate-order、residue-field 同构。
+
+## 13. P7 最终汇总：10 个 GAP code 状态表（2026-11-13 19:05）
+
+来源：`Mzk1P7GapRegisterActual.gapRegister`（length=10；ole 55,640B）。
+
+| # | GAP code | 当前状态 | 证据 / 说明 |
+|---|---|---|---|
+| 1 | GAP-P7-GENERAL-CMP | **OPEN** | S3137 actual q/theta readings green；qTheta comparison（paper normalization）未证；S3137 assembly 以 comparison 为 hypothesis。 |
+| 2 | GAP-P7-IQ-LITERAL | **DISCHARGED（definition-level carrier） + semantic PARTIAL** | `Mzk1IQFiniteAdeleRestrictedActual.lean`（DONE 12:04:41Z，olean 41,096B）：`iqPlaceIndex=HeightOneSpectrum (𝓞K)`、`iqLocalField=i.adicCompletion K`、`iqLocalIntegers=i.adicCompletionIntegers K`；`iqCarrier_eq_mathlibFiniteAdeleRing`（rfl 到 Mathlib `IsDedekindDomain.FiniteAdeleRing (𝓞K) K`）、`iqFiniteAdeleRingEquiv`（RingEquiv.refl）、`iqCommRing`/`iqTopologicalSpace`/`iqAlgebra`/`iqIsTopologicalRing` 结构运输；`iqCoordinateMap_eventually_mem_integers` 几乎处处整性。**不需要 FLT backport 链**。semantic 附加：`Mzk1IQFiniteAdeleStructuresActual`（DONE 12:28:08Z，olean 133,520B）构造 `IQUnitGroup`/`iqUnitGroupEquiv`、`principalFiniteAdele`、`principalSupport`/`mem_principalSupport_iff`、`principalDivisorFull: HeightOneSpectrum →₀ Int`（divisorSupport = support k ∪ support k⁻¹，`principalDivisorFull_support_subset`）。剩余 semantic GAP：paper label 的**精确类型**为 `ProcessionLabel l = (ZMod l.value)ˣ`（`Mzk1PaperLabelProjectionActual`，DONE 12:44:39Z，olean 75,632B）；已构造实际 ℕ 投影 `rationalPrimeOfFinitePlace v = Ideal.absNorm (v.asIdeal.under ℤ)` 与 residue-prime 候选 `candidateLabelOfPlace`（仅 nonzero mod l subtype），但**无 canonical theta-label 映射** `HeightOneSpectrum → ProcessionLabel l`，`PaperLabelProjectionInterface` 仍是命名输入；**实际 Bad→Nat 桥**：`Mzk1PaperLabelBadIndexBridgeActual`（DONE 12:51:49Z，olean 65,824B）`badRationalPrime b = absNorm((nativeBadToKPlace b).maximalIdeal.asIdeal.under ℤ)`，但只到 rational prime/residue-prime，非 theta label；`BadThetaLabelMap` 为命名输入。`deg(principalDivisorFull)=0` 须带 residue-degree/log 权重，未证/未冒充。 |
+| 3 | GAP-P7-OB33-SRC | **CONDITIONAL** | `Mzk1Ob33SourceIdentificationActual`（DONE 11:40:50Z，ole 82,832B）：本地实际 `ob33DetNormalizedLogVolume` 构造 + `ob33_detNormalized_eq_raw_div`（raw Haar/blockDim）；实际 detDegree 对象 `ob33ActualDetDegree = actualUnitLineBundleData.detData.globalLogVolume`；显式 identification `Ob33SourceIdentificationActual` 仍未证，消费定理 `ob33_actualDetDegree_eq_raw_div_of_identification`。**新增实际 source**：`Mzk1PaperQPilotLineBundleSourceActual`（DONE 12:32:28Z）从 bad-prime 理想乘积构造 `qPilotLineBundleSourceOfBadPrimes`；`Mzk1Ob33DetLineFromBadPrimeSourceActual`（DONE 12:35:00Z）接 `qPilotDetLineOfBadPrimes`/`DetData`/`DetArithmeticDegree`，并把 RouteB gap 精确化为 `BadPrimeSourceReadingIdentification`（semantic Prop，条件闭合）；paper q-参数幂次/label 权重语义仍 GAP。 |
+| 4 | GAP-P7-MULTIRADIAL | **PARTIAL** | (xi-e)/(xi-f) 实际 production 缺失。仅有有限/kernel 模型 carrier（`tmp/sheaf/xif/paper/Mzk1P7MultiradialCarrierActual.lean`，reuse `SourceFiniteMultiradial.core/profile`，模型边界）；精确缺失输入/输出型别见 `coord/P7-MULTIRADIAL-GAP.md`。有限模型 production green（`finiteMultiradialAlgorithmDischarge`/`finiteIndeterminacyDischarge`，仅 finite Q(i)-at-5）；general 层 `CarrierAlgorithmContract` 无条件 green、`RouteNormalForm` 是 named input、general `FiniteIndeterminacyDischarge` 缺失（Mzk1P7MultiradialGeneralBridgeActual DONE 19:18:19Z；finite witness `Mzk1P7MultiradialWitnessActual` DONE 19:31:16Z（actual finite label/procession 填入 GeneralMultiradialWitness））；实际 `n,oR_LGP`/procession/log-Kummer/IPL-SHE-APT production 仍缺，GAP 仍 OPEN/PARTIAL，不冒充 discharge。 |
+| 5 | GAP-P7-THETA-V | **DISCHARGED（general-k, C0=1）** | 实际 `scaledThetaHull_normalizedLog_eq : normalizedLog(scaledThetaHull k) = scaledClosedFormR k - 1` ⇒ paper V(k)=scaledClosedFormR k = normalizedLog+1。`Mzk1ThetaVGeneralUnconditionalActual.thetaVScaleOffsetGeneral k`：scale=1, offset=1，**无假设**；`scaledClosedFormR_le_paperBox_add_one (M E k)`：general-k C0=1 actual bound。一般 k 的 scale 项已被吸收进 offset=1；qLogSum 项用于 `scaledClosedFormR k ≤ s1915ClosedForm`。 |
+| 6 | GAP-P7-THETA-D | **PARTIAL/DISCHARGED for S2717C3** | 实际 C3 key map `Mzk1C3DKeyMapActual.actualC3DKeyMap`（DONE 11:22:23Z）；D 右端投影 `Mzk1C3DDonorProjectionActual`（DONE 12:05:14Z，7 个 rfl：tensorIndex/PlaceIndex/Places/Tuple 及 keymap 投影 = D 字段）。S2717C3 构造上就是 D；一般 S3137 C3 与 donor 的相等仍是单独桥。 |
+| 7 | GAP-P7-THETA-DEG | **CONDITIONAL/PARTIAL**（2026-11-13 12:20Z） | ① p-scaling block factor 非正 green（`Mzk1S3137ThetaBlockFactorNonposActual`）；② 实际 local degree = `Module.finrank ℚ_[p] (CommonPrimeCompletion place)`（`Mzk1P7ThetaDegActual.localCompletionDegree`）并证 `c3TensorBlockDimension = ∏ localCompletionDegree`（DONE 12:20:07Z）；③ 路线 B2：域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank block = ∑ finrank E_j`（`Mzk1P7ThetaDegB2Actual`，待 watchdog）；C3 特化 `c3TensorBlockDimension = ∑ 实际 local degree`（`Mzk1P7ThetaDegC3Actual`，DONE 12:33:19Z）。未闭：degree 权重与 V 的最终归一化消去（真实分块上乘法/加法关系仍待接）。 |
+| 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（2026-11-13） | 映射与条件装配已机器化：`Mzk1P7ContractMapActual.lean`（DONE，olean=True）给出 `recon12ToGap`（12 行）、`missing7ToGap`（7 missing → 10 GAP codes）、`gapCodesCovered`（=10 且 = gapRegister.length）、`contract_fields_not_linked`（#6 真缺口）、`p7_conditional_contract`（comparison ⇒ Cor312Conclusion）。文档 `coord/P7-CONTRACT-MAP.md`。 |
+| 9 | GAP-P7-HULL-UB | **DISCHARGED（paper regime, C0=0）** | paper V(k)=`scaledClosedFormR k` = `normalizedLog(scaledThetaHull k)+1`（`Mzk1ThetaVGeneralUnconditionalActual`）；general-k C0=1 unconditional（`Mzk1HullUBGeneralFinalActual`）。paper regime 下 `normalizedLog≤0` 且 `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox≥1`，故 `V≤paperBox`，即 **C0=0**（`Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`，待 watchdog）。一般 CurveData（disc=1/cond=1）C0=0 仍 OPEN（paperBox≥1 不自动）。<br>**arch 边界**：HULL-UB/S1902 载体只含有限 bad places；paperBox 无 arch 项；arch 归 #10，不混入。 |
+| 9b | GAP-P7-HULL-UB-C0 | **paper regime DISCHARGED；general OPEN** | `V=normalizedLog+1`, `normalizedLog≤0`；paper regime `paperBox≥1` ⇒ `V≤paperBox`（C0=0）已证。一般 `disc=1/cond=1` 时 paperBox≥1 不自动，C0=0 仍 OPEN；不能假设 e-常数 1 无条件吸收。 |
+| 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL** | `Mzk1NormArchCKActual.lean`（DONE 11:13:09Z）：显式 `archCK K=1/[K:Q]`、`archCKToric=1/(2[K:Q])`；general-K `hArc/hNon/hToricArc` 因子形式 green。`Mzk1NormArchAbcHookActual.lean`（DONE 11:29:49Z，olean 140,232B）：`AbcArchFactorOutput` / `C3HaarScaleDocking`；`C3HaarScaleDocking_nonempty_of_finrank_one`（[K:Q]=1 ⇒ haarScale=1=C_K 实例）；`AbcArchFactorOutput_nonempty`。**缺失**：一般 K 的 abc `haarScale` 公式来源；C3S1902HaarScaleData 的 `haarScale` 仍 arbitrary+pos。 |<br>**与 HULL-UB 边界**：archCK/archFactor 只属本行；HULL-UB 的 C0=1 上界不消费 arch，故 #9 的 C0=1 不依赖本行；#10 只影响 arch 归一化/abc 对接，不改变 HULL-UB 有限位上界。
+
+#10 备注：**degree-one 已构造**（`[K:Q]=1 ⇒ haarScale=1=archCK`，`C3HaarScaleDocking_nonempty_of_finrank_one`）；**一般 K 等 abc 链**。核查结论：`C3S1902HaarScaleData.haarScale` 是 arbitrary `Real` + `0<haarScale`，无任何构造等式到 `c3UnitHaar` 或 `archCK`，故不能无条件对接。
+
+#10 消费者入口（路线 B）：`Mzk1NormArchConsumerActual.lean`（DONE 11:49:36Z，olean 49,736B）。入口 = `GenEll01bHeightLayerActual.s3135_hArc/hNon/hBox_nonneg`，原先要 `0 ≤ heightWeight F`；新 `hArc_nonneg_via_archCK`/`hNon_nonneg_via_archCK`/`hBox_nonneg_via_archCK` 用 `archCK F` 提供同一权重（`archCK_eq_heightWeight`），并给替换定理 `hArc_eq_archCK_mul_sum_consumer`。有限位 Haar 比例仍由 B3 独立算（GAP）。
+
+B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carrier = `CommonPrimeCompletion place`**，DONE 12:16:42Z）——`normalizedHaar_scaled_unitBall`/`b3_ratio_scaled_unitBall`：在 `LocalHaarScalingLaw` 下，`O_k` 与 `a • O_k` 的 normalizedHaar 比 = `||a||`；ProperSpace 障碍已消。**单一 named input**：`Mzk1CarrierEquivDataActual.lean`（DONE 12:30:44Z，olean 153,104B）把 carrier align + scaling 收成 `CarrierEquivData place`（`CommonPrimeCompletion place ≃ Completion place.val` 可测等价 + `LocalHaarScalingLaw`），`CarrierEquivDataRequired := Nonempty` 不造 inhabitant。仍需单独 `CountLocalizationBridge`（localizedLine 生成元 span）。最小字段清单：① equiv + measurable/measurable_symm；② scaling；③（另一结构）CountLocalizationBridge 的 e/pi/span_eq。
+
+**公式层 DONE + citizen 缺口**：`Mzk1NormArchC3HaarScaleFormulaActual.lean`（DONE 12:42:05Z，olean 115,824B）——`c3HaarScaleCandidate K localUnitProduct = archCK K * localUnitProduct = (1/[K:Q])*product`，正性 + [K:Q]=1&product=1⇒1；`C3HaarScaleFormulaData` 为公式层 named data。citizen 缺口：① `C3S1902HaarScaleData.blockEquiv` 的实际构造；② `unitMass` 实际值；③ T-specific `Bad (nativePlaceSelection T)` 索引的 local unit-mass product 实例化（通用 normalized product 已 green：`Mzk1LocalUnitMassProductActual.localUnitMassProduct_eq_one`，DONE 12:46:00Z，olean 未查）。
+
+结论：10 个 GAP code 中 **#2 GAP-P7-IQ-LITERAL 已 definition-level DISCHARGED**（Mathlib `FiniteAdeleRing` + carrier rfl + ring/topology/K-algebra 结构运输）；GAP-P7-CONTRACT 是条件接口（CONDITIONAL），GAP-P7-MULTIRADIAL 为 PARTIAL，其余为 OPEN/CONDITIONAL；除 #2 外没有因 UNRAM bridge green 自动关闭。
+
+### 最新 gate / 相关通道
+- `Mzk1C17UnramResidueBridgeActual`：GREEN DONE 01:21:06Z（64s，ole 65,464B）；GAP-PC-WEIGHT 直接通道（e=f=1 ⇒ degree=1 ⇒ weight=1）为 CONDITIONAL；FLT finrank 通道已 import/#check，实例化仍需 place 对齐。
+- `Mzk1P3AgreeFLTActual`：FAIL（最新 11:03:33Z）；首错未变：`:59/60/61` invalid field `ValuationSubring.maximalIdeal`/`maximalIdeal_ne_bot`；`:42` simp no progress；`:93` typeclass stuck。交 mainline。
+- 剩余 4 算术输入：QPLACE、eSource=1、candidate-order（无定义级等式，见 CANDIDATE-ORDER-OBSTRUCTION.md）、residue-field 同构。
+- gate 快照：extra=392，clean 363 + ole-only 20 + stale 2 + red 7；P7 **NOT PASSED**。
+
+## 14. GAP-PC 行更新（AGREE 关闭，2026-11-13 19:19）
+
+- **GAP-PC-AGREE**：**CLOSED**（mainline `Mzk1P3AgreeFLTActual` DONE 11:13:10Z；AGREE-RAM/FIELD 由 FLT BaseChange :685/:721）。
+- 受影响的 GAP-PC-WEIGHT：`Mzk1C17UnramResidueBridgeActual.nativeBadLocalWeight_eq_one_of_unram_residue_bridge_agree`（DONE 11:18:55Z）不再需要 `hagree`；条件只剩 FINITE + e=f=1。
+- GAP-PC-FINITE / UNRAM / RESIDUE / RESNORM / LOGSUM 状态不变；FLT finrank 通道仍待 place 对齐。
+- 10 个 GAP-P7 code 状态表（§13）不变：全部未 unconditional discharge。
+
+## 15. GAP-P7-OB33-SRC Route B 进展（2026-11-13 20:03）
+
+- `Mzk1Ob33SourceIdentificationActual`：**GREEN**（ole 82,832B @ 11:40:50Z）；本地 det-normalized 构造 + `ob33DetNormalized_eq_raw_div` + **实际 detDegree** `ob33ActualDetDegree = actualUnitLineBundleData.detData.globalLogVolume` + 条件消费定理。
+- `Mzk1Ob33DetLineActual`：**GREEN**（DONE 11:53:24Z，53s）；实际 `qPilotDetLine`/`qPilotDetMap`/`qPilotDetArithmeticDegree` 构造；`RouteBArithmeticDegreeReadingGap` 仍是**未证 exact Proposition**（不消费）。
+- `Mzk1Ob33DetLineConstructionLinkActual`：**GREEN**（DONE 12:03:46Z，98s）；
+  - `qPilotDetArithmeticDegree_eq_relativeDetLog`：qPilot line = mainline `relativeDetLine H O` ⇒ degree = `globalLogVolume H - globalLogVolume O`；
+  - `relativeDetLocalizedLine`：实际有限位 localization；
+  - `localGeneratorDataOfSpan`：由实际 generator + span 等式**填入** mainline `LocalGeneratorData`（不声称存在性）。
+- 仍缺（精确缺口，不 named input）：有限位 index/SNF 对象；infinite-place archimedean determinant metric 对象；实际 q-pilot line source 本身。
+
+## 16. B5 逐位 index/SNF 与 arch metric（2026-11-13 20:26）
+
+- `Mzk1Ob33B5IndexActual`：**GREEN**（ole 138,968B @ 12:13:57Z）；`PlaceSNFData` 从 mainline `LocalGeneratorData` 构造 rank-one SNF 单不变量；`relativePlaceIndex = val(xH)-val(xO)` 与 `relativePlaceIndex_eq` 已证；一般 higher-rank SNF 仍 `MissingGeneralPlaceSNF` 精确缺口。
+- `Mzk1Ob33ArchMetricActual`：**GREEN**（最新 DONE 12:40:02Z，53s）；`HermitianLineMetric` 用 `w (x : F)` 实际构造；`lineBundleHermitianMetric`/`archimedeanLineMetric` 实际 infinite-place metric；`archDetMetricWeight` 用 `archCK` + `principalDivisorExplicit`。**compatibility 已证**：`archimedeanLogNorm` + `archDetMetricWeight_eq_neg_archimedeanLogNorm`（arch weight = -C_K * log-norm sum）。
+
+## 17. B5 finite index + arch + qpilot actual source（2026-11-13 20:44）
+
+- `Mzk1Ob33B5IndexActual` 更新为 **GREEN**（DONE 12:43:52Z，66s）：
+  - `qPilotSourceLine T := (qPilotLineBundleSourceOfBadPrimes T).qPilotLineBundle`（qpilot 实际 bad-prime 源）；
+  - `qPilotPlaceSNFData`：由该源的 `LocalGeneratorData` 构造 rank-one SNF/index；
+  - `MissingQPilotLocalGenerator v := Nonempty (LocalGeneratorData qPilotSourceLine v)`：逐位 generator 仍精确缺失；
+  - rank-one SNF、relativePlaceIndex 与 MissingGeneralPlaceSNF 保持。
+- `Mzk1Ob33ArchMetricActual`：**GREEN**（DONE 12:40:02Z，53s）；`HermitianLineMetric`/`archimedeanLineMetric` 实际构造；compatibility `archDetMetricWeight_eq_neg_archimedeanLogNorm` 已证。
+- 汇总到 `relativeDetLog`：mainline 全局 `globalLogVolume_relativeDetLine` 已证；逐位 index 与 arch 权重已构造，但缺**局部-全局 product formula 桥**：
+  `relativeDetLog H O = Σ_v (finite place index contribution) + archimedean contribution`（有限支撑求和/局部 log 到全局 log 的定理在 Mathlib/项目均未提供）。这是精确缺口，未作为 named input 消费。

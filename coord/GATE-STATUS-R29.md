@@ -165,3 +165,168 @@
 - STALE：`Mzk1PaperFaithfulHullActual`（latest FAIL 21:23:58Z）、`Mzk1MatrixHaarBaseActual`（21:19:33Z 曾 DONE，但之后 21:22/21:23 又 FAIL，当前 latest START 21:24:20Z；在最新 DONE 前不列 clean）。
 - RED/pending：`Mzk1SourceNativeQActual`、`Mzk1StepVVolumeActual`、`Mzk1P5LabelShiftActual`、`Mzk1PaperFaithfulHullP4Actual`、`Mzk1PrimeConductorUnconditionalActual`、`Mzk1DualTransposeActual`（后四项 latest START，尚无结果）。
 - P7：仍 NOT PASSED（lana `Iut` 链无 ole）；P5-D/P6-A 的新绿不改变该结论。
+
+## 12. 2026-11-13 05:50 增量：P6-B1 concrete packet green
+
+- `Mzk1WeightedDetPacketInstanceActual`：**DONE EXIT=0 21:50:23Z（62s）**，olean 163,376 B；q/Theta 两个 concrete packet、commonTensorDegree=`(2l)^#Bad`、normalized 实际和、条件 `weighted 差 = N*M` 已证；`GAP_P6_C17_DICT_INST` 保留命名缺口。
+- 当前 extra-targets = 92；clean green 79 + ole-only 6 + stale 1 + red 6（仍有 START 在跑，最终以 log 最后一行修正）。
+- P7：仍 NOT PASSED（lana Iut 链无 ole）。
+
+## 13. 2026-11-13 06:12 巡检快照（Lead 报 extra=102；巡检时实时文件已增到 **104**）
+
+- 当前 extra-targets = **104**。
+- 分类：**clean green 91 + ole-only 6 + stale 2 + red 5**（仍有 START 在跑，最终以 log 最后一行修正）。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`（FAIL EXIT=1 2026-11-12T22:10:07.332Z）；`Mzk1DiagonalIndexActual.lean`（FAIL EXIT=1 2026-11-12T22:13:39.589Z）
+- RED/pending：`Mzk1FactorPermutationLatticeActual.lean`（FAIL EXIT=1）；`Mzk1C3S1902BridgeActual.lean`（START）；`Mzk1DualIndexSourceActual.lean`（FAIL EXIT=1）；`Mzk1P3DictQCoeffActual.lean`（FAIL EXIT=1）；`Mzk1DiagonalDualActual.lean`（NONE）
+- P7：仍 **NOT PASSED**（lana `Iut` 链无 ole；见 `coord/P7-GATE-REVIEW.md`）。
+- P6-B1 `Mzk1WeightedDetPacketInstanceActual`：latest DONE 22:12:50Z（含 qplace_comap_eq 后仍 green）。
+
+## 14. 2026-11-13 06:30 巡检快照（批量化前）
+
+- 当前 extra-targets = **127**。
+- 分类：**clean green 100 + ole-only 6 + stale 2 + red 19**（watchdog 12 线程，仍在跑）。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`；`Mzk1WeightedDetPacketInstanceActual.lean`
+- RED：`Mzk1FactorPermutationLatticeActual.lean`；`Mzk1DualIndexSourceActual.lean`；`Mzk1DiagonalDualActual.lean`；`Mzk1GLHaarConditionalActual.lean`；`Mzk1P5QNormalizationInputActual.lean`；`Mzk1GLActBundlingActual.lean`；`Mzk1DiagonalProductScalingConditionActual.lean`；`Mzk1RestrictedDetConditionalActual.lean`；`Mzk1DiagonalPermutationActual.lean`；`Mzk1ExactHullVUpperBoundActual.lean`；`Mzk1StepXIContractEvidenceMapActual.lean`；`Mzk1P4CExternalStageContainerActual.lean`；`Mzk1P5PhaseRelationActual.lean`；`Mzk1P5CJConditionActual.lean`；`Mzk1DiagCardFActual.lean`；`Mzk1DiagEmbeddingInjActual.lean`；`Mzk1DiagVolumeCondActual.lean`；`Mzk1Diag2x2Actual.lean`；`Mzk1PermMatrixActual.lean`
+- 新增待编译（本批 P6）：`Mzk1C17QCANDOrderResidueActual`、`Mzk1S3137ThetaRawEqActual`（路径已报 Lead）。
+- P7：仍 **NOT PASSED**（lana Iut 链无 ole）。
+
+## 15. 2026-11-13 06:40 巡检快照（Lead 报 extra=160）
+
+- 巡检时 extra-targets = **160**。
+- 分类：**clean green 135 + ole-only 6 + stale 2 + red 17**（watchdog 12 线程；仍有 START/FAIL 在跑）。
+- 最近新 green（Lead 点名）：`Mzk1P5PhaseRelationActual`、`Mzk1ExactHullVLocalBoundActual`、`Mzk1C3S1902IndexFiberDataActual`、`Mzk1P3ResDegActual`、`Mzk1P3L7AssemblyActual`、`Mzk1StepXIEvidenceInterfaceActual`、`Mzk1C17QPLACEChoiceGapActual`。
+- 本 lane 新增：`Mzk1S3137ThetaPacketRawGapActual` green；`Mzk1C17QCANDOrderResidue`/`Mzk1S3137ThetaRawEq`/`Mzk1C17QCANDAssembly` 首轮 FAIL 后已修，待重编译。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`；`Mzk1WeightedDetPacketInstanceActual.lean`
+- RED：`Mzk1FactorPermutationLatticeActual.lean`；`Mzk1DiagonalDualActual.lean`；`Mzk1GLHaarConditionalActual.lean`；`Mzk1DiagonalProductScalingConditionActual.lean`；`Mzk1ExactHullVUpperBoundActual.lean`；`Mzk1P5CJConditionActual.lean`；`Mzk1DiagCardFActual.lean`；`Mzk1DiagEmbeddingInjActual.lean`；`Mzk1Diag2x2Actual.lean`；`Mzk1C17QCANDOrderResidueActual.lean`；`Mzk1C17QCANDAssemblyActual.lean`；`Mzk1S3137ThetaRawEqActual.lean`；`Mzk1P5LabelZeroSeparateActual.lean`；`Mzk1ArchFactorRatioActual.lean`；`Mzk1P3DictCEquivUnderL7Actual.lean`；`Mzk1P3DictQWeightDiffActual.lean`；`Mzk1P3DictCBoxFormulaActual.lean`
+- **P7 NOT PASSED**（lana `Iut` 链无 ole）。
+
+## 16. 2026-11-13 06:46 巡检快照（batch 5 green）
+
+- 当前 extra-targets = **177**。
+- 分类：**clean green 160 + ole-only 6 + stale 1 + red 10**。
+- 本 lane batch 全绿：`Mzk1C17QCANDOrderResidueActual`、`Mzk1C17QCANDAssemblyActual`、`Mzk1S3137ThetaRawEqActual`、`Mzk1S3137ThetaPacketRawGapActual`、`Mzk1C17QPLACEChoiceGapActual`；`Mzk1WeightedDetPacketInstanceActual` 也在 QCAND 追加后 DONE 22:44:52Z。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`
+- RED：`Mzk1FactorPermutationLatticeActual.lean`；`Mzk1DiagonalDualActual.lean`；`Mzk1GLHaarConditionalActual.lean`；`Mzk1DiagEmbeddingInjActual.lean`；`Mzk1P5LabelZeroSeparateActual.lean`；`Mzk1P3NormFormulaProofActual.lean`；`Mzk1P3DictQNonnegActual.lean`；`Mzk1P3DictCReverseNativeDExactActual.lean`；`Mzk1ExactHullVAssemblyActual.lean`；`Mzk1ArchFactorProductActual.lean`
+- **P7 NOT PASSED**（lana Iut 链无 ole）。
+
+## 17. 2026-11-13 07:03 巡检快照（batch 2 全绿）
+
+- 当前 extra-targets = **225**；**clean green 204 + ole-only 6 + stale 2 + red 13**。
+- 本轮 5 份新文件全绿：`Mzk1C17QCANDOrderCoeffActual`（22:52:52Z，84s，32,592B）、`Mzk1C17QCANDResNormLogActual`（22:52:52Z，84s，29,592B）、`Mzk1S3137ThetaDefectNormActual`（22:57:49Z，52s，78,968B）、`Mzk1C17QPLACELiftUniqueActual`（23:02:51Z，82s，38,256B）、`Mzk1P6C17GapLedgerActual`（22:53:27Z，24s，42,840B）。
+- 源码均无实际 sorry/admit/axiom；header CONDITIONAL/GAP。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`；`Mzk1P5PhaseDerivedActual.lean`
+- RED：`Mzk1FactorPermutationLatticeActual.lean`；`Mzk1DiagEquivProvedActual.lean`；`Mzk1P3UnramResidueActual.lean`；`Mzk1P3DictQHALFWeightOneSummaryActual.lean`；`Mzk1P3DictL7NativeTargetActual.lean`；`Mzk1P3DictQSourceBuilderActual.lean`；`Mzk1ThetaVConsumerChainActual.lean`；`Mzk1RawThetaReadoutBoundsActual.lean`；`Mzk1C3DictionaryRowsActual.lean`；`Mzk1C3DIndexDataActual.lean`；`Mzk1PaperVFactorActual.lean`；`Mzk1PaperVFactorRowsActual.lean`；`Mzk1StepXIContractSchemaActual.lean`
+- **P7 NOT PASSED**（lana `Iut` 链无 ole）。
+
+## 18. 2026-11-13 07:04 巡检快照（本 lane 第二批 5/5 green 后）
+
+- 当前 extra-targets = **233**；**clean green 215 + ole-only 6 + stale 2 + red 10**。
+- 本 lane 第二批 5/5 green：OrderCoeff/ResNormLog/ThetaDefectNorm/QPLACELiftUnique/P6C17GapLedger（详见 P6 doc §13.1f 与 §16/§17）。
+- STALE：`Mzk1PaperFaithfulHullActual.lean`；`Mzk1HaarScalarOneActual.lean`
+- RED：`Mzk1FactorPermutationLatticeActual.lean`；`Mzk1RawThetaReadoutBoundsActual.lean`；`Mzk1P3DictBDArithNativeActual.lean`；`Mzk1P3DictDOrdInterfaceActual.lean`；`Mzk1P3DictQHALFRegressionActual.lean`；`Mzk1C3DDictionaryAssemblyActual.lean`；`Mzk1C3DIndexDataConsumerActual.lean`；`Mzk1PaperVRatioChainActual.lean`；`Mzk1PaperVRatioRowsActual.lean`；`Mzk1StepXIEvidenceUpgradeActual.lean`
+- **P7 NOT PASSED**。
+
+## 19. 2026-11-13 07:21 巡检快照（batch 3 全绿）
+
+- 当前 extra-targets = **298**；**clean green 257 + ole-only 18 + stale 0 + red 23**。
+- 本轮 5 份全绿：`Mzk1C17QCANDOrderDefsActual`、`Mzk1C17QCANDOrderDefEqActual`、`Mzk1C17QCANDResNormComapActual`、`Mzk1S3137ThetaDefectFactorActual`、`Mzk1S3137ThetaBlockFactorNonposActual`（均 23:19–23:20Z DONE）。
+- STALE：
+- RED：`Mzk1P3DictQAbsLogIdentityActual.lean`；`Mzk1QuantitativeTargetNonnegActual.lean`；`Mzk1P3TameFromConductorActual.lean`；`Mzk1P5HunitDerivedActual.lean`；`Mzk1DiagVolumeProvedActual.lean`；`AdicValuation.lean`；`IntegralClosure.lean`；`Tower.lean`；`FiniteAdeleRing.lean`；`Cofinite.lean`；`FiniteAdeleRing.lean`；`BaseChange.lean`；`ModuleTopology.lean`；`Algebra.lean`；`Equiv.lean`；`Module.lean`；`TopologicalSpace.lean`；`Finite.lean`；`HeightOneSpectrum.lean`；`Mzk1SNFToolActual.lean`；`Mzk1P3DictDCurveDataSourceActual.lean`；`Mzk1RestrictedProductReuseActual.lean`；`Mzk1CanonicalHaarRegularActual.lean`
+- **P7 NOT PASSED**。
+
+## 20. 2026-11-13 07:48 巡检快照（k=1 条件 ORDER/RESNORM green）
+
+- 当前 extra-targets = **341**；**clean green 306 + ole-only 20 + stale 0 + red 15**。
+- 新 green：`Mzk1C17QCANDOrderK1Actual`（DONE 23:44:03Z，75s）与 `Mzk1C17QCANDResNormDegreeOneActual`（DONE 23:48:00Z，75s）。
+- ORDER：QPLACE+`eSource=1`+`badPlaceQCandidate.order=sectionQ.order` ⇒ baseQ.order=qVFamily.order（有条件）。
+- RESNORM：两 place `localResidueDegree=1` ⇒ residueNormBase 相等（有条件）。
+- 外部 FLT 的 inertiaDeg API 已定位，但 flt BaseChange/IntegralClosure 当前仍在 watchdog 重试；`localResidueDegree=1`/`eSource=1` 本身仍待证。
+- **P7 NOT PASSED**。
+
+## 21. 2026-11-13 07:55 巡检快照（residue-field equiv green）
+
+- 当前 extra-targets = **343**；**clean green 309 + ole-only 20 + stale 1 + red 13**。
+- 新 green：`Mzk1C17ResidueFieldEquivActual` DONE 23:54:04Z（27s，ole 49,080B）：`ResidueFieldEquiv` 命名输入 + `inertiaDeg'_eq_one_of_residueFieldEquiv`。
+- `eSource=1` / `localResidueDegree=1` 已在 P6 §13.1i 与 P7 附录标为 **irreducible arithmetic input**；residue-field 同构是单个可查充分条件，未断言实际存在。
+- 反面来源已记：`BadPlaceRationalDegreeFactorActual.RationalDegreeGreaterOneSource`。
+- **P7 NOT PASSED**。
+
+## 22. 2026-11-13 08:05 巡检快照（residue-weight 链 green）
+
+- 当前 extra-targets = **360**；**clean green 325 + ole-only 20 + stale 1 + red 14**。
+- 新 green：`Mzk1C17ResidueWeightChainActual` DONE 00:04:45Z（68s，ole 77,008B）：`ResidueFieldEquiv ⇒ localResidueDegree=1 ⇒ nativeBadLocalWeight=1`。
+- P7：**NOT PASSED**；`eSource=1`/`localResidueDegree=1` 仍为 irreducible arithmetic input。
+
+## 23. 2026-11-13 08:11 巡检快照（FLT BaseChange 仍 blocked）
+
+- 当前 extra-targets = **364**；**clean green 327 + ole-only 20 + stale 0 + red 17**。
+- FLT：IntegralClosure.lean/AdicValuation.lean ole 存在；DedekindDomain/Completion/BaseChange.lean FAIL/无 ole（最晚 23:57:56Z）。
+- coord/UNRAM-RESIDUE-PROOF-SKELETON.md 已写清 BaseChange 绿后的精确证明步骤。
+- P7 MISSING 最终 4 输入已写入 coord/P7-GATE-REVIEW.md §9。
+- P7 NOT PASSED。
+
+## 24. 2026-11-13 08:22 巡检快照（BaseChange 修复中）
+
+- 当前 extra-targets = **372**；**clean green 337 + ole-only 20 + stale 0 + red 15**。
+- FLT `Completion/BaseChange.lean`：仍 FAIL/无 ole（最新 00:20:50Z）；剩余错误在 `ramificationIdx_mul_inertiaDeg_eq_finrank` 的局部 finrank goal，Lead 正在修。
+- UNRAM/RESIDUE bridge 文件待 BaseChange 绿后立即写；骨架在 `coord/UNRAM-RESIDUE-PROOF-SKELETON.md`。
+- P7 NOT PASSED。
+
+## 25. 2026-11-13 08:36 巡检快照（BaseChange 交 Lead）
+
+- 当前 extra-targets = **376**；**clean green 345 + ole-only 20 + stale 0 + red 11**。
+- `FLT/DedekindDomain/Completion/BaseChange.lean` 仍 **FAIL/无 ole**；Lead 直接接手 BC 编译，我停止编辑。
+- 我最后两处 BaseChange 编辑：`:389` 已加 `RingHom.coe_range`；`:223-226` 改为 `rw [WithVal.equiv_symm_apply, WithVal.valued_toVal]` + `exact valuation_comap ...`，但最新 :226 仍 type mismatch（LHS `under A ↑w` vs `v`、RHS `(valuation L ↑w)` vs `Valued.v (WithVal.toVal ...)`），交 Lead 处理。
+- UNRAM bridge 文件待 BC olean 绿后立即写；骨架已备。
+- P7 NOT PASSED。
+
+## 26. 2026-11-13 19:00 巡检快照（UNRAM bridge green）
+
+- 当前 extra-targets = **386**；**clean green 358 + ole-only 20 + stale 0 + red 8**。
+- `Mzk1C17UnramResidueBridgeActual`：**DONE 01:21:06Z（64s）**，ole 65,464B；无 sorry/axiom。
+- 双通道已写入 P7 §10：直接 e=f=1 通道 green conditional；FLT finrank 通道 BaseChange:751 import/#check，实例化仍需 local/global place 对齐。
+- **P7 NOT PASSED**。
+
+## 27. 2026-11-13 19:00 P5 root-unit conditional audit (not a gate)
+
+- P5AxiomAuditActual DONE 00:25:03Z; its output has only allowed axioms
+  (propext/Classical.choice/Quot.sound; root choice propext/Quot.sound).
+- P5InternalConsistencyActual DONE 00:13:57Z as conditional packaging;
+  L=RootExtension,toRoot=id blocked by Field-instance diamond.
+- P5NamedInputs four inputs; c_j/hcomparison constructed; actual analytic
+  toRoot/Kummer and label->phase dictionary remain GAP.
+- P5 is NOT canonical S3137/Paper312 and NOT a P7 gate item; gate remains
+  NOT PASSED.  Old GATE-STATUS RED P5 entries above are superseded by the
+  latest DONE events (QNormalization/PhaseRelation/CJ/PhaseDerived/JDerived/
+  RootChoice/Hunit/Comparison/PhaseExponent/FinalSummary/Audit).
+
+End of P5 gate note.
+## 28. 2026-11-13 18:54 巡检快照（断点恢复后）
+
+- 当前 extra-targets = **389**；**clean green 360 + ole-only 20 + stale 0 + red 9**。
+- 断点恢复批次仍在收尾（watchdog CYCLE pending 逐步下降）；上表按最新 DONE/FAIL 计。
+- `Mzk1C17UnramResidueBridgeActual` 保持 green（DONE 01:21:06Z，ole 65,464B）。
+- **P7 NOT PASSED**；剩余 4 算术输入不变。
+
+## 29. 2026-11-13 19:05 巡检快照（恢复批次收尾）
+
+- 当前 extra-targets = **391**；**clean green 363 + ole-only 20 + stale 0 + red 8**。
+- `coord/CANDIDATE-ORDER-OBSTRUCTION.md`：candidate-order 无定义级等式；S1413 只给 sectionQ=map(shadowQ)，S2680 把 hQ 作为显式假设。
+- AgreeFLT 最新首错未变：`ValuationSubring.maximalIdeal` 字段缺失 / `simp` no progress / typeclass stuck。
+- **P7 NOT PASSED**；剩余 4 算术输入不变。
+
+## 30. 2026-11-13 19:05 巡检快照（恢复批次重试循环中）
+
+- 当前 extra-targets = **392**；**clean green 363 + ole-only 20 + stale 2 + red 7**。
+- watchdog 仍在重试少数失败项（DiagEquivBridge/InputAlignment*/AgreeFLT），快照为当前最新 DONE/FAIL 状态。
+- `Mzk1C17UnramResidueBridgeActual` 保持 green（01:21:06Z，ole 65,464B）。
+- AgreeFLT 最新 FAIL 11:03:33Z；首错仍是 `ValuationSubring.maximalIdeal` 字段缺失等。
+- P7 NOT PASSED；10 个 GAP code 终表见 P7 §13。
+
+## 31. 2026-11-13 19:19 巡检快照（AGREE 关闭）
+
+- 当前 extra-targets = **417**；**clean green 376 + ole-only 20 + stale 0 + red 21**。
+- `Mzk1P3AgreeFLTActual`：**DONE 11:13:10Z**（AGREE-RAM/FIELD 由 FLT :685/:721 证）→ **GAP-PC-AGREE CLOSED**。
+- `Mzk1C17UnramResidueBridgeActual`：**DONE 11:18:55Z（89s）**，含 `nativeBadLocalWeight_eq_one_of_unram_residue_bridge_agree`（不再需要 hagree）。
+- GAP-PC-WEIGHT 直接通道条件：FINITE + e=1 + f=1（AGREE 已关闭）。
+- 10 GAP-P7 codes 全部未 unconditional discharge；**P7 NOT PASSED**。

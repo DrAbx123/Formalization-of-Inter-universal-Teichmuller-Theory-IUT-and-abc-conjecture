@@ -1339,3 +1339,18 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
   (IsSheafFor at the empty presieve forces a subsingleton).
 - [remaining, outside this packet] G4 still needs the IsStack effectiveness part and
   a faithful D6 stack constructor; this packet only supplies descent of morphisms.
+
+
+## 2026-11-13 — 当前 chat：P7 消除输入的后续建议
+
+- [completed: research only] 用户要求的 P7 计划追加意见已写入 P7-GAP-ATTACK-PLAN.md；节点 p7-no-extra-input-routes-20261113。单线程，未改 Lean、未运行构建或目标验收。
+- [proposed to existing owners; not dispatched] A0：复用 S1915.s1915_local_measure / s1915_hull_toReal 与 S709，在现有 C3S1902 消费者中消除 hball/质量公式输入。
+- [proposed] B0/C0：同一个 T 的来源、参照与权重字典；由 alpha^(2l)=qhat 构造根侧 q 格包含，证明与原 target 对应；必要时计算实际 G、trace/SNF 系数及 determinant 证书。
+- 不再把 conditional contract、自由 identification、Haar scale=archCK 假设作为缺口关闭。整体 P7 仍开放；本记录不调整现有各 lane 的归属或调度。
+
+
+## 2026-11-13 — 当前 chat：P7 建议范围查重缩减
+
+- [completed: research only] 已在 P7-GAP-ATTACK-PLAN.md 追加 P7-REUSE-CORRECTION-20261113，节点 p7-no-extra-input-routes-20261113.reuse_review。未调度新任务；原 owner 不变。
+- [reuse; supersedes broad wording above] A0 复用当前球质量和 S1915 系数和；B0/#7 复用 exists_arithmeticTensorTuple_fieldProduct；C0 复用当前根格证明体及旧 normalized 包含；C1 复用迹/不同理想/SNF。已有基础引理不再作为新证明任务。
+- [remaining] 验证现有实现并接消费者，消去 B2 的分解参数，完成同一原输入的 C3/root/paper 识别及实际比较。候选源码存在不等于 target_accepted。

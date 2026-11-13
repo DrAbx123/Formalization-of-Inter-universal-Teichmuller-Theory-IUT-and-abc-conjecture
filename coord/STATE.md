@@ -4535,3 +4535,43 @@ CITABLE 10) -> Thm2.5 unconditional.  No new long tasks before pause; all files 
 - 唯一 remaining named = `NatRadicalWeightBound`（纯自然数算术）；`final_conditional_ABC : NatRadicalWeightBound → ABCConjecture` 为定理；反向不证；ABC gate NOT passed；canonical 未改。
 - 审计 80 条（A546…A697）。
 
+
+## P5 conditional root-unit chain (2026-11-13)
+
+- GREEN: Mzk1P5QNormalizationInputActual, PhaseRelation, CJCondition, PhaseDerived,
+  CJDerived, RootChoiceOrder, HunitDerived, ComparisonDerived, PhaseExponentData,
+  FinalSummary, AxiomAudit, InternalConsistency.
+- Final file: tmp/sheaf/xif/paper/Mzk1P5FinalSummaryActual.lean;
+  DONE 2026-11-12T23:53:16.767Z,
+  p5_final_comparison only [propext, Classical.choice, Quot.sound].
+- Four named inputs: toRoot, r, root_image=twoLthRootAt^l, PhaseExponentData.
+- c_j/hcomparison are constructed (cOfPhase/comparison_cOfPhase); no c_j=1 claim.
+- Axiom audit: tmp/sheaf/xif/paper/Mzk1P5AxiomAuditActual.lean DONE 00:25:03Z;
+  all printed axioms are propext/Classical.choice/Quot.sound (root choice adds
+  only propext/Quot.sound); no sorryAx.
+- InternalConsistency DONE 00:13:57Z as conditional packaging only; L=R,toRoot=id
+  blocked by Field-instance diamond on AlgebraicClosure; not the analytic bridge.
+- Gate hint: P5 is a conditional root-unit dictionary, NOT the canonical
+  S3137/Paper312 log-volume target. Do not cite P5 as canonical progress; its
+  consumer is the future paperRootThetaUnit/CTheta root-unit dictionary.
+- Next executable step (P5 lane): no further P5 green proof is pending.  The
+  only next real step is outside P5: supply the actual analytic toRoot/place-
+  Kummer source, the root image, and the paper label->phase exponent dictionary;
+  until then keep the four named inputs and do not wire P5 into canonical/P7.
+- GAP: actual analytic toRoot/place-Kummer map and paper label->phase exponent
+  dictionary. Acceptance: coord/P5-ACCEPTANCE.md.
+
+
+## 2026-11-13 — 当前 chat：P7 构造路线追加意见
+
+- 用户要求以完整解决原问题为目标，新增困难假设不能作为完成。已在 [P7-GAP-ATTACK-PLAN.md](P7-GAP-ATTACK-PLAN.md) 下方追加三条具体构造路线；节点 p7-no-extra-input-routes-20261113。
+- 最短新连接：S1915 的实际球/乘积质量 + S709 + S865，接入 C3S1902，消除球质量/ceil 输入。另给出根关系 q 格包含、同源归一化及实际矩阵证书路线。
+- 当前仍未证明 P7/3.12 无条件闭合。未改 Lean、未运行四项验收、未派发任务或修改其他 owner。
+- 下一步：由原 owner 直接接现成质量公式，随后构造同一 T 的 q/theta 字典并检验根侧比较能否进入锁定目标。
+
+
+## 2026-11-13 — 当前 chat：P7 复用查重修订
+
+- P7-GAP-ATTACK-PLAN.md 追加查重表及最小剩余任务；节点 p7-no-extra-input-routes-20261113.reuse_review。使用用户提供的 iut-audit-20261113 索引，但未声称全仓逐一定理核对。
+- 已有球质量/系数和、实际域乘积分解、normalized q 区域包含、迹/SNF 均应直接复用；当前 A/C0 实现保留原 owner，不重复新建。剩余重点是消费者接入与同一原输入的对象/读数对应。
+- 未改 Lean，四项证明验收 NOT_RUN；无新调度。下一步：原 owner 以现有域分解存在定理供应 B2 的 e，并复用已有 A/C0 实现核对实际消费者。

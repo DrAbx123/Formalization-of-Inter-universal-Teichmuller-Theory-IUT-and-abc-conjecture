@@ -105,7 +105,7 @@ log (μ(Λ_G)/μ(O_i)) = -d * (∑ i, c_i) * log p
 
 ## 5b.2 受限矩阵 Haar 基础（task-109，new file 待 watchdog）
 
-新文件：`tmp/sheaf/xif/paper/Mzk1MatrixHaarBaseActual.lean`（3,642B）；watchdog **DONE EXIT=0 @21:24:48Z（27s）**，olean 147,104B @05:24:47 fresh。
+新文件：`tmp/sheaf/xif/paper/Mzk1MatrixHaarBaseActual.lean`（5,023B）；watchdog **DONE EXIT=0 @21:46:58Z（39s）**，olean 204,384B @05:46:58 fresh。
 
 | 项 | 状态 | 说明 |
 |---|---|---|
@@ -114,10 +114,11 @@ log (μ(Λ_G)/μ(O_i)) = -d * (∑ i, c_i) * log p
 | `glAct_mem_coordLattice` | **DONE** | :49，积分矩阵 V '' Z_p^d ⊆ Z_p^d 逐坐标证明 |
 | `glAct_image_eq_of_mul_eq_one` | **DONE** | :81；显式逆 W、`V*W=1` ⇒ `V''Z_p^d=Z_p^d` |
 | Haar 不变 μ(V''S)=μ(S) | **GAP** | 需 Haar 唯一性 + lattice mass 归一化；未构造 |
+| `diagAct`/`diagAct_image_coordLattice` | **DONE** | :93/:96；逐坐标 p^{e_i} 像 = 坐标缩放格 |
 | 对角坐标缩放乘积公式 | **GAP** | 逐坐标 p^{e_i} 的 product-Haar 未证 |
 | 受限 det 公式 | **GAP** | 需 SNF/矩阵分解 + 上述 Haar 不变；doc §5b.1 |
 
-**build**：watchdog START 21:24:20Z → DONE EXIT=0 21:24:48Z（27s）；olean 147,104B fresh。未手编。
+**build**：watchdog START 21:46:19Z → DONE EXIT=0 21:46:58Z（39s）；olean 204,384B fresh。未手编。
 
 ### 5b.3 Haar 不变当前精确条件（task-109）
 
@@ -130,6 +131,129 @@ log (μ(Λ_G)/μ(O_i)) = -d * (∑ i, c_i) * log p
 4. **全 sets 推广**：uniqueness 直接给 compact closure 集；全集需内正则/regular 扩展。
 
 **精确条件版**：若暂时不构造 `ContinuousLinearEquiv`，可把 `hν : IsAddHaarMeasure (μ.map (glAct V))`、`hmeas`、`c=1` 作为显式条件；等价地 `μ(V''Z_p^d)=μ(Z_p^d)` 是 c=1 的归一化条件。本文件**不**把该条件写成无条件定理。
+
+### 5b.4 对角 quotient cardinal（task-109，green）
+
+新文件：`tmp/sheaf/xif/paper/Mzk1DiagonalIndexActual.lean`（2,367B）；watchdog **DONE EXIT=0 @22:15:01Z（32s）**，olean 67,144B @06:15:01 fresh。
+
+- `diagLatticeSubmodule e := ∏ i, (p^{e_i}) ⊂ d→Z_p`；
+- **`natCard_quotient_diagLatticeSubmodule`**：`Nat.card ((d→Z_p) ⧸ ∏ p^{e_i}) = ∏ i, p^{e_i}`，用 `Submodule.quotientPi` + `natCard_quotient_span_padicInt_pow` + `Nat.card_pi`。
+
+**仍缺（μ scaling）**：
+1. 把 `diagLatticeSubmodule` 经 `integerProductEmbedding` 映到 `d→Q_p` 的紧开子群 `L'`；
+2. 证 `L' ⊆ Z_p^d` 且 `Z_p^d ∩ L' = L'`；
+3. 证 `#(Z_p^d/L') = ∏ p^{e_i}`（需把 `(d→Z_p)/diagLatticeSubmodule` 与 `Z_p^d/L'` 的商等价写出来）；
+4. 用 `CompactOpenAddSubgroup.measure_eq_index_mul_intersection` 得 `μ(Z_p^d)=#(Z_p^d/L')·μ(L')`。
+
+当前只完成 3 的 cardinal 端；4 的 measure 端、受限 det 仍 GAP。
+
+### 5b.5 坐标置换不变性（task-109，green）
+
+新文件：`tmp/sheaf/xif/paper/Mzk1PermutationHaarActual.lean`（2,543B）；watchdog **DONE EXIT=0 @22:22:53Z（23s）**，olean 75,208B @06:22:53 fresh。
+
+- `permAct σ x i = x (σ i)`（:31）；
+- `permAct_image_coordLattice`（:39）：实际置换 `P_σ` 保 `Z_p^d`；
+- **`measure_pi_perm_coordLattice`**（:53）：product-Haar mass `μ(P_σ''Z_p^d)=μ(Z_p^d)`，由像集相等直接得。
+
+这是 `GL_d(Z_p)` Haar 不变性的**置换子群情形**；一般矩阵 `V ∈ GL_d(Z_p)` 的 Haar 不变仍 GAP。
+
+### 5b.6 批处理小文件（task-109，均 watchdog green）
+
+| file | size | watchdog | olean | 内容/边界 |
+|---|---|---|---|---|
+| `Mzk1GLActBundlingActual.lean` | 971B | DONE 22:37:07Z（40s） | 35,912B | `glLinear` Q_p-linear 打包；连续等价 GAP |
+| `Mzk1DiagonalProductScalingConditionActual.lean` | 925B | DONE 22:41:21Z（36s） | 30,880B | 对角 quotient cardinal re-export；measure scaling GAP |
+| `Mzk1RestrictedDetConditionalActual.lean` | 1,304B | DONE 22:31:13Z（51s） | 35,000B | restricted det 条件乘积（task-104 green core）；SNF/det-Haar GAP |
+| `Mzk1DiagonalPermutationActual.lean` | 1,147B | DONE 22:37:00Z（41s） | 35,008B | `diagPermAct = permAct ∘ diagAct`；measure invariance GAP |
+| `Mzk1GLHaarConditionalActual.lean` | 1,559B | DONE 22:49:05Z（36s） | 31,016B | `GLHaarInvarianceCondition` 精确条件；c=1/Haar uniqueness GAP |
+
+**说明**：GLHaarConditional 原尝试直接调用 additive Haar uniqueness，但该 olean 上下文里 `addHaarScalarFactor` / `measure_isAddInvariant_eq_smul_of_isCompact_closure` 无法解析；已降为精确条件定义，不冒充无条件 GL 不变。置换子群 `Mzk1PermutationHaarActual` 仍独立 green。
+
+### 5b.7 c=1 Haar scalar 归一化（task-109，green 条件步）
+
+新文件：`tmp/sheaf/xif/paper/Mzk1HaarScalarOneActual.lean`（5,064B）；watchdog **DONE EXIT=0 @23:17:30Z（52s）**，olean 156,696B @07:17:30 fresh。
+
+- `addHaarScalarFactor_eq_one_of_lattice`（:22）：
+  `L : (d→Q_p) ≃L[Q_p] (d→Q_p)`，μ additive Haar，`coordLattice` 开、`0<μO<⊤`；
+  若 `(μ.map L) O = μ O`（`hνO`），则 `addHaarScalarFactor (μ.map L) μ = 1`。
+- 使用 `ContinuousLinearEquiv.isAddHaarMeasure_map` + `Measure.measure_isAddHaarMeasure_eq_smul_of_isOpen`（命名空间 `MeasureTheory.Measure`）。
+- `map_coordLattice_eq_of_image_eq`（:48）：由 image 等号 + `Measure.map_apply` 得 `(μ.map L) O = μ O`。
+- `addHaarScalarFactor_eq_one_of_image`（:72）：直接由 image 等号得 c=1。
+- **`map_eq_of_image_eq`（:87）**：在 `[Measure.OuterRegular μ]` 与 `[Measure.OuterRegular (μ.map L)]` 下，由开集相等经 `Measure.OuterRegular.ext_isOpen` 得 `μ.map L = μ`（全可测集）。
+
+**仍 GAP**：实际 Haar 的 `OuterRegular` 实例（一般局部紧/第二可数来源）；矩阵 `glAct` 到 `ContinuousLinearEquiv` 打包。B4 compact-open 层已足。
+
+### 5b.8 canonical Haar OuterRegular + 无假设全 sets 不变（task-109，green）
+
+新文件：
+- `Mzk1CanonicalHaarRegularActual.lean`（1,263B；DONE **23:33:34Z（27s）**；olean 29,080B）：`canonical_addHaarMeasure_outerRegular`（`Regular.toOuterRegular`，需 `[LocallyCompactSpace]`）。
+- `Mzk1CanonicalHaarInvarianceActual.lean`（2,153B；DONE **23:35:48Z（46s）**；olean 50,480B）：`canonical_map_eq_of_image_eq`。
+  - 对 canonical `addHaarMeasure K₀`，`L''coordLattice=coordLattice` ⇒ `(addHaarMeasure K₀).map L = addHaarMeasure K₀`；
+  - 不再需要 `[OuterRegular μ]` 假设；像测度外正则由 `Measure.OuterRegular.map L.toHomeomorph` 提供。
+
+**已补**：`Mzk1CanonicalHaarCoordLatticeActual.lean`（3,550B；DONE **23:56:51Z（29s）**；olean 135,136B）——`coordinateCompacts`（carrier=coordLattice，Pi topology）；`coordinateCompacts_mass`（`addHaarMeasure_self=1`）；`canonical_map_eq_of_image_eq_full`（:48，canonical `addHaarMeasure` 无 OuterRegular、无 hOpos/hOfin 假设的 map_eq）。
+
+**剩余**：真实 `glAct` 打包 ContinuousLinearEquiv、对角 measure scaling、一般 SNF det。
+
+### 5b.9 GL_d(Z_p) 打包 + canonical B4 无条件 GL 不变（task-109，green）
+
+新文件：
+- `Mzk1GLActContinuousActual.lean`（1,432B；DONE **23:59:59Z（30s）**）：`glContinuousLinearEquiv : GL_d(Z_p) → ((d→Q_p) ≃L[Q_p] (d→Q_p))`，用 `Matrix.GeneralLinearGroup.map (algebraMap Z_p Q_p)` + `toLin` + `toContinuousLinearEquiv`。
+- `Mzk1GLActContinuousActionActual.lean`（2,310B；DONE **00:09:13Z（46s）**；olean 71,640B）：
+  - `glContinuousLinearEquiv_apply`（:15）rfl；
+  - `glContinuous_image_coordLattice`（:20）：V 的打包作用保 `Z_p^d`；
+  - **`glContinuous_canonical_haar_invariant`（:31）**：对 canonical `addHaarMeasure coordinateCompacts`，任意 `V ∈ GL_d(Z_p)` 满足 `(addHaarMeasure).map (glContinuousLinearEquiv V) = addHaarMeasure`。
+
+这是 B4 的 **GL_d(Z_p) 无条件不变性**（canonical Haar）；剩对角 scaling 与一般 SNF det。
+
+### 5b.10 canonical 对角 volume ratio（task-109，green 条件 wrapper）
+
+新文件：`tmp/sheaf/xif/paper/Mzk1CanonicalDiagScalingActual.lean`（2,668B；watchdog **DONE 00:18:06Z（55s）**；olean 69,728B）。
+
+- `canonical_diag_volume_ratio`（:16）：把 `Mzk1DiagVolumeProvedActual.diagonal_volume_ratio_actual` 特化到 canonical `addHaarMeasure coordinateCompacts`；
+  得 `μ(coordDual f)/μ(coordSmall) = (∏ p^{f_i})⁻¹`。
+- 目前 compact/open/正有限测仍为显式条件；无条件化（从 `coordinateCompacts` 的紧开性 + `IsOpenPosMeasure`）是剩余小 GAP。
+
+**SNF**：`Mzk1GeneralSNFVolumeActual` 已有 quotient cardinal，Haar volume bridge 仍 GAP（stage4 协作）。
+
+### 5b.11 coordSmall = coordLattice 桥（task-109，green）
+
+新文件：`tmp/sheaf/xif/paper/Mzk1CoordSmallBridgeActual.lean`（1,660B；watchdog **DONE 00:31:39Z（30s）**；olean 112,376B）。
+
+- `span_one_eq_one`（:13）：`Z_p ∙ 1 = 1`；
+- **`coordSmall_eq_coordLattice`（:28）**：`(coordSmall : Set (d→Q_p)) = coordLattice`。
+
+这是对角 scaling 无条件化的桥①；桥②（coordDual = diagEquiv '' coordLattice）与桥③（紧开/正有限）仍 GAP。
+
+**SNF**：stage4 `Mzk1GeneralSNFVolume2Actual` 当前 watchdog FAIL/无 olean，不能 import；`Mzk1CanonicalSNFDetActual.lean` 仅作 GAP 记录，未冒充。
+
+## 5c. task-109 最终 acceptance（2026-11-13）
+
+### Green（watchdog 证据，不手编）
+| 文件 | 状态 | 内容 |
+|---|---|---|
+| `Mzk1MatrixHaarBaseActual.lean` | DONE | 积分矩阵格作用、`glAct_image_eq`、`diagAct` 像 |
+| `Mzk1DiagonalIndexActual.lean` | DONE | `Nat.card ((d→Z_p)/∏p^{e_i})=∏p^{e_i}` |
+| `Mzk1PermutationHaarActual.lean` | DONE | 坐标置换保 `Z_p^d` 与 product-Haar mass |
+| `Mzk1HaarScalarOneActual.lean` | DONE | c=1 条件、image 等号 ⇒ c=1、全 sets（条件 OuterRegular） |
+| `Mzk1CanonicalHaarRegularActual.lean` | DONE | canonical `addHaarMeasure` 的 `OuterRegular` |
+| `Mzk1CanonicalHaarInvarianceActual.lean` | DONE | canonical 无 OuterRegular 假设的 map_eq（条件 hOpos/hOfin） |
+| `Mzk1CanonicalHaarCoordLatticeActual.lean` | DONE | `coordinateCompacts`、mass=1、**canonical full map_eq**（B4 全 sets） |
+| `Mzk1GLActContinuousActual.lean` | DONE | `GL_d(Z_p) → ContinuousLinearEquiv` |
+| `Mzk1GLActContinuousActionActual.lean` | DONE | action=rfl、image 等号、**GL 无条件 canonical Haar 不变** |
+| `Mzk1GLActBundlingActual.lean` | DONE | glLinear 打包 |
+| `Mzk1RestrictedDetConditionalActual.lean` | DONE | restricted det 条件乘积 |
+| `Mzk1CanonicalDiagScalingActual.lean` | DONE | canonical diag volume ratio（条件紧开/正有限） |
+| `Mzk1CoordSmallBridgeActual.lean` | DONE | `coordSmall = coordLattice` |
+
+### 精确 GAP
+1. **bridge② `diagEquivCLM`**：`p^{f_i}` 对角 `ContinuousLinearEquiv` 的 `left_inv/right_inv` 结构归约未过；`diagEquivCLM '' coordLattice = coordDual f` 未证。
+2. **bridge③**：`coordDual f` 紧开/正有限测未从 `coordinateCompacts` 消去；故 `canonical_diag_volume_ratio_unconditional` 未完成。
+3. **一般 SNF det**：stage4 `Mzk1GeneralSNFVolume2Actual` 当前 FAIL/无 olean，不能 import；`Mzk1CanonicalSNFDetActual.lean` 仅为 GAP 记录。
+4. B4 的 GL 部分与 canonical full sets 已无条件 green；剩余是 diagonal/SNF 部分。
+
+### 结论
+task-109 的 **B4 Haar 不变性主链**（canonical full sets + GL_d(Z_p) 无条件）已完成并 gate green；diagonal 与 SNF 为明确 GAP，未用 axiom/sorry 冒充。
 
 ## 6. 其他 GAP / 前提
 

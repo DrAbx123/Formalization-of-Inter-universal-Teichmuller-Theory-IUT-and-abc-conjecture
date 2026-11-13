@@ -190,6 +190,34 @@ abc L7: (1-1/l)logp <= D_exact
   以及非 istar 因子系数 0 的 actual unit 数据（localGenerator 范数 1、commonExponent/order_eq 等）。
   该 datum 尚未构造；不能把它作为假设换 green。
 
+  task-122 进展：Mzk1StepVScalingDataActual.lean（watchdog DONE EXIT=0，21:35:24Z，60s；olean 209,240B）已用生产构造 arithmeticTuplePureFractionalScalingData_ofGenerator 把 data 归约为 generators：
+  stepVScalingDataOfGenerator（给定 g_i, ||g_i||=p^{-c_i}）
+  stepVRegion_volume_eq_ofGenerator（volume identity = StepVTerm）
+  剩余唯一源对象 StepVQRootSourceGap：qroot^{label²} at istar + 零因子 unit generators + norm 等式。
+
+
+### 5.6 StepVQRootSourceGap 的精确 source map 缺口
+
+StepVQRootSourceGap 要求存在
+  generator : (i : ι) → CommonPrimeCompletion (places i (tuple i))
+  generator_norm : ||generator i|| = p^(-stepVScalingCoefficient i)
+其中 c_istar = stepVLambda，其他 c_i = 0。
+
+现有 qroot 对象都在别的层：
+- qThetaRoot T b : rootNormedExtension T b（Mzk1ThetaPilotObjectActual.lean:52-54），
+  即 IntermediateField.adjoin (sourceRootField T b) {rootNormedElement}（PaperRootCompletionTensorActual.lean:54-60）；
+- qrootOf D v : completionAt D.Kt v（Iut/Concrete/ThetaLocalConstruct/Data.lean:281-291），
+  但需要 D : InitialThetaData，不是 S3029 的通用 K/V/places/tuple；
+- S3029 的 jValue : CommonPrimeCompletion (places istar (tuple istar)) 只是通用 completion，
+  没有 qroot/root extension 字段。
+
+因此缺三个映射/等式：
+1. rootMap : rootNormedExtension T b → CommonPrimeCompletion (places istar (tuple istar))（把 qThetaRoot 搬到 S3029 completion；需与 qVFam place 对齐）；
+2. rootMap 的 norm 保持：||rootMap (qThetaRoot^label²)|| = p^(-stepVLambda)；
+3. 非 istar 因子（若 ι 非 Unit）的 norm-one unit generators（||g_i||=1）；
+4. 以及 S3029 的 istar/jValue 与 qVFamTensorPlaces/qVFamTensorTuple 的来源对齐。
+这些都没有在树内构造；StepVQRootSource 是显式结构，但 StepVQRootSourceGap 仍 open。
+
 ### 5.4 task-111：actual D_exact 与 L7→L6 接口
 
 新文件：tmp/sheaf/xif/paper/Mzk1DExactActual.lean（watchdog **DONE EXIT=0**，21:12:30Z，57s；olean 26,176B）。
@@ -270,3 +298,298 @@ abc L7: (1-1/l)logp <= D_exact
 
 结论：hD 由抽象假设降为两个可寻址的实际内容缺口；若 GAP-PC-WEIGHT/LOGSUM 后续证出，
 该文件即给出素导子类的（条件于外部 Mestre–Oesterlé 的）真实 SSIneqExplicit 定理类。
+
+
+## 8. GAP-PC-WEIGHT 归约（2026-11-13 后续）
+
+新文件（待 watchdog 名单）：`tmp/sheaf/xif/paper/Mzk1PrimeConductorWeightOneActual.lean`
+
+利用已有 green 对象 `FinitePlaceCompletionDegree`：
+- `localCompletionDegree = finrank (K_w / (Fmod)_v)`（`ProcessionNormalizationWeightsActual:49`）；
+- `finrank_adicCompletion_eq_relativeCompletionDegree`（:325，条件 `hfinite` + `hagree`）；
+- `relativeCompletionDegree_eq_one_iff`（:284，`e=f=1 ↔ degree=1`）。
+
+新定理：
+- `nativeBadLocalWeight_eq_one_of_tame_data`：**GAP-PC-FINITE**（`Module.Finite` 完成整数环）+
+  **GAP-PC-AGREE**（`localDataAgreesWithPlaceData`）+ **GAP-PC-UNRAM/RESIDUE**（relative `e=1`、`f=1`）
+  ⇒ `nativeBadLocalWeight T b = 1`；
+- `nativeBadLocalWeight_eq_one_of_tame`：包装 `PrimeConductorTameLocalData`（e=f=1 的命名 Prop）；
+- `PrimeConductorTameLocalData`：素导子 tame 情形（l∤e_p ⇒ 坏位处不分歧、剩余次数 1）的待证内容。
+
+**缺口定位（语义 > 编译）**：
+1. **GAP-PC-FINITE**：`Module.Finite O_v O_w` 对 adic completion 整数环；Mathlib 4.32.2 无
+   `IsIntegralClosure` 的 completion 版（见 `FinitePlaceCompletionDegree` 注释 :310 附近）。
+2. **GAP-PC-AGREE**：completed local data 与 number-ring place data 的 `ramificationIdx'/inertiaDeg'`
+   一致（Mathlib 无比较余域/指数的定理）。
+3. **GAP-PC-UNRAM/RESIDUE**：素导子 + l∤e_p tame ⇒ relative e=f=1（需 E[l] 的局部域分歧计算）。
+
+若 1–3 证出，则 `GAP-PC-WEIGHT` 关闭，task-118 的 `nativeDExact_L7_of_conditions` 只剩 GAP-PC-LOGSUM。
+
+
+## 9. GAP-PC-LOGSUM 归约（2026-11-13 后续）
+
+新文件（待 watchdog 名单）：`tmp/sheaf/xif/paper/Mzk1PrimeConductorLogSumActual.lean`
+
+实际等式（green）：
+- `baseQLogMagnitude_eq_order_mul_log`（BaseQLogVolumeActual:74）：
+  `|log q_b| = order_b · log (residueNormBase (nativeBaseSectionPlace T b))`；
+- `baseQ_order_pos`（:106）：`0 < order_b`。
+
+新定理（GAP-PC-LOGSUM 归约）：
+- `sum_baseQLogMagnitude_eq`：GAP-PC-RESNORM（每个坏位 residue norm = C.p）⇒
+  `∑ |log q_b| = (∑ order_b)·log C.p`；
+- `log_le_sum_baseQLogMagnitude`：再加 `[Nonempty Bad]`、`log C.p ≥ 0` ⇒
+  `log C.p ≤ ∑ |log q_b|`（用 `∑ order_b ≥ card ≥ 1`）；
+- `nativeDExact_L7_of_residueNorm` / `primeConductor_ssIneqExplicit_of_actual_residueNorm`：
+  把 task-118 的 GAP-PC-LOGSUM 换成 **GAP-PC-RESNORM**。
+
+**结论**：GAP-PC-LOGSUM 不再是“整条未证”，而归约为 GAP-PC-RESNORM
+（素导子坏位 residue norm = p，即每个坏位剩余次数 1 的算术识别；预期由 tame/素导子给出，未构造）。
+若 GAP-PC-RESNORM 证出（与 GAP-PC-WEIGHT 三个子缺口一起），task-118 的 SSIneqExplicit 将成为
+素导子类上只依赖外部 Mestre–Oesterlé 参数的真实定理。
+
+
+## 10. GAP-PC-RESNORM 归约（2026-11-13 后续）
+
+新文件（待 watchdog 名单）：`tmp/sheaf/xif/paper/Mzk1PrimeConductorResNormActual.lean`
+
+利用 green：
+- `residueNormBase_eq_lower_pow`（ArithmeticQPilotBaseChange:126）：
+  `residueNormBase w = residueNormBase (comap w) ^ localResidueDegree w`；
+- `nativeBaseSectionPlace_comap`（BaseQFamilyActual:71）：`comap (nativeBaseSectionPlace T b) = b.1`。
+
+新定理：
+- `residueNormBase_nativeBaseSectionPlace_eq_pow`：`residueNormBase (nativeBaseSectionPlace T b)
+  = residueNormBase (b.1) ^ localResidueDegree (nativeBaseSectionPlace T b)`；
+- `residueNormBase_nativeBaseSectionPlace_eq_Cp`：GAP-PC-RESDEG（residue degree=1）+
+  GAP-PC-BADCHAR（`residueNormBase b.1 = C.p`）⇒ `residueNormBase (nativeBaseSectionPlace T b) = C.p`；
+- `primeConductorResidueNormData_of_data`：把 LOGSUM 文件的 `PrimeConductorResidueNormData` 由这两条数据给出；
+- `log_le_sum_baseQLogMagnitude_of_data`：RESNORM 兑现后 LOGSUM 成立（再加 nonempty + log C.p≥0）。
+
+**结论**：GAP-PC-RESNORM 归约为两条内容缺口：GAP-PC-RESDEG（坏位实际剩余次数 1，tame 情形）
+与 GAP-PC-BADCHAR（坏 moduli place 的 residue norm 与素导子 p 的识别）。两者都是实际对象上的
+算术识别，未构造；无新增假设换 green。
+
+
+## 11. GAP-PC-BADCHAR 归约（2026-11-13 后续）
+
+新文件（待 watchdog 名单）：`tmp/sheaf/xif/paper/Mzk1PrimeConductorBadCharActual.lean`
+
+分解 `BADCHAR: residueNormBase (b.1) = C.p` 为三条命名内容输入：
+- **GAP-PC-NORMFORMULA**：`residueNormBase place = residueCharacteristic place ^ residueInertiaDegree place`
+  （可寻址：`FinitePlaceDegreeSumBound:39 under_eq_span_residueCharacteristic` +
+  `Ideal.absNorm_eq_pow_inertiaDeg'_of_liesOver`；尚未拼装）；
+- **GAP-PC-BADCHAR-PRIME**：`residueCharacteristic (b.1) = C.p`（坏位残数特征 = 素导子，需
+  T 的 bad place 与 conductor prime 的实际识别）；
+- **GAP-PC-BADCHAR-DEG**：`residueInertiaDegree (b.1) = 1`（坏位剩余次数 1）。
+
+定理：`badCharData_of_data`（三输入 ⇒ BADCHAR）、`resNormData_of_badChar`（再加 RESDEG ⇒
+`PrimeConductorResidueNormData`）；rows=5。
+
+**结论**：BADCHAR 归约为 NORMFORMULA / PRIME / DEG 三条；其中 NORMFORMULA 最可能先在本地
+Mathlib 对象上拼装（absNorm/inertiaDeg 已有 lemma），PRIME 与 DEG 属素导子类实际构造缺口。
+
+
+## 12. NORMFORMULA 关闭 + RESNORM→BADCHAR 当前链（2026-11-13 后续）
+
+**GAP-PC-NORMFORMULA 已关闭**：`Mzk1P3NormFormulaProofActual.lean` watchdog **DONE 35s@22:58:24，olean=True**。
+定理：`residueNormBase place = (residueCharacteristic place : ℝ) ^ residueInertiaDegree place`
+（拼装 `Ideal.absNorm_eq_pow_inertiaDeg_of_liesOver` + `under_eq_span_residueCharacteristic`
++ `Ideal.inertiaDeg'_eq_inertiaDeg` + `Ideal.absNorm_span_singleton`）。
+
+**RESNORM → BADCHAR 链（当前精确状态）**：
+```
+GAP-PC-RESNORM  (residueNormBase (nativeBaseSectionPlace T b) = C.p)
+├── GAP-PC-RESDEG   localResidueDegree (nativeBaseSectionPlace T b) = 1
+│      ⟺ residueNormBase (nativeBaseSectionPlace T b) = residueNormBase (b.1)   [GREEN: P3ResNormSlack/P3ResDeg]
+└── GAP-PC-BADCHAR  residueNormBase (b.1) = C.p
+       ├── GAP-PC-NORMFORMULA  residueNormBase = char ^ inertiaDegree        [GREEN: P3NormFormulaProof]
+       ├── GAP-PC-BADCHAR-PRIME  residueCharacteristic (b.1) = C.p          [GAP: 需要 conductor 识别]
+       └── GAP-PC-BADCHAR-DEG    residueInertiaDegree (b.1) = 1             [GAP: 剩余次数 1]
+```
+即：`RESNORM = RESDEG ∧ (NORMFORMULA ∧ PRIME ∧ DEG)`，其中 NORMFORMULA 已 green、
+RESDEG 已化为可寻址等式（RESDEG ⟺ residue-norm 等式，green），只剩 **PRIME / DEG** 两条实际算术识别缺口。
+
+**新文件（已 green）**：
+- `Mzk1P3ResNormSlackActual`（RESDEG ⟺ 范数等式）
+- `Mzk1P3ResDegActual`（坏位特化）
+- `Mzk1P3NormFormulaActual` / `Mzk1P3NormFormulaProofActual`（NORMFORMULA 形式化+证明）
+- `Mzk1P3BadCharPrimeActual`（PRIME 单方向：char=q ⇒ under=span{q}）
+- `Mzk1P3FiniteCompletionActual`（FINITE 条件化：separable+integralClosure ⇒ Module.Finite）
+- `Mzk1P3AgreeActual` / `Mzk1P3AgreeDegreeActual`（AGREE rfl 形式 + AGREE∧FINITE ⇒ local degree = relative degree）
+- `Mzk1P3UnramResidueActual`（e=f=1 ⟺ relative degree 1；待 watchdog 终验）
+- `Mzk1P3GapLedgerActual`（GAP 台账，14 行，已同步 NORMFORMULA green）
+
+
+## 13. 第三批拆分（2026-11-13 后续）
+
+新增文件（待 watchdog 名单）：
+1. `Mzk1P3ArithmeticRelativeBridgeActual.lean` — **rfl 桥**：
+   `ArithmeticQPilotBaseChange.localResidueDegree = FinitePlaceCompletionDegree.relativeResidueDegree`、
+   `localRamificationIndex = relativeRamificationIndex`（同 number-ring 公式，仅命名空间不同）。
+   含义：RESDEG/UNRAM-RESIDUE 的“local”与“relative”措辞是同一对象，AGREE 缺口的实际内容是
+   completed-valuation-ring 数据 ↔ number-ring 数据的比较，而不是 local* 与 relative* 的名字差异。
+2. `Mzk1P3BadCharPrimeEquivActual.lean` — **BADCHAR-PRIME 等价**：
+   `b.1.maximalIdeal.asIdeal.under ℤ = span{C.p} ↔ residueCharacteristic (b.1) = C.p`（green）。
+3. `Mzk1P3BadCharDegActual.lean` — **BADCHAR-DEG 等价**：
+   `residueInertiaDegree (b.1) = 1 ↔ absNorm (b.1) = residueCharacteristic (b.1)`（来自 NORMFORMULA green）。
+4. `Mzk1P3TameFromConductorActual.lean` — tame 假设/结论形状：
+   `TameConductorHypotheses (l≥11, l∤e, e≠0)`、`tameConclusion (e=f=1)`、
+   与 `UnramResidueData` 的 rfl 对应；**推导目标 `TameDerivationTarget` 标 GAP-PC-TAME**（不硬凑）。
+5. `Mzk1P3AgreeResidueFieldActual.lean` — AGREE residue-field 碎片：
+   `relativeResidueDegree = finrank (O_k/p_res) (O_K/P)`（green，条件实例）；
+   completed-side 对应等式标 **GAP-PC-AGREE-FIELD**。
+
+**更新后的 P3 GAP 树（第三批后）**：
+- BADCHAR-PRIME ⟺ under-ideal 识别（green 等价）+ 实际 under 数据（GAP: conductor 识别）；
+- BADCHAR-DEG ⟺ absNorm 等式（green 等价）+ 实际 absNorm 数据（GAP: residue degree）；
+- RESDEG/UNRAM：local* = relative*（rfl 桥）+ 实际 e=f=1（GAP-PC-TAME/AGREE）；
+- NORMFORMULA：**已关闭**（green）；
+- DICT-B/C：由 qpilot lane 处理，本 lane 不碰。
+
+
+### 13.1 AGREE 分量精确化（rfl 桥的作用范围）
+
+`localDataAgreesWithPlaceData (k := k) place` 的定义（FinitePlaceCompletionDegree）为：
+```
+localRamificationIndex (completion)  = relativeRamificationIndex (number-ring)
+∧ localInertiaDegree (completion)   = relativeResidueDegree (number-ring)
+```
+其中 completion 侧两项由 **adic completion 整数环的极大理想**定义
+（:180 `IsLocalRing.maximalIdeal (... adicCompletionIntegers k)).ramificationIdx' ...`；
+:187 的 inertiaDeg' 版本），number-ring 侧两项由 `comap` 的极大理想定义。
+
+**rfl 桥消掉的是命名混淆，不是 AGREE 分量**：
+- `ArithmeticQPilotBaseChange.localResidueDegree` / `localRamificationIndex`
+  = `FinitePlaceCompletionDegree.relativeResidueDegree` / `relativeRamificationIndex`（**同 number-ring 公式**，rfl）；
+- 因此 RESDEG/UNRAM-RESIDUE 的措辞统一到 **relative（number-ring）指数**语言；
+- AGREE 的两个分量**仍是真缺口**：
+  1. **GAP-PC-AGREE-RAM**：completion 侧 `ramificationIdx'` = relative `e`
+     （Mathlib 无 adic completion 下 `ramificationIdx'` 不变性；只有不等式与 tower 条件）；
+  2. **GAP-PC-AGREE-FIELD**：completion 侧 `inertiaDeg'` = relative `f`
+     （Mathlib 无 `𝒪_v/𝔪_v ≃+* 𝓞 k/v` 的 residue-field 同构）。
+- 另有独立 **GAP-PC-FINITE**（`IsIntegralClosure 𝒪_w 𝒪_v K_w`，即 `Module.Finite`）。
+
+结论：AGREE 不可由 rfl 桥消掉；rfl 桥的价值是让 RESDEG/UNRAM 的 `localResidueDegree` 写成
+`relativeResidueDegree`（completion 文件的 relative 语言），从而与 AGREE 的右侧一致。
+
+
+## 14. AGREE-RAM/FIELD 的直接 FLT 来源（2026-11-13 后续）
+
+**关键发现**：仓内已移植的 FLT 文件
+`tmp/external/ported/flt/FLT/DedekindDomain/Completion/BaseChange.lean` 直接包含所需定理
+（在 `namespace adicCompletion` / `section RamificationInertia`，`w : v.Extension B`）：
+
+- **:685 `ramificationIdx_eq_ramificationIdx`**：
+  `(w.1.completionIdeal L).ramificationIdx (v.adicCompletionIntegers K) = w.1.asIdeal.ramificationIdx A`
+  ——即 **AGREE-RAM**（completion 侧 ramification index = number-ring 侧 e）。
+- **:721 `inertiaDeg_eq_inertiaDeg`**：
+  `w.1.asIdeal.inertiaDeg A = Ideal.inertiaDeg (w.1.completionIdeal L) (v.adicCompletionIntegers K)`
+  ——即 **AGREE-FIELD**（completion 侧 inertia degree = number-ring 侧 f；证明用
+  `inertiaDeg_tower` + base 侧 `AdicValuation.lean:318 inertiaDeg_asIdeal_completionIdeal`：`Ideal.inertiaDeg (v.completionIdeal K) A = 1`）。
+- 另有 `:739-744` 的 tower 等式与 `ramificationIdx_mul_inertiaDeg_eq_finrank` 可直接配合。
+
+**转换到本仓 `localRamificationIndex` / `relativeRamificationIndex` 的 `'` 形式**：
+- `Ideal.ramificationIdx'_eq_ramificationIdx`（FLT 文件中已用，需 `completionIdeal_ne_bot`）；
+- `Ideal.inertiaDeg'_eq_inertiaDeg`（Mathlib Inertia.lean:119，需 maximal 实例）；
+- 我们的 `local*` 定义用 `IsLocalRing.maximalIdeal (adicCompletionIntegers ...)`，与
+  `v.completionIdeal K` 定义一致（`AdicValuation.lean` 的 `completionIdeal`）。
+- `w : v.Extension B` 由 `nativeBadToKPlace`/`nativeBaseSectionPlace` 与它们的
+  `comap = b.1` 引理构造（`⟨place, under_eq⟩`）。
+
+**状态**：`FLT/DedekindDomain/AdicValuation.olean = True`；
+`FLT/DedekindDomain/IntegralClosure` 等待 `FLT/Mathlib/RingTheory/Localization/BaseChange.olean`（lead 已修 pin、重编中）；
+`FLT/DedekindDomain/Completion/BaseChange.lean` 需其依赖链（Completion/AdicValuation 等）绿后加入/重编。
+绿后写 `Mzk1P3AgreeFLTActual.lean`：import `tmp.external.ported.flt.FLT.DedekindDomain.Completion.BaseChange`，
+把 `:685`/`:721` 经 `ramificationIdx'`/`inertiaDeg'` 转换后套到 `localDataAgreesWithPlaceData` 的两个分量。
+
+### 14.1 BADCHAR-PRIME 精确缺口（无法对一般 T 证明）
+
+`PrimeConductorCurve`（`Mzk1PrimeConductorRouteActual.lean`）只有字段
+`p : ℕ`、`hp : Nat.Prime p`、`e : ℕ`；**没有任何对象把 `C.p` 与 `T.arithmetic.Fmod` 的坏模位
+`b.1` 的 residue characteristic/under-ideal 联系起来**。因此
+`GAP-PC-BADCHAR-PRIME (residueCharacteristic (b.1) = C.p)` 对任意 `T` 不可证：
+- 可证部分是 `under ℤ = span{C.p} ↔ residueCharacteristic (b.1) = C.p`（green，P3BadCharPrimeEquiv）；
+- 缺的是 **C 的构造**：由实际 bad 位数据定义 `C.p`（或给 bridge hypothesis `C.p = residueCharacteristic (b.1)`）。
+同理 BADCHAR-DEG 需要实际 bad 位的 `residueInertiaDegree = 1`（tame/conductor 局部计算），
+可证部分是等价 `f=1 ↔ absNorm = char`（green，P3BadCharDeg）。
+
+
+### 14.2 AGREE-FLT 草稿与当前 FLT 阻塞（2026-11-13 07:40 CST）
+
+草稿文件：`tmp/sheaf/xif/paper/Mzk1P3AgreeFLTActual.lean`（待 Lead 加 watchdog）。
+- import `tmp.external.ported.flt.FLT.DedekindDomain.Completion.BaseChange`；
+- `completionExtension place : v.Extension (𝓞 K)`，其中 `v := (comap (k := k) place).maximalIdeal`，
+  `w.1 := place.maximalIdeal`，under-ideal 等式由 `NumberFieldFinitePlace.comap_maximalIdeal` 给出；
+- `localRamificationIndex_eq_relativeRamificationIndex`：FLT `:685` + `Ideal.ramificationIdx'_eq_ramificationIdx`；
+- `localInertiaDegree_eq_relativeResidueDegree`：FLT `:721` + `Ideal.inertiaDeg'_eq_inertiaDeg`；
+- `localDataAgreesWithPlaceData_of_implies`：合取。
+需要实例假设：`[FiniteDimensional k K] [Algebra.IsSeparable k K]`
+（+ 由 Mathlib 提供的 `IsIntegralClosure 𝓞K 𝓞k K`、`Module.Finite 𝓞k 𝓞K`，若缺按错误补）。
+
+**当前 FLT 阻塞**：
+- `FLT/DedekindDomain/IntegralClosure.olean = False`：最新仍 4 处 pin
+  （:112 rewrite pattern、:139 `Set.coe_setOf`、:194/:199 `finrank_of_isFractionRing` 实例、:266 induction zero）；
+  Lead 已修 `:112 if_pos`、`:139 Set.coe_setOf`、`:199 finrank_of_isFractionRing`、`:266 | zero => simp`，等下一轮。
+- `FLT/DedekindDomain/Completion/BaseChange.olean = False`，其唯一缺失依赖就是 `IntegralClosure.olean`
+  （per-file log 全是 "object file ... IntegralClosure.olean does not exist"）。
+- `FLT/DedekindDomain/Completion/AdicValuation.olean = False`，同为链上等待。
+
+
+## 15. GAP-PC-AGREE-RAM/FIELD 关闭（2026-11-13 后续）
+
+**产物**：`tmp/sheaf/xif/paper/Mzk1P3AgreeFLTActual.lean` — watchdog **DONE EXIT=0 43s@11:13:10Z，olean=True**。
+
+内容（复用仓内 FLT `DedekindDomain/Completion/BaseChange.lean`）：
+- `IsDedekindDomain.HeightOneSpectrum.adicCompletion.ramificationIdx_eq_ramificationIdx`（:685，签名由 qpilot #check 确认）；
+- `IsDedekindDomain.HeightOneSpectrum.adicCompletion.inertiaDeg_eq_inertiaDeg`（:721）；
+- primed 转换 `Ideal.ramificationIdx'_eq_ramificationIdx` / `Ideal.inertiaDeg'_eq_inertiaDeg`（注意：p、q 是显式 binder，必须传两个 Ideal）；
+- 构造 `lowerPlace (place) = (comap place).maximalIdeal`、`placeExtension : (lowerPlace place).Extension (𝓞 K)`（`HeightOneSpectrum.ext` + `under_def` + `comap_maximalIdeal`）。
+
+定理：
+- `localRamificationIndex_eq_relativeRamificationIndex`（**AGREE-RAM 关闭**）；
+- `localInertiaDegree_eq_relativeResidueDegree`（**AGREE-FIELD 关闭**）；
+- `localDataAgreesWithPlaceData_of_implies`（AGREE 整体成立，条件为内容假设：`[FiniteDimensional k K]`、`[Algebra.IsSeparable k K]`、`[Algebra (𝓞k) K]`、两个 `IsScalarTower`、`[IsScalarTower ℤ (𝓞k) (𝓞K)]`、`[Module.Finite (𝓞k) (𝓞K)]`、`[Module.IsTorsionFree (𝓞k) (𝓞K)]`、`[IsIntegralClosure (𝓞K) (𝓞k) K]`；`Algebra.IsIntegral (𝓞k) (𝓞K)` 用 `Algebra.IsIntegral.tower_top (R := ℤ)` 实例提供）。
+
+**P3-E GAP 树更新**：
+```
+SSIneqExplicit（条件于外部 Mestre–Oesterlé 参数）
+├── GAP-PC-WEIGHT  ← FINITE（GAP）/ AGREE（**PROVED**）/ UNRAM-RESIDUE（GAP tame）
+├── GAP-PC-RESNORM ← RESDEG（≈范数等式, green）/ BADCHAR（NORMFORMULA green + PRIME/DEG GAP）
+└── GAP-PC-FINITE  ← 仍为内容缺口（IsIntegralClosure ⇒ Module.Finite 的完成环版本）
+```
+即 AGREE-RAM/FIELD 已从缺口变为**已证定理**（条件仅为 T 的算术内容假设）。
+
+
+## 16. P3-E 最终条件装配（AGREE + FINITE 均关闭）
+
+**新产物（watchdog 证据）**：
+- `tmp/sheaf/xif/paper/Mzk1P3FiniteFLTActual.lean` — **DONE 65s@11:25:09Z，olean=True**；
+  `moduleFinite_completedValuationRings` / `nativeBadToKPlace_moduleFinite`：
+  用 FLT `DedekindDomain/Completion/BaseChange.lean` 的 `(priority 1001) Module.Finite
+  (adicCompletionIntegers K v) (adicCompletionIntegers L w.1)` 实例；
+  **注意**：必须先 `let v := (comap place).maximalIdeal`、`let w := placeExtension place` 再
+  `inferInstance`（直接 inferInstance 会 metavariable 匹配失败）。
+- `tmp/sheaf/xif/paper/Mzk1P3FinalAssemblyActual.lean` — **DONE 58s@11:28:57Z，olean=True**；
+  `ssIneqExplicit_final`：端到端 `SSIneqExplicit`，其中
+  **AGREE（FLT :685/:721）与 FINITE（FLT 实例）均已关闭**。
+- `tmp/sheaf/xif/paper/Mzk1P3ArithInstancesActual.lean`（待 watchdog）：对 `T.arithmetic` 构造
+  - `FiniteDimensional Fmod K` ← `FiniteDimensional.trans`（Fmod→F→K）；
+  - `Algebra.IsSeparable Fmod K` ← `Algebra.IsSeparable.trans`（两步 Galois ⇒ separable）；
+  - `Module.Finite (𝓞 Fmod) (𝓞 K)` ← `IsIntegralClosure.finite`（𝓞Fmod integrally closed + Noetherian）；
+  - 其余 7 个实例（Algebra (𝓞Fmod) K、IsScalarTower×3、IsIntegralClosure、IsTorsionFree、
+    Algebra.IsIntegral）由 Mathlib NumberField/Basic 提供（文件内 `example := inferInstance` 登记）。
+
+**P3-E 最终 GAP 树（16 后）**：
+```
+SSIneqExplicit  final（condition，[hMO] 外部参数）
+├── AGREE-RAM / AGREE-FIELD      DISCHARGED（FLT BaseChange :685/:721）
+├── GAP-PC-FINITE                DISCHARGED（FLT priority-1001 instance）
+├── T 算术实例                    CONSTRUCTED（P3ArithInstances；Mathlib 提供余下 7 个）
+└── 剩余内容输入：
+    ├── GAP-PC-RESNORM 数据：hdeg（RESDEG）+ hunder/hinert（BADCHAR 下的 PRIME/DEG 实际识别）
+    ├── GAP-PC-TAME：htame（relative e=f=1，素导子 tame 局部计算）
+    └── arch: harch（≥0）
+```
+即 P3-E 已从“AGREE/FINITE 两条大缺口”缩到 **RESNORM 的 BADCHAR 数据识别 + tame 局部计算 + arch**
+（外加外部 Mestre–Oesterlé Prop 参数），无 sorry/axiom。

@@ -69,3 +69,12 @@
 
 - `paperRootThetaImageNZ`（非零标签，`=F(c_root)·O_hol`, `c_root=m/(2l)`）：A8 给出**相对 index/体积比与 m 无关，common-scalar 机制不产生随 m 线性增长的相对增益**；绝对 log-volume 仍有 m 线性项。
 - `rootThetaHull`（含 j=0）：j=0 贡献 `F(0)·O_hol=R·O_hol` 的 q-无关固定分量，hull 不是单一 `p^{a(m)}` 倍格 ⇒ **A8 前提不成立，不能直接套用；需拆出零标签固定分量**（HANDOFF-OBJECT-TABLE §3.2–3.3）。
+
+
+---
+
+## 8. 联动更新（23:45Z）
+
+- A 线工具：`Mzk1DiagEquivProvedActual`（e'/map）、`Mzk1DiagQuotCardActual`（商/cardinal）、`Mzk1DiagVolumeProvedActual`（体积比）均 green；
+- SNF 工具：`Mzk1SNFToolActual`/`Mzk1BasisDetUnitActual`/`Mzk1SNFDiagActual`/`Mzk1SNFDiagEquivActual`/`Mzk1GLActActual` green；
+- `coord/XG-DIAGONAL-SOURCE-GAP.md §8–10` 已更新；剩余 GAP：一般 X_G GL_d(Z_p)-等价比（组合 SNF span + GL 保格 + det unit）、Ind1 桥反向。

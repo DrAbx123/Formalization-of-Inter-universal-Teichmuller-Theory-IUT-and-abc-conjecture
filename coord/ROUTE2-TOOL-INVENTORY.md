@@ -78,3 +78,13 @@ watchdog 证据（`dag/watchdog/watchdog.log`）：
 - HANDOFF：`D:/iut-audit-20261113/COR312-THREE-ROUTES-HANDOFF-20261113.md` §5.2–§5.6、§5.11–§5.13（更新后 1623 行版）。
 - 现有：`LeanFormal/IUT/Foundations/LocalFields/{IntegralTraceDualLattice,IntegralTraceDualTensorInclusion,DifferentTraceProduct,PadicLatticeIndexFormula,IntegralLogShellHaarIndex,FinitePadicHaarScaling}.lean`。
 - 新：`tmp/sheaf/xif/paper/Mzk1TraceDualVolumeActual.lean`。
+
+
+---
+
+## 联动更新（23:45Z，A 线完成）
+
+- SNF 工具 green：`Mzk1SNFToolActual`（Mathlib `Submodule.smithNormalForm`）、`BasisDetUnit`、`SNFDiag`、`SNFDiagEquiv`、`GLAct`；
+- φ 链 green：`Mzk1DiagEquivProvedActual`（e'/map）、`Mzk1DiagQuotCardActual`（商/cardinal）、`Mzk1DiagVolumeProvedActual`（体积比）；
+- 路线二对偶侧：`Mzk1DualTransposeActual`（X_G 列配对/comap）green；一般 X_G GL_d(Z_p)-等价比与 Ind1 桥反向仍 GAP。
+- 详见 `coord/XG-DIAGONAL-SOURCE-GAP.md §8–10`。

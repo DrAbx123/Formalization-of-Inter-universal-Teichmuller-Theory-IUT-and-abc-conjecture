@@ -102,3 +102,33 @@ GAP-C17-C20：C17/C19 已接；C18 仅乘性部分；C20 缺。
 1. 若 P6 继续：优先 (C20) 的 **product formula 对象**（全局位集、归一化 arch 因子）——它同时解锁 (C19) 的 paper 归一化版本与 §4 的 GAP-NORM-ARCH；
 2. (C18) 实例化：在 `RelativeCompletionFinrankReduction.lean:293` 与 `FinitePlaceCompletionNormTransport.lean:27` 之间建立 relative norm 的 `norm_norm` 实例（新对象=项目扩张/完成映射的 `IsScalarTower` 链）；
 3. (C13) 不变性：`Gal` 作用重排 `∏ σ` 的小引理，可放进本文件或后续 C-Norm 扩展。
+---
+
+## 8. P5-D 进展：(C13) Galois invariance（green）
+
+| field | value |
+|---|---|
+| Lean | `tmp/sheaf/xif/paper/Mzk1GaloisNormInvarianceActual.lean`：**watchdog DONE EXIT=0**（`watchdog.log` L204584，21:40:11Z，27s；olean 存在） |
+| 已证 | `galoisMulRightEquiv : Gal(L/K) ≃ Gal(L/K)`（右乘 σ 的群置换）；`norm_galois_apply_eq : Algebra.norm K (σ α) = Algebra.norm K α`（用 `Mzk1NormDeterminantToolsActual.norm_galois_product` + `Fintype.prod_equiv` 重排乘积） |
+| 剩余 | (C18) restriction-of-scalars 实例化（GAP-NORM-TRANS）——下一文件 `Mzk1NormFunctorialityActual` |
+## 9. P5-D 进展：(C18) norm functoriality（green）
+
+| field | value |
+|---|---|
+| Lean | `tmp/sheaf/xif/paper/Mzk1NormFunctorialityActual.lean`：**watchdog DONE EXIT=0**（`watchdog.log` L204623，21:45:33Z，29s；olean 存在） |
+| 已证 | `det_restrictScalars_eq_norm_det`：`LinearMap.det (f.restrictScalars R) = Algebra.norm R (LinearMap.det f)`（re-export `Norm/Transitivity.lean:180`，需 `[Algebra R S] [Module.Free R S]`）；`norm_norm_rel`：`Algebra.norm R (Algebra.norm S a) = Algebra.norm R a`（re-export `:202`） |
+| 剩余 | 项目级 restriction-of-scalars 实例化（GAP-NORM-TRANS）；arch 归一化进入 degree（GAP-NORM-ARCH）→ 下一文件 `Mzk1NormArchDegreeActual` |
+## 10. GAP-NORM-ARCH：arch-normalized degree（green）
+
+| field | value |
+|---|---|
+| Lean | `tmp/sheaf/xif/paper/Mzk1NormArchDegreeActual.lean`：**watchdog DONE EXIT=0**（`watchdog.log` L204650，21:48:57Z，59s；olean 存在） |
+| 已证 | `archNormalizedDegree c d`（有限部不变、arch 部乘 c）；`archNormalizedDegree_one`（c=1 回到 Example36 度）；`archNormalizedDegree_of_degree_zero`（零度 ⇒ `(c-1)·arch 和`）；`archNormalizedDegree_principalUnit`（全局单位主除子特化） |
+| 剩余 GAP-NORM-ARCH | paper 的 `1/[K:Q]` / `1/(2ℓ)` 与 `c` 的识别；arch 和 ↔ S2717/S2807 theta-hull 读数的桥仍缺 |
+## 11. GAP-NORM-ARCH 剩余：paper 因子字典（**watchdog DONE EXIT=0，21:56:02Z，62s**）
+
+| field | value |
+|---|---|
+| Lean | `tmp/sheaf/xif/paper/Mzk1NormFactorDictionaryActual.lean`：**watchdog DONE EXIT=0**（`watchdog.log` L204697，21:56:02Z，62s；olean 存在）；首轮 FAIL 为 `ring` 需先 `push_cast`（Nat cast 分母），已修 |
+| 可证（file:line） | `S3050StepVQExpansionActual:18-20 S3050Unit = -((-localNormOrder)/(2l))·log p` ⇒ 本文件 `S3050Unit_eq_paperCRoot_mul_logp`（paper c_root = order/(2l)）；`paperArchFactor l = 1/(2l)`；`archNormalizedDegree_paperArchFactor`（c=1/(2l) 模板，rfl）；principal-unit 特化（用 NORM-ARCH green 定理）；`T l` 定义 re-export（`Mzk1PrimeConductorRouteActual:58`） |
+| GAP-NORM-ARCH-C | paper 的 **`1/[K:Q]`** 因子未在树中找到实际对象；`c = 1/(2l)` 只是 q 侧 c_root，arch 侧的 `1/[K:Q]` 与 `T(l)`（Route-C 阈值，非 arch 因子）的关系未构造；精确缺口：arch 和 ↔ S2717/S2807 读数的 arch 归一化。 |
