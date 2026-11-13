@@ -708,3 +708,5 @@
 - 19:45：hull B6 rawV binding 更正要紧：paper V = s1915ClosedForm = **1 + normalizedLog**（a_i=d_b, β=1），故 V ≤ paperBox+1（C0=1，非 0）；#9 不能写 C0=0 DISCHARGED，应为 CONDITIONAL + C0=1 精确障碍。3 份文件入队（431 项）。
 
 - 19:48：P7-GAP-ATTACK-PLAN #9 更正 CONDITIONAL(C0=1)（paper V=1+normalizedLog）；不冒充 DISCHARGED。
+
+- 19:50：C3BlockMeasure 第二处 `have hp :=` 也缺 by（:77-79）已修并 retouch；TopologicalSpace 再 retouch（Equiv.olean 已存在，前次失败是依赖时序）。
