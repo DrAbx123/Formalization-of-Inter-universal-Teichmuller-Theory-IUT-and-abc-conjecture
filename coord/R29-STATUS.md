@@ -1126,3 +1126,5 @@
 - 23:36：shehdd P1/B5 大包全 green，P1 线归约到唯一缺失 `MissingLocalizedIsPrincipal I v`（inferInstance 失败，Mathlib 无 DVR/localization principal 实例）。已派 P1 收口大包：路线 A 局部化 f.g.+DVR IsPrincipalIdealRing（TFAE Basic:115）；路线 B 因子分解构造 generator；都卡则收成单一新缺失引理。
 
 - 23:32：**P0.5 半端到端里程碑**（hull）：P0NativeComparison GREEN 15:29:00Z（olean 45,704B；nativeComparison_of_theta_nonneg/LComparison 转移/theta_nonneg）；精确缺失 ①q alignment T→I source ②θ landing/归一化 ③P2 R1.2 整性。**P1 收口**（shehdd）：6 文件全 green + inferInstance 确认失败；唯一缺失收缩为 `DVRFGPrincipalLemma`(+LocalizedLineFG)，条件归约已写。已派 hull P0.5 下一阶段（攻 q/θ alignment 并接 abc QNativeSourceArrow）。
+
+- 23:40：**P1 收口线索（Lead 侦查）**：`tmp/external/ported/flt/FLT/DedekindDomain/AdicValuation.lean:559` 已有 `IsDiscreteValuationRing (v.adicCompletionIntegers K)`；配 `DiscreteValuationRing.Basic:115` TFAE ⇒ `IsPrincipalIdealRing (LocalRing)`，再配 `FractionalIdeal/Operations.lean:788` 的 `isPrincipal` 实例 ⇒ 若把 `localizedLine I v` 识别为 FractionalIdeal 的 coercion，`MissingLocalizedIsPrincipal` 可直接得。已派 shehdd 按此攻。
