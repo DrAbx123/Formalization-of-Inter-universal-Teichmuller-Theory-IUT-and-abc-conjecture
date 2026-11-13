@@ -565,3 +565,20 @@ red 全为新批次 WIP，分为两组：
 **本批已 green 的里程碑**：P0 native core/tensor consumer/tensor landing/migration rows/native equiv；P2 R1.3 相对质量差（`Mzk1P2RelativeMassActual`）、P2 det coefficient；P1 localized span/idealized count/principal valuation/R21 bridge/B5WithFv/contract evidence rows、P1 localized IsPrincipal/local generator/generator nonzero/B5 no-hproduct 行表；P3 六文件全 green；#10 native 六文件全 green。
 
 旧 C3 空类型语义提醒不变：旧 C3-typed 文件仅 historical/vacuous；当前有效路线 = P0 native + P1/P2/P3 C3-free 数学。P7 **NOT PASSED**。
+
+## §38 批量迁移后快照（2026-11-14 00:11 CST，Lead）
+
+| 分类 | 数量 |
+|---|---:|
+| extra-targets | **571** |
+| clean DONE | **540** |
+| red FAIL | **4** |
+| in-progress | 6 |
+| ole-only/prebuilt | 20 |
+| missing olean | 1 |
+
+red 清单（lane 自修）：`Mzk1P2ThetaAllowedImageActual`、`Mzk1P1DVRPrincipalLemmaActual`、`Mzk1P1LocalGeneratorActual`、`Mzk1P0LRegionPosActual`。
+
+已恢复/新增 green 覆盖：P0 六组件 + P0.5 alignment（q/θ 各一结论）、P0-L 六组件、P1 六文件 + IsPrincipal 突破 + LocalizedFractionalIdeal、P2 R1.3 + 路线二六文件、P3 六文件 + 净量四文件、#10 native 六文件 + NativeBadPrime + normalized unitMass 条件版。
+
+旧 C3 空类型提醒不变：C3-typed 文件仅 historical/vacuous；有效路线 = P0 native + P1/P2/P3 C3-free。P7 **NOT PASSED**。
