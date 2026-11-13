@@ -1306,3 +1306,5 @@
 - 05:52：mainline CountMul 重写为 proof（countExponent_pow/zpow/inv/self/pow_self 全由 Mathlib count_* 证；proof files=5）；stepxi 新 green P0LQReadoutSign（17:33:36Z：qReadActual_neg/qReadActual_eq_neg_localLogMagnitude）、P0LThetaMeasureRead（17:33:05Z：thetaReadActual_eq_logMeasure）；NormalizationSign/QThetaStrict 已修待编。
 
 - 05:56：shehdd `Mzk1P1GeneratorValuationRelationActual` DONE 17:33:06Z（ole 13,344B）——countValuationBridge_iff_spanGeneratorValuation + localValuation_eq_neg_count_of_bridge（count↔valuation 桥充要形式）；residue-one 已双向归约到单点 log-residue 等式（nativeBase+qVFam）。
+
+- 05:58：gate §43：**extra 823 = clean 648 + red 87 + inprog 26 + oleonly 20 + missing 42**。lattice 里程碑 proof=8/status=0，6 green（DetHaarDegreeFactor c=ofReal|detB|、BlockProductAlignment W/indexEquiv/factorEquiv、TensorCoreWitness、BadPrimeIff、RootExtensionCarrierRfl、ThetaRootCarrier）；ThetaRootCarrierHaar 补 open 待编、UnitMassNormalizedProof log 停在 1:24 待重抽。
