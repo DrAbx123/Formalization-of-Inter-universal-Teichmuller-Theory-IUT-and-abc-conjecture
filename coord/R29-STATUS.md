@@ -1717,3 +1717,5 @@
 - 02:20：**三个新 green（本人 verified）：`Mzk1A5MultiradialConsumerActual` 22:24:24、`Mzk1A1PadicSaturationBasesActual` 22:25:13、`Mzk1P1IdealMapPowerGeneralProofActual` 22:25:14（102s）**。general IdealMapPower 官方绿 ⇒ 三桥齐；已派 mainline 写 `IdealLocalizedCountStatement` + B5Index + retest B5 evidence；stage4 A1.6；hull Delta/correspondence；stepxi #4 文档。
 
 - 02:25：stepxi 整理 #4 最终消费文档 `coord/P7-MULTIRADIAL-CONSUMER-FINAL.md`（CapsulePosition 21:44:15 → Ind1Ind3Consumer 21:53:05 → MultiradialConsumer 22:24:24；Ind3 无条件；Ind1 fixed-place；一般 place 精确 shellEquiv gap 禁止 refl/toy），并同步 P7-MULTIRADIAL-GAP/A5-IND1-IND3-CONSUMER。
+
+- 02:30：mainline：general IdealMapPower GREEN（22:25:14，olean=True）确认；`Mzk1P1UniformizerPowerSpan` 用 `Subring.coe_mul`+`map_pow` 显式修；新 `Mzk1P1IdealLocalizedCountFinalActual.idealLocalizedCountStatement_proved`（三桥）；`Mzk1P7ContractB5Evidence` 补 `Mzk1C17QCANDResNormComapActual` import 后 retest；B5Consumer 22:25:12 green。hull：Correspondence 去 Final 依赖、本地定义 qhatLogReadout，`qhatHaarScaling` 唯一 factor 缺口。
