@@ -1821,3 +1821,5 @@
 - 06:50：abc 核对 #1：点态符号一致 `qhatLogReadout−paperQSignedReadout=log ratio`；但**全局权重不一致**——hull `nativeBadLocalWeight=1/f`，P2 `d_b=finrank=[L:Q_p]`；最终 #1 必须按 paper sums 权重选一并显式换算，不得混用。已派 mainline 报告 paper sums 权重定义、hull 拆点态/带权重全局式/换算、abc 写权重换算或记录不可混用。gate §20.32 已写。
 
 - 06:55：mainline 落盘 #1 条件版 `Mzk1P1NormalizedSourceConditionalActual`（`PaperSourceCorrectionFreeFields T → paperNormalizedThetaSum≤paperNormalizedQPilotSum`；S45 条件 docstring）。并确认 paper sums 权重=`nativeBadLocalWeight=1/f`、log 对象=`qVFamTensorP`；hull 用 `d_b`+`log(rootImageRadius)`，**不可直接等同**。已派 mainline/hull 写 bridge（1/f vs d_b、log 字典、coefficient degree factor、a1LocalQLog 归一化），S3137 读数形式暂不宣称。gate §20.33 已写。
+
+- 07:00：hull 写 `Mzk1P0QThetaReadoutDictionaryActual`（待编）：`qhatLogReadout=−c_norm log p`（norm agreement 下）、`log r=−c_norm log p/(2l)`、`d_b log r=(1/(2l))d_b qhatLogReadout`、`qhatLogReadout−paperQ=log ratio`。**警告**：`PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget` 虽 green，但依赖 model `PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog`（c_norm/(2l)），不能当 #1 收口。已派 hull 编译 dictionary 接 S3137 条件形式；mainline 继续 paper-faithful bridge；abc 只读核实并记 AUDIT。gate §20.34 已写。

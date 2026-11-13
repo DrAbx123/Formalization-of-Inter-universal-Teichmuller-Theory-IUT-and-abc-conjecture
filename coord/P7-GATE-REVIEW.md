@@ -627,3 +627,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **结论**：paper sums 与 hull product inequality **不可直接等同**：权重 1/f vs d_b、对数对象 `log qVFamTensorP` vs `log rootImageRadius` 均不同；需显式 bridge（`nativeBadLocalWeight_eq_inv` + coefficient degree-factor + log 字典 + a1LocalQLog 归一化）。
 - **新文件** `Mzk1P1NormalizedSourceConditionalActual`（queued）：`paperNormalizedComparison_of_sourceFields (S : PaperSourceCorrectionFreeFields T) : paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T`；docstring 标 S45 条件；S3137 读数形式暂不宣称。
 - **#1 状态**：已到 paper-normalized 条件版（S45），但 S3137 reading form 仍缺权重/对数 bridge。
+
+
+### 20.34 hull dictionary 与 model-target 警告（2026-11-15 00:00）
+- **hull `Mzk1P0QThetaReadoutDictionaryActual`（待编）**：
+  - q 侧（norm agreement 下）：`qhatLogReadout_b = −c_norm_b·log p_b`；
+  - theta 侧：`log r_b = −(c_norm_b·log p_b)/(2l)`（`Mzk1RootImageRadiusFormulaActual.log_rootImageRadius_eq_neg_coeff_mul_logp_div_twoL`）；
+  - 合并：`d_b log r_b = (1/(2l)) d_b qhatLogReadout_b`；全局 `s1915ClosedForm−1 = (1/(2l)) Σ d_b qhatLogReadout_b`（dictionary 文件目标）；
+  - `qhatLogReadout_b − paperQSignedReadout_b = log(qVFamNormRatio_b)`（norm agreement 下）。
+- **警告**：`PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget` 虽 green，但经 `PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog`（**model**：perBQ/theta 系数 c_norm/(2l)）证明；审计已标 model，**不得作为原文 3.12 收口**。
+- **#1 状态**：paper-faithful 路线 = `Mzk1P1NormalizedSourceConditionalActual`（S45 条件）+ paper sums↔S3137 字典/bridge；剩余缺口：norm agreement（P2QHatNormInstanceAgreement）、权重 1/f vs d_b、paper sums 与 S3137 读数的精确对应；S45 条件显式。
