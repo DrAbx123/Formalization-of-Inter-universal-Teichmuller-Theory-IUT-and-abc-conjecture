@@ -1220,3 +1220,5 @@
 - 03:26：流水线抽检：新 green 批次（P0-L SourceRows/PaperInstanceFinal/QThetaArrowFinal/NormalizationFactor/RegionOpen、P1 GeneratorNorm/PlaceLogVolumeIdentity 等）；red 多为依赖 olean 未建（CountMul←CountAdd）或 binder/Function expected 类。已按 lane 批量 relay 首错模式，要求逐绿接下游。
 
 - 03:30：lattice #10 19 文件已入队（744 项饱和，不冒充 green）；blockEquiv 阻塞=P3 core 只存在性 + C3 fiber 缺 Fintype/DecidableEq + E_j↔rootNormedExtension 未对齐。Lead 给路线：直接取 J=Bad(有 Fintype)/E=rootNormedExtension，P3 core 存在性给 block ≃ₐ ∏E，而 S1902Carrier 按定义即 ∏rootNormedExtension ⇒ 定义级组合；unitMass 用 ∏c_b。NativeBadModuliFixedPrime 保持 paper 输入。
+
+- 03:34：lattice 纠正 blockEquiv：P3 core 是 ∃ J E 不能指定，需 `BlockProductAlignmentData`（J≃Bad + 逐因子 E_j≃rootNormedExtension + AlgEquiv 兼容）。Lead 指出语义：qVFamTensorBlock 因子是 F completion，rootNormedExtension 是 2l 次扩域，维度不同 ⇒ 正路=定义 ThetaRootTensor := FinitePadicTensor(rootNormedExtension) → 与 S1902 product 对齐 → 再证与 qVFamTensorBlock 的显式度因子关系。要求继续第二波 20 文件不干等。
