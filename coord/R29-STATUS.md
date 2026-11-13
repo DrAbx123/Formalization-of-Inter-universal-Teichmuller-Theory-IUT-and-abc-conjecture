@@ -1629,3 +1629,5 @@
 - 22:00：lattice 新 `Mzk1IutIVProp14GroupCountBridgeActual`（`exists_h_card_gamma` + `volume_ratio_eq_pow_of_groupCount`），等 shehdd `isPGroup_logShellIntegerQuotient`/`card_gamma_eq_pow_actual` official 后把 h 设为实际 witness，P14ii 无条件化；未把 IsPGroup 当已证。
 
 - 22:10：**路线一第一检查点 GREEN：`Mzk1A1SourceGeneratorExpansionActual` DONE 21:21:43Z（98s）**——实际 q 生成元到 theta 源 hull 的四来源展开 machine-checked。另：`Mzk1PadicSaturationBasesActual` GREEN 21:21:38。A1SaturationBases 仍红待重编；已让 hull 按 §1.5 推源 q 格整体 ⊆ theta hull + 原目标读数，stage4 用 ℤ_p 基接口。shehdd GammaPGroup 等重编。
+
+- 22:15：shehdd 确认 `GroupCountInterfaceActual.olean` 存在（21:20:56Z），已 retouch `IutIVProp14GammaPGroupActual`（05:22:49Z）等依赖就绪后重编；绿后发 `card_gamma_eq_pow_actual` 签名给 lattice + 写 `torsion_card_eq_of_congruenceCard`。不冒充 official。
