@@ -1092,3 +1092,16 @@ SourceNativeInitialThetaData (T) + b : Bad (nativePlaceSelection T)
 
 - `NativeComparison : Prop := nativeQReadout T b ≤ nativeThetaReadout T b` 只是目标陈述，**未证明**；不冒充 P7 #1。
 - 下一步：把该比较接到 S3137/L-side q/θ 消费者（stepxi 负责 L-side），并逐项迁移 #1/#3/#8。
+
+## P0.5 — native comparison / L 对齐（2026-11-13 23:30）
+
+- GREEN：`Mzk1P0NativeComparisonActual`（DONE 15:29:00Z，77s，olean 已核）。
+- 实际定理：
+  - `nativeComparison_of_theta_nonneg : 0 ≤ nativeThetaReadout T b → NativeComparison T b`；
+  - `LComparison_of_nativeComparison`（显式 `hq`/`hθ` 等式转移）；
+  - `LComparison_of_theta_nonneg`。
+- 精确缺失（不新增 named input）：
+  1. `qVFamily T b` ↔ `concreteQCandidate I place` 的 T→I source identification（`NativeOriginalInputDonors`/place binding 已有接口，未从 P0 T 构造）；
+  2. L tensor Haar region ↔ native tensor Haar region 的 landing/normalization 等式；
+  3. P2 R1.2 系数整性（现有 unit-ball，非整性）；R1.3 `p2R13Exact_nonneg` 待 olean。
+- 文档：`coord/P0.5-COMPARISON-MAP.md`。

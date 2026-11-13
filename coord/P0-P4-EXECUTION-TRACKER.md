@@ -95,3 +95,15 @@
 - qpilot `NativeTensorConsumer`（14:59:15Z）+ `P0NativeConsumerP2`（15:22:21Z）与 qVFam tensor 接合。
 - **未达成**：`NativeComparison` 仅为 Prop（未证）——目标 q/θ 比较仍 OPEN；L-side 由 stepxi 负责。
 - 纪律：无旧 C3、无 IsEmpty、无新 axiom/sorry。
+
+## 里程碑 P0.5（半端到端，2026-11-13 23:31）
+
+- GREEN：`Mzk1P0NativeComparisonActual`（15:29:00Z，olean 45,704B）：`nativeComparison_of_theta_nonneg`、`LComparison_of_nativeComparison`、`LComparison_of_theta_nonneg`。
+- 精确缺失（无新 named input）：① q alignment（`qVFamily` ↔ `concreteQCandidate` 需 T→I source identification）；② θ alignment（L tensor Haar region ↔ native region landing/归一化）；③ P2 R1.2 整性（当前只有 unit ball；R1.3 `p2R13Exact_nonneg` 待 olean）。
+- 未无条件证明 comparison，不冒充 #1 DISCHARGED。
+
+## 里程碑 P1 收口（2026-11-13 23:31）
+
+- 原 6 文件全 GREEN；`inferInstance` 尝试 green 且确认失败（IsPrincipal 不能自动推断）。
+- 路线 A 新文件 `Mzk1P1DVRPrincipalLemmaActual`：单一缺失 `DVRFGPrincipalLemma : Module.Finite (LocalRing v) M → IsTorsionFree (LocalRing v) M → M.IsPrincipal` + `LocalizedLineFG`（后者可尝试由 Noetherian 消去）；`localizedLine_isPrincipal_of_dvrLemma` 条件归约已写。
+- 路线 B 卡同一缺口。P1 线 = 只剩 DVR 引理（+FG 输入）。

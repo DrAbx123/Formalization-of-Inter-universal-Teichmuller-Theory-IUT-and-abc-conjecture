@@ -1124,3 +1124,5 @@
 - 23:32：P0 里程碑后派 P0.5 大包（hull 自主）：NativeComparison 从 Prop → 可证或单一精确缺失；对齐 native readout 与 S3137/L-side 读数、映射到 paper q≤θ、接 P2 R1.2/R1.3 与 qpilot det 供体。
 
 - 23:36：shehdd P1/B5 大包全 green，P1 线归约到唯一缺失 `MissingLocalizedIsPrincipal I v`（inferInstance 失败，Mathlib 无 DVR/localization principal 实例）。已派 P1 收口大包：路线 A 局部化 f.g.+DVR IsPrincipalIdealRing（TFAE Basic:115）；路线 B 因子分解构造 generator；都卡则收成单一新缺失引理。
+
+- 23:32：**P0.5 半端到端里程碑**（hull）：P0NativeComparison GREEN 15:29:00Z（olean 45,704B；nativeComparison_of_theta_nonneg/LComparison 转移/theta_nonneg）；精确缺失 ①q alignment T→I source ②θ landing/归一化 ③P2 R1.2 整性。**P1 收口**（shehdd）：6 文件全 green + inferInstance 确认失败；唯一缺失收缩为 `DVRFGPrincipalLemma`(+LocalizedLineFG)，条件归约已写。已派 hull P0.5 下一阶段（攻 q/θ alignment 并接 abc QNativeSourceArrow）。
