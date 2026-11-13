@@ -1470,3 +1470,5 @@
 - 13:40：用户问“目前 P7 数学缺口在哪里”。已写 `P7-GATE-REVIEW.md §20.5` 清单：**A 真数学缺口 A1–A8**（A1 tensor/product BlockProductAlignmentData+measure-scale；A2 qhat norm 指数桥；A3 hull/procession 归一化接 native readout；A4 #3 residue-one=paper tame/split；A5 #4 multirradial production；A6 #9 disc=1∧cond=1 单点；A7 #10 NativeBadModuliFixedPrime paper 输入；A8 #2 canonical theta-label）；**B 纯工程缺口**（桥2 coercion/CountSide import/max-ideal change/port API 适配）；**C 外部/等价输入**（Cor312ToABCBridgeInterface≡abc、RootExtensionHaarDetScaling class-B、MO surrogate）。
 
 - 13:46：stage4 3/3 green：`Mzk1P3BlockProductAlignmentObstructionActual`（card W.J ≤ finrank block；card Bad > finrank ⇒ 无 W.J≃Bad ⇒ 无 BlockProductAlignmentData；等号情形仍缺逐因子识别）、`Mzk1P3HaarScaleFactorLogActual`（log mass 差 = log addHaarScalarFactor，measure-scale factor 精确识别）、`Mzk1P3ProductLogRatioActual`（productNormalizedLog_sub）。已写 P7 §20.6 A1 细化，并把 3 供体发 hull（#1 拼接）与 stage4（等号情形构造）。
+
+- 13:52：A1 等号情形路线已发 stage4：取实际 places/tuple，证 `ArithmeticTensorTupleBlock ≃ₐ ∏_{b:Bad} rootNormedExtension`（用有限 étale 分解唯一性/度数与根多项式，或退回 BlockProductAlignmentData 字段级显式构造；若对象不同则写精确子缺口）。另 HaarScaleFactorLog 可接 #10 det-Haar measure-scale。
