@@ -1683,3 +1683,5 @@
 - 00:50：巡检：**`Mzk1A1SaturationBasesActual` GREEN 22:04:26**（A1 链第三环）；`C17BothResidueFieldInputsGap` GREEN 22:04:25。尾错修法：qpilot BoxFormal 删重复行 34；shehdd Gamma 用 `Multiplicative.ofAdd 0` 避免 OfNat；mainline finprodExpand motive 用 `finprod_eq_prod...` 转 Finset prod；hull A1Delta:53/GlobalReadout:90 按 tail；lattice A1Padic 实例交 stage4/L-side。
 
 - 00:55：mainline 修 finprodExpand motive：`ideal_eq_finset_prod_maxPowDividing := (factorization hI).symm.trans (finprod_eq_prod …)`（无 tactic）+ 新假设形式 `ideal_map_eq_finset_prod_map_of_eq`（RHS 不含 I），原定理作推论；general `idealMapPowerStatement_general` 应直接过。
+
+- 01:00：shehdd Gamma `:47` 改为 `Multiplicative.ofAdd 0` + `← ofAdd_nsmul`/`← ofAdd_zero` + `eq_zero_iff`；lattice A1Padic 改 `ι : Type` 且 `[Module ℤ_[p] (rootNormedExtension)]` 作字段输入（交 stage4/L-side），不再硬造 compHom。
