@@ -898,3 +898,5 @@
 - 01:32：mainline DetLinePlaceB5Merged（finiteB5Part+finite_eq_placeLogVolume_sub+mergedLogDegree_B5）入队（472 项）；Ob33DetLineBridge 确认 green（12:41:14Z，58s）。派 qpilot 攻 local-global product formula（Ideal.absNorm 分解 API，可能可证→直接关 B5 汇总缺口）、hull 收尾 #5/#6/#9 文档核对、lattice 查 nativeBadToKPlace 的 prime 等式。
 
 - 01:36：hull 文档核对完成：P7 §13 #5/#6/#9 一致；#9 最终 spec 段已加（V=scaledClosedFormR=normalizedLog+1；general C0=1；paper regime C0=0；C0=0⇔slack≥1；一般 disc=1 OPEN；arch 归 #10）；10 份 olean 存在（GeneralFinal 131,080B 等）；AUDIT_LEDGER 已追加。
+
+- 01:40：lattice NativeBadPrime（NativeBadPrimeData p := ∀b completionRationalPrime(...)=p 单一 named input；给定后构造 FinitePlaceAtPrime + CommonPrimeCompletion 上 unit-mass product eq_one）入队（473 项）；来源核查 Bad 只是 Fmod 有限坏位、无固定 p 等式。
