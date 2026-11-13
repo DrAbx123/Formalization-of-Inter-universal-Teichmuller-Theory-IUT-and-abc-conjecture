@@ -1268,3 +1268,5 @@
 - 04:34：**LFI OFFICIAL GREEN！**`Mzk1P1LocalizedFractionalIdealActual` DONE 17:17:31Z（74s，olean mtime 17:17:30）——P1 keystone 关闭（`localizedLine_isPrincipal_actual` 的 official 版本落地）。已通知 shehdd 链式转 LocalGeneratorUncond/Span/Nonzero + mainline 恢复 LocalGenerator 真构造 → R21Bridge。
 
 - 04:38：lattice proof=5/status=0：TensorCoreWitness（17:07:47）、NativeBadPrimeIff（17:08:44）green；UnitMassNormalizedProof/RootExtensionCarrierRfl 已修待重抽；**新增 sharp 定理 `factorEquiv_finrank_eq` + `no_blockProductAlignment_of_finrank_ne`**（维度不同 ⇒ 无 BlockProductAlignment inhabitant）。Lead：不要旧载体找 Equiv；正路=定义 `ThetaRootTensor := FinitePadicTensor(rootNormedExtension)`（或 RootExtensionProductCarrier 为主对象）→ 与 S1902 carrier 定义级对齐 → 与 qVFamTensorBlock 的度因子关系交 P2 det-Haar。
+
+- 04:40：qpilot det-Haar 两 proof：`Mzk1GapDetHaarSNFSplitActual`（SNFMatrixSplit+snfMatrixSplit+exists_snfMatrixSplit，缺任意 GL_d 的 SNF basis 数据）、`Mzk1GapDetHaarAssemblyActual`（detHaar_map_of_factors 三因子组装代数核心；缺显式 SNF factor functions/c=‖det B‖ 识别）。watchdog 存活（16 lean、17:19 START、lock 2472）。
