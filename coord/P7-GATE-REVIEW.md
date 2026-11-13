@@ -358,3 +358,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **#6 THETA-D re-anchor（construction level, no C3）**：`Mzk1P3NativeDReanchorActual`——`thetaRootCarrier_eq_pi : ThetaRootCarrier = dependent product over Bad`（rfl）；`BlockProductAlignmentData` 记录唯一剩余构造（`J ≃ Bad`、`E_j ≃ rootNormedExtension (JEquiv j)`）。
 - **#1 Dupuy–Hilado log 分解（GREEN）**：`Mzk1P3DupuyHiladoLogActual`（`productNormalizedLogPerDim_weighted` = `E(ln μ/dim)` 加权平均）、`Mzk1P3ProductHaarPiActual`（productHaar=π、log=Σ）、`Mzk1P3ProductUnitBallLogActual`（unitBall log mass=Σ）、`Mzk1P3MeasureTransportLogActual`（measure_map/log_measure_map transport）、`Mzk1P3NativeTensorLogComparisonActual`（`logMass_eq_add_log_factor` det/度因子形式）。
 - 精确剩余：`BlockProductAlignmentData` inhabitant + NativeTensorLogComparison 的 measure-scale factor 识别；无新假设。
+
+### 20.4 更新（2026-11-14 12:38）：桥 2 实质通过 + max-ideal 最后一步重写
+- **桥 2 `localizedLine_eq_span_idealMap` 已通过**（per-file 首错只出现在下一个 theorem）：`localizedLine (J) v = span O_v (image of Ideal.map J)`，用 LFI `localizedFractionalIdeal_coe_eq` + Mathlib `FractionalIdeal.extended_coeIdeal_eq_map` + `coe_coeIdeal`。
+- `localizedLine_maxIdeal_eq_span_uniformizer` 已重写（桥 1 + `maximalIdeal_eq_span_uniformizer` + `le_antisymm` 双向），等重编。
+- 绿后：#3 的 max-ideal `CountValuationBridge`/`R21Bridge` 无条件 → IdealMapPower general I → B5Index 重接。
+- #10：`Mzk1RootUnitMassCitizen` green（rootUnitBallMass pos/lt_top/ne0/netop、normalizedRootUnitBallMass_eq_one）；新 `Mzk1BlockAlignmentCard`（BlockProductAlignmentData 存在 ⇒ card J = card Bad，必要 cardinality 条件）。

@@ -1442,3 +1442,5 @@
 - 12:24：桥 2 首错：`:61:40 Invalid argument name pi`（引理 binder 是 Unicode `π`，去掉命名参数/用位置或 hπ）+ `:53:80 unsolved goals`（span/Ideal.map coercion 需显式 le_antisymm/change）；已发 mainline。其余新 green：B5CountLocalValuationBridge 18:58:28Z、P3NativeDReanchor 18:58:33Z、P1LocalGeneratorFromIsPrincipal 18:59:08Z、Ob33B5CountBridge 18:59:10Z、Ob33B5Assembly 18:59:11Z（import 剪枝生效）。
 
 - 12:32：调度（每秒巡检）：桥 2 两错已修待重编；B5/C17 的 `import import` 是旧日志（源码当前无）；已唤醒 mainline/hull/shehdd/qpilot/stage4/lattice/stepxi 下一波：#1 接 stage4 供体、#4 C3Free、#6 BlockProductAlignmentData inhabitant/measure-scale、#10 unitMass/blockEquiv、port 6 pending。
+
+- 12:38：**桥 2 实质通过**（`localizedLine_eq_span_idealMap` PROVED；`localizedLine_maxIdeal_eq_span_uniformizer` 重写+等重编）；桥 1/2 完成后 max-ideal CountValuationBridge/R21Bridge 无条件 → IdealMapPower general I → B5Index。lattice #10 `RootUnitMassCitizen` green（rootUnitBallMass pos/lt_top/ne0/netop、normalizedRootUnitBallMass_eq_one）+ 新 `BlockAlignmentCard`（card J=card Bad 必要条）；shehdd B5/C17 3 新 proof（FiniteIndexDataDiagonalBridge 双向闭环、C17ResNormDegreeGapNativeEqQFam、IdealMapPowerMaximalApply）。
