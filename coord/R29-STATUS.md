@@ -1368,3 +1368,5 @@
 - 09:12：发现机械错误：shehdd 的 5 个文件出现 `import import ` 双前缀（B5FiniteIndexExpansionIff/C17ResidueOneBothSides/C17ResNormDegreeGapOfResidueOne/P1GeneratorValuationSignIff/P1PlaceVolumeZero，共 12 处），已发修法；Mzk1Ob33B5IndexActual 文件内 PlaceSNFData 重复定义待删重复。P1CountIdealMapPower 仅等桥 1 olean。
 
 - 09:18：调度：bridge1 真首错 `:20:56 Unknown identifier LocalRing`（加 open PaperDeterminantLogVolume/全限定）已发 mainline；GapDetHaarMatrixSplit 真错 `:20 No goals to be solved` + `:27 isUnit_prod.mpr unknown` 发 qpilot；P2ComparisonChain `:8 Function expected`/`:14 not def-eq` 发 abc；shehdd 修好 import import×12 + Ob33 import cycle。已唤醒 mainline/hull/abc/lattice/stepxi。lattice unitMass NormalizedProof green（18:04:11Z）、ThetaRootCarrierHaar olean True（18:03:19Z）。
+
+- 09:22：mainline 桥 1 已推进到最后一步：uniformizer/hmax 通过，剩 forward inclusion coercion；修法=先 `rw [← hmax]` 回 maximalIdeal、`change … ∈ completionIdeal`，再 `mem_completionIdeal_iff → algebraMap_completionIntegers → valuedAdicCompletion_eq_valuation → valuation_of_algebraMap → intValuation_lt_one_iff_mem`。等桥 1 绿后接 `P1CountIdealMapPower`/R21Bridge。
