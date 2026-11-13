@@ -832,3 +832,5 @@
 - 23:12：mainline DetLinePlaceB5Arch（archCKForK=1/[K:Q]、rfl 级 heightWeight、hArc_nonneg_for_K、mergedLogDegree+nonneg）入队（461 项）；P7-CONTRACT-MAP §6 记录第 4/5 步。
 
 - 23:16：**C0GlobalIdele GREEN**（stepxi DONE 12:37:34Z，67s，ole 94,240B，trio）：c0GlobalFinite(bad-lift=q_v else 1)、c0BadComponent、C0GlobalIdele(arch=1)、arch_one。剩 c0FiniteBadConsistencyGap（Classical.choose dependent cast）与 idele→height/readout。已给 choice+lift 单射+dif_pos 的证明模式。
+
+- 23:20：三红 relay：Ob33DetLineBridge :77（目标已展开，先 change 到 OfBadPrimes 再 rw）、A5 :44/:51（Fact Prime/NeZero 实例 + 严格正用 exact_mod_cast Fact.out Prime.pos）、Ob33ArchMetric :99（回归，新改动引入 rw 模式不匹配）。
