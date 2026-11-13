@@ -1831,3 +1831,5 @@
 - 07:15：mainline 更正 `radius_log` 不可成立（`rootImageRadius=sup_j‖rootNormedElement‖^{gaussExponent}`）；hull 已找到绿色供体 `S201RootThetaNormLActual.rootNormedElementNorm_pow_twoL` + `rootNormedThetaValueInL_norm`，故 `rootNormedLogVolume=(1/(2l))log‖q‖` 可证、`theta_root_log` 不是新源缺口。bridge 三字段改为 `theta_root_log`/`degree_tower`(finrank_mul_finrank)/`a1_delta_paper`；mainline 重写文件。gate §20.37 已写。
 
 - 07:20：**`theta_root_log` 正式由 S709+S201 供体给出**（`Mzk1P1RootRadiusBridgeActual`：`log r=-(c_norm/(2l))logP`、`rootNormedLogVolume=(1/(2l))log‖q‖`），不再列源输入。bridge 只剩 `weight_conversion`（degree tower）与 `a1_delta_paper`；S3137 form 仍显式依赖 S45 + norm-instance agreement。gate §20.38 已写。
+
+- 07:25：**权重语义更正**：`localCompletionDegree=[K_w:F_v]=e·f`（总局部次数），故 paper weight=`1/[K_w:F_v]=1/(e·f)`，之前 1/f 作废；`s1915LocalDegree=[L_b:Q_p]`，degree tower `d_b=n_b·[K_w:F_v]`。新 `Mzk1P1WeightA1BridgeActual`（rfl 语义 + degree tower）+ a1Delta 展开落盘；bridge 只剩 S45 + norm-instance agreement 两项显式。已派 mainline 合 bridge/写 S3137 条件版、hull 改 dictionary 权重、abc 更新 ledger。gate §20.39 已写。

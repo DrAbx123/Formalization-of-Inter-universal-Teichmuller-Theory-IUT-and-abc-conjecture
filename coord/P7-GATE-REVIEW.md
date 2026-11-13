@@ -667,3 +667,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - ⇒ `theta_root_log` **不再是源输入**；`PaperToS3137BridgeData` 的旧 `radius_log` 错误字段由这两条替换。
 - **bridge 剩余**：`weight_conversion`（degree tower：`s1915LocalDegree = localCompletionDegree × rootDegree`，`Module.finrank_mul_finrank`；并澄清 `nativeBadLocalWeight=1/?`）、`a1_delta_paper`（`a1SignedTerm_eq_log_radius_sub_delta` + 新 log r 公式展开）。
 - **#1**：S3137 reading form 的 bridge 进一步缩小；仍显式依赖 S45 `PaperSourceCorrectionFreeFields` 与 norm-instance agreement。
+
+
+### 20.39 更正权重语义：paper weight = 1/[K_w:F_v] = 1/(e·f)，不是 1/f（mainline，2026-11-15 00:30）
+- **`localCompletionDegree`**（`ProcessionNormalizationWeightsActual:49`）= `Module.finrank ((comap w).maximalIdeal.adicCompletion Fmod) (w.maximalIdeal.adicCompletion K)` = **[K_w:F_v] = e·f（总局部次数）**；
+  ⇒ `nativeBadLocalWeight = 1/[K_w:F_v] = 1/(e·f)`（paper normalized weight），之前的“1/f”表述作废。
+- **`s1915LocalDegree = [L_b:Q_p] = finrank(rootNormedExtension)`**；degree tower：`[L:Q_p] = [L:K_w]·[K_w:F_v]`，中间因子 `n_b=[L_b:K_w]`（`Module.finrank_mul_finrank`）。
+- 新文件 `Mzk1P1WeightA1BridgeActual`（queue）：`nativeBadLocalWeight_eq_inv_total_local_degree`（rfl）、`s1915LocalDegree_eq_finrank`（rfl）、degree tower 语义。
+- **a1Delta 展开**（新定理）：`a1Delta = −((c_norm/(2l))log P) − (1/d)(log μ(c0Q)−log μ(unitBall))`（`a1Delta_eq_log_radius_sub_signedTerm` + 新 log r 公式）。
+- **bridge 剩余**：S45 条件 + norm-instance agreement（两项显式）；权重差用 degree tower 说明，不再写错误 1/f。
