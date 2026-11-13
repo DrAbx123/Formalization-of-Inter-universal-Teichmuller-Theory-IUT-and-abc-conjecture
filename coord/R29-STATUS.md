@@ -1026,3 +1026,5 @@
 - 23:00：qpilot FullProductFormulaCount 入队（492）：finite_log_sum=-∑count·log absNorm、arch_log=+∑count；stage4 B4 norm 直接证法重写并 retouch。mainline NormBridges :10 语法错误（stray identifier）致 :50/:51 连带，已 relay。
 
 - 23:06：B4 仅剩 :80（Set coercion vs Submodule 成员，rw pattern 不匹配）→ relay `change ... ∈ Submodule.span ...` 再 rw；改完应绿。
+
+- 23:10：qpilot count 公式 goal 修法 relay（rw hlog → hnorm_eq → log_absNorm_eq_sum_count_mul_log(span{x}) → ring）；B4 change 已加待重编。
