@@ -542,3 +542,5 @@
 - 08:58：stepxi P5AxiomAudit 首轮观察完成：全部打印项仅 [propext, Classical.choice, Quot.sound]（无 sorryAx）；补 open BridgeIntegrationActual 后待 DONE。P5-ACCEPTANCE 已加 Axiom audit log 节。
 
 - 09:01：BaseChange :388 zero 分支改 `exact subset_closure ⟨0, map_zero _⟩`；retouch。
+
+- 09:05：BaseChange :388 换写法（显式 f 的 Set.mem_range_self + simpa map_zero）并 retouch；若仍 stuck 交 mainline 另证 zero 分支。abc Quantity 第五轮 prod_pos 修复已 retouch。
