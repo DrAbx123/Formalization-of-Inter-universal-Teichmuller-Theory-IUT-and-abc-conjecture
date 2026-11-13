@@ -219,3 +219,13 @@
 7. **#10**：blockEquiv inhabitant = `BlockProductAlignmentData`（现有必要维度条件 `factorEquiv_finrank_eq`；W.E=base completion vs rootNormedExtension 的维度/同构字段）；`unitMass=1` 归一化（用 normalized scalar + det-Haar）。
 8. **旧 C3**：所有 C3-typed 文件 vacuous/historical（S1429 空类型）；P0 native/论文输入包为有效锚点。
 9. **验收层**：abc 端到端未闭合；target_accepted/独立审查/comparator NOT_RUN；P7 NOT PASSED。
+
+## P1 里程碑：generator 真构造 PROVED（2026-11-14 04:52）
+
+- `Mzk1P1LocalGeneratorActual` 真构造（用 official LFI `localizedLine_isPrincipal_actual`）：
+  - `localGenerator := Submodule.IsPrincipal.generator (localizedLine I v)`；
+  - `localGenerator_span : span {generator} = localizedLine`（`span_singleton_generator`，PROVED）；
+  - `localGeneratorDataOfIsPrincipal : LocalGeneratorData I v`（CONSTRUCTED，无假设）；
+  - **`localPrincipalGenerator_proved : LocalPrincipalGenerator I v`（PROVED，无假设）**。
+- 里程碑：proof=4（uniformizerData/valuation_uniformizer/countAdd/localPrincipalGenerator_proved）+ 桥 1 attempt；
+- P1 剩余：桥 1（`Ideal.map v.asIdeal = completionIdeal`，上游 `intValuation_exists_uniformizer` 的 K 参数已修）→ countIdealMapPower → R21Bridge；residue-one 归约到 `localResidueDegree = 1`。

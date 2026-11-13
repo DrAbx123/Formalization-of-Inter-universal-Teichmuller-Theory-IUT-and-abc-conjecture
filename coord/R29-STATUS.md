@@ -1274,3 +1274,5 @@
 - 04:44：lattice 纠正 ThetaRootTensor(张量积)≠S1902Carrier(函数积)，写 `Mzk1ThetaRootCarrierActual`（RootExtensionProductCarrier 为正确 product 载体；thetaRootCarrier_eq_s1902Carrier rfl、thetaRootCarrierEquiv 真构造）；下一波 unitBall/Haar 传输 + root product normalized unitMass + det-Haar 度因子。mainline 桥 1 上游首错：`intValuation_exists_uniformizer` 无 K 参数（去 `(K:=)`）；Mathlib olean 读失败为环境 I/O（文件已核存在）会连带假错。
 
 - 04:50：lattice proof 新增 2（total 7/status 0）：ThetaRootCarrierHaar（unitBall_mem_iff/ productHaar_eq rfl/ normalizedUnitMass_eq_one conditional）、DetHaarDegreeFactor（detB,c,c=ofReal‖detB‖ 接口）；stage4 P3 milestone proof=11/status=1（netQuantity 恒等/负例、netQuantity_p2_nonneg、p2R13Exact_eq_sum_blockTerms、R37R13NativeMassIdentification_iff_coefficient；唯一剩余=p2NativeProductBlockMissing/q reading/tensor log-volume/det donor）。已重发 mainline/shehdd generator 真构造消息。
+
+- 04:52：**P1 里程碑：`localPrincipalGenerator_proved : LocalPrincipalGenerator I v` PROVED（无假设）** + `localGenerator_span`（official LFI 路线）；LFI keystone 与 generator 均关闭。桥 1 上游 `intValuation_exists_uniformizer` 的 K 参数已修。已让 shehdd 避免重复 generator，转 B5 hproduct/count 支援/residue-one。**DAG_MAX 调至 12 并重启 watchdog**（用户指定；8 已试，12 现运行、lean=12）。
