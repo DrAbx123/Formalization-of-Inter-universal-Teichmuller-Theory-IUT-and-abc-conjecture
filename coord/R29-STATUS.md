@@ -1056,3 +1056,5 @@
 - 23:14：**B4 GREEN**（stage4 Mzk1CanonicalDiagUncondFinalActual DONE 14:44:03Z，53s）——无条件 `canonical_diag_volume_ratio_uncond`（绕开 diagHomeo image bridge）⇒ **B4 image bridge GAP 可删**。已派 stage4 更新 P7/XG/AUDIT/task-87；hull 准备 gate §35 FINAL（预期 clean 473 + ole-only 20 = 493，red 0）。NormZpow 仍红待查。
 
 - 23:20：NormZpow hexp 精确证明 relay（localValuation; exp_inj.mp; exp_log + ←coe_unzero; cases unzero with ofAdd => rfl），替换 :45-47。
+
+- 22:48：NormZpow 源码未落盘（mtime 22:44:13 早于 relay），已提醒 mainline 写 hexp 段并保存；已 retouch。
