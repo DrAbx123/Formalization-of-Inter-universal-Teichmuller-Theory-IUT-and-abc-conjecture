@@ -540,3 +540,5 @@
 - 08:57：qpilot FLTCompletionInput（乘性公式+FLTCompletionFinrankInput+归约）入队（374 项）；BaseChange :388 已修 retouch。
 
 - 08:58：stepxi P5AxiomAudit 首轮观察完成：全部打印项仅 [propext, Classical.choice, Quot.sound]（无 sorryAx）；补 open BridgeIntegrationActual 后待 DONE。P5-ACCEPTANCE 已加 Axiom audit log 节。
+
+- 09:01：BaseChange :388 zero 分支改 `exact subset_closure ⟨0, map_zero _⟩`；retouch。
