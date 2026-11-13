@@ -496,3 +496,5 @@
 - 08:10：stage4 GeneralSNFVolume 降级为 SNF 商 cardinal（一般体积比 A2 桥留 GAP；对角情形已 green）；XGGLFinal 重写自包含待编。
 
 - 08:12：**hull 重要更正**：QPilotLineActualConstruction 已有 paperQPilotObjectActual 条件构造器 + 实际 C2 ⇒ P 的条件 inhabitant 已可填；真正剩余 = NativeC1PaperSource + donor D + input alignment（P.input vs S2711I V 类型不同）。5 份新文件（ActualInhabitantOfPacket/C2Closed/StripOneColumnClosed/ResidualInputs/InputMismatch）入队（360 项）。FLT ModuleTopology 改用 `IsTopologicalAddGroup.ext_iff` + letI moduleTopology 实例，retouch。
+
+- 08:13：stage4 唤醒（A2 桥 Submodule→AddSubgroup、U/W 显式矩阵、GL 传递、X_G→SNF 对角，5-10 份）；stepxi 唤醒（P5 验收文档 + internal consistency 实例检验）；FLT ModuleTopology 新修复待重新编译。
