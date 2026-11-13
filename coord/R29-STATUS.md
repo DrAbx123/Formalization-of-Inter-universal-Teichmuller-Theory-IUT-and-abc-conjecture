@@ -1336,3 +1336,5 @@
 - 06:50：**查明 Mestre–Oesterlé 不在当前目标链上**：`Mzk1SignedCor312ContractActual` closure=3（仅 StepXI.Contract，无 Mestre）；`Mzk1Paper312StatementActual` closure=353（无 Mestre）；仅旧 §12.2 骨架 `Mzk1TargetReductionActual`（closure 757）/`Mzk1PrimeConductorRoute`/`Mzk1DExactLower`/`Mzk1ThetaDataLegality`/`Mzk1L7*`/`Mzk1P3*` 含 `MestreOesterleBound`（显式 hMO 条件）。已写入 tracker。
 
 - 06:52：stage4 P3 wave milestone：15 green（MassLambdaQhat/LogMassRegion/R37Net/TraceDualityCoefficientNumeric/CoreScalingExplicit/DomainTrace/NetBound/SourceComparisonAttempt/HaarMassLog/TensorProductMass/P2Alignment/ReferenceMass/CorrectionsNumeric/SNFMass/DetNet/MassIdentification）+ 6 小文件 pending retry。关键定理：R37R13NativeMassIdentification_iff_coefficient、p2Alignment_nativeLogVolume/detNonpos、sourceComparison_of_native_block、domainTraceCoefficient_projection、log_tensorProductMass、snfMassRatio_pos、detNet_le、r37Net_eq_log_ratio。
+
+- 07:56：**用户口径**：MO 输入能用就用，最后形式化；不要能用但不用。已建 `coord/MESTRE-USE-DIRECTIVE.md`；派 mainline 逐项判定当前活动缺口可否消费 `MestreOesterleBound`（thetaR13Defect/NativeComparison/R21Bridge/IdealLocalizedCount/residue-one/det-Haar/arch/R37R13/blockEquiv/unitMass），能接线就写显式 hMO 小文件，不能则写精确非适用性说明。
