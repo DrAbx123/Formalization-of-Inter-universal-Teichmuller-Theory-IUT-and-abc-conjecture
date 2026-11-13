@@ -956,3 +956,5 @@
 - 21:47：shehdd B5CountBridge 首错 relay（:73 No goals 删行；:90 rw 需 conv_rhs/simp only + ring，因 localValuation 在负号内部）。stage4 Cancel 已改 import S3137ThetaHullVolumeScalingActual 待重编。
 
 - 21:50：**shehdd B5CountBridge GREEN**（13:36:29Z，53s，ole 152,688B）：relativePlaceIndex=-countH+countO、num/den 展开、placeLogVolume 差公式；MissingQPilotLocalGenerator 精确接口写入 P7 §18.1。
+
+- 21:41：Cancel 根因再补充：thetaPilotHullLogVolumeReal **定义**在 S3137QThetaPilotLogVolumeReadingsActual:128（不是 Scaling 文件），需 import/open 该 namespace；已 relay stage4。
