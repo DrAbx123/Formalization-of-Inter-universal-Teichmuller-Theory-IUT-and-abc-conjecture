@@ -548,3 +548,5 @@
 - 09:07：hull 5/5 green（ActualInhabitantOfPacket 00:23:35Z、C2Closed 00:12:18、StripOneColumnClosed 00:23:34、ResidualInputs 00:05:48、InputMismatch 00:27:09）——**PActual 条件 inhabitant 已实际构造**；剩 NativeC1PaperSource packet+donor D+oneColumn actual(S366)+input alignment。
 
 - 09:09：shehdd gate §24（372/clean337/red15）；BaseChange 报错清单为旧 run 交错；已确认文件含我的两处修复（:388 zero 显式 f、:766 finrank_of_isFractionRing）；**把 BaseChange 交给 shehdd 接力修**（避免 lead 编辑冲突）。
+
+- 09:11：qpilot WeightDegreeOneFinrank（FLTCompletionFinrankInput+finrank=1⇒weight=1，不 import FLT）入队（375 项）；BaseChange 由 shehdd 接力（已告知 qpilot）。

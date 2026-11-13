@@ -372,3 +372,4 @@ tmp/sheaf/xif/paper/Mzk1GeneralSNFVolume2Actual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalSNFDetActual.lean
 tmp/sheaf/xif/paper/Mzk1P5AxiomAuditActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FLTCompletionInputActual.lean
+tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneFinrankActual.lean
