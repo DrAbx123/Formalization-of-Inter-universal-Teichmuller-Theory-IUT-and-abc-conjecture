@@ -664,3 +664,5 @@
 - 20:25：**GAP-PC-AGREE-RAM/FIELD 关闭**（mainline Mzk1P3AgreeFLTActual DONE 11:13:10Z，43s，olean True）：`localRamificationIndex_eq_relativeRamificationIndex`（FLT BaseChange:685）、`localInertiaDegree_eq_relativeResidueDegree`（:721）、`localDataAgreesWithPlaceData_of_implies`；GapLedger 改 PROVED via FLT、P3-EXACT-REDUCTION §15 新 GAP 树（只剩 FINITE/RESNORM 子缺口/WEIGHT 的 FINITE/UNRAM 子缺口）。mainline 下一步接 BadCharPipeline + P7 #8 CONTRACT；qpilot/shehdd 更新 weight 链假设。
 
 - 20:27：mainline 2 份（AgreeIntegration 去 hagree + P7ContractMap 12↔GAP/7↔GAP/条件装配 p7_conditional_contract）入队（409 项）；P7-CONTRACT-MAP.md 文档已写。
+
+- 20:29：hull #5 四层（Raw/Normalized/ScaleOffset/FourLayers）+ #6 实际 C3DKeyMap（actualDonorC3=S2717C3 字段）入队（414 项）；Dictionary/Composite 再 retouch。
