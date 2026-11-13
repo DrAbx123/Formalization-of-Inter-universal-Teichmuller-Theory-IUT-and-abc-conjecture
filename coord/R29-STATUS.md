@@ -1193,3 +1193,6 @@
 - 01:50：abc P2 批量 6/6 green（RelativeMass/R13vsC0/LabelBlockComplete/QNativeSourceArrow/ThetaAllowedImage/WeightedSum）。**Lead 发现 `P2QNativeReadingGap` 陈述可能符号 bug**：p2NativeQMagnitude=localLogMagnitude=-log‖q‖（正），p2RootQhatMagnitude=log‖c0QHat‖=log‖q‖（负）⇒ 原等式为假（除非 q 范数=1）；正确应为 `p2NativeQMagnitude = -p2RootQhatMagnitude`。已让 abc 用 `norm_algebraMap'`+`c0QHat_eq_q` 证正确形式并修陈述/rows/docs（修正答案而非改题目）。
 
 - 01:55：**P2 rank-one GREEN**：`Mzk1P2RankOneChainActual` DONE 16:24:28Z（ole 210,904B，p2RankOneBlockEquiv/条件 isometry/logVolume=nativeThetaReadout/R13 nonneg/arch criterion/RankOneComparisonCandidate）；`Mzk1P2DetHaarActual` DONE 16:25:20Z（status/gap，detHaarMissing 三步+donors）。Lead 给 det-Haar 更短路线：Haar 唯一性 + 在 coordLattice 上算 c + U/W 保 lattice + B4 对角比 + FinitePadicHaarScaling 标量 ⇒ 无需 normalization 桥。
+
+- 02:30：**P1 里程碑**：`Mzk1P1PrincipalValuationProofActual` DONE 16:25:27Z（40s）——`principalValuationStatement_proved : PrincipalValuationStatement` **整体关闭（非条件）**。P1 剩 IdealLocalizedCount + generator 构造；已唤醒 mainline 攻 IdealLocalizedCount/R21Bridge，qpilot 落 det-Haar 短路线 `Mzk1P2DetHaarProofActual`。
+- gate 快照：extra 589 clean 561 red 5（P1DVRPrincipalLemma/P0LQThetaComponent/P0LRegionNonempty/NativeUnitMassNormalizedFactor/P3MassIdentification，均 WIP）+ inprog 2 + oleonly 20 + missing 1。
