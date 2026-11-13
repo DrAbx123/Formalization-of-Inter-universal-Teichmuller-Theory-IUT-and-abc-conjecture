@@ -1444,3 +1444,5 @@
 - 12:32：调度（每秒巡检）：桥 2 两错已修待重编；B5/C17 的 `import import` 是旧日志（源码当前无）；已唤醒 mainline/hull/shehdd/qpilot/stage4/lattice/stepxi 下一波：#1 接 stage4 供体、#4 C3Free、#6 BlockProductAlignmentData inhabitant/measure-scale、#10 unitMass/blockEquiv、port 6 pending。
 
 - 12:38：**桥 2 实质通过**（`localizedLine_eq_span_idealMap` PROVED；`localizedLine_maxIdeal_eq_span_uniformizer` 重写+等重编）；桥 1/2 完成后 max-ideal CountValuationBridge/R21Bridge 无条件 → IdealMapPower general I → B5Index。lattice #10 `RootUnitMassCitizen` green（rootUnitBallMass pos/lt_top/ne0/netop、normalizedRootUnitBallMass_eq_one）+ 新 `BlockAlignmentCard`（card J=card Bad 必要条）；shehdd B5/C17 3 新 proof（FiniteIndexDataDiagonalBridge 双向闭环、C17ResNormDegreeGapNativeEqQFam、IdealMapPowerMaximalApply）。
+
+- 12:42：stepxi milestone：5 新定理绿（QThetaStrict qReadActual_strict_below_theta_of_theta_nonneg 18:20:57Z；NormalizationJoint lThetaNormFactor_gt_theta/pos_of_theta_nonneg 18:20:29Z；QThetaJointSign qReadActual_lt_theta/le_theta_of_theta_nonneg 18:27:45Z）；Consumer finals 已标 RE-EXPORT 不计 proof；P7 C3Free 简化为 P0 core+ThetaRootCarrier inhabitant（rootChange/kummer 进 missing 清单），P2Data 修 opens，待编。
