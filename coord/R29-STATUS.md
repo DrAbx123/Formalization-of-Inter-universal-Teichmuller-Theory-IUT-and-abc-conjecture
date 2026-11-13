@@ -1312,3 +1312,5 @@
 - 06:00：qpilot det-Haar milestone：2 green（GapDetHaarSNFSplit/SDetHaarDegreeFactor）+ 依赖链 retouch（GapDetHaarAssembly/DegreeIdentification）+ 新写 GapDetHaarMatrixSplit（det_eq_mul_prod_mul_of_split/isUnit_det_of_split/norm_det_eq_mul_prod_mul_of_split/snfMatrixSplit_det）；GAP-DET-HAAR 最后两步=matrix-level SNF 构造、diagonal factor 识别。已唤醒 shehdd/stepxi 下一波。
 
 - 06:04：hull P0.6 里程碑 **8 proof GREEN / status=0**：NativeLSide、NativeThetaBridgeProof、NativeQBridgeProof、NativeReadoutPair、NativeComparisonNonneg、NativeComparisonR13、**NativeThetaR13Bridge**（17:33:08Z）、**PaperInputV**（17:34:51Z，ole 54,576B：PaperInputV l + LPaperInstance_of_paperInputV）；待重编 5（PaperInputVConsumption/Final、ThetaR13Defect/Chain/Bound，依赖已绿）。Defect 证书：Bridge↔defect=0；defect≤thetaReadout；defect≥0⇒comparison（defect≤0 不成立）。
+
+- 06:08：shehdd 下一波 5 proof（B5FiniteIndexExpansionIff：FiniteIndexExpansion↔B5ProductFormulaBridge 在 arch=0；C17ResNormDegreeGapOfResidueOne；C17ResidueOneBothSides；P1PlaceVolumeZero；P1GeneratorValuationSignIff）+ GeneratorValuationRelation official green。
