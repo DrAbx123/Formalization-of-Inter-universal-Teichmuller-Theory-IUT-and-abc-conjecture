@@ -878,3 +878,5 @@
 - 00:42：qpilot #2 label 对照结论：`badRationalPrime : Bad→ℕ`（residue-prime 投影）与 `S3136WeightedAverageLabelMappingActual.lgpThetaLabelCollectionTerm : SignedLabel l.value→ℕ`（theta label j² collection 权重）定义域/语义不同，T.arithmetic 无 canonical `Bad→SignedLabel`；只有显式 pullback 才能接权重——精确 GAP 已写入 P7 §13 #2，不新增文件。
 
 - 00:46：abc #8 消费者入口 Mzk1P7ContractMarginConsumer（comparison_of_margin_one、margin_one_theta_sub、p7_conditional_contract_of_margin_one/_of_hullQDictionary、margin7Rows+length；codes_eq:True 仅占位不冒充）入队（468 项）。stage4 B2 本地重建 hblocks 修 Classical.propDecidable vs 显式实例 mismatch 待重编。
+
+- 00:54：**B2 GREEN**（stage4 P7ThetaDegB2 DONE 12:54:15Z，35s：域分解 block=ΣE_j + packet=ΣtupleΣj）；**HullUBC0Absorption GREEN**（12:53:24Z，68s：paper regime C0=0 DISCHARGED，ole 231,984B）；**C0GlobalIdele 精炼 GREEN**（stepxi 12:53:22Z，66s，ole 149,472B：definitional bad 分量，consistency gap 消除）。
