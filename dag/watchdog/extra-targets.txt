@@ -429,3 +429,4 @@ tmp/sheaf/xif/paper/Mzk1P7ThetaDegB2Actual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBPaperVRawBindingActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBPaperVRawUpperActual.lean
 tmp/sheaf/xif/paper/Mzk1HullUBB6RowsActual.lean
+tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeActual.lean
