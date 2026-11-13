@@ -353,3 +353,8 @@ tmp/sheaf/xif/paper/Mzk1C17ResidueWeightChainActual.lean
 tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneResidueEquivActual.lean
 tmp/sheaf/xif/paper/Mzk1P3BadCharTameDegreeActual.lean
 tmp/sheaf/xif/paper/Mzk1C3S1902LowerBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotActualInhabitantOfPacketActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotActualC2ClosedActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotStripOneColumnClosedActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotResidualInputsActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotActualInputMismatchActual.lean

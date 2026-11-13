@@ -494,3 +494,5 @@
 - 08:09：abc C3S1902LowerBound（ballMassProduct_pos + comparison_of_qnorm_le_haarScale_mul_lowerBound 注入 c 接口）入队（355 项）；核查结论：rootExtensionHaar 无 p^{-ord} 显式值，radius=theta 范数 sup ⇒ 最后一步精确为 **theta-value 范数下界（缺）**。
 
 - 08:10：stage4 GeneralSNFVolume 降级为 SNF 商 cardinal（一般体积比 A2 桥留 GAP；对角情形已 green）；XGGLFinal 重写自包含待编。
+
+- 08:12：**hull 重要更正**：QPilotLineActualConstruction 已有 paperQPilotObjectActual 条件构造器 + 实际 C2 ⇒ P 的条件 inhabitant 已可填；真正剩余 = NativeC1PaperSource + donor D + input alignment（P.input vs S2711I V 类型不同）。5 份新文件（ActualInhabitantOfPacket/C2Closed/StripOneColumnClosed/ResidualInputs/InputMismatch）入队（360 项）。FLT ModuleTopology 改用 `IsTopologicalAddGroup.ext_iff` + letI moduleTopology 实例，retouch。
