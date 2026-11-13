@@ -400,8 +400,6 @@ tmp/sheaf/xif/paper/Mzk1Ob33SourceIdentificationActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalDiagUncondActual.lean
 tmp/sheaf/xif/paper/HullDetObjectActual.lean
 tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/RestrictedProduct/Equiv.lean
-tmp/external/ported/flt/FLT/Mathlib/Topology/Algebra/RestrictedProduct/TopologicalSpace.lean
-tmp/external/ported/flt/FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegActual.lean
 tmp/sheaf/xif/paper/Mzk1PadicBallCeilActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MultiradialGeneralBridgeActual.lean
@@ -443,3 +441,4 @@ tmp/sheaf/xif/paper/Mzk1C3DDonorProjectionActual.lean
 tmp/sheaf/xif/paper/Mzk1DetLinePrincipalGeneratorActual.lean
 tmp/sheaf/xif/paper/Mzk1FinitePlaceHaarRatioActual.lean
 tmp/sheaf/xif/paper/Mzk1LocalizedLineHaarBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1S1915DegreeFinrankActual.lean
