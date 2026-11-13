@@ -384,3 +384,6 @@ tmp/sheaf/xif/paper/Mzk1P3FLTMultiplicityActual.lean
 tmp/sheaf/xif/paper/Mzk1C17UnramResidueBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FLTFinrankSupplyActual.lean
 tmp/sheaf/xif/paper/Mzk1P3FinalWeightAssemblyActual.lean
+tmp/sheaf/xif/paper/Mzk1P3WeightOneChannelsActual.lean
+tmp/sheaf/xif/paper/Mzk1SNFMatrixDiagActual.lean
+tmp/sheaf/xif/paper/Mzk1GeneralSNFVolume3Actual.lean
