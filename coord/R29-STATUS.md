@@ -1114,3 +1114,5 @@
 - 23:18：**P2 里程碑（R1.3）**：`Mzk1P2RelativeMassActual` GREEN（15:15:09Z，113s）——`R_exact=Σd_b(log‖λ_b‖−log‖qhat_b‖)=−Σd_b log‖c_b‖≥0` 与 c0RemainderV2 correction 精确对齐落地（C3-free，有效）。同批 **P1LocalizedIsPrincipal GREEN**（15:15:09Z，113s）。其余批量文件 lane 自修中。
 
 - 23:22：**lattice #10/P1 批量 6 文件全 DONE（自行入队/修红）**：NativeUnitMassOne/size30,424B、NativeBlockEquivCandidate 24,248B、P1FinitePlaceFv 48,352B、P1LocalUnitProductT 30,952B、P3HaarScaleDocking 88,200B、P1CountLocalValuationNative 192,856B；unitMass=1/blockEquiv/NativeBadPrimeData 来源仍精确 GAP。#10 §13/AUDIT_LEDGER 已更新。
+
+- 23:26：**mainline P1 批量 6 全 DONE**（LocalizedSpan 15:10:42Z、IdealLocalizedCount 15:10:43Z、PrincipalValuation 15:09:52Z、R21Bridge 15:17:47Z、B5WithFv 15:11:17Z、ContractMapEvidenceRows 15:10:57Z）；精确缺口各一：LocalizedSpan=coercion 链、PrincipalValuation=count↔intValuation、IdealLocalizedCount=DVR map=completionIdeal^count、R21=上述组合。已回：不覆盖旧 C3-typed 主表 missing7ToGap（historical/vacuous），保留 evidence 表。
