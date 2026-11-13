@@ -1260,3 +1260,5 @@
 - 04:22：更新 P0-P4 tracker 的 R30 前快照：真证清单（P0 native L-side/theta-q bridge/S3137；P1 principalValuationStatement 非条件/localizedLine IsPrincipal/ne_bot；P2 R1.3/det/det-Haar 三真证/nativeProductEquiv；P3 mass 表达式/P3 core witness；#10 badPrime iff/TensorCoreWitness）+ 剩余精确缺口 9 条（P1 IdealCount/residue-one；P2 det-Haar SNF/q reading/arch global f；P3 R37R13；P0.5 theta/V；#10 blockEquiv/unitMass；验收层 NOT_RUN）。
 
 - 04:24：hull P0.6 本波 proof=3 new green（NativeLSide 16:55:37Z、NativeThetaBridgeProof 17:08:46Z、NativeReadoutPair 17:08:46Z），3 个已修待重编（QBridgeProof/ComparisonNonneg/PaperInputV，均补 NativeReadoutActual import/open）。watchdog 队列正常（15 lean、17:13 事件），下 cycle 重扫；已让 hull 继续写 PaperInputV→LPaperInstance 与 NativeComparison 供应。mainline `P1ValuationUniformizerActual` 17:13:39 FAIL 待查。
+
+- 04:26：LFI 仍排队（batch 已 15 lean 在跑；source 16:56 retouch）。已让 shehdd 不干等：先写不依赖 LFI 的 proof（B5 hproduct 单路线、place volume sign、count/valuation sign）；mainline 先修桥 1 上游（open PaperDeterminantLogVolume）+ 查 ValuationUniformizer 首错。
