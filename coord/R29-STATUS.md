@@ -1546,3 +1546,5 @@
 - 17:30：**里程碑：`Mzk1P1MaxIdealR21UncondActual` GREEN 20:41:11Z（100s）** ⇒ `maxIdeal_countValuationBridge_uncond`/`maxIdeal_r21Bridge_uncond` = B5② max-ideal 无条件。B5Index connector 也 GREEN 20:35:41。已让 mainline 下一波：#8 CONTRACT linkage（ContractFieldsLinked=false）优先，再 IdealMapPower 剩余。hull #1：已判定 `NativeThetaLogLambdaBridge` 实质是 tensor product Haar scale factor 缺口，给两条路径（P3 product Haar 公式 vs S3137 readings route）。
 
 - 17:35：#1 语义检查发现 `qVFamTensorPlaces` 是单点、`qVFamTensorBlock` = base completion，`nativeThetaReadout` 可能是 local logShell 的 raw Haar volume（非 paper 负体积 theta hull）；已让 hull 先证 `nativeThetaReadout_eq_log_localLogShell`、查 addHaar 归一化，若 native comparison 平凡则说明 native theta 不是 3.12 的 theta 侧，应改用 root hull 读数 `s1915ClosedForm`/`s1915A0` 做 `nativeQReadout ≤ s1915ClosedForm` 比较。
+
+- 17:40：R21Uncond GREEN 确认（20:41:11Z）⇒ B5② max-ideal 无条件；mainline 新 `Mzk1P7ContractFieldsActualActual`（ContractFieldsActual 真实证据结构，替代 signed assembly 的 True 字段）。已唤醒 mainline（B5Index 重接 → #8 真实 evidence → IdealMapPower）与 shehdd（B5ContractEvidence 接 #8）、lattice（A1SaturationBases 20:42 START）。
