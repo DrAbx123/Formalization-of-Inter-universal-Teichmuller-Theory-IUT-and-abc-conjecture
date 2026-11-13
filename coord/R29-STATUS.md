@@ -958,3 +958,5 @@
 - 21:50：**shehdd B5CountBridge GREEN**（13:36:29Z，53s，ole 152,688B）：relativePlaceIndex=-countH+countO、num/den 展开、placeLogVolume 差公式；MissingQPilotLocalGenerator 精确接口写入 P7 §18.1。
 
 - 21:41：Cancel 根因再补充：thetaPilotHullLogVolumeReal **定义**在 S3137QThetaPilotLogVolumeReadingsActual:128（不是 Scaling 文件），需 import/open 该 namespace；已 relay stage4。
+
+- 21:44：**Cancel GREEN（13:39:28Z，51s）——#7 (a)-(d) 全部收口**（域分解/求和/local degree/权重/归一化相消；p-scaling 引用既有 green；剩 B4 image bridge GAP）。mainline FractionalExpansionBridge 已用 `NumberField.FinitePlace.equivHeightOneSpectrum`+`finsum_comp_equiv` 升级（剩 hsumH/hsumO finite support）；新 Uncond 文件（Associates.finite_factors 证 HasFiniteSupport ⇒ FractionalLogVolumeExpansion 无条件）入队（486 项）。
