@@ -1785,3 +1785,5 @@
 - 05:15：读 §7 后按路线推进：stepxi 已有 `Mzk1Ind1AlgebraicUnitQuotientActual`（isoMon+torsion quotient）；已提醒 **§7.1 的“抽象群同构自动连续”需核实**（W_F≅ℤ_p^d 存在 wild hom，自动连续一般不成立），必须找到额外 norm/拓扑结构或把连续性作为源箭头实际性质构造（§7.2 惯性像/§7.5 Kummer），不得加自由 Continuous 字段。已建 `coord/THREE-GAPS-EXECUTION-BOARD.md`（§5 七步映射 owner/状态）。
 
 - 05:20：按 doc §8 重排 Box 主攻：`Mzk1BoxDistinguishedScalarActual`（qpilot）用 `SourceClauseC.torsion23_rational`/`kernel_field_identification` + `SourceClauseB.q_comparison` Tate 比较，证 E[2l] 在 K/K_v 有理 → q^{1/(2l)}∈K_v → θ=α^{j²} order j²/(2l) → principal-region normalized scalar readout；不声称 O_L 满射 O_M。stepxi 继续 §7.2/7.5 实际单位商源节点。§7.1 自动连续已核实不成立，gate §20.21 记录。
+
+- 05:25：用户核对纠正：§7.1 **成立**——有限秩 `ℤ_p^d→ℤ_p^{d'}` 任意加法群同态保持 `p^n` 倍子群（p^n 是整数），故自动连续；我此前 wild-hom 判断错误。gate §20.22 更正 §20.21；stepxi 改为写 `continuous_of_addHom_fin_zpadic` 并传输到 W_F，剩余唯一源缺口=实际单位识别 + β_a 来源，不再把连续性当新增节点。

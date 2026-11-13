@@ -522,3 +522,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   4. θ_{b,j}=α^{j²}，`ord_p θ=j²/(2l)·ord_p q`；
   5. principal-region normalized scalar readout 等式（§8.3），不声称 O_L 满射到 O_M。
 - 文件：`Mzk1BoxDistinguishedScalarActual`（qpilot）待写；`StepVActualInd1Ind2Action` 仍无 inhabitant。
+
+
+### 20.22 更正 §20.21：§7.1 自动连续性成立（用户核对，2026-11-14 07:22）
+- 对标准拓扑的有限秩 `ℤ_p^d → ℤ_p^{d'}`，**任意加法群同态** `f` 满足 `f(p^n x)=p^n f(x)`（`p^n` 是整数），故 `f(p^n B_d)⊆p^n B_{d'}`，在零点连续；加法同态⇒处处连续。
+- 因此 §7.1 的自动连续性**成立**；`§20.21` 中“wild homs ⇒ 自动连续性不成立”的判断错误，以本节为准。
+- **剩余 Ind1 源缺口**缩小为：`TimesMuQuotient ((F.Mon v)ˣ) ≃* (Integers F)ˣ/tors` 的实际识别，以及 `β_a` 来自实际源 action；连续性/ℤ_p 线性/ℚ_p 线性不是额外算术输入。
+- Lean 通用引理：`continuous_of_addHom_fin_zpadic`（`(Fin d → ℤ_[p]) →+ (Fin d' → ℤ_[p])` 连续），再由 `AddEquiv` 传输到 `W_F`。
