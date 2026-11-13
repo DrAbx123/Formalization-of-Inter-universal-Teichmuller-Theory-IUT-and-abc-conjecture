@@ -493,3 +493,16 @@ These are pre-seeded imports/old built files; olean presence alone is not a curr
 - 本快照未改 Lean；`HullDetObjectActual`/`HaarStrictActual` 的 DEFERRED 建议已生效（HaarStrict 不在 extra-targets）。
 - P7 NOT PASSED；P7 #5/#6/#9 的 DISCHARGED/CONDITIONAL 结构化状态不因 gate red 改变。
 - 待 B5Uncond DONE 后重跑 §34 final，期望 clean 465 + ole-only 20，red=0。
+
+### 34.5 2026-11-13 22:00 CST FINAL（B5Uncond green 后）
+
+- `Mzk1B5FractionalExpansionUncondActual`：**DONE EXIT=0 2026-11-13T14:00:11Z（52s）**；olean `168560 B @2026-11-13T14:00:10.410Z`。
+- extra-targets = **485**
+- **clean DONE = 465**
+- **red FAIL = 0**
+- **in-progress = 0**
+- **ole-only/prebuilt = 20**
+- **missing olean = 0**
+- 恒等式：465 + 0 + 0 + 20 + 0 = **485**。
+- gate build 状态：**全绿（red=0）**；P7 状态仍 **NOT PASSED**（10 个 GAP-P7 code 的结构化状态见 P7-GATE-REVIEW §13，build green ≠ P7 gate pass）。
+- 备注：ole-only 20 项为旧 paper/FLT ported Mathlib 预置导入，有 olean 但无当前 run 事件；不是 red。

@@ -28656,3 +28656,203 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - P6 (C17)：Mzk1WeightedDetPacketInstance DONE 22:22:09Z——QPLACE（fkDescentShadow = nativeBadLift.lift，同载体 FinitePlace A.F）与 QCAND 显式化；QHALF_of_QPLACE_QCAND PROVED；类型更正：sectionFiniteLift 返回 FinitePlace A.K，不能与 nativeBadLift.lift（A.F）字面相等；S1413ShadowEqualsNative 未证。
 - P0 #2/#5：Mzk1C3S1902BridgeActual DONE 22:22:09Z——条件 transport 接口（C3S1902TransportData: blockEquiv/region_eq/haarScale/haar_apply，无 inhabitant）；thetaRead_eq_s1902_normalized_add_correction；真正缺口=inhabitant + paper normalization 字典。
 - P7 #3：Mzk1Ob33InterfaceActual DONE 22:23:05Z——Ob33SourceIdentification named input + 条件 weighted 对齐 + 非空实例；GAP-P7-OB33-SRC 保留（非 discharge）。
+
+## 2026-11-13 — hull lane batch 8 green（1 条）
+
+- watchdog green：Mzk1ExactHullVUpperBoundActual（240672B @22:44:39Z）、Mzk1ExactHullVLocalBoundActual（119920B @22:44:05Z）、Mzk1StepXIContractEvidenceMapActual（158936B @22:30:59Z）、Mzk1StepXIComparisonEvidenceActual（132432B @22:30:25Z）、Mzk1ReconciliationGapRowsActual（75728B @22:30:25Z）、Mzk1C3S1902IndexFiberDataActual（135400B @22:44:36Z）、Mzk1C3S1902HaarScaleDataActual（103728B @22:36:48Z）、Mzk1P4CExternalStageContainerActual（110552B @22:44:40Z）。
+- 新增 `Mzk1ExactHullVAssemblyActual.lean`（局部 per-place bound + global sum → conditional V upper bound），待 watchdog。
+- 均为 named-data/audit interface；#7 真实 GAP 仍是 local_le/sum_le/C0 source；C3S1902TransportData inhabitant 未构造。
+- 文档 `coord/BATCH-GAP-INTERFACES.md` 已写。
+## 2026-11-13 — #7 assembly green（1 条）
+
+- `tmp/sheaf/xif/paper/Mzk1ExactHullVAssemblyActual.lean` watchdog **DONE EXIT=0** @2026-11-12T22:51:19Z（78s）；src 3509B，olean 240672B @22:51:18Z。
+- `HullVUpperBoundLocalAssembly`（per-place LocalBallLogBound + global sum bound）→ `HullVUpperBoundData`；`normalizedLog_hull_le_of_local` 条件 V 上界。
+- #7 真实 GAP：per-place local bound、global sum bound、C0 来源；无 C0 object；本文件为 named-data 条件装配，不是进展。
+更正：#7 assembly 条目 src 应为 **2271B**、olean **144720B** @22:51:18Z；DONE 22:51:19Z 不变。
+
+## 2026-11-13 — hull lane 第二批 6 green（1 条）
+
+- green：Mzk1PaperNormalizationDictionaryActual（raw→paper V 字典）、Mzk1PaperIQCarrierInterfaceActual（IQ carrier named data）、Mzk1StepXIContractLinkageActual（三字段未链接）、Mzk1P4CInd2StageMapActual、Mzk1P4CInd3StageMapActual（Ind2/Ind3 stage map named data）、Mzk1PaperNormalizationRowsActual（#2/#5 6-row GAP inventory）。
+- 均为 named-data/GAP 接口，无 inhabitant，不冒充 target/QTheta comparison。
+## 2026-11-13 — hull lane 第三批 5 green（1 条）
+
+- green：Mzk1C3DictionaryRowsActual（C3-vs-D 6 field inventory）、Mzk1C3DIndexDataActual（C3DIndexData named data）、Mzk1PaperVFactorActual（PaperVFactorData + paperVFactor_eq）、Mzk1PaperVFactorRowsActual（4-row inventory）、Mzk1StepXIContractSchemaActual（三 obligation schema，evidence 全 none）。
+- 全部 named-data/audit，无 inhabitant；C3-vs-D 字段 status 保持 not proved/no equivalence；不冒充 target。
+## 2026-11-13 — 第四批 5 green + historical P0 stale 修复（1 条）
+
+- green：Mzk1C3DDictionaryAssemblyActual（C3DIndexData↔status rows；indexEquiv_bijective/no_discharged_status）、Mzk1C3DIndexDataConsumerActual（dIndex_equiv/dPlaces_fiber 改 def，避免非 Prop theorem）、Mzk1PaperVRatioChainActual（PaperVRatioData/rawLog_eq/dim_eq/ratio_eq/paperVRatio_eq）、Mzk1PaperVRatioRowsActual（5-row inventory）、Mzk1StepXIEvidenceUpgradeActual（EvidenceLevel/upgradeRows/no_discharged）。
+- historical `Mzk1PaperFaithfulHullActual` 补 QVFamNormalizedCoefficient/GeneratorSupply/RootFactor/ThetaTensor imports 后 **DONE EXIT=0**；stale 消除。
+- 均 named-data/audit；无 inhabitant；不 discharge target。
+## 2026-11-13 — 第五批 5 green + external search（1 条）
+
+- green：Mzk1C3DFieldLevelAssemblyActual、Mzk1C3DPlaceTupleDataActual、Mzk1C3DStatusConsumerActual、Mzk1PaperVRatioReadingsActual、Mzk1StepXIEvidenceConsumerActual。
+- 外部搜索：tmp/external/ported（flt/flt_core/flt_th/tauceti/belyi）中只有一般 ramification/inertia/Completion 与 Haar 乘积（FLT NumberField Completion/Ramification），没有 paper normalization、C3-vs-D dictionary、log-shell hull V 上界的可复用声明；tauceti 为 puncture-filling/拓扑，不适用。结论：项目特定，继续自写条件 named-data；不硬移植无关文件。
+- 文档 BATCH-GAP-INTERFACES 已追加第五批。
+## 2026-11-13 — 第六批 3 green（1 条）
+
+- green：Mzk1ExactHullVLocalZeroActual（localBallLog_sub_unit_le_zero）、Mzk1ExactHullVMainTermActual（normalizedLog_hull_nonpos / normalizedLog_hull_le_mainTerm）、Mzk1Paper312ActualDonorC3Actual（Paper312Statement at S2717C3 ... D；paper312Statement_actualDonorC3_iff / _iff_neg_abs）。
+- #7：actual local bound=0（ball⊆unit）与 main-term 界；paper312：C3-I/VALUE 固定为实际 donor C3，剩余仅 PaperQPilotObjectActual inhabitant。
+- 无 sorry/axiom；未 discharge qThetaPilotLogVolumeComparison。
+## 2026-11-13 — 第七批 5 green + P unique gap / #7 actual bound（1 条）
+
+- green：Mzk1PaperQPilotActualComponentsActual（PaperQPilotActualComponents.toActual 条件构造器；universe 固定后 DONE 23:49:26Z）、Mzk1PaperQPilotActualCostAuditActual、Mzk1MainTermActualNonnegActual、Mzk1MainTermActualBoundActual、Mzk1C0MainTermRowsActual。
+- P 唯一剩余 gap：line.C2 / logKummer / logKummer_eq；concrete PaperQPilotObject.logKummer 是 SourceKummerArrow，类型不匹配 PActual 的 SourceLogKummerData。C3/C1 有实际候选（条件）。
+- #7 actual bound：normalizedLog_hull ≤ (1/4)l(log disc+log cond)，C0=0；mainTerm 非负来自 CurveData.disc/cond Nat 非零。V 是 normalizedLog，不是 raw paper V。
+- 文档 CANONICAL-TARGET-MAP/P0-CNORM-CONSUMERS 已追加 P 唯一 gap 与 #7 actual bound。
+## 2026-11-13 — P inhabitant correction（重要更正）
+
+- 早先“line.C2/logKummer/logKummer_eq 缺失”不准确：tree 已有 `C2Actual.sourceLogKummerDataActual`（实际 C2）与 `QPilotLineActualConstruction.paperQPilotObjectActual`（条件 PActual；logKummer:=C2；logKummer_eq:=rfl）。
+- 本轮 `Mzk1PaperQPilotActualInhabitantOfPacketActual` 进一步以 `ind3TimesMuStrip 1 0` + `sourceOneColumnActual P` 关闭 strip/oneColumn，给出 `PaperQPilotObjectActual (I:=P.input)` 的条件 inhabitant。
+- 真正剩余：NativeC1PaperSource packet、donor D、以及 `P.input`（V=NativePlaces）vs `S2711I`（V=FinitePrimePlace 2 7）的 input alignment。
+- 文档 CANONICAL-TARGET-MAP §6 / P0-CNORM-CONSUMERS §4 已更正。
+
+## 2026-11-13 — P 条件 inhabitant 实际落地（5 green，1 条）
+
+- green：Mzk1PaperQPilotActualInhabitantOfPacketActual（`paperQPilotObjectActualOfPacket`：NativeC1PaperSource+donor+strip+oneColumn → PActual；`..._nonempty`）、Mzk1PaperQPilotActualC2ClosedActual（C2Actual 实际 C2）、Mzk1PaperQPilotStripOneColumnClosedActual（strip=ind3TimesMuStrip 1 0；oneColumn 参数）、Mzk1PaperQPilotResidualInputsActual、Mzk1PaperQPilotActualInputMismatchActual。
+- 重大更正：PActual 的 line.C2/logKummer/logKummer_eq **不是缺失**；`C2Actual.sourceLogKummerDataActual` 提供 C2；`QPilotLineActualConstruction.paperQPilotObjectActual` 已条件构造 PActual（logKummer:=C2; logKummer_eq:=rfl）。
+- P 当前剩余：NativeC1PaperSource packet、donor D、oneColumn actual（S366 未入 build；本轮以参数保留）、以及 P.input(V=NativePlaces) vs S2711I(V=FinitePrimePlace 2 7) input alignment。
+- 文档 CANONICAL §6/P0 §4 已更正。
+## 2026-11-13 — S366 oneColumn dependency still red（1 条）
+
+- `S366OneColumnActual.lean` 仍 FAIL：`SourceOneColumnArithmeticHolomorphicStructure` 的 localRing/localField 是依赖 `v.1` 的 match，`ringOf`/`localizationInclusion` 的 expected type 在结构字面量里与 named def 的实例不 definitional 对齐；尝试 reducible/lambda/split 均失败。
+- 因此本轮 P 条件 inhabitant 的 `oneColumn` 仍作为参数保留（`Mzk1PaperQPilotActualInhabitantOfPacketActual` 已 green）；`strip` 已用实际 `ind3TimesMuStrip`。
+- 下一步若要消参：为 NativePlaces 写一个 localRing/localField 用 **单个 sigma 分解**的定义（对 subtype/place 统一 `match`）或证明 S366 的 instance 对齐；不改 P inhabitant 现状。
+
+## 2026-11-13 — P7 #9 HULL-UB 降为 CONDITIONAL（1 条）
+
+- `Mzk1HullUBPaperBoxActual.normalizedLog_hull_le_paperBox`：DONE EXIT=0 @11:12:12Z（61s，olean 待记录）；actual `normalizedLog_hull ≤ paperBox l.value (log disc) (log cond) 0`。
+- `Mzk1HullUBDictionaryActual.paperV_le_of_dictionary`：从 `HullUBDictionaryData` + scale=1/offset=0 得 paper V ≤ paperBox（条件）。
+- `Mzk1HullUBP7StatusActual`：DONE @11:10:22Z；4-row 状态。
+- P7-GATE-REVIEW §13 / P7-GAP-ATTACK-PLAN：GAP-P7-HULL-UB OPEN→CONDITIONAL（paper V unconditional 仍 OPEN）。
+## 2026-11-13 — #5/#6 状态更新（1 条）
+
+- #5 THETA-V：4 层文件 green（Raw/Normalized/ScaleOffset/FourLayers）；L1/L2 GREEN、L3 CONDITIONAL、L4 OPEN；P7 §13 标 PARTIAL/CONDITIONAL。
+- #6 THETA-D：`Mzk1C3DKeyMapActual.actualC3DKeyMap` green（DONE 11:22:23Z）；实际 C3 侧 key map 已构造；D 侧对齐 OPEN；P7 §13 标 PARTIAL/CONDITIONAL。
+- `Mzk1HullUBDictionaryActual` 仍 red（paperBox 名字解析/rewrite），已改 fully-qualified + 自包含证明，待重试；Composite 待 ascription 重试。
+
+## 2026-11-13 — P7 无额外输入的构造路线复核（当前 chat，单线程）
+
+- 按用户要求仅向 P7-GAP-ATTACK-PLAN.md 追加正文意见；保留原计划及其他 owner 的 Lean 源码。研究节点：dag/nodes/p7-no-extra-input-routes-20261113.json。
+- 直接复用链：S1915.s1915_local_measure / s1915_hull_toReal + S709 半径公式 + S865 Haar norm-power；当前球质量消费者不必另假设 ceil 球等式。一般分歧扩域的取整应涉及 e，正文给出具体检验。
+- 提出从原根关系 alpha^(2l)=qhat 得 qhat O⊆alpha O 的整数系数构造；明确只先得到根侧比较，原 paper carrier/标签/权重的实际连接仍须证明。
+- 给出同源 donor 投影、相对 Haar/determinant、actual paper V 绑定、trace/SNF/Cauchy–Binet 的接入方案。指出 Haar 测度比例与 1/[K:Q] 的 log 后权重不可直接等同。
+- 未新增 Lean 声明，未运行编译、公理、comparator 或独立审查；四项验收均 NOT_RUN，target_accepted=false。未把条件装配或具名输入视为缺口核销。
+
+## 2026-11-13 — C0=0 精确障碍（1 条）
+
+- 实际 paper V = `s1915ClosedForm = 1 + normalizedLog` ⇒ `V ≤ paperBox + 1`（C0=1）。
+- `Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_box_ge_one`：C0=0 当且仅当 `1 ≤ paperBox`。
+- 充分条件：`disc ≥ 2 ∧ cond ≥ 1 ∧ l ≥ 5` ⇒ `box_ge_one_of_disc_ge_two_cond_ge_one`。
+- 一般 `disc=1/cond=1` 时 mainTerm≥1 不自动；C0=0 仍 OPEN，不假设 e-constant 可吸收。
+- `Mzk1HullUBC0ObstacleRowsActual`：5-row 状态。
+
+## 2026-11-13 — P7 定向查重修订（当前 chat，单线程）
+
+- 用户询问是否全仓逐定理核对，并提供 D:/lean/iut-audit-20261113。已明确未作穷尽语义审查；按 A0/B0/C0/C1 检索供体并读相关声明/证明段，查阅审计索引及 R29 执行记录。
+- 旧供体补明确：Mzk1S1915ComparisonActual.s1915ClosedForm_eq_one_sub_sum；主库 exists_arithmeticTensorTuple_fieldProduct（含双向连续性）；RootNormalizedContainmentActual 的 normalized scaling data 和包含；迹对偶/不同理想/SNF。已有基础步骤从建议新证范围扣除。
+- 当前 Mzk1PadicBallCeilActual、Mzk1RouteC0RootQLatticeActual、Mzk1HullUBPaperVRawBindingActual 已有相关实现；保留原 owner，复用并验证，不另建副本。当前 C3 transport、原目标同源识别和比较仍开放；Eta det/Haar 文件为条件结论。
+- 已追加 coord/P7-GAP-ATTACK-PLAN.md 的 P7-REUSE-CORRECTION-20261113；节点 p7-no-extra-input-routes-20261113 的 reuse_review 保存版本。未改 Lean、未编译/比较器/公理闭包验收、未向其他 chat 发任务。
+
+## 2026-11-13 — B6/Dictionary/ScaleOffset green（1 条）
+
+- `Mzk1HullUBPaperVRawUpperActual` DONE 12:07:47Z；`Mzk1HullUBPaperVDictionaryActual` DONE 12:10:27Z（rawV=s1915ClosedForm, normV=normalizedLog, scale=1, offset=1）；`Mzk1ThetaVScaleOffsetIdentityActual` DONE 12:10:27Z（L3 actual, offset=1）。
+- `Mzk1C3DDonorProjectionActual` DONE 12:05:14Z：7 个 rfl 投影，D 为 C3D dictionary 右端；#6 对 S2717C3 构造 DISCHARGED（一般 S3137 C3 桥另列）。
+- `Mzk1HullUBC0AbsorptionActual`/`Mzk1HullUBPaperVDischargeActual` 仍待 retry（依赖已全绿）。
+- B6：V=s1915ClosedForm=normalizedLog+1；实际 C0=1；C0=0 当且仅当 1≤paperBox（充分条件 disc≥2/cond≥1/l≥5 已证）。
+## 2026-11-13 — C0=0 exact slack obstruction（更正）
+
+- 更正：C0=0 **不是** `1≤paperBox`；正确条件是 `slack = paperBox - normalizedLog ≥ 1`。
+- `Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_iff_slack`：`V≤paperBox ↔ 1≤slack`。
+- `current_bound_gives_slack_nonpos`：现有 actual bound 只给 slack≤0；因此 C0=0 不能从现有数据推出。
+- `disc≥2 ∧ cond≥1 ∧ l≥5` 只给 paperBox≥1，不给 slack≥1；此前充分条件表述已删除/纠正。
+- e-常数 1 是精确障碍；C0=1 是当前实际可达界。
+## 2026-11-13 — C0/Discharge/Obstacle 全部 green（1 条）
+
+- `Mzk1HullUBC0AbsorptionActual` DONE 12:17:20Z：`paperV_le_paperBox_zero_iff_slack`（C0=0 ⇔ slack≥1）、`paperV_le_paperBox_zero_of_slack`、`current_bound_gives_slack_nonpos`。
+- `Mzk1HullUBPaperVDischargeActual` DONE 12:17:19Z：C0=1 状态，C0=0 需 slack≥1。
+- `Mzk1HullUBC0ObstacleRowsActual` DONE 12:16:32Z：5-row 障碍表；`1≤paperBox` 仅必要非充分。
+- 之前 `1≤paperBox ⇒ C0=0` 的错误推论已从文档/定理删除；保留 `1≤paperBox` 为必要非充分条件。
+## 2026-11-13 — #5 L4 unconditional green（1 条）
+
+- `Mzk1ThetaVGeneralUnconditionalActual` DONE 12:24:25Z：`thetaVScaleOffsetGeneral k`（rawV=scaledClosedFormR k, normV=normalizedLog(scaledThetaHull k), scale=1, offset=1，无假设）；`qLogSum_nonneg`；`scaledClosedFormR_le_s1915`；`scaledClosedFormR_le_paperBox_add_one`。
+- 实际依据：`scaledThetaHull_normalizedLog_eq`（normalizedLog=scaledClosedFormR k -1）。
+- P7 §13 #5 更新为 DISCHARGED（general-k, C0=1）；scale=1/offset=1 来源明确。
+- Composite 已改 `A.input_eq ▸ A.source` cast，待 retry。
+## 2026-11-13 — P7 #9/#10 arch 边界说明（1 条）
+
+- HULL-UB 的 S1902 载体只含有限 bad places；paperBox 只含 disc/cond 有限算术，**无 arch 项**。
+- arch 归一化归 #10 GAP-NORM-ARCH-C-K（archCK/archFactor）；C0=1 与 arch 无关，故 #9 的 C0=1 不依赖 #10。
+- #10 只影响 arch 归一化/abc 对接，不改变 HULL-UB 有限位上界。
+- 文档 P7 §13 #9/#10 已加边界说明。
+- 新文件 `Mzk1HullUBGeneralFinalActual`/`Mzk1HullUBArchCheckRowsActual` 待 watchdog。
+## 2026-11-13 — general-k 最终上界 green（1 条）
+
+- `Mzk1HullUBGeneralFinalActual` DONE 12:29:54Z：`generalK_paperV_eq`、`generalK_final_upper`（C0=1）、`generalK_final_upper_C0_one`。
+- P7 §13 #9 更新为 **CONDITIONAL（general-k, C0=1）**；9b exact slack obstruction 保持。
+- Composite 改为 Nonempty 形式（避免 universe 强制 cast），待 retry。
+## 2026-11-13 — C0=0 paper regime 修正（重要）
+
+- 之前“C0=0 不能由现有数据推出”过强。实际：`normalizedLog≤0`（hull⊆unit）且 paper regime `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox≥1` ⇒ `V=1+normalizedLog≤paperBox`，**C0=0 在 paper regime 下成立**。
+- `Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one` 重写并待 watchdog。
+- 一般 CurveData（disc=1/cond=1）paperBox≥1 不自动，C0=0 仍 OPEN；C0=1 为无条件界。
+- Composite 简化为 alignment-only（cross-V PActual transport 仍 GAP）；actual P inhabitant 另有 green 文件。
+## 2026-11-13 — #1 GENERAL-CMP 条件收口 + Route A 球质量链（abc，1 条）
+
+- **Green（watchdog DONE + olean=True）**：`Mzk1PadicBallCeilActual`（A2：`rootExtension_ballMass_eq_radius_pow`/`..._p_rpow`，11:52:14Z；删 hball/ceil/general scaling）、`Mzk1C3S1902BallMassFormulaActual`（乘积质量恒等式 + `comparison_iff_qnorm_le_haarScale_mul_ballMassProduct`，12:03:46Z）、`Mzk1C3S1902LowerBoundActual`（重写：仅 `comparison_of_qnorm_le_haarScale_mul_ballMassProduct`，删 c/hprod/范数下界，12:06:23Z）、`Mzk1S1915DegreeFinrankActual`（`s1915LocalDegree_eq_finrank` rfl，12:18:40Z）、`Mzk1C3S1902NormalizedLogActual`（A5：`s1915ClosedForm = 1 - Σ_b d_b c_b/(2l) log p_b`，当前版 12:38:53Z）、`Mzk1P7ComparisonConditionalFinalActual`（HullQDictionary 唯一 named input；`comparison_of_hullQDictionary`、`theta_read_eq_qRead_add_one`、`comparison_margin_one`、`paperGap_of_hullQDictionary`，12:50:24Z）。
+- **精确缺口（file:line）**：(1) `C3S1902TransportData` inhabitant 不可由现有 D 文件构造——`Mzk1C3DDonorProjectionActual:26-39` 只给 C3 tensor 字段 = S2717 donor D（rfl），无 `Bad (nativePlaceSelection T)` 映射；S1902 carrier 是逐 place 乘积（`S1902ActualThetaHullActual:35-36,104`）vs C3 block 是有限张量积（`C3LogShellTensorPacketActual:58-59`、`FinitePlaceArithmeticTensorBlocks:26-27`）。(2) `HullQDictionary`（`Mzk1S1915ComparisonActual:103-125`）三项子障碍：`q_eq_sum` 需 base q ↔ qVFamily 跨族映射（`BaseQFamilyActual:16-18`、`BaseQLogVolumeQGlobalLinkActual:17-18` 明文 no cross-family equality；`qVFamily` 来自 clause-B witness `QPilotZeroLocusDivisorActual:55-62`）；`∏_b qVFamNormRatio=1` 是 `PaperSourceCorrectionFreeFields` 源字段（`BadPlaceSourceFieldsObstructionActual:4-9,65-100`；两范数实例 normalized/default 不同，`QVFamNormalizedCoefficientBridgeActual:54-65`），不可作定理；place-求和恒等式 `Σ_b d_b order_b log residue_b = 2ℓ·order·log residue_base` 无既有定理。
+- **形态**：#1 = **CONDITIONAL(HullQDictionary)**（唯一 named input，两个标量；无新假设/新 structure）；margin 1 为 `θread = qread + 1`（严格），与 #7 paperBox 上界 `V≤paperBox(+C0)` 对象/方向不同，不替代不冲突。文档：`coord/P7-MISSING-7-VERIFY.md` §10–§12，`coord/P7-GAP-ATTACK-PLAN.md` #1 行。
+- **#8 消费者入口（GREEN）**：`Mzk1P7ContractMarginConsumerActual` **DONE 13:08:36Z（55s，olean=True）**：`comparison_of_margin_one`（margin≥1 ⇒ comparison，纯 linarith）、`margin_one_theta_sub`（θ−q=1）、`p7_conditional_contract_of_margin_one`、`p7_conditional_contract_of_hullQDictionary`、`margin7Rows`（length 7）；`p7_conditional_contract` 的唯一数学输入可由 margin 或 dictionary 直接给出。
+## 2026-11-13 — C0=0 paper regime DISCHARGED（1 条）
+
+- 关键补充：`normalizedLog_hull_nonpos`（hull⊆unit）给出 normalizedLog≤0；paper regime disc≥2/cond≥1/l≥5 下 paperBox系数 (l+5)/4≥5/2，`5/2·log2>1` ⇒ paperBox≥1；故 V=1+normalizedLog≤paperBox，**C0=0 成立**。
+- `Mzk1HullUBC0AbsorptionActual` DONE 12:53:24Z（68s）：`box_ge_one_of_disc_ge_two_cond_ge_one`、`paperV_le_paperBox_zero_of_box_ge_one`、`paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`。
+- 一般 CurveData（disc=1/cond=1）C0=0 仍 OPEN；C0=1 无条件。
+- `Mzk1InputAlignmentCompositeActual` DONE 12:50:24Z（alignment-only, cross-V transport GAP）。
+## 2026-11-13 — P7 #9 最终 spec / 文档一致性核对（1 条）
+
+- P7-GATE-REVIEW §13 #5/#6/#9 行已核对；新增“#9 GAP-P7-HULL-UB 最终 spec”段。
+- #9: paper V(k)=scaledClosedFormR k=normalizedLog(scaledThetaHull k)+1；general-k 无条件 C0=1（Mzk1HullUBGeneralFinalActual DONE 12:29:54Z）；paper regime disc≥2/cond≥1/l≥5 ⇒ C0=0（Mzk1HullUBC0AbsorptionActual DONE 12:53:24Z）；slack 条件 C0=0 ⇔ 1≤slack；general disc=1/cond=1 OPEN；arch 归 #10。
+- 所有相关 olean 已核对存在：GeneralFinal/RawUpper/Dictionary/ScaleOffsetIdentity/C3DDonorProjection/UBC0Absorption/ObstacleRows/Discharge/ThetaVGeneralUnconditional/ArchCheckRows。
+## 2026-11-13 — GATE-STATUS-R29 §32 审计快照（1 条）
+
+- extra-targets 478：clean DONE 451 + red FAIL 4 + in-progress 3 + ole-only/prebuilt 20 + missing olean 0。
+- red：P7ThetaDegCancel（dep 时序）、B5CountLocalValuationBridge（旧 API residueNormBase/k）、B5RelativeDetLogExpansion（语法/旧 API）、B5FractionalAbsNormFormula（`>` 语法）。
+- in-progress：HaarStrict、P7ContractMarginConsumer、P7ThetaDegWeight。
+- 20 ole-only：6 旧 paper 文件 + 14 FLT ported Mathlib 预置导入；非当前 run clean 认证。
+- P7 NOT PASSED；表为 build 状态审计，不改 Lean。
+## 2026-11-13 — GATE-STATUS-R29 §33 审计快照（1 条）
+
+- extra-targets 483：clean DONE 460 + red FAIL 2 + in-progress 1 + ole-only/prebuilt 20 + missing olean 0。
+- red：HaarStrict（旧 API/证明）、B5FractionalExpansionBridge（未知 FractionalIdeal 常量 + rewrite）。
+- in-progress：P7ThetaDegCancel（latest START 13:30:51Z，依赖 ThetaDegWeight olean）。
+- 20 ole-only：6 旧 paper + 14 FLT ported Mathlib 预置导入；非当前 run clean 认证。
+- P7 NOT PASSED；未改 Lean。
+## 2026-11-13 — #8 集成核对：7 行行码 bridge（abc，1 条）
+
+- `margin7Rows`（`Mzk1P7ContractMarginConsumerActual`）与 `missing7ToGap`（`Mzk1P7ContractMapActual`）逐行比对：item/顺序一致；仅第 5 行 gap code 字符串原不一致（缺 GAP- 前缀/空格），已修正为 `GAP-P7-THETA-V / GAP-P7-THETA-D / GAP-P7-THETA-DEG`。
+- 新 bridge `Mzk1P7ContractRowsBridgeActual` **DONE 13:29:25Z（54s，olean=True）**：`margin7Rows_items_eq_missing7ToGap`、`margin7Rows_codes_eq_missing7ToGap`、`margin7Rows_length_eq_missing7ToGap`（rfl）。
+- mainline 消费入口：`p7_conditional_contract_of_margin_one`（margin ⇒ Cor312Conclusion）、`p7_conditional_contract_of_hullQDictionary`；示例：`hmargin : qread+1≤θread` ⇒ `p7_conditional_contract_of_margin_one C3 P hmargin`。GAP-P7-CONTRACT 仍 CONDITIONAL，rows 2–7 未变。
+## 2026-11-13 — HaarStrict DEFERRED 审计（1 条）
+
+- `Mzk1HaarStrictActual` 长期红：`:74 max_le hz2` unify、`:76` 参数类型、`:108-110` placeholder/unsolved goals；无 olean（src 371 行，mtime 11-11）。
+- 无 watched consumer：extra-targets 483 项中 0 个直接 import；其 import 子树（HaarStrictProof/HaarAnnulusCylinder/Cor312UnconditionalStrictAcceptance/AnnulusMeasurePositive/AnnulusStrictConsumer 等）均不在 watch；引用它的其他文件也不在 watch，无 watched green 逆向依赖。
+- 处理：从 extra-targets 移除并标 DEFERRED，源码保留；未来按当前 API 重写 `max_le_iff`/参数/占位符。
+- 文档：`coord/HAARSTRICT-RED-GAP.md`。
+
+## 2026-11-13 — #7 全收口 / #4 C3 候选源 / #10 citizen 清单 green（收尾审计，1 条）
+
+- **#7 GAP-P7-THETA-DEG 全收口（5 文件时间线）**：① `Mzk1P7ThetaDegActual` DONE 12:20:07Z（`localCompletionDegree = Module.finrank`、`c3TensorBlockDimension = ∏ localCompletionDegree`）；② `Mzk1P7ThetaDegC3Actual` DONE 12:33:19Z（`c3TensorBlockDimension_eq_sum_fieldProduct`）；③ `Mzk1P7ThetaDegB2Actual` DONE 12:54:15Z（域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank_arithmeticTensorTupleBlock_eq_sum_fieldProduct`）；④ `Mzk1P7ThetaDegWeightActual` DONE 13:22:49Z（`thetaBlockLogFactor_eq_sum_localDegree`、`c3PacketNormalizedLogVolume_eq_sum_localDegree`）；⑤ `Mzk1P7ThetaDegCancelActual` DONE 13:39:28Z（`c3PacketNormalizedLogVolume_eq_inv_sumDegree_mul_log`、`..._actualRegion_eq_inv_sumDegree_mul_theta`）。未闭仅 B4 image bridge（`Mzk1DiagEquivBridgeActual`）。
+- **#4 GAP-P7-MULTIRADIAL C3 候选源 green**：`Mzk1P7MultiradialProductionActual` **DONE 13:19:40Z（54s）**（C3 candidate source）；实际 (xi-e)/(xi-f) production/缺失清单仍缺 → #4 保持 PARTIAL。
+- **#10 GAP-NORM-ARCH-C-K citizen 清单 green**：`Mzk1C3S1902BlockEquivDataActual` **DONE 13:28:16Z**（重编 13:33:03Z，olean=True）：`C3S1902BlockEquivData`（tensorIndexEquiv/fiberEquiv/blockEquiv）+ `C3S1902UnitMassData`（unitMass/pos/eq）+ 5 行 citizen 清单；inhabitant 仍缺（blockEquiv/unitMass 未构造），#10 保持 CONDITIONAL/PARTIAL；archCK/archFactor 只属 #10，不进 HULL-UB 有限位上界。
+- **文档一致性**：`coord/P7-MISSING-7-VERIFY.md` 修正陈旧行——THETA-DEG 由“未识别”改为 #7 DONE 5 文件；#1 由“仍 PARTIAL（仅接口）”改为 CONDITIONAL(HullQDictionary)（§12，12:50:24Z）；#4 改为 PARTIAL+C3 候选源 13:19:40Z；#5/#6/#7 三行状态按 plan 更新。gate 审计快照 §34 由 hull 负责，本段不代签。
+## 2026-11-13 — GATE-STATUS-R29 §34 快照（B5Uncond 未绿，1 条）
+
+- extra-targets 485：clean 464 + red 1 + in-progress 0 + ole-only 20 + missing 0。
+- 唯一 red：Mzk1B5FractionalExpansionUncondActual（Subtype.coe_ne_zero 未知；finsum_sub_bridge rewrite 不匹配；旧 API 漂移），待 mainline 修。
+- HaarStrict 已从名单移除；HullDet DEFERRED 建议生效。
+- P7 NOT PASSED；未改 Lean。
+## 2026-11-13 — GATE-STATUS-R29 §34 FINAL（1 条）
+
+- extra-targets 485 = clean DONE 465 + red 0 + in-progress 0 + ole-only 20 + missing 0。
+- Mzk1B5FractionalExpansionUncondActual DONE 2026-11-13T14:00:11Z（52s），olean 存在；唯一 red 消除。
+- gate build 状态全绿（red=0）；P7 仍 NOT PASSED，build green ≠ P7 gate pass。

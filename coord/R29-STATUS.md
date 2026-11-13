@@ -980,3 +980,23 @@
 - 22:04：gate **§34 当前快照**（hull 21:56 CST）：extra 485 = clean **464** + red **1**（仅 B5Uncond）+ in-progress 0 + ole-only 20 + missing 0；B5Uncond 首错归为旧 API/时序（:35 Subtype.coe_ne_zero；:57 finsum_sub_bridge 方向），非新数学 GAP；待 mainline 绿后补 §34 final（期望 clean 465、red 0）。
 
 - 22:06：**B5FractionalExpansionUncond GREEN（14:00:11Z，52s）——B5 ① 完全无条件**（FractionalLogVolumeExpansion 由 qpilot 三定理推出）；gate 现应 red=0。已派 hull 补 §34 final（期望 clean 465/red 0）、mainline 更新 CONTRACT-MAP §6.3/§6.4（B5 汇总只剩 ② bridge + residue-one）。
+
+## R29 收尾快照（2026-11-13 22:00 CST）
+
+- **gate build 全部绿**：`extra=485 = clean DONE 465 + red 0 + in-progress 0 + ole-only 20 + missing olean 0`（GATE-STATUS-R29 §34.5 FINAL；ole-only 为 6 旧 paper + 14 FLT ported 预置导入）。
+- **P7 仍 NOT PASSED**（build green ≠ P7 gate pass）。十 GAP 当前结构化状态见 `P7-GATE-REVIEW §13` + `P7-GAP-ATTACK-PLAN`：
+  - #1 GENERAL-CMP: CONDITIONAL(HullQDictionary)（margin-1 comparison green；三源字段 (a)(b)(c) 精确 GAP，其中 (b) 查实不可由现有定义证）
+  - #2 IQ-LITERAL: DISCHARGED(definition-level) + semantic PARTIAL（label/deg 等 GAP）
+  - #3 OB33-SRC: CONDITIONAL（Ob33 det line/data/degree 接 qpilot actual bad-prime source；B4/B5 桥 green；B5 ① 无条件；剩 ② bridge+residue-one、local-global 汇总）
+  - #4 MULTIRADIAL: PARTIAL/OPEN（C3 候选源 DONE 13:19:40Z；production 缺失字段清单无 inhabitant）
+  - #5 THETA-V: DISCHARGED(general-k V 字典, scale=1/offset=1)
+  - #6 THETA-D: DISCHARGED(S2717C3 实例)/一般 S3137 C3 桥 GAP
+  - #7 THETA-DEG: **DONE**（5 文件：P7ThetaDeg 12:20:07Z、C3 12:33:19Z、B2 12:54:15Z、Weight 13:22:49Z、Cancel 13:39:28Z）；剩 B4 canonical image bridge GAP
+  - #8 CONTRACT: CONDITIONAL ASSEMBLY（ContractMap green；margin7Rows↔missing7ToGap 行覆盖 green；margin-1 消费者入口 green）
+  - #9 HULL-UB: DISCHARGED(paper regime C0=0, disc≥2/cond≥1/l≥5) + general C0=1；general disc=1 C0=0 OPEN；slack 精确障碍
+  - #10 NORM-ARCH-C-K: CONDITIONAL/PARTIAL（archCK=1/[K:Q]、c3HaarScale 公式层、localUnitMassProduct、BadPlace product、BlockEquiv/UnitMass citizen 清单 green；inhabitant + NativeBadPrimeData + actual carrier 仍缺）
+- **C0 路线研究收尾**：有限 q-lattice v1/v2、idele bad/good 定义级构造、c0IdeleHeight（有限+arch）与 signed 形式实际构造；条件 hBox 等号 green；readout 精确接口（无 inhabitant）；唯一缺失=全局分量识别/readout 等式（+符号约定）。
+- **B5 路线收尾**：product formula（整数+fractional）、count=num/den、finsum_sub_bridge+Summable、relativeDetLog 展开+arch 汇总、B5Index/ArchMetric/B5Assembly、FractionalExpansionUncond（① 完全无条件）均 green；剩 ② LocalNormGeneratorBridge/CountValuationBridge + residue-one（GAP-PC-RESDEG/tame）。
+- **路线 A 收尾**：A2 球质量（S1915 直接）/A5 显式归一化对数、s1915LocalDegree=finrank 语义等式 green；LowerBound 无 c/hprod；#1 剩 HullQDictionary 唯一 named input。
+- **DEFERRED**：`HullDetObjectActual`、`Mzk1HaarStrictActual`（旧 API，无 watched consumer；文档 coord/HULLDET-OBJECT-RED-GAP.md、coord/HAARSTRICT-RED-GAP.md）。
+- 未完成/未运行：target_accepted、独立审查、comparator（按 SHEAF 要求如实标注）；abc 猜想端到端未闭合，P7 NOT PASSED。
