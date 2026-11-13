@@ -1655,3 +1655,5 @@
 - 23:25：巡检：lean 降到 1（batch 刚结束），新 run 待起；6 idle lane 已按首错派多波次：mainline `Ideal.isCoprime_iff_sup_eq` 名修 + general IdealMapPower；hull A1Delta:144/GlobalReadout:62（imageHull=s1902Hull change）；lattice A1Padic Module 实例/A1Saturation:38；shehdd Gamma `change` 修 + actual h/torsion；stepxi A5 consumer；qpilot NormalizedValuation。
 
 - 23:30：lattice 修 A1Padic `Module.compHom` 显式首参；A1SaturationBases `ι : Type` universe 固定问题（去 `Type*`）；P14ii 条件保留等 Gamma。
+
+- 23:35：shehdd GammaPGroup 第 4 次修：目标里是 `Quot.mk leftRel gamma ^ p^k = 1`（gamma 为 shell 代表元），不用 change；直接在商类上 induction，用 `Quot.mk _ z ^ p^k = Quot.mk _ ((p^k)•z)` + `QuotientAddGroup.eq_zero_iff` + `mem_logShellIntegerSubgroup_iff` + `hk`。stepxi A5 consumer 补 `SourceProcessionCapsule`/`NumberFieldFinitePlace` open，接口文档 `coord/A5-IND1-IND3-CONSUMER.md` 已写。
