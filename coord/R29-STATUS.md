@@ -1721,3 +1721,5 @@
 - 02:30：mainline：general IdealMapPower GREEN（22:25:14，olean=True）确认；`Mzk1P1UniformizerPowerSpan` 用 `Subring.coe_mul`+`map_pow` 显式修；新 `Mzk1P1IdealLocalizedCountFinalActual.idealLocalizedCountStatement_proved`（三桥）；`Mzk1P7ContractB5Evidence` 补 `Mzk1C17QCANDResNormComapActual` import 后 retest；B5Consumer 22:25:12 green。hull：Correspondence 去 Final 依赖、本地定义 qhatLogReadout，`qhatHaarScaling` 唯一 factor 缺口。
 
 - 02:35：用户定调“马拉松最后500m，缺什么补什么”。已按硬缺口重新派工：hull→`qhatHaarScaling`（从 c0QLattice 球测度直接证，不绕 det-Haar）；stepxi→一般 place Ind1 定义级检查（places/placeEquiv 可能定义对齐，用 cast 填 shellEquiv，否则保留精确输入）；qpilot→BoxConsumer + carrier bridge（无现成等价就显式条件）；mainline→B5Index/B5 evidence 收口；abc→A2 QHatNorm/QReadout；shehdd→Gamma/torsion；stage4→A1.6 正式读数；lattice→P14ii actual h。
+
+- 02:40：**`Mzk1A1DeltaExplicitActual` GREEN 22:30:14（110s）**——A1 signed/delta 正式落地；已让 hull 用它做 weighted 对齐 + 主攻 `qhatHaarScaling`。stepxi 定义级结论：一般 place 的 Ind1 无定义级 completion 等价，`Ind1ShellTransportForRequired places e φ` 是唯一显式源输入，裸 Gap 仅 identity 可填（文档已补）。Gamma 第 8 次修等重编；lattice P14ii actual 文件已备等 Gamma。
