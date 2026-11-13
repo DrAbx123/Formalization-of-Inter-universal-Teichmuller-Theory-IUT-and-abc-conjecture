@@ -1757,3 +1757,5 @@
 - 04:00：hull 确认 scaled-readout 纪律；scaling 文件修 `qhatUnit_coe` 非法 named binder（`(T:=T)`→显式 typed），`qhatUnit/qhatUnit_smul_unitBall` Function expected 应消；后续：scaling official → `qhatLogReadout=log‖qhat‖` → `=-|log q|`（q norm<1）→ 逐项 signed 比较 `Σ d_b qhatLogReadout_b ≤ Σ d_b log r_b = s1915ClosedForm−1`，不经过 s1915A0。
 
 - 04:05：qpilot 新 `Mzk1BoxReadoutLocalActual`（SignedLocalReadout 用 s1446Upper + StepVHullEstimate.signed_sum 显式字段）。已提醒：`a0` 可用绿色 `arithmeticTupleHullUnitLogVolume` + `arithmeticTupleCanonicalRegions_relativeLogVolume` 一半落定理；`signed_sum` 试用绿色 `arithmeticTupleFieldHull_addHaar_logVolume_decomposition_change`，若只给整体不逐因子则保留为单点显式字段并写清所需引理，不假证。
+
+- 04:10：**#8 CONTRACT 两半正式收口**：`Mzk1P7ContractB5EvidenceActual` 22:43:55（b5_norm/log/residue_gap rows + ContractEvidenceWithB5 + cor312_and_gap），加上 signed evidence 21:16:03，B5Index rewire 20:48:46；三桥齐（general 22:25:14 / 桥2 20:07:18 / uniformizer 22:43:33）。已把 §20.15 写入 `coord/P7-GATE-REVIEW.md`；`IdealLocalizedCountFinal` 竞态待下一 cycle（非缺口）。

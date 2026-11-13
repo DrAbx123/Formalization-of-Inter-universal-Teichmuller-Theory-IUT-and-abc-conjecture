@@ -461,3 +461,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **按计划 §1 路线一执行**：用实际系数把 q 格送进 theta 源 hull。第一检查点（§1.2/1.5）：一个实际 `(p,tuple,label)` 上写 (R1.2) `g_a^q=Σ_i c_{ia}g_i^θ`，证 `c_{ia}` 整，从而 q 格 ⊆ theta hull；验收展示源 q、源 theta、落点、权重四个来源。
 - 供体：`Mzk1RouteC0RootQLatticeActual/V2`（R1.1）、`Mzk1A1LatticeInverse/Compare`、`Mzk1P2LabelBlockCompleteActual`、`Mzk1P2MultiIndexLandingActual`。
 - 执行顺序按计划 §7：A0 球质量（部分完成）→ B0 读数表 → C0 根侧 q 格 → C1 实际 G/q 基/迹/SNF 系数 → F 聚合；每包四问报告。
+
+
+### 20.15 #8 CONTRACT 两半收口（2026-11-14 22:43，watchdog 官方 DONE）
+- **signed evidence 半**：`Mzk1P7ContractLinkageWiringActual` GREEN 21:16:03Z：`contractOfContractFieldsActual` 用真实 `ipl/she/apt`（`qThetaPilotLogVolumeComparison` / `qPilotLogVolumeReading ≤0` / `qReading ≤ thetaHull`）替换原 `True` 证据，`cor312_of_contractFieldsActual : Cor312Conclusion`。
+- **B5 evidence 半**：`Mzk1P7ContractB5EvidenceActual` GREEN 22:43:55Z：`b5_norm_row`/`b5_log_row`/`b5_residue_gap_row` 消费 `Mzk1B5ContractEvidenceConsumerActual`；`ContractEvidenceWithB5` + `contractEvidenceWithB5_of_inputs` + `contractEvidenceWithB5_cor312_and_gap`。
+- **B5Index 重接**：`Mzk1Ob33B5IndexRewireActual` GREEN 20:48:46Z（`missingGeneralPlaceSNF_rewired` 无条件）。
+- **三桥齐**：`idealMapPowerStatement_general`（22:25:14）+ 桥 2 `localizedLine_eq_span_idealMap`（20:07:18）+ `uniformizerPowerSpan_proved`（22:43:33）⇒ `IdealLocalizedCountStatement` 的 hmap/hspan/huni 全部举出；`Mzk1P1IdealLocalizedCountFinalActual` 因竞态（START 22:41:29 早于 huni DONE 22:43:33）待下一 cycle，不是证明缺口。
+- **边界**：以上是 #8 的 contract/B5 证据链收口，不等于 paper 3.12 或 ABC 已证；#1 的 q 侧 `qhatHaarScaling`（S865 供体链）与 theta signed readout 比较仍在编；#9/HullUB 冻结。
