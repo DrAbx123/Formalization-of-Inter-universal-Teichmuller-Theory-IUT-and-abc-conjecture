@@ -802,3 +802,5 @@
 - 22:18：lattice B3 carrier 收口：FinitePlaceHaarRatio 在 CommonPrimeCompletion 上 DONE 12:16:42Z；CommonPrimeCarrierAlign 改 GAP 记录 DONE 12:25:53Z（ole 32,816B，需显式 CarrierEquivData）；三 GAP 保留（carrier align/CountLocalizationBridge/LocalHaarScalingLaw）；P7 §13 #10 更新。
 
 - 22:21：hull HullUBGeneralFinal 首错=未导入 `scaledThetaHull_normalizedLog_eq`（在 Mzk1ScaledThetaHullNormalizedLogShaActual）已 relay；stepxi C0GlobalIdele :70 No goals→删冗余行 relay；HullUBArchCheckRows DONE 12:26:47Z（34s）。
+
+- 22:24：lattice CarrierEquivData（CommonPrimeCompletion ≃ Completion 可测等价 + LocalHaarScalingLaw 收成单一 named input；`CarrierEquivDataRequired := Nonempty` 不造 inhabitant）入队（456 项）；CountLocalizationBridge 单独 GAP。
