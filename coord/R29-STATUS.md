@@ -1096,3 +1096,5 @@
 - 23:48（用户指正）：取消 Lead 入队交接层——每个 lane 自己用 `Add-Content` 原子追加 extra-targets + 自己 retouch；Lead 已一次性补入 35 个近 45 分钟新文件（名单 539 项）。lane 批量写/修与编译并行，不再单独等待。
 
 - 23:55（用户指正）：Lead 只负责大包/大方向与验收边界；具体文件、修复、入队全部由 lane 自主。已按 8 个大包领域重派（P0 native 迁移/P1 B5 生成元+#8/P1 localized generator/P2 系数+质量/P2 路线二/P3 core/P3-L/#10 native 字典），lane 里程碑报告制。
+
+- 23:12：gate §36 批量迁移期快照（Lead 扫描）：extra 548 = clean 485 + red 13（全为 P0-P3 新批次 WIP，无旧 gate 回归）+ inprog 16 + oleonly 20 + missing 14；注明旧 C3 空类型语义（旧 C3 green 仅 historical/vacuous，native 链才有效）。

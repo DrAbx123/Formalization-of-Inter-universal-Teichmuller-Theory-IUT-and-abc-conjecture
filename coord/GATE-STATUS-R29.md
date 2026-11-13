@@ -529,3 +529,20 @@ These are pre-seeded imports/old built files; olean presence alone is not a curr
 
 - `Mzk1B5NormZpowActual` DONE 后：clean **473** + red **0** + ole-only **20** = **493**。
 - P7 仍 NOT PASSED；build green ≠ P7 gate pass。
+
+## §36 批量迁移期快照（2026-11-13 23:11 CST，Lead 扫描）
+
+说明：P0–P3 批量包（8 lane × 6 文件）刚入队，**red 均为新批次 WIP 文件**（旧 gate 无回归）；lane 自主修红、自主入队。
+
+| 分类 | 数量 |
+|---|---:|
+| extra-targets | **548** |
+| clean DONE | **485** |
+| red FAIL（新批次 WIP） | **13** |
+| in-progress | 16 |
+| ole-only/prebuilt | 20 |
+| missing olean（新入队未跑） | 14 |
+
+red 清单（均为新包）：`Mzk1P3TensorCoreActual`、`Mzk1P0NativeSourceCoreActual`、`Mzk1P0LPaperInstanceActual`、`Mzk1P2RelativeMassActual`、`Mzk1P1GeneratorNonzeroActual`、`Mzk1P1LocalGeneratorFromIsPrincipalActual`、`Mzk1P2DetCoefficient/DetWeightedNonneg/TensorPairing`、`Mzk1P3DomainDecompositionMap/ExponentNet/TensorCoreHaar/TensorCoreNormalized`。
+
+**语义提醒（关键）**：旧 C3 类型 `SourcePilotRegionData` 为空（S1429）；此前所有旧 C3-条件文件的 green 只作 **historical/vacuous**，P0 迁移后的 native 链才是有效进度。P7 仍 **NOT PASSED**。
