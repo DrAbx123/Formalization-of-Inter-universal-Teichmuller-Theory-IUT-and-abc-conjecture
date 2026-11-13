@@ -1348,3 +1348,5 @@
 - 08:16：调度：`Mzk1PrimeConductorABCActual` 不在 WL（MestreUseWiring 上游无 olean）——已加入 extra-targets（841），其依赖 BoundarySzpiro/SSIneqExplicitForm oleans 已存在。plan 已刷新（17:58:54），lattice 三 pending 应被抽到。red 多为上游 olean 未建（B5/C17/NormalizationSign），已逐 lane 说明；qpilot DiagonalNorm 的 rw pattern 是真错待修。新 green：P3ResDeg/P3DictQPacket/P3DictBArith/P3DictQCoeff。
 
 - 08:20：qpilot 修 `GapDetHaarDiagonalNorm:21` 的 rw（prod_pow_eq_pow_sum 与负指数/Real.rpow 形状不匹配 → norm_prod→norm_p_pow→显式 prod 等式→rpow_neg），已 retouch 等重编；det-Haar 仍两点：matrix-level SNF、diagonal factor 识别。
+
+- 08:24：shehdd 2 official green（P1GeneratorValuationRelation 17:33:06Z、P1PlaceVolumeSignFinal 17:43:25Z，69,000B）+ 3 新 proof：**P1IdealMapPowerGeneral（ideal_map_pow_general: Ideal.map f (I^n)=(Ideal.map f I)^n + idealMapPowerStatement_of_count_map）**、C17ResidueOneWitness（ResidueOneArithmeticInput 命名输入 + resNormDegreeGap_of_...）、C17ResidueOneConsume（单点 log 等式 ⇒ localResidueDegree=1）。已提示 mainline 复用 ideal_map_pow_general 接 bridge1/count。
