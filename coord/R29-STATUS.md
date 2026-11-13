@@ -1781,3 +1781,5 @@
 - 05:05：**三个新 green：`IutIVProp14TorsionCountActual` 23:14:04、`Mzk1IutIVProp14IndexCardActual` 23:14:10、root `QhatHaarScalingReuse` 23:15:02**。已派 hull 用 root scaling 完成 Correspondence/最终 Q≤Θ；lattice 等 Gamma 填 hμΛ/P14ii；shehdd torsion actual/#C；qpilot BoxReadoutLocal；stepxi PhiMax/β_a。gate §20.20 已写。
 
 - 05:10：lattice 新 `Mzk1IutIVProp14HaarIndexPowActual`：`mu_lambda_toReal_eq_pow_mul`（Nat.card Γ=p^h + μ(O)≠⊤ ⇒ (μΛ).toReal=p^h·(μO).toReal），接 HaarIndex wrapper + IndexCard p^h + norm_cast；Gamma 绿后填 volume_ratio_eq_pow 的 hμΛ。IndexCard/TorsionCount 已 official。
+
+- 05:15：读 §7 后按路线推进：stepxi 已有 `Mzk1Ind1AlgebraicUnitQuotientActual`（isoMon+torsion quotient）；已提醒 **§7.1 的“抽象群同构自动连续”需核实**（W_F≅ℤ_p^d 存在 wild hom，自动连续一般不成立），必须找到额外 norm/拓扑结构或把连续性作为源箭头实际性质构造（§7.2 惯性像/§7.5 Kummer），不得加自由 Continuous 字段。已建 `coord/THREE-GAPS-EXECUTION-BOARD.md`（§5 七步映射 owner/状态）。
