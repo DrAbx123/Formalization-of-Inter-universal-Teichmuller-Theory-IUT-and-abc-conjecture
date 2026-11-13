@@ -760,3 +760,5 @@
 - 21:05：mainline LocalizedLineMul（localizedLine_eq_span_map + localizedLine_mul：map_mul/mul_def/span_mul_span/span_span）入队（448 项）。
 
 - 21:10：lattice B3 桥 GAP 记录 DONE 12:12:07Z（ole 29,096B）；两障碍：CountLocalizationBridge、NumberField.Completion 缺 ProperSpace/carrier 对齐。已建议：改用项目既有的 `FiniteDimensional.proper ℚ_[p]` 构造 ProperSpace，或把 normalizedHaar/ratio 直接陈述在实际 `CommonPrimeCompletion place` carrier 上（AbsTopIII07 normalizedHaar），NumberField.Completion 仅留对齐引理。
+
+- 21:14：qpilot #2 semantic：unit group/principal support green（12:13:19Z，ole 84,736B），principalDivisor（formal sum, 系数=v.valuation K k）已加。已建议直接构造负部（应用 Support.finite 于 k⁻¹ + valuation map_mul/map_one 得 val(k⁻¹)=val(k)⁻¹）⇒ 完整 principalDivisorFull 可无假设构造；label 映射来源继续查。
