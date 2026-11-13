@@ -1573,3 +1573,5 @@
 - 18:55：新 green：`Mzk1P2NormalizedCompletionNormCoherenceActual`（20:53:44，A2 norm coherence）、`Mzk1A5CapsulePositionActual`（20:53:46）、`Mzk1LatticeSaturationIndexActual`（20:54:32）、**`Mzk1P7ContractFieldsActualActual`（20:54:35，ContractFieldsActual）**。首错：SaturationBasesData 缺 `DecidableEq D.ι`（已发 lattice 修）；Order `Nontrivial ↥(ofClass v).valueGroup`（已发 qpilot 精确 haveI）。hull 已按计划 §1 写 `Mzk1A1SourceGeneratorExpansionActual`（四来源齐）。
 
 - 19:00：lattice 确认 `Mzk1LatticeSaturationIndexActual` green；`SaturationBasesData` 加 `[Fintype D.ι] [DecidableEq D.ι]` binder 修 det 实例；A1SaturationBases 依赖 retouch。已让 stage4 准备实际 K/F 整基 b₁/b₂ 填 `SaturationBasesData` 接 A1.6。
+
+- 19:05：hull `Mzk1A1SourceGeneratorExpansionActual` 加全标签生成元/有限展开/逐生成元 q 格⊆theta 格（待编）。提醒：非 max 标签系数用 `if=max then c else 0` 构造仍是人工单活跃标签，计划 §1.3 要求实际多标签索引/权重；已让 hull 从 `P2ActualLabelBlock` 取实际多标签数据、由源数据证明单活跃性（若真），并保留 `nativeBadLocalWeight`/procession average 顺序。
