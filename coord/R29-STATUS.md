@@ -1250,3 +1250,5 @@
 - 04:22：**watchdog 停摆并已重启**：log 停在 16:59:15Z START，无 lean/lake 进程、lock pid=25776 失效、无 crash.log。删除 stale lock，`Start-Process cmd /c run_dag_watchdog.cmd` detached 重启；17:06:40Z 新日志恢复（START/RETRY 出现，node watchdog pid 18172/2472）。已广播：不手动编译、检查 per-file log、retouch 红文件、绿接绿。
 
 - 04:26：watchdog 重启后队列恢复（17:08 出 DONE/FAIL）：新 green `P2UnitOperation`、`UnitMassC1Condition`、`S1902CarrierRfl`、`NativeBadPrimeIff`、**`P0NativeThetaBridgeProof`**、**`P0NativeReadoutPair`**；red 多为依赖链（P2 QNativeReadingCorrected→RootQhatNorm→QReadoutBridge）或小错（Function expected/unknown id/synth）。mainline 后台任务 failed 已唤醒；已按 lane relay 首错修法。
+
+- 04:30：桥 1 失败根因=上游 `Mzk1P1IdealMapCompletionIdealActual` 红（`:20:56 Unknown identifier LocalRing`，缺 `open LeanFormal.IUT.PaperDeterminantLogVolume`）；transient retry 用尽。已发 mainline 精确修法（open 或全限定），先修上游再 retouch 桥 1。LFI 16:56 retouch 仍在队列（pending ~97）。新 green：P0NativeHaarScale 17:09:44Z。
