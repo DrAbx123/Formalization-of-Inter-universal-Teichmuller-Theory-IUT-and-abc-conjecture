@@ -1653,3 +1653,5 @@
 - 23:15：watchdog 健康（12 lean、log 05:47:50、plan 05:43:23）。qpilot 继续 NormalizedValuation 修 `intValuation_apply`（4.32 `Valuation.map` 第二参数/`map_apply`）替换 rfl/show/change，等新 run；Uniformizer/LocalFieldScaling/DegreeIdentification 顺延；Iut/TFG 闭包 104 目标在后台编译，若慢转 plan §5.3。
 
 - 23:25：巡检：lean 降到 1（batch 刚结束），新 run 待起；6 idle lane 已按首错派多波次：mainline `Ideal.isCoprime_iff_sup_eq` 名修 + general IdealMapPower；hull A1Delta:144/GlobalReadout:62（imageHull=s1902Hull change）；lattice A1Padic Module 实例/A1Saturation:38；shehdd Gamma `change` 修 + actual h/torsion；stepxi A5 consumer；qpilot NormalizedValuation。
+
+- 23:30：lattice 修 A1Padic `Module.compHom` 显式首参；A1SaturationBases `ι : Type` universe 固定问题（去 `Type*`）；P14ii 条件保留等 Gamma。
