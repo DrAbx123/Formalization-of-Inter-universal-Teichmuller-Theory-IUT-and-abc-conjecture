@@ -1408,3 +1408,5 @@
 - 11:04：清理：`Mzk1P0LHaarUnitBallActual`（0 thm status stub）、`Mzk1P0LNormalizationBridgeActual`（0 thm）从 WL 移除。诊断 `P1LocalGeneratorActual` unknown `localizedLine_isPrincipal_actual`：源码 LFI:94 有该定理但 olean 与源码不一致（旧缓存），已 retouch LFI 强制重编；LFI 绿后 retouch generator。
 
 - 11:08：stepxi 确认 P0L Final 类（ReadoutFinal/S3137LFinal/SourceIdentFinal/SignedLogFinal/TensorZero）均为 1–2 定理的 consumer re-export（非新证明），已加 header 且不按 proof 计数；P7 C3Free 修 `N8Closure.C3Roots` open/import + P2Data 改依赖 `P2MultiIndexLanding`，已 retouch。
+
+- 11:14：桥 1 hval 新错（`:46 rw pattern` + `:49 simpa type mismatch`）；已给 mainline 不用 rw/change 的等式拼接法（`h1 := valued_algebraMap_completionIntegers ...; h2 := ...; exact h1.trans h2`），并用显式 `LeanFormal...CompletionIntegers v` 避免 LocalRing abbrev coercion；备选走 `adicCompletion.exists_uniformizer` + `maximalIdeal_eq_span_uniformizer {π:CompletionIntegers}` 路线。hull P7 #9/#1 green（HullUBC0GeneralDiscOne 18:33:24Z、P0RouteC0Log 18:33:21Z）；缺口② QHatNormExponent、缺口① RootCoordEquiv、det 共轭 RootMulQHat 待编。
