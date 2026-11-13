@@ -1715,3 +1715,5 @@
 - 02:15：qpilot 报 DegreeIdentification GREEN 22:20:10 + BoxConsumer 源码修好（import/open、SourceNativeInitialThetaData 去 `.{0}`、结构补 DecidableEq/MeasurableSpace、`s1915A0` 展开显式）、待新 batch；引用记录已写 `coord/EXTERNAL-CITATIONS-20261114.md`（含 S1902Carrier↔ArithmeticTensorTupleBlock bridge 精确缺口）。
 
 - 02:20：**三个新 green（本人 verified）：`Mzk1A5MultiradialConsumerActual` 22:24:24、`Mzk1A1PadicSaturationBasesActual` 22:25:13、`Mzk1P1IdealMapPowerGeneralProofActual` 22:25:14（102s）**。general IdealMapPower 官方绿 ⇒ 三桥齐；已派 mainline 写 `IdealLocalizedCountStatement` + B5Index + retest B5 evidence；stage4 A1.6；hull Delta/correspondence；stepxi #4 文档。
+
+- 02:25：stepxi 整理 #4 最终消费文档 `coord/P7-MULTIRADIAL-CONSUMER-FINAL.md`（CapsulePosition 21:44:15 → Ind1Ind3Consumer 21:53:05 → MultiradialConsumer 22:24:24；Ind3 无条件；Ind1 fixed-place；一般 place 精确 shellEquiv gap 禁止 refl/toy），并同步 P7-MULTIRADIAL-GAP/A5-IND1-IND3-CONSUMER。
