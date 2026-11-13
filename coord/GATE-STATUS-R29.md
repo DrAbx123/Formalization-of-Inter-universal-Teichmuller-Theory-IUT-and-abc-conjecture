@@ -582,3 +582,16 @@ red 清单（lane 自修）：`Mzk1P2ThetaAllowedImageActual`、`Mzk1P1DVRPrinci
 已恢复/新增 green 覆盖：P0 六组件 + P0.5 alignment（q/θ 各一结论）、P0-L 六组件、P1 六文件 + IsPrincipal 突破 + LocalizedFractionalIdeal、P2 R1.3 + 路线二六文件、P3 六文件 + 净量四文件、#10 native 六文件 + NativeBadPrime + normalized unitMass 条件版。
 
 旧 C3 空类型提醒不变：C3-typed 文件仅 historical/vacuous；有效路线 = P0 native + P1/P2/P3 C3-free。P7 **NOT PASSED**。
+
+## §39 快照（2026-11-14 00:38 CST，Lead）
+
+| 分类 | 数量 |
+|---|---:|
+| extra-targets | **576** |
+| clean DONE | **549** |
+| red FAIL | **3** |
+| in-progress | 3 |
+| ole-only | 20 |
+| missing | 1 |
+
+red：`Mzk1P1DVRPrincipalLemmaActual`、`Mzk1P1LocalizedFractionalIdealActual`（shehdd 修 `IsScalarTower` import，修法已给：`import Mathlib.RingTheory.DedekindDomain.AdicValuation` / `adicCompletion.instIsScalarTower'` via inferInstanceAs，待重编）、`Mzk1P3TensorCoreScalingConsistencyActual`（stage4 新文件）。
