@@ -1140,3 +1140,5 @@
 - 23:46：lattice #10 本轮：NativeBadPrime 精确归约 green（→`NativeBadModuliFixedPrime`）；normalized unitMass=1 GAP（IntermediateField 缺 MeasurableSpace/SigmaFinite；Mzk1NativeNormalizedUnitMassOne DONE 15:37:29Z，localUnitMassScalar pos/finite green）；blockEquiv GAP。已派下一阶段大包：NativeBadModuliFixedPrime 来源/normalized 刻度接口/blockEquiv inhabitant。
 
 - 23:52：**P1 重大突破**：shehdd `Mzk1P1LocalizedFractionalIdealActual` DONE 15:38:22Z（31s）——`localizedFractionalIdeal_coe_eq`（FractionalIdeal.extended coercion = localizedLine）+ **`localizedLine_isPrincipal_actual : (localizedLine I v).IsPrincipal` 无假设证明**（DVR PID 实例）。⇒ P1 唯一缺失 `MissingLocalizedIsPrincipal` 关闭；LocalGeneratorData 可无假设构造；剩 count↔valuation + residue-one。已通知 mainline/shehdd 接线并更新文档。
+
+- 23:56：**P0-L 里程碑完成**（stepxi 六文件全 green：P0LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog）；`LPaperInstance=LPaper312Statement` 仍 Prop（条件化）；LQThetaSourceArrow 精确缺 q_mem_thetaRegion+normalization_eq；RegionMass 正性 regionMassPosGap。P0/P0-L 均完成，关键路径转向 P0.5 q/θ alignment + P2 R1.2 整性。

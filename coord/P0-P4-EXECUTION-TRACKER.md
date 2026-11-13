@@ -86,7 +86,7 @@
 - P2（abc）：LabelBlockCoefficient、LabelBlockSum、RelativeMass（R1.3）green；R13vsC0/LabelBlockComplete/QNativeSourceArrow/ThetaAllowedImage/WeightedSum 在修。
 - P2（qpilot）：NativeTensorConsumer、DetCoefficient green；DetWeightedNonneg/TensorPairing/ProductFormulaCancel/PureTensorExpansion/NativeConsumerP2 在修。
 - P0（hull）：NativeSourceCore、NativeTensorLanding、MigrationRows、NativeEquiv green；NativeReadout/NativeS3137Chain 在修。
-- P0-L（stepxi）：S3137LReadout green；LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog 在修。
+- P0-L（stepxi）：S3137LReadout green；LPaperInstance DONE 15:27:26Z（ole 89,128B）、LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z、LSourceIdent DONE 15:35:44Z、LSignedLog DONE 15:40:51Z——六个 L-side 文件全 green。LPaper312Statement 实例仍为 Prop，首缺 = q 读数→theta hull containment/normalization（LQThetaSourceArrow）。
 
 ## P0 里程碑达成（2026-11-13 23:24 CST）
 
@@ -130,3 +130,9 @@
   - `localizedFractionalIdeal_coe_eq`：其 Submodule coercion = `localizedLine I v`（PROVED）；
   - **`localizedLine_isPrincipal_actual : (localizedLine I v).IsPrincipal`（PROVED，无额外假设；用 DVR ⇒ PID 的 FractionalIdeal `isPrincipal` 实例）**。
 - ⇒ P1 唯一缺失 `MissingLocalizedIsPrincipal` 关闭；`LocalGeneratorData` 可无假设构造（generator/span/非零）；P1 剩余 = count↔valuation（`localValuation v generator = -countExponent v I`）与 residue-one。
+
+## P0-L 里程碑完成（2026-11-13 23:56）
+
+- 六文件全 GREEN：`P0LPaperInstance`（15:27:26Z，ole 89,128B）、`LReadoutInstance`（35,080B）、`LQThetaArrow`（14,568B）、`LRegionMass`（17,536B）（均 15:34:30Z）、`LSourceIdent`（11,352B@15:35:44Z）、`LSignedLog`（13,856B@15:40:51Z）。
+- 内容：`C3LAt = actualSourcePilotRegionDataL` 实例；`qReadActual = -|log q|`/nonpos；`thetaReadActual = log actual L tensor Haar region`；`LPaperInstance = LPaper312Statement` 仍 Prop（`LPaperInstance_of_theta_nonneg` 条件化）；`LQThetaSourceArrow` 精确缺 `q_mem_thetaRegion + normalization_eq`；RegionMass 有限 <⊤、正性 `regionMassPosGap`；`SourceIdent` core_eq rfl（root/Kummer 不在 core 的首缺另记）；`SignedLog thetaSigned=-thetaRead`。
+- 无旧 C3、无 IsEmpty。
