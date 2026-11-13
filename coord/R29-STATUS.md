@@ -650,3 +650,5 @@
 - 20:08：FiniteAdeleRing 正确路径 = FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean（已加名单）；FLT 链 404 项，等 Equiv→TopologicalSpace→FiniteAdeleRing。
 
 - 20:10：stage4 #7 THETA-DEG 文件（localCompletionDegree=finrank、c3TensorBlockDimension=∏、block nonpos+local degree 分解）入队（405 项）。
+
+- 20:12：abc 按 ceil 思路首文件 PadicBallCeil（measure_prime_pow_smul_finiteDimensional + rootExtension_closedBall_measure_eq 显式 mass）入队（406 项）——GAP-P7-BALL-MASS 降为 ceil 等式 + finrank 因子两项。
