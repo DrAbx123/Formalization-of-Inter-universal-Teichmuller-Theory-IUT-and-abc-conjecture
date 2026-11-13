@@ -1151,3 +1151,5 @@
 - 00:10：Lead 给 hull P0.5 构造出路：SourceDefinition31Data 已有装配入口 `d11EntryData`/`D4D9Supply.toSourceData`（toSourceData_arithmetic rfl）；大目标从 SourceCompletion/OriginalInput 构造 SourceDefinition31Data 以满足 NativeOriginalInputDonors + arithmetic 等式，再走 donors→q 识别。
 
 - 00:12：gate §38：**extra 571 = clean 540 + red 4（P2ThetaAllowedImage/P1DVRPrincipalLemma/P1LocalGenerator/P0LRegionPos）+ inprog 6 + oleonly 20 + missing 1**——批量后 red 从 13 降至 4，clean 540。**#10 normalized unitMass 条件版 green**（RootExtensionCarrierData DONE 15:43:22Z/54,752B；NativeNormalizedUnitMassConditional DONE 15:48:26Z/76,872B：SigmaFinite 条件下 normalizedProduct_unitBall=1、normalizedUnitMass_eq_one；实际 s1915UnitMass=1 仍 GAP additive 未归一）。
+
+- 00:14：新 green：**P2NativeBlockAlignment/P2ArchWeightAlignment**（qpilot 15:48:27Z，65s——路线二 alignment 已开始落地）；**P2R13vsC0Remainder/P2WeightedSum**（abc 15:49:54Z/55Z，72s）。red：P0SourceDataBridge（hull q alignment 构造在修）、P0LRegionPos/P0LQThetaMem（stepxi）、P2ThetaAllowedImage/P2LabelBlockComplete（abc）、P1LocalizedFractionalIdeal（shehdd 新改动）。stage4/lattice 待机→派下一大包（stage4=P3 net→P2 供体/trace 系数/core scaling；lattice=unitMass 实际刻度/blockEquiv/NativeBadModuliFixedPrime）。
