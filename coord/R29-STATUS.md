@@ -1793,3 +1793,5 @@
 - 05:35：mainline 报 **IdealLocalizedCount 无条件 GREEN 23:22:40**：`idealLocalizedCountStatement_proved (I) (hI) (v) : IdealLocalizedCountStatement I hI v`（`∃π e, e=Associates.count … ∧ localizedLine I v = span O_v {(π)^e}`）；消费点：statement/桥1/桥2/bridge3/general hmap → `idealLocalizedCount_of_bridges`。新 `Mzk1Ob33B5IndexConsumerActual`（3 定理，queued）把 statement 排成 B5Index 词汇 + `placeSNFData_nonempty`；绿后 B5Index 完整消费确认。#8 两半已收口；最终 Cor312 assembly 的 `cor312_of_s3137Comparison` 仍消费 comparison hypothesis（即 3.12 不等式本身）。
 
 - 05:40：lattice `Mzk1IutIVProp14HaarIndexActual` 补 `[MeasurableSpace K]`（BorelSpace 不反推实例），HaarIndexPow touch 重排；Gamma v10 等重编，Gamma red 仍为 GroupCountInterface olean 时间差。
+
+- 05:45：stepxi 确认 §7.1 文档更正；`continuous_of_addHom_fin_zpadic` 未落地，已给具体 Lean 骨架要求先绿该引理（`AddMonoidHom.continuous_of_continuousAt_zero` + `span p^(n+1)`/`map_nsmul`/norm）。shehdd Gamma v10 `:58` 修法：`← QuotientAddGroup.mk_nsmul` 把 `p^k • mk z` 变 `mk ((p^k)•z)` 再用 `eq_zero_iff`；`:21/:52` 另读 tail。
