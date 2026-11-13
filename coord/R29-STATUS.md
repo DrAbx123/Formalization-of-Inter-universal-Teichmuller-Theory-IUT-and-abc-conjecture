@@ -1094,3 +1094,5 @@
 - 23:34：新建 `coord/P0-P4-EXECUTION-TRACKER.md`（8 lane × 6 文件批量追踪表 + 旧 C3 空类型纪律）；abc P2RelativeMass 入队（504）。
 
 - 23:48（用户指正）：取消 Lead 入队交接层——每个 lane 自己用 `Add-Content` 原子追加 extra-targets + 自己 retouch；Lead 已一次性补入 35 个近 45 分钟新文件（名单 539 项）。lane 批量写/修与编译并行，不再单独等待。
+
+- 23:55（用户指正）：Lead 只负责大包/大方向与验收边界；具体文件、修复、入队全部由 lane 自主。已按 8 个大包领域重派（P0 native 迁移/P1 B5 生成元+#8/P1 localized generator/P2 系数+质量/P2 路线二/P3 core/P3-L/#10 native 字典），lane 里程碑报告制。
