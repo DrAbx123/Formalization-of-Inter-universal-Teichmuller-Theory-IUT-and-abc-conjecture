@@ -66,3 +66,17 @@ Last formalization TODO: connect this external law to the concrete Haar normaliz
   - 依赖闭包仅 10 个 TauCeti 文件（~110KB），可移植到本项目（Lean 4.32.2）。
 - 文档：`https://taucetiproject.org/docs/TauCeti/MeasureTheory/Group/LocalFieldScaling.html`。
 - **行动**：qpilot 负责把这 10 个文件移植为 `tmp/sheaf/xif/paper/TauCetiPort/...` 模块并让 watchdog 编译；成功后 `PAdicHaarDetScaling` 由 ported `addHaar_image_mulVec` 直接证明，GAP-DET-HAAR 从“class-B 外部输入”升级为“内部 ported 证明”。若移植遇 4.32 vs 4.36 API 差异，报告精确首个错误/API，回退保持外部输入。
+
+## 8. 更多外部文献（2026-11-14 第二轮搜索，均“登记/备用”，当前主链不消费）
+
+| 主题 | 文献/来源 | 说明 |
+|---|---|---|
+| Serre mass formula | Serre 1978 (C. R. Acad. Sci. Paris A286, 1031–1036)；UCL thesis 转引 `m̃(Êt_{1^n}/F)=1/q_F^{n-1}`；TauCeti LocalFieldScaling 亦以此为例 | 与 unitMass/局部体积归一化相关，当前只需 class-B 层不消费 |
+| Faltings height 比较 | Silverman 高度比较估计（Pila 转引：`|h(x)-12h_F(E)|` 界） | 旧 E7 L2 用；signed 链不用 |
+| Néron period | 现代文献（如 arXiv 2412.16629 引 DD15 Lemma 2.4；Zenodo BSD 文）`Ω_E^±` 最小模型/同源/二次扭唯一确定 | 旧 E7 L8 用；登记 |
+| Petersson 范数估计 | Fomenko 显式估计（zbMATH Zbl 04128909）；Kramer sup-norm notes Thm 4.4 | 旧 E7 L7 用；登记 |
+| Artin–Whaples product formula | 标准（反问题刻画 product formula） | 当前 B5 用 Mathlib `NumberField.prod_abs_eq_one`（内部） |
+
+## 9. IUT 3.12 相关外部分析（**注意：不是可引用定理，只是文献/语境**）
+- Zenodo 上有若干对 IUTchIII Cor 3.12 缺口/“validation”的分析与争论文章（如 *The Gap in IUTchIII, Corollary 3.12: From Attempted Repair to Structural Diagnosis*；*A Validation of IUT: The Contested Bound, Instantiated from Source*；*A LOCAL NON-CONTAINMENT IN STEP (V) OF IUT IV*）。这些是评论/争议文献，**不能作为 class-B 数学输入**，仅登记供语境参考；外部共识仍是 abc 未被证明。
+- 结论：没有外部定理能直接替代当前 signed Cor312 的比较不等式；唯一已发现可立即消费的外部机器验证结果是 TauCeti 的 p-adic Haar 缩放律（见 §7）。

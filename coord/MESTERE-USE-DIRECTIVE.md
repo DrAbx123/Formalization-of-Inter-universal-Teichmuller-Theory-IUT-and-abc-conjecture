@@ -34,3 +34,21 @@ MO 在本项目有**两个显式 Prop 版本**（均为 class-B 外部输入，�
 - `Mzk1P3FinalAssemblyActual.lean:50` `ssIneqExplicit_final (hMO) (C)`；
 - `Mzk1P3DictDOrdInterfaceActual.lean:30` `C.e ≤ 5` from hMO；
 - `Mzk1P3DictDLogDiscBoundActual` / `Mzk1P3DictL7SSIneqArchActual` / `Mzk1L7ProofActual:102`：`ssIneqExplicit_of_L7 (hMO)`。
+
+## 更正节（Lead 2026-11-14 02:15）：genuine MO vs normalized surrogate
+
+**genuine MO = Zbl 0693.14004**：
+- Thm 1：E/Q 半稳定 Weil 曲线，若 |Δ| 是 m 次幂，则 m ≤ 5 且 E 有 Q-有理 m-除点；
+- Thm 2：素数导子 p ⇒（明确例外外）Δ = ±p。
+
+**本项目 Lean 里的 `MestreOesterleBound` 不是原文定理**：
+- `Mzk1PrimeConductorABCActual.MestreOesterleBound (logq logd C) := logq ≤ 6 * logd + C` 是
+  **normalized surrogate**（Szpiro-6 形状，用于 P3/ssIneq 链）；
+- `Mzk1PrimeConductorRouteActual.MestreOesterleBound := ∀ C, C.e ≤ 5 ∧ (37 < C.p → C.e ≤ 2)`
+  是**打包的素导子指数形式**（同样不是原文 Thm 1/2 的直接陈述）。
+- 因此 `Mzk1MestreUseWiringActual` 的 rows/docstring 已改为
+  “normalized surrogate；genuine MO Thm 1/2 见 `coord/EXTERNAL-CITATIONS-20261114.md` §7”，
+  **不声称**是原文定理的直接形式化。
+
+判定表结论不变：剩余活动缺口均非 MO/surrogate 形状；MO/surrogate 已在 D_exact、P3 ssIneq、
+`C.e ≤ 5` 处消费。
