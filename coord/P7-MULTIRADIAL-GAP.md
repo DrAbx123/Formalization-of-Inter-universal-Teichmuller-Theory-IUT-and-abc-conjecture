@@ -155,3 +155,7 @@ End of 2026-11-13 update.
   - `sourceMultiradialCarrier_nonempty`。
 - 另有 green：`MultiradialProcessionActual`（PrcMember/PrcTransition/PrcAutomorphism/Ind1TensorAction/thetaLabelOfFin/sourceThetaValue/sourceLGPMonoid/sourceLGPAction 等 14 defs）、`Indet02BPSMultiradialUpToActual`、`Indet05RouteMultiradialClassActual`、`S3139SourceMultiradialConsumerActual`、`S3139MultiradialProcessionConsumerActual`。
 - **因此旧结论“actual production 缺失”过时**：quotient-carrier 级 production 已有；真正剩余是 `SourceMultiradialMutationDemand`（first-triangle BPS → 该 quotient target，`S3139StageOneSeamsActual` 的 exact missing）以及完整 `n,oR_LGP` 输出类型/IPL-SHE-APT 兼容。
+
+## Update 2026-11-14 14:25: A5 进一步查重（mutation demand 已有 inhabitant）
+- `S3139FirstTriangleResidualActual.lean`（olean True）已有 **`sourceMultiradialMutationDemandInhabitant : SourceMultiradialMutationDemand J (sourceBPSOfTheater J 0 0) (sourceEtHTZeroColumn J 0)`**（`bps_glued := refl`, `etHT_zero_column := rfl`, `mutation := id`），以及 `sourceEtHTTarget_eq_bpsEtaleLikePortion`、`ind1_ind2_tprod_commute`。
+- 该文件明确：A5 只差 **三个 residual `Nonempty` 数据**：`SourceProcessionCapsuleContract`、`SourceLGPData`、`SourceFmodRealEmbedding`，加 Ind1 与 actual procession action 识别、Ind3 log-Kummer 兼容；旧结论“n,oR_LGP production 缺失”过时。
