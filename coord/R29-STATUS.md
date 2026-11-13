@@ -970,3 +970,5 @@
 - 21:45：hull **HaarStrict DEFERRED 审计完成**（coord/HAARSTRICT-RED-GAP.md + AUDIT_LEDGER）：371 行/17,136B/无 olean/最新 FAIL 13:26:16Z；首错旧 API（:74 max_le、:76 参数、:108-110 placeholder）；extra-targets 483 项中 0 直接 import、子树均不在 watch、无 watched green 逆向依赖 ⇒ 已从名单移除；gate red 只剩 B5 系（Uncond 在修）。
 
 - 21:48：abc 收尾审计完成：AUDIT_LEDGER 追加 #7 全收口/#4 C3 候选/#10 citizen 清单；P7-MISSING 修正 6 处陈旧行（#1 统一 CONDITIONAL(HullQDictionary)；#7 DONE 5 文件；#4 PARTIAL+C3 候选；#5/#6/#7 按 plan）；无 Lean 改动。
+
+- 21:52：mainline Uncond 首错 relay（den.property R 显式、Finite.subset/HasFiniteSupport 展开、Associates.finite_factors binder 名；建议直接用 qpilot 的 fractional_count_weighted_hasFiniteSupport + finsum_sub_bridge）。
