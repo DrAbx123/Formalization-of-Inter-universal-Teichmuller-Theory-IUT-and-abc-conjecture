@@ -1506,3 +1506,5 @@
 - 15:28：TauCeti port 时间盒结论：**冻结为“部分移植 4/10 + CardQuotient 4.36 广义定理缺口”**（4.32 `Ideal.cardQuot_mul` 需 `[Module.Free ℤ S]`；O_K 非 ℤ-自由，不能补 instance）；class-B `PAdicHaarDetScaling`（已 green）作为 det-Haar/#10 实际支撑，不再投入 port（除非用户批准 inline 广义 cardQuot_mul 立项）。det-Haar：`Mzk1GapDetHaarSNFSplit` green；MatrixSplit/DiagonalNorm 最新修复 retouch；Assembly/DegreeIdentification 等 SNFMatrixSplit olean。
 
 - 15:32：桥 2 RHS 分支剩余错：`(fun x => ↑x) y ∈ ↑(Submodule.map …)`，需先 `hfun : (fun x => ↑x) = ⇑(Algebra.linearMap …)`（rfl 或 funext+Algebra.linearMap_apply），再 `change … ∈ Submodule.map …`、`rw [Submodule.mem_map]`、`exact ⟨y,hy,rfl⟩`。已发 mainline；TauCeti port 正式冻结（部分移植+class-B）。
+
+- 15:35：采纳 `coord/P7-SIX-GAPS-ROUTES-20261114.md` 修正路线（已写 P7 §20.11）：**A1 改格比较**（J=π_F^{⌈m/e⌉}O_F、Q⊆J、determinant 备选，不再要求 BlockProductAlignmentData 同构）；**A4 保留 f/e**（N(v)=p^{f_v} 对齐，不依赖 residue-one）；**A5 补原文局部实现**（S3139 已有 quotient/mutation/标准实数模型；真实 log-shell/LGP/Ind1-3）；**A6 1/3 三平移草案**（hull 实现中）；**A7 exact obstruction、改 p-free 乘积**（`coord/A7-BAD-MODULI-VERDICT.md`）；**A8 改 (b,label) 评价族**（不追 Nonempty map）。

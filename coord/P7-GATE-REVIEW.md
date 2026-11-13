@@ -428,3 +428,18 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 乘积 ⇒ `μ(hull)/μ(unit) ≤ (1/3)^{#Bad}`；`s1915ClosedForm = 1 + log(μ(hull)/μ(unit)) ≤ 1 − (#Bad)·log3 < 0`（#Bad nonempty 可证）。
 - 而 `paperBox ≥ 0`（disc,cond≥1）⇒ `V ≤ paperBox` 对**所有** disc/cond 成立，`C0=0` 无条件；#9 可望整体 DISCHARGED，不再需要排除 `disc=1∧cond=1`。
 - 已派 hull 实现：`Mzk1HullUBLocalThirdActual`（严格半径 + 1/3 界）+ `Mzk1HullUBUnconditionalC0Actual`（乘积 + 闭式 + 收口）。
+
+### 20.11 六缺口修正路线（stepxi 交接 + Lead 采纳，2026-11-14 15:35）
+来源：`coord/P7-SIX-GAPS-ROUTES-20261114.md`（40KB，含 file:line 研究；未 kernel-check）。采纳要点：
+
+**A1（改主线，不再要求载体同构）**：不需要 `BlockProductAlignmentData` 的 `≃ₐ`；在实际 tensor 载体上构造格 `J`，证 `Q_A ⊆ J ⊆ H_A^paper`（或只比较 determinant `v_p(det C)≥0`），用同一 Haar 单调性/行列式得到 log-volume 比较。局部秩一块：`q=α^N`, `λ=α`, `a=v_F(q)`, `m=v_L(λ)`, `e=e(L/F)` ⇒ `v_L(ιx)=e v_F(x)`, `J=π_F^{⌈m/e⌉}O_F`; `qO⊆J` 由 `q=λc, c∈O_L` 的整性自动支付取整误差；归一化差 `(1/d_F)log(μ(J)/μ(O)) = log‖λ‖_L − δ`, `0≤δ<log p/e_F`。第一包：一个实际 `qVFamTensorBlock T b` 上实现 `J_b`、`qO⊆J_b`、有符号相对读数；第二包扩展到 tuple/permitted-image 生成元证书。禁止再加 `hcomparison`/`hblockEquiv`/`hδsmall` 输入。
+
+**A4（改主线，保留 f/e）**：通用输入不要 residue-one；用 `N(v)=p^{f_v}`（Mathlib `Ideal.absNorm_eq_pow_inertiaDeg'_of_liesOver` + 项目 `residueNormBase` 对齐）并把 `-log|g_v|=a_v f_v log p` 放回 B5/count；按绝对维数归一化时 `a_v f_v log p/[K_v:Q_p]=a_v/e_v·log p`，f 自然消去。只有原文真正全分裂/局部同构输入才走 residue-field 同构条件链；`finite/tame/split` 字样不算构造。
+
+**A5（改主线，补原文局部实现）**：已有 S3139 quotient/mutation + `S3139FirstTriangleFieldBActual` 标准实数模型前两项 + FieldAC/FieldC character；“还差三个 Nonempty”是过时快照。新任务是：按 `E_{p,j,i}=⊕_{v|p}K_{v,i}`, `A_{p,j}=⊗_{i=0}^j E_{p,j,i}` 构造真实局部 log-shell/LGP 作用，证 Ind1 等变方块 `eval(g·x)=g_*eval(x)`、Ind2 pure-tensor 非干扰、Ind3 log-link 包含；最小单元：一个 p、一个 j、相邻两个 m 列。
+
+**A6（证明草案已完整，hull 实现中）**：`0<r_b<1`（S709 radius=root norm + strict）⇒ `H,1+H,2+H` 两两不交且 ⊂ O（奇 residue char，‖1‖=‖2‖=1）⇒ `3μ(H)≤μ(O)` ⇒ `μ(H_T)/μ(O_T)≤1/3` ⇒ `V_T=1+log ratio≤1−log3<0` ⇒ `(disc=cond=1,paperBox=0)` 直接 `V≤paperBox`。注意验收范围：对当前 S1902/S1915 根最大球成立；若改成 `1+(log ratio)/D` 只给 `1−log3/D`；若原 Ind1–3 区域更大不能自动保留 1/3。
+
+**A7（不判定固定 p，改 p-free 乘积）**：probe 结论 = **exact obstruction**：`NativeBadModuliFixedPrime` 是 Bad 上 `completionRationalPrime` 常值性，源数据不决定；S1729/S1730 的 bad set 有 ≥2 个素数，故 T-level 反例条件化。**#10 不需要 fixed p**：`localUnitMassProduct`/`badPlaceUnitMassProduct_eq_one` 已 p-free；只有需要共同 Qp tensor 时才按 `B_p={b:p_b=p}` 分块（`b↔(p_b,b)` 双射）。不要加固定 p 源字段（会让 S1730Selection 不可构造）。见 `coord/A7-BAD-MODULI-VERDICT.md`。
+
+**A8（不再追 Nonempty map）**：`BadThetaLabelMap.labelOf : Bad→(ZMod l)ˣ` 裸类型可用 `fun _=>1` 填，“无 inhabitant”应理解为“无原文忠实标签映射”。主线改为真实 `(b,label)` 评价族 `Eval(b,j)=θ_{b,j}`（复用 `Mzk1P2LabelBlockCompleteActual.P2ActualLabelBlock`），procession 用 `Σ j, Place j` 依赖和、不强行选唯一 j；canonical 性通过重标记不变性 `θ'_{b,j}=transport_σ(θ_{b,σ(j)})`、`w'_j=w_{σ(j)}` 证明，而非找无依据的唯一标签。
