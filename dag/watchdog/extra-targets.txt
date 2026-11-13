@@ -426,3 +426,6 @@ tmp/sheaf/xif/paper/Mzk1ThetaVScaleOffsetGeneralActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MissingRowsWitnessActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegB2Actual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBPaperVRawBindingActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBPaperVRawUpperActual.lean
+tmp/sheaf/xif/paper/Mzk1HullUBB6RowsActual.lean
