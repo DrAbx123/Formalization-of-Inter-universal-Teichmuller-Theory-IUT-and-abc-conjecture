@@ -1701,3 +1701,5 @@
 - 01:40：hull 建议以 `Mzk1A1SignedReadoutFinal` 替代 `A1DeltaExplicit`；**纠正**：21:26:13 green 的是 `Mzk1A1SignedReadoutActual`，`SignedReadoutFinal` 22:15:25 FAIL/22:18:27 仍在重编，official 前不能当已证、不能删 Delta。条件 correspondence（`qhatHaarScaling` 单点 factor 缺口）已写 `Mzk1P0QThetaReadoutCorrespondenceActual`，待编。
 
 - 01:45：abc 定位 A2 收口：`Mzk1P2QHatNormCoherence` 绿；根因是 `Mzk1P0QHatNormExponentActual:40 ring` 失败导致 donor 无 olean；已授权 abc 只改该行 `ring→ring_nf`（文件无 active owner），然后写 `P2QHatNormRootBase`/`AgreementUnconditional` 两小文件填 `P2QHatNormInstanceAgreement` → `P2QReadoutUnconditional` 绿（#1/A2 最后条件）。
+
+- 01:50：巡检新 green：**`Mzk1P1IdealMapFinprodExpandActual` 22:19:16**（三桥第一桥）、**`Mzk1GapDetHaarDegreeIdentificationActual` 22:20:10**（det-Haar/port 辅助）。已让 mainline 推 general proof→IdealLocalizedCount→B5Index+B5 evidence，qpilot 继续 BoxConsumer，shehdd Gamma/torsion，lattice A1Padic，stepxi A5 consumer。
