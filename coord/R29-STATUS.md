@@ -896,3 +896,5 @@
 - 01:26：abc P7ContractMarginConsumer 首错：:58/:65 `Unknown identifier T`（缺 binder/variable），已 relay；stage4 Weight 修复（删除无效 open、本地 MeasurableSpace/BorelSpace 实例、push_cast;ring）待重编；DetLinePlaceB5Arch DONE 12:58:34Z（64s）。
 
 - 01:32：mainline DetLinePlaceB5Merged（finiteB5Part+finite_eq_placeLogVolume_sub+mergedLogDegree_B5）入队（472 项）；Ob33DetLineBridge 确认 green（12:41:14Z，58s）。派 qpilot 攻 local-global product formula（Ideal.absNorm 分解 API，可能可证→直接关 B5 汇总缺口）、hull 收尾 #5/#6/#9 文档核对、lattice 查 nativeBadToKPlace 的 prime 等式。
+
+- 01:36：hull 文档核对完成：P7 §13 #5/#6/#9 一致；#9 最终 spec 段已加（V=scaledClosedFormR=normalizedLog+1；general C0=1；paper regime C0=0；C0=0⇔slack≥1；一般 disc=1 OPEN；arch 归 #10）；10 份 olean 存在（GeneralFinal 131,080B 等）；AUDIT_LEDGER 已追加。

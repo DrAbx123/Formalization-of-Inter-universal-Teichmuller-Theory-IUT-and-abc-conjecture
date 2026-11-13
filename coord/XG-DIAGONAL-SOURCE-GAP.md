@@ -123,5 +123,5 @@ D. 最后接 Mzk1DualIndexSourceActual.XG_volume_ratio_of_quotient_equiv。
 
 - **B4 canonical**：`Mzk1CanonicalDiagUncondActual` DONE 12:20:05Z，收口为 `canonical_diag_volume_ratio_compact_open`（条件 hLc/hLo/hXc/hXo；hXpos/hXtop 已由 IsOpenPosMeasure/measure_lt_top 推出）；`diagHomeo f '' coordSmall = coordDual` 的 **image bridge + compact/open 像为精确 GAP**（见 `Mzk1DiagEquivBridgeActual`）。
 - **#7 THETA-DEG**：`Mzk1P7ThetaDegActual` DONE 12:20:07Z——`localCompletionDegree := Module.finrank ℚ_[p] (CommonPrimeCompletion place)`，`c3TensorBlockDimension = ∏ localCompletionDegree`。
-- **B2**：`Mzk1P7ThetaDegB2Actual`（待 watchdog）——域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank block = ∑ finrank E_j`；packet = Σ_tuple Σ_j；C3 block:Q_p = Σ 实际 local degree。
+- **B2**：`Mzk1P7ThetaDegB2Actual` **DONE 12:54:15Z**——域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank block = ∑ finrank E_j`；packet = Σ_tuple Σ_j。**C3 特化** `Mzk1P7ThetaDegC3Actual` **DONE 12:33:19Z**：`c3TensorBlockDimension = Σ 实际 local degree`。
 - 依赖修复：`Mzk1C3BlockMeasureActual` DONE 11:44:02Z（`Nat.cast_pos` 取代 `exact_mod_cast`）。

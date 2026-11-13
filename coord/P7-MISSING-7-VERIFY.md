@@ -127,7 +127,7 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 | `Mzk1C3S1902QuantityActual.lean` | **DONE EXIT=0**（00:35:41Z，57s） | CONDITIONAL on `C3S1902TransportData`：`hull_measure_toReal_eq_haarScale_mul_prod_ball`（μ_C3(hull)=haarScale·∏_b μ_b(ball_b)）、`thetaRead_eq_log_haarScale_add_sum_log_ball`、`ballMassProduct_pos` |
 | `Mzk1C3S1902ComparisonActual.lean` | **DONE EXIT=0**（00:53:27Z，57s） | `comparison_iff_qnorm_le_haarScale_mul_prod_ball`（comparison ⇔ ‖q‖≤haarScale·∏μ_b(ball_b)）、`comparison_of_qnorm_le_haarScale_mul_prod_ball` |
 | `Mzk1C3S1902LowerBoundActual.lean` | **DONE EXIT=0**（10:57:00Z，50s） | `comparison_of_qnorm_le_haarScale_mul_lowerBound`（注入任意 c≤∏μ_b(ball_b)） |
-| `Mzk1C3S1902ConditionOneActual.lean` | 待 watchdog | `comparison_of_one_le_haarScale_mul_prod`（∏·haarScale≥1 且 ‖q‖≤1）、`comparison_of_haarScale_one_of_one_le_prod` |
+| `Mzk1C3S1902ConditionOneActual.lean` | DONE 11:00:25Z，olean=True | `comparison_of_one_le_haarScale_mul_prod`（∏·haarScale≥1 且 ‖q‖≤1）、`comparison_of_haarScale_one_of_one_le_prod` |
 
 **状态**：#1 general 仍未证，但现在精确化为**具体局部质量乘积** `haarScale·∏_b μ_b(ball_b)`；其正性已证，具体正下界仍需 theta-value 范数下界（`rootImageRadius` 是 theta 范数 sup，`PaperRootExtensionThetaHullAuditActual:48-51`），无 p^{-ord} 显式公式。所有结果都 CONDITIONAL on `C3S1902TransportData`（无 inhabitant）。
 ## 9. #1 GENERAL-CMP 攻击进展（P7-GAP-ATTACK-PLAN 负责项）
@@ -153,7 +153,7 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 | `Mzk1PadicBallCeilActual.lean` | DONE 11:52:14Z | **A2**：`μ_b(B_b) = ofReal(r_b^{d_b})·μ_b(O_b)`（`s1915_local_measure`）；rpow 形式；已删 ceil/hball/general scaling |
 | `Mzk1C3S1902BallMassFormulaActual.lean` | DONE 12:03:46Z | 乘积质量 `(∏μ_b(B_b)).toReal=(∏r_b^{d_b})·(∏μ_b(O_b)).toReal`；comparison ⇔ `‖q‖≤haarScale·(∏r^{d})·(∏μ(O)).toReal` |
 | `Mzk1C3S1902LowerBoundActual.lean` | DONE 12:06:23Z | 重写：仅 `comparison_of_qnorm_le_haarScale_mul_ballMassProduct`；**删除** `c`/`hprod`/范数下界/`hball` |
-| `Mzk1S1915DegreeFinrankActual.lean` | 待 watchdog | `s1915LocalDegree_eq_finrank`（rfl）、real 形式、closed form 改写 |
+| `Mzk1S1915DegreeFinrankActual.lean` | DONE 12:18:40Z，olean=True | `s1915LocalDegree_eq_finrank`（rfl）、real 形式、closed form 改写 |
 
 ### `C3S1902TransportData` inhabitant 的精确障碍
 
@@ -169,7 +169,7 @@ GAP-P7-THETA-DEG：论文的 [C3 block : Q_p] 是否等于逐位局部次数/乘
 | `Mzk1C3S1902BallMassFormulaActual` | DONE 12:03:46Z，olean=True | 乘积质量恒等式 + `comparison_iff_qnorm_le_haarScale_mul_ballMassProduct` |
 | `Mzk1C3S1902LowerBoundActual` | DONE 12:06:23Z，olean=True | 重写后仅 `comparison_of_qnorm_le_haarScale_mul_ballMassProduct`；无 c/hprod/范数下界 |
 | `Mzk1S1915DegreeFinrankActual` | DONE 12:18:40Z，olean=True | `s1915LocalDegree_eq_finrank`（rfl）+ real + closed form |
-| `Mzk1C3S1902NormalizedLogActual` | DONE 12:29:53Z，olean=True | (A5) `s1915ClosedForm = 1 - Σ_b d_b c_b/(2l) log p_b`；`log_normalized_hull_eq_one_sub_sum` |
+| `Mzk1C3S1902NormalizedLogActual` | DONE 12:38:53Z（当前版本；前版 12:29:53Z），olean=True | (A5) `s1915ClosedForm = 1 - Σ_b d_b c_b/(2l) log p_b`；`log_normalized_hull_eq_one_sub_sum` |
 
 **依赖减少**：`hball`/ceil/general prime-power scaling 删除；`c`/`hprod`/范数下界删除；球质量链所有输入均为 S1915/S709/QVFam 实际定理。
 

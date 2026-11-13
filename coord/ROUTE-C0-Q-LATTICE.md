@@ -231,28 +231,66 @@ Next executable tasks:
    exists in the tree.
 
 End of readout source note.
-## Source B idele construction status
+## Source B idele construction status (definitional bad components)
 
 File: tmp/sheaf/xif/paper/Mzk1C0GlobalIdeleActual.lean.
-GREEN (DONE 2026-11-13T12:45:04.868Z, 56s; olean 94336 B; axioms
+GREEN (DONE 2026-11-13T12:53:22.155Z, 66s; olean 149472 B; axioms
 [propext, Classical.choice, Quot.sound]).
 
-Constructed:
-- `c0GlobalFinite : (v : FinitePlace F) -> Completion v`
-  (bad-lift branch = q_v, other = 1), using Classical.choose;
-- `c0BadComponent b = (qVFamily T b).q` definitionally;
-- `C0GlobalIdele` with finite=`c0GlobalFinite`, arch=1;
-- `c0GlobalIdele_arch_one`.
+Replaced the failed total `if/choose` function by definitional component data:
+- `c0BadSupport = univ.image lift` (finite support of bad lifts);
+- `C0GlobalIdeleData` with
+  `bad : ∀ b, Completion (lift b)`, `bad_eq : bad b = q_v`,
+  `good : ∀ v, v ∉ c0BadSupport -> (Completion v)ˣ`, and
+  `arch : ∀ w, (w.Completion)ˣ`;
+- `c0GlobalIdeleData` constructed with
+  `bad := fun b => (qVFamily T b).q`, `good := 1`, `arch := 1`;
+- `c0GlobalIdeleData_bad` / `_bad_eq` are rfl; `_good_one` and `_arch_one`
+  are rfl.
 
-Exact remaining gap inside the finite function:
-`c0FiniteBadConsistencyGap : ∀ b, c0GlobalFinite (lift b) = q_v`.  The
-dependent cast through `Classical.choose_spec` (Completion is a type family)
-is not completed; attempted `cases hbb` fails dependent elimination
-(`b = Classical.choose h`).  This is recorded as a Prop, not an axiom.  Thus the bad
-components are explicitly available as `c0BadComponent`, but the total
-if/choose function is not yet proved to agree with them.
+The dependent-cast total function is NOT needed for source B.  There is no
+`c0FiniteBadConsistencyGap` anymore: bad components are definitional q_v.
+(
 
-Second missing arrow remains: idele -> global height/readout; no height
-functional for `C0GlobalIdele` and no `qPilotLogVolumeReading` equality.
+Second missing arrow remains: `C0GlobalIdeleData` -> global height/readout;
+no idele height functional and no `qPilotLogVolumeReading` equality.  The
+finite bad data is fully constructed; only the readout bridge is open.
 
 End of source B status.
+
+## Idele height functional: constructible candidate vs readout gap
+
+File: tmp/sheaf/xif/paper/Mzk1C0IdeleHeightActual.lean.
+GREEN (DONE 2026-11-13T12:58:33.911Z, 63s; olean 76040 B; axioms
+[propext, Classical.choice, Quot.sound]).
+
+Constructed from `C0GlobalIdeleData`:
+- `c0IdeleFiniteHeight D = heightWeight * sum_bad log max(norm q_v,1)`;
+- `c0IdeleArchHeight D = heightWeight * sum_arch log max(norm arch_w,1)`;
+- `c0IdeleHeight D = c0IdeleFiniteHeight D + c0IdeleArchHeight D`;
+- `c0IdeleHeight_eq_finite_add_arch` (rfl);
+- `c0IdeleHeight_eq_weight_mul_sum`: the same paper hBox shape
+  `heightWeight * (sum_bad + sum_arch)`;
+- finite/arch nonneg and total nonneg.
+
+Relation to paper height:
+The paper `hBox` is `heightWeight * (sum_finite hTerm + sum_arch hTerm)`
+with `hTerm = log max(absValAt,1)` (ArithmeticDivisorDegree.lean:1220-1228).
+Our candidate has exactly this sum shape, with local completion norms.  For a
+global element `x : F`, equality would be rfl-level **given** the component
+identifications
+
+  D.bad b = algebraMap F (Completion (lift b)) x,
+  D.arch w = algebraMap F (w.Completion) x  (as a unit),
+
+and the second is only possible when the arch component is a unit (norm 1).
+`C0GlobalIdeleData.arch` is a unit, so this is a real constraint, not a
+definitional equality.
+
+Exact readout gap:
+  ideleReadout : C0GlobalIdeleData T -> Real,
+  ideleReadout_eq : ideleReadout D = qPilotLogVolumeReading P
+for an actual P, or = hBox F x for a global x whose components are D.
+There is no such map/equality in the tree; this is the second missing arrow.
+
+End of idele height note.

@@ -158,15 +158,15 @@ End of P5/P7 alignment note.
 | # | GAP code | 当前状态 | 证据 / 说明 |
 |---|---|---|---|
 | 1 | GAP-P7-GENERAL-CMP | **OPEN** | S3137 actual q/theta readings green；qTheta comparison（paper normalization）未证；S3137 assembly 以 comparison 为 hypothesis。 |
-| 2 | GAP-P7-IQ-LITERAL | **DISCHARGED（definition-level carrier） + semantic PARTIAL** | `Mzk1IQFiniteAdeleRestrictedActual.lean`（DONE 12:04:41Z，olean 41,096B）：`iqPlaceIndex=HeightOneSpectrum (𝓞K)`、`iqLocalField=i.adicCompletion K`、`iqLocalIntegers=i.adicCompletionIntegers K`；`iqCarrier_eq_mathlibFiniteAdeleRing`（rfl 到 Mathlib `IsDedekindDomain.FiniteAdeleRing (𝓞K) K`）、`iqFiniteAdeleRingEquiv`（RingEquiv.refl）、`iqCommRing`/`iqTopologicalSpace`/`iqAlgebra`/`iqIsTopologicalRing` 结构运输；`iqCoordinateMap_eventually_mem_integers` 几乎处处整性。**不需要 FLT backport 链**。semantic 附加：`Mzk1IQFiniteAdeleStructuresActual`（DONE 12:28:08Z，olean 133,520B）构造 `IQUnitGroup`/`iqUnitGroupEquiv`、`principalFiniteAdele`、`principalSupport`/`mem_principalSupport_iff`、`principalDivisorFull: HeightOneSpectrum →₀ Int`（divisorSupport = support k ∪ support k⁻¹，`principalDivisorFull_support_subset`）。剩余 semantic GAP：paper label 的**精确类型**为 `ProcessionLabel l = (ZMod l.value)ˣ`（`Mzk1PaperLabelProjectionActual`，DONE 12:44:39Z，olean 75,632B）；已构造实际 ℕ 投影 `rationalPrimeOfFinitePlace v = Ideal.absNorm (v.asIdeal.under ℤ)` 与 residue-prime 候选 `candidateLabelOfPlace`（仅 nonzero mod l subtype），但**无 canonical theta-label 映射** `HeightOneSpectrum → ProcessionLabel l`，`PaperLabelProjectionInterface` 仍是命名输入；**实际 Bad→Nat 桥**：`Mzk1PaperLabelBadIndexBridgeActual`（DONE 12:51:49Z，olean 65,824B）`badRationalPrime b = absNorm((nativeBadToKPlace b).maximalIdeal.asIdeal.under ℤ)`，但只到 rational prime/residue-prime，非 theta label；`BadThetaLabelMap` 为命名输入。`deg(principalDivisorFull)=0` 须带 residue-degree/log 权重，未证/未冒充。 |
+| 2 | GAP-P7-IQ-LITERAL | **DISCHARGED（definition-level carrier） + semantic PARTIAL** | `Mzk1IQFiniteAdeleRestrictedActual.lean`（DONE 12:04:41Z，olean 41,096B）：`iqPlaceIndex=HeightOneSpectrum (𝓞K)`、`iqLocalField=i.adicCompletion K`、`iqLocalIntegers=i.adicCompletionIntegers K`；`iqCarrier_eq_mathlibFiniteAdeleRing`（rfl 到 Mathlib `IsDedekindDomain.FiniteAdeleRing (𝓞K) K`）、`iqFiniteAdeleRingEquiv`（RingEquiv.refl）、`iqCommRing`/`iqTopologicalSpace`/`iqAlgebra`/`iqIsTopologicalRing` 结构运输；`iqCoordinateMap_eventually_mem_integers` 几乎处处整性。**不需要 FLT backport 链**。semantic 附加：`Mzk1IQFiniteAdeleStructuresActual`（DONE 12:28:08Z，olean 133,520B）构造 `IQUnitGroup`/`iqUnitGroupEquiv`、`principalFiniteAdele`、`principalSupport`/`mem_principalSupport_iff`、`principalDivisorFull: HeightOneSpectrum →₀ Int`（divisorSupport = support k ∪ support k⁻¹，`principalDivisorFull_support_subset`）。剩余 semantic GAP：paper label 的**精确类型**为 `ProcessionLabel l = (ZMod l.value)ˣ`（`Mzk1PaperLabelProjectionActual`，DONE 12:44:39Z，olean 75,632B）；已构造实际 ℕ 投影 `rationalPrimeOfFinitePlace v = Ideal.absNorm (v.asIdeal.under ℤ)` 与 residue-prime 候选 `candidateLabelOfPlace`（仅 nonzero mod l subtype），但**无 canonical theta-label 映射** `HeightOneSpectrum → ProcessionLabel l`，`PaperLabelProjectionInterface` 仍是命名输入；**实际 Bad→Nat 桥**：`Mzk1PaperLabelBadIndexBridgeActual`（DONE 12:51:49Z，olean 65,824B）`badRationalPrime b = absNorm((nativeBadToKPlace b).maximalIdeal.asIdeal.under ℤ)`，但只到 rational prime/residue-prime，非 theta label；`BadThetaLabelMap` 为命名输入。**S3137/S3136 label-weight 对照**：`S3136WeightedAverageLabelMappingActual.lgpThetaLabelCollectionTerm : SignedLabel l.value → ℕ` 是 theta label 权重；而 `badRationalPrime : Bad → ℕ` 是 residue prime 投影；两者类型不同，无 canonical `Bad → SignedLabel l.value` 映射（仅可经显式 pullback 输入），故不能直接对接。`deg(principalDivisorFull)=0` 须带 residue-degree/log 权重，未证/未冒充。 |
 | 3 | GAP-P7-OB33-SRC | **CONDITIONAL** | `Mzk1Ob33SourceIdentificationActual`（DONE 11:40:50Z，ole 82,832B）：本地实际 `ob33DetNormalizedLogVolume` 构造 + `ob33_detNormalized_eq_raw_div`（raw Haar/blockDim）；实际 detDegree 对象 `ob33ActualDetDegree = actualUnitLineBundleData.detData.globalLogVolume`；显式 identification `Ob33SourceIdentificationActual` 仍未证，消费定理 `ob33_actualDetDegree_eq_raw_div_of_identification`。**新增实际 source**：`Mzk1PaperQPilotLineBundleSourceActual`（DONE 12:32:28Z）从 bad-prime 理想乘积构造 `qPilotLineBundleSourceOfBadPrimes`；`Mzk1Ob33DetLineFromBadPrimeSourceActual`（DONE 12:35:00Z）接 `qPilotDetLineOfBadPrimes`/`DetData`/`DetArithmeticDegree`，并把 RouteB gap 精确化为 `BadPrimeSourceReadingIdentification`（semantic Prop，条件闭合）；paper q-参数幂次/label 权重语义仍 GAP。 |
 | 4 | GAP-P7-MULTIRADIAL | **PARTIAL** | (xi-e)/(xi-f) 实际 production 缺失。仅有有限/kernel 模型 carrier（`tmp/sheaf/xif/paper/Mzk1P7MultiradialCarrierActual.lean`，reuse `SourceFiniteMultiradial.core/profile`，模型边界）；精确缺失输入/输出型别见 `coord/P7-MULTIRADIAL-GAP.md`。有限模型 production green（`finiteMultiradialAlgorithmDischarge`/`finiteIndeterminacyDischarge`，仅 finite Q(i)-at-5）；general 层 `CarrierAlgorithmContract` 无条件 green、`RouteNormalForm` 是 named input、general `FiniteIndeterminacyDischarge` 缺失（Mzk1P7MultiradialGeneralBridgeActual DONE 19:18:19Z；finite witness `Mzk1P7MultiradialWitnessActual` DONE 19:31:16Z（actual finite label/procession 填入 GeneralMultiradialWitness））；实际 `n,oR_LGP`/procession/log-Kummer/IPL-SHE-APT production 仍缺，GAP 仍 OPEN/PARTIAL，不冒充 discharge。 |
 | 5 | GAP-P7-THETA-V | **DISCHARGED（general-k, C0=1）** | 实际 `scaledThetaHull_normalizedLog_eq : normalizedLog(scaledThetaHull k) = scaledClosedFormR k - 1` ⇒ paper V(k)=scaledClosedFormR k = normalizedLog+1。`Mzk1ThetaVGeneralUnconditionalActual.thetaVScaleOffsetGeneral k`：scale=1, offset=1，**无假设**；`scaledClosedFormR_le_paperBox_add_one (M E k)`：general-k C0=1 actual bound。一般 k 的 scale 项已被吸收进 offset=1；qLogSum 项用于 `scaledClosedFormR k ≤ s1915ClosedForm`。 |
 | 6 | GAP-P7-THETA-D | **PARTIAL/DISCHARGED for S2717C3** | 实际 C3 key map `Mzk1C3DKeyMapActual.actualC3DKeyMap`（DONE 11:22:23Z）；D 右端投影 `Mzk1C3DDonorProjectionActual`（DONE 12:05:14Z，7 个 rfl：tensorIndex/PlaceIndex/Places/Tuple 及 keymap 投影 = D 字段）。S2717C3 构造上就是 D；一般 S3137 C3 与 donor 的相等仍是单独桥。 |
 | 7 | GAP-P7-THETA-DEG | **CONDITIONAL/PARTIAL**（2026-11-13 12:20Z） | ① p-scaling block factor 非正 green（`Mzk1S3137ThetaBlockFactorNonposActual`）；② 实际 local degree = `Module.finrank ℚ_[p] (CommonPrimeCompletion place)`（`Mzk1P7ThetaDegActual.localCompletionDegree`）并证 `c3TensorBlockDimension = ∏ localCompletionDegree`（DONE 12:20:07Z）；③ 路线 B2：域分解 `Block ≃ₐ ∏ E_j` ⇒ `finrank block = ∑ finrank E_j`（`Mzk1P7ThetaDegB2Actual`，待 watchdog）；C3 特化 `c3TensorBlockDimension = ∑ 实际 local degree`（`Mzk1P7ThetaDegC3Actual`，DONE 12:33:19Z）。未闭：degree 权重与 V 的最终归一化消去（真实分块上乘法/加法关系仍待接）。 |
 | 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（2026-11-13） | 映射与条件装配已机器化：`Mzk1P7ContractMapActual.lean`（DONE，olean=True）给出 `recon12ToGap`（12 行）、`missing7ToGap`（7 missing → 10 GAP codes）、`gapCodesCovered`（=10 且 = gapRegister.length）、`contract_fields_not_linked`（#6 真缺口）、`p7_conditional_contract`（comparison ⇒ Cor312Conclusion）。文档 `coord/P7-CONTRACT-MAP.md`。 |
-| 9 | GAP-P7-HULL-UB | **DISCHARGED（paper regime, C0=0）** | paper V(k)=`scaledClosedFormR k` = `normalizedLog(scaledThetaHull k)+1`（`Mzk1ThetaVGeneralUnconditionalActual`）；general-k C0=1 unconditional（`Mzk1HullUBGeneralFinalActual`）。paper regime 下 `normalizedLog≤0` 且 `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox≥1`，故 `V≤paperBox`，即 **C0=0**（`Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`，待 watchdog）。一般 CurveData（disc=1/cond=1）C0=0 仍 OPEN（paperBox≥1 不自动）。<br>**arch 边界**：HULL-UB/S1902 载体只含有限 bad places；paperBox 无 arch 项；arch 归 #10，不混入。 |
-| 9b | GAP-P7-HULL-UB-C0 | **paper regime DISCHARGED；general OPEN** | `V=normalizedLog+1`, `normalizedLog≤0`；paper regime `paperBox≥1` ⇒ `V≤paperBox`（C0=0）已证。一般 `disc=1/cond=1` 时 paperBox≥1 不自动，C0=0 仍 OPEN；不能假设 e-常数 1 无条件吸收。 |
+| 9 | GAP-P7-HULL-UB | **DISCHARGED（paper regime, C0=0；general C0=1）** | paper V(k)=`scaledClosedFormR k`=`normalizedLog(scaledThetaHull k)+1`；general-k C0=1 unconditional（`Mzk1HullUBGeneralFinalActual`）。paper regime `normalizedLog≤0` 且 `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox≥1`（系数 `(l+5)/4≥5/2`，`5/2·log2>1`）⇒ `V≤paperBox`，**C0=0**（`Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`，DONE 12:53:24Z）。一般 CurveData（disc=1/cond=1）C0=0 仍 OPEN。<br>**arch 边界**：HULL-UB/S1902 载体只含有限 bad places；paperBox 无 arch 项；arch 归 #10，不混入。 |
+| 9b | GAP-P7-HULL-UB-C0 | **paper regime DISCHARGED；general OPEN** | `V=normalizedLog+1`, `normalizedLog≤0`；paper regime `paperBox≥1`（disc≥2, cond≥1, l≥5）⇒ `V≤paperBox`，C0=0 已证。一般 `disc=1/cond=1` 时 paperBox≥1 不自动，C0=0 仍 OPEN；`1≤paperBox` 仅必要非充分。 |
 | 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL** | `Mzk1NormArchCKActual.lean`（DONE 11:13:09Z）：显式 `archCK K=1/[K:Q]`、`archCKToric=1/(2[K:Q])`；general-K `hArc/hNon/hToricArc` 因子形式 green。`Mzk1NormArchAbcHookActual.lean`（DONE 11:29:49Z，olean 140,232B）：`AbcArchFactorOutput` / `C3HaarScaleDocking`；`C3HaarScaleDocking_nonempty_of_finrank_one`（[K:Q]=1 ⇒ haarScale=1=C_K 实例）；`AbcArchFactorOutput_nonempty`。**缺失**：一般 K 的 abc `haarScale` 公式来源；C3S1902HaarScaleData 的 `haarScale` 仍 arbitrary+pos。 |<br>**与 HULL-UB 边界**：archCK/archFactor 只属本行；HULL-UB 的 C0=1 上界不消费 arch，故 #9 的 C0=1 不依赖本行；#10 只影响 arch 归一化/abc 对接，不改变 HULL-UB 有限位上界。
 
 #10 备注：**degree-one 已构造**（`[K:Q]=1 ⇒ haarScale=1=archCK`，`C3HaarScaleDocking_nonempty_of_finrank_one`）；**一般 K 等 abc 链**。核查结论：`C3S1902HaarScaleData.haarScale` 是 arbitrary `Real` + `0<haarScale`，无任何构造等式到 `c3UnitHaar` 或 `archCK`，故不能无条件对接。
@@ -175,9 +175,58 @@ End of P5/P7 alignment note.
 
 B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carrier = `CommonPrimeCompletion place`**，DONE 12:16:42Z）——`normalizedHaar_scaled_unitBall`/`b3_ratio_scaled_unitBall`：在 `LocalHaarScalingLaw` 下，`O_k` 与 `a • O_k` 的 normalizedHaar 比 = `||a||`；ProperSpace 障碍已消。**单一 named input**：`Mzk1CarrierEquivDataActual.lean`（DONE 12:30:44Z，olean 153,104B）把 carrier align + scaling 收成 `CarrierEquivData place`（`CommonPrimeCompletion place ≃ Completion place.val` 可测等价 + `LocalHaarScalingLaw`），`CarrierEquivDataRequired := Nonempty` 不造 inhabitant。仍需单独 `CountLocalizationBridge`（localizedLine 生成元 span）。最小字段清单：① equiv + measurable/measurable_symm；② scaling；③（另一结构）CountLocalizationBridge 的 e/pi/span_eq。
 
-**公式层 DONE + citizen 缺口**：`Mzk1NormArchC3HaarScaleFormulaActual.lean`（DONE 12:42:05Z，olean 115,824B）——`c3HaarScaleCandidate K localUnitProduct = archCK K * localUnitProduct = (1/[K:Q])*product`，正性 + [K:Q]=1&product=1⇒1；`C3HaarScaleFormulaData` 为公式层 named data。citizen 缺口：① `C3S1902HaarScaleData.blockEquiv` 的实际构造；② `unitMass` 实际值；③ T-specific `Bad (nativePlaceSelection T)` 索引的 local unit-mass product 实例化（通用 normalized product 已 green：`Mzk1LocalUnitMassProductActual.localUnitMassProduct_eq_one`，DONE 12:46:00Z，olean 未查）。
+**公式层 DONE + citizen 缺口**：`Mzk1NormArchC3HaarScaleFormulaActual.lean`（DONE 12:42:05Z，olean 115,824B）——`c3HaarScaleCandidate K localUnitProduct = archCK K * localUnitProduct = (1/[K:Q])*product`，正性 + [K:Q]=1&product=1⇒1；`C3HaarScaleFormulaData` 为公式层 named data。citizen 缺口：① `C3S1902HaarScaleData.blockEquiv` 的实际构造；② `unitMass` 实际值；③ T-specific `Bad (nativePlaceSelection T)` 索引的 local unit-mass product 实例化（通用 normalized product 已 green：`Mzk1LocalUnitMassProductActual.localUnitMassProduct_eq_one`（DONE 12:46:00Z，olean 64,952B）；T-specific Bad-index 泛型 product 也 green：`Mzk1BadPlaceUnitMassProductActual.badPlaceUnitMassProduct_eq_one`（DONE 12:57:11Z，olean 43,880B）。**实际 K 字段 GAP**：`nativeBadToKPlace T b` 只给 `FinitePlace`，无 `completionRationalPrime = p` 证明；`NumberFieldFinitePlace.Completion` 缺 `ProperSpace`（Mathlib），故不能直接接 `CommonPrimeCompletion`（需 `FinitePlaceAtPrime`）。
 
 结论：10 个 GAP code 中 **#2 GAP-P7-IQ-LITERAL 已 definition-level DISCHARGED**（Mathlib `FiniteAdeleRing` + carrier rfl + ring/topology/K-algebra 结构运输）；GAP-P7-CONTRACT 是条件接口（CONDITIONAL），GAP-P7-MULTIRADIAL 为 PARTIAL，其余为 OPEN/CONDITIONAL；除 #2 外没有因 UNRAM bridge green 自动关闭。
+
+### #9 GAP-P7-HULL-UB 最终 spec（2026-11-13 21:00 CST）
+
+**paper V 定义（actual）**
+- `thetaScaledLog T k := rootExtensionProductNormalizedLog T (scaledThetaHull T k)`；
+- 实际定理：`Mzk1ScaledThetaHullNormalizedLogShaActual.scaledThetaHull_normalizedLog_eq`
+  `normalizedLog(scaledThetaHull k) = scaledClosedFormR k - 1`；
+- 因此 `V_paper(k) := scaledClosedFormR k = normalizedLog(scaledThetaHull k) + 1`（general k）。
+
+**general-k 无条件界（C0=1）**
+- `Mzk1HullUBGeneralFinalActual.generalK_paperV_eq`：`scaledClosedFormR k = normalizedLog(scaledThetaHull k)+1`；
+- `Mzk1HullUBGeneralFinalActual.generalK_final_upper`：
+  `V_paper(k) ≤ paperBox(l, log disc, log cond, 0) + 1`；
+- `generalK_final_upper_C0_one`：同界写成 `paperBox(..., C0=1)`。
+- DONE 12:29:54Z；olean 131080 B @12:29:53Z。
+
+**paper regime 的 C0=0（DISCHARGED）**
+- `normalizedLog ≤ 0`：`Mzk1ExactHullVMainTermActual.normalizedLog_hull_nonpos`（hull⊆unit）；
+- `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox ≥ 1`：`(l+5)/4 ≥ 5/2`，`5/2·log2 > 1`；
+  `Mzk1HullUBC0AbsorptionActual.box_ge_one_of_disc_ge_two_cond_ge_one`；
+- 由 `V=1+normalizedLog≤1≤paperBox` 得：
+  `Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`
+  `V_paper(k) ≤ paperBox(l, log disc, log cond, 0)`，即 **C0=0**。
+- DONE 12:53:24Z；olean 231984 B @12:53:24Z。
+
+**C0=0 的 slack 精确条件**
+- `slack := paperBox(l,log disc,log cond,0) - normalizedLog(scaledThetaHull k)`；
+- `V_paper ≤ paperBox ⇔ 1 ≤ slack`（`Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_box_ge_one` 的逆命题表述）；
+- paper regime 下 `normalizedLog≤0` 且 `paperBox≥1` ⇒ `slack≥1`，故 C0=0 成立；
+- 一般 `disc=1 ∧ cond=1`：`paperBox≥1` 不自动，C0=0 仍 OPEN；`1≤paperBox` 只是必要条件，非充分；
+- **e-常数 1**（`s1902NormalizedHaar = (e/unit)·productHaar`）是 offset 来源，不能无条件吸收。
+
+**arch 边界**
+- HULL-UB 载体 S1902 只含有限 bad places；`paperBox` 只含 disc/cond 有限算术，**无 arch 项**；
+- arch 归一化归 #10 GAP-NORM-ARCH-C-K（archCK/archFactor），不混入 HULL-UB；C0=1/C0=0 均与 arch 无关。
+
+**相关 olean（全部存在）**
+| 文件 | olean | DONE |
+|---|---|---|
+| `Mzk1HullUBGeneralFinalActual` | 131080 B @12:29:53Z | 12:29:54Z |
+| `Mzk1HullUBPaperVRawUpperActual` | 65632 B @12:07:46Z | 12:07:47Z |
+| `Mzk1HullUBPaperVDictionaryActual` | 47952 B @12:10:26Z | 12:10:27Z |
+| `Mzk1ThetaVScaleOffsetIdentityActual` | 47920 B @12:10:26Z | 12:10:27Z |
+| `Mzk1C3DDonorProjectionActual` | 49360 B @12:05:13Z | 12:05:14Z |
+| `Mzk1HullUBC0AbsorptionActual` | 231984 B @12:53:24Z | 12:53:24Z |
+| `Mzk1HullUBC0ObstacleRowsActual` | 57848 B @12:49:36Z | 12:49:36Z |
+| `Mzk1HullUBPaperVDischargeActual` | 16888 B @12:17:19Z | 12:17:19Z |
+| `Mzk1ThetaVGeneralUnconditionalActual` | 131264 B @12:24:24Z | 12:24:25Z |
+| `Mzk1HullUBArchCheckRowsActual` | 57864 B @12:26:47Z | 12:26:47Z |
 
 ### 最新 gate / 相关通道
 - `Mzk1C17UnramResidueBridgeActual`：GREEN DONE 01:21:06Z（64s，ole 65,464B）；GAP-PC-WEIGHT 直接通道（e=f=1 ⇒ degree=1 ⇒ weight=1）为 CONDITIONAL；FLT finrank 通道已 import/#check，实例化仍需 place 对齐。

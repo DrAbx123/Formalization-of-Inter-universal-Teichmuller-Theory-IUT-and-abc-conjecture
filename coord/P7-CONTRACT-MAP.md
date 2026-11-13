@@ -89,3 +89,16 @@ qThetaPilotLogVolumeComparison C3 P
   `RouteBArithmeticDegreeReadingGap ⇔ 相对行列式形式`；
   `BadPrimeSourceReadingIdentification ⇔ relativeDetLog 形式`。
   参照线丛 O 与非零见证 hH/hO 为显式内容输入（bad-prime 理想乘积 ≠ paper q-除子的语义仍待识别）。
+
+### 6.1 第 4/5 步状态（2026-11-13 后续 2）
+
+- Mzk1DetLinePlaceB5ArchActual — DONE 64s@12:58:34Z，olean=True（archCKForK / hArc_nonneg_for_K / mergedLogDegree / mergedLogDegree_nonneg）。
+- Mzk1Ob33DetLineBridgeActual — DONE 58s@12:41:14Z，olean=True：
+  qPilotDetArithmeticDegreeOfBadPrimes = relativeDetLog(H,O) + globalLogVolume O；
+  RouteBArithmeticDegreeReadingGap ⇔ 相对行列式形式；
+  BadPrimeSourceReadingIdentification ⇔ relativeDetLog 形式。
+- Mzk1DetLinePlaceB5MergedActual（待名单）：finiteB5Part = -(vH-vO)logp、
+  finiteB5Part_eq_placeLogVolume_sub（PlaceB5Target ⇒ finite part = placeLogVolume 差）、
+  mergedLogDegree_B5 / mergedLogDegree_B5_nonneg（finite+arch 合并声明接上 PlaceB5Target）。
+- 剩余内容输入：LocalHaarScalingLaw（Haar scaling）、LocalPrincipalGenerator/CountLocalizationBridge
+  （DVR 主理想生成元）、参照线丛 O 与非零见证 hH/hO（paper 除子识别后消去）。
