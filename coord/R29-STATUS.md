@@ -1530,3 +1530,5 @@
 - 16:40：CardQuotient 已过 module import 关，最新首错 `:107:12 failed to synthesize Infinite R`——已发修法（加 `[Infinite R]` 或用 `[CharZero R]` + Mathlib `CharZero.infinite`，`Algebra/CharZero/Infinite.lean:21`）。`Mzk1B5ResidueNormPowActual` GREEN 20:22:46Z（62s）；`AbsNorm436Port` module 版 20:22:20 重绿；A6 LocalThird 20:21:44 重编中。
 
 - 16:46：**A1 格比较再进一步**：`Mzk1A1LatticeCompareActual` DONE 20:23:34Z（`qhatLattice_eq_c0QLattice`、`c0QLattice_subset_lambdaLattice`、`qVFamily_mem_inverseLambdaLattice_compare`）。三处首错修法已发：hull `LocalThird:39` 先 `change (↑p) ^ (-(c/(2l))) < 1` 再 `rw [Real.rpow_neg]`；shehdd `Ob33B5IndexGenerator:56` 用全限定 `Mzk1B5CountLocalValuationBridgeActual.CountValuationBridge`；qpilot CardQuotient 加 `[Infinite R]` 或 `[CharZero R]`+`CharZero.infinite`。
+
+- 16:50：shehdd 修 `Mzk1Ob33B5IndexGeneratorActual`：补 `import Mzk1Ob33B5CountUnconditionalAttemptActual`、`SpanGeneratorValuationLemma` 全限定、`CountValuationBridge` 全限定 `Mzk1B5CountLocalValuationBridgeActual.CountValuationBridge d`；并恢复被并发覆盖丢失的 QPilot section + `qPilotLocalGeneratorBridge_proved`（带 `[Fintype (Bad …)]` + 显式 binder），retouch 04:27:42Z，等重编。
