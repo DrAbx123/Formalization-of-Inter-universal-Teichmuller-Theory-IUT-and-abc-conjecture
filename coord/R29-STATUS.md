@@ -1102,3 +1102,5 @@
 - 23:16：P0-P4 tracker 增加里程碑验收表（P0 native 端到端/P1 生成元-count/P2 R1.2 四来源+R1.3 质量差/P3 迹下降/P4 闭合）；Lead 只维护大包与验收，不逐文件指挥。
 
 - 23:18：批量编译进展：**Mzk1P7ContractMapEvidenceRowsActual GREEN**（#8 证据行升级落地）；**Mzk1P1B5WithFvActual GREEN**（含 f_v 的 B5 输出）；**Mzk1NativeUnitMassOneActual GREEN**（#10 unitMass=1 条件/值）；**Mzk1P3HaarScaleDockingActual GREEN**；**Mzk1P1CountLocalValuationNativeActual GREEN**（native count↔valuation 桥）。hull P0 三件（NativeS3137Chain/NativeReadout/NativeEquiv）在修。
+
+- 23:24：新建 `coord/P7-VACUITY-MAP.md`（Lead 战略分类）：C3-free 有效（IQ/B5/NormArch/HullUB/T-only/ThetaV/UnitMass/NativeDictionary/P3 core）；C3-typed vacuous 需 re-type（#1 比较链/#3 Ob33/#4/#6/#7 表面/#8/#10 BlockEquiv）；#7 DONE 仅数学内容，有效载体=P3 core；#1 不得再宣称条件版收口。
