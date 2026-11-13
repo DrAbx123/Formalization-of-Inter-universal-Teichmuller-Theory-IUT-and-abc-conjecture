@@ -1232,3 +1232,5 @@
 - 03:56：stepxi P0-L 小波次里程碑（按质量格式）：proof files=4（LIndexNonempty 16:11:21Z / LRegionNonempty 16:35:34Z / LPaperInstanceFinal 16:43:57Z / LQThetaArrowFinal 16:44:02Z）；status=3（SourceRows/NormalizationFactor/RegionOpen）。关键新证明：zero tensor+regionNonempty 关闭 regionNonemptyGap；tensorIndex Nonempty 关闭实例缺；LPaperInstance 条件接口。仍红 10 个（依赖/待重试），下一波先修红再写下游。已确认不做手动 lean。
 
 - 03:58：gate §40：**extra 784 = clean 606 + red 59 + inprog 16 + oleonly 20 + missing 83**；red/missing 多为 mega-batch 首轮依赖未编完（object file missing），lane 按依赖顺序 retouch 即转绿。已广播判读规则+小波次纪律。stepxi P0-L 波次里程碑：proof files=4（IndexNonempty/RegionNonempty/PaperInstanceFinal/QThetaArrowFinal），regionNonemptyGap 关闭。
+
+- 04:02：lattice 波次状态：proof=3（NativeBadPrimeIff/UnitMassNormalizedProof/RootExtensionCarrierRfl，待编）/status=39（承认超额，后续停写 status）。已绿 BlockEquivFiber（status 类）。blockEquiv 仍需 BlockProductAlignmentData；NativeBadModuliFixedPrime=paper 输入。Lead 要求只写 proof：unitMass normalized 真证、badPrime iff 真证、blockEquiv 用 core witness 实际字段尝试。pending ~97。
