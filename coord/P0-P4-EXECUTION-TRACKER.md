@@ -229,3 +229,9 @@
   - **`localPrincipalGenerator_proved : LocalPrincipalGenerator I v`（PROVED，无假设）**。
 - 里程碑：proof=4（uniformizerData/valuation_uniformizer/countAdd/localPrincipalGenerator_proved）+ 桥 1 attempt；
 - P1 剩余：桥 1（`Ideal.map v.asIdeal = completionIdeal`，上游 `intValuation_exists_uniformizer` 的 K 参数已修）→ countIdealMapPower → R21Bridge；residue-one 归约到 `localResidueDegree = 1`。
+
+## P3 大波次 milestone（2026-11-14 05:29，stage4）
+
+新 green（9+）：`P3SNFMass`（17:25:56Z）、`P3TensorProductMass`（17:26:19Z）、`P3DetNet`（17:26:58Z）、`P3ReferenceMass`（17:27:10Z）、`P3P2Alignment`（17:27:10Z）、`P3DomainTrace`（17:27:13Z）、`P3SourceComparisonAttempt`（17:27:25Z）、`P3R37Net`（17:27:38Z）、`P3LogMassRegion`（17:27:44Z）；P1 `FractionalIdealPrincipal`（17:27:47Z）。
+- 内容：`referenceMassTerm := p2R13Exact` + 非负；`detNet := netQuantity G h p2WeightedDetLog` + detNet_le；`sourceComparison_of_native_block`；`r37Net`/`r37Net_nonneg_iff`/`r37Net_eq_log_ratio`；P3 SNF/乘积质量与 det 净量。
+- P3 剩余：`R37R13NativeMassIdentification`（依赖 p2NativeProductBlockMissing/q reading/det-Haar 三供体）；trace-duality 数值；core p-scaling 实例。

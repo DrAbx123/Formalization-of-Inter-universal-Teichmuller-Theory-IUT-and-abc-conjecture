@@ -1290,3 +1290,5 @@
 - 05:12：abc P2 波次 proof=6（LabelBlock/Sum/R1.3/R13vsC0/WeightedSum/UnitOperation）+ 20 文件批（proof 17/status 3）已入队，关键链 QNativeReadingCorrected→RootQhatNorm→QReadoutBridge。hull 新写 ThetaR13Bridge（nativeLSideThetaReadout=p2R13Exact，iff weighted）+ PaperInputVFinal。mainline 桥 1 rcases 失败根因=把 FinitePlace 当 HeightOneSpectrum 用；Lead 给 `(underlyingPrime v).intValuation_exists_uniformizer` 精确写法；abc 的 norm_algebraMap' timeout 给拆分+maxHeartbeats 修法。
 
 - 05:16：qpilot det-Haar 收口小波次 proof=3/status=0：GapDetHaarSNFSplit（SNFMatrixSplit/snfMatrixSplit/exists_snfMatrixSplit）、GapDetHaarAssembly（detHaar_map_of_factors）、GapDetHaarDegreeIdentification（detHaar_degree_scaling_of_factors/detHaar_degree_scaling_eq_ofReal；缺 diagonal SNF factor 与 real det norm=∏p^{-e}）；DetHaarDegreeFactor 的 c 改为显式 ENNReal。
+
+- 05:29：**P3 大波次 9+ green**：P3SNFMass/P3TensorProductMass/P3DetNet/P3ReferenceMass/P3P2Alignment/P3DomainTrace/P3SourceComparisonAttempt/P3R37Net/P3LogMassRegion（17:25:56–17:27:44Z）+ P1FractionalIdealPrincipal（17:27:47Z）。内容：referenceMassTerm=p2R13Exact+非负、detNet=netQuantity(G,h,p2WeightedDetLog)+detNet_le、sourceComparison_of_native_block、r37Net/net_nonneg_iff/eq_log_ratio。
