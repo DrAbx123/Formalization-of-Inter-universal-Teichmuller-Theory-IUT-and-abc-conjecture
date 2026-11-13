@@ -1611,3 +1611,5 @@
 - 21:00：给 shehdd 线 2 第 1 条精确 shape：`integralLogShell` = `AddSubgroup K` range `(logShellScale p)⁻¹*unitLog`；donor `∃b, range unitLog ⊆ (p:K)^(-b) • Integers`；取 `k=b+logShellScaleExponentFactor`，`p^k • z = y∈Integers`（`Nat.cast_pow`+`zpow_neg`）；随后 `Quotient.inductionOn`+`mem_logShellIntegerSubgroup_iff` ⇒ `IsPGroup`，再 `card_gamma_eq_pow_actual`。
 
 - 21:05：shehdd 实际 Γ p-群文件 `IutIVProp14GammaPGroupActual` 已入队（三定理，按 lead shape；可能 API 名错等首错修）；在 official 前不许给 lattice 当已证 h。
+
+- 21:20：**#8 里程碑：`Mzk1P7ContractLinkageWiringActual` GREEN 21:16:03Z（99s）**——`contractOfContractFieldsActual` 真实 ipl/she/apt evidence + `cor312_of_contractFieldsActual : Cor312Conclusion`，signed assembly 真实 evidence 接线完成！另：A1SourceGeneratorExpansion 根因 `ThetaLabel/thetaLabelToSigned` 缺导入（PaperC3ThetaRootActual），A1SaturationBases 根因 `rootNormedExtension` 缺导入 + ℤ_p 基接口需改（stage4 障碍成立）；已发 hull/lattice 修法。
