@@ -154,3 +154,10 @@
 - SourceCompletion→D4D9Supply 精确缺失 5 组：SourcePlaceSelection（signQuotient V/V_mod_bad）、D4ReductionSupply 三组 card、D5TorsionSupply（frozen datum+carrier/label）、contract 版 orbicurve/sections/cusp、D9CompatibilitySupply 五槽。
 - q alignment 最终最小缺口：NativeLattice + 上述 5 组 + index_equiv + NativePlaceBindingDonors + q 值识别；P2 侧 `P2QNativeReadingGap` + R1.2 整性。
 - θ alignment：factor 恒等式已证；缺 L/native tensor region 的 Haar 归一化/landing（对应 stepxi `LQThetaSourceArrowMissing`）。
+
+## P0.5d 里程碑：论文输入包 GREEN（2026-11-14 00:42）
+
+- `Mzk1P0PaperInputActual` DONE 15:57:24Z（63s）：`P05PaperInput` = `C : SourceCompletion` + `S : D4D9Supply C.arithmetic` + `X : N8NativeInput` + `hX : X.S = nativeThetaData C` + `index_equiv` + `NativePlaceBindingDonors`（全部论文给定输入）。
+- 导出：`paperDonors : NativeOriginalInputDonors P.X`、`paperOriginalInput`、`paperOriginalInput_nonempty`、`paperBinding`、`paper_sourceData_arithmetic`（rfl）、`paperOriginalInput_initial`。
+- 比较接口：`PaperComparisonInput`（q_read_eq/theta_read_eq）+ `LPaperInstance_of_paperComparison` GREEN。
+- 剩余三个精确数学桥：① q 值识别（concreteQCandidate ↔ qVFamily + place transport）；② theta 归一化（thetaReadActual=nativeThetaReadout，Haar/landing）；③ V-index 同一性（FinitePrimePlace 2 7 vs NativePlaces）。

@@ -1165,3 +1165,5 @@
 - 00:36：stepxi LQTheta 三文件 green：P0LQThetaMem（15:54:41Z，qComponentMemGap 显式化+tensorUnit_mem_thetaRegion_of_qComponentMem）、P0LNormalization（15:44:43Z，lThetaNormFactor/Gap/Data 无 inhabitant）、P0LRegionPos（15:57:23Z，measure_pos 条件 + regionOpenGap/NonemptyGap/PosGap）。已给供体线索：CarrierEquivData/CommonPrimeCarrierAlign/LocalizedLineHaarBridge/FinitePlaceHaarRatio（范数实例桥）、DetLinePlaceB5Arch/UnitMass（归一化）、tensorIndex Nonempty。
 
 - 00:38：gate §39：**extra 576 = clean 549 + red 3 + inprog 3 + oleonly 20 + missing 1**；red=P1DVRPrincipalLemma/P1LocalizedFractionalIdeal（shehdd tower import 修复待重编）+ P3TensorCoreScalingConsistency（stage4）。P0-L 已达 9 文件 green（LQThetaMem/LNormalization/LRegionPos 条件部分落地：qComponentMemGap、lThetaNormFactor/Gap、regionOpen/Nonempty/PosGap 精确化）。
+
+- 00:42：**P0.5d 里程碑 GREEN**：`Mzk1P0PaperInputActual` DONE 15:57:24Z（63s）——`P05PaperInput`（SourceCompletion+D4D9Supply+N8NativeInput+hX+index_equiv+PlaceBinding，全部论文输入）→ donors/OriginalInput/binding；`LPaperInstance_of_paperComparison` green。剩三桥：q 值识别、theta 归一化、V-index 同一性。已派 hull P0.6 攻三桥。
