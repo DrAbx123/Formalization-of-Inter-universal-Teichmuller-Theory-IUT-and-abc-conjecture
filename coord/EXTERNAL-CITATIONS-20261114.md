@@ -47,3 +47,22 @@ Lean file: `tmp/sheaf/xif/paper/Mzk1PAdicHaarDetScalingExternalActual.lean`
 - `detHaarSNFReplacedByExternal` : SNF route retained as internal cross-check, not a gap
 
 Last formalization TODO: connect this external law to the concrete Haar normalization used in S3137/P3 consumers (same exact statement, different measure instance).
+
+## 7. 精确文献核验（2026-11-14，new Web Search/Fetch API 已启用）
+
+### Mestre–Oesterlé 1989 的准确陈述（zbMATH 评论原文）
+- Zbl 0693.14004 评论（Reviewer: E.-U. Gekeler）：
+  - **Theorem 1**：若 E 是 Q 上半稳定 Weil 曲线，且 `|Δ|` 是 m 次幂，则 `m ≤ 5`，且 E 有 Q-有理的 m-除点（m-division point）。
+  - **Theorem 2**：若 E 的导子为素数 p，则（有少量明确列出的例外）最小判别式 `Δ = ±p`。
+  - 证明用 Ribet [Invent. Math. 100 (1990) 431–476] + Serre [Duke Math. J. 54 (1987) 179–230]；逐一排除 m 被 7,10,15,6,9,25,8 整除 ⇒ m≤5。
+  - 定义：Weil curve = 存在非平凡 Q-态射 `X_0(N) → E`（模性）。
+- 来源：`https://zbmath.org/?q=an%3A0693.14004`（评论全文，已 fetch）；Semantic Scholar 摘要 `https://www.semanticscholar.org/paper/...`（法文摘要：m≤5 + 有理 m-除点；素数导子 Δ=±p）。
+- **重要更正**：项目代码里 `MestreOesterleBound (logq logd C) := logq ≤ 6·logd + C` 是**归一化 Szpiro-6 形状的替代输入**，不是 Mestre–Oesterlé 原文定理；原文定理是上面的 Thm 1/Thm 2。最终形式化 MO 时必须用 Thm 1/2，并把归一化不等式改名为 `Szpiro6Shape` 或从 Thm 1/2 推导。
+
+### p-adic Haar det 缩放律：已有 Lean 机器验证（TauCeti）
+- 本地 `tmp/TauCeti/TauCeti/MeasureTheory/Group/LocalFieldScaling.lean`（上游 github.com/TauCetiProject/TauCeti，Lean 4.36，本地未编译）包含：
+  - `MeasureTheory.Measure.measure_image_mulVec_integerBox`：对 O_K-整数矩阵 A，`det A ~ ϖ^k`，则左不变测度下 `μ (A '' integerBox) = q^(-k) μ(integerBox)`；
+  - **`MeasureTheory.Measure.addHaar_image_mulVec`：对 Haar 测度 μ 和任意集合 s，`μ (A '' s) = q^(-k) · μ s`**（即 p-adic Haar det 缩放律的一般形式）；
+  - 依赖闭包仅 10 个 TauCeti 文件（~110KB），可移植到本项目（Lean 4.32.2）。
+- 文档：`https://taucetiproject.org/docs/TauCeti/MeasureTheory/Group/LocalFieldScaling.html`。
+- **行动**：qpilot 负责把这 10 个文件移植为 `tmp/sheaf/xif/paper/TauCetiPort/...` 模块并让 watchdog 编译；成功后 `PAdicHaarDetScaling` 由 ported `addHaar_image_mulVec` 直接证明，GAP-DET-HAAR 从“class-B 外部输入”升级为“内部 ported 证明”。若移植遇 4.32 vs 4.36 API 差异，报告精确首个错误/API，回退保持外部输入。
