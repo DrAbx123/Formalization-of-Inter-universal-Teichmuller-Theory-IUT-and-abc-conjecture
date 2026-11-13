@@ -1058,3 +1058,5 @@
 - 23:20：NormZpow hexp 精确证明 relay（localValuation; exp_inj.mp; exp_log + ←coe_unzero; cases unzero with ofAdd => rfl），替换 :45-47。
 
 - 22:48：NormZpow 源码未落盘（mtime 22:44:13 早于 relay），已提醒 mainline 写 hexp 段并保存；已 retouch。
+
+- 22:52：NormZpow mainline 于 22:47:53 保存新内容（上轮 FAIL 在保存前），已 retouch 触发重编。
