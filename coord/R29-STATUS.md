@@ -1649,3 +1649,5 @@
 - 23:00：用户问 idle 情况。实况：11 个 lean 进程在跑、plan dirty=205（含新加的 104 Iut/TFG），队列饱和；teammate 是 turn-based（inactive=当前无 turn，不等于停写）。已给 mainline/hull/qpilot/shehdd/lattice/stepxi 发**多波次任务**，要求连续做到硬阻塞再报，减少 idle 抖动。
 
 - 23:10：巡检：11 lean 进程、plan dirty≈205（Iut/TFG 闭包在排队）；多数 FAIL 是依赖 olean 时间差（例：A1DeltaGlobal source 05:40:03 > log 05:39:04，hull 仍在编辑）。新 green：`Mzk1P1IdealMapFinsetProdActual` 21:38:10；`Mzk1A1PadicSaturationActual` 21:31:51。已给 idle lane 多波次任务；当前主动 lane：qpilot/stage4/abc running，其余收到多波次任务后应陆续转 running。
+
+- 23:15：watchdog 健康（12 lean、log 05:47:50、plan 05:43:23）。qpilot 继续 NormalizedValuation 修 `intValuation_apply`（4.32 `Valuation.map` 第二参数/`map_apply`）替换 rfl/show/change，等新 run；Uniformizer/LocalFieldScaling/DegreeIdentification 顺延；Iut/TFG 闭包 104 目标在后台编译，若慢转 plan §5.3。
