@@ -469,3 +469,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **B5Index 重接**：`Mzk1Ob33B5IndexRewireActual` GREEN 20:48:46Z（`missingGeneralPlaceSNF_rewired` 无条件）。
 - **三桥齐**：`idealMapPowerStatement_general`（22:25:14）+ 桥 2 `localizedLine_eq_span_idealMap`（20:07:18）+ `uniformizerPowerSpan_proved`（22:43:33）⇒ `IdealLocalizedCountStatement` 的 hmap/hspan/huni 全部举出；`Mzk1P1IdealLocalizedCountFinalActual` 因竞态（START 22:41:29 早于 huni DONE 22:43:33）待下一 cycle，不是证明缺口。
 - **边界**：以上是 #8 的 contract/B5 证据链收口，不等于 paper 3.12 或 ABC 已证；#1 的 q 侧 `qhatHaarScaling`（S865 供体链）与 theta signed readout 比较仍在编；#9/HullUB 冻结。
+
+
+### 20.16 三个显式缺口收口计划（root，2026-11-14，`coord/P7-THREE-GAPS-CLOSURE-20261114.md`）
+- **qhatHaarScaling**：root 已交独立检查文件 `tmp/sheaf/three_gap_closure_20261114/QhatHaarScalingReuse.lean`（`qhat_haar_scaling_actual`、`qhat_signed_readout_eq_log_norm` 等；初版单条已 green，最终文件已入 WL 待重编）；正式集成沿用 owner 的 `Mzk1P0QHatHaarScalingActual` 命名，但 `Correspondence` 的自由 `hd/hscale/hQ/hO` 必须由实际定理填掉，删 Class-B 分支。
+- **一般 Ind1**：正确对象不是 completion 域同构，而是从实际源作用诱导的单位模挠商连续同构 `β_a:U_F/tors→U_F'/tors`，再经对数像、有理化、连续性升 `ℚ_p`-线性并证格保持；供体：`unitLogTorsionQuotientEquivRange`、`unitLogTorsionQuotientHomeomorph`、`UnitLogPerfection`/`unitLogPerfectionEquiv`、`unitLogPerfectionHomeomorph`、`UnitPerfectionFunctoriality`、`SourceFTimesMuPrimeStripEquivalence.canonicalLift`。源端 `β_a` 仍须从实际 arithmetic realization 构造；抽象 `DPrimeStrip` 不足以自动给出。
+- **S1902/carrier**：不再要求全局 `S1902Carrier ≃ ArithmeticTensorTupleBlock`；改为逐 `(p,j,tuple)` 实际 packet：用 `arithmeticTuple_stepV_hull_normalizedLogVolume_le_paperBound`（StepVAssembly:814，hull 版），构造 `K_{v_i}` tensor、distinguished `ϖ`（`ord_p(ϖ)=j²/(2l)ord_p(q)`）、实际作用族与 signed readout，经 `StepVDistinguishedSlotAverage`/`StepVProcessionAverage` 得 Box；旧 `s1915A0` 保留定义不动，另证论文读数对应（`s1915A0=max(0,1+Σd_b log r_b)` 是截断聚合，不得当 signed 局部读数）。
+- **边界**：以上三项均未无条件闭合；#8 CONTRACT 两半已收口（§20.15）；#9/HullUB 冻结；paper 3.12/ABC 未证。

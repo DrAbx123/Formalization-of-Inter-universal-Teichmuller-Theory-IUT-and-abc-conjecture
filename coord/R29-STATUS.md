@@ -1759,3 +1759,5 @@
 - 04:05：qpilot 新 `Mzk1BoxReadoutLocalActual`（SignedLocalReadout 用 s1446Upper + StepVHullEstimate.signed_sum 显式字段）。已提醒：`a0` 可用绿色 `arithmeticTupleHullUnitLogVolume` + `arithmeticTupleCanonicalRegions_relativeLogVolume` 一半落定理；`signed_sum` 试用绿色 `arithmeticTupleFieldHull_addHaar_logVolume_decomposition_change`，若只给整体不逐因子则保留为单点显式字段并写清所需引理，不假证。
 
 - 04:10：**#8 CONTRACT 两半正式收口**：`Mzk1P7ContractB5EvidenceActual` 22:43:55（b5_norm/log/residue_gap rows + ContractEvidenceWithB5 + cor312_and_gap），加上 signed evidence 21:16:03，B5Index rewire 20:48:46；三桥齐（general 22:25:14 / 桥2 20:07:18 / uniformizer 22:43:33）。已把 §20.15 写入 `coord/P7-GATE-REVIEW.md`；`IdealLocalizedCountFinal` 竞态待下一 cycle（非缺口）。
+
+- 04:15：采纳 root 的 `coord/P7-THREE-GAPS-CLOSURE-20261114.md`（404 行）为三缺口权威计划；已把 `QhatHaarScalingReuse.lean` 加入 WL；派 hull（§2 qhat scaling 技术条件消去/Correspondence 去 Class-B）、stepxi（§3 单位商 `β_a`→对数有理化→ℚ_p 保格，不再求 completion 域同构）、qpilot（§4 实际 packet signed readout + `arithmeticTuple_stepV_hull_normalizedLogVolume_le_paperBound`，s1915A0 不动、carrier 等价不必需）；gate §20.16 已写。
