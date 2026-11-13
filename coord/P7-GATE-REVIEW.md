@@ -496,3 +496,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **源端缺口**：`FPrimeStripEquiv.isoMon` 有代数层，但抽象 `DPrimeStrip` 无实际整数单位/拓扑/local reciprocity/重构；连续 `β_a:U_F/tors→U_F'/tors` 仍不能无条件构造，精确记录在 `coord/IND1-UNIT-QUOTIENT-GAP.md`。
 - **通用后半段（待编）**：`Mzk1Ind1LogLatticeActionActual`（`SinglePlaceLogLatticeAction`，显式 `p`）、`Mzk1Ind1UnitQuotientActual`（`unitLogQuotientEquivOfMulEquiv`、`unitPerfectionMap_log_square`）。
 - **边界**：Φmax 只解决“上界作用族非空”，不证明实际 Ind1/Ind2 作用属于它；Step V 的实际 `hΦ` 仍需源端作用构造。
+
+
+### 20.19 A2/QHatNorm 的真实结论：条件等价，不是无条件化（2026-11-14 07:16）
+- **探针结论**：`c0QHat` 的范数是 normalized completion norm；`qVFamDefaultNorm`/原始 q 读数用 raw Completion adic norm；二者相等 **iff `qVFamNormRatio = 1`**。
+- 因此 `Mzk1P0QHatNormExponentActual` 的 hq' 原陈述在 adic 侧不成立，不是证法/heartbeats 问题；该 donor 不再作为无条件供体，改动将 revert，标为 obsolete。
+- **A2 正确收口**：`P2QHatNormInstanceAgreement ↔ qVFamNormRatio = 1`（精确条件等价），对应已知 `PaperSourceCorrectionFreeFields` 条件；不是新 gap。
+- **文件**：`Mzk1P2QHatNormAgreementUnconditionalActual.p2QHatNormInstanceAgreement_iff_ratio_one`（将改为不依赖 donor 独立编译）；`p2QNativeReading_unconditional`（default/adic norm 下成立）。
+- **边界**：A2 不提供 `‖c0QHat‖ = qVFamDefaultNorm` 的无条件等式；任何消费者若需要 normalized=adic，必须显式带 `qVFamNormRatio=1` 条件。
