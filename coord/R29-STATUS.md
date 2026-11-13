@@ -1697,3 +1697,5 @@
 - 01:30：**`Mzk1B5ContractEvidenceActual` GREEN 22:12:24Z（104s）**——#8 的 B5 evidence 依赖解锁；已让 mainline retest `Mzk1P7ContractB5EvidenceActual`。hull GlobalReadout GREEN 保持，Delta 待重编；已同意 paper 读数 correspondence 先查 det-Haar 缩放引理，缺则条件版+单点 factor 缺口。
 
 - 01:35：shehdd Gamma 第 6 次修：`:35` 用 `convert hy using 1; field_simp [hp]; ring` 归约到 `y∈Integers`；`:46` 在 `change` 给 `Multiplicative (LogShellIntegerQuotient)` 完整类型标注；等 official。B5ContractEvidence 已 green，#8 B5 由 mainline retest。
+
+- 01:40：hull 建议以 `Mzk1A1SignedReadoutFinal` 替代 `A1DeltaExplicit`；**纠正**：21:26:13 green 的是 `Mzk1A1SignedReadoutActual`，`SignedReadoutFinal` 22:15:25 FAIL/22:18:27 仍在重编，official 前不能当已证、不能删 Delta。条件 correspondence（`qhatHaarScaling` 单点 factor 缺口）已写 `Mzk1P0QThetaReadoutCorrespondenceActual`，待编。
