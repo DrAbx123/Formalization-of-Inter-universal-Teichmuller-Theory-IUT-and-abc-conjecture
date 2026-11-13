@@ -1607,3 +1607,5 @@
 - 20:45：shehdd 定位线 2 卡口 donor：`IntegralLogShellSharpBounds.exists_unitLog_range_subset_pow_inv_smul`（∃b, unitLog u ∈ p^{-b}O）⇒ 对 shell 元 z=p^{-s}log u 取 k=b+s 得 p^k z∈O ⇒ 商中幂零 ⇒ Γ p-群 ⇒ `card_gamma_eq_pow_actual`。已发三条 Lean 骨架（`integralLogShell_pow_smul_mem_integers`、`isPGroup_logShellIntegerQuotient`、`card_gamma_eq_pow_actual`）；lattice 不得消费未证 hGamma。
 
 - 20:50：`Mzk1P7ContractLinkageWiringActual` 21:06:13 FAIL 只是 START 早于 ContractFieldsActual olean（21:06:14）的时间差；已 touch 触发重试。`Mzk1A1SaturationBases`、`Mzk1IutIVProp14iiiBoxActual` 也 touch 重排。Iut 33 文件闭包等 plan reload。
+
+- 21:00：给 shehdd 线 2 第 1 条精确 shape：`integralLogShell` = `AddSubgroup K` range `(logShellScale p)⁻¹*unitLog`；donor `∃b, range unitLog ⊆ (p:K)^(-b) • Integers`；取 `k=b+logShellScaleExponentFactor`，`p^k • z = y∈Integers`（`Nat.cast_pow`+`zpow_neg`）；随后 `Quotient.inductionOn`+`mem_logShellIntegerSubgroup_iff` ⇒ `IsPGroup`，再 `card_gamma_eq_pow_actual`。
