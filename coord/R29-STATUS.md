@@ -920,3 +920,5 @@
 - 02:12：**product formula GREEN**（qpilot Mzk1B5LocalGlobalProductFormula DONE 13:09:21Z，ole 77,496B：absNormReal、absNormReal_eq_finprod、absNorm_maxPowDividing_pos、log_absNorm_eq_sum_count_mul_log——整数理想版无额外假设）。已派 mainline 做 fractional 相对 det 展开+arch 汇总；qpilot 补 fractional ideal 版本（num/den + count 关系）。
 
 - 02:16：stepxi signed 形式 **GREEN**：C0IdeleHeight DONE 13:09:50Z（60s，ole 100,736B，c0SignedIdeleHeight=-c0IdeleHeight + eq_neg_hBox_of_components）；C0ReadoutIdentification DONE 13:09:50Z（60s，ole 101,264B，readout_eq_neg_hBox: readout=-hBox F x；readout_eq_qPilot 保持；均非正）；ROUTE-C0 符号约定/paper hBox 字段已同步。
+
+- 02:18：Weight 自 13:03:49 后无新 START（retry 上限），已 retouch 触发重编；Cancel 待其 olean。
