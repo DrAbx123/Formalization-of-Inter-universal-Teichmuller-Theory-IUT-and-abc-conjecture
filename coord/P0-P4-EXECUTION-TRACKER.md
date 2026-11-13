@@ -136,3 +136,13 @@
 - 六文件全 GREEN：`P0LPaperInstance`（15:27:26Z，ole 89,128B）、`LReadoutInstance`（35,080B）、`LQThetaArrow`（14,568B）、`LRegionMass`（17,536B）（均 15:34:30Z）、`LSourceIdent`（11,352B@15:35:44Z）、`LSignedLog`（13,856B@15:40:51Z）。
 - 内容：`C3LAt = actualSourcePilotRegionDataL` 实例；`qReadActual = -|log q|`/nonpos；`thetaReadActual = log actual L tensor Haar region`；`LPaperInstance = LPaper312Statement` 仍 Prop（`LPaperInstance_of_theta_nonneg` 条件化）；`LQThetaSourceArrow` 精确缺 `q_mem_thetaRegion + normalization_eq`；RegionMass 有限 <⊤、正性 `regionMassPosGap`；`SourceIdent` core_eq rfl（root/Kummer 不在 core 的首缺另记）；`SignedLog thetaSigned=-thetaRead`。
 - 无旧 C3、无 IsEmpty。
+
+## P2 路线二里程碑（qpilot，6/6 GREEN，2026-11-14 00:00）
+
+- `Mzk1P2DetCoefficientActual`（100,312B）：`detCoefficientNorm=∏‖c_b‖`、`norm_prod_le_one`、`log_norm_prod_eq_sum`、`p2DetCoefficientNorm_le_one`；
+- `Mzk1P2DetWeightedNonnegActual`（122,992B）：`weightedDetLog_nonpos`、`p2WeightedDetLog_nonpos`、`p2R13Exact=−p2WeightedDetLog`、`p2R13Exact_nonneg`；
+- `Mzk1P2TensorPairingActual`（81,768B）：`tensorDetPairing`、`productFormula_cancel`、`tensorPairing_cancel_of_finite`；
+- `Mzk1P0NativeConsumerP2Actual`（234,864B）：`NativeP2ConsumerData`、`nativeP2Consumer`、`correctedLogVolume`；
+- `Mzk1P2ProductFormulaCancelActual`（62,280B）：`principal_arch_eq_count`、`p2R13Exact_eq_neg_arch_of_arch_eq_weighted`、`arch_sub_weighted_eq_zero_of_eq`；
+- `Mzk1P2PureTensorExpansionActual`（56,424B）：`pureTensorSumFamily`、`pureTensor_finite_sum_expansion`、`labelBlockSum_expansion`、`labelBlockSum_qGen_mem`。
+- 精确缺口（List）：`nativeP2AlignmentMissing`（native places↔Bad、native block↔product carrier、arch metric）；`p2ArchWeightAlignmentMissing`（actual arch tensor log↔p2WeightedDetLog、sign/weight 约定）。

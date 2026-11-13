@@ -1144,3 +1144,5 @@
 - 23:56：**P0-L 里程碑完成**（stepxi 六文件全 green：P0LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog）；`LPaperInstance=LPaper312Statement` 仍 Prop（条件化）；LQThetaSourceArrow 精确缺 q_mem_thetaRegion+normalization_eq；RegionMass 正性 regionMassPosGap。P0/P0-L 均完成，关键路径转向 P0.5 q/θ alignment + P2 R1.2 整性。
 
 - 23:58：P0-L 六文件全 green（LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog；LSourceIdent core_eq rfl）。已派 stepxi 下一大包：LQThetaSourceArrow 三缺口（q_mem_thetaRegion/normalization_eq/regionMassPosGap）+ roots/kummer 缺失接口。
+
+- 00:00：**P2 路线二里程碑（qpilot 6/6 green）**：DetCoefficient/DetWeightedNonneg(R1.3 nonneg)/TensorPairing/NativeConsumerP2/ProductFormulaCancel/PureTensorExpansion；精确缺口 nativeP2AlignmentMissing（native places↔Bad、block↔carrier、arch metric）与 p2ArchWeightAlignmentMissing（arch log↔p2WeightedDetLog/sign）。已派 qpilot 下一大包：P2 native/arch alignment 并与 abc 源箭头汇合。
