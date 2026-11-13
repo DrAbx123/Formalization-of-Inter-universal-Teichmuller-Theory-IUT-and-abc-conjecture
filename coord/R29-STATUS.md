@@ -1134,3 +1134,5 @@
 - 23:48：P0.5 q alignment 侦查：`C10BridgeProof.lean:51` 的 `NativeOriginalInputDonors` 需 `initial : SourceDefinition31Data`，注释明言“No native→SourceDefinition31Data constructor exists in production”；`C1BridgeProof.NativeContractDatumExists` 列为精确缺失 donor。已派 hull：从 native 数据构造 SourceDefinition31Data（或最小字段集），可复用 C10DonorSearch/C1DonorCanonical/NativeClosure/SourceDefinition31PlacePartition。
 
 - 23:38：**P0 L-side 里程碑**（stepxi）：P0LPaperInstance DONE 15:27:26Z（82s，ole 89,128B，trio）；LReadoutInstance/LQThetaArrow/LRegionMass DONE 15:34:30Z；RegionMass 正性仍 GAP；SourceIdent/SignedLog 在修。已告知 hull：L 实例可用于 P0.5 的 hq/hθ alignment 等式。
+
+- 23:42：mainline LocalizedSpan 阻塞（`coe_spanSingleton` 的 Set coercion 不可 rw）→ Lead 给绕开法：用 `FractionalIdeal.mem_spanSingleton`（Operations:575）与 `Submodule.mem_span_singleton` 直接做成员等价（同为 ∃r, r•x=z），不需要 Set-level bridge。
