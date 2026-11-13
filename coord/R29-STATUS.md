@@ -1538,3 +1538,5 @@
 - 17:05：新 green：`Mzk1HullUBLocalThirdActual`（A6 strict radius，20:33:18Z，110s）、`Mzk1Ob33B5IndexGeneratorActual`（B5Index 连接点，20:35:41Z，107s）、`Mzk1A5CapsulePositionActual`（20:34:51Z）、`CardQuotient`（20:34:31Z，port）。R21Uncond 最新错 `countValuationBridge_maxIdeal_of_span` 不存在，donor 是 `countValuationBridge_maxIdeal_of_generator`（已发 mainline 精确改法）。A6 LocalThird 绿 → 让 hull retouch LocalThirdBound → UnconditionalC0。
 
 - 17:15：**用户决定两步走：先按原文推出 3.12，#9/IUT IV 1.10 推迟**。已写 P7 §20.13：3.12 关键路径 = #1 GENERAL-CMP + #2 IQ-LITERAL + #3（已 PROVED）+ #4 MULTIRADIAL + #5–#7 THETA + #8 CONTRACT；#9 冻结（已核对 SignedCor312/Paper312/S3137 全部无 HullUB 引用，方向相反）。hull 主力转 #1/A3（对接 stage4 A1 格比较）；mainline R21Uncond→B5Index→#8 contract linkage；abc 继续 P2 norm agreement；stepxi A5；lattice A1 det 数据。
+
+- 17:20：lattice 新 proof `Mzk1A1SaturationBasesActual`（`closure_c0Q_le_closure_lambda` + `a1SaturationBasesData`：只输入两侧整基 b₁/b₂ 与 relIndex≠0 即构造 `SaturationBasesData`，接 `saturationLogIndex_eq` 得两侧 log|det|）——A1.6 实际数据接口，已让 stage4 填实际 K/F 整基。
