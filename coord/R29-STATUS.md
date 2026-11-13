@@ -1542,3 +1542,5 @@
 - 17:20：lattice 新 proof `Mzk1A1SaturationBasesActual`（`closure_c0Q_le_closure_lambda` + `a1SaturationBasesData`：只输入两侧整基 b₁/b₂ 与 relIndex≠0 即构造 `SaturationBasesData`，接 `saturationLogIndex_eq` 得两侧 log|det|）——A1.6 实际数据接口，已让 stage4 填实际 K/F 整基。
 
 - 17:25：**#1 路线纠正**：hull 的 `nativeQReadout_le_thetaReadout_of_R37` 把 #1 归约到 R37，而 R37 正是 A1 probe 已证 ill-typed/假的 tensor/product 对齐（`massIdentificationMissing` 第一条）；已让 hull 改走 A1 格/系数路线：`‖c0QHat‖≤‖λ‖`（由 `qhatLattice_subset_lambdaLattice`）→ q norm 桥 → `nativeThetaReadout` 的实际展开/degree 因子（`logMass_eq_add_log_factor`），不假设相等。
+
+- 17:30：**里程碑：`Mzk1P1MaxIdealR21UncondActual` GREEN 20:41:11Z（100s）** ⇒ `maxIdeal_countValuationBridge_uncond`/`maxIdeal_r21Bridge_uncond` = B5② max-ideal 无条件。B5Index connector 也 GREEN 20:35:41。已让 mainline 下一波：#8 CONTRACT linkage（ContractFieldsLinked=false）优先，再 IdealMapPower 剩余。hull #1：已判定 `NativeThetaLogLambdaBridge` 实质是 tensor product Haar scale factor 缺口，给两条路径（P3 product Haar 公式 vs S3137 readings route）。
