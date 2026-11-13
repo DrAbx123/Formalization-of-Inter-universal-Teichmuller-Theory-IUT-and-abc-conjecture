@@ -77,3 +77,13 @@
 | P4（闭合） | 从原合格输入内部构造全部对象，接回原 q/Theta 目标并完整验收（target_accepted） | 未开始；P0-P3 完成前不做 |
 
 纪律：里程碑报告由 owner 一次发出；Lead 不逐文件/逐错误指挥。
+## 批量完成日志（Lead 汇总，2026-11-13 23:22）
+
+- P3（stage4）六文件全 green：TensorCore/TensorCoreNormalized/TensorCoreHaar/DomainDecompositionMap/TraceDualityCoefficient/ExponentNet（core p-scaling 缺口已记录）。
+- #10/P1（lattice）六文件全 green：NativeUnitMassOne/NativeBlockEquivCandidate/P1FinitePlaceFv/P1LocalUnitProductT/P3HaarScaleDocking/P1CountLocalValuationNative。
+- P1（mainline）六文件全 green：LocalizedSpan/IdealLocalizedCount/PrincipalValuation/R21Bridge/B5WithFv/ContractMapEvidenceRows（精确缺口各一）。
+- P1/B5（shehdd）六文件全 green：LocalizedIsPrincipal/LocalGeneratorFromIsPrincipal/GeneratorNonzero/PlaceVolumeSign/B5AssemblyNoHproduct/Ob33B5RowsFinal。
+- P2（abc）：LabelBlockCoefficient、LabelBlockSum、RelativeMass（R1.3）green；R13vsC0/LabelBlockComplete/QNativeSourceArrow/ThetaAllowedImage/WeightedSum 在修。
+- P2（qpilot）：NativeTensorConsumer、DetCoefficient green；DetWeightedNonneg/TensorPairing/ProductFormulaCancel/PureTensorExpansion/NativeConsumerP2 在修。
+- P0（hull）：NativeSourceCore、NativeTensorLanding、MigrationRows、NativeEquiv green；NativeReadout/NativeS3137Chain 在修。
+- P0-L（stepxi）：S3137LReadout green；LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog 在修。

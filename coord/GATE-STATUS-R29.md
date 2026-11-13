@@ -546,3 +546,22 @@ These are pre-seeded imports/old built files; olean presence alone is not a curr
 red 清单（均为新包）：`Mzk1P3TensorCoreActual`、`Mzk1P0NativeSourceCoreActual`、`Mzk1P0LPaperInstanceActual`、`Mzk1P2RelativeMassActual`、`Mzk1P1GeneratorNonzeroActual`、`Mzk1P1LocalGeneratorFromIsPrincipalActual`、`Mzk1P2DetCoefficient/DetWeightedNonneg/TensorPairing`、`Mzk1P3DomainDecompositionMap/ExponentNet/TensorCoreHaar/TensorCoreNormalized`。
 
 **语义提醒（关键）**：旧 C3 类型 `SourcePilotRegionData` 为空（S1429）；此前所有旧 C3-条件文件的 green 只作 **historical/vacuous**，P0 迁移后的 native 链才是有效进度。P7 仍 **NOT PASSED**。
+
+## §37 批量迁移期快照（2026-11-13 23:22 CST，Lead）
+
+| 分类 | 数量 |
+|---|---:|
+| extra-targets | **550** |
+| clean DONE | **511** |
+| red FAIL | **13** |
+| in-progress | 4 |
+| ole-only/prebuilt | 20 |
+| missing olean | 2 |
+
+red 全为新批次 WIP，分为两组：
+- **P0 L-side（6）**：`Mzk1P0LQThetaArrowActual`、`Mzk1P0LReadoutInstanceActual`、`Mzk1P0LRegionMassActual`、`Mzk1P0LSignedLogActual`、`Mzk1P0LSourceIdentActual`、`Mzk1P0NativeS3137ChainActual`（stepxi/hull 自修）；
+- **P2（7）**：`Mzk1P2ProductFormulaCancelActual`、`Mzk1P2TensorPairingActual`、`Mzk1P2R13vsC0RemainderActual`、`Mzk1P2LabelBlockCompleteActual`、`Mzk1P2QNativeSourceArrowActual`、`Mzk1P2ThetaAllowedImageActual`、`Mzk1P2WeightedSumActual`（abc/qpilot 自修）。
+
+**本批已 green 的里程碑**：P0 native core/tensor consumer/tensor landing/migration rows/native equiv；P2 R1.3 相对质量差（`Mzk1P2RelativeMassActual`）、P2 det coefficient；P1 localized span/idealized count/principal valuation/R21 bridge/B5WithFv/contract evidence rows、P1 localized IsPrincipal/local generator/generator nonzero/B5 no-hproduct 行表；P3 六文件全 green；#10 native 六文件全 green。
+
+旧 C3 空类型语义提醒不变：旧 C3-typed 文件仅 historical/vacuous；当前有效路线 = P0 native + P1/P2/P3 C3-free 数学。P7 **NOT PASSED**。
