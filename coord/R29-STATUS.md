@@ -564,3 +564,5 @@
 - 09:27：lattice 桥① green（CoordSmallBridge 00:31:39Z，olean 112,376B，coordSmall=coordLattice）；桥②③待写；CanonicalSNFDet 改纯 GAP 记录。BaseChange 最新 run 仍 :210/:389 两错（shehdd 在修）。
 
 - 09:30：BaseChange :210 goal 已提取（case h：v(a)^e = w(algebraMap a)）；relay shehdd 用 valuation_comap + WithVal.equiv simp 收尾；:389 加 RingHom.coe_range。
+
+- 09:36：**BaseChange Lead 直接修好并 COMPILE-OK（lean exit 0）**！:389 加 RingHom.coe_range；:222-226 改用 `rw [WithVal.equiv_symm_apply, WithVal.valued_toVal, ← WithVal.toVal_ofVal (valuation K v) a, WithVal.valued_toVal]` + valuation_comap 经 rw [w.2] at h。watchdog 下一轮生成 olean；mainline/shehdd/qpilot 已通知立即编 AgreeFLT/UnramResidueBridge/AGREEFLTBridge。
