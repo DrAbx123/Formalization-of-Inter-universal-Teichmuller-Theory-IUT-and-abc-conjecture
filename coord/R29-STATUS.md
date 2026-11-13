@@ -1078,3 +1078,5 @@
 - 23:38：hull P0NativeSourceCore 首错（binder 名 T 不匹配）relay：按 #check 签名用位置参数或显式命名 binder。
 
 - 23:44：**P0NativeTensorConsumer GREEN**（qpilot 14:59:15Z，ole 391,120B：Block/shell/region compact/IQ/Haar/logVolume/Packet，输入仅 p/places/tuple，不依赖 C3；c3RequiredFields 10 项清单）。**NativeFinitePlaceDictionary GREEN 14:58:15Z（ole 121,504B，不依赖 C3）**；**P2LabelBlockSum GREEN 14:59:39Z（62s）**；Ob33B5GeneratorCandidate GREEN 14:57:05Z。新增 mainline P1GeneratorCount、stepxi P0LPaperInstance 入队（503）。P0NativeSourceCore/S3137LReadout 仍红（hull 修）。
+
+- 23:06：P0 三处：S3137LReadout 红（stepxi P0LPaperInstance 依赖其 olean）优先修；P0NativeSourceCore 首错（:23 Invalid arg K、:34 Function expected、:51 instance stuck）；qpilot P0NativeTensorConsumer green 可直接对接。P1GeneratorCount GREEN 15:00:42Z（33s）。已 relay hull。
