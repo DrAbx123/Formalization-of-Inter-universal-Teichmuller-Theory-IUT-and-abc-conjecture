@@ -1779,3 +1779,5 @@
 - 05:00：abc 探针确认 A2 真结论：`‖c0QHat‖`=normalized norm，`qVFamDefaultNorm`=adic norm，相等 iff `qVFamNormRatio=1`；donor hq' 原陈述在 adic 侧不成立（非证法问题）→ 停止无条件化、revert 两处、标 obsolete；A2 以精确条件等价 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1`（已知 PaperSourceCorrectionFreeFields 条件）收口，文件改独立不依赖 donor；gate §20.19 已写。
 
 - 05:05：**三个新 green：`IutIVProp14TorsionCountActual` 23:14:04、`Mzk1IutIVProp14IndexCardActual` 23:14:10、root `QhatHaarScalingReuse` 23:15:02**。已派 hull 用 root scaling 完成 Correspondence/最终 Q≤Θ；lattice 等 Gamma 填 hμΛ/P14ii；shehdd torsion actual/#C；qpilot BoxReadoutLocal；stepxi PhiMax/β_a。gate §20.20 已写。
+
+- 05:10：lattice 新 `Mzk1IutIVProp14HaarIndexPowActual`：`mu_lambda_toReal_eq_pow_mul`（Nat.card Γ=p^h + μ(O)≠⊤ ⇒ (μΛ).toReal=p^h·(μO).toReal），接 HaarIndex wrapper + IndexCard p^h + norm_cast；Gamma 绿后填 volume_ratio_eq_pow 的 hμΛ。IndexCard/TorsionCount 已 official。
