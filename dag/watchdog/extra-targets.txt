@@ -365,3 +365,4 @@ tmp/sheaf/xif/paper/S366OneColumnActual.lean
 tmp/sheaf/xif/paper/Mzk1P3AGREEFLTBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1CanonicalDiagScalingActual.lean
 tmp/sheaf/xif/paper/Mzk1ChangeMatrixActual.lean
+tmp/sheaf/xif/paper/Mzk1P3WeightDegreeOneLocalEFActual.lean
