@@ -1849,3 +1849,5 @@
 - 08:05：abc 只读核对：`Mzk1A1TensorProdProbeActual.rootNormedExtension_finrank_tower` GREEN，tower `[L:Qp]=[F_v:Qp]*[L:F_v]` 可直接用、**不是 GAP**；`weight_conversion` 只剩单点 `[K_w:Qp]=[F_v:Qp]`（或 root extension 以 K_w 为基）的 F/K 局部兼容，仓库无此定理。gate §20.46 已写；mainline 条件版 `weight_conversion_cond` 的 hdF 即该点。
 
 - 08:10：**新 GREEN：`Mzk1A1LatticeValuationIdentifyActual` 23:48:30（`inverseLambdaLattice_eq_inverseLattice`/`inverseLambdaLattice_eq_saturated_actual`，A1.6 qhat↔J_s 格识别）、`Mzk1P2QNativeReadingCorrectedActual` 23:49:11（P2 corrected reading/定义）**。已派 stage4 用 A1.6 完成实际 valuation 读数；mainline/hull/qpilot/shehdd/lattice/abc 各自继续。gate §20.47 已写。
+
+- 08:15：Gamma 第 14 次修：给 shehdd 改用 zpow 合并指数的证明（`zpow_add₀`/`zpow_natCast`/`zpow_neg`，避免 field_simp 卡住）；第二定理保留 `change ...; rw [eq_zero_iff]; exact hmem`。lattice HaarIndex `invalid binder annotation` 建议把 section variables 改成显式 theorem binders（正确顺序 MeasurableSpace 后 BorelSpace）或内联 wrapper。
