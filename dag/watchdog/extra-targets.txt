@@ -438,3 +438,5 @@ tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5Actual.lean
 tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeV2Actual.lean
 tmp/sheaf/xif/paper/Mzk1C3S1902BallMassFormulaActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33DetLineConstructionLinkActual.lean
+tmp/sheaf/xif/paper/Mzk1IQFiniteAdeleRestrictedActual.lean
+tmp/sheaf/xif/paper/Mzk1C3DDonorProjectionActual.lean
