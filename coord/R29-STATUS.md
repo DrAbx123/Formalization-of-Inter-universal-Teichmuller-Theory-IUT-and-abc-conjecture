@@ -792,3 +792,5 @@
 - 21:58：hull ThetaVGeneralUnconditional 首错 = qVFamTensorP 未导入（定义在 QVFamTensorCoefficientActual:51）已 relay；lattice carrier align 降为 GAP 记录（CommonPrimeCompletion def vs LocalField carrier，需显式 Set align），保留三 GAP；stage4 B2 拆主体。
 
 - 22:00：**#5 THETA-V general-k DISCHARGED**：`Mzk1ThetaVGeneralUnconditionalActual` DONE 12:24:25Z（67s）——rawV=scaledClosedFormR k、normV=normalizedLog(scaledThetaHull k)、scale=1/offset=1、qLogSum_nonneg、general-k C0=1；无 closed-form 命名假设。P7 plan #5 更新。
+
+- 22:05：abc A5 :47 `Real.log_rpow` 未匹配——需显式 hx（0<↑p，exact_mod_cast Fact.out Prime.pos）；已 relay 具体 rw 写法。Composite retouch；ThetaVGeneralUnconditional green 已记（#5 DISCHARGED general-k）。
