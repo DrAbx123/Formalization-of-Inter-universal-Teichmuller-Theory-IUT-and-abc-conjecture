@@ -405,3 +405,5 @@ tmp/external/ported/flt/FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lea
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegActual.lean
 tmp/sheaf/xif/paper/Mzk1PadicBallCeilActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MultiradialGeneralBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1P3AgreeIntegrationActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ContractMapActual.lean
