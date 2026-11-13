@@ -196,3 +196,17 @@ qThetaPilotLogVolumeComparison C3 P
   见 `Mzk1Ob33B5CountUnconditionalAttemptActual`（GREEN 14:08:27Z，ole 60,104B）中的精确缺失引理名与条件后果。
 - **residue-one**（`GAP-PC-RESDEG` / tame）仍是 B5 ② 唯一算术假设；`placeLogVolume_eq_localLogVolume` 已以 `hchar` 显式记录。
 - 相关 green 状态：`Mzk1Ob33B5CountBridgeActual` 13:36:29Z ole152,688B；`Mzk1Ob33B5IndexActual` 12:43:51Z ole170,608B；`Mzk1Ob33ArchMetricActual` 12:40:01Z ole293,472B；`Mzk1Ob33B5AssemblyActual` 13:12:59Z ole86,352B。
+
+### 6.5 P1 生成元/count 基础设施（2026-11-13 后续 6）
+
+- Mzk1P1GeneratorCountActual — **DONE 33s@15:00:42Z，olean=True**：
+  - `numDenDecomposition`：`∃ a ∈ nonZeroDivisors(OK k), I = spanSingleton(a⁻¹) * ↑(num I)`
+    （用 `FractionalIdeal.den_mul_self_eq_num'`，qpilot count 同一 calc 封装为公开定理）；
+  - `R21Bridge`（named Prop）：`localValuation v generator = -countExponent v I`；
+  - rows 精确列出缺的 Mathlib 桥：localizedLine(ideal) = maxIdeal^count（DVR 局部化主性）、
+    count_v(span{a}) ↔ localValuation v (algebraMap a)。
+- B5 ② norm 侧：Mzk1B5GeneratorNormBridgesActual（DONE 14:33:40Z）有条件定理；
+  NormZpow statement 版 Mzk1B5NormZpowActual（DONE 14:56:40Z）把 zpow motive 缺口记录为 GAP row。
+- 下一步：① `localizedLine (spanSingleton x) v = span O_v {algebraMap x}`（`coe_spanSingleton` +
+  `Submodule.map_span` + `span_span_of_tower`）；② num ideal 素数分解后 localize；
+  若 Mathlib 无 DVR principal 引理则把精确缺失引理名写入 R21Bridge 的 gap 表。

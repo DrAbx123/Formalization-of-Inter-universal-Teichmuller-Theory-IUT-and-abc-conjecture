@@ -1037,3 +1037,26 @@ P0 的证明复用可以保留 #7 的全部数学内容，但不能因此声称�
 - 当前最具体的下一步：**P0 复用已存在的正确 root/core 分层接回消费者；P1 用有限生成元最小赋值证明 (R2.1)。** 随后立即用 P2 的一个真实标签块检验整条链，而不是等所有包装齐全才第一次接触原不等式。
 
 <!-- END P7-NEXT-ATTACK-SOURCE-FIRST-20261113 -->
+
+## P2 (R1.2) 首包状态（2026-11-13 15:00Z，abc）
+
+**已 green（watchdog DONE + olean=True）**：
+- `tmp/sheaf/xif/paper/Mzk1P2LabelBlockCoefficientActual.lean` — **DONE 14:54:36Z（62s）**：
+  - `p2Coefficient b := c0QHat T b / rootThetaFieldLambda T b`；
+  - **`p2Coefficient_mem_unitBall : c_b ∈ O_{L_b}`**（unit-ball 模型），`p2Coefficient_norm_le_one`；
+  - `p2QHat_eq_lambda_mul_coefficient : qhat_b = λ_b·c_b`（R1.2 单生成元展开）；
+  - `p2PureTensorCoefficient` 与 **`p2PureTensorCoefficient_mem_productUnitBall`**（纯张量 ∈ 张量整数环）；`p2_pureTensor_mul_mem`；
+  - `P2LabelBlockData` + `p2_labelBlock_qGen_mem`（单生成元/纯张量标签块整性传递）。
+- `tmp/sheaf/xif/paper/Mzk1P2LabelBlockSumActual.lean` — **DONE 14:59:39Z（62s）**：
+  - `p2_productUnitBall_zero_mem` / `_mul_mem` / **`_add_mem`**（用 `rootNormedExtension_norm_add_le_max` 的 ultrametric 三角）；
+  - `P2LabelBlockSumData (ι)`：theta/coeff 族均 ∈ tensor 整数环；
+  - **`p2_labelBlockSum_qGen_mem`**：`(fun b => Σ_i c_ia(b)·θ_i(b)) ∈ rootExtensionProductUnitBall`（多标签有限和整性）。
+
+**缺失映射（不因上述原型消失）**：
+1. native 源 q 读数 → 根扩张 → `qhat_b = alpha_b^{2l}` 的实际映射；本包只用 `c0QHat`（其定义已在 C0 green），未构造从 native q 到它的来源等式；
+2. theta 特殊值/允许换根/单位操作 → 实际 `lambda_b = rootThetaFieldLambda` 的允许像映射；
+3. **旧 C3 `tensorLanding_q` 不可用**：`S1429CompletionRootObstructionActual.sourcePilotRegionData_isEmpty`（旧 C3 空类型），所以 R1.2 的“实际标签块落点”必须在新 native 载体上重建；
+4. 多索引张量落点/线性展开：本包只做 product carrier 上的族/纯张量与有限和整性传递，未证 `g^q_a` 来自实际源张量块的落点；
+5. 多标签原型的前提是**已给的 integral generators/coeffs**（`P2LabelBlockSumData`），不是源构造；下一步须按本文件 §1.3 检查点选实际 `(p, tuple, label)` 写出完整展开并展示源 q/源 theta/落点/权重四个来源。
+
+**张量模型说明**：本包用实际 product carrier（有限乘积 `O_{L_b}`，与 C0/S1902 一致），非共同基上的字面 `TensorProduct`；paper 的逐位张量在该载体上逐位表示。
