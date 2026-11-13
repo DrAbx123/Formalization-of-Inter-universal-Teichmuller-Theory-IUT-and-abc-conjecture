@@ -914,3 +914,5 @@
 - 02:01：qpilot product formula :90 No goals（删多余行 relay）；stepxi C0 符号 GAP 处理建议（readout 改 signed 形式，文档写清约定）。
 
 - 02:04：stepxi 按 signed 形式最小改动：新增 c0SignedIdeleHeight = -c0IdeleHeight + c0SignedIdeleHeight_eq_neg_hBox_of_components；C0ReadoutIdentification 字段改 readout_eq_neg_hBox（readout = -hBox F x），readout_eq_qPilot 保持（两者非正，符号一致）；文档同步符号约定。
+
+- 02:08：mainline B5CountLocalValuationBridge（LocalNormGeneratorBridge + CountValuationBridge named input；placeLogVolume=count_v·log residueNormBase；placeLogVolume_eq_localLogVolume 含 residue-degree-one 等式）入队（476 项）。**P7ContractMarginConsumer DONE 13:08:36Z（55s）**——#8 消费者入口 green。

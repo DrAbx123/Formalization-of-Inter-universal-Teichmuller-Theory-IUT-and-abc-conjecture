@@ -473,3 +473,4 @@ tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5MergedActual.lean
 tmp/sheaf/xif/paper/Mzk1NativeBadPrimeActual.lean
 tmp/sheaf/xif/paper/Mzk1C0ReadoutIdentificationActual.lean
 tmp/sheaf/xif/paper/Mzk1B5LocalGlobalProductFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1B5CountLocalValuationBridgeActual.lean
