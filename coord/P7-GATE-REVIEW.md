@@ -353,3 +353,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1P1IdealMapCompletionIdealActual` DONE 18:54:55Z（106s，olean 129,848B）**：证明桥 1 `Ideal.map (underlyingPrime v).asIdeal = completionIdeal`（K_v 的极大理想 = p 的扩张）。
 - 这是 P7 #3（GAP-P7-OB33-SRC）B5② 的**上游关键单点**；后续链：桥 2 `localizedLine = span{π}` → max-ideal `CountValuationBridge`/`R21Bridge`（shehdd donor）→ `IdealMapPower` general I → `Mzk1Ob33B5IndexActual` 重接。
 - #3 状态仍 CONDITIONAL，但卡点已从“桥 1 未证”变为“桥 2 span 识别 + general I 组装”。
+
+### 20.3 更新（2026-11-14 12:20）：#1 log 分解 + #6 re-anchor GREEN（stage4）
+- **#6 THETA-D re-anchor（construction level, no C3）**：`Mzk1P3NativeDReanchorActual`——`thetaRootCarrier_eq_pi : ThetaRootCarrier = dependent product over Bad`（rfl）；`BlockProductAlignmentData` 记录唯一剩余构造（`J ≃ Bad`、`E_j ≃ rootNormedExtension (JEquiv j)`）。
+- **#1 Dupuy–Hilado log 分解（GREEN）**：`Mzk1P3DupuyHiladoLogActual`（`productNormalizedLogPerDim_weighted` = `E(ln μ/dim)` 加权平均）、`Mzk1P3ProductHaarPiActual`（productHaar=π、log=Σ）、`Mzk1P3ProductUnitBallLogActual`（unitBall log mass=Σ）、`Mzk1P3MeasureTransportLogActual`（measure_map/log_measure_map transport）、`Mzk1P3NativeTensorLogComparisonActual`（`logMass_eq_add_log_factor` det/度因子形式）。
+- 精确剩余：`BlockProductAlignmentData` inhabitant + NativeTensorLogComparison 的 measure-scale factor 识别；无新假设。
