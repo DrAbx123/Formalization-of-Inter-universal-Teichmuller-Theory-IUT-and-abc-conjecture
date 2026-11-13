@@ -492,3 +492,5 @@
 - 08:07：abc C3UnitHaarComparison green（00:00:27Z）；C3S1902Quantity 补 PaperRootExtensionHaar import + 本地改名后 retouch；下一步查 ball 质量 p^{-ord} 型公式。
 
 - 08:09：abc C3S1902LowerBound（ballMassProduct_pos + comparison_of_qnorm_le_haarScale_mul_lowerBound 注入 c 接口）入队（355 项）；核查结论：rootExtensionHaar 无 p^{-ord} 显式值，radius=theta 范数 sup ⇒ 最后一步精确为 **theta-value 范数下界（缺）**。
+
+- 08:10：stage4 GeneralSNFVolume 降级为 SNF 商 cardinal（一般体积比 A2 桥留 GAP；对角情形已 green）；XGGLFinal 重写自包含待编。
