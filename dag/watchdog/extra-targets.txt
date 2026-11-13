@@ -468,3 +468,4 @@ tmp/sheaf/xif/paper/Mzk1P7ComparisonConditionalFinalActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ContractMarginConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1C0IdeleHeightActual.lean
 tmp/sheaf/xif/paper/Mzk1P7ThetaDegWeightActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ThetaDegCancelActual.lean

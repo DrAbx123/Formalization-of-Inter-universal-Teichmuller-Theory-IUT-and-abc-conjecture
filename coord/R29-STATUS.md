@@ -886,3 +886,5 @@
 - 01:05：lattice 回退 BadPlaceUnitMassProduct 到 green 的 generic Bad-index product（`badPlaceUnitMassProduct_eq_one`），保留精确 GAP：Completion 缺 NormedField/ProperSpace、CommonPrimeCompletion 需 nativeBadToKPlace 的 FinitePlaceAtPrime 证明（当前仅 FinitePlace）；blockEquiv/unitMass citizen 仍缺。已建议查 nativeBadToKPlace 结构字段是否有 prime 等式可直接构造 FinitePlaceAtPrime。
 
 - 01:09：stage4 P7ThetaDegWeight 入队（470 项）：(a) thetaBlockLogFactor=-(Σlocal degree)·log p、(b) c3PacketNormalizedLogVolume 分母=Σ finrank E_j + p-scaling；#7 剩 (c)(d) 代数对接。
+
+- 01:12：stage4 P7ThetaDegCancel 入队（471 项）：(d) normalized=(1/∑deg)*log(μS)、(c) 实际区域 normalized=(1/∑deg)*thetaPilotHullLogVolumeReal；绿后 #7 (a)-(d) 收口（剩 B4 image bridge GAP）。
