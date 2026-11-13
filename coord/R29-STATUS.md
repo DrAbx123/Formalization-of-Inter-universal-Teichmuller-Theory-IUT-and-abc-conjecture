@@ -738,3 +738,5 @@
 - 20:20：FLT TopologicalSpace 缺 `singleAddMonoidHom`（Mathlib 无）——已用 `RestrictedProduct.single B j` 手写该 AddMonoidHom（toFun/map_zero/map_add）；retouch。mainline B#3 第 3 步 API 入口（FractionalIdeal.count + uniformizer）已定位。
 
 - 20:25：**#2 pivot**：Mathlib 自带 `IsDedekindDomain.FiniteAdeleRing R K := Πʳ v, [v.adicCompletion K, v.adicCompletionIntegers K]`（RingTheory/DedekindDomain/FiniteAdeleRing.lean:94），与 qpilot IQFiniteAdeleRestricted 载体同形 ⇒ #2 可 rfl/Equiv.refl 直接构造，不需 FLT backport 链（TopologicalSpace 手写 singleAddMonoidHom 不再阻塞 #2）。
+
+- 20:30：巡检：**Ob33DetLineConstructionLink DONE（12:00:35Z）**、**IQFiniteAdeleRestricted DONE（12:01:23Z，32s）**；C3S1902BallMassFormula/C3DDonorProjection/C0/Dictionary/ThetaVScaleOffsetIdentity/InputAlignmentComposite/P7ThetaDeg/B2/CanonicalDiagUncond 已 retouch。qpilot 转 Mathlib FiniteAdeleRing 识别；mainline 写 PrincipalGenerator；hull/stage4/lattice/stepxi 派活。
