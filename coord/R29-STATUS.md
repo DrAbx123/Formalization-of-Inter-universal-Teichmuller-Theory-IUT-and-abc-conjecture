@@ -1500,3 +1500,5 @@
 - 15:14：诊断 qpilot“watchdog 编译旧 source”=**误读累积日志**：CardQuotient source 无旧路径、log 最新尾部错误是 `:84 Free ℤ R` 实例缺失（真实 4.32 API 差），旧模块名是历史首错。已让 qpilot 只读 tail、修 Free ℤ R/读 Order tail。lattice #10 新增 2 green（BlockProductAlignmentObstruction/BlockAlignmentCard，proof green=15）；shehdd C17/P1 3 新 proof。
 
 - 15:16：巡检：19:52 BATCH DONE (done 7/failed 35/skipped 1，多为依赖首轮)；桥 2 19:52:53 重编中。已唤醒 mainline（桥2结果→MaxIdealR21Uncond→IdealMapPower）与 lattice（#10 pending 3 + A1 接口）。
+
+- 15:22：**TauCeti port 决策**：qpilot 诊断 4.32 `Ideal.cardQuot_mul` 需 `[Module.Free ℤ S]`，而 4.36 是广义 Dedekind 版本；LocalFieldScaling 的 O_K 非 ℤ-自由 ⇒ 非 API 重命名缺口。按用户“能补就补、实在用不了另说”：给 qpilot 1–2 波时间盒 inline 证 `card_quotient_range_mulVecLin_eq_pow`（用 Mathlib 4.32 `Submodule.smithNormalForm` PID + det 关系）；成则继续 port，否则冻结为“部分移植 + class-B PAdicHaarDetScaling（已 green）”并记录精确缺口。
