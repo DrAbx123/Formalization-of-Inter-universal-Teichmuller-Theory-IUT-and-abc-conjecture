@@ -1575,3 +1575,5 @@
 - 19:00：lattice 确认 `Mzk1LatticeSaturationIndexActual` green；`SaturationBasesData` 加 `[Fintype D.ι] [DecidableEq D.ι]` binder 修 det 实例；A1SaturationBases 依赖 retouch。已让 stage4 准备实际 K/F 整基 b₁/b₂ 填 `SaturationBasesData` 接 A1.6。
 
 - 19:05：hull `Mzk1A1SourceGeneratorExpansionActual` 加全标签生成元/有限展开/逐生成元 q 格⊆theta 格（待编）。提醒：非 max 标签系数用 `if=max then c else 0` 构造仍是人工单活跃标签，计划 §1.3 要求实际多标签索引/权重；已让 hull 从 `P2ActualLabelBlock` 取实际多标签数据、由源数据证明单活跃性（若真），并保留 `nativeBadLocalWeight`/procession average 顺序。
+
+- 19:10：hull 修正 A1 展开：源数据 `qVFamTensorV := Unit`（单因子，单 q 生成元），多标签在 theta 侧；新证 `a1ThetaLabelCoefficient j = θ_j/λ ∈ O`（max 性/div_le_one）、`θ_j = λ*d_j`、逐标签 `θ_j∈lambdaLattice`、`qhat=λ*c`（c=p2Coefficient∈O）、`qhat∈lambdaLattice`、四来源; 无 if 构造/模型 comparison。待编。
