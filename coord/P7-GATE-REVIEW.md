@@ -682,3 +682,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **S45**：`PaperSourceCorrectionFreeFields.normRatio_one` 给 `qVFamNormRatio=1`，即 `qVFamNormalizedNorm = qVFamDefaultNorm`（normalized vs adic completion norm 一致）。
 - **norm-instance agreement**：`P2QHatNormInstanceAgreement := ‖c0QHat_b‖ = qVFamNormalizedNorm_b`，是 c0QHat 的 normalized norm coherence；**与 ratio=1 不等价**（abc 核对）。
 - bridge 使用 `qhatLogReadout=−c_norm log p` 时必须显式带 `P2QHatNormInstanceAgreement`；S45 只负责 ratio=1/修正项。最终 S3137 条件定理要把两者分别列出，任一未证就显式保留条件。
+
+
+### 20.41 权重精确换算：d_b·nativeBadLocalWeight = n_b（abc 更正，2026-11-15 00:40）
+- `nativeBadLocalWeight = 1/[K_w:F_v] = 1/(e_w f_w)`；`d_b = [L_b:Q_p]`；`n_b := [L_b:K_w]`；
+- **精确换算：`nativeBadLocalWeight_b = n_b/d_b`，即 `d_b·nativeBadLocalWeight_b = n_b`**（取代之前 `n_b·e_b` 说法）。
+- 若 `F_v=Q_p`，`d_b = n_b·e_w f_w` 由 `Module.finrank_mul_finrank` 给出；`n_b` 由 `rootNormedExtensionFiniteDimensional` 的 `finrank rootBase rootNormedExtension` 可得。
+- **bridge 影响**：`PaperToS3137BridgeData.weight_conversion` 可由 degree tower 直接证（不再是 GAP）；S3137 bridge 只剩 `a1_delta_paper` + S45 + norm-instance agreement。
+- 历史 `1/f` / `d_b·weight=n_b·e_b` 表述作废，以本节为准。

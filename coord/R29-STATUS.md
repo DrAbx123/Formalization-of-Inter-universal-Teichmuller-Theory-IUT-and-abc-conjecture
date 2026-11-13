@@ -1835,3 +1835,5 @@
 - 07:25：**权重语义更正**：`localCompletionDegree=[K_w:F_v]=e·f`（总局部次数），故 paper weight=`1/[K_w:F_v]=1/(e·f)`，之前 1/f 作废；`s1915LocalDegree=[L_b:Q_p]`，degree tower `d_b=n_b·[K_w:F_v]`。新 `Mzk1P1WeightA1BridgeActual`（rfl 语义 + degree tower）+ a1Delta 展开落盘；bridge 只剩 S45 + norm-instance agreement 两项显式。已派 mainline 合 bridge/写 S3137 条件版、hull 改 dictionary 权重、abc 更新 ledger。gate §20.39 已写。
 
 - 07:30：再次纠正 mainline bridge 表述：S45 `qVFamNormRatio=1`（normalized=adic）与 `P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`）是两独立命题；bridge 用 `qhatLogReadout=−c_norm log p` 需显式带后者，S45 只负责 ratio=1。gate §20.40 已写。
+
+- 07:35：abc 更正权重精确换算：`nativeBadLocalWeight=1/[K_w:F_v]`、`n_b=[L_b:K_w]`、`d_b=[L_b:Q_p]` ⇒ **`d_b·weight=n_b`**（之前 n_b·e_b 作废）。因此 `weight_conversion` 可由 degree tower 直接证、不再是 GAP；bridge 只剩 `a1_delta_paper` + S45 + norm-instance agreement。已派 mainline 把 weight_conversion 改定理/删字段，abc 核对 tower 方向。gate §20.41 已写。
