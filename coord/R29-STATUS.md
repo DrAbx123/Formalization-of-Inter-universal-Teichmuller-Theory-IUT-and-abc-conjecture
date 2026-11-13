@@ -1609,3 +1609,5 @@
 - 20:50：`Mzk1P7ContractLinkageWiringActual` 21:06:13 FAIL 只是 START 早于 ContractFieldsActual olean（21:06:14）的时间差；已 touch 触发重试。`Mzk1A1SaturationBases`、`Mzk1IutIVProp14iiiBoxActual` 也 touch 重排。Iut 33 文件闭包等 plan reload。
 
 - 21:00：给 shehdd 线 2 第 1 条精确 shape：`integralLogShell` = `AddSubgroup K` range `(logShellScale p)⁻¹*unitLog`；donor `∃b, range unitLog ⊆ (p:K)^(-b) • Integers`；取 `k=b+logShellScaleExponentFactor`，`p^k • z = y∈Integers`（`Nat.cast_pow`+`zpow_neg`）；随后 `Quotient.inductionOn`+`mem_logShellIntegerSubgroup_iff` ⇒ `IsPGroup`，再 `card_gamma_eq_pow_actual`。
+
+- 21:05：shehdd 实际 Γ p-群文件 `IutIVProp14GammaPGroupActual` 已入队（三定理，按 lead shape；可能 API 名错等首错修）；在 official 前不许给 lattice 当已证 h。
