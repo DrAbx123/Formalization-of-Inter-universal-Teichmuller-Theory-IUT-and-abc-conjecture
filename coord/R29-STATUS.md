@@ -562,3 +562,5 @@
 - 09:25：stage4 GeneralSNFVolume2 再修（hle simpa [Submodule.toAddSubgroup]、hμM congrArg toReal calc）；ChangeMatrixRing 待编。
 
 - 09:27：lattice 桥① green（CoordSmallBridge 00:31:39Z，olean 112,376B，coordSmall=coordLattice）；桥②③待写；CanonicalSNFDet 改纯 GAP 记录。BaseChange 最新 run 仍 :210/:389 两错（shehdd 在修）。
+
+- 09:30：BaseChange :210 goal 已提取（case h：v(a)^e = w(algebraMap a)）；relay shehdd 用 valuation_comap + WithVal.equiv simp 收尾；:389 加 RingHom.coe_range。
