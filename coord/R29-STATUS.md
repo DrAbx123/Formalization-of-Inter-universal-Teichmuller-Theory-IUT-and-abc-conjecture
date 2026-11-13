@@ -596,3 +596,5 @@
 - 18:58：hull input alignment：Types/NativePlacesVsFinitePrimePlace/GapRows green；Named 改 HEq 字段（input_eq 无法跨 V 统一 universe）、Composite 同步改同 V 参数；均已 retouch。恢复批次：WeightOneChannels DONE（10:51:33Z，59s）——两条 weight=1 通道 green。
 
 - 19:00：stage4 首轮修复（SNFMatrixDiag open ChangeMatrixRing、Volume3 hle exact hle_sub）已 retouch。
+
+- 19:03：stage4 SNFMatrixDiag（两次 changeMatrix_one）与 Volume3（显式 hle 假设，GAP 精确为 Submodule.toAddSubgroup ≤ coercion）已 retouch。mainline AgreeFLT 首错 relay：`:61 ValuationSubring.maximalIdeal_ne_bot` 不存在，建议用 `completionIdeal_ne_bot`/`IsLocalRing.maximalIdeal_ne_bot` 路线（参考 BaseChange:706-708）。
