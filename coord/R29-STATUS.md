@@ -1226,3 +1226,5 @@
 - 03:40：队列因 batch 需整轮跑完才 loadPlan，keystone 被阻塞。已向 8 lane 广播提效法：红/keystone 文件直接用 `lake env lean <file>` 快速迭代（不产 olean，秒级出错误），0 error 后再 retouch 让 watchdog 正式产 olean；修红不阻塞、绿了立即接下游。
 
 - 03:46：Lead 审计最近 60 个 DONE 文件（1 no-theorem / 38 含 1-2 theorem / 21 含 ≥3 theorem），发现不少是 status/rows 文件。已向 8 lane 发质量门槛：每文件≥1 个实质新证明/构造（或明确唯一缺失），status/rows ≤20%，里程碑报 proof/status 数量+3-5 个新定理名；继续本地 lean 快速修红。
+
+- 03:52：用户指出本地 `lake env lean` 手动编译错误（绕过 watchdog、重复编译/竞争/不产 olean）。已撤回该建议并向 8 lane 更正：watchdog 是唯一编译器；改小波次 5–8 文件/轮，修红立即 retouch，只读 per-file log/watchdog.log，绿接绿；不空等。
