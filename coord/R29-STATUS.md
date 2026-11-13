@@ -524,3 +524,5 @@
 - 08:40：lattice 对角无条件化三桥配方已给（coordSmall=span single；diagEquiv f 像=coordDual f；紧开/正有限测）；Bilinear 修复版待编。
 
 - 08:42：lattice CoordSmallBridge（span{1}=1 ⇒ coordSmall=coordLattice）入队（370 项）；已给 diagEquiv 桥②配方。Bilinear/BaseChange 再 retouch。
+
+- 08:44：**stage4 A2 桥 GREEN（IndexCardBridge DONE 00:19:20Z，51s）**；GeneralSNFVolume2（general_snf_volume_ratio = 一般 N≤M 的 μ 比 = ∏|a_i|_p）入队（371 项）——一般受限 det 公式核心非条件版。已派 stage4/lattice 对接 canonical Haar 与 U/W。
