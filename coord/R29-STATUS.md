@@ -1494,3 +1494,5 @@
 - 14:56：新 green：`Mzk1S3139FmodEmbeddingActual`（19:46:54Z，A5 residual ③ Fmod embedding 进展）、`Mzk1P1R21BridgeMaxIdealActual`（19:39:40Z）、`Mzk1P1R21BridgeMaxIdealCountActual`（19:38:17Z）、`Mzk1P3CanonicalEqualityObstructionActual`（19:37:59Z）、`Mzk1C17NativeBaseResidueOneActual`（19:37:58Z）、`Mzk1C17NativeBadResidueFieldGapActual`（19:37:58Z）。桥 2 尾部已按 le_antisymm+map_coe 稳健证法修改，19:45:56 重编。
 
 - 15:02：桥 2 最新两错：`:47 Submodule.map_coe at hx` 改 `Submodule.mem_map`（Map.lean:90）；`:83 Algebra.smul_def` 不匹配因 `↑c` 是 Subring coercion，先 `change (algebraMap LocalRing LocalField c) * pi ∈ span{pi}` 再 `← Algebra.smul_def` + smul_mem。stepxi A5 `Mzk1S3139FmodEmbeddingActual` GREEN（19:46:54Z）；lattice BlockAlignmentCard/BlockProductAlignmentObstruction green 19:47。
+
+- 15:08：用户要求多唤醒人。Team 成员上限 8 已满（spawn 报 limit 8），已把全部 8 lane 唤醒；另让 stage4 用一次性 subagent 做 A1 真/假 probe，stepxi 用两个一次性 subagent 做 A7 真/假与 A8 label probe（符合“lane 按需用一次性 agent、Lead 不直接使用”）。mainline 给出桥 2 :83 精确修法（`have h := Submodule.smul_mem …; rw [← Algebra.smul_def] at h; simpa [Subring.coe_mul] using h`）；shehdd C17/P1 3 新 proof。
