@@ -460,3 +460,4 @@ tmp/sheaf/xif/paper/Mzk1Ob33DetLineFromBadPrimeSourceActual.lean
 tmp/sheaf/xif/paper/Mzk1Ob33DetLineBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5ArchActual.lean
 tmp/sheaf/xif/paper/Mzk1NormArchC3HaarScaleFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperLabelProjectionActual.lean
