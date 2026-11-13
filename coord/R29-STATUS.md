@@ -674,3 +674,5 @@
 - 20:38：巡检：gate §31 clean 376/red 21（extra 417）；ThetaVFourLayers/LayerScaleOffset green（11:19:54Z）；#4/#8/#9/#10 状态已更新入 P7-GAP-ATTACK-PLAN；HullDetObjectActual 预置坏文件（:344/:346）→ 建议 shehdd 本地重述依赖；lattice 接 #10 arch factor 对接。
 
 - 20:40：shehdd OB33 改本地重述（删 HullDetObject import，用 S3137 green 文件定义 ob33DetNormalizedLogVolume；raw/blockDim 等式 + 显式 identification）——绕开坏依赖，等编后 #3 → CONDITIONAL。
+
+- 20:42：lattice #10 abc 对接类型表 NormArchAbcHook（AbcArchFactorOutput + C3HaarScaleDocking named input；对接口不明确做显式接口，不冒充）入队（417 项）。
