@@ -780,3 +780,5 @@
 - 21:38：lattice B3 carrier 路线成功：FinitePlaceHaarRatio 在 CommonPrimeCompletion 上 DONE 12:16:42Z（53s，ProperSpace/FiniteDimensional 现成）；LocalizedLineHaarBridge 回 GAP 记录；剩余 carrier align（commonPrimeCompletionRingEquiv）+ CountLocalizationBridge + LocalHaarScalingLaw。已派 carrier align 文件任务。
 
 - 21:40：新 green：**P7ThetaDeg DONE 12:20:07Z（72s，#7 实际 finrank）**、**CanonicalDiagUncond DONE 12:20:05Z（70s，B4 conditional compact_open）**、**RouteC0GlobalDecomposition DONE 12:20:08Z（73s）**、S1915DegreeFinrank DONE 12:18:40Z。仍 FAIL：Ob33ArchMetric/LocalizedLineMul/P7ThetaDegB2/InputAlignmentComposite（owners 在修）。
+
+- 21:42：**hull #5 L4 unconditional 突破**：`scaledThetaHull_normalizedLog_eq`（实际定理，normalizedLog(scaledThetaHull k)=scaledClosedFormR k −1）⇒ general-k ThetaVScaleOffset scale=1/offset=1 无需假设；新 ThetaVGeneralUnconditional（含 qLogSum_nonneg、scaledClosedFormR_le_paperBox_add_one ⇒ general C0=1）入队（450 项）；Composite retouch。
