@@ -1138,3 +1138,5 @@
 - 23:42：mainline LocalizedSpan 阻塞（`coe_spanSingleton` 的 Set coercion 不可 rw）→ Lead 给绕开法：用 `FractionalIdeal.mem_spanSingleton`（Operations:575）与 `Submodule.mem_span_singleton` 直接做成员等价（同为 ∃r, r•x=z），不需要 Set-level bridge。
 
 - 23:46：lattice #10 本轮：NativeBadPrime 精确归约 green（→`NativeBadModuliFixedPrime`）；normalized unitMass=1 GAP（IntermediateField 缺 MeasurableSpace/SigmaFinite；Mzk1NativeNormalizedUnitMassOne DONE 15:37:29Z，localUnitMassScalar pos/finite green）；blockEquiv GAP。已派下一阶段大包：NativeBadModuliFixedPrime 来源/normalized 刻度接口/blockEquiv inhabitant。
+
+- 23:52：**P1 重大突破**：shehdd `Mzk1P1LocalizedFractionalIdealActual` DONE 15:38:22Z（31s）——`localizedFractionalIdeal_coe_eq`（FractionalIdeal.extended coercion = localizedLine）+ **`localizedLine_isPrincipal_actual : (localizedLine I v).IsPrincipal` 无假设证明**（DVR PID 实例）。⇒ P1 唯一缺失 `MissingLocalizedIsPrincipal` 关闭；LocalGeneratorData 可无假设构造；剩 count↔valuation + residue-one。已通知 mainline/shehdd 接线并更新文档。
