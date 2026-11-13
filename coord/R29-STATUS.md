@@ -642,3 +642,5 @@
 - 19:59：三 lane 十-GAP 产出：stepxi #4 MultiradialCarrier（finite-only + P7-MULTIRADIAL-GAP.md，保持 OPEN）；shehdd #3 Ob33SourceIdentification（实际 detNormalized=raw/blockDim + 显式 identification，可降 CONDITIONAL）；stage4 CanonicalDiagUncond（diagHomeo+hLc/hLo/hXc/hXo 消除+比例 uncond，B4 收尾）。三者入队（400 项）。
 
 - 20:02：巡检：InputAlignmentNamed/SNFMatrixUW/DiagEquivBridge/IQCarrier/CanonicalDiagReduce green；HullUBDictionary 缺 HullUBPaperBox.olean（已 retouch）、Ob33SourceIdentification 缺 HullDetObject.olean（已加入 watch list，398 项）。AgreeFLT/Composite 仍迭代中。
+
+- 20:05：abc #1 关键思路 relay：closedBall(p^{-s})=p^{⌈s⌉}·O ⇒ ball 质量 = p^{-⌈s⌉}·μ(O)（无需 rpow，用整数 scaling + Int.ceil；d 维加 [L:Q_p] 因子）；FLT RestrictedProduct/Equiv+TopologicalSpace+FiniteAdeleRing 三文件 retouch 触发 #2 链。
