@@ -605,3 +605,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - (a) 显式条件定理 `PaperSourceCorrectionFreeFields T → paperQ≤theta`；
   - (b) correction 形式 `paperQ≤theta−Σw log ratio`（不声明 ratio=1）。
 - **#1 当前定位**：product signed `Q≤Θ`（`Mzk1A1SignedReadoutProductActual` 23:02:24）是 correction 形式的基础；无条件 Q≤Θ 不存在；条件版依赖 S45。
+
+
+### 20.32 权重区分：hull 1/f vs P2 d_b（abc 核对，2026-11-14 23:50）
+- **点态**：`qhatLogReadout − paperQSignedReadout = Real.log(qVFamNormRatio)`；符号一致（`localLogMagnitude = −log‖c0QHat‖ + log ratio` 取负）。
+- **全局权重不一致**：
+  - hull `nativeBadLocalWeight = localNormalizedWeight = 1/[K_w:(F_mod)_v] = 1/f`；
+  - P2 R1.3 质量权重 `d_b = s1915LocalDegree = finrank_ℚp(rootNormedExtension) = [L:Q_p]`。
+  - 点态可互译；**全局 `Σw log ratio` 与 `Σ d_b(...)` 不是同一量**，最终 #1 必须按 paper sums 的实际权重选一个并显式换算，禁止混用。
+- hull 文件 `Mzk1P0QThetaReadoutNormCorrectionActual` 尚无 DONE，未验收；需拆点态/带权重全局式/权重换算。
+- **#1 状态**：correction 形式成立需显式权重；条件版依赖 S45 `PaperSourceCorrectionFreeFields`；两者都不能混用权重。

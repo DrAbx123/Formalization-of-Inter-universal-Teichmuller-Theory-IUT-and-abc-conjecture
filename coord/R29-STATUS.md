@@ -1817,3 +1817,5 @@
 - 06:40：hull norm-correction 文件（待编）：精确 `qhatLogReadout−paperQSignedReadout=log ratio`；全局 `Σw log ratio`；最终只能得 `paperQ ≤ theta − Σw log ratio`；`Σw log ratio≥0` 时 paperQ≤theta，ratio=1 是 `PaperSourceCorrectionFreeFields.normRatio_one` 条件，不无条件。已让 mainline 查是否由实际 SourceNativeInitialThetaData 推出；abc 同步 ledger。gate §20.30 已写。
 
 - 06:45：**mainline 审计结论：`qVFamNormRatio=1` 不是 SourceNativeInitialThetaData 推出，而是原文 S45 `PaperSourceCorrectionFreeFields` 条件**（`paperXiFTargetStrict_of_fields` + `paperNormalizedComparison_exact_of_strict`）。因此 #1 的 Q≤Θ 不能无条件写；正确形式=(a) `PaperSourceCorrectionFreeFields T → paperQ≤theta` 或 (b) correction 形式 `paperQ≤theta−Σw log ratio`。已派 mainline 写显式条件版最终定理；hull 保留 correction + 条件版；abc 只读核对 `paperNormalized*` 定义与我们的 normalizedLog 的 bridge。gate §20.31 已写。
+
+- 06:50：abc 核对 #1：点态符号一致 `qhatLogReadout−paperQSignedReadout=log ratio`；但**全局权重不一致**——hull `nativeBadLocalWeight=1/f`，P2 `d_b=finrank=[L:Q_p]`；最终 #1 必须按 paper sums 权重选一并显式换算，不得混用。已派 mainline 报告 paper sums 权重定义、hull 拆点态/带权重全局式/换算、abc 写权重换算或记录不可混用。gate §20.32 已写。
