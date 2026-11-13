@@ -910,3 +910,5 @@
 - 01:54：mainline B#3 全链（1–7 文件）green 汇总；剩余命名输入清单（LocalHaarScalingLaw/LocalPrincipalGenerator- CountLocalizationBridge/LocalizedLineMulLaw/参照 O+hH hO）已记录。已派 mainline 等 qpilot product formula olean 后写 relativeDetLog 的逐位展开 + relativePlaceIndex/arch 合流（不重复实现公式）。
 
 - 01:58：**C0 收口完成**（stepxi）：C0ReadoutIdentification GREEN 13:06:10Z（59s，ole 100,424B，无 inhabitant：readout/readout_eq_hBox/readout_eq_qPilot）；c0IdeleHeight_eq_hBox_of_components green 13:02:28Z（ole 96,616B）；paper hBox 分量识别精确数据（x、finite_norm+support、arch_norm）与**符号/定向 GAP**（c0IdeleHeight≥0 vs qPilotReading≤0，直接等式仅零）已写清。C0 最终：有限 lattice/idele/height 实际构造 + 条件 hBox 等号 + readout 精确接口；唯一缺失=全局分量识别/readout（+符号约定）。
+
+- 02:01：qpilot product formula :90 No goals（删多余行 relay）；stepxi C0 符号 GAP 处理建议（readout 改 signed 形式，文档写清约定）。
