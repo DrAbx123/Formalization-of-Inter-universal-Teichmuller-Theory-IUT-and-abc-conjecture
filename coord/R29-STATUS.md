@@ -1645,3 +1645,5 @@
 - 22:50：lattice 写 `Mzk1IutIVProp14ActualHBridgeActual`（actualGammaH := Classical.choose card_gamma_eq_pow_actual）；提醒：`card_gamma_eq_pow_actual` 所在 GammaPGroup 仍 FAIL（等 shehdd 05:31 retouch 重编），official 前不算接入；μΛ=p^h μO 仍需接 `measure_integralLogShell_eq_index_mul`。
 
 - 22:55：hull 新 `Mzk1A1DeltaExplicitActual`（`lambdaBall_eq_closedBall`、`lambdaBall_measure_eq`、`a1Delta b := log r_b − (1/d_b)(log μ(c0QLattice_b)−log μ(O_b))`、**`a1Delta_nonneg`** 由 q 格⊆lambda 格 + log 单调 + measure 展开）并修 `Mzk1P0RouteC0GlobalReadout` 的 import（rootExtensionProductImageHull/s1915LocalDegree/s1915_local_measure），待编；下一步合成 signed readout `(1/d)log(μ(J)/μ(O))=log r−δ` + `c0ProductQ_normalizedLog_le_thetaHull`/`thetaHull_normalizedLog_eq_closedForm_sub_one` ⇒ normalized Q≤Θ。
+
+- 23:00：用户问 idle 情况。实况：11 个 lean 进程在跑、plan dirty=205（含新加的 104 Iut/TFG），队列饱和；teammate 是 turn-based（inactive=当前无 turn，不等于停写）。已给 mainline/hull/qpilot/shehdd/lattice/stepxi 发**多波次任务**，要求连续做到硬阻塞再报，减少 idle 抖动。
