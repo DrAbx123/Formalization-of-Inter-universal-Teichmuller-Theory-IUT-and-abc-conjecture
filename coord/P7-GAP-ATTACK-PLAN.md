@@ -2,7 +2,7 @@
 
 来源：coord/P7-GATE-REVIEW.md §13（Mzk1P7GapRegisterActual.gapRegister）。
 用户指示：10 个 gap 是把一个大 gap 分解成 10 个，逐个击破。
-状态：全部未 unconditional discharge；GAP-P7-CONTRACT 为 CONDITIONAL/INTERFACE。
+状态（2026-11-13 23:30 最新）：**#7 THETA-DEG 已 DONE（含 B4 无条件 canonical diag ratio）**；#5/#9 DISCHARGED（paper regime）；#2 DISCHARGED(definition-level)+semantic PARTIAL；#6 S2717C3 实例 DISCHARGED；#1/#3/#8 CONDITIONAL；#4/#10 PARTIAL。P7 整体仍 **NOT PASSED**（build gate 全绿 ≠ P7 gate pass）。
 
 ## 编号 / 缺口 / 主攻 lane / 下一步（可执行）
 
@@ -10,14 +10,14 @@
 |---|---|---|---|---|
 | 1 | GAP-P7-GENERAL-CMP | **CONDITIONAL(HullQDictionary)（唯一 named input；路线 A 完成，条件版 GREEN 12:50:24Z）**；已 green：PadicBallCeil(A2 球质量，11:52:14Z)、BallMassFormula(12:03:46Z)、LowerBound(重写去 c/hprod，12:06:23Z)、S1915DegreeFinrank(rfl 语义等式，12:18:40Z)、C3S1902NormalizedLog(A5，12:38:53Z)。精确障碍（abc 已 file:line 定位）：`HullQDictionary` 的 q_eq_sum 需跨族同源（qVFamily ↔ C3 q，independent objects；另需 ∏qVFamNormRatio=1 与 place-求和恒等式）；theta_eq 需 C3↔S1902 hull 标量质量对齐（弱于 blockEquiv）。HullQDictionary = 唯一 named input（仅两标量）；(b) ∏qVFamNormRatio=1 经查不可由现有定义证（PaperSourceCorrectionFreeFields 源字段，两范数实例不同，BadPlaceSourceFieldsObstruction 明文；强行作定理即 fake） | abc | **`Mzk1P7ComparisonConditionalFinalActual` DONE 12:50:24Z（89s）**：HullQDictionary 唯一 named input（theta_eq+q_eq_sum），`comparison_of_hullQDictionary`（margin-1）、`theta_read_eq_qRead_add_one`、`comparison_margin_one`、`paperGap_of_hullQDictionary`；三源字段 (a)(b)(c) 只在 docs 说明、不新增 structure。margin 1 是 #1 充分严格形式（`θread = qread + 1`），不替代 #7 的 paperBox 界（#7 是上界 `V≤paperBox(+C0)`，#1 是 θ vs q 比较，方向/对象不同，不冲突） |
 | 2 | GAP-P7-IQ-LITERAL | **DISCHARGED（definition-level）**；`Mzk1IQFiniteAdeleRestrictedActual` DONE 12:04:41Z（olean 41,096B）：`iqPlaceIndex=HeightOneSpectrum (𝓞K)`、`adicCompletion/adicCompletionIntegers` 真实载体，`iqCarrier_eq_mathlibFiniteAdeleRing`（rfl 到 Mathlib `IsDedekindDomain.FiniteAdeleRing`）+ `iqFiniteAdeleRingEquiv`（RingEquiv.refl）+ 结构运输 + 几乎处处整性；不依赖 FLT backport 链 | qpilot | **语义剩余**：paper-literal IQ 的 divisor/label/unit-group 结构未识别（definition-level ≠ paper-literal）；在 Mathlib carrier 上构造这些附加结构即下一阶段 |
-| 3 | GAP-P7-OB33-SRC | **CONDITIONAL**；`Mzk1Ob33SourceIdentificationActual` GREEN（11:40:50Z）：实际 detDegree = actualUnitLineBundleData.detData.globalLogVolume，`ob33DetNormalizedLogVolume` 本地定义 + 显式 identification；B4.4 det line：mainline DetLineConstruction GREEN（11:47:36Z，log D(H,O)=logH−logO） | shehdd | B5 逐位：localizedLine DVR 生成元 + Haar scaling（mainline DetLinePlaceB5 的 named-input 口径）；arch metric；然后用 relativeDetLog 替换 Ob33 命名 identification |
+| 3 | GAP-P7-OB33-SRC | **CONDITIONAL（B5 只剩 ② bridge+residue-one）**；`Mzk1Ob33SourceIdentificationActual` 11:40:50Z（实际 detDegree=actualUnitLineBundleData.detData.globalLogVolume）；`Mzk1DetLineConstructionActual` 11:47:36Z（log D(H,O)=logH−logO）；`Mzk1Ob33DetLineActual`/`FromBadPrimeSource`（qpilot actual bad-prime source 实例化）green；`Mzk1B5LocalGlobalProductFormulaActual` 13:09:21Z（log absNorm=Σcount·log absNorm）；`Mzk1B5FractionalAbsNormFormulaActual` 13:16:43Z + `FractionalCountNumDenActual` 13:26:56Z（fractional）；`Mzk1B5FinsumSummableActual` 13:40:11Z（finsum_sub_bridge+HasFiniteSupport/Summable）；`Mzk1B5RelativeDetLogExpansionActual` 13:25:05Z（①展开+③arch 汇总）；`Mzk1B5FractionalExpansionUncondActual` **14:00:11Z（①完全无条件）**；`Mzk1Ob33B5AssemblyActual` 13:13:00Z（conditional assembly）；`Mzk1Ob33B5IndexActual`/`ArchMetric`/`B5CountBridge` green；Norm 桥：`Mzk1B5GeneratorNormBridgesActual` 14:26:00Z + `Mzk1B5NormZpowActual`（在编，`‖x‖=residueNormBase^localValuation`） | shehdd | 剩：② `CountValuationBridge` = `SpanGeneratorValuationLemma`（`localValuation v d.generator = -countExponent v I`，无 DVR principal-generator/localization count 引理，精确缺失）+ residue-one（GAP-PC-RESDEG/tame）；q-pilot bad-prime source 与 paper q-参数除子语义识别仍独立 Prop |
 | 4 | GAP-P7-MULTIRADIAL | PARTIAL；finite Q(i)-at-5 production green；general CarrierAlgorithmContract 无条件 green；RouteNormalForm named input；实际 production 缺失 | stepxi | 已完成：carrier 包 `Mzk1P7MultiradialCarrierActual`（finite model）、`Mzk1P7MultiradialGeneralBridgeActual`（general conditional）、精确缺口 `coord/P7-MULTIRADIAL-GAP.md`；2026-11-13 加 C3 actual source candidate `Mzk1P7MultiradialProductionActual`（kummer/rootChange/theta/tensor 实际字段 + `MultiradialProductionMissing` 接口，仍非 production）；下一步 actual n,oR_LGP/production 输出类型 |
 | 5 | GAP-P7-THETA-V | **DISCHARGED（general-k V 字典）**：L1 raw green、L2 normalized green、L3 actual scale=1/offset=1（`Mzk1ThetaVScaleOffsetIdentityActual` DONE 12:10:27Z）；general-k：`scaledThetaHull_normalizedLog_eq`（实际定理）+ **`Mzk1ThetaVGeneralUnconditionalActual` DONE 12:24:25Z（67s）**：rawV=scaledClosedFormR k、normV=normalizedLog(scaledThetaHull k)、scale=1/offset=1、qLogSum_nonneg、general-k C0=1 bound | hull | 无剩余 named closed-form 假设；若需 paper 的最终 V 形式再另行对齐（当前字典已实际构造） |
 | 6 | GAP-P7-THETA-D | **DISCHARGED（S2717C3 实例）/PARTIAL（一般 S3137 C3）**；`Mzk1C3DKeyMapActual` + `Mzk1C3DDonorProjectionActual` DONE 12:05:14Z（actualDonorC3 展开到 D 字段，7 个 rfl 投影）；#6 对实际 donor C3 构造已识别 | hull | 一般 S3137 C3 桥另列精确缺口（不是 named dictionary） |
-| 7 | GAP-P7-THETA-DEG | **PARTIAL（核心构造 DONE）**；`Mzk1C3BlockMeasureActual` GREEN 11:44:02Z；`Mzk1P7ThetaDegActual` GREEN 12:20:07Z（localCompletionDegree=finrank、block:Q_p=∏、block nonpos）；**`Mzk1P7ThetaDegC3Actual` GREEN 12:33:19Z**：`c3TensorBlockDimension_eq_sum_fieldProduct`（域分解 ⇒ C3 block:Q_p=Σ 实际 local degree）；B2 主体（packet 求和 calc）在编 | stage4 | B2 绿后合并更新 P7 §13 #7 为“域分解+求和 DONE”；剩余：degree 权重与 V 的最终归一化消去（精确 GAP） |
-| 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY**（`Mzk1P7ContractMapActual` DONE 11:18:55Z，olean=True；AgreeFLT DONE 11:13:10Z） | mainline | 已完成：`recon12ToGap`/`missing7ToGap`/`gapCodesCovered`/`contract_fields_not_linked`/`p7_conditional_contract`；文档 `coord/P7-CONTRACT-MAP.md`。后续：等其它 GAP 关闭后把条件装配升级为 DISCHARGED |
+| 7 | GAP-P7-THETA-DEG | **DONE（2026-11-13 14:44:03Z；含 B4）**：`Mzk1C3BlockMeasureActual` 11:44:02Z；`Mzk1P7ThetaDegActual` 12:20:07Z（localCompletionDegree=finrank、block:Q_p=∏）；`Mzk1P7ThetaDegC3Actual` 12:33:19Z（C3 block=Σ 实际 local degree）；`Mzk1P7ThetaDegB2Actual` 12:54:15Z（域分解 ⇒ block=ΣE_j、packet=ΣtupleΣj）；`Mzk1P7ThetaDegWeightActual` 13:22:49Z（thetaBlockLogFactor=-(Σlocal degree)log p、normalized 分母=Σ finrank）；`Mzk1P7ThetaDegCancelActual` 13:39:28Z（normalized=(1/Σdeg)·log(μS)、实际区域=(1/Σdeg)·thetaPilotHullLogVolumeReal）；**B4 DONE**：`Mzk1CanonicalDiagUncondFinalActual` 14:44:03Z（olean 216,480B）无条件 `canonical_diag_volume_ratio_uncond`（coordSmall/coordDual 紧开性，绕开 diagHomeo image bridge） | stage4 | 无剩余 GAP；task-87 收口（P1/P2 预备与 X_G/对角双链） |
+| 8 | GAP-P7-CONTRACT | **CONDITIONAL ASSEMBLY（消费者入口与行覆盖已 green）**；`Mzk1P7ContractMapActual` 11:18:55Z；`Mzk1P7ContractMarginConsumerActual` 13:08:36Z（comparison_of_margin_one、p7_conditional_contract_of_margin_one/_of_hullQDictionary、margin7Rows+length）；`Mzk1P7ContractRowsBridgeActual` 13:29:25Z（margin7Rows_items/codes/length_eq_missing7ToGap 全 rfl，逐行覆盖）；AgreeFLT 11:13:10Z | mainline | 把 `missing7ToGap` 7 行内容升级为“已有实际证据行”（#5/#7/B5①③/AGREE 等标 PROVED），只留真 GAP；升级后 #8 可从 CONDITIONAL ASSEMBLY → PARTIAL(rows evidenced)+精确剩余 |
 | 9 | GAP-P7-HULL-UB | **DISCHARGED（paper regime C0=0）**；hull 修正：`normalizedLog≤0`（hull⊆unit）且 paper regime `disc≥2 ∧ cond≥1 ∧ l≥5 ⇒ paperBox≥1` ⇒ `V=1+normalizedLog ≤ paperBox`（C0=0 在 paper regime 可证，`Mzk1HullUBC0AbsorptionActual.paperV_le_paperBox_zero_of_disc_ge_two_cond_ge_one`）；一般 CurveData（disc=1）仍 OPEN；无条件实际界 C0=1（`V≤paperBox+1`） | hull | 一般 disc=1 的 slack≥1 仍 OPEN；paper regime 下 #9 已闭（待 watchdog 确认重写文件）。 |
-| 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL（公式层 + citizen 清单 DONE；inhabitant 缺）**；`Mzk1NormArchCKActual`(C_K/因子)、`Mzk1NormArchAbcHookActual`(接口+degree-one haarScale=1)、`Mzk1NormArchConsumerActual`(去 heightWeight 假设的 arch 加权和)、`Mzk1Ob33ArchMetricActual`(实际 Hermitian metric + compatibility PROVED)、B3 ratio on CommonPrimeCompletion(ProperSpace 障碍消除)、`CarrierEquivData`(单一 named input)、`NormArchC3HaarScaleFormula`(c3HaarScale=archCK·localUnitProduct，公式层 named data) 均 green | lattice | citizen 清单 GREEN 2026-11-13：`Mzk1C3S1902BlockEquivDataActual`（DONE 13:28:16Z，olean 33,584B）给出 `C3S1902BlockEquivData`（tensorIndexEquiv/fiberEquiv/blockEquiv）+ `C3S1902UnitMassData`（unitMass/pos/eq）+ 5 行清单；**inhabitant 仍缺**：① blockEquiv 实际构造；② unitMass 实际值；③ T-specific local unit-mass product 的 FinitePlaceAtPrime 对齐；CountLocalizationBridge 单独 GAP。状态仍 PARTIAL，不冒充。 |
+| 10 | GAP-NORM-ARCH-C-K | **CONDITIONAL/PARTIAL（公式层 + citizen 清单 DONE；inhabitant 缺）**；`Mzk1NormArchCKActual`(C_K/因子)、`Mzk1NormArchAbcHookActual`(接口+degree-one haarScale=1)、`Mzk1NormArchConsumerActual`(去 heightWeight 假设的 arch 加权和)、`Mzk1Ob33ArchMetricActual`(实际 Hermitian metric + compatibility PROVED)、B3 ratio on CommonPrimeCompletion(ProperSpace 障碍消除)、`CarrierEquivData`(单一 named input)、`NormArchC3HaarScaleFormula`(c3HaarScale=archCK·localUnitProduct，公式层 named data) 均 green | lattice | citizen 清单 GREEN 2026-11-13：`Mzk1C3S1902BlockEquivDataActual`（DONE 13:28:16Z，olean 33,584B）给出 `C3S1902BlockEquivData`（tensorIndexEquiv/fiberEquiv/blockEquiv）+ `C3S1902UnitMassData`（unitMass/pos/eq）+ 5 行清单；**inhabitant 更新**：`Mzk1C3S1902UnitMassCitizenActual` DONE 14:08:27Z（olean 42,104B）实际构造 `actualC3S1902UnitMassData`（unitMass=(s1915UnitMass T).toReal，正性 green）；`unitMass=1` 仍 GAP；① blockEquiv 实际 inhabitant 仍缺；③ T-specific local unit-mass product 的 FinitePlaceAtPrime 对齐仍缺；CountLocalizationBridge 单独 GAP。状态仍 PARTIAL，不冒充。 |
 
 ## 纪律
 - 每项只允许：定理化（green）、条件接口（显式 named input，CONDITIONAL）、精确缺口文档（OPEN + 障碍说明）。
@@ -692,3 +692,348 @@ q 根关系/迹系数在这些运输下的对应。
 
 检索说明：03 分片的部分 Markdown/TSV 含 NUL，普通 `rg` 会提示停止按文本搜索；本轮相关查找已用 `rg -a` 补查。因此对索引中未命中的名字，不作“仓库没有”的结论。
 <!-- END P7-REUSE-CORRECTION-20261113 -->
+
+<!-- BEGIN P7-NEXT-ATTACK-SOURCE-FIRST-20261113 -->
+## 下一轮攻法：先接回可实现的源，再攻三个实际比较（2026-11-13，单线程）
+
+**建议次序：先处理旧 C3 空类型这一入口错误；主攻真实 q 格的系数构造；同时把 B5 剩余的局部 count 桥做实；若源张量与根侧乘积不能直接对应，再走逐素数的迹下降。不要继续增加以 `HullQDictionary` 为输入的推论。**
+
+本节回应用户最新的十 GAP 状态。任务 ID：`p7-next-attack-source-first-20261113`；负责人：当前 chat 的 root；阶段：SHEAF 1，具体构造路线与复用复核。实际消费者是 P7 比较、B5 局部生成元和 C3/S1902 运输接口。只追加本计划及节点/STATE/queue/研究账本，不修改其他 owner 的 Lean 文件、不调度其他 chat。证据版本见同名 DAG 节点的 SHA-256 快照；这是定向阅读，不是全仓逐一定理审查。
+
+验收目标仍是：对**原文允许的全部合格输入**，构造所需源对象并证明原来的 q/Theta 不等式，以及相关有限性、归一化和生产相容性。原文已经给定的初始数据可以作为输入；后面为了比较而新增的根系、同源等式、质量字典、余量估计，必须在证明内部实际构造或证明。条件定理本身未必是逻辑上的循环，但留下这些条件便没有完成用户要求。
+
+**以下是三条有明确构造和检查点的研究路线，不是三份已经完成的无条件证明。** 我能给出其中若干技术连接的完整数学证明步骤；实际源 production 到原不等式的连接尚未证成，不能保证每条候选最终成功。没有把这部分不确定性藏入新的输入字段。
+
+### 0. 比最新状态表更优先的一条已有证据：旧 C3 不能被构造
+
+#### 0.1 这不是新猜测，仓库已经有直接定理
+
+[S1429CompletionRootObstructionActual.lean](D:/lean/tmp/sheaf/xif/paper/S1429CompletionRootObstructionActual.lean) 已有：
+
+```text
+no_completionRootSystem
+sourcePilotRegionData_isEmpty : IsEmpty (SourcePilotRegionData I)
+```
+
+本轮读到了完整证明体。[S2837NoQRootSystemCriterionActual.lean](D:/lean/tmp/sheaf/xif/paper/S2837NoQRootSystemCriterionActual.lean) 另有一般 q-candidate 的同类结论。**不用重新安排证明这些 no-go。上一轮本 chat 的复用清单遗漏了这项关键结果，应以本节纠正。**
+
+理由非常具体：[SourcePilotRegion.lean](D:/lean/tmp/sheaf/n8/closure/SourcePilotRegion.lean) 要求 `roots : NatRootSystem qUnit` 位于原完成域中，而 q 的离散阶数是正整数 r。`NatRootSystem.pow_self` 要求每个 N>0 都有 x_N^N=q；取赋值得到 N·ord(x_N)=r。取 N=r+1，就要求 r+1 整除 r，矛盾。换成该完成域的 normalized norm 不改变域或这个矛盾。
+
+当前 `Mzk1P7MultiradialProductionActual` 的候选源仍然只是旧 `SourcePilotRegionData` 的别名；S3137 的当前接口也仍引用这个旧类型。因此“候选源接口 green”不能说明有可用源实例。旧类型上的条件恒等式可以保留，但由空类型消去得到任何比较，都不能算解决原论文。
+
+#### 0.2 修正方向早已确定，也有可复用实现
+
+已有 [N8-TARGET-INPUT-DECISION-20261023.md](D:/lean/coord/N8-TARGET-INPUT-DECISION-20261023.md) §2–§5 明确要求 native 源输入、正确扩张中的根系、真实源可能像和有符号读数。该决定不是要求现在再发明一套替代命题。直接复用：
+
+| 已有对象/定理 | 本轮确认的作用 | 尚未由它完成的事情 |
+|---|---|---|
+| [C3Roots.lean](D:/lean/tmp/sheaf/n8/closure/C3Roots.lean)：`algClosedRootSystem`、`qCandidateRootSystem`、`..._pow_self` | 对给定的实际 q，在代数闭包中构造全阶相容根 | 不把任意 q-candidate 认作原曲线的 Tate q；不提供原 multiradial production |
+| [NatRootSystem.lean](D:/lean/LeanFormal/IUT/IUTII/Kummer/NatRootSystem.lean)：`rootSystemOfAlgClosed` | 已完成阶乘链的相容根构造 | 不再重建一般根系理论 |
+| [S1314C3GaloisRootActionActual.lean](D:/lean/tmp/sheaf/xif/paper/S1314C3GaloisRootActionActual.lean) | 已有 Galois 对单位、根系的作用及 fixed-q 法则 | 其 concrete q 的源识别不能省略；通用构造可在真实 q 上实例化 |
+| [KummerClass.lean](D:/lean/LeanFormal/IUT/IUTII/Kummer/KummerClass.lean) | `kummerClass`、`kummerClass_mul`、`kummerClass_diff`，构造 cocycle 和换根相容 | 不需要把 cocycle 法则重新列成自由假设 |
+| [S1391C3LSourcePilotActual.lean](D:/lean/tmp/sheaf/xif/paper/S1391C3LSourcePilotActual.lean) | 已拆出共用 core，并给出 L 侧 root/Kummer 结构 | 该版本有特定 V 范围，不能直接冒称一般原输入 |
+| [Mzk1SourcePilotLGenericActual.lean](D:/lean/tmp/sheaf/xif/paper/Mzk1SourcePilotLGenericActual.lean) | 已有一般 V 的结构陈述 | 不是一般源 constructor；还绑定 concrete q，不宜照抄后宣布完成 |
+| [Mzk1C3LogShellTensorLActual.lean](D:/lean/tmp/sheaf/xif/paper/Mzk1C3LogShellTensorLActual.lean) | L 侧张量、log-shell 区域、Haar、紧性适配已存在 | 一般源范围、真实 hull 与 signed log 消费者仍须接入；文件中的 ENNReal log 包装不能代替负的 signed log |
+
+实际工作应是：把只用 `p/places/tuple` 的张量与测度定理作用在已有共用 core；根/Kummer 操作作用在正确扩张；从同一个原始输入供给二者。**不再构造 L→旧 C3 的总适配**，因为那又要求不存在的完成域内全阶根。
+
+根系放在代数闭包，并不意味着在代数闭包上使用局部紧 Haar。全根系用于代数/Galois 层；有限标签所需的有限个根值放入实际有限扩张，测度与格子仍在有限局部域及有限张量块中计算。现有 `rootNormedExtension` 链正是可复用的有限扩张入口。
+
+迁移时保留原 q、原 theta 源像、标签平均和目标强度，逐项重审引用定义。旧 S3137 的字面类型不能因为它为空就成为最终验收锚点；更不能静默更改定义后沿用旧 `target_accepted`。本节没有修改该类型，也没有宣称迁移已完成。
+
+#### 0.3 另外三项状态应收窄，避免重复工作
+
+1. **#3 范数桥已新增实现。** 当前 [Mzk1B5GeneratorNormBridgesActual](D:/lean/tmp/sheaf/xif/paper/Mzk1B5GeneratorNormBridgesActual.lean) 已有 `normZpowBridge_of_ne_zero`、`localNormGeneratorBridge_proved`。本轮复核期间源码更新，最终以已读到的这个版本为准。剩余主项是生成元/count，以及从 I≠0 推导生成元非零，不是再证明 norm_def。
+2. **#10 unitMass inhabitant 已有。** [Mzk1C3S1902UnitMassCitizenActual](D:/lean/tmp/sheaf/xif/paper/Mzk1C3S1902UnitMassCitizenActual.lean) 已构造 `actualC3S1902UnitMassData`。它取真实正有限质量，不声称质量等于 1。不能继续把整个 unitMass citizen 列作未构造。
+3. **#7 的已完成计算直接保留。** [Mzk1ThetaScalarAlignActual](D:/lean/tmp/sheaf/xif/paper/Mzk1ThetaScalarAlignActual.lean) 明确证明 raw theta = dimension × packet-normalized theta，同时明确这不能推出 `theta_eq`。除法约掉维数不是新增的跨源质量识别。需要迁移的是其消费者，不是重证维数公式。
+
+### 1. 路线一：用实际系数把 q 格送进 theta 源 hull，直接得到比较
+
+**主攻对象：#1、#4 的真实源像连接，以及 #6 的一般源对应。优先级最高。** 已有根侧包含是实质数学供体；下一包应围绕它到底能否在原目标的载体、标签和归一化下使用，而不是继续写比较的等价形式。
+
+#### 1.1 根侧已经有的证书
+
+固定同一份 native 数据 T 和坏位 b，令
+
+\[
+\alpha_b=\operatorname{qrootElem}(T,b),\qquad
+\widehat q_b=\alpha_b^{2l},\qquad
+\lambda_b=\operatorname{rootThetaFieldLambda}(T,b).
+\]
+
+[Mzk1RouteC0RootQLatticeActual](D:/lean/tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeActual.lean) 已证明 \(\widehat q_b\) 等于实际 `qVFamily` 元素的映入；[V2 文件](D:/lean/tmp/sheaf/xif/paper/Mzk1RouteC0RootQLatticeV2Actual.lean) 已证明
+
+\[
+\|\widehat q_b\|\leq\|\lambda_b\|,\qquad
+c_b:=\widehat q_b/\lambda_b\in\mathcal O_{L_b},\qquad
+\widehat q_b\mathcal O_{L_b}\subseteq\lambda_b\mathcal O_{L_b}.
+\tag{R1.1}
+\]
+
+这里 c_b 是一个实际构造出的系数。乘积包含及 Haar 单调性也已经有了。不再新建第二份 C0。
+
+#### 1.2 新证明必须落在源生成元上
+
+从原合格输入先构造真实的 q 区域与 theta 允许像，再记录它们在每个实际张量块中的生成元。对已有数学对象做以下计算：
+
+1. 将源 q 的局部值沿原塔的实际完成映射送入根扩张，证明它确实给出 (R1.1) 的 \(\widehat q_b\)。不能因为两者都叫 q 就视为相同；尤其核对 q、2l 次根及不同列的 q。
+2. 将实际 theta 特殊值及允许换根/单位操作送入同一有限扩张，证明所用 \(\lambda_b\) 来自目标 hull 允许的像。若只证明了“某个候选 theta 元素”，尚不能使用目标 hull 的最小性。
+3. 在实际目标块中写出 q 生成元的坐标：
+   \[
+   g_a^q=\sum_i c_{ia}g_i^\theta.
+   \tag{R1.2}
+   \]
+   秩一原型取 \(c=\widehat q/\lambda\)；张量情形先对纯张量使用这些比值，再沿线性展开、实际投影和已有张量落点证明 (R1.2)。若变换出现分母，记录具体分母，转路线三计算，不添加“系数整性”输入。
+4. 由源根幂关系、单位范数及实际变换公式证明所有 c_ia 属于正确的整数环，继而用 span 的泛性质推出源 q 格包含于源 theta hull。
+
+若要用基矩阵表述，在同一个满秩局部向量空间中取实际基矩阵 A_q、A_Theta，计算 C=A_Theta^{-1}A_q。路线一的核心新定理是 **C 的每个条目整**；C 必须来自已构造的源基，不能先任取一个整矩阵再定义源基等于它的像。
+
+#### 1.3 标签与生产顺序不能省
+
+原文 3.12 的 theta 量包含 procession 的标签平均。不能用“对所有标签取最大半径得到一个大球”的 log，直接替代“逐标签 hull 的 log 再平均”。应保留索引 `(rational prime, tuple, label, field component)`，按目标的顺序取允许像、hull、log 和权重。
+
+如果 q 是 determinant/正张量幂的读数，则先通过路线二计算它在该标签块中的分配。不要人为令每个标签的 q 读数都等于全局 Q。需要证明的是**原来的加权和**可由实际局部 q 格表示。
+
+对 #4，构造实际操作后按操作表达式归纳：换根使用 `kummerClass_diff`；实际单位/合法基变换用其保持整数结构的证明；源链接使用同一原输入给出的具体映射。Ind3 需要其实际允许输出的控制，不能仅凭“操作类型有限”断言所有像有限或有界。`MultiradialProductionMissing` 中当前的 `Type` 和 `Prop` 字段只是清单，甚至没有要求各 `Prop` 的证明；填满这个结构不是此路线的交付。
+
+#### 1.4 质量差要算真实的那一项
+
+在根侧，记 \(d_b=[L_b:\mathbb Q_{p_b}]\)。由现成局部 Haar 缩放，正确的相对质量差为
+
+\[
+R_{\rm exact}
+=\log\frac{\mu(H_{\rm root})}{\mu(Q_{\rm root})}
+=\sum_b d_b\bigl(\log\|\lambda_b\|-\log\|\widehat q_b\|\bigr)
+\geq0.
+\tag{R1.3}
+\]
+
+全部质量须先证正且有限，再使用 toReal/log。相同参照的质量在比值中消去。
+
+`c0RemainderV2_nonneg` 当前证明了一个表达式非负，但尚未证明它等于上述差值。除非另有 \(\|\widehat q_b\|=\|\lambda_b\|^{2l}\)，不能把 \((2l-1)\sum_b d_b(-\log\|\lambda_b\|)\) 当成 (R1.3)。直接证明 (R1.3) 更稳妥，也不必强求这个额外等式。
+
+接回原目标时逐项证明：源 Q 的权重、Theta 的权重、有限扩张 degree、参照格质量和常数项分别是什么。若目标使用 raw Haar log，就恢复参照项；若使用相对 log，则同一真实参照相消。S1902 的 closed form 有 `+1`，相对 normalized log 本身没有这个 `+1`。
+
+#### 1.5 为什么不再优先攻 `HullQDictionary`
+
+[Mzk1S1915ComparisonActual](D:/lean/tmp/sheaf/xif/paper/Mzk1S1915ComparisonActual.lean) 的该字典要求两条精确等式，推出 Theta=Q+1。原比较只要求 Q≤Theta。字典是一个充分条件，不能当成唯一通路，更不能先假定所有原输入都有精确 margin 1。
+
+路线一用**实际包含及其真实质量差**代替这份强字典；仍证明原比较，没有减弱它。对于不同源独立给出的 T、C3、P，不去证明任意三者之间的等式，而是从同一个合法初始源构造需要的三端对象，证明相关图交换。
+
+**第一个可执行检查点：** 选原目标需要的一个实际 `(p, tuple, label)`，写出 (R1.2) 中一个 q 生成元的完整展开，并证明其在正确 theta 源 hull 中的整系数表示。验收同时展示源 q、源 theta、落点和权重四个来源。若只是重得根侧包含而没有源落点，该包未完成接入。
+
+**明确剩余：** 实际源 theta 的识别及一般 production 仍需证明。这不是已由 (R1.1) 自动解决；本节没有给它们改名为可以直接使用的假设。
+
+### 2. 路线二：先闭合真正的 B5，再计算源相对行列式的符号
+
+**主攻对象：#3 与 #10 的局部/全局数值对应，随后给 #1 提供行列式证书。** 当逐条目整性难证，但总行列式更简单时，这条路线比路线一要求更少。
+
+#### 2.1 已有供体直接保留
+
+- [Mzk1B5FractionalExpansionUncondActual](D:/lean/tmp/sheaf/xif/paper/Mzk1B5FractionalExpansionUncondActual.lean)：非零分式理想的有限位 norm/count 展开已经证明。
+- [Mzk1B5FinsumSummableActual](D:/lean/tmp/sheaf/xif/paper/Mzk1B5FinsumSummableActual.lean)：count 加权函数的有限支撑、求和及差分桥已经证明。
+- [Mzk1B5GeneratorNormBridgesActual](D:/lean/tmp/sheaf/xif/paper/Mzk1B5GeneratorNormBridgesActual.lean)：非零局部元素的 norm/valuation 公式已经证明。
+- [FinitePlaceCompletionNormTransport](D:/lean/LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceCompletionNormTransport.lean)：`norm_eq_absNorm_zpow`、`logNorm_eq_absNorm_mul`、剩余次数及完成映射的对数输运已有供体。
+- [Mzk1B5FullProductFormulaActual](D:/lean/tmp/sheaf/xif/paper/Mzk1B5FullProductFormulaActual.lean)：对任意非零全局元素的有限位＋无穷位乘积公式已经有了；不是新的外部调研任务。
+
+#### 2.2 可直接实施的生成元/count 证明
+
+准确新目标为：对任意非零分式理想 I、任意有限位 v，**构造** g_v≠0，证明
+
+\[
+I\mathcal O_v=g_v\mathcal O_v,
+\qquad \operatorname{ord}_v(g_v)=\operatorname{count}_v(I).
+\tag{R2.1}
+\]
+
+`localizedLine` 正是 I 在完成域中的像的 O_v-span。因此可从有限生成元直接证，不需要先发明一个很大的 localization API：
+
+1. 取非零公分母 a，使 J=aI 是非零整数理想。令 n=count_v(J)≥0。整数环 Noetherian，取 J 的有限生成元 y_1,…,y_m。
+2. 利用现有 Dedekind 理想分解与 count 的单调性，得到 J⊆p_v^n 且 J⊄p_v^(n+1)。后一项若不成立，count 单调性给 n+1≤n。
+3. 所有非零 y_i 都有 ord_v(y_i)≥n；至少一个非零 y_i0 的阶数恰好为 n，否则所有生成元都在 p_v^(n+1)，与第 2 步矛盾。零生成元单独处理，不给 Lean 的零值整数 valuation 强套非零元素公式。取 g_v=image(y_i0/a)。它非零且 ord_v(g_v)=n−ord_v(a)=count_v(I)。这里使用有限位赋值与主理想 factor count 的实际定义。
+4. 对任意非零 y∈J，ord_v(y/y_i0)≥0，所以 y/y_i0∈O_v；y=0 的情形直接成立。于是 I 的每个像都属于 g_v O_v，span 也包含于 g_v O_v。反向因 y_i0/a∈I，g_v 属于 `localizedLine I v`，故 g_v O_v 包含于它。得到 (R2.1)。
+5. 若需当前接口的 pi^count 形式，复用 `exists_uniformizer_local` 取 pi。g_v/pi^count 的赋值为 0，是 O_v 的单位，故二者生成同一格。返回 exponent **明确等于 count** 的结果。
+6. 对任意现有 `LocalGeneratorData I v` 的生成元 h，从两个 span 相等得到 h=g_v u、g_v=h w，其中 u,w∈O_v。g_v≠0 推出 h≠0 和 uw=1，故 ord_v(u)=0，最终 ord_v(h)=count_v(I)。这给出真正无额外输入的 `CountValuationBridge`。
+
+该证明只用已有对象与普通理想/赋值运算；没有把 (R2.1) 放进前提。可以按第 2、4、6 步拆成少量实际消费者引理，但不能只交付另一个 `...Bridge : Prop`。
+
+**当前接口还有一个需要修正的细节：** [Mzk1DetLinePrincipalGeneratorActual](D:/lean/tmp/sheaf/xif/paper/Mzk1DetLinePrincipalGeneratorActual.lean) 的 `CountLocalizationBridge` 实际只说“存在某个 e，使局部格=pi^e O_v”，没有写 e=count。证明它本身不足以取得 count 桥。新增构造定理应直接返回 count 指定的指数；然后供给旧接口，保留旧定理。
+
+I=0 在某些当前 `SpanGeneratorValuationLemma` 中也被量化。该情形须按实际 count/valuation 零约定单独验证；非零范数公式只在 I≠0 分支使用。最终 q/determinant 线非零应由真实源构造证明，不能继续作为无来源的新输入。
+
+#### 2.3 去掉 residue-one 的办法是恢复权重，不是设法把 f_v 证成 1
+
+令 p_v 为下方有理素数，f_v 为真实剩余次数，N(v)=p_v^f_v。当前默认完成域范数下：
+
+\[
+\log\|g_v\|=-\operatorname{count}_v(I)\log N(v),\qquad
+\operatorname{placeLogVolume}(I,v)=\operatorname{count}_v(I)\,f_v\log p_v.
+\tag{R2.2}
+\]
+
+当前 `localLogVolume` 用的是 count·log p；所以一般情况下正确关系是
+
+\[
+\operatorname{placeLogVolume}=f_v\cdot\operatorname{localLogVolume},
+\tag{R2.3}
+\]
+
+而不是无权重相等。底层 norm-base 的乘方/对数公式已有供体。新增工作是把 f_v 沿实际消费者传过去，并核对原文地方归一化究竟在哪里除去它。
+
+这能消除“f_v=1”的辅助限制，但**不能**把旧的无权重等式在所有 v 上强行证明。若消费者确实锁死了错误的等式，修正中间陈述及其所有消费者，并保持原文最终数值；不悄悄改最终目标。tame 也不推出 residue degree one。
+
+#### 2.4 范数、Haar、算术 degree 三者分开计算
+
+当前 `placeLogVolume=-log||g||` 是负对数范数。默认完成域范数使用 N(v)；对相同参考 O_v，实际 Haar 的 log 比值为 **+log||g||**。不能把这两个量在注释里直接当成同一个 log-volume。
+
+在有限扩张 L/Q_p 的谱归一化范数下，Haar 模数是 \(\|a\|^{[L:\mathbb Q_p]}\)，不是一般的 \(\|a\|\)。[Mzk1DetLinePlaceB5Actual](D:/lean/tmp/sheaf/xif/paper/Mzk1DetLinePlaceB5Actual.lean) 的 `LocalHaarScalingLaw` 没有附次数，不能作为任意 normalized carrier 上的通用定理去证。用已有 S865 的实际缩放及正确 carrier 实例。
+
+另外，[DeterminantLogVolumeActual](D:/lean/tmp/sheaf/xif/paper/DeterminantLogVolumeActual.lean) 的 `globalLogVolume` 就是 log(absNorm I)，其定义没有无穷位 metric。因而在准确的局部生成元、log N(v) 和全部支撑上，它已经等于有限 count 和。不能再给它随意加一个独立的 arch 项。
+
+[Mzk1Ob33B5AssemblyActual](D:/lean/tmp/sheaf/xif/paper/Mzk1Ob33B5AssemblyActual.lean) 当前 `hproduct` 同时用了自由 dH/dO、log p 和自由全局 f。应改为实际相对线的局部生成元及实际换框元素；先证明有限部分，再把真正的 Hermitian determinant metric 通过独立构造接入。已证乘积公式负责消除**同一个全局换框元素**在有限/无穷位的变化，不负责让任意 arch 项自动消失。
+
+#### 2.5 从 B5 到原不等式的具体新证书
+
+在实际满秩 q 格和 theta 格的共同空间取 A_q、A_Theta，设 C=A_Theta^{-1}A_q。若采用 Q_p 基，则
+
+\[
+\log\mu(H)-\log\mu(Q)
+=-\log|\det C|_p
+=\operatorname{ord}_p(\det C)\log p.
+\tag{R2.4}
+\]
+
+如果在 E/Q_p 上取基，则必须再取 restriction-of-scalars determinant 或域范数，不能漏 degree。秩不足时先构造正确满秩 lattice，不使用不存在的逆矩阵。
+
+路线二尝试直接分解实际 det C：从 q 根幂、theta 生成元、张量/投影矩阵中取得各因子；同一换框的有限/无穷位项用乘积公式消去；剩余的局部阶数按 (R2.1)–(R2.3) 计算。**只要求总的正确加权量非负，不要求每个矩阵条目整，也不要求差值恒等于 1。** 例如 diag(p,p^−1) 的部分条目不整但 determinant 为 1，说明这确实比路线一的证书弱。
+
+若剩下实质非负性，必须计算该源 determinant 或其实际截面的有限位整性/无穷位范数；不以 `det_nonneg`、`ArithmeticDegreeIdentification` 作为最终输入。这一步尚未完成。B5 计算成功只消掉 degree 字典的技术缺口，不自动证明原源 theta 与 q 的关系。
+
+**第一个可执行交付：** 实现 (R2.1) 的 count 指定生成元，并从同一构造得到 generator≠0、任意生成元的 count 值；调用已经完成的 norm 桥，输出含真实 f_v 的逐位公式。此包可独立于旧 C3 迁移推进，是本轮最确定可以减少实际缺口的一包。
+
+### 3. 路线三：逐素数分块，借助迹对偶把根侧比较下降到真实张量
+
+**主攻对象：#10 的载体与测度运输、#6 的一般桥，及路线一遇到的实际整性损失。** 这条路线处理“域不一样、张量整数结构不一样”的情况，不再强求一个预设的全局 blockEquiv。
+
+#### 3.1 先消除不必要的“所有坏位同一个 p”输入
+
+[Mzk1NativeBadPrimeActual](D:/lean/tmp/sheaf/xif/paper/Mzk1NativeBadPrimeActual.lean) 的 `NativeBadPrimeData p` 要求每个坏位都在同一 p 上。这不是一般原输入的性质。直接从 b 取 p_b，构造
+
+\[
+\mathcal P=\operatorname{image}(b\mapsto p_b),\quad
+B_p=\{b\mid p_b=p\},\quad
+B\simeq\coprod_{p\in\mathcal P}B_p.
+\tag{R3.1}
+\]
+
+对应函数 b↦(p_b,b,rfl)，逆映射忘掉 p；在有限 Bad 上直接得到有限分组。每个 b 也可直接构造 `FinitePlaceAtPrime K p_b`，所需素性来自 `completionRationalPrime`。这是真实数据，不需要新增素数等式假设。
+
+普通局部单位球的 normalized Haar 质量乘积可按 b 独立计算，根本不要求共享 Q_p；只有做 Q_p 张量时才在每个 p 的纤维内部进行。这里消掉的是全局共同素数条件，不是声称原 rootExtension 的 raw Haar 单位质量等于 1。
+
+#### 3.2 复用 #7 的域分解，但用正确的分解索引
+
+对每个实际 `(p, tuple)` 张量块 A，调用主库
+`exists_arithmeticTensorTuple_fieldProduct`，得到
+
+\[
+e:A\simeq_{\mathbb Q_p}\prod_{j\in J}E_j,
+\qquad D=\dim_{\mathbb Q_p}A=\sum_j[E_j:\mathbb Q_p].
+\tag{R3.2}
+\]
+
+来源：[FinitePlaceArithmeticTensorBlockFields](D:/lean/LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticTensorBlockFields.lean)。双向连续性、有限维及完备性已有。#7 的五文件计算直接复用/移到 core 消费，不重做一般分解。
+
+J 是**张量代数的域因子**，不是原来的张量因子集合，也不是全局 Bad 集。张量维数是原因子维数的乘积；域分解后才是各 E_j 维数之和。例如次数 2、3 的两个域张量维数是 6，不能把原两个域的直积（维数 5）当成它。
+
+当前 [C3S1902BlockEquivData](D:/lean/tmp/sheaf/xif/paper/Mzk1C3S1902BlockEquivDataActual.lean) 的三个 `Equiv` 实际都是集合双射，注释中的 normed/ring 性质并不在类型里。填入任意集合双射没有 measure/region 运输意义。应由 (R3.2) 的真实代数映射和源投影构造需要的映射；若另一个根模型具有不同维数，就使用共同有限扩张中的实际嵌入、迹/范数或相对 determinant，不能硬造代数同构。
+
+#### 3.3 归一化修正要计算，不能令 normRatio 的乘积等于 1
+
+对同一个基完成域 F_v，记默认范数为 \(|\cdot|_{\rm mod}\)，Q_p 谱归一化范数为 \(|\cdot|_*\)。实际次数 \(n_v=[F_v:\mathbb Q_p]=e_vf_v\) 对应
+
+\[
+|x|_{\rm mod}=|x|_*^{n_v},\qquad
+\log\frac{|x|_*}{|x|_{\rm mod}}=(1-n_v)\log|x|_*.
+\tag{R3.3}
+\]
+
+一个可实施的证明是：先用已有 `normalizedCompletion_norm_le_one_iff` 及逆元证明整数单位在两范数下都为 1；写 x=pi^m u、p=pi^e u_p；由谱范数延拓 Q_p 得 \(|pi|_*^e=p^{-1}\)，默认范数为 \(|pi|_{mod}=p^{-f}\)，再结合实际次数恒等式。主库已有的默认范数与完成塔输运可以复用；同一完成域两种数值范数的这条精确比较，本轮未确认已有完整通用声明，不能仅凭 unit-ball 相同就略去证明。
+
+当 n_v>1 且 0<|q|_*<1 时，(R3.3) 的比值一般不为 1。[QVFamNormalizedCoefficientBridgeActual](D:/lean/tmp/sheaf/xif/paper/QVFamNormalizedCoefficientBridgeActual.lean)、[BadPlaceNormRatioCorrectionActual](D:/lean/tmp/sheaf/xif/paper/BadPlaceNormRatioCorrectionActual.lean) 已保留真实修正项，应复用。若源和根扩张维数不同，n_v 与 \(d_b=[L_b:\mathbb Q_p]\) 也不能互相替换。
+
+对同一元素 a∈E、有限扩张 L/E，在谱归一化下有
+
+\[
+\frac{1}{[E:\mathbb Q_p]}\log\frac{\mu_E(aO_E)}{\mu_E(O_E)}
+=\log|a|_*
+=\frac{1}{[L:\mathbb Q_p]}\log\frac{\mu_L(aO_L)}{\mu_L(O_L)}.
+\tag{R3.4}
+\]
+
+所以可以在根扩张里证明局部数值比较，再带着**实际度数权重**下降；不必先让 raw 质量相等。一般张量格不是主理想时，必须计入整数阶/参照格指数，见下一步。
+
+同理，\(C_K\log\mu(S)\) 与 \(\log(C_K\mu(S))\) 是不同运算。`archCK=1/[K:Q]` 是读数权重，并不据此等于 Haar 运输常数。实际连续加法同构给出的 Haar 比例可由同一个正有限参照 O 的质量比构造；再用 Haar 唯一性证明所有可测集上的运输。相对 log 消去比例，raw log 必须保留它。当前 `C3HaarScaleFormulaData` 的字段不是这项证明。
+
+#### 3.4 用实际迹对偶清分母，并精确衡量代价
+
+设 R 是真实张量整数格，O_hol 是其域分解侧的整数闭包/规范参照。已有
+
+\[
+\delta\,O_{hol}\subseteq R\subseteq O_{hol},
+\tag{R3.5}
+\]
+
+其中 delta 是实际各因子不同理想生成元的张量。对应供体是 [IntegralTraceDualTensorInclusion](D:/lean/LeanFormal/IUT/Foundations/LocalFields/IntegralTraceDualTensorInclusion.lean) 的 `arithmeticTensorDifferentGenerator_mul_mem_arithmeticTupleValuationIntegerLattice` 等定理；不要重做迹对偶一般理论。该文件末尾带 `hdiff` 的 prime-power 版本仍有输入，不能与已经证明的 delta 乘法版本混用。
+
+从根侧坐标 u 求实际张量基 b_i 中的系数时，用迹对偶基 b_i^*：
+
+\[
+u=\sum_i\operatorname{Tr}(u b_i^*)b_i.
+\tag{R3.6}
+\]
+
+计算这些迹的赋值，利用 (R3.5) 清除分母。这给出可检验的实际系数，不是“存在一个 transport”。然后复用 [IntegralTraceDualLattice](D:/lean/LeanFormal/IUT/Foundations/LocalFields/IntegralTraceDualLattice.lean) 的 quotient-cardinality/determinant 公式，把损失写成真实整数指数。
+
+特别地，在已构造出的满秩紧开格情形，若 L_H⊆H_big 且有限指数 h=[H_big:L_H]，则
+
+\[
+\log\mu(L_H)=\log\mu(H_{big})-\log h.
+\tag{R3.7}
+\]
+
+若路线一给根侧增益 G=log mu(H_big)−log mu(Q)，下降后要证明的是 G−log h 加上所有实际权重/参照修正仍非负。h 必须是**目标 theta 源格**相对于 H_big 的指数；O_hol/R 的指数只能在已证识别后代入。
+
+#### 3.5 本路线真正的胜负点
+
+下一包应对实际块输出一张数学计算表：根侧增益 G、真实源格的精确指数 h、normRatio 修正、degree 权重、参照质量差。随后从源 q 阶数、实际不同理想及实际矩阵关系证明它们的净和非负。
+
+若能证明，(R3.7) 就把根侧包含变成真实张量上的原比较，消掉原 blockEquiv/haarScale/质量识别输入。若粗糙的 delta 界太大，先算精确 h；粗界失败不代表精确比较失败。若精确的净量在原文允许的数据上仍为负，这条具体下降路线应停止，转路线二检查 determinant 抵消，不能添加 `G ≥ log h` 假设继续宣布成功。
+
+这一步并未在本轮完成。#9 的 theta **上界**不能自动提供这里需要的净量**下界**；没有用已经 green 的 #9 反向推导补偿。不保证不同理想损失总能被根幂增益吸收，必须对实际源证明。
+
+### 4. 接下来怎样安排，才不再绕回条件接口
+
+以下是给现有 owner 的建议，不是本 chat 已派发的新任务，也不覆盖原有文件所有权。
+
+| 次序 | 最小实际交付 | 直接消费者/减少的缺口 | 不再安排的重复项 |
+|---|---|---|---|
+| P0，最优先 | 从已有 core/L/native 入口接出正确域的源 q/根/Kummer 数据；把一个实际 tensor/readout 消费者改为消费 core，记录源语义和旧接口差异 | #4 的可实例化入口；避免 #1/#6/#7/#8 依赖旧空 C3 来宣称完成 | 不重证 S1429，不构造旧 C3，不重建一般相容根/Galois/cocycle |
+| P1，可独立做 | (R2.1) 的实际生成元及 count；derive generator≠0；输出含 f_v 的 B5 | #3 CountValuationBridge/LocalPrincipalGenerator；#10 有限位字典 | 不重证有限 norm 展开、finsum、已有 norm 桥及乘积公式 |
+| P2，主比较试验 | 一个实际标签块的 (R1.2)；原 q 读数与该格的准确关系 | #1/#4 的首次真实源包含；决定路线一能否接通 | 不再重证 C0 根侧包含，不再写 margin-1 条件包装 |
+| P3，仅有载体/分母失配时 | (R3.1) 分块＋真实域分解的映射；(R3.6) 的系数；(R3.7) 的精确指数 | #6 一般桥、#10 实际运输，以及路线一的分母 | 不重证 #7 五文件；不强求全 Bad 共同素数/张量因子=域分解因子 |
+| P4，闭合时 | 从原合格输入内部构造全部所需对象，连回原 q/Theta 目标并做完整验收 | #8 消费真正构造结果 | 行覆盖表、合取、`Nonempty` 空包装不计新进展 |
+
+P0 的证明复用可以保留 #7 的全部数学内容，但不能因此声称一般 production 已完成。P1 的证明有完整的理想/赋值方案，最适合马上做成真正无新增困难条件的局部成果。P2/P3 则必须尽早接触真实源公式，防止继续积累没有实际消费者的中间包装。
+
+对源语义的最终检查以本地原文为准：[IUT III 原文提取](D:/lean/papers/motizuki_corpus/text/source_audit/IUTIII_Theorem311_through_Corollary312_pp153-186.plain.txt)，物理页 173–174 的 Corollary 3.12、183–184 的 (xi-d)–(xi-f)。原文明确涉及允许像的 hull、标签归一化、高秩向量束的 determinant，以及 q 值的实际实现或逼近；仅有同名的实数公式不能取代这些对象。该提取的源 PDF 指纹为 `9A7EE3C77B1C7717210C0613EB39B6844649D0040DC3D9E1BE7D544F8F91A0B9`；机器提取用于文字定位，本轮没有重新校对所有排版公式。
+
+若直接成员构造失败而转原文允许的逼近方式，必须从真实 production 产生 y_epsilon，证明 y_epsilon≤Theta 且 Q−epsilon≤y_epsilon；再用 epsilon 任意性完成比较。不能把 `Values` 定义成 `(-∞,Theta]` 后把后一个不等式当作新输入。这是本节三路线的统一验收边界，而不是第四个已经解决的方案。
+
+### 5. 本轮交付与验收范围
+
+- 本轮新增的是上述构造方案、旧 C3 空类型供体的接回、最新 norm/unitMass 去重及错误辅助条件的纠正。不是无条件 3.12 证明。
+- 未改 Lean；`statement_compiles = NOT_RUN`、`proof_body_checked = NOT_RUN`、`kernel_closed = NOT_RUN`、`target_accepted = NOT_RUN`；比较器、全 Project 构建及独立审查均未运行。这里的源码阅读不等于这些验收。
+- 所有路径中的最终源对应、实际 production、实际系数/净量非负性仍须证明；不能因有详细计划就核销 #1/#4/#8。
+- 当前最具体的下一步：**P0 复用已存在的正确 root/core 分层接回消费者；P1 用有限生成元最小赋值证明 (R2.1)。** 随后立即用 P2 的一个真实标签块检验整条链，而不是等所有包装齐全才第一次接触原不等式。
+
+<!-- END P7-NEXT-ATTACK-SOURCE-FIRST-20261113 -->
