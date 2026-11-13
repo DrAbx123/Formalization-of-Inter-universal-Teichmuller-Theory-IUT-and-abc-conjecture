@@ -690,3 +690,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 若 `F_v=Q_p`，`d_b = n_b·e_w f_w` 由 `Module.finrank_mul_finrank` 给出；`n_b` 由 `rootNormedExtensionFiniteDimensional` 的 `finrank rootBase rootNormedExtension` 可得。
 - **bridge 影响**：`PaperToS3137BridgeData.weight_conversion` 可由 degree tower 直接证（不再是 GAP）；S3137 bridge 只剩 `a1_delta_paper` + S45 + norm-instance agreement。
 - 历史 `1/f` / `d_b·weight=n_b·e_b` 表述作废，以本节为准。
+
+
+### 20.42 权威定义：P2QHatNormInstanceAgreement = ‖c0QHat‖=qVFamNormalizedNorm，不是 ratio=1（2026-11-15 00:45）
+- **定义**（`Mzk1P2QNativeReadingCorrectedActual:41-43`）：`P2QHatNormInstanceAgreement T := ∀ b, ‖c0QHat T b‖ = qVFamNormalizedNorm T b`。
+- **旧文件头注释 `:14` 的 “exactly qVFamNormRatio=1” 错误**；`Mzk1P2QHatNormAgreementUnconditionalActual:85-88` 明确：本文件只证标准 agreement（normalized=default ↔ ratio=1），**不**声称 `P2QHatNormInstanceAgreement`（c0QHat normalized norm coherence）。
+- 最终 S3137 条件定理必须分列：① S45 `PaperSourceCorrectionFreeFields`（ratio=1/修正项）；② `P2QHatNormInstanceAgreement`（c0QHat=nomalized norm）。
+- **degree tower 的额外 GAP**：mainline 指出 `rootBase T b` 与 `(nativeBadToKPlace b).maximalIdeal.adicCompletion K` 的同一性不在树内（`Mzk1RouteBBridgeActual:18` 已标）；若不能证，`weight_conversion` 仍需显式 bridge，不得假设同一性。

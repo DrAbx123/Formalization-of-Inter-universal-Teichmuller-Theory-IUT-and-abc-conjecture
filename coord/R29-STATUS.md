@@ -1837,3 +1837,5 @@
 - 07:30：再次纠正 mainline bridge 表述：S45 `qVFamNormRatio=1`（normalized=adic）与 `P2QHatNormInstanceAgreement`（`‖c0QHat‖=qVFamNormalizedNorm`）是两独立命题；bridge 用 `qhatLogReadout=−c_norm log p` 需显式带后者，S45 只负责 ratio=1。gate §20.40 已写。
 
 - 07:35：abc 更正权重精确换算：`nativeBadLocalWeight=1/[K_w:F_v]`、`n_b=[L_b:K_w]`、`d_b=[L_b:Q_p]` ⇒ **`d_b·weight=n_b`**（之前 n_b·e_b 作废）。因此 `weight_conversion` 可由 degree tower 直接证、不再是 GAP；bridge 只剩 `a1_delta_paper` + S45 + norm-instance agreement。已派 mainline 把 weight_conversion 改定理/删字段，abc 核对 tower 方向。gate §20.41 已写。
+
+- 07:40：**权威定义核对**：`P2QHatNormInstanceAgreement` 定义（`Mzk1P2QNativeReadingCorrectedActual:41-43`）= `∀b,‖c0QHat‖=qVFamNormalizedNorm`；旧文件头 `:14` “exactly ratio=1” 是错误注释（`AgreementUnconditional:85-88` 明确只证标准 agreement）。最终 S3137 条件定理分列 S45 vs P2 norm-instance。另 degree tower 需 `rootBase T b` 与 `nativeBadToKPlace` completion 同一性，若不在树内则 `weight_conversion` 仍有显式 bridge GAP。gate §20.42 已写。
