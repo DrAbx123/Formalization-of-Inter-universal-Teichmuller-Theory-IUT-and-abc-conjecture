@@ -1048,3 +1048,5 @@
 - 22:48：B4（stage4 补 IntegralUnits import/open + show y=rfl + hfac nonzero）与 NormZpow（mainline 修 base/exponent）已 retouch 触发新 run；gate §35 待两绿后 final（预期 493=clean 473+red0+ole20）。
 
 - 22:56：NormZpow 最终修法 relay（base: underlyingPrime abbrev + residueNormBase def ⇒ rw 后 rfl；exponent: WithZero.exp_inj + exp_log + coe_unzero ⇒ log=toAdd）。
+
+- 23:02：B4 最后两处 relay：mem_integers_iff 显式 K；y*p^e=x 用 mul_assoc+mul_comm+inv_mul_cancel_left₀ 或 field_simp；已 retouch。
