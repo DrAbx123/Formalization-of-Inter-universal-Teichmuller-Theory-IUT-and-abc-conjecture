@@ -1244,3 +1244,5 @@
 - 04:14：多 lane 报告：**mainline `Mzk1P1IdealMapMaximalBridgeProofActual`**（按 FLT 路线 attempt 真证 `Ideal.map v.asIdeal = completionIdeal`，自入队）；**lattice 第 4 个 proof `Mzk1TensorCoreWitnessActual`**（rcases tensorCore_fieldProduct 构造 TensorCoreWitness、Classical.choice 取实际 witness）已入队；**qpilot det-Haar 未关闭但 `p2_map_coordLattice_eq_scalar_smul`/`p2_scalar_eq_lattice_image`/`p2_lattice_preserving_scalar_one` 真证 green**，nativeProductEquiv/WeightedDetFinal green；**hull P0-L 7 green + NativeLSide green**；多 lane 承认 status 超额，下一波只写 proof。
 
 - 04:18：Lead 侦查 residue-one（GAP-PC-RESDEG）：已有供体 `Mzk1C17QCANDResNormDegreeOneActual`（resNorm_eq_of_localResidueDegree_one 条件证明）、`Mzk1C17QCANDResNormComapActual`、`BadPlaceRationalDegreeActual`；最小缺口=`localResidueDegree (nativeBaseSectionPlace T b)=1`（tame/split multiplicative paper 输入或从 SourceReductionClause 推）。已发 mainline，要求复用旧文件、不再写 residue 行表。
+
+- 04:20：shehdd LFI 本地类型检查 0 error（仅诊断；official 仍等 watchdog），source mtime 16:56:03 已 retouch。Lead 建 `coord/PROOF-STATUS-REGISTRY.md` 集中登记 status/aux 文件（含各 lane rows），milestone 只报 proof+新定理名；禁止手动 lean 验收、不删文件（除非无消费者）。
