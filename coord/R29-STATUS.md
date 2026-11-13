@@ -882,3 +882,5 @@
 - 00:54：**B2 GREEN**（stage4 P7ThetaDegB2 DONE 12:54:15Z，35s：域分解 block=ΣE_j + packet=ΣtupleΣj）；**HullUBC0Absorption GREEN**（12:53:24Z，68s：paper regime C0=0 DISCHARGED，ole 231,984B）；**C0GlobalIdele 精炼 GREEN**（stepxi 12:53:22Z，66s，ole 149,472B：definitional bad 分量，consistency gap 消除）。
 
 - 01:02：stage4 #7 剩余 GAP (a)-(d) 清晰（文档已更新）；stepxi C0IdeleHeight（c0IdeleFiniteHeight=heightWeight*Σlog max(norm q,1)、c0IdeleArchHeight、非负；读数识别单列 GAP）入队（469 项）。
+
+- 01:05：lattice 回退 BadPlaceUnitMassProduct 到 green 的 generic Bad-index product（`badPlaceUnitMassProduct_eq_one`），保留精确 GAP：Completion 缺 NormedField/ProperSpace、CommonPrimeCompletion 需 nativeBadToKPlace 的 FinitePlaceAtPrime 证明（当前仅 FinitePlace）；blockEquiv/unitMass citizen 仍缺。已建议查 nativeBadToKPlace 结构字段是否有 prime 等式可直接构造 FinitePlaceAtPrime。
