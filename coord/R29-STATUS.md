@@ -1024,3 +1024,5 @@
 - 22:52：**B5 FullProductFormula GREEN**（qpilot 14:15:51Z：full_product_formula_log = arch+finite product formula）。B4 :77 根因=模块实例 diamond，relay stage4 改用 norm 直接证 mem_span_pow_iff（正向 norm_smul+PadicInt.norm_le_one；反向 x/(p^e)∈Integers）；qpilot 转 count 加权推论（arch = ∑count·log absNorm，对 #1 readout）。
 
 - 23:00：qpilot FullProductFormulaCount 入队（492）：finite_log_sum=-∑count·log absNorm、arch_log=+∑count；stage4 B4 norm 直接证法重写并 retouch。mainline NormBridges :10 语法错误（stray identifier）致 :50/:51 连带，已 relay。
+
+- 23:06：B4 仅剩 :80（Set coercion vs Submodule 成员，rw pattern 不匹配）→ relay `change ... ∈ Submodule.span ...` 再 rw；改完应绿。
