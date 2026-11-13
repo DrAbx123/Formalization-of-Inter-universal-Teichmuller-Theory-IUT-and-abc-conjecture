@@ -1118,3 +1118,5 @@
 - 23:26：**mainline P1 批量 6 全 DONE**（LocalizedSpan 15:10:42Z、IdealLocalizedCount 15:10:43Z、PrincipalValuation 15:09:52Z、R21Bridge 15:17:47Z、B5WithFv 15:11:17Z、ContractMapEvidenceRows 15:10:57Z）；精确缺口各一：LocalizedSpan=coercion 链、PrincipalValuation=count↔intValuation、IdealLocalizedCount=DVR map=completionIdeal^count、R21=上述组合。已回：不覆盖旧 C3-typed 主表 missing7ToGap（historical/vacuous），保留 evidence 表。
 
 - 23:24：新 green：`Mzk1P2PureTensorExpansionActual`、`Mzk1P0NativeConsumerP2Actual`（15:22:21Z/63s）。stage4/lattice 批次完成待机→按大包派下一阶段：stage4=P3 净量非负第一步（core p-scaling/R3.7 显式、不许假设 G≥log h）；lattice=#10 三 GAP 攻坚（blockEquiv inhabitant/unitMass=1/NativeBadPrimeData 来源）。
+
+- 23:28：**P0 里程碑达成（hull 报告）**：native 输入→core→readout/landing 端到端链 green（6 文件全 green；S3137Chain 15:23:56Z 7↔7 字段对照；NativeEquiv oldC3ImpossibleFields 3/migratableFields 5）；`NativeComparison` 仍 Prop OPEN；L-side 归 stepxi。已写入 tracker/plan/audit。

@@ -87,3 +87,11 @@
 - P2（qpilot）：NativeTensorConsumer、DetCoefficient green；DetWeightedNonneg/TensorPairing/ProductFormulaCancel/PureTensorExpansion/NativeConsumerP2 在修。
 - P0（hull）：NativeSourceCore、NativeTensorLanding、MigrationRows、NativeEquiv green；NativeReadout/NativeS3137Chain 在修。
 - P0-L（stepxi）：S3137LReadout green；LPaperInstance/LReadoutInstance/LQThetaArrow/LRegionMass/LSourceIdent/LSignedLog 在修。
+
+## P0 里程碑达成（2026-11-13 23:24 CST）
+
+- native 输入（T,b,p,places,tuple）→ native core → readout/tensor landing 端到端链编译通过（无新 named input）。
+- 组件：`Mzk1P0NativeSourceCoreActual`（15:15:06Z）、`NativeReadout`（15:18:19Z）、`NativeTensorLanding`（15:11:59Z）、`NativeS3137Chain`（15:23:56Z，7↔7 字段对照）、`MigrationRows`（15:11:49Z）、`NativeEquiv`（15:21:01Z，`oldC3ImpossibleFields` 3 / `migratableFields` 5）。
+- qpilot `NativeTensorConsumer`（14:59:15Z）+ `P0NativeConsumerP2`（15:22:21Z）与 qVFam tensor 接合。
+- **未达成**：`NativeComparison` 仅为 Prop（未证）——目标 q/θ 比较仍 OPEN；L-side 由 stepxi 负责。
+- 纪律：无旧 C3、无 IsEmpty、无新 axiom/sorry。

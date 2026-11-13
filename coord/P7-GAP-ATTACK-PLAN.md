@@ -1060,3 +1060,35 @@ P0 的证明复用可以保留 #7 的全部数学内容，但不能因此声称�
 5. 多标签原型的前提是**已给的 integral generators/coeffs**（`P2LabelBlockSumData`），不是源构造；下一步须按本文件 §1.3 检查点选实际 `(p, tuple, label)` 写出完整展开并展示源 q/源 theta/落点/权重四个来源。
 
 **张量模型说明**：本包用实际 product carrier（有限乘积 `O_{L_b}`，与 C0/S1902 一致），非共同基上的字面 `TensorProduct`；paper 的逐位张量在该载体上逐位表示。
+## P0 — native 源迁移（2026-11-13 23:25 里程碑 GREEN）
+
+**背景**：`S1429CompletionRootObstructionActual.sourcePilotRegionData_isEmpty` 证明旧 `SourcePilotRegionData I` 为空；旧 C3 参数的一切 actual 结论 vacuous。P0 改用 native 源链；**不构造旧 C3，不用 IsEmpty**。
+
+### 已 GREEN 组件（olean 已核）
+
+| 文件 | 定理/对象 | 说明 |
+|---|---|---|
+| `Mzk1P0NativeSourceCoreActual` | `actualNativeSourceCore T b`、`nativeCore_roots_pow_self`、`nativeCore_qCoeff_eq` | roots 在代数闭包（`C3Roots.qCandidateRootSystem`）；tensorBlock=`qVFamTensorBlock`；qCoeff=`qVFamTensorCoefficient` |
+| `Mzk1P0NativeReadoutActual` | `nativeQReadout`、`nativeThetaReadout`、`nativeQReadout_nonpos` | q 读数 `-|log‖qVFamily.q‖|`；θ 读数= `nativeTensorLogVolume(qVFamTensorPlaces/Tuple)` |
+| `Mzk1P0NativeTensorLandingActual` | `nativeLandingPacket`、`nativeLandingPacket_logVolume` | 复用 qpilot 的 `nativeTensorPacket` |
+| `Mzk1P0NativeS3137ChainActual` | `c3RequiredFields`/`nativeReplacementFields` 7↔7、`rows` | S3137/L 依赖字段对照；旧 C3 字段逐项有 native 替代 |
+| `Mzk1P0MigrationRowsActual` | `migrationRows`（6 行） | 活动组 43/~100/13/5 + roots/q 迁移表 |
+| `Mzk1P0NativeEquivActual` | `oldC3ImpossibleFields`（3）、`migratableFields`（5） | 可迁移字段与精确不可替代项分开；不造假列 |
+
+依赖外部 GREEN：`Mzk1P0NativeTensorConsumerActual`（qpilot，`nativeTensorPacket`/`nativeTensorLogVolume`）、`Mzk1S3137LReadoutActual`（L-side q/θ readout）。
+
+### 端到端链（无新 named input）
+
+```text
+SourceNativeInitialThetaData (T) + b : Bad (nativePlaceSelection T)
+  → actualNativeSourceCore T b            -- roots/qVFamily/tensorBlock/qCoeff
+  → nativeQReadout / nativeThetaReadout    -- q/θ 实际读数
+  → nativeLandingPacket (nativeTensorPacket) -- tensor block/region/IQ/Haar/logVolume
+```
+
+验收：core/readout/tensor landing/chain/equiv 全部 `DONE EXIT=0`；无旧 C3；无 IsEmpty；无新 axiom/sorry。
+
+### 仍 OPEN（P0 比较本身）
+
+- `NativeComparison : Prop := nativeQReadout T b ≤ nativeThetaReadout T b` 只是目标陈述，**未证明**；不冒充 P7 #1。
+- 下一步：把该比较接到 S3137/L-side q/θ 消费者（stepxi 负责 L-side），并逐项迁移 #1/#3/#8。
