@@ -538,3 +538,5 @@
 - 08:55：BaseChange :387 zero 分支改 `simpa using subset_closure (Set.mem_range_self (0 : B))`（log 末尾显示 0∈closure(range) 未解）；retouch。stage4 GeneralSNFVolume2 修 hμM calc 待重编；A2 桥 green 细节已归档。
 
 - 08:57：qpilot FLTCompletionInput（乘性公式+FLTCompletionFinrankInput+归约）入队（374 项）；BaseChange :388 已修 retouch。
+
+- 08:58：stepxi P5AxiomAudit 首轮观察完成：全部打印项仅 [propext, Classical.choice, Quot.sound]（无 sorryAx）；补 open BridgeIntegrationActual 后待 DONE。P5-ACCEPTANCE 已加 Axiom audit log 节。
