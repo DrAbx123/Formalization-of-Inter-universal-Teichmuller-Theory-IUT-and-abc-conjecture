@@ -226,3 +226,18 @@ qThetaPilotLogVolumeComparison C3 P
 - 该写法已转给 shehdd 复用（他的 LFI 也卡同一 tower）。
 - 下一步：② IdealLocalizedCount（FLT `completionIdeal` + `intValuation_exists_uniformizer`）；③ R21Bridge 组合；
   residue-one（GAP-PC-RESDEG/tame）单独列。
+
+
+### 6.7 P1 IdealLocalizedCount：条件定理 PROVED + 3 桥（2026-11-14）
+
+- **Mzk1P1IdealLocalizedCountProofActual — DONE 35s@16:36:28Z，olean=True**：
+  - `completionIdealOf v := IsDedekindDomain.HeightOneSpectrum.completionIdeal k (underlyingPrime v)`
+    （FLT 全名已核实；注意不在 `adicCompletion` 子命名空间）；
+  - `IdealMapPowerStatement`（桥 1）：`Ideal.map (O_K -> O_v) I = completionIdeal^count_v(I)`；
+  - `LocalizedLineIdealMapStatement`（桥 2）：`localizedLine I v = span O_v (image of ideal-map)`；
+  - `UniformizerPowerSpanStatement`（桥 3）：`span O_v (completionIdeal^e) = span O_v {π^e}`
+    （π 取 FLT `adicCompletion.exists_uniformizer`，e 任意）；
+  - **`idealLocalizedCount_of_bridges`：三桥 ⇒ `IdealLocalizedCountStatement`（PROVED，条件）**。
+- 桥 3 的 FLT API 已定位：`exists_uniformizer`（AdicValuation:472）、
+  `maximalIdeal_eq_span_uniformizer`（:520）、`mem_completionIdeal_pow`（:571）。
+- 桥 1 是唯一实质缺口（ideal-map 幂）；桥 2 是 span/coercion 桥。
