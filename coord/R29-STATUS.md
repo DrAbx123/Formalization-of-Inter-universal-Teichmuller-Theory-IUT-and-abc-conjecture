@@ -1044,3 +1044,5 @@
 - 22:40：NormZpow goal relay：base 用 residueNormBase 定义/`simp`，exponent 用 `localValuation=(Valued.v).log= toAdd(unzero ·)`；把 push_cast;rfl 改 congr 1 + 两个 simp。
 
 - 22:44：B4 mpr 首错 relay：mem_integers_iff 在 IntegralUnits.lean:28（补 import/open）；rw[y] 改 change/show；nonzeroness 显式 hpne。
+
+- 22:48：B4（stage4 补 IntegralUnits import/open + show y=rfl + hfac nonzero）与 NormZpow（mainline 修 base/exponent）已 retouch 触发新 run；gate §35 待两绿后 final（预期 493=clean 473+red0+ole20）。
