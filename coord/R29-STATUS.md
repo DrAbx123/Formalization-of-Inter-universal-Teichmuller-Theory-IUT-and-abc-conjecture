@@ -1631,3 +1631,5 @@
 - 22:10：**路线一第一检查点 GREEN：`Mzk1A1SourceGeneratorExpansionActual` DONE 21:21:43Z（98s）**——实际 q 生成元到 theta 源 hull 的四来源展开 machine-checked。另：`Mzk1PadicSaturationBasesActual` GREEN 21:21:38。A1SaturationBases 仍红待重编；已让 hull 按 §1.5 推源 q 格整体 ⊆ theta hull + 原目标读数，stage4 用 ℤ_p 基接口。shehdd GammaPGroup 等重编。
 
 - 22:15：shehdd 确认 `GroupCountInterfaceActual.olean` 存在（21:20:56Z），已 retouch `IutIVProp14GammaPGroupActual`（05:22:49Z）等依赖就绪后重编；绿后发 `card_gamma_eq_pow_actual` 签名给 lattice + 写 `torsion_card_eq_of_congruenceCard`。不冒充 official。
+
+- 22:20：进展汇总：lattice 新 `Mzk1A1PadicSaturationBasesActual`（`span_c0Q_le_span_lambda`、`a1PadicSaturationBasesData`，ℤ_p 基给 stage4）；mainline 落盘 `Mzk1P1IdealMapNonVPrimeActual.ideal_map_nonV_prime_eq_top`（IdealMapPower general ②）；stepxi 新增 `factorRegion_perm_mem`（fixed-place Ind1 factor-region 等变）。#8 真实 evidence 里程碑保持；路线一第一检查点保持。
