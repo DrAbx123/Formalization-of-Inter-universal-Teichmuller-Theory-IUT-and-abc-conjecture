@@ -1084,3 +1084,5 @@
 - 23:09：S3137LReadout 根因 relay：namespace 是 `LeanFormal.IUT.XiFPaper.C3LogShellTensorLActual`（无 Mzk1 前缀），hull 写错导致 unknown namespace/identifiers。
 
 - 23:15：**S3137LReadout GREEN**（hull 15:01:52Z，55s）。P0LPaperInstance 首错：LQThetaSourceArrow 需 import/open S3137LReadoutActual；Invalid arg I。P0NativeSourceCore 剩 :34 Function expected/:51 instance stuck/:52 Type mismatch，relay hull 逐行修。
+
+- 23:18：唤醒 stage4 修 P3TensorCore（P0 native consumer 的 core；首错多为 import/instance 不匹配）。
