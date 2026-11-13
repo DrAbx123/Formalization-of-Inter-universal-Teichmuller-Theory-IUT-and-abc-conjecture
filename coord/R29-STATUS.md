@@ -1418,3 +1418,5 @@
 - 11:34：**诊断 46-FAIL 波次根因=批量 import 脚本把无关文件/自身 import 加入，形成自导入+循环 ⇒ 'has already been declared'**。受影响 4+ 文件：`Mzk1P1LocalGeneratorFromIsPrincipalActual`、`Mzk1P1PlaceVolumeSignActual`、`Mzk1B5AssemblyNoHproductAttemptActual`、`Mzk1Ob33B5AssemblyActual`、`Mzk1B5CountLocalValuationBridgeActual`、`Mzk1Ob33B5CountBridgeActual`（import 图里互相 import/自导入）。已按 owner 分派精确剪枝清单（mainline 2 文件、shehdd 4 文件），改后 retouch。这批红不是证明错误。
 
 - 11:38：mainline 已按清单剪掉 `Mzk1P1LocalGeneratorFromIsPrincipalActual`/`Mzk1P1PlaceVolumeSignActual` 自导入+成环 import，retouch；桥 1 h2 改 `exact ha` 等重编。
+
+- 11:42：**TauCeti port import bug**：CardQuotient 报 `TauCetiPort/RingTheory/.../Basic.olean does not exist`——模块名少了 `TauCeti.` 一层（文件在 `TauCetiPort/TauCeti/...`，import 写成 `TauCetiPort.RingTheory...`）。已让 qpilot 全量改 import 为 `TauCetiPort.TauCeti.…`；Order:114 另有真 API 差（synthInstanceFailed/IsUniformizer rewrite）待 import 修后处理。B5/C17 红为上游 olean 缺失（B5HproductGeneralAttempt/C17ResidueOneConsume，等上游）。
