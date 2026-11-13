@@ -461,3 +461,35 @@ These are pre-seeded imports/old built files; olean presence alone is not a curr
 
 - watchdog.log append-only；本表按时间戳取每个 target 最新事件，不读 per-file log 尾部旧错误（per-log 只用于归类首错）。
 - 快照后如有新 START/DONE，计数会变化；本表记录 21:32 CST 时刻。
+
+## 34. 2026-11-13 21:56 巡检快照（485 项；B5Uncond 未绿，red=1）
+
+- 扫描对象：`extra-targets.txt`（**485** 项）+ `watchdog.log` + per-file logs；快照 21:56 CST。
+- 判定同 §33：latest DONE + olean = clean；latest FAIL = red；latest START 无 terminal = in-progress；无 log 事件但 olean = ole-only/prebuilt。
+- 当前：**clean DONE 464 + red FAIL 1 + in-progress 0 + ole-only/prebuilt 20 + missing olean 0 = 485**。
+- **B5FractionalExpansionUncondActual 未绿，故 red 尚未归零**；§34 先记录当前状态，待 mainline 修复后再补最终 red=0 快照。
+
+### 34.1 red（1）
+
+| target | 最新 FAIL | 最新首错 |
+|---|---|---|
+| `tmp/sheaf/xif/paper/Mzk1B5FractionalExpansionUncondActual.lean` | 2026-11-13T13:55:09.676Z | 依赖/API 漂移：`Subtype.coe_ne_zero` 未知；`finsum_sub_bridge` rewrite 不匹配；`count_eq_count_num_sub_count_den`/`w.asIdeal` 等旧名称/参数漂移 |
+
+### 34.2 变化
+
+- extra-targets：483 → **485**（+2；HaarStrict 已移除，新增 B5Uncond/B5 相关）。
+- clean：460 → **464**；red：2 → **1**（HaarStrict 已 DEFERRED 移除；B5Uncond 为唯一 red）。
+- ole-only/prebuilt 仍 **20**；missing olean 0。
+
+### 34.3 B5Uncond 精确首错（per-file log 最新）
+
+1. `:35` `Unknown constant Subtype.coe_ne_zero`；
+2. `:57` `rewrite finsum_sub_bridge` pattern 不匹配（目标仍是两个独立 finsum 差，未先合并）；
+3. 早前错误含 `Finite.subset` 未导入、`nonZeroDivisors` 双重 coercion、`w.asIdeal`/`Finite.subset` 名称漂移。
+- 归类：**旧 API/依赖时序 + qpilot/mainline 正在修**；不是新增数学 GAP。
+
+### 34.4 备注
+
+- 本快照未改 Lean；`HullDetObjectActual`/`HaarStrictActual` 的 DEFERRED 建议已生效（HaarStrict 不在 extra-targets）。
+- P7 NOT PASSED；P7 #5/#6/#9 的 DISCHARGED/CONDITIONAL 结构化状态不因 gate red 改变。
+- 待 B5Uncond DONE 后重跑 §34 final，期望 clean 465 + ole-only 20，red=0。

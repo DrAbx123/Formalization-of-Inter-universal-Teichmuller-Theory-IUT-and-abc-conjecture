@@ -976,3 +976,5 @@
 - 21:54：mainline Uncond 唯一首错 = `:35 Subtype.coe_ne_zero` 不存在；已给出显式替代 + 建议直接用 qpilot FinsumSummable 的定理；已 retouch。
 
 - 22:02：mainline Uncond 最新首错 = :57 rw 方向（finsum_sub_bridge 用错方向/形状），已 relay：`rw [finsum_sub_bridge]`（无 ←）+ 显式 f/g + finsum_congr + ring；:35 若仍在用显式 subtype 证明或直接调 qpilot 定理。
+
+- 22:04：gate **§34 当前快照**（hull 21:56 CST）：extra 485 = clean **464** + red **1**（仅 B5Uncond）+ in-progress 0 + ole-only 20 + missing 0；B5Uncond 首错归为旧 API/时序（:35 Subtype.coe_ne_zero；:57 finsum_sub_bridge 方向），非新数学 GAP；待 mainline 绿后补 §34 final（期望 clean 465、red 0）。
