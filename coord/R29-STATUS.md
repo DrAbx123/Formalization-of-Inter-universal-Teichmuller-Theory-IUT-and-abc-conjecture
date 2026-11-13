@@ -1430,3 +1430,5 @@
 - 12:02：mainline 桥 2 文件 `Mzk1P1LocalizedLineIdealMapActual`（localizedLine_eq_span_idealMap 用 Mathlib `FractionalIdeal.extended_coeIdeal_eq_map`(Extended:184) + localizedLine_maxIdeal_eq_span_uniformizer）；已给该引理签名与显式参数模板。qpilot TauCeti port import 路径已修（10 文件），Order:114 真 API 差（IsRankOneDiscrete 缺 IsCyclic valueGroup 实例）；建议一两个 wave 内能补就补，否则保留外部 PAdicHaarDetScaling（已够 det-Haar）并记录精确缺口，转 det-Haar 收口。
 
 - 12:04：gate §45 快照（见输出）。桥 2 文件待重编；TauCeti port import 已修 10 文件，4/10 green。
+
+- 12:08：mainline 桥 2 显式补参数（A=𝓞k,K=k,B=LocalRing k v,M=nonZeroDivisors 𝓞k,N=nonZeroDivisors(LocalRing),L=LocalField,f=algebraMap,hf=sourceNZLeComap v,I₀=J），等重编。
