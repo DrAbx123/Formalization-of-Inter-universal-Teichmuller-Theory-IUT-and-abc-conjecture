@@ -798,3 +798,5 @@
 - 22:08：hull HullUBGeneralFinal（generalK_paperV_eq、generalK_final_upper(C0=1)）+ ArchCheckRows（arch/infinite 5-row；HULL-UB 只含有限 bad places、paperBox 不含 arch，arch 归 #10）入队（455 项）。
 
 - 22:15：**B5 index + arch metric 双 green**（shehdd）：Ob33B5Index ole 138,968B@12:13:57Z（PlaceSNFData 从 LocalGeneratorData 构造、relativePlaceIndex rfl、MissingGeneralPlaceSNF 单列）；Ob33ArchMetric DONE 12:25:56Z（76s，ole 240,992B）——**实际构造 HermitianLineMetric**（norm w x := w (x:F)）+ lineBundleHermitianMetric + archimedeanLineMetric + archDetMetricWeight（actual archCK）；仅剩 metric↔global arch degree compatibility NEXT。stage4 B2 用 calc 规避 sum_congr 不匹配待重编。mainline localizedLine_mul 修法已 relay（← Submodule.mul_def 后 span_mul_span + map_mul/coe_mul）。
+
+- 22:18：lattice B3 carrier 收口：FinitePlaceHaarRatio 在 CommonPrimeCompletion 上 DONE 12:16:42Z；CommonPrimeCarrierAlign 改 GAP 记录 DONE 12:25:53Z（ole 32,816B，需显式 CarrierEquivData）；三 GAP 保留（carrier align/CountLocalizationBridge/LocalHaarScalingLaw）；P7 §13 #10 更新。
