@@ -530,3 +530,5 @@
 - 08:46：**Bilinear DONE（00:20:11Z，28s）**——FLT 全上游 olean 齐；Completion/BaseChange 已 START（00:20:11）。qpilot local EF green（00:19:22Z，olean 43,368B；local e=f=1⇒weight=1 不依赖 FLT）。
 
 - 08:48：BaseChange 真实 API 错 2 处已修（:387 induction zero；:761 → Algebra.IsAlgebraic.finrank_of_isFractionRing completion 域对）并 retouch；shehdd/stepxi 唤醒（UNRAM bridge skeleton、P5 axiom audit 文件）。
+
+- 08:50：lattice CanonicalSNFDet（general_snf_volume_ratio 特化 canonical）入队（372 项）。BaseChange 修复版待编。
