@@ -1587,3 +1587,5 @@
 - 19:35：**port Order GREEN**（qpilot）：`haveI : Nontrivial (valueGroup (.ofClass v)) := nontrivial_valueGroup_of_surjective v hv`（`.ofClass` notation）+ `exists_eq_zpow_mul_unit_of_surjective` 用 `[IsRankOneDiscrete v]`/`haveI := ‹...›`；Assembly 改为显式 `hcompDW`/`hcompUDW` composition 等式等重编。
 
 - 19:40：**port 新 green**：`Order` GREEN 21:05:10Z（34s）、**Assembly GREEN 21:06:14Z**（98s，hcomp composition 修法生效）、`ContractFieldsActual` 21:06:14 重绿。Order 解锁 NormalizedValuation/Uniformizer/LocalFieldScaling（7/10 port green）；Assembly 可接 DegreeIdentification。已让 qpilot 继续，det-Haar/port 不抢 3.12 主线。
+
+- 19:50：**两条线同步推进**（用户指令）：线 1 = 3.12（mainline #8 / hull #1 / abc A2 / stage4 A1 / stepxi #4）不变；线 2 = `coord/IUTIV-PROP14-TO-BOX-PLAN-20261114.md` 派给 idle：shehdd 写 `IutIVProp14GroupCountActual`（§3.2–3.4 同余商计数/QFE 实例）、lattice 写 `IutIVProp14VolumeActual`（§3.5–3.6 d=ef/μ 比/P14ii）、qpilot port 收尾后写 `Mzk1IutIVProp14iiiBoxActual`（§5 Box 直接入口）。两线文件 ownership 不重叠；Step 2 不替代 3.12 主线。
