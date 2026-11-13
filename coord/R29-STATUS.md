@@ -1633,3 +1633,5 @@
 - 22:15：shehdd 确认 `GroupCountInterfaceActual.olean` 存在（21:20:56Z），已 retouch `IutIVProp14GammaPGroupActual`（05:22:49Z）等依赖就绪后重编；绿后发 `card_gamma_eq_pow_actual` 签名给 lattice + 写 `torsion_card_eq_of_congruenceCard`。不冒充 official。
 
 - 22:20：进展汇总：lattice 新 `Mzk1A1PadicSaturationBasesActual`（`span_c0Q_le_span_lambda`、`a1PadicSaturationBasesData`，ℤ_p 基给 stage4）；mainline 落盘 `Mzk1P1IdealMapNonVPrimeActual.ideal_map_nonV_prime_eq_top`（IdealMapPower general ②）；stepxi 新增 `factorRegion_perm_mem`（fixed-place Ind1 factor-region 等变）。#8 真实 evidence 里程碑保持；路线一第一检查点保持。
+
+- 22:25：hull 新写 `Mzk1P0RouteC0GlobalReadoutActual`（待编）：`c0ProductQ_subset_thetaHull`、`c0ProductQ_haar_le_thetaHull`、`c0ProductQ_normalizedLog_le_thetaHull`、**`thetaHull_normalizedLog_eq_closedForm_sub_one`**（normalizedLog(hull)=s1915ClosedForm−1，去掉 +1 offset），把全局 q 格落点接到 paper normalized hull；下一步 A1.6 δ_b 显式/非负与权重对应。
