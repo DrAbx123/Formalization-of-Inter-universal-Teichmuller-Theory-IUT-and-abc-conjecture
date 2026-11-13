@@ -1623,3 +1623,5 @@
 - 21:40：hull 修 `ThetaLabel/thetaLabelToSigned` 根因（补 import/open `PaperC3ThetaRootActual`），源 mtime 21:17:45，等重编；预期剩余只在 `rootThetaMaxIndex_spec` coercion/`field_simp`/`norm_mul`。
 
 - 21:45：Prop14 Box wrapper 依赖加深：`Iut/Anabelian/Tempered` 失败于 `TemperedFundamentalGroups.SemistableReduction.NodeEtaleGlueReduced.olean` 缺失；TFG 闭包 744 文件、71 缺 olean。已把 71 个 TFG 路径加入 WL（与 33 Iut 合计 104 目标）；已告知 qpilot 继续 port，若编译太慢转 plan §5.3（在 LeanFormal 真实 tensor 重写 1.4(iii) 第二上界，不用 Iut 供体）。
+
+- 21:50：**线 2 里程碑：`IutIVProp14GroupCountInterfaceActual` GREEN 21:20:57Z（51s）**，`card_gamma_eq_pow` 可用；已让 shehdd retest GammaPGroupActual（三定理）、lattice 准备用实际 h 填 P14ii。唤醒 mainline（IdealMapPower/合同收尾）、hull（A1 expansion 重编）、stage4（A1SaturationBases/Padic 接口）、stepxi（A5）。
