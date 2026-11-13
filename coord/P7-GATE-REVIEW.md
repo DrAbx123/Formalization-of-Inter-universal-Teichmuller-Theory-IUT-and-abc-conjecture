@@ -391,3 +391,20 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **A1 的精确分层**：`Mzk1P3BlockProductAlignmentObstructionActual` 证：任意 `TensorCoreWitness` 有 `Fintype.card W.J ≤ finrank(tensor block)`；若 `card Bad > finrank block`，则 **不存在** `W.J ≃ Bad` ⇒ `BlockProductAlignmentData` 不可能。即 A1 只在 `card Bad ≤ finrank` 情形需要构造；**等号情形仍需逐因子 `E_j ≃ rootNormedExtension` 的实际识别**（真正的数学缺口）。
 - **measure-scale factor 已识别**：`Mzk1P3HaarScaleFactorLogActual.logMass_eq_add_log_addHaarScalarFactor`：两个 additive Haar 在同一开集上的 log mass 差 = `Real.log (Measure.addHaarScalarFactor)`（标准 Haar/det transport 常数）——A1 的 measure-scale factor 不再是 independent 假设。
 - `Mzk1P3ProductLogRatioActual.productNormalizedLog_sub`：product normalized log 差 = Σ 局部 normalized log 差（#1 hull readout 供体）。
+
+### 20.7 缺口按“方法明确性”分级（2026-11-14 14:00 Lead）
+
+**方法不明确 / 可能为假（需要先做可行性判定或改接口）**
+1. **A1 tensor vs product（BlockProductAlignmentData）**：等号情形可能**不是真的**——`ArithmeticTensorTupleBlock` 是 base completions 的张量，`rootNormedExtension` 是 q 的根扩张，二者 finrank/因子类型已知不一致（旧 carrier 上 `no_blockProductAlignment_of_finrank_ne`）。正确方向可能是**只证 log-volume 关系 + 显式 det/degree 因子**（`logMass_eq_add_log_factor`），而不是构造 `≃ₐ`；#6/#10 的 blockEquiv 消费者需要相应改接口。方法待判定。
+2. **A4 residue-one（GAP-PC-RESDEG）**：无内部证明路径；paper tame/split 算术输入，且对一般 T 未必成立（需具体 source 条件）。
+3. **A5 #4 multirradial production**：`n / oR_LGP / dPrimeProcessions / logKummerTransport / ThetaMuLGP / IPL-SHE-APT / Ind1–3` 的 paper 构造未形式化，定义域/语义本身需要先澄清。
+4. **A6 #9 `disc=1 ∧ cond=1`**：abstract `CurveData` 无法排除该 case；要么加 C0=1，要么需要“无 conductor/disc=1 椭圆曲线”的算术定理；C0=0 的关闭方法不明确。
+5. **A7 `NativeBadModuliFixedPrime`**：Bad 只是 Fmod 的有限坏位（不同 residue characteristic 均可），**所有 Bad 模位固定同一 p 未必成立**；若为假，则 #10 的 unitMass 归一化必须改用按 prime 分组或逐 prime product。
+6. **A8 / #2 canonical theta-label**：`HeightOneSpectrum → ProcessionLabel l` 的 canonical 映射在论文中依赖 label/procession 数据，尚未定义；无内部构造路径。
+7. **C: `Cor312ToABCBridgeInterface`**：审计等价于 abc 本身——方法不存在（公开难题），不能作为可证目标。
+
+**方法明确（只是执行/工程）**：
+- A2 qhat norm 指数：`c0QHat_eq_q + norm_algebraMap'` 或 P2 的 qhat norm 供体（等 olean/coercion 修好）；
+- A3 hull/procession 归一化：class-B `RootExtensionHaarDetScaling` + Dupuy–Hilado `E(ln μ/dim)` + `addHaarScalarFactor` + `productNormalizedLog_sub`，逐块拼接；
+- #3 桥 2/max-ideal R21/general I：coercion/import/instance 级别；
+- #10 unitMass det 因子链：已 green（c=∏c_b、normalized citizen=1），只剩与 blockEquiv 的接口。

@@ -1472,3 +1472,5 @@
 - 13:46：stage4 3/3 green：`Mzk1P3BlockProductAlignmentObstructionActual`（card W.J ≤ finrank block；card Bad > finrank ⇒ 无 W.J≃Bad ⇒ 无 BlockProductAlignmentData；等号情形仍缺逐因子识别）、`Mzk1P3HaarScaleFactorLogActual`（log mass 差 = log addHaarScalarFactor，measure-scale factor 精确识别）、`Mzk1P3ProductLogRatioActual`（productNormalizedLog_sub）。已写 P7 §20.6 A1 细化，并把 3 供体发 hull（#1 拼接）与 stage4（等号情形构造）。
 
 - 13:52：A1 等号情形路线已发 stage4：取实际 places/tuple，证 `ArithmeticTensorTupleBlock ≃ₐ ∏_{b:Bad} rootNormedExtension`（用有限 étale 分解唯一性/度数与根多项式，或退回 BlockProductAlignmentData 字段级显式构造；若对象不同则写精确子缺口）。另 HaarScaleFactorLog 可接 #10 det-Haar measure-scale。
+
+- 14:00：用户问“有没有连方法都不明确的数学缺口”。已写 `P7-GATE-REVIEW.md §20.7` 分级：**方法不明确/可能为假** = A1 (tensor vs product 等号可能不真，正确方向可能是 log 关系+det 因子而非 ≃ₐ)、A4 residue-one (paper tame/split，对一般 T 未必真)、A5 #4 production (Ind1–3 等未形式化)、A6 disc=1∧cond=1 (abstract CurveData 无法排除)、A7 NativeBadModuliFixedPrime (可能为假，Bad 不同 prime)、A8/#2 theta-label、C Cor312ToABCBridgeInterface≡abc。**方法明确** = A2 qhat norm、A3 hull 归一化、#3 coercion、#10 unitMass 链。
