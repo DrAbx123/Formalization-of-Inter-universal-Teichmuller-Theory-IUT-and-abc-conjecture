@@ -1777,3 +1777,5 @@
 - 04:50：root `QhatHaarScalingReuse` FAIL 仅在 `qhat_lattice_measure_pos` 的 `ENNReal.mul_pos` typeclass；`qhat_haar_scaling_actual`/`qhat_signed_readout_eq_log_norm` 已通过；hull copy 已改 `ENNReal.mul_pos_iff.mpr`。A2：授权 abc 只改 donor hq' 证法（保留陈述），给 ambient-coercion/显式 letI/`rfl` 三路探针（≤200k heartbeats），不许 4M 挂死；若仍阻塞则保留 agreement↔qVFamNormRatio=1 精确等价并报告。
 
 - 05:00：abc 探针确认 A2 真结论：`‖c0QHat‖`=normalized norm，`qVFamDefaultNorm`=adic norm，相等 iff `qVFamNormRatio=1`；donor hq' 原陈述在 adic 侧不成立（非证法问题）→ 停止无条件化、revert 两处、标 obsolete；A2 以精确条件等价 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1`（已知 PaperSourceCorrectionFreeFields 条件）收口，文件改独立不依赖 donor；gate §20.19 已写。
+
+- 05:05：**三个新 green：`IutIVProp14TorsionCountActual` 23:14:04、`Mzk1IutIVProp14IndexCardActual` 23:14:10、root `QhatHaarScalingReuse` 23:15:02**。已派 hull 用 root scaling 完成 Correspondence/最终 Q≤Θ；lattice 等 Gamma 填 hμΛ/P14ii；shehdd torsion actual/#C；qpilot BoxReadoutLocal；stepxi PhiMax/β_a。gate §20.20 已写。

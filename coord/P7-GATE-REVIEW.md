@@ -504,3 +504,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **A2 正确收口**：`P2QHatNormInstanceAgreement ↔ qVFamNormRatio = 1`（精确条件等价），对应已知 `PaperSourceCorrectionFreeFields` 条件；不是新 gap。
 - **文件**：`Mzk1P2QHatNormAgreementUnconditionalActual.p2QHatNormInstanceAgreement_iff_ratio_one`（将改为不依赖 donor 独立编译）；`p2QNativeReading_unconditional`（default/adic norm 下成立）。
 - **边界**：A2 不提供 `‖c0QHat‖ = qVFamDefaultNorm` 的无条件等式；任何消费者若需要 normalized=adic，必须显式带 `qVFamNormRatio=1` 条件。
+
+
+### 20.20 线2补件与 qhat scaling 官方 GREEN（2026-11-14 23:14–23:15）
+- **root `tmp/sheaf/three_gap_closure_20261114/QhatHaarScalingReuse.lean` GREEN 23:15:02（107s）**：`qhat_haar_scaling_actual`、`qhat_signed_readout_eq_log_norm` 等实际通过；scaling 的无条件供体正式可用。
+- **`IutIVProp14TorsionCountActual` GREEN 23:14:04（49s）**：`torsion_card_eq_of_congruenceCard` 条件版（hdecomp/hC/hGamma/hq/hcop ⇒ `∃m, #T=(q−1)p^m ∧ h+m=f(es−1)`）。
+- **`Mzk1IutIVProp14IndexCardActual` GREEN 23:14:10（55s）**：`logShellIntegerIndex_eq_natCard`（rfl）、`logShellIntegerIndex_eq_pow_of_card_eq`；Gamma 绿后可填 `volume_ratio_eq_pow` 的 `hμΛ`。
+- 下一步：hull 用 root scaling 供体完成 Correspondence/最终锚定；lattice 等 Gamma actual；shehdd 写 torsion actual + 实际 #C。
