@@ -676,3 +676,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 新文件 `Mzk1P1WeightA1BridgeActual`（queue）：`nativeBadLocalWeight_eq_inv_total_local_degree`（rfl）、`s1915LocalDegree_eq_finrank`（rfl）、degree tower 语义。
 - **a1Delta 展开**（新定理）：`a1Delta = −((c_norm/(2l))log P) − (1/d)(log μ(c0Q)−log μ(unitBall))`（`a1Delta_eq_log_radius_sub_signedTerm` + 新 log r 公式）。
 - **bridge 剩余**：S45 条件 + norm-instance agreement（两项显式）；权重差用 degree tower 说明，不再写错误 1/f。
+
+
+### 20.40 再次纠正：S45 ratio=1 与 norm-instance agreement 分开（2026-11-15 00:35）
+- **S45**：`PaperSourceCorrectionFreeFields.normRatio_one` 给 `qVFamNormRatio=1`，即 `qVFamNormalizedNorm = qVFamDefaultNorm`（normalized vs adic completion norm 一致）。
+- **norm-instance agreement**：`P2QHatNormInstanceAgreement := ‖c0QHat_b‖ = qVFamNormalizedNorm_b`，是 c0QHat 的 normalized norm coherence；**与 ratio=1 不等价**（abc 核对）。
+- bridge 使用 `qhatLogReadout=−c_norm log p` 时必须显式带 `P2QHatNormInstanceAgreement`；S45 只负责 ratio=1/修正项。最终 S3137 条件定理要把两者分别列出，任一未证就显式保留条件。
