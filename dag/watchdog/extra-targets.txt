@@ -422,3 +422,4 @@ tmp/sheaf/xif/paper/Mzk1HullUBPaperVDictionaryActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaVScaleOffsetIdentityActual.lean
 tmp/sheaf/xif/paper/Mzk1P7MultiradialWitnessActual.lean
 tmp/sheaf/xif/paper/Mzk1P3ArithInstancesActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaVScaleOffsetGeneralActual.lean

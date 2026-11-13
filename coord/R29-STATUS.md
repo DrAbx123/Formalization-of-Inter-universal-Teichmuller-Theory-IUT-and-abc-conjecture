@@ -694,3 +694,5 @@
 - 19:38：**P3-E 最终装配 green**（mainline FinalAssembly DONE 11:28:57Z，58s；ssIneqExplicit_final，AGREE+FINITE 关闭；P3-EXACT-REDUCTION §16 最终 GAP 树）；**T 算术实例构造文件 P3ArithInstances 入队（424 项）**——FiniteDimensional/IsSeparable trans、Module.Finite IsIntegralClosure.finite、其余 inferInstance，把假设变构造。
 
 - 19:41：巡检：FinalAssembly/NormArchAbcHook/MultiradialWitness green；C3BlockMeasure 已 retouch（旧 exact_mod_cast 行已修）；唤醒 stage4（重编链）、lattice（#5 L4 一般 scale/offset 构造）、stepxi（7 missing rows 逐行构造）。
+
+- 19:45：lattice #5 L4 条件构造 ThetaVScaleOffsetGeneral（scale=1/offset=-k*qLogSum + closed form 条件）入队（425 项）；Equiv 在 change 后补 dsimp only 再 rw dif_neg。
