@@ -720,3 +720,5 @@
 - 19:48：shehdd OB33 **GREEN**（ole 82,832B @11:40:50Z）：实际 detDegree 对象（unitLineBundleData.detData.globalLogVolume）+ 显式 identification；P7 §13 #3 OPEN→CONDITIONAL。DetLine 重写待编。
 
 - 19:52：Cofinite 修 rw 方向（`rw [h.coe_toFinset]`）并 retouch；已提醒 qpilot 不要编辑 FLT 文件（Lead 统一修，防并发覆盖）。
+
+- 19:55：mainline `Mzk1DetLineConstructionActual` GREEN（11:47:36Z，57s，relativeDetLine + globalLogVolume_relativeDetLine=B4/B5 全局）且 `Mzk1P3ArithInstancesActual` **DONE（11:50:30Z，33s，generic A 实例构造）**；lattice `Mzk1NormArchConsumerActual` GREEN（11:49:36Z，71s，去 heightWeight 假设的 arch 加权和入口）。Cofinite 新版待编。
