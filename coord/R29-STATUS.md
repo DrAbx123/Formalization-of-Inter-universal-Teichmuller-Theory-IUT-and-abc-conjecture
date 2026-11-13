@@ -1036,3 +1036,5 @@
 - 23:34：NormZpowBridge 证明链 relay（FinitePlace.norm_def:257 + WithZeroMulInt.toNNReal_neg_apply + NNReal.coe_zpow；e=residueNormBase 定义一致；需 x≠0，x=0 两边不等）；证成后 LocalNormGeneratorBridge 真实例化。
 
 - 22:35（巡检）：mainline NormBridges 文件已乱（structure 化/语法错），建议回退 green 版 + 新建干净 `Mzk1B5NormZpowActual.lean`（norm_def + toNNReal_neg_apply + coe_zpow + rfl）；stage4 唤醒继续 B4；hull 准备 §35。
+
+- 22:38：唤醒文档收尾：lattice #10（unitMass citizen DONE/unitMass=1 GAP）、abc §11/§12（theta_eq 标量归约+同源箭头候选）、shehdd §18.2（SpanGeneratorValuationLemma/norm 桥/residue-one）、qpilot CONTRACT-MAP §8（full product formula ×2）+ fractional 扩展可选、stepxi CANONICAL §22 更新。
