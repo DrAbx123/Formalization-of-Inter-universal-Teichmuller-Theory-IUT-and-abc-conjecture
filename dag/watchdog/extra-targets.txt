@@ -343,3 +343,9 @@ tmp/sheaf/xif/paper/Mzk1C17ResidueFieldEquivActual.lean
 tmp/sheaf/xif/paper/Mzk1C3UnitHaarComparisonActual.lean
 tmp/sheaf/xif/paper/Mzk1GLActContinuousActual.lean
 tmp/sheaf/xif/paper/Mzk1C3S1902QuantityActual.lean
+tmp/sheaf/xif/paper/Mzk1GLActContinuousActionActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotArrowLogDataGapActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperQPilotConcretePartsActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperLogKummerFieldsActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperNormalizationRawVsNormalizedActual.lean
+tmp/sheaf/xif/paper/Mzk1PaperNormalizationGapRowsActual.lean
