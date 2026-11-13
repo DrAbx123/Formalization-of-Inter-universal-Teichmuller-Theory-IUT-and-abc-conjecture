@@ -1769,3 +1769,5 @@
 - 04:30：巡检：watchdog 重启后 11 lean 在跑、log 07:00:52；已派 hull（四件 #1 定理 official 后写最终锚定 Q≤Θ consumer）、qpilot（Box actual packet 继续）、shehdd（Gamma/torsion/#C）、lattice（P14ii/IndexCard）、stepxi（源端 β_a 或 Φmax 定义+精确缺口）。
 
 - 04:35：**新 green `Mzk1A1SignedReadoutProductActual` 23:02:24（138s）**：#1 product 级 signed 收口——`productQ_normalizedLog_eq_sum_a1LocalQLog`、`a1LocalQLog_eq_degree_log_radius_sub_degree_delta`、`sum_a1LocalQLog_eq_degree_log_radius_sub_totalDelta`、`totalDelta_nonneg`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、**`productQ_normalizedLog_le_closedForm_sub_one`**。已让 hull 用无条件 qhat scaling 展开成 signed q 读数（−|log q|）并合最终 Q≤Θ。lattice IndexCard 补 MeasurableSpace K；Gamma 仍 olean 时间差。
+
+- 04:40：stage4 报 A1.6 formal product readout GREEN（4 new proof files；Delta/SignedReadout/Product/p-adic consumers）。唯一剩余数学缺口=qhat 格与 `J_s=π_F^{ceil(m/e)}O_F` 的 valuation/ramification 识别；已让 stage4 优先接 `Mzk1A1LatticeValuationActual.inverseLattice_eq_saturated` + `Mzk1A1LatticeInverseActual`，不加 hscale/hid。gate §20.17 已写。

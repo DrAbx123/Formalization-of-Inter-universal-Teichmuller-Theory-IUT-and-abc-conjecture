@@ -476,3 +476,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **一般 Ind1**：正确对象不是 completion 域同构，而是从实际源作用诱导的单位模挠商连续同构 `β_a:U_F/tors→U_F'/tors`，再经对数像、有理化、连续性升 `ℚ_p`-线性并证格保持；供体：`unitLogTorsionQuotientEquivRange`、`unitLogTorsionQuotientHomeomorph`、`UnitLogPerfection`/`unitLogPerfectionEquiv`、`unitLogPerfectionHomeomorph`、`UnitPerfectionFunctoriality`、`SourceFTimesMuPrimeStripEquivalence.canonicalLift`。源端 `β_a` 仍须从实际 arithmetic realization 构造；抽象 `DPrimeStrip` 不足以自动给出。
 - **S1902/carrier**：不再要求全局 `S1902Carrier ≃ ArithmeticTensorTupleBlock`；改为逐 `(p,j,tuple)` 实际 packet：用 `arithmeticTuple_stepV_hull_normalizedLogVolume_le_paperBound`（StepVAssembly:814，hull 版），构造 `K_{v_i}` tensor、distinguished `ϖ`（`ord_p(ϖ)=j²/(2l)ord_p(q)`）、实际作用族与 signed readout，经 `StepVDistinguishedSlotAverage`/`StepVProcessionAverage` 得 Box；旧 `s1915A0` 保留定义不动，另证论文读数对应（`s1915A0=max(0,1+Σd_b log r_b)` 是截断聚合，不得当 signed 局部读数）。
 - **边界**：以上三项均未无条件闭合；#8 CONTRACT 两半已收口（§20.15）；#9/HullUB 冻结；paper 3.12/ABC 未证。
+
+
+### 20.17 A1.6 formal readout GREEN + 唯一剩余数学缺口（stage4，2026-11-14 07:02 local）
+- **已绿**：`Mzk1A1DeltaExplicitActual`（22:30:14）、`Mzk1A1SignedReadoutActual`（21:26:13）、`Mzk1A1SignedReadoutProductActual`（23:02:24）、`Mzk1A1SaturationBasesActual`（22:04:26）、`Mzk1A1PadicSaturationBasesActual`（22:25:13）。
+- **A1.6 形式恒等式**（本地 + product）：
+  - `a1SignedTerm_eq_log_radius_sub_delta`、`a1SignedTerm_le_log_radius`；
+  - `productQ_normalizedLog_eq_sum_a1LocalQLog`、`a1LocalQLog_eq_degree_log_radius_sub_degree_delta`、`totalDelta_nonneg`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、`productQ_normalizedLog_le_closedForm_sub_one`。
+- **剩余唯一数学缺口（stage4 判定）**：实际 qhat 格与 `J_s=π_F^{ceil(m/e)}O_F` 的 valuation/ramification 识别（measure-side identity 与 δ 已形式化）。优先接 `Mzk1A1LatticeValuationActual.inverseLattice_eq_saturated` + `Mzk1A1LatticeInverseActual` 的实际格等式；不得新增 `hscale/hid` 条件。
+- **边界**：A1.6 形式读数已绿，但上述格识别未证，故 A1.6 实际 valuation 版未标闭合。
