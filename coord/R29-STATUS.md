@@ -1665,3 +1665,5 @@
 - 23:55：**决策**：Iut/TFG 104 个 WL 条目移除（缺失 olean 文件有真实旧错误，依赖沼泽）；Box wrapper 改按 plan §5.3 在 LeanFormal 现有真实 tensor 重写 1.4(iii) 第二上界（`IntegralTraceDualTensorInclusion`/`LocalDifferentUpperBound`/`SharpBounds`），不 import Iut。port：NormalizedValuation 再一轮，若仍卡 `Valuation.map` defeq 则冻结 7/10 + 精确缺口（class-B 已够 det-Haar/#10）。
 
 - 00:05：**线 2 关键发现/复用**：qpilot 新 `Mzk1IutIVProp14iiiBoxFormalActual` 不 import Iut，直接复用已 GREEN 的 `FinitePlaceStepVAssembly.arithmeticTuple_stepV_normalizedLogVolume_le_paperBound`（实际 local different generators/δ·O_hol⊆R_I/componentVol Haar 上界），复述论文 (11) 上界；待编。**port 正式冻结 7/10**（NormalizedValuation 卡 4.32 `Valuation.map` 显式 monotone 与 `intValuation` defeq；class-B `PAdicHaarDetScaling` 已够 det-Haar/#10）。DegreeIdentification 等新 tail。
+
+- 00:10：hull 修 A1Delta/GlobalReadout 首错：`rootImageRadius`（PaperRootExtensionThetaHullAuditActual）/`rootNormedExtension`（PaperRootCompletionTensorActual）import/open 缺失致 autoImplicit；`thetaHull` 目标先 change 成 `s1902Hull` 再 rw；两文件 retouch 等下一轮 START。
