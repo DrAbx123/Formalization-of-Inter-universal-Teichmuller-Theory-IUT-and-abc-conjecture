@@ -534,3 +534,5 @@
 - 08:50：lattice CanonicalSNFDet（general_snf_volume_ratio 特化 canonical）入队（372 项）。BaseChange 修复版待编。
 
 - 08:52：stepxi P5AxiomAudit（#print axioms 15 条）入队（373 项）。
+
+- 08:55：BaseChange :387 zero 分支改 `simpa using subset_closure (Set.mem_range_self (0 : B))`（log 末尾显示 0∈closure(range) 未解）；retouch。stage4 GeneralSNFVolume2 修 hμM calc 待重编；A2 桥 green 细节已归档。
