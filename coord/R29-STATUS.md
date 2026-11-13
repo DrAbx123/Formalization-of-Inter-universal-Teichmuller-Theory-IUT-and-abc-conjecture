@@ -528,3 +528,5 @@
 - 08:44：**stage4 A2 桥 GREEN（IndexCardBridge DONE 00:19:20Z，51s）**；GeneralSNFVolume2（general_snf_volume_ratio = 一般 N≤M 的 μ 比 = ∏|a_i|_p）入队（371 项）——一般受限 det 公式核心非条件版。已派 stage4/lattice 对接 canonical Haar 与 U/W。
 
 - 08:46：**Bilinear DONE（00:20:11Z，28s）**——FLT 全上游 olean 齐；Completion/BaseChange 已 START（00:20:11）。qpilot local EF green（00:19:22Z，olean 43,368B；local e=f=1⇒weight=1 不依赖 FLT）。
+
+- 08:48：BaseChange 真实 API 错 2 处已修（:387 induction zero；:761 → Algebra.IsAlgebraic.finrank_of_isFractionRing completion 域对）并 retouch；shehdd/stepxi 唤醒（UNRAM bridge skeleton、P5 axiom audit 文件）。
