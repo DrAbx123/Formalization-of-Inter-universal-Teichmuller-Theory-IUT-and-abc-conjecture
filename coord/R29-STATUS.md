@@ -1595,3 +1595,5 @@
 - 20:00：线 2：shehdd `IutIVProp14GroupCountActual` 首版只把 congruence quotient cardinality 打包成命名输入 + 由输入构造 QFE 实例；已要求继续**真证**：`U/U_s≃(O/𝔪^{es})^×` + `cardQuot_pow_of_prime` ⇒ `#(U/U_s)=(q-1)q^{es-1}`、`#Γ=p^h`（IsPGroup）、`#T=(q-1)p^m`/`h+m=f(es-1)`，最后 QFE 实例无输入参数；与 lattice 对齐 `card_gamma_eq_pow`/`torsion_card_eq`。
 
 - 20:05：lattice 线 2 追加 `volume_ratio_eq_pow`（条件 h：h+f+m=s*d、μΛ=p^h μO、μL=p^{-(s*d)}μΛ ⇒ μL=p^{-(f+m)}μO）；h 待 shehdd `card_gamma_eq_pow`。提醒 lattice：`Mzk1SaturationBasesDataActual` 已 GREEN 20:59:46，A1SaturationBases 可编，别只等；已催 shehdd 先做 `#Γ=p^h` 具名定理。
+
+- 20:10：`Mzk1A1SaturationBasesActual` 上轮 20:59:33 FAIL 只是 SaturationBasesData.olean 尚未生成（20:59:46 才 DONE）的时间差；已 touch 源文件触发下一 cycle 重编。lattice §3.6 `volume_ratio_eq_pow` 条件版已写好，等 shehdd `card_gamma_eq_pow`。
