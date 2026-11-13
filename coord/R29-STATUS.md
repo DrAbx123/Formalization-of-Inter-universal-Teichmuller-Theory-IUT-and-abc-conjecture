@@ -902,3 +902,5 @@
 - 01:40：lattice NativeBadPrime（NativeBadPrimeData p := ∀b completionRationalPrime(...)=p 单一 named input；给定后构造 FinitePlaceAtPrime + CommonPrimeCompletion 上 unit-mass product eq_one）入队（473 项）；来源核查 Bad 只是 Fmod 有限坏位、无固定 p 等式。
 
 - 01:44：stage4 Weight 首错 relay：:54 No goals（删多余行）；:65 HSMul ℚ_[p] (Set ...) synth 超时（Set smul）→ 改写 `(fun x => c • x) '' S` 或 Set.image。Cancel 待 Weight olean。
+
+- 01:47：stage4 Weight 修复：删多余 push_cast（:54）；定理陈述改 Set.image（proof `simpa [Set.smul_set_def]`）；待重编，Cancel 随后重试。
