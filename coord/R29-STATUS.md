@@ -636,3 +636,5 @@
 - 19:52：stage4 SNFMatrixUW GREEN（11:06:43Z，22s，U*diag*W+det unit）；CanonicalDiagReduce（去 hXpos/hXtop 中间步）入队（393 项）。
 
 - 19:54：lattice #10 首版 NormArchCK（archCK=1/[K:Q]、archCKToric=1/(2[K:Q])、hArc/hNon/hToricArc rfl）入队（394 项）。
+
+- 19:56：hull #9 HULL-UB 3 份（HullUBPaperBox 实际定理 normalizedLog≤paperBox；HullUBDictionary 条件版；HullUBP7Status 4-row）入队（397 项）——HULL-UB OPEN→CONDITIONAL 依据；Composite 再 retouch。
