@@ -1216,3 +1216,5 @@
 - 03:18：mega-batch 编译中：watch 725 项（clean 566/red 17/inprog 16/ole 20/missing 106——new 文件排队）。shehdd 20 文件已入队；已将其被取代的 `Mzk1P1DVRPrincipalLemmaActual` 从名单移除（IsPrincipal 已真证，保留 historical 版本）。已唤醒 shehdd：LFI keystone 优先修绿 → 链式转绿 1-5 → 通知 mainline → 继续第二波 20 文件。
 
 - 03:22：用户强调“不要干等编译”。已向 8 lane 广播流水线纪律：每 5–8 文件立刻抽查 per-file log → 先修红（批量）→ 绿的立刻接下游继续写 → 同时写下一波 → 只报里程碑。目标：写/入队/修红/接绿/再写不停，编译队列永远有货。
+
+- 03:26：流水线抽检：新 green 批次（P0-L SourceRows/PaperInstanceFinal/QThetaArrowFinal/NormalizationFactor/RegionOpen、P1 GeneratorNorm/PlaceLogVolumeIdentity 等）；red 多为依赖 olean 未建（CountMul←CountAdd）或 binder/Function expected 类。已按 lane 批量 relay 首错模式，要求逐绿接下游。
