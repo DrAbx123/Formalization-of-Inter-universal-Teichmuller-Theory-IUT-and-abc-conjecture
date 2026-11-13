@@ -1735,3 +1735,5 @@
 - 03:05：`IutIVProp14TorsionCountActual` 条件版已入队（纯 Mathlib），按骨架完整写；Gamma 第 8 次修等重编；等这两者后 torsion actual + P14ii actual。
 
 - 03:10：qpilot BoxReadout 抽象化（`BoxReadout.a0/bridge` + `box_readout_le` + `s1902CarrierBridgeMissing`），已让加 `boxReadoutOfS1915`/`s1915A0_le_box_of_bridge`；lattice 读 `measure_integralLogShell_eq_index_mul` 写 `mu_lambda_eq_index_mul`；shehdd torsion 等机检 + 推实际 #C。
+
+- 03:15：**关键路径**：shehdd 找到 `S865RootHaarFactorNormPowActual.rootHaarFactor_normPow_actual`（已绿）——`rootHaarFactor lam = ofReal(‖lam‖^d)`。已给 hull 无条件证 `qhatHaarScaling` 的完整链：`c0QLattice=qhat•O` + `distribHaarChar_mul` + `rootHaarFactor` def + S865 + `Units.val_mk0` + `s1915LocalDegree=finrank`。这可能是 #1 主缺口的真正闭合路径。lattice：`logShellIntegerIndex=Nat.card Γ`（定义/rfl）→ Gamma 绿后填 `hμΛ`。
