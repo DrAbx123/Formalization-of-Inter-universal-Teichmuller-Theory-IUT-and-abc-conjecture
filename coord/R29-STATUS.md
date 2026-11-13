@@ -1695,3 +1695,5 @@
 - 01:25：hull Delta 修复中（`ENNReal.mul_lt_top` 显式两参 + `hλlog`→`hlamlog`）；GlobalReadout GREEN 保持；下一步 Delta 绿后 weighted→`s1915ClosedForm−1` 常数/权重对齐，再用 S865/rootHaarFactor 消 q positivity。
 
 - 01:30：**`Mzk1B5ContractEvidenceActual` GREEN 22:12:24Z（104s）**——#8 的 B5 evidence 依赖解锁；已让 mainline retest `Mzk1P7ContractB5EvidenceActual`。hull GlobalReadout GREEN 保持，Delta 待重编；已同意 paper 读数 correspondence 先查 det-Haar 缩放引理，缺则条件版+单点 factor 缺口。
+
+- 01:35：shehdd Gamma 第 6 次修：`:35` 用 `convert hy using 1; field_simp [hp]; ring` 归约到 `y∈Integers`；`:46` 在 `change` 给 `Multiplicative (LogShellIntegerQuotient)` 完整类型标注；等 official。B5ContractEvidence 已 green，#8 B5 由 mainline retest。
