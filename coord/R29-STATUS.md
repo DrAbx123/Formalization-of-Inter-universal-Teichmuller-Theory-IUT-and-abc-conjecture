@@ -1843,3 +1843,5 @@
 - 07:45：更正 §20.41：`rootBase=F_v completion`，`d_b=n_b·[F_v:Q_p]`、`weight=1/[K_w:F_v]`，故 `d_b·weight` 要等于 n_b 需 `[K_w:F_v]=[F_v:Q_p]`（K_w≅F_v 桥），不是纯 finrank tower。`weight_conversion` 改为条件定理/显式 GAP；mainline 按此写，`NormalizedSourceConditional` 修 forall-instance，Cor312 chain 等编。gate §20.43 已写。
 
 - 07:50：hull dictionary 权重更正：`paperWeight_eq_inv_localCompletionDegree`（1/[K_w:F_v]=1/(e·f)）；`d_b=[L:Q_p]` 与 paper weight 分列；degree tower 改为 `DegreeTowerInterface`（∃n, d_b=n·localCompletionDegree）作精确缺口，不冒充恒等式；log r/qhat 字典保持。dictionary 等编。
+
+- 07:55：mainline 重构 S3137 bridge 为四项显式输入：`S45SourceFields`、`QHatNormCoherence`（P2 独立 norm-instance）、`RootBaseCompletionGap`（rootBase↔K_w completion 同一性 GAP）、`PaperToS3137A1Data.a1_delta_paper`；最终 S3137 条件版按此链写，每项显式。P2 文件头错误注释已更正。已要求先修 NormalizedSourceConditional forall-instance，再编 chain/bridge 并报 exact 签名。gate §20.44 已写。

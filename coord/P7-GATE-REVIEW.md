@@ -709,3 +709,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   或保留 `PaperToS3137BridgeData.weight_conversion` 并标显式 GAP。
 - 可用供体：`BadPlaceRationalDegreeFactorActual:64`（qVFamTensorRationalDegree 的 degreeFactor 反推）；`Mzk1RouteBBridgeActual:18` 已标 K_w↔F_v 同一性不在树内。
 - **§20.41 的“weight_conversion 可由 degree tower 直接证”作废，以本节为准。**
+
+
+### 20.44 S3137 条件版的四项显式输入（mainline，2026-11-15 00:55）
+- `Mzk1P1PaperSumsToS3137BridgeActual` 重构（去掉 weight GAP 字段）：
+  1. `S45SourceFields := Nonempty (PaperSourceCorrectionFreeFields T)`（S45 normalized-source 条件，非新假设）；
+  2. `QHatNormCoherence := P2QHatNormInstanceAgreement T`（`‖c0QHat‖=qVFamNormalizedNorm`，独立 norm-instance coherence）；
+  3. `RootBaseCompletionGap := Nonempty (rootBase T b ≃+* (nativeBadToKPlace b).maximalIdeal.adicCompletion K)`（degree tower 所需同一性，显式 GAP，`Mzk1RouteBBridgeActual:18` 已标）；
+  4. `PaperToS3137A1Data.a1_delta_paper`（a1Delta↔paper coefficient 字典，显式 GAP）。
+- **最终 S3137 条件版**将写：`S45SourceFields → QHatNormCoherence → RootBaseCompletionGap → PaperToS3137A1Data → qPilotLogVolumeReading P ≤ thetaPilotHullLogVolumeReal C3`，每项显式、未证即条件。
+- `Mzk1P2QNativeReadingCorrectedActual` 文件头已更正：`P2QHatNormInstanceAgreement` 是独立 coherence，不等价于 ratio=1。
+- **#1 状态**：paper-faithful 条件版；无条件 Q≤Θ 不存在。
