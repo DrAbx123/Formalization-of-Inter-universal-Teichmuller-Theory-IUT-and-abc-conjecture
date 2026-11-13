@@ -922,3 +922,5 @@
 - 02:16：stepxi signed 形式 **GREEN**：C0IdeleHeight DONE 13:09:50Z（60s，ole 100,736B，c0SignedIdeleHeight=-c0IdeleHeight + eq_neg_hBox_of_components）；C0ReadoutIdentification DONE 13:09:50Z（60s，ole 101,264B，readout_eq_neg_hBox: readout=-hBox F x；readout_eq_qPilot 保持；均非正）；ROUTE-C0 符号约定/paper hBox 字段已同步。
 
 - 02:18：Weight 自 13:03:49 后无新 START（retry 上限），已 retouch 触发重编；Cancel 待其 olean。
+
+- 02:22：mainline RelativeDetLogExpansion（①relativeDetLog_eq_sum_count_diff；③+arch 项；FractionalLogVolumeExpansion named input）+ qpilot FractionalAbsNormFormula（absNorm_eq_num_div_den、log_absNorm_fractional_eq_num_sub_den/_sum_diff）入队（478 项）；待补 count=num/den count 差等式。abc 收尾三项：AUDIT_LEDGER 追加、P7-MISSING 修正 2 处陈旧状态、#8 消费者入口 DONE 13:08:36Z（comparison_of_margin_one 等）。
