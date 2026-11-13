@@ -1248,3 +1248,5 @@
 - 04:20：shehdd LFI 本地类型检查 0 error（仅诊断；official 仍等 watchdog），source mtime 16:56:03 已 retouch。Lead 建 `coord/PROOF-STATUS-REGISTRY.md` 集中登记 status/aux 文件（含各 lane rows），milestone 只报 proof+新定理名；禁止手动 lean 验收、不删文件（除非无消费者）。
 
 - 04:22：**watchdog 停摆并已重启**：log 停在 16:59:15Z START，无 lean/lake 进程、lock pid=25776 失效、无 crash.log。删除 stale lock，`Start-Process cmd /c run_dag_watchdog.cmd` detached 重启；17:06:40Z 新日志恢复（START/RETRY 出现，node watchdog pid 18172/2472）。已广播：不手动编译、检查 per-file log、retouch 红文件、绿接绿。
+
+- 04:26：watchdog 重启后队列恢复（17:08 出 DONE/FAIL）：新 green `P2UnitOperation`、`UnitMassC1Condition`、`S1902CarrierRfl`、`NativeBadPrimeIff`、**`P0NativeThetaBridgeProof`**、**`P0NativeReadoutPair`**；red 多为依赖链（P2 QNativeReadingCorrected→RootQhatNorm→QReadoutBridge）或小错（Function expected/unknown id/synth）。mainline 后台任务 failed 已唤醒；已按 lane relay 首错修法。
