@@ -1564,3 +1564,5 @@
 - 18:15：abc 定位 `P2QHatNormInstanceAgreement` = norm-instance coherence（`NormalizedCompletion` vs `CommonPrimeCompletion` 的 inferInstanceAs norm；`isometry_commonPrimeCompletionRingEquiv` rfl 只给 dist），已让其写 `Mzk1P2NormalizedCompletionNormCoherenceActual`；若 rfl/Isometry 桥成立则 P2 可无条件化，再认领 IdealMapPower。mainline ContractFieldsActual 20:46:51 在编；lattice LatticeSaturationIndex 20:47:25 START。
 
 - 18:20：qpilot 时间戳核对：Order source 20:47:08 / log 20:43:04，Assembly source 20:47:09 / log 20:41:08 ⇒ 均未在新 source 重编，旧 tail 不算数；已 apply Order `haveI : Nontrivial ↥(Valuation.ofClass v).valueGroup`、Assembly `Measure.map U μ` 修复，等新 batch。port 非 3.12 主线，不抢优先。
+
+- 18:25：**B5Index 重接完成**：`Mzk1Ob33B5IndexRewireActual` GREEN 20:48:46Z（116s，olean=True）——`placeSNFDataActual`、`placeSNFDataActual_index_eq_neg_count_of_lemma`、`missingGeneralPlaceSNF_rewired`（B5Index exact missing 关闭）。**A1 链第一环**：`Mzk1LatticeSaturationIndexActual` GREEN 20:49:09Z（104s）→ SaturationBasesData → A1SaturationBases。mainline `Mzk1P7ContractFieldsActualActual` 两错（docstring/`≤0` coercion）已修，等重编。
