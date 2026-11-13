@@ -537,3 +537,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1StepVPhiMaxActual` GREEN 23:21:48（66s）**：`stepVPhiMax`、`identity_mem`、`nonempty`；`StepVActualInd1Ind2Action` 无 inhabitant。
 - **`IutIVProp14TorsionCountActual` 23:14:04 / `Mzk1IutIVProp14IndexCardActual` 23:14:10** 保持。
 - **边界**：IdealLocalizedCount 无条件已绿，但 B5Index 消费点仍需 mainline 接入；Box 的 actual packet readout 已绿，但 §8 distinguished scalar 与实际作用族/权重链未完成；paper 3.12/ABC 未证；#9/port 冻结。
+
+
+### 20.24 三个新 GREEN：B5Index 消费、A2 精确等价、Ind1 代数核心（2026-11-14 23:26–23:27）
+- **`Mzk1Ob33B5IndexConsumerActual` GREEN 23:27:07（96s）**：`b5Index_localizedCount_consumer`、`b5Index_placeSNFData_and_localizedCount`、`b5Index_placeSNFData_nonempty`；B5Index 完整消费链（Rewire 20:48:46 + Consumer 23:27:07）收口。
+- **`Mzk1P2QHatNormAgreementUnconditionalActual` GREEN 23:27:06（95s）**：A2 以精确条件等价收口 `P2QHatNormInstanceAgreement ↔ qVFamNormRatio=1`（= 已知 `PaperSourceCorrectionFreeFields` 条件），不是新 gap；不提供 `‖c0QHat‖ = qVFamDefaultNorm` 无条件等式。
+- **`Mzk1Ind1AlgebraicUnitQuotientActual` GREEN 23:26:17（46s）**：`fPrimeStripUnitQuotientEquiv = QuotientGroup.congr (Units.mapEquiv (a.isoMon v))`；β_a 的代数核心 official；实际 `W_F` 识别/连续性/源 action 仍是显式缺口。
+- **边界**：B5Index 消费链绿不等于 paper 3.12/ABC；A2 是条件等价；Ind1 一般 place 仍缺实际单位识别与 β_a 来源；`StepVActualInd1Ind2Action` 无 inhabitant。

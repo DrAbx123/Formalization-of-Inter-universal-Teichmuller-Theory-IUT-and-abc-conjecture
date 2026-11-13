@@ -1797,3 +1797,5 @@
 - 05:45：stepxi 确认 §7.1 文档更正；`continuous_of_addHom_fin_zpadic` 未落地，已给具体 Lean 骨架要求先绿该引理（`AddMonoidHom.continuous_of_continuousAt_zero` + `span p^(n+1)`/`map_nsmul`/norm）。shehdd Gamma v10 `:58` 修法：`← QuotientAddGroup.mk_nsmul` 把 `p^k • mk z` 变 `mk ((p^k)•z)` 再用 `eq_zero_iff`；`:21/:52` 另读 tail。
 
 - 05:50：shehdd Gamma v11：`congr 1` 后 `rw [← QuotientAddGroup.mk_nsmul]` 把 `p^k•mk z=0` 转 `mk((p^k)•z)=0`，再 `eq_zero_iff` + `mem_logShellIntegerSubgroup_iff`；第一定理已过，第二定理只剩该转换；retouch 等重编。
+
+- 05:55：**三个新 GREEN：`Mzk1Ob33B5IndexConsumerActual` 23:27:07（B5Index 完整消费链收口）、`Mzk1P2QHatNormAgreementUnconditionalActual` 23:27:06（A2 精确条件等价）、`Mzk1Ind1AlgebraicUnitQuotientActual` 23:26:17（β_a 代数核心）**。已派 mainline 报 B5Index 消费点并接 Cor312/3.12 链；abc 更新 ledger；hull 用 root scaling 收 Correspondence；qpilot §8；stepxi 连续引理/单位识别；shehdd Gamma。gate §20.24 已写。
