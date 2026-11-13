@@ -1641,3 +1641,5 @@
 - 22:40：mainline `Mzk1P1IdealMapFinsetProdActual` 落盘：`ideal_map_finset_prod`（Finset 归纳 + map_mul/map_top）+ 单 binder 形式；下一步用 finite support 展开 finprod 套 ② + prime-power/mul ⇒ general `IdealMapPowerStatement`。#8 保持。
 
 - 22:45：shehdd 按 21:25 log 修 GammaPGroup 三处（`hu.symm`、`rw [hz, ← hlog, smul_eq_mul, hfac]`、`Quotient.inductionOn` 前先 `let gamma' : LogShellIntegerQuotient := gamma`），retouch 05:31Z，等首错；绿后发 lattice `card_gamma_eq_pow_actual`。
+
+- 22:50：lattice 写 `Mzk1IutIVProp14ActualHBridgeActual`（actualGammaH := Classical.choose card_gamma_eq_pow_actual）；提醒：`card_gamma_eq_pow_actual` 所在 GammaPGroup 仍 FAIL（等 shehdd 05:31 retouch 重编），official 前不算接入；μΛ=p^h μO 仍需接 `measure_integralLogShell_eq_index_mul`。
