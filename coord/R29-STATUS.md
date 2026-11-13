@@ -604,3 +604,5 @@
 - 19:08：stage4 SNFMatrixDiag green 确认；U/W 真换基短路线已给（U=bM.toMatrix S、W=S.toMatrix bN、Basis.toMatrix_mul_toMatrix + mul_assoc 组装 U*diag*W）；Volume3 待重编。
 
 - 19:09：hull InputAlignmentNamed DONE 10:54:52Z（HEq 字段 + transport 显式 universe）；Composite 已 retouch（Named olean 已就绪）。
+
+- 19:10：stage4 SNFMatrixUW（basis_toMatrix_mul_linearMap_toMatrix_mul_basis_toMatrix：U*diag*W = 标准基矩阵 + det unit）入队（390 项）。
