@@ -1508,3 +1508,5 @@
 - 15:32：桥 2 RHS 分支剩余错：`(fun x => ↑x) y ∈ ↑(Submodule.map …)`，需先 `hfun : (fun x => ↑x) = ⇑(Algebra.linearMap …)`（rfl 或 funext+Algebra.linearMap_apply），再 `change … ∈ Submodule.map …`、`rw [Submodule.mem_map]`、`exact ⟨y,hy,rfl⟩`。已发 mainline；TauCeti port 正式冻结（部分移植+class-B）。
 
 - 15:35：采纳 `coord/P7-SIX-GAPS-ROUTES-20261114.md` 修正路线（已写 P7 §20.11）：**A1 改格比较**（J=π_F^{⌈m/e⌉}O_F、Q⊆J、determinant 备选，不再要求 BlockProductAlignmentData 同构）；**A4 保留 f/e**（N(v)=p^{f_v} 对齐，不依赖 residue-one）；**A5 补原文局部实现**（S3139 已有 quotient/mutation/标准实数模型；真实 log-shell/LGP/Ind1-3）；**A6 1/3 三平移草案**（hull 实现中）；**A7 exact obstruction、改 p-free 乘积**（`coord/A7-BAD-MODULI-VERDICT.md`）；**A8 改 (b,label) 评价族**（不追 Nonempty map）。
+
+- 15:40：**watchdog 卡住已解**：`Mzk1P1R21BridgeMaxIdealViaSpanActual` 编译从 03:52 挂到 04:05（12min，疑似 simp/elab 循环），杀掉 elan/lake/lean 子进程后 watchdog 恢复正常（20:05:16 新 batch START）。stepxi A8 新 proof `Mzk1A8EvalFamilyActual`（evalTheta/evalTheta_eq_p2Block/weightedThetaLogSum/perm 不变性）+ `coord/A8-LABEL-PROBE.md`；lattice `PFreeUnitMass`/`SaturationIndexData`（p-free unitMass + A1 饱和指数接口）。已唤醒 abc/lattice。
