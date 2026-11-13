@@ -1560,3 +1560,5 @@
 - 18:05：hull #1 语义修正定稿：`nativeThetaReadout` = 单因子 local shell raw Haar，不是 paper theta；paper theta 侧用 `s1915ClosedForm = 1 + Σ d_b log r_b`。已让 hull 写 `NativeThetaPaperReadoutGap`：明确 q 全局/逐 b，逐 b `log‖q_b‖≤log r_b`（`c0QHat=λ·c`），把 `1+Σ(d_b−1)log r_b` 的净符号作为 3.12 真正内容，输出 `nativeQReadoutGlobal ≤ s1915ClosedForm`（或精确 det/degree 因子）。
 
 - 18:10：**用户提醒“似曾相识”**：hull 的 `paperNetSlack = Σ(d_b−1)(−log r_b) ≤ 1` 是“把 3.12 化数值常数不等式”的旧套路（依赖任意实数 `qVFamNormalizedCoefficient`、`+1` 是 s1902NormalizedHaar offset，不是 paper normalization）。已让 hull 暂停 `NativeThetaPaperReadout` slack 路线，回到 paper 定义：`qPilotLogVolumeReading=-|log q|` vs `−|log Θ|` 的 normalized hull 读数，先核 `s1915A0`/`s1915ClosedForm`/`s1902LogVolume` 与 paper `1/(2l)`/procession 归一化的精确对应；若差定义 offset 就改读数定义，不得加 slack 条件凑。
+
+- 18:15：abc 定位 `P2QHatNormInstanceAgreement` = norm-instance coherence（`NormalizedCompletion` vs `CommonPrimeCompletion` 的 inferInstanceAs norm；`isometry_commonPrimeCompletionRingEquiv` rfl 只给 dist），已让其写 `Mzk1P2NormalizedCompletionNormCoherenceActual`；若 rfl/Isometry 桥成立则 P2 可无条件化，再认领 IdealMapPower。mainline ContractFieldsActual 20:46:51 在编；lattice LatticeSaturationIndex 20:47:25 START。
