@@ -736,3 +736,5 @@
 - 20:14：按用户要求检查并刷新 `coord/P7-GAP-ATTACK-PLAN.md` 顶部表：#1 OPEN/PARTIAL（路线 A 球质量消除，BallMassFormula 在编）、#2 PARTIAL（FLT Equiv/Cofinite green，TopologicalSpace/FiniteAdeleRing 重编+IQFiniteAdeleRestricted 在编）、#3 CONDITIONAL（Ob33 实际 detDegree green）、#4 PARTIAL、#5 PARTIAL、#6 PARTIAL（D 右端投影在编）、#7 PARTIAL（C3BlockMeasure green，B2 在编）、#8 CONDITIONAL ASSEMBLY、#9 CONDITIONAL(C0=1)、#10 CONDITIONAL/PARTIAL；A/B/C 路线与 condition-realization 表保留。
 
 - 20:20：FLT TopologicalSpace 缺 `singleAddMonoidHom`（Mathlib 无）——已用 `RestrictedProduct.single B j` 手写该 AddMonoidHom（toFun/map_zero/map_add）；retouch。mainline B#3 第 3 步 API 入口（FractionalIdeal.count + uniformizer）已定位。
+
+- 20:25：**#2 pivot**：Mathlib 自带 `IsDedekindDomain.FiniteAdeleRing R K := Πʳ v, [v.adicCompletion K, v.adicCompletionIntegers K]`（RingTheory/DedekindDomain/FiniteAdeleRing.lean:94），与 qpilot IQFiniteAdeleRestricted 载体同形 ⇒ #2 可 rfl/Equiv.refl 直接构造，不需 FLT backport 链（TopologicalSpace 手写 singleAddMonoidHom 不再阻塞 #2）。
