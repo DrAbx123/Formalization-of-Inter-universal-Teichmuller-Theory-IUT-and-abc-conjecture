@@ -1571,3 +1571,5 @@
 - 18:40：**用户要求按 `coord/P7-GAP-ATTACK-PLAN.md` 路线一执行**（不是模型/包裹比较）。已写 P7 §20.14：停止用 `PaperLevelXiFTargetProofActual`/`BadPlaceProcessionNormalizedComparison`/`Paper312Comparison` 当 #1（root hull 系数 c_norm/(2l)、包含由 cRoot≤cNorm 直接给出=模型；审计 :687/:819 已警告）。hull 改回 §1 路线一第一检查点：一个实际 (p,tuple,label) 上写 (R1.2) `g_a^q=Σ c_{ia}g_i^θ`、证整性 ⇒ q 格⊆theta hull，展示源 q/theta/落点/权重四来源；供体 RouteC0/V2、A1LatticeInverse/Compare、P2LabelBlockComplete、P2MultiIndexLanding。
 
 - 18:55：新 green：`Mzk1P2NormalizedCompletionNormCoherenceActual`（20:53:44，A2 norm coherence）、`Mzk1A5CapsulePositionActual`（20:53:46）、`Mzk1LatticeSaturationIndexActual`（20:54:32）、**`Mzk1P7ContractFieldsActualActual`（20:54:35，ContractFieldsActual）**。首错：SaturationBasesData 缺 `DecidableEq D.ι`（已发 lattice 修）；Order `Nontrivial ↥(ofClass v).valueGroup`（已发 qpilot 精确 haveI）。hull 已按计划 §1 写 `Mzk1A1SourceGeneratorExpansionActual`（四来源齐）。
+
+- 19:00：lattice 确认 `Mzk1LatticeSaturationIndexActual` green；`SaturationBasesData` 加 `[Fintype D.ι] [DecidableEq D.ι]` binder 修 det 实例；A1SaturationBases 依赖 retouch。已让 stage4 准备实际 K/F 整基 b₁/b₂ 填 `SaturationBasesData` 接 A1.6。
