@@ -934,3 +934,5 @@
 - 02:52：**#4 production GREEN**（stepxi 13:19:40Z，54s，ole 83,552B：C3 实际 kummer/rootChange/thetaPacket/qUnit/tensorUnit/tensorLanding 候选源 rfl；MultiradialProductionMissing 无 inhabitant；finite Q(i)-at-5 与 C3 无 map 桥接缺口）。stage4 Weight 建议删 p-scaling 定理（Set smul 实例 local，green 文件已有；只留 (a)(b)）。lattice BlockEquivData 首错（:27 Invalid argument name l、:38 structure 连带）。
 
 - 03:00：qpilot FractionalCountNumDen（count_eq_count_num_sub_count_den：用 den_mul_self_eq_num'+spanSingleton_inv+count_well_defined）入队（482 项）。relay：abc RowsBridge :48 set_option 位置 + :61 whnf timeout（native_decide/逐行分拆）；mainline RelativeDetLogExpansion :85 unsolved goals、CountLocalValuationBridge :69 同类。
+
+- 03:10：**Weight GREEN**（stage4 13:22:49Z，56s——#7 (a)(b) DONE）；**CountLocalValuationBridge DONE 13:24:42Z（33s）**、**RelativeDetLogExpansion DONE 13:25:05Z（55s）**（mainline：② 桥+① 展开+③ arch 汇总，B5 汇总条件定理）；**FractionalCountNumDen DONE 13:26:56Z（26s）**（qpilot count=num−den）。已派 mainline 用 qpilot 两 fractional 文件替换 FractionalLogVolumeExpansion 输入并写 hsub Summable 支撑。
