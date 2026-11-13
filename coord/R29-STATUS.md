@@ -700,3 +700,5 @@
 - 19:52：stepxi missing7 行2/7 构造（P7MissingRowsWitness）入队（426 项）；Equiv change 改 beta-reduced 直接 if 形式 + rw。
 
 - 19:55：Equiv right_inv 现只需 `change` + `rw [dif_neg hi]`（后续 hsub/congrArg 报 No goals ⇒ 目标已闭合）；已删多余两行并 retouch。
+
+- 19:45（晚）：用户贴出 P7-GAP-ATTACK-PLAN 追加的 A/B/C 三路线（root 单线程复核）。Lead 已按路线重派 8 lane：A→abc（S1915 精确球质量接线、放弃错误 ceil）、B#2→qpilot、B#3/#8→mainline+shehdd、B#5/#9→hull（绑定 rawV 到真实 paper V）、B#6/#7→hull/stage4、B#10→lattice、C0→stepxi（根侧 q 格 C1-C5）。文档已附执行状态。
