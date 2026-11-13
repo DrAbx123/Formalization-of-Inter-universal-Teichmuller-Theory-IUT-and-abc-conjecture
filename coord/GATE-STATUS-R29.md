@@ -595,3 +595,16 @@ red 清单（lane 自修）：`Mzk1P2ThetaAllowedImageActual`、`Mzk1P1DVRPrinci
 | missing | 1 |
 
 red：`Mzk1P1DVRPrincipalLemmaActual`、`Mzk1P1LocalizedFractionalIdealActual`（shehdd 修 `IsScalarTower` import，修法已给：`import Mathlib.RingTheory.DedekindDomain.AdicValuation` / `adicCompletion.instIsScalarTower'` via inferInstanceAs，待重编）、`Mzk1P3TensorCoreScalingConsistencyActual`（stage4 新文件）。
+
+## §40 mega-batch 首轮快照（2026-11-14 03:57 CST，Lead）
+
+| 分类 | 数量 |
+|---|---:|
+| extra-targets | **784** |
+| clean DONE | **606** |
+| red FAIL | **59** |
+| in-progress | 16 |
+| ole-only | 20 |
+| missing olean（新入队未跑） | 83 |
+
+判读：red/missing 主要是 8 lane ×20 mega-batch 的首轮依赖未编完（`object file ... does not exist`）；lane 按依赖顺序 retouch 后转绿，不需要改证明。继续要求小波次（5–8 文件/轮）、修红后立即 retouch、绿接绿。
