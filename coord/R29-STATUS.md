@@ -656,3 +656,5 @@
 - 20:14：stepxi #4 MULTIRADIAL：实际 xi-e/xi-f production 仍缺；但找到并复用有限版 production（MultiradialAlgorithmReduction.finiteMultiradialAlgorithmDischarge，仅 finite Q(i)-at-5 carrier）；P7MultiradialCarrier DONE（19:13:12Z，axioms trio）；P7-MULTIRADIAL-GAP 补 finite production 与缺失型别；GAP 保持 OPEN（P7 §13 row#4 已更新）。
 
 - 20:17：**#10 NORM-ARCH-C-K green 条件版**（lattice NormArchCK DONE 11:13:09Z，olean 93,784B，archCK=1/[K:Q]、rfl 因子形式、heightWeight 识别；P7 §13 → CONDITIONAL/PARTIAL）；**#9 HULL-UB**：HullUBPaperBox DONE 11:12:12Z（actual normalizedLog≤paperBox）+ HullUBP7Status DONE 11:10:22Z ⇒ P7 §13 → CONDITIONAL；Dictionary retouch。
+
+- 20:20：FLT RestrictedProduct/Equiv :620 改用 `dite_eq_iff` + `Or.inr ⟨i.2, rfl⟩`（abc 精确定位：目标为依赖 if 的 dite，dif_neg 不匹配）；Equiv+TopologicalSpace retouch。
