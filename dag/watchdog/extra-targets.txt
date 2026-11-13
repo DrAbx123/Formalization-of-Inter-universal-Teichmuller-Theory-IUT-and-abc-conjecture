@@ -476,3 +476,5 @@ tmp/sheaf/xif/paper/Mzk1B5LocalGlobalProductFormulaActual.lean
 tmp/sheaf/xif/paper/Mzk1B5CountLocalValuationBridgeActual.lean
 tmp/sheaf/xif/paper/Mzk1B5RelativeDetLogExpansionActual.lean
 tmp/sheaf/xif/paper/Mzk1B5FractionalAbsNormFormulaActual.lean
+tmp/sheaf/xif/paper/Mzk1P7ContractRowsBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1C3S1902BlockEquivDataActual.lean
