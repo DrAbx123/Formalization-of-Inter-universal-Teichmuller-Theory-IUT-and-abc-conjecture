@@ -658,3 +658,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`theta_root_log` 可证（非新源缺口）**：`S201RootThetaNormLActual.rootNormedElementNorm_pow_twoL`（`‖rootNormedElement‖^(2l)=‖sourceRootQUnit‖`）+ `rootNormedThetaValueInL_norm` + `rootNormedLogVolume=log‖rootNormedUnit‖` ⇒ `rootNormedLogVolume=(1/(2l))log‖(qVFamily T b).q‖`（normalized），再用 norm-instance agreement 接 `qVFamNormalizedNorm`。
 - **bridge 修正字段**：`theta_root_log`（可证）、`degree_tower`（`s1915LocalDegree = localCompletionDegree × local factor`，用 `Module.finrank_mul_finrank`）、`a1_delta_paper`（用 a1 定义展开）。
 - `Mzk1P1PaperSumsToS3137BridgeActual` 将按此重写；旧错误字段不保留。
+
+
+### 20.38 theta_root_log 正式由 S709/S201 供体给出（mainline，2026-11-15 00:25）
+- **新文件 `Mzk1P1RootRadiusBridgeActual`（queue）**：
+  - `log_rootImageRadius_eq_neg_coefficient_mul_logP : log(rootImageRadius)=-(c_norm/(2l))·log P`（`S709.rootImageRadius_eq_rootNorm` + `rootNormedElementNorm_eq_p_rpow` + `Real.log_rpow`）；
+  - `rootNormedLogVolume_eq_inv_twoL_mul_log_norm : rootNormedLogVolume = (1/(2l))·log‖(qVFamily T b).q‖`（`S201.rootNormedElementNorm_pow_twoL` + `Real.log_pow`）。
+- ⇒ `theta_root_log` **不再是源输入**；`PaperToS3137BridgeData` 的旧 `radius_log` 错误字段由这两条替换。
+- **bridge 剩余**：`weight_conversion`（degree tower：`s1915LocalDegree = localCompletionDegree × rootDegree`，`Module.finrank_mul_finrank`；并澄清 `nativeBadLocalWeight=1/?`）、`a1_delta_paper`（`a1SignedTerm_eq_log_radius_sub_delta` + 新 log r 公式展开）。
+- **#1**：S3137 reading form 的 bridge 进一步缩小；仍显式依赖 S45 `PaperSourceCorrectionFreeFields` 与 norm-instance agreement。
