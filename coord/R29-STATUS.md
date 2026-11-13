@@ -1687,3 +1687,5 @@
 - 01:00：shehdd Gamma `:47` 改为 `Multiplicative.ofAdd 0` + `← ofAdd_nsmul`/`← ofAdd_zero` + `eq_zero_iff`；lattice A1Padic 改 `ι : Type` 且 `[Module ℤ_[p] (rootNormedExtension)]` 作字段输入（交 stage4/L-side），不再硬造 compHom。
 
 - 01:05：mainline finprodExpand 最终修法：`ideal_eq_finset_prod_maxPowDividing := (factorization hI).symm.trans (finprod_eq_prod …)`（无 tactic）+ 假设形式 `ideal_map_eq_finset_prod_map_of_eq`（RHS 不含 I，rw 安全），原定理作推论；等 finprodExpand/generalProof/uniformizerPowerSpan 编绿 ⇒ IdealLocalizedCount 三条件齐。
+
+- 01:15：**线 2 里程碑：`Mzk1IutIVProp14iiiBoxFormalActual` GREEN 22:14:39Z（53s）**——`prop14iii_box_formal` 给出 IUT IV Prop 1.4(iii) 第二上界 (11)：`μ_log(S) ≤ (−ord_p ϖ+Σ ord_p δ_i+1)log p+Σ_{i∈I*}(3+log e_i)`，复用绿色 `FinitePlaceStepVAssembly.arithmeticTuple_stepV_normalizedLogVolume_le_paperBound`，不 import Iut/TFG。线 2 的 Box 入口正式落地；下一步 consumer 接到 s1915 根 hull/P0 readout + 记录引用；port 冻结 7/10。
