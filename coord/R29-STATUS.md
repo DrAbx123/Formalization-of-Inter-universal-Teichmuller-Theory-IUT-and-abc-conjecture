@@ -1733,3 +1733,5 @@
 - 03:00：shehdd 按精确骨架入队 `IutIVProp14TorsionCountActual`（纯 Mathlib，无 project import）：`torsion_card_eq_of_congruenceCard` 完整用 hdecomp/hC/hGamma/hq/hcop + `hcop.pow h 1`/`dvd_of_dvd_mul_left`/`pow_dvd_pow_iff_le_right`/`pow_sub_mul_pow`/`Nat.add_sub_of_le`；等机检，首错换名。Gamma 第 8 次修等重编。
 
 - 03:05：`IutIVProp14TorsionCountActual` 条件版已入队（纯 Mathlib），按骨架完整写；Gamma 第 8 次修等重编；等这两者后 torsion actual + P14ii actual。
+
+- 03:10：qpilot BoxReadout 抽象化（`BoxReadout.a0/bridge` + `box_readout_le` + `s1902CarrierBridgeMissing`），已让加 `boxReadoutOfS1915`/`s1915A0_le_box_of_bridge`；lattice 读 `measure_integralLogShell_eq_index_mul` 写 `mu_lambda_eq_index_mul`；shehdd torsion 等机检 + 推实际 #C。
