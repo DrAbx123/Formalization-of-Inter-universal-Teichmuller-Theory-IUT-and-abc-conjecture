@@ -1414,3 +1414,5 @@
 - 11:20：用户提出 `log f ≥ 4/(l+5)` 眼熟——解释：来自 `paperBox=((l+5)/4)(logd+logf)`（f=cond），在 logd=0 时等价 paperBox≥1；因 l≥5 ⇒ 4/(l+5)≤0.4<log2，故 **cond≥2（且 disc≥1）⇒ paperBox≥(5/2)log2>1，C0=0 自动**，不需要 disc≥2。已派 hull 写 `box_ge_one_of_cond_ge_two`（推广旧的 disc≥2∧cond≥1 定理），把 #9 general 缩到唯一单点 `disc=1 ∧ cond=1`（paperBox=0，C0=0 不可能，需 C0=1/paper 排除）。
 
 - 11:28：用户要求唤醒。hull #9 新写 `Mzk1HullUBC0CondTwoActual`：`box_ge_one_of_cond_ge_two`（disc≥1∧cond≥2⇒paperBox≥1）、`paperV_le_paperBox_zero_of_cond_ge_two`、`disc_one_cond_one_box_zero`；#9 general 只剩单点 disc=1∧cond=1（paperBox=0，C0=0 不可能）。#1 缺口② QHatNormExponent/① RootCoordEquiv/MulQHat 修首错待编。已唤醒 mainline/qpilot/shehdd/lattice/stepxi 并派下一波。
+
+- 11:34：**诊断 46-FAIL 波次根因=批量 import 脚本把无关文件/自身 import 加入，形成自导入+循环 ⇒ 'has already been declared'**。受影响 4+ 文件：`Mzk1P1LocalGeneratorFromIsPrincipalActual`、`Mzk1P1PlaceVolumeSignActual`、`Mzk1B5AssemblyNoHproductAttemptActual`、`Mzk1Ob33B5AssemblyActual`、`Mzk1B5CountLocalValuationBridgeActual`、`Mzk1Ob33B5CountBridgeActual`（import 图里互相 import/自导入）。已按 owner 分派精确剪枝清单（mainline 2 文件、shehdd 4 文件），改后 retouch。这批红不是证明错误。
