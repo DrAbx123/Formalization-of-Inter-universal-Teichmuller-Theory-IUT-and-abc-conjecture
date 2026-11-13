@@ -161,3 +161,10 @@
 - 导出：`paperDonors : NativeOriginalInputDonors P.X`、`paperOriginalInput`、`paperOriginalInput_nonempty`、`paperBinding`、`paper_sourceData_arithmetic`（rfl）、`paperOriginalInput_initial`。
 - 比较接口：`PaperComparisonInput`（q_read_eq/theta_read_eq）+ `LPaperInstance_of_paperComparison` GREEN。
 - 剩余三个精确数学桥：① q 值识别（concreteQCandidate ↔ qVFamily + place transport）；② theta 归一化（thetaReadActual=nativeThetaReadout，Haar/landing）；③ V-index 同一性（FinitePrimePlace 2 7 vs NativePlaces）。
+
+## P2 native/arch alignment 里程碑（qpilot，3/3 GREEN，2026-11-14 00:46）
+
+- `Mzk1P2NativeBlockAlignmentActual`（37,624B）：`p2NativeBlock = NativeTensorBlock qVFamTensorPlaces qVFamTensorTuple`；`= qVFamTensorBlock`（rfl）；`p2NativeBlock_logVolume_eq_nativeThetaReadout`（rfl）；`p2NativeBlockPacket`；`p2NativeProductBlockMissing`（tensor of base completions ↔ Pi root extensions 无 canonical isometry/log-volume 传输）。
+- `Mzk1P2ArchWeightAlignmentActual`（60,816B）：`p2ArchMetric_eq_neg_archCK_mul_archLog`；`p2ArchMetric_eq_archCK_mul_p2R13Exact_of_logNorm_eq`（条件）；`p2ArchMetric_nonneg_of_logNorm_eq`；`p2ArchWeightAlignmentMissing`（缺 global element 的 arch log = p2WeightedDetLog）。
+- `Mzk1P2R12WeightBridgeActual`（56,984B）：`p2R12WeightTerm = s1915LocalDegree * log‖p2Coefficient‖`；`p2R12WeightSum_eq_p2WeightedDetLog`；`p2R12WeightTerm/Sum_nonpos`；`p2R12_qhat_expansion`；`p2R12WeightBridgeMissing`（P2QNativeReadingGap/arch 对齐/tensor↔product isometry）。
+- 路线二剩余单一缺失：global arch log ↔ p2WeightedDetLog；tensor↔product 无 canonical isometry（可用 B2 域分解等价 + Haar det 因子路线）。

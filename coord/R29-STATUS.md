@@ -1169,3 +1169,5 @@
 - 00:42：**P0.5d 里程碑 GREEN**：`Mzk1P0PaperInputActual` DONE 15:57:24Z（63s）——`P05PaperInput`（SourceCompletion+D4D9Supply+N8NativeInput+hX+index_equiv+PlaceBinding，全部论文输入）→ donors/OriginalInput/binding；`LPaperInstance_of_paperComparison` green。剩三桥：q 值识别、theta 归一化、V-index 同一性。已派 hull P0.6 攻三桥。
 
 - 00:44：LFI 仍红（`:62 failed to synthesize` tower + :67/:68 rw 同根因）；已给 shehdd 手动 tower 实例法（constructor; intro x y z; simp only [Algebra.smul_def]; apply mul_assoc，同 Mathlib AdicValuation:970）+ import。唤醒 mainline：P1 最后一段 count↔valuation 大包（intValuation_eq_exp_neg_multiplicity + valuation_of_algebraMap，目标 R21Bridge ≤1 精确缺失）。新 green：P2LabelBlockComplete（abc 15:54:42Z，87s）、P3NetGainP2（stage4 15:57:24Z）。
+
+- 00:46：**P2 native/arch alignment 里程碑（qpilot 3/3 green）**：P2NativeBlockAlignment（p2NativeBlock=qVFamTensorBlock rfl；logVolume=nativeThetaReadout；缺 tensor↔product isometry）、P2ArchWeightAlignment（archMetric=−C_K*archLog；条件 archMetric=C_K*p2R13Exact；缺 global element arch log）、P2R12WeightBridge（权重项=deg*log‖coeff‖；weightSum=p2WeightedDetLog；缺 P2QNativeReadingGap/arch 对齐/tensor↔product isometry）。已给 qpilot 方向：B2 域分解 + Haar det 因子；B5FullProductFormula arch 展开。
