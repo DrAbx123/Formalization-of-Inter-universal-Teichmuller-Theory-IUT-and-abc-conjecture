@@ -790,3 +790,5 @@
 - 21:53：stepxi C0GlobalIdele（c0GlobalFinite bad=q_v 否则 1、arch=1、finite_bad/good/arch_one）入队（453 项）；idele height/readout 保持精确 GAP。
 
 - 21:58：hull ThetaVGeneralUnconditional 首错 = qVFamTensorP 未导入（定义在 QVFamTensorCoefficientActual:51）已 relay；lattice carrier align 降为 GAP 记录（CommonPrimeCompletion def vs LocalField carrier，需显式 Set align），保留三 GAP；stage4 B2 拆主体。
+
+- 22:00：**#5 THETA-V general-k DISCHARGED**：`Mzk1ThetaVGeneralUnconditionalActual` DONE 12:24:25Z（67s）——rawV=scaledClosedFormR k、normV=normalizedLog(scaledThetaHull k)、scale=1/offset=1、qLogSum_nonneg、general-k C0=1；无 closed-form 命名假设。P7 plan #5 更新。
