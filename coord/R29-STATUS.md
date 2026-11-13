@@ -1364,3 +1364,5 @@
 - 09:02：mainline MO 更正落盘（directive 更正节 + Mzk1MestreUseWiring rows/docstring 改为 normalized surrogate，不声称原文；判定表结论不变）。第二轮外部文献搜索已补 `EXTERNAL-CITATIONS-20261114.md` §8/§9：Serre mass formula、Faltings/Silverman、Néron、Petersson、Artin–Whaples；IUT 3.12 相关 Zenodo 分析仅作语境（不可作为 class-B 输入）。结论：无外部定理直接替代 signed Cor312；唯一可消费外部结果=TauCeti Haar 缩放律。
 
 - 09:06：新 green：`Mzk1PrimeConductorABCActual` 18:13:18Z（→ MestreUseWiring 上游就绪）；P2 波次 5 green：`P2WeightedSumFull`（17:58? 18:11:59Z，p2WeightedSum_RExact/p2WeightedSum_coeff）、`P2UnitNormAction`（p2Unit_mul_mem_unitBall/integers）、`P2UnitOperation`（p2UnitOperation_norm_one）、`P2ThetaValueIdentification`、`P2LabelWeight`（p2LabelWeight_eq_finrank）；另 `P2NormGenerator`、`P2R13MassFinal`、`P3ExponentTelescope`、`P2MultiIndexLanding`、`P2ThetaReadoutBridge`（18:11–18:12Z）green。abc 正在修 QNativeReadingCorrected（符号已改 -log‖qhat‖=localLogMagnitude、norm 走 ambient+whnf timeout 处理）。
+
+- 09:12：发现机械错误：shehdd 的 5 个文件出现 `import import ` 双前缀（B5FiniteIndexExpansionIff/C17ResidueOneBothSides/C17ResNormDegreeGapOfResidueOne/P1GeneratorValuationSignIff/P1PlaceVolumeZero，共 12 处），已发修法；Mzk1Ob33B5IndexActual 文件内 PlaceSNFData 重复定义待删重复。P1CountIdealMapPower 仅等桥 1 olean。
