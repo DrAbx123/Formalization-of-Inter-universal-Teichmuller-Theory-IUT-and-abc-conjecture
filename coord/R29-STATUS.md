@@ -1819,3 +1819,5 @@
 - 06:45：**mainline 审计结论：`qVFamNormRatio=1` 不是 SourceNativeInitialThetaData 推出，而是原文 S45 `PaperSourceCorrectionFreeFields` 条件**（`paperXiFTargetStrict_of_fields` + `paperNormalizedComparison_exact_of_strict`）。因此 #1 的 Q≤Θ 不能无条件写；正确形式=(a) `PaperSourceCorrectionFreeFields T → paperQ≤theta` 或 (b) correction 形式 `paperQ≤theta−Σw log ratio`。已派 mainline 写显式条件版最终定理；hull 保留 correction + 条件版；abc 只读核对 `paperNormalized*` 定义与我们的 normalizedLog 的 bridge。gate §20.31 已写。
 
 - 06:50：abc 核对 #1：点态符号一致 `qhatLogReadout−paperQSignedReadout=log ratio`；但**全局权重不一致**——hull `nativeBadLocalWeight=1/f`，P2 `d_b=finrank=[L:Q_p]`；最终 #1 必须按 paper sums 权重选一并显式换算，不得混用。已派 mainline 报告 paper sums 权重定义、hull 拆点态/带权重全局式/换算、abc 写权重换算或记录不可混用。gate §20.32 已写。
+
+- 06:55：mainline 落盘 #1 条件版 `Mzk1P1NormalizedSourceConditionalActual`（`PaperSourceCorrectionFreeFields T → paperNormalizedThetaSum≤paperNormalizedQPilotSum`；S45 条件 docstring）。并确认 paper sums 权重=`nativeBadLocalWeight=1/f`、log 对象=`qVFamTensorP`；hull 用 `d_b`+`log(rootImageRadius)`，**不可直接等同**。已派 mainline/hull 写 bridge（1/f vs d_b、log 字典、coefficient degree factor、a1LocalQLog 归一化），S3137 读数形式暂不宣称。gate §20.33 已写。

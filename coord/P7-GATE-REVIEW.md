@@ -615,3 +615,15 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - 点态可互译；**全局 `Σw log ratio` 与 `Σ d_b(...)` 不是同一量**，最终 #1 必须按 paper sums 的实际权重选一个并显式换算，禁止混用。
 - hull 文件 `Mzk1P0QThetaReadoutNormCorrectionActual` 尚无 DONE，未验收；需拆点态/带权重全局式/权重换算。
 - **#1 状态**：correction 形式成立需显式权重；条件版依赖 S45 `PaperSourceCorrectionFreeFields`；两者都不能混用权重。
+
+
+### 20.33 paper sums 的实际权重与 #1 桥接缺口（mainline，2026-11-14 23:55）
+- **paper 两 sum**（`BadPlacePaperNormalizedComparisonActual:92/98`）：
+  - `paperNormalizedQPilotSum := Σ_b nativeBadLocalWeight T b * (paperNormalizedCoefficient T b * log(qVFamTensorP T b))`；
+  - `paperNormalizedThetaSum := Σ_b nativeBadLocalWeight T b * ((paperNormalizedCoefficient T b / (2*l.value)) * log(qVFamTensorP T b))`；
+  - 权重 `nativeBadLocalWeight = localNormalizedWeight = (localCompletionDegree)⁻¹ = 1/f`（`nativeBadLocalWeight_eq_inv`）；
+  - `paperNormalizedCoefficient = order * (log(residueNormBase P)/log P)`（degree 因子在 coefficient 内）。
+- **hull closed form**：`s1915ClosedForm = 1 + Σ_b s1915LocalDegree b * log(rootImageRadius b)`，`s1915LocalDegree = finrank_ℚp(rootNormedExtension) = d_b`。
+- **结论**：paper sums 与 hull product inequality **不可直接等同**：权重 1/f vs d_b、对数对象 `log qVFamTensorP` vs `log rootImageRadius` 均不同；需显式 bridge（`nativeBadLocalWeight_eq_inv` + coefficient degree-factor + log 字典 + a1LocalQLog 归一化）。
+- **新文件** `Mzk1P1NormalizedSourceConditionalActual`（queued）：`paperNormalizedComparison_of_sourceFields (S : PaperSourceCorrectionFreeFields T) : paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T`；docstring 标 S45 条件；S3137 读数形式暂不宣称。
+- **#1 状态**：已到 paper-normalized 条件版（S45），但 S3137 reading form 仍缺权重/对数 bridge。
