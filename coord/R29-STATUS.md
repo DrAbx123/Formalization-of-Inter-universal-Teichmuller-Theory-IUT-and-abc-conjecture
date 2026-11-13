@@ -1122,3 +1122,5 @@
 - 23:28：**P0 里程碑达成（hull 报告）**：native 输入→core→readout/landing 端到端链 green（6 文件全 green；S3137Chain 15:23:56Z 7↔7 字段对照；NativeEquiv oldC3ImpossibleFields 3/migratableFields 5）；`NativeComparison` 仍 Prop OPEN；L-side 归 stepxi。已写入 tracker/plan/audit。
 
 - 23:32：P0 里程碑后派 P0.5 大包（hull 自主）：NativeComparison 从 Prop → 可证或单一精确缺失；对齐 native readout 与 S3137/L-side 读数、映射到 paper q≤θ、接 P2 R1.2/R1.3 与 qpilot det 供体。
+
+- 23:36：shehdd P1/B5 大包全 green，P1 线归约到唯一缺失 `MissingLocalizedIsPrincipal I v`（inferInstance 失败，Mathlib 无 DVR/localization principal 实例）。已派 P1 收口大包：路线 A 局部化 f.g.+DVR IsPrincipalIdealRing（TFAE Basic:115）；路线 B 因子分解构造 generator；都卡则收成单一新缺失引理。

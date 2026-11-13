@@ -316,3 +316,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **C3-free（有效）**：#2 IQ（Mathlib FiniteAdeleRing）；#3 的 B5 数学（FractionalIdeal product formula/count/finsum/relativeDetLog/norm 桥）；#5 ThetaV general-k（T-only）；#9 HullUB（T-only）；#10 的 NormArchCK/Consumer/AbcHook、UnitMassCitizen、NativeFinitePlaceDictionary；P3 tensor core（p/places/tuple/有限 E_i）。
 - **C3-typed（vacuous，需 re-type 到 P0 native / P3 core）**：#1 比较链（HullQDictionary、C3S1902 BallMass/LowerBound、S1915Comparison）；#3 的 Ob33 arithmetic-degree 接口；#4 production 候选源；#6 C3D key map；#7 表面（ThetaDeg/Cancel/Weight/C3BlockMeasure；数学内容经 P3 core 有效）；#8 ContractMap/MarginConsumer；#10 的 C3S1902BlockEquivData/HaarScaleData。
 - **纪律**：旧 C3 green 只作数学供体/历史记录；#1 不再宣称“条件版收口”作为目标进展；P7 仍 **NOT PASSED**。P0–P4（见 `P7-GAP-ATTACK-PLAN` §4）是当前唯一有效路线。
+
+### 18.5 P1 批量 6 文件 + instance 尝试全部 GREEN（2026-11-13 23:27）
+
+- `Mzk1P1LocalizedIsPrincipalActual`：`localizedLine_isPrincipal_of_span`；精确缺失 `MissingLocalizedIsPrincipal`。
+- `Mzk1P1LocalGeneratorFromIsPrincipalActual`：`localGeneratorDataOfIsPrincipal`（IsPrincipal ⇒ mainline LocalGeneratorData）。
+- `Mzk1P1GeneratorNonzeroActual`：localizedLine≠⊥ ⇔ generator≠0 两个方向。
+- `Mzk1P1PlaceVolumeSignActual`：`log_residueNormBase_pos`、`placeLogVolume_pos_of_lt_one`、`placeLogVolume_neg_of_one_lt_norm`。
+- `Mzk1B5AssemblyNoHproductAttemptActual`：`B5ProductFormulaBridge` 命名桥 + 条件装配；`MissingB5ProductFormulaBridge` 精确 GAP。
+- `Mzk1Ob33B5RowsFinalActual`：12 行 B5 ② 状态表。
+- `Mzk1P1LocalizedIsPrincipalInstanceAttemptActual`：直接 `inferInstance` **synthInstanceFailed**，确认 `(localizedLine I v).IsPrincipal` 不能从 DVR/PID 实例自动推断；文件改为 `MissingLocalizedIsPrincipalInstance` 精确缺口。
+- 结论：P1 线已归约到唯一精确缺失 `MissingLocalizedIsPrincipal` / `MissingLocalizedIsPrincipalInstance`；其余 generator/nonzero/sign/assembly 条件链均 green。
