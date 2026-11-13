@@ -766,3 +766,5 @@
 - 21:18：lattice 按 ② 把 B3 ratio/localizedLine 桥改到 CommonPrimeCompletion（现成 ProperSpace/FiniteDimensional）重编；shehdd Ob33ArchMetric（archDetMetricWeight 用实际 archCK + principalDivisorExplicit；ArchimedeanDetMetricData 实际构造；MissingArchimedeanLineMetric 精确缺口）入队（449 项）。
 
 - 21:20：hull **C0 更正**：paper V=normalizedLog+1；C0=0 ⇔ slack:=paperBox−normalizedLog ≥ 1，而 actual bound 只给 slack≤0 ⇒ C0=0 不能由现有数据推出（e-常数 1 精确障碍）；`disc≥2/cond≥1/l≥5` 只给 paperBox≥1，不足。已重写 C0Absorption/ObstacleRows/Discharge 并 retouch 3 份；P7 §13 9b 改 exact slack obstruction。
+
+- 21:22：P7 plan #9 更新为 C0=1 CONDITIONAL + C0=0 exact slack obstruction（slack:=paperBox−normalizedLog≥1；现有 bound 只给 slack≤0；disc/cond 条件不足）。
