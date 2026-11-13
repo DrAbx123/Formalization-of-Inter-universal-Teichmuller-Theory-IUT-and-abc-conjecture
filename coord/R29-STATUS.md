@@ -906,3 +906,5 @@
 - 01:47：stage4 Weight 修复：删多余 push_cast（:54）；定理陈述改 Set.image（proof `simpa [Set.smul_set_def]`）；待重编，Cancel 随后重试。
 
 - 01:50：**qpilot product formula 实际定理**：absNormReal_eq_finprod（Ideal.finprod_heightOneSpectrum_factorization + map_finprod）+ log_absNorm_eq_sum_count_mul_log（log|I|=Σᶠ_v count_v·log|v|）——可望关 B5 汇总缺口；Mzk1B5LocalGlobalProductFormula 入队（475 项）。stepxi C0ReadoutIdentification（readout_eq_hBox 条件 + readout_eq_qPilot 精确接口，无 inhabitant）入队；c0IdeleHeight_eq_hBox_of_components green 13:02:28Z（ole 96,616B）。lattice NativeBadPrime green 13:03:48Z（ole 53,304B，单一 named input + FinitePlaceAtPrime 构造）。
+
+- 01:54：mainline B#3 全链（1–7 文件）green 汇总；剩余命名输入清单（LocalHaarScalingLaw/LocalPrincipalGenerator- CountLocalizationBridge/LocalizedLineMulLaw/参照 O+hH hO）已记录。已派 mainline 等 qpilot product formula olean 后写 relativeDetLog 的逐位展开 + relativePlaceIndex/arch 合流（不重复实现公式）。
