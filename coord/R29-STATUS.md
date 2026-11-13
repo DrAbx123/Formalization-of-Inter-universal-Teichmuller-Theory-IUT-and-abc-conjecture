@@ -1340,3 +1340,5 @@
 - 07:56：**用户口径**：MO 输入能用就用，最后形式化；不要能用但不用。已建 `coord/MESTRE-USE-DIRECTIVE.md`；派 mainline 逐项判定当前活动缺口可否消费 `MestreOesterleBound`（thetaR13Defect/NativeComparison/R21Bridge/IdealLocalizedCount/residue-one/det-Haar/arch/R37R13/blockEquiv/unitMass），能接线就写显式 hMO 小文件，不能则写精确非适用性说明。
 
 - 08:00：用户要求激活其他 lane。已唤醒 hull/qpilot/shehdd/lattice/stepxi 并派下一波大包：hull=P0.6 待编+readout/defect 界+LPaper 最终链；qpilot=matrix SNF/diagonal factor/关闭 GAP-DET-HAAR；shehdd=ideal-map power/residue-one/B5 FiniteIndexExpansion；lattice=ThetaRootCarrierHaar/unitMass/data/app；stepxi=NormalizationSign/QThetaStrict/QTheta 链/联合符号。全部 proof-only 小波次。
+
+- 08:04：shehdd B5/residue-one 波次 proof=9/status=0：B5FiniteIndexExpansionIff（arch=0 下 ↔ B5ProductFormulaBridge）、B5FiniteIndexExpansionDiagonal（实际对角 FiniteIndexExpansion 数据）、C17ResNormDegreeGapOfResidueOne、C17ResNormDegreeGapLog（两侧 log-residue ⇒ ResNormDegreeGap）、C17ResidueOneBothSides、P1PlaceVolumeZero、P1GeneratorValuationSignIff、P1R21BridgeEquivalence、P1IdealMapPowerUnit。下一波：IdealMapPower 非平凡幂 + 一般 residue-one 单点。
