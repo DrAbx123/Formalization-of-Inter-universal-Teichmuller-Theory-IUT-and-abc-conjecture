@@ -1643,3 +1643,5 @@
 - 22:45：shehdd 按 21:25 log 修 GammaPGroup 三处（`hu.symm`、`rw [hz, ← hlog, smul_eq_mul, hfac]`、`Quotient.inductionOn` 前先 `let gamma' : LogShellIntegerQuotient := gamma`），retouch 05:31Z，等首错；绿后发 lattice `card_gamma_eq_pow_actual`。
 
 - 22:50：lattice 写 `Mzk1IutIVProp14ActualHBridgeActual`（actualGammaH := Classical.choose card_gamma_eq_pow_actual）；提醒：`card_gamma_eq_pow_actual` 所在 GammaPGroup 仍 FAIL（等 shehdd 05:31 retouch 重编），official 前不算接入；μΛ=p^h μO 仍需接 `measure_integralLogShell_eq_index_mul`。
+
+- 22:55：hull 新 `Mzk1A1DeltaExplicitActual`（`lambdaBall_eq_closedBall`、`lambdaBall_measure_eq`、`a1Delta b := log r_b − (1/d_b)(log μ(c0QLattice_b)−log μ(O_b))`、**`a1Delta_nonneg`** 由 q 格⊆lambda 格 + log 单调 + measure 展开）并修 `Mzk1P0RouteC0GlobalReadout` 的 import（rootExtensionProductImageHull/s1915LocalDegree/s1915_local_measure），待编；下一步合成 signed readout `(1/d)log(μ(J)/μ(O))=log r−δ` + `c0ProductQ_normalizedLog_le_thetaHull`/`thetaHull_normalizedLog_eq_closedForm_sub_one` ⇒ normalized Q≤Θ。
