@@ -1729,3 +1729,5 @@
 - 02:50：lattice 确认 Gamma 红是 `GroupCountInterface` olean 时间差（非新错），已 retouch GammaPGroupActual，依赖链 GroupCountInterface→Gamma→ActualHBridge→P14iiActual。stepxi 收尾：Ind1 定义级结论/consumer rule 写入文档；新增 `SourceMultiradialInd1Ind3InterfaceFor`/`RequiredFor`/`sourceMultiradialInd1Ind3InterfaceFor_of_transport`；一般 e,φ 仍是唯一显式源输入。
 
 - 02:55：stepxi 收尾完成：`SourceMultiradialInd1Ind3InterfaceFor`/`RequiredFor`/`of_transport` 写入 `Mzk1A5Ind1Ind3ConsumerActual`；文档两处更新；#4 A5 最终接口稳定（Ind3 无条件、Ind1 一般 e,φ 为唯一显式源输入，不 refl/toy）。
+
+- 03:00：shehdd 按精确骨架入队 `IutIVProp14TorsionCountActual`（纯 Mathlib，无 project import）：`torsion_card_eq_of_congruenceCard` 完整用 hdecomp/hC/hGamma/hq/hcop + `hcop.pow h 1`/`dvd_of_dvd_mul_left`/`pow_dvd_pow_iff_le_right`/`pow_sub_mul_pow`/`Nat.add_sub_of_le`；等机检，首错换名。Gamma 第 8 次修等重编。
