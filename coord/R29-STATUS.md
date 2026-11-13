@@ -1016,3 +1016,5 @@
 - 22:28：**ThetaScalarAlign GREEN**（abc 14:11:27Z，54s）——theta_eq 降为标量方程 (Σdeg)·packetNorm=s1915ClosedForm。B4 final 三处首错 relay stage4（:98 缺 import Mzk1CanonicalDiagUncondActual；:71 rw 方向；:84 padicFractionalLattice 成员转换）。
 
 - 22:32：mainline norm bridge 首错 relay：`NumberField.underlyingPrime` → 项目名 `NumberFieldFinitePlace.underlyingPrime`（FinitePlaces.lean；用法见 SourceDefinition31PlacePartition:307）。abc ThetaScalarAlign GREEN（14:11:27Z）已记：theta_eq 降为标量方程 (Σdeg)·packetNorm=s1915ClosedForm。
+
+- 22:38：stage4 mem_span_pow_iff 直接证法 relay：span{p^e} = (p^e)•span{1} = (p^e)•Integers = padicFractionalLattice（用 IntegralLogShellSharpBounds:1529）；先写 span{1}=Integers 小引理。
