@@ -628,3 +628,5 @@
 - 19:37：shehdd gate §30（extra 392，clean 363 + ole 20 + stale 2 + red 7）；P7 §13 终表：10 GAP codes 全未 unconditional discharge（THETA-DEG partial，CONTRACT conditional interface）；P7 NOT PASSED。已询问 mainline AgreeFLT 的实际首错/修法应用情况。
 
 - 19:39：stage4 UW 已 touch 重编；canonical 无条件 wrapper 设计中（复用 coordinateCompacts）。
+
+- 19:45：AgreeFLT 最新 3 错（:103 LiesOver over 字段方向、:109 inertiaDeg' 实例 defeq、:99 hrel 方向）已给精确修法；UW 需裸名 `basis_toMatrix_...`（root ns）；hull Named DONE 11:04:44Z、Composite retouch。
