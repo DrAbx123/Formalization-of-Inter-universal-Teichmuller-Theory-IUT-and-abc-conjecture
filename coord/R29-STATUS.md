@@ -1004,3 +1004,5 @@
 - 22:14：mainline 确认 B5 ① 无条件 + CONTRACT-MAP §6.4 更新（FractionalLogVolumeExpansion 由 qpilot 三定理无条件推出；依赖文件清单已列）；B5 汇总仅剩 ② LocalNormGeneratorBridge/CountValuationBridge + residue-one（GAP-PC-RESDEG/tame）；mainline 收尾待机。
 
 - 22:20（goal round 30）：gate 全绿后继续攻真 GAP。派：stage4 用已有 compact/open/hle 引理**关闭 B4 GAP**（不需要 diagHomeo image bridge）；mainline 实际证明 B5 ② 两 bridge + #8 行升级；lattice 证 unitMass=1 + 查 nativeBad prime；abc 攻 #1 theta_eq（用 #7 归一化关系 + S1915 显式公式）；shehdd 无条件化 relativePlaceIndex=count 差；qpilot 合并有限+无限位 product formula（全局 product formula，同源箭头候选）。
+
+- 22:22：hull 唤醒做 B4 closure 的只读引理定位（compact/open/le 的精确 lemma 名/参数/行号），代码归 stage4，避免重叠。
