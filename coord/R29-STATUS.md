@@ -672,3 +672,5 @@
 - 20:34：mainline P3FinalAssembly（ssIneqExplicit_final：AGREE/FINITE 由 FLT 定理清偿，仅剩 RESNORM 数据+tame+arch+T 算术实例）入队（417 项）。
 
 - 20:38：巡检：gate §31 clean 376/red 21（extra 417）；ThetaVFourLayers/LayerScaleOffset green（11:19:54Z）；#4/#8/#9/#10 状态已更新入 P7-GAP-ATTACK-PLAN；HullDetObjectActual 预置坏文件（:344/:346）→ 建议 shehdd 本地重述依赖；lattice 接 #10 arch factor 对接。
+
+- 20:40：shehdd OB33 改本地重述（删 HullDetObject import，用 S3137 green 文件定义 ob33DetNormalizedLogVolume；raw/blockDim 等式 + 显式 identification）——绕开坏依赖，等编后 #3 → CONDITIONAL。
