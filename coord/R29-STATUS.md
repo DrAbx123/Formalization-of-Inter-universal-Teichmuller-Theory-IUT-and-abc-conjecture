@@ -946,3 +946,5 @@
 - 03:36：**gate §33**（hull 21:32 CST）：483 项 = clean **460** + red **2**（HaarStrict 旧 API；B5FractionalExpansionBridge 未限定 count 名/rewrite）+ in-progress 1（Cancel，Weight olean 已存在=93,784B）+ ole-only 20 + missing 0；P7 NOT PASSED。abc #8 集成核对全部 green（RowsBridge 三 rfl + P7-CONTRACT-MAP §7 + AUDIT_LEDGER）；lattice BlockEquivData 全名重写；shehdd Ob33B5CountBridge（relativePlaceIndex=-countH+countO、num/den 展开、placeLogVolume 差）入队（484 项）。
 
 - 03:38：stepxi 文档核对修正：P7-GATE-REVIEW #1 OPEN→CONDITIONAL(HullQDictionary)（DONE 12:50:24Z，ole 77,640B）；#4 PARTIAL+实际 production OPEN（含 C3 候选 DONE 13:19:40Z ole 83,552B）；#10 CONDITIONAL/PARTIAL（BlockEquivData DONE 13:28:16Z ole 33,584B，inhabitant 缺）；CANONICAL-TARGET-MAP §22 P7 snapshot（#1 在 canonical 路径且带 dictionary）。
+
+- 21:35：qpilot B5FinsumSummable（finsum_sub_bridge、ideal/fractional count weighted hasFiniteSupport/summable）入队（485 项）——mainline FinsumSubBridge 可用 theorem 替换。
