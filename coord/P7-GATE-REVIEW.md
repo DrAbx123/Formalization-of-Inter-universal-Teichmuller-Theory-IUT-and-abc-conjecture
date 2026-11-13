@@ -348,3 +348,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 | 10 | GAP-NORM-ARCH-C-K | CONDITIONAL/PARTIAL | 新 green：`NativeUnitMassNormalizedProof`（unitMassFactor_pos/lt_top/normalizedUnitMassScalar_eq_one）、`ThetaRootCarrierHaar`（normalized unitMass=1?）、`ThetaRootNormalizedUnitMass`、`DetHaarDegreeFactor`（c_ne_top/c_eq_one/c_le_one）、det-Haar external/TauCeti port 4/10 | lattice：unitMass=1 + blockEquiv inhabitant（ThetaRootCarrier）+ T-specific local unit product；qpilot：det-Haar port 后接 #10 |
 
 结论：P7 仍 **NOT PASSED**；#5/#7 DONE，#2 definition-level；#1/#3/#8 CONDITIONAL；#4/#6/#10 PARTIAL。本轮按上表逐项攻。
+
+### 20.1 更新（2026-11-14 11:50）：桥 1 GREEN
+- **`Mzk1P1IdealMapCompletionIdealActual` DONE 18:54:55Z（106s，olean 129,848B）**：证明桥 1 `Ideal.map (underlyingPrime v).asIdeal = completionIdeal`（K_v 的极大理想 = p 的扩张）。
+- 这是 P7 #3（GAP-P7-OB33-SRC）B5② 的**上游关键单点**；后续链：桥 2 `localizedLine = span{π}` → max-ideal `CountValuationBridge`/`R21Bridge`（shehdd donor）→ `IdealMapPower` general I → `Mzk1Ob33B5IndexActual` 重接。
+- #3 状态仍 CONDITIONAL，但卡点已从“桥 1 未证”变为“桥 2 span 识别 + general I 组装”。
