@@ -858,3 +858,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - doc 明确：实际 scaling 数据只在 `c_norm`，**缺 base 侧 2l-root generator**；因此 S45 的 `rootHull_scaling` 是真实条件，不是本轮可证。
 - `RootHullHalfScalingDataGap` 无 inhabitant；不假填。
 - 分配调整：hull 不再投入 rootHull 构造，专注 NormCorrection；S45 保留原条件（normRatio_one + rootHull_scaling）。
+
+
+### 20.64 新 GREEN 三连：BoxDistinguished / HaarIndex / UnitQuotient probe（2026-11-15 03:05）
+- **`Mzk1BoxDistinguishedScalarActual` DONE 00:53:39（48s）**：`ord`、`theta`、`ord_pow`、`ord_theta`、`DistinguishedScalarData`、`distinguished_theta_order`、`torsionToLocalRootGap`（三点显式源缺口）；下一步 PacketHullData.varpi/principal-region scalar/StepV。
+- **`Mzk1IutIVProp14HaarIndexActual` DONE 00:53:43（52s）**：`mu_lambda_eq_index_mul`、`mu_lambda_toReal_eq_index_mul`；下一步 HaarIndexPow→hμΛ→P14ii actual。
+- **`Mzk1Ind1UnitQuotientActual` DONE 00:53:44（53s）**：`unitLogQuotientEquivOfMulEquiv`；axiom probe = `[propext, Classical.choice, Quot.sound]`，无 sorryAx。
+- `Mzk1Ind1LogLatticeActionActual`：结构字段缺 `NormedAlgebra` 实例；已把 F/L/p/instances 显式列入 structure，只留 structure（无 proof/sorry），等编。
+- `Mzk1WFLatticeActionActual`：参数化 `WFUnitQuotientIdentification (W) (d)`，无 Fin0/PUnit，无 inhabitant；连续链 `continuous_of_addHom_fin_zpadic` 已 green。

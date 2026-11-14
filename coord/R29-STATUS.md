@@ -1905,3 +1905,5 @@
 - 11:05：Gamma tail：calc 是等式，目标 membership；让 shehdd 包 `have hcalc := by calc...; rw [hcalc]; exact hy`，`:42` 先 `hinv` 再 zpow_add。lattice 已补 `open LocalFieldIntegralUnits` + toReal_mul/natCast，等 HaarIndex 编；不越权修 Gamma。
 
 - 11:10：定位 S45 rootHull 真实缺口：`BadPlaceRootHullScalingFormulaActual` 已给 `RootHullHalfScalingDataGap`（supply 在 c_norm/(2l) + hull_eq），doc 明确缺 base 侧 2l-root generator；`rootHullScalingFormulaAt_of_halfScalingData` 条件版 green。已让 hull 停止 rootHull 构造，专注 NormCorrection；S45 保留原条件。gate §20.63 已写。
+
+- 11:15：**三连 GREEN：`Mzk1BoxDistinguishedScalarActual` 00:53:39（48s，ord/theta/ord_pow/ord_theta/distinguished_theta_order）、`Mzk1IutIVProp14HaarIndexActual` 00:53:43（52s，mu_lambda_eq_index_mul/toReal）、`Mzk1Ind1UnitQuotientActual` 00:53:44（53s，unitLogQuotientEquivOfMulEquiv；probe 三公理无 sorryAx）**。已派 qpilot 接 PacketHullData.varpi/principal-region scalar、lattice 编 HaarIndexPow→hμΛ→P14ii、stepxi 编 LogLattice/WF 并接实际单位识别。gate §20.64 已写。
