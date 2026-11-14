@@ -3777,3 +3777,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.570 IsEquiv.uniformContinuous donor for stage4 (2026-11-15 25:20)
 - Mathlib IsEquiv.uniformContinuous_congr (WithVal.lean:603) / IsEquiv.uniformContinuous (:582). Apply v=native, w=(moved.valuation).comap σ; show withValSigmaHom factors via WithVal.congr/equiv. stage4. stepxi integer cast; hull region product gap. No fake.
+
+
+### 20.571 URGENT IntegersEquiv ValuationSubring/Subring mismatch (2026-11-15 25:30)
+- Integers = Subring; concreteFiveCompletionIntegers = ValuationSubring. Equality type mismatch, composition sorryAx. Fix cast to `.toSubring`, add RingEquiv A.toSubring ≃+* A, then compose; or delete. stepxi. No fake.
