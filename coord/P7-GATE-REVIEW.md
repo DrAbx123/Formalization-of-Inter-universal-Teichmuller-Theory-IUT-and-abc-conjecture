@@ -3277,3 +3277,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.462 MAJOR A2SignAction GREEN degenerate sign action constructed (mainline, 2026-11-15 08:30)
 - Mzk1A2SignActionActual DONE 18:17:36/olean 02:17:35: constantDiagram (Pseudofunctor.mk obj=stack.fiber, map=id, mapComp=rightUnitor), atBaseCandidate=Equivalence.id, signActionCandidate (diagram/atBase/inversion=Hom.id/generator_identification=rightUnitor≪≪leftUnitor/inversionSquared=leftUnitor), signActionOfStackPoint, inversion_eq rfl. No source sorry.
 - Remaining exact: quotientWitness universal property, groups (OrbifoldFundamentalGroupData), scalar SourceEtaleStackScalarExtension. Mainline extend partial fields with signAction; abc probe. PrincipalDim re-green 02:17:35. No fake.
+
+
+### 20.463 MAJOR Paper312 correction consumer GREEN (hull, 2026-11-15 08:40)
+- Mzk1Paper312CorrectionConsumerActual DONE 18:25:59: perPlace_of_correction (hcard: correction hypothesis a c)(hres:q=p^f)(hcoef:CoeffComparison f Fdeg l a)(hlogp_eq)(hmu)(hl)(hc:1<=c) -> qcoef <= (1-1/(2l))*log index + logMu. c>=1 log c>=0 helps. FinalIndexDecomp gives a=A-k,c=p^r*((q-1)/T0).
+- Remaining separate: unramified A=0 => a=0 condition4 FAIL, c=1/log c=0 no help; need direct log/diff. Hull next feed A_le_Lbar_add_Dbar/paper312_of_local_bounds and handle unramified. abc probe. No fake.
