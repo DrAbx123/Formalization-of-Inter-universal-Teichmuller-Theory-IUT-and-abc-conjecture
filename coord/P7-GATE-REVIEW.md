@@ -3985,3 +3985,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.620 Algebraic Iff.trans instance mismatch (2026-11-15 33:40)
 - rw hlog fails instance mismatch; use exact Iff.trans hlog horder.symm or explicit mp/mpr composition. qpilot. No fake.
+
+
+### 20.621 Algebraic hlog explicit K/p annotation (2026-11-15 33:50)
+- hlog term miselaborated as @unitLog ... v; use explicit hlog type and (K:=F)(p:=p) call; then Iff.trans. qpilot. No fake.

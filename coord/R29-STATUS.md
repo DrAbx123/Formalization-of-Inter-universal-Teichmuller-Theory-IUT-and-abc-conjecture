@@ -3067,3 +3067,5 @@
 - 36:30: Algebraic hlog.trans parse fix; qpilot. gate 20.619 written.
 
 - 36:40: Algebraic Iff.trans fix; qpilot. gate 20.620 written.
+
+- 36:50: Algebraic hlog explicit K/p annotation; qpilot. gate 20.621 written.
