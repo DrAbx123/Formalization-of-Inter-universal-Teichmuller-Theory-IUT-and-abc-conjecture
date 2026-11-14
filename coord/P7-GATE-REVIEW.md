@@ -2647,3 +2647,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.346 R1 shared q: type correction; aggregation identity caution (mainline, 2026-11-17 09:20)
 - Mainline correctly notes P.line.C3.q.q : Completion place vs qVFamNormalizedGenerator : CommonPrimeCompletion place.val not defeq; no element equality; use scalar/log identity + normalizedCompletionRingEquiv + degree d_F. S3013QPilot is Real exp(-M), not field element.
 - CAUTION: actualQPilotMagnitudeClassical = sum w c_norm*log p while native M=sum w baseQLogMagnitude. If c_norm differs by qVFamNormRatio correction, aggregation equality actualQPilotMagnitudeClassical=M is S45-like and false for d>1. Do not assume equality; only provable inequality direction/log identity. mainline/qpilot to verify definitions and report exact difference; no fake.
+
+
+### 20.347 MAJOR #C B PRIMARY GREEN unconditional (hull, 2026-11-17 09:30)
+- Mzk1TruncatedUnitsPrimaryActual DONE 12:42:22 (src 12:38:34, olean 12:42:21): span_logShellScale_eq_maximalIdeal_pow : Ideal.span{logShellScale p} = m^(eK*s); truncatedUnitsCardPrimary : TruncatedUnitsCardPrimary (q-1)q^(eK*s-1), UNCONDITIONAL. Depends on TruncatedUnitsCount 12:31:16 card_units_quotient_maximalIdeal_pow, LocalRingUnitsCard, TruncatedUnitsCard. grep sorry/admit/axiom 0. abc to probe/audit.
+- Next p=2 #C A bridge: uniformizer pi, hpi, hp_rel p=u*pi^eK; N=2eK kernel 1+4O. Hull continues.

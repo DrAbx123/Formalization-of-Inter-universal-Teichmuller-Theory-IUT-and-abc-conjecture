@@ -2521,3 +2521,5 @@
 - 15:00: KernelIntegers green 20:36 (equiv), TruncatedUnits 20:31; FloorNativeHull pending. mainline R1 shared q; hull span/p2; stepxi W quotient/Z_p^d. gate 20.345 written.
 
 - 15:10: R1 type correction accepted (scalar/log not element equality). Caution aggregation equality actualQPilotMagnitudeClassical=M may be S45-like/false if c_norm vs base; mainline/qpilot verify definitions/difference, no fake. gate 20.346 written.
+
+- 15:20: MAJOR #C B PRIMARY GREEN 12:42:22 unconditional: span identity + units card (q-1)q^(eK*s-1). abc probe/audit; hull next p=2 bridge. gate 20.347 written.
