@@ -2543,3 +2543,5 @@
 - 16:50: hullUnitLog=0 reduction pending: from hullLog<=unitLog, hullLog=hullUnitLog+unitLog, 0<=hullUnitLog => hullUnitLog=0, hullLog=unitRegionLog. hM now unitRegionLog=-M; M>=1 necessary. qpilot compile; abc audit. gate 20.356 written.
 
 - 17:00: P2NormBridge source exists 13:09:31, watchdog backlog; target norm/addVal bridge with pi/hpi, N*eK <= addVal toNat. Touched 21:11; next green -> kernel 1+4O wrapper. gate 20.357 written.
+
+- 17:10: conditional aggregation GREEN (actualQ<=M under same-q); exact same-q place/element/carrier missing; P.signed=-M needs C3<->native base family place+element. mainline/qpilot coordinate. gate 20.358 written.

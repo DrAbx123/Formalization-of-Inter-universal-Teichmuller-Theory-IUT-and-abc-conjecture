@@ -2709,3 +2709,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.357 P2NormBridge source exists; watchdog backlog (hull, 2026-11-17 11:20)
 - Actual file Mzk1P2NormBridgeActual.lean (not Mzk1P2BridgeActual); src mtime 13:09:31 retouched, last log FAIL 13:08:18 old. Queue has path; watchdog backlog. Target norm_le_norm_natCast_iff_addVal_ge (pi,hpi,x!=0,N): ||x||<=||p^N|| <-> N*eK <= addVal x toNat; needs no hp_rel (eq_unit_mul_pow_irreducible gives p=u*pi^eK). Old errors fixed with local DVR/Dedekind instances, norm pow rewrites. Next green -> create Mzk1P2BridgeActual kernel 1+4O wrapper (addVal 0=top). Touched 21:11.
+
+
+### 20.358 Conditional aggregation GREEN; exact same-q/P.signed gaps (mainline, 2026-11-17 11:30)
+- Mzk1ActualReadingTargetActual DONE 13:09:10: qVFamCoefficient_mul_log_le_baseQLogMagnitude (hsame-q) and actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q; direction actualQ<=M, no equality. Probe 7 items pending.
+- same-q exact missing: (a) qVFamTensorPlace= nativeBaseSectionPlace/bad F-place lift; (b) qVFamily T b = baseQ T b=nativeBaseQFamily T b same Tate parameter; (c) same Completion instance/canonical carrier. None in repo.
+- P.signed=-M exact missing: P.line.C3 place/lift correspondence to native base family; P.line.C3.q.q norm vs base q norm same q witness; global sum vs single place. No theorem. R1 remains explicit QSourceLeQNorm condition. No fake.
