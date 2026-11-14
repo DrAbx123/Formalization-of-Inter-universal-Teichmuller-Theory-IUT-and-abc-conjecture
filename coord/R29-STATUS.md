@@ -2455,3 +2455,5 @@
 - 09:20: Ind1 DepthSubgroup GREEN 11:13:38 + CorrectedExtraction DONE 11:13:39, correctedDepthLayer_le_invariant/Required_iff; no inhabitant. Next valuation/W_F/divisibility/A_H compat. abc audit. gate 20.312 written.
 
 - 09:30: stepxi LocalValuationData interface queued (AQuotient/WQuotient, v, range_unitToA_eq_ker, infinitelyDivisible); no inhabitant. Next v via Valued.v+unzero; divisibility via Z_p^d. gate 20.313 written.
+
+- 09:40: Ind1 v donor: use CompletionPlaceCoherentValuationActual Valued.v with WithZero(Multiplicative Z), not NormedField.valuation ℝ≥0; abstract F carries actual Valued instance. Norm-one units bridge separate. gate 20.314 written.

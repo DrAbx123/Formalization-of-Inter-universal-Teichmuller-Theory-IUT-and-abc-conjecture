@@ -2459,3 +2459,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.313 Ind1 actual valuation interface (stepxi, 2026-11-17 04:00)
 - Donor search: NormedField.valuation target not Multiplicative Z; IntegralUnits only units/log, no kernel=W_F theorem and no r-divisibility. Mzk1Ind1ValuationDataActual queued: AQuotient F:=TimesMuQuotient F^x; WQuotient F:=(Integers F)^x/tors; structure LocalValuationData { unitToA : WQuotient -> AQuotient; v : AQuotient ->* Multiplicative Z; range_unitToA_eq_ker; infinitelyDivisible : forall r coprime p, forall x, InfinitelyDivisibleFor r x }; Required=Nonempty no inhabitant.
 - Second donor: A_H≅L^x/mu(L), D_r(A_H)=O_L^x/mu(L); third ActualSourceUnitLayer compat. Suggested v via Valued.v + WithZero.unzero; divisibility via O_F^x/tors ≅ Z_p^d and r invertible. No fake.
+
+
+### 20.314 Ind1 v donor: Valued completion, not NormedField.valuation (2026-11-17 04:10)
+- stepxi found NormedField.valuation target ℝ≥0, no discrete integer valuation; no WithZero.unzero from ℝ≥0^x to Multiplicative Z. Key donor: CompletionPlaceCoherentValuationActual provides Valuation (Completion place) (WithZero (Multiplicative Z)); use Valued.v there. For abstract F, carry actual [Valued F (WithZero (Multiplicative Z))] as structure input (not fake), then v := WithZero.unzero ∘ Valued.v on nonzero AQuotient. Norm-one units bridge via Integers/norm_le_one lemmas or exact missing lemma.
+- LocalValuationData queued no inhabitant; no fake.
