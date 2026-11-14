@@ -2251,3 +2251,5 @@
 - 15:50: S45FreeScalingRoute green; mainline to test final S45 elimination; lattice batch slash imports; hull/stage4 integration; abc audit. 0 lean, log 14:40.
 
 - 16:00: hull queued DefaultToNormalizedBridge: only gap to downstream is c_norm=qVFamPureCoefficient (S45 direction); no new constructor. paper coefficient needs separate equality. mainline to compile/probe. gate 20.223 written.
+
+- 16:10 CRITICAL Route A: S45-free final inequality via correction sign; donor gives ratio>=1, weight nonneg, correction<=0 (l>=5), exact_of_correction_nonpos => paperTheta<=paperQPilot. Implement qVFamNormRatio_ge_one/normRatioCorrectionSum_nonneg/paperNormalizedCorrection_nonpos/final_noS45; mainline/hull. gate 20.224 written.

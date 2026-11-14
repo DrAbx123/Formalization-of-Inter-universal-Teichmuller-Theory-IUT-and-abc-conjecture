@@ -1897,3 +1897,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1DefaultToNormalizedBridgeActual (queued): QVFamNormalizedCoefficientBridge := c_norm = qVFamPureCoefficient; normalizedGeneratorSupply_of_coefficient_bridge; pureFractionalScalingData_of_coefficient_bridge; QVFamNormalizedCoefficientBridgeMissing := bridge. Conditional, no assertion.
 - Assessment: default-norm variant green but cannot replace existing structure; only gap to existing downstream is c_norm=qVFamPureCoefficient (equiv norm ratio=1/S45 direction); existing NormalizedGeneratorSupply is the bridge object, no new tensor constructor needed. For paper coefficient also need paperNormalizedCoefficient=qVFamPureCoefficient (from default coefficient eq order*... + paper def, unnamed).
 - S45 still not unconditional; no fake.
+
+
+### 20.224 CRITICAL Route A: S45-free final inequality via correction sign (stage4, 2026-11-16 10:00)
+- Stage4 found final paper inequality can be S45-free via correction sign, independent of q^d scaling data.
+- Paper exact comparison: paperTheta <= paperQPilot + correction, correction = halfNormRatioCorrectionSum - normRatioCorrectionSum = normRatioCorrectionSum*(1/(2l)-1).
+- donor: ||q||_norm=||q||_def^(1/d), 0<def<1, d>=1 => norm>=def => qVFamNormRatio>=1 => log ratio>=0. weight nonneg => normRatioCorrectionSum>=0. l>=5 => 1/(2l)-1<0 => correction<=0. green paperNormalizedComparison_exact_of_correction_nonpos => paperTheta<=paperQPilot with no S45.
+- New lemmas: qVFamNormRatio_ge_one, normRatioCorrectionSum_nonneg, paperNormalizedCorrection_nonpos, finalPaperNormalizedComparison_noS45. Dependencies: donor formula + default norm + qNorm_lt_one + d_pos + weight_nonneg + half sum relation + paperNormalizedCorrection_eq + l>=5 + exact_of_correction_nonpos. No new assumptions.
+- Replace finalPaperNormalizedComparison(S45) by noS45; finalDictionaryCombined can drop S for inequality. Keep S45 only for correction-zero/strict equality/R2.
+- Assigned mainline/hull implement; no fake.
