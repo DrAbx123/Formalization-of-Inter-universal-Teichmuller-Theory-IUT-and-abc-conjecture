@@ -1270,3 +1270,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New Mzk1IutIVProp14TorsionFromUnitsActual (queue): torsion_card_eq_actual_of_unitsEquiv with eEquiv, hcard, hs, hq, hcop => exists h,m #Gamma=p^h, #T=(q-1)p^m, h+m=f(e*s-1).
 - Proof: card_logShellCongruenceQuotient_of_unitsEquiv gives #C=(q-1)q^(e*s-1); rw [hq,pow_mul] to (q-1)p^(f(e*s-1)); feed torsion_card_eq_actual_of_congruenceCard.
 - Need fix pow_mul/cast direction on compile; actual eEquiv/hcard donor remains.
+
+
+### 20.122 GREEN: PrincipalScalar probe; Ind1 W exhaustive gap; Volume fixes (2026-11-15 13:30)
+- Mzk1BoxPrincipalScalarProbe DONE 02:01:01 (106s): principal_region_normalized_scalar depends only on [propext, Classical.choice, Quot.sound]; no sorryAx.
+- stepxi exhaustive W donor check: PrimeStripCore abstract CommMonoid; LocalPrimeStrip concrete Mon=(AlgClosure Qp)^x; IntegralUnitLogarithm gives (Integers K)^x -> log/image, not iso to AlgClosure units; Kummer only injection; inertia no donor; natural map injective non-surjective, torsion quotients differ; no canonical ≃*. Added sourceUnitLogRangeEquiv_self (self id + identity beta) as interface consistency only, not source W.
+- Volume fixes: :12 simpa [Nat.mul_comm] using hmul; :32 rw [eq_comm] at hcancel; field_simp [hpd] at hcancel; wait recompile.

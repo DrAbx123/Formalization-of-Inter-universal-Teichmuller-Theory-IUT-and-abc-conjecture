@@ -2033,3 +2033,5 @@
 - 19:10: #C interface exponent fixed: ideal p^{s*e}, hcard (q-1)q^{e*s-1}. Next combine q=p^f to p^{f(e*s-1)} and feed torsion hC. gate 20.120 written.
 
 - 19:20: shehdd queued Mzk1IutIVProp14TorsionFromUnitsActual (torsion_card_eq_actual_of_unitsEquiv); needs pow_mul/cast fix; actual eEquiv/hcard donor remains. Woke lattice/shehdd/qpilot/stepxi/abc/hull/stage4. gate 20.121 written.
+
+- 19:30: GREEN PrincipalScalarProbe 02:01:01 (principal_region_normalized_scalar three axioms). stepxi W exhaustive donor check: no canonical ≃*; self log-range endo is interface only. Volume :12/:32 fixed. gate 20.122 written.
