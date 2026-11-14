@@ -4001,3 +4001,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.624 Algebraic #check unitLog signature (2026-11-15 34:20)
 - Theorem application still function expected; #check unitLog / unitLog_eq_zero_iff to determine explicit p/instance order; report signatures. qpilot. No fake.
+
+
+### 20.625 stale kernel olean/rebuild; Algebraic p on theorem (2026-11-15 37:30)
+- Earlier arity mismatch from stale IntegralUnitLogarithmKernel olean built before core redefinition; Lead rebuilt kernel olean 07:51:53. Algebraic now only NormedAlgebra ℚ_[?m] stuck; call unitLog_eq_zero_iff_isOfFinOrder with (K:=F)(p:=p). qpilot. No fake.

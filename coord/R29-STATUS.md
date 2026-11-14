@@ -3075,3 +3075,5 @@
 - 37:10: Algebraic explicit lambda/check hlog; qpilot. gate 20.623 written.
 
 - 37:20: Algebraic #check unitLog signatures; qpilot. gate 20.624 written.
+
+- 37:30: stale kernel olean rebuilt; Algebraic p on theorem. gate 20.625 written.
