@@ -2652,3 +2652,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.347 MAJOR #C B PRIMARY GREEN unconditional (hull, 2026-11-17 09:30)
 - Mzk1TruncatedUnitsPrimaryActual DONE 12:42:22 (src 12:38:34, olean 12:42:21): span_logShellScale_eq_maximalIdeal_pow : Ideal.span{logShellScale p} = m^(eK*s); truncatedUnitsCardPrimary : TruncatedUnitsCardPrimary (q-1)q^(eK*s-1), UNCONDITIONAL. Depends on TruncatedUnitsCount 12:31:16 card_units_quotient_maximalIdeal_pow, LocalRingUnitsCard, TruncatedUnitsCard. grep sorry/admit/axiom 0. abc to probe/audit.
 - Next p=2 #C A bridge: uniformizer pi, hpi, hp_rel p=u*pi^eK; N=2eK kernel 1+4O. Hull continues.
+
+
+### 20.348 FloorNativeHull GREEN conditional; #C primary probes (2026-11-17 09:50)
+- Mzk1IVThm110FloorNativeHullActual DONE 12:47:21/olean 20:47:20: signedFloorCertificate_qSigned_eq_min (rfl); floorQSigned_eq_native_of_hull conditional on hM: arithmeticTupleCanonicalHullHaarLog = -M and hMone: 1<=M. floorNativeHullGap 2 items. No sorry.
+- Mzk1TruncatedUnitsPrimaryAxiomProbeActual DONE 12:47:13; Mzk1TruncatedUnitsCountProbeActual 12:47:13; Mzk1KernelWProbeActual 12:46:32; abc to audit no sorryAx.
+- qpilot next actual hM/hMone; hull p=2 bridge; stepxi AQuotient/Z_p^d; mainline R1 scalar -M.
