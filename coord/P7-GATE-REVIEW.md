@@ -3033,3 +3033,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.417 Post-redefinition breakage observed; assess/revert decision (2026-11-15 00:30)
 - NativeBadLift redefinition GREEN itself, but watchdog 36 fails incl BaseChangeQCorrespondence 16:08:58 (errors :113 zero_pow/typeclass, :118 token, :207 not definitional) and old lanes P0L*/C17/Ind1/Probes. Some may be pre-existing red; need distinguish.
 - mainline asked: if >few deep proof breakages revert NativeBadLift to last green and keep explicit alignment gap; do not leave core red. If manageable list files/continue. No fake.
+
+
+### 20.418 NativeBadLift redefinition experiment reverted; core green (mainline, 2026-11-15 00:40)
+- Experiment: lift:=comap_F(sectionFiniteLift), lift_comap comap_comap/sectionFiniteLift_comap; core NativeBadLiftActual GREEN 15:55:17. Downstream 73 importers: first round only 7 green; sampled errors C17 No goals (gap rfl), BlockIndex Function expected, BadPlaceUnitMass Type mismatch, correspondence nativeBadLiftAlignment_proved :207 type mismatch. 36 fails mixed with pre-existing red; cannot confirm only-few in time -> reverted.
+- Rollback: NativeBadLiftActual from .bak DONE 16:14:51 green; BaseChangeQCorrespondence DONE 16:15:02 green with hplace explicit input, nativeBadLiftAlignment_proved removed; retained nativeBaseContractionFPlace/comap/NativeBadLiftAlignment explicit gap (+C17 QPlaceChoiceGap cross-ref). No fake.
+- Next mainline: attack (c) q element/(d) C3 aggregation under hplace; no redefinition retry now.

@@ -2663,3 +2663,5 @@
 - 02:50: correction split #T=T0*p^m, index=q^(A-m)*((q-1)/T0), a=A-m; hdiv too strong. Prove m<=fA/T0|q-1 via coprime index. Hull. gate 20.416 written.
 
 - 03:00: post-NativeBadLift redefinition 36 fails; BaseChange errors; mainline to assess/revert if deep. gate 20.417 written.
+
+- 03:10: NativeBadLift redefinition experiment reverted (73 importers, deep breakage); core green 16:14/16:15; alignment remains explicit gap. Next (c)/(d). gate 20.418 written.
