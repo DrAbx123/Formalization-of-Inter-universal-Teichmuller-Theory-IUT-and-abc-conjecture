@@ -2589,3 +2589,5 @@
 - 20:40: HullUnitZero conditional GREEN 22:03:40 (scale=1, 4-item obstruction); UnitInvariance X notation fix, u•O=O written. qpilot continue distribHaarChar/measure. gate 20.379 written.
 
 - 20:50: general eEquiv route: P2NormBridge with N=s and uniformizer gives all-p norm/addVal criterion; no Irreducible p/eK=1. P2Bridge wrapper unnecessary; hull implement eEquiv. gate 20.380 written.
+
+- 21:00: HOT general logShell norm criterion GREEN 14:09:01 (all p) and kernel equality GREEN 14:03:42. Hull build eEquiv; stepxi first-iso equiv; abc probes. gate 20.381 written.

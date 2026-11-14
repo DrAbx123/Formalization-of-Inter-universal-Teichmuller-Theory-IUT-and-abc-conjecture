@@ -2829,3 +2829,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.380 General uniformizer eEquiv route; P2Bridge p=2 wrapper unnecessary (2026-11-17 15:20)
 - Hull found p!=2 branch still lacks uniformizer version (p not irreducible when eK>1), and p=2 wrapper red. Root fix: P2NormBridge norm_le_norm_natCast_iff_addVal_ge holds for ARBITRARY p with actual uniformizer pi; take N=s=logShellScaleExponentFactor p and use logShellScale_eq_prime_pow_factor : logShellScale p=p^s. Then ||x||<=||logShellScale p|| <-> s*eK <= addVal x, all p including ramified odd/p=2; no Irreducible p/eK=1. Build eEquiv parity-free. P2Bridge wrapper unnecessary; shehdd paused to avoid duplicate.
+
+
+### 20.381 HOT: general logShell norm criterion + kernel equality GREEN (2026-11-17 15:30)
+- Mzk1GeneralLogShellNormCriterionActual DONE 14:09:01: norm_le_norm_logShellScale_iff (pi,hpi,x): ||x||<=||logShellScale p|| <-> (s*eK : ℕ∞)<=addVal x; ALL p, no parity/irreducibility of p. Uses P2NormBridge with N=s and logShellScale_eq_prime_pow_factor.
+- Mzk1Ind1KernelBridgeActual DONE 14:03:42: kernelToAQuotient_ker_eq with constructor simpa; no source sorry. Next AQuotientKernelBridge.equiv via first iso.
+- Hull to build eEquiv all-p from general criterion; stepxi equiv; abc probes. P2Bridge paused.
