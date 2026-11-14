@@ -2503,3 +2503,5 @@
 - 13:30: p=2 bridge correction: p not irreducible in ramified case; need uniformizer pi/hpi/p=u*pi^eK. Hull takes over corrected signature; no fake. gate 20.336 written.
 
 - 13:40: KernelIntegers partial green 20:08 (needs kernel maps/MulEquiv); SharedQPilot green 20:08 (3-item gap); target deps recompiled 12:05/12:06 -> probe. p=2 hull pending. gate 20.337 written.
+
+- 13:50: gave unitValuationHom_eq_one_iff script avoiding symm_one (calc/rfl/injective/Units.ext). stepxi to readd; Kernel partial green. gate 20.338 written.

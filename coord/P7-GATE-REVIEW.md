@@ -2598,3 +2598,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1SharedQPilotActual DONE 12:08:56: SharedNativeQPilotSource + actualSharedNativeQPilotSource + qPilot/qSigned equalities; sharedNativeToStepVAndC3Gap 3 items (floor qSigned=native, C3 q=native, index/weight). No sorry.
 - PaperLevelXiFTargetProofActual DONE 12:05:19, BridgeActual DONE 12:06:51: target deps fresh now; rerun target probe. Clean chain remains Dictionary 19:15:17 -> Assembly 19:28:52 -> probes.
 - CorrectedExtraction re-DONE 12:01:30; abc to audit no sorryAx. odd-p p odd green; p=2 bridge hull pending.
+
+
+### 20.338 unitValuationHom_eq_one_iff proof script without symm_one (2026-11-17 08:00)
+- Forward: h': unitsToValuedUnits u=1 via unitsWithZeroEquiv.injective + calc (unitValuationHom u) = unitsWithZeroEquiv(unitsToValuedUnits u) =1 = unitsWithZeroEquiv 1; then congrArg Units.val + simpa [unitsToValuedUnits]. Reverse: h': unitsToValuedUnits u=1 via Units.ext/simpa [unitsToValuedUnits,h]; then calc unitValuationHom u=unitsWithZeroEquiv(unitsToValuedUnits u)=unitsWithZeroEquiv 1=1. Units.val_mk0 available. No symm-one needed.
+- stepxi removed eq_iff temporarily to keep ValuationData green; can readd with this script. KernelIntegers partial green unchanged.
