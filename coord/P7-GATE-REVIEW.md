@@ -3272,3 +3272,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.461 MAJOR PrincipalDimScaling GREEN (qpilot, 2026-11-15 08:20)
 - Mzk1IVThm110PrincipalDimScalingActual DONE 18:02:50/olean 02:02:49: principalDim_log_scaling; no source sorry. Source later edited 02:12 pending recompile. Direct compile earlier EXIT=0.
 - Next qpilot instantiate actual lambda=p^k*u with g=pU^k*algebraMapUnit u, hact/hchar/hnorm via Padic unit decomposition/green Haar; or connect to floor unitRegionLog=-M/M>=1. abc probe. QuotientBridge empty green. No fake.
+
+
+### 20.462 MAJOR A2SignAction GREEN degenerate sign action constructed (mainline, 2026-11-15 08:30)
+- Mzk1A2SignActionActual DONE 18:17:36/olean 02:17:35: constantDiagram (Pseudofunctor.mk obj=stack.fiber, map=id, mapComp=rightUnitor), atBaseCandidate=Equivalence.id, signActionCandidate (diagram/atBase/inversion=Hom.id/generator_identification=rightUnitor≪≪leftUnitor/inversionSquared=leftUnitor), signActionOfStackPoint, inversion_eq rfl. No source sorry.
+- Remaining exact: quotientWitness universal property, groups (OrbifoldFundamentalGroupData), scalar SourceEtaleStackScalarExtension. Mainline extend partial fields with signAction; abc probe. PrincipalDim re-green 02:17:35. No fake.
