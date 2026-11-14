@@ -2775,3 +2775,5 @@
 - 12:10: IsScalarTower.of_algebraMap_eq donor sent; stage4 prove algebraMap compatibility. adicAbv missing unchanged. gate 20.472 written.
 
 - 12:20: MAJOR RamifiedPlace bundle GREEN 18:51:40 (ofPlace NormalizedCompletion). Next RamifiedPlaceData/per-i h; hull. Paper312Assembly probes green; QpDecomp red. gate 20.473 written.
+
+- 12:30: IsScalarTower donors found (relativeNormalizedCompletionScalarTower); stage4 fix import/args then synth. QpDecomp no olean; A2 xK transport. gate 20.475 written.
