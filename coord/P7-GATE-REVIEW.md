@@ -3773,3 +3773,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.569 Wake mainline/hull/stage4/stepxi (2026-11-15 25:10)
 - mainline SG3b coordinate product Haar IsAddHaar/scalar; hull hq/hθ definitions; stage4 IsEquiv; stepxi integer equiv casts. Watchdog active log 06:00:51. No fake.
+
+
+### 20.570 IsEquiv.uniformContinuous donor for stage4 (2026-11-15 25:20)
+- Mathlib IsEquiv.uniformContinuous_congr (WithVal.lean:603) / IsEquiv.uniformContinuous (:582). Apply v=native, w=(moved.valuation).comap σ; show withValSigmaHom factors via WithVal.congr/equiv. stage4. stepxi integer cast; hull region product gap. No fake.
