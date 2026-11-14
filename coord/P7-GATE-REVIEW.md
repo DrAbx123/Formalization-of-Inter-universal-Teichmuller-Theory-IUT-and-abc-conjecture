@@ -1396,3 +1396,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.140 Audit probe GREEN: GroupCountBridge/TorsionFromUnits three axioms (abc, 2026-11-15 17:10)
 - Mzk1IutIVProp14AuditProbeActual DONE 03:04:25 (olean): exists_h_card_gamma, volume_ratio_eq_pow_of_groupCount, torsion_card_eq_actual_of_unitsEquiv all [propext, Classical.choice, Quot.sound]; no sorryAx.
 - GroupCountBridge/TorsionFromUnits source no sorry/True/axiom; TorsionFromUnits remains conditional on eEquiv/hcard/hs/hq/hcop.
+
+
+### 20.141 GREEN: CongruenceActualGap; VarpiProbe (2026-11-15 17:20)
+- Mzk1IutIVProp14CongruenceActualGap DONE 03:04:25 (52s): MissingCongruenceUnitsEquiv e; MissingTruncatedUnitsCard e s; torsion_card_eq_actual_of_missing. #C actual split into two objectives.
+- Mzk1BoxDistinguishedVarpiProbe GREEN (packetHull_with_theta_varpi and packetHull_normalizedLogVolume_le_box).
+- ActualHBridge/P14ii still pending; final hM/hB fix pending.
