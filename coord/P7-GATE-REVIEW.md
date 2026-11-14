@@ -3101,3 +3101,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.430 equivOfRingEquiv def donor for norm equality (stage4, 2026-11-15 02:50)
 - Mathlib HeightOneSpectrum.equivOfRingEquiv (RingTheory/DedekindDomain/Ideal/Lemmas:596): toFun := HeightOneSpectrum.comap e.symm e.symm.surjective; asIdeal = v.asIdeal.comap e.symm. So moved place norm at x should equal v's adic norm at e x definitionally after unfolding equivOfRingEquiv/comap/adicAbv. Try simp [HeightOneSpectrum.equivOfRingEquiv, HeightOneSpectrum.comap, FinitePlace.norm_embedding] or rfl after show. Report first error/GREEN.
 - UnitInvariance image beta_reduce applied, pending. Hull piecewise k/r pending. No fake.
+
+
+### 20.431 C3BaseQIdentification GREEN conditional structures (mainline, 2026-11-15 03:00)
+- Mzk1C3BaseQIdentificationActual DONE 16:32:35: C3BaseQElementIdentification (n_pos, log_relation ||P.line.C3.q||=-baseQLogMagnitude/n); GlobalSumCollapse (global_eq M=baseQLogMagnitude/n); ClauseBBaseQSourceIdentity (q_element_eq under casts); qPilotC3SignedAggregation_of_identification (id+gsc -> QPilotC3SignedAggregation P.signed=-M). No inhabitant; consumer conditional only.
+- Next mainline probe + attack actual inhabitants/exact missing; abc probe. No fake.
