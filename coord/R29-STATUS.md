@@ -2055,3 +2055,5 @@
 - 20:30: GREEN VolumeActual 02:11:46; A1Data 02:16:59; WeightA1AxiomProbe 02:12:40 (4 three axioms); PrincipalAlignmentProbe 02:12:39 (1 three axioms). Volume chain unblocked; final still pending. gate 20.129 written.
 
 - 20:40: CRITICAL A1Data olean 02:16:59 predates source 02:17:11; pre-DONE log had sorry warning line44; current source no sorry but unverified. Must recompile A1Data, check no sorry, then probe/final. WeightA1 probe verified. gate 20.130 written.
+
+- 20:50: scheduled check: A1Data last DONE still 02:16:59 predates source 02:17:11; no new recompile. mainline ordered force recompile+check no sorry+probe+Final. Woke lanes. batch 02:19:14 done:1 failed:41; 12 lean.
