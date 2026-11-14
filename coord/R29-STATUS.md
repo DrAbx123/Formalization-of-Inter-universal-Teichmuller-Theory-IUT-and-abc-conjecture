@@ -1883,3 +1883,5 @@
 - 09:50：新 tail 修法：C17 用根 namespace `finrank_eq_one_iff_of_nonzero'`（不带 FiniteDimensional 前缀）；PaperSums `RootBaseCompletionGap` 的 `b` 未绑定→改 ∀b/加 binder；RootRadius `linarith` 改 `rw [← h]`/eq_div_iff；Correspondence `:198` 需**产品** measure hQ0/hQtop（`c0ProductQ=Set.pi` + `productHaar_pi` + Finset.prod），不是局部 ∀b。
 
 - 10:05：**GREEN `Mzk1P0QThetaReadoutCorrespondenceActual` 00:34:54（107s）**：q/Theta readout correspondence official（产品 measure hQ0 由 productHaar_pi 收；sum_degree_qhatLogReadout_le_closedForm_sub_one 等）。解锁 NormCorrection 与最终 correction/conditional 形式。已派 hull 编 NormCorrection/最终形式，mainline 继续 bridge，其余 lane 各自推进。gate §20.53 已写。
+
+- 10:10：Gamma 最后一步：目标带括号指数不相邻，直接 `rw [← zpow_add₀]` 不匹配；给 shehdd `calc` + `ring` 重组方案（h1/h2 分别合并 (b+f)+(-f)=b 与 b+(-b)=0），`zpow_add₀` 只处理相邻幂；完成后报三公理。
