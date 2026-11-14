@@ -3960,3 +3960,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.614 CardExponent remove explicit residue units Fintype (2026-11-15 32:40)
 - Coprime instance mismatch canonical instFintypeUnitsOfDecidableEq vs explicit. Remove [Fintype (ResidueField A)ˣ] from both theorems; canonical from field Fintype+DecidableEq. qpilot. No fake.
+
+
+### 20.615 CardExponent restore field Fintype; remove sorry (2026-11-15 32:50)
+- Removed [Fintype (ResidueField A)] too; restore it, keep [DecidableEq], no explicit units. Remove sorry placeholder line44. qpilot. No fake.

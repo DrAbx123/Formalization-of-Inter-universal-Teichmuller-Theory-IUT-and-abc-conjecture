@@ -3055,3 +3055,5 @@
 - 35:30: CardExponent open namespace; qpilot. gate 20.613 written.
 
 - 35:40: CardExponent remove explicit residue units Fintype; qpilot. gate 20.614 written.
+
+- 35:50: CardExponent restore field Fintype/remove sorry; qpilot. gate 20.615 written.
