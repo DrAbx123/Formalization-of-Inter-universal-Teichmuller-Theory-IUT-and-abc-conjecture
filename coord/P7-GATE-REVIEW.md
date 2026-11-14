@@ -2728,3 +2728,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - First missing theorem: baseChangePlace F-place above b <-> K-place above b compatible with comap, plus Completion comparison and Tate parameter correspondence qVFamily<->nativeBaseQFamily. No repo bridge.
 - P.signed=-M additional: P.signed=Real.log||P.line.C3.q.q|| single local log vs M=sum_b W_b baseQLogMagnitude weighted sum; single C3 cannot equal -M unless C3 corresponds to whole Bad family/aggregate or Bad singleton. Need index/weight-wise or local reading; no theorem identifies P.line.C3 with nativeBaseQFamily.
 - Mainline to build explicit correspondence structures (no inhabitant) and report exact first target; no fake.
+
+
+### 20.361 KernelBridge fresh DONE without failed declaration (stepxi, 2026-11-17 12:00)
+- Mzk1Ind1KernelBridgeActual DONE 13:13:16 (61s), olean generated; failed kernelToAQuotient_ker deleted; only def kernelToAQuotient + structure AQuotientKernelBridge (no proof declaration). Old sorryAx/type mismatch is pre-deletion residual. Fresh #print axioms kernelToAQuotient added, pending no-axioms confirmation. Next re-add kernel equality under new name with Subgroup.mem_subgroupOf, then AQuotientKernelBridge.equiv, Z_p^d divisibility.

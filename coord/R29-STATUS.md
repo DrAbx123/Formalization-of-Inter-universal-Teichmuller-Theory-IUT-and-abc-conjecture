@@ -2549,3 +2549,5 @@
 - 17:20: audit restored greens; HullUnitZero unknown identifier but def exists at FinitePlaceIQHullSignedLogVolume:43 -> missing import; qpilot fix. KernelBridge red, P2 missing. gate 20.359 written.
 
 - 17:30: same-q/P.signed type obstructions confirmed: F-place vs K-place, F Completion vs K Completion; missing baseChange place/completion + Tate parameter correspondence; P.signed single local log vs global Bad weighted sum. mainline structures no inhabitant. gate 20.360 written.
+
+- 17:40: KernelBridge fresh DONE 13:13:16 (failed declaration removed, only def+structure); probe pending. Next re-add kernel equality new name, equiv, Z_p^d. gate 20.361 written.
