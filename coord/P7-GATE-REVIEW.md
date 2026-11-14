@@ -2891,3 +2891,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1CongruenceUnitsEquivGeneralActual DONE 14:34:05: congruenceUnits_equiv_primary_general (pi,hpi) unconditional CongruenceUnitsPrimaryEquivTarget; all p actual uniformizer; probe 14:43:52 three axioms.
 - Mzk1IutIVCongruenceCardActual re-DONE 14:44:39/olean 14:44:38: congruenceQuotientCardinalityInput_exists_actual (e)(he:e=eK) -> ∃f, CongruenceQuotientCardinalityInput; logShellQFECardinalityHypothesis_exists_actual similarly. Chain: exists_irreducible pi -> general eEquiv -> logShellResidueCard_eq_prime_pow -> consumer. Unconditional.
 - Next hull specialize e=eK/feed IutIVProp14 consumer; abc probe. No fake.
+
+
+### 20.392 KernelBridge fresh GREEN; HullUnitZeroProbe2 (2026-11-17 17:20)
+- Mzk1Ind1KernelBridgeActual DONE 15:05:30/olean 23:05:29: kernelToAQuotient_ker_eq, normal instances, quotientKernelEquivRange; no source sorry; ofRange removed. Next compose with completionKernelTimesMuEquiv once range_eq_ker identification exists; then Z_p^d.
+- HullUnitZeroProbe2 DONE 15:10:14. UnitInvariance no olean (topo/scalar fix pending). Alignment no olean. abc probe.
