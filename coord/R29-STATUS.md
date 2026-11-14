@@ -2617,3 +2617,5 @@
 - 23:00: Ind1 range_eq_ker route via Quotient.out representative; stepxi implement. gate 20.393 written.
 
 - 23:10: COR3.12 obstruction: pure q^a needs #T=q-1, false in ramified (Qp(ζp) p-torsion). Conditional pure bridge with hT green; trace consumer necessity. No fake. gate 20.394 written.
+
+- 23:20: Cor3.12 trace: ResiduePowerCondition only sufficient; consumer accepts torsion-divided if per-place log margin. Need log margin estimate; hull. gate 20.395 written.

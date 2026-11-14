@@ -2908,3 +2908,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Existing QFE gives torsion-divided logShellIntegerIndex = q^(eK*s-1)*(q-1)/#T, not pure q^a. Existing torsion_dvd_sub_one only gives q^(...)*((q-1)/#T).
 - Pure needs #T=q-1 (stronger than divisibility); generally FALSE in ramified case: K=Qp(ζp) has p-torsion, q=p, #T>p-1. Unramified Teichmuller #T=q-1 only. So pure Cor3.12 not unconditional from QFE; needs explicit hT/unramified/torsion-free-p assumption.
 - Hull wrote conditional logShellIntegerIndex_eq_residueCard_pow_of_torsion_eq_sub_one (hT). Next trace Cor3.12 consumer necessity vs sufficiency. No fake.
+
+
+### 20.395 Cor3.12 trace: ResiduePowerCondition only sufficient (hull, 2026-11-17 17:50)
+- Exact consumer Mzk1Paper312FinalBoundActual.A_le_Lbar_add_Dbar: per-place qlog_i/(2l) <= logIdx_i+diff_i -> sum inequality; ExplicitPaper312Inequality only uses Lbar=sum log index, no ResiduePowerCondition. Conditions used only by log_index_of_residuePower to turn index into a f log p; local_bound_with_conditions takes abstract a, not ResiduePowerCondition. So pure q^a is sufficient route, not necessary; torsion-divided form can feed consumer if per-place log margin holds.
+- Exact remaining: per-place qlog_v/(2l) <= Real.log(index_v)+diff_v using torsion-divided index formula; existing QFE only gives multiplicative formula, no log margin lower bound. Hull to attempt/report exact missing estimate. No fake.
