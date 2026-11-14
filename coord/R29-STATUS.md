@@ -2509,3 +2509,5 @@
 - 14:00: Floor GREEN 20:15:21 (certificateOfFloorData conditional on N5/htheta/hCTheta); remaining floor N5/CTheta source. Target deps fresh 12:05/12:06, magnitude probe 12:15. gate 20.339 written.
 
 - 14:10: stage4 SMulDistribClass donor: AlgEquiv.applyMulSemiringAction + NumberField.Basic instances for G on O_F/SMulDistribClass. Use/align; then primesOver/transitivity. gate 20.340 written.
+
+- 14:20: unitValuationHom_eq_one_iff GREEN 12:25:28; KernelIntegers re-added kernel maps, next MulEquiv. No fake. gate 20.341 written.

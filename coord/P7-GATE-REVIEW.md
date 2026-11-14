@@ -2614,3 +2614,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.340 stage4 SMulDistribClass donor: AlgEquiv action (2026-11-17 08:20)
 - Stage4 failed SMulDistribClass Gal(F/Fmod) (O_F) F and ring-level IsGaloisGroup; HSMul issues.
 - Donor: Mathlib AlgEquiv.applyMulSemiringAction : MulSemiringAction (A ≃ₐ[R] A) A (Algebra/Algebra/Equiv:688). With G=Gal(F/Fmod) on F, NumberField/Basic:124/127 gives MulSemiringAction G (𝓞 F) and SMulDistribClass G (𝓞 F) F automatically. Use/align these instead of hand-building; then primesOver bridge/transitivity. Report first failure.
+
+
+### 20.341 unitValuationHom_eq_one_iff GREEN (stepxi, 2026-11-17 08:30)
+- Mzk1Ind1ValuationDataActual DONE 12:25:28: unitValuationHom_eq_one_iff proved using calc script + WithZero.unitsWithZeroEquiv.map_one (instead of simp) and Units.val_mk0 in simpa. #print axioms added, retouched.
+- KernelIntegers re-added completionKernelToIntegers/completionIntegersToKernel using eq_iff -> Valued.v=1<->norm=1 -> unitOfNormOne/norm_unit_eq_one; MulEquiv left_inv/right_inv next; WQuotient torsion/Z_p^d divisibility remaining. Report fresh probe/no sorryAx.
