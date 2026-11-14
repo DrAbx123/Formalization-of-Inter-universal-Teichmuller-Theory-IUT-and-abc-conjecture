@@ -2870,3 +2870,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - KernelBridge log 22:24 still old errors :58/:66 MonoidHom.mrange field notation, :69 invalid F, with stale sorryAx; source may not be updated/retouched. stepxi to confirm fresh, no stale acceptance.
 - CongruenceUnitsEquivGeneral log 22:29: :44:2 type mismatch; :59:62 app mismatch; :84:8 simplification; :99:27 app mismatch; :60:8 rw pattern; :102:4 type mismatch (actual f/hsurj/hker attempt). Hull to fix/report.
 - Probes green: CongruenceGeneralBaseChangeProbe 14:24:55; BaseChangeQCorrespondenceAxiomProbe 14:24:55; GaloisRingBridgeProbe 14:30:05.
+
+
+### 20.388 GaloisRingBridge strengthened: native primes + transitivity (stage4, 2026-11-17 16:50)
+- Mzk1GaloisRingBridgeActual DONE 22:34:55/olean 22:34:54: nativeFmodPrime from b.1; nativeBadFPlace_liesOver/nativeKContraction_liesOver; nativeFPrimeOver/nativeKPrimeOver; exists_galois_move_nativeF (sigma with sigma•nativeFPrimeOver.1=nativeKPrimeOver.1). Ring-level IsGaloisGroup/primesOver/transitivity green.
+- Next: convert sigma•P=Q to galoisPlaceMk sigma(nativeBadToFPlace b)=comap_F(nativeBadToKPlace b) via HeightOneSpectrum.equivOfRingEquiv asIdeal map/comap_symm, sigma•P.1=P.1.map(MulSemiringAction.toRingHom) equality to mapRingEquiv by RingHom.ext/RingOfIntegers.ext, maximalIdeal_injective+galoisPlaceMk_maximalIdeal. Then alignedCompletionMap/degree tower. abc probe.
