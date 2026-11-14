@@ -2537,3 +2537,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.326 Ind1 ValuationData sorryAx cleared fresh (stepxi, 2026-11-17 06:10)
 - Mzk1Ind1ValuationDataActual DONE 11:41:33; fresh probe torsion_le_ker_unitValuationHom and LocalValuationDataRequired both three axioms [propext, Classical.choice, Quot.sound], no sorryAx. Previous sorryAx was 11:37 stale auto-sorry from failed map_one/change; current source uses unitsToValuedUnits + unitsWithZeroEquiv composition.
 - KernelIntegers upstream olean now exists; stepxi to rebuild and prove left_inv/right_inv MulEquiv, mod torsion WQuotient, Z_p^d divisibility.
+
+
+### 20.327 odd-p residue-field target; consumer lemma (shehdd, 2026-11-17 06:20)
+- New log showed: theorem vs def (fixed); missing IsDiscreteValuationRing via simpa; type mismatch ResidueField vs O/(p). Switched target to (logShellResidueField K)^x with direct quotient equiv, no big simpa; consumer should use Ideal.quotEquivOfEq hpi.maximalIdeal_eq. shehdd to add consumer lemma to O/(p), DVR instance local. p=2 still open.
+- Ind1 ValuationData fresh 11:41:33 no sorryAx; KernelIntegers rebuild next.

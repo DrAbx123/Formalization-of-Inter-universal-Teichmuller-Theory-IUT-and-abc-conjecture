@@ -2481,3 +2481,5 @@
 - 11:30: URGENT sorryAx probe in Ind1 ValuationData (source no sorry) treat red until fresh audit. hull units pow_succ fix; qpilot Floor upstream missing; odd-p first error; stage4 Galois instance. gate 20.325 written.
 
 - 11:40: Ind1 ValuationData fresh DONE 11:41:33, probes three axioms no sorryAx (old stale auto-sorry cleared). KernelIntegers upstream exists, rebuild/MulEquiv/divisibility next. gate 20.326 written.
+
+- 11:50: odd-p target changed to logShellResidueField, no big simpa; consumer lemma to O/(p) to add. ValuationData fresh no sorryAx. gate 20.327 written.
