@@ -1376,3 +1376,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - ActualSourceUnitLayer :57 synthInstanceFailed Mul (ActualSourceUnitLayer K): quotient needs CommGroup instance from QuotientGroup (torsion normal); no axiom.
 - TorsionFromUnits :40 unsolved: inspect tail, likely pow_mul/Nat cast.
 - LS3137LFinal timeout at isDefEq; may need explicit C3L/instances and maxHeartbeats; lower priority.
+
+
+### 20.138 GREEN: GroupCountBridge; TorsionFromUnits (2026-11-15 16:55)
+- Mzk1IutIVProp14GroupCountBridgeActual DONE 02:53:32 (51s): exists_h_card_gamma; volume_ratio_eq_pow_of_groupCount. Unblocks ActualHBridge/P14ii.
+- Mzk1IutIVProp14TorsionFromUnitsActual DONE 02:53:33 (51s): torsion_card_eq_actual_of_unitsEquiv; actual eEquiv/hcard donor remains.
+- Need probes; final still pending hM/hB fix; Volume chain advances.
