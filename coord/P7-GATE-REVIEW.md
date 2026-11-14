@@ -3046,3 +3046,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - (c) exact missing: completionMap(hplace.symm qVFamily.q)=kPlace_eq.symm nativeBaseQFamily.q; completionMap green but source parameter identity clauseB q_comparison .parameter (F) vs badPlaceQCandidate (K) same q, no bridge; hplace insufficient.
 - (d1): C3.place.val=b.1, same q, baseQLogMagnitude b = n*(-log||C3.q.q||)=n*P.signed; (d2) M=sum W_b baseQ; P.signed=-M needs global sum collapse (Bad singleton/weights). No index/weight theorem.
 - Next mainline: explicit structures C3BaseQElementIdentification, GlobalSumCollapse, (c) source identity structure + consumer; no inhabitant/no fake.
+
+
+### 20.420 URGENT KernelBridge ofRange suspicious sorryAx; UnitInvariance line72 (2026-11-15 01:00)
+- KernelBridge log 23:46:45: errors :68:18/:106:18 Type mismatch, :74:8 rw pattern, with sorryAx; current source has ofRange at 102; may be auto-sorry. stepxi to delete ofRange if unproved, keep range equality/kernelToAQuotient_ker_eq/quotientKernelEquivRange, verify no sorryAx. abc urgent audit.
+- UnitInvariance log 00:18:55: :72:10 rw pattern miss (image/Set.ext step). qpilot to report/fix. No fake.
