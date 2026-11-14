@@ -2409,3 +2409,5 @@
 - 05:20: qpilot logQ absorption algebra done (l>=7,d>=1), source fixed pending batch; remaining hCor312 source. stepxi DPrime action gap interface queued: F-level action available, DPrime-only action missing, no inhabitant. gate 20.289 written.
 
 - 05:30: stepxi Ind1 fixed-units/extraction interface queued; missing r!=p infinitely divisible subgroup/integralLayer extraction/ActualSourceUnitLayer compatibility; no inhabitant. gate 20.290 written.
+
+- 05:40: stepxi infinite-divisible subgroup API queued (InfinitelyDivisibleFor, infinitelyDivisibleSubgroup); missing compatibility with fixed units/torsion/ActualSourceUnitLayer. Next instantiate candidateIntegralLayer and prove containsFixedUnits. gate 20.291 written.

@@ -2312,3 +2312,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.290 Ind1 fixed-units/extraction interface (stepxi, 2026-11-16 23:30)
 - Mzk1Ind1GaloisFixedRouteActual queued: actionFixedUnits F v := units fixed by all g in Pi v under actual FPrimeStrip.action (Units-level); mem_actionFixedUnits; actionFixedUnitsInTorsion image in TimesMuQuotient; structure Ind1IntegralExtraction F { integralLayer : forall v, Subgroup (TimesMuQuotient ((F.Mon v)^x)); containsFixedUnits : fixed image <= integralLayer }; Required=Nonempty no inhabitant.
 - Exact obstruction: 'r != p infinitely divisible' subgroup and integralLayer extraction, ActualSourceUnitLayer compatibility no donor; DPrime-only lacks Mon/action. stepxi to search divisibility API and formalize predicate or report missing donor.
+
+
+### 20.291 Ind1 infinite-divisible subgroup API (stepxi, 2026-11-16 23:40)
+- Tree has LocalUnitKummerInjectivity (fixed roots, integralClosureUnits_residuallyFinite, 'divisible in every positive degree is one') but no r!=p infinitely divisible subgroup extraction/ActualSourceUnitLayer compatibility API.
+- Mzk1Ind1InfiniteDivisibleActual queued: InfinitelyDivisibleFor r x := forall n, exists y, y^(r^n)=x; infinitelyDivisibleSubgroup r : Subgroup G (one/mul/inv closed); mem lemmas. Actual predicate/subgroup API for candidateIntegralLayer.
+- Still missing: connect subgroup to fixed units/torsion quotient/ActualSourceUnitLayer compatibility (no donor); no fake. stepxi to instantiate candidate and prove containsFixedUnits or report missing donor.
