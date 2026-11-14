@@ -3063,3 +3063,5 @@
 - 36:10: core pos Finite instance fix; qpilot. gate 20.617 written.
 
 - 36:20: core redefinition green olean 07:32:38; AlgebraicUnitLogarithm implicit rw fix. gate 20.618 written.
+
+- 36:30: Algebraic hlog.trans parse fix; qpilot. gate 20.619 written.
