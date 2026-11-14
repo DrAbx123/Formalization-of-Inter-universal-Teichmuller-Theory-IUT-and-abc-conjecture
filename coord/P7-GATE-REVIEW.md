@@ -2318,3 +2318,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Tree has LocalUnitKummerInjectivity (fixed roots, integralClosureUnits_residuallyFinite, 'divisible in every positive degree is one') but no r!=p infinitely divisible subgroup extraction/ActualSourceUnitLayer compatibility API.
 - Mzk1Ind1InfiniteDivisibleActual queued: InfinitelyDivisibleFor r x := forall n, exists y, y^(r^n)=x; infinitelyDivisibleSubgroup r : Subgroup G (one/mul/inv closed); mem lemmas. Actual predicate/subgroup API for candidateIntegralLayer.
 - Still missing: connect subgroup to fixed units/torsion quotient/ActualSourceUnitLayer compatibility (no donor); no fake. stepxi to instantiate candidate and prove containsFixedUnits or report missing donor.
+
+
+### 20.292 P7-READING-FIRST-ATTACK doc integrated (2026-11-17 00:00)
+- Read coord/P7-READING-FIRST-ATTACK-20261114.md. Key: reading uses same-source one-way transport Q_src<=Q_norm<=H_root<=H_target (R1 norm ratio>=1; R2 actualPaperXiFTarget hull containment); no G2/G3 equality or normRatio=1. Mainline to verify/rewrite Mzk1ActualReadingTargetActual and report missing same-q/oneLabel/lattice/measure calibration.
+- Thm1.10: l!=5 -> l>=7; hCor312 absorbs logQ; remaining actual display terms and actual hCor312 from same-source 3.12/Box/arithmetic. qpilot aligned.
+- #C: A must be O^x/(1+p^sO) ≃* (O/(p^s))^x; B count N=e_K*s; direct filtration U_n/U_{n+1} ≅ k^+ gives [U:U_N]=(q-1)q^(N-1), bypasses quotient API. Hull/shehdd aligned.
+- Ind1: fixed points first, then mod torsion, D_r(A_F)=W_F for (r,p)=1; do not mod torsion before fixed points. stepxi aligned.
+- Object lock: true tower m*d_L=n*d_F, raw calibration log mu(H)=d V_R(H)+log mu(R), unitMass=1 not assumed, signed vs magnitude distinction. stage4 aligned.

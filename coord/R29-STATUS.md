@@ -2411,3 +2411,5 @@
 - 05:30: stepxi Ind1 fixed-units/extraction interface queued; missing r!=p infinitely divisible subgroup/integralLayer extraction/ActualSourceUnitLayer compatibility; no inhabitant. gate 20.290 written.
 
 - 05:40: stepxi infinite-divisible subgroup API queued (InfinitelyDivisibleFor, infinitelyDivisibleSubgroup); missing compatibility with fixed units/torsion/ActualSourceUnitLayer. Next instantiate candidateIntegralLayer and prove containsFixedUnits. gate 20.291 written.
+
+- 05:50: integrated P7-READING-FIRST-ATTACK doc: reading one-way transport (no G2/G3), Thm110 l>=7 remaining actual hCor312, #C primary O/(p^s) + direct filtration, Ind1 fixed-points-first, object lock tower/raw calibration. mainline/hull/shehdd/stepxi/stage4 updated. gate 20.292 written.
