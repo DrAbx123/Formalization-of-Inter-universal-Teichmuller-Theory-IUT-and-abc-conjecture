@@ -1335,3 +1335,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.131 GREEN: VolumeRatioHaarActual (2026-11-15 15:25)
 - Mzk1IutIVProp14VolumeRatioHaarActual DONE 02:21:02 (101s): volume_ratio_eq_pow_of_haar. Next: GroupCountBridge -> ActualHBridge -> P14ii.
 - A1Data still stale DONE 02:16:59 vs source 02:17:11; no recompile. mainline ordered to retouch/remove stale olean and verify no sorry before final.
+
+
+### 20.132 Final/S3137 source audit: no True; LS3137LFinal elaboration failure (hull, 2026-11-15 15:35)
+- Hull audited 6 final-chain files: grep True/PUnit/IsEmpty.elim/sorry/admit/axiom all 0; no fake targets.
+- GREEN: LReadoutFinal 02:04:08; LNormReadoutActual 01:57:32; LNormReadoutProduct 01:36:49; LNormComparisonConditional 02:08:48; LPaperInstanceFinal 17:45.
+- Mzk1P0LS3137LFinalActual FAIL 02:17:12: no True; :13 Invalid argument name I; :15 typeclass stuck (C3L.q.q place/QCandidate); :18 unknown C3L + whnf. Elaboration issue; fix with explicit (C3L := C3L), explicit SourcePilotRegionDataL (I := I) / place/QCandidate instances; no fake.
+- VolumeRatioHaar GREEN 02:21:02; GroupCountBridge fixes (remove named K; hp 0<p).
