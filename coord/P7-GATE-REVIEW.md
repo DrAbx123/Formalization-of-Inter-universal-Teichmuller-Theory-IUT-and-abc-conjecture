@@ -2282,3 +2282,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.285 Provenance interface queued; ABCAdapted GREEN (2026-11-16 22:10)
 - stepxi Mzk1Ind1ProvenanceActual queued: integersUnitsToTimesMu, actualSourceUnitToTimesMu via quotientMap_ker + torsion killed; structure ActualInd1UnitActionProvenance with algAction/beta/timesMuAction, algAction_timesMu, square; Required=Nonempty, no inhabitant. Substantial square/commutation, not bare Prop; actual TimesMu/source action donor still missing.
 - lattice Mzk1IUTIVABCStatementLayerActualAdapted GREEN (olean True). Remaining Estimates/Comparison/EstimateBridge/Section2 Adapted in WL/retouched, pending not red. 9 auto-probes excluded.
+
+
+### 20.286 #C A radius pairing; provenance donor obstruction; forced retouch (2026-11-16 22:20)
+- shehdd task-127: logShellCongruenceUnits radius is ||logShellScale p|| = 1+p^s O, not (p^s)^e; hull defined logShellCongruenceUnitsPow e = principalUnitsAtClosedRadius ||(logShellScale p)^e||; pow_one returns original. Correct target ((Integers K)^x / logShellCongruenceUnitsPow e) ≃* (O/(p^s)^e)^x. New Mzk1CongruenceUnitsEquivActual with reduction congruenceUnits_equiv_of_kernel_surjective; remaining f=Units.map mk, hsurj local ring lifting, hker kernel = 1+(p^s)^e O. No sorry.
+- stepxi provenance: SourceTimesMuKummerLayer acts on (AlgClosure)^x, only inhabitant sourceKummerArrow_self gate-only (sourceAction=1, refl, explicitly no arithmetic content); no nontrivial actual donor on (Integers K)^x/tors. Required not non-fake closable currently; interface substantial but no inhabitant.
+- Added/touched WL for Mzk1Ind1ProvenanceActual, Mzk1CongruenceUnitsEquivActual, Mzk1TruncatedUnitsCardActual to force watchdog.
