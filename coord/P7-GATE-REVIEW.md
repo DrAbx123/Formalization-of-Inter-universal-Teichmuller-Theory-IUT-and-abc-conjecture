@@ -2231,3 +2231,12 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Grep no real sorry/axiom (only comments); Final rows unconditional noS45; Dictionary rows length 8 incl finalDictionaryCombined_noS45 unconditional.
 - Fresh probe 5 items all [propext, Classical.choice, Quot.sound]: finalPaperNormalizedComparison; normPowerBridge_holds; finalPaperNormalizedComparison_noS45_uncond; finalDictionaryCombined_noS45_uncond; finalDictionaryCombined_noS45.
 - Caveats: rel/lock explicit unproved; L hlock/hbound/hlog explicit; unitMass=1 not claimed; strict equality S45 unproved. Old probes predate rebuild must not be cited; CleanAcceptanceProbe only fresh evidence.
+
+
+### 20.278 Next hard gaps assigned (2026-11-16 19:40)
+- mainline: paperNormalized*Sum -> qPilotLogVolumeReading/thetaPilotHullLogVolumeReal readout bridge; acceptance file stale/conditional.
+- hull: #C B truncatedUnits_card or L-side hlock/hbound/hlog.
+- qpilot: IV Thm110 exact missing unconditional inputs.
+- lattice: remaining IV statement-layer red 18.
+- shehdd: retry B if fresh context; stepxi provenance; abc audit; stage4 read-only target bridge.
+- Clean acceptance chain Dictionary 17:42:56 -> Assembly/Final 17:46:50 -> probe 17:50:33; 5 items three axioms.
