@@ -866,3 +866,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1Ind1UnitQuotientActual` DONE 00:53:44（53s）**：`unitLogQuotientEquivOfMulEquiv`；axiom probe = `[propext, Classical.choice, Quot.sound]`，无 sorryAx。
 - `Mzk1Ind1LogLatticeActionActual`：结构字段缺 `NormedAlgebra` 实例；已把 F/L/p/instances 显式列入 structure，只留 structure（无 proof/sorry），等编。
 - `Mzk1WFLatticeActionActual`：参数化 `WFUnitQuotientIdentification (W) (d)`，无 Fin0/PUnit，无 inhabitant；连续链 `continuous_of_addHom_fin_zpadic` 已 green。
+
+
+### 20.65 审计 probe GREEN：BoxDistinguished / HaarIndex 三公理；LogLattice structure green（2026-11-15 03:20）
+- **`Mzk1BoxDistinguishedScalarProbe` DONE 00:56:51（48s）**：`ord_pow`、`ord_theta`、`distinguished_theta_order` 的 `#print axioms` 均为 `[propext, Classical.choice, Quot.sound]`；无 sorryAx。
+- **`Mzk1IutIVProp14HaarIndexAxiomProbe` DONE 00:56:56（53s）**：`mu_lambda_eq_index_mul`、`mu_lambda_toReal_eq_index_mul` 同为三公理；无 sorryAx。
+- **`Mzk1Ind1LogLatticeActionActual` DONE 00:56:57（55s）**：仅 `SinglePlaceLogLatticeAction` structure（F/L/p/instances 显式参数），无 proof/sorry；旧 log 的 `NormedAlgebra` 错误是旧 run。
+- `Mzk1BoxDistinguishedScalarActual` 00:53:39 GREEN；`Mzk1IutIVProp14HaarIndexActual` 00:53:43 GREEN；`Mzk1Ind1UnitQuotientActual` 00:53:44 GREEN + probe 三公理。
+- 下一步：qpilot `Mzk1BoxDistinguishedVarpiActual`（PacketHullData.varpi）；lattice HaarIndexPow→hμΛ；stepxi WF/实际单位识别。

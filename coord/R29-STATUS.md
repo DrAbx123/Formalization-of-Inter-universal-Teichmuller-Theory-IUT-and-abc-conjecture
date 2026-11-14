@@ -1911,3 +1911,5 @@
 - 11:20：QHat attempt 失败原因：① 文件头 doc comment 在 line7 已闭合，line9-14 裸命令；② `rw [c0QHat_eq_q]` 后 ascription 被消，`(qVFamily q)` 显示为 `Completion` 而非 `rootBase`；让 mainline 先包 doc comment，再显式 `change` 保留 coercion 后 `rw [norm_algebraMap']`，若 change 失败报类型差。
 
 - 11:25：NormCorrection 精确修：本地 `qhatLogReadout` 改为 `abbrev` 别名指向 Correspondence 同名 def（解决 hbound 类型不匹配）；`:67/:99 linarith` 前加 `ring_nf`；`:134` 随别名解决。已发 hull。
+
+- 11:30：**审计 probe GREEN：`Mzk1BoxDistinguishedScalarProbe` 00:56:51（ord_pow/ord_theta/distinguished_theta_order 三公理）、`Mzk1IutIVProp14HaarIndexAxiomProbe` 00:56:56（mu_lambda_eq_index_mul/toReal 三公理）；`Mzk1Ind1LogLatticeActionActual` 00:56:57（仅 structure，无 proof/sorry）**。qpilot 正在写 `Mzk1BoxDistinguishedVarpiActual`；lattice 接 HaarIndexPow；stepxi 接 WF/实际单位识别。gate §20.65 已写。
