@@ -1181,3 +1181,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Current source mtime 01:41:19: thetaNormReadL := thetaReadActual I place - Real.log actualUnitMassL (direct, no actualC3LogShellTensorLogVolumeL/haarLogVolume clamping).
 - hull retracted its max-0-log caveat for the current definition; Mzk1P0LHaarLogClipActual rewritten as historical separation: actualC3LogShellTensorLogVolumeL_eq_max (old def) and thetaNormReadL_eq_thetaReadActual_sub_log_unitMass (current rfl, not a defect).
 - coord/L-NORMALIZED-READOUT-AUDIT.md section 10 retracts sections 7/8 clipped conclusions; canonicality now only needs unitMass positive/finite for log.
+
+
+### 20.109 GREEN probes: StepVAverage/Torsion/HaarIndexPow/LNormReadoutProduct (2026-11-15 11:05)
+- Mzk1BoxStepVAverageProbe DONE 01:42:00 (50s): stepV_weightedAverage_le_of_distinguished and stepV_procession_le_of_distinguished both [propext, Classical.choice, Quot.sound].
+- Mzk1IutIVProp14TorsionAxiomProbeActual DONE 01:42:07 (57s): torsion_card_eq_actual_of_congruenceCard three axioms.
+- Mzk1IutIVProp14HaarIndexPowAxiomProbe DONE 01:42:49 (99s): mu_lambda_toReal_eq_pow_mul three axioms.
+- Mzk1P0LNormReadoutProductAxiomProbeActual DONE 01:42:54 (104s): thetaNormReadProduct_eq_sum, _closedForm_sub_one, _neg_sum_coefficient all three axioms.
+- Ind1 LocalMon/SourceUnitBridge/IntegralUnitMap recompiled DONE 01:42 (self identification is tautological interface only, not source W).

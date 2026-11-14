@@ -2003,3 +2003,5 @@
 - 17:00: hull clip caveat (haarLogVolume ofReal clamps negative log) applies to old thetaNormReadL; mainline current def = thetaReadActual - log unitMassL, direct log, no clamp. Old audit invalidated for current source; clip lemma kept historical. gate 20.107 written.
 
 - 17:05: hull retracted old clipped thetaNormReadL caveat; current def direct (thetaReadActual - log unitMass), mtime 01:41:19. Mzk1P0LHaarLogClipActual rewritten historical separation; audit section 10 retracts 7/8. gate 20.108 written.
+
+- 17:10: GREEN probes: StepVAverageProbe 01:42:00 (2), TorsionAxiomProbe 01:42:07 (1), HaarIndexPowAxiomProbe 01:42:49 (1), LNormReadoutProductAxiomProbe 01:42:54 (3) all [propext, Classical.choice, Quot.sound]. Ind1 LocalMon/SourceUnitBridge/IntegralMap recompiled; self identification interface-only. gate 20.109 written.
