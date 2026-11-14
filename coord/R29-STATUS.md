@@ -2881,3 +2881,5 @@
 - 21:00: stepxi writing integer equiv composition + Module instance. gate 20.526 written.
 
 - 21:10: IntegersEquivZp remove p arg; UnitRegionScaling compile/floor. gate 20.527 written.
+
+- 21:20: UnitRegionScaling direct GREEN; IntegersEquiv Fact/type alignment blockers. qpilot floor; stepxi cast. gate 20.528 written.

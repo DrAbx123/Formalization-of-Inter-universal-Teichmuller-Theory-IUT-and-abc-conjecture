@@ -3584,3 +3584,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.527 IntegersEquivZp arg error; UnitRegionScaling (2026-11-15 19:10)
 - Direct IntegersEquivZp: :17 Invalid argument p for DFunLike.coe; concreteFivePadicIntEquiv has no p arg (fixed concreteFivePrime). Remove (p:=5). stepxi.
 - UnitRegionScaling source ready after Assembly olean; qpilot direct compile; floor reduces to unitRegionLog=-M and 1<=M explicit. No fake.
+
+
+### 20.528 UnitRegionScaling direct GREEN; IntegersEquiv blockers (2026-11-15 19:20)
+- Direct UnitRegionScaling src 04:44:39 EXIT=0: unitRegionLog_eq_canonical_add_principalDim; floor only unitRegionLog=-M and 1<=M explicit. qpilot retouch.
+- IntegersEquiv: :15 missing Fact Prime 5; concreteFivePadicIntEquiv for concreteFiveHeightOne adicCompletion Q vs target Integers(Completion(comap concretePlace)); need cast concreteGaussianFivePlace_comap + concreteFivePlace.maximalIdeal=concreteFiveHeightOne. stepxi. No fake.
