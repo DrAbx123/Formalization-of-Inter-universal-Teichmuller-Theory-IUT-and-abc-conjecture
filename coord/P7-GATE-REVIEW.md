@@ -1829,3 +1829,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor DONE 05:58:55 olean 14:04:02 + probe 06:04:01 three axioms. LS3137 DONE 05:57:00 + probe 06:00:57 two axioms.
 - Residual old files: GeneralNormalizedNormFinal (all-x no hx), Consumer (all-x), NormalizedNormSpectralBridge (hx but no olean), GeneralNormalizedNormFinalWiringFixed (depends old), GeneralNormalizedNormFormula (no olean); all no olean and not consumable until hx/fix names.
 - S45 not donor-implied; independent explicit condition.
+
+
+### 20.213 Round-14 critical S45 inquiry; residual files; probes (2026-11-16 07:40)
+- Final S3137/Dictionary probes fresh green; donor/composite/LS3137/AddLeProof green; CompositeAxiomProbe 06:17:01 three axioms.
+- CRITICAL: is S45 qVFamNormRatio=1 actually FALSE/refutable? Donor power relation gives normalized=default^(1/d); d≠1 means ratio≠1 unless default=1. SeparatedNormRatioRegime records ratio≠1 regime. hull/stage4 to determine if actual T/b refutes S45; if false, route obstruction must be reported, no fake unconditional.
+- Residual old all-x files: Final/Consumer/SpectralBridge/FinalWiringFixed, no olean, must add hx/fix names or exclude.
+- #C B/A gap; source arrow provenance gap; non-lane statement red pending.
