@@ -3051,3 +3051,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.420 URGENT KernelBridge ofRange suspicious sorryAx; UnitInvariance line72 (2026-11-15 01:00)
 - KernelBridge log 23:46:45: errors :68:18/:106:18 Type mismatch, :74:8 rw pattern, with sorryAx; current source has ofRange at 102; may be auto-sorry. stepxi to delete ofRange if unproved, keep range equality/kernelToAQuotient_ker_eq/quotientKernelEquivRange, verify no sorryAx. abc urgent audit.
 - UnitInvariance log 00:18:55: :72:10 rw pattern miss (image/Set.ext step). qpilot to report/fix. No fake.
+
+
+### 20.421 Torsion split arithmetic directions (hull, 2026-11-15 01:20)
+- Mzk1TorsionSplitActual FAIL 16:22:42 but log old; current fixes: Fact p.Prime, hT0dvdT, hval0 via padicValNat.div_pow, hnotp. Remaining: hT0dvdq1 dvd_of_dvd_mul_left direction; hmle needs Coprime (p^m)(q-1); pow_left mismatch.
+- Hints: get p^m|p^(fA) from p^m|T and T|q^A(q-1) plus coprimality, then m<=fA via pow_dvd_pow_iff_le_right/Nat.le_of_dvd; then Coprime.coprime_dvd_left gives Coprime (p^m)(q-1). Use hcop.symm/coprime_dvd_left instead of pow_left. No fake.

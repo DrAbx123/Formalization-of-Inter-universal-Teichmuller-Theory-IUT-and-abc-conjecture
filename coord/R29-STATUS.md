@@ -2669,3 +2669,5 @@
 - 03:20: R1 three carriers identified (F/K/Fmod); (c) clauseB source id, (d1) C3 Fmod<->K same q+n, (d2) global sum collapse. Mainline write explicit structures/consumer. gate 20.419 written.
 
 - 03:30: URGENT KernelBridge ofRange log errors+sorryAx; verify/delete. UnitInvariance line72. gate 20.420 written.
+
+- 03:40: torsion split arithmetic hints (coprime_dvd_left/pow_dvd_pow_iff_le_right). hull. gate 20.421 written.
