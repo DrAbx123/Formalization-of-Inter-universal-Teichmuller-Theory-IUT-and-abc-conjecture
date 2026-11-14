@@ -1427,3 +1427,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - BUT ActualInd1UnitAction.fromProcession : Prop is bare (no semantic content/proof); ActualInd1UnitActionRequired := Nonempty nearly only 'exists beta', not evidence of actual Ind1/Ind2 procession action. Must replace with substantive proposition (equality/commutation with actual action) or remove and mark explicit gap.
 - New audit probe Mzk1AuditProbe720Actual DONE 03:23:12: 6 items (two H bridges, three Normalized, SourceUnitLayer self_nonempty) all [propext, Classical.choice, Quot.sound].
 - Final latest FAIL 03:15:08 (before Normalized olean 03:15:24); pending retouch.
+
+
+### 20.146 Ind1 ActualInd1UnitAction fromProcession replaced by substantive compatible (stepxi, 2026-11-15 18:40)
+- Bare fromProcession Prop removed. New structure ActualInd1UnitAction (K : Type) [NormedField K] [IsUltrametricDist K] where:
+  algAction : (AlgClosure K)^x ≃* (AlgClosure K)^x;
+  beta : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer K;
+  compatible : forall u : (Integers K)^x, exists v : (Integers K)^x, beta (QuotientGroup.mk u) = QuotientGroup.mk v /\ integersUnitsToAlgClosure v = algAction (integersUnitsToAlgClosure u).
+- ActualInd1UnitActionRequired := Nonempty; actualInd1LogRangeEquiv A := actualSourceUnitLogRangeEquiv self self A.beta.
+- compatible is substantive provenance (beta induced by actual alg-closure action on integral units); no inhabitant; exact source gap. No bare Prop, no fake.

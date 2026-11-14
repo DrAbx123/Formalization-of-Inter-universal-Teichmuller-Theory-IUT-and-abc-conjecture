@@ -2087,3 +2087,5 @@
 - 00:20: GREEN ActualSourceUnitLayer 03:14:34, ActualHBridge 03:14:35 (actualGammaH_spec/volume_ratio_eq_pow_actualH), NormalizedSourceConditional 03:15:24 (paperNormalizedComparison_of_sourceFields etc), PlaceVolumeFinal2 03:18:57. CAUTION B5 source 11:19:24 after Final2 DONE, B5 olean stale; recompile B5 then Final2. gate 20.144 written.
 
 - 00:30: abc audit new greens clean; BUT ActualInd1UnitAction.fromProcession bare Prop placeholder -> must replace with substantive proposition or mark gap. Probe720 6 items three axioms. Final pending. gate 20.145 written.
+
+- 00:40: stepxi replaced bare fromProcession with substantive compatible field (beta induced by actual algAction on integral units) + algAction field; ActualInd1UnitAction now real provenance structure, no inhabitant. ActualSourceUnitLayer/IntegrationAction retouched. gate 20.146 written.
