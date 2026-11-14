@@ -1232,3 +1232,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - WeightA1 :103: field_simp [hbne] already closes; delete trailing ring/no-op.
 - LNormBoundWeak hOtop type mismatch: pass explicit named args to totalDelta_nonneg and ensure hOtop type exactly rootExtensionHaar T b (rootExtensionUnitBall T b) != top; or show-convert.
 - #C interface :32 IsUltrametricDist metavariable: make K/p explicit structure parameters and theorem arguments; don't rely on section inference.
+
+
+### 20.116 LNormReadout dependency note: final chain does not use clipped def (hull, 2026-11-15 12:35)
+- Current final/LNormComparison chain does NOT depend on old clipped actualC3LogShellTensorLogVolumeL/haarLogVolume.
+- LNormReadoutActual (mtime 01:41:19): thetaNormReadL := thetaReadActual - log actualUnitMassL, direct; no clipped def in file.
+- LNormComparisonConditional uses only thetaNormReadL/thetaNormReadProduct/qReadActual; LReadoutFinal re-exports q read; LPaperInstanceFinal uses thetaReadActual nonneg; LS3137LFinal re-exports q reading.
+- actualC3LogShellTensorLogVolumeL only at Mzk1C3LogShellTensorLActual:121 and historical Mzk1P0LHaarLogClipActual.
+- Still need actualUnitMassL positive/finite for log; qRead_le_thetaRead_of_normTarget needs 0 <= log actualUnitMassL. LNormReadoutProduct still pending (import/open + proof tail).

@@ -2021,3 +2021,5 @@
 - 18:20: new tails: LNormReadout x i tensor block not Pi -> norm unit ball; WeightA1 no-goal remove ring; LNormBoundWeak hOtop explicit/convert; #C interface make K/p explicit structure params. Sent mainline/shehdd. gate 20.115 written.
 
 - 18:30: watchdog batch reset at 01:55:29; no new DONE after 01:52. Woke all lanes: mainline watch/compile LNormReadout/Weight/final, qpilot principal probe/alignment, shehdd #C, lattice Volume, stepxi W, abc audit, hull read-only. goal round 5 active.
+
+- 18:35: hull dependency note: final/LNormComparison chain does not use old clipped actualC3LogShellTensorLogVolumeL; current thetaNormReadL direct thetaReadActual - log unitMassL; only unitMass pos/finite and hlog condition remain. LNormReadoutProduct pending. gate 20.116 written.
