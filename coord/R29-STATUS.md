@@ -2981,3 +2981,5 @@
 - 29:20: hq q tensor norm/region gap; hull inspect C3.q construction. gate 20.576 written.
 
 - 29:30: CRITICAL hq C3.q single local point vs multi-place sum; mainline determine construction mismatch. gate 20.577 written.
+
+- 29:40: CRITICAL R1 C3.q single local vs Bad global sum; GlobalSumAggregation conditional not proven; hq blocked. Gate 20.578 written.

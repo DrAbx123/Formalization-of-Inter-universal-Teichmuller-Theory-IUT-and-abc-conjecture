@@ -3806,3 +3806,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.577 CRITICAL hq structural mismatch: C3.q single local point vs multi-place sum (2026-11-15 26:30)
 - SourcePilotRegionData: C3.q : FinitePlaceQCandidate place.val (single local field point); tensorLanding: CommonPrimeCompletion -> ArithmeticTensorTupleBlock, tensorLanding q.q = tensorUnit. signedQPilotLogVolume=Real.log||C3.q.q|| single point, while A=(1/2l)*sum over all places qlog. hq qReading=-A structurally incompatible; tensorLanding only maps q to tensorUnit not product. hθ region still no coordinate product. mainline determine intended paper q (single vs global tensor) and exact construction mismatch/fix; no fake.
+
+
+### 20.578 CRITICAL R1 single-place q vs global Bad sum (mainline, 2026-11-15 26:40)
+- SourcePilotRegionData doc: one actual finite place; C3.q : FinitePlaceQCandidate place.val (single local q); qPilotRegion={tensorUnit}; signedQPilotLogVolume=localSignedLog C3.q; qPilotLogVolumeReading single log. tensorLanding only maps this q to tensorUnit (field), no per-place product. Global A/M=sum_b W_b*... (Bad family). So P.signedQPilotLogVolume is different type than A/M; R1 aggregation identity missing. No canonical global q/tensorLanding; tensorLanding is input field; qVFamily per-b no canonical same-as-C3 identification. BadToC3TensorMap no inhabitant/thetaValue_compat bare Prop. This confirms R1 direct aggregation gap (GlobalSumAggregation conditional, not proven) and hq structural obstruction. No fake.
