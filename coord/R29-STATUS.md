@@ -2231,3 +2231,5 @@
 - 14:20: AddLeProof probe GREEN 06:20:03; donor probe re-DONE 06:20:02. Prop18 no olean; S45 d>1 attempt assigned hull/stage4. gate 20.214 written.
 
 - 14:30: Prop18 FAIL same slash import at :1:17; Example36 olean exists. lattice to fix dot path. gate 20.215 written.
+
+- 14:40: S45 route analysis: ratio=absNorm^{nu(1-1/d)}; ratio=1 only nu=0 or d=1; S45 genuine extra condition, donor cannot imply/close CommonPrimeNormInstanceCompat. Keep QVFamNormInstanceGap explicit. Residual four files excluded. gate 20.216 written.

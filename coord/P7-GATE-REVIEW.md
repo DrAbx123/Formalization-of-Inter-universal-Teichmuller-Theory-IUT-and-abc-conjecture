@@ -1845,3 +1845,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 
 ### 20.215 Prop18 root cause: slash import again (lattice, 2026-11-16 08:20)
 - Mzk1IUTIVProp18CompositeActual FAIL 06:20:53: :1:17 unexpected token '/', import uses slash; :2 invalid import; missing Example36 olean is cascade. Fix slash to dot path as Prop11. Retouch.
+
+
+### 20.216 S45 route analysis: genuine extra condition, not donor-implied (mainline, 2026-11-16 08:40)
+- qVFamNormRatio = normalized/default; default is canonical valued-adic absNorm^{-nu}; normalized is spectral absNorm^{-nu/d}. Under explicit carrier identification ratio = absNorm^{nu(1-1/d)}; ratio=1 only if nu=0 (unit) or d=1; for d>1 and nu!=0 ratio !=1.
+- Thus S45 qVFamNormRatio=1 is a genuine extra condition (paper normalized-source hypothesis); donor cannot imply it and cannot close CommonPrimeNormInstanceCompat (norm equality false d!=1).
+- Next: keep QVFamNormInstanceGap as explicit lock; prove qVFamNormRatio=1 <-> QVFamNormInstanceGap (default norm nonzero) and condition power-ratio formula under explicit named carrier-identification hypothesis; never treat it true.
+- Residual four files explicitly excluded (old all-x/no olean): GeneralNormalizedNormFinal/Consumer/NormalizedNormSpectralBridge/FinalWiringFixed; restore only with hx/fixed names and watchdog.
+- AddLeProof probe queued; AddLeProof green 06:12:20.
