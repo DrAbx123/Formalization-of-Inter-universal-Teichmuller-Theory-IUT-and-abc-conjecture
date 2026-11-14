@@ -2995,3 +2995,5 @@
 - 30:30: GaloisCompletion fresh green (def only); stage4 uniform; hull hq; abc audit. gate 20.583 written.
 
 - 30:40: RelativeNorm q_ne_zero green; power law may be false for etale product; derive product formula/counterexample. mainline. gate 20.584 written.
+
+- 30:50: PrincipalUnits norm bridge change/coercion; qpilot. gate 20.585 written.
