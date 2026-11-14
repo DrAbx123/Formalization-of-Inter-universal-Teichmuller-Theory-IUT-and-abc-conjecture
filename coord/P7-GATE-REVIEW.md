@@ -2045,3 +2045,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - hbridge Value :71:9 rewrite pattern not found; Donor :93:4 Type mismatch after simplification; hull owns edits.
 - After hbridge green: Final _ofNormBridge (fun b => hbridge T b) -> unconditional finalPaperNormalizedComparison_noS45; replace S45 version (strict only); Dictionary drop S; rows/probe. No fake.
 - LiteralCarrierReduction GREEN 07:53:24; IV red 23->18.
+
+
+### 20.249 Both final probes fresh; noS45 bridge probed (2026-11-16 14:50)
+- Mzk1P0FinalS3137AxiomProbeActual olean 16:03:38: finalPaperNormalizedComparison, finalPaperNormalizedComparison_noS45_ofNormBridge, finalLPaperInstance, finalBridgeConditions_of all three axioms.
+- Mzk1FinalAuditAxiomProbeActual olean 16:03:38: final comparison, finalL, finalBridge, B5 conditional all three axioms.
+- abc's earlier list omitted noS45 bridge; corrected separately. Both fresh.
+- LiteralCarrierAxiomProbe 08:03:09 three axioms; LiteralCarrier GREEN 07:53:24.
