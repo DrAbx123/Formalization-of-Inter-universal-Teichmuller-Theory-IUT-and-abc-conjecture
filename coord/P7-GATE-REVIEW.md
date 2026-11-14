@@ -1136,3 +1136,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - ReadoutProduct :96: remove change, use explicit hlog = Real.log_rpow ...; rw [hlog]; ring.
 - Torsion actual: add finite_integralUnitTorsion/finite_logShellCongruenceQuotient/finite_logShellIntegerQuotient before obtain; only #C donor remains.
 - Lattice chain root: IutIVProp14VolumeActual olean missing; retouched Prop14Volume->GroupCountBridge->ActualHBridge->P14ii; HaarIndexPow add import Mathlib/open LocalFieldIntegralUnits.
+
+
+### 20.101 SourceUnitBridge vs L readout interface gap (hull, 2026-11-15 09:55)
+- SourceUnitBridge provides: SourceUnitQuotientIdentification W K = W ≃* (Integers K)^x/tors (no inhabitant); sourceUnitLogRangeEquiv (log range only); no measure/theta hull.
+- L readout is analytic Haar-mass ratio: thetaNormReadL/thetaNormReadProduct, qReadActual=log||q.q||; thetaNormReadProduct=s1915ClosedForm-1=sum d_b log r_b.
+- Missing interfaces: (1) unit group vs completion field q/Haar; (2) SourceUnitQuotientIdentification inhabitant; (3) q/tensorUnit <-> integral unit representative, unitLog -> log||q|| bridge; (4) product/global version: SourceUnitBridge single field K/L vs global Bad product hull, no per-block multiplicative assembly.
+- Reusable: unitLogQuotientEquivOfMulEquiv; still need source unit identification and L readout alignment. SourceUnitBridge does NOT directly give LQThetaSourceArrow.normalization_eq or thetaNormReadL normalization.

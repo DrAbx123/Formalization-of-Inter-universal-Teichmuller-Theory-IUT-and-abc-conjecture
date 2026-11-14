@@ -1987,3 +1987,5 @@
 - 15:30: GREEN Mzk1Ind1SourceUnitBridgeActual 01:30:31: SourceUnitQuotientIdentification (no inhabitant), sourceUnitLogRangeEquiv, apply (three axioms). Beta_a log half done; only W identification remains. Woke all lanes: mainline compile, stepxi LocalMon/W, lattice P14ii, shehdd torsion, qpilot StepV, abc audit, hull/stage4 read-only. gate 20.99 written.
 
 - 15:40: GREEN RootRadiusAxiomProbe 01:31:20 + VarpiAxiomProbe 01:31:19 both three axioms no sorryAx. WeightA1 imports fixed; ReadoutProduct hlog fix; torsion finite instances; lattice Prop14Volume chain root. Sent mainline/shehdd/lattice continue. gate 20.100 written.
+
+- 15:50: hull audit SourceUnitBridge vs L readout: different layers (unit group vs Haar mass); missing identification inhabitant, q/tensorUnit <-> integral unit, unitLog->log||q||, global product assembly. SourceUnitBridge does not give LQThetaSourceArrow.normalization_eq/thetaNormReadL. gate 20.101 written.

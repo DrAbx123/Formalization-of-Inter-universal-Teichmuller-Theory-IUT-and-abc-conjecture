@@ -90,3 +90,32 @@
 
 ### `Mzk1P0LNormReadoutActual`
 - 01:21:12 START，结果待 watchdog。
+
+## 9. `SourceUnitBridge` 与 L readout 接口（只读）
+
+### SourceUnitBridge 提供什么
+`Mzk1Ind1SourceUnitBridgeActual.lean`：
+- `SourceUnitQuotientIdentification (W) (K) : Type` = `W ≃* ((Integers K)ˣ ⧸ torsion)`；**无 inhabitant**（源码 doc 明说 missing source-level identification）。
+- `sourceUnitLogRangeEquiv (idK idL β) : (unitLogHom K).range ≃* (unitLogHom L).range`；
+- `sourceUnitLogRangeEquiv_apply`（rfl）；只处理 **integral units 的 log range**，不含 measure/theta hull。
+
+### L readout 提供什么
+- `thetaNormReadL`/`thetaNormReadProduct`：analytic `Real.log` of Haar mass ratio / product hull；
+- `qReadActual`：`Real.log‖q.q‖`（signed log）；
+- `thetaNormReadProduct = s1915ClosedForm−1 = Σ_b d_b log r_b`（全局 Bad 求和）。
+
+### 接口缺口（精确）
+1. **对象层级不同**：SourceUnitBridge 是 `Integers K` 的单位群/对数 range；L readout 是 completion field 的 q 元素/Haar 测度。
+2. **缺 SourceUnitQuotientIdentification inhabitant**：`W` ↔ integral units 的实际源单位识别；
+3. **缺 q 单位/测度对应**：`q.q`（或 tensorUnit）与 integral unit representative 的对应，及 unitLog 值到 `log‖q‖` 的桥；
+4. **缺 product/global 版本**：SourceUnitBridge 是单个 normed field K/L；L product readout 是全局 `Bad` product hull，没有逐 block 单位 log range 的乘性装配。
+
+### 现有可复用接口
+- `Mzk1Ind1UnitQuotientActual.unitLogQuotientEquivOfMulEquiv`：
+  给定 `(Integers K)ˣ/torsion ≃* (Integers L)ˣ/torsion`，得到 log range equiv；
+  仍需要“源单位 → 整单位 quotient”的 identification 和 L 侧 readout 的 log 值对齐。
+
+### 结论
+- SourceUnitBridge 不能直接给 `LQThetaSourceArrow.normalization_eq` 或 `thetaNormReadL` 的规范化；
+- 它是 **Ind1 unit-log** 层，L theta readout 是 **measure/analytic log** 层；
+- 要做接口需新增：`SourceUnitQuotientIdentification` inhabitant + q/单位对应 + product 装配；当前均无。
