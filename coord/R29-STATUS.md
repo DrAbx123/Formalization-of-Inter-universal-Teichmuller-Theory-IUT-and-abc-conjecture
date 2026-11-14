@@ -2913,3 +2913,5 @@
 - 23:40: UnitRegionScaling/AdicAbv/FloorUnitRegion probes done; audit. ActualData olean stale. qpilot hscale; stepxi cast. gate 20.542 written.
 
 - 23:50: ConcreteFiveCast transient Mathlib olean retry; qpilot unitLog_norm_le_one. gate 20.543 written.
+
+- 24:00: unitLog norm via principal-unit power congruence (u^n in 1+p^{v+1}) -> norm<=1; qpilot try. gate 20.544 written.

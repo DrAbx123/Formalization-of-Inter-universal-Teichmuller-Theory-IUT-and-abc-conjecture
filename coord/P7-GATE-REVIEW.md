@@ -3662,3 +3662,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.543 ConcreteFiveCast Mathlib olean transient; unitLog norm (2026-11-15 21:50)
 - ConcreteFiveCast direct fails before source: Mathlib/Algebra/QuadraticDiscriminant.olean.private read; retry. source uses NumberFieldFinitePlace.Completion fix.
 - hscale donor: try unitLog_norm_le_one/integralLogShell_norm_le_one (unitLog in maximal ideal => norm<=1/p), then tensor unit ball. qpilot. No fake.
+
+
+### 20.544 unitLog norm via principal-unit power congruence (2026-11-15 22:00)
+- unitLog = log1p(u^n-1)/n with n=integralUnitExponent; no valuation control on n. But for u∈1+p, u^n≡1 mod p^{v_p(n)+1} (principal unit power), so ‖log1p‖<=p^{-(v+1)}, divide by norm(n)=p^{-v} gives <=1. Try prove using principal-unit power congruence/log1p bound; report exact missing lemma. Else record scale=1 obstruction, switch scale!=1. qpilot. No fake.
