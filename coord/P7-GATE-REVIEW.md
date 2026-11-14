@@ -2619,3 +2619,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.341 unitValuationHom_eq_one_iff GREEN (stepxi, 2026-11-17 08:30)
 - Mzk1Ind1ValuationDataActual DONE 12:25:28: unitValuationHom_eq_one_iff proved using calc script + WithZero.unitsWithZeroEquiv.map_one (instead of simp) and Units.val_mk0 in simpa. #print axioms added, retouched.
 - KernelIntegers re-added completionKernelToIntegers/completionIntegersToKernel using eq_iff -> Valued.v=1<->norm=1 -> unitOfNormOne/norm_unit_eq_one; MulEquiv left_inv/right_inv next; WQuotient torsion/Z_p^d divisibility remaining. Report fresh probe/no sorryAx.
+
+
+### 20.342 MAJOR #C B units card unconditional; N5FloorBridge green (2026-11-17 08:40)
+- Mzk1TruncatedUnitsCountActual GREEN 20:26:24: cardQuot_maximalIdeal_eq_residueCard; card_units_quotient_maximalIdeal_pow (N)(hN) : #((O/m^N)^x)=(q-1)q^(N-1) fully proved; truncatedUnitsCardPrimary_of_span_eq conditional only on Ideal.span{logShellScale p}=m^(eK*s). Next hull prove span identity, then primary unconditional; p=2 bridge remains.
+- Mzk1IVThm110N5FloorBridgeActual GREEN 20:26:21: qSideSignedValueCondition_of_native_qSigned_eq; FloorNativeQBridge (floorQSigned=S3013QSigned+condition); floor_qSideSignedValueCondition; remainingSharedQObjects 5 items (floor qSigned=native -M, S3013QPilot=C3 q, index/weight, htheta, hCTheta).
+- Ind1 ValuationData re-DONE 12:30:12; KernelIntegers 20:08 partial; probes pending. p=2 hull pending; odd-p p odd green.

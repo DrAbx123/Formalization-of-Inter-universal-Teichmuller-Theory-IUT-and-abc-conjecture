@@ -2511,3 +2511,5 @@
 - 14:10: stage4 SMulDistribClass donor: AlgEquiv.applyMulSemiringAction + NumberField.Basic instances for G on O_F/SMulDistribClass. Use/align; then primesOver/transitivity. gate 20.340 written.
 
 - 14:20: unitValuationHom_eq_one_iff GREEN 12:25:28; KernelIntegers re-added kernel maps, next MulEquiv. No fake. gate 20.341 written.
+
+- 14:30: MAJOR units card unconditional GREEN 20:26:24 ((q-1)q^(N-1)); primary only span identity left; N5FloorBridge green conditional floorQSigned=native. Hull span/p2; qpilot N5 floor sources. gate 20.342 written.
