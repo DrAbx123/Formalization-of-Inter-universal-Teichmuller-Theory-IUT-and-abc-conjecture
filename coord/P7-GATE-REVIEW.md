@@ -2771,3 +2771,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.368 u•O=O route; integralClosure donor (2026-11-17 13:10)
 - UnitSmulCanonicalUnitReferenceActual has unitMulLinearEquiv, open/compact/measure pos finite but no u•O=O or distribHaarChar=1. Exact blocker: algebraMap_unit_smul_canonicalUnitReference_eq.
 - Route: O=integralClosure Zp X; algebraMap u ∈ O via isIntegral_algebraMap/algebraMap_mem'; integralClosure subring mul_mem gives u•O⊆O; reverse with u^-1 => equality; then DistribChar:92 char=1 and μS invariance. qpilot to implement; no fake.
+
+
+### 20.369 P2 fresh errors persist; stage4/stepxi asked (2026-11-17 13:20)
+- P2NormBridge log 21:38: :58:39 type mismatch; :59:36 nonzeroness; :86:25 rewrite missing; hn : sorry=e; :49:8 rewrite missing; :56:39/:57:36; :86:2 omega; :47:8 rewrite; :83:2 no goals; :51:55 type mismatch. Hull to report exact first lines/fix or hand off.
+- stage4 asked ring-level/SMulDistribClass status; stepxi asked kernel equality/equiv. No new green; KernelBridge olean 21:18:05 with kernelToAQuotient probe three axioms.
