@@ -1903,3 +1903,5 @@
 - 11:00：**GREEN `Mzk1Ind1UnitQuotientActual` 00:49:19（55s）**：只剩 `unitLogQuotientEquivOfMulEquiv` def（unitLog range ≃*），源无 sorry；旧 log 的 sorryAx 是旧 run。已让 stepxi 补 axiom probe 并编 `Mzk1Ind1LogLatticeActionActual`（仅 structure，无 sorry）。gate §20.62 已写。
 
 - 11:05：Gamma tail：calc 是等式，目标 membership；让 shehdd 包 `have hcalc := by calc...; rw [hcalc]; exact hy`，`:42` 先 `hinv` 再 zpow_add。lattice 已补 `open LocalFieldIntegralUnits` + toReal_mul/natCast，等 HaarIndex 编；不越权修 Gamma。
+
+- 11:10：定位 S45 rootHull 真实缺口：`BadPlaceRootHullScalingFormulaActual` 已给 `RootHullHalfScalingDataGap`（supply 在 c_norm/(2l) + hull_eq），doc 明确缺 base 侧 2l-root generator；`rootHullScalingFormulaAt_of_halfScalingData` 条件版 green。已让 hull 停止 rootHull 构造，专注 NormCorrection；S45 保留原条件。gate §20.63 已写。

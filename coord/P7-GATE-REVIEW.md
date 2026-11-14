@@ -849,3 +849,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   `: (unitLogHom K).range ≃* (unitLogHom L).range`；无 sorry；旧 log 的 `sorryAx` 是旧 run。
 - **待补 axiom probe**：对 `unitLogQuotientEquivOfMulEquiv` `#print axioms` 确认三公理；`Mzk1Ind1LogLatticeActionActual` 仅 structure（`SinglePlaceLogLatticeAction`，无 sorry），等编。
 - 唯一源缺口仍为实际 `TimesMuQuotient ((F.Mon v)ˣ) ≃* (Integers F)ˣ/tors` 识别 + actual source action 导出 β_a。
+
+
+### 20.63 S45 rootHull_scaling 的真实缺口已定位（2026-11-15 03:00）
+- `BadPlaceRootHullScalingFormulaActual.lean`（olean=True）：
+  - `RootHullHalfScalingDataGap` = `supply : NormalizedGeneratorSupplyAt (c_norm/(2l))` + `hull_eq : actualLocalHullRegion = fractionalLattice(c_norm/(2l)) * holomorphic`；
+  - `rootHullScalingFormulaAt_of_halfScalingData (G) : RootHullScalingFormulaAt`；
+  - doc 明确：实际 scaling 数据只在 `c_norm`，**缺 base 侧 2l-root generator**；因此 S45 的 `rootHull_scaling` 是真实条件，不是本轮可证。
+- `RootHullHalfScalingDataGap` 无 inhabitant；不假填。
+- 分配调整：hull 不再投入 rootHull 构造，专注 NormCorrection；S45 保留原条件（normRatio_one + rootHull_scaling）。
