@@ -1169,3 +1169,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Fix: `Mzk1P0LNormReadoutActual.thetaNormReadL := thetaReadActual I place - log actualUnitMassL` (no clamped actualC3LogShellTensorLogVolumeL); rfl theorem `= thetaReadActual - logU`; qRead_le_thetaRead_of_normTarget linarith works; LNormComparisonConditional signature unchanged.
 - thetaNormReadProduct (S1915 product-space) independent; hlock : thetaNormReadL = thetaNormReadProduct remains explicit condition.
 - PaperSums unknown namespace: import inserted; need Mzk1A1SignedReadoutProductActual.olean present (currently true); transient if not compiled.
+
+
+### 20.107 HaarLogVolume clipping caveat resolved by direct def (2026-11-15 10:50)
+- hull audit: actualC3LogShellTensorLogVolumeL uses (haarLogVolume).toReal, and ENNReal.ofReal negative log clamps via ofReal/toReal -> max 0 log; old thetaNormReadL would be noncanonical for negative raw log.
+- mainline fix (current source): thetaNormReadL := thetaReadActual I place - log actualUnitMassL (direct Real.log of mu region, no haarLogVolume clipping). Therefore canonicality no longer depends on 0 <= log mu_region; hull's caveat applies only to old definition.
+- Mzk1P0LHaarLogClipActual can remain as historical/audit lemma but must not be used to invalidate current LNormReadoutActual.
