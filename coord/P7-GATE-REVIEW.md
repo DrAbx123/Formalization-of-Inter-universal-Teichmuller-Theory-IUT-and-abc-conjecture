@@ -3329,3 +3329,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.472 IsScalarTower constructor donor (stage4, 2026-11-15 10:10)
 - IsScalarTower of_algebraMap_eq (Algebra/Algebra/Tower:114): to build IsScalarTower Qp (Completion lower) (Completion upper), prove forall x algebraMap Qp upper x = algebraMap lower upper (algebraMap Qp lower x), using completionAlgebra/coeRingHom + ext/simp. Then finrank_mul_finrank. adicAbv missing unchanged. No fake.
+
+
+### 20.473 MAJOR RamifiedPlace bundle GREEN (hull, 2026-11-15 10:20)
+- Mzk1RamifiedPlaceActual DONE 18:51:40: structure RamifiedPlace (p/Fact/K/NormedField/CharZero/CompleteSpace/IsUltrametricDist/ProperSpace/NormedAlgebra/FiniteDimensional); ofPlace from NumberField.FinitePlace with K=NormalizedCompletion place and all instances. So actual local bundle available.
+- Next RamifiedPlaceData (ι): places + scalar fn/Fdeg/l/logp/logMu/logIdx/diff/a/c; per-i hcard/hlogIdx/hcoef as separate forall args; letI per i; accumulate perPlace bounds. No fake.
+- Paper312Assembly probes three axioms; QpDecomp red source 02:51. abc audit.
