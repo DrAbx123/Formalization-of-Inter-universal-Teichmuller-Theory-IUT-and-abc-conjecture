@@ -1907,3 +1907,5 @@
 - 11:10：定位 S45 rootHull 真实缺口：`BadPlaceRootHullScalingFormulaActual` 已给 `RootHullHalfScalingDataGap`（supply 在 c_norm/(2l) + hull_eq），doc 明确缺 base 侧 2l-root generator；`rootHullScalingFormulaAt_of_halfScalingData` 条件版 green。已让 hull 停止 rootHull 构造，专注 NormCorrection；S45 保留原条件。gate §20.63 已写。
 
 - 11:15：**三连 GREEN：`Mzk1BoxDistinguishedScalarActual` 00:53:39（48s，ord/theta/ord_pow/ord_theta/distinguished_theta_order）、`Mzk1IutIVProp14HaarIndexActual` 00:53:43（52s，mu_lambda_eq_index_mul/toReal）、`Mzk1Ind1UnitQuotientActual` 00:53:44（53s，unitLogQuotientEquivOfMulEquiv；probe 三公理无 sorryAx）**。已派 qpilot 接 PacketHullData.varpi/principal-region scalar、lattice 编 HaarIndexPow→hμΛ→P14ii、stepxi 编 LogLattice/WF 并接实际单位识别。gate §20.64 已写。
+
+- 11:20：QHat attempt 失败原因：① 文件头 doc comment 在 line7 已闭合，line9-14 裸命令；② `rw [c0QHat_eq_q]` 后 ascription 被消，`(qVFamily q)` 显示为 `Completion` 而非 `rootBase`；让 mainline 先包 doc comment，再显式 `change` 保留 coercion 后 `rw [norm_algebraMap']`，若 change 失败报类型差。
