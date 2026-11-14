@@ -3422,3 +3422,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.493 MAJOR PrincipalDimActual GREEN (qpilot, 2026-11-15 13:30)
 - Mzk1IVThm110PrincipalDimActual DONE 19:38:06/olean 03:38:05: principalDimUnit (k)(u) := pU^k * algebraMapUnit u; principalDim_log_scaling_actual (hdecomp/hnorm/hact: lam•O=((principalDimUnit k u:X)•O)/hchar) -> log(mu(lam•O))=log(mu O)+D*log||lam||. No sorry/axiom; HPow issue solved by principalDimUnit; Pointwise scoped for Set smul.
 - Remaining explicit: hdecomp/hnorm from QpDecomp+padic norm; hchar via real_log_distribHaarChar_primeScalar_zpow+unit char=1; hact via principalDimUnit val=algebraMap lam; floor. qpilot. abc probe. No fake.
+
+
+### 20.494 MAJOR RamifiedPlaceData fresh GREEN (2026-11-15 13:40)
+- Mzk1RamifiedPlaceDataActual DONE 19:38:48/olean 03:38:47: structure explicit iota; HasCorrection/HasLogIdx/HasCoeff/HasRes; perPlace_bounds_of_data. PrincipalDimActual DONE 19:38:06/olean 03:38:05. QpDecomp 03:13:28.
+- Next hull actual family/discharge HasX via index_decomp/res; qpilot hdecomp/hnorm/hchar/hact/floor; mainline cocycle/groups; stepxi ZpLattice; abc audit. No fake.
