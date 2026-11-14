@@ -2661,3 +2661,5 @@
 - 02:40: sigma isometry route: |sigma x|_{sigma v}=|x|_v by moved-place definition; prove norm equality -> Isometry -> Completion.Isometry.mapRingHom. stage4. gate 20.415 written.
 
 - 02:50: correction split #T=T0*p^m, index=q^(A-m)*((q-1)/T0), a=A-m; hdiv too strong. Prove m<=fA/T0|q-1 via coprime index. Hull. gate 20.416 written.
+
+- 03:00: post-NativeBadLift redefinition 36 fails; BaseChange errors; mainline to assess/revert if deep. gate 20.417 written.

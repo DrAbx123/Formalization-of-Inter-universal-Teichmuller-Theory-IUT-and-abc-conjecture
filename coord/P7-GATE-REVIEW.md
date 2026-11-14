@@ -3028,3 +3028,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1CorrectionHypothesisActual DONE 16:08:48: correctionHypothesis_of_div (hdiv:#T|q-1) -> LogShellResiduePowerCardCorrectionHypothesis (eK*s-1) ((q-1)/#T). hdiv too strong/false (Qp(ζp): #T=p(p-1), q-1=p-1).
 - Correct split: #T=T0*p^m, p∤T0. T0|q-1 (Teichmuller non-p part); p^m|q^A (A=eK*s-1, q^A=p^{fA}); index=q^(A-m)*((q-1)/T0), a_v=A-m, c=(q-1)/T0. Qp(ζp): A=p-2,m=1,T0=p-1,c=1,index=q^(p-3).
 - Exact missing: (1) m=v_p(#T) bound; (2) T0=#T/p^m | q-1. Can prove generally from index integer + coprimality (T0 coprime q^A): m<=fA and T0|q-1, no local ramification. Hull to implement; assess unramified A=0/a=0 condition4. No fake.
+
+
+### 20.417 Post-redefinition breakage observed; assess/revert decision (2026-11-15 00:30)
+- NativeBadLift redefinition GREEN itself, but watchdog 36 fails incl BaseChangeQCorrespondence 16:08:58 (errors :113 zero_pow/typeclass, :118 token, :207 not definitional) and old lanes P0L*/C17/Ind1/Probes. Some may be pre-existing red; need distinguish.
+- mainline asked: if >few deep proof breakages revert NativeBadLift to last green and keep explicit alignment gap; do not leave core red. If manageable list files/continue. No fake.
