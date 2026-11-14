@@ -2389,3 +2389,5 @@
 - 03:10: #C B formula false in ramified case (ideal exponent e_K*s*e); hull to report/propose corrected. Alternative actual hull-containment route actualPaperXiFTarget maybe legitimate (no flagged model); mainline audit/wire; G1/G2/G3 still needed. Target reading bridge S45/correction-sign open. gate 20.281 written.
 
 - 03:20: #C B corrected target: general exponent e_K*s*e + specialization e_K=1; do not modify existing hcard silently. hull build/report. gate 20.282 written.
+
+- 03:40: user shortcut: derive logQ bound from hCor312 by rearrangement for l>=7,dmod>=1; l=5 separate. #C: distinguish p-ideal vs m-ideal to determine ramification factor. qpilot/hull assigned. gate 20.283 written.
