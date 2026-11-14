@@ -2924,3 +2924,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Proposal #T <= (q-1)eK FALSE: K=Qp(ζp) p odd has eK=p-1, q=p, #T=p(p-1) (Teichmuller p-1 + ζp p); (q-1)eK=(p-1)^2. Same for (q-1)p^{v_p(eK)}.
 - Correct candidate: #T <= (q-1)*p^{v_p(eK)+1}. Non-p part injects into residue units order | q-1; p-part: mu_{p^a} subset K -> Qp(ζ_{p^a}) subset K ramification p^{a-1}(p-1), so a-1<=v_p(eK).
 - Exact missing: mu_{p^a} subset K -> p^{a-1}(p-1) | eK (local field p-power roots ramification bound), not in tree/Mathlib. Then log((q-1)/#T) >= -(v_p(eK)+1)log p. Alternative explicit #T<=(q-1)C -> log donor. Hull to write conditional donor/search. No fake.
+
+
+### 20.398 Galois alignment retry errors (stage4, 2026-11-17 18:20)
+- Mzk1GaloisRingBridgeActual DONE 23:16:46/olean 23:16:45 (alignment removed; P/Q/transitivity retained).
+- Alignment retry errors: (1) after maximalIdeal_injective goal is HS equality; rw [galoisPlaceMk_maximalIdeal] pattern not found due implicit args; use change (galoisPlaceMk ...).maximalIdeal=... before rw, or congrArg maximalIdeal then HeightOneSpectrum.ext. (2) RingHom equality via RingHom.ext+RingOfIntegers.ext failed unify; try rfl/simp for induced action or explicit ext_iff. (3) named nativeFPrimeOver_val/nativeKPrimeOver_val need rewriting before simp unfolds. Current green ring/transitivity retained; alignment missing. No fake.

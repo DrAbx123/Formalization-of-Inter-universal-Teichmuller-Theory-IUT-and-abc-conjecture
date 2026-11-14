@@ -2623,3 +2623,5 @@
 - 23:30: per-place margin needs torsion upper bound #T<=C; suggest #T<=(q-1)eK via reduction/p-power ramification; then log((q-1)/#T)>=-log eK. Hull attempt. gate 20.396 written.
 
 - 23:40: #T<=(q-1)eK FALSE (Qp(ζp) counterexample); correct #T<=(q-1)p^{v_p(eK)+1}, missing p-power roots ramification estimate. Hull conditional log donor/search. gate 20.397 written.
+
+- 23:50: Galois alignment retry errors (HS change/rw, RingHom ext, named lemmas); stage4 retry. Gate 20.398 written.
