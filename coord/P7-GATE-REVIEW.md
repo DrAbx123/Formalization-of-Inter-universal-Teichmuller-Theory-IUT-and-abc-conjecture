@@ -932,3 +932,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 因此不存在现成 `TimesMuQuotient((F.Mon v)ˣ) ≃ ((Integers F)ˣ/tors)`；`fPrimeStripUnitQuotientEquiv` 只是抽象代数层。
 - **构造任务**：从 `localFPrimeStrip` 实际载体定义/实例化 `F.Mon v`（algebraic-closure units），使 `TimesMuQuotient` 作用其上；证 `fPrimeStripUnitQuotientEquiv` 给 range/log 作用；若与 `(Integers F)ˣ` torsion quotient 不同，写精确 `≃*` 目标/障碍，不假填。
 - 已写入 `coord/IND1-UNIT-QUOTIENT-GAP.md` donor discrepancy。
+
+
+### 20.73 L canonical normalized readout 已定义（mainline，2026-11-15 04:30）
+- 新文件 `Mzk1P0LNormReadoutActual`（queue）：
+  - `actualUnitBallL := {x | ∀ i, ‖x i‖ ≤ 1}`；
+  - `actualUnitMassL := (Haar(actualUnitBallL)).toReal`（任意 `Measure.addHaar`，不声称 =1）；
+  - **`thetaNormReadL := actualC3LogShellTensorLogVolumeL − log(actualUnitMassL)`**；
+  - `thetaNormReadL_eq_raw_sub_log_unitMass`（rfl）、`thetaNormReadL_eq_log_div`（正性条件）；
+  - **`LNormComparisonTarget : Prop := qReadActual ≤ thetaNormReadL`**（canonical）；
+  - `qRead_le_thetaRead_of_normTarget`：旧未归一化目标只在 `log unitMass ≥ 0` 时由 normalized 目标推出（显式条件）。
+- **下一步**：核对 `actualC3LogShellTensorRegionL` 的乘积分解/unit ball Haar 缩放，给 `thetaNormReadL` 与 `s1915` normalized log 的显式对齐；再接 `LPaperInstance` 条件版。`unitMass=1` 只作 GAP 记录。

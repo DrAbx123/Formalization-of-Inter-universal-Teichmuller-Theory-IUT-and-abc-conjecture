@@ -1929,3 +1929,5 @@
 - 12:10：发现 L 侧 `actualC3LogShellTensorHaarL=Measure.addHaar` 未归一化，`thetaReadActual` 非 canonical，`unitMass=1` 不可证；L 目标需改为 normalized readout（减 log unitBall mass / s1915 normalized log）。已让 mainline 定义 canonical normalized target，hull 不再造空 arrow，abc 找 normalized Haar donor。gate §20.71 已写。
 
 - 12:15：stepxi 查清 Ind1 donor discrepancy：`F.Mon` 抽象 CommMonoid，`localFPrimeStrip` 是 `(AlgebraicClosure ℚ_v)ˣ`，非 `(Integers F)ˣ`；无现成 TimesMuQuotient 识别。已让其从 `localFPrimeStrip` 实际载体构造 `F.Mon v` instance 并证 range/log 作用；不同 torsion quotient 写精确目标/障碍。gate §20.72 已写。
+
+- 12:20：mainline 落盘 `Mzk1P0LNormReadoutActual`：`thetaNormReadL = log Haar(region) − log Haar(unitBall)`、`LNormComparisonTarget := qReadActual ≤ thetaNormReadL`、旧目标仅在 log unitMass≥0 时推出（显式条件）；unitMass=1 仅 GAP。已让其对齐 `tensorIntegralRegion` 乘积 Haar 与 s1915 normalized log，然后接 LPaperInstance 条件版；abc 只读审计。gate §20.73 已写。
