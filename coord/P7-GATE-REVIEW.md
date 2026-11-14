@@ -3510,3 +3510,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.511 ZpLattice GREEN sorryAx fixed (stepxi, 2026-11-15 16:30)
 - Fix abbrev ZpLattice (p d) [Fact p.Prime] := Multiplicative (Fin d→Zp). Direct compile EXIT=0; zpLattice_infinitelyDivisible depends [propext,Classical.choice,Quot.sound] only; sorryAx gone. Retouch build; next WQuotient≅ZpLattice donor/root transport. abc probe. No fake.
+
+
+### 20.512 WQuotientLatticeIdentification interface (stepxi, 2026-11-15 16:40)
+- New Mzk1Ind1WQuotientLatticeActual: structure WQuotientLatticeIdentification {d; equiv : completionWQuotient ≃* ZpLattice p d} (no inhabitant); infinitelyDivisible_of_latticeEquiv e hr x uses y=e.symm z, z root of e x, e.injective/map_pow/apply_symm_apply. WQuotient≅Zp^d donor still missing. stepxi inspect WQuotient/IntegralUnitLogarithm for equiv or report exact missing. No fake.
