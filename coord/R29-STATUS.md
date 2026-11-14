@@ -2037,3 +2037,5 @@
 - 19:30: GREEN PrincipalScalarProbe 02:01:01 (principal_region_normalized_scalar three axioms). stepxi W exhaustive donor check: no canonical ≃*; self log-range endo is interface only. Volume :12/:32 fixed. gate 20.122 written.
 
 - 19:35: abc confirms final source no True/unused binders; only ordering issue. LNormReadoutActual green 01:57:32; ordered mainline retouch Comparison then Final. PrincipalScalarProbe green 02:01:01 three axioms. W source still missing (stepxi exhaustive).
+
+- 19:40: GREEN WeightA1Bridge 02:04:11 (nativeBadLocalWeight_eq_inv_total_local_degree, s1915LocalDegree_eq_finrank, a1Delta_eq_neg_coefficient_logP_sub_signed, weight_conversion_cond). KEY: a1Delta expansion matches PaperToS3137A1Data field -> construct A1Data inhabitant, bridge A1Data GAP closes. Need probe; final pending. gate 20.123 written.

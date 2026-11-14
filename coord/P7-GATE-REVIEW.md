@@ -1276,3 +1276,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1BoxPrincipalScalarProbe DONE 02:01:01 (106s): principal_region_normalized_scalar depends only on [propext, Classical.choice, Quot.sound]; no sorryAx.
 - stepxi exhaustive W donor check: PrimeStripCore abstract CommMonoid; LocalPrimeStrip concrete Mon=(AlgClosure Qp)^x; IntegralUnitLogarithm gives (Integers K)^x -> log/image, not iso to AlgClosure units; Kummer only injection; inertia no donor; natural map injective non-surjective, torsion quotients differ; no canonical ≃*. Added sourceUnitLogRangeEquiv_self (self id + identity beta) as interface consistency only, not source W.
 - Volume fixes: :12 simpa [Nat.mul_comm] using hmul; :32 rw [eq_comm] at hcancel; field_simp [hpd] at hcancel; wait recompile.
+
+
+### 20.123 GREEN: WeightA1Bridge; A1Data field now provable (2026-11-15 14:10)
+- Mzk1P1WeightA1BridgeActual DONE 02:04:11 (100s): nativeBadLocalWeight_eq_inv_total_local_degree; s1915LocalDegree_eq_finrank; a1Delta_eq_neg_coefficient_logP_sub_signed (hd : 0 < s1915LocalDegree); weight_conversion_cond (conditional hdF/hdpos); rows 3.
+- KEY: a1Delta_eq_neg_coefficient_logP_sub_signed RHS matches PaperToS3137A1Data.a1_delta_paper field verbatim. Construct inhabitant using local_degree_pos -> PaperToS3137A1Data no longer an EXPLICIT GAP.
+- Need axiom probe for WeightA1 4 theorems; final chain still pending Comparison/Final.
