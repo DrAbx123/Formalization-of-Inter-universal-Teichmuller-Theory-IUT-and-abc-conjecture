@@ -2488,3 +2488,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.318 Ind1 kernel bridge donor: IntegralUnits (2026-11-17 04:50)
 - LeanFormal/IUT/Foundations/LocalFields/IntegralUnits.lean: Integers K = NormedField.valuation.integer; mem_integers_iff x <-> ||x||<=1; norm_unit_eq_one for units; unitOfNormOne from norm-one elements. Combine with unitValuationHom=1 to identify ker units with (Integers F)^x, then mod torsion for WQuotient. Divisibility remains O_F^x/tors ≅ Z_p^d.
 - Torsion descent multiplicative_int_eq_one_of_pow_eq_one/torsion_le_ker/quotientValuationHom queued, no fake.
+
+
+### 20.319 Ind1 kernel coherence donor: normUnitEquivValuedInteger (2026-11-17 05:00)
+- NormalizedLogNormConsumer.lean provides normUnitEquivValuedInteger : (Integers completionField)^x ≃* (Valued.v.integer : Subring completionField)^x. Use actual completionField/Completion place instead of abstract NormedField F; then ker Valued.v units ≅ norm-one units available. LocalValuationData should be restricted to completion fields. Divisibility Z_p^d remains.
+- Abstract Valued F coherence has no donor; explicit valued_one_iff_norm_one would be extra condition, so prefer completion-specific donor.

@@ -2465,3 +2465,5 @@
 - 10:10: Assembly ordering stale 19:14:37<Dictionary 19:15:17; force rebuild. stepxi unitValuationHom via Valued.v; missing torsion descent/kernel bridge/divisibility. Hull/qpilot/shehdd pending. gate 20.317 written.
 
 - 10:20: Ind1 kernel bridge donor IntegralUnits: Integers=valuation.integer, mem_integers_iff norm<=1, norm_unit_eq_one, unitOfNormOne. stepxi to combine with unitValuationHom; divisibility Z_p^d remains. gate 20.318 written.
+
+- 10:30: Ind1 kernel coherence donor normUnitEquivValuedInteger in NormalizedLogNormConsumer; restrict LocalValuationData to completionField. Divisibility remains. gate 20.319 written.
