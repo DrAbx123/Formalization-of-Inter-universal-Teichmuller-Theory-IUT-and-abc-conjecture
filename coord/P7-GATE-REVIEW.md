@@ -2277,3 +2277,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Thm 1.10 initial data implies l != 5, actual l>=7; drop l=5. hCor312 following slack/logQ bound eliminable by elementary calc for l>=7. Real remaining: derive hCor312 from same-source 3.12, Box, arithmetic data. Assigned qpilot.
 - Reading side: donor normRatio>=1; in signed q readout correction direction favorable; retain correction and estimate directly, no need normRatio=1 or hcorr norm<=half. Assigned mainline.
 - stepxi Mzk1Ind1ProvenanceActual queued: integersUnitsToTimesMu, actualSourceUnitToTimesMu, structure ActualInd1UnitActionProvenance with algAction/beta/timesMuAction/commutation/square; Required=Nonempty, no inhabitant; substantial square not bare Prop. Continue donor/inhabitant or exact obstruction.
+
+
+### 20.285 Provenance interface queued; ABCAdapted GREEN (2026-11-16 22:10)
+- stepxi Mzk1Ind1ProvenanceActual queued: integersUnitsToTimesMu, actualSourceUnitToTimesMu via quotientMap_ker + torsion killed; structure ActualInd1UnitActionProvenance with algAction/beta/timesMuAction, algAction_timesMu, square; Required=Nonempty, no inhabitant. Substantial square/commutation, not bare Prop; actual TimesMu/source action donor still missing.
+- lattice Mzk1IUTIVABCStatementLayerActualAdapted GREEN (olean True). Remaining Estimates/Comparison/EstimateBridge/Section2 Adapted in WL/retouched, pending not red. 9 auto-probes excluded.
