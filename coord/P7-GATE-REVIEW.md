@@ -3309,3 +3309,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.468 MAJOR Paper312 assembly GREEN (hull, 2026-11-15 09:30)
 - Mzk1Paper312AssemblyActual DONE 18:47:32: qlog_div_eq; A_le_Lbar_add_Dbar_of_correction (per-place qcoef<=logIdx+diff -> sum inequality); paper312_of_correction_bounds (sFactor/A/Lbar/Dbar -> ExplicitPaper312Inequality). Ramified correction per-place wired to final 3.12 consumer; perPlace_diff_of_correction supplies h.
 - Remaining: instantiate actual per-place params for ramified places (a,c,logMu,logIdx,diff) to discharge h; unramified explicit obstruction (a=0,c=1 fails, must exclude or independent a_v). Hull next actual instance; abc probe. No fake.
+
+
+### 20.469 Paper312 actual per-place exact missing: place-indexed family (hull, 2026-11-15 09:40)
+- Single-point theorems: index_decomp_with_correction (a=A-k,c=p^r*((q-1)/T0)); perPlace_diff_of_correction. Global h : ∀ i needs place-indexed family: finite type ι ramified places; K i local field instances; fn/Fdeg/l/logp/logMu/logIdx/diff; per-place hcard/hres/hcoef/hlogIdx/hdiff; hcard from decomposition, hres from logShellResidueCard_eq_prime_pow, hcoef CoeffComparison. No Lean function/structure from finite place type to data; theorems single-K. Build RamifiedPlaceData family and accumulate h. Unramified excluded. No fake.
