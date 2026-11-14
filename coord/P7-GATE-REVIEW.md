@@ -3727,3 +3727,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.558 PrincipalUnitsResidue fix: use Valued.v not NNReal-valued NormedField.valuation (2026-11-15 23:20)
 - Errors: NormedField.valuation x : NNReal not WithZero; NormedField.valuation.integer not ValuationSubring. Use `Valued.v` value group directly: norm_lt_one_iff := Valued.NormedValued.norm_lt_one_iff; subgroup equality via (Valued.v (K:=K)).integer (ValuationSubring) + unitsModPrincipalUnitsEquivResidueFieldUnits. qpilot. No fake.
+
+
+### 20.559 ActualData olean with actual_paper312 (2026-11-15 23:30)
+- Lead compiled current ActualData source to olean 05:41:21 via lake env lean -o (EXIT=0); includes actual_A_le and actual_paper312. abc audit. Next hull hq:qReading=-A and hθ:thetaSide=Lbar+Dbar-sFactor*A via qPilotLogVolumeReading_eq_log_norm/theta definitions. No fake.
