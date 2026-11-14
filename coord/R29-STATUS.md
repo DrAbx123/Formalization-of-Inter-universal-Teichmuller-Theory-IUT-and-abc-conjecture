@@ -2769,3 +2769,5 @@
 - 11:40: per-place actual needs RamifiedPlaceData family (ι,K i,fn,Fdeg,logp,logMu,logIdx,diff,hcard/hres/hcoef); hull build. Unramified excluded. gate 20.469 written.
 
 - 11:50: RamifiedPlaceData dependent instance issue; build bundle + separate per-i args, no tautology. hull. gate 20.470 written.
+
+- 12:00: QpDecomp errors :9/:26/:35; stage4/stepxi wake. Paper312Assembly green. gate 20.471 written.

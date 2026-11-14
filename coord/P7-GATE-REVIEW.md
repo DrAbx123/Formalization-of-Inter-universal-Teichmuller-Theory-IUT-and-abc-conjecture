@@ -3319,3 +3319,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Existing NumberFieldFinitePlace/NormalizedCompletion but Paper312 uses abstract ι; no place->local-field decomposition family.
 - Proposed RamifiedPlace bundle (K, NormedField, CharZero, CompleteSpace, IsUltrametricDist, ProperSpace, p/Fact, NormedAlgebra, FiniteDimensional); RamifiedPlaceData with places/fn/Fdeg/l/logp/logMu/logIdx/diff/a/c plus hcoef/hlogIdx/hdiff/hmu0/hl/hc/hcard. Exact issues: (1) hcard/hlogIdx dependent local instances can't be plain fields without letI bundle; (2) no FinitePlace->RamifiedPlace instance (residue degree/eK/torsion/q); (3) no per-place hcoef arithmetic proof. Putting hcard/hlogIdx as fields tautological; not writing.
 - Hull to deliver RamifiedPlace bundle + scalar fields; per-i hcard/hlogIdx as separate args with letI; report first error. No fake.
+
+
+### 20.471 QpDecomp fresh errors; stage4/stepxi wake (2026-11-15 10:00)
+- QpDecomp src 02:34, log 02:38: :9:67 unsolved; :26:42 No goals; :35:19 rewrite pattern missing. qpilot fix.
+- stage4 adicAbv/IsScalarTower pending. stepxi padic IsUnit (Coprime r p -> IsUnit (r:Zp)) new file.
+- Paper312Assembly 02:47:32 green; PrincipalDim 02:17; A2PartialFields 18:46 recompile. No fake.
