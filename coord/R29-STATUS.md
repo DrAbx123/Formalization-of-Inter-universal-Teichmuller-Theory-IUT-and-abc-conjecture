@@ -2015,3 +2015,5 @@
 - 17:40: no new greens; woke mainline (WeightA1/LNormReadoutActual/final), lattice (Volume chain), qpilot (principal scalar), shehdd (#C interface). batch 01:45:36 done:8 failed:24; 2 lean.
 
 - 17:55: round-3 exact fixes: LNormReadout le_trans/sub_le_self; WeightA1 show LHS orientation; LNormBoundWeak explicit hOtop; principal scalar ENNReal.toReal_ofReal pow_nonneg; #C interface card_congr.trans. Sent mainline/qpilot/shehdd. gate 20.113 written.
+
+- 18:05: GREEN PrincipalScalar 01:52:12 (principalDim/principal_region_normalized_scalar) + bridge probe 01:52:13 two theorems three axioms. Need PrincipalScalar probe; bridge/final still blocked on LNormReadoutActual/WeightA1. gate 20.114 written.

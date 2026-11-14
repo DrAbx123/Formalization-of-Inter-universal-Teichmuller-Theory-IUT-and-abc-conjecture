@@ -1218,3 +1218,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - LNormBoundWeak hOtop type mismatch: explicit binder (hOtop : forall b, rootExtensionHaar T b (rootExtensionUnitBall T b) != top) and pass named.
 - PrincipalScalar :37: after rw [hfac], exact ENNReal.toReal_ofReal (pow_nonneg (norm_nonneg _) _); then rw [hto, Real.log_pow]; field_simp [hd'].
 - #C interface :36: exact (Nat.card_congr h.unitsEquiv.toEquiv).trans h.card_units or simpa using h.card_units.
+
+
+### 20.114 GREEN: PrincipalScalar; bridge probe three axioms (2026-11-15 12:05)
+- Mzk1BoxPrincipalScalarActual DONE 01:52:12 (103s): principalDim T b = finrank Qp rootNormedExtension; principal_region_normalized_scalar: log(rootHaarFactor T b lam).toReal / principalDim T b = log||lam||; from rootHaarFactor_normPow_actual; no carrier equivalence.
+- Mzk1P1PaperSumsBridgeAxiomProbeActual DONE 01:52:13 (104s): paper_sum_weight_eq_inv and paper_coefficient_degree_factor both [propext, Classical.choice, Quot.sound]; no sorryAx.
+- Need axiom probe for PrincipalScalar; principal readout vs PacketHullData scalar alignment next.
+- Bridge/final chain still waiting LNormReadoutActual/WeightA1; LNormReadout fixes le_trans/sub_le_self.
