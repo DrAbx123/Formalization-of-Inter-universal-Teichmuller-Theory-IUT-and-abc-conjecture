@@ -1603,3 +1603,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary FAIL 04:22:05: finalDictionaryCombined:132 positional PaperS3137ReadingDictionary hM... mismatch; section vars T/I/place auto-precede; fix named args (hM:=hM)(hB:=hB)(I:=I)(place:=place)(T:=T)(lock:=lock).
 - Hull: structure binder order hM/hB before T wrong; reorder (I)(place)(T)[Fintype](hM)(hB)(lock). Probe FAIL because finalDictionaryCombined unknown; old olean 12:15:04 < source 12:17:53 not usable.
 - Dictionary fields substantive no True; final theorem pending recompile.
+
+
+### 20.176 GREEN: Dictionary fresh recompile; finalDictionaryCombined (mainline/abc follow-up, 2026-11-16 01:20)
+- Dictionary source 12:25:11 < olean 12:29:54, DONE 04:29:55; current source has reordered binders (I)(place)(T)[Fintype](hM)(hB)(lock) and named args; finalDictionaryCombined compiled.
+- finalDictionaryCombined: S45SourceFields + RelativeFactorTowerData + PaperS3137ObjectLock -> paper comparison /\ RelativeFactorTowerData /\ Nonempty (PaperS3137ReadingDictionary ...). No True; all args consumed.
+- Probe old log 12:22 predates current olean (finalDictionaryCombined unknown); must retouch/recompile probe. theta_sign negative vs hlock positive remains explicit lock sign; do not claim both.
