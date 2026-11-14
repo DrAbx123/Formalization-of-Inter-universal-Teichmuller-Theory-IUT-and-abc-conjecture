@@ -3304,3 +3304,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1A2ScalarStackExtensionActual DONE 18:38:58: pointStack F := {fiber:=sourceStackPointEtaleFiber, isStack}; pointStackScalarExtension : SourceEtaleStackScalarExtension F K (pointStack F) with result=pointStack K, fiberEquivalence=Equivalence.id. Degenerate but actual. Remaining quotientWitness/groups/unique explicit.
 - Mzk1Paper312UnramifiedActual DONE 18:39:40: unramified_odd_obstruction (log3/2 <= 0 false with a=0,c=1); perPlace_diff_of_correction combines correction consumer with diff reduction. So unramified a=0 bound genuinely false; a_v must be independent/larger or separate treatment.
 - mainline add scalar extension to A2 partial if xF.stack=pointStack; hull feed A_le_Lbar for ramified and record unramified obstruction. abc probe. No fake.
+
+
+### 20.468 MAJOR Paper312 assembly GREEN (hull, 2026-11-15 09:30)
+- Mzk1Paper312AssemblyActual DONE 18:47:32: qlog_div_eq; A_le_Lbar_add_Dbar_of_correction (per-place qcoef<=logIdx+diff -> sum inequality); paper312_of_correction_bounds (sFactor/A/Lbar/Dbar -> ExplicitPaper312Inequality). Ramified correction per-place wired to final 3.12 consumer; perPlace_diff_of_correction supplies h.
+- Remaining: instantiate actual per-place params for ramified places (a,c,logMu,logIdx,diff) to discharge h; unramified explicit obstruction (a=0,c=1 fails, must exclude or independent a_v). Hull next actual instance; abc probe. No fake.

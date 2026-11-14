@@ -2763,3 +2763,5 @@
 - 11:10: A2 blocked: unique no ext/keep gap; quotient/groups no donor; scalar fiberEquivalence missing. mainline attempt scalar. gate 20.466 written.
 
 - 11:20: A2 point scalar extension GREEN 18:38:58; Paper312 unramified obstruction/perPlace_diff GREEN 18:39:40 (a=0 bound false at p=3). mainline scalar partial; hull feed ramified. abc probe. gate 20.467 written.
+
+- 11:30: MAJOR Paper312 assembly GREEN 18:47:32 (per-place -> A_le_Lbar -> ExplicitPaper312Inequality). Remaining actual per-place params/unramified exclusion. abc probe. gate 20.468 written.
