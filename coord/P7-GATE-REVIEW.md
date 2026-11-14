@@ -3074,3 +3074,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.425 TorsionSplit direct compile exact error :35; C3BaseQ linarith (2026-11-15 02:00)
 - Direct lake env lean Mzk1TorsionSplitActual: exit 1, single error :35:6 Type mismatch: Nat.Prime.ne_one hp h1 has type False but expected ¬p ∣ T0. Old watchdog lines stale. Hull to fix line35 with actual ¬p∣T0 proof/remove branch.
 - Mainline C3BaseQIdentificationActual :95 linarith failure: target -baseQ/n=-M, gsc.global_eq M=baseQ/n; fix neg_div + congrArg Neg.neg. Report green.
+
+
+### 20.426 KernelBridge fresh GREEN clean (2026-11-15 02:10)
+- Mzk1Ind1KernelBridgeActual DONE 16:27:22/olean 00:27:21; source 00:25:59; 8 decls only (no ofRange): kernelToAQuotient/range_kernelToAQuotient_eq/AQuotientKernelBridge/kernelToAQuotient_ker_eq/two Normal/quotientKernelEquivRange/#prints; no source sorry; probes kernelToAQuotient_ker_eq/kernelToAQuotient three axioms. Fresh green accepted.
+- Next stepxi: actual AQuotientKernelBridge inhabitant from range+quotient equiv with submonoid/subgroup conversion; compose WQuotient; Z_p^d.
+- UnitInvariance olean stale 23:41; TorsionSplit no olean. abc audit. No fake.
