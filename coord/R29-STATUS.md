@@ -2791,3 +2791,5 @@
 - 13:30: IsScalarTower actual transport SMul via inferInstanceAs; stage4. adicAbv pending. gate 20.481 written.
 
 - 13:40: QpDecomp/A2XK probes green. RamifiedPlaceData red lines75/80/86 invalid field notation; hull fix. gate 20.482 written.
+
+- 13:50: PrincipalDimActual errors :36/:47/:48/:49/:55/:66; fixes p:=p/map_zpow/Set.smul_set/call order/NNReal.coe_zpow. qpilot. gate 20.483 written.

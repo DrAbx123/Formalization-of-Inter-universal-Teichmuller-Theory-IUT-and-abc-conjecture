@@ -3372,3 +3372,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.482 QpDecomp/A2XK probes green; RamifiedPlaceData red field notation (2026-11-15 11:40)
 - QpDecomp source 03:13:20/olean 03:13:28 no sorry; exists_pow_mul_zpUnit probe 19:17:24 three axioms. A2PartialFields re-green 03:04:20; A2PartialXKProbe 19:13:48 7 items three axioms.
 - RamifiedPlaceData src 03:13:27 FAIL 19:09:46: lines75/80/86 invalid field notation + :80 unsolved; no olean. hull fix/direct compile. No fake.
+
+
+### 20.483 PrincipalDimActual exact errors/fixes (qpilot, 2026-11-15 11:50)
+- Current errors: :36:15 rw pattern miss ?f(?a^?n) on char(pU^k*unit)=p^(-kD); :47:50 Classical.choose param type (exists_pow_mul_zpUnit p not passed); :49:9 HPow X Z; :48:13/:55:17 HSMul Qp (Set X); :66:68 distribHaarChar_primeScalar_pow_mul_unit arg order. Fixes: exists_pow_mul_zpUnit (p:=p); map_pow->map_zpow; explicit Set.smul_set or Units action/hact; call order; NNReal.coe_zpow/Real.rpow. QpDecomp green. No fake.
