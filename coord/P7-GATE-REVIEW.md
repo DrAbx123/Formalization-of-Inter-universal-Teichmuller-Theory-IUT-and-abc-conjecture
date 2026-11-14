@@ -3899,3 +3899,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.599 MAJOR PrincipalUnits olean all decls (2026-11-15 30:10)
 - Lead compiled PrincipalUnitsResidue to olean 06:51:43: norm bridge, integersToA, integersUnitsEquivUnitGroup, subgroup equality, quotientEquivResidueUnits, card_quotient_eq_card_residueUnits. Next residue field Fintype/card=p^f/coprime, integralUnitExponent_coprime, unitLog norm/tensor. abc audit. No fake.
+
+
+### 20.600 residue field card/coprime route (qpilot, 2026-11-15 30:20)
+- Need explicit [Fintype (ResidueField A)] and [CharP (ResidueField A) p] or finite-field structure; FiniteField.card gives card=p^f; Fintype.card_units gives p^f-1; Nat.coprime_pow_sub_one -> coprime -> integralUnitExponent_coprime. Label explicit local-field hypotheses; no fake. unitLog norm/tensor ball pending.

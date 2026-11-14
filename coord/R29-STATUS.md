@@ -3025,3 +3025,5 @@
 - 33:00: MAJOR quotient residue units direct green; next card/coprime/unitLog. gate 20.598 written.
 
 - 33:10: MAJOR PrincipalUnits olean 06:51:43 all decls. Next residue field card/coprime/unitLog. abc audit. gate 20.599 written.
+
+- 33:20: residue card/coprime explicit CharP route; qpilot. gate 20.600 written.
