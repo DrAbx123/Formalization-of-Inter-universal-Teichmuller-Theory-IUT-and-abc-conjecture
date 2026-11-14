@@ -2099,3 +2099,5 @@
 - 02:10: round-6 tails: P14ii hp still 1<p (fix call site linarith/explicit 0<p); IntegrationAction calc double application; LS3137LFinal isDefEq timeout. Woke mainline/lattice/stepxi/shehdd/abc/hull. Final/probes green. gate 20.150 written.
 
 - 02:20: scheduled check: no new green; P14ii pending old log, mainline/lattice ordered force compile; stepxi integration calc; shehdd #C B->A; abc audit. 4 lean, log 11:41.
+
+- 02:40 MILESTONE: P14iiActual GREEN 03:43:09 (p14ii_logVolume_actual; source 11:40:58, olean 11:43:08, no sorry/True). IV 1.10 actual chain complete at P14ii level. Need probe. gate 20.151 written.

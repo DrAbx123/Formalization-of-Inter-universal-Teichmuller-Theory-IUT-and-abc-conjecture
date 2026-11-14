@@ -1468,3 +1468,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - IntegrationAction :48 calc: LHS integersUnitsToAlgClosure (Classical.choose ..) vs expected double application; fix inverse/choose_spec or invFun left_inv/right_inv.
 - LS3137LFinal :18 isDefEq timeout 200000; may need explicit C3L/instances/maxHeartbeats; no fake.
 - Final S3137/probes green; B5/Final2 reproducible; P14ii remains last IV 1.10 file.
+
+
+### 20.151 MILESTONE GREEN: IutIVProp14P14iiActual (2026-11-15 20:40)
+- Mzk1IutIVProp14P14iiActualActual DONE 03:43:09 (55s)! Source 11:40:58, olean 11:43:08; no sorry/True/axiom.
+- p14ii_logVolume_actual (hp, d e f m s, he hf hd, mL mO mLambda, positivity, hexp, hmuLambda, hL) : (log mL - log mO)/d = -(((f+m)/(e*f)) log p).
+- Proof: volume_ratio_eq_pow_actualH with 0<p by linarith, then p14ii_logVolume_cond.
+- IV 1.10 actual chain complete at P14ii level (conditional on mu/hexp inputs). Need probe; mainline/lattice notified.
+- B5 03:26:34; Final2 03:29:42 reproducible; final S3137 03:29:47; final fresh 03:33:31 no sorry.
