@@ -3798,3 +3798,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.575 PrincipalUnits subgroup route via isEquiv_valuation_valuationSubring (2026-11-15 26:10)
 - A=(NormedField.valuation).valuationSubring; Mathlib Valuation.isEquiv_valuation_valuationSubring : v.IsEquiv A.valuation. For units x: x∈A.unitGroup ↔ v x=1 ↔ ||x||=1; x∈(Integers K)^x iff v x=1. Build unitEquiv via Units.ext/Subtype.ext; then SetLike.ext + mem_principalUnits_iff. qpilot. No fake.
+
+
+### 20.576 hq q tensor norm gap; inspect q construction (2026-11-15 26:20)
+- qPilotLogVolumeReading := P.signedQPilotLogVolume := localSignedLog P.line.C3.q; C3.q.q is single tensor block element, not place sum. Need q local factor decomposition + block norm log=sum local; absent. theta region image not product; absent. hull inspect C3.q/q construction/norm defs for donors. No fake.
