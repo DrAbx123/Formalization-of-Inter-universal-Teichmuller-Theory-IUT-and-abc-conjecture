@@ -1436,3 +1436,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   compatible : forall u : (Integers K)^x, exists v : (Integers K)^x, beta (QuotientGroup.mk u) = QuotientGroup.mk v /\ integersUnitsToAlgClosure v = algAction (integersUnitsToAlgClosure u).
 - ActualInd1UnitActionRequired := Nonempty; actualInd1LogRangeEquiv A := actualSourceUnitLogRangeEquiv self self A.beta.
 - compatible is substantive provenance (beta induced by actual alg-closure action on integral units); no inhabitant; exact source gap. No bare Prop, no fake.
+
+
+### 20.147 MILESTONE GREEN: Final S3137ConditionalActual (2026-11-15 19:30)
+- Mzk1P0FinalS3137ConditionalActual DONE 03:29:47 (103s)!
+- finalPaperNormalizedComparison (S : S45SourceFields T) : paperNormalizedThetaSum T <= paperNormalizedQPilotSum T.
+- finalLPaperInstance (hlock)(hbound)(hlog) : LPaperInstance I place.
+- FinalBridgeConditions: s45 : S45SourceFields; relFactor : RelativeFactorTowerData; a1 : PaperToS3137A1Data (constructed); finalBridgeConditions_of (s45)(rel) : FinalBridgeConditions.
+- Rows: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION; A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP (no True); unitMass=1 NOT CLAIMED; old raw S3137 vacuous RECORD ONLY.
+- B5 GREEN 03:26:34 (olean 11:26:33 > source 11:23:30); Final2 recompiled 03:29:42 after B5 -> reproducible now.
+- Need final axiom probe; final is conditional, not unconditional 3.12/abc closure.
