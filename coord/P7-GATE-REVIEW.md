@@ -2587,3 +2587,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.335 p=2 bridge handoff to hull after units (2026-11-17 07:40)
 - shehdd confirmed p=2 bridge route/donors/step6 lemma pow_le_pow_iff_right_of_lt_one₀, but could not write compiled proof. No sorry added.
 - Hull to take over after #C B units closes: norm_le_norm_natCast_iff_addVal_ge via eq_unit_mul_pow_irreducible/addVal_mul/addVal_pow/addVal_prime/norm_uniformizer/pow_le_pow_iff_right_of_lt_one₀; then N=2eK kernel 1+4O, combine primary count. shehdd to hand lines after one more attempt.
+
+
+### 20.336 p=2 bridge corrected: p not irreducible, need uniformizer (2026-11-17 07:50)
+- In ramified case eK>1, p=unit*pi^eK, p NOT irreducible; cannot use Irreducible p. Correct target needs actual uniformizer pi : Integers K, hpi : Irreducible pi, hp_rel : (p:O)=u*pi^(logShellRamificationExponent K p). Then x=u_x*pi^n, ||x||=||pi||^n, ||p^N||=||pi||^(N*eK), pow_le_pow_iff_right_of_lt_one₀ -> n>=N*eK, addVal(p^N)=N*eK. p=2 N=2eK kernel 1+4O. Hull takes over with corrected signature; no fake.

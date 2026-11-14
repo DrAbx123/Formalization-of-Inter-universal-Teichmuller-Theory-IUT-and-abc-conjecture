@@ -2499,3 +2499,5 @@
 - 13:10: p=2 bridge step6 uses pow_le_pow_iff_right_of_lt_one₀; shehdd to implement. gate 20.334 written.
 
 - 13:20: p=2 bridge not yet compiled; handoff to hull after #C B units. Route/donors fixed. shehdd one more attempt then hand lines. gate 20.335 written.
+
+- 13:30: p=2 bridge correction: p not irreducible in ramified case; need uniformizer pi/hpi/p=u*pi^eK. Hull takes over corrected signature; no fake. gate 20.336 written.
