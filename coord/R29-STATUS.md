@@ -2681,3 +2681,5 @@
 - 04:20: TorsionSplit direct compile only :35 ¬p∣T0 error; hull fix. Mainline C3BaseQ linarith fix. gate 20.425 written.
 
 - 04:30: KernelBridge fresh GREEN 00:27:21 clean (no ofRange, probes 3 axioms). Next inhabitant/WQuotient/Z_p^d. abc audit. gate 20.426 written.
+
+- 04:40: MAJOR torsion_split GREEN 16:31:40 (T=p^m*T0, T0|q-1, m<=fA). Next index decomposition a=A-m/c=(q-1)/T0. gate 20.427 written.

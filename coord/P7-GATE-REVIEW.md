@@ -3080,3 +3080,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1Ind1KernelBridgeActual DONE 16:27:22/olean 00:27:21; source 00:25:59; 8 decls only (no ofRange): kernelToAQuotient/range_kernelToAQuotient_eq/AQuotientKernelBridge/kernelToAQuotient_ker_eq/two Normal/quotientKernelEquivRange/#prints; no source sorry; probes kernelToAQuotient_ker_eq/kernelToAQuotient three axioms. Fresh green accepted.
 - Next stepxi: actual AQuotientKernelBridge inhabitant from range+quotient equiv with submonoid/subgroup conversion; compose WQuotient; Z_p^d.
 - UnitInvariance olean stale 23:41; TorsionSplit no olean. abc audit. No fake.
+
+
+### 20.427 MAJOR torsion_split GREEN (hull, 2026-11-15 02:20)
+- Mzk1TorsionSplitActual DONE 16:31:40: torsion_split (hp)(hTpos)(hdvd:T|q^A*(q-1))(hcop:Coprime p(q-1))(hq:q=p^f) -> exists m T0, T=p^m*T0, Coprime p T0, T0|q-1, m<=f*A. Fixes: Fact p.Prime; padicValNat.div_pow; eq_zero_iff first branch False.elim; hcop.pow_left m gives Coprime(p^m)(q-1). No fake.
+- Next hull: derive index=q^(A-m)*((q-1)/T0), a=A-m,c=(q-1)/T0; feed correction/Paper312. abc probe.
