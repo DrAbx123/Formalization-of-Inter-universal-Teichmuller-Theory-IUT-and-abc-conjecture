@@ -2619,3 +2619,5 @@
 - 23:10: COR3.12 obstruction: pure q^a needs #T=q-1, false in ramified (Qp(ζp) p-torsion). Conditional pure bridge with hT green; trace consumer necessity. No fake. gate 20.394 written.
 
 - 23:20: Cor3.12 trace: ResiduePowerCondition only sufficient; consumer accepts torsion-divided if per-place log margin. Need log margin estimate; hull. gate 20.395 written.
+
+- 23:30: per-place margin needs torsion upper bound #T<=C; suggest #T<=(q-1)eK via reduction/p-power ramification; then log((q-1)/#T)>=-log eK. Hull attempt. gate 20.396 written.

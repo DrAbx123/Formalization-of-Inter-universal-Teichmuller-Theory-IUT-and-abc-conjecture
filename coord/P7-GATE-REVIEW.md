@@ -2913,3 +2913,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.395 Cor3.12 trace: ResiduePowerCondition only sufficient (hull, 2026-11-17 17:50)
 - Exact consumer Mzk1Paper312FinalBoundActual.A_le_Lbar_add_Dbar: per-place qlog_i/(2l) <= logIdx_i+diff_i -> sum inequality; ExplicitPaper312Inequality only uses Lbar=sum log index, no ResiduePowerCondition. Conditions used only by log_index_of_residuePower to turn index into a f log p; local_bound_with_conditions takes abstract a, not ResiduePowerCondition. So pure q^a is sufficient route, not necessary; torsion-divided form can feed consumer if per-place log margin holds.
 - Exact remaining: per-place qlog_v/(2l) <= Real.log(index_v)+diff_v using torsion-divided index formula; existing QFE only gives multiplicative formula, no log margin lower bound. Hull to attempt/report exact missing estimate. No fake.
+
+
+### 20.396 per-place log margin exact donor: torsion upper bound (hull, 2026-11-17 18:00)
+- Consumer Mzk1PerPlaceBoundHullActual.perPlace_inequality_of_mu_lower_diff needs qcoef <= logMu+(1-1/(2l))logIdx, equivalently qcoef <= logIdx+diff. qcoef=(f/Fdeg)*order*log p/(2l); logMu=(1+[p=2]-1/e-r/n)log p; logIdx=log(logShellIntegerIndex).
+- torsion-divided: logIdx=(eK*s-1)f log p + log((q-1)/#T); need lower bound log((q-1)/#T), i.e. #T upper bound. #T>q-1 possible (Qp(ζp): q=p,#T>=p). Tree has only finiteness/p-power info, no sharp upper bound. Suggested #T <= (q-1)*eK or (q-1)*p^{v_p(eK)} via reduction + p-power torsion ramification bound, giving log((q-1)/#T)>=-log eK; combine with paperShellLogMu_ge_lower and eK*s-1. Hull to attempt/report exact missing. No fake.
