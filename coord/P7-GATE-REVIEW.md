@@ -1282,3 +1282,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P1WeightA1BridgeActual DONE 02:04:11 (100s): nativeBadLocalWeight_eq_inv_total_local_degree; s1915LocalDegree_eq_finrank; a1Delta_eq_neg_coefficient_logP_sub_signed (hd : 0 < s1915LocalDegree); weight_conversion_cond (conditional hdF/hdpos); rows 3.
 - KEY: a1Delta_eq_neg_coefficient_logP_sub_signed RHS matches PaperToS3137A1Data.a1_delta_paper field verbatim. Construct inhabitant using local_degree_pos -> PaperToS3137A1Data no longer an EXPLICIT GAP.
 - Need axiom probe for WeightA1 4 theorems; final chain still pending Comparison/Final.
+
+
+### 20.124 A1Data CONSTRUCTED given local-degree positivity (mainline, 2026-11-15 14:20)
+- New Mzk1P1PaperSumsA1DataActual: paperToS3137A1Data_of_pos (hd : forall b, 0 < s1915LocalDegree T b) : PaperToS3137A1Data T with a1_delta_paper b := a1Delta_eq_neg_coefficient_logP_sub_signed (hd b); paperToS3137A1Data_nonempty_of_pos.
+- Thus PaperToS3137A1Data is CONSTRUCTED (given explicit local degree positivity), not an unexplained EXPLICIT GAP. Gate updated.
+- New Mzk1P1WeightA1AxiomProbeActual (queue) for four WeightA1 theorems.
+- Comparison import fix: LPaper312Statement from Mzk1S3137LReadoutActual.
+- Remaining final conditions: S45SourceFields; RelativeFactorTowerData (divisibility); PaperS3137ReadingDictionary (undefined GAP); d_F; unitMass=1 not assumed.
