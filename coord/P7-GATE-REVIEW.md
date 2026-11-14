@@ -887,3 +887,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **两条件分开**：`hnorm : ‖c0QHat‖=qVFamNormalizedNorm`（P2）与 `S.normRatio_one`（S45）。
 - 关键修复：本地 `qhatLogReadout` 改为 Correspondence 同名 def 的 abbrev 别名；linarith 前 `ring_nf`。
 - **下一步**：axiom probe（5 定理三公理）、S3137 读数层 correction 定理（或精确 `PaperS3137ReadingDictionary` 字段）；mainline 继续 QHat/RootRadius/PaperSums。
+
+
+### 20.67 更正：`SourcePilotRegionData` 非空；S3137 P 构造应继续（2026-11-15 03:35）
+- 实定义 `tmp/sheaf/n8/closure/SourcePilotRegion.lean:59`：`structure SourcePilotRegionData` 含 `p/place/q/thetaPacket/qUnit/roots/roots'/kummerClass/rootChange/tensorIndex/tensorPlaces/tensorTuple/tensorUnit/tensorLanding/tensorLanding_q` 等字段；**不是空类型**。
+- S3137 的 `P.line.C3` 类型即该 structure；hull 之前“S1429 空类型”可能是另一个 wrapper/alias，需 `#check` 确认 exact path。
+- **继续 actual P 构造**：`PaperQPilotObjectActual` = `line : QPilotLineActual`（C1/C2/C3）+ strip/oneColumn/logKummer/oneZero；优先 `qread_eq : qPilotLogVolumeReading P = -localLogMagnitude (qVFamily T b)`。若 C3 实际不可构造，再列精确字段缺口。

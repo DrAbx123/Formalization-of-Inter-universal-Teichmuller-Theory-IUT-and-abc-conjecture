@@ -1915,3 +1915,5 @@
 - 11:30：**审计 probe GREEN：`Mzk1BoxDistinguishedScalarProbe` 00:56:51（ord_pow/ord_theta/distinguished_theta_order 三公理）、`Mzk1IutIVProp14HaarIndexAxiomProbe` 00:56:56（mu_lambda_eq_index_mul/toReal 三公理）；`Mzk1Ind1LogLatticeActionActual` 00:56:57（仅 structure，无 proof/sorry）**。qpilot 正在写 `Mzk1BoxDistinguishedVarpiActual`；lattice 接 HaarIndexPow；stepxi 接 WF/实际单位识别。gate §20.65 已写。
 
 - 11:35：**GREEN `Mzk1P0QThetaReadoutNormCorrectionActual` 00:57:51（108s）**：q 侧 correction 链完成（qhat−paperQ=log ratio；1/[K_w:F_v] 与 d_b 两权重分列；`paperQDegree≤closedForm−1−Σd log ratio`；S45+norms 下 `paperQDegree≤closedForm−1`）。已派 hull 做 axiom probe + S3137 读数层 correction；mainline 继续 QHat/RootRadius/PaperSums；abc 核对权重。gate §20.66 已写。
+
+- 11:40：更正 hull：`SourcePilotRegionData` 实定义在 `tmp/sheaf/n8/closure/SourcePilotRegion.lean:59`，非空（含 p/place/q/thetaPacket/.../tensorLanding_q 等）；S3137 的 `P.line.C3` 应即该 structure。已让 hull `#check` 确认 exact path，继续 actual P 构造（优先 qread_eq），不要基于“空类型”放弃。gate §20.67 已写。
