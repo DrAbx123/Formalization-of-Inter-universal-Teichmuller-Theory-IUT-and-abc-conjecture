@@ -1969,3 +1969,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Route: x:=qVFamNormalizedGenerator hx ne_zero; hdef := norm_eq_absNorm_zpow (toC x) gives ||toC x||_C=absNorm^m; hnorm := generalNormalizedNormFormula x hx gives ||x||_L=absNorm^(-nu x/d); WithZero.log(Valued.v(toC x))=m via coe_unzero => nu x=-m; simpa unfolds norms to qVFamDefaultNorm=absNorm^m; absNorm^(-nu/d)=absNorm^(m/d)=(absNorm^m)^(1/d) via Real.rpow_mul absNorm_pos + casts => hbridge.
 - Imports: GeneralNormalizedNormBySpectralUniqueness, FinitePlaceCompletionNormTransport, QVFamNormalizedCoefficientBridgeActual, QVFamNormalizedGeneratorSupplyActual, QPilotZeroLocusDivisorActual, Mathlib.Tactic. Pitfalls: keep C/L norm instances separate, compare reals; toC x≠0; absNorm_pos.
 - Then hbridge -> ratio>=1 -> RouteA -> final noS45. Assigned mainline/hull.
+
+
+### 20.236 New hbridge files pending; noS45 wrapper GREEN (2026-11-16 12:20)
+- Mzk1RouteAFinalNoS45WrapperActual DONE 07:13:53 (95s): finalPaperNormalizedComparison_noS45_of_norm_bridge (pointwise hbridge -> ratio>=1 -> RouteA), conditional on hbridge.
+- New bridge files Mzk1QVFamNormBridgeValueActual (src 15:18:21) and Mzk1P0QVFamNormBridgeDonorActual (15:20:27): no olean yet; build/report. If hbridge green, wrapper gives final noS45, integrate final.
