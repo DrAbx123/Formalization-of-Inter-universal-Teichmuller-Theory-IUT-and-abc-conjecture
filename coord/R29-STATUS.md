@@ -2049,3 +2049,5 @@
 - 20:10: mainline running Final; woke hull/qpilot/shehdd/lattice/stepxi/abc/stage4 with next tasks. Final/A1Data/WeightA1 probes still pending; no new DONE after 02:08:48.
 
 - 20:15: stepxi defines ActualSourceUnitLayer K := (Integers K)^x/tors with actual self inhabitant + actualSourceUnitLogRangeEquiv; generic W mismatch avoided. Remaining source node: beta from actual Ind1/Ind2 procession action. Volume hcancel.symm/<-hqpow fixed. gate 20.127 written.
+
+- 20:20: stepxi added ActualInd1UnitAction structure (beta + fromProcession Prop, no inhabitant) and consumer actualInd1LogRangeEquiv; only source node = actual Ind1/Ind2 procession action -> beta. No fake. gate 20.128 written.

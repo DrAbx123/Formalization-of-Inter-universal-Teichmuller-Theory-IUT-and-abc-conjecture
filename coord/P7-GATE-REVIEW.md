@@ -1309,3 +1309,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New Mzk1Ind1ActualSourceUnitLayerActual (queue): ActualSourceUnitLayer K := (Integers K)^x/tors; actualSourceUnitLayer_self : SourceUnitQuotientIdentification (ActualSourceUnitLayer K) K with equiv=MulEquiv.refl (actual inhabitant); actualSourceUnitLogRangeEquiv (beta : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer L) : logRange K ≃* logRange L.
 - This replaces generic W by the actual finite-generated integral-unit quotient, avoiding the (AlgClosure)^x mismatch. Remaining source node: actual beta from Ind1/Ind2 procession action; no fake beta.
 - Volume direction fixes: hcancel.symm and rw [<- hqpow]; wait recompile.
+
+
+### 20.128 Ind1 actual unit action interface (stepxi, 2026-11-15 14:55)
+- Mzk1Ind1ActualSourceUnitLayerActual extended (retouch): structure ActualInd1UnitAction K L { beta : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer L; fromProcession : Prop }; ActualInd1UnitActionRequired; consumer actualInd1LogRangeEquiv A := actualSourceUnitLogRangeEquiv A.beta.
+- Structure has no inhabitant; only source node = construct beta from actual Ind1/Ind2 procession action and prove fromProcession. Old FPrimeStrip.isoMon acts on (AlgClosure)^x, not integral-unit quotient; no fake.
+- Written into gap doc.
