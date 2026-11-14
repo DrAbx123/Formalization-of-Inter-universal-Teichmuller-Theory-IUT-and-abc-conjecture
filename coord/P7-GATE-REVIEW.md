@@ -925,3 +925,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **正确目标**：归一化读数 `thetaNormRead := thetaReadActual − log(Haar(unitBall))`（或直接 `s1915` normalized log），与 `qReadActual` 的 degree d 对齐；**不是** `unitMass=1` 等号，也不是空 arrow equality。
 - hull 已证 theta≥0 分支 `LQThetaSourceArrow` empty；不要构造它。
 - mainline 先核对 `actualUnitMass` 与 region/unit ball 实际关系，定义 canonical normalized L target（不改旧目标类型），给 exact 签名；abc 可只读找 normalized Haar donor。
+
+
+### 20.72 Ind1 源节点：`F.Mon` 抽象 vs `localFPrimeStrip` 实际载体（stepxi，2026-11-15 04:20）
+- `PrimeStripCore:118-120` 的 `F.Mon` 只是抽象 CommMonoid；`LocalPrimeStrip:41` 的具体 `localFPrimeStrip` 是 `Mon v = (AlgebraicClosure ℚ_[v.1])ˣ`，不是 `(Integers F)ˣ`；`TimesMuQuotient` 只做抽象 torsion 商。
+- 因此不存在现成 `TimesMuQuotient((F.Mon v)ˣ) ≃ ((Integers F)ˣ/tors)`；`fPrimeStripUnitQuotientEquiv` 只是抽象代数层。
+- **构造任务**：从 `localFPrimeStrip` 实际载体定义/实例化 `F.Mon v`（algebraic-closure units），使 `TimesMuQuotient` 作用其上；证 `fPrimeStripUnitQuotientEquiv` 给 range/log 作用；若与 `(Integers F)ˣ` torsion quotient 不同，写精确 `≃*` 目标/障碍，不假填。
+- 已写入 `coord/IND1-UNIT-QUOTIENT-GAP.md` donor discrepancy。
