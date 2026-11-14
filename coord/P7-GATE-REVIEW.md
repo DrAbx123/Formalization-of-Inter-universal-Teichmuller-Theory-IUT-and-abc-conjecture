@@ -911,3 +911,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - 全部 `[propext, Classical.choice, Quot.sound]`，无 sorryAx。
 - L-carrier 路线：`LQThetaSourceArrow` 两 field 精确阻塞 = `qComponentMemGap`（显式）+ `CommonPrimeNormInstanceCompat`（norm instance）；mainline 写 attempt（donor rfl），绿后组装条件版 `LQThetaSourceArrow`/`LPaperInstance`。
 - 旧 raw S3137 P 侧 vacuous 记录保留；不冒充非空。
+
+
+### 20.70 L 侧不要证 `unitMass=1`；目标是 qRead≤thetaRead 的不等式（2026-11-15 04:05）
+- `Mzk1C3S1902UnitMassCitizenActual` rows 明确 `unitMass=1` 是 **GAP**（无 additive rootExtensionHaar normalized unit-ball mass 定理）；`actualUnitMass = (s1915UnitMass T).toReal` 是局部球质量乘积，一般≠1。
+- `lThetaNormalizationGap : thetaRead = log‖q‖` 只在 d=1 且 unitMass=1 时成立，**不能作为无条件目标**；L 侧真正目标是 `qRead ≤ thetaRead`。
+- 路线：由 `thetaRegion` 含 q tensor unit/球 → Haar 单调 → `thetaRead ≥ log(‖q‖^d · unitMass)`，再用 qRead<0 与 d/unitMass 实际下界；不走 `unitMass=1` 等号。
+- mainline 先核对 `C3LAt` tensor dimension/`actualC3LogShellTensorRegionL` 与 q tensor unit 包含关系；Norm compat attempt 可先编。

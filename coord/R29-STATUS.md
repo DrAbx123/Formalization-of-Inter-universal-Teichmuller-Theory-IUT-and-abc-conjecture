@@ -1923,3 +1923,5 @@
 - 11:50：巡检唤醒：qpilot 等 Varpi；shehdd Gamma v20→torsion；abc 核对 L-carrier donor；lattice HaarIndexPow→hμΛ；stepxi WF 绿后接实际单位识别/β_a。旧 raw S3137 空性记录保持，非空路线 L-carrier。
 
 - 12:00：**GREEN `Mzk1P0NormCorrectionAxiomProbeActual` 01:02:52（108s）**：NormCorrection 5 定理 + Dictionary 2 定理全部三公理无 sorryAx。L 侧 `LQThetaSourceArrow` 阻塞精确：`qComponentMemGap`（显式）+ `CommonPrimeNormInstanceCompat`（norm instance）；mainline 写 attempt（donor rfl），绿后组装条件版。gate §20.69 已写。
+
+- 12:05：纠正 L 侧目标：`unitMass=1` 是明确 GAP（additive rootExtensionHaar 无 normalized unit-ball mass 定理），`thetaRead=log‖q‖` 只在 d=1/unitMass=1 成立；真正目标是 **qRead≤thetaRead 不等式**，从 thetaRegion 含 q tensor unit/球的 Haar 单调 + d/unitMass 实际下界走，不证假的等号。已发 mainline 核对 region 包含/dimension。gate §20.70 已写。
