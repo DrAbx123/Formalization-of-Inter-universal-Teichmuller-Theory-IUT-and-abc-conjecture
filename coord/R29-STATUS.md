@@ -2671,3 +2671,5 @@
 - 03:30: URGENT KernelBridge ofRange log errors+sorryAx; verify/delete. UnitInvariance line72. gate 20.420 written.
 
 - 03:40: torsion split arithmetic hints (coprime_dvd_left/pow_dvd_pow_iff_le_right). hull. gate 20.421 written.
+
+- 03:50: URGENT KernelBridge source/olean mismatch (source newer, only 4 decls); freeze proven decls+recompile. UnitInvariance red line72/coercion. gate 20.422 written.

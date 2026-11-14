@@ -3056,3 +3056,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.421 Torsion split arithmetic directions (hull, 2026-11-15 01:20)
 - Mzk1TorsionSplitActual FAIL 16:22:42 but log old; current fixes: Fact p.Prime, hT0dvdT, hval0 via padicValNat.div_pow, hnotp. Remaining: hT0dvdq1 dvd_of_dvd_mul_left direction; hmle needs Coprime (p^m)(q-1); pow_left mismatch.
 - Hints: get p^m|p^(fA) from p^m|T and T|q^A(q-1) plus coprimality, then m<=fA via pow_dvd_pow_iff_le_right/Nat.le_of_dvd; then Coprime.coprime_dvd_left gives Coprime (p^m)(q-1). Use hcop.symm/coprime_dvd_left instead of pow_left. No fake.
+
+
+### 20.422 URGENT source/olean mismatch KernelBridge; UnitInvariance red (abc, 2026-11-15 01:30)
+- KernelBridge olean 23:46:45 probes range/ker_eq/quotientKernelEquivRange three axioms no sorryAx; ofRange unknown. BUT current source mtime 00:20:44 > olean and only 4 decls (no quotientKernelEquivRange) -> olean stale/mismatched, not current evidence. stepxi to freeze only proven decls and recompile+probe.
+- UnitInvariance FAIL 16:04:39 line72 rw + coercion mismatch; current olean stale. qpilot to fix/simplify image equality via ext/membership, no smul; fresh. No fake.
