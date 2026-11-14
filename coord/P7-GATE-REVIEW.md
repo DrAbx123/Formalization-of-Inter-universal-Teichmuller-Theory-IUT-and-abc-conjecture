@@ -2127,3 +2127,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Grep zero sorry in Donor (source 17:02:37) and Value (16:29:55); temporary toAdd sorry removed.
 - Both still no olean: Donor FAIL 09:02:08 final calc exponent; source newer pending build; Value FAIL 09:02:08 carrier mismatch qVFamily.q vs NormalizedCompletion qVFamTensorPlace.
 - Not green; no probe until build passes. Wrapper/Assembly conditional green; S45 not claimed; power not equality.
+
+
+### 20.264 Donor hbridge last exponent zpow/rpow (hull, 2026-11-16 17:20)
+- Source clean: grep sorry/admit/axiom zero. Donor FAIL 09:09:13 only hdef' exponent: LHS ↑Ideal.absNorm ^ m (zpow) vs RHS ^↑m (rpow); Real.rpow_intCast not matching.
+- Fix: option 2 simpa [Real.rpow_intCast] using congrArg (fun z => (↑(Ideal.absNorm ...):R)^z) h2; or option 1 RHS zpow absNorm^m then rw [h2] rfl and later rpow_intCast. Hull continues this cycle; freeze source; if not green next, hand lines to mainline single takeover.
+- Value still default rw proof term. hbridge not green; conditional chain green. No fake.

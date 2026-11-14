@@ -2347,3 +2347,5 @@
 - 23:50: no sorry in hbridge files verified. unzero named arg is x; Donor restore hm. hull fix. Estimates green; next Section2Statement. gate 20.262 written.
 
 - 00:00: no sorry confirmed in hbridge files; both still red/no olean. Donor exponent calc, Value carrier mismatch. Not green. gate 20.263 written.
+
+- 00:10: Donor only zpow/rpow exponent; hull continues with simpa rpow_intCast option; freeze source, else mainline takeover. Source no sorry. gate 20.264 written.
