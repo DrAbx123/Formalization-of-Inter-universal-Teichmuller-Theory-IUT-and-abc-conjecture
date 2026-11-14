@@ -3648,3 +3648,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.540 hscale1 likely false: coordinate norms (2026-11-15 21:20)
 - hull S = intersection of regions containing S; hull S⊆unitRegion iff S⊆unitRegion iff every coordinate norm<=1. S=arithmeticTupleFieldLogImage. No such theorem; likely false when log-volume positive. scale:=1 redefinition has no proof -> must NOT do. Need counterexample/coordinate norm formula or scale!=1 hullUnitLog=0/full Haar scaling. qpilot inspect; no fake.
+
+
+### 20.541 MAJOR ActualRamifiedData GREEN; abc exact missing confirmed (2026-11-15 21:30)
+- Direct ActualRamifiedData src 05:06:45 EXIT=0 after duplicate removal: actualFn_spec/hdecomp/chosen/HasCorrection/HasLogIdx/HasCoeff/perPlace_bounds. Retouch; next combine with Paper312 assembly.
+- abc: no abcRationalPoint->C3LogShellTensorBlock map; no c3NormalizedTensorHaar region weight estimate; no thetaPilotHullLogVolumeReal = log normalized hull donor (only scalar/dimension/shift). Mainline attempt canonical c3LogShellPointOfAbcTriple or report obstruction; hhullRead via shift/dimension form.
