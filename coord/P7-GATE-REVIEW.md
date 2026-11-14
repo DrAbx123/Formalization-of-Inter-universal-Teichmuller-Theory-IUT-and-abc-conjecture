@@ -2705,3 +2705,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.356 hullUnitLog=0 reduction (qpilot, 2026-11-17 11:10)
 - New pending Mzk1IVThm110HullUnitZeroActual: from (1) arithmeticTupleCanonicalHullHaarLog_le_unitRegionHaarLog, (2) hullLog=hullUnitLog+unitLog (IQHullLogVolumeInterface), (3) 0<=hullUnitLog, derive arithmeticTupleHullUnitLogVolume=0 and hullLog=unitRegionLog (canonical hull vs IQ unit region relative volume 0).
 - Then hM reduces to arithmeticTupleIQHullUnitRegionHaarLog = -M (M>1); floor qSigned=min(unitRegionLog,-1). Exact first missing source now unitRegionLog=-M plus M>=1; M=1 only needs unitRegionLog>=-1. No fake; all from green facts.
+
+
+### 20.357 P2NormBridge source exists; watchdog backlog (hull, 2026-11-17 11:20)
+- Actual file Mzk1P2NormBridgeActual.lean (not Mzk1P2BridgeActual); src mtime 13:09:31 retouched, last log FAIL 13:08:18 old. Queue has path; watchdog backlog. Target norm_le_norm_natCast_iff_addVal_ge (pi,hpi,x!=0,N): ||x||<=||p^N|| <-> N*eK <= addVal x toNat; needs no hp_rel (eq_unit_mul_pow_irreducible gives p=u*pi^eK). Old errors fixed with local DVR/Dedekind instances, norm pow rewrites. Next green -> create Mzk1P2BridgeActual kernel 1+4O wrapper (addVal 0=top). Touched 21:11.
