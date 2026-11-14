@@ -2630,3 +2630,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.343 Ind1 KernelIntegers equivalence green (stepxi, 2026-11-17 08:50)
 - Mzk1Ind1KernelIntegersActual fresh DONE 12:30:22: completionKernelToIntegers/IntegersToKernel probes three axioms no sorryAx; ValuationData unitValuationHom_eq_one_iff probe three axioms.
 - Added completionKernelEquivIntegers : ker unitValuationHom ≃* (Integers completionField)^x; left_inv/right_inv/map_mul by Subtype.ext+Units.ext+rfl. Next WQuotient torsion quotient and Z_p^d infinite divisibility. Report first error/GREEN.
+
+
+### 20.344 Ind1 KernelIntegers equivalence GREEN fresh no sorryAx (stepxi, 2026-11-17 09:00)
+- Mzk1Ind1KernelIntegersActual DONE 12:36:26; completionKernelEquivIntegers probe [propext,Classical.choice,Quot.sound], no sorryAx; both maps retained. left_inv/right_inv Subtype.ext+Units.ext+rfl pass.
+- Next: mod torsion to WQuotient=(Integers completionField)^x/tors; bridge AQuotient kernel quotient to WQuotient; then Z_p^d infinite divisibility. No fake.

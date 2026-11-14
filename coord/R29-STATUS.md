@@ -2515,3 +2515,5 @@
 - 14:30: MAJOR units card unconditional GREEN 20:26:24 ((q-1)q^(N-1)); primary only span identity left; N5FloorBridge green conditional floorQSigned=native. Hull span/p2; qpilot N5 floor sources. gate 20.342 written.
 
 - 14:40: Ind1 KernelIntegers DONE 12:30:22 + completionKernelEquivIntegers; probes no sorryAx. Next WQuotient torsion/Z_p^d divisibility. gate 20.343 written.
+
+- 14:50: Ind1 KernelIntegers equiv fresh GREEN 12:36:26, no sorryAx. Next WQuotient torsion/Z_p^d. gate 20.344 written.
