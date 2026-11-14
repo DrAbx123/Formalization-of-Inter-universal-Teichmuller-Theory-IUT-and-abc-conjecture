@@ -3166,3 +3166,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.442 Audit: UnitInvariance/KernelBridge/TorsionSplit/Ceil/IndexPow/C3BaseQ all fresh standard (2026-11-15 04:50)
 - UnitInvariance 00:53:10 smul O=O probe 16:58:14 three axioms; KernelBridge 00:36:38 ofRange probe 16:48:43 no sorryAx; TorsionSplit 16:31:40 probe 16:41; CeilDecomp 16:44:24 standard; IndexPow 16:48:33 subset; C3BaseQ 16:45:19 direct GlobalSumAggregation probe 00:49:23 standard. No sorry.
 - Next: qpilot create Haar file char/measure; hull create IndexDivision; stepxi quotient bridge; stage4 adicAbv/IsScalarTower. No fake.
+
+
+### 20.443 MAJOR index division GREEN (hull, 2026-11-15 05:00)
+- Mzk1QuotientDecompActual DONE 17:01:31: quotient_decomp (0<p)(0<T0)(q=p^f)(T=p^m*T0)(T0|q-1)(m<=fA) -> q^A*(q-1)/T = p^(fA-m)*((q-1)/T0).
+- Mzk1IndexDivisionActual DONE 17:05:58: index_division wrapper. With ceil_decomp/exponent_decomp/index_pow_identity: index = q^(A-k)*(p^r*((q-1)/T0)), a=A-k, c=p^r*((q-1)/T0).
+- Remaining: connect actual logShellIntegerIndex to q^A(q-1)/T via QFE quotient card/definition; then instantiate a/c/feed correction/Paper312. Unramified a=0 condition4 separate. abc probe. No fake.
