@@ -2743,3 +2743,5 @@
 - 09:30: URGENT QuotientBridge sorryAx delete; PrincipalDim real log errors; A2 blocked no donor. gate 20.456 written.
 
 - 09:40: QuotientBridge empty green 01:57:57; PrincipalDim fresh errors :60/:67/:68/:69. mainline A2 pseudofunctor; stage4 adicAbv; stepxi Z_p^d. gate 20.457 written.
+
+- 09:50: A2 signAction: constant pseudofunctor coherence first missing; atBase Equivalence.id feasible; quotient/groups/scalar no donor. mainline draft. gate 20.458 written.

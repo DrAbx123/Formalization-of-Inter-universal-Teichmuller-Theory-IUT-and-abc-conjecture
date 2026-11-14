@@ -3249,3 +3249,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1Ind1QuotientBridgeActual DONE 17:57:58/olean 01:57:57 (empty, no sorry) accepted placeholder.
 - PrincipalDim fresh log 01:57:56: :60:4 type mismatch, :67:2 unsolved, :69:4 type mismatch, :68:26 strict positivity; qpilot fixing Real.log_zpow/casts.
 - mainline A2 signAction constant pseudofunctor/Bicategory equivalence; stage4 adicAbv/IsScalarTower; stepxi Z_p^d. abc audit. No fake.
+
+
+### 20.458 A2 signAction donor/missing analysis (mainline, 2026-11-15 07:50)
+- No constant pseudofunctor constructor in Mathlib; only Pseudofunctor.mk/mkOfOplax/id/FreeBicategory.lift. diagram : SignActionIndex -> EtaleStackPseudofunctor F needs Pseudofunctor.mk obj=fun _=>X.stack.fiber map=fun _ _=>id; coherence fields no donor (needs bicategory coherence). First exact missing.
+- atBase: Bicategory.Equivalence has structure/Equivalence.id; if constant diagram defeq then atBase=Equivalence.id feasible. generator_identification then unitors+Iso.refl likely.
+- quotient witness no donor (universal property). groups need actual OrbicurveEtaleFundamentalGroup (coverCategory/baseScheme/fiber functor), no constructor. scalar stackExtension: schemeRestrictScalarsPseudofunctor green; missing result : EtaleStackOverField K actual stack/IsStack.
+- Mainline to draft constant Pseudofunctor.mk candidate/report first coherence error. No fake.
