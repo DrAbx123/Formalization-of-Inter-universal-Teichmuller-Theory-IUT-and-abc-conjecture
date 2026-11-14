@@ -2358,3 +2358,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - shehdd added congruenceUnitsMap=Units.map (Ideal.Quotient.mk I), congruenceUnitsMap_surjective via IsLocalRing.surjective_units_map_of_local_ringHom. Remaining hker: ker = logShellCongruenceUnits, needs equivalence u in closed-radius principal units <-> (u:K)-1 in Ideal.span{logShellScale p}. No existing bridge found; exact missing lemma.
 - hull: cardQuot_maximalIdeal_pow green; next units card q=cardQuot(m), nonunits=m/m^N, card=q^(N-1), units=(q-1)q^(N-1).
 - New greens: CongruenceUnitsEquiv conditional 18:21, TruncatedUnitsCard defs+cardQuot 18:27, ObjectLockData gaps 18:28, InfiniteDivisible 18:21.
+
+
+### 20.298 #C A odd-p kernel donor found (shehdd, 2026-11-17 01:10)
+- IntegralUnitLogShellSharpBounds.integralUnitToLogShellResidueUnits_ker_eq (hp2:p!=2)(hpi:Irreducible(p:Integers K)) : ker integralUnitToLogShellResidueUnits = logShellCongruenceUnits. This gives hker for odd p, s=1 with logShellScale p=p and span{p}=maximalIdeal; surjectivity via IsLocalRing.surjective_units_map_of_local_ringHom.
+- Remaining: identify congruenceUnitsMap (Units.map Ideal.Quotient.mk span{p}) with integralUnitToLogShellResidueUnits (IsLocalRing.residue); p=2 needs (p^s)=(4) norm<->ideal criterion, existing mem_span_prime_iff_norm_le_norm_prime_of_irreducible only for irreducible p not 4.
+- Next: wire odd-p primary via donor; p=2 separate norm criterion. No new Lean yet, no sorry.
