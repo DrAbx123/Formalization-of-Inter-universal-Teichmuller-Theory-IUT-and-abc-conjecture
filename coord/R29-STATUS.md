@@ -2243,3 +2243,5 @@
 - 15:20: GREEN Prop18Composite 06:23:15; S45NormRatioRealization 06:28:02 (ratio=1 iff gap, no sorry). Probe queued; q_norm^d route continuing. gate 20.220 written.
 
 - 15:30: GREEN DefaultNormScalingVariant 06:31:04 (default-norm scaling data + constructor). Existing tensor structure still needs norm bridge (proposition mismatch), not pure type no-go. Probe queued; q_norm^d route continues. gate 20.221 written.
+
+- 15:40: GREEN S45FreeScalingRoute 06:36:39 (paper-coefficient scaling data without S45 via normalized representative g=q^d; caveat actual q/S45 not claimed). S45Realization probe 06:37:20; DefaultNorm probe 06:36:37 three axioms. gate 20.222 written.

@@ -1884,3 +1884,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1DefaultNormScalingVariantActual DONE 06:31:04 (51s): DefaultNormPureFractionalScalingData localGenerator : Completion ... with default norm; defaultNormPureFractionalScalingData_ofGenerator. GREEN official.
 - Downstream: CommonPrimeCompletion := NormalizedCompletion := Completion defeq underlying type, so default generator term typechecks, but existing localGenerator_norm proposition is normalized/spectral vs default norm; not defeq. Cannot cast to existing ArithmeticTuplePureFractionalScalingData without norm-instance bridge (S45 direction) or new default downstream consumer.
 - Default supply itself green; tensor constructor still blocked by norm bridge, not pure type no-go. Update coord/S45-TENSOR-CONSTRUCTOR-OBSTRUCTION.md §5. Need probe.
+
+
+### 20.222 GREEN: S45-free scaling route; probes (mainline, 2026-11-16 09:40)
+- Mzk1S45FreeScalingRouteActual DONE 06:36:39 (50s): norm_pow_eq_of_norm_eq_rpow; normalizedScalingGenerator q i := q i ^ d i; norm_normalizedScalingGenerator; arithmeticTuplePureFractionalScalingData_ofNormalizedRepresentative (paper-coefficient scaling data without S45). Caveat: g is normalized representative, not actual q; S45/norm-instance equality not proved/claimed.
+- Mzk1S45NormRatioRealizationAxiomProbeActual DONE 06:37:20: qVFamNormRatio_eq_one_iff_gap, mul_default, pos all three axioms.
+- Mzk1DefaultNormScalingVariantAxiomProbeActual DONE 06:36:37: defaultNormPureFractionalScalingData_ofGenerator three axioms.
+- S45 reality: ratio=1 <-> QVFamNormInstanceGap; donor only power; no S45; CommonPrimeNormInstanceCompat no inhabitant. Residual four files excluded.
