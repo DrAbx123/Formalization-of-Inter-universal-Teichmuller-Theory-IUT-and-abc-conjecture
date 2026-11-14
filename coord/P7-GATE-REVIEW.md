@@ -2863,3 +2863,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1BaseChangeQCorrespondenceActual green (DONE 14:15:28, semantics corrected/recompiled): structure fields fPlace/kPlace, fPlace_comap_F, fPlace_lift, kPlace_eq, comaps, completionMap, n+n_pos, completionMap_norm: ||completionMap x||=||x||^n; BaseChangeQElementCorrespondence q_eq; QPilotC3SignedAggregation signed=-M; conditional R1.
 - Important donor: T.arithmetic has Algebra F K + IsScalarTower Fmod F K; FinitePlaceExtension.completionMap (k:=F)(K:=K) kPlace : (comap_F kPlace).adicCompletion F →+* kPlace.adicCompletion K GREEN with completionMap_injective/valuation_algebraMap/valuation_completionMap/completionMap_coe. So completionMap field constructible.
 - Missing inhabitants: (a) fPlace_lift: comap_F(nativeBaseSectionPlace)= (nativeBadLift).lift b (selected lift coherence, no theorem); (b) completionMap_norm power formula n=[K_w:F_v] via valuation_algebraMap + residue degree (not packaged); (c) q element correspondence; (d) C3 signed aggregation. No fake.
+
+
+### 20.387 Fresh errors UnitInvariance/KernelBridge/eEquiv (2026-11-17 16:40)
+- UnitInvariance log 22:24: :47:12 unsolved; :54:12/:55:10 rw pattern miss. qpilot to report/fix.
+- KernelBridge log 22:24 still old errors :58/:66 MonoidHom.mrange field notation, :69 invalid F, with stale sorryAx; source may not be updated/retouched. stepxi to confirm fresh, no stale acceptance.
+- CongruenceUnitsEquivGeneral log 22:29: :44:2 type mismatch; :59:62 app mismatch; :84:8 simplification; :99:27 app mismatch; :60:8 rw pattern; :102:4 type mismatch (actual f/hsurj/hker attempt). Hull to fix/report.
+- Probes green: CongruenceGeneralBaseChangeProbe 14:24:55; BaseChangeQCorrespondenceAxiomProbe 14:24:55; GaloisRingBridgeProbe 14:30:05.

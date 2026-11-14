@@ -2601,3 +2601,5 @@
 - 21:40: MAJOR GaloisRingBridge GREEN 22:24:59 (SMulDistribClass, IsGaloisGroup, primesOver transitivity). Next stage4 alignment from P/Q; abc probe. gate 20.385 written.
 
 - 21:50: BaseChange norm power semantics corrected (not preservation; ||map x||=||x||^n). completionMap donor exists; missing fPlace_lift/norm power/q element/C3 aggregation. mainline. gate 20.386 written.
+
+- 22:00: fresh errors unit/kernel/eEquiv; kernel log stale; hull eEquiv actual seam failing. Wake qpilot/stepxi/hull. Probes green. gate 20.387 written.
