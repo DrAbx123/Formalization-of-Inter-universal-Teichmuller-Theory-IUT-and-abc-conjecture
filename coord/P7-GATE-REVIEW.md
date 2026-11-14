@@ -3657,3 +3657,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.542 Probes UnitRegionScaling/AdicAbv/FloorUnitRegion done (2026-11-15 21:40)
 - DONE 21:02:40 UnitRegionScalingProbe; 21:03:31 AdicAbvEquivAxiomProbe; 21:03:38 FloorUnitRegion. Audit pending. ActualData olean 04:39:59 stale vs src 05:06:45; watchdog not recompiled yet. qpilot hscale; stepxi cast. No fake.
+
+
+### 20.543 ConcreteFiveCast Mathlib olean transient; unitLog norm (2026-11-15 21:50)
+- ConcreteFiveCast direct fails before source: Mathlib/Algebra/QuadraticDiscriminant.olean.private read; retry. source uses NumberFieldFinitePlace.Completion fix.
+- hscale donor: try unitLog_norm_le_one/integralLogShell_norm_le_one (unitLog in maximal ideal => norm<=1/p), then tensor unit ball. qpilot. No fake.
