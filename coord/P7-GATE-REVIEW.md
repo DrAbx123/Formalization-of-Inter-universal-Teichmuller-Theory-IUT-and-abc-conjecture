@@ -2841,3 +2841,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - GeneralLogShellNormCriterion: src 22:06:58 DONE 14:09:01 olean 22:09:00; probe 14:14:32 three axioms; no sorry.
 - KernelBridge: src 22:01:54 DONE 14:03:42 olean 22:03:41; old kernelToAQuotient_ker sorryAx replaced by kernelToAQuotient_ker_eq; probe 22:14:32 three axioms no sorryAx; old red record void.
 - IutIVCongruenceCard DONE 14:04:24 olean 22:04:23; probe 14:09:44 three axioms (old unknown obsolete). TruncatedUnitsSecondaryAxiomProbe 13:59:24 standard. P2Bridge paused no olean not accepted.
+
+
+### 20.383 HOT: general criterion + conditional eEquiv + BaseChange structures GREEN (2026-11-17 15:50)
+- Mzk1GeneralLogShellNormCriterionActual DONE 14:09:01: norm_le_norm_logShellScale_iff all p uniformizer.
+- Mzk1CongruenceUnitsEquivGeneralActual DONE 14:19:05: addVal_logShellScale; CongruenceUnitsPrimaryEquivTarget; congruenceUnits_equiv_primary_general_of_kernel (f,hsurj,hker -> Nonempty equivalence). Remaining actual seam: f=Units.map(Ideal.Quotient.mk I), I=span{logShellScale p}; hsurj local ring quotient units lift; hker via general criterion+addVal_logShellScale+addVal_le_iff_dvd. Hull to finish.
+- Mzk1BaseChangeQCorrespondenceActual DONE 14:15:28: BaseChangePlaceCompletionCorrespondence, BaseChangeQElementCorrespondence, QPilotC3SignedAggregation structures (no inhabitant); qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures conditional R1. Mainline to attack actual inhabitants.

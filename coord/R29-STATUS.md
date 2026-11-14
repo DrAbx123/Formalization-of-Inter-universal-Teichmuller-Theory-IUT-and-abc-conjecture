@@ -2593,3 +2593,5 @@
 - 21:00: HOT general logShell norm criterion GREEN 14:09:01 (all p) and kernel equality GREEN 14:03:42. Hull build eEquiv; stepxi first-iso equiv; abc probes. gate 20.381 written.
 
 - 21:10: audit general criterion/kernel bridge/consumer probes standard no sorryAx; old red void. P2Bridge paused. gate 20.382 written.
+
+- 21:20: HOT general criterion/conditional eEquiv/BaseChange structures GREEN; eEquiv only actual f/hsurj/hker seam; R1 only structure inhabitants. gate 20.383 written.
