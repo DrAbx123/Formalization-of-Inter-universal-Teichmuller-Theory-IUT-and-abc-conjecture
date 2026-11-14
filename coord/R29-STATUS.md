@@ -3005,3 +3005,5 @@
 - 31:20: PrincipalUnits norm bridge direct GREEN; next subgroup units equiv. qpilot. gate 20.588 written.
 
 - 31:30: PrincipalUnits units equiv via integersToA; qpilot. gate 20.589 written.
+
+- 31:40: integersToA explicit valuationSubring K; qpilot. gate 20.590 written.

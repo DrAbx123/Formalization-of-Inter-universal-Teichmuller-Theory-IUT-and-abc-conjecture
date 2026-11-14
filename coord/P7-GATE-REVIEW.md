@@ -3858,3 +3858,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.589 PrincipalUnits units equiv via integersToA (2026-11-15 28:30)
 - A.unitGroupMulEquiv needs explicit K; (Integers K)^x vs A^units mismatch. Build integersToA : (Integers K) ≃+* A (Subtype.ext carrier same), then (Units.mapEquiv integersToA).trans (A.unitGroupMulEquiv (K:=K)).symm. qpilot. No fake.
+
+
+### 20.590 integersToA implicit K stuck; use explicit valuationSubring (2026-11-15 28:40)
+- :25 IsUltrametricDist ?m from abbrev A/K inference. Use explicit (NormedField.valuation (K:=K)).valuationSubring in statement/binders and unitGroupMulEquiv; avoid A abbrev. qpilot. No fake.
