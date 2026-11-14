@@ -2852,3 +2852,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.384 BaseChange correspondence structures green + probe queued (mainline, 2026-11-17 16:00)
 - Mzk1BaseChangeQCorrespondenceActual DONE 14:15:28: BaseChangePlaceCompletionCorrespondence (F/K place + comap + completionMap/norm), BaseChangeQElementCorrespondence (q_eq under casts), QPilotC3SignedAggregation (signed=-M), and qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures (R1 conditional). Type-correct: no F/K place or Completion element equality; casts only. No inhabitant, no sorry/axiom.
 - Exact remaining: inhabitants (i) place/completion correspondence, (ii) q element correspondence, (iii) C3 signed aggregation. (iii) is single C3 vs global Bad weighted sum obstruction; sum-equivalent form green nativeGlobalQPilotNormalizedLogMagnitude_eq. Probe Mzk1BaseChangeQCorrespondenceAxiomProbeActual queued.
+
+
+### 20.385 MAJOR GaloisRingBridge GREEN (stage4, 2026-11-17 16:10)
+- Mzk1GaloisRingBridgeActual DONE 22:24:59/olean 22:24:58: galoisFmodMulSemiringAction trivial; galoisSMulDistribClass G (O_Fmod) (O_F) via hgr/ext/simp; galoisRingIsGaloisGroup via iff_isFractionRing; primesOverMkPlace bridge; exists_galois_smul_primesOver (primesOver transitivity, scoped Pointwise). ObjectLockData stays green. No mainline edits.
+- Next stage4: instantiate P/Q from nativeBadToFPlace/comap_F(nativeBadToKPlace), apply transitivity, convert sigma•P=Q to galoisPlaceMk alignment, then completion embedding/degree tower. abc probe.
