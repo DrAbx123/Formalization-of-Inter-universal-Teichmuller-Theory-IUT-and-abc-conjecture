@@ -2179,3 +2179,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0FinalNoS45AssemblyActual DONE 09:22:46: normPowerBridge_holds, finalPaperNormalizedComparison_noS45_uncond, finalDictionaryCombined_noS45_uncond (rel)(lock) unconditional; rows 7; no sorry/axiom.
 - This is the S45-free final IUT 3.12 paper inequality under standard T/[Fintype]/[hM][hB] assumptions. S45 ratio=1 remains strict-only/unproved.
 - Need: probe retarget to unconditional theorems (Assembly probe old currently), Dictionary unconditional finalDictionaryCombined_noS45, rows freshness, final audit/acceptance.
+
+
+### 20.272 MILESTONE acceptance evidence; rows caveat (abc, 2026-11-16 18:30)
+- Final DONE 09:22:47 src 17:20:18 olean 17:22:46; finalPaperNormalizedComparison unconditional via donor noS45; grep only comment. Strict S45 and conditional bridge retained.
+- Assembly DONE 09:22:46: normPowerBridge_holds, finalPaperNormalizedComparison_noS45_uncond, finalDictionaryCombined_noS45_uncond(rel)(lock); no S45/hbridge condition but still needs rel + substantive PaperS3137ObjectLock; no sorry.
+- Fresh probe Mzk1MilestoneFreshProbeActual DONE 09:25:48 7 items all three axioms; old Assembly probe 08:41 predates and must not be cited.
+- Caveats: Final rows line112 stale conditional label; Dictionary unconditional lacks rel/lock; L side hlock/hbound/hlog; unitMass=1 not claimed; strict equality needs S45. Paper comparison unconditional S45-free; full S3137 target still has explicit rel/lock/L conditions. Not total closure claim.
