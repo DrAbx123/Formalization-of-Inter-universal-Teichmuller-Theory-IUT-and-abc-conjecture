@@ -2983,3 +2983,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.408 Paper312ExponentInput interface GREEN (hull, 2026-11-17 20:00)
 - Mzk1Paper312ExponentInputActual DONE 15:41:17: Paper312ExponentInput (f Fdeg l exponent logp logMu) with coeffComparison/logp_nonneg/logMu_nonneg; perPlace_of_paper312ExponentInput consumer. Paper312IndexExponentInput (index residueCard a ...) with pure_power/index=residueCard^a + exponentInput + logIdx_eq. a_v is independent source exponent, not eK*s-1.
 - Exact missing: pure_power requires #T=q-1 for QFE; unramified eK=1,s=1 gives a=0 but condition4 1<=a*(Fdeg*2l) fails. No tree theorem constructs Paper312ExponentInput from QFE/eK/s. Hull to locate actual a_v source and conditional consumer. No fake.
+
+
+### 20.409 MAJOR Galois place alignment GREEN (stage4, 2026-11-17 20:10)
+- Mzk1GaloisRingBridgeActual DONE 23:47:32/olean 23:47:31: galoisPlaceMk_alignment_of_smul (σ•nativeFPrimeOver.1=nativeKPrimeOver.1 -> galoisPlaceMk σ(nativeBadToFPlace b)=comap_F(nativeBadToKPlace b)); galoisFPlaceAlignmentCondition_actual via exists_galois_move_nativeF+conversion. Fixes: Fintype Bad instance; ring hom equality by rfl/simp not RingOfIntegers.ext; Ideal.comap_symm explicit; change before galoisPlaceMk_maximalIdeal; named nativeFPrimeOver_val/nativeKPrimeOver_val rewriting.
+- Green chain: ring IsGaloisGroup -> primesOver transitivity -> native P/Q -> move σ -> FinitePlace alignment -> GaloisFPlaceAlignmentCondition actual.
+- Next stage4: alignedCompletionMap F_v->K_w at comap place, degree tower IsScalarTower/finrank_mul_finrank. abc probe. No fake.
