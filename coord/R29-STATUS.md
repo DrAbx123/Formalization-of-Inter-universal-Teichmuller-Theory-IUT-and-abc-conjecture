@@ -2151,3 +2151,5 @@
 - 07:30: Dictionary probe GREEN 04:36:25 (paperS3137ReadingDictionary_of + finalDictionaryCombined three axioms). finalDictionaryCombined official; sign/unitMass lock explicit. BaseScalar blocked; S45 explicit. gate 20.177 written.
 
 - 07:40: round-13 priorities: BaseScalar four errors (mainline/donor), #C B (shehdd), beta (stepxi), statement-layer red (lattice), audits. Dictionary/final/probes green. gate 20.178 written.
+
+- 07:50: lattice diagnosed statement-layer root: DeepStatementLayerV2 :17:61/:18:63 unexpected ';' syntax; consumer fails only missing olean. Assigned minimal syntax fix. gate 20.179 written.

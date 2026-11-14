@@ -1622,3 +1622,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary GREEN 04:29:55 + probe 04:36:25 (three axioms); finalDictionaryCombined official.
 - Remaining key blockers: BaseScalarValuationRelation four proof/instance errors (blocks donor); #C actual B/A (MissingTruncatedUnitsCard/MissingCongruenceUnitsEquiv); Ind1 beta/algAction inhabitant; non-lane statement-layer red (23); final S45/RelativeFactor/sign-unitMass/d_F conditions explicit.
 - Assigned: mainline BaseScalar/donor; shehdd #C B; stepxi beta; lattice statement-layer first error; hull/abc audit; qpilot Box standby.
+
+
+### 20.179 Non-lane statement layer root cause: DeepStatementLayerV2 syntax (lattice, 2026-11-16 01:50)
+- Mzk1IUTIVStatementLayerConsumerActual has no per-file log/uncompiled; imports Mzk1DeepStatementLayerV2Actual, whose first errors :17:61 and :18:63 unexpected token ';' expected command. Consumer failure is missing dependency olean, root is syntax in DeepStatementLayerV2.
+- Assigned lattice minimal syntax fix (no goal change/sorry/True), then next first error.
