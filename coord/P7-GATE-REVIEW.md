@@ -1303,3 +1303,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0LNormComparisonConditionalActual DONE 02:08:48 (104s): LNormComparisonTarget_of_bounds; _of_local_bound; LPaperInstance_of_bounds; rows 7. Final S3137 dependency satisfied.
 - Mzk1BoxPrincipalPacketAlignmentActual DONE 02:08:47 (104s): principalScalarReadout; principalScalarReadout_eq_log_norm; PacketScalarAlignment structure; principalPacketAlignmentMissing list (principal region <-> StepV slot, rootHaarFactor <-> packet hull normalized log ratio); no fake equality.
 - Final retouch/recompile ordered; WeightA1/A1Data probes pending.
+
+
+### 20.127 Actual source-unit layer defined (stepxi, 2026-11-15 14:45)
+- New Mzk1Ind1ActualSourceUnitLayerActual (queue): ActualSourceUnitLayer K := (Integers K)^x/tors; actualSourceUnitLayer_self : SourceUnitQuotientIdentification (ActualSourceUnitLayer K) K with equiv=MulEquiv.refl (actual inhabitant); actualSourceUnitLogRangeEquiv (beta : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer L) : logRange K ≃* logRange L.
+- This replaces generic W by the actual finite-generated integral-unit quotient, avoiding the (AlgClosure)^x mismatch. Remaining source node: actual beta from Ind1/Ind2 procession action; no fake beta.
+- Volume direction fixes: hcancel.symm and rw [<- hqpow]; wait recompile.

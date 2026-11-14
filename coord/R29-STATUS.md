@@ -2047,3 +2047,5 @@
 - 20:05: GREEN LNormComparisonConditional 02:08:48 (LNormComparisonTarget_of_bounds/_of_local_bound/LPaperInstance_of_bounds) and PrincipalPacketAlignment 02:08:47 (principalScalarReadout_eq_log_norm/PacketScalarAlignment/missing list). Final dep satisfied; mainline to retouch/recompile Final. gate 20.126 written.
 
 - 20:10: mainline running Final; woke hull/qpilot/shehdd/lattice/stepxi/abc/stage4 with next tasks. Final/A1Data/WeightA1 probes still pending; no new DONE after 02:08:48.
+
+- 20:15: stepxi defines ActualSourceUnitLayer K := (Integers K)^x/tors with actual self inhabitant + actualSourceUnitLogRangeEquiv; generic W mismatch avoided. Remaining source node: beta from actual Ind1/Ind2 procession action. Volume hcancel.symm/<-hqpow fixed. gate 20.127 written.
