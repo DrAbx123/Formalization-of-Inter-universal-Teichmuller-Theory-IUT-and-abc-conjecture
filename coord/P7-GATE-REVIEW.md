@@ -2989,3 +2989,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1GaloisRingBridgeActual DONE 23:47:32/olean 23:47:31: galoisPlaceMk_alignment_of_smul (σ•nativeFPrimeOver.1=nativeKPrimeOver.1 -> galoisPlaceMk σ(nativeBadToFPlace b)=comap_F(nativeBadToKPlace b)); galoisFPlaceAlignmentCondition_actual via exists_galois_move_nativeF+conversion. Fixes: Fintype Bad instance; ring hom equality by rfl/simp not RingOfIntegers.ext; Ideal.comap_symm explicit; change before galoisPlaceMk_maximalIdeal; named nativeFPrimeOver_val/nativeKPrimeOver_val rewriting.
 - Green chain: ring IsGaloisGroup -> primesOver transitivity -> native P/Q -> move σ -> FinitePlace alignment -> GaloisFPlaceAlignmentCondition actual.
 - Next stage4: alignedCompletionMap F_v->K_w at comap place, degree tower IsScalarTower/finrank_mul_finrank. abc probe. No fake.
+
+
+### 20.410 Old lane files recompiled; C17 QPLACE gap matches alignment (2026-11-17 20:20)
+- Batch DONE: Mzk1BadPlaceUnitMassProductActual, P1FinitePlaceFvActual, PaperLabelBadIndexBridgeActual, PaperQPilotLineBundleSourceActual, P3WeightDegreeOneActual, P3DictQWeightDegreeActual, C17QPLACEChoiceGapActual, KernelBridgeFreshProbeActual, P3TameFromConductorActual, PrimeConductorWeightOneActual, PlaceEqSpecializationActual, CompletionMapSelfActual (all 15:47-15:49).
+- Mzk1C17QPLACEChoiceGapActual: QPlaceChoiceGap := fkDescentShadow(nativePlaceSelection b.1)=nativeBadLift.lift b; qplace_comap_eq proved; qplace_imp_comap one direction. This matches NativeBadLiftAlignment up to fkDescentShadow=comap_F(sectionFiniteLift). Mainline cross-ref; continue experiment. abc audit.
+- Kernel/Unit/Galois fresh green retained. No fake.

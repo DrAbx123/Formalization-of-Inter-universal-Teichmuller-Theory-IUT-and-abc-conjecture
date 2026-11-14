@@ -2647,3 +2647,5 @@
 - 01:30: Paper312ExponentInput interface GREEN 15:41:17; a_v independent; exact missing source/pure power. Hull. gate 20.408 written.
 
 - 01:40: MAJOR Galois alignment GREEN 23:47:32 (alignment_of_smul + condition_actual). Next completion map/degree tower. gate 20.409 written.
+
+- 01:50: old lanes recompiled; C17 QPLACE gap matches NativeBadLiftAlignment. Mainline cross-ref; abc audit. gate 20.410 written.
