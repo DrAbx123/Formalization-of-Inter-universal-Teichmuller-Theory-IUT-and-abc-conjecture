@@ -1547,3 +1547,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor GeneralNormalizedNormBySpectralUniqueness.lean:94 uses canonicalAbsValue_add_le from CanonicalAbsValueAddLeProof.lean:64; AddLeProof imports donor => cycle; donor lacks import so identifier unknown. Cannot order as written.
 - Fix route: inline add_le proof into donor, or move canonicalAbsValue/nu/absNorm_gt_one/d_eq_e_mul_f + add_le proof to lower shared module, then AddLeProof imports donor; build BaseScalarValuationRelation first.
 - Formula match (source): donor ||x||_norm=absNorm^(-nu/d), default ||x||_def=absNorm^m with m=-nu, so donor = ||x||_def^(1/d); normalizedCanonicalPowerComparison equivalent. If built, may close norm-instance compat.
+
+
+### 20.167 Correction: donor gives power formula, not norm equality (2026-11-15 22:50)
+- mainline fix plan for donor cycle (inline add_le or lower core module) and dictionary hM/hB explicit params is correct.
+- BUT correction: donor gives ||x||_norm = absNorm^(-nu/d) = ||x||_def^(1/d), NOT ||x||_norm=||x||_def. CommonPrimeNormInstanceCompat asks equality; cannot be closed by donor except d=1/trivial. S45 qVFamNormRatio=1 is NOT donor-implied; it remains a real source condition. Do not fake; record exact power formula and keep ratio explicit.
+- Build BaseScalarValuationRelation first; then donor; probe; then report compat exact first error.

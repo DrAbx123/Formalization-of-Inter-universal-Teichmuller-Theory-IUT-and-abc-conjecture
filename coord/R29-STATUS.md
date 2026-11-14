@@ -2123,3 +2123,5 @@
 - 04:30: donor FAIL missing BaseScalarValuationRelation.olean; added dep to WL and refreshed plan (dep dirty). Mainline to watch/force donor retry; dictionary fix pending. A1Data fresh audit passed three axioms. gate 20.165 written.
 
 - 04:40: CRITICAL donor structural blocker: canonicalAbsValue_add_le circular between donor and CanonicalAbsValueAddLeProof. mainline to inline/move to lower shared module; build BaseScalarValuationRelation first. Formula source match confirmed (norm_def^(1/d)); if built may close norm gap. gate 20.166 written.
+
+- 04:50: donor fix plan (inline add_le/lower core) and dictionary hM/hB explicit params approved. CORRECTION: donor gives power formula ||x||_norm=||x||_def^(1/d), NOT equality; S45 ratio=1 not donor-implied; compat should fail unless d=1. Keep S45 explicit, no fake. gate 20.167 written.
