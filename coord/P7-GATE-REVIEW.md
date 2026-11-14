@@ -1030,3 +1030,14 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - GammaPGroup GREEN 01:12:27; shehdd probe queued; actual h sent to lattice.
 - bridge rewired: QHat removed; RootBaseCompletionGap replaced by `RelativeFactorTowerData : Prop := forall b, exists A B C, 0<A /\ rootBaseQpDegree=A /\ kPlaceQpDegree=C /\ C=B*A`. This is explicit per-b relative factor B, not degree identity. CAVEAT: this is only existence/divisibility (A|C), not an actual field tower (F_v may not embed in K_w); do not call it constructed tower; if used as condition, label as explicit condition, and check whether it is true/derivable. S45SourceFields / PaperToS3137A1Data / PaperS3137ReadingDictionary remain.
 - Final S3137 conditional signature to use these explicit items; no unitMass=1; old raw S3137 vacuous only record.
+
+
+### 20.86 Round-2 triage of pending files (2026-11-15 06:45)
+- RootRadius :45 log_rpow pattern: target is `Real.log (P.rpow e)`; use `change Real.log (P ^ e) = _` then `rw [Real.log_rpow hp]`.
+- Cor312 :52 Unknown T / warning sorry: add section variable T, remove old wrapper/sorry.
+- LNormReadoutProduct :85 qVFamTensorP unknown: add import/open QVFamTensorCoefficientActual.
+- NormInstanceCompat depends on missing Mzk1P0LQThetaComponentActual.olean; PObjectObstruction :13 OriginalInput universe/argument needs explicit typing.
+- C17 :44 Module (R/p) (S/P) missing: build Algebra/Module instance from quotientMap_a/lift.
+- Varpi :54 stray `exact` in source; HaarIndexPow Measure K parse: open MeasureTheory / fully qualify.
+- LocalMon `:25` unsolved `sorry () = q` in apply theorem; IntegralUnitMap references undefined `integersUnitsToAlgClosure_injective`; define it or remove theorem; must have no sorryAx.
+- All stale logs may predate retouch; re-run after fixes.

@@ -1953,3 +1953,5 @@
 - 13:20: QHatNormCoherenceProof GREEN 01:13:14 (QHat unconditionally closed; bridge drops QHat); GammaPGroup GREEN 01:12:27 (need axiom probe); RootBaseCompletionGapActual GREEN 01:13:12 is NEGATIVE (naive degree identity false if relative factor B>1, forces B=1) -> do not use as constructible; weight conversion needs explicit B/per-b factor. gate 20.84 written. Sent mainline/shehdd.
 
 - 13:30: QHatProof GREEN 01:13:14 (unconditional); Gamma GREEN 01:12:27; bridge rewired to S45 / RelativeFactorTowerData / A1Data + reading bridge. CAVEAT: RelativeFactorTowerData is only exists-divisibility A|C, not actual field tower; label explicit condition, verify truth; do not claim constructed. QHat probe queued. gate 20.85 written.
+
+- 13:40: Round-2 triage: RootRadius log_rpow, Cor312 T/sorry, LNormReadoutProduct qVFamTensorP import, NormInstanceCompat missing QThetaComponent, PObjectObstruction OriginalInput universe, C17 Module instance, Varpi stray exact, HaarIndexPow Measure parse, LocalMon sorry apply, IntegralUnitMap undefined injective. Sent precise fixes to lanes. gate 20.86 written.
