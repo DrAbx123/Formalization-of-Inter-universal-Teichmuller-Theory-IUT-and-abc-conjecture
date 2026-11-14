@@ -1114,3 +1114,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Current grep of Mzk1P1PaperSumsToS3137BridgeActual.lean: PaperS3137ReadingDictionary appears only in doc row (line32) and rows (line113), both 'EXPLICIT GAP (not defined; True placeholder deleted)'; no `:= True` definition. abc's True finding was stale source.
 - RootRadiusBridge and BoxDistinguishedVarpi are source-clean but have no axiom probe files; audit status = source no sorry, axioms not formally verified. Ordered probes from mainline.
 - Bridge still FAIL; final S3137 pending recompile; no True in final.
+
+
+### 20.98 OPS: LNormReadoutActual hung; lean killed to unblock watchdog (2026-11-15 09:30)
+- Watchdog spent 8+ min on Mzk1P0LNormReadoutActual.lean (lean PID 7412, created 09:21:16); killed at 09:29:22; log FAIL EXIT=4294967295.
+- Cause likely whnf unfolding of actualC3LogShellTensorHaarL with maxHeartbeats 2000000; do not retry same config. Fix: reduce unfolding/use explicit change, lower heartbeats ~400k; temporarily deprioritize/remove from WL if needed.
+- Blocked LNormComparisonConditional; prioritize WeightA1/PaperSums/probes instead.
