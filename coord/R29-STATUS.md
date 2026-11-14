@@ -2427,3 +2427,5 @@
 - 07:00: #C A odd p hker donor integralUnitToLogShellResidueUnits_ker_eq; wire odd primary; p=2 needs (4) norm<->ideal lemma. shehdd. gate 20.298 written.
 
 - 07:10: confirmed Ideal.quotEquivOfEq and MonoidHom.ker_comp_of_injective for odd-p #C A wiring; shehdd to implement. stepxi depth subgroup fixed/retouched. gate 20.299 written.
+
+- 07:20: MAJOR logQ GREEN 18:33 (l>=7); ABC main estimate conditional GREEN 18:39; reading transport GREEN 18:39 (middle green, R1/R3 explicit); task-130 complete. Next: replace hQ, actual hCor312, actual R1/R3, #C units/A, object lock. gate 20.300 written.

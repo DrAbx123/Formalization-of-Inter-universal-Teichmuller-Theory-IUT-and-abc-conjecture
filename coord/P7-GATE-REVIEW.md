@@ -2370,3 +2370,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Confirmed Mathlib: Ideal.quotEquivOfEq (ideal equality) gives quotient ring equiv; MonoidHom.ker_comp_of_injective (f)(g)(hg:Injective g) : (g.comp f).ker = f.ker.
 - Plan: hpi.maximalIdeal_eq -> maximalIdeal=span{p}; eRing := Ideal.quotEquivOfEq h; f := (Units.mapEquiv eRing.toMulEquiv).toMonoidHom.comp integralUnitToLogShellResidueUnits; hsurj := Units.mapEquiv.surjective.comp residue surj; hker := ker_comp_of_injective ... then donor integralUnitToLogShellResidueUnits_ker_eq. p=2 separate (4)-norm criterion.
 - stepxi depth subgroup first error fixed Nat.le_mul_of_pos_right _ hpos; DepthSubgroupEqualsKernel restored; retouched pending.
+
+
+### 20.300 MAJOR logQ GREEN; ABC main estimate conditional; reading transport GREEN (2026-11-17 01:40)
+- Mzk1IVThm110LogQActual GREEN 18:33:51: logQ_coeff_pos; hCor312_absorb; logQ_bound_of_hCor312 (hl:7<=l, hd:1<=d, hS/hE nonneg, h312 => Q<=4dlS+5l^2E). l=5 recorded separate input. No sorry. Next replace hQ in IVThm110Actual; remaining actual hCor312.
+- Mzk1ABCMainEstimateActual GREEN 18:39:04: abcMainEstimate_of_frontierRegionComparison; abcConjecture_of_frontierHeightRegionEstimates conditional on FrontierHeightComparisonClause + FrontierRegionComparisonClause; no sorry. Actual frontier clauses still open.
+- Mzk1ActualReadingTargetActual GREEN 18:39:59: qNorm_le_hRoot (middle green), transport theorem to original reading conditional on QSourceLeQNorm (R1) + HRootLeHTarget (R3); R1/R3 explicit one-way conditions; no G2/G3 equality. Next actual R1/R3.
+- 4 Adapted statement task-130 completed; auto-probes excluded.
