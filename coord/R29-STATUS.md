@@ -2519,3 +2519,5 @@
 - 14:50: Ind1 KernelIntegers equiv fresh GREEN 12:36:26, no sorryAx. Next WQuotient torsion/Z_p^d. gate 20.344 written.
 
 - 15:00: KernelIntegers green 20:36 (equiv), TruncatedUnits 20:31; FloorNativeHull pending. mainline R1 shared q; hull span/p2; stepxi W quotient/Z_p^d. gate 20.345 written.
+
+- 15:10: R1 type correction accepted (scalar/log not element equality). Caution aggregation equality actualQPilotMagnitudeClassical=M may be S45-like/false if c_norm vs base; mainline/qpilot verify definitions/difference, no fake. gate 20.346 written.

@@ -2642,3 +2642,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1TruncatedUnitsCountActual GREEN 20:31:15; TruncFloorValProbe 12:37:12.
 - Still no olean: Mzk1IVThm110FloorNativeHullActual (floor hullLog=-M/M>=1 pending); qpilot retouched.
 - Mainline R1 shared q: SharedQPilot source actual; C3 q witness remains. Hull next span identity/p=2. stepxi next AQuotient kernel/Z_p^d. stage4 Galois action.
+
+
+### 20.346 R1 shared q: type correction; aggregation identity caution (mainline, 2026-11-17 09:20)
+- Mainline correctly notes P.line.C3.q.q : Completion place vs qVFamNormalizedGenerator : CommonPrimeCompletion place.val not defeq; no element equality; use scalar/log identity + normalizedCompletionRingEquiv + degree d_F. S3013QPilot is Real exp(-M), not field element.
+- CAUTION: actualQPilotMagnitudeClassical = sum w c_norm*log p while native M=sum w baseQLogMagnitude. If c_norm differs by qVFamNormRatio correction, aggregation equality actualQPilotMagnitudeClassical=M is S45-like and false for d>1. Do not assume equality; only provable inequality direction/log identity. mainline/qpilot to verify definitions and report exact difference; no fake.
