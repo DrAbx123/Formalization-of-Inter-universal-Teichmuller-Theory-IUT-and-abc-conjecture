@@ -3562,3 +3562,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.522 Assembly GREEN; AdicAbv explicit coercion fixes (2026-11-15 18:20)
 - Assembly direct EXIT=0 src 04:35:06 after hchar order fix; retouch; next floor with hact explicit.
 - AdicAbv: (1) map_comap_of_surjective with explicit (f.symm : O_K'→+*O_K), RingEquiv.surjective; (2) hw via ←Ideal.comap_comap (I:=v.asIdeal)(f:=f.symm)(g:=f) + hcomp + Ideal.comap_id; (3) hφ simp RingOfIntegers.coe_eq_algebraMap then change e(r:K)=((f r:O_K'):K'); rw mapRingEquiv_apply. mainline.
+
+
+### 20.523 Watchdog restart (2026-11-15 18:30)
+- Watchdog was stopped (log mtime 04:18:57, heartbeat 20:13:54 running=0 pending=48). Lead restarted via background job pwsh-ce25be70ff9a4731 (`cmd /c tools/run_dag_watchdog.cmd`); log active 04:38:37, pending draining. Fresh builds/probes (ActualRamified, WQuotient, UnitValuation, UnitRegionScaling, Batch2Probe) will follow. abc re-audit.
