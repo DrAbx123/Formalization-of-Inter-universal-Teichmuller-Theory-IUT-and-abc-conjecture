@@ -1923,3 +1923,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IUTIVSection2ElementaryCompositeActual DONE 06:44:39 (52s) after slash import fix.
 - Mzk1S45FreeScalingRouteActual old DONE 06:36:39/olean 14:36:38; source 14:39:24, likely still red; fix line85 Measure binder and recompile/probe.
 - LiteralCarrierReduction next. Route A ratio>=1 proof continuing.
+
+
+### 20.228 LiteralCarrier missing SMul on Set; downstream binder errors (lattice, 2026-11-16 10:50)
+- Mzk1IUTIVLiteralCarrierReductionActual :43/:45 failed to synthesize HSMul ((i)->(K i)^x) (Set ((i)->K i)) for scalingUnits lam hlam • unitRegion. Fix via explicit Set.image pointwise action/group action; :86/90/106/110 hpos/hfin unknown from section vars; fix after smul. Example36 missing was historical.

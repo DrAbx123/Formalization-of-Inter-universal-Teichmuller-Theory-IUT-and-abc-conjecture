@@ -2259,3 +2259,5 @@
 - 16:30: abc: S45FreeScalingRoute is RED after source edit; old DONE stale; :85 Measure.IsAddHaarMeasure invalid binder (need open MeasureTheory/full qualification). mainline fix. Do not count green. gate 20.226 written.
 
 - 16:40: GREEN Section2ElementaryComposite 06:44:39. S45Free route freshness still issue; fix Measure binder. Literal next; ratio proof continuing. gate 20.227 written.
+
+- 16:50: LiteralCarrier missing SMul units on Set; use Set.image pointwise; then fix hpos/hfin binders. lattice to fix. gate 20.228 written.
