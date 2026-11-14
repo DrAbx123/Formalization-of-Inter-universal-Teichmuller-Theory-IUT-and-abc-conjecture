@@ -2572,3 +2572,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.332 p=2 exact bridge lemma and donors (shehdd, 2026-11-17 07:10)
 - Donors found: addVal_le_iff_dvd, addVal_pow, addVal_prime_eq_ramificationExponent, norm_natCast_eq_prime_zpow_neg_padicValNat, norm_uniformizer_eq_prime_rpow_inv_ramificationExponent, eq_unit_mul_pow_irreducible. For 4=2^2: addVal 4=2eK, ||4||=p^-2.
 - Missing lemma: norm_le_norm_natCast_iff_addVal_ge (x : Integers K)(N)(hN): ||x||<=||p^N|| <-> addVal x >= addVal(p^N). Route: x=u*pi^n, addVal x=n, ||x||=||pi||^n, reduce n>=N*eK, addVal(p^N)=N*eK. p=2 N=2eK kernel 1+4O. No fake.
+
+
+### 20.333 unitValuationHom_eq_one_iff unfolding route (stepxi, 2026-11-17 07:20)
+- KernelIntegers root cause: mem_ker gives unitValuationHom u=1 but completion_valued_one_iff expects Valued.v u=1; missing unitValuationHom_eq_one_iff. Failed kernel maps removed to keep green; only completion_valued_one_iff_norm_one and completionIntegersToFieldUnits retained.
+- Proof route: unfold unitValuationHom = unitsWithZeroEquiv.comp unitsToValuedUnits; forward via unitsWithZeroEquiv.injective + Units.ext/simp [unitsToValuedUnits,Units.mk0_one,WithZero.coe_unzero]; reverse via Valued.v u=1 -> unitsToValuedUnits u=1 by Units.ext/simp. Names: Units.mk0_one, WithZero.unitsWithZeroEquiv, MulEquiv.map_eq_one_iff.

@@ -2493,3 +2493,5 @@
 - 12:40: p=2 gap route via addVal_le_iff_dvd/addVal_pow/addVal_prime; need norm<->addVal bridge. Floor open MeasureTheory.Measure fixed. gate 20.331 written.
 
 - 12:50: p=2 bridge lemma norm_le_norm_natCast_iff_addVal_ge with donors listed; implement via uniformizer decomposition. shehdd. gate 20.332 written.
+
+- 13:00: KernelIntegers missing unitValuationHom_eq_one_iff; route via unitsWithZeroEquiv.injective + Units.ext/simp. stepxi. gate 20.333 written.
