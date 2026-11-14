@@ -3049,3 +3049,5 @@
 - 35:00: integralUnitExponent opacity; qpilot test cardExponent file before core change. gate 20.610 written.
 
 - 35:10: PrincipalUnitsResidue 9 decls audit accepted (ole 07:12:09). qpilot cardExponent test. gate 20.611 written.
+
+- 35:20: CardExponent import/Fintype fixes; qpilot. gate 20.612 written.

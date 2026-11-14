@@ -3948,3 +3948,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.611 quotient transport audit 9 decls accepted (2026-11-15 32:10)
 - PrincipalUnitsResidue source 07:10:22, olean 07:12:09 > src, DONE 23:11:54, no sorry/axiom. quotientEquivPrincipalUnits L124 probe Mzk1PrincipalUnitsQuotProbeActual DONE 23:15:38/olean 07:15:38 three axioms. 9 decls all fresh probe evidence; accepted. qpilot testing cardExponent. No fake.
+
+
+### 20.612 CardExponent import/Fintype residue fixes (2026-11-15 32:20)
+- Mzk1IVThm110CardExponentActual needs import PrincipalUnitsResidueActual; add [Fintype (ResidueField A)] for residue theorem; fix hcard sorry. qpilot. No fake.
