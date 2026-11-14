@@ -2395,3 +2395,5 @@
 - 03:50: shehdd context exhausted for task-127; #C A reassigned to hull combined with #C B. Alignment: logShellCongruenceUnits radius 1+p^s O vs target (p^s)^e; resolve pairing first.
 
 - 04:10: user says no context exhaustion. Reassigned task-127 back to shehdd; told lattice resume task-130 and ignore auto-probes. Continue all lines.
+
+- 04:20: user: Thm110 l>=7 only, eliminate logQ by elementary calc, focus hCor312 from 3.12/Box/arithmetic (qpilot). Reading signed q correction favorable, retain/estimate not norm=1 (mainline). stepxi provenance interface queued with square/commutation, no inhabitant yet.
