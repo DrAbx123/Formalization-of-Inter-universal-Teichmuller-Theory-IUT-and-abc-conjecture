@@ -1420,3 +1420,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14ActualHBridgeActual DONE 03:14:35 (52s): actualGammaH, actualGammaH_spec, volume_ratio_eq_pow_actualH. P14ii next.
 - Mzk1P1NormalizedSourceConditionalActual DONE 03:15:24 (101s): paperNormalizedComparison_of_sourceFields, paperXiFTargetStrict_of_sourceFields, paperNormalizedComparison_with_corrections.
 - Mzk1P1PlaceVolumeFinal2Actual DONE 03:18:57 (67s) but B5 source mtime 11:19:24 later and B5 olean stale 11-13 23:21; Final2 not yet reproducible against current B5. Recompile B5 then Final2.
+
+
+### 20.145 CRITICAL: ActualInd1UnitAction.fromProcession is a bare Prop placeholder (abc, 2026-11-15 18:30)
+- ActualSourceUnitLayer green 03:14:34; ActualHBridge green 03:14:35; NormalizedSourceConditional green 03:15:24; all source no True/sorry/axiom.
+- BUT ActualInd1UnitAction.fromProcession : Prop is bare (no semantic content/proof); ActualInd1UnitActionRequired := Nonempty nearly only 'exists beta', not evidence of actual Ind1/Ind2 procession action. Must replace with substantive proposition (equality/commutation with actual action) or remove and mark explicit gap.
+- New audit probe Mzk1AuditProbe720Actual DONE 03:23:12: 6 items (two H bridges, three Normalized, SourceUnitLayer self_nonempty) all [propext, Classical.choice, Quot.sound].
+- Final latest FAIL 03:15:08 (before Normalized olean 03:15:24); pending retouch.
