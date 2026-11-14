@@ -3614,3 +3614,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.533 ActualData HasLogIdx/perPlace binder errors (2026-11-15 20:10)
 - Direct :202 HasLogIdx after dsimp goal Real.log ↑logShellIntegerIndex = Real.log ↑logShellIntegerIndex; add rfl. :211 Fact Prime ?m stuck in perPlace binders; annotate ∀ i : FinitePlaceAtPrime F p and chosenC args. hull.
 - FloorUnitRegion arg order fixed (named places/tuple/label/μ/T); pending. No fake.
+
+
+### 20.534 MAJOR AdicAbv GREEN (mainline, 2026-11-15 20:20)
+- Mzk1AdicAbvEquivActual DONE 20:57:10/olean 04:57:09: adicAbv_equivOfRingEquiv (e)(v)(x): adicAbv K' (equivOfRingEquiv (mapRingEquiv e) v) (e x)=adicAbv K v x. No sorry/axiom; fixes absNorm/hw/hφ/hval/coe_toRingHom/by_cases toNNReal.
+- stage4 use e:=σ, x:=σ.symm x to get adicAbv moved x = adicAbv v (σ.symm x), then Isometry/Completion.mapRingHom. probe pending. No fake.
