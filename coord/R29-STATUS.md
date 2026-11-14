@@ -2349,3 +2349,5 @@
 - 00:00: no sorry confirmed in hbridge files; both still red/no olean. Donor exponent calc, Value carrier mismatch. Not green. gate 20.263 written.
 
 - 00:10: Donor only zpow/rpow exponent; hull continues with simpa rpow_intCast option; freeze source, else mainline takeover. Source no sorry. gate 20.264 written.
+
+- 00:20: GREEN Section2Statement 09:05:32. Donor still no olean; hull. Next statement-layer. gate 20.265 written.

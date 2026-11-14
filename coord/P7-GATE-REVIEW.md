@@ -2133,3 +2133,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Source clean: grep sorry/admit/axiom zero. Donor FAIL 09:09:13 only hdef' exponent: LHS ↑Ideal.absNorm ^ m (zpow) vs RHS ^↑m (rpow); Real.rpow_intCast not matching.
 - Fix: option 2 simpa [Real.rpow_intCast] using congrArg (fun z => (↑(Ideal.absNorm ...):R)^z) h2; or option 1 RHS zpow absNorm^m then rw [h2] rfl and later rpow_intCast. Hull continues this cycle; freeze source; if not green next, hand lines to mainline single takeover.
 - Value still default rw proof term. hbridge not green; conditional chain green. No fake.
+
+
+### 20.265 GREEN PaperIUTIVSection2Statement (2026-11-16 17:10)
+- Mzk1PaperIUTIVSection2StatementActual DONE 09:05:32 (95s) after removing Prop / WL.
+- Donor/Value still no olean; donor only zpow/rpow; hull owns. Woke lanes.
