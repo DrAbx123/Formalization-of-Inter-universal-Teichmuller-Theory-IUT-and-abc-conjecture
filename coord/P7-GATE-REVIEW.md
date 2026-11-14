@@ -3653,3 +3653,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.541 MAJOR ActualRamifiedData GREEN; abc exact missing confirmed (2026-11-15 21:30)
 - Direct ActualRamifiedData src 05:06:45 EXIT=0 after duplicate removal: actualFn_spec/hdecomp/chosen/HasCorrection/HasLogIdx/HasCoeff/perPlace_bounds. Retouch; next combine with Paper312 assembly.
 - abc: no abcRationalPoint->C3LogShellTensorBlock map; no c3NormalizedTensorHaar region weight estimate; no thetaPilotHullLogVolumeReal = log normalized hull donor (only scalar/dimension/shift). Mainline attempt canonical c3LogShellPointOfAbcTriple or report obstruction; hhullRead via shift/dimension form.
+
+
+### 20.542 Probes UnitRegionScaling/AdicAbv/FloorUnitRegion done (2026-11-15 21:40)
+- DONE 21:02:40 UnitRegionScalingProbe; 21:03:31 AdicAbvEquivAxiomProbe; 21:03:38 FloorUnitRegion. Audit pending. ActualData olean 04:39:59 stale vs src 05:06:45; watchdog not recompiled yet. qpilot hscale; stepxi cast. No fake.

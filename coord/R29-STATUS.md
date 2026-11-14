@@ -2909,3 +2909,5 @@
 - 23:20: hscale1 likely false (coordinate norms>1); scale=1 route not provable, switch to scale!=1 gap. qpilot inspect coordinate formulas. gate 20.540 written.
 
 - 23:30: MAJOR ActualData GREEN direct EXIT=0; abc exact missing confirmed. hull combine Paper312; mainline logShellPoint. gate 20.541 written.
+
+- 23:40: UnitRegionScaling/AdicAbv/FloorUnitRegion probes done; audit. ActualData olean stale. qpilot hscale; stepxi cast. gate 20.542 written.
