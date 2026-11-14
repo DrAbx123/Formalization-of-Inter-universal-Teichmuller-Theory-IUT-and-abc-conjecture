@@ -2831,3 +2831,5 @@
 - 16:50: MAJOR ActualRamifiedData GREEN 19:54:19 (ofAtPrime/actualFn/actualData hcoef explicit). Next choose aExp/cCorr/Has*. abc probe. gate 20.501 written.
 
 - 17:00: hdecomp orientation quotient=T*index; calc T*index=hdec.symm then hquot. hull choose a/c. gate 20.502 written.
+
+- 17:10: MAJOR A2PartialFields quotient integrated GREEN 19:53:42 (15 groups; 3 blocked). abc probe; mainline quotientWitness/groups. gate 20.503 written.

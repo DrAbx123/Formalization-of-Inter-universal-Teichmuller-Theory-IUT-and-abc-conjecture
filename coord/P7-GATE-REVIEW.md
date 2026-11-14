@@ -3469,3 +3469,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.502 ActualRamifiedData hdecomp orientation (hull, 2026-11-15 15:00)
 - IntegralLogShellIndexArithmetic:89 logShellCongruenceQuotient_card_eq_torsion_mul_logShellIntegerIndex: quotient = T*index. hquot qfe_quotient_card_actual: quotient = q^A(q-1). hdecomp by calc T*index = quotient := hdec.symm; _ = q^A(q-1) := hquot. Then nested choose a,c; actualFn_spec choose_spec; HasLogIdx rfl/HasRes spec. Hull.
+
+
+### 20.503 MAJOR A2PartialFields quotient integrated GREEN (mainline, 2026-11-15 15:10)
+- Mzk1A2PartialFieldsActual DONE 19:53:42: signAction:=signActionSimplified (inversionSquared Iso.refl), sign_action_inversion_eq rfl, cF:=xFOfStackPoint, quotient:=quotientMorphismSimplified (cocycle rfl), plus V/stackExtension/xK/cK. 15 groups closed.
+- Blocked 3: quotientWitness 5 fields; xFGroups/cFGroups/fGroupInclusion; unique_elliptic_involution. Probe updated. abc probe; mainline quotientWitness/groups. No fake.
