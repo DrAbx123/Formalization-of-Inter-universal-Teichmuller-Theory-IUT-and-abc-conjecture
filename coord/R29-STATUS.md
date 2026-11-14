@@ -2581,3 +2581,5 @@
 - 20:00: P2Bridge error root cause missing hp2:p=2; add hypothesis/subst. shehdd. P2NormBridge probe three axioms. gate 20.375 written.
 
 - 20:10: stage4 #synth exact missing SMulDistribClass G (O_Fmod) (O_F); explicit instance via smul_distrib_smul/trivial action/commutes. gate 20.376 written.
+
+- 20:20: #C B consumer green conditional eEquiv+hf; hf via FiniteField.card/CharP; hull to prove. P2Bridge unknown p fix by shehdd (include p). gate 20.377 written.

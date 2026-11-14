@@ -2810,3 +2810,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.376 stage4 bounded #synth: exact missing class (2026-11-17 14:30)
 - Succeeded: MulSemiringAction G F (AlgEquiv.applyMulSemiringAction), MulSemiringAction G (O_F) (RingOfIntegers), SMulDistribClass G (O_F) F. Trivial MulSemiringAction G Fmod added.
 - Only failure: SMulDistribClass G (O_Fmod) (O_F), hence IsGaloisGroup G (O_Fmod) (O_F). Exact fix: explicit instance via smul_distrib_smul using trivial g•r=r on O_Fmod and AlgEquiv.commutes/RingOfIntegers.ext for g•(algebraMap r s)=algebraMap r (g•s); then iff_isFractionRing/primesOver transitivity. Probe file only red; ObjectLockData/LPaperData green. No fake.
+
+
+### 20.377 #C B consumer green; hf via FiniteField.card (2026-11-17 14:40)
+- Mzk1IutIVCongruenceCardActual DONE 13:59:25: congruenceQuotient_card_actual (e,he,eEquiv) and congruenceQuotientCardinalityInput_of_equiv (he,hf,eEquiv); conditional on eEquiv and hf: logShellResidueCard=p^f. Feeds IutIVProp14GroupCountActual.logShellQFECardinalityHypothesis_actual.
+- hf donor: Mathlib FiniteField.card (FieldTheory/Finite/Basic:256): finite field CharP p => exists n:ℕ+, q=p^n. Apply to logShellResidueField K with CharP instance, choose f=n. Hull to prove/report. eEquiv p=2 owned shehdd; P2Bridge audit found unknown p, add include p/binder.
