@@ -3023,3 +3023,5 @@
 - 32:50: MAJOR PrincipalUnits subgroup direct GREEN; next quotient/residue/coprime/unitLog. gate 20.597 written.
 
 - 33:00: MAJOR quotient residue units direct green; next card/coprime/unitLog. gate 20.598 written.
+
+- 33:10: MAJOR PrincipalUnits olean 06:51:43 all decls. Next residue field card/coprime/unitLog. abc audit. gate 20.599 written.

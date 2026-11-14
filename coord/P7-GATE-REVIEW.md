@@ -3895,3 +3895,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.598 MAJOR quotient residue units GREEN (2026-11-15 30:00)
 - Direct PrincipalUnitsResidue src 06:48:39 EXIT=0: quotientEquivResidueUnits via ValuationSubring.unitsModPrincipalUnitsEquivResidueFieldUnits. Next card quotient=residue units card, residue field card=p^f/coprime, integralUnitExponent_coprime, unitLog norm/tensor. abc audit. No fake.
+
+
+### 20.599 MAJOR PrincipalUnits olean all decls (2026-11-15 30:10)
+- Lead compiled PrincipalUnitsResidue to olean 06:51:43: norm bridge, integersToA, integersUnitsEquivUnitGroup, subgroup equality, quotientEquivResidueUnits, card_quotient_eq_card_residueUnits. Next residue field Fintype/card=p^f/coprime, integralUnitExponent_coprime, unitLog norm/tensor. abc audit. No fake.
