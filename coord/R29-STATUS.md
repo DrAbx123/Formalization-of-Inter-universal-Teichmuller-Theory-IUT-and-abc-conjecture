@@ -2283,3 +2283,5 @@
 - 18:30: hbridge exact errors documented (:45 instance, :50 Multiplicative, :51 Valued, :58 rw target, :43/:48 imports; d abbrev). mainline/hull fixing. wrapper conditional green. gate 20.237 written.
 
 - 18:40: hbridge Value ring line75 + Donor missing import/T binder. Wrapper conditional green+probe; hbridge unproved. mainline fix. gate 20.238 written.
+
+- 18:50: hbridge latest fixes :57 add x to generalNormalizedNormFormula, :63 use hx directly, :73 xC one let, :134 import BadPlacePaperNormalizedActual. mainline fix. gate 20.239 written.

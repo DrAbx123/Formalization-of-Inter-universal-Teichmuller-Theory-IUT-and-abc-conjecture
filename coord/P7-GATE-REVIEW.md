@@ -1986,3 +1986,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Value Mzk1QVFamNormBridgeValueActual FAIL 07:23:24 line75 ring unsolved -(nu_norm*d^-1)=-((d^-1)*nu_def); fix mul_comm/ring_nf. hbridge not proved, no olean.
 - Donor Mzk1P0QVFamNormBridgeDonorActual FAIL 07:23:24: paperNormalizedQPilotSum unknown (import/open BadPlacePaperNormalizedComparisonActual); line135/136 T unbound. No olean.
 - Only conditional wrapper green; hbridge unproved; S45-free not unconditionally closed. No fake.
+
+
+### 20.239 hbridge latest fix coordinates (hull, 2026-11-16 12:50)
+- Mainline Donor FAIL 07:27:11: :57-58 generalNormalizedNormFormula missing x argument (needs (x)(hx)); :60/63 simpa [toC] using hx type mismatch -> use hx directly/show; :73 define xC:=toC place (qVFamNormalizedGenerator) once for hv/hlog/hdef and unify Valued.v instance; :134 import/open BadPlacePaperNormalizedActual, T unknown cascade. Old :45/:50/:51 are stale line numbers; if recur use toC/default formula, Multiplicative.toAdd, show NormalizedCompletion.
+- Conditional Generic/Wrapper green; hbridge unproven; S45 not used.
