@@ -2519,3 +2519,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - R1 missing same-q-witness P.line.C3.q.q = qVFamNormalizedGenerator + place/Bad index/weight; numerical core green. R3 missing T root hull -> C3 target hull carrier/region + oneLabel lattice containment, then relative_log_mass_image_eq dimension-normalized/extended ideal, no negative, no target Haar on low-dim image.
 - Tower correction recorded rootBase=e*dBase, kPlace=n*dBase; divisibility via Galoisity+transitivity; root L_b->K_w still Tate/torsion/fixed-field.
 - Mainline also to check N5 qSigned=-|log q| overlap with R1.
+
+
+### 20.324 N5 magnitude nonneg donor found (2026-11-17 05:50)
+- PaperXiFGlobalDirectActual.nativeGlobalQPilotNormalizedLogMagnitude_nonneg (line55) : 0 <= nativeGlobalQPilotNormalizedLogMagnitude T; proof sum_nonneg with baseQLogMagnitude_pos. DirectScalarComparisonActual.paperQPilotSignedLog = -nativeGlobalQPilotNormalizedLogMagnitude (rfl).
+- Use this to discharge S3013MagnitudeNonnegTarget; N5 then reduces to shared StepV q/native q witness (S3013StepVQInterface uninhabited). Mainline/qpilot instructed.
