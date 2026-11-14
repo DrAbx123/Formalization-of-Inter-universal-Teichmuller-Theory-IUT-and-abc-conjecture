@@ -2961,3 +2961,5 @@
 - 27:40: RankOne transfer Valued.v<-NormedField.valuation; qpilot. gate 20.566 written.
 
 - 27:50: probe-fresh ActualData 4 decls/ConcreteFiveCast three axioms. gate 20.567 written.
+
+- 28:00: avoid RankOne, use NormedField.valuation (NNReal) direct; qpilot. gate 20.568 written.

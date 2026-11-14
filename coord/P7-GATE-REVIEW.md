@@ -3765,3 +3765,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.567 Probe-fresh ActualData/ConcreteFiveCast (abc, 2026-11-15 24:50)
 - Mzk1ActualFinalProbeActual DONE 21:52:12/olean 05:52:11 > ActualData 05:41:21: actualDataCore_hasCoeff, perPlace_bounds, actual_A_le_Lbar_add_Dbar, actual_paper312 all three axioms no sorryAx.
 - Mzk1ConcreteFiveCastProbeActual DONE 21:51:27/olean 05:51:27 > ConcreteFive 05:18:24: concreteFiveCompletion_eq three axioms. Watchdog recovered. No fake.
+
+
+### 20.568 Avoid RankOne: use NormedField.valuation directly (2026-11-15 25:00)
+- RankOne transfer fails LinearOrderedCommMonoidWithZero ℝ confusion. Simpler: NormedField.valuation : Valuation K NNReal (valuation_apply = nnnorm); norm bridge ||x||<1 iff valuation x<1 trivial; subgroup use (NormedField.valuation).valuationSubring.principalUnitGroup (NNReal has instance). qpilot. No fake.
