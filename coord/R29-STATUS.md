@@ -2557,3 +2557,5 @@
 - 18:00: hullUnitLog=0 correction: scaled vs canonical unit reference differ by scale Haar log; unconditional false. Conditional scale=1 lemmas + 4-item obstruction; need Haar scaling formula if scale!=1. qpilot. gate 20.363 written.
 
 - 18:10: Haar scaling donors for HullUnitZero: LinearMap.exists_map_addHaar_eq_smul_addHaar, addHaarScalarFactor_smul_eq_distribHaarChar, map_addHaar_smul (Euclidean only). qpilot inspect/report exact missing. gate 20.364 written.
+
+- 18:20: Qp unit decomposition donor Padic.unitCoeff_spec; remaining unit-invariance of Haar under ||u||=1 not found. qpilot to report exact missing lemma. gate 20.365 written.

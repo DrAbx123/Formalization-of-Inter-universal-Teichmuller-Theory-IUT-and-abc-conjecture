@@ -2750,3 +2750,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - hullUnitLog=0 only if scale=1; otherwise need unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||.
 - Donors to inspect: LinearMap.exists_map_addHaar_eq_smul_addHaar (Measure/Haar/Disintegration:108); addHaarScalarFactor_smul_eq_distribHaarChar (Measure/Haar/DistribChar:63); map_addHaar_smul (Lebesgue/EqHaar:336 Euclidean only). No exact p-adic scaling donor; qpilot to report missing bridge if absent.
 - HullUnitZero conditional version pending; no fake.
+
+
+### 20.365 Qp unit decomposition donor; unit-invariance gap (2026-11-17 12:40)
+- For arbitrary lambda in Haar scaling formula, use Qp= p^k*u decomposition. Mathlib donor: Padic.unitCoeff/unitCoeff_spec (NumberTheory/Padics/PadicIntegers:403/413) for Zp x = u*p^valuation; apply to p^(-v)*lambda (or lambda=p^k*u).
+- Then need unit invariance of additive Haar under u with ||u||=1 (determinant norm 1), i.e. measure_scaling for p^k times unit; no obvious donor found in MeasureTheory. Report exact missing unit-invariance/measure_scaling lemma. No fake.
