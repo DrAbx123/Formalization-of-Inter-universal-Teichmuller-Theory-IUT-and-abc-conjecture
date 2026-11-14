@@ -1075,3 +1075,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - apply theorem rfl.
 - This assembles the algebraic/log half of beta_a; only actual identification W <-> (Integers K)^x/tors remains. No fake inhabitant.
 - LocalMon/IntegralMap pending compile; no sorry.
+
+
+### 20.92 LNormReadout vs A1 weight convention (stage4 note, 2026-11-15 08:20)
+- Mzk1P0LNormReadoutProductActual is WEIGHT-CONSISTENT with A1: thetaNormReadProduct_eq_sum uses sum_b s1915LocalDegree*log r_b; _eq_closedForm_sub_one uses s1915ClosedForm; no nativeBadLocalWeight in product fix.
+- Mzk1P0LNormReadoutActual (single place) is dimension-unnormalized: thetaNormReadL = raw log - log unitMass, no 1/d_F; corresponds to a1LocalQLog, not a1SignedTerm (=a1LocalQLog/d_F). Do not equate without 1/d_F.
+- Unit-ball normalization consistent; unitMass=1 not claimed in product file, matching A1.
+- Object level: thetaNormReadProduct is theta-hull readout; A1 productQ_normalizedLog is qhat-lattice readout; exact relation thetaNormReadProduct = productQ_normalizedLog + totalDelta (A1 = closedForm-1-totalDelta). Single place vs global Bad mismatch already recorded.
+- Reuse: thetaNormReadProduct_eq_closedForm_sub_one for theta hull product; combine with A1 totalDelta for qhat product; do not use thetaNormReadL as a1SignedTerm.
