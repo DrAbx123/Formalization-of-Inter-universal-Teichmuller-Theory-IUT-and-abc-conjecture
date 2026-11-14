@@ -2738,3 +2738,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - KernelBridge source clean: failed kernelToAQuotient_ker deleted; only kernelToAQuotient + AQuotientKernelBridge + #print axioms. DONE 13:18:06 olean; source mtime after DONE so fresh probe pending; old log sorryAx stale. No red.
 - HullUnitZero still no olean; qpilot to add import FinitePlaceIQHullSignedLogVolume or explicit log expression. P2NormBridge still no olean; hull retouch. Stage4 asked ring-level status.
 - Fresh probes: ActualReadingTarget 13:14:01; RestoredGreens 13:14:04.
+
+
+### 20.363 hullUnitLog=0 correction: scale issue (qpilot, 2026-11-17 12:20)
+- arithmeticTupleIQHullUnitRegion = arithmeticTupleIQHullUnitScale • canonicalUnitReference (FinitePlaceIQHullSharpUpperBound:69).
+- hullLog<=IQHullUnitRegionLog compares SCALED unit reference; decomposition hullLog=hullUnitLog+log mu(canonicalUnitReference) uses CANONICAL unit reference. They differ by Haar log of scale; hullUnitLog=0 only if scale=1.
+- HullUnitZero changed to conditional: IQHullUnitRegion_eq_unitReference_of_scale_one; arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one; arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one; hullUnitZeroObstruction 4 items. If scale!=1 need unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||; no theorem in repo; exact first missing. No fake.

@@ -2553,3 +2553,5 @@
 - 17:40: KernelBridge fresh DONE 13:13:16 (failed declaration removed, only def+structure); probe pending. Next re-add kernel equality new name, equiv, Z_p^d. gate 20.361 written.
 
 - 17:50: KernelBridge clean DONE 13:18:06, probe pending; HullUnitZero/P2 no oleans; stage4 status asked. ActualReading/Restored probes standard. gate 20.362 written.
+
+- 18:00: hullUnitLog=0 correction: scaled vs canonical unit reference differ by scale Haar log; unconditional false. Conditional scale=1 lemmas + 4-item obstruction; need Haar scaling formula if scale!=1. qpilot. gate 20.363 written.
