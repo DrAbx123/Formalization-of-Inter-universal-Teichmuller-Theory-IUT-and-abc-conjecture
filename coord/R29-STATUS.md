@@ -1967,3 +1967,5 @@
 - 14:10: stepxi Mzk1Ind1SourceUnitBridgeActual: SourceUnitQuotientIdentification W K {equiv : W ≃* (Integers K)^x/tors} (no inhabitant) + sourceUnitLogRangeEquiv from actual beta; only W<->(Integers K)^x/tors identification remains. LocalMon/IntegralMap pending. gate 20.91 written.
 
 - 14:20: stage4 note A1-LNORM-READOUT-WEIGHT-CHECK: LNormReadoutProduct is weight-consistent with A1 (s1915LocalDegree/closedForm, no nativeBadLocalWeight); LNormReadL is unnormalized single-place (=a1LocalQLog, not a1SignedTerm without 1/d_F); thetaNormReadProduct=productQ_normalizedLog+totalDelta; unitMass=1 not claimed. gate 20.92 written.
+
+- 14:25: sent mainline: use thetaNormReadProduct = productQ_normalizedLog + totalDelta and A1 product=closedForm-1-totalDelta to try prove hbound; if d_F=1 qReadActual same-origin qhat, else divide by d_F; thetaNormReadL is a1LocalQLog not a1SignedTerm. Keep hbound explicit if not provable.
