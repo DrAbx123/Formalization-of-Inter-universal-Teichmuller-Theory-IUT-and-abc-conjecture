@@ -1891,3 +1891,5 @@
 - 10:20：abc 核对 Correspondence 权重为 d_b（非 paper 1/[K_w:F_v]），条件分离正确；NormCorrection `:128` 缺 `[∀b, MeasurableSpace/BorelSpace (qVFamTensorBlock T b)]` section 实例（Correspondence 有），补上即可，方向正确无需符号假设。已让 hull 补实例重编。gate §20.55 已写。
 
 - 10:30：发现 `Mzk1WFLatticeActionActual.WFUnitQuotientIdentification` 用 `Fin 0` 作 W 载体（toy placeholder），已让 stepxi 参数化 `W`/`d`、去掉 `Fin 0`/`PUnit`/`True`；结构仍无 inhabitant 标 GAP。gate §20.56 已写。
+
+- 10:35：stage4 A1.6 最终审计完成：`Mzk1A1AxiomAuditActual` 对 16 个定理 `#print axioms` 全部只剩 `[propext, Classical.choice, Quot.sound]`，无 sorryAx；`coord/A1-TENSOR-PROD-PROBE.md` 三节清单（unconditional/conditional/not constructed）已对齐；A1.6 固定 conditional（principal-lattice + ramification），不再投入。gate §20.57 已写。

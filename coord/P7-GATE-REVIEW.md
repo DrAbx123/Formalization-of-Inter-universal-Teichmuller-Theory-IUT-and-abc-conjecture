@@ -816,3 +816,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - stepxi 的 W_F 链结构当前写 `sourceAddEquiv : sourceUnitQuotient ≃+ (Fin 0 → ℤ_[p])`，把 W 硬编码成平凡群；虽无 inhabitant，但违反 no-toy-carrier 纪律。
 - 已要求改为参数化实际维度/实际 W：`sourceAddEquiv : sourceUnitQuotient ≃+ W`，`wEquiv : W ≃ₜ+ (Fin d → ℤ_[p])`；不要用 `Fin 0`/`PUnit`/`True` 作载体。
 - 结构仍无 inhabitant，标 GAP；WFLattice 连续链本身不依赖该结构。
+
+
+### 20.57 A1.6 最终审计完成：16 定理三公理、无 sorryAx（stage4，2026-11-15 02:20）
+- **审计文件**：`tmp/sheaf/xif/paper/Mzk1A1AxiomAuditActual.lean`（watchdog 编译，`#print axioms`）；日志 `dag/watchdog/logs/tmp_sheaf_xif_paper_Mzk1A1AxiomAuditActual.lean.log`；未改源。
+- **结果**：16 个 A1.6 链定理全部只依赖 `[propext, Classical.choice, Quot.sound]`；无 sorryAx。
+- **清单**（三公理）：`a1SignedTerm_eq_log_radius_sub_delta`、`a1SignedTerm_le_log_radius`、`signedRelativeReadout_eq_neg_log_index`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、`productQ_normalizedLog_le_closedForm_sub_one`、`totalDelta_nonneg`、`inverseLambdaLattice_eq_inverseLattice`、`inverseLambdaLattice_eq_saturated_actual`、`qVFamily_mem_saturatedLattice`、`signedReadout_eq_log_radius_sub_delta`、`qVFamily_mem_saturatedLattice_of_valuationData`、`mem_lambdaLattice_iff`、`mem_qhatLattice_iff`、`inverseLambdaLattice_eq_normBall`、`qhatLattice_subset_lambdaLattice`、`qVFamily_mem_inverseLambdaLattice`。
+- **三节清单**（doc）：unconditional / conditional inputs / not constructed；A1.6 固定 **conditional on principal-lattice recognition + ramification identity**。
+- **QhatSaturationReadout no-inhabitant**：`qVFamily_mem_saturatedLattice` 带显式 aval/bval/m/e/hram/hLambda，不构造 A1ValuationData inhabitant，无 Nonempty/choice；与 A1ValuationData 同 conditional。
+- 无 fake completion、无 hscale/hid；本轮不再投入 valuation 构造。

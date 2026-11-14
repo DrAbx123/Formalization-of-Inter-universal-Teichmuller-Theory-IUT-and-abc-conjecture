@@ -424,3 +424,21 @@ Verification:
 3. `Mzk1A1ValuationInputsActual.A1ValuationData` — bundled Prop of the two inputs; **no inhabitant, no Nonempty theorem, no instance is provided**. File is green and contains only the definitions plus `qVFamily_mem_saturatedLattice_of_valuationData (h : A1ValuationData)`, which is conditional on the bundled Prop.
 
 **No-inhabitant check:** `A1ValuationData` occurs only as the type of the hypothesis in `qVFamily_mem_saturatedLattice_of_valuationData`; there is no theorem constructing it, no `Classical.choice` inhabitant, no `True`/`PUnit` substitute. The gate remains conditional; do not report A1.6 as unconditionally closed.
+
+
+### A1.6 axiom audit (2026-11-14, read-only)
+
+**Command/route:** watchdog compiled the read-only audit file `tmp/sheaf/xif/paper/Mzk1A1AxiomAuditActual.lean` containing `#print axioms` for the 16 A1.6-chain theorems; per-file log `dag/watchdog/logs/tmp_sheaf_xif_paper_Mzk1A1AxiomAuditActual.lean.log`. No source file was modified.
+
+**Result:** every queried theorem depends only on `[propext, Classical.choice, Quot.sound]`:
+`a1SignedTerm_eq_log_radius_sub_delta`, `a1SignedTerm_le_log_radius`, `signedRelativeReadout_eq_neg_log_index`, `productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`, `productQ_normalizedLog_le_closedForm_sub_one`, `totalDelta_nonneg`, `inverseLambdaLattice_eq_inverseLattice`, `inverseLambdaLattice_eq_saturated_actual`, `qVFamily_mem_saturatedLattice`, `signedReadout_eq_log_radius_sub_delta`, `qVFamily_mem_saturatedLattice_of_valuationData`, `mem_lambdaLattice_iff`, `mem_qhatLattice_iff`, `inverseLambdaLattice_eq_normBall`, `qhatLattice_subset_lambdaLattice`, `qVFamily_mem_inverseLambdaLattice`.
+
+### A1.6 not-constructed items (final list)
+
+1. Explicit base normalized order `aval : rootBase T b -> Nat` and root normalized order `bval : rootNormedExtension T b -> Nat` constructed from the actual DVRs.
+2. Proof of `A1PrincipalLatticeRecognition`: `lambdaLattice T b = principalLattice bval m` for the constructed `bval`, `m`.
+3. Proof of `A1RamificationIdentity`: `bval (algebraMap x) = e * aval x` for the constructed `aval`, `bval`, `e`.
+4. An inhabitant / `Nonempty` theorem for `A1ValuationData` (none exists; only the hypothesis-taking theorem).
+5. A base-side discrete DVR/uniformizer object analogous to `rootDiscreteValuation`/`rootUniformizer` (base has `Valued.v` and the DVR equivalence in `SourceTateParameter`, but not the explicit order construction).
+
+**QhatSaturationReadout check:** `Mzk1A1QhatSaturationReadoutActual.qVFamily_mem_saturatedLattice` is conditional in exactly the same way as `A1ValuationData`: its signature carries explicit `aval/bval/m/e`, `hram`, `hLambda`; it constructs no `A1ValuationData` inhabitant and contains no `Nonempty`/choice inhabitant. The no-inhabitant conclusion therefore applies to it as well.
