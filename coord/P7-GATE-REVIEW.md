@@ -943,3 +943,17 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - **`LNormComparisonTarget : Prop := qReadActual ≤ thetaNormReadL`**（canonical）；
   - `qRead_le_thetaRead_of_normTarget`：旧未归一化目标只在 `log unitMass ≥ 0` 时由 normalized 目标推出（显式条件）。
 - **下一步**：核对 `actualC3LogShellTensorRegionL` 的乘积分解/unit ball Haar 缩放，给 `thetaNormReadL` 与 `s1915` normalized log 的显式对齐；再接 `LPaperInstance` 条件版。`unitMass=1` 只作 GAP 记录。
+
+
+### 20.74 L normalized route (b): product space mirrors s1915; tensor scaling cancels (2026-11-15 04:40)
+- actualC3LogShellTensorRegionL = tensorIntegralRegion = finitePadicTensorTprod image of Set.pi (FinitePadicTensorIntegralRegion:20); actualC3LogShellTensorHaarL = Measure.addHaar; no finitePadicTensorTprod Haar scaling lemma in tree.
+- KEY: thetaNormReadL = log Haar(region) - log Haar(unitBall) is invariant under global Haar scaling; tensor pushforward constant c_tensor cancels in the ratio; no tensor scaling lemma needed.
+- ROUTE (b): define thetaNormReadProduct on product space rootExtensionProductHaar, mirror s1915_hull_measure_eq (S1915:242): Haar(hull)=unitMass*prod r_b^{d_b}; thetaNormReadProduct = sum_b d_b log r_b (unitMass cancels); then use rootImageRadius=norm q to connect to qReadActual.
+- tensor<->product linear isometry only transports the readout; if unavailable, make it an explicit condition. Do NOT prove tensor addHaar scaling; do NOT assume unitMass=1.
+
+
+### 20.75 GREEN: WF probe three axioms; LocalMon actual; Ind1 no canonical iso (2026-11-15 04:45)
+- Mzk1WFLatticeActionActual DONE 01:07:10 (54s); wfIdentificationRequired_iff depends on [propext, Classical.choice, Quot.sound], no sorryAx; structure parameterized, no Fin0/PUnit, no inhabitant.
+- Mzk1Ind1LocalMonActual (queue): localFPrimeStrip_Mon_eq (v): Mon v = (AlgebraicClosure Q_[v.1])^x; LocalUnitQuotient v := TimesMuQuotient (localFPrimeStrip.Mon v); localFPrimeStrip_reflUnitQuotientEquiv = fPrimeStripUnitQuotientEquiv (refl); identity apply proof.
+- Exact obstruction: actual local Mon = algebraic-closure units, target (Integers F)^x/tors is finitely generated; natural map (Integers F)^x -> (AlgebraicClosure)^x after torsion quotient, not canonical iso; cokernel contains non-integral algebraic-closure units. No fake iso.
+- L norm audit (abc): thetaNormReadL is canonical; actualUnitMassL and s1915UnitMass are both noncanonical unit-ball masses on different carriers; no existing equality; unitMass=1 is false GAP. LNormComparisonTarget is the only canonical normalized form.
