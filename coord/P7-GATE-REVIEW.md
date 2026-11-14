@@ -3919,3 +3919,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.604 residue card_units have/rw (2026-11-15 31:00)
 - rw pattern fails despite same print. Bind `have hcu : card Fˣ = card F -1 := Fintype.card_units (α:=F)`; rw [hcu,hcard]. qpilot. No fake.
+
+
+### 20.605 residue coprime instance/Fact/sub (2026-11-15 31:10)
+- Fintype.card_units instance mismatch: remove explicit [Fintype Fˣ] use canonical; add [Fact (Nat.Prime p)]; Nat.dvd_sub already gives p ∣ p^f-(p^f-1); prove sub=1 via one_le_pow/omega then not_dvd_one. qpilot. No fake.

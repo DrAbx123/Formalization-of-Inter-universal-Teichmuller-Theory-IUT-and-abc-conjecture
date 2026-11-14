@@ -3035,3 +3035,5 @@
 - 33:50: residue card add DecidableEq F; qpilot. gate 20.603 written.
 
 - 34:00: residue card_units have/rw; qpilot. gate 20.604 written.
+
+- 34:10: residue coprime instance/Fact/sub fixes; qpilot. gate 20.605 written.
