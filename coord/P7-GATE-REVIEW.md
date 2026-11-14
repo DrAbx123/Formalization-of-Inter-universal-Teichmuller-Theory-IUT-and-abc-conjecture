@@ -1853,3 +1853,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Next: keep QVFamNormInstanceGap as explicit lock; prove qVFamNormRatio=1 <-> QVFamNormInstanceGap (default norm nonzero) and condition power-ratio formula under explicit named carrier-identification hypothesis; never treat it true.
 - Residual four files explicitly excluded (old all-x/no olean): GeneralNormalizedNormFinal/Consumer/NormalizedNormSpectralBridge/FinalWiringFixed; restore only with hx/fixed names and watchdog.
 - AddLeProof probe queued; AddLeProof green 06:12:20.
+
+
+### 20.217 S45 exact: ratio=1 iff d=1 (q nonunit); wiring alternative (stage4, 2026-11-16 08:50)
+- Default Completion norm ||x||_def=absNorm^(-nu); donor normalized ||x||_norm=absNorm^(-nu/d). For q nonunit r=||q||_def<1: qVFamNormRatio=r^(1/d-1); d=1 => ratio=1; d>1 => ratio>1. Thus S45 ratio=1 is FALSE for every d>1 place; ratio=1 iff d=1 (q nonunit). PaperNormalizedCoefficient is default valuation-norm coefficient; tensor uses normalized spectral; bridge subtracts log ratio. S45 is assumption bridge trivial.
+- d>1 not derivable: only 0<d, d=e*f, no 1<d/1<e/1<f. localCompletionDegree(nativeBadToKPlace) is different degree [K_w:(Fmod)_v], not F-place d.
+- POTENTIAL ROUTE: build ArithmeticTuplePureFractionalScalingData from default Completion generator q with default norm p^{-paperCoeff}, matching paper coefficient by construction; then S45 unnecessary. hull/stage4 to investigate constructor carrier/norm acceptance; if yes construct unconditional supply, if no exact obstruction. No fake.
