@@ -3114,3 +3114,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - (d2) GlobalSumCollapse too strong/false generally (M weighted sum; single-point only vanishing/singleton/weight1). Replace by direct aggregation target QPilotC3SignedAggregation P.signed=-M (or signed=-sum). No collapse source theorem.
 - (c) ClauseBBaseQSourceIdentity: completionMap green; missing clauseB q_comparison parameter (F) vs badPlaceQCandidate (K) same-q source; plus fPlace_lift gap. No bridge.
 - First Lean error expected missing T.arithmetic=I.initial.arithmetic. Mainline next: mark/drop GlobalSumCollapse overstrong, direct aggregation consumer, inspect OrigXiFPaperNativeRoot constructibility. No fake.
+
+
+### 20.433 UnitInvariance image=O GREEN; KernelBridge/TorsionSplit fresh (2026-11-15 03:20)
+- Mzk1IVThm110UnitInvarianceActual DONE 16:36:32/olean 00:36:32: algebraMap_unit_mem/mul_mem/inv_mul_mem/integralClosure + image_canonicalUnitReference_eq; no source sorry.
+- Next qpilot: u•O=O via Units.smul_def; distribHaarChar_eq_of_measure_smul_eq_mul with s=O -> char=1; distribHaarChar_mul -> μ(u•S)=μS; λ=p^k*u/principalDim.
+- KernelBridge fresh 00:36:38; TorsionSplit 00:31:40; C3BaseQ 00:32:34. abc probe.
