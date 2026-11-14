@@ -3923,3 +3923,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.605 residue coprime instance/Fact/sub (2026-11-15 31:10)
 - Fintype.card_units instance mismatch: remove explicit [Fintype Fˣ] use canonical; add [Fact (Nat.Prime p)]; Nat.dvd_sub already gives p ∣ p^f-(p^f-1); prove sub=1 via one_le_pow/omega then not_dvd_one. qpilot. No fake.
+
+
+### 20.606 Nat.dvd_sub no third arg (2026-11-15 31:20)
+- Nat.dvd_sub hpow hdvd already returns divisibility; remove Nat.sub_le arg; then prove sub=1 via Nat.sub_sub_self/one_le_pow and simpa. qpilot. No fake.

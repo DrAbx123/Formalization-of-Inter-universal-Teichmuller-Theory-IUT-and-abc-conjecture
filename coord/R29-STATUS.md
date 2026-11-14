@@ -3037,3 +3037,5 @@
 - 34:00: residue card_units have/rw; qpilot. gate 20.604 written.
 
 - 34:10: residue coprime instance/Fact/sub fixes; qpilot. gate 20.605 written.
+
+- 34:20: Nat.dvd_sub fix; qpilot. gate 20.606 written.
