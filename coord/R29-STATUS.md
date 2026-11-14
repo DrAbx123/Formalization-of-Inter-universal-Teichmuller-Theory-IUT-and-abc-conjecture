@@ -2701,3 +2701,5 @@
 - 06:00: norm equality valuation route donors valuation_of_mk'/valuation_of_algebraMap; stage4. IsScalarTower pending. gate 20.435 written.
 
 - 06:10: GlobalSumCollapse replaced by direct GlobalSumAggregation; A2 gate exact missing for OrigXiFPaperNativeRoot. mainline compile/probe/A2 inspect. gate 20.436 written.
+
+- 06:20: index_pow_identity GREEN 16:48:33; next division cancellation q^A(q-1)/T=p^(fA-m)((q-1)/T0). hull. gate 20.437 written.

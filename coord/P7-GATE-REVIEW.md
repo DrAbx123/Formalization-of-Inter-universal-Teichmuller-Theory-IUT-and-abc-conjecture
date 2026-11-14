@@ -3135,3 +3135,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1C3BaseQIdentificationActual edited: removed over-strong GlobalSumCollapse; added GlobalSumAggregation (I)(P): log||P.line.C3.q|| = -(sum_b W_b baseQLogMagnitude_b) (direct M sum); consumer qPilotC3SignedAggregation_of_aggregation -> QPilotC3SignedAggregation, using nativeGlobalQPilotNormalizedLogMagnitude_eq. Compile/probe pending.
 - OrigXiFPaperNativeRoot I no unconditional inhabitant: S1494 paperNativeRoot_nonempty_of_a2Gate needs SourceNativeArithmeticToSourceGate (A2 gate, named open card); S1532 paperNativeRoot_of_a2 needs hroot I.initial.arithmetic=S1280Arithmetic l + S1532A2FirstField + S1532A2Assembly. Cannot construct from existing actual I; exact first source = A2 gate/fields (not mechanical root).
 - (d1) chain: OrigXiFPaperNativeRoot (A2 gate) -> T.arithmetic=I.initial.arithmetic -> Fmod/place correspondence -> same q -> norm exponent n. Mainline compile/probe + inspect A2 fields. No fake.
+
+
+### 20.437 index_pow_identity GREEN; division cancellation missing (hull, 2026-11-15 04:00)
+- Mzk1IndexPowIdentityActual DONE 16:48:33: index_pow_identity (hq:q=p^f)(hExp:fA-m=f(A-k)+r): p^(fA-m)*((q-1)/T0)=q^(A-k)*(p^r*((q-1)/T0)); proof hExp/pow_add/mul_assoc/hq/pow_mul; no T0 divisibility needed.
+- Missing division cancellation: q^A*(q-1)/T = p^(fA-m)*((q-1)/T0) with T=p^m*T0,T0|q-1. Route: q-1=T0*c; q^A=p^(fA); p^(fA)*(T0*c)/(p^m*T0)=p^(fA)*c/p^m; Nat.mul_div_mul_right; pow_sub_mul_pow/mul_div. p^r factor via Nat.mul_div_assoc. Hull to implement. condition4 unramified a=0 still fails. No fake.
