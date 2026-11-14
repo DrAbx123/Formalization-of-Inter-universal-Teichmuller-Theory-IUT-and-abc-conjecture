@@ -2665,3 +2665,5 @@
 - 03:00: post-NativeBadLift redefinition 36 fails; BaseChange errors; mainline to assess/revert if deep. gate 20.417 written.
 
 - 03:10: NativeBadLift redefinition experiment reverted (73 importers, deep breakage); core green 16:14/16:15; alignment remains explicit gap. Next (c)/(d). gate 20.418 written.
+
+- 03:20: R1 three carriers identified (F/K/Fmod); (c) clauseB source id, (d1) C3 Fmod<->K same q+n, (d2) global sum collapse. Mainline write explicit structures/consumer. gate 20.419 written.

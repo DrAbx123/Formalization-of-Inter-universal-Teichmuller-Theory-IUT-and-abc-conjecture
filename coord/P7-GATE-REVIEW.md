@@ -3039,3 +3039,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Experiment: lift:=comap_F(sectionFiniteLift), lift_comap comap_comap/sectionFiniteLift_comap; core NativeBadLiftActual GREEN 15:55:17. Downstream 73 importers: first round only 7 green; sampled errors C17 No goals (gap rfl), BlockIndex Function expected, BadPlaceUnitMass Type mismatch, correspondence nativeBadLiftAlignment_proved :207 type mismatch. 36 fails mixed with pre-existing red; cannot confirm only-few in time -> reverted.
 - Rollback: NativeBadLiftActual from .bak DONE 16:14:51 green; BaseChangeQCorrespondence DONE 16:15:02 green with hplace explicit input, nativeBadLiftAlignment_proved removed; retained nativeBaseContractionFPlace/comap/NativeBadLiftAlignment explicit gap (+C17 QPlaceChoiceGap cross-ref). No fake.
 - Next mainline: attack (c) q element/(d) C3 aggregation under hplace; no redefinition retry now.
+
+
+### 20.419 R1 (c)(d) three carriers analysis; explicit structures (mainline, 2026-11-15 00:50)
+- qVFamily T b : FinitePlaceQCandidate (nativeBadLift.lift b) (F layer), source T.clauseB q_comparison parameter (QPilotZeroLocusDivisorActual:55-62); nativeBaseQFamily : candidate (nativeBaseSectionPlace) (K layer) = badPlaceQCandidate; P.line.C3.q : candidate C3.place.val where C3.place : FinitePlaceAtPrime Fmod p (Fmod layer!); P.signed=log||C3.q|| Fmod canonical log.
+- (c) exact missing: completionMap(hplace.symm qVFamily.q)=kPlace_eq.symm nativeBaseQFamily.q; completionMap green but source parameter identity clauseB q_comparison .parameter (F) vs badPlaceQCandidate (K) same q, no bridge; hplace insufficient.
+- (d1): C3.place.val=b.1, same q, baseQLogMagnitude b = n*(-log||C3.q.q||)=n*P.signed; (d2) M=sum W_b baseQ; P.signed=-M needs global sum collapse (Bad singleton/weights). No index/weight theorem.
+- Next mainline: explicit structures C3BaseQElementIdentification, GlobalSumCollapse, (c) source identity structure + consumer; no inhabitant/no fake.
