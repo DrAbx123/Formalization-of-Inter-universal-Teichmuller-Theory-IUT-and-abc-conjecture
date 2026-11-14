@@ -2603,3 +2603,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.338 unitValuationHom_eq_one_iff proof script without symm_one (2026-11-17 08:00)
 - Forward: h': unitsToValuedUnits u=1 via unitsWithZeroEquiv.injective + calc (unitValuationHom u) = unitsWithZeroEquiv(unitsToValuedUnits u) =1 = unitsWithZeroEquiv 1; then congrArg Units.val + simpa [unitsToValuedUnits]. Reverse: h': unitsToValuedUnits u=1 via Units.ext/simpa [unitsToValuedUnits,h]; then calc unitValuationHom u=unitsWithZeroEquiv(unitsToValuedUnits u)=unitsWithZeroEquiv 1=1. Units.val_mk0 available. No symm-one needed.
 - stepxi removed eq_iff temporarily to keep ValuationData green; can readd with this script. KernelIntegers partial green unchanged.
+
+
+### 20.339 Floor GREEN; N5/CTheta sources remain (2026-11-17 08:10)
+- Mzk1IVThm110HCor312FloorActual DONE 12:15:22/olean 20:15:21: signedFloorCertificate=arithmeticTupleSignedFloorCertificate; certificateOfFloorData builds S2953 certificate conditional on hqne/hN5 qSideSignedValueCondition on floor qSigned/htheta/hCTheta; hCor312_of_floor_data. No actual sorry (comment only). Remaining exact: N5 on floor cert qSigned (engineered min(hullLog,-1)), htheta source identity, CThetaPaper source normalization, term source identifications.
+- Target deps PaperLevelXiFTargetProof/Bridge recompiled 12:05/12:06; ActualHullTargetMagnitude recompiled 12:15:25 + probe 12:15:22; clean chain fresh.
+- SharedQPilot 20:08; KernelIntegers partial 20:08; stepxi to readd eq_iff script then kernel MulEquiv.

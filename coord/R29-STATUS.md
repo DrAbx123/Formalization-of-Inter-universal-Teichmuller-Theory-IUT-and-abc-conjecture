@@ -2505,3 +2505,5 @@
 - 13:40: KernelIntegers partial green 20:08 (needs kernel maps/MulEquiv); SharedQPilot green 20:08 (3-item gap); target deps recompiled 12:05/12:06 -> probe. p=2 hull pending. gate 20.337 written.
 
 - 13:50: gave unitValuationHom_eq_one_iff script avoiding symm_one (calc/rfl/injective/Units.ext). stepxi to readd; Kernel partial green. gate 20.338 written.
+
+- 14:00: Floor GREEN 20:15:21 (certificateOfFloorData conditional on N5/htheta/hCTheta); remaining floor N5/CTheta source. Target deps fresh 12:05/12:06, magnitude probe 12:15. gate 20.339 written.
