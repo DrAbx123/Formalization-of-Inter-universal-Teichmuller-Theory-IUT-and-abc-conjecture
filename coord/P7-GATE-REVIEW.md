@@ -3536,3 +3536,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.517 WQuotient p=5 interface GREEN (stepxi, 2026-11-15 17:30)
 - WQuotientLatticeActual src 04:21:31: instance Fact Prime 5; structure WQuotientLatticeIdentification {d; equiv : completionWQuotient ≃* ZpLattice 5 d}; Required := Nonempty; direct EXIT=0; Required axioms propext... no inhabitant. Next d=2 and range unitLogHom ≅ Zp^d via basis coordinates. abc probe. No fake.
+
+
+### 20.518 Wired ActualData order bug; Assembly HPow; finrank timeout (2026-11-15 17:40)
+- ActualRamifiedData wired: :65/:66 Unknown chosenA/chosenC because actualData before definitions. Reorder chosen defs before actualData. hull.
+- Assembly :38 HPow X Z in principalDimUnit_val_eq: unit zpow coerced to X lacking zpow, statement not type-correct; use unit equality or keep hact explicit/exact missing. qpilot.
+- CompletionTower finrank kernel timeout after corrected orientation; keep scalar/module green, mark blocked; try unfold/small lemmas. stage4.
+- WQuotient d likely 1 (relativeResidueDegree=1, e=1); prove finrank Q5 completionField=1 then specialize d=1. stepxi. No fake.

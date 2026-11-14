@@ -2861,3 +2861,5 @@
 - 19:20: completionField concrete p=5 (Gaussian over 5); WQuotient specialized interface p=5 no p arg. stepxi. gate 20.516 written.
 
 - 19:30: WQuotient p=5 interface GREEN direct EXIT=0; no inhabitant. Next d=2/donor. abc probe. gate 20.517 written.
+
+- 19:40: ActualData chosen order bug; Assembly HPow X Z (statement type); finrank kernel timeout; d=1 candidate. Tasks sent. gate 20.518 written.
