@@ -3298,3 +3298,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - unique_elliptic_involution: Hom X X = StrongTrans fiber fiber; no StrongTrans.ext; direct constructor/ext first error No applicable extensionality theorem. Manual decomposition app (Cat.Hom.ext/Functor.ext/Subsingleton SourceStackPointObj) + naturality iso (Iso.ext) possible but heavy; not generally subsingleton. Keep explicit gap.
 - quotientWitness 12-field universal property no donor; groups need actual OrbicurveEtaleFundamentalGroup (coverCategory/baseScheme/fiber functor) no donor; scalar stackExtension potential result=sourceStackPointEtaleFiber K but fiberEquivalence point-stack K ≌ restrict(point-stack F) not defeq, no StrongTrans equivalence donor.
 - Mainline next scalar fiberEquivalence or report exact missing; quotient/groups donors. No fake.
+
+
+### 20.467 A2 point scalar stack extension GREEN; Paper312 unramified obstruction (2026-11-15 09:20)
+- Mzk1A2ScalarStackExtensionActual DONE 18:38:58: pointStack F := {fiber:=sourceStackPointEtaleFiber, isStack}; pointStackScalarExtension : SourceEtaleStackScalarExtension F K (pointStack F) with result=pointStack K, fiberEquivalence=Equivalence.id. Degenerate but actual. Remaining quotientWitness/groups/unique explicit.
+- Mzk1Paper312UnramifiedActual DONE 18:39:40: unramified_odd_obstruction (log3/2 <= 0 false with a=0,c=1); perPlace_diff_of_correction combines correction consumer with diff reduction. So unramified a=0 bound genuinely false; a_v must be independent/larger or separate treatment.
+- mainline add scalar extension to A2 partial if xF.stack=pointStack; hull feed A_le_Lbar for ramified and record unramified obstruction. abc probe. No fake.

@@ -2761,3 +2761,5 @@
 - 11:00: A2 partial/sign/consumer probes green; qpilot actual lambda/floor, stage4 adicAbv, stepxi Z_p^d. gate 20.465 written.
 
 - 11:10: A2 blocked: unique no ext/keep gap; quotient/groups no donor; scalar fiberEquivalence missing. mainline attempt scalar. gate 20.466 written.
+
+- 11:20: A2 point scalar extension GREEN 18:38:58; Paper312 unramified obstruction/perPlace_diff GREEN 18:39:40 (a=0 bound false at p=3). mainline scalar partial; hull feed ramified. abc probe. gate 20.467 written.
