@@ -2139,3 +2139,5 @@
 - 06:30: dictionary finalDictionaryCombined added (S45/Relative/ObjectLock -> comparison /\ Relative /\ Nonempty dictionary, all consumed, no True); probe queued. BaseScalar marked BLOCKED (4 errors); donor/compat not claimed; S45 not donor-implied. gate 20.172 written.
 
 - 06:40: dictionary source 12:16:32 > olean 12:15:04; finalDictionaryCombined not compiled; probe no log. mainline to force recompile/probe. BaseScalar still blocked. gate 20.173 written.
+
+- 06:50: scheduled check: dictionary source still newer than olean; finalDictionaryCombined not compiled; mainline ordered force. BaseScalar no olean. Woke lanes. 12 lean, log 12:20.
