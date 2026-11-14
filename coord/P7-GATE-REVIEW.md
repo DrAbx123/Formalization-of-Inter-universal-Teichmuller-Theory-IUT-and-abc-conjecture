@@ -2896,3 +2896,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.392 KernelBridge fresh GREEN; HullUnitZeroProbe2 (2026-11-17 17:20)
 - Mzk1Ind1KernelBridgeActual DONE 15:05:30/olean 23:05:29: kernelToAQuotient_ker_eq, normal instances, quotientKernelEquivRange; no source sorry; ofRange removed. Next compose with completionKernelTimesMuEquiv once range_eq_ker identification exists; then Z_p^d.
 - HullUnitZeroProbe2 DONE 15:10:14. UnitInvariance no olean (topo/scalar fix pending). Alignment no olean. abc probe.
+
+
+### 20.393 Ind1 range_eq_ker bridge: quotient representative route (stepxi, 2026-11-17 17:30)
+- KernelBridge green. Exact missing: MonoidHom.mrange kernelToAQuotient = (quotientValuationHom h).ker.toSubmonoid.
+- Route: forward v(class subtype y)=unitValuationHom y=1. Reverse x in v.ker: representative y:=Quotient.out x (AQuotient=TimesMuQuotient F^x); Quotient.out_eq; v x=unitValuationHom y; v x=1 => y in ker; class subtype y = x. Prove range equality via subset antisymm. Then compose quotientKernelEquivRange with submonoidCongr. Z_p^d remains.
