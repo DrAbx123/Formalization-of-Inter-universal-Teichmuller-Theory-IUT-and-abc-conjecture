@@ -3846,3 +3846,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.586 GaloisCompletion probe green; PrincipalUnits red (2026-11-15 28:00)
 - GaloisCompletion DONE 22:18:39/olean 06:18:37 withValMovedSigma only; probe 22:23:28/olean 06:23:27 three axioms. GaloisProbeAudit 22:13:57: galoisPlaceMk_apply/adicAbv_lt_one_iff/valuation_isEquiv_comap three axioms.
 - PrincipalUnits src 06:19:40 no olean FAIL 22:17:27, not accepted; qpilot fixing. No fake.
+
+
+### 20.587 PrincipalUnits avoid change; simp norm/valuation (2026-11-15 28:10)
+- change (↑||x||₊:ℝ)<1 triggers LE Type/OfNat Type parsing. Use rw valuation_apply then simp/simpa (norm unfolds to coe_nnnorm) or exact_mod_cast. qpilot. No fake.
