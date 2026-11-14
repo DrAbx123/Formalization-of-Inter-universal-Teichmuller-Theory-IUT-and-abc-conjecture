@@ -3177,3 +3177,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.444 A2 partial GREEN: xF/xF_geometry constructible, 8 fields remain (mainline, 2026-11-15 05:10)
 - Mzk1A2GeometricCorePartialActual DONE 17:06:06: xFOfStackPoint := realizedHyperbolicOrbicurve from sourceStackPointEtaleFiber; xFOfStackPoint_geometry; exists_xF_xF_geometry. First two SourceSignQuotientData fields constructible degenerately. a2FirstRemainingFields 8: ellipticInvolution/squared/unique; signAction+inversion; cF/quotient/witness; xFGroups/cFGroups/fGroupInclusion; xK/cK/extensions/type; V tuple components.
 - Mainline to check each remaining field donor/constructor; report first. qpilot Haar pending; stepxi quotient pending; stage4 adicAbv/IsScalarTower. No fake.
+
+
+### 20.445 URGENT KernelBridge quotient bridge sorryAx; QuotientDecomp/IndexDivision green (2026-11-15 05:20)
+- QuotientDecomp DONE 17:01:31 probe 17:10:10 [propext,Quot.sound]; IndexDivision DONE 17:05:58 green. Accepted.
+- KernelBridge comapTorsion_eq_torsionKernel FAIL 17:01:43 no fresh olean; lines147/150 IsPeriodicPt mismatch; probe has sorryAx -> not accepted. stepxi to delete if fix not fresh green, keep last clean KernelBridge. abc verify.

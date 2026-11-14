@@ -2717,3 +2717,5 @@
 - 07:20: MAJOR quotient_decomp/index_division GREEN 17:01/17:05; index=q^(A-k)*(p^r*((q-1)/T0)). Next connect actual index/QFE and instantiate a/c. Unramified a=0 condition4 remains. gate 20.443 written.
 
 - 07:30: A2 partial GREEN 17:06: xF/xF_geometry constructible; 8 remaining fields. mainline check donors. Haar/quotient/adicAbv pending. gate 20.444 written.
+
+- 07:40: QuotientDecomp/IndexDivision green probes subset; KernelBridge quotient bridge sorryAx -> delete/rebuild urgent. gate 20.445 written.
