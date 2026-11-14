@@ -3718,3 +3718,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.556 General norm_lt_one_iff donor; theta compat ∀b likely false (2026-11-15 23:00)
 - Mathlib Valued.NormedValued.norm_lt_one_iff (NormedValued.lean:245): ||x||<1 ↔ Valued.v x<1; with NormedField.v_eq_valuation gives general NormedField.valuation bridge, then principalUnits subgroup equality + residue units donor. qpilot.
 - ThetaValueCompat ∀b version: C3.thetaPacket.scale j independent of b but qVFamilyThetaValue depends on b; with j exponent nonzero implies all qVFam q norms equal, generally false. No per-coordinate C3 theta field. QVThetaValueRelation arbitrary n; QVThetaValueMismatch/SourceTheaterQNeQVFamily record mismatch. basePlace_compat strict form needs Fmod equality; only ring equiv. So BadToC3TensorMap paper semantics blocked on per-coordinate theta data + Fmod equality; no True fill. mainline gap.
+
+
+### 20.557 MAJOR actual_paper312 GREEN direct (hull, 2026-11-15 23:10)
+- ActualRamifiedData src 05:35:11 direct EXIT=0: actual_paper312 (Fdeg l logMu hcoef hmu0 hl hc sFactor hs0 hs1 hA0) -> ExplicitPaper312Inequality sFactor A Lbar Dbar, A=(1/2l)*sum fn/Fdeg*logp, Lbar=sum logIdx, Dbar=sum(logMu-(1/2l)logIdx). Uses perPlace bounds.
+- Next connect to Paper312Statement via Mzk1Paper312ExplicitActual.paper312_iff_explicit: need hq qReading=-A and htheta thetaSide=Lbar+Dbar-sFactor*A; identify or report missing. No fake.
