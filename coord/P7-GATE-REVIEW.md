@@ -2297,3 +2297,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1TruncatedUnitsCardActual DONE 10:09:31.
 - 4 Adapted statement files GREEN 10:10:18 (Estimates/Comparison/EstimateBridge/Section2); statement skeletons only.
 - Ind1Provenance/CongruenceUnitsEquiv still no olean.
+
+
+### 20.288 User corrections: #C quotient O/(p^s), not (p^s)^e; Ind1 concrete descent route (2026-11-16 23:00)
+- #C: current congruence group is 1+p^s O, corresponding quotient must be O/(p^s). Ramification enters via (p^s)=m^{e_K s}; units card primary target (q-1) q^{e_K*s-1}. Do not replace quotient by O/(p^s)^e. General e version secondary only for quotient by (p^s)^e. Hull/shehdd to fix primary targets; logShellCongruenceUnitsPow e only secondary.
+- Ind1: concrete source-side route: original arrow action on actual multiplicative monoid -> Galois fixed points down to F^x -> mod torsion -> subgroup 'infinitely divisible for some r != p' -> integral unit layer. Avoids requiring unit-layer isomorphism from nothing; with only DPrimeStrip arrow, obtaining actual multiplication action is unsolved. stepxi to formalize or identify exact missing action.
