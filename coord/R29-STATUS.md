@@ -2419,3 +2419,5 @@
 - 06:10: depth subgroup API queued; qpilot/shehdd/mainline pending first errors (logQ linarith, quotient args, reading arg mismatch); GaloisFixed green; target magnitude probe green. Resumed. gate 20.294 written.
 
 - 06:30: found Integers DVR/Dedekind instances (integersIsDiscreteValuationRing/integersIsDedekindDomain, LocalDifferentUpperBound:52-53); hull can use cardQuot_pow_of_prime for #C B. gate 20.295 written.
+
+- 06:40: greens: #C A conditional 18:21, cardQuot_maximalIdeal_pow 18:27, ObjectLockData gaps 18:28, InfiniteDivisible 18:21. Next: #C units card from cardQuot, actual f/hsurj/hker, object lock tower/unitMass/thetaSign, logQ/depth subgroup. gate 20.296 written.

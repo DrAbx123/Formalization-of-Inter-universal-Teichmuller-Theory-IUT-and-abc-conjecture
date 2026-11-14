@@ -2344,3 +2344,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.295 #C B donor found: Integers DVR/Dedekind instances (2026-11-17 00:40)
 - Hull reported no IsDedekindDomain (Integers K); but project already has integersIsDiscreteValuationRing (p:=p) and integersIsDedekindDomain (p:=p), used at LeanFormal/IUT/Foundations/LocalFields/LocalDifferentUpperBound.lean:52-53. Tell hull to letI these, then cardQuot_pow_of_prime applies to maximal ideal m; direct filtration fallback remains.
 - #C primary TruncatedUnitsCardPrimary O/(p^s) units = (q-1)q^(eK*s-1); secondary (p^s)^e correctly exponent eK*s*e. A primary O^x/(1+p^sO) ≃ (O/(p^s))^x.
+
+
+### 20.296 New greens: #C A conditional, cardQuot_maximalIdeal_pow, ObjectLock data gaps (2026-11-17 00:50)
+- Mzk1CongruenceUnitsEquivActual GREEN 18:21:31: conditional defs congruenceUnits_equiv_primary (O/(p^s)) and _pow e; no actual f/hsurj/hker yet.
+- Mzk1TruncatedUnitsCardActual GREEN 18:27:59: TruncatedUnitsCardPrimary/Corrected defs; cardQuot_maximalIdeal_pow (N) : cardQuot(m^N)=cardQuot(m)^N using integersIsDVR/Dedekind; no units-card proof yet. Next connect q=cardQuot(m), nonunits=m/m^N.
+- Mzk1ObjectLockDataActual GREEN 18:28:52: TrueTowerDataSource/UnitMassDataSource/ThetaSignDataSource gaps explicit; relativeFactorTowerData_of_tower (kPlaceQpDegree=n*rootBaseQpDegree); mainline_lock_implies_factorization; no actual data.
+- Mzk1Ind1InfiniteDivisibleActual GREEN 18:21:23.
+- qpilot logQ, shehdd A, stepxi depth subgroup still pending; retouched/report next.
