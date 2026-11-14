@@ -2464,3 +2464,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.314 Ind1 v donor: Valued completion, not NormedField.valuation (2026-11-17 04:10)
 - stepxi found NormedField.valuation target ℝ≥0, no discrete integer valuation; no WithZero.unzero from ℝ≥0^x to Multiplicative Z. Key donor: CompletionPlaceCoherentValuationActual provides Valuation (Completion place) (WithZero (Multiplicative Z)); use Valued.v there. For abstract F, carry actual [Valued F (WithZero (Multiplicative Z))] as structure input (not fake), then v := WithZero.unzero ∘ Valued.v on nonzero AQuotient. Norm-one units bridge via Integers/norm_le_one lemmas or exact missing lemma.
 - LocalValuationData queued no inhabitant; no fake.
+
+
+### 20.315 Sign fixed; ObjectLockData corrected; Assembly ordering stale (2026-11-17 04:20)
+- Mainline PaperS3137ObjectLock.theta_sign changed to thetaNormReadL=thetaNormReadProduct (no negative), Dictionary rebuilt olean 19:15:17.
+- Stage4 corrected ObjectLockData GREEN 19:14:35: TrueTowerDataSource independent factors dBase,e,n,mRoot with rootBase=e*dBase, kPlace=n*dBase, s1915=mRoot*e*dBase; no m*dL=n*dF. mainline_lock_implies_extra_relation; KCompletionOverFSource (mK) -> RelativeFactorTowerData; ObjectLockRelativeMassDataSource dimension-normalized; ObjectLockThetaSignedDataSource theta_signed no negative + theta_nonneg; legacy negative obsolete.
+- BUT Assembly olean 19:14:37 earlier than Dictionary 19:15:17 -> rebuild Assembly after Dictionary and rerun probes before clean acceptance.
+- Stage4 next: actual F-place Galois action/alignment (Mathlib Ideal.exists_smul_eq_of_isGaloisGroup/isPretransitive_of_isGaloisGroup on primesOver + bridge to FinitePlace), completion embedding F_v->K_w and kPlace=mK*rootBase; unitMass same-dim relative mass.

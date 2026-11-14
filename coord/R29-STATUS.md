@@ -2457,3 +2457,5 @@
 - 09:30: stepxi LocalValuationData interface queued (AQuotient/WQuotient, v, range_unitToA_eq_ker, infinitelyDivisible); no inhabitant. Next v via Valued.v+unzero; divisibility via Z_p^d. gate 20.313 written.
 
 - 09:40: Ind1 v donor: use CompletionPlaceCoherentValuationActual Valued.v with WithZero(Multiplicative Z), not NormedField.valuation ℝ≥0; abstract F carries actual Valued instance. Norm-one units bridge separate. gate 20.314 written.
+
+- 09:50: sign fixed Dictionary 19:15:17; ObjectLockData corrected 19:14:35 (independent dBase/e/n/mRoot, relative mass, no negative). Assembly 19:14:37 predates Dictionary -> rebuild/probe. task-129 completed. gate 20.315 written.
