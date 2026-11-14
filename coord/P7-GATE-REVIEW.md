@@ -1297,3 +1297,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Gate: PaperToS3137A1Data EXPLICIT GAP -> CONSTRUCTED (unconditional).
 - Remaining final conditions: S45SourceFields; RelativeFactorTowerData (divisibility-only explicit condition); PaperS3137ReadingDictionary (undefined explicit GAP); d_F normalization; unitMass=1 not assumed.
 - Comparison import fixed; WeightA1 axiom probe queued; BoundWeak still pending.
+
+
+### 20.126 GREEN: LNormComparisonConditional; PrincipalPacketAlignment (2026-11-15 14:35)
+- Mzk1P0LNormComparisonConditionalActual DONE 02:08:48 (104s): LNormComparisonTarget_of_bounds; _of_local_bound; LPaperInstance_of_bounds; rows 7. Final S3137 dependency satisfied.
+- Mzk1BoxPrincipalPacketAlignmentActual DONE 02:08:47 (104s): principalScalarReadout; principalScalarReadout_eq_log_norm; PacketScalarAlignment structure; principalPacketAlignmentMissing list (principal region <-> StepV slot, rootHaarFactor <-> packet hull normalized log ratio); no fake equality.
+- Final retouch/recompile ordered; WeightA1/A1Data probes pending.

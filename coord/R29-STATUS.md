@@ -2043,3 +2043,5 @@
 - 19:50: A1Data constructed (paperToS3137A1Data_of_pos, hd forall b 0<d; RHS exact match) -> not EXPLICIT GAP. WeightA1 probe queued. Comparison import fixed. Remaining final: S45/RelativeFactor/Reading/d_F. gate 20.124 written.
 
 - 19:55: A1Data UNCONDITIONAL via green local_degree_pos; paperToS3137A1Data constructed, nonempty. Remaining final: S45 / RelativeFactor(divisibility) / ReadingDictionary(undefined) / d_F; unitMass=1 not assumed. gate 20.125 written.
+
+- 20:05: GREEN LNormComparisonConditional 02:08:48 (LNormComparisonTarget_of_bounds/_of_local_bound/LPaperInstance_of_bounds) and PrincipalPacketAlignment 02:08:47 (principalScalarReadout_eq_log_norm/PacketScalarAlignment/missing list). Final dep satisfied; mainline to retouch/recompile Final. gate 20.126 written.
