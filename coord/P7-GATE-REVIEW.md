@@ -2542,3 +2542,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.327 odd-p residue-field target; consumer lemma (shehdd, 2026-11-17 06:20)
 - New log showed: theorem vs def (fixed); missing IsDiscreteValuationRing via simpa; type mismatch ResidueField vs O/(p). Switched target to (logShellResidueField K)^x with direct quotient equiv, no big simpa; consumer should use Ideal.quotEquivOfEq hpi.maximalIdeal_eq. shehdd to add consumer lemma to O/(p), DVR instance local. p=2 still open.
 - Ind1 ValuationData fresh 11:41:33 no sorryAx; KernelIntegers rebuild next.
+
+
+### 20.328 Corrected chain green; red list/sorryAx old olean (abc, 2026-11-17 06:30)
+- Clean: Dictionary 19:15:17 theta_sign no negative -> Assembly olean 19:28:52 after -> Assembly probe 19:38:11 three axioms; Final probe 19:42:34; ObjectLockData 19:14:35 theta_signed no negative + theta_nonneg. Sign correction verified.
+- Green fresh: Ind1 ValuationData 11:41:33 olean 19:41:33, probe 11:48:52 three axioms no sorryAx (old stale auto-sorry); IVThm110Actual 19:28:49 no actual sorry, hQ eliminated/hCor312 explicit; DepthSubgroup; LocalRingUnitsCard/TruncatedUnitsCard (cardQuot only, primary unproved).
+- RED: Ind1CorrectedExtraction FAIL 11:41:32 unsolved x in invariantUnitLayer; old olean correctedDepthLayer_le_invariant/Required_iff contains sorryAx -> unusable. KernelIntegers FAIL 11:49:03 no olean. Floor FAIL 11:48:13 missing HCor312Actual.olean. odd-p FAIL 11:44:24 unsolved quotient equivalence. TruncatedUnitsCount pending. Target magnitude deps stale: PaperLevelXiFTargetProof/Bridge src 19:08:09 > olean old -> recompile before final evidence. 4 Adapted statement-only.
