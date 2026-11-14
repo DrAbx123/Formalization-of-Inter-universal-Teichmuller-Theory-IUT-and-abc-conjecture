@@ -3756,3 +3756,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.565 Watchdog second restart (2026-11-15 24:30)
 - Watchdog process alive (PID31424) but wedged: log stuck 05:32:49, no lean child, CPU idle. Killed and restarted background job pwsh-7c84b86adf7041f5; log active 05:50:35, batch STARTs. abc re-audit. Earlier ActualData olean 05:41:21 audited three axioms (actualDataCore_* and actual_paper312 no sorryAx). ConcreteFiveCast three axioms.
+
+
+### 20.566 RankOne instance transfer (qpilot, 2026-11-15 24:40)
+- Valued.v.RankOne not synthesized; instance registered for NormedField.valuation (NormedValued:101) though rfl. Add explicit haveI : Valuation.RankOne (Valued.v (K:=K)) := inferInstanceAs (Valuation.RankOne (NormedField.valuation (K:=K))) or transfer via v_eq_valuation. qpilot. No fake.

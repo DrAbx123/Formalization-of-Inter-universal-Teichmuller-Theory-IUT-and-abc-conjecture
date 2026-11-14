@@ -2957,3 +2957,5 @@
 - 27:20: norm lemma name Valued.toNormedField.norm_lt_one_iff; qpilot. gate 20.564 written.
 
 - 27:30: watchdog wedged, killed/restarted job pwsh-7c84b86adf7041f5; log active 05:50:35. abc re-audit. gate 20.565 written.
+
+- 27:40: RankOne transfer Valued.v<-NormedField.valuation; qpilot. gate 20.566 written.
