@@ -2463,3 +2463,5 @@
 - 10:00: stage4 tower Galois concrete route suggested: FinitePlace action v.comp σ or HeightOneSpectrum; MulSemiringAction via RingOfIntegers.mapAlgEquiv; completionMap; finrank_mul_finrank. UnitMass same-dim transport missing. gate 20.316 written.
 
 - 10:10: Assembly ordering stale 19:14:37<Dictionary 19:15:17; force rebuild. stepxi unitValuationHom via Valued.v; missing torsion descent/kernel bridge/divisibility. Hull/qpilot/shehdd pending. gate 20.317 written.
+
+- 10:20: Ind1 kernel bridge donor IntegralUnits: Integers=valuation.integer, mem_integers_iff norm<=1, norm_unit_eq_one, unitOfNormOne. stepxi to combine with unitValuationHom; divisibility Z_p^d remains. gate 20.318 written.

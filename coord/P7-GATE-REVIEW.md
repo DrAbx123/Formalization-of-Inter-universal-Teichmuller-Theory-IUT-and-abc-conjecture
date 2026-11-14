@@ -2483,3 +2483,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Assembly olean 19:14:37 still predates Dictionary 19:15:17; mainline told force retouch Assembly after Dictionary, rerun probes. Clean acceptance not valid until then.
 - stepxi added unitValuationHom via Valued.v + WithZero.unitsWithZeroEquiv for [Valued F (WithZero (Multiplicative Z))]. Missing: torsion F^x <= ker (roots of unity valuation=1, torsion-free value group); kernel-WQuotient bridge (norm-one units/Integers); WQuotient infinite divisibility via Z_p^d.
 - Hull TruncatedUnitsCount, qpilot IVThm110Actual, shehdd odd-p still no olean; retouched/report.
+
+
+### 20.318 Ind1 kernel bridge donor: IntegralUnits (2026-11-17 04:50)
+- LeanFormal/IUT/Foundations/LocalFields/IntegralUnits.lean: Integers K = NormedField.valuation.integer; mem_integers_iff x <-> ||x||<=1; norm_unit_eq_one for units; unitOfNormOne from norm-one elements. Combine with unitValuationHom=1 to identify ker units with (Integers F)^x, then mod torsion for WQuotient. Divisibility remains O_F^x/tors ≅ Z_p^d.
+- Torsion descent multiplicative_int_eq_one_of_pow_eq_one/torsion_le_ker/quotientValuationHom queued, no fake.
