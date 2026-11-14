@@ -2729,3 +2729,5 @@
 - 08:20: KernelBridge fresh clean 01:15:01; Haar green; final index/principal files pending. gate 20.449 written.
 
 - 08:30: A2 involution candidate identity GREEN 17:23:21; squared/unique missing coherence/Subsingleton; other fields no donors. mainline try. gate 20.450 written.
+
+- 08:40: MAJOR final index decomposition/correction GREEN 17:28:49; a=A-k,c=p^r*((q-1)/T0). Next Paper312 correction feed/unramified separate. abc probe. gate 20.451 written.

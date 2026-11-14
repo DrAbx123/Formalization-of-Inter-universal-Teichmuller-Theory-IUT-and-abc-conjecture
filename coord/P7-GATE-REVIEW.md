@@ -3207,3 +3207,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.450 A2 involution candidate GREEN; squared/unique exact missing (mainline, 2026-11-15 06:10)
 - Mzk1A2InvolutionCandidateActual DONE 17:23:21: a2EllipticInvolutionCandidate = Hom.id (degenerate identity); squared/unique Gap Props. First donor Hom.id green.
 - Exact missing: TwoIso (comp id id) id no constructor/coherence (only TwoCell.id); unique requires Subsingleton (X.Hom X)/classification. Other 6 field groups (signAction/quotient/groups/scalar ext/type/V) no constructors; Example36OrbicurveFeasibility:476-489 says all unconstructed. SourceCompletionSignQuotient->toSourceSignQuotientData conditional only. Mainline try Iso.refl/TwoCell.id for squared; check uniqueness donor. No fake.
+
+
+### 20.451 MAJOR final index decomposition + correction GREEN (hull, 2026-11-15 06:30)
+- Mzk1FinalIndexDecompActual DONE 17:28:49: index_decomp_with_correction (0<f)(q=p^f)(T*index=q^A(q-1)) -> exists a c, index=q^a*c and LogShellResiduePowerCardCorrectionHypothesis a c; A=eK*s-1,T=#T,a=A-k,c=p^r*((q-1)/T0), k/r ceil_decomp, m/T0 torsion_split. Internal chain torsion_split/ceil/exponent/index_qfe/quotient_decomp/index_pow_identity.
+- Next hull feed Paper312 correction consumer; unramified A=0 => a=0 condition4 separate. A2InvolutionCandidateProbe 17:28. abc probe. No fake.
