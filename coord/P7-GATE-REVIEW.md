@@ -3598,3 +3598,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.530 AdicAbv coe RingEquiv alignment (mainline, 2026-11-15 19:40)
 - absNorm/hw/hφ/hval now pass. Current :81 change fails: m uses valuation K' ... ((e:K→+*K') x) vs target (e x), not defeq under change. Fix define m with e x, `simp only [RingEquiv.coe_toRingHom]` before change, or hcoe : ((e:K→+*K') x)=e x := rfl. Then by_cases m=0/toNNReal. No fake.
+
+
+### 20.531 UnitRegionScaling build/floor; watchdog backlog (2026-11-15 19:50)
+- UnitRegionScaling direct EXIT=0; lead started background lake build job pwsh-202db132c91e41f4 for olean. floor remains unitRegionLog=-M and 1<=M explicit; hact explicit. Watchdog active but backlog P0/P1/B5; our files need direct builds.
+- hull HasLogIdx/perPlace; stepxi Fact5+Completion cast; stage4 finrank split; qpilot floor. No fake.

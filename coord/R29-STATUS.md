@@ -2887,3 +2887,5 @@
 - 21:30: IntegersEquiv cleared to placeholder; blockers Fact/completion-integers cast. WQuotient interface green/equiv missing. gate 20.529 written.
 
 - 21:40: AdicAbv coe RingEquiv alignment; define m with e x / simp coe_toRingHom. mainline. gate 20.530 written.
+
+- 21:50: UnitRegionScaling background build; watchdog backlog. hull HasLogIdx; stepxi cast; stage4 finrank split. gate 20.531 written.
