@@ -2983,3 +2983,5 @@
 - 29:30: CRITICAL hq C3.q single local point vs multi-place sum; mainline determine construction mismatch. gate 20.577 written.
 
 - 29:40: CRITICAL R1 C3.q single local vs Bad global sum; GlobalSumAggregation conditional not proven; hq blocked. Gate 20.578 written.
+
+- 29:50: search global q/SourcePilotRegionData construction; mainline. gate 20.579 written.

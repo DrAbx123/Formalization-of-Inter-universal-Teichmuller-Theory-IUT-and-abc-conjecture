@@ -3810,3 +3810,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.578 CRITICAL R1 single-place q vs global Bad sum (mainline, 2026-11-15 26:40)
 - SourcePilotRegionData doc: one actual finite place; C3.q : FinitePlaceQCandidate place.val (single local q); qPilotRegion={tensorUnit}; signedQPilotLogVolume=localSignedLog C3.q; qPilotLogVolumeReading single log. tensorLanding only maps this q to tensorUnit (field), no per-place product. Global A/M=sum_b W_b*... (Bad family). So P.signedQPilotLogVolume is different type than A/M; R1 aggregation identity missing. No canonical global q/tensorLanding; tensorLanding is input field; qVFamily per-b no canonical same-as-C3 identification. BadToC3TensorMap no inhabitant/thetaValue_compat bare Prop. This confirms R1 direct aggregation gap (GlobalSumAggregation conditional, not proven) and hq structural obstruction. No fake.
+
+
+### 20.579 Search global q/SourcePilotRegionData (2026-11-15 26:50)
+- R1 C3.q single local; global A/M Bad sum. Search tree for global SourcePilotRegionData parameterized by Bad (tensor/product per-b q) or tensorLanding/global q map; report constructor or none. Decides construction-level fix without changing paper objects. mainline. No fake.
+- qpilot PrincipalUnits norm helper fixes pending. No fake.
