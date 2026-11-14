@@ -3161,3 +3161,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - C3BaseQ direct aggregation DONE 16:45:19 + probe 16:53:57 three axioms.
 - A2 gate SourceNativeArithmeticToSourceGate no inhabitant. S1532A2FirstField = SourceSignQuotientData (S1280Arithmetic l); its structure has xF : HyperbolicOrbicurve A.F, xF_geometry : SourceOncePuncturedGeometry A.curve xF, ellipticInvolution/squared/unique, signAction/inversion, cF/quotient/witness, xFGroups/cFGroups/fGroupInclusion, xK/cK/extensions, etc. No Nonempty/constructor. SourceClauseAssembly not first missing (S1494ClauseAssemblyFromNative green). hroot also explicit gap.
 - Mainline to keep A2 as source-geometry gap; check if xF or realizedHyperbolicOrbicurve can help; next (c) ClauseBBaseQSourceIdentity same-q source. No fake.
+
+
+### 20.442 Audit: UnitInvariance/KernelBridge/TorsionSplit/Ceil/IndexPow/C3BaseQ all fresh standard (2026-11-15 04:50)
+- UnitInvariance 00:53:10 smul O=O probe 16:58:14 three axioms; KernelBridge 00:36:38 ofRange probe 16:48:43 no sorryAx; TorsionSplit 16:31:40 probe 16:41; CeilDecomp 16:44:24 standard; IndexPow 16:48:33 subset; C3BaseQ 16:45:19 direct GlobalSumAggregation probe 00:49:23 standard. No sorry.
+- Next: qpilot create Haar file char/measure; hull create IndexDivision; stepxi quotient bridge; stage4 adicAbv/IsScalarTower. No fake.
