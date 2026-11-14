@@ -1253,3 +1253,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0LNormReadoutActual DONE 01:57:32 (106s): thetaNormReadL direct, LNormComparisonTarget, qRead_le_thetaRead_of_normTarget; unblocks LNormComparisonConditional -> FinalS3137.
 - Mzk1IutIVProp14CongruenceCardInterfaceActual DONE 01:56:44 (59s): card_logShellCongruenceQuotient_of_unitsEquiv with explicit e and hcard; actual #C donor now just needs e/hcard.
 - Continue final chain and #C actual construction; no True.
+
+
+### 20.119 #C interface exponent mismatch: e*s-1 vs s-1 (shehdd, 2026-11-15 13:00)
+- Current card_logShellCongruenceQuotient_of_unitsEquiv hcard gives (q-1) q^(logShellScaleExponentFactor-1) = s-1 exponent, but torsion actual needs (q-1) q^(e*s-1) (from #C=(q-1)p^{f(e*s-1)}).
+- Fix: parameterize interface with explicit e (or n=e*s): hcard = (q-1)*q^(e*logShellScaleExponentFactor-1), truncated ideal m^(e*s); then use hq:q=p^f to reach (q-1)p^{f(e*s-1)}. Do not claim s-1 as e*s-1.
