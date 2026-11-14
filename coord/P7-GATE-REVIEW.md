@@ -3150,3 +3150,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.439 KernelBridge ofRange GREEN actual inhabitant (stepxi, 2026-11-15 04:20)
 - Mzk1Ind1KernelBridgeActual DONE 16:36:39; AQuotientKernelBridge.ofRange probe [propext,Classical.choice,Quot.sound], no sorryAx. Inhabitant constructed via range_kernelToAQuotient_eq + quotientKernelEquivRange + submonoidCongr.
 - Next stepxi: MulEquiv v.ker.toSubmonoid ~ v.ker (same carrier), transport equiv to subgroup; compose with completionKernelTimesMuEquiv (torsion.comap vs torsion ker bridge); Z_p^d. Report first error/GREEN. No fake.
+
+
+### 20.440 MAJOR UnitInvariance smul GREEN (qpilot, 2026-11-15 04:30)
+- Mzk1IVThm110UnitInvarianceActual DONE 00:53:10: membership lemmas, image=O, algebraMapUnit : X^x (val/inv algebraMap, val_inv/inv_val by change/map_mul/Units.mul_inv), algebraMapUnit_smul_canonicalUnitReference_eq : (algebraMapUnit u)•O=O. No source sorry.
+- Next qpilot: Mzk1IVThm110HaarUnitInvarianceActual with MeasurableSpace/BorelSpace/IsAddHaarMeasure; O positive finite; distribHaarChar_eq_of_measure_smul_eq_mul s=O -> char=1; distribHaarChar_mul -> μ(u•S)=μS; λ=p^k*u/principalDim. abc probe.
