@@ -2287,3 +2287,5 @@
 - 18:50: hbridge latest fixes :57 add x to generalNormalizedNormFormula, :63 use hx directly, :73 xC one let, :134 import BadPlacePaperNormalizedActual. mainline fix. gate 20.239 written.
 
 - 19:00: hbridge Value/Donor and Literal still no olean; 11 lean. Woke mainline/hull/lattice/abc. gate unchanged.
+
+- 19:10: hbridge Value ring line75 + Donor missing Fintype section var. mainline fix. wrapper conditional green; hbridge unproved. gate 20.240 written.

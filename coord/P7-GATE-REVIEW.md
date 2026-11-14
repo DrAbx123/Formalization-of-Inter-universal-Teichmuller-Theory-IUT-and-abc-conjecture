@@ -1991,3 +1991,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.239 hbridge latest fix coordinates (hull, 2026-11-16 12:50)
 - Mainline Donor FAIL 07:27:11: :57-58 generalNormalizedNormFormula missing x argument (needs (x)(hx)); :60/63 simpa [toC] using hx type mismatch -> use hx directly/show; :73 define xC:=toC place (qVFamNormalizedGenerator) once for hv/hlog/hdef and unify Valued.v instance; :134 import/open BadPlacePaperNormalizedActual, T unknown cascade. Old :45/:50/:51 are stale line numbers; if recur use toC/default formula, Multiplicative.toAdd, show NormalizedCompletion.
 - Conditional Generic/Wrapper green; hbridge unproven; S45 not used.
+
+
+### 20.240 hbridge Value ring + Donor Fintype fixes (abc, 2026-11-16 13:10)
+- Value Mzk1QVFamNormBridgeValueActual FAIL 07:23:24 line75 ring unsolved -(nu_norm*d^-1)=-((d^-1)*nu_def); use ring_nf/mul_comm. No olean; hbridge unproved.
+- Donor Mzk1P0QVFamNormBridgeDonorActual source 15:28:08 FAIL 07:30:28: section lacks [Fintype (Bad (nativePlaceSelection T))], causing Fintype synth/T unknown/exact unknown cascade; add variable. qVFamNormalizedNorm_eq_defaultNorm_rpow not compiled; no olean.
+- Wrapper conditional green+probe; hbridge pending; S45-free not unconditional. No fake.
