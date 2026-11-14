@@ -3057,3 +3057,5 @@
 - 35:40: CardExponent remove explicit residue units Fintype; qpilot. gate 20.614 written.
 
 - 35:50: CardExponent restore field Fintype/remove sorry; qpilot. gate 20.615 written.
+
+- 36:00: CardExponent full green olean 07:26:06. Lead approves core helper redefinition; qpilot rebuild. gate 20.616 written.

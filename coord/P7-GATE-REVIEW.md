@@ -3964,3 +3964,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.615 CardExponent restore field Fintype; remove sorry (2026-11-15 32:50)
 - Removed [Fintype (ResidueField A)] too; restore it, keep [DecidableEq], no explicit units. Remove sorry placeholder line44. qpilot. No fake.
+
+
+### 20.616 CardExponent full GREEN olean 07:26:06; Lead approves core helper redefinition (2026-11-15 33:00)
+- CardExponent direct+olean 07:26:06: cardExponent, pos, pow_mem, cardExponent_eq_residueUnits, cardExponent_coprime. No sorry.
+- Lead approves changing helper integralUnitExponent (not paper object) to `Nat.card ((Integers K)^x / principalUnits)`, reprove pos/pow_mem via Fintype.ofFinite/pow_card_eq_one/QuotientGroup.eq_one_iff; rebuild core/downstream. Gate records definition change; no fake. abc audit.
