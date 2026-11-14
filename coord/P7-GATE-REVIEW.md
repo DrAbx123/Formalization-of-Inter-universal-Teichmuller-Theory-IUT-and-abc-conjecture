@@ -2555,3 +2555,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110HCor312Actual GREEN 19:49:45: hCor312_of_actual_certificate (certificate + term identifications -> hCor312), missingCertificateProducer 3 items; no sorry. Mzk1CThetaToHCor312Actual GREEN 19:45:10; NativeGlobalQPilotNormalizedLogVolumeActual 19:49:48.
 - FloorActual still red/needs HCor312Actual olean now available; qpilot to build. Shared StepV q identification may coincide with R1 same-q witness; mainline/qpilot coordinate.
 - CorrectedExtraction source changed/old olean sorryAx; stepxi rebuild. odd-p fix retouch.
+
+
+### 20.330 Ind1 CorrectedExtraction and odd-p GREEN (2026-11-17 06:50)
+- Mzk1Ind1CorrectedExtractionActual GREEN 19:54:59: unitAction/unitFixedSubgroup/invariantUnitLayer(A_H)/correctedDepthLayer(D_r inside A_H)/Ind1CorrectedExtraction/Required; no source sorry. Old olean sorryAx stale; abc to probe fresh.
+- Mzk1CongruenceUnitsEquivOddActual GREEN 19:55:06: congruenceUnits_equiv_primary_odd (residue field) + primary_odd_quot (O/(p)); no source sorry; p odd only. p=2 still needs (4)-norm criterion.
+- Fresh probes: target magnitude 19:55:57/19:55:53, N5HCor312Probe 19:55:53; corrected probes pending.
+- Still no olean: TruncatedUnitsCount, Floor, SharedQPilot, KernelIntegers; retouched/report.
