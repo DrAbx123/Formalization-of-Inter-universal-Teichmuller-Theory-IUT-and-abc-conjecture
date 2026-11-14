@@ -2149,3 +2149,5 @@
 - 07:20: Dictionary FRESH GREEN 04:29:55 (source 12:25:11 < olean 12:29:54); finalDictionaryCombined compiled after binder/named args. Probe stale must retouch; theta_sign sign remains explicit. gate 20.176 written.
 
 - 07:30: Dictionary probe GREEN 04:36:25 (paperS3137ReadingDictionary_of + finalDictionaryCombined three axioms). finalDictionaryCombined official; sign/unitMass lock explicit. BaseScalar blocked; S45 explicit. gate 20.177 written.
+
+- 07:40: round-13 priorities: BaseScalar four errors (mainline/donor), #C B (shehdd), beta (stepxi), statement-layer red (lattice), audits. Dictionary/final/probes green. gate 20.178 written.

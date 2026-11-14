@@ -1616,3 +1616,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - finalDictionaryCombined exact signature: (S:S45SourceFields T)(rel:RelativeFactorTowerData T)(lock:PaperS3137ObjectLock I place T) -> (paperNormalizedThetaSum T <= paperNormalizedQPilotSum T) /\ RelativeFactorTowerData T /\ Nonempty (PaperS3137ReadingDictionary (I:=I)(place:=place)(T:=T)(hM:=hM)(hB:=hB)(lock:=lock)). All three consumed; no True.
 - Sign: ObjectLock.theta_sign negative vs LNormComparison hlock positive; two different explicit lock conventions, not both asserted/one proved. Reading-dictionary sign/unitMass gap remains explicit.
 - BaseScalarBounded blocked; donor/compat not proved; S45 not donor-implied.
+
+
+### 20.178 Round-13 priorities: BaseScalar, #C B, beta, statement-layer (2026-11-16 01:40)
+- Dictionary GREEN 04:29:55 + probe 04:36:25 (three axioms); finalDictionaryCombined official.
+- Remaining key blockers: BaseScalarValuationRelation four proof/instance errors (blocks donor); #C actual B/A (MissingTruncatedUnitsCard/MissingCongruenceUnitsEquiv); Ind1 beta/algAction inhabitant; non-lane statement-layer red (23); final S45/RelativeFactor/sign-unitMass/d_F conditions explicit.
+- Assigned: mainline BaseScalar/donor; shehdd #C B; stepxi beta; lattice statement-layer first error; hull/abc audit; qpilot Box standby.
