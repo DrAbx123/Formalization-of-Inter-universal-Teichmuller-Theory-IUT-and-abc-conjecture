@@ -1495,3 +1495,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P14iiAuditAxiomProbeActual DONE 03:47:14: same theorem three axioms.
 - Mzk1IutIVProp14iiiBoxActual DONE 03:47:15 (49s): compatible stub replacedByFormalBox; old Iut dependency removed; no sorry/True.
 - Mzk1IutIVProp14iiiBoxConsumerActual still red: :59 unknown prop14iii_box_formal (must use actual theorem from Mzk1IutIVProp14iiiBoxFormalActual, open namespace); :60 synthInstanceFailed C.mu.IsAddHaarMeasure (explicit hypothesis/instance needed). qpilot to fix.
+
+
+### 20.156 Round-7 direction: norm-instance gap investigation (2026-11-15 21:20)
+- Final S3137 conditional GREEN; P14ii probe GREEN; IV core chain green.
+- Remaining unconditional obstruction: S45 field qVFamNormRatio=1. qVFamNormalizedGenerator is qVFamily.q coerced to CommonPrimeCompletion (NormalizedCompletion spectral norm), while qVFamDefaultNorm uses Completion default valuation norm. qVFamPureFractionalScalingDataGapActual explicitly records no tree theorem identifies these norm instances. hull/stage4 to investigate exact obstruction/route; no fake.
+- Other tails: iiiBoxConsumer (prop14iii_box_formal + IsAddHaarMeasure), IntegrationAction calc, LS3137LFinal timeout, #C actual B/A, source beta.
