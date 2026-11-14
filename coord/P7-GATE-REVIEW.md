@@ -1859,3 +1859,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Default Completion norm ||x||_def=absNorm^(-nu); donor normalized ||x||_norm=absNorm^(-nu/d). For q nonunit r=||q||_def<1: qVFamNormRatio=r^(1/d-1); d=1 => ratio=1; d>1 => ratio>1. Thus S45 ratio=1 is FALSE for every d>1 place; ratio=1 iff d=1 (q nonunit). PaperNormalizedCoefficient is default valuation-norm coefficient; tensor uses normalized spectral; bridge subtracts log ratio. S45 is assumption bridge trivial.
 - d>1 not derivable: only 0<d, d=e*f, no 1<d/1<e/1<f. localCompletionDegree(nativeBadToKPlace) is different degree [K_w:(Fmod)_v], not F-place d.
 - POTENTIAL ROUTE: build ArithmeticTuplePureFractionalScalingData from default Completion generator q with default norm p^{-paperCoeff}, matching paper coefficient by construction; then S45 unnecessary. hull/stage4 to investigate constructor carrier/norm acceptance; if yes construct unconditional supply, if no exact obstruction. No fake.
+
+
+### 20.218 S45 bypass type-level obstruction; default-norm variant route (hull, 2026-11-16 09:00)
+- ArithmeticTuplePureFractionalScalingData localGenerator : CommonPrimeCompletion (NormalizedCompletion spectral norm); localGenerator_norm ||g||=p^(-c). Only constructor takes CommonPrimeCompletion. q default norm is adic; same type different norm. Thus cannot pass default-norm q as generator; c forced to c_norm (normalized) or S45 norm equality. No bypass with existing constructor.
+- Exact outs: (1) new default-norm scaling data structure + constructor + downstream adaptation; (2) prove norm-instance equality S45. Assigned hull/stage4 to assess/implement default variant and downstream compatibility; no silent object change; no fake.
+- S45 exact: d=1 => ratio=1; d>1 => ratio>1 for nonunit q; paper coefficient is default norm; tensor uses spectral.
