@@ -3221,3 +3221,14 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.453 A2 squared GREEN; unique exact missing (mainline, 2026-11-15 07:00)
 - Mzk1A2InvolutionCandidateActual DONE 17:36:00: a2InvolutionSquaredCandidate = CategoryTheory.Iso.refl _ (comp Hom.id Hom.id defeq Hom.id). So ellipticInvolution + squared constructible for degenerate xF. unique_elliptic_involution exact missing: needs Subsingleton (xF.Hom xF)/classification; no tree donor (only general Cat.Hom.ext/unrelated AffOrbicurve); expected synth failure. Probe three axioms.
 - Next mainline check other 6 A2 fields donors or exact missing; nondegenerate xF possibility. stepxi QuotientBridge open fixed pending. No fake.
+
+
+### 20.454 A2 remaining field donors/missing (mainline, 2026-11-15 07:10)
+- signAction: inversion/squared free from Hom.id/Iso.refl; first missing diagram : SignActionIndex -> EtaleStackPseudofunctor F + atBase Bicategory.Equivalence (diagram.obj signActionObject) X.stack.fiber. No pseudofunctor/equivalence constructor.
+- cF: can degenerate to xF; OrbicurveSignInvariantMorphism map=Hom.id/invariant=Iso.refl possible if action; missing OrbicurveSignQuotientWitness universal property (descend/factor/descendTwoCell/twoCell_ext).
+- groups: SourceOrbicurveGroupData only field groups : OrbicurveFundamentalGroupData; no constructor/donor.
+- scalar extension: result can realizedHyperbolicOrbicurve K degenerate; missing SourceEtaleStackScalarExtension F K X.stack (actual base change).
+- xK/cK degenerate candidates possible with sourceTypeOneLTorsion(+Minus) hyperbolic proofs; xK_eq_extension needs scalar extension.
+- V/V_mod_bad/V_section: real donor SourcePlaceSelection (V_section restrictionSection, V selected, singleton constructor) => not first missing; residual actual odd-residue place.
+- nondegenerate xF subsingleton no donor (generic Hom usually non-subsingleton); unique remains missing.
+- First donor V=SourcePlaceSelection; first missing signAction.diagram/atBase, then quotient witness/groups/scalar stackExtension. Mainline write partial fields (V/degenerate xF/squared) and report blocked. No fake.
