@@ -2880,3 +2880,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.389 MAJOR unconditional #C A eEquiv (hull, 2026-11-17 17:00)
 - Mzk1CongruenceUnitsEquivGeneralActual re-DONE 14:34:05/olean 22:34:04: congruenceUnits_equiv_primary_general (π)(hπ): CongruenceUnitsPrimaryEquivTarget UNCONDITIONAL (all p, actual uniformizer; no parity/irreducible p). Proof builds f=Units.map(Ideal.Quotient.mk I), I=span{logShellScale p}; hsurj via IsLocalRing.surjective_units_map_of_local_ringHom; hker via mk_eq_one_iff_sub_mem + general criterion + addVal_logShellScale + addVal_le_iff_dvd. No source sorry.
 - Next hull connect to congruenceQuotientCardinalityInput_of_equiv and Prop1.4 consumer; abc probe. GaloisRingBridgeProbe2 14:39:51 green.
+
+
+### 20.390 Audit: unconditional eEquiv probe three axioms; Galois probe2 (abc, 2026-11-17 17:10)
+- CongruenceUnitsEquivGeneral src 22:30:17 DONE 14:34:05 olean 22:34:04; congruenceUnits_equiv_primary_general unconditional; probe Mzk1CongruenceGeneralMajorProbeActual DONE 14:43:52 three axioms. Boundary: abstract unit quotient ≃ abstract residue quotient (depends on Irreducible pi uniformizer existence), not equality with specific native map; consumer owns native map/kernel.
+- GaloisRingBridgeProbe2 DONE 14:39:51: nativeFmodPrime/nativeBadFPlace_liesOver/nativeKContraction_liesOver/nativeFPrimeOver/nativeKPrimeOver/exists_galois_move_nativeF all three axioms.
