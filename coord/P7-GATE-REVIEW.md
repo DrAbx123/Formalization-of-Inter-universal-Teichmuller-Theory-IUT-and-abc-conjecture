@@ -2288,3 +2288,12 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - shehdd task-127: logShellCongruenceUnits radius is ||logShellScale p|| = 1+p^s O, not (p^s)^e; hull defined logShellCongruenceUnitsPow e = principalUnitsAtClosedRadius ||(logShellScale p)^e||; pow_one returns original. Correct target ((Integers K)^x / logShellCongruenceUnitsPow e) ≃* (O/(p^s)^e)^x. New Mzk1CongruenceUnitsEquivActual with reduction congruenceUnits_equiv_of_kernel_surjective; remaining f=Units.map mk, hsurj local ring lifting, hker kernel = 1+(p^s)^e O. No sorry.
 - stepxi provenance: SourceTimesMuKummerLayer acts on (AlgClosure)^x, only inhabitant sourceKummerArrow_self gate-only (sourceAction=1, refl, explicitly no arithmetic content); no nontrivial actual donor on (Integers K)^x/tors. Required not non-fake closable currently; interface substantial but no inhabitant.
 - Added/touched WL for Mzk1Ind1ProvenanceActual, Mzk1CongruenceUnitsEquivActual, Mzk1TruncatedUnitsCardActual to force watchdog.
+
+
+### 20.287 MAJOR actual target magnitude GREEN; multiple line greens (2026-11-16 22:40)
+- Mzk1ActualHullTargetMagnitudeActual DONE 10:05:42 (204s): actualTargetMagnitude_actual : ActualPaperXiFTargetMagnitude T unconditional; actualTargetSigned_actual : ActualPaperXiFTarget T; actualPerB_inequality. Proof uses PaperLevelXiFTargetProofActual.actualPaperXiFTarget <- globalQPilotLog_le_globalThetaHullLog <- perBQPilotLog_le_perBThetaHullLog (actual qPilotNormLog <= rootNormHullLog hull containment), no paper-normalized correction/S45. This bypasses the target bridge sign barrier for the magnitude target; still needs G1/G2/G3 to connect C3/P readings.
+- Mzk1IutIVTruncatedUnitsCardCorrectedActual DONE 10:03:20: only def TruncatedUnitsCardCorrected + unramified specialization, no general proof yet.
+- Mzk1ABCHeightEstimateActual DONE 10:09:30: conditional from frontier height comparison; main estimate still needed.
+- Mzk1TruncatedUnitsCardActual DONE 10:09:31.
+- 4 Adapted statement files GREEN 10:10:18 (Estimates/Comparison/EstimateBridge/Section2); statement skeletons only.
+- Ind1Provenance/CongruenceUnitsEquiv still no olean.

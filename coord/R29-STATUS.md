@@ -2401,3 +2401,5 @@
 - 04:30: stepxi provenance interface queued (substantial square/commutation, no inhabitant); lattice ABCAdapted GREEN, 3 Adapted pending. Continue lines.
 
 - 04:40: #C A radius pairing resolved via logShellCongruenceUnitsPow e; reduction queued. provenance: only gate-only sourceKummerArrow_self, no nontrivial donor. Forced retouch WL for 3 new files. gate 20.286 written.
+
+- 04:50: MAJOR Mzk1ActualHullTargetMagnitudeActual 10:05:42 actualTargetMagnitude_actual unconditional via hull containment (not paper correction). Needs G1/G2/G3 reading wire; sign barrier bypassed for magnitude. #C corrected only target/spec no proof; ABC height conditional; 4 Adapted green. gate 20.287 written.
