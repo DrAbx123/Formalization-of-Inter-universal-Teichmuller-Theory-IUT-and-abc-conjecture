@@ -3353,3 +3353,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.478 MAJOR A2 xK/cK GREEN; 14 groups closed, 3 blocked (mainline, 2026-11-15 11:00)
 - Mzk1A2PartialFieldsActual DONE 19:04:21: xKCurve/xKCurve_signature/genus/xKExtensionCandidate; cK analogues; structure fields xK/xKType/xKExtension/xK_eq_extension and cK...; target_stack/genus_preserved rfl due point fiber defeq and Equivalence.id. Closed 14 groups: xF/geom/involution/squared/signAction/inversion_eq/cF/V group/V_section/stackExtension/xK group/cK group. Blocked 3: quotientWitness; xFGroups/cFGroups/fGroupInclusion; unique_elliptic_involution. Probe updated. abc probe; mainline quotient/groups. No fake.
+
+
+### 20.479 QpDecomp direct GREEN; RamifiedPlace syntax/universe errors (2026-11-15 11:10)
+- Direct compile Mzk1IVThm110QpDecompActual current source EXIT=0 (no olean); qpilot retouch, accept after build. A2PartialFields re-green 03:04:20.
+- RamifiedPlaceData direct errors: :14:69 docstring before `variable` illegal (unexpected token variable, expected lemma); :18:11 universe inference for field places : ι → RamifiedPlace (add universe u and RamifiedPlace.{u}/.{0}); :80:31 unsolved after. hull fix. No fake.

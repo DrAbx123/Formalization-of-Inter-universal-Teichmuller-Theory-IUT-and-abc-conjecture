@@ -2783,3 +2783,5 @@
 - 12:50: IsScalarTower probe GREEN 03:05:07; next transfer to adicCompletion/finrank_mul_finrank. adicAbv pending. gate 20.477 written.
 
 - 13:00: MAJOR A2 xK/cK GREEN 19:04:21; 14 groups closed, 3 blocked (quotientWitness/groups/unique). mainline quotient/groups; abc probe. gate 20.478 written.
+
+- 13:10: QpDecomp direct EXIT=0 green (no olean) retouch; A2PartialFields re-green 03:04:20. RamifiedPlaceData :14 docstring-variable, :18 universe, :80 unsolved; hull fix. gate 20.479 written.
