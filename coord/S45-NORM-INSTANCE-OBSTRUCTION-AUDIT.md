@@ -109,3 +109,31 @@
 - 在 donor 变绿前不能把 `||x||_norm = ||x||_def^(1/d)` 当 official theorem。
 
 未改源。
+
+## 13. donor/L-side fresh 复核（2026-11-14）
+
+### BaseScalar
+- `BaseScalarValuationRelation.lean`：src 05:19:38，olean 05:22:40，**DONE EXIT=0 05:22:40**；
+- 已 fresh GREEN。
+
+### Spectral uniqueness
+- `GeneralNormalizedNormBySpectralUniqueness.lean`：src 03:57:02，**FAIL 05:32:21**；
+- errors：
+  * `Unknown identifier NumberFieldFinitePlace.relativeCompletionDegree_eq_ramificationIdx_mul_inertiaDeg`；
+  * type expected got `L : FinitePlace → Type`（多处）；
+  * `failed to synthesize instance`；
+  * `introN` no binders（可能 source 有未完成 tactic 分支）。
+- 即使 BaseScalar olean 已存在，spectral 文件仍 red。
+
+### Final donor
+- `GeneralNormalizedNormFinal.lean`：无 olean、无 watchdog 记录（依赖 spectral red）。
+
+### L readout
+- `Mzk1P0LNormReadoutActual`：src 01:54:11，olean 01:57:31，**DONE 01:57:32** fresh GREEN；
+- `Mzk1P0LNormComparisonConditionalActual`：src 02:08:41，olean 02:08:47，**DONE 02:08:48** fresh GREEN。
+
+### 结论
+- BaseScalar 已 fresh；但 spectral/final donor 仍不可用；
+- §11 power formula 仍不能 official；
+- L side readout/comparison fresh GREEN，不受 donor red 影响；
+- 未改源。
