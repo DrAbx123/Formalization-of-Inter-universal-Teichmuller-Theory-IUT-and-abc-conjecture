@@ -3518,3 +3518,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.513 URGENT WQuotientLattice sorryAx/concept mismatch (2026-11-15 16:50)
 - Direct compile Mzk1Ind1WQuotientLatticeActual src 04:14: Invalid argument p for completionWQuotient (fixed abbrev, KernelIntegers:67, no p) at :15/:18/:19/:21; depends sorryAx. Generic p mismatch: completionWQuotient is for fixed completionField actual prime. Delete or specialize; no generic p/fake. stepxi.
+
+
+### 20.514 MAJOR ActualRamifiedData hdecomp/chosen GREEN; WQuotient placeholder green (2026-11-15 17:00)
+- Mzk1ActualRamifiedDataActual DONE 20:15:49: actualFn_spec (1<=fn and q=p^fn); hdecompOf (T*index=q^A(q-1)) via quotient card+qfe; chosenA/chosenC via index_decomp_with_correction with actualFn_spec+hdecompOf. Next actualData aExp/cCorr:=chosen; HasCorrection via chosenSpec; HasLogIdx rfl; HasRes spec.2; hcoef explicit.
+- WQuotientLatticeActual failed declarations removed; empty placeholder direct EXIT=0. ZpLattice green unaffected. Rebuild WQuotient only with actual completionField prime or parameterized WQuotient. abc probe. No fake.
