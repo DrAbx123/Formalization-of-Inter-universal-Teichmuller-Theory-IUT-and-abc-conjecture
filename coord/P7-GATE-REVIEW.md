@@ -3891,3 +3891,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.597 MAJOR PrincipalUnits subgroup GREEN (2026-11-15 29:50)
 - Direct PrincipalUnitsResidue src 06:47:05 EXIT=0: principalUnits_eq_comap_principalUnitGroup via typed h:∀{x}, v x<1 ↔ A.valuation x<1, hx at u.val-1, congr/simp. No sorry. Retouch; next quotient residue units/card/coprime/integralUnitExponent_coprime/unitLog. abc audit.
+
+
+### 20.598 MAJOR quotient residue units GREEN (2026-11-15 30:00)
+- Direct PrincipalUnitsResidue src 06:48:39 EXIT=0: quotientEquivResidueUnits via ValuationSubring.unitsModPrincipalUnitsEquivResidueFieldUnits. Next card quotient=residue units card, residue field card=p^f/coprime, integralUnitExponent_coprime, unitLog norm/tensor. abc audit. No fake.

@@ -3021,3 +3021,5 @@
 - 32:40: IsEquiv Iff h binding/hx; qpilot. gate 20.596 written.
 
 - 32:50: MAJOR PrincipalUnits subgroup direct GREEN; next quotient/residue/coprime/unitLog. gate 20.597 written.
+
+- 33:00: MAJOR quotient residue units direct green; next card/coprime/unitLog. gate 20.598 written.
