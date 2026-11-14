@@ -3261,3 +3261,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.459 Paper312 correction consumer errors (hull, 2026-11-15 08:00)
 - Mzk1Paper312CorrectionConsumerActual FAIL 18:03:33: :34 rewrite pattern Real.log(↑(q^a)*↑c) not found in Real.log(↑q^a*↑c) due Nat.cast_pow. Fix calc Real.log index=Real.log((q:ℝ)^a*c) via hidx/Nat.cast_mul/Nat.cast_pow; Real.log_mul; Real.log_pow.
 - :55 linarith failed (logp/f*a order); fix rw [hlogp_eq], hcomm/ring_nf at h ⊢ before nlinarith. FinalIndexDecomp green unchanged. No fake.
+
+
+### 20.460 PrincipalDim direct compile GREEN; QuotientBridge sorryAx delete (2026-11-15 08:10)
+- Direct lake env lean Mzk1IVThm110PrincipalDimScalingActual current source EXIT=0 (only warnings); no olean yet -> retouch build, accept after fresh. qpilot.
+- Direct compile Mzk1Ind1QuotientBridgeActual exit1 :30:55 type mismatch and comapTorsion depends on sorryAx -> stepxi delete theorem/file now; KernelBridge clean.
+- mainline constantDiagram/atBase green; generator_identification explicit unitors iso next. abc re-audit.
