@@ -3502,3 +3502,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.509 quotientWitness TwoCell type gap; mainline to adicAbv (2026-11-15 16:10)
 - id_whiskerLeft alpha.app fails: TwoCell=StrongTrans.Hom not elaborated as bicategory 2-cell `⟶`; need TwoCell->2-cell unification lemma absent. factor leftUnitor typechecks (defeq vcomp/id) but simp destroys defeq. twoCell_ext same. 3/5 fields constructed; 2 coherences exact gap.
 - Mainline new independent task: adicAbv (equivOfRingEquiv e v) x = adicAbv v (e x) via HeightOneSpectrum.valuation/valuation_of_mk'/Valuation.ext intValuation. groups/unique gaps. No fake.
+
+
+### 20.510 URGENT ZpLattice sorryAx/missing Fact in abbrev (2026-11-15 16:20)
+- Direct compile Mzk1Ind1ZpLatticeDivisibleActual src 03:40:46: :9:63 Fact (Nat.Prime p) missing in abbrev ZpLattice (p d); :12:33 CommGroup synth fail; declaration uses sorry; depends on [propext,sorryAx]. Not accepted. Fix abbrev add [Fact p.Prime] (and CommGroup instance); remove sorry; direct compile. stepxi.

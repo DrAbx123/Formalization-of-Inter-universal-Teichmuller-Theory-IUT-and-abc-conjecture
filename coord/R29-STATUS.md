@@ -2845,3 +2845,5 @@
 - 18:00: quotientWitness vcomp/id bridge hcomp (Hom.id).comp η=𝟙≫η; mainline. gate 20.508 written.
 
 - 18:10: quotientWitness TwoCell->2-cell gap; mainline switched to adicAbv norm equality. gate 20.509 written.
+
+- 18:20: URGENT ZpLattice sorryAx missing Fact in abbrev; stepxi fix. gate 20.510 written.
