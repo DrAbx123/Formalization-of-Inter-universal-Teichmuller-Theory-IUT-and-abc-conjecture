@@ -2577,3 +2577,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.333 unitValuationHom_eq_one_iff unfolding route (stepxi, 2026-11-17 07:20)
 - KernelIntegers root cause: mem_ker gives unitValuationHom u=1 but completion_valued_one_iff expects Valued.v u=1; missing unitValuationHom_eq_one_iff. Failed kernel maps removed to keep green; only completion_valued_one_iff_norm_one and completionIntegersToFieldUnits retained.
 - Proof route: unfold unitValuationHom = unitsWithZeroEquiv.comp unitsToValuedUnits; forward via unitsWithZeroEquiv.injective + Units.ext/simp [unitsToValuedUnits,Units.mk0_one,WithZero.coe_unzero]; reverse via Valued.v u=1 -> unitsToValuedUnits u=1 by Units.ext/simp. Names: Units.mk0_one, WithZero.unitsWithZeroEquiv, MulEquiv.map_eq_one_iff.
+
+
+### 20.334 p=2 bridge step6 lemma name (2026-11-17 07:30)
+- pow_le_pow_iff_right_of_lt_one₀ (ha₀:0<a)(ha₁:a<1) : a^m <= a^n ↔ n <= m (Algebra/Order/GroupWithZero/Basic:586). Use a=||p||, 0<||p||<1; then addVal(p^N)=N*eK, x=u*p^n. shehdd.
+- norm_le_norm_natCast_iff_addVal_ge target/route recorded; no fake.

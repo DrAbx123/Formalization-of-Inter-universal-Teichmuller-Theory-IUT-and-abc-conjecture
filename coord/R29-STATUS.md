@@ -2495,3 +2495,5 @@
 - 12:50: p=2 bridge lemma norm_le_norm_natCast_iff_addVal_ge with donors listed; implement via uniformizer decomposition. shehdd. gate 20.332 written.
 
 - 13:00: KernelIntegers missing unitValuationHom_eq_one_iff; route via unitsWithZeroEquiv.injective + Units.ext/simp. stepxi. gate 20.333 written.
+
+- 13:10: p=2 bridge step6 uses pow_le_pow_iff_right_of_lt_one₀; shehdd to implement. gate 20.334 written.
