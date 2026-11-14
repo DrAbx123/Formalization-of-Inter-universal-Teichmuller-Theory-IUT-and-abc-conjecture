@@ -2929,3 +2929,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.398 Galois alignment retry errors (stage4, 2026-11-17 18:20)
 - Mzk1GaloisRingBridgeActual DONE 23:16:46/olean 23:16:45 (alignment removed; P/Q/transitivity retained).
 - Alignment retry errors: (1) after maximalIdeal_injective goal is HS equality; rw [galoisPlaceMk_maximalIdeal] pattern not found due implicit args; use change (galoisPlaceMk ...).maximalIdeal=... before rw, or congrArg maximalIdeal then HeightOneSpectrum.ext. (2) RingHom equality via RingHom.ext+RingOfIntegers.ext failed unify; try rfl/simp for induced action or explicit ext_iff. (3) named nativeFPrimeOver_val/nativeKPrimeOver_val need rewriting before simp unfolds. Current green ring/transitivity retained; alignment missing. No fake.
+
+
+### 20.399 URGENT KernelBridge regression: range theorem sorryAx (abc, 2026-11-17 18:30)
+- Current src 23:13:29 FAIL 15:15:55 no olean; lines27/30/33/74 rw mismatch; range_kernelToAQuotient_eq proof fails -> auto sorryAx. Old olean 23:05:29 range theorem also has sorryAx -> NOT acceptable. kernelToAQuotient_ker_eq itself standard but file not green; previous 'fixed green' invalid.
+- Stepxi to delete range_kernelToAQuotient_eq immediately, keep kernelToAQuotient_ker_eq + quotientKernelEquivRange if fresh green; no sorryAx acceptance. HullUnitZero conditional green (scale=1, probe 15:10:14 standard); IutIVCongruenceCard probe 15:06:07 standard. P2Bridge paused.

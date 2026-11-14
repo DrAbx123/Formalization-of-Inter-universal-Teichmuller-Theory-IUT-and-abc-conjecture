@@ -2625,3 +2625,5 @@
 - 23:40: #T<=(q-1)eK FALSE (Qp(ζp) counterexample); correct #T<=(q-1)p^{v_p(eK)+1}, missing p-power roots ramification estimate. Hull conditional log donor/search. gate 20.397 written.
 
 - 23:50: Galois alignment retry errors (HS change/rw, RingHom ext, named lemmas); stage4 retry. Gate 20.398 written.
+
+- 00:00: URGENT KernelBridge regression range theorem sorryAx; delete it, keep ker_eq/quotientKernelEquivRange. HullUnitZero conditional; consumer probe standard. gate 20.399 written.
