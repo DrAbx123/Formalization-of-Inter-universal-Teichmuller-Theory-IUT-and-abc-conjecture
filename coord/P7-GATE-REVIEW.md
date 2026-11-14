@@ -2700,3 +2700,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - ObjectLockData DONE 21:09:07/olean 21:09:06 (source 21:05:43) fresh; failing ring-level/bridge/transitivity blocks removed; green API retained. Root cause: explicit letI still failed SMulDistribClass G (O_F) F and HSMul; next safe section-start #synth or explicit SMulDistribClass G (O_Fmod) (O_F) via smul_distrib_smul.
 - FloorNativeObstruction DONE 21:09:07/olean 21:09:06: M>=1 necessary, M>1 forces hullLog=-M, unit-relative decomposition; no fake.
 - ActualReadingTarget re-DONE 13:09:10; abc to audit. KernelBridge still no olean; P2Bridge missing.
+
+
+### 20.356 hullUnitLog=0 reduction (qpilot, 2026-11-17 11:10)
+- New pending Mzk1IVThm110HullUnitZeroActual: from (1) arithmeticTupleCanonicalHullHaarLog_le_unitRegionHaarLog, (2) hullLog=hullUnitLog+unitLog (IQHullLogVolumeInterface), (3) 0<=hullUnitLog, derive arithmeticTupleHullUnitLogVolume=0 and hullLog=unitRegionLog (canonical hull vs IQ unit region relative volume 0).
+- Then hM reduces to arithmeticTupleIQHullUnitRegionHaarLog = -M (M>1); floor qSigned=min(unitRegionLog,-1). Exact first missing source now unitRegionLog=-M plus M>=1; M=1 only needs unitRegionLog>=-1. No fake; all from green facts.

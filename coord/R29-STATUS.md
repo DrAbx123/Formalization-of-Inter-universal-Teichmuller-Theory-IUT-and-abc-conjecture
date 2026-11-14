@@ -2539,3 +2539,5 @@
 - 16:30: audit: ObjectLockData regression HSMul line125, KernelBridge red sorryAx, P2 missing, FloorObstruction pending. Fresh greens: #C primary/count, KernelIntegers, ValuationData, Floor/HC312, SharedQPilot, ActualHull chain. stage4 restore/fix, stepxi fix, hull create p2. gate 20.354 written.
 
 - 16:40: ObjectLockData restored GREEN 21:09:06; FloorNativeObstruction GREEN 21:09:06; ActualReadingTarget re-DONE. KernelBridge still red/no olean; P2Bridge missing. gate 20.355 written.
+
+- 16:50: hullUnitLog=0 reduction pending: from hullLog<=unitLog, hullLog=hullUnitLog+unitLog, 0<=hullUnitLog => hullUnitLog=0, hullLog=unitRegionLog. hM now unitRegionLog=-M; M>=1 necessary. qpilot compile; abc audit. gate 20.356 written.
