@@ -3096,3 +3096,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Stage4 probe resolved: galoisPlaceMk explicit T; after rw goal ||embedding(equivOfRingEquiv(mapRingEquiv σ)) v x||=v(σ.symm x), simp no progress -> not definitional. Missing lemma: ||embedding(equivOfRingEquiv e v) x||=||embedding v (e x)|| via FinitePlace.norm_embedding/adicAbv + maximalIdeal map/Valuation.comap; then isometry/Completion.mapRingHom. IsScalarTower still pending.
 - Hull ceil: Nat has no ceilDiv; implement piecewise m=f*(m/f)+m%f; k=m/f + if m%f=0 then 0 else 1; r=if m%f=0 then 0 else f-m%f; prove f*k=m+r and index=q^(A-k)*(p^r*((q-1)/T0)). a=A-k; unramified a=0 condition4 still fails, correction no help.
 - No fake.
+
+
+### 20.430 equivOfRingEquiv def donor for norm equality (stage4, 2026-11-15 02:50)
+- Mathlib HeightOneSpectrum.equivOfRingEquiv (RingTheory/DedekindDomain/Ideal/Lemmas:596): toFun := HeightOneSpectrum.comap e.symm e.symm.surjective; asIdeal = v.asIdeal.comap e.symm. So moved place norm at x should equal v's adic norm at e x definitionally after unfolding equivOfRingEquiv/comap/adicAbv. Try simp [HeightOneSpectrum.equivOfRingEquiv, HeightOneSpectrum.comap, FinitePlace.norm_embedding] or rfl after show. Report first error/GREEN.
+- UnitInvariance image beta_reduce applied, pending. Hull piecewise k/r pending. No fake.

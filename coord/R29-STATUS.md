@@ -2687,3 +2687,5 @@
 - 04:50: correction index decomposition false f>1; correct k=ceil(m/f), r=fk-m, index=q^(A-k)*(p^r*((q-1)/T0)), a=A-k. Hull implement. gate 20.428 written.
 
 - 05:00: Galois norm equality lemma missing; hull piecewise k/r (no Nat ceil). Unramified a=0 condition4 remains. gate 20.429 written.
+
+- 05:10: equivOfRingEquiv def donor for norm equality; stage4 simp/rfl route. Unit beta_reduce, hull piecewise pending. gate 20.430 written.
