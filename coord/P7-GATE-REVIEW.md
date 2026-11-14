@@ -3832,3 +3832,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.583 GaloisCompletion fresh green (2026-11-15 27:30)
 - Mzk1GaloisCompletionActual DONE 22:18:39/olean 06:18:37: only withValMovedSigma def, no uniform theorem, no sorry. GaloisProbeAudit DONE 22:13:57. stage4 continue uniform; hull hq/hθ; abc audit. PrincipalUnits red. No fake.
+
+
+### 20.584 RelativeNormQProperties: q_ne_zero green; power law may be false (2026-11-15 27:40)
+- BaseQUnconditionalActual.baseQValue_ne_zero green (Algebra.norm_ne_zero_iff + cast injective). valuation_lt_one reduces to MissingAlgebraNormValuationPowerTheorem: exists n>0, v(relativeNormCompletion x)=v(x)^n. But NativeFCompletion/base may be finite etale/product, so true formula may be product over local factors with exponents, not simple power. mainline inspect/derive exact norm-valuation formula or counterexample; then check q contraction. arithmetic_fmod_eq still only ring equiv/A2 gate. No fake.

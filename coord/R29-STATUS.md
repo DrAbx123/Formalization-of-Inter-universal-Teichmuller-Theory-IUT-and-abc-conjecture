@@ -2993,3 +2993,5 @@
 - 30:20: R1 no descent; try RelativeNormQProperties; mainline. gate 20.582 written.
 
 - 30:30: GaloisCompletion fresh green (def only); stage4 uniform; hull hq; abc audit. gate 20.583 written.
+
+- 30:40: RelativeNorm q_ne_zero green; power law may be false for etale product; derive product formula/counterexample. mainline. gate 20.584 written.
