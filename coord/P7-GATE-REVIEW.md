@@ -3363,3 +3363,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.480 QpDecomp fresh GREEN; A2PartialXKProbe green (2026-11-15 11:20)
 - Mzk1IVThm110QpDecompActual DONE 19:13:29/olean 03:13:28: exists_pow_mul_zpUnit green. A2PartialFields 03:04:20; A2PartialXKProbe 19:13:48.
 - qpilot next action bridge/norm/PrincipalDim instantiation/floor; mainline quotient cocycle/groups; stepxi ZpLattice/WQuotient; abc audit. No fake.
+
+
+### 20.481 IsScalarTower actual transport error (stage4, 2026-11-15 11:30)
+- Actual IsScalarTower synth fails: failed to synthesize SMul Qp (adicCompletion F (comap_F nativeBadToKPlace).maximalIdeal); Qp scalar instance registered for CommonPrimeCompletion/NormalizedCompletion (defeq Completion) not found for bare adicCompletion spelling. Module.Finite fails at same transport. Fix: letI Algebra/SMul Qp actualLower := inferInstanceAs (... NormalizedCompletion lowerPlace), same upper; change to CommonPrimeCompletion tower, infer relativeNormalizedCompletionScalarTower/Finite, finrank_mul_finrank. Probe was green. No fake.

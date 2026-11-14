@@ -2787,3 +2787,5 @@
 - 13:10: QpDecomp direct EXIT=0 green (no olean) retouch; A2PartialFields re-green 03:04:20. RamifiedPlaceData :14 docstring-variable, :18 universe, :80 unsolved; hull fix. gate 20.479 written.
 
 - 13:20: QpDecomp fresh GREEN 03:13:28; A2PartialXKProbe green. Next action bridge/PrincipalDim/floor; quotient/groups; ZpLattice. gate 20.480 written.
+
+- 13:30: IsScalarTower actual transport SMul via inferInstanceAs; stage4. adicAbv pending. gate 20.481 written.
