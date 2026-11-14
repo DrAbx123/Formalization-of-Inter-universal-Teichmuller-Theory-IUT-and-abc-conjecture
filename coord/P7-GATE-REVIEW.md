@@ -988,3 +988,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `c0QHat = c0Alpha^(2l)`; `c0Alpha = qrootElem = rootNormedElement`; S305 `rootNormedElementNorm_pow_twoL_eq_qVFamNormalizedNorm`: `(norm rootNormedElement)^(2l) = qVFamNormalizedNorm`; `norm_pow` gives `norm c0QHat = qVFamNormalizedNorm` directly.
 - This bypasses `norm_algebraMap'` and completion defeq/instance search; write QHatNormCoherence proof from these green donors. If green, remove QHat from bridge (leaving S45 / RootBase / A1Data + reading bridge).
 - Also: `thetaNormReadProduct = (1/(2l)) sum d qhatLogReadout`; with NormCorrection `qhat=paperQ+log ratio`, follows `sum d log r = (1/(2l))(sum d paperQ + sum d log ratio)`. Same-origin q/ratio sign still needed for qRead bound.
+
+
+### 20.80 Ind1 actual integral-unit map (stepxi, 2026-11-15 05:35)
+- New `Mzk1Ind1IntegralUnitMapActual` (queue): `integersUnitsToAlgClosure : (Integers K)^x ->* (AlgebraicClosure K)^x` (Units.map algebraMap); injective via Units.map_injective + algebraMap injective; `actualIntegralUnitToAlgClosureMap` structure (map + injective). Natural one-way map, not iso; no fake ≃*.
+- LocalMon file pending; WF probe three axioms confirmed. Only source gap remains actual layer Ind1/Ind2 action -> beta_a.
