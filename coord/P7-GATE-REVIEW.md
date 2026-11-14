@@ -3474,3 +3474,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.503 MAJOR A2PartialFields quotient integrated GREEN (mainline, 2026-11-15 15:10)
 - Mzk1A2PartialFieldsActual DONE 19:53:42: signAction:=signActionSimplified (inversionSquared Iso.refl), sign_action_inversion_eq rfl, cF:=xFOfStackPoint, quotient:=quotientMorphismSimplified (cocycle rfl), plus V/stackExtension/xK/cK. 15 groups closed.
 - Blocked 3: quotientWitness 5 fields; xFGroups/cFGroups/fGroupInclusion; unique_elliptic_involution. Probe updated. abc probe; mainline quotientWitness/groups. No fake.
+
+
+### 20.504 Instantiate arg-order error; CompletionTower final green (2026-11-15 15:20)
+- PrincipalDimInstantiate direct only :57:64 distribHaarChar_algebraMapUnit_eq_one expects (u)(μ), call passed μ as u; fix places tuple u μ.
+- CompletionTower final DONE 19:59:50/olean 03:59:49 (prior FAIL stale). ActualRamifiedData 19:54:19 probe 19:59:42; A2QuotientMorphism 19:48:54 probe 03:53:40.
+- qpilot fix; abc acknowledged. No fake.
