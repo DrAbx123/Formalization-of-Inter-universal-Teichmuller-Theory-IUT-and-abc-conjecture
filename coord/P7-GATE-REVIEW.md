@@ -1323,3 +1323,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P1WeightA1AxiomProbeActual DONE 02:12:40 (104s): four WeightA1 theorems all [propext, Classical.choice, Quot.sound].
 - Mzk1BoxPrincipalAlignmentProbe DONE 02:12:39 (103s): principalScalarReadout_eq_log_norm three axioms.
 - Final still pending recompile.
+
+
+### 20.130 CRITICAL: A1Data green olean may predate sorry-free source (abc, 2026-11-15 15:20)
+- Mzk1P1PaperSumsA1DataActual DONE 02:16:59 but source mtime 02:17:11 > DONE; pre-DONE log had warning 'declaration uses sorry' at line44; current source grep has no sorry/True but is NOT recompiled.
+- Status: A1Data must NOT be treated as sorry-free verified until current source is recompiled with no sorry warning; axiom probe failed 02:15:26 and must be retouched after recompile.
+- WeightA1AxiomProbe DONE 02:12:40 verified 4 theorems three axioms.
+- final FAIL 02:16:42 due missing Comparison/A1Data olean; source no True; wait retouch after dependencies verified.

@@ -2053,3 +2053,5 @@
 - 20:20: stepxi added ActualInd1UnitAction structure (beta + fromProcession Prop, no inhabitant) and consumer actualInd1LogRangeEquiv; only source node = actual Ind1/Ind2 procession action -> beta. No fake. gate 20.128 written.
 
 - 20:30: GREEN VolumeActual 02:11:46; A1Data 02:16:59; WeightA1AxiomProbe 02:12:40 (4 three axioms); PrincipalAlignmentProbe 02:12:39 (1 three axioms). Volume chain unblocked; final still pending. gate 20.129 written.
+
+- 20:40: CRITICAL A1Data olean 02:16:59 predates source 02:17:11; pre-DONE log had sorry warning line44; current source no sorry but unverified. Must recompile A1Data, check no sorry, then probe/final. WeightA1 probe verified. gate 20.130 written.
