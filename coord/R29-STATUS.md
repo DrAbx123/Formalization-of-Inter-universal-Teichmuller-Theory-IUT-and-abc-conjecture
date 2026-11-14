@@ -2101,3 +2101,5 @@
 - 02:20: scheduled check: no new green; P14ii pending old log, mainline/lattice ordered force compile; stepxi integration calc; shehdd #C B->A; abc audit. 4 lean, log 11:41.
 
 - 02:40 MILESTONE: P14iiActual GREEN 03:43:09 (p14ii_logVolume_actual; source 11:40:58, olean 11:43:08, no sorry/True). IV 1.10 actual chain complete at P14ii level. Need probe. gate 20.151 written.
+
+- 02:50: lattice IV audit: core P14ii chain all green; P14ii probe queued. Two RED iiiBoxActual (missing Iut.Concrete.LocalConstruct.Prop14Lattice olean) and iiiBoxConsumerActual (SourceNativeInitialThetaData local/universe); assigned qpilot. gate 20.152 written.

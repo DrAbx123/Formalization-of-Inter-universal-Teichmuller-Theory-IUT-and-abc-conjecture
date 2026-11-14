@@ -1476,3 +1476,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Proof: volume_ratio_eq_pow_actualH with 0<p by linarith, then p14ii_logVolume_cond.
 - IV 1.10 actual chain complete at P14ii level (conditional on mu/hexp inputs). Need probe; mainline/lattice notified.
 - B5 03:26:34; Final2 03:29:42 reproducible; final S3137 03:29:47; final fresh 03:33:31 no sorry.
+
+
+### 20.152 IV 1.10 actual chain audit: core all GREEN; iiiBox two RED (lattice, 2026-11-15 20:50)
+- Core chain GREEN: Volume, VolumeRatioHaar, GroupCountBridge, ActualHBridge, P14iiActual, HaarIndex, HaarIndexPow, IndexCard, GammaPGroup, TorsionCount.
+- New Mzk1IutIVProp14P14iiAxiomProbeActual queued (#print axioms p14ii_logVolume_actual).
+- Two RED (Box lane): Mzk1IutIVProp14iiiBoxActual missing external module olean Iut.Concrete.LocalConstruct.Prop14Lattice; Mzk1IutIVProp14iiiBoxConsumerActual SourceNativeInitialThetaData local variable/universe error. Assigned qpilot.
+- IV 1.10 actual chain at P14ii layer done; no fake probe result.
