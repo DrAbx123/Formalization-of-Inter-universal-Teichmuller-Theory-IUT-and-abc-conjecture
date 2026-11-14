@@ -2038,3 +2038,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IUTIVLiteralCarrierReductionActual DONE 07:53:24 (49s): using existing normalizedLogVolume_region, no HSMul hand proof.
 - Mzk1P0FinalS3137AxiomProbeActual olean exists after Final re-DONE 07:54:15; verify 4-item fresh axioms next.
 - hbridge Donor/Value still no olean; hull to retouch/report.
+
+
+### 20.248 Final probe fresh 4 items; hbridge latest errors (mainline, 2026-11-16 14:40)
+- Mzk1P0FinalS3137AxiomProbeActual fresh: finalPaperNormalizedComparison, finalPaperNormalizedComparison_noS45_ofNormBridge (new conditional noS45), finalLPaperInstance, finalBridgeConditions_of all [propext, Classical.choice, Quot.sound].
+- hbridge Value :71:9 rewrite pattern not found; Donor :93:4 Type mismatch after simplification; hull owns edits.
+- After hbridge green: Final _ofNormBridge (fun b => hbridge T b) -> unconditional finalPaperNormalizedComparison_noS45; replace S45 version (strict only); Dictionary drop S; rows/probe. No fake.
+- LiteralCarrierReduction GREEN 07:53:24; IV red 23->18.
