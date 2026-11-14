@@ -2703,3 +2703,5 @@
 - 06:10: GlobalSumCollapse replaced by direct GlobalSumAggregation; A2 gate exact missing for OrigXiFPaperNativeRoot. mainline compile/probe/A2 inspect. gate 20.436 written.
 
 - 06:20: index_pow_identity GREEN 16:48:33; next division cancellation q^A(q-1)/T=p^(fA-m)((q-1)/T0). hull. gate 20.437 written.
+
+- 06:30: C3BaseQ re-green 16:45:19 direct aggregation; probes kernel/fresh four. Wake qpilot/stepxi/abc; mainline A2. gate 20.438 written.
