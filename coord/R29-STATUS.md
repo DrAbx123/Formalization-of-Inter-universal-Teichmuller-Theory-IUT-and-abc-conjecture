@@ -3053,3 +3053,5 @@
 - 35:20: CardExponent import/Fintype fixes; qpilot. gate 20.612 written.
 
 - 35:30: CardExponent open namespace; qpilot. gate 20.613 written.
+
+- 35:40: CardExponent remove explicit residue units Fintype; qpilot. gate 20.614 written.
