@@ -2026,3 +2026,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 
 ### 20.245 hbridge narrowed to elaboration/coercion (stage4, 2026-11-16 14:10)
 - BridgeDonor no olean; latest fail 15:50, errors elaboration not math: :84/:90/:104/:110 WithZero.unzero returns Multiplicative Z but :R annotation makes target Multiplicative R; bind m : Z := Multiplicative.toAdd (alpha:=Z) (unzero (x:=val) hv), then (m:R). :85 ring closes. :97 simpa only mismatch -> change literal ‖qVFamNormalizedGenerator‖ shape then exact hnorm. Final body := by/direct term. Route correct; Generic/RouteA green.
+
+
+### 20.246 Final noS45 bridge theorem wired (mainline, 2026-11-16 14:20)
+- Mzk1P0FinalS3137ConditionalActual DONE 07:54:15 (99s, EXIT=0): new theorem finalPaperNormalizedComparison_noS45_ofNormBridge (hbridge : forall b, qVFamNormalizedNorm T b = (qVFamDefaultNorm T b)^(1/(relativeCompletionDegree (k:=Q)(qVFamTensorPlace T b):R))) : paperNormalizedThetaSum <= paperNormalizedQPilotSum. Uses wrapper; suffix _ofNormBridge avoids shadowing.
+- Mzk1P0FinalS3137AxiomProbeActual updated to 4 #print axioms (new/old comparison, finalL, finalBridge); fresh result pending next batch.
+- hbridge still hull-owned; Donor 07:54:11 FAIL, Value :75 unsolved. After hbridge green: instantiate _ofNormBridge -> remove S45-premised comparison; Dictionary finalDictionaryCombined drop S; rows/probe. hbridge power only, no norm equality; S45 strict-only. No fake.
