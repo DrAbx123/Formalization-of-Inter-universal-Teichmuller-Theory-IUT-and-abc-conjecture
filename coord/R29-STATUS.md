@@ -2715,3 +2715,5 @@
 - 07:10: audit confirms unit/kernel/torsion/ceil/indexpow/C3BaseQ fresh standard. Next create Haar/IndexDivision files; quotient/adicAbv. gate 20.442 written.
 
 - 07:20: MAJOR quotient_decomp/index_division GREEN 17:01/17:05; index=q^(A-k)*(p^r*((q-1)/T0)). Next connect actual index/QFE and instantiate a/c. Unramified a=0 condition4 remains. gate 20.443 written.
+
+- 07:30: A2 partial GREEN 17:06: xF/xF_geometry constructible; 8 remaining fields. mainline check donors. Haar/quotient/adicAbv pending. gate 20.444 written.

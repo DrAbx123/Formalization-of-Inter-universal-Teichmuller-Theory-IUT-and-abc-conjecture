@@ -3172,3 +3172,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1QuotientDecompActual DONE 17:01:31: quotient_decomp (0<p)(0<T0)(q=p^f)(T=p^m*T0)(T0|q-1)(m<=fA) -> q^A*(q-1)/T = p^(fA-m)*((q-1)/T0).
 - Mzk1IndexDivisionActual DONE 17:05:58: index_division wrapper. With ceil_decomp/exponent_decomp/index_pow_identity: index = q^(A-k)*(p^r*((q-1)/T0)), a=A-k, c=p^r*((q-1)/T0).
 - Remaining: connect actual logShellIntegerIndex to q^A(q-1)/T via QFE quotient card/definition; then instantiate a/c/feed correction/Paper312. Unramified a=0 condition4 separate. abc probe. No fake.
+
+
+### 20.444 A2 partial GREEN: xF/xF_geometry constructible, 8 fields remain (mainline, 2026-11-15 05:10)
+- Mzk1A2GeometricCorePartialActual DONE 17:06:06: xFOfStackPoint := realizedHyperbolicOrbicurve from sourceStackPointEtaleFiber; xFOfStackPoint_geometry; exists_xF_xF_geometry. First two SourceSignQuotientData fields constructible degenerately. a2FirstRemainingFields 8: ellipticInvolution/squared/unique; signAction+inversion; cF/quotient/witness; xFGroups/cFGroups/fGroupInclusion; xK/cK/extensions/type; V tuple components.
+- Mainline to check each remaining field donor/constructor; report first. qpilot Haar pending; stepxi quotient pending; stage4 adicAbv/IsScalarTower. No fake.
