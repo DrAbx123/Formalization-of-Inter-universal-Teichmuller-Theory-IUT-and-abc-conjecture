@@ -3944,3 +3944,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.610 integralUnitExponent choose opacity; test cardExponent (2026-11-15 32:00)
 - integralUnitExponent = Classical.choose exists_uniform..., no equality to quotient card; cannot move coprime. New file test: cardExponent := Nat.card ((Integers K)^x/principalUnits); prove pos, pow_mem via Fintype.ofFinite/pow_card_eq_one/QuotientGroup.eq_one_iff, cardExponent_coprime via quotient card/residue coprime. If green, consider core redefinition with Lead approval; no fake.
+
+
+### 20.611 quotient transport audit 9 decls accepted (2026-11-15 32:10)
+- PrincipalUnitsResidue source 07:10:22, olean 07:12:09 > src, DONE 23:11:54, no sorry/axiom. quotientEquivPrincipalUnits L124 probe Mzk1PrincipalUnitsQuotProbeActual DONE 23:15:38/olean 07:15:38 three axioms. 9 decls all fresh probe evidence; accepted. qpilot testing cardExponent. No fake.
