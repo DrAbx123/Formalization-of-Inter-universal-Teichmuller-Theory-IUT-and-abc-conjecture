@@ -1787,3 +1787,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - grep Mzk1P0LS3137LFinalActual: no sorry/axiom; failure is elaboration (qPilotLogVolumeReadingL_nonpos C3L stuck on C3L.q.q place/QCandidate), synthetic sorry/unsolved from failed decl, not source sorry.
 - StatementLayerConsumer no actual sorry/True; bundle projections conditional assembly, no inhabitant/probe.
 - abc to correct ledger wording; mainline to fix LS3137 explicit I/place/instances or derive qReading_nonpos from eq_neg_abs+abs_nonneg.
+
+
+### 20.206 GREEN LS3137LFinal; donor corrections (mainline, 2026-11-16 06:50)
+- Mzk1P0LS3137LFinalActual DONE 05:57:00 (97s, olean=True): fixed by copying full imports/opens from Mzk1S3137LReadoutActual (C3LogShellTensorLActual, OrigXiFPaperQPilotFromSourceLActual, S3137C3LogShellPacketNormalizedLogVolumeActual, ArithmeticQPilotLogVolume, SourcePlacePartitionReduction); qReading_final/qReading_nonpos_final official.
+- Donor corrections (must prevent overclaim): (1) all-x generalNormalizedNormFormula FALSE under definitions (x=0 gives RHS=absNorm^0=1 vs norm 0); restrict x≠0, matching existing GeneralNormalizedNormFormula (x)(hx). (2) Mathlib AbsoluteValue.add_le' is archimedean f(x+y)≤fx+fy, NOT max; old CanonicalAbsValueAddLeProof target shape wrong and unverified. (3) adicCompletion ambient norm is canonical valued-adic; absNorm^(-nu/d) is normalized spectral; d≠1 differ. Use L:=NormalizedCompletion place, C:=adicCompletion only for Valued.v/nu. (4) nu_add_ge_min needs x≠0,y≠0,x+y≠0. (5) relativeCompletionDegree d=e*f is rfl; Real.rpow_le_rpow_left₀ absent, use Real.rpow_le_rpow_of_exponent_le.
+- Donor only power relation for x≠0, not equality; S45 not implied.
+- Composite Prop11 now packetDet_tensor_pos unknown; lattice retouch pending.
