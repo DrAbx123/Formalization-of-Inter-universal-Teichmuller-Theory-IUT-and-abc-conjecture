@@ -3009,3 +3009,5 @@
 - 31:40: integersToA explicit valuationSubring K; qpilot. gate 20.590 written.
 
 - 31:50: integersToA K inference fix; qpilot. gate 20.591 written.
+
+- 32:00: MAJOR PrincipalUnitsResidue GREEN 06:38:51. Next subgroup/quotient/residue/unitLog. abc audit. gate 20.592 written.

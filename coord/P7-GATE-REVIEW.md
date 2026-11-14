@@ -3866,3 +3866,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.591 integersToA K inference; use (K:=K) (2026-11-15 28:50)
 - Units.mapEquiv integersToA sees Integers ?m not K. Fix `Units.mapEquiv (integersToA (K := K))` and explicit K on valuationSubring/unitGroupMulEquiv. qpilot. No fake.
+
+
+### 20.592 MAJOR PrincipalUnitsResidue GREEN (2026-11-15 29:00)
+- Mzk1IVThm110PrincipalUnitsResidueActual DONE 22:38:52/olean 06:38:51: norm_lt_one_iff_valuation_lt_one; integersToA : (Integers K) ≃+* valuationSubring; integersUnitsEquivUnitGroup : (Integers K)^x ≃* valuationSubring.unitGroup (Units.mapEquiv + unitGroupMulEquiv.symm). No sorry/axiom.
+- Next subgroup equality principalUnits=A.principalUnitGroup.comap A.unitGroup.subtype via units equiv + mem_unitGroup_iff + norm bridge; quotient/residue card/coprime; unitLog norm/tensor. abc audit. No fake.
