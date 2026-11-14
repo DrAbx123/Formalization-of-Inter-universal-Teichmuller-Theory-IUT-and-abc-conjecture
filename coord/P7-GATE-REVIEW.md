@@ -1041,3 +1041,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Varpi :54 stray `exact` in source; HaarIndexPow Measure K parse: open MeasureTheory / fully qualify.
 - LocalMon `:25` unsolved `sorry () = q` in apply theorem; IntegralUnitMap references undefined `integersUnitsToAlgClosure_injective`; define it or remove theorem; must have no sorryAx.
 - All stale logs may predate retouch; re-run after fixes.
+
+
+### 20.87 GREEN: QHat axiom probe three axioms (2026-11-15 07:00)
+- `Mzk1P2QHatAxiomProbeActual` DONE 01:18:09 (102s): `qHatNormCoherence_proved` and `p2QHatNormInstanceAgreement_proved` both depend on `[propext, Classical.choice, Quot.sound]`, no sorryAx.
+- QHatNormCoherence is now officially unconditionally closed and audited; bridge drops QHat.
