@@ -1893,3 +1893,5 @@
 - 10:30：发现 `Mzk1WFLatticeActionActual.WFUnitQuotientIdentification` 用 `Fin 0` 作 W 载体（toy placeholder），已让 stepxi 参数化 `W`/`d`、去掉 `Fin 0`/`PUnit`/`True`；结构仍无 inhabitant 标 GAP。gate §20.56 已写。
 
 - 10:35：stage4 A1.6 最终审计完成：`Mzk1A1AxiomAuditActual` 对 16 个定理 `#print axioms` 全部只剩 `[propext, Classical.choice, Quot.sound]`，无 sorryAx；`coord/A1-TENSOR-PROD-PROBE.md` 三节清单（unconditional/conditional/not constructed）已对齐；A1.6 固定 conditional（principal-lattice + ramification），不再投入。gate §20.57 已写。
+
+- 10:40：stepxi 已移除 toy：`WFUnitQuotientIdentification` 参数化 `(W)(d)`，`sourceAddEquiv : sourceUnitQuotient ≃+ W`、`wEquiv : W ≃ₜ+ (Fin d→ℤ_[p])`，无 Fin 0/PUnit/True，仍无 inhabitant；UnitQuotient/LogLattice 删包装定理、retouch，等新编确认无 sorryAx。gate §20.58 已写。

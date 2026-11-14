@@ -825,3 +825,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **三节清单**（doc）：unconditional / conditional inputs / not constructed；A1.6 固定 **conditional on principal-lattice recognition + ramification identity**。
 - **QhatSaturationReadout no-inhabitant**：`qVFamily_mem_saturatedLattice` 带显式 aval/bval/m/e/hram/hLambda，不构造 A1ValuationData inhabitant，无 Nonempty/choice；与 A1ValuationData 同 conditional。
 - 无 fake completion、无 hscale/hid；本轮不再投入 valuation 构造。
+
+
+### 20.58 toy 载体已移除：WFUnitQuotientIdentification 参数化（stepxi，2026-11-15 02:25）
+- `Mzk1WFLatticeActionActual.WFUnitQuotientIdentification` 已改为参数化：`(W : Type uW) [AddCommGroup W] [TopologicalSpace W] [IsTopologicalAddGroup W] (d : Nat)`；字段 `sourceAddEquiv : sourceUnitQuotient ≃+ W`、`wEquiv : W ≃ₜ+ (Fin d → ℤ_[p])`；不再 `Fin 0`/`PUnit`/`True` 载体；仍无 inhabitant（GAP）。
+- `UnitQuotient`/`LogLattice` 仍有旧失败声明 sorryAx；已删无谓包装定理（UnitQuotient 只留 def；LogLattice 只留结构/构造）并 retouch，等新编确认无 sorryAx。
+- continuity lemma 保持 GREEN 三公理；唯一源缺口仍实际 `TimesMuQuotient ≅ (Integers F)ˣ/tors` 识别 + β_a。
