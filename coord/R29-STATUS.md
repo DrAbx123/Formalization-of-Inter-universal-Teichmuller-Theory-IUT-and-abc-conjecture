@@ -2103,3 +2103,5 @@
 - 02:40 MILESTONE: P14iiActual GREEN 03:43:09 (p14ii_logVolume_actual; source 11:40:58, olean 11:43:08, no sorry/True). IV 1.10 actual chain complete at P14ii level. Need probe. gate 20.151 written.
 
 - 02:50: lattice IV audit: core P14ii chain all green; P14ii probe queued. Two RED iiiBoxActual (missing Iut.Concrete.LocalConstruct.Prop14Lattice olean) and iiiBoxConsumerActual (SourceNativeInitialThetaData local/universe); assigned qpilot. gate 20.152 written.
+
+- 03:00: P14ii adjudicated GREEN 03:43:09; abc's FAIL 03:36:44 stale (predates DONE); source 11:40:58, olean 11:43:08, no sorry/True. abc to re-audit. Final fresh/probe valid. gate 20.153 written.
