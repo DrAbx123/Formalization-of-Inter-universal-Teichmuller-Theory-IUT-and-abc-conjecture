@@ -2695,3 +2695,5 @@
 - 05:30: C3BaseQ inhabitants: (d1) blocked on OrigXiFPaperNativeRoot I (no inhabitant); (d2) GlobalSumCollapse overstrong -> direct P.signed=-M target; (c) source identity missing. mainline. gate 20.432 written.
 
 - 05:40: UnitInvariance image=O GREEN 00:36:32; next u•O=O/char/measure. KernelBridge/TorsionSplit/C3BaseQ fresh. abc probe. gate 20.433 written.
+
+- 05:50: ceil_decomp/exponent_decomp GREEN 16:44:24; next index identity/a=A-k/c=p^r*((q-1)/T0). Unramified a=0 condition4 remains. gate 20.434 written.

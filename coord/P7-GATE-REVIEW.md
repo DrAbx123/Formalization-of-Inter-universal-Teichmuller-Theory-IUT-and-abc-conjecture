@@ -3120,3 +3120,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110UnitInvarianceActual DONE 16:36:32/olean 00:36:32: algebraMap_unit_mem/mul_mem/inv_mul_mem/integralClosure + image_canonicalUnitReference_eq; no source sorry.
 - Next qpilot: u•O=O via Units.smul_def; distribHaarChar_eq_of_measure_smul_eq_mul with s=O -> char=1; distribHaarChar_mul -> μ(u•S)=μS; λ=p^k*u/principalDim.
 - KernelBridge fresh 00:36:38; TorsionSplit 00:31:40; C3BaseQ 00:32:34. abc probe.
+
+
+### 20.434 MAJOR ceil_decomp/exponent_decomp GREEN (hull, 2026-11-15 03:30)
+- Mzk1CeilDecompActual DONE 16:44:24: ceil_decomp {f m A} (0<f)(m<=fA) -> exists k r, m+r=f*k, r<f, k<=A (piecewise m/f,m%f); exponent_decomp (k<=A)(m+r=f*k)(m<=fA): f*A-m=f*(A-k)+r. No fake.
+- Next hull: index identity p^(fA-m)*((q-1)/T0)=q^(A-k)*(p^r*((q-1)/T0)) via q=p^f/fA-m=f(A-k)+r/pow_sub/pow_add/mul_div; T0|q-1. Then a=A-k,c=p^r*((q-1)/T0), feed correction. Unramified A=0 => a=0, condition4 still fails; c=1 no help. No fake.
