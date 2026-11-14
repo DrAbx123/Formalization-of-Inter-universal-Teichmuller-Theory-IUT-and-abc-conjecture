@@ -2137,3 +2137,5 @@
 - 06:20: GREEN Dictionary 04:15:05 (PaperS3137ObjectLock substantive + ReadingDictionary (a)(b)(c) constructed; no True). Need probe and final combination. BaseScalar still no olean; donor blocked; mainline to fix or mark blocked. gate 20.171 written.
 
 - 06:30: dictionary finalDictionaryCombined added (S45/Relative/ObjectLock -> comparison /\ Relative /\ Nonempty dictionary, all consumed, no True); probe queued. BaseScalar marked BLOCKED (4 errors); donor/compat not claimed; S45 not donor-implied. gate 20.172 written.
+
+- 06:40: dictionary source 12:16:32 > olean 12:15:04; finalDictionaryCombined not compiled; probe no log. mainline to force recompile/probe. BaseScalar still blocked. gate 20.173 written.

@@ -1585,3 +1585,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New theorem finalDictionaryCombined (S : S45SourceFields T) (rel : RelativeFactorTowerData T) (lock : PaperS3137ObjectLock I place T) : (paperNormalizedThetaSum <= paperNormalizedQPilotSum) /\ RelativeFactorTowerData T /\ Nonempty (PaperS3137ReadingDictionary hM hB I place T lock). All three consumed, no unused binders, no True.
 - New probe Mzk1P0FinalS3137DictionaryAxiomProbeActual queued for paperS3137ReadingDictionary_of and finalDictionaryCombined.
 - BaseScalarValuationRelation explicitly BLOCKED (four real errors :125/:140/:146/:151/:167); donor and compat not claimed; S45 not donor-implied (donor only power relation). Need owner fix or explicit block.
+
+
+### 20.173 Dictionary stale after finalDictionaryCombined (2026-11-16 00:40)
+- Dictionary source 12:16:32 > olean 12:15:04; finalDictionaryCombined (line 126) not yet compiled. Probe no log. Force recompile/probe; report exact signature/axioms.
+- BaseScalar still no olean; donor blocked. Dictionary (a)(b)(c) green from prior olean; final combination pending.
