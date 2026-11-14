@@ -3952,3 +3952,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.612 CardExponent import/Fintype residue fixes (2026-11-15 32:20)
 - Mzk1IVThm110CardExponentActual needs import PrincipalUnitsResidueActual; add [Fintype (ResidueField A)] for residue theorem; fix hcard sorry. qpilot. No fake.
+
+
+### 20.613 CardExponent open namespace (2026-11-15 32:30)
+- Import present but declarations namespaced; add open LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual. qpilot. No fake.

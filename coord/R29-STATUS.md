@@ -3051,3 +3051,5 @@
 - 35:10: PrincipalUnitsResidue 9 decls audit accepted (ole 07:12:09). qpilot cardExponent test. gate 20.611 written.
 
 - 35:20: CardExponent import/Fintype fixes; qpilot. gate 20.612 written.
+
+- 35:30: CardExponent open namespace; qpilot. gate 20.613 written.
