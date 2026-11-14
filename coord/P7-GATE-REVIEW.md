@@ -993,3 +993,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.80 Ind1 actual integral-unit map (stepxi, 2026-11-15 05:35)
 - New `Mzk1Ind1IntegralUnitMapActual` (queue): `integersUnitsToAlgClosure : (Integers K)^x ->* (AlgebraicClosure K)^x` (Units.map algebraMap); injective via Units.map_injective + algebraMap injective; `actualIntegralUnitToAlgClosureMap` structure (map + injective). Natural one-way map, not iso; no fake ≃*.
 - LocalMon file pending; WF probe three axioms confirmed. Only source gap remains actual layer Ind1/Ind2 action -> beta_a.
+
+
+### 20.81 L normalized readout audit complete (hull, 2026-11-15 05:45)
+- raw thetaReadActual (Measure.addHaar log) noncanonical; canonical tensor readout thetaNormReadL = rawLog - log actualUnitMassL; canonical product readout thetaNormReadProduct = log hullMass - log unitMass = sum d_b log r_b = s1915ClosedForm-1 = sum -(d_b c_norm)/(2l) log p; no unitMass=1.
+- qReadActual = log norm q canonical signed log; qReadActual<0; no additive constant.
+- Unique structural gap: LGlobalLocalObjectLock (single-place/local tensor vs global Bad sum; arithmetic data identification + Bad<->tensorIndex). No inhabitant.
+- LQThetaSourceArrow empty for theta>=0 (obstruction GREEN 01:08:02); use LPaperInstance_of_theta_nonneg, not arrow.
+- Mzk1P0LNormReadoutActual/ProductActual currently no olean; in WL; canonical theorems not yet official; do not claim GREEN.
+- Axiom probe 7 theorems: three axioms, no sorryAx.
