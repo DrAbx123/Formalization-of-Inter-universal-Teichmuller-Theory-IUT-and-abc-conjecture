@@ -2383,3 +2383,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1LocalRingUnitsCardActual queued: natCard_units_eq_card_sub_maximalIdeal R [CommRing][IsLocalRing][Finite] via units<->IsUnit, maximalIdeal<->nonunits, Fintype.card_subtype_compl; previous Nat.sub_sub_self direction fixed .symm.
 - Plan: q=cardQuot(m) via Submodule.cardQuot_apply; card(m/m^N)=q^(N-1) via Submodule.card_quotient_mul_card_quotient (LinearAlgebra/Isomorphisms:196) + cardQuot_maximalIdeal_pow; R/m^N local ring nonunits=m/m^N; units=(q-1)q^(N-1); N=eK*s.
 - Mathlib names verified: Submodule.cardQuot_apply, Submodule.card_quotient_mul_card_quotient, Nat.sub_sub_self. #C A odd-p pending; p=2 (4)-norm criterion open.
+
+
+### 20.302 Audit corrections: Ind1 ambient error; target magnitude stale deps; #C files red (abc/doc, 2026-11-17 02:10)
+- IND1-DPRIME-REALIZATION-ROUTES doc §7 corrects current Ind1 fixed route: taking infinitely divisible subgroup in whole TimesMuQuotient ambient gives whole ambient; correct: A_H := TimesMuKummer.invariantImage, D_r(A_H)=O_L^x/mu(L) inside A_H, then map subtype; integralLayer<=A_H not old reverse containment. stepxi instructed.
+- abc audit: Mzk1TruncatedUnitsCardActual current RED 10:39:06 unknown integersIsDVR/integersIsDedekindDomain/dvr_maximalIdeal_ne_bot; 18:27 green old. Mzk1CongruenceUnitsEquivActual RED missing IsLocalHom. Hull/shehdd instructed fix imports/instance.
+- Mzk1ActualHullTargetMagnitudeActual green but deps PaperLevelXiFTargetProof/Bridge olean older than source; mainline to recompile before unconditional citation.
+- ABC F4/F5 not attack: Frontier iff ABCConjecture; no weak route; keep explicit donor clauses.
