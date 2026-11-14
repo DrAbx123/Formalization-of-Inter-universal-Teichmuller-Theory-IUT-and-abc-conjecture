@@ -2088,3 +2088,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.256 GREEN FinalNoS45Assembly (2026-11-16 16:00)
 - Mzk1P0FinalNoS45AssemblyActual DONE 08:38:07 (100s): NormPowerBridge := forall b, qVFamNormalizedNorm = qVFamDefaultNorm^(1/relativeCompletionDegree); finalPaperNormalizedComparison_noS45 (hbridge) : paper comparison; finalDictionaryCombined_noS45 (hbridge)(rel)(lock) : comparison /\ RelativeFactorTowerData /\ Nonempty Dictionary. Conditional on NormPowerBridge, power not equality; S45 not used for comparison.
 - hbridge Donor/Value still no olean; last piece. Probe/audit queued.
+
+
+### 20.257 Assembly probe GREEN; hbridge exact fixes (mainline, 2026-11-16 16:10)
+- Mzk1P0FinalNoS45AssemblyAxiomProbeActual fresh GREEN: finalPaperNormalizedComparison_noS45 and finalDictionaryCombined_noS45 both three axioms. Assembly DONE 08:38:07; NormPowerBridge single power input.
+- hbridge exact fixes to hull: Donor :78 WithZero.unzero named (x:=val) forces alpha R; use positional unzero val hval; let m:Z := toAdd(unzero val hval); same in hdef_exp/hlog/hnu. Value :70-71 proof-term mismatch; calc ||q|| = ↑(Ideal.absNorm)^m := h; _ = absNorm^(-(nu)) := by rw [hm]; simp only [absNorm], with hm:(m:R)=-(nu).
+- After hbridge green: Assembly/Final/Dictionary instantiate fun b => hbridge T b; replace S versions; S45 strict-only. No fake; power not equality.
