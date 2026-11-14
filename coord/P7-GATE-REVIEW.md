@@ -3790,3 +3790,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.573 IntegersEquiv placeholder green; SG3b product Haar instance green (2026-11-15 25:50)
 - IntegersEquivZpActual deleted all failed declarations; placeholder direct EXIT=0 no sorryAx. WQuotient p=5 d=1 equiv gap stays. Exact missing dependent Eq.ndrec cast.
 - SG3b: IsAddHaarMeasure (Measure.pi (fun _ : ι => Measure.addHaar)) GREEN via inferInstance (pi.isHaarMeasure to_additive) with Qp MeasurableSpace/BorelSpace/ProperSpace imports. Scalar relation route: addHaarScalarFactor + isAddLeftInvariant_eq_smul_of_innerRegular; needs transportedHaar IsAddHaarMeasure, InnerRegular/FiniteMeasureOnCompacts, LocallyCompactSpace heartbeats. Region tprod-image obstruction explicit. mainline. No fake.
+
+
+### 20.574 Wake qpilot/hull/stage4/abc (2026-11-15 26:00)
+- qpilot PrincipalUnits subgroup bridge; hull hq/hθ + region image; stage4 withValSigmaHom factorization; abc audit. Watchdog active 06:10:15 but no new DONE yet. No fake.
