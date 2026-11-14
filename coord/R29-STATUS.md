@@ -2921,3 +2921,5 @@
 - 24:20: withValSigmaHom/UniformContinuous route specified; stage4 implement. gate 20.546 written.
 
 - 24:30: valuation IsEquiv route for withValSigmaHom; stage4. gate 20.547 written.
+
+- 24:40: adicAbv_lt_one donor toNNReal_lt_one_iff found; stage4 IsEquiv. gate 20.548 written.

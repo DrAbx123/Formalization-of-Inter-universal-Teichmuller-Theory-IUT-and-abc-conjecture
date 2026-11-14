@@ -3679,3 +3679,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.547 Valuation IsEquiv route for withValSigmaHom (stage4, 2026-11-15 22:30)
 - UniformContinuous ball comparison needs equality/IsEquiv of Valued.v.restrict, not only NNReal norms. First blocker: no IsEquiv from adicAbv equality. Route: `Valuation.isEquiv_iff_val_lt_one` + prime-ideal correspondence x∈v ↔ σx∈moved; then IsEquiv.restrict/ball comparison; then UniformContinuous/Completion.mapRingHom. stage4. No fake.
+
+
+### 20.548 adicAbv_lt_one donor found (stage4, 2026-11-15 22:40)
+- WithZeroMulInt.toNNReal_lt_one_iff (Data/Int/WithZero.lean:95) with e=absNorm and one_lt_absNorm_nnreal (FinitePlace:130); connect adicAbv K v x to toNNReal (absNorm_ne_zero v) ((v.valuation K) x) via FinitePlace:166/rfl; get adicAbv<1 iff valuation<1; then Valuation.IsEquiv + IsEquiv.restrict + UniformContinuous. No fake.
