@@ -2411,3 +2411,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - rootBaseQpDegree = [F_v:Qp]; localCompletionDegree = [K_w:(Fmod)_v]; kPlaceQpDegree=[K_w:Qp]. Current TrueTowerDataSource m*dL=n*dF and relativeFactorTowerData_of_tower hypothesis kPlaceQpDegree=n*rootBaseQpDegree are WRONG: dK=n*dBase, dF=e*dBase where dBase=[(Fmod)_v:Qp], e=[F_v:(Fmod)_v]. Also dL=s1915LocalDegree=m*dF=m*e*dBase.
 - F-place and K-place are separately chosen, only proven above same Fmod-place; do NOT assume F_v subset K_w or m*dL=n*dF. Legacy lock d_L=B*n requires extra relation, not true tower.
 - task-129 reopened/edited for stage4 to rebuild TrueTowerDataSource/RelativeFactorTowerData with dBase,e,n,m; hull/mainline warned not to use wrong identity. Mzk1ObjectLockDataActual green remains conditional on wrong data and is not evidence for actual tower until corrected.
+
+
+### 20.306 USER CORRECTION: signed log-volume notation; unitMass relative-region route (2026-11-17 02:50)
+- Cor 3.12 uses -|log Θ| as notation for signed log-volume; proof handles nonnegative case separately. Cannot interpret as globally nonpositive -abs, nor add negative sign between two signed readings. theta_sign requiring thetaNormReadL=-thetaNormReadProduct remains an extra convention, not derivable from raw signed volumes. mainline/stage4/abc warned.
+- unitMass feasible direction: compare region mass relative to reference lattice using NormalizedHaarTransport.relative_log_mass_image_eq (LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean:39); cancels Haar scalar factor. For different-dimensional root field vs completion, compare extended ideals and dimension-normalized volume, not target Haar on low-dim image. No unitMass=1.
