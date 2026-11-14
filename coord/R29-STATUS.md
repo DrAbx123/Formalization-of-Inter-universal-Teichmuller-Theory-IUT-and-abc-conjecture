@@ -3019,3 +3019,5 @@
 - 32:30: isEquiv iff named x; qpilot. gate 20.595 written.
 
 - 32:40: IsEquiv Iff h binding/hx; qpilot. gate 20.596 written.
+
+- 32:50: MAJOR PrincipalUnits subgroup direct GREEN; next quotient/residue/coprime/unitLog. gate 20.597 written.
