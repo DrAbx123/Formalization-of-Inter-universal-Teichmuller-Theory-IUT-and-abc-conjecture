@@ -3624,3 +3624,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.535 AdicAbv GREEN; mainline to abc/IV final assembly audit (2026-11-15 20:30)
 - AdicAbv theorem green, probe pending. stage4 apply e=σ to norm equality/Isometry.
 - mainline inspect existing abc/IVThm110 final assembly consumers; enumerate exact remaining global inputs from Paper312 bounds/Cor3.12/IVThm110 display to abc frontier; report first non-tautological missing. No fake.
+
+
+### 20.536 MAJOR FloorUnitRegion GREEN; abc first missing identified (2026-11-15 20:40)
+- Mzk1IVThm110FloorUnitRegionActual DONE 21:03:37/olean 05:03:37: floorQSigned_eq_native_of_unitRegion (hscale1: IQHullUnitScale=1, hM: unitRegionLog=-M, hMone:1<=M -> floor qSigned=S3013QSigned); scaleNeOneGap explicit. No sorry.
+- ActualData duplicate perPlace_bounds declaration at :228; hull delete duplicate.
+- abc/IV analysis: existing final consumers green conditional; first non-tautological missing = regionVolume_le_normalizedWeight/UndilatedRegionBound bridge Cor3.12/IV theta-pilot -> comparisonRegion logVolume. mainline inspect smallest bridge. No fake.
