@@ -1225,3 +1225,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P1PaperSumsBridgeAxiomProbeActual DONE 01:52:13 (104s): paper_sum_weight_eq_inv and paper_coefficient_degree_factor both [propext, Classical.choice, Quot.sound]; no sorryAx.
 - Need axiom probe for PrincipalScalar; principal readout vs PacketHullData scalar alignment next.
 - Bridge/final chain still waiting LNormReadoutActual/WeightA1; LNormReadout fixes le_trans/sub_le_self.
+
+
+### 20.115 Round-4 tail fixes: LNormReadout tensor norm ball, WeightA1 no-goal, LNormBoundWeak hOtop, #C structure params (2026-11-15 12:20)
+- LNormReadoutActual :42: C3LogShellTensorBlockL is not a Pi type; define actualUnitBallL as {x | norm x <= 1} (tensor block norm) or tensorIntegralRegion (fun i => {y | norm y <=1}), not x i.
+- WeightA1 :103: field_simp [hbne] already closes; delete trailing ring/no-op.
+- LNormBoundWeak hOtop type mismatch: pass explicit named args to totalDelta_nonneg and ensure hOtop type exactly rootExtensionHaar T b (rootExtensionUnitBall T b) != top; or show-convert.
+- #C interface :32 IsUltrametricDist metavariable: make K/p explicit structure parameters and theorem arguments; don't rely on section inference.
