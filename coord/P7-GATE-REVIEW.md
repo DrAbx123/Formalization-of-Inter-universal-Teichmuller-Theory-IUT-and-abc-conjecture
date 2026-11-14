@@ -3022,3 +3022,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.415 Sigma isometry route for completion extension (stage4, 2026-11-17 21:10)
 - Need continuous/isometry sigma between WithVal nativeBadToFPlace and moved galoisPlaceMk sigma nativeF. Observation: field automorphism fixing Fmod should satisfy |sigma x|_{sigma(v)}=|x|_v by definition of moved place/global normalized absolute value; then sigma is Isometry and Completion.Isometry.mapRingHom applies. Try prove FinitePlace/norm equality via maximalIdeal map/FinitePlaceAtPrime definitions (simp/rfl); if not definitional use residue/adic norm. Then compose with alignedCompletionMapMoved. Degree tower IsScalarTower still missing. No fake.
+
+
+### 20.416 Correction decomposition: split p-part of torsion (hull, 2026-11-15 00:20)
+- Mzk1CorrectionHypothesisActual DONE 16:08:48: correctionHypothesis_of_div (hdiv:#T|q-1) -> LogShellResiduePowerCardCorrectionHypothesis (eK*s-1) ((q-1)/#T). hdiv too strong/false (Qp(ζp): #T=p(p-1), q-1=p-1).
+- Correct split: #T=T0*p^m, p∤T0. T0|q-1 (Teichmuller non-p part); p^m|q^A (A=eK*s-1, q^A=p^{fA}); index=q^(A-m)*((q-1)/T0), a_v=A-m, c=(q-1)/T0. Qp(ζp): A=p-2,m=1,T0=p-1,c=1,index=q^(p-3).
+- Exact missing: (1) m=v_p(#T) bound; (2) T0=#T/p^m | q-1. Can prove generally from index integer + coprimality (T0 coprime q^A): m<=fA and T0|q-1, no local ramification. Hull to implement; assess unramified A=0/a=0 condition4. No fake.

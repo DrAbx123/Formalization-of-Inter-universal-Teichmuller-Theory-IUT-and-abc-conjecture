@@ -2659,3 +2659,5 @@
 - 02:30: sigma-extension donors Completion.mapRingHom/Isometry.mapRingHom for native->moved F completion; stage4 implement. degree tower IsScalarTower still. gate 20.414 written.
 
 - 02:40: sigma isometry route: |sigma x|_{sigma v}=|x|_v by moved-place definition; prove norm equality -> Isometry -> Completion.Isometry.mapRingHom. stage4. gate 20.415 written.
+
+- 02:50: correction split #T=T0*p^m, index=q^(A-m)*((q-1)/T0), a=A-m; hdiv too strong. Prove m<=fA/T0|q-1 via coprime index. Hull. gate 20.416 written.
