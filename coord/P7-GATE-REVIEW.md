@@ -3292,3 +3292,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.465 A2 partial probe/consumer green; next actual lambda/floor (2026-11-15 09:00)
 - A2PartialFields 02:25:17 + AxiomProbe 18:29:52; A2SignPrincipalProbe 18:25:19; CorrectionConsumer 02:25:58 green. No new oleans beyond.
 - qpilot actual lambda/g/floor via Qp decomposition/action bridge/norm; stage4 adicAbv/IsScalarTower; stepxi Z_p^d/different bridge; abc audit. No fake.
+
+
+### 20.466 A2 blocked fields: unique no ext, quotient/groups/scalar missing (mainline, 2026-11-15 09:10)
+- unique_elliptic_involution: Hom X X = StrongTrans fiber fiber; no StrongTrans.ext; direct constructor/ext first error No applicable extensionality theorem. Manual decomposition app (Cat.Hom.ext/Functor.ext/Subsingleton SourceStackPointObj) + naturality iso (Iso.ext) possible but heavy; not generally subsingleton. Keep explicit gap.
+- quotientWitness 12-field universal property no donor; groups need actual OrbicurveEtaleFundamentalGroup (coverCategory/baseScheme/fiber functor) no donor; scalar stackExtension potential result=sourceStackPointEtaleFiber K but fiberEquivalence point-stack K ≌ restrict(point-stack F) not defeq, no StrongTrans equivalence donor.
+- Mainline next scalar fiberEquivalence or report exact missing; quotient/groups donors. No fake.
