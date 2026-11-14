@@ -1202,3 +1202,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.111 GREEN: PaperSumsToS3137Bridge (2026-11-15 11:25)
 - Mzk1P1PaperSumsToS3137BridgeActual DONE 01:43:47 (107s): paper_sum_weight_eq_inv; paper_coefficient_degree_factor; S45SourceFields; RelativeFactorTowerData (divisibility-only); PaperToS3137A1Data structure; PaperS3137ReadingDictionary only rows/documented EXPLICIT GAP (no True); rows 7.
 - Final S3137Conditional now unblocked; retouch/recompile and report exact signature; bridge axiom probe requested; no True consumed.
+
+
+### 20.112 Round-3 triage: LNormReadout linarith, WeightA1 orientation, principal scalar, #C interface (2026-11-15 11:40)
+- LNormReadoutActual :70 linarith: convert h explicitly: have h' : qReadActual <= thetaReadActual - log actualUnitMassL := by simpa [LNormComparisonTarget, thetaNormReadL] using h; then linarith [h', hu].
+- WeightA1 :93: target has inverse localCompletionDegree; hdF : finrank rootBase = localCompletionDegree; rewrite with hdF.symm or field_simp [hdF] then field_simp/ring.
+- PrincipalScalar :37: after hfac use exact ENNReal.toReal_ofReal (by positivity) (or simp only); then rw [hto, Real.log_pow]; field_simp [hd'].
+- CongruenceCardInterface :36: read tail, likely ring/pow arithmetic; push_cast/ring, no new hypotheses.
+- final depends on LNormComparisonConditional olean; compile LNormReadoutActual first.
