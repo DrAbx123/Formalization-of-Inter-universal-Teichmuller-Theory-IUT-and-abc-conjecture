@@ -1348,3 +1348,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New Mzk1Ind1IntegrationActionActual (queue): structure IntegralUnitStableAlgebraicAction K { algAction : (AlgClosure K)^x ≃*; mapsIntegers : each integral unit maps to integral units; mapsIntegers_symm : inverse also preserves }; inducedIntegralUnitEquiv using choose + integersUnitsToAlgClosure_injective; inducedSourceUnitEquiv : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer K via QuotientGroup.congr.
 - This conditionally descends actual alg-closure Ind1 action to integral-unit quotient; stability of integral units is exact source gap (no inhabitant); no fake.
 - VolumeRatioHaar green; GroupCountBridge source fixed named K/hp 0<p, waiting recompile; ActualHBridge/P14ii after.
+
+
+### 20.134 A1Data not verified; final own errors (abc, 2026-11-15 15:55)
+- A1Data latest DONE 02:21:11 but source mtime 10:21:26 > olean 10:21:10; source unverified. Current source grep no sorry/True; old log sorry warning not decisive but A1Data must be recompiled after edits stop.
+- A1Data probe DONE 02:21:08 targets old olean; must retouch after A1Data recompile.
+- Final FAIL 02:21:19 own errors: paperNormalizedQPilotSum unknown (missing import/open BadPlacePaperNormalizedComparisonActual); missing [forall b MeasurableSpace (qVFamTensorBlock T b)]/Borel instance variables (synthInstanceFailed). Fix required before final.
+- WeightA1 probe 02:12:40 and PrincipalAlignment probe 02:12:39 remain valid three axioms.
