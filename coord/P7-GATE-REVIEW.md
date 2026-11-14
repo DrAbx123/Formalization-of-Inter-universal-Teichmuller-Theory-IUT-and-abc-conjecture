@@ -2193,3 +2193,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IUTIVStepXINamedInputsActualAdapted DONE 09:22:36.
 - Assembly probe fresh 09:25:48; MilestoneFresh 09:25:48 7 items three axioms.
 - Remaining: Final rows stale conditional label; final acceptance/audit. No fake.
+
+
+### 20.274 Dictionary probe fresh; ordering/rows caveat (abc, 2026-11-16 18:50)
+- Dictionary GREEN 09:25:51 src 17:24:27 olean 17:25:50; finalDictionaryCombined_noS45(rel)(lock) comparison via donor uncond + rel + Nonempty dictionary; rel/lock explicit. New probe Mzk1DictionaryMilestoneProbeActual DONE 09:32:49 3 items three axioms.
+- StepXIAdapted GREEN 09:22:36 statement/interface, no substantive math.
+- Final DONE 09:22:47 olean 17:22:46 > src; comparison unconditional; probe 09:25:48.
+- Assembly DONE 09:22:46 olean 17:22:46 EARLIER than Dictionary 17:25:50 -> ordering stale; must rebuild Assembly + consumers after Dictionary.
+- Rows stale: Final line112 conditional label; Dictionary rows missing noS45. Fix then clean final acceptance. rel/lock/L explicit, unitMass=1 not claimed, strict S45 unproved; full S3137 not unconditional closure.

@@ -2369,3 +2369,5 @@
 - 01:30: MILESTONE acceptance evidence: Final unconditional comparison DONE 09:22:47; Assembly noS45_uncond 09:22:46; fresh probe 7 items three axioms 09:25:48. Final rows stale conditional label -> mainline fix. Dictionary uncond still rel/lock; not total closure. gate 20.272 written.
 
 - 01:40: Dictionary unconditional drop-S GREEN 09:25:51 (rel/lock explicit); StepXI green 09:22:36; Assembly probe fresh. Remaining Final rows + acceptance. gate 20.273 written.
+
+- 01:50: Dictionary probe fresh 09:32:49; StepXI green. Ordering: Assembly 17:22:46 predates Dictionary 17:25:50; rebuild Assembly + rows fix. Clean final acceptance after. gate 20.274 written.
