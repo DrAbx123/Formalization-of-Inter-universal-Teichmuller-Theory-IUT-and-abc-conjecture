@@ -2413,3 +2413,5 @@
 - 05:40: stepxi infinite-divisible subgroup API queued (InfinitelyDivisibleFor, infinitelyDivisibleSubgroup); missing compatibility with fixed units/torsion/ActualSourceUnitLayer. Next instantiate candidateIntegralLayer and prove containsFixedUnits. gate 20.291 written.
 
 - 05:50: integrated P7-READING-FIRST-ATTACK doc: reading one-way transport (no G2/G3), Thm110 l>=7 remaining actual hCor312, #C primary O/(p^s) + direct filtration, Ind1 fixed-points-first, object lock tower/raw calibration. mainline/hull/shehdd/stepxi/stage4 updated. gate 20.292 written.
+
+- 06:00: shehdd #C A primary O/(p^s), def not theorem, retouched; first error fixed. Told hull B N independent then N=e_K*s; corrected (p^s)^e secondary only. gate 20.293 written.

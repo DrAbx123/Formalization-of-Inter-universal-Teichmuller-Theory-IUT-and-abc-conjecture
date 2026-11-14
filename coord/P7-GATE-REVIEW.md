@@ -2326,3 +2326,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - #C: A must be O^x/(1+p^sO) ≃* (O/(p^s))^x; B count N=e_K*s; direct filtration U_n/U_{n+1} ≅ k^+ gives [U:U_N]=(q-1)q^(N-1), bypasses quotient API. Hull/shehdd aligned.
 - Ind1: fixed points first, then mod torsion, D_r(A_F)=W_F for (r,p)=1; do not mod torsion before fixed points. stepxi aligned.
 - Object lock: true tower m*d_L=n*d_F, raw calibration log mu(H)=d V_R(H)+log mu(R), unitMass=1 not assumed, signed vs magnitude distinction. stage4 aligned.
+
+
+### 20.293 #C A/B coordination: A primary O/(p^s), B N independent (shehdd/hull, 2026-11-17 00:10)
+- shehdd task-127 redone per §6.1: primary O^x/(1+p^sO) ≃* (O/(p^s))^x, kernel logShellCongruenceUnits; secondary Pow e only. First true error fixed: ≃* Type not Prop -> noncomputable def. Retouched; next errors expected quotientMulEquivOfEq/quotientKerEquivOfSurjective argument directions.
+- Coordination to hull: A primary O/(p^s); B count N independent: #(O/m^N)^x=(q-1)q^(N-1), then N=e_K*s. Do not use corrected (p^s)^e B for primary; secondary only. Direct filtration still substitute N=e_K*s.
