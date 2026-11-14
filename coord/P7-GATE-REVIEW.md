@@ -3018,3 +3018,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.414 Sigma-extension donor: Completion.mapRingHom (stage4, 2026-11-17 21:00)
 - Mzk1GaloisRingBridgeActual DONE 00:02:06: alignedCompletionMapMoved (h) casts alignedCompletionMapAtComap along place equality, giving Completion(movedF)→+*Completion(K). Blocker: need Completion(nativeF)→Completion(movedF) sigma-extension (alignment doesn't identify moved with native).
 - Donors: UniformSpace.Completion.mapRingHom (Topology/Algebra/UniformRing:155) for continuous ring hom; MetricSpace.Completion.Isometry.mapRingHom (MetricSpace/Completion:217) for isometry. Use sigma ring hom F(native place)→F(moved place); finite-dimensional linear maps continuous; places correspondence gives continuity/isometry. Then compose. Also IsScalarTower degree tower still missing. Report first error/GREEN.
+
+
+### 20.415 Sigma isometry route for completion extension (stage4, 2026-11-17 21:10)
+- Need continuous/isometry sigma between WithVal nativeBadToFPlace and moved galoisPlaceMk sigma nativeF. Observation: field automorphism fixing Fmod should satisfy |sigma x|_{sigma(v)}=|x|_v by definition of moved place/global normalized absolute value; then sigma is Isometry and Completion.Isometry.mapRingHom applies. Try prove FinitePlace/norm equality via maximalIdeal map/FinitePlaceAtPrime definitions (simp/rfl); if not definitional use residue/adic norm. Then compose with alignedCompletionMapMoved. Degree tower IsScalarTower still missing. No fake.

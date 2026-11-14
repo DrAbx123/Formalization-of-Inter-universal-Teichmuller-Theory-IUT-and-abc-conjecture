@@ -2657,3 +2657,5 @@
 - 02:20: MAJOR NativeBadLift redefined aligned (lift=comap_F sectionFiniteLift) GREEN 23:55:16; alignment now rfl. Mainline instantiate BaseChange place/completion, then q element/C3. abc audit. gate 20.413 written.
 
 - 02:30: sigma-extension donors Completion.mapRingHom/Isometry.mapRingHom for native->moved F completion; stage4 implement. degree tower IsScalarTower still. gate 20.414 written.
+
+- 02:40: sigma isometry route: |sigma x|_{sigma v}=|x|_v by moved-place definition; prove norm equality -> Isometry -> Completion.Isometry.mapRingHom. stage4. gate 20.415 written.
