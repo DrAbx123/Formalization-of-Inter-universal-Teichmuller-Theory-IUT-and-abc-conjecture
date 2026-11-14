@@ -2331,3 +2331,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.293 #C A/B coordination: A primary O/(p^s), B N independent (shehdd/hull, 2026-11-17 00:10)
 - shehdd task-127 redone per §6.1: primary O^x/(1+p^sO) ≃* (O/(p^s))^x, kernel logShellCongruenceUnits; secondary Pow e only. First true error fixed: ≃* Type not Prop -> noncomputable def. Retouched; next errors expected quotientMulEquivOfEq/quotientKerEquivOfSurjective argument directions.
 - Coordination to hull: A primary O/(p^s); B count N independent: #(O/m^N)^x=(q-1)q^(N-1), then N=e_K*s. Do not use corrected (p^s)^e B for primary; secondary only. Direct filtration still substitute N=e_K*s.
+
+
+### 20.294 Depth subgroup API; pending first errors (2026-11-17 00:30)
+- stepxi Mzk1Ind1DepthSubgroupActual queued: depthSubgroup r A := inf_n range(pow r^n); mem_depthSubgroup <-> forall n exists y, y^(r^n)=x; nat_lt_pow_self, int_eq_zero_of_forall_dvd_pow; DepthSubgroupEqualsKernel v r := depthSubgroup r A = v.ker. Missing local field valuation A_F->Multiplicative Z kernel W_F, unit infinite divisibility for (r,p)=1, fixed-points descent compatibility; no fake.
+- qpilot Mzk1IVThm110LogQActual no olean; log 18:15 linarith hScoef/hEcoef; resume fix.
+- shehdd Mzk1CongruenceUnitsEquivActual no olean; resume quotient argument directions.
+- mainline Mzk1ActualReadingTargetActual no olean; last error type mismatch SourcePilotRegionData vs OriginalInput in qPilotLogVolumeReading_le_theta..._of_identifications; mainline to fix argument.
+- stepxi GaloisFixedRoute GREEN 18:15; actual hull target magnitude probe GREEN 18:16.

@@ -2415,3 +2415,5 @@
 - 05:50: integrated P7-READING-FIRST-ATTACK doc: reading one-way transport (no G2/G3), Thm110 l>=7 remaining actual hCor312, #C primary O/(p^s) + direct filtration, Ind1 fixed-points-first, object lock tower/raw calibration. mainline/hull/shehdd/stepxi/stage4 updated. gate 20.292 written.
 
 - 06:00: shehdd #C A primary O/(p^s), def not theorem, retouched; first error fixed. Told hull B N independent then N=e_K*s; corrected (p^s)^e secondary only. gate 20.293 written.
+
+- 06:10: depth subgroup API queued; qpilot/shehdd/mainline pending first errors (logQ linarith, quotient args, reading arg mismatch); GaloisFixed green; target magnitude probe green. Resumed. gate 20.294 written.
