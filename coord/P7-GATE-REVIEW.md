@@ -1453,3 +1453,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - final rows consistent: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION (not field tower); A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP undefined no True; unitMass=1 NOT CLAIMED; old raw S3137 P RECORD ONLY. No unused binders.
 - B5 DONE 03:26:34: no True/sorry; conditional assembly B5ProductFormulaBridge (relativeDetLog = finite index + arch), ..._of_bridge; MissingB5ProductFormulaBridge is exact GAP.
 - Final2 DONE 03:29:42: status-only row file, no theorems; not substantive progress.
+
+
+### 20.149 Final S3137 fresh recompile + final probe; P14ii hp fix (mainline, 2026-11-15 19:55)
+- Final S3137ConditionalActual fresh forced recompile DONE 03:33:31 (75s), fresh output empty => no warning/no sorry; old log :65/:66 sorry warnings from earlier failed run, not current source.
+- final axiom probe GREEN 03:37:33 (101s): finalPaperNormalizedComparison, finalLPaperInstance, finalBridgeConditions_of all [propext, Classical.choice, Quot.sound].
+- Final2 DONE 03:29:42 after B5 GREEN 03:26:34 => reproducible; B5 green 03:26:34.
+- P14ii first error: volume_ratio_eq_pow_actualH hp needs 0 < (p:Real), hp is 1 < (p:Real); fix with (by linarith). Retouched; next compile.
+- Final rows unchanged: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION; A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP (no True); unitMass=1 not assumed; old raw S3137 vacuous record only.

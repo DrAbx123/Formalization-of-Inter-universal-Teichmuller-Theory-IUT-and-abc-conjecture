@@ -2093,3 +2093,5 @@
 - 01:30 MILESTONE: Final S3137ConditionalActual GREEN 03:29:47 (finalPaperNormalizedComparison/finalLPaperInstance/finalBridgeConditions_of). Rows: S45 conditional, RelativeFactorTower divisibility conditional, A1Data constructed, ReadingDictionary undefined GAP, unitMass not assumed. B5 green 03:26:34, Final2 recomputed 03:29:42 (reproducible). Need final probe. gate 20.147 written.
 
 - 01:45: final axiom probe GREEN 03:33:29 (4 items three axioms). B5 conditional with MissingB5ProductFormulaBridge exact GAP; Final2 status-only no theorem. final rows consistent. gate 20.148 written.
+
+- 02:00: mainline final fresh recompile 03:33:31 empty output => no warning/sorry; final probe 03:37:33 three axioms. B5 03:26:34; Final2 03:29:42 reproducible. P14ii hp 1<p -> 0<p fixed by linarith. gate 20.149 written.
