@@ -1947,3 +1947,5 @@
 - 13:00: hull L normalized readout audit complete (coord/L-NORMALIZED-READOUT-AUDIT.md): raw thetaRead noncanonical; thetaNormReadL/thetaNormReadProduct canonical; thetaNormReadProduct=sum d log r=closedForm-1=coeff form; qRead canonical; unique gap LGlobalLocalObjectLock (local tensor vs global Bad); arrow empty theta>=0; LNormReadout files pending olean, not official. gate 20.81 written.
 
 - 13:05: abc audit: LNormComparison conditional hobj unused/vacuous; LGlobalLocalObjectLock is placeholder (no T<->I, Bad<->tensorIndex map). Told mainline remove hobj or strengthen to actual fields and consume projections; no fake lock. gate 20.82 written.
+
+- 13:10: QHat formal proof landed (S305+norm_pow; c0QHat=c0Alpha^(2l), qrootElem norm=r); pending compile. If green bridge drops QHat. Mainline removed unused hobj from L conditional theorems; LGlobalLocalObjectLock only text GAP, no fake lock in proofs. gate 20.83 written.
