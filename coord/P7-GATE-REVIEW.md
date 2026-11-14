@@ -3182,3 +3182,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.445 URGENT KernelBridge quotient bridge sorryAx; QuotientDecomp/IndexDivision green (2026-11-15 05:20)
 - QuotientDecomp DONE 17:01:31 probe 17:10:10 [propext,Quot.sound]; IndexDivision DONE 17:05:58 green. Accepted.
 - KernelBridge comapTorsion_eq_torsionKernel FAIL 17:01:43 no fresh olean; lines147/150 IsPeriodicPt mismatch; probe has sorryAx -> not accepted. stepxi to delete if fix not fresh green, keep last clean KernelBridge. abc verify.
+
+
+### 20.446 A2 xF/xF_geometry removed from gap; 8 fields remain (mainline, 2026-11-15 05:30)
+- Mzk1A2GeometricCorePartialActual DONE 17:06:06: xFOfStackPoint via realizedHyperbolicOrbicurve/sourceStackPointEtaleFiber; xFOfStackPoint_geometry; exists_xF_xF_geometry. First two SourceSignQuotientData fields constructible degenerately (signature inserted, not geometric). So first gap now ellipticInvolution (+squared/unique).
+- Remaining 8: ellipticInvolution/squared/unique; signAction/inversion; cF/quotient/witness; xFGroups/cFGroups/fGroupInclusion; xK/cK/extensions/type; V tuple. Full SQ still no inhabitant. Probe 17:10:19. Mainline next search ellipticInvolution donor. No fake.

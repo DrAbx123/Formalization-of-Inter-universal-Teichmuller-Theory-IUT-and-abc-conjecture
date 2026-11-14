@@ -2719,3 +2719,5 @@
 - 07:30: A2 partial GREEN 17:06: xF/xF_geometry constructible; 8 remaining fields. mainline check donors. Haar/quotient/adicAbv pending. gate 20.444 written.
 
 - 07:40: QuotientDecomp/IndexDivision green probes subset; KernelBridge quotient bridge sorryAx -> delete/rebuild urgent. gate 20.445 written.
+
+- 07:50: A2 xF/xF_geometry constructible degenerately; first gap now ellipticInvolution + 8 fields. mainline search. Probe 17:10:19. gate 20.446 written.
