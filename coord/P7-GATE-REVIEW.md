@@ -2201,3 +2201,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Final DONE 09:22:47 olean 17:22:46 > src; comparison unconditional; probe 09:25:48.
 - Assembly DONE 09:22:46 olean 17:22:46 EARLIER than Dictionary 17:25:50 -> ordering stale; must rebuild Assembly + consumers after Dictionary.
 - Rows stale: Final line112 conditional label; Dictionary rows missing noS45. Fix then clean final acceptance. rel/lock/L explicit, unitMass=1 not claimed, strict S45 unproved; full S3137 not unconditional closure.
+
+
+### 20.275 Clean rebuild ordering fixed (2026-11-16 19:00)
+- FinalS3137Conditional, FinalNoS45Assembly, FinalS3137Dictionary all DONE 09:39:07/08, olean 17:39:07/08, after Dictionary 17:25:50 -> ordering clean.
+- Probes at 09:32 predate rebuild; abc to re-run fresh probes for unconditional comparison/Assembly/Dictionary. Rows check mainline.
+- Semantics caveats unchanged: rel/lock/L explicit, unitMass=1 not claimed, strict S45 unproved. No fake.

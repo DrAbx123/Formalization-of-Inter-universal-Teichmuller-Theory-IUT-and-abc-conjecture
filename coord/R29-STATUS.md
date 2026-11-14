@@ -2371,3 +2371,5 @@
 - 01:40: Dictionary unconditional drop-S GREEN 09:25:51 (rel/lock explicit); StepXI green 09:22:36; Assembly probe fresh. Remaining Final rows + acceptance. gate 20.273 written.
 
 - 01:50: Dictionary probe fresh 09:32:49; StepXI green. Ordering: Assembly 17:22:46 predates Dictionary 17:25:50; rebuild Assembly + rows fix. Clean final acceptance after. gate 20.274 written.
+
+- 02:00: clean rebuild Final/Assembly/Dictionary 09:39:07/08 after Dictionary; ordering fixed. Re-probe fresh; rows check. gate 20.275 written.
