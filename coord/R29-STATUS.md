@@ -2507,3 +2507,5 @@
 - 13:50: gave unitValuationHom_eq_one_iff script avoiding symm_one (calc/rfl/injective/Units.ext). stepxi to readd; Kernel partial green. gate 20.338 written.
 
 - 14:00: Floor GREEN 20:15:21 (certificateOfFloorData conditional on N5/htheta/hCTheta); remaining floor N5/CTheta source. Target deps fresh 12:05/12:06, magnitude probe 12:15. gate 20.339 written.
+
+- 14:10: stage4 SMulDistribClass donor: AlgEquiv.applyMulSemiringAction + NumberField.Basic instances for G on O_F/SMulDistribClass. Use/align; then primesOver/transitivity. gate 20.340 written.

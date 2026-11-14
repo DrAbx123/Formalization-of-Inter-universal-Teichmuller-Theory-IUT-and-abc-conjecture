@@ -2609,3 +2609,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110HCor312FloorActual DONE 12:15:22/olean 20:15:21: signedFloorCertificate=arithmeticTupleSignedFloorCertificate; certificateOfFloorData builds S2953 certificate conditional on hqne/hN5 qSideSignedValueCondition on floor qSigned/htheta/hCTheta; hCor312_of_floor_data. No actual sorry (comment only). Remaining exact: N5 on floor cert qSigned (engineered min(hullLog,-1)), htheta source identity, CThetaPaper source normalization, term source identifications.
 - Target deps PaperLevelXiFTargetProof/Bridge recompiled 12:05/12:06; ActualHullTargetMagnitude recompiled 12:15:25 + probe 12:15:22; clean chain fresh.
 - SharedQPilot 20:08; KernelIntegers partial 20:08; stepxi to readd eq_iff script then kernel MulEquiv.
+
+
+### 20.340 stage4 SMulDistribClass donor: AlgEquiv action (2026-11-17 08:20)
+- Stage4 failed SMulDistribClass Gal(F/Fmod) (O_F) F and ring-level IsGaloisGroup; HSMul issues.
+- Donor: Mathlib AlgEquiv.applyMulSemiringAction : MulSemiringAction (A ≃ₐ[R] A) A (Algebra/Algebra/Equiv:688). With G=Gal(F/Fmod) on F, NumberField/Basic:124/127 gives MulSemiringAction G (𝓞 F) and SMulDistribClass G (𝓞 F) F automatically. Use/align these instead of hand-building; then primesOver bridge/transitivity. Report first failure.
