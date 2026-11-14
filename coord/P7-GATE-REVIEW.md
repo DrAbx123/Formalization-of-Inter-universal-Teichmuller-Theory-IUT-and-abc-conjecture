@@ -2448,3 +2448,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1ActualReadingTargetAxiomProbeActual DONE 11:09:02; Mzk1NewGreens3AuditProbeActual 11:09:02; report fresh 5-item/8-item axioms.
 - Still no olean: Ind1DepthSubgroup, Ind1CorrectedExtraction, IVThm110Actual, CongruenceUnitsEquivOddActual, TruncatedUnitsCountActual. Owners retouched/report.
 - TruncatedUnitsCardProbe 11:02:41; LocalRingUnitsCardProbe 10:52; target magnitude probe 11:03:25.
+
+
+### 20.312 Ind1 DepthSubgroup + CorrectedExtraction GREEN (stepxi, 2026-11-17 03:50)
+- Mzk1Ind1DepthSubgroupActual GREEN 11:13:38: mem_depthSubgroup, int_eq_zero_of_forall_dvd_pow, DepthSubgroupEqualsKernel_of_divisible; probes three axioms, no sorryAx.
+- Mzk1Ind1CorrectedExtractionActual DONE 11:13:39; correctedDepthLayer_le_invariant (Subgroup.mem_map) and Required_iff added; A_H=invariantUnitLayer fixed units image; correctedDepthLayer takes D_r inside A_H then map subtype. No inhabitant.
+- Next: actual valuation A_F->Multiplicative Z kernel W_F; W_F infinite divisibility (r,p)=1; A_H≅L^x/mu(L), D_r(A_H)=O_L^x/mu(L); ActualSourceUnitLayer compat. abc to audit/probe.

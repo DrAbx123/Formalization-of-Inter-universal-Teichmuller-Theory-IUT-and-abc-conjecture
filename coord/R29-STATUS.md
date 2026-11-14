@@ -2451,3 +2451,5 @@
 - 09:00: fresh target chain confirmed (deps fresh, target magnitude 10:52+probe 4 items three axioms); R1 numerical core GREEN (default<=normalized, log inequality). Next R1 same-q witness, R3 T->C3 carrier/region. gate 20.310 written.
 
 - 09:10: CongruenceUnitsEquiv conditional GREEN 19:08; reading/target probes fresh 11:09. Still red: depth/corrected/IVThm110/odd-p/TruncatedUnitsCount. gate 20.311 written.
+
+- 09:20: Ind1 DepthSubgroup GREEN 11:13:38 + CorrectedExtraction DONE 11:13:39, correctedDepthLayer_le_invariant/Required_iff; no inhabitant. Next valuation/W_F/divisibility/A_H compat. abc audit. gate 20.312 written.
