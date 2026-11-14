@@ -3883,3 +3883,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.595 isEquiv_iff_val_lt_one implicit x named arg (2026-11-15 29:30)
 - The theorem statement uses ∀ {x}; apply `(x := ((u.val:K)-1))` named. Then rw h/align unitsImage. qpilot. No fake.
+
+
+### 20.596 IsEquiv Iff mp implicit x (2026-11-15 29:40)
+- `.mp ... (x:=...)` invalid on Iff.mp. First bind `h : ∀ {x:K}, v x<1 ↔ A.valuation x<1 := ...mp...`, then `h (x := u.val-1)`. qpilot. No fake.

@@ -3017,3 +3017,5 @@
 - 32:20: subgroup apply IsEquiv to u.val-1; qpilot. gate 20.594 written.
 
 - 32:30: isEquiv iff named x; qpilot. gate 20.595 written.
+
+- 32:40: IsEquiv Iff h binding/hx; qpilot. gate 20.596 written.
