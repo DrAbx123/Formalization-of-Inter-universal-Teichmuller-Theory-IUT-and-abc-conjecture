@@ -3287,3 +3287,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.464 A2PartialFields expanded signAction GREEN (mainline, 2026-11-15 08:50)
 - Mzk1A2PartialFieldsActual DONE 18:25:17: added signAction : OrbicurveSignAction xF (degenerate signActionCandidate) and sign_action_inversion_eq (rfl). Closed fields now 9 groups: xF/xF_geometry/ellipticInvolution/squared/signAction/inversion_eq/cF/V group/V_section.
 - Blocked 4: quotient/quotientWitness; xFGroups/cFGroups/fGroupInclusion; xK/cK/scalar extensions/type; unique_elliptic_involution. Probe updated. Mainline inspect donors (unique via Cat.Hom.ext/Subsingleton). No fake.
+
+
+### 20.465 A2 partial probe/consumer green; next actual lambda/floor (2026-11-15 09:00)
+- A2PartialFields 02:25:17 + AxiomProbe 18:29:52; A2SignPrincipalProbe 18:25:19; CorrectionConsumer 02:25:58 green. No new oleans beyond.
+- qpilot actual lambda/g/floor via Qp decomposition/action bridge/norm; stage4 adicAbv/IsScalarTower; stepxi Z_p^d/different bridge; abc audit. No fake.
