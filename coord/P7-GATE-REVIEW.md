@@ -3433,3 +3433,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Constructible given ι [Fintype ι] place : ι → FinitePlace F: places:=ofPlace; fn/hres via choose logShellResidueCard_eq_prime_pow; aExp/cCorr/HasCorrection via choose index_decomp_with_correction after hdecomp from logShellCongruenceQuotient/QFE; logIdx rfl; logp; logMu/diff.
 - Exact first missing: HasCoeff CoeffComparison (fn i)(Fdeg i) l (aExp i) actual arithmetic; no place-indexed residue degree/CoeffComparison connection. Also finite fiber Fintype and e_v/r/n parameter connection.
 - Donors for fiber: FinitePlaceFullPrimePacket.fintype_fullPrimePlaces : Fintype (FinitePlaceAtPrime K p); FinitePlaceCompletionDegreeGlobal.placesAboveFintype/upperPlaceFiberFintype. Hull build with hcoef explicit input; no fake.
+
+
+### 20.496 Ramified actual family p-defeq obstacle (hull, 2026-11-15 14:00)
+- Donors: fintype_fullPrimePlaces : Fintype (FinitePlaceAtPrime K p); FinitePlaceAtPrime.place; CommonPrimeCompletion instances. Proposed ofAtPrime K:=CommonPrimeCompletion place.
+- First obstacle: predicates use (d.places i).p = fixed p but logShellResidueCard_eq_prime_pow/index_decomp need completionRationalPrime place.val; only propositional equality. Fix define ofAtPrime p := (completionRationalPrime place.val).val (definitional), or cases place.property subst. hcoef explicit input. No fake.

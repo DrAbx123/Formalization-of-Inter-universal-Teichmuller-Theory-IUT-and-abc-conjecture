@@ -2817,3 +2817,5 @@
 - 15:40: MAJOR RamifiedPlaceData fresh GREEN 03:38:47; PrincipalDimActual GREEN 03:38:05. Next actual family/discharge; qpilot hdecomp/hnorm/hchar/hact/floor. abc audit. gate 20.494 written.
 
 - 15:50: Ramified actual instance constructible except HasCoeff; use FinitePlaceAtPrime fintype donor; hcoef explicit input. hull. gate 20.495 written.
+
+- 16:00: Ramified actual family p-defeq obstacle; use completionRationalPrime in ofAtPrime or subst place.property. hull. gate 20.496 written.
