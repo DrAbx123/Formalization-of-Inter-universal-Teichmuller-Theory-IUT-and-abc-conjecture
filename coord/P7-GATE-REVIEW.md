@@ -2672,3 +2672,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.351 stage4 instance scoping nuance (2026-11-17 10:20)
 - Failing SMulDistribClass G (O_F) F; Mathlib NumberField/Basic:127 needs MulSemiringAction G F in scope. Put letI MulSemiringAction G F := AlgEquiv.applyMulSemiringAction at top of section/instance before synth, then letI MulSemiringAction G (O_F) and SMulDistribClass G (O_F) F. If still fails use #synth. Distinguish ring-level IsGaloisGroup G (O_Fmod) (O_F) may need SMulDistribClass G (O_Fmod) (O_F), prove via smul_distrib_smul/AlgEquiv.commutes. ObjectLockData green 20:53:43. No fake.
+
+
+### 20.352 KernelBridge RED sorryAx; P2 no log; obstruction pending (2026-11-17 10:30)
+- Mzk1Ind1KernelBridgeActual log 20:52:46: kernelToAQuotient_ker failed (goal kernelToAQuotient u=1); probe has sorryAx -> RED, not accepted. stepxi to fix quotientMap_ker/mem_ker or remove declaration, fresh no sorryAx.
+- Mzk1IVThm110FloorNativeObstructionActual pending; log tail shows theorem target only.
+- Mzk1P2BridgeActual no source/log; hull to create/retouch p=2 bridge with uniformizer pi/hpi/hp_rel, N=2eK, kernel 1+4O.
+- Green: TruncatedUnitsPrimary 20:42:21; ObjectLockData 20:53:43; BaseQLogVolume/NativeGlobal recompiled 12:52/12:54; FloorNativeHullProbe 12:58:43.
