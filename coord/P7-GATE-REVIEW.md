@@ -3384,3 +3384,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.485 RamifiedPlaceData ι parameter missing (2026-11-15 12:10)
 - Direct compile src 03:19: :29/:42/:55/:58 typeclass stuck; :73/:74 Function expected; :82-85 Invalid argument HasX. Root: defs/theorem use (d : RamifiedPlaceData) so ι autoImplicit, HasX not Prop. Fix universe u; variable {ι : Type u} [Fintype ι]; RamifiedPlaceData ι in all HasX and theorem. hull direct compile. No fake.
+
+
+### 20.486 PrincipalDimActual donor/restatement (2026-11-15 12:20)
+- Donor for pU^k char/log: FinitePlaceNormalizedUnitScalingLogVolume.real_log_distribHaarChar_arithmeticTuplePrimeScalarUnit_zpow (k:Z): Real.log(char(pU^k)) = -(k*finrank*log p); proof uses map_zpow+NNReal.coe_zpow. Avoid raw map_zpow on NNReal in PrincipalDimActual.
+- Restate principalDim_log_scaling_actual with explicit k,u,hdecomp,hnorm,hact; instantiate k/u from exists_pow_mul_zpUnit via Classical.choose inside proof only. Removes HPow/choose statement errors. qpilot.

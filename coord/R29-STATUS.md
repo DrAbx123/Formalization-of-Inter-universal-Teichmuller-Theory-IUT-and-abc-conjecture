@@ -2797,3 +2797,5 @@
 - 14:00: RamifiedPlaceData root cause field notation HasX d -> fix to HasX d binders; hull. gate 20.484 written.
 
 - 14:10: RamifiedPlaceData missing ι param; fix HasX (d : RamifiedPlaceData ι) + explicit theorem ι. hull. gate 20.485 written.
+
+- 14:20: PrincipalDimActual use real_log_distribHaarChar_primeScalar_zpow donor and restate with explicit k/u/hdecomp; qpilot. gate 20.486 written.
