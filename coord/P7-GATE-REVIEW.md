@@ -3506,3 +3506,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.510 URGENT ZpLattice sorryAx/missing Fact in abbrev (2026-11-15 16:20)
 - Direct compile Mzk1Ind1ZpLatticeDivisibleActual src 03:40:46: :9:63 Fact (Nat.Prime p) missing in abbrev ZpLattice (p d); :12:33 CommGroup synth fail; declaration uses sorry; depends on [propext,sorryAx]. Not accepted. Fix abbrev add [Fact p.Prime] (and CommGroup instance); remove sorry; direct compile. stepxi.
+
+
+### 20.511 ZpLattice GREEN sorryAx fixed (stepxi, 2026-11-15 16:30)
+- Fix abbrev ZpLattice (p d) [Fact p.Prime] := Multiplicative (Fin d→Zp). Direct compile EXIT=0; zpLattice_infinitelyDivisible depends [propext,Classical.choice,Quot.sound] only; sorryAx gone. Retouch build; next WQuotient≅ZpLattice donor/root transport. abc probe. No fake.

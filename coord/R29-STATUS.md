@@ -2847,3 +2847,5 @@
 - 18:10: quotientWitness TwoCell->2-cell gap; mainline switched to adicAbv norm equality. gate 20.509 written.
 
 - 18:20: URGENT ZpLattice sorryAx missing Fact in abbrev; stepxi fix. gate 20.510 written.
+
+- 18:30: ZpLattice GREEN fixed (EXIT=0, three axioms, no sorryAx). Next WQuotient donor. abc probe. gate 20.511 written.
