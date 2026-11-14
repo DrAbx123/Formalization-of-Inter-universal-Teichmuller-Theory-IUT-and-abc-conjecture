@@ -1917,3 +1917,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Source mtime 14:39:24; old DONE 06:36:39 (olean 14:36:38) predates source; latest START 06:40:29 FAIL 06:41:00 -> real error.
 - First error line85 [Measure.IsAddHaarMeasure mu]: invalid binder annotation, type not class instance; MeasureTheory not opened. Fix open MeasureTheory or fully qualify MeasureTheory.Measure.IsAddHaarMeasure; recompile. Old olean stale, no probe.
 - S45-free scope remains normalized representative only; actual q norm identification still explicit S45, not claimed.
+
+
+### 20.227 GREEN Section2ElementaryComposite; S45Free freshness; ratio proof (2026-11-16 10:40)
+- Mzk1IUTIVSection2ElementaryCompositeActual DONE 06:44:39 (52s) after slash import fix.
+- Mzk1S45FreeScalingRouteActual old DONE 06:36:39/olean 14:36:38; source 14:39:24, likely still red; fix line85 Measure binder and recompile/probe.
+- LiteralCarrierReduction next. Route A ratio>=1 proof continuing.
