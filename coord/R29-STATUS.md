@@ -2643,3 +2643,5 @@
 - 01:10: nativeBadLift redefinition impact plan; bounded experiment A+73 importers, continue/revert based on breakage; no core red. gate 20.406 written.
 
 - 01:20: UnitInvariance membership GREEN 15:36:28; Kernel range equality GREEN 15:36:34; ofRange pending. qpilot Set.ext/measure; stepxi ofRange/composition. gate 20.407 written.
+
+- 01:30: Paper312ExponentInput interface GREEN 15:41:17; a_v independent; exact missing source/pure power. Hull. gate 20.408 written.

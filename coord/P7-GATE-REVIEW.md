@@ -2978,3 +2978,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110UnitInvarianceActual DONE 15:36:28: algebraMap_unit_mem_integralClosure, algebraMap_unit_mul_mem_integralClosure, algebraMap_unit_inv_mul_mem_integralClosure; no source sorry. Next Set.ext u•O=O, then distribHaarChar/measure.
 - Mzk1Ind1KernelBridgeActual DONE 15:36:34: range_kernelToAQuotient_eq GREEN probe three axioms; source also has kernelToAQuotient_ker_eq/quotientKernelEquivRange/AQuotientKernelBridge.ofRange pending fresh. Next subgroup bridge/compose WQuotient/Z_p^d.
 - TorsionLogDonorProbe 15:36:21. NativeBadLiftActual olean 12:46 old; mainline experiment pending. abc probes.
+
+
+### 20.408 Paper312ExponentInput interface GREEN (hull, 2026-11-17 20:00)
+- Mzk1Paper312ExponentInputActual DONE 15:41:17: Paper312ExponentInput (f Fdeg l exponent logp logMu) with coeffComparison/logp_nonneg/logMu_nonneg; perPlace_of_paper312ExponentInput consumer. Paper312IndexExponentInput (index residueCard a ...) with pure_power/index=residueCard^a + exponentInput + logIdx_eq. a_v is independent source exponent, not eK*s-1.
+- Exact missing: pure_power requires #T=q-1 for QFE; unramified eK=1,s=1 gives a=0 but condition4 1<=a*(Fdeg*2l) fails. No tree theorem constructs Paper312ExponentInput from QFE/eK/s. Hull to locate actual a_v source and conditional consumer. No fake.
