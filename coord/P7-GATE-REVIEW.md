@@ -2307,3 +2307,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.289 logQ absorption algebra done; DPrime action gap interface (2026-11-16 23:20)
 - qpilot: hCor312 rearrangement: (1/6-2/l^2)Q <= (1+12d/l)S+10E; c>0 for l>=7; coefficients <= (4dl,5l^2) for l>=7,d>=1; l=5 fails first coefficient so discarded per user. First Lean error at Mzk1IVThm110LogQActual:42 nlinarith missing coefficient inequalities; source fixed with hScoef/hEcoef field_simp/nlinarith, retouched. Remaining target: derive hCor312 from same-source Cor3.12/Box/arithmetic.
 - stepxi: Mzk1Ind1DPrimeActionGapActual queued: DPrimeStripActionData, fPrimeStripActionData from FPrimeStrip.action, Ind1GaloisFixedRoute with fixedSubgroup/modTorsion/integralLayer; Required=Nonempty no inhabitant. DPrimeStrip only Pi/G/proj no Mon/action; FPrimeStrip has action; Galois fixed points/torsion quotient/r!=p extraction no constructions yet. No fake.
+
+
+### 20.290 Ind1 fixed-units/extraction interface (stepxi, 2026-11-16 23:30)
+- Mzk1Ind1GaloisFixedRouteActual queued: actionFixedUnits F v := units fixed by all g in Pi v under actual FPrimeStrip.action (Units-level); mem_actionFixedUnits; actionFixedUnitsInTorsion image in TimesMuQuotient; structure Ind1IntegralExtraction F { integralLayer : forall v, Subgroup (TimesMuQuotient ((F.Mon v)^x)); containsFixedUnits : fixed image <= integralLayer }; Required=Nonempty no inhabitant.
+- Exact obstruction: 'r != p infinitely divisible' subgroup and integralLayer extraction, ActualSourceUnitLayer compatibility no donor; DPrime-only lacks Mon/action. stepxi to search divisibility API and formalize predicate or report missing donor.
