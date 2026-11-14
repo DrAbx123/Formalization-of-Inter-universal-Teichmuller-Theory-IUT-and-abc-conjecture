@@ -2029,3 +2029,5 @@
 - 18:55: GREEN LNormReadoutActual 01:57:32 (106s) + #C interface 01:56:44 (59s). Final chain unblocked; mainline to retouch/compile Comparison/Final and report exact signatures. #C actual now needs explicit e/hcard. gate 20.118 written.
 
 - 19:00: #C interface exponent口径错: hcard q^{s-1} vs needed q^{e*s-1}; shehdd to parameterize e/n and ideal m^{e*s}, then hq=q=p^f to hC. Do not claim s-1 as e*s-1. gate 20.119 written.
+
+- 19:10: #C interface exponent fixed: ideal p^{s*e}, hcard (q-1)q^{e*s-1}. Next combine q=p^f to p^{f(e*s-1)} and feed torsion hC. gate 20.120 written.

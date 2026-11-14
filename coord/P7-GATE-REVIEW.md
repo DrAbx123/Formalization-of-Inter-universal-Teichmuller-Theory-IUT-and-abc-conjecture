@@ -1258,3 +1258,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.119 #C interface exponent mismatch: e*s-1 vs s-1 (shehdd, 2026-11-15 13:00)
 - Current card_logShellCongruenceQuotient_of_unitsEquiv hcard gives (q-1) q^(logShellScaleExponentFactor-1) = s-1 exponent, but torsion actual needs (q-1) q^(e*s-1) (from #C=(q-1)p^{f(e*s-1)}).
 - Fix: parameterize interface with explicit e (or n=e*s): hcard = (q-1)*q^(e*logShellScaleExponentFactor-1), truncated ideal m^(e*s); then use hq:q=p^f to reach (q-1)p^{f(e*s-1)}. Do not claim s-1 as e*s-1.
+
+
+### 20.120 #C interface exponent fixed: m^{p^{s*e}}, exponent e*s-1 (shehdd, 2026-11-15 13:10)
+- New exact signature: card_logShellCongruenceQuotient_of_unitsEquiv (e : Nat) (eEquiv : ... ≃* (Integers K / span{(logShellScale p)^e})^x) (hcard : #truncatedUnits = (q-1)*q^(e*logShellScaleExponentFactor-1)) : #C = (q-1)*q^(e*s-1).
+- Truncated ideal p^{s*e}; exponent e*s-1; no s-1 disguised as e*s-1.
+- Next: combine with q=p^f to get p^{f(e*s-1)} and feed torsion hC; report exact signature.
