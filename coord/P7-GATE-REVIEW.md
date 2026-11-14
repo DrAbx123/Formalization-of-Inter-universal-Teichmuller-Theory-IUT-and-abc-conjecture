@@ -2138,3 +2138,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.265 GREEN PaperIUTIVSection2Statement (2026-11-16 17:10)
 - Mzk1PaperIUTIVSection2StatementActual DONE 09:05:32 (95s) after removing Prop / WL.
 - Donor/Value still no olean; donor only zpow/rpow; hull owns. Woke lanes.
+
+
+### 20.266 Donor last 3 fixes (stage4, 2026-11-16 17:30)
+- Donor FAIL 17:09 no olean: :87 delete rfl after rw [h1] (No goals); :108 hstep exact Real.rpow_intCast _ m (or simpa using, check direction); :115 hnorm' simpa [qVFamNormalizedNorm] using hnorm or convert hnorm using 2; rfl, unfold d=relativeCompletionDegree. After these BridgeDonor should olean.
+- Section2Statement audit: Prop identity wrappers skeleton, no mathematical content/closure; not substantive.
+- hbridge conditional chain green; no unconditional claim. No fake.
