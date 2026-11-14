@@ -2658,3 +2658,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110FloorNativeHullActual DONE 12:47:21/olean 20:47:20: signedFloorCertificate_qSigned_eq_min (rfl); floorQSigned_eq_native_of_hull conditional on hM: arithmeticTupleCanonicalHullHaarLog = -M and hMone: 1<=M. floorNativeHullGap 2 items. No sorry.
 - Mzk1TruncatedUnitsPrimaryAxiomProbeActual DONE 12:47:13; Mzk1TruncatedUnitsCountProbeActual 12:47:13; Mzk1KernelWProbeActual 12:46:32; abc to audit no sorryAx.
 - qpilot next actual hM/hMone; hull p=2 bridge; stepxi AQuotient/Z_p^d; mainline R1 scalar -M.
+
+
+### 20.349 Ind1 first-iso bridge route (stepxi, 2026-11-17 10:00)
+- WQuotient green 12:41:34 probes three axioms. Missing: ker(unitValuationHom -> AQuotient)=torsion, then first iso to v.ker; no donor lemma. Second gap WQuotient ≅ Z_p^d / r-divisibility no donor.
+- Route: incl:ker unitValuationHom→Fˣ; q:Fˣ→AQuotient=TimesMuQuotient Fˣ; wToA=q.comp incl; kernel=torsion via quotientMap_ker + torsion<=ker; kerLift/first-iso gives ker/torsion ≃* range wToA; range_unitToA_eq_ker relates to v.ker. Construct AQuotientKernelBridge structure/bijective, then divisibility. No fake.

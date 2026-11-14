@@ -2525,3 +2525,5 @@
 - 15:20: MAJOR #C B PRIMARY GREEN 12:42:22 unconditional: span identity + units card (q-1)q^(eK*s-1). abc probe/audit; hull next p=2 bridge. gate 20.347 written.
 
 - 15:30: FloorNativeHull GREEN 20:47:20 conditional hM/hMone; #C primary/probes fresh 12:47:13. qpilot actual hull log; hull p2; stepxi AQuotient/Z_p^d; mainline R1 scalar. gate 20.348 written.
+
+- 15:40: Ind1 first-iso route: ker(unitValuationHom→AQuotient)=torsion, wToA=q.comp incl, kerLift gives ker/torsion≃range; range_unitToA_eq_ker. stepxi to construct bridge. gate 20.349 written.
