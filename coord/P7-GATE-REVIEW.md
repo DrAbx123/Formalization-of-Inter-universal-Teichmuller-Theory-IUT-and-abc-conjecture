@@ -1723,3 +1723,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - BSR still no olean; latest FAIL 13:01; file edited again. Errors: :290 No goals after congr 1 (remove/reposition exact coe_padicIntEquiv_symm_apply); :329 rewrite completionMap_coe fails (goal in show-normalized form; change literal spelling/simp only); :343 unknown Algebra.algebraMap.coe_zpow (absent in pin; drop, map_zpow₀ covers); :307 unsolved downstream.
 - BSR green then donor circular dependency fix. Formula source-level normalized=default^(1/d).
 - Galois scope caveat recorded: sigma=1 makes Nonempty trivial; no provenance; beta source not globally closed.
+
+
+### 20.196 GREEN: DeepStatementLayerV2; Dictionary probe fresh; LQThetaComponent (2026-11-16 04:40)
+- Mzk1DeepStatementLayerV2Actual DONE 05:03:27 (10s) after field-as-type batch fixes; statement layer syntax/type fixed.
+- Mzk1P0FinalS3137DictionaryAxiomProbeActual re-DONE 05:04:50 (93s) fresh after final dictionary olean.
+- Mzk1P0LQThetaComponentActual DONE 05:08:51 (98s).
+- BSR still no olean; L-side red pending; statement consumer next.
