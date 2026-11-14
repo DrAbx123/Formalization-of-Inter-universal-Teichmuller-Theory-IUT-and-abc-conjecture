@@ -2506,3 +2506,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110Actual GREEN 19:28:49: thm110_display_of_hCor312 proved; hQ eliminated; only hCor312 remains. No actual sorry.
 - qpilot Mzk1IVThm110HCor312Actual pending: hCor312_of_actual_certificate input S2953CThetaUpperCertificate + identifications; missingCertificateProducer.
 - Observation: S2953CThetaUpperCertificate.hCTheta says CThetaPaper=thetaLogVolume/|log q|; hupper follows from hCTheta by field_simp when |log q|!=0, so likely not independent Box 11 estimate. Certificate producer may reduce to actual StepXIFiniteCertificate + actual q/thetaLogVolume readings + hqAbs. qpilot asked to check first.
+
+
+### 20.322 IV hCor312 reduced to actual certificate + N5 + CTheta normalization (qpilot, 2026-11-17 05:30)
+- hupper derivable from hCTheta (ratio definition), not independent Box 11. Actual StepXI certificate producer exists: LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullSignedCertificateNonvacuous.lean arithmeticTupleSignedFloorCertificate (qSigned=min(hullLog,-1), thetaSigned=IQHullUnitRegionHaarLog, q_le_hull/hull_le_theta, q_negative).
+- Exact missing actual objects: (1) N5 source q-pilot signed condition qSigned=-|log q|, recorded named hypothesis qSideSignedValueCondition in FinitePlaceStepVLambda; actual cert qSigned is engineered min(hullLog,-1). (2) CThetaPaper=thetaLogVolume/|log q| source normalization incl dmod/dFpd/fFpd/eStar/etaPrm/logQ source identification. (3) connect engineered qSigned/thetaSigned to source q/theta readings.
+- qpilot to build hCor312_of_actual_certificate; mainline to check overlap with R1 same-q witness/N5. No fake.

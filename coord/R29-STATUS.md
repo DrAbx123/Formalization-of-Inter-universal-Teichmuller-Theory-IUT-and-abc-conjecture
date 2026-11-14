@@ -2471,3 +2471,5 @@
 - 10:40: IVThm110 GREEN 19:28:49 (hQ eliminated, hCor312 only); Assembly rebuilt 19:28:52 but probe stale -> rerun. stage4 galoisPlaceMk API green; blockers MulSemiringAction/primesOver bridge/IsGaloisGroup/alignment/degree tower. gate 20.320 written.
 
 - 10:50: IVThm110 green; hCor312 reduced to S2953 certificate producer. hupper follows from hCTheta (ratio def) when |log q|≠0, likely no independent Box estimate; producer may need actual StepXIFiniteCertificate/readings. qpilot to check. gate 20.321 written.
+
+- 11:00: IV hCor312 reduced to actual certificate producer (arithmeticTupleSignedFloorCertificate exists) + N5 qSigned=-|log q| + CTheta source normalization. hupper derivable. qpilot build wiring; mainline check N5/R1 overlap. gate 20.322 written.
