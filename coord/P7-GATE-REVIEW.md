@@ -1597,3 +1597,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Root cause: PaperS3137ReadingDictionary structure has hM/hB before (T), but types reference qVFamTensorBlock T b; reorder to (I)(place)(T)[Fintype](hM)(hB)(lock). PaperS3137ObjectLock/ReadingDictionary unknown and hM expected errors are cascades.
 - Sign warning: ObjectLock theta_sign = thetaNormReadL = -thetaNormReadProduct, but LNormComparisonConditional hlock assumes thetaNormReadL = thetaNormReadProduct. Only one can be true; check definitions/green lemmas, keep true sign; do not treat both as true premises.
 - ObjectLock has B/B_pos/weight_relation/unitMass_eq/theta_sign; Dictionary has (a)(b)(c); finalDictionaryCombined depends on model comparison, not native actual closure.
+
+
+### 20.175 Dictionary exact failure: positional args + binder order (abc, 2026-11-16 01:10)
+- Dictionary FAIL 04:22:05: finalDictionaryCombined:132 positional PaperS3137ReadingDictionary hM... mismatch; section vars T/I/place auto-precede; fix named args (hM:=hM)(hB:=hB)(I:=I)(place:=place)(T:=T)(lock:=lock).
+- Hull: structure binder order hM/hB before T wrong; reorder (I)(place)(T)[Fintype](hM)(hB)(lock). Probe FAIL because finalDictionaryCombined unknown; old olean 12:15:04 < source 12:17:53 not usable.
+- Dictionary fields substantive no True; final theorem pending recompile.

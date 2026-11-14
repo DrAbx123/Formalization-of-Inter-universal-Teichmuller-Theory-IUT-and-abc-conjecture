@@ -2143,3 +2143,5 @@
 - 06:50: scheduled check: dictionary source still newer than olean; finalDictionaryCombined not compiled; mainline ordered force. BaseScalar no olean. Woke lanes. 12 lean, log 12:20.
 
 - 07:00: hull freshness fail: dictionary source 04:17:53 > olean 04:15:04; binder order hM/hB before T wrong -> reorder (I)(place)(T)[Fintype](hM)(hB)(lock). Sign inconsistency theta_sign negative vs hlock positive; check true sign. finalDictionaryCombined not usable until official. gate 20.174 written.
+
+- 07:10: Dictionary FAIL exact :132 positional args/binder order; mainline to use named args and reorder (I)(place)(T)[Fintype](hM)(hB)(lock); probe failed because finalDictionaryCombined unknown. Old olean unusable. gate 20.175 written.
