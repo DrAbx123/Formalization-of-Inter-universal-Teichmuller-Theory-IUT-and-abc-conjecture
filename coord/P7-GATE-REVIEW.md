@@ -3875,3 +3875,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.593 subgroup final IsEquiv transfer (2026-11-15 29:10)
 - principalUnits_eq_comap_principalUnitGroup rfl fails: NormedField.valuation (u-1)<1 vs A.valuation(unitsImage u -1)<1. Use Valuation.isEquiv_valuation_valuationSubring + isEquiv_iff_val_lt_one; simp [integersUnitsEquivUnitGroup,integersToA] to align units image. qpilot. No fake.
+
+
+### 20.594 subgroup apply IsEquiv iff to x=u.val-1 (2026-11-15 29:20)
+- `isEquiv_iff_val_lt_one.mp` needs explicit x=(u.val:K)-1; current h missing x. Then rw h and align unitsImage u with u.val via congr/simp. qpilot. No fake.

@@ -3013,3 +3013,5 @@
 - 32:00: MAJOR PrincipalUnitsResidue GREEN 06:38:51. Next subgroup/quotient/residue/unitLog. abc audit. gate 20.592 written.
 
 - 32:10: subgroup IsEquiv transfer; qpilot. gate 20.593 written.
+
+- 32:20: subgroup apply IsEquiv to u.val-1; qpilot. gate 20.594 written.
