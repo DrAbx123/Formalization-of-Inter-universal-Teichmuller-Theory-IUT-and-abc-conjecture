@@ -3041,3 +3041,5 @@
 - 34:20: Nat.dvd_sub fix; qpilot. gate 20.606 written.
 
 - 34:30: MAJOR residue card/coprime olean 07:07:33. Next quotient transfer/integralUnitExponent_coprime/unitLog. gate 20.607 written.
+
+- 34:40: quotient transport map_comap_eq_self fix; qpilot. gate 20.608 written.

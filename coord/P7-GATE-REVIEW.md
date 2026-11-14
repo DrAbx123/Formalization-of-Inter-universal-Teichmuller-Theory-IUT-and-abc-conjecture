@@ -3931,3 +3931,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.607 MAJOR residue card/coprime GREEN olean 07:07:33 (2026-11-15 31:30)
 - Lead edited Nat.dvd_sub proof; direct EXIT=0 and olean 07:07:33: residue_field_card_exists, residue_units_card_coprime. Next transfer quotient via units equiv/subgroup equality to (Integers K)^x/principalUnits, card=residue units card, integralUnitExponent_coprime; then unitLog/tensor. abc audit. No fake.
+
+
+### 20.608 quotient transport map_comap_eq_self (2026-11-15 31:40)
+- Goal H ≤ range f not range=⊤; prove htop: range f=⊤ via MonoidHom.range_eq_top.mpr surjective, rw [htop], exact le_top. qpilot. No fake.
