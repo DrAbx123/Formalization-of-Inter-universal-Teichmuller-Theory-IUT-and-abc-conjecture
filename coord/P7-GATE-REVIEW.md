@@ -781,3 +781,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 用途：`W_F ≅ (ℤ_p)^d` 识别后，任意加法群同态 β_a 自动连续；连续+加性 ⇒ ℤ_p 线性，再有理化得 ℚ_p 线性。
 - **剩余 Ind1 源缺口**：实际 `TimesMuQuotient ((F.Mon v)ˣ) ≅ (Integers F)ˣ/tors` 识别 + β_a 来源；不假填。
 - `Mzk1Ind1UnitQuotientActual`/`Mzk1Ind1LogLatticeActionActual` 旧日志为旧版本，已 retouch，待确认无 sorryAx。
+
+
+### 20.53 GREEN：q/Theta readout Correspondence（hull，2026-11-15 01:55）
+- **`Mzk1P0QThetaReadoutCorrespondenceActual` DONE 00:34:54（107s）**：
+  - `c0ProductQ_normalizedLog_eq_sum_qhat_actual`、`sum_degree_qhatLogReadout_le_closedForm_sub_one`、`a1LocalQLog_eq_degree_qhatLogReadout` 等 official；
+  - norm agreement 下 `qhatLogReadout = log‖c0QHat‖`、`paperQ` 对应关系；
+  - 产品 measure hQ0/hQtop 已由 `c0ProductQ=Set.pi` + `productHaar_pi` 收。
+- **解锁**：`Mzk1P0QThetaReadoutNormCorrectionActual`（Correspondence olean 满足）、最终 correction/conditional 形式、#1 的 q 侧读数桥。
+- **两条件仍分开**：P2 norm agreement `‖c0QHat‖=qVFamNormalizedNorm`；S45 `qVFamNormRatio=1`；权重 1/[K_w:F_v]，不混 d_b。
+- 其余 pending：C17/RootRadius/PaperSums/Gamma/BoxDistinguished 等。
