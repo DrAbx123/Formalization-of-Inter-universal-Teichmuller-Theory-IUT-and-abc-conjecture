@@ -3675,3 +3675,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.546 withValSigmaHom/UniformContinuous route (stage4, 2026-11-15 22:20)
 - Norm equality green. Next object: withValSigmaHom (σ)(v) : WithVal (v.maximalIdeal.valuation F) →+* WithVal ((galoisPlaceMk σ v).maximalIdeal.valuation F) := (WithVal.equiv moved).symm.toRingHom.comp (σ.toRingHom.comp (WithVal.equiv v).toRingHom). Prove UniformContinuous via uniformContinuous_of_continuousAt_zero + Valued.hasBasis_nhds_zero using galoisPlaceMk_apply; then UniformSpace.Completion.mapRingHom, compose alignedCompletionMapMoved. No fake.
+
+
+### 20.547 Valuation IsEquiv route for withValSigmaHom (stage4, 2026-11-15 22:30)
+- UniformContinuous ball comparison needs equality/IsEquiv of Valued.v.restrict, not only NNReal norms. First blocker: no IsEquiv from adicAbv equality. Route: `Valuation.isEquiv_iff_val_lt_one` + prime-ideal correspondence x∈v ↔ σx∈moved; then IsEquiv.restrict/ball comparison; then UniformContinuous/Completion.mapRingHom. stage4. No fake.

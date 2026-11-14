@@ -2919,3 +2919,5 @@
 - 24:10: MAJOR Galois isometry probe GREEN 05:13:13; ActualData fn cast fix. gate 20.545 written.
 
 - 24:20: withValSigmaHom/UniformContinuous route specified; stage4 implement. gate 20.546 written.
+
+- 24:30: valuation IsEquiv route for withValSigmaHom; stage4. gate 20.547 written.
