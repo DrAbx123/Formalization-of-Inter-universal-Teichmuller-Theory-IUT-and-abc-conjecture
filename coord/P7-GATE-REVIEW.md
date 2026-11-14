@@ -1730,3 +1730,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0FinalS3137DictionaryAxiomProbeActual re-DONE 05:04:50 (93s) fresh after final dictionary olean.
 - Mzk1P0LQThetaComponentActual DONE 05:08:51 (98s).
 - BSR still no olean; L-side red pending; statement consumer next.
+
+
+### 20.197 MILESTONE GREEN: BaseScalarValuationRelation (mainline/subagent, 2026-11-16 05:22)
+- BaseScalarValuationRelation DONE EXIT=0 05:22:40 (58s); olean 453208B mtime 13:22:40 > source 17549B 13:19:38; per-file log only 4 linter warnings, no errors/sorry. Source no sorry/axiom/admit/True.
+- 8 final signatures: lowerPrimeValuation, upperPrimeValuation, scalarPrime_norm, padicUnit_norm_one, padicUnit_valuation_zero, scalarDVRDecomposition, unitUpperValuation, baseScalarValuationRelation. Only statement change (8) to nested exists m,u with 4-tuple, matching donor consumer.
+- Fixes: removed unused padicScalarValuedInstance (isDefEq timeout); added instAlgebraAdicCompletion + scalarAlgebra local Algebra Q instances; rebuilt lowerPrimeValuation; added algebraMap_ratCast_eq'; unitUpperValuation via padicIntEquiv.symm + valuation_completionMap. 16 real errors fixed.
+- Next donor restructure (inline canonicalFun/nu_add_ge_min/canonicalFun_add_le; AddLeProof downstream); donor probe; power formula ||x||_norm=absNorm^(-nu/d)=||x||_def^(1/d), not equality. S45 not donor-implied.
