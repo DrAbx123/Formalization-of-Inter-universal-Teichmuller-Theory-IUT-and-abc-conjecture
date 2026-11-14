@@ -2061,3 +2061,5 @@
 - 20:55: GREEN VolumeRatioHaarActual 02:21:02; volume chain advances. A1Data still stale DONE 02:16:59 vs source 02:17:11; urgent retouch ordered. gate 20.131 written.
 
 - 21:00: hull final source audit: 6 files no True/PUnit/sorry/axiom; LS3137LFinal FAIL is elaboration (explicit C3L/I/instances needed). VolumeRatioHaar GREEN 02:21:02; GroupCountBridge hp 0<p/named K fixed. A1Data recompile still urgent. gate 20.132 written.
+
+- 21:10: stepxi new Mzk1Ind1IntegrationActionActual: IntegralUnitStableAlgebraicAction + inducedIntegralUnitEquiv + inducedSourceUnitEquiv; stable integral-unit action is exact source gap (no inhabitant). VolumeRatioHaar green; GroupCountBridge named K/hp fixed. gate 20.133 written.

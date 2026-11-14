@@ -1342,3 +1342,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - GREEN: LReadoutFinal 02:04:08; LNormReadoutActual 01:57:32; LNormReadoutProduct 01:36:49; LNormComparisonConditional 02:08:48; LPaperInstanceFinal 17:45.
 - Mzk1P0LS3137LFinalActual FAIL 02:17:12: no True; :13 Invalid argument name I; :15 typeclass stuck (C3L.q.q place/QCandidate); :18 unknown C3L + whnf. Elaboration issue; fix with explicit (C3L := C3L), explicit SourcePilotRegionDataL (I := I) / place/QCandidate instances; no fake.
 - VolumeRatioHaar GREEN 02:21:02; GroupCountBridge fixes (remove named K; hp 0<p).
+
+
+### 20.133 Ind1 integration action: conditional descent to integral-unit quotient (stepxi, 2026-11-15 15:45)
+- New Mzk1Ind1IntegrationActionActual (queue): structure IntegralUnitStableAlgebraicAction K { algAction : (AlgClosure K)^x ≃*; mapsIntegers : each integral unit maps to integral units; mapsIntegers_symm : inverse also preserves }; inducedIntegralUnitEquiv using choose + integersUnitsToAlgClosure_injective; inducedSourceUnitEquiv : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer K via QuotientGroup.congr.
+- This conditionally descends actual alg-closure Ind1 action to integral-unit quotient; stability of integral units is exact source gap (no inhabitant); no fake.
+- VolumeRatioHaar green; GroupCountBridge source fixed named K/hp 0<p, waiting recompile; ActualHBridge/P14ii after.
