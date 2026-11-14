@@ -1991,3 +1991,5 @@
 - 15:50: hull audit SourceUnitBridge vs L readout: different layers (unit group vs Haar mass); missing identification inhabitant, q/tensorUnit <-> integral unit, unitLog->log||q||, global product assembly. SourceUnitBridge does not give LQThetaSourceArrow.normalization_eq/thetaNormReadL. gate 20.101 written.
 
 - 16:00: corrected abc: RootRadius/Varpi probes are GREEN 01:31:20/01:31:19 with three axioms; bridge still FAIL 01:31:53 missing qVFamTensorRationalBaseNorm/PaperSourceCorrectionFreeFields/A1SignedReadoutProduct namespace/localCompletionDegree/forall instances; mainline ordered fix; final retouch after bridge. gate 20.103 written.
+
+- 16:10: four GREEN: TorsionActual 01:36:01 (torsion_card_eq_actual_of_congruenceCard; only #C donor), StepVAverage 01:35:55 (weightedAverage/procession), LocalMon 01:35:55, IntegralUnitMap 01:35:59. Probes requested; mainline continues bridge/final. gate 20.104 written.

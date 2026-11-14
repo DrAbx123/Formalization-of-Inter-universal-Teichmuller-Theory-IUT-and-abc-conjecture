@@ -1148,3 +1148,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.103 Audit corrections: RootRadius/Varpi probes ARE green; bridge missing imports (2026-11-15 10:00)
 - RootRadiusAxiomProbeActual DONE 01:31:20 and VarpiAxiomProbeActual DONE 01:31:19; logs show both three axioms; abc's 'unverified' status was stale; update ledger.
 - bridge current FAIL 01:31:53: missing qVFamTensorRationalBaseNorm (BadPlaceRationalDegreeActual), PaperSourceCorrectionFreeFields (BadPlacePaperTargetStrictActual), Mzk1A1SignedReadoutProductActual namespace, localCompletionDegree (ProcessionNormalizationWeightsActual), forall MeasurableSpace/Borel instances. mainline ordered to fix; final retouch after bridge green.
+
+
+### 20.104 GREEN: TorsionActual, StepVAverage, LocalMon, IntegralUnitMap (2026-11-15 10:15)
+- Mzk1IutIVProp14TorsionActual DONE 01:36:01 (53s): torsion_card_eq_actual_of_congruenceCard (hC,hq,hcop => exists h,m; #Gamma=p^h, #T=(q-1)p^m, h+m=f(es-1)); only actual #C donor remains.
+- Mzk1BoxStepVAverageActual DONE 01:35:55 (46s): stepV_weightedAverage_le_of_distinguished; stepV_procession_le_of_distinguished.
+- Mzk1Ind1LocalMonActual DONE 01:35:55 (47s): localFPrimeStrip_Mon_eq (Mon v=(AlgClosure Q_v)^x).
+- Mzk1Ind1IntegralUnitMapActual DONE 01:35:59 (51s): integerUnitsRingHom + injective; integersUnitsToAlgClosure + injective; IntegralUnitToAlgClosureMap.
+- Probes requested for these four; bridge/final still pending.
