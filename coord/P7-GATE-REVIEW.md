@@ -2755,3 +2755,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.365 Qp unit decomposition donor; unit-invariance gap (2026-11-17 12:40)
 - For arbitrary lambda in Haar scaling formula, use Qp= p^k*u decomposition. Mathlib donor: Padic.unitCoeff/unitCoeff_spec (NumberTheory/Padics/PadicIntegers:403/413) for Zp x = u*p^valuation; apply to p^(-v)*lambda (or lambda=p^k*u).
 - Then need unit invariance of additive Haar under u with ||u||=1 (determinant norm 1), i.e. measure_scaling for p^k times unit; no obvious donor found in MeasureTheory. Report exact missing unit-invariance/measure_scaling lemma. No fake.
+
+
+### 20.366 Unit invariance route via distribHaarChar/lattice (2026-11-17 12:50)
+- Instead of determinant, prove unit invariance: u in Zp^× preserves a compact open additive lattice L (u•L=L since u,u^-1 integral). Then distribHaarChar_mul (Haar/DistribChar:83) and distribHaarChar_eq_of_measure_smul_eq_mul (:92) yield distribHaarChar block u =1, hence μ(u•S)=μS. Need compact open lattice in ArithmeticTensorTupleBlock preserved by unit action (product of integer rings).
+- Then lambda=p^k*u decomposition via Padic.unitCoeff_spec + p^k formula; get principalDim log||lambda||. qpilot to implement/report first blocker.
