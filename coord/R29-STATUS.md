@@ -2237,3 +2237,5 @@
 - 14:50: S45 exact: ratio=1 iff d=1 (q nonunit); paper coefficient is default norm, tensor uses spectral. Potential wiring alternative: use default Completion generator; hull/stage4 investigate constructor carrier. No fake. gate 20.217 written.
 
 - 15:00: S45 bypass type-blocked: constructor requires CommonPrimeCompletion spectral norm; default-norm variant needed. hull/stage4 assess/implement default scaling structure + downstream; no silent object change. S45 exact d=1. gate 20.218 written.
+
+- 15:10: S45-free scaling route from stage4: g=q_norm^d, ||g||=r=p^{-paper}; feed constructor at paper coefficient. Builds scaling data without S45, but actual q norm identification still needs S45/R2. mainline to implement norm lemma/data. gate 20.219 written.

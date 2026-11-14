@@ -1865,3 +1865,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - ArithmeticTuplePureFractionalScalingData localGenerator : CommonPrimeCompletion (NormalizedCompletion spectral norm); localGenerator_norm ||g||=p^(-c). Only constructor takes CommonPrimeCompletion. q default norm is adic; same type different norm. Thus cannot pass default-norm q as generator; c forced to c_norm (normalized) or S45 norm equality. No bypass with existing constructor.
 - Exact outs: (1) new default-norm scaling data structure + constructor + downstream adaptation; (2) prove norm-instance equality S45. Assigned hull/stage4 to assess/implement default variant and downstream compatibility; no silent object change; no fake.
 - S45 exact: d=1 => ratio=1; d>1 => ratio>1 for nonunit q; paper coefficient is default norm; tensor uses spectral.
+
+
+### 20.219 S45-free paper-coefficient scaling data route (stage4, 2026-11-16 09:10)
+- Default-norm variant incompatible with downstream (tensor block/measure API normalized). Paper object should be normalized.
+- S45-free scaling construction: r=||q||_def<1, paper=-logb_p r. Donor ||q_norm||=r^(1/d). Let g:=q_norm^d; then ||g||=r=p^{-paper}. Feed g to arithmeticTuplePureFractionalScalingData_ofGenerator at paper coefficient. Builds paper-coefficient scaling data without S45, compatible with normalized consumers.
+- Caveat: g is normalized representative of default coefficient, not actual q; S45 still needed to identify actual q's two norms. R2 normalized root supply unchanged; q_norm^d does not fill R2.
+- Requires new lemma ||q_norm^d||=p^{-paper} via norm_pow+donor. Assigned mainline; no fake.
