@@ -3666,3 +3666,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.544 unitLog norm via principal-unit power congruence (2026-11-15 22:00)
 - unitLog = log1p(u^n-1)/n with n=integralUnitExponent; no valuation control on n. But for u∈1+p, u^n≡1 mod p^{v_p(n)+1} (principal unit power), so ‖log1p‖<=p^{-(v+1)}, divide by norm(n)=p^{-v} gives <=1. Try prove using principal-unit power congruence/log1p bound; report exact missing lemma. Else record scale=1 obstruction, switch scale!=1. qpilot. No fake.
+
+
+### 20.545 MAJOR Galois isometry probe GREEN; ActualData fn cast (2026-11-15 22:10)
+- ProbeGaloisIsometryActual DONE 05:13:13: galoisPlaceMk_apply via AdicAbv+mk_maximalIdeal/mk_apply/norm_embedding, sigma.apply_symm_apply; no sorry. stage4 package Isometry/Completion.mapRingHom next.
+- ActualData :250 A_le mismatch: theorem expects fn : ι→ℝ; pass fn:=fun i=>(actualFn i:ℝ), Fdeg constant, logIdx/diff; hull fix. No fake.
