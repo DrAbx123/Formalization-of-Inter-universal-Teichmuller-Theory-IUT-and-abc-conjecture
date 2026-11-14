@@ -3202,3 +3202,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.449 KernelBridge fresh clean; Haar green; final index/principal files pending (2026-11-15 06:00)
 - Mzk1Ind1KernelBridgeActual DONE 17:15:02/olean 01:15:01 after deleting quotient bridge; A2IndexKernelProbe 17:19:31; HaarUnitInvariance 17:14:58. No final index/principal files yet.
 - Tasks: qpilot create PrincipalDimScaling; hull create final index decomposition; stepxi new-file quotient/Z_p^d; abc audit. No fake.
+
+
+### 20.450 A2 involution candidate GREEN; squared/unique exact missing (mainline, 2026-11-15 06:10)
+- Mzk1A2InvolutionCandidateActual DONE 17:23:21: a2EllipticInvolutionCandidate = Hom.id (degenerate identity); squared/unique Gap Props. First donor Hom.id green.
+- Exact missing: TwoIso (comp id id) id no constructor/coherence (only TwoCell.id); unique requires Subsingleton (X.Hom X)/classification. Other 6 field groups (signAction/quotient/groups/scalar ext/type/V) no constructors; Example36OrbicurveFeasibility:476-489 says all unconstructed. SourceCompletionSignQuotient->toSourceSignQuotientData conditional only. Mainline try Iso.refl/TwoCell.id for squared; check uniqueness donor. No fake.

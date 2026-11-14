@@ -2727,3 +2727,5 @@
 - 08:10: MAJOR HaarUnitInvariance GREEN 01:14:58 (char=1, μ invariance, explicit ContinuousConstSMul). Next lambda decomposition/principalDim/floor. gate 20.448 written.
 
 - 08:20: KernelBridge fresh clean 01:15:01; Haar green; final index/principal files pending. gate 20.449 written.
+
+- 08:30: A2 involution candidate identity GREEN 17:23:21; squared/unique missing coherence/Subsingleton; other fields no donors. mainline try. gate 20.450 written.
