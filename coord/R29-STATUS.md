@@ -2337,3 +2337,5 @@
 - 23:00: Donor hbridge explicit unzero named args/alpha, toAdd Z cast; or hdef.trans+h2. Hand to mainline if stuck; single owner. gate 20.258 written.
 
 - 23:10: donor/Estimates still no olean; 12 lean. Woke lanes; hull continues donor. No fake.
+
+- 23:20: hbridge corrections: Donor toAdd alpha:=Z; Value use generator for L/nu and toC for C/default, qVFamily.q not defeq L. hull fix. gate 20.259 written.

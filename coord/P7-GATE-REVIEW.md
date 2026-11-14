@@ -2098,3 +2098,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 
 ### 20.258 Donor hbridge explicit unzero args (hull, 2026-11-16 16:20)
 - Donor FAIL 08:48 source 08:46: :78 toAdd type Multiplicative Z expected R (cast not passed to toAdd); :79/:80 unzero positional val but first explicit arg is proof, x implicit -> must (alpha:=Multiplicative Z)(x:=val)(proof). Fix h1/h2 all with named args; hdef_exp LHS (toAdd (alpha:=Multiplicative Z) (unzero (x:=val) proof) : Z) then cast to R; or skip hdef_exp and use hdef.trans + h2. If stuck, mainline single non-concurrent takeover. Value still default hval/rw. No fake.
+
+
+### 20.259 hbridge critical carrier/toAdd corrections (abc/stage4, 2026-11-16 16:30)
+- Donor toAdd alpha is Z not Multiplicative Z: let m:Z := Multiplicative.toAdd (alpha:=Z) (WithZero.unzero (alpha:=Multiplicative Z) (x:=val) hval); same h2.
+- Value: qVFamily.q is Completion C; generator is NormalizedCompletion L; they are not defeq. Use x:=qVFamNormalizedGenerator for nu/normalized formula; use toC x for default formula (toC x = qVFamily.q defeq); qVFamDefaultNorm unfolds to norm of qVFamily.q; simpa [qVFamDefaultNorm, qVFamNormalizedGenerator, toC]. This is real carrier issue, not a simple show; still not a new math gap if toC identity is used.
+- hbridge still red; wrapper/dictionary/assembly conditional green+probes; not unconditional. No fake.
