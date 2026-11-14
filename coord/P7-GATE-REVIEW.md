@@ -2079,3 +2079,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IUTIVABCStatementLayerActual DONE 08:23:34 (43s) after import/field-as-type projection fixes.
 - hbridge Donor/Value still no olean; hull owns; hdef'/carrier remaining.
 - Woke lanes; next statement-layer file.
+
+
+### 20.255 hbridge coercion fixes (stage4, 2026-11-16 15:50)
+- Donor no olean; FAIL 16:27. :78 hlog use WithZero.log_exp (val = exp(toAdd(unzero hval)) or simpa [m]) then rfl; :94 hdef' hm_cast ((m:Z):R)=..., change ‖(qVFamily T b).q‖=absNorm^((m:Z):R) then simpa [qVFamDefaultNorm,toC]; :92 convert hdef using 2 narrow simp set. Math route unchanged; elaboration/coercion only. Generic/RouteA green.

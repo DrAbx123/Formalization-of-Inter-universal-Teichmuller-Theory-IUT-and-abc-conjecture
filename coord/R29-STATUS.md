@@ -2327,3 +2327,5 @@
 - 22:10: Donor hbridge last hdef exponent unzero proof; use simpa [m,WithZero.coe_unzero,absNorm] or convert using 1. Value explicit show carrier. hull fix. gate 20.253 written.
 
 - 22:20: GREEN ABCStatementLayer 08:23:34. hbridge still no olean; hull. Next statement-layer. gate 20.254 written.
+
+- 22:30: hbridge :78 log_exp, :94 hm_cast/change/convert. hull fix. gate 20.255 written.
