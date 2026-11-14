@@ -1553,3 +1553,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - mainline fix plan for donor cycle (inline add_le or lower core module) and dictionary hM/hB explicit params is correct.
 - BUT correction: donor gives ||x||_norm = absNorm^(-nu/d) = ||x||_def^(1/d), NOT ||x||_norm=||x||_def. CommonPrimeNormInstanceCompat asks equality; cannot be closed by donor except d=1/trivial. S45 qVFamNormRatio=1 is NOT donor-implied; it remains a real source condition. Do not fake; record exact power formula and keep ratio explicit.
 - Build BaseScalarValuationRelation first; then donor; probe; then report compat exact first error.
+
+
+### 20.168 GREEN: ActualSourceUnitLayer with three-axiom probe (stepxi, 2026-11-15 23:00)
+- ActualSourceUnitLayerActual GREEN 04:05:14Z, axioms [propext, Classical.choice, Quot.sound], no sorryAx: instance Normal, ActualSourceUnitLayer, actualSourceUnitLayer_self/nonempty, ActualInd1UnitAction (algAction+beta+compatible substantive), Required.
+- IntegrationAction GREEN 03:54:09Z (structure retained; induced proofs removed); Required iff probe added, pending final three axioms.
+- Exact remaining beta source node: actual Ind1/Ind2 action -> IntegralUnitStableAlgebraicAction (algAction preserves integral units bijectively) or ActualInd1UnitAction (algAction+beta+compatible); no inhabitant, no fake.
