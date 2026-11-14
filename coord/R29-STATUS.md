@@ -2903,3 +2903,5 @@
 - 22:50: hscale1 not from choose; try hull⊆unitReference then helper scale:=1 with proof. qpilot. gate 20.537 written.
 
 - 23:00: abc bridge audit: first missing logShellPoint abc->C3 tensor + c3NormalizedTensorHaar region estimate; then hhullRead normalized/actual Haar. mainline search. gate 20.538 written.
+
+- 23:10: hscale1 obstruction precise: no hull⊆O/unique; only redefine scale:=1 with proof after inclusion, downstream recheck. qpilot try inclusion. gate 20.539 written.
