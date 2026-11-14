@@ -1676,3 +1676,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary src 04:39:04 < olean 04:44:24 DONE 04:44:25; Bridge src 04:39:04 < olean 04:44:23 DONE 04:44:24; rows updated to CONSTRUCTED, no True.
 - Mzk1P0FinalS3137ConditionalActual FAIL 04:44:24: finalBridgeConditionRows has 10 rows but finalBridgeConditionRows_length = 9 (rfl mismatch); fix length to 10 or remove row. Log's NormalizedSourceConditional olean missing is transient (olean 03:15 exists).
 - Dictionary probe src/olean 04:33/04:36 predates new Dictionary olean 04:44; retouch probe, not fresh.
+
+
+### 20.189 BSR moving-target latest corrections (stage4, 2026-11-16 03:30)
+- BSR still no olean; source being edited (mtime 12:48), latest FAIL 12:46:45.
+- Latest routes: :101 zpow_eq_one_iff_right₀ two args (0≤a)(a≠1); :113 Prime.ne_zero; :120 dsimp only [uq]/change; :125 correct lemma PadicInt.mkUnits_eq (not mkUnits_coe) after coercion change; :143 bare instAlgebraAdicCompletion is not Algebra Q term, use inferred/completionMap; :146/151 change to completionMap spelling; :139/:174 split map_mul/map_zpow₀ + padicUnit_valuation_zero, refine nested ∃.
+- Donor circular dependency remains after BSR; formula source-level normalized=default^(1/d).
