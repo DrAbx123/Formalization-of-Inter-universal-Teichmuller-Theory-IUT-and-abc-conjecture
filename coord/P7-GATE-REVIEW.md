@@ -3566,3 +3566,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.523 Watchdog restart (2026-11-15 18:30)
 - Watchdog was stopped (log mtime 04:18:57, heartbeat 20:13:54 running=0 pending=48). Lead restarted via background job pwsh-ce25be70ff9a4731 (`cmd /c tools/run_dag_watchdog.cmd`); log active 04:38:37, pending draining. Fresh builds/probes (ActualRamified, WQuotient, UnitValuation, UnitRegionScaling, Batch2Probe) will follow. abc re-audit.
+
+
+### 20.524 MAJOR Assembly/WQuotient/ActualData/CompletionTower fresh GREEN (2026-11-15 18:40)
+- Watchdog recovered. PrincipalDimAssembly DONE 20:39:16/olean 04:39:16 (principalDim_log_scaling_of_decomp, only hact explicit). WQuotientLattice DONE 20:39:19/04:39:19 (p=5 d=1 structure, no inhabitant). ActualRamifiedData DONE 20:40:00/04:39:59 (wired chosen; actualFn_spec/hdecomp/chosenSpec). CompletionTower re-DONE 20:40:07/04:40:07 (scalarTower/moduleFinite; finrank absent). ZpLatticeProbe green 20:39:08.
+- qpilot floor; hull Has*; stepxi WQuotient equiv; abc audit. No fake.
