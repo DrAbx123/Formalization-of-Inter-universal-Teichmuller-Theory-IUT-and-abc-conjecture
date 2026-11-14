@@ -2857,3 +2857,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.385 MAJOR GaloisRingBridge GREEN (stage4, 2026-11-17 16:10)
 - Mzk1GaloisRingBridgeActual DONE 22:24:59/olean 22:24:58: galoisFmodMulSemiringAction trivial; galoisSMulDistribClass G (O_Fmod) (O_F) via hgr/ext/simp; galoisRingIsGaloisGroup via iff_isFractionRing; primesOverMkPlace bridge; exists_galois_smul_primesOver (primesOver transitivity, scoped Pointwise). ObjectLockData stays green. No mainline edits.
 - Next stage4: instantiate P/Q from nativeBadToFPlace/comap_F(nativeBadToKPlace), apply transitivity, convert sigma•P=Q to galoisPlaceMk alignment, then completion embedding/degree tower. abc probe.
+
+
+### 20.386 BaseChange completionMap norm power semantics (mainline, 2026-11-17 16:20)
+- Mzk1BaseChangeQCorrespondenceActual green (DONE 14:15:28, semantics corrected/recompiled): structure fields fPlace/kPlace, fPlace_comap_F, fPlace_lift, kPlace_eq, comaps, completionMap, n+n_pos, completionMap_norm: ||completionMap x||=||x||^n; BaseChangeQElementCorrespondence q_eq; QPilotC3SignedAggregation signed=-M; conditional R1.
+- Important donor: T.arithmetic has Algebra F K + IsScalarTower Fmod F K; FinitePlaceExtension.completionMap (k:=F)(K:=K) kPlace : (comap_F kPlace).adicCompletion F →+* kPlace.adicCompletion K GREEN with completionMap_injective/valuation_algebraMap/valuation_completionMap/completionMap_coe. So completionMap field constructible.
+- Missing inhabitants: (a) fPlace_lift: comap_F(nativeBaseSectionPlace)= (nativeBadLift).lift b (selected lift coherence, no theorem); (b) completionMap_norm power formula n=[K_w:F_v] via valuation_algebraMap + residue degree (not packaged); (c) q element correspondence; (d) C3 signed aggregation. No fake.
