@@ -1368,3 +1368,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0LNormBoundWeakActual DONE 02:35:44 (101s): qRead_le_thetaNormReadProduct_of_productBound.
 - A1Data probe DONE 02:35:43 (100s): paperToS3137A1Data_nonempty depends only [propext, Classical.choice, Quot.sound]; no sorryAx.
 - Final FAIL current: :75/:83 synthInstanceFailed for (b: Bad) -> MeasurableSpace (QVFamTensorCoefficientActual.qVFamTensorBlock T b); :87 Unknown hB; hM inferred as Bad -> MeasurableSpace sorry; line66 sorry warning from failed decl. Fix explicit hM/hB binders with fully qualified qVFamTensorBlock and letI.
+
+
+### 20.137 Round-4 late tails: Final structure args, GroupCountBridge instance, ActualSourceUnitLayer group, TorsionFromUnits (2026-11-15 16:25)
+- Final :89 type expected got (FinalBridgeConditions T : (hM) -> (hB) -> Prop): make hM/hB typeclass/instance binders of structure or pass explicitly; then finalBridgeConditions_of.
+- GroupCountBridge :18 NormedAlgebra Qp ?m stuck: explicit K/p binders/named args.
+- ActualSourceUnitLayer :57 synthInstanceFailed Mul (ActualSourceUnitLayer K): quotient needs CommGroup instance from QuotientGroup (torsion normal); no axiom.
+- TorsionFromUnits :40 unsolved: inspect tail, likely pow_mul/Nat cast.
+- LS3137LFinal timeout at isDefEq; may need explicit C3L/instances and maxHeartbeats; lower priority.

@@ -2069,3 +2069,5 @@
 - 21:30: A1Data DONE 02:25:50 olean newer than source; source no sorry/True; probe output three axioms (no sorryAx). Old log warning is earlier build. Final still own errors: paperNormalizedQPilotSum import + forall MeasurableSpace/Borel instances; ordered fix. gate 20.135 written.
 
 - 21:50: GREEN LNormBoundWeak 02:35:44; A1Data probe 02:35:43 three axioms no sorryAx. Final current errors: missing forall MeasurableSpace/Borel instances, unknown hB, hM sorry; ordered explicit hM/hB + qualified qVFamTensorBlock. gate 20.136 written.
+
+- 22:25: current tails: Final structure needs hM/hB instance binders; GroupCountBridge NormedAlgebra stuck (explicit K/p); ActualSourceUnitLayer missing Mul/CommGroup quotient instance; TorsionFromUnits :40; LS3137LFinal isDefEq timeout. Sent fixes. gate 20.137 written.
