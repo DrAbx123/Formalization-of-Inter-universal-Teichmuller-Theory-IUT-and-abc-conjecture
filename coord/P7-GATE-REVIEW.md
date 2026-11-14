@@ -2720,3 +2720,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.359 Audit restored greens; HullUnitZero identifier fix (2026-11-17 11:40)
 - Fresh GREEN: FloorNativeObstruction 21:09:06 (probes 21:14:03 standard); ObjectLockData 21:09:06 (sign correct theta_signed=thetaNormReadProduct no minus + theta_nonneg; probes standard); ActualReadingTarget 21:09:09 (conditional aggregation/R1 core; probes standard). No actual sorry.
 - RED: HullUnitZero FAIL 13:13:24 unknown arithmeticTupleIQHullUnitRegionHaarLog; definition exists at LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullSignedLogVolume.lean:43 (arithmeticTupleIQHullUnitRegionHaarLog), so missing import; qpilot to import/rewrite explicit. KernelBridge still RED 13:02:43 no olean; P2Bridge no source/log.
+
+
+### 20.360 same-q/P.signed type obstructions: base-change correspondence missing (mainline, 2026-11-17 11:50)
+- qVFamTensorPlace T b : FinitePlace F (F-place, QVFamTensorCoefficientActual:47) vs nativeBaseSectionPlace T b : FinitePlace K (K-place, BaseQFamilyActual:52); equality type-incorrect (F vs K). Both contract to b.1 (comap lemmas).
+- Elements qVFamily q : Completion F-place vs nativeBaseQFamily q : Completion K-place; equality type-incorrect. Need actual base-change K/F at completions + norm degree factors.
+- First missing theorem: baseChangePlace F-place above b <-> K-place above b compatible with comap, plus Completion comparison and Tate parameter correspondence qVFamily<->nativeBaseQFamily. No repo bridge.
+- P.signed=-M additional: P.signed=Real.log||P.line.C3.q.q|| single local log vs M=sum_b W_b baseQLogMagnitude weighted sum; single C3 cannot equal -M unless C3 corresponds to whole Bad family/aggregate or Bad singleton. Need index/weight-wise or local reading; no theorem identifies P.line.C3 with nativeBaseQFamily.
+- Mainline to build explicit correspondence structures (no inhabitant) and report exact first target; no fake.
