@@ -3671,3 +3671,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.545 MAJOR Galois isometry probe GREEN; ActualData fn cast (2026-11-15 22:10)
 - ProbeGaloisIsometryActual DONE 05:13:13: galoisPlaceMk_apply via AdicAbv+mk_maximalIdeal/mk_apply/norm_embedding, sigma.apply_symm_apply; no sorry. stage4 package Isometry/Completion.mapRingHom next.
 - ActualData :250 A_le mismatch: theorem expects fn : ι→ℝ; pass fn:=fun i=>(actualFn i:ℝ), Fdeg constant, logIdx/diff; hull fix. No fake.
+
+
+### 20.546 withValSigmaHom/UniformContinuous route (stage4, 2026-11-15 22:20)
+- Norm equality green. Next object: withValSigmaHom (σ)(v) : WithVal (v.maximalIdeal.valuation F) →+* WithVal ((galoisPlaceMk σ v).maximalIdeal.valuation F) := (WithVal.equiv moved).symm.toRingHom.comp (σ.toRingHom.comp (WithVal.equiv v).toRingHom). Prove UniformContinuous via uniformContinuous_of_continuousAt_zero + Valued.hasBasis_nhds_zero using galoisPlaceMk_apply; then UniformSpace.Completion.mapRingHom, compose alignedCompletionMapMoved. No fake.
