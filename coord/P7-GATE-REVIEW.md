@@ -973,3 +973,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0LNormReadoutProductActual (queue): thetaNormReadProduct_eq_sum (sum d_b log r_b) and _eq_closedForm_sub_one (s1915ClosedForm-1); new thetaNormReadProduct_eq_neg_sum_coefficient (sum -(d_b c_norm_b)/(2l) log P_b; S709/S305 + log_rpow + ring).
 - OBJECT MISMATCH: thetaNormReadProduct is global Bad sum; LPaperInstance is single place/C3 local. No T.arithmetic=I.initial.arithmetic identity or tensorIndex<->Bad correspondence in tree. Added explicit LGlobalLocalObjectLock (single_place Prop + local_eq_global_restriction) and lNormGlobalLocalObjectLockGap := Nonempty; do not equate global with local.
 - Next: LNormComparisonTarget_of_bounds with (hobj : LGlobalLocalObjectLock) and (hbound : qReadActual <= thetaNormReadProduct) or local version; object alignment and numerical bound separate; no unitMass=1.
+
+
+### 20.78 GREEN-in-progress: LNormComparisonTarget conditional; single-place T not constructible (mainline, 2026-11-15 05:15)
+- New `Mzk1P0LNormComparisonConditionalActual` (queue):
+  - `LNormComparisonTarget_of_bounds (hobj : LGlobalLocalObjectLock T) (hlock : thetaNormReadL = thetaNormReadProduct T) (hbound : qReadActual <= thetaNormReadProduct T) : LNormComparisonTarget`;
+  - `LNormComparisonTarget_of_local_bound (hobj) (hbound : qReadActual <= thetaNormReadL) : LNormComparisonTarget`;
+  - hobj explicit; hlock/hbound separate; no unitMass=1.
+- Single-place T / `T.arithmetic = I.initial.arithmetic` cannot be constructed in one round: no identification theorem, no Bad<->tensorIndex correspondence; keep hobj as explicit GAP; do not equate global and local.
+- Next: compile files, then `LPaperInstance_of_bounds (hobj) (hbound) : LPaperInstance`; report exact signature.
