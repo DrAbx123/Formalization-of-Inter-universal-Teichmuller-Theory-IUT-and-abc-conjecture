@@ -2940,3 +2940,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - KernelBridge source 23:19 has no range theorem; old log 23:15 errors are stale. Waiting fresh; if quotientKernelEquivRange fails delete it, keep kernelToAQuotient_ker_eq.
 - UnitInvariance log 23:15: :37:4 change failed; :47:6 change failed; :59:10/:62:10 rw pattern miss. qpilot to report/fix explicit algebraMap/Units ext.
 - GaloisPlaceAlignment no log; stage4 to report/queue. No fake.
+
+
+### 20.401 BaseChange constructor green; fPlace lift coherence via choice mismatch (mainline, 2026-11-17 18:50)
+- Mzk1BaseChangeQCorrespondenceActual DONE 15:16:49: baseChangePlaceCompletionCorrespondence (hplace) with completionMap from NumberFieldFinitePlace.completionMap; n=relativeCompletionDegree; completionMap_norm=norm_completionMap_pow green. (b) closed. Only (a) hplace: comap_F(nativeBaseSectionPlace b)=nativeBadLift.lift b remains.
+- nativeBadLift = Classical.choose(comap_surjective) in NativeBadLiftActual; nativeBaseSectionPlace = sectionFiniteLift = Classical.choose(other statement). Different choices, so (a) not provable as-is. Legitimate fix (our construction): redefine nativeBadLift to sectionFiniteLift maybe rfl; assess downstream impact. Mainline to report.
+- KernelBridge fresh DONE 15:21:15 no range theorem, probes three axioms; range equality still missing. UnitInvariance topology deps removed/use Algebra.smul_def, pending.

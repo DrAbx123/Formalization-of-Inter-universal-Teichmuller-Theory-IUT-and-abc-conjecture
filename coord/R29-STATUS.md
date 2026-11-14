@@ -2629,3 +2629,5 @@
 - 00:00: URGENT KernelBridge regression range theorem sorryAx; delete it, keep ker_eq/quotientKernelEquivRange. HullUnitZero conditional; consumer probe standard. gate 20.399 written.
 
 - 00:10: Kernel source clean (no range theorem), unit change/rw errors, alignment no log. Wake qpilot/stepxi/stage4. gate 20.400 written.
+
+- 00:20: BaseChange constructor green (b closed); (a) choice mismatch nativeBadLift vs sectionFiniteLift; fix by aligning our nativeBadLift. KernelBridge fresh green no range. UnitInvariance topology deps removed. gate 20.401 written.
