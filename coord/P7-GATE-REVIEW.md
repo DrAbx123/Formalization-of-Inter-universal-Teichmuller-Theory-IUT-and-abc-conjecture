@@ -2260,3 +2260,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - #C B: existing hcard ideal (logShellScale p)^e = (p^s)^e has K-valuation e_K*s*e, so claimed q^(e*s-1) units card only if e_K=1 (unramified). In general target false. Hull instructed: report obstruction, propose corrected exponent (q-1)q^(e_K*s*e-1) using LogShellQFECardinalityHypothesis; or state e_K=1. No fake proof.
 - Alternative actual target: mainline reported PaperLevelXiFTargetProofActual/PaperLevelXiFTargetBridgeActual hull-containment route gives actual magnitude actualThetaHullMagnitudeRoot <= actualQPilotMagnitudeClassical unconditionally (per-b hull containment, no margin). Decision: potentially legitimate if actual hull containment, not flagged model c_norm/(2l). Mainline to audit dependencies/probes; if clean, wire to actual magnitude target. (G1) PaperQPilotObjectActual inhabitant, (G2) theta reading identity, (G3) q reading identity still needed.
 - Target reading bridge remains S45/correction-sign open; paper comparison alone not sufficient.
+
+
+### 20.282 #C B corrected target decision (hull, 2026-11-16 20:20)
+- Confirmed false original hcard in ramified case: ideal (logShellScale p)^e = m^{e_K*s*e}, units card (q-1)q^{e_K*s*e-1}; original (q-1)q^{e*s-1} only if e_K=1. Example totally ramified K=Q_{p^2}, e=1 fails.
+- LogShellQFECardinalityHypothesis semantics: e is ramification exponent, congruence quotient mod logShellScale p (not power), so q^{e*s-1}(q-1) consistent; mismatch only in TorsionFromUnits hcard using (p^s)^e.
+- Decision: build corrected general theorem exponent e_K*s*e + specialization heK:e_K=1 -> original hcard; keep both labeled; do not silently modify existing hcard. Hull to report first Lean error on corrected target. Paper context unramified/logShellScale uniformizer would need explicit e_K=1.

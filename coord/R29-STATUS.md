@@ -2387,3 +2387,5 @@
 - 03:00 CRITICAL: target bridge sign barrier; paper comparison weaker than actual target for d>1; S45-free does not imply qPilot reading target. mainline/hull attack direct actual-target inequality or margin; flagged model not silent. Target bridge still S45/d=1. gate 20.280 written.
 
 - 03:10: #C B formula false in ramified case (ideal exponent e_K*s*e); hull to report/propose corrected. Alternative actual hull-containment route actualPaperXiFTarget maybe legitimate (no flagged model); mainline audit/wire; G1/G2/G3 still needed. Target reading bridge S45/correction-sign open. gate 20.281 written.
+
+- 03:20: #C B corrected target: general exponent e_K*s*e + specialization e_K=1; do not modify existing hcard silently. hull build/report. gate 20.282 written.
