@@ -2737,3 +2737,5 @@
 - 09:00: A2 squared GREEN via Iso.refl (defeq); unique missing Subsingleton Hom. mainline other fields/nondegenerate. QuotientBridge open fix pending. gate 20.453 written.
 
 - 09:10: A2 field analysis: V donor SourcePlaceSelection; first missing signAction.diagram/atBase then quotient witness/groups/scalar stackExtension; unique missing. mainline partial fields. gate 20.454 written.
+
+- 09:20: A2PartialFields GREEN 17:45:23; quotient/principal logs stale; mainline direct compile. gate 20.455 written.

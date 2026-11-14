@@ -3232,3 +3232,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - V/V_mod_bad/V_section: real donor SourcePlaceSelection (V_section restrictionSection, V selected, singleton constructor) => not first missing; residual actual odd-residue place.
 - nondegenerate xF subsingleton no donor (generic Hom usually non-subsingleton); unique remains missing.
 - First donor V=SourcePlaceSelection; first missing signAction.diagram/atBase, then quotient witness/groups/scalar stackExtension. Mainline write partial fields (V/degenerate xF/squared) and report blocked. No fake.
+
+
+### 20.455 A2PartialFields GREEN; watchdog logs stale on quotient/principal (2026-11-15 07:20)
+- Mzk1A2PartialFieldsActual DONE 17:45:23: structure A2PartialFields; a2PartialFieldsOfSingleton; a2BlockedFields 6 items. Probe 17:49:41.
+- QuotientBridge src 01:43, log 01:45 still Invalid F :16/17/29. PrincipalDim src 01:40, log 01:45 still λ :36/:60/:67/:69. Logs stale; mainline direct compile current sources; stepxi/qpilot retouch. No fake.
