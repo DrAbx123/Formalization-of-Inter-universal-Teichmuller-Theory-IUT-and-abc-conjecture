@@ -1488,3 +1488,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.153 P14ii status adjudication: GREEN 03:43:09 (2026-11-15 21:00)
 - abc reported P14ii FAIL 03:36:44 olean=False, but that predates watchdog DONE EXIT=0 03:43:09. Current source mtime 11:40:58; olean mtime 11:43:08 > source; source no sorry/True.
 - Therefore P14iiActual is GREEN 03:43:09; abc to re-audit current olean/probe. Final fresh 03:33:31 and final probe 03:43:57 remain valid.
+
+
+### 20.155 GREEN: P14ii axiom probes; iiiBoxActual; iiiBoxConsumer remains (2026-11-15 21:05)
+- Mzk1IutIVProp14P14iiAxiomProbeActual DONE 03:47:14: p14ii_logVolume_actual depends only [propext, Classical.choice, Quot.sound].
+- Mzk1P14iiAuditAxiomProbeActual DONE 03:47:14: same theorem three axioms.
+- Mzk1IutIVProp14iiiBoxActual DONE 03:47:15 (49s): compatible stub replacedByFormalBox; old Iut dependency removed; no sorry/True.
+- Mzk1IutIVProp14iiiBoxConsumerActual still red: :59 unknown prop14iii_box_formal (must use actual theorem from Mzk1IutIVProp14iiiBoxFormalActual, open namespace); :60 synthInstanceFailed C.mu.IsAddHaarMeasure (explicit hypothesis/instance needed). qpilot to fix.

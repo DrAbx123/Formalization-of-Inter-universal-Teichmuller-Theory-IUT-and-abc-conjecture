@@ -2105,3 +2105,5 @@
 - 02:50: lattice IV audit: core P14ii chain all green; P14ii probe queued. Two RED iiiBoxActual (missing Iut.Concrete.LocalConstruct.Prop14Lattice olean) and iiiBoxConsumerActual (SourceNativeInitialThetaData local/universe); assigned qpilot. gate 20.152 written.
 
 - 03:00: P14ii adjudicated GREEN 03:43:09; abc's FAIL 03:36:44 stale (predates DONE); source 11:40:58, olean 11:43:08, no sorry/True. abc to re-audit. Final fresh/probe valid. gate 20.153 written.
+
+- 03:05: GREEN P14iiAxiomProbe 03:47:14 (p14ii_logVolume_actual three axioms) and iiiBoxActual 03:47:15 stub. iiiBoxConsumer still red: unknown prop14iii_box_formal + missing IsAddHaarMeasure; qpilot to fix. gate 20.155 written.
