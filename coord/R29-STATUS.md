@@ -2187,3 +2187,5 @@
 - 10:30: BSR latest errors :290/:329/:343/:307 sent to mainline/subagent; still no olean. Galois scope caveat stands. gate 20.195 written.
 
 - 10:40: GREEN DeepStatementLayerV2 05:03:27 (field-as-type fixes); Dictionary probe fresh 05:04:50; LQThetaComponent 05:08:51. Statement consumer next; BSR no olean. gate 20.196 written.
+
+- 10:50: scheduled check: no consumer/BSR olean; DeepStatement/DictionaryProbe/LQTheta green. Woke lanes. 1 lean, log 13:18.
