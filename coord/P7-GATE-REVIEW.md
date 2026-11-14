@@ -1102,3 +1102,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.95 GREEN: BoxDistinguishedVarpiActual; LNormReadoutProduct tail fixes (2026-11-15 08:55)
 - Mzk1BoxDistinguishedVarpiActual DONE 01:23:01 (110s): `packetHullDataWithVarpi`; `packetHull_with_theta_varpi` puts actual thetaVarpi into PacketHullData.varpi and still gets Box (11): arithmeticTupleNormalizedLogVolume <= (-ord_p thetaVarpi + sum ord delta + 1) log p + sum (3+log e). Uses letI := D.inst; no s1915A0/carrier equivalence.
 - LNormReadoutProduct tail: `:83 unfold ... at hnorm` fails (hnorm lacks thetaNormReadProduct) -> `simp only [thetaNormReadProduct, s1915ClosedForm] at hnorm ⊢`; `:84/:85 Function expected` -> explicit (T:=T)/(b:=b) for thetaNormReadProduct/qVFamNormalizedCoefficient/qVFamTensorP; `:96 Real.log_rpow` -> change to rpow form first. LNormReadoutActual start 01:21:12 pending; autoImplicit I/place and whnf timeout.
+
+
+### 20.96 GREEN: RootRadiusBridge; Gamma formal probe (2026-11-15 09:00)
+- Mzk1P1RootRadiusBridgeActual DONE 01:23:02 (110s): log_rootImageRadius_eq_neg_coefficient_mul_logP; rootNormedLogVolume_eq_inv_twoL_mul_log_norm. Unblocks WeightA1Bridge/PaperSums.
+- Mzk1IutIVProp14GammaAxiomProbeActual DONE 01:22:11 (59s): three Gamma theorems depend only on [propext, Classical.choice, Quot.sound]; no sorryAx.
+- LNormReadoutProduct/Readout still pending; LNormProduct fixes retouched.
