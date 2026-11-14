@@ -1682,3 +1682,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - BSR still no olean; source being edited (mtime 12:48), latest FAIL 12:46:45.
 - Latest routes: :101 zpow_eq_one_iff_right₀ two args (0≤a)(a≠1); :113 Prime.ne_zero; :120 dsimp only [uq]/change; :125 correct lemma PadicInt.mkUnits_eq (not mkUnits_coe) after coercion change; :143 bare instAlgebraAdicCompletion is not Algebra Q term, use inferred/completionMap; :146/151 change to completionMap spelling; :139/:174 split map_mul/map_zpow₀ + padicUnit_valuation_zero, refine nested ∃.
 - Donor circular dependency remains after BSR; formula source-level normalized=default^(1/d).
+
+
+### 20.190 MILESTONE GREEN: general K beta source inhabitant (stepxi, 2026-11-16 03:40)
+- Mzk1Ind1GaloisIntegralGeneralActual DONE 04:52:18 (53s); probes localUnitsAction_fixes_integralUnits and localActualInd1UnitAction both [propext, Classical.choice, Quot.sound]; no sorryAx/True.
+- localUnitsAction (sigma : AlgebraicClosure K ≃ₐ[K] AlgebraicClosure K) : MulAut (AlgClosure K)^x := Units.mapEquiv sigma.toRingEquiv.toMulEquiv.
+- localUnitsAction_fixes_integralUnits (sigma)(u : (Integers K)^x) : localUnitsAction sigma (integersUnitsToAlgClosure u)=integersUnitsToAlgClosure u.
+- localStableAlgebraicAction sigma : IntegralUnitStableAlgebraicAction K.
+- localActualInd1UnitAction sigma : ActualInd1UnitAction K (algAction=localUnitsAction, beta=MulEquiv.refl, compatible fix.symm).
+- Beta source node closes for any local field K and K-automorphism class (integral quotient action identity). Does NOT cover abstract Ind1/Ind2 arrows not arising from field automorphisms; no overclaim.
