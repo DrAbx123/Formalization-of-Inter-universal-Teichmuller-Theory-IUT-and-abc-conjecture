@@ -3989,3 +3989,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.621 Algebraic hlog explicit K/p annotation (2026-11-15 33:50)
 - hlog term miselaborated as @unitLog ... v; use explicit hlog type and (K:=F)(p:=p) call; then Iff.trans. qpilot. No fake.
+
+
+### 20.622 unitLog no explicit p (2026-11-15 34:00)
+- Invalid named p for unitLog; call unitLog (K:=F) v / unitLog_eq_zero_iff (K:=F) v without p. qpilot. No fake.

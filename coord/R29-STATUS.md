@@ -3069,3 +3069,5 @@
 - 36:40: Algebraic Iff.trans fix; qpilot. gate 20.620 written.
 
 - 36:50: Algebraic hlog explicit K/p annotation; qpilot. gate 20.621 written.
+
+- 37:00: unitLog no explicit p; qpilot. gate 20.622 written.
