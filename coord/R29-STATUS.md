@@ -2485,3 +2485,5 @@
 - 11:50: odd-p target changed to logShellResidueField, no big simpa; consumer lemma to O/(p) to add. ValuationData fresh no sorryAx. gate 20.327 written.
 
 - 12:00: corrected chain green/sign verified. ValuationData fresh no sorryAx. Red: CorrectedExtraction old olean has sorryAx + source fail; KernelIntegers/Floor upstream missing; odd-p unsolved; units pending. Target magnitude deps stale -> recompile. gate 20.328 written.
+
+- 12:10: MAJOR N5 green 19:45:13 (magnitude nonneg + native qSide signed actual, no sorry); HCor312Actual green 19:49:45 (certificate wiring). Remaining shared StepV q identification for N5/R1. Floor build next. gate 20.329 written.

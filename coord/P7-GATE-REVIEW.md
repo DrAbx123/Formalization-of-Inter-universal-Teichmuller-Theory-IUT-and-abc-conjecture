@@ -2548,3 +2548,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Clean: Dictionary 19:15:17 theta_sign no negative -> Assembly olean 19:28:52 after -> Assembly probe 19:38:11 three axioms; Final probe 19:42:34; ObjectLockData 19:14:35 theta_signed no negative + theta_nonneg. Sign correction verified.
 - Green fresh: Ind1 ValuationData 11:41:33 olean 19:41:33, probe 11:48:52 three axioms no sorryAx (old stale auto-sorry); IVThm110Actual 19:28:49 no actual sorry, hQ eliminated/hCor312 explicit; DepthSubgroup; LocalRingUnitsCard/TruncatedUnitsCard (cardQuot only, primary unproved).
 - RED: Ind1CorrectedExtraction FAIL 11:41:32 unsolved x in invariantUnitLayer; old olean correctedDepthLayer_le_invariant/Required_iff contains sorryAx -> unusable. KernelIntegers FAIL 11:49:03 no olean. Floor FAIL 11:48:13 missing HCor312Actual.olean. odd-p FAIL 11:44:24 unsolved quotient equivalence. TruncatedUnitsCount pending. Target magnitude deps stale: PaperLevelXiFTargetProof/Bridge src 19:08:09 > olean old -> recompile before final evidence. 4 Adapted statement-only.
+
+
+### 20.329 N5/hCor312 major: magnitude and native qSide signed proved (2026-11-17 06:40)
+- Mzk1IVThm110N5Actual GREEN 19:45:13: S3013MagnitudeNonnegTarget_actual (via nativeGlobalQPilotNormalizedLogMagnitude_nonneg), native_qSideSignedValueCondition_actual (qSigned=-|log q| for native S3013 pilot), actualS3013QSource; no sorry. Remaining N5: identify native qSigned/Q with StepV/floor certificate (3 items).
+- Mzk1IVThm110HCor312Actual GREEN 19:49:45: hCor312_of_actual_certificate (certificate + term identifications -> hCor312), missingCertificateProducer 3 items; no sorry. Mzk1CThetaToHCor312Actual GREEN 19:45:10; NativeGlobalQPilotNormalizedLogVolumeActual 19:49:48.
+- FloorActual still red/needs HCor312Actual olean now available; qpilot to build. Shared StepV q identification may coincide with R1 same-q witness; mainline/qpilot coordinate.
+- CorrectedExtraction source changed/old olean sorryAx; stepxi rebuild. odd-p fix retouch.
