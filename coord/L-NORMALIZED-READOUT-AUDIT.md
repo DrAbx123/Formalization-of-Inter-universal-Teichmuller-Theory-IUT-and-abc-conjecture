@@ -58,3 +58,22 @@
 ## 6. 待确认
 - 两 L 文件当前无 olean；已入 WL，等官方编译确认上述 canonical 定理。
 - 不修改旧 S3137 raw P（已证 empty）。
+
+## 7. 编译级只读核对（mainline fixing，勿改）
+
+### `Mzk1P0LNormReadoutProductActual`（FAIL 01:13:13）
+- 已 import/open `QVFamTensorCoefficientActual`，`qVFamTensorP` 有来源；
+- **缺** `import/open LeanFormal.IUT.XiFPaper.QVFamNormalizedGeneratorSupplyActual`：
+  `qVFamNormalizedCoefficient` 定义在该 namespace（当前文件只用 `QVFamNormalizedCoefficientBridgeActual`，不 re-export 该名）。
+- 剩余 proof errors：
+  - `:77 rw [Real.log_mul (by positivity) (by positivity)] at hnorm` 模式不匹配（`s1915_log_normalized_hull` 的表达式需先 `rw [show ...]`/`ring_nf` 或用显式非负证明）；
+  - `:84/:85 Function expected` 与 `qVFamNormalizedCoefficient` autoImplicit 连带。
+
+### `Mzk1P0LNormReadoutActual`（FAIL 01:13:57）
+- `thetaNormReadL`/`actualUnitMassL`/`qReadActual` 是 section 变量自动隐式参数；
+  `thetaNormReadL I place`/`qReadActual I place` 会 Function expected；需 `thetaNormReadL (I := I) (place := place)` 或把 def 的 I/place 显式化。
+- `:80 deterministic timeout at whnf` 出现在 `LNormComparisonTarget_iff_log_div` 的 `actualC3LogShellTensorHaarL` 大项展开；可加 `set_option maxHeartbeats 1000000` 或 `change` 成显式表达式。
+
+### 结论
+- 两文件 canonical 定理内容正确，但当前 **未 official GREEN**；audit 中标为待编译。
+- 不改 mainline；等其 owner 修 import/open 与隐式参数。

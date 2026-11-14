@@ -1046,3 +1046,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.87 GREEN: QHat axiom probe three axioms (2026-11-15 07:00)
 - `Mzk1P2QHatAxiomProbeActual` DONE 01:18:09 (102s): `qHatNormCoherence_proved` and `p2QHatNormInstanceAgreement_proved` both depend on `[propext, Classical.choice, Quot.sound]`, no sorryAx.
 - QHatNormCoherence is now officially unconditionally closed and audited; bridge drops QHat.
+
+
+### 20.88 LNormReadout compile fixes (hull audit, 2026-11-15 07:10)
+- Mzk1P0LNormReadoutProductActual missing import/open QVFamNormalizedGeneratorSupplyActual (qVFamNormalizedCoefficient definition; Bridge does not re-export); fix :84/:85 Function expected.
+- :77 `rw [Real.log_mul ...] at hnorm` pattern mismatch: change/ring_nf to explicit product first, then rw.
+- Mzk1P0LNormReadoutActual: I/place are autoImplicit; call explicitly (I := I) (place := place); :80 whnf timeout -> maxHeartbeats/change explicit expression.
+- Both files correct in content but not official GREEN; audit marks pending compile; no new construction, no raw S3137 P change.

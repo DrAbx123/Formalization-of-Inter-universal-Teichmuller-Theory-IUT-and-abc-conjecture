@@ -1957,3 +1957,5 @@
 - 13:40: Round-2 triage: RootRadius log_rpow, Cor312 T/sorry, LNormReadoutProduct qVFamTensorP import, NormInstanceCompat missing QThetaComponent, PObjectObstruction OriginalInput universe, C17 Module instance, Varpi stray exact, HaarIndexPow Measure parse, LocalMon sorry apply, IntegralUnitMap undefined injective. Sent precise fixes to lanes. gate 20.86 written.
 
 - 13:45: GREEN QHatAxiomProbeActual 01:18:09: qHatNormCoherence_proved + p2QHatNormInstanceAgreement_proved both [propext, Classical.choice, Quot.sound], no sorryAx. QHat officially unconditionally closed/audited; bridge drops QHat. gate 20.87 written.
+
+- 13:50: hull audit LNormReadout compile fixes: add import/open QVFamNormalizedGeneratorSupplyActual; log_mul change/ring_nf; explicit I/place params; whnf maxHeartbeats/change. Sent mainline. Files correct but not official. gate 20.88 written.
