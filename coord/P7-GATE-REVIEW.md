@@ -1670,3 +1670,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1GaloisIntegralGeneralActual (queue): localUnitsAction (sigma : AlgebraicClosure K ≃ₐ[K] ...) := Units.mapEquiv; fixes integral units by Units.ext + sigma.commutes (sigma fixes K hence embedded integral units); localStableAlgebraicAction/localActualInd1UnitAction K with beta=refl, compatible fix.
 - Same math as Qp version, K arbitrary local field; if green beta source closes for K-automorphism class (not all automorphisms). Await watchdog; no fake.
 - Statement-layer field-as-type fixes retouched; #C B/A still exact gaps; BSR still no olean.
+
+
+### 20.188 Final conditional rows length mismatch; Dictionary probe stale (hull, 2026-11-16 03:20)
+- Dictionary src 04:39:04 < olean 04:44:24 DONE 04:44:25; Bridge src 04:39:04 < olean 04:44:23 DONE 04:44:24; rows updated to CONSTRUCTED, no True.
+- Mzk1P0FinalS3137ConditionalActual FAIL 04:44:24: finalBridgeConditionRows has 10 rows but finalBridgeConditionRows_length = 9 (rfl mismatch); fix length to 10 or remove row. Log's NormalizedSourceConditional olean missing is transient (olean 03:15 exists).
+- Dictionary probe src/olean 04:33/04:36 predates new Dictionary olean 04:44; retouch probe, not fresh.
