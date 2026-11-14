@@ -3850,3 +3850,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.587 PrincipalUnits avoid change; simp norm/valuation (2026-11-15 28:10)
 - change (↑||x||₊:ℝ)<1 triggers LE Type/OfNat Type parsing. Use rw valuation_apply then simp/simpa (norm unfolds to coe_nnnorm) or exact_mod_cast. qpilot. No fake.
+
+
+### 20.588 PrincipalUnits norm bridge direct GREEN (2026-11-15 28:20)
+- Direct PrincipalUnitsResidue src 06:30:14 EXIT=0: norm_lt_one_iff_valuation_lt_one via constructor + NNReal.coe_lt_coe + coe_nnnorm; no LE Type. Retouch; next subgroup (Integers K)^x ≃* A.unitGroup via mem_unitGroup_iff/valuation=1/Units.ext/Subtype.ext. qpilot. abc audit. No fake.
