@@ -1355,3 +1355,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - A1Data probe DONE 02:21:08 targets old olean; must retouch after A1Data recompile.
 - Final FAIL 02:21:19 own errors: paperNormalizedQPilotSum unknown (missing import/open BadPlacePaperNormalizedComparisonActual); missing [forall b MeasurableSpace (qVFamTensorBlock T b)]/Borel instance variables (synthInstanceFailed). Fix required before final.
 - WeightA1 probe 02:12:40 and PrincipalAlignment probe 02:12:39 remain valid three axioms.
+
+
+### 20.135 A1Data recompiled after source; probe shows three axioms; final own errors remain (2026-11-15 16:00)
+- A1Data DONE 02:25:50, olean 10:25:49 newer than source 10:21:26; current source grep no sorry/True; old log line44 sorry warning is from earlier failed build, not current source.
+- A1DataAxiomProbe log shows paperToS3137A1Data_nonempty depends only on [propext, Classical.choice, Quot.sound]; no sorryAx. A1Data effectively clean pending a fresh clean probe.
+- Final still FAIL 02:21:19: paperNormalizedQPilotSum unknown (missing import/open BadPlacePaperNormalizedComparisonActual); missing forall MeasurableSpace/Borel instance vars. mainline ordered fix.
+- VolumeRatioHaar green 02:21:02; GroupCountBridge source fixed.
