@@ -3723,3 +3723,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.557 MAJOR actual_paper312 GREEN direct (hull, 2026-11-15 23:10)
 - ActualRamifiedData src 05:35:11 direct EXIT=0: actual_paper312 (Fdeg l logMu hcoef hmu0 hl hc sFactor hs0 hs1 hA0) -> ExplicitPaper312Inequality sFactor A Lbar Dbar, A=(1/2l)*sum fn/Fdeg*logp, Lbar=sum logIdx, Dbar=sum(logMu-(1/2l)logIdx). Uses perPlace bounds.
 - Next connect to Paper312Statement via Mzk1Paper312ExplicitActual.paper312_iff_explicit: need hq qReading=-A and htheta thetaSide=Lbar+Dbar-sFactor*A; identify or report missing. No fake.
+
+
+### 20.558 PrincipalUnitsResidue fix: use Valued.v not NNReal-valued NormedField.valuation (2026-11-15 23:20)
+- Errors: NormedField.valuation x : NNReal not WithZero; NormedField.valuation.integer not ValuationSubring. Use `Valued.v` value group directly: norm_lt_one_iff := Valued.NormedValued.norm_lt_one_iff; subgroup equality via (Valued.v (K:=K)).integer (ValuationSubring) + unitsModPrincipalUnitsEquivResidueFieldUnits. qpilot. No fake.
