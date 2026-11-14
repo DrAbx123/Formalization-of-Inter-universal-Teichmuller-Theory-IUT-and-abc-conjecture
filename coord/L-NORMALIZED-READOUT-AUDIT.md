@@ -119,3 +119,15 @@
 - SourceUnitBridge 不能直接给 `LQThetaSourceArrow.normalization_eq` 或 `thetaNormReadL` 的规范化；
 - 它是 **Ind1 unit-log** 层，L theta readout 是 **measure/analytic log** 层；
 - 要做接口需新增：`SourceUnitQuotientIdentification` inhabitant + q/单位对应 + product 装配；当前均无。
+
+## 10. 更正（2026-11-14）：当前 `thetaNormReadL` 已改 direct，`max 0 log` caveat 作废
+
+- 现源 mtime `2026-11-14T01:41:19`：
+  `thetaNormReadL := thetaReadActual I place − Real.log actualUnitMassL`（direct），
+  不再走 `actualC3LogShellTensorLogVolumeL`/`haarLogVolume` 的 `ofReal` 钳位。
+- `Mzk1P0LHaarLogClipActual` 已改写为仅记录：
+  * 旧 `actualC3LogShellTensorLogVolumeL` 的 `max 0 log` 性质；
+  * 当前 `thetaNormReadL = thetaReadActual − log unitMass`（rfl），**不是缺陷**。
+- 第 7/8 节中关于 `thetaNormReadL` 用 clipped log 的结论作废，只保留对旧 def 的说明。
+- canonicality 结论不变：现 `thetaNormReadL` 是 direct signed readout 减 unit-mass log；
+  仍需 `unitMass` 正性/有限性用于 log。

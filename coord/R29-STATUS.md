@@ -2001,3 +2001,5 @@
 - 16:50: root cause LNormReadoutActual: haarLogVolume `.toReal` clamps negative logs to 0 (ofReal), so not equal thetaReadActual. mainline changed thetaNormReadL = thetaReadActual - log unitMassL (no clamped term); rfl/linarith fixed; LNormComparison signature unchanged. PaperSums import needs A1SignedReadoutProductActual olean. gate 20.106 written.
 
 - 17:00: hull clip caveat (haarLogVolume ofReal clamps negative log) applies to old thetaNormReadL; mainline current def = thetaReadActual - log unitMassL, direct log, no clamp. Old audit invalidated for current source; clip lemma kept historical. gate 20.107 written.
+
+- 17:05: hull retracted old clipped thetaNormReadL caveat; current def direct (thetaReadActual - log unitMass), mtime 01:41:19. Mzk1P0LHaarLogClipActual rewritten historical separation; audit section 10 retracts 7/8. gate 20.108 written.

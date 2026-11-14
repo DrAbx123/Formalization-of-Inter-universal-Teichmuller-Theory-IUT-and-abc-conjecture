@@ -1175,3 +1175,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - hull audit: actualC3LogShellTensorLogVolumeL uses (haarLogVolume).toReal, and ENNReal.ofReal negative log clamps via ofReal/toReal -> max 0 log; old thetaNormReadL would be noncanonical for negative raw log.
 - mainline fix (current source): thetaNormReadL := thetaReadActual I place - log actualUnitMassL (direct Real.log of mu region, no haarLogVolume clipping). Therefore canonicality no longer depends on 0 <= log mu_region; hull's caveat applies only to old definition.
 - Mzk1P0LHaarLogClipActual can remain as historical/audit lemma but must not be used to invalidate current LNormReadoutActual.
+
+
+### 20.108 Current thetaNormReadL is direct; old clip audit section retracted (hull, 2026-11-15 10:55)
+- Current source mtime 01:41:19: thetaNormReadL := thetaReadActual I place - Real.log actualUnitMassL (direct, no actualC3LogShellTensorLogVolumeL/haarLogVolume clamping).
+- hull retracted its max-0-log caveat for the current definition; Mzk1P0LHaarLogClipActual rewritten as historical separation: actualC3LogShellTensorLogVolumeL_eq_max (old def) and thetaNormReadL_eq_thetaReadActual_sub_log_unitMass (current rfl, not a defect).
+- coord/L-NORMALIZED-READOUT-AUDIT.md section 10 retracts sections 7/8 clipped conclusions; canonicality now only needs unitMass positive/finite for log.
