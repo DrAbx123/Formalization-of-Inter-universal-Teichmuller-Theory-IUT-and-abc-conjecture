@@ -2957,3 +2957,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.403 Conditional per-place torsion GREEN; hTub explicit gap (hull, 2026-11-17 19:10)
 - Mzk1TorsionPerPlaceConditionalActual DONE 15:31:29: perPlace_bound_of_torsion_le (hTub:T<=q1*C)(hlogIdx:logIdx=base+log(q1/T))(hmu:L<=logMu)(hl:1<=2l)(hbase:qcoef<=L+(1-1/(2l))(base-log C)) -> qcoef<=logMu+(1-1/(2l))logIdx. hTub docstring explicit conditional gap; C=p^{v_p(eK)+1}; no fake.
 - Local cyclotomic/ramification donor search confirms Mathlib only global cyclotomic, no local Qp(ζ) subset/local ramification multiplicativity; hTub remains explicit gap. Next hull connect to A_le_Lbar_add_Dbar, instantiate qcoef/logIdx/logMu and hbase arithmetic; report first missing.
+
+
+### 20.404 Cor3.12 exponent obstruction: a_v not eK*s-1 (hull, 2026-11-17 19:20)
+- Consumer chain perPlace_bound_of_torsion_le -> perPlace_inequality_of_mu_lower_diff -> A_le_Lbar_add_Dbar -> paper312_of_local_bounds exists. Missing: actual Lean defs qcoef/logIdx/logMu/diff; hbase arithmetic substituting torsion index.
+- Obstruction: for unramified odd p eK=1,s=1, eK*s-1=0, logIdx=log((q-1)/#T)=0 (Teichmuller) so hbase qcoef <= L-(1-1/(2l))log C may be false for C=p. Thus paper a_v (condition4 a_v>=1/(Fdeg*2l)) is NOT eK*s-1; it is independent/larger source input. Exact missing: (1) per-place definitions; (2) relation a_v to eK*s-1 or paper a input; (3) separate handling if forcing a=eK*s-1. No fake.
