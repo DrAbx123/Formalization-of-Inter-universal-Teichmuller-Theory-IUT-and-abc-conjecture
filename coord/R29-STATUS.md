@@ -2843,3 +2843,5 @@
 - 17:50: MAJOR Instantiate GREEN 04:04:18 (hnorm+hchar). Next hvalu/hact/assemble/floor. abc probe. gate 20.507 written.
 
 - 18:00: quotientWitness vcomp/id bridge hcomp (Hom.id).comp η=𝟙≫η; mainline. gate 20.508 written.
+
+- 18:10: quotientWitness TwoCell->2-cell gap; mainline switched to adicAbv norm equality. gate 20.509 written.

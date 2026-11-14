@@ -3497,3 +3497,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.508 quotientWitness vcomp/id bridge attempt (mainline, 2026-11-15 16:00)
 - Hom.comp = StrongTrans.vcomp; leftUnitor type Iso (𝟙≫map) map vs expected Iso ((Hom.id).comp map) map. Need bridge hcomp : (Hom.id).comp η = 𝟙≫η (or Iso) by ext/simp [Hom.id,Hom.comp,StrongTrans.id,StrongTrans.vcomp]; transport leftUnitor via eqToIso/congrArg, then Bicategory.id_whiskerLeft. Report first error or keep exact gap. No fake.
+
+
+### 20.509 quotientWitness TwoCell type gap; mainline to adicAbv (2026-11-15 16:10)
+- id_whiskerLeft alpha.app fails: TwoCell=StrongTrans.Hom not elaborated as bicategory 2-cell `⟶`; need TwoCell->2-cell unification lemma absent. factor leftUnitor typechecks (defeq vcomp/id) but simp destroys defeq. twoCell_ext same. 3/5 fields constructed; 2 coherences exact gap.
+- Mainline new independent task: adicAbv (equivOfRingEquiv e v) x = adicAbv v (e x) via HeightOneSpectrum.valuation/valuation_of_mk'/Valuation.ext intValuation. groups/unique gaps. No fake.
