@@ -3085,3 +3085,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.427 MAJOR torsion_split GREEN (hull, 2026-11-15 02:20)
 - Mzk1TorsionSplitActual DONE 16:31:40: torsion_split (hp)(hTpos)(hdvd:T|q^A*(q-1))(hcop:Coprime p(q-1))(hq:q=p^f) -> exists m T0, T=p^m*T0, Coprime p T0, T0|q-1, m<=f*A. Fixes: Fact p.Prime; padicValNat.div_pow; eq_zero_iff first branch False.elim; hcop.pow_left m gives Coprime(p^m)(q-1). No fake.
 - Next hull: derive index=q^(A-m)*((q-1)/T0), a=A-m,c=(q-1)/T0; feed correction/Paper312. abc probe.
+
+
+### 20.428 Correction: index decomposition false for f>1; ceil formula (hull, 2026-11-15 02:30)
+- index=q^(A-m)*((q-1)/T0) FALSE for f>1: q^A=p^(fA); dividing by T=p^m T0 gives p^(fA-m), while q^(A-m)=p^(f(A-m)) differs by p^(m(f-1)). Counterexample p=2,f=2,q=4,A=2,m=1,T0=1,T=2: LHS 24, RHS 12.
+- Correct: k=ceil(m/f), r=f*k-m (0<=r<f), index=q^(A-k)*(p^r*((q-1)/T0)); a=A-k, c=p^r*((q-1)/T0). Only r=0 pure. Need ceil/div identity from q=p^f and m<=fA. Hull to implement; condition4 on a=A-k, c contains p^r; unramified a=0 still issue. No fake.

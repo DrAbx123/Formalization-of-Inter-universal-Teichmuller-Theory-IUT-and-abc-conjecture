@@ -2683,3 +2683,5 @@
 - 04:30: KernelBridge fresh GREEN 00:27:21 clean (no ofRange, probes 3 axioms). Next inhabitant/WQuotient/Z_p^d. abc audit. gate 20.426 written.
 
 - 04:40: MAJOR torsion_split GREEN 16:31:40 (T=p^m*T0, T0|q-1, m<=fA). Next index decomposition a=A-m/c=(q-1)/T0. gate 20.427 written.
+
+- 04:50: correction index decomposition false f>1; correct k=ceil(m/f), r=fk-m, index=q^(A-k)*(p^r*((q-1)/T0)), a=A-k. Hull implement. gate 20.428 written.
