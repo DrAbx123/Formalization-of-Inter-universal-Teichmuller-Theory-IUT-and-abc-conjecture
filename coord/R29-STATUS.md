@@ -1925,3 +1925,5 @@
 - 12:00：**GREEN `Mzk1P0NormCorrectionAxiomProbeActual` 01:02:52（108s）**：NormCorrection 5 定理 + Dictionary 2 定理全部三公理无 sorryAx。L 侧 `LQThetaSourceArrow` 阻塞精确：`qComponentMemGap`（显式）+ `CommonPrimeNormInstanceCompat`（norm instance）；mainline 写 attempt（donor rfl），绿后组装条件版。gate §20.69 已写。
 
 - 12:05：纠正 L 侧目标：`unitMass=1` 是明确 GAP（additive rootExtensionHaar 无 normalized unit-ball mass 定理），`thetaRead=log‖q‖` 只在 d=1/unitMass=1 成立；真正目标是 **qRead≤thetaRead 不等式**，从 thetaRegion 含 q tensor unit/球的 Haar 单调 + d/unitMass 实际下界走，不证假的等号。已发 mainline 核对 region 包含/dimension。gate §20.70 已写。
+
+- 12:10：发现 L 侧 `actualC3LogShellTensorHaarL=Measure.addHaar` 未归一化，`thetaReadActual` 非 canonical，`unitMass=1` 不可证；L 目标需改为 normalized readout（减 log unitBall mass / s1915 normalized log）。已让 mainline 定义 canonical normalized target，hull 不再造空 arrow，abc 找 normalized Haar donor。gate §20.71 已写。

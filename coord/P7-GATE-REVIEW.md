@@ -918,3 +918,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `lThetaNormalizationGap : thetaRead = log‖q‖` 只在 d=1 且 unitMass=1 时成立，**不能作为无条件目标**；L 侧真正目标是 `qRead ≤ thetaRead`。
 - 路线：由 `thetaRegion` 含 q tensor unit/球 → Haar 单调 → `thetaRead ≥ log(‖q‖^d · unitMass)`，再用 qRead<0 与 d/unitMass 实际下界；不走 `unitMass=1` 等号。
 - mainline 先核对 `C3LAt` tensor dimension/`actualC3LogShellTensorRegionL` 与 q tensor unit 包含关系；Norm compat attempt 可先编。
+
+
+### 20.71 L 侧 Haar 未归一化：`thetaReadActual` 不是 canonical（2026-11-15 04:15）
+- `actualC3LogShellTensorHaarL := Measure.addHaar`（`Mzk1C3LogShellTensorLActual:100`）——任意 Haar，未归一化；`thetaReadActual = log Haar(region)` 相差任意常数，`unitMass=1` 不可能作为定理。
+- **正确目标**：归一化读数 `thetaNormRead := thetaReadActual − log(Haar(unitBall))`（或直接 `s1915` normalized log），与 `qReadActual` 的 degree d 对齐；**不是** `unitMass=1` 等号，也不是空 arrow equality。
+- hull 已证 theta≥0 分支 `LQThetaSourceArrow` empty；不要构造它。
+- mainline 先核对 `actualUnitMass` 与 region/unit ball 实际关系，定义 canonical normalized L target（不改旧目标类型），给 exact 签名；abc 可只读找 normalized Haar donor。
