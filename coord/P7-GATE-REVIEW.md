@@ -3325,3 +3325,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - QpDecomp src 02:34, log 02:38: :9:67 unsolved; :26:42 No goals; :35:19 rewrite pattern missing. qpilot fix.
 - stage4 adicAbv/IsScalarTower pending. stepxi padic IsUnit (Coprime r p -> IsUnit (r:Zp)) new file.
 - Paper312Assembly 02:47:32 green; PrincipalDim 02:17; A2PartialFields 18:46 recompile. No fake.
+
+
+### 20.472 IsScalarTower constructor donor (stage4, 2026-11-15 10:10)
+- IsScalarTower of_algebraMap_eq (Algebra/Algebra/Tower:114): to build IsScalarTower Qp (Completion lower) (Completion upper), prove forall x algebraMap Qp upper x = algebraMap lower upper (algebraMap Qp lower x), using completionAlgebra/coeRingHom + ext/simp. Then finrank_mul_finrank. adicAbv missing unchanged. No fake.
