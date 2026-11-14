@@ -3125,3 +3125,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.434 MAJOR ceil_decomp/exponent_decomp GREEN (hull, 2026-11-15 03:30)
 - Mzk1CeilDecompActual DONE 16:44:24: ceil_decomp {f m A} (0<f)(m<=fA) -> exists k r, m+r=f*k, r<f, k<=A (piecewise m/f,m%f); exponent_decomp (k<=A)(m+r=f*k)(m<=fA): f*A-m=f*(A-k)+r. No fake.
 - Next hull: index identity p^(fA-m)*((q-1)/T0)=q^(A-k)*(p^r*((q-1)/T0)) via q=p^f/fA-m=f(A-k)+r/pow_sub/pow_add/mul_div; T0|q-1. Then a=A-k,c=p^r*((q-1)/T0), feed correction. Unramified A=0 => a=0, condition4 still fails; c=1 no help. No fake.
+
+
+### 20.435 Norm equality via HeightOneSpectrum.valuation donor (stage4, 2026-11-15 03:40)
+- Stage4 reduced to w.asIdeal=v.asIdeal.comap e.symm, need ||embedding w x||=v(e x). Donors: IsDedekindDomain.HeightOneSpectrum.valuation (AdicValuation:328), valuation_of_mk' (:339), valuation_of_algebraMap (:345). Route: prove w.valuation K x = v.valuation K (e x) by Valuation.ext + valuation_of_mk' on x=r/s (e extends to K); then unfold adicAbv/norm_embedding. Then Isometry/Completion.mapRingHom; IsScalarTower pending. No fake.
