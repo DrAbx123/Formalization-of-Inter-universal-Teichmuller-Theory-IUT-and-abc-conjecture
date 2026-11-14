@@ -2723,3 +2723,5 @@
 - 07:50: A2 xF/xF_geometry constructible degenerately; first gap now ellipticInvolution + 8 fields. mainline search. Probe 17:10:19. gate 20.446 written.
 
 - 08:00: MAJOR index/QFE connection GREEN 17:11:06 (index=q^A(q-1)/T). Next assemble final a=A-k,c=p^r*((q-1)/T0). Unramified a=0 condition4 separate. gate 20.447 written.
+
+- 08:10: MAJOR HaarUnitInvariance GREEN 01:14:58 (char=1, μ invariance, explicit ContinuousConstSMul). Next lambda decomposition/principalDim/floor. gate 20.448 written.

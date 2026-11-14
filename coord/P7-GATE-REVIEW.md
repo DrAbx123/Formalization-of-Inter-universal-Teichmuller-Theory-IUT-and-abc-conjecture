@@ -3192,3 +3192,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.447 MAJOR actual index/QFE connection GREEN (hull, 2026-11-15 05:40)
 - Mzk1IndexQFEConnectionActual DONE 17:11:06: qfe_quotient_card_actual (quotient=q^(eK*s-1)(q-1)) via general eEquiv+truncatedUnitsCardPrimary; index_eq_qfe_quotient_div (hquot,hTpos): logShellIntegerIndex=q^A(q-1)/#T via logShellCongruenceQuotient_card_eq_torsion_mul and Nat.mul_div_right. Exact missing connection closed.
 - Next hull assemble final index=q^(A-k)*(p^r*((q-1)/T0)) with a=A-k,c=p^r*((q-1)/T0) using torsion_split/ceil/quotient/index_pow; feed correction/Paper312. Unramified a=0 condition4 separate. abc probe. No fake.
+
+
+### 20.448 MAJOR HaarUnitInvariance GREEN (qpilot, 2026-11-15 05:50)
+- Mzk1IVThm110HaarUnitInvarianceActual DONE 01:14:58: distribHaarChar_algebraMapUnit_eq_one via distribHaarChar_eq_of_measure_smul_eq_mul s=O (O positive finite, u•O=O); measure_algebraMapUnit_smul_eq μ(u•S)=μS via distribHaarChar_mul. No sorry/axiom. Uses explicit [ContinuousConstSMul X^x X] actual continuity condition (not fake); unconditional composition not yet.
+- Next qpilot: lambda=p^k*u decomposition via Padic.unitCoeff + p^k formula -> unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||; then floor unitRegionLog=-M/M>=1. abc probe. No fake.
