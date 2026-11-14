@@ -3819,3 +3819,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.580 WithVal uniform continuity γ type mismatch (stage4, 2026-11-15 27:00)
 - tendsto_iff both bases gives different ValueGroup₀ˣ unit types (same underlying, different ofClass); use only target Valued.hasBasis_nhds_zero + Filter.HasBasis.mem_iff/mem_nhds_iff, prove preimage neighborhood via IsEquiv.restrict ball comparison. Failed uniform theorem removed; withValMovedSigma def only. stage4. No fake.
+
+
+### 20.581 CRITICAL R1 construction-level gap confirmed; no global C3 (mainline, 2026-11-15 27:10)
+- All existing C3 constructions single place; tensorIndex/Places not Bad; no Bad->tensorLanding/global q map. ActualC3DonorFromNative documents no restriction/descent F-completion q -> Fmod completion; exact missing MissingBaseQData/MissingBaseTensorLanding/MissingC3DonorData. Global q side only scalar globalQParameterFamily/globalQPilotSignedLog green; GlobalQElementActual.globalQ conditional on PrincipalQPilotIdealData (no production ideal). So R1 single-place vs global-sum is construction-level real gap; cannot arithmetic fix; paper-level extension/global object needed. No fake.
+- PrincipalUnits :13 NNReal.coe_lt_coe named arg fix; qpilot. mainline inspect restriction/descent possibility.

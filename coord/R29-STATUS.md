@@ -2987,3 +2987,5 @@
 - 29:50: search global q/SourcePilotRegionData construction; mainline. gate 20.579 written.
 
 - 30:00: WithVal uniform γ type mismatch; use target basis/mem_iff. stage4. gate 20.580 written.
+
+- 30:10: CRITICAL R1 construction gap confirmed no global C3; mainline inspect restriction/descent. PrincipalUnits arg fix. gate 20.581 written.
