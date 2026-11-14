@@ -3493,3 +3493,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.507 MAJOR PrincipalDimInstantiate GREEN (qpilot, 2026-11-15 15:50)
 - Mzk1IVThm110PrincipalDimInstantiateActual DONE 20:04:19/olean 04:04:18: log_norm_decomp (hdecomp,hvalu -> log||lam||=-k log p); hchar_principalDimUnit (char(principalDimUnit k u)=p^(-kD)) via map_mul/unit char/ donor real_log_distribHaarChar.../exp_log/rpow. No sorry/axiom. Fixes: Subtype.ext, push_cast, explicit μ, call order u μ.
 - Remaining qpilot: hvalu from ||u||=1; hact via principalDimUnit_val=algebraMap lam+Algebra.smul_def; assemble unconditional; floor. abc probe. No fake.
+
+
+### 20.508 quotientWitness vcomp/id bridge attempt (mainline, 2026-11-15 16:00)
+- Hom.comp = StrongTrans.vcomp; leftUnitor type Iso (𝟙≫map) map vs expected Iso ((Hom.id).comp map) map. Need bridge hcomp : (Hom.id).comp η = 𝟙≫η (or Iso) by ext/simp [Hom.id,Hom.comp,StrongTrans.id,StrongTrans.vcomp]; transport leftUnitor via eqToIso/congrArg, then Bicategory.id_whiskerLeft. Report first error or keep exact gap. No fake.
