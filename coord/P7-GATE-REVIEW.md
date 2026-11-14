@@ -3256,3 +3256,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - atBase: Bicategory.Equivalence has structure/Equivalence.id; if constant diagram defeq then atBase=Equivalence.id feasible. generator_identification then unitors+Iso.refl likely.
 - quotient witness no donor (universal property). groups need actual OrbicurveEtaleFundamentalGroup (coverCategory/baseScheme/fiber functor), no constructor. scalar stackExtension: schemeRestrictScalarsPseudofunctor green; missing result : EtaleStackOverField K actual stack/IsStack.
 - Mainline to draft constant Pseudofunctor.mk candidate/report first coherence error. No fake.
+
+
+### 20.459 Paper312 correction consumer errors (hull, 2026-11-15 08:00)
+- Mzk1Paper312CorrectionConsumerActual FAIL 18:03:33: :34 rewrite pattern Real.log(↑(q^a)*↑c) not found in Real.log(↑q^a*↑c) due Nat.cast_pow. Fix calc Real.log index=Real.log((q:ℝ)^a*c) via hidx/Nat.cast_mul/Nat.cast_pow; Real.log_mul; Real.log_pow.
+- :55 linarith failed (logp/f*a order); fix rw [hlogp_eq], hcomm/ring_nf at h ⊢ before nlinarith. FinalIndexDecomp green unchanged. No fake.
