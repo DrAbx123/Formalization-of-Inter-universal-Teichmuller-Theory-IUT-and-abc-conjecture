@@ -2929,3 +2929,5 @@
 - 25:00: ConcreteFiveCast green; ActualData olean stale. qpilot unitLog; mainline logShellPoint; stepxi probe. gate 20.550 written.
 
 - 25:10: retry integer equiv with concreteFiveCompletion_eq casts; stepxi. gate 20.551 written.
+
+- 25:20: MAJOR ActualData/A_le GREEN 21:31:17. BadToC3TensorMap vacuous Prop must not be True; mainline semantic. qpilot exponent coprime. gate 20.552 written.

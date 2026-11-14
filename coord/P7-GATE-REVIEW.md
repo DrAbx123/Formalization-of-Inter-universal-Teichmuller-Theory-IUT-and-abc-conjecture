@@ -3695,3 +3695,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.551 ConcreteFiveCast green; retry integer equiv with casts (2026-11-15 22:10)
 - ConcreteFiveCast DONE 21:18:25; concreteFiveCompletion_eq probe three axioms. Now retry integersCompletionFieldEquivZp using concreteGaussianFivePlace_comap + concreteFiveCompletion_eq + concreteFivePadicIntEquiv casts; report first error. WQuotient equiv gap. No fake basis.
+
+
+### 20.552 MAJOR ActualData/A_le GREEN; BadToC3TensorMap vacuous warning (2026-11-15 22:20)
+- ActualRamifiedData DONE 21:31:17: actual_A_le_Lbar_add_Dbar (perPlace bounds -> A_le) green; fixes remove qlog_div_eq rw, cast completionRationalPrime.val. HasCorrection/LogIdx/Res/Coeff done; HasCoeff/hmu0/hl/hc explicit; unramified explicit.
+- BadToC3TensorMap structure has thetaValue_compat : Prop (not proof) so Nonempty is trivially inhabit able; DO NOT use True/vacuous inhabitant (toy/fake). Need intended proposition from docstring/theta data; hhullRead via dimension/additive shift. mainline.
+- qpilot integralUnitExponent_coprime via quotient/residue units; tensor unit ball. abc audit. No fake.
