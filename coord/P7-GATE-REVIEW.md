@@ -1704,3 +1704,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1GaloisActionAuditProbeActual DONE 04:52:18 (53s) alongside general K action; probe green.
 - Final S3137Conditional 04:57:23, Dictionary probe 04:57:19, Dictionary 04:57:24 all fresh green (after rows/length fixes).
 - BSR still no olean; L-side red pending; statement-layer pending next error.
+
+
+### 20.193 Freshness caveat: dictionary probe predates final dictionary olean (hull, 2026-11-16 04:10)
+- Final DONE 04:57:23 src 04:53:15; Dictionary DONE 04:57:24 src 04:53:07; Dictionary probe DONE 04:57:19 olean 04:57:18, which predates Dictionary final olean 04:57:23. Axioms expected same; strict fresh probe needs one more retouch.
+- Bridge DONE 04:44:24. All green.
+- Statement-layer DeepStatementLayerV2: unified 26 field-as-type theorems to (H)(h:H.x):H.x:=h; retouched, next error pending.
+- #C B/A remain named gaps; no fake.
