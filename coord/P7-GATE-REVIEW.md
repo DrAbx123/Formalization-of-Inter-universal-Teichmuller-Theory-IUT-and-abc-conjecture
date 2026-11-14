@@ -3619,3 +3619,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.534 MAJOR AdicAbv GREEN (mainline, 2026-11-15 20:20)
 - Mzk1AdicAbvEquivActual DONE 20:57:10/olean 04:57:09: adicAbv_equivOfRingEquiv (e)(v)(x): adicAbv K' (equivOfRingEquiv (mapRingEquiv e) v) (e x)=adicAbv K v x. No sorry/axiom; fixes absNorm/hw/hφ/hval/coe_toRingHom/by_cases toNNReal.
 - stage4 use e:=σ, x:=σ.symm x to get adicAbv moved x = adicAbv v (σ.symm x), then Isometry/Completion.mapRingHom. probe pending. No fake.
+
+
+### 20.535 AdicAbv GREEN; mainline to abc/IV final assembly audit (2026-11-15 20:30)
+- AdicAbv theorem green, probe pending. stage4 apply e=σ to norm equality/Isometry.
+- mainline inspect existing abc/IVThm110 final assembly consumers; enumerate exact remaining global inputs from Paper312 bounds/Cor3.12/IVThm110 display to abc frontier; report first non-tautological missing. No fake.
