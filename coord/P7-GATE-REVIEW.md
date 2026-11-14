@@ -3973,3 +3973,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.617 core pos Finite instance (2026-11-15 33:10)
 - integralUnitExponent_pos Nat.card_pos needs Finite; add letI finite_principalUnitQuotient. qpilot. CardExponent audit 5 decls three axioms accepted. No fake.
+
+
+### 20.618 core redefinition green; AlgebraicUnitLogarithm implicit rw (2026-11-15 33:20)
+- Core IntegralUnitLogarithm direct+olean 07:32:38 green (Nat.card version). Downstream Functoriality/Example36 green. AlgebraicUnitLogarithm:125 rw unitLog_eq_zero_iff pattern fails; use explicit (p:=p)(K:=F) hlog + horder.symm. qpilot. No fake.
