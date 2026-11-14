@@ -3911,3 +3911,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.602 residue card_units explicit α (2026-11-15 30:40)
 - rw Fintype.card_units pattern failed; use `Fintype.card_units (α := F)` then hcard. qpilot. Audit: PrincipalUnits 6 decls probe-fresh three axioms, accepted. No fake.
+
+
+### 20.603 residue card DecidableEq F (2026-11-15 30:50)
+- Fintype.card_units needs DecidableEq F; add [DecidableEq F] hypothesis. qpilot. No fake.

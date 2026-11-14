@@ -3031,3 +3031,5 @@
 - 33:30: residue card import/Fintype units fix; qpilot. gate 20.601 written.
 
 - 33:40: residue card_units explicit α; PrincipalUnits 6 decls audit accepted. gate 20.602 written.
+
+- 33:50: residue card add DecidableEq F; qpilot. gate 20.603 written.
