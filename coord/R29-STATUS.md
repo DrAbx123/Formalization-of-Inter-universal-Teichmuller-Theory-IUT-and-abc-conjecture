@@ -2031,3 +2031,5 @@
 - 19:00: #C interface exponent口径错: hcard q^{s-1} vs needed q^{e*s-1}; shehdd to parameterize e/n and ideal m^{e*s}, then hq=q=p^f to hC. Do not claim s-1 as e*s-1. gate 20.119 written.
 
 - 19:10: #C interface exponent fixed: ideal p^{s*e}, hcard (q-1)q^{e*s-1}. Next combine q=p^f to p^{f(e*s-1)} and feed torsion hC. gate 20.120 written.
+
+- 19:20: shehdd queued Mzk1IutIVProp14TorsionFromUnitsActual (torsion_card_eq_actual_of_unitsEquiv); needs pow_mul/cast fix; actual eEquiv/hcard donor remains. Woke lattice/shehdd/qpilot/stepxi/abc/hull/stage4. gate 20.121 written.

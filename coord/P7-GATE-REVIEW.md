@@ -1264,3 +1264,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New exact signature: card_logShellCongruenceQuotient_of_unitsEquiv (e : Nat) (eEquiv : ... ≃* (Integers K / span{(logShellScale p)^e})^x) (hcard : #truncatedUnits = (q-1)*q^(e*logShellScaleExponentFactor-1)) : #C = (q-1)*q^(e*s-1).
 - Truncated ideal p^{s*e}; exponent e*s-1; no s-1 disguised as e*s-1.
 - Next: combine with q=p^f to get p^{f(e*s-1)} and feed torsion hC; report exact signature.
+
+
+### 20.121 TorsionFromUnits combination theorem queued (shehdd, 2026-11-15 13:20)
+- New Mzk1IutIVProp14TorsionFromUnitsActual (queue): torsion_card_eq_actual_of_unitsEquiv with eEquiv, hcard, hs, hq, hcop => exists h,m #Gamma=p^h, #T=(q-1)p^m, h+m=f(e*s-1).
+- Proof: card_logShellCongruenceQuotient_of_unitsEquiv gives #C=(q-1)q^(e*s-1); rw [hq,pow_mul] to (q-1)p^(f(e*s-1)); feed torsion_card_eq_actual_of_congruenceCard.
+- Need fix pow_mul/cast direction on compile; actual eEquiv/hcard donor remains.
