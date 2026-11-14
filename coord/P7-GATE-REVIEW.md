@@ -3380,3 +3380,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.484 RamifiedPlaceData root cause: field notation on namespace defs (2026-11-15 12:00)
 - Source 03:13:27 FAIL 19:18:30 no olean no literal sorry. HasCorrection/HasLogIdx/HasCoeff/HasRes are namespace defs not structure fields; `d.HasRes` invalid field notation line74, cascades lines82-85, line80 unsolved. Fix binders to (hcard : HasCorrection d) etc; keep dsimp. hull. No fake.
+
+
+### 20.485 RamifiedPlaceData ι parameter missing (2026-11-15 12:10)
+- Direct compile src 03:19: :29/:42/:55/:58 typeclass stuck; :73/:74 Function expected; :82-85 Invalid argument HasX. Root: defs/theorem use (d : RamifiedPlaceData) so ι autoImplicit, HasX not Prop. Fix universe u; variable {ι : Type u} [Fintype ι]; RamifiedPlaceData ι in all HasX and theorem. hull direct compile. No fake.

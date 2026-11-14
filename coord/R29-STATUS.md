@@ -2795,3 +2795,5 @@
 - 13:50: PrincipalDimActual errors :36/:47/:48/:49/:55/:66; fixes p:=p/map_zpow/Set.smul_set/call order/NNReal.coe_zpow. qpilot. gate 20.483 written.
 
 - 14:00: RamifiedPlaceData root cause field notation HasX d -> fix to HasX d binders; hull. gate 20.484 written.
+
+- 14:10: RamifiedPlaceData missing ι param; fix HasX (d : RamifiedPlaceData ι) + explicit theorem ι. hull. gate 20.485 written.
