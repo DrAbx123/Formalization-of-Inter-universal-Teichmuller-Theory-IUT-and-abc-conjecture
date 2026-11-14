@@ -1875,3 +1875,5 @@
 - 09:20：按新 tail 派精确修法：C17 用 `finrank_eq_one_iff_of_nonzero'`（带 prime）；PaperSums 补 `QVFamNormalizedGeneratorSupplyActual`；RootRadius `change` RHS 显式化+log_pow；Correspondence 用 `ne_of_lt/ne_of_gt` 替代 `.ne`；Gamma 内层 smul 再 `smul_eq_mul` 后 zpow；ContinuousAdd 删多余 `sub_zero`。
 
 - 09:25：Gamma v17：`nsmul_eq_mul` 后补 `simp only [smul_eq_mul]` 转内层 K-smul，再 push_cast/zpow；第二定理 change/eq_zero_iff 保持；retouch 等编。
+
+- 09:35：**GREEN `Mzk1ContinuousAddZpadicActual` 00:23:12（48s）**：`continuous_of_addHom_fin_zpadic` official，三公理无 sorryAx；已让 stepxi 接 W_F 识别/β_a 连续→ℤ_p/ℚ_p 线性链，并清 UnitQuotient/LogLattice。gate §20.52 已写。

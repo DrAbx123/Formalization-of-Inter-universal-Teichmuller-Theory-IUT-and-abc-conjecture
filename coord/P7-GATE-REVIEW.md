@@ -772,3 +772,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **供体检查**：root 侧 `PaperRootExtensionDiscreteValuationActual.rootDiscreteValuation/rootUniformizer` 存在；base 侧 `Valued.v`/DVR equivalence（`SourceTateParameter.valued_isEquiv_maximalIdealValuation` over Completion）有，但显式 `aval/bval` 构造与 `bval(iota x)=e·aval x` 不在树内；一轮内不能证，保持 conditional，不再投入。
 - **无条件 green 部分**：`signedReadout_eq_log_radius_sub_delta`、`mem_lambdaLattice_iff`/`mem_qhatLattice_iff`/`inverseLambdaLattice_eq_normBall`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`/`_le_closedForm_sub_one`。
 - 未 fake completion，未加 `hscale/hid`。
+
+
+### 20.52 GREEN：连续加性同态引理（stepxi，2026-11-15 01:45）
+- **`Mzk1ContinuousAddZpadicActual` DONE 00:23:12（48s）**：
+  `continuous_of_addHom_fin_zpadic : ((Fin d → ℤ_[p]) →+ (Fin d' → ℤ_[p])) → Continuous f`；
+  `#print axioms = [propext, Classical.choice, Quot.sound]`，**无 sorryAx**。
+- 用途：`W_F ≅ (ℤ_p)^d` 识别后，任意加法群同态 β_a 自动连续；连续+加性 ⇒ ℤ_p 线性，再有理化得 ℚ_p 线性。
+- **剩余 Ind1 源缺口**：实际 `TimesMuQuotient ((F.Mon v)ˣ) ≅ (Integers F)ˣ/tors` 识别 + β_a 来源；不假填。
+- `Mzk1Ind1UnitQuotientActual`/`Mzk1Ind1LogLatticeActionActual` 旧日志为旧版本，已 retouch，待确认无 sorryAx。
