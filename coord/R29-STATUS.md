@@ -2673,3 +2673,5 @@
 - 03:40: torsion split arithmetic hints (coprime_dvd_left/pow_dvd_pow_iff_le_right). hull. gate 20.421 written.
 
 - 03:50: URGENT KernelBridge source/olean mismatch (source newer, only 4 decls); freeze proven decls+recompile. UnitInvariance red line72/coercion. gate 20.422 written.
+
+- 04:00: TorsionSplit watchdog log stale; mainline direct compile for exact first error. hull no fake. gate 20.423 written.

@@ -3061,3 +3061,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.422 URGENT source/olean mismatch KernelBridge; UnitInvariance red (abc, 2026-11-15 01:30)
 - KernelBridge olean 23:46:45 probes range/ker_eq/quotientKernelEquivRange three axioms no sorryAx; ofRange unknown. BUT current source mtime 00:20:44 > olean and only 4 decls (no quotientKernelEquivRange) -> olean stale/mismatched, not current evidence. stepxi to freeze only proven decls and recompile+probe.
 - UnitInvariance FAIL 16:04:39 line72 rw + coercion mismatch; current olean stale. qpilot to fix/simplify image equality via ext/membership, no smul; fresh. No fake.
+
+
+### 20.423 TorsionSplit watchdog stale; direct compile needed (hull, 2026-11-15 01:40)
+- Mzk1TorsionSplitActual source updated with Fact p.Prime/hT0dvdT/hval0/hnotp/hcopT0/hmle (hcop.pow_left m).dvd_of_dvd_mul_right h1; watchdog FAIL 16:27:10 log still old lines 26/30/47/49/29/34/35 -> stale log, cannot report fresh error. mainline to compile current source directly and report first error; no edit. No fake; correction construction green.
