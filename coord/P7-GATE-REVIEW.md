@@ -1516,3 +1516,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   paperS3137ReadingDictionary_of (lock): constructs dictionary, only lock explicit.
 - Final conditional signature: S45SourceFields /\ RelativeFactorTowerData /\ PaperS3137ObjectLock -> paperNormalizedComparison and dictionary. No True; lock not claimed/provably trivial. Pending compile; likely need logP nonzero.
 - S45 norm-instance audit: qVFamNormRatio=1 is genuine unresolved coherence (CommonPrime spectral vs Completion default); no tree theorem; separated regime exists.
+
+
+### 20.160 Candidate donor for norm-instance gap: GeneralNormalizedNormBySpectralUniqueness (2026-11-15 22:00)
+- stage4/hull found LeanFormal/IUT/Foundations/AlgebraicGeometry/GeneralNormalizedNormBySpectralUniqueness.lean: generalNormalizedNormFormula; normalizedCanonicalPowerComparison; no sorry/True; source 03:33:15; was NOT in watchdog WL (no olean).
+- Added to extra-targets (line 1081). If it compiles, it may prove ||x||_normalized = ||x||_default^(1/d) and the qVFamNormRatio formula, potentially closing S45 norm-instance gap.
+- Assigned mainline compile/audit; exact analytic input was NormValuationCompatible (unproved) in Example36CompletionNormFormula. Donor uses spectralNorm_unique_field_norm_ext.

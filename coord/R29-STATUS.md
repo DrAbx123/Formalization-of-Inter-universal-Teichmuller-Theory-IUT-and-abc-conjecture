@@ -2113,3 +2113,5 @@
 - 03:35: GREEN iiiBoxConsumer 03:51:00 (box_readout_le); IV Box RED cleared. mainline ReadingDictionary plan approved: construct (a) theta_product_eq, (b) q_paper_eq rfl, (c) coeff_eq_of_ratio, keep substantive object_lock explicit (no bare Prop/True). gate 20.157 written.
 
 - 03:50: mainline queued Mzk1P0FinalS3137DictionaryActual with substantive PaperS3137ObjectLock (B/weight_relation/unitMass/theta_sign) + ReadingDictionary (a)(b)(c). Final conditional signature S45 /\ RelativeFactor /\ ObjectLock -> comparison/dictionary; no True, lock not trivial. Pending compile. gate 20.159 written.
+
+- 04:00: IMPORTANT donor found: GeneralNormalizedNormBySpectralUniqueness.lean (generalNormalizedNormFormula/normalizedCanonicalPowerComparison, no sorry/True) was unbuilt/not WL. Added to WL line 1081; mainline to compile/audit. May close S45 norm-instance gap via spectral uniqueness; if green derive ratio formula. gate 20.160 written.
