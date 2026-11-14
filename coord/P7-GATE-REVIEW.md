@@ -982,3 +982,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - hobj explicit; hlock/hbound separate; no unitMass=1.
 - Single-place T / `T.arithmetic = I.initial.arithmetic` cannot be constructed in one round: no identification theorem, no Bad<->tensorIndex correspondence; keep hobj as explicit GAP; do not equate global and local.
 - Next: compile files, then `LPaperInstance_of_bounds (hobj) (hbound) : LPaperInstance`; report exact signature.
+
+
+### 20.79 QHatNormCoherence direct proof route found (abc, 2026-11-15 05:25)
+- `c0QHat = c0Alpha^(2l)`; `c0Alpha = qrootElem = rootNormedElement`; S305 `rootNormedElementNorm_pow_twoL_eq_qVFamNormalizedNorm`: `(norm rootNormedElement)^(2l) = qVFamNormalizedNorm`; `norm_pow` gives `norm c0QHat = qVFamNormalizedNorm` directly.
+- This bypasses `norm_algebraMap'` and completion defeq/instance search; write QHatNormCoherence proof from these green donors. If green, remove QHat from bridge (leaving S45 / RootBase / A1Data + reading bridge).
+- Also: `thetaNormReadProduct = (1/(2l)) sum d qhatLogReadout`; with NormCorrection `qhat=paperQ+log ratio`, follows `sum d log r = (1/(2l))(sum d paperQ + sum d log ratio)`. Same-origin q/ratio sign still needed for qRead bound.
