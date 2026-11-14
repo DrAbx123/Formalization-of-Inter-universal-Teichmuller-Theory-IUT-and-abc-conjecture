@@ -3488,3 +3488,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.506 CompletionTower finrank removed; orientation/Module.Free fix (stage4, 2026-11-15 15:40)
 - Green CompletionTower only scalarTower+moduleFinite (source 03:59:50). finrank attempt removed: Module.Free Qp lower synth timeout (even of_divisionRing); orientation of finrank_mul_finrank is product = upper, not upper = product. Fix explicit letI Module Qp lower := Algebra.toModule; haveI Module.Free := of_divisionRing; state product equality; higher heartbeats. Then transport degree/rootBase. adicAbv pending. No fake.
+
+
+### 20.507 MAJOR PrincipalDimInstantiate GREEN (qpilot, 2026-11-15 15:50)
+- Mzk1IVThm110PrincipalDimInstantiateActual DONE 20:04:19/olean 04:04:18: log_norm_decomp (hdecomp,hvalu -> log||lam||=-k log p); hchar_principalDimUnit (char(principalDimUnit k u)=p^(-kD)) via map_mul/unit char/ donor real_log_distribHaarChar.../exp_log/rpow. No sorry/axiom. Fixes: Subtype.ext, push_cast, explicit μ, call order u μ.
+- Remaining qpilot: hvalu from ||u||=1; hact via principalDimUnit_val=algebraMap lam+Algebra.smul_def; assemble unconditional; floor. abc probe. No fake.

@@ -2839,3 +2839,5 @@
 - 17:30: quotientWitness 3/5 fields; descendTwoCell_factor/twoCell_ext missing unitor coherence; mainline manual ext. gate 20.505 written.
 
 - 17:40: CompletionTower finrank removed (Module.Free timeout/orientation); stage4 re-add product direction explicit Module. adicAbv pending. gate 20.506 written.
+
+- 17:50: MAJOR Instantiate GREEN 04:04:18 (hnorm+hchar). Next hvalu/hact/assemble/floor. abc probe. gate 20.507 written.
