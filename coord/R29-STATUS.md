@@ -2127,3 +2127,5 @@
 - 04:50: donor fix plan (inline add_le/lower core) and dictionary hM/hB explicit params approved. CORRECTION: donor gives power formula ||x||_norm=||x||_def^(1/d), NOT equality; S45 ratio=1 not donor-implied; compat should fail unless d=1. Keep S45 explicit, no fake. gate 20.167 written.
 
 - 05:00: GREEN ActualSourceUnitLayer 04:05:14 with three-axiom probe (Normal/layer/self/nonempty/ActualInd1UnitAction/Required); IntegrationAction 03:54:09 structure; Required iff probe pending. Beta source remains only exact gap. gate 20.168 written.
+
+- 05:20: dictionary root cause imports/instances: add ProcessionNormalizationWeightsActual, QVFamNormalizedCoefficientBridgeActual, explicit Fintype binder, remove invalid named I on unitMass/thetaNorm. BaseScalar still compiling. gate 20.169 written.

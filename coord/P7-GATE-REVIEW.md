@@ -1559,3 +1559,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - ActualSourceUnitLayerActual GREEN 04:05:14Z, axioms [propext, Classical.choice, Quot.sound], no sorryAx: instance Normal, ActualSourceUnitLayer, actualSourceUnitLayer_self/nonempty, ActualInd1UnitAction (algAction+beta+compatible substantive), Required.
 - IntegrationAction GREEN 03:54:09Z (structure retained; induced proofs removed); Required iff probe added, pending final three axioms.
 - Exact remaining beta source node: actual Ind1/Ind2 action -> IntegralUnitStableAlgebraicAction (algAction preserves integral units bijectively) or ActualInd1UnitAction (algAction+beta+compatible); no inhabitant, no fake.
+
+
+### 20.169 Dictionary root cause: missing imports/instance params (2026-11-15 23:20)
+- Dictionary first errors: localCompletionDegree unknown (need import/open ProcessionNormalizationWeightsActual); qVFamNormRatio unknown (need import/open QVFamNormalizedCoefficientBridgeActual); Fintype (Bad ...) synth fails inside structures (add explicit [Fintype] instance binder); actualUnitMassL/thetaNormReadL named (I:=I) invalid (auto-bound params; use bare names or add explicit params in LNormReadout).
+- PaperS3137ObjectLock/ReadingDictionary need explicit hM/hB and Fintype binders; then dictionary (a)(b)(c) construction.
+- BaseScalarValuationRelation still compiling (lean PID 20468) no olean yet; donor waits.
