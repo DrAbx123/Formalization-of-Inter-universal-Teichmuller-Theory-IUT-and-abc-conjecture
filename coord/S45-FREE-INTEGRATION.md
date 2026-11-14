@@ -289,3 +289,46 @@ Pitfalls to expect:
   GeneralNormalizedNormBySpectralUniqueness.toC]`.
 
 No Lean changes made; this is the exact hbridge proof route.
+
+## hbridge current implementation status (2026-11-14 15:30, read-only)
+
+Two candidate hbridge files exist, both currently red:
+
+### `Mzk1P0QVFamNormBridgeDonorActual.lean` (no olean; latest FAIL 15:30)
+Contains the intended unconditional
+`qVFamNormalizedNorm_eq_defaultNorm_rpow` and `qVFamNormRatio_ge_one`, but:
+- `:67:8` `generalNormalizedNormFormula` argument type mismatch: the donor lemma is
+  stated for `x : NormalizedCompletion place`, while `qVFamNormalizedGenerator` has
+  the reducible `CommonPrimeCompletion` spelling; the expected/actual `Zero` instances
+  differ syntactically.  Fix: pass an explicit
+  `(show NormalizedCompletion (qVFamTensorPlace T b) from qVFamNormalizedGenerator T b)`
+  or `change`/`simpa [CommonPrimeCompletion, NormalizedCompletion]` before applying the
+  donor lemma (the BridgeValue file already uses this explicit `show` pattern).
+- `:77:51` `WithZero.unzero hv`: implicit value inferred from a different
+  `Valued.v` instance.  Fix: state `hv` at the explicit
+  `NormalizedCompletion`/`toC` carrier (as BridgeValue does), or give
+  `WithZero.unzero (a := Valued.v (toC ...)) hv`.
+- `:138` final paper comparison needs `[Fintype (Bad (nativePlaceSelection T))]`;
+  add the instance variable before that theorem (the pairwise ratio lemma does not
+  need it).  The later `unknown identifier T` errors are cascades from this.
+
+### `Mzk1QVFamNormBridgeValueActual.lean` (no olean; latest FAIL 15:23)
+Tries the cleaner value-level proof:
+- `:41` normalized formula `simpa` type mismatch — same
+  `CommonPrimeCompletion` vs `NormalizedCompletion` instance issue.
+- `:70/:71` rewrite default formula pattern not found, `:75/:76` unsolved goals —
+  the `change` to the default norm is not in the same `Valued` instance expected by
+  `norm_eq_absNorm_zpow`; use the explicit `toC` carrier and
+  `show NormalizedCompletion ... from (qVFamily T b).q` as already attempted in
+  `qVFamDefaultNorm_eq_absNorm_rpow`, then `simpa [toC]` rather than `rw`.
+
+**Exact repair order:**
+1. Put the qVFamily element under the explicit `NormalizedCompletion` carrier
+   everywhere the donor is called.
+2. State the default formula on `toC x : C place`, not on the L carrier; use
+   `valuation_ne_zero_of_ne_zero` and the explicit `WithZero.unzero` value.
+3. Derive `qVFamDefaultNorm = absNorm^m` by `simpa [qVFamDefaultNorm, toC]`.
+4. Use `Real.rpow_mul` with `absNorm_pos`.
+5. Add `[Fintype (Bad ...)]` for the final global comparison only.
+
+No Lean changes made; the hbridge route is otherwise exactly as described above.

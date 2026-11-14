@@ -1997,3 +1997,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Value Mzk1QVFamNormBridgeValueActual FAIL 07:23:24 line75 ring unsolved -(nu_norm*d^-1)=-((d^-1)*nu_def); use ring_nf/mul_comm. No olean; hbridge unproved.
 - Donor Mzk1P0QVFamNormBridgeDonorActual source 15:28:08 FAIL 07:30:28: section lacks [Fintype (Bad (nativePlaceSelection T))], causing Fintype synth/T unknown/exact unknown cascade; add variable. qVFamNormalizedNorm_eq_defaultNorm_rpow not compiled; no olean.
 - Wrapper conditional green+probe; hbridge pending; S45-free not unconditional. No fake.
+
+
+### 20.241 hbridge carrier/instance fixes exact (stage4, 2026-11-16 13:20)
+- Donor :67 donor lemma expects x : NormalizedCompletion place; qVFamNormalizedGenerator has reducible CommonPrimeCompletion spelling/Zero instance differs -> explicit show NormalizedCompletion or change/simpa [CommonPrimeCompletion,NormalizedCompletion]. :77 WithZero.unzero Valued.v instance mismatch -> explicit carrier/toC or unzero (a:=Valued.v (toC ...)). :138 add [Fintype (Bad ...)]; T unknown cascade.
+- Value :41 explicit carrier; :70/71 default formula rw pattern -> simpa [toC]; :75/76 ring_nf/mul_comm.
+- Repair order: explicit NormalizedCompletion carrier, default formula on toC x:C, qVFamDefaultNorm=absNorm^m by simpa [qVFamDefaultNorm,toC], rpow_mul with absNorm_pos. No fake.

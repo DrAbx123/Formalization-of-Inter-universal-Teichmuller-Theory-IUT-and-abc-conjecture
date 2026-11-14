@@ -2289,3 +2289,5 @@
 - 19:00: hbridge Value/Donor and Literal still no olean; 11 lean. Woke mainline/hull/lattice/abc. gate unchanged.
 
 - 19:10: hbridge Value ring line75 + Donor missing Fintype section var. mainline fix. wrapper conditional green; hbridge unproved. gate 20.240 written.
+
+- 19:20: hbridge carrier/instance fixes: explicit NormalizedCompletion show, WithZero.unzero carrier, Fintype; Value simpa [toC]/ring_nf. mainline fix. gate 20.241 written.
