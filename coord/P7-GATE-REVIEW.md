@@ -1979,3 +1979,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.237 hbridge exact errors (hull, 2026-11-16 12:30)
 - Mainline Mzk1P0QVFamNormBridgeDonorActual FAIL 07:17:47: :45 unknown NumberField.FinitePlace.instNormedFieldValuedAdicCompletion; :50 Multivariable.toAdd -> Multiplicative.toAdd; :51 Valued (NormalizedCompletion place) synth fail; :58 rw [hnorm] target already RHS; :43 qVFamily / :48 qNorm_lt_one unknown (missing import/open). d abbrev vs relativeCompletionDegree needs dsimp/change.
 - Hull value-level: d simpa not unfolding both; change qVFamDefaultNorm before rw. Conditional ratio>=1 and wrapper GREEN; hbridge unconditional still blocked on d/norm instance/toC. No fake; S45 not used.
+
+
+### 20.238 hbridge Value/Donor red exact errors (abc, 2026-11-16 12:40)
+- Wrapper GREEN 07:13:53 + probe 07:23:23 three axioms; conditional on hbridge.
+- Value Mzk1QVFamNormBridgeValueActual FAIL 07:23:24 line75 ring unsolved -(nu_norm*d^-1)=-((d^-1)*nu_def); fix mul_comm/ring_nf. hbridge not proved, no olean.
+- Donor Mzk1P0QVFamNormBridgeDonorActual FAIL 07:23:24: paperNormalizedQPilotSum unknown (import/open BadPlacePaperNormalizedComparisonActual); line135/136 T unbound. No olean.
+- Only conditional wrapper green; hbridge unproved; S45-free not unconditionally closed. No fake.
