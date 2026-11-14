@@ -2121,3 +2121,5 @@
 - 04:20: donor compiling START 12:00:31 (PID 33304) + probe; no DONE yet. IntegrationAction green 03:54:09. Dictionary :92/:93 fix pending. Woke lanes. gate 20.164 written.
 
 - 04:30: donor FAIL missing BaseScalarValuationRelation.olean; added dep to WL and refreshed plan (dep dirty). Mainline to watch/force donor retry; dictionary fix pending. A1Data fresh audit passed three axioms. gate 20.165 written.
+
+- 04:40: CRITICAL donor structural blocker: canonicalAbsValue_add_le circular between donor and CanonicalAbsValueAddLeProof. mainline to inline/move to lower shared module; build BaseScalarValuationRelation first. Formula source match confirmed (norm_def^(1/d)); if built may close norm gap. gate 20.166 written.

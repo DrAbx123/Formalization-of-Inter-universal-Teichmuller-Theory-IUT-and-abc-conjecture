@@ -1541,3 +1541,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor build FAIL: object file BaseScalarValuationRelation.olean missing. Added LeanFormal/IUT/Foundations/AlgebraicGeometry/BaseScalarValuationRelation.lean to WL, refreshed dag_plan (targets 14837, dirty 548; dep dirty). Watchdog to build dep then retry donor after retry window.
 - Donor itself currently not dirty due failed-state retry window; mainline to retouch/clear if needed.
 - A1Data donor/probe fresh audit passed (source no sorry/True; probe three axioms).
+
+
+### 20.166 Donor structural blocker: circular canonicalAbsValue_add_le (stage4, 2026-11-15 22:40)
+- Donor GeneralNormalizedNormBySpectralUniqueness.lean:94 uses canonicalAbsValue_add_le from CanonicalAbsValueAddLeProof.lean:64; AddLeProof imports donor => cycle; donor lacks import so identifier unknown. Cannot order as written.
+- Fix route: inline add_le proof into donor, or move canonicalAbsValue/nu/absNorm_gt_one/d_eq_e_mul_f + add_le proof to lower shared module, then AddLeProof imports donor; build BaseScalarValuationRelation first.
+- Formula match (source): donor ||x||_norm=absNorm^(-nu/d), default ||x||_def=absNorm^m with m=-nu, so donor = ||x||_def^(1/d); normalizedCanonicalPowerComparison equivalent. If built, may close norm-instance compat.
