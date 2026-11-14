@@ -3903,3 +3903,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.600 residue field card/coprime route (qpilot, 2026-11-15 30:20)
 - Need explicit [Fintype (ResidueField A)] and [CharP (ResidueField A) p] or finite-field structure; FiniteField.card gives card=p^f; Fintype.card_units gives p^f-1; Nat.coprime_pow_sub_one -> coprime -> integralUnitExponent_coprime. Label explicit local-field hypotheses; no fake. unitLog norm/tensor ball pending.
+
+
+### 20.601 residue card import/Fintype units (2026-11-15 30:30)
+- FiniteField.card unknown: add import Mathlib.FieldTheory.Finite.Basic; needs [Fintype F]/CharP. Fintype Fˣ instance missing: add explicit [Fintype Fˣ] hypothesis. Then card_units/coprime. qpilot. No fake.
