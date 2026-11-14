@@ -2010,3 +2010,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Wrapper olean=True; old log errors stale; mainline not editing it.
 - hbridge two files concurrently edited by another worker; mainline stops editing to avoid clobber. Donor current :148 unknown exact intermediate; Value :75 ring unsolved. Ownership to hull/current worker; finish per stage4 fixes (Donor :67 x, :72/75 toC_apply, :77 unzero, :138 Fintype; Value ring_nf/mul_comm).
 - Integration: only unconditional 1<=ratio missing; donor only power relation; S45 only correction-zero/strict/R2. No fake.
+
+
+### 20.243 hbridge latest exact fixes (abc, 2026-11-16 13:50)
+- Value FAIL 07:36:32 line75 ring unsolved -(nu*d^-1)=-((d^-1)*nu): ring_nf/mul_comm.
+- Donor source 15:38:19 FAIL 07:40:17: line84 WithZero.unzero type mismatch -> unzero (a:=val) hv or direct unzero hv; line147-150 finalPaperNormalizedComparison_noS45 missing by after := causes line150 exact unknown; Fintype already line146. No olean.
+- hbridge still unproved; wrapper probe green; S45-free not unconditional. No fake.
