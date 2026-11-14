@@ -2003,3 +2003,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor :67 donor lemma expects x : NormalizedCompletion place; qVFamNormalizedGenerator has reducible CommonPrimeCompletion spelling/Zero instance differs -> explicit show NormalizedCompletion or change/simpa [CommonPrimeCompletion,NormalizedCompletion]. :77 WithZero.unzero Valued.v instance mismatch -> explicit carrier/toC or unzero (a:=Valued.v (toC ...)). :138 add [Fintype (Bad ...)]; T unknown cascade.
 - Value :41 explicit carrier; :70/71 default formula rw pattern -> simpa [toC]; :75/76 ring_nf/mul_comm.
 - Repair order: explicit NormalizedCompletion carrier, default formula on toC x:C, qVFamDefaultNorm=absNorm^m by simpa [qVFamDefaultNorm,toC], rpow_mul with absNorm_pos. No fake.
+
+
+### 20.242 hbridge ownership/concurrency (mainline, 2026-11-16 13:30)
+- RouteA chain ready: Mzk1P0S45FreeFinalRouteAActual GREEN 06:55:40 + probe; finalPaperNormalizedComparison_noS45_of_ratio_ge_one official (conditional forall 1<=ratio).
+- Wrapper olean=True; old log errors stale; mainline not editing it.
+- hbridge two files concurrently edited by another worker; mainline stops editing to avoid clobber. Donor current :148 unknown exact intermediate; Value :75 ring unsolved. Ownership to hull/current worker; finish per stage4 fixes (Donor :67 x, :72/75 toC_apply, :77 unzero, :138 Fintype; Value ring_nf/mul_comm).
+- Integration: only unconditional 1<=ratio missing; donor only power relation; S45 only correction-zero/strict/R2. No fake.

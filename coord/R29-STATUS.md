@@ -2291,3 +2291,5 @@
 - 19:10: hbridge Value ring line75 + Donor missing Fintype section var. mainline fix. wrapper conditional green; hbridge unproved. gate 20.240 written.
 
 - 19:20: hbridge carrier/instance fixes: explicit NormalizedCompletion show, WithZero.unzero carrier, Fintype; Value simpa [toC]/ring_nf. mainline fix. gate 20.241 written.
+
+- 19:30: hbridge concurrency; mainline stops editing; hull owns finish (Donor :67/:72/:75/:77/:138; Value ring_nf). Only unconditional 1<=ratio missing for final noS45. gate 20.242 written.
