@@ -2339,3 +2339,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - shehdd Mzk1CongruenceUnitsEquivActual no olean; resume quotient argument directions.
 - mainline Mzk1ActualReadingTargetActual no olean; last error type mismatch SourcePilotRegionData vs OriginalInput in qPilotLogVolumeReading_le_theta..._of_identifications; mainline to fix argument.
 - stepxi GaloisFixedRoute GREEN 18:15; actual hull target magnitude probe GREEN 18:16.
+
+
+### 20.295 #C B donor found: Integers DVR/Dedekind instances (2026-11-17 00:40)
+- Hull reported no IsDedekindDomain (Integers K); but project already has integersIsDiscreteValuationRing (p:=p) and integersIsDedekindDomain (p:=p), used at LeanFormal/IUT/Foundations/LocalFields/LocalDifferentUpperBound.lean:52-53. Tell hull to letI these, then cardQuot_pow_of_prime applies to maximal ideal m; direct filtration fallback remains.
+- #C primary TruncatedUnitsCardPrimary O/(p^s) units = (q-1)q^(eK*s-1); secondary (p^s)^e correctly exponent eK*s*e. A primary O^x/(1+p^sO) ≃ (O/(p^s))^x.

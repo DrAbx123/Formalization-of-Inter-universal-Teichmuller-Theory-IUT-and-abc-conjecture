@@ -2417,3 +2417,5 @@
 - 06:00: shehdd #C A primary O/(p^s), def not theorem, retouched; first error fixed. Told hull B N independent then N=e_K*s; corrected (p^s)^e secondary only. gate 20.293 written.
 
 - 06:10: depth subgroup API queued; qpilot/shehdd/mainline pending first errors (logQ linarith, quotient args, reading arg mismatch); GaloisFixed green; target magnitude probe green. Resumed. gate 20.294 written.
+
+- 06:30: found Integers DVR/Dedekind instances (integersIsDiscreteValuationRing/integersIsDedekindDomain, LocalDifferentUpperBound:52-53); hull can use cardQuot_pow_of_prime for #C B. gate 20.295 written.
