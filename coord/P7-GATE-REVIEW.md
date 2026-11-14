@@ -1156,3 +1156,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1LocalMonActual DONE 01:35:55 (47s): localFPrimeStrip_Mon_eq (Mon v=(AlgClosure Q_v)^x).
 - Mzk1Ind1IntegralUnitMapActual DONE 01:35:59 (51s): integerUnitsRingHom + injective; integersUnitsToAlgClosure + injective; IntegralUnitToAlgClosureMap.
 - Probes requested for these four; bridge/final still pending.
+
+
+### 20.105 GREEN: HaarIndexPow; LNormReadoutProduct (2026-11-15 10:25)
+- Mzk1IutIVProp14HaarIndexPowActual DONE 01:36:43 (95s): mu_lambda_toReal_eq_pow_mul.
+- Mzk1P0LNormReadoutProductActual DONE 01:36:49 (101s): thetaNormReadProduct; thetaNormReadProduct_eq_sum (sum d_b log r_b); _eq_closedForm_sub_one (s1915ClosedForm-1); _eq_neg_sum_coefficient (sum -(d_b c_norm)/(2l) log p); LGlobalLocalObjectLock record only; rows 6.
+- Need axiom probes for both; then hmuLambda/volume_ratio and bridge/final.
