@@ -2073,3 +2073,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.253 hbridge last hdef exponent/carrier (hull, 2026-11-16 15:30)
 - Donor FAIL 08:27:50: only hdef' left: target (NNReal .1 absNorm^m) = absNorm^(toAdd(unzero ...)); m vs opaque unzero proof. Fix simpa [m, WithZero.coe_unzero, absNorm] using hdef, or convert hdef using 1; simp [m, WithZero.coe_unzero]. Other components hlog/hm/hnorm'/final := by already pass.
 - Value default theorem nu carrier mismatch qVFamily.q vs generator: explicit show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q. No fake.
+
+
+### 20.254 GREEN ABCStatementLayer (2026-11-16 15:40)
+- Mzk1IUTIVABCStatementLayerActual DONE 08:23:34 (43s) after import/field-as-type projection fixes.
+- hbridge Donor/Value still no olean; hull owns; hdef'/carrier remaining.
+- Woke lanes; next statement-layer file.

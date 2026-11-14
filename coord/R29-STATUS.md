@@ -2325,3 +2325,5 @@
 - 22:00: Dictionary drop-S conditional GREEN 08:14:22 (finalDictionaryCombined_ofNormBridge); final probe 4 items confirmed. Dictionary probe 3 items pending. hbridge presentation fixes; after green instantiate/remove S45. gate 20.252 written.
 
 - 22:10: Donor hbridge last hdef exponent unzero proof; use simpa [m,WithZero.coe_unzero,absNorm] or convert using 1. Value explicit show carrier. hull fix. gate 20.253 written.
+
+- 22:20: GREEN ABCStatementLayer 08:23:34. hbridge still no olean; hull. Next statement-layer. gate 20.254 written.
