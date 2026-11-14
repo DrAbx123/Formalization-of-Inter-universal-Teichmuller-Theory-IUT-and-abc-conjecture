@@ -1933,3 +1933,5 @@
 - 12:20：mainline 落盘 `Mzk1P0LNormReadoutActual`：`thetaNormReadL = log Haar(region) − log Haar(unitBall)`、`LNormComparisonTarget := qReadActual ≤ thetaNormReadL`、旧目标仅在 log unitMass≥0 时推出（显式条件）；unitMass=1 仅 GAP。已让其对齐 `tensorIntegralRegion` 乘积 Haar 与 s1915 normalized log，然后接 LPaperInstance 条件版；abc 只读审计。gate §20.73 已写。
 
 - 12:30: route (b) for L normalized readout sent to mainline: product-space rootExtensionProductHaar mirrors s1915; tensor scaling cancels in normalized ratio; no unitMass=1. WF probe GREEN 01:07:10 three axioms. stepxi LocalMonActual queues actual Mon=(AlgebraicClosure)^x and proves no canonical iso to (Integers F)^x/tors; exact obstruction recorded. abc audit: thetaNormReadL canonical, actualUnitMassL/s1915UnitMass noncanonical. gate 20.74/20.75 written.
+
+- 12:35: mainline landed `Mzk1P0LNormReadoutProductActual`: thetaNormReadProduct = sum d_b log r_b = s1915ClosedForm-1 (product-space, unitMass cancels). Next: S709/S305 rewrite to q-side; compare to qRead as explicit bound. Flagged global-Bad vs local-C3 object mismatch, need restriction/bridge. abc auditing. gate 20.76 written.

@@ -957,3 +957,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1LocalMonActual (queue): localFPrimeStrip_Mon_eq (v): Mon v = (AlgebraicClosure Q_[v.1])^x; LocalUnitQuotient v := TimesMuQuotient (localFPrimeStrip.Mon v); localFPrimeStrip_reflUnitQuotientEquiv = fPrimeStripUnitQuotientEquiv (refl); identity apply proof.
 - Exact obstruction: actual local Mon = algebraic-closure units, target (Integers F)^x/tors is finitely generated; natural map (Integers F)^x -> (AlgebraicClosure)^x after torsion quotient, not canonical iso; cokernel contains non-integral algebraic-closure units. No fake iso.
 - L norm audit (abc): thetaNormReadL is canonical; actualUnitMassL and s1915UnitMass are both noncanonical unit-ball masses on different carriers; no existing equality; unitMass=1 is false GAP. LNormComparisonTarget is the only canonical normalized form.
+
+
+### 20.76 GREEN-in-progress: product-space normalized readout = s1915ClosedForm-1 (mainline, 2026-11-15 04:55)
+- New `Mzk1P0LNormReadoutProductActual` (queue):
+  - `thetaNormReadProduct T := log(s1915HullMass T).toReal - log(s1915UnitMass T).toReal`;
+  - `thetaNormReadProduct_eq_sum : = sum_b (s1915LocalDegree b) * log(rootImageRadius b)` (s1915_hull_toReal + log_mul + s1915_log_prod_radius);
+  - `thetaNormReadProduct_eq_closedForm_sub_one : = s1915ClosedForm T - 1` (s1915 normalized hull formula).
+- Step (3): use S709 rootImageRadius_eq_rootNorm + S305 rootNormedElementNorm_pow_twoL_eq_qVFamNormalizedNorm to rewrite sum d log r as sum -(d c_norm)/(2l) log P; compare with qReadActual = OrigXiFSourceLQScalar as explicit bound condition `LNormComparisonTarget_of_bounds`; no new constants, no unitMass=1.
+- **Object mismatch flagged**: thetaNormReadProduct is GLOBAL Bad sum; LPaperInstance is single-place/C3 local; need restrict T/Bad to the place or explicit bridge; do not silently equate global and local.
