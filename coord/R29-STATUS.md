@@ -2571,3 +2571,5 @@
 - 19:10: P2NormBridge handed to shehdd (hull off); exact fixes congrArg norm/norm_pow/no-goal calc. gate 20.370 written.
 
 - 19:20: hull assigned general-e #C B secondary units card (N=eK*s*e, span power). p2 wrapper waits shehdd. gate 20.371 written.
+
+- 19:30: shehdd applied P2 fixes; fresh pending. Hull primary/probe confirmed no sorryAx; hull general-e secondary assigned. gate 20.372 written.

@@ -2785,3 +2785,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.371 Hull standby -> general-e #C B secondary (2026-11-17 13:40)
 - Hull stopped P2NormBridge; primary/probe green with no sorryAx. Assigned next non-overlapping #C B task: general-e/secondary units card unconditional via card_units_quotient_maximalIdeal_pow with N=eK*s*e and span identity Ideal.span{(logShellScale p)^e}=m^(eK*s*e) derived from span_logShellScale_eq_maximalIdeal_pow. Inspect TruncatedUnitsCardCorrected e target; report first error/GREEN. p=2 wrapper waits for shehdd norm bridge.
+
+
+### 20.372 P2 fixes applied by shehdd; primary probe confirmed (2026-11-17 13:50)
+- shehdd fixed P2NormBridge: hpnorm via congrArg norm hcoep; hcoenorm via rw [norm_pow]; hnormx simpa [hcoex,norm_mul,norm_unit_eq_one,norm_pow]. Retouched, fresh pending.
+- Hull stopped editing; TruncatedUnitsPrimary DONE 12:42:22 olean 12:42:21 and probe 12:47:13 axioms span_logShellScale_eq_maximalIdeal_pow/truncatedUnitsCardPrimary standard no sorryAx. Hull assigned general-e #C B secondary.
