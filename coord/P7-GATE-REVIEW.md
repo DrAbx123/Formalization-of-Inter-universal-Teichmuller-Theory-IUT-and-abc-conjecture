@@ -2441,3 +2441,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - R1 numerical core in Mzk1ActualReadingTargetActual DONE 11:03:33: qVFamDefaultNorm_le_qVFamNormalizedNorm, log_qVFamDefaultNorm_le_log_normalized from donor ratio>=1 + positivity; no ratio=1.
 - R1 still missing same-q-witness P.line.C3.q.q = qVFamNormalizedGenerator + place/Bad index/weight. R3 still missing T root hull -> C3 target hull public carrier/region + oneLabel lattice containment, then relative_log_mass_image_eq dimension-normalized/extended ideal, no negative sign.
 - Tower correction recorded: rootBase=e*dBase, kPlace=n*dBase; divisibility via F/Fmod Galoisity+transitivity; root L_b->K_w still Tate/torsion/fixed-field.
+
+
+### 20.311 Fresh greens: CongruenceUnitsEquiv conditional; reading probes fresh (2026-11-17 03:40)
+- Mzk1CongruenceUnitsEquivActual GREEN 19:08:13 (conditional primary/pow defs; no actual map/surj yet).
+- Mzk1ActualReadingTargetAxiomProbeActual DONE 11:09:02; Mzk1NewGreens3AuditProbeActual 11:09:02; report fresh 5-item/8-item axioms.
+- Still no olean: Ind1DepthSubgroup, Ind1CorrectedExtraction, IVThm110Actual, CongruenceUnitsEquivOddActual, TruncatedUnitsCountActual. Owners retouched/report.
+- TruncatedUnitsCardProbe 11:02:41; LocalRingUnitsCardProbe 10:52; target magnitude probe 11:03:25.

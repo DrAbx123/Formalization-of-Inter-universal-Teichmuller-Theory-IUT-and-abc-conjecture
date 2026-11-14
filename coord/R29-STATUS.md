@@ -2449,3 +2449,5 @@
 - 08:50: sign-risk: lock/ObjectLock negative theta_sign conflicts with signed convention; mainline/stage4 to change to thetaNormReadL=thetaNormReadProduct and rebuild. Fresh green list + red list recorded. hfac/IsLocalHom/DepthSubgroup fixes dispatched. gate 20.309 written.
 
 - 09:00: fresh target chain confirmed (deps fresh, target magnitude 10:52+probe 4 items three axioms); R1 numerical core GREEN (default<=normalized, log inequality). Next R1 same-q witness, R3 T->C3 carrier/region. gate 20.310 written.
+
+- 09:10: CongruenceUnitsEquiv conditional GREEN 19:08; reading/target probes fresh 11:09. Still red: depth/corrected/IVThm110/odd-p/TruncatedUnitsCount. gate 20.311 written.
