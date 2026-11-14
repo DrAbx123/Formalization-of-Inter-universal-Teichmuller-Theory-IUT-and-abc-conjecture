@@ -2013,3 +2013,5 @@
 - 17:35: triage LNormReadoutActual linarith (explicit h'), WeightA1 rewrite hdF.symm, principal scalar ENNReal.toReal_ofReal/simp, #C interface ring/push_cast. Sent mainline/qpilot/shehdd. gate 20.112 written.
 
 - 17:40: no new greens; woke mainline (WeightA1/LNormReadoutActual/final), lattice (Volume chain), qpilot (principal scalar), shehdd (#C interface). batch 01:45:36 done:8 failed:24; 2 lean.
+
+- 17:55: round-3 exact fixes: LNormReadout le_trans/sub_le_self; WeightA1 show LHS orientation; LNormBoundWeak explicit hOtop; principal scalar ENNReal.toReal_ofReal pow_nonneg; #C interface card_congr.trans. Sent mainline/qpilot/shehdd. gate 20.113 written.

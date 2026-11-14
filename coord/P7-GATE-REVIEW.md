@@ -1210,3 +1210,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - PrincipalScalar :37: after hfac use exact ENNReal.toReal_ofReal (by positivity) (or simp only); then rw [hto, Real.log_pow]; field_simp [hd'].
 - CongruenceCardInterface :36: read tail, likely ring/pow arithmetic; push_cast/ring, no new hypotheses.
 - final depends on LNormComparisonConditional olean; compile LNormReadoutActual first.
+
+
+### 20.113 Round-3 exact fixes: LNormReadout le_trans, WeightA1 show orientation, LNormBoundWeak binder, principal scalar, #C (2026-11-15 11:55)
+- LNormReadout :70: avoid linarith atom mismatch; exact le_trans h (sub_le_self _ hu) or explicit h1.
+- WeightA1 :93: ensure show LHS is localCompletionDegree: rw [show (localCompletionDegree ... : R) = (finrank rootBase : R) from by exact_mod_cast hdF.symm]; fallback field_simp [hdF].
+- LNormBoundWeak hOtop type mismatch: explicit binder (hOtop : forall b, rootExtensionHaar T b (rootExtensionUnitBall T b) != top) and pass named.
+- PrincipalScalar :37: after rw [hfac], exact ENNReal.toReal_ofReal (pow_nonneg (norm_nonneg _) _); then rw [hto, Real.log_pow]; field_simp [hd'].
+- #C interface :36: exact (Nat.card_congr h.unitsEquiv.toEquiv).trans h.card_units or simpa using h.card_units.
