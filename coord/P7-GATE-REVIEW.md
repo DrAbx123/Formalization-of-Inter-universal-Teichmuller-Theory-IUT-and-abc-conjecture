@@ -1950,3 +1950,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0S45FreeFinalRouteAActual DONE 06:55:40 (60s) fresh; conditional ratio>=1 route green.
 - Mzk1GenericNormBridgeActual no olean; source newer than log; fix/retouch then integrate final noS45.
 - LiteralCarrier no olean; retouch. Woke lanes.
+
+
+### 20.233 CRITICAL last piece: restore/prove qVFam norm bridge (stage4, 2026-11-16 11:40)
+- RouteA GREEN conditional: finalPaperNormalizedComparison_noS45_of_ratio_ge_one.
+- GenericNormBridge source rewritten 15:00:47; now ONLY conditional qVFamNormRatio_ge_one_of_norm_bridge (d,hd,hbridge); unconditional normalized_norm_eq_default_norm_rpow/qVFamNormRatio_ge_one removed. Log stale.
+- Exact blocker: prove qVFamNormalizedNorm = qVFamDefaultNorm^(1/d), d=relativeCompletionDegree(k:=Q)(qVFamTensorPlace). Proof content: donor generalNormalizedNormFormula + default norm_eq_absNorm_zpow + WithZero.log/unzero identity (nu=-m) + Real.rpow_mul; imports GeneralNormalizedNormBySpectralUniqueness + FinitePlaceCompletionNormTransport + qVFam specialization. Then ratio>=1 -> RouteA -> final noS45. Assigned mainline/hull; no cycle.
