@@ -2668,3 +2668,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.350 Floor native obstruction: M>=1 necessary (qpilot, 2026-11-17 10:10)
 - FloorNativeHull GREEN 20:47:20 (hullLog=-M & M>=1 -> floor qSigned=native). New pending obstruction file: M_ge_one_of_floor_eq_native (floor qSigned<=-1 and if M<1 then -M>-1 so equality impossible); hullLog_eq_neg_M_of_floor_eq_native_of_one_lt. Thus M>=1 is necessary, not an assumption; M>1 forces actual hullLog=-M.
 - hullLog is Haar log of canonical tensor hull; M is sum weights*baseQLogMagnitude; hullLog-unitLog=arithmeticTupleHullUnitLogVolume (field-product normalized log, not base-q sum). Exact first missing: arithmeticTupleHullUnitLogVolume=-M plus M>=1; no fake.
+
+
+### 20.351 stage4 instance scoping nuance (2026-11-17 10:20)
+- Failing SMulDistribClass G (O_F) F; Mathlib NumberField/Basic:127 needs MulSemiringAction G F in scope. Put letI MulSemiringAction G F := AlgEquiv.applyMulSemiringAction at top of section/instance before synth, then letI MulSemiringAction G (O_F) and SMulDistribClass G (O_F) F. If still fails use #synth. Distinguish ring-level IsGaloisGroup G (O_Fmod) (O_F) may need SMulDistribClass G (O_Fmod) (O_F), prove via smul_distrib_smul/AlgEquiv.commutes. ObjectLockData green 20:53:43. No fake.

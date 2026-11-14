@@ -2529,3 +2529,5 @@
 - 15:40: Ind1 first-iso route: ker(unitValuationHom→AQuotient)=torsion, wToA=q.comp incl, kerLift gives ker/torsion≃range; range_unitToA_eq_ker. stepxi to construct bridge. gate 20.349 written.
 
 - 15:50: FloorNativeObstruction proves M>=1 necessary (M<1 => floor equality impossible); M>1 forces hullLog=-M. Exact missing hullUnitLog=-M & M>=1; qpilot to attack Box/volume or report. gate 20.350 written.
+
+- 16:00: stage4 instance scoping nuance: MulSemiringAction G F must be letI before synth; distinguish (O_F) F vs (O_Fmod) (O_F) class. Report first failure/GREEN. gate 20.351 written.
