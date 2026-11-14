@@ -3216,3 +3216,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.452 Pending sources touched; PrincipalDim/QuotientBridge builds forced (2026-11-15 06:50)
 - PrincipalDimScaling src 01:32:56; QuotientBridge src 01:20:38; no oleans. Touched to force watchdog. qpilot/stepxi report fresh. Paper312CorrectionFeed no src yet (hull). stage4 adicAbv/IsScalarTower pending.
+
+
+### 20.453 A2 squared GREEN; unique exact missing (mainline, 2026-11-15 07:00)
+- Mzk1A2InvolutionCandidateActual DONE 17:36:00: a2InvolutionSquaredCandidate = CategoryTheory.Iso.refl _ (comp Hom.id Hom.id defeq Hom.id). So ellipticInvolution + squared constructible for degenerate xF. unique_elliptic_involution exact missing: needs Subsingleton (xF.Hom xF)/classification; no tree donor (only general Cat.Hom.ext/unrelated AffOrbicurve); expected synth failure. Probe three axioms.
+- Next mainline check other 6 A2 fields donors or exact missing; nondegenerate xF possibility. stepxi QuotientBridge open fixed pending. No fake.

@@ -2733,3 +2733,5 @@
 - 08:40: MAJOR final index decomposition/correction GREEN 17:28:49; a=A-k,c=p^r*((q-1)/T0). Next Paper312 correction feed/unramified separate. abc probe. gate 20.451 written.
 
 - 08:50: touched PrincipalDim/QuotientBridge sources; no oleans. stage4 adicAbv pending; correction feed no src. gate 20.452 written.
+
+- 09:00: A2 squared GREEN via Iso.refl (defeq); unique missing Subsingleton Hom. mainline other fields/nondegenerate. QuotientBridge open fix pending. gate 20.453 written.
