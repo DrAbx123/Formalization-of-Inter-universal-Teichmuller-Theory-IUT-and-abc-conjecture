@@ -2023,3 +2023,5 @@
 - 18:30: watchdog batch reset at 01:55:29; no new DONE after 01:52. Woke all lanes: mainline watch/compile LNormReadout/Weight/final, qpilot principal probe/alignment, shehdd #C, lattice Volume, stepxi W, abc audit, hull read-only. goal round 5 active.
 
 - 18:35: hull dependency note: final/LNormComparison chain does not use old clipped actualC3LogShellTensorLogVolumeL; current thetaNormReadL direct thetaReadActual - log unitMassL; only unitMass pos/finite and hlog condition remain. LNormReadoutProduct pending. gate 20.116 written.
+
+- 18:45: stepxi confirms three probe greens 01:42:01/06 (LocalMon, IntegralMap injective, SourceUnitBridge apply+self_nonempty) all three axioms. self is interface-only, not source W. Source W identification still absent; next actual integral-unit layer + Ind1/Ind2 action -> beta_a. gate 20.117 written.

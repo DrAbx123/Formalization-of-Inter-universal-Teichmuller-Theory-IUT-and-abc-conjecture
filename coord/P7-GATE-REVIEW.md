@@ -1240,3 +1240,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - LNormComparisonConditional uses only thetaNormReadL/thetaNormReadProduct/qReadActual; LReadoutFinal re-exports q read; LPaperInstanceFinal uses thetaReadActual nonneg; LS3137LFinal re-exports q reading.
 - actualC3LogShellTensorLogVolumeL only at Mzk1C3LogShellTensorLActual:121 and historical Mzk1P0LHaarLogClipActual.
 - Still need actualUnitMassL positive/finite for log; qRead_le_thetaRead_of_normTarget needs 0 <= log actualUnitMassL. LNormReadoutProduct still pending (import/open + proof tail).
+
+
+### 20.117 GREEN: Ind1 three probes three axioms (stepxi, 2026-11-15 12:45)
+- localFPrimeStrip_Mon_eq DONE 01:42:01; integerUnitsRingHom_injective / integersUnitsToAlgClosure_injective DONE 01:42:06; sourceUnitLogRangeEquiv_apply / sourceUnitQuotientIdentification_self_nonempty DONE 01:42:06. All depend only on [propext, Classical.choice, Quot.sound]; no sorryAx.
+- self inhabitant is only interface consistency W=target, NOT actual source W identification.
+- Actual source W identification still missing: no W_F type in tree; concrete local Mon=(AlgClosure)^x; natural map (Integers K)^x -> (AlgClosure)^x injective not surjective; torsion quotients differ. No fake iso.
+- Next source node: actual integral-unit layer identification + Ind1/Ind2 action -> beta_a.
