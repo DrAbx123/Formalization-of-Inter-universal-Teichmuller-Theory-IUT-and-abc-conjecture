@@ -3514,3 +3514,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.512 WQuotientLatticeIdentification interface (stepxi, 2026-11-15 16:40)
 - New Mzk1Ind1WQuotientLatticeActual: structure WQuotientLatticeIdentification {d; equiv : completionWQuotient ≃* ZpLattice p d} (no inhabitant); infinitelyDivisible_of_latticeEquiv e hr x uses y=e.symm z, z root of e x, e.injective/map_pow/apply_symm_apply. WQuotient≅Zp^d donor still missing. stepxi inspect WQuotient/IntegralUnitLogarithm for equiv or report exact missing. No fake.
+
+
+### 20.513 URGENT WQuotientLattice sorryAx/concept mismatch (2026-11-15 16:50)
+- Direct compile Mzk1Ind1WQuotientLatticeActual src 04:14: Invalid argument p for completionWQuotient (fixed abbrev, KernelIntegers:67, no p) at :15/:18/:19/:21; depends sorryAx. Generic p mismatch: completionWQuotient is for fixed completionField actual prime. Delete or specialize; no generic p/fake. stepxi.
