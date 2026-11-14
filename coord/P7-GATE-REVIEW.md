@@ -1578,3 +1578,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0FinalS3137DictionaryActual DONE 04:15:05 (100s)! Source no sorry/True/axiom; declarations: PaperS3137ObjectLock (B, B_pos, weight_relation, unitMass_eq, theta_sign); PaperS3137ReadingDictionary (hM/hB/Fintype/Lock fields theta_product_eq, q_paper_eq, coeff_eq_of_ratio); paperS3137ReadingDictionary_of; dictionaryRows. No True.
 - Need probe and final combination S45 + RelativeFactor + ObjectLock -> comparison/dictionary.
 - BaseScalar still no olean; donor blocked. Four errors remain in BaseScalar; mainline to fix or explicitly mark donor blocked.
+
+
+### 20.172 finalDictionaryCombined + BaseScalar BLOCKED (mainline, 2026-11-16 00:30)
+- Dictionary GREEN 04:15:05: PaperS3137ObjectLock substantive; PaperS3137ReadingDictionary; paperS3137ReadingDictionary_of official.
+- New theorem finalDictionaryCombined (S : S45SourceFields T) (rel : RelativeFactorTowerData T) (lock : PaperS3137ObjectLock I place T) : (paperNormalizedThetaSum <= paperNormalizedQPilotSum) /\ RelativeFactorTowerData T /\ Nonempty (PaperS3137ReadingDictionary hM hB I place T lock). All three consumed, no unused binders, no True.
+- New probe Mzk1P0FinalS3137DictionaryAxiomProbeActual queued for paperS3137ReadingDictionary_of and finalDictionaryCombined.
+- BaseScalarValuationRelation explicitly BLOCKED (four real errors :125/:140/:146/:151/:167); donor and compat not claimed; S45 not donor-implied (donor only power relation). Need owner fix or explicit block.
