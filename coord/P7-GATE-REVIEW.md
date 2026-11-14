@@ -1590,3 +1590,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.173 Dictionary stale after finalDictionaryCombined (2026-11-16 00:40)
 - Dictionary source 12:16:32 > olean 12:15:04; finalDictionaryCombined (line 126) not yet compiled. Probe no log. Force recompile/probe; report exact signature/axioms.
 - BaseScalar still no olean; donor blocked. Dictionary (a)(b)(c) green from prior olean; final combination pending.
+
+
+### 20.174 Dictionary not fresh: binder order + sign inconsistency (hull, 2026-11-16 00:55)
+- finalDictionaryCombined source 04:17:53 > olean 04:15:04; watchdog latest FAIL 04:22:05; current olean stale, not reproducible.
+- Root cause: PaperS3137ReadingDictionary structure has hM/hB before (T), but types reference qVFamTensorBlock T b; reorder to (I)(place)(T)[Fintype](hM)(hB)(lock). PaperS3137ObjectLock/ReadingDictionary unknown and hM expected errors are cascades.
+- Sign warning: ObjectLock theta_sign = thetaNormReadL = -thetaNormReadProduct, but LNormComparisonConditional hlock assumes thetaNormReadL = thetaNormReadProduct. Only one can be true; check definitions/green lemmas, keep true sign; do not treat both as true premises.
+- ObjectLock has B/B_pos/weight_relation/unitMass_eq/theta_sign; Dictionary has (a)(b)(c); finalDictionaryCombined depends on model comparison, not native actual closure.
