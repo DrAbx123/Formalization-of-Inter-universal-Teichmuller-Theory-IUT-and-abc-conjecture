@@ -1066,3 +1066,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - `finalLPaperInstance (hlock) (hbound) (hlog) : LPaperInstance I place` (all params consumed; no unused lock);
   - `FinalBridgeConditions` data-only recording four explicit conditions/GAPs, 8 rows with status; S45 = EXPLICIT CONDITION; RelativeFactorTowerData = EXPLICIT CONDITION (divisibility, not tower); A1Data/ReadingDictionary = EXPLICIT GAP; unitMass=1 NOT CLAIMED; raw S3137 P vacuous = RECORD ONLY.
 - Mzk1IutIVProp14TorsionActual (queue): `torsion_card_eq_actual_of_congruenceCard` with hC : card C = (q-1)p^(f(es-1)), hq, hcop; uses card_gamma_eq_pow_actual + card_logShellCongruenceQuotient + green torsion_card_eq_of_congruenceCard; output exists h,m with #Gamma=p^h, #T=(q-1)p^m, h+m=f(es-1). Only remaining actual input = #C=(q-1)q^(es-1) donor (U/U_s equiv + cardQuot_pow_of_prime).
+
+
+### 20.91 Ind1 source-unit bridge (stepxi, 2026-11-15 08:10)
+- New Mzk1Ind1SourceUnitBridgeActual (queue):
+  - `SourceUnitQuotientIdentification W K` structure with field `equiv : W ≃* (Integers K)^x/tors`; no inhabitant (exact source identification);
+  - `sourceUnitLogRangeEquiv`: given idK, idL, actual beta : W ≃* W', construct actual log range equiv: unitLogTorsionQuotientEquivRange K -> W -> W' -> range L;
+  - apply theorem rfl.
+- This assembles the algebraic/log half of beta_a; only actual identification W <-> (Integers K)^x/tors remains. No fake inhabitant.
+- LocalMon/IntegralMap pending compile; no sorry.
