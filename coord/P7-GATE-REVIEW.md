@@ -3557,3 +3557,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Direct ActualRamifiedData src 04:29:44 EXIT=0 after reorder. Retouch; next HasCorrection/HasLogIdx/HasRes.
 - Assembly direct only :44 hchar_principalDimUnit call order (k)(u)(μ), current places tuple μ k u; fix. Then green likely.
 - AdicAbv direct: :22 unknown namespace LeanFormal.IUT (remove open; use Iut.valuation_of_comap); :58 rw comap; :62 change; :60 arg mismatch. mainline.
+
+
+### 20.522 Assembly GREEN; AdicAbv explicit coercion fixes (2026-11-15 18:20)
+- Assembly direct EXIT=0 src 04:35:06 after hchar order fix; retouch; next floor with hact explicit.
+- AdicAbv: (1) map_comap_of_surjective with explicit (f.symm : O_K'→+*O_K), RingEquiv.surjective; (2) hw via ←Ideal.comap_comap (I:=v.asIdeal)(f:=f.symm)(g:=f) + hcomp + Ideal.comap_id; (3) hφ simp RingOfIntegers.coe_eq_algebraMap then change e(r:K)=((f r:O_K'):K'); rw mapRingEquiv_apply. mainline.
