@@ -2805,3 +2805,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.375 P2Bridge first error: missing hp2 hypothesis (2026-11-17 14:20)
 - Mzk1P2BridgeActual error :33:4 type mismatch. Root cause: p2_norm_le_four_iff_addVal has variable p but no (hp2 : p = 2); ||p^2|| != ||4|| without it. Add hp2 and subst/simp [hp2] before applying norm bridge N=2; logShellScale_two also needs p=2 context. shehdd to fix/report.
 - P2NormBridge GREEN 21:48:01 probe 21:53:09 three axioms; not complete P2Bridge.
+
+
+### 20.376 stage4 bounded #synth: exact missing class (2026-11-17 14:30)
+- Succeeded: MulSemiringAction G F (AlgEquiv.applyMulSemiringAction), MulSemiringAction G (O_F) (RingOfIntegers), SMulDistribClass G (O_F) F. Trivial MulSemiringAction G Fmod added.
+- Only failure: SMulDistribClass G (O_Fmod) (O_F), hence IsGaloisGroup G (O_Fmod) (O_F). Exact fix: explicit instance via smul_distrib_smul using trivial g•r=r on O_Fmod and AlgEquiv.commutes/RingOfIntegers.ext for g•(algebraMap r s)=algebraMap r (g•s); then iff_isFractionRing/primesOver transitivity. Probe file only red; ObjectLockData/LPaperData green. No fake.

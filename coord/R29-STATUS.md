@@ -2579,3 +2579,5 @@
 - 19:50: #C B secondary general-e GREEN 13:53:57 (span power + corrected units card). Hull to connect primary/secondary into assembly consumer; abc probe. P2 wrapper pending. gate 20.374 written.
 
 - 20:00: P2Bridge error root cause missing hp2:p=2; add hypothesis/subst. shehdd. P2NormBridge probe three axioms. gate 20.375 written.
+
+- 20:10: stage4 #synth exact missing SMulDistribClass G (O_Fmod) (O_F); explicit instance via smul_distrib_smul/trivial action/commutes. gate 20.376 written.
