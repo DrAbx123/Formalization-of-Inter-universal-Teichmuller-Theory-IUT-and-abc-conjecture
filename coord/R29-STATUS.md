@@ -2767,3 +2767,5 @@
 - 11:30: MAJOR Paper312 assembly GREEN 18:47:32 (per-place -> A_le_Lbar -> ExplicitPaper312Inequality). Remaining actual per-place params/unramified exclusion. abc probe. gate 20.468 written.
 
 - 11:40: per-place actual needs RamifiedPlaceData family (ι,K i,fn,Fdeg,logp,logMu,logIdx,diff,hcard/hres/hcoef); hull build. Unramified excluded. gate 20.469 written.
+
+- 11:50: RamifiedPlaceData dependent instance issue; build bundle + separate per-i args, no tautology. hull. gate 20.470 written.

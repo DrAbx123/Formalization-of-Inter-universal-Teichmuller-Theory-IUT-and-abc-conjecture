@@ -3313,3 +3313,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.469 Paper312 actual per-place exact missing: place-indexed family (hull, 2026-11-15 09:40)
 - Single-point theorems: index_decomp_with_correction (a=A-k,c=p^r*((q-1)/T0)); perPlace_diff_of_correction. Global h : ∀ i needs place-indexed family: finite type ι ramified places; K i local field instances; fn/Fdeg/l/logp/logMu/logIdx/diff; per-place hcard/hres/hcoef/hlogIdx/hdiff; hcard from decomposition, hres from logShellResidueCard_eq_prime_pow, hcoef CoeffComparison. No Lean function/structure from finite place type to data; theorems single-K. Build RamifiedPlaceData family and accumulate h. Unramified excluded. No fake.
+
+
+### 20.470 RamifiedPlaceData: dependent instance issue (hull, 2026-11-15 09:50)
+- Existing NumberFieldFinitePlace/NormalizedCompletion but Paper312 uses abstract ι; no place->local-field decomposition family.
+- Proposed RamifiedPlace bundle (K, NormedField, CharZero, CompleteSpace, IsUltrametricDist, ProperSpace, p/Fact, NormedAlgebra, FiniteDimensional); RamifiedPlaceData with places/fn/Fdeg/l/logp/logMu/logIdx/diff/a/c plus hcoef/hlogIdx/hdiff/hmu0/hl/hc/hcard. Exact issues: (1) hcard/hlogIdx dependent local instances can't be plain fields without letI bundle; (2) no FinitePlace->RamifiedPlace instance (residue degree/eK/torsion/q); (3) no per-place hcoef arithmetic proof. Putting hcard/hlogIdx as fields tautological; not writing.
+- Hull to deliver RamifiedPlace bundle + scalar fields; per-i hcard/hlogIdx as separate args with letI; report first error. No fake.
