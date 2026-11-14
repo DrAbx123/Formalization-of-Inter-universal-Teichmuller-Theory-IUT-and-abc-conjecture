@@ -2744,3 +2744,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - arithmeticTupleIQHullUnitRegion = arithmeticTupleIQHullUnitScale • canonicalUnitReference (FinitePlaceIQHullSharpUpperBound:69).
 - hullLog<=IQHullUnitRegionLog compares SCALED unit reference; decomposition hullLog=hullUnitLog+log mu(canonicalUnitReference) uses CANONICAL unit reference. They differ by Haar log of scale; hullUnitLog=0 only if scale=1.
 - HullUnitZero changed to conditional: IQHullUnitRegion_eq_unitReference_of_scale_one; arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one; arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one; hullUnitZeroObstruction 4 items. If scale!=1 need unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||; no theorem in repo; exact first missing. No fake.
+
+
+### 20.364 Haar scaling donor pointers for HullUnitZero (2026-11-17 12:30)
+- hullUnitLog=0 only if scale=1; otherwise need unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||.
+- Donors to inspect: LinearMap.exists_map_addHaar_eq_smul_addHaar (Measure/Haar/Disintegration:108); addHaarScalarFactor_smul_eq_distribHaarChar (Measure/Haar/DistribChar:63); map_addHaar_smul (Lebesgue/EqHaar:336 Euclidean only). No exact p-adic scaling donor; qpilot to report missing bridge if absent.
+- HullUnitZero conditional version pending; no fake.
