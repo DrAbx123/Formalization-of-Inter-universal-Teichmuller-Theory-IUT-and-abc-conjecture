@@ -2952,3 +2952,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1TorsionLogDonorActual DONE 15:26:19: log_torsion_ratio_ge_neg_log {q1 T C} (hq1)(hC)(hTpos)(hT:T<=q1*C): -log C <= log(q1/T). Usable q1=q-1,T=#torsion.
 - mu_{p^a} subset K -> p^{a-1}(p-1) | eK: Mathlib only global cyclotomic IsCyclotomicExtension.Rat.ramificationIdx_span_zeta_sub_one (Q(ζ)); repo lacks local subfield Qp(ζ)⊂K rep and local ramification multiplicativity e(K/Qp)=e(K/L)e(L/Qp). Exact missing: construct local L=Qp(ζ_{p^a}), embedding from mu_{p^a}, multiplicativity. Not single tactic.
 - Accepted conditional hTub: #T <= (q-1)*p^{v_p(eK)+1} as explicit gap; hull to write conditional per-place theorem, continue searching local cyclotomic donor in parallel. No fake.
+
+
+### 20.403 Conditional per-place torsion GREEN; hTub explicit gap (hull, 2026-11-17 19:10)
+- Mzk1TorsionPerPlaceConditionalActual DONE 15:31:29: perPlace_bound_of_torsion_le (hTub:T<=q1*C)(hlogIdx:logIdx=base+log(q1/T))(hmu:L<=logMu)(hl:1<=2l)(hbase:qcoef<=L+(1-1/(2l))(base-log C)) -> qcoef<=logMu+(1-1/(2l))logIdx. hTub docstring explicit conditional gap; C=p^{v_p(eK)+1}; no fake.
+- Local cyclotomic/ramification donor search confirms Mathlib only global cyclotomic, no local Qp(ζ) subset/local ramification multiplicativity; hTub remains explicit gap. Next hull connect to A_le_Lbar_add_Dbar, instantiate qcoef/logIdx/logMu and hbase arithmetic; report first missing.
