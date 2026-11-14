@@ -3993,3 +3993,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.622 unitLog no explicit p (2026-11-15 34:00)
 - Invalid named p for unitLog; call unitLog (K:=F) v / unitLog_eq_zero_iff (K:=F) v without p. qpilot. No fake.
+
+
+### 20.623 Algebraic explicit lambda/check hlog (2026-11-15 34:10)
+- Iff.trans still misparses hlog; use explicit ⟨mp,mpr⟩; if not Iff #check theorem application and report. qpilot. No fake.

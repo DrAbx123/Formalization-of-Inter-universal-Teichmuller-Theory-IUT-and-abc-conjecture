@@ -3071,3 +3071,5 @@
 - 36:50: Algebraic hlog explicit K/p annotation; qpilot. gate 20.621 written.
 
 - 37:00: unitLog no explicit p; qpilot. gate 20.622 written.
+
+- 37:10: Algebraic explicit lambda/check hlog; qpilot. gate 20.623 written.
