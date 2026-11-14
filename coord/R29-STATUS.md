@@ -2777,3 +2777,5 @@
 - 12:20: MAJOR RamifiedPlace bundle GREEN 18:51:40 (ofPlace NormalizedCompletion). Next RamifiedPlaceData/per-i h; hull. Paper312Assembly probes green; QpDecomp red. gate 20.473 written.
 
 - 12:30: IsScalarTower donors found (relativeNormalizedCompletionScalarTower); stage4 fix import/args then synth. QpDecomp no olean; A2 xK transport. gate 20.475 written.
+
+- 12:40: QpDecomp direct compile only assoc goal; use rw [mul_assoc]. qpilot. gate 20.476 written.

@@ -3340,3 +3340,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.475 IsScalarTower donors found; stage4 name/import errors (2026-11-15 10:30)
 - Stage4 IsScalarTower probe first errors are Unknown nativeBadToKPlace (missing VbadPlaceIndexingActual import/open) and FinitePlaceAtPrime arg names (K/p not T), so donor untested. Donors in tree: FinitePlaceCompletionNormTransport.isScalarTower_completionAlgebra (IsScalarTower F (Completion comap) (Completion)); FinitePlaceRelativeNormalizedCompletion.relativeNormalizedCompletionScalarTower (IsScalarTower Qp CommonPrimeCompletion CommonPrimeCompletion); relativeNormalizedCompletionModuleTower. Align CommonPrimeCompletion/NormalizedCompletion with adicCompletion, package nativeBadToKPlace as FinitePlaceAtPrime.
 - AdicAbv still missing. qpilot QpDecomp no olean; mainline A2 xK transport. abc/idle. No fake.
+
+
+### 20.476 QpDecomp direct compile exact error (2026-11-15 10:40)
+- Current source direct compile: only error :10:67 unsolved calc.step, goal ↑p^k*lam*↑p^(-k)=↑p^k*(lam*↑p^(-k)) (associativity). Fix final calc step with rw [mul_assoc] instead of ring. qpilot. No fake.
