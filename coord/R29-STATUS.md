@@ -1859,3 +1859,5 @@
 - 08:35：triage：`Mzk1ContinuousAddZpadicActual` log 有 `:20 No goals to be solved` + `#print axioms` 含 sorryAx（失败声明合成，非允许 green）；已让 stepxi 修 `:20`、删 `#print axioms`、确认三公理，Ind1 两个文件的 sorryAx 同理。`Mzk1C17ResidueFieldEquivConstructActual` 首错：`Ideal.quotientMapₐ ?m hle` 第一参数应是 `Algebra.ofId R S`；已让 mainline 改成 `quotientMapₐ (Algebra.ofId R S) hle`。WeightA1Bridge 依赖 RootRadius olean 缺，等 RootRadius 先绿。
 
 - 08:40：mainline 修 C17 `Ideal.quotientMapₐ` 调用（J 是第一个显式参数：`quotientMapₐ (I:=p) P (Algebra.ofId R S) hle`；`over_def` 方向对）；injective 若报错改用 `AlgHom.injective` 或 kernel 为零。等编。
+
+- 08:45：**新 GREEN `Mzk1P0QThetaReadoutDictionaryActual` 00:01:14（101s）**：dictionary official（qhat=−c_norm log p、log r=−c_norm log p/(2l)、d_b log r=(1/(2l))d_b qhat、qhat−paperQ=log ratio；权重 1/[K_w:F_v]；DegreeTowerInterface）。已让 hull 用 dictionary 收 NormCorrection/Correspondence 与最终 correction/conditional 形式。C17 quotientMap 已修等编；zpadic/radius pending；lean=0 batch 间隙。gate §20.48 已写。

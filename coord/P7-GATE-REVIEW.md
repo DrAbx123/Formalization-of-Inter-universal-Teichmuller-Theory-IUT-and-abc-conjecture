@@ -734,3 +734,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1A1LatticeValuationIdentifyActual` GREEN 23:48:30（103s）**：`inverseLambdaLattice_eq_inverseLattice`、`inverseLambdaLattice_eq_saturated_actual`；A1.6 的 qhat 格↔J_s/饱和格识别正式可用（配合 `inverseLattice_eq_saturated` + `Mzk1A1InverseLatticeNormActual`）。
 - **`Mzk1P2QNativeReadingCorrectedActual` GREEN 23:49:11（96s）**：P2 corrected reading（`P2QHatNormInstanceAgreement` 定义/`p2NativeQReading_eq_neg_log_qhat_add_ratio` 等）official；P2 norm-instance 定义以本文件为准。
 - 其余 bridge 文件（RootRadius/WeightA1/PaperSums/NormalizedSource/Cor312Chain）仍 pending；Gamma v13/BoxDistinguished/C17 residue 亦 pending。
+
+
+### 20.48 新 GREEN：hull readout dictionary（2026-11-15 01:15）
+- **`Mzk1P0QThetaReadoutDictionaryActual` GREEN 00:01:14（101s）**：
+  - `qhatLogReadout = -c_norm·log p`（norm agreement 下）；
+  - `log r = -(c_norm·log p)/(2l)`；
+  - `d_b log r = (1/(2l))·d_b qhatLogReadout`；
+  - `qhatLogReadout − paperQ = log ratio`；
+  - 权重更正 `paperWeight_eq_inv_localCompletionDegree = 1/[K_w:F_v]`；`DegreeTowerInterface`（n_b 精确缺口）。
+- **仍未收口**：`Mzk1P0QThetaReadoutNormCorrectionActual`/Correspondence（等编）、S3137 条件版四项（S45/QHat/RootBase/A1）、`a1_delta_paper` GAP。
