@@ -1083,3 +1083,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Unit-ball normalization consistent; unitMass=1 not claimed in product file, matching A1.
 - Object level: thetaNormReadProduct is theta-hull readout; A1 productQ_normalizedLog is qhat-lattice readout; exact relation thetaNormReadProduct = productQ_normalizedLog + totalDelta (A1 = closedForm-1-totalDelta). Single place vs global Bad mismatch already recorded.
 - Reuse: thetaNormReadProduct_eq_closedForm_sub_one for theta hull product; combine with A1 totalDelta for qhat product; do not use thetaNormReadL as a1SignedTerm.
+
+
+### 20.93 CRITICAL: PaperS3137ReadingDictionary := True is a vacuous placeholder (abc audit, 2026-11-15 08:35)
+- abc found bridge's `PaperS3137ReadingDictionary` defined as `Prop := True`, while rows call it EXPLICIT GAP. This is a no-True surrogate violation; cannot count as condition closure.
+- Fix: delete `:= True`; either define a real structure with fields (q_actual, qread_eq : qPilotLogVolumeReading P = -localLogMagnitude (qVFamily T b), theta_actual, theta_raw_eq, theta_normalized_eq) with no inhabitant, or remove the definition and mark FinalBridgeConditions item as EXPLICIT GAP (not defined). Final theorem must not consume True.
+- Also fix Mzk1P1PaperSumsToS3137BridgeActual missing imports/opens: qVFamily, qVFamTensorRationalBaseNorm, PaperSourceCorrectionFreeFields.
+- All other probe statuses confirmed: QHat probe 01:18:09 and Gamma probe 01:20:29 three axioms, no sorryAx.
