@@ -2967,3 +2967,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.405 BaseChange fPlace lift: safe explicit gap vs global redefinition (mainline, 2026-11-17 19:30)
 - nativeBaseSectionPlace is K-place; nativeBadLift.lift is F-place; direct redefinition type-incorrect. Viable redefinition: nativeBadLift.lift b := comap_F(sectionFiniteLift (nativePlaceSelection) b.1), then alignment rfl; but 137 files reference nativeBadLift/nativeBadToFPlace, full rebuild risk. Safe plan implemented: nativeBaseContractionFPlace b := comap_F(nativeBaseSectionPlace b); comap_Fmod = b.1 green; NativeBadLiftAlignment b := nativeBaseContractionFPlace b = nativeBadLift.lift b = explicit gap (a). baseChange constructor takes hplace; (b) norm power closed.
 - Decision: keep explicit gap now; mainline to prepare precise global-redefinition impact plan (files/proofs/build estimate) without editing; compile new defs/probe. No fake.
+
+
+### 20.406 nativeBadLift global redefinition impact plan (mainline, 2026-11-17 19:40)
+- New defs/probe fresh 15:37:14 three axioms. Impact: 123 files direct nativeBadLift, 73 direct imports; transitive 300-500 files; build 1-2h. (A) NativeBadLiftActual rewrite lift:=comap_F(sectionFiniteLift) + lift_comap comap_comap/sectionFiniteLift_comap. (B) risk files depending on Classical.choose equality: S438QVFamilyKSideCandidateActual/C7QPilotRegionActual/O2PaperComparison2; Mzk1CompletionMapSelfActual notes no equality theorem. (C)(D) mostly recompile/rfl.
+- Decision: bounded experiment by mainline (git backup, redefine A, build 73 importers first; if only mechanical continue, else revert and keep NativeBadLiftAlignment explicit gap). Do not leave core red. No fake.
