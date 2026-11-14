@@ -764,3 +764,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   `hram : bval(algebraMap x)=e·aval x`（ramification identity）为输入。
 - **现状**：未构造 `aval/bval/m`，未从 ramification 定义证 `hram`；实际 DVR 供体有 `PaperRootExtensionDiscreteValuationActual.rootDiscreteValuation/rootUniformizer`（root 侧），base 侧尚未构造。
 - **结论**：A1.6 **conditional on principal-lattice recognition + ramification identity**；不得标 unconditional closed。
+
+
+### 20.51 A1.6 round closed：conditional + inputs named（stage4，2026-11-15 01:35）
+- **新 GREEN `Mzk1A1ValuationInputsActual`**：named Props `A1PrincipalLatticeRecognition`、`A1RamificationIdentity`、bundled `A1ValuationData`，以及 conditional `qVFamily_mem_saturatedLattice_of_valuationData`（无 inhabitant claimed）。
+- **A1.6 status fixed**：conditional on principal-lattice recognition + ramification identity；`coord/A1-TENSOR-PROD-PROBE.md` 已记录精确输入；不称 unconditionally closed。
+- **供体检查**：root 侧 `PaperRootExtensionDiscreteValuationActual.rootDiscreteValuation/rootUniformizer` 存在；base 侧 `Valued.v`/DVR equivalence（`SourceTateParameter.valued_isEquiv_maximalIdealValuation` over Completion）有，但显式 `aval/bval` 构造与 `bval(iota x)=e·aval x` 不在树内；一轮内不能证，保持 conditional，不再投入。
+- **无条件 green 部分**：`signedReadout_eq_log_radius_sub_delta`、`mem_lambdaLattice_iff`/`mem_qhatLattice_iff`/`inverseLambdaLattice_eq_normBall`、`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`/`_le_closedForm_sub_one`。
+- 未 fake completion，未加 `hscale/hid`。

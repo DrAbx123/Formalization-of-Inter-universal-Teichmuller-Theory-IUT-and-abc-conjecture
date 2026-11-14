@@ -1869,3 +1869,5 @@
 - 09:00：triage 六个 pending 首错并派修法：C17 `:47` quotientMap apply 展开；RootRadius `:60` unfold rootNormedLogVolume/change；PaperSums `:90` 补 `Mzk1RouteC0RootQLatticeActual`；Gamma `:36` 先 `nsmul_eq_mul` 再 zpow；BoxDistinguished `:31` 显式 `ord (K:=K)`；ContinuousAdd `:54` 先 `dist_eq_norm` 再 `pi_norm_lt_iff`；均要求去 sorryAx。
 
 - 09:05：mainline 修 C17/RootRadius/PaperSums 首错（`AlgHom.commutes`、`unfold rootNormedLogVolume`+`congrArg log`、补 `Mzk1RouteC0RootQLatticeActual`）；hull Correspondence 只剩隐式参数顺序，修法已给；Gamma v16 用 `nsmul_eq_mul` 后再 push_cast/zpow，等编。dictionary GREEN 保持。
+
+- 09:15：stage4 A1.6 轮次收口：新 GREEN `Mzk1A1ValuationInputsActual`（named Props + conditional `qVFamily_mem_saturatedLattice_of_valuationData`，无 inhabitant）；A1.6 固定 conditional（principal-lattice + ramification），`coord/A1-TENSOR-PROD-PROBE.md` 已记录；root 侧 DVR 供体存在、base 侧显式 aval/bval/ramification 不在树内，一轮不能证，不再投入；无条件 measure/norm 部分保持 green。gate §20.51 已写。
