@@ -2885,3 +2885,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.390 Audit: unconditional eEquiv probe three axioms; Galois probe2 (abc, 2026-11-17 17:10)
 - CongruenceUnitsEquivGeneral src 22:30:17 DONE 14:34:05 olean 22:34:04; congruenceUnits_equiv_primary_general unconditional; probe Mzk1CongruenceGeneralMajorProbeActual DONE 14:43:52 three axioms. Boundary: abstract unit quotient ≃ abstract residue quotient (depends on Irreducible pi uniformizer existence), not equality with specific native map; consumer owns native map/kernel.
 - GaloisRingBridgeProbe2 DONE 14:39:51: nativeFmodPrime/nativeBadFPlace_liesOver/nativeKContraction_liesOver/nativeFPrimeOver/nativeKPrimeOver/exists_galois_move_nativeF all three axioms.
+
+
+### 20.391 MAJOR #C A/eEquiv/Prop1.4 consumer unconditional chain GREEN (hull, 2026-11-17 17:20)
+- Mzk1CongruenceUnitsEquivGeneralActual DONE 14:34:05: congruenceUnits_equiv_primary_general (pi,hpi) unconditional CongruenceUnitsPrimaryEquivTarget; all p actual uniformizer; probe 14:43:52 three axioms.
+- Mzk1IutIVCongruenceCardActual re-DONE 14:44:39/olean 14:44:38: congruenceQuotientCardinalityInput_exists_actual (e)(he:e=eK) -> ∃f, CongruenceQuotientCardinalityInput; logShellQFECardinalityHypothesis_exists_actual similarly. Chain: exists_irreducible pi -> general eEquiv -> logShellResidueCard_eq_prime_pow -> consumer. Unconditional.
+- Next hull specialize e=eK/feed IutIVProp14 consumer; abc probe. No fake.
