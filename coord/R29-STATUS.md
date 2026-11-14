@@ -2501,3 +2501,5 @@
 - 13:20: p=2 bridge not yet compiled; handoff to hull after #C B units. Route/donors fixed. shehdd one more attempt then hand lines. gate 20.335 written.
 
 - 13:30: p=2 bridge correction: p not irreducible in ramified case; need uniformizer pi/hpi/p=u*pi^eK. Hull takes over corrected signature; no fake. gate 20.336 written.
+
+- 13:40: KernelIntegers partial green 20:08 (needs kernel maps/MulEquiv); SharedQPilot green 20:08 (3-item gap); target deps recompiled 12:05/12:06 -> probe. p=2 hull pending. gate 20.337 written.

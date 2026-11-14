@@ -2591,3 +2591,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.336 p=2 bridge corrected: p not irreducible, need uniformizer (2026-11-17 07:50)
 - In ramified case eK>1, p=unit*pi^eK, p NOT irreducible; cannot use Irreducible p. Correct target needs actual uniformizer pi : Integers K, hpi : Irreducible pi, hp_rel : (p:O)=u*pi^(logShellRamificationExponent K p). Then x=u_x*pi^n, ||x||=||pi||^n, ||p^N||=||pi||^(N*eK), pow_le_pow_iff_right_of_lt_one₀ -> n>=N*eK, addVal(p^N)=N*eK. p=2 N=2eK kernel 1+4O. Hull takes over with corrected signature; no fake.
+
+
+### 20.337 KernelIntegers/SharedQPilot green; target deps recompiled (2026-11-17 07:50)
+- Mzk1Ind1KernelIntegersActual DONE 12:08:12 but only partial bridge (completion_valued_one_iff_norm_one, completionIntegersToFieldUnits); kernel maps/equiv still to add via unitValuationHom_eq_one_iff.
+- Mzk1SharedQPilotActual DONE 12:08:56: SharedNativeQPilotSource + actualSharedNativeQPilotSource + qPilot/qSigned equalities; sharedNativeToStepVAndC3Gap 3 items (floor qSigned=native, C3 q=native, index/weight). No sorry.
+- PaperLevelXiFTargetProofActual DONE 12:05:19, BridgeActual DONE 12:06:51: target deps fresh now; rerun target probe. Clean chain remains Dictionary 19:15:17 -> Assembly 19:28:52 -> probes.
+- CorrectedExtraction re-DONE 12:01:30; abc to audit no sorryAx. odd-p p odd green; p=2 bridge hull pending.
