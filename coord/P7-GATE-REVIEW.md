@@ -1717,3 +1717,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1GaloisIntegralActionActual (Qp) and GeneralActual (K) green; probes three axioms; no sorry/True.
 - BUT inhabitants come from sigma : AlgClosure K ≃ₐ[K] ..., including sigma=1; beta=refl; integral units fixed. Structures ActualInd1UnitAction/IntegralUnitStableAlgebraicAction have no provenance field tying algAction/beta to actual Ind1/Ind2 procession arrow. Nonempty is trivially true via sigma=1.
 - Therefore this does NOT close the actual Ind1/Ind2 source arrow; only a local K-automorphism nonempty construction. Must not claim beta source globally closed; either add substantive provenance (not bare Prop) or keep source gap explicit. abc ledger updated.
+
+
+### 20.195 BSR latest errors after rewrite (stage4, 2026-11-16 04:30)
+- BSR still no olean; latest FAIL 13:01; file edited again. Errors: :290 No goals after congr 1 (remove/reposition exact coe_padicIntEquiv_symm_apply); :329 rewrite completionMap_coe fails (goal in show-normalized form; change literal spelling/simp only); :343 unknown Algebra.algebraMap.coe_zpow (absent in pin; drop, map_zpow₀ covers); :307 unsolved downstream.
+- BSR green then donor circular dependency fix. Formula source-level normalized=default^(1/d).
+- Galois scope caveat recorded: sigma=1 makes Nonempty trivial; no provenance; beta source not globally closed.
