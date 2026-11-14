@@ -1572,3 +1572,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   :125 rewrite pattern ↑↑(PadicInt.mkUnits hunorm) not found (instances transparency/defeq); :140 unsolved goals; :146/:151 synthesized instance not defeq (DivisionRing.toRatAlgebra vs instAlgebraAdicCompletion); :167 application mismatch scalarDVRDecomposition vs expected exists x.
 - Donor blocked by upstream BaseScalar, not missing olean. After green, donor cycle add_le fix (inline/lower shared module). Power formula remains source-level, not official; S45 ratio=1 still explicit.
 - Note coord/S45-NORM-INSTANCE-OBSTRUCTION-AUDIT.md section 12 updated; coord/NORM-INSTANCE-GAP-OBSTRUCTION.md updated.
+
+
+### 20.171 GREEN: PaperS3137ReadingDictionary (substantive lock) 2026-11-16 00:20
+- Mzk1P0FinalS3137DictionaryActual DONE 04:15:05 (100s)! Source no sorry/True/axiom; declarations: PaperS3137ObjectLock (B, B_pos, weight_relation, unitMass_eq, theta_sign); PaperS3137ReadingDictionary (hM/hB/Fintype/Lock fields theta_product_eq, q_paper_eq, coeff_eq_of_ratio); paperS3137ReadingDictionary_of; dictionaryRows. No True.
+- Need probe and final combination S45 + RelativeFactor + ObjectLock -> comparison/dictionary.
+- BaseScalar still no olean; donor blocked. Four errors remain in BaseScalar; mainline to fix or explicitly mark donor blocked.
