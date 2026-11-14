@@ -1189,3 +1189,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14HaarIndexPowAxiomProbe DONE 01:42:49 (99s): mu_lambda_toReal_eq_pow_mul three axioms.
 - Mzk1P0LNormReadoutProductAxiomProbeActual DONE 01:42:54 (104s): thetaNormReadProduct_eq_sum, _closedForm_sub_one, _neg_sum_coefficient all three axioms.
 - Ind1 LocalMon/SourceUnitBridge/IntegralUnitMap recompiled DONE 01:42 (self identification is tautological interface only, not source W).
+
+
+### 20.110 Torsion probe confirmed; #C exact interface (shehdd, 2026-11-15 11:15)
+- #print axioms torsion_card_eq_actual_of_congruenceCard = [propext, Classical.choice, Quot.sound]; no sorryAx.
+- New Mzk1IutIVProp14CongruenceCardInterfaceActual (queue):
+  - structure CongruenceUnitsEquivData: (Integers K)^x / logShellCongruenceUnits ≃* (Integers K / (logShellScale p))^x + truncated unit group cardinality;
+  - card_logShellCongruenceQuotient_of_unitsEquiv: from data #C=(q-1)q^(s-1).
+- This is exact #C donor interface; remaining construction = logShellCongruenceUnits = 1 + (logShellScale p)O and cardQuot_pow_of_prime quotient iso; no fake inhabitant.
