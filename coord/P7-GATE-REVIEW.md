@@ -2397,3 +2397,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1ObjectLockDataActual GREEN 18:28:51: TrueTowerDataSource m*dL=n*dF; mainline_lock_implies_factorization (legacy lock+true tower => dF=m*B); relativeFactorTowerData_of_tower (B=n); unitMass and signed-theta source structures separated.
 - Actual data not constructible. Exact first missing: (1) actual common tower/embedding L_b -> K-place completion with m*dL=n*dF; legacy lock additionally dF=m*B; (2) unitMass carrier/measure identification actualUnitMassL vs s1915UnitMass.toReal; (3) signed theta object/index identification thetaNormReadL=-thetaNormReadProduct, negative sign not derivable from raw signed log-volumes. No sorry/axiom/fake.
 - stepxi Mzk1Ind1CorrectedExtractionActual queued: invariantUnitLayer A_H=TimesMuKummer.invariantImage; correctedDepthLayer=(infinitelyDivisibleSubgroup (G:=A_H) r).map subtype; correctedDepthLayer_le_invariant; Ind1CorrectedExtraction with H open, r>=2, integralLayer_eq; Required=Nonempty no inhabitant. Still missing actual H/r with (r,p)=1, A_H≅L^x/mu(L), D_r(A_H)=O_L^x/mu(L), ActualSourceUnitLayer compat; D-only lacks action.
+
+
+### 20.304 Exact fixes for current red files (2026-11-17 02:30)
+- TruncatedUnitsCardActual: add imports IntegralTraceDualTensorInclusion (integersIsDiscreteValuationRing:589, integersIsDedekindDomain:597) and IUTIV/Estimates/DifferentDegreeUpperBound (dvr_maximalIdeal_ne_bot:43).
+- CongruenceUnitsEquivActual: expected surjectivity of congruenceUnitsMap but have Units.map mk; unfold congruenceUnitsMap/simp and ensure IsLocalHom instance. Odd-p file maxHeartbeats -> raise.
+- IVThm110Actual no olean; retouch/report fresh first error; then hQ replacement + actual hCor312.
+- Ind1CorrectedExtraction no log; retouch.
+- LocalRingUnitsCardActual GREEN 18:45:47; use for units card.
