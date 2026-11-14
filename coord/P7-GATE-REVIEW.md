@@ -2240,3 +2240,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - lattice: remaining IV statement-layer red 18.
 - shehdd: retry B if fresh context; stepxi provenance; abc audit; stage4 read-only target bridge.
 - Clean acceptance chain Dictionary 17:42:56 -> Assembly/Final 17:46:50 -> probe 17:50:33; 5 items three axioms.
+
+
+### 20.279 Target reading bridge still explicit source gap (abc, 2026-11-16 19:50)
+- Clean acceptance evidence unchanged: Dictionary 17:42:56, Assembly/Final 17:46:50, CleanAcceptanceProbe 17:50:33, 5 items three axioms; paper comparison + dictionary combined no S45/hbridge under given rel/lock. Does NOT close target reading bridge.
+- Target reading bridge gap open: Mzk1S3137ReadoutBridgeActual green 11-11; qPilot readout parameterized by P : PaperQPilotObjectActual I; qPilotReadoutInhabitationGap says inhabitant = paper source obligation. A716 Theorem311Source.PaperQPilotObject (constructor) vs N8Closure.PaperQPilotObjectActual (no unconditional inhabitant) not bridged.
+- Conditional inhabitant Mzk1PaperQPilotActualInhabitantOfPacketActual needs NativeC1PaperSource + SourcePilotRegionDonors + oneColumn (non-unconditional); Mzk1QPilotReadingAlignmentActual no olean. Old C3 no-go sourcePilotRegionData_isEmpty but Mzk1P0S3137PObjectObstructionActual FAIL 09:46:42/no olean -> no-go evidence not recompiled this revision.
+- Conclusion: target reading bridge remains explicit source gap; clean acceptance neither depends on nor closes it. No fake.

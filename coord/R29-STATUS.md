@@ -2381,3 +2381,5 @@
 - 02:30: CLEAN FINAL ACCEPTANCE verified: chain Dictionary 17:42:56 -> Assembly/Final 17:46:50 -> CleanAcceptanceProbe 17:50:33; 5 items three axioms; rows unconditional noS45; old probes superseded. rel/lock/L explicit, unitMass=1 not claimed, strict S45 unproved. gate 20.277 written.
 
 - 02:40: clean acceptance chain verified. Assigned next hard gaps: mainline target reading bridge; hull #C B/L-side; qpilot IV Thm110; lattice IV statements; abc audit; stepxi provenance. gate 20.278 written.
+
+- 02:50: target reading bridge explicit source gap: PaperQPilotObjectActual has no unconditional inhabitant; conditional needs NativeC1PaperSource+SourcePilotRegionDonors+oneColumn; QPilotReadingAlignment no olean; PObjectObstruction red. Clean acceptance does not close it. gate 20.279 written.
