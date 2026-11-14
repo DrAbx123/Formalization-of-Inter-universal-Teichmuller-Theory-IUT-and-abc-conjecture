@@ -2500,3 +2500,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Assembly rebuilt 19:28:52 after Dictionary 19:15:17; ordering fixed, but Assembly probe 19:28:48 predates -> rerun fresh probe.
 - stage4 ObjectLockData GREEN 19:28:50: galoisPlaceMk via FinitePlace.mk/HeightOneSpectrum.equivOfRingEquiv; galoisPlaceMk_maximalIdeal; GaloisFPlaceAlignmentCondition/Gap; alignedCompletionMap; relativeFactorTowerData_of_completionTower. Blockers: MulSemiringAction (F≃ₐ F)(𝓞 F); primesOver->FinitePlace bridge; ring-level IsGaloisGroup; alignment existence; degree tower IsScalarTower/finrank_mul_finrank. UnitMass same-dim transport object missing.
 - Suggested MonoidHom to (𝓞 F ≃+* 𝓞 F) + MulSemiringAction.compHom; FinitePlace transitivity or primesOver bridge; IsScalarTower finrank_mul_finrank.
+
+
+### 20.321 IV hCor312 reduces to certificate producer; hupper derivable (2026-11-17 05:20)
+- Mzk1IVThm110Actual GREEN 19:28:49: thm110_display_of_hCor312 proved; hQ eliminated; only hCor312 remains. No actual sorry.
+- qpilot Mzk1IVThm110HCor312Actual pending: hCor312_of_actual_certificate input S2953CThetaUpperCertificate + identifications; missingCertificateProducer.
+- Observation: S2953CThetaUpperCertificate.hCTheta says CThetaPaper=thetaLogVolume/|log q|; hupper follows from hCTheta by field_simp when |log q|!=0, so likely not independent Box 11 estimate. Certificate producer may reduce to actual StepXIFiniteCertificate + actual q/thetaLogVolume readings + hqAbs. qpilot asked to check first.
