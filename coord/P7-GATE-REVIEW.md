@@ -1090,3 +1090,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Fix: delete `:= True`; either define a real structure with fields (q_actual, qread_eq : qPilotLogVolumeReading P = -localLogMagnitude (qVFamily T b), theta_actual, theta_raw_eq, theta_normalized_eq) with no inhabitant, or remove the definition and mark FinalBridgeConditions item as EXPLICIT GAP (not defined). Final theorem must not consume True.
 - Also fix Mzk1P1PaperSumsToS3137BridgeActual missing imports/opens: qVFamily, qVFamTensorRationalBaseNorm, PaperSourceCorrectionFreeFields.
 - All other probe statuses confirmed: QHat probe 01:18:09 and Gamma probe 01:20:29 three axioms, no sorryAx.
+
+
+### 20.94 True placeholder removed; bridge import fixed (mainline, 2026-11-15 08:45)
+- `Mzk1P1PaperSumsToS3137BridgeActual`: deleted `def PaperS3137ReadingDictionary : Prop := True`; rows now `EXPLICIT GAP (not defined; True placeholder deleted per no-True discipline)`. Final theorem consumes no True.
+- `Mzk1P0FinalS3137ConditionalActual`: `FinalBridgeConditions.reading` field removed; replaced by comment `PaperS3137ReadingDictionary: EXPLICIT GAP (not defined; no True placeholder)`; rows updated.
+- bridge imports/opens added: BadPlaceRationalDegreeActual (qVFamTensorRationalBaseNorm), QPilotZeroLocusDivisorActual (qVFamily); PaperSourceCorrectionFreeFields via BadPlacePaperTargetStrictActual.
+- No True surrogate; item is undefined explicit GAP; if later needed, add real structure with typeable fields.
