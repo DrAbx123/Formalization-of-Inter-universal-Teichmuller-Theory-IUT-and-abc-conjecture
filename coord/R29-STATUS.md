@@ -2569,3 +2569,5 @@
 - 19:00: P2 errors persist (type/rewrite/omega); hull to report exact first lines. stage4/stepxi asked status. gate 20.369 written.
 
 - 19:10: P2NormBridge handed to shehdd (hull off); exact fixes congrArg norm/norm_pow/no-goal calc. gate 20.370 written.
+
+- 19:20: hull assigned general-e #C B secondary units card (N=eK*s*e, span power). p2 wrapper waits shehdd. gate 20.371 written.
