@@ -1906,3 +1906,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New lemmas: qVFamNormRatio_ge_one, normRatioCorrectionSum_nonneg, paperNormalizedCorrection_nonpos, finalPaperNormalizedComparison_noS45. Dependencies: donor formula + default norm + qNorm_lt_one + d_pos + weight_nonneg + half sum relation + paperNormalizedCorrection_eq + l>=5 + exact_of_correction_nonpos. No new assumptions.
 - Replace finalPaperNormalizedComparison(S45) by noS45; finalDictionaryCombined can drop S for inequality. Keep S45 only for correction-zero/strict equality/R2.
 - Assigned mainline/hull implement; no fake.
+
+
+### 20.225 Route A simplification: existing ratio>=1 comparison theorem (2026-11-16 10:10)
+- Green BadPlaceCorrectionSignAttackActual.paperNormalizedComparison_exact_of_ratio_ge_one (h : forall b, 1 <= qVFamNormRatio T b) : paperNormalizedThetaSum <= paperNormalizedQPilotSum. Also paperNormalizedComparison_exact_of_correction_nonpos and paperNormalizedCorrection_eq_factor_mul/correctionFactor_neg exist.
+- Therefore S45 elimination reduces to unconditional 1 <= qVFamNormRatio; then no S45/correction-zero needed for final inequality. Prove from donor generalNormalizedNormFormula + default norm_eq_absNorm_zpow + qVFamDefaultNorm<1 + d>=1; only formal gap is Completion/NormalizedCompletion coercion bridge for qVFam norms. Assigned mainline/hull; no fake.
