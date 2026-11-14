@@ -2094,3 +2094,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0FinalNoS45AssemblyAxiomProbeActual fresh GREEN: finalPaperNormalizedComparison_noS45 and finalDictionaryCombined_noS45 both three axioms. Assembly DONE 08:38:07; NormPowerBridge single power input.
 - hbridge exact fixes to hull: Donor :78 WithZero.unzero named (x:=val) forces alpha R; use positional unzero val hval; let m:Z := toAdd(unzero val hval); same in hdef_exp/hlog/hnu. Value :70-71 proof-term mismatch; calc ||q|| = ↑(Ideal.absNorm)^m := h; _ = absNorm^(-(nu)) := by rw [hm]; simp only [absNorm], with hm:(m:R)=-(nu).
 - After hbridge green: Assembly/Final/Dictionary instantiate fun b => hbridge T b; replace S versions; S45 strict-only. No fake; power not equality.
+
+
+### 20.258 Donor hbridge explicit unzero args (hull, 2026-11-16 16:20)
+- Donor FAIL 08:48 source 08:46: :78 toAdd type Multiplicative Z expected R (cast not passed to toAdd); :79/:80 unzero positional val but first explicit arg is proof, x implicit -> must (alpha:=Multiplicative Z)(x:=val)(proof). Fix h1/h2 all with named args; hdef_exp LHS (toAdd (alpha:=Multiplicative Z) (unzero (x:=val) proof) : Z) then cast to R; or skip hdef_exp and use hdef.trans + h2. If stuck, mainline single non-concurrent takeover. Value still default hval/rw. No fake.
