@@ -2217,3 +2217,5 @@
 - 13:00 MILESTONE: donor GREEN 05:58:55 (54s); olean 586400B fresh; no sorry/True; restricted canonicalFun_of_ne/nu_add_ge_min. mainline to add probe and record power-not-equality/all-x false. gate 20.207 written.
 
 - 13:10: GREEN probes LS3137LFinal 06:00:57 (2) and donor 06:04:01 (3), all three axioms. Five donor corrections verified. S45 boundary: donor unrelated to S45/paper comparison; no overclaim. gate 20.208 written.
+
+- 13:20: probe greens donor 06:04:01 (3) + LS3137 06:00:57 (2). S45 boundary no overclaim. Composite now real error 0<c; lattice to fix. gate 20.208 updated.
