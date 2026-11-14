@@ -2062,3 +2062,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor src 16:08:02 FAIL 08:14:16: hlog line79 rw already closed, line80 rfl No goals -> delete rfl or simpa [WithZero.coe_unzero] using (coe_unzero hval).symm.
 - Value src 15:44:10 FAIL 08:14:15: line70 change carrier mismatch for nu (qVFamTensorPlace) (qVFamily).q -> explicit show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q both places, matching lines52/62.
 - hbridge not green yet; wrapper conditional green; S45-free not unconditional. No fake.
+
+
+### 20.252 Dictionary drop-S conditional GREEN; final probe confirmed (mainline, 2026-11-16 15:20)
+- Mzk1P0FinalS3137DictionaryActual DONE 08:14:22 (100s): new finalDictionaryCombined_ofNormBridge (hbridge : forall b, normalized=default^(1/d); rel; lock) : paper comparison /\ RelativeFactorTowerData /\ Nonempty dictionary. Conditional on pointwise hbridge; original S45 version retained.
+- Mzk1P0FinalS3137AxiomProbeActual fresh 4 items three axioms incl noS45_ofNormBridge. Dictionary probe updated to 3 items incl finalDictionaryCombined_ofNormBridge, pending fresh output.
+- hbridge still red (hull): Value :71 unzero/absNorm presentation; Donor :93 hdef Ideal.absNorm vs absNorm. Defeq presentation, not math. After hbridge green instantiate hbridge:=fun b=>hull_hbridge T b; remove S45 premise; S45 strict-only. No fake.

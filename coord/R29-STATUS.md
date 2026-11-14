@@ -2321,3 +2321,5 @@
 - 21:40: hbridge tiny fixes: Donor remove rfl/coe_unzero; Value explicit show NormalizedCompletion both q uses. hull fix. gate 20.251 written.
 
 - 21:50: Dictionary re-DONE 08:14:22; hbridge/Literal no olean; 12 lean. Woke lanes. Check Dictionary freshness/S status.
+
+- 22:00: Dictionary drop-S conditional GREEN 08:14:22 (finalDictionaryCombined_ofNormBridge); final probe 4 items confirmed. Dictionary probe 3 items pending. hbridge presentation fixes; after green instantiate/remove S45. gate 20.252 written.
