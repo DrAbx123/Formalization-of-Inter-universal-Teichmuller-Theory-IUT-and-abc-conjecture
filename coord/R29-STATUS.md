@@ -2807,3 +2807,5 @@
 - 14:50: IsScalarTower base-field cast PadicScalarField->Qp via completionRationalPrime_comap; stage4. gate 20.489 written.
 
 - 15:00: RamifiedPlaceData only arg-order error; remove d.cCorr i. hull. gate 20.490 written.
+
+- 15:10: Ramified stale Mathlib olean read; Principal hact extra paren :38; ZpLattice intro needs unfold. Tasks sent. gate 20.491 written.

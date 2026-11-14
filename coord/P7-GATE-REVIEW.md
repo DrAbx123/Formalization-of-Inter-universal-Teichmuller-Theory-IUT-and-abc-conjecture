@@ -3405,3 +3405,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.490 RamifiedPlaceData only arg-order error (2026-11-15 13:00)
 - Direct compile src 03:26: only error :97:4: perPlace_diff_of_correction applied to (d.cCorr i) but first explicit arg is hcard. Fix remove d.cCorr i; pass hcard/hres/hcoef/hlogp_eq/hmu0/hl/hc/hlogIdx/hdiff. Then green. hull direct compile.
+
+
+### 20.491 Pending direct compile status (2026-11-15 13:10)
+- RamifiedPlaceData direct fails before source: failed to read Mathlib/Algebra/Module/Projective.olean.private (transient/cache); retry/rebuild.
+- PrincipalDimActual :38:59 unexpected ')' expected ':' in hact; extra paren; simplify cast Units product.
+- ZpLattice :14:8 introN no binders; target def InfinitelyDivisibleFor needs rw/change before intro.
+- Tasks sent; no fake.
