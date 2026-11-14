@@ -3344,3 +3344,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.476 QpDecomp direct compile exact error (2026-11-15 10:40)
 - Current source direct compile: only error :10:67 unsolved calc.step, goal ↑p^k*lam*↑p^(-k)=↑p^k*(lam*↑p^(-k)) (associativity). Fix final calc step with rw [mul_assoc] instead of ring. qpilot. No fake.
+
+
+### 20.477 IsScalarTower probe GREEN (stage4, 2026-11-15 10:50)
+- ProbeScalarTowerActual DONE 03:05:07: after packaging nativeBadToKPlace as FinitePlaceAtPrime K via (completionRationalPrime ...).val, #synth IsScalarTower Qp (CommonPrimeCompletion relativeCommonPrimePlace kPlace) (CommonPrimeCompletion kPlace) via relativeNormalizedCompletionScalarTower, and Module.Finite via relativeNormalizedCompletionFinite. Qp-level scalar tower/finite module donor exist.
+- Next stage4 transfer CommonPrimeCompletion/NormalizedCompletion to adicCompletion (defeq Completion), apply Module.finrank_mul_finrank for finrank Qp upper = mK*finrank Qp lower; moved-place degree invariance needed. adicAbv norm equality pending. No fake.

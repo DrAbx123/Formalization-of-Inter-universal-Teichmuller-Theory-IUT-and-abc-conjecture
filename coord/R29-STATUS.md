@@ -2779,3 +2779,5 @@
 - 12:30: IsScalarTower donors found (relativeNormalizedCompletionScalarTower); stage4 fix import/args then synth. QpDecomp no olean; A2 xK transport. gate 20.475 written.
 
 - 12:40: QpDecomp direct compile only assoc goal; use rw [mul_assoc]. qpilot. gate 20.476 written.
+
+- 12:50: IsScalarTower probe GREEN 03:05:07; next transfer to adicCompletion/finrank_mul_finrank. adicAbv pending. gate 20.477 written.
