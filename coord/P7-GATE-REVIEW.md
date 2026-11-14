@@ -1507,3 +1507,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14iiiBoxConsumerActual DONE 03:51:00 (57s): box_readout_le; uses fully qualified prop14iii_box_formal + [Measure.IsAddHaarMeasure C.mu]; no fake/sorry/axiom.
 - Box (11) chain: iiiBoxFormalActual.prop14iii_box_formal -> iiiBoxConsumerActual.box_readout_le; IV directory Box RED cleared.
 - mainline ReadingDictionary plan: fields (a) theta_product_eq (green), (b) q_paper_eq (rfl), (c) coeff_eq_of_ratio (green), (d) object_lock (single-place vs Bad global sum + per-b weight factor B_b + sign/unitMass). Lead approved but object_lock must be substantive object/equality datum, not bare Prop/True; (a)-(c) to be constructed, (d) explicit GAP.
+
+
+### 20.159 PaperS3137ReadingDictionary substantive construction queued (mainline, 2026-11-15 21:50)
+- New Mzk1P0FinalS3137DictionaryActual (queue):
+  PaperS3137ObjectLock data fields: B : Bad -> Nat; B_pos : forall b 0<B b; weight_relation : s1915LocalDegree T b = B b * localCompletionDegree T.arithmetic (nativeBadToKPlace T b); unitMass_eq : actualUnitMassL I place = (s1915UnitMass T).toReal; theta_sign : thetaNormReadL I place = -thetaNormReadProduct T. Substantive data, not bare Prop.
+  PaperS3137ReadingDictionary lock: theta_product_eq (green), q_paper_eq (rfl), coeff_eq_of_ratio (green).
+  paperS3137ReadingDictionary_of (lock): constructs dictionary, only lock explicit.
+- Final conditional signature: S45SourceFields /\ RelativeFactorTowerData /\ PaperS3137ObjectLock -> paperNormalizedComparison and dictionary. No True; lock not claimed/provably trivial. Pending compile; likely need logP nonzero.
+- S45 norm-instance audit: qVFamNormRatio=1 is genuine unresolved coherence (CommonPrime spectral vs Completion default); no tree theorem; separated regime exists.
