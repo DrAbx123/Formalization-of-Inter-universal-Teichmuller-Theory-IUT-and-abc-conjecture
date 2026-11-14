@@ -2997,3 +2997,5 @@
 - 30:40: RelativeNorm q_ne_zero green; power law may be false for etale product; derive product formula/counterexample. mainline. gate 20.584 written.
 
 - 30:50: PrincipalUnits norm bridge change/coercion; qpilot. gate 20.585 written.
+
+- 31:00: GaloisCompletion/ProbeAudit green three axioms; PrincipalUnits red fixing. gate 20.586 written.

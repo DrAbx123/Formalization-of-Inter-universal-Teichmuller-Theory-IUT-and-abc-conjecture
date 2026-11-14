@@ -3841,3 +3841,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.585 PrincipalUnits norm bridge change/coercion (2026-11-15 27:50)
 - :12 NNReal.coe_lt_coe gives Iff (↑||x||₊<1) (||x||₊<1), expected ||x||<1. Fix change (‖x‖₊:ℝ)<1 ↔ (NormedField.valuation x:NNReal)<1; rw valuation_apply; exact NNReal.coe_lt_coe.
 - :19 LE Type in congrArg coercion; use exact_mod_cast h or NNReal.coe_inj; if persists delete helpers. qpilot. No fake.
+
+
+### 20.586 GaloisCompletion probe green; PrincipalUnits red (2026-11-15 28:00)
+- GaloisCompletion DONE 22:18:39/olean 06:18:37 withValMovedSigma only; probe 22:23:28/olean 06:23:27 three axioms. GaloisProbeAudit 22:13:57: galoisPlaceMk_apply/adicAbv_lt_one_iff/valuation_isEquiv_comap three axioms.
+- PrincipalUnits src 06:19:40 no olean FAIL 22:17:27, not accepted; qpilot fixing. No fake.
