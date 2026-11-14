@@ -2789,3 +2789,5 @@
 - 13:20: QpDecomp fresh GREEN 03:13:28; A2PartialXKProbe green. Next action bridge/PrincipalDim/floor; quotient/groups; ZpLattice. gate 20.480 written.
 
 - 13:30: IsScalarTower actual transport SMul via inferInstanceAs; stage4. adicAbv pending. gate 20.481 written.
+
+- 13:40: QpDecomp/A2XK probes green. RamifiedPlaceData red lines75/80/86 invalid field notation; hull fix. gate 20.482 written.
