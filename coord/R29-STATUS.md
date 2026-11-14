@@ -2971,3 +2971,5 @@
 - 28:30: URGENT IntegersEquiv ValuationSubring.toSubring mismatch/sorryAx; stepxi. gate 20.571 written.
 
 - 28:40: URGENT IntegersEquiv rw under Integers fails; fix congrArg or delete. gate 20.572 written.
+
+- 28:50: IntegersEquiv placeholder green; SG3b product Haar instance green, scalar relation route. gate 20.573 written.

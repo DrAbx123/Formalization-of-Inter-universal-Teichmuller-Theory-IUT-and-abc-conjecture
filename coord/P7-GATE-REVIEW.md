@@ -3785,3 +3785,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.572 URGENT IntegersEquiv rw under Integers fails (2026-11-15 25:40)
 - Still mismatch Subring (Completion (comap...)) vs adicCompletion; rw doesn't rewrite inside Integers; composition sorryAx. Fix via explicit h:Completion... and congrArg (fun X => (NormedField.valuation (K:=X)).integer) h/Eq.ndrec; else delete cast+composition to clean. stepxi. No fake.
+
+
+### 20.573 IntegersEquiv placeholder green; SG3b product Haar instance green (2026-11-15 25:50)
+- IntegersEquivZpActual deleted all failed declarations; placeholder direct EXIT=0 no sorryAx. WQuotient p=5 d=1 equiv gap stays. Exact missing dependent Eq.ndrec cast.
+- SG3b: IsAddHaarMeasure (Measure.pi (fun _ : ι => Measure.addHaar)) GREEN via inferInstance (pi.isHaarMeasure to_additive) with Qp MeasurableSpace/BorelSpace/ProperSpace imports. Scalar relation route: addHaarScalarFactor + isAddLeftInvariant_eq_smul_of_innerRegular; needs transportedHaar IsAddHaarMeasure, InnerRegular/FiniteMeasureOnCompacts, LocallyCompactSpace heartbeats. Region tprod-image obstruction explicit. mainline. No fake.
