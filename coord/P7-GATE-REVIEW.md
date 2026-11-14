@@ -2567,3 +2567,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.331 p=2 gap route; Floor open fix (2026-11-17 07:00)
 - p=2: logShellScale 2=4=2^2, (4)=m^{2eK}; cannot use irreducible-p norm lemma. Need mem_span_logShellScale_iff_norm_le / mem_span_four_iff_norm_le. Route via Ideal.mem_span_singleton, IsDiscreteValuationRing.addVal_le_iff_dvd, addVal_pow, addVal_prime_eq_ramificationExponent (IntegralTraceDualTensorInclusion:708-737); addVal(4)=2*eK. Need norm<->addVal bridge for Integers K; no general donor found. Combine primary N=eK*s (s=2) and kernel 1+4O. shehdd tasked; no fake.
 - Floor: open MeasureTheory MeasureTheory.Measure fixed; retouched.
+
+
+### 20.332 p=2 exact bridge lemma and donors (shehdd, 2026-11-17 07:10)
+- Donors found: addVal_le_iff_dvd, addVal_pow, addVal_prime_eq_ramificationExponent, norm_natCast_eq_prime_zpow_neg_padicValNat, norm_uniformizer_eq_prime_rpow_inv_ramificationExponent, eq_unit_mul_pow_irreducible. For 4=2^2: addVal 4=2eK, ||4||=p^-2.
+- Missing lemma: norm_le_norm_natCast_iff_addVal_ge (x : Integers K)(N)(hN): ||x||<=||p^N|| <-> addVal x >= addVal(p^N). Route: x=u*pi^n, addVal x=n, ||x||=||pi||^n, reduce n>=N*eK, addVal(p^N)=N*eK. p=2 N=2eK kernel 1+4O. No fake.

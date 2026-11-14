@@ -2491,3 +2491,5 @@
 - 12:30: Ind1 CorrectedExtraction GREEN 19:54:59 (no source sorry, fresh probes pending); odd-p GREEN 19:55:06 (primary+quot, p odd). p=2 next. TruncatedUnits/Floor/Shared/Kernel still no olean. gate 20.330 written.
 
 - 12:40: p=2 gap route via addVal_le_iff_dvd/addVal_pow/addVal_prime; need norm<->addVal bridge. Floor open MeasureTheory.Measure fixed. gate 20.331 written.
+
+- 12:50: p=2 bridge lemma norm_le_norm_natCast_iff_addVal_ge with donors listed; implement via uniformizer decomposition. shehdd. gate 20.332 written.
