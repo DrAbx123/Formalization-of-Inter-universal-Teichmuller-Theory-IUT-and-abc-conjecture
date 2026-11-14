@@ -1627,3 +1627,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.179 Non-lane statement layer root cause: DeepStatementLayerV2 syntax (lattice, 2026-11-16 01:50)
 - Mzk1IUTIVStatementLayerConsumerActual has no per-file log/uncompiled; imports Mzk1DeepStatementLayerV2Actual, whose first errors :17:61 and :18:63 unexpected token ';' expected command. Consumer failure is missing dependency olean, root is syntax in DeepStatementLayerV2.
 - Assigned lattice minimal syntax fix (no goal change/sorry/True), then next first error.
+
+
+### 20.180 Concrete beta route: integrality, not isometry (2026-11-16 02:00)
+- LocalAbsoluteGalois p = all Qp-algebra automorphisms of AlgebraicClosure Qp; localGaloisUnitsAction is actual unit action.
+- Missing stability lemma localGaloisUnitsAction_preserves_integers should follow from integrality, not continuity: Integers (AlgebraicClosure Qp) is integral closure of Integers Qp; sigma fixes Qp hence fixes Zp=Integers Qp; integral elements map to integral, and sigma.symm too. Use IsIntegralClosure/integralClosure.map/isIntegral_iff.
+- Then construct IntegralUnitStableAlgebraicAction Qp (mapsIntegers/mapsIntegers_symm) -> beta. Assigned stepxi; no fake.
