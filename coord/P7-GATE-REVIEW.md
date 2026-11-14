@@ -2377,3 +2377,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1ABCMainEstimateActual GREEN 18:39:04: abcMainEstimate_of_frontierRegionComparison; abcConjecture_of_frontierHeightRegionEstimates conditional on FrontierHeightComparisonClause + FrontierRegionComparisonClause; no sorry. Actual frontier clauses still open.
 - Mzk1ActualReadingTargetActual GREEN 18:39:59: qNorm_le_hRoot (middle green), transport theorem to original reading conditional on QSourceLeQNorm (R1) + HRootLeHTarget (R3); R1/R3 explicit one-way conditions; no G2/G3 equality. Next actual R1/R3.
 - 4 Adapted statement task-130 completed; auto-probes excluded.
+
+
+### 20.301 #C B units count plan/names (hull, 2026-11-17 01:50)
+- Mzk1LocalRingUnitsCardActual queued: natCard_units_eq_card_sub_maximalIdeal R [CommRing][IsLocalRing][Finite] via units<->IsUnit, maximalIdeal<->nonunits, Fintype.card_subtype_compl; previous Nat.sub_sub_self direction fixed .symm.
+- Plan: q=cardQuot(m) via Submodule.cardQuot_apply; card(m/m^N)=q^(N-1) via Submodule.card_quotient_mul_card_quotient (LinearAlgebra/Isomorphisms:196) + cardQuot_maximalIdeal_pow; R/m^N local ring nonunits=m/m^N; units=(q-1)q^(N-1); N=eK*s.
+- Mathlib names verified: Submodule.cardQuot_apply, Submodule.card_quotient_mul_card_quotient, Nat.sub_sub_self. #C A odd-p pending; p=2 (4)-norm criterion open.

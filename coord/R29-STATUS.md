@@ -2429,3 +2429,5 @@
 - 07:10: confirmed Ideal.quotEquivOfEq and MonoidHom.ker_comp_of_injective for odd-p #C A wiring; shehdd to implement. stepxi depth subgroup fixed/retouched. gate 20.299 written.
 
 - 07:20: MAJOR logQ GREEN 18:33 (l>=7); ABC main estimate conditional GREEN 18:39; reading transport GREEN 18:39 (middle green, R1/R3 explicit); task-130 complete. Next: replace hQ, actual hCor312, actual R1/R3, #C units/A, object lock. gate 20.300 written.
+
+- 07:30: #C B units count plan/names verified: cardQuot_apply, card_quotient_mul_card_quotient, Nat.sub_sub_self. hull implementing. #C A odd-p pending, p=2 open. gate 20.301 written.
