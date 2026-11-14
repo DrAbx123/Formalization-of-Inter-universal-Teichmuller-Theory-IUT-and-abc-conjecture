@@ -2979,3 +2979,5 @@
 - 29:10: PrincipalUnits subgroup via isEquiv_valuation_valuationSubring; qpilot. gate 20.575 written.
 
 - 29:20: hq q tensor norm/region gap; hull inspect C3.q construction. gate 20.576 written.
+
+- 29:30: CRITICAL hq C3.q single local point vs multi-place sum; mainline determine construction mismatch. gate 20.577 written.

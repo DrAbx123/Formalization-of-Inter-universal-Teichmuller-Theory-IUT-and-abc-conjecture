@@ -3802,3 +3802,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.576 hq q tensor norm gap; inspect q construction (2026-11-15 26:20)
 - qPilotLogVolumeReading := P.signedQPilotLogVolume := localSignedLog P.line.C3.q; C3.q.q is single tensor block element, not place sum. Need q local factor decomposition + block norm log=sum local; absent. theta region image not product; absent. hull inspect C3.q/q construction/norm defs for donors. No fake.
+
+
+### 20.577 CRITICAL hq structural mismatch: C3.q single local point vs multi-place sum (2026-11-15 26:30)
+- SourcePilotRegionData: C3.q : FinitePlaceQCandidate place.val (single local field point); tensorLanding: CommonPrimeCompletion -> ArithmeticTensorTupleBlock, tensorLanding q.q = tensorUnit. signedQPilotLogVolume=Real.log||C3.q.q|| single point, while A=(1/2l)*sum over all places qlog. hq qReading=-A structurally incompatible; tensorLanding only maps q to tensorUnit not product. hθ region still no coordinate product. mainline determine intended paper q (single vs global tensor) and exact construction mismatch/fix; no fake.
