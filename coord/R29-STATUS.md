@@ -2433,3 +2433,5 @@
 - 07:30: #C B units count plan/names verified: cardQuot_apply, card_quotient_mul_card_quotient, Nat.sub_sub_self. hull implementing. #C A odd-p pending, p=2 open. gate 20.301 written.
 
 - 07:40: audit corrections: Ind1 ambient group error->use invariantImage A_H then D_r; target magnitude stale deps recompile; #C Truncated/Congruence red fix imports/IsLocalHom; ABC F4/F5 not attack. gate 20.302 written.
+
+- 07:50: task-129 complete (LPaperData/ObjectLockData conditional + exact missing tower/unitMass/theta-sign). stepxi corrected extraction queued using invariantImage A_H, D_r inside, map subtype; no inhabitant. gate 20.303 written.
