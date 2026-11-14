@@ -1664,3 +1664,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.186 Bridge/Dictionary re-GREEN after row updates (2026-11-16 03:00)
 - Mzk1P1PaperSumsToS3137BridgeActual DONE 04:44:24; Mzk1P0FinalS3137DictionaryActual DONE 04:44:25 after rows update; beta GaloisIntegralAction DONE 04:43:30.
 - BSR still no olean; next errors :140 unitUpperValuation and :46 Valued instance. Statement-layer hpoint fix retouched. No fake.
+
+
+### 20.187 General K beta candidate queued (stepxi, 2026-11-16 03:10)
+- Mzk1Ind1GaloisIntegralGeneralActual (queue): localUnitsAction (sigma : AlgebraicClosure K ≃ₐ[K] ...) := Units.mapEquiv; fixes integral units by Units.ext + sigma.commutes (sigma fixes K hence embedded integral units); localStableAlgebraicAction/localActualInd1UnitAction K with beta=refl, compatible fix.
+- Same math as Qp version, K arbitrary local field; if green beta source closes for K-automorphism class (not all automorphisms). Await watchdog; no fake.
+- Statement-layer field-as-type fixes retouched; #C B/A still exact gaps; BSR still no olean.
