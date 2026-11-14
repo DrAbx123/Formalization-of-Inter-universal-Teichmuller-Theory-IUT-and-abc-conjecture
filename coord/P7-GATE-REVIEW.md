@@ -2164,3 +2164,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IUTIVReuseIndexActualAdapted DONE 09:15:28 (90s).
 - Donor probes all DONE 09:18:57: Mzk1QVFamNormBridgeDonorAxiomProbeActual, Mzk1P0QVFamNormBridgeDonorAxiomProbeActual, Mzk1DonorHbridgeAuditProbeActual; three axioms expected (abc to confirm).
 - Integration Final/Dictionary/Assembly still old green; mainline to instantiate unconditional provider.
+
+
+### 20.270 Integration check: Final unconditional source updated; Dictionary/probe pending (stage4, 2026-11-16 18:10)
+- Donor GREEN olean 17:15:33 unconditional hbridge/ratio/noS45.
+- FinalS3137Conditional source 17:20 newer than olean 15:54; rebuild START 17:21; source imports donor and defines unconditional finalPaperNormalizedComparison, keeps conditional _ofNormBridge and S45-strict.
+- Dictionary source 16:10/olean 16:14: finalDictionaryCombined still S45; only conditional _ofNormBridge. NOT yet updated.
+- FinalS3137AxiomProbe still probes conditional noS45_ofNormBridge, not unconditional.
+- Remaining: (1) add finalDictionaryCombined_noS45(rel)(lock) first conjunct from unconditional Final comparison/donor, drop S; (2) rebuild Dictionary after donor; (3) retarget probe to unconditional comparison/finalDictionaryCombined_noS45; (4) optional drop s45 from FinalBridgeConditions; (5) verify Conditional olean newer than donor. Assigned mainline; no fake.

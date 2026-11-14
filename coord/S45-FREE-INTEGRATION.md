@@ -386,3 +386,51 @@ So the hbridge proof route itself is correct; the remaining work is:
 3. final theorem body needs `:= by` (or direct term) as noted earlier.
 
 No Lean changes made.
+
+## Integration check after donor GREEN (2026-11-14 17:20, read-only)
+
+**Donor is now GREEN:** `Mzk1P0QVFamNormBridgeDonorActual.olean` (17:15:33,
+watchdog DONE 17:15:34).  It contains the unconditional
+`qVFamNormalizedNorm_eq_defaultNorm_rpow`, `qVFamNormRatio_ge_one`, and
+`finalPaperNormalizedComparison_noS45`.
+
+Downstream status:
+
+- `Mzk1RouteAFinalNoS45WrapperActual`: GREEN (15:13:52); still useful as the
+  generic wrapper, but the donor now gives the final comparison directly.
+- `Mzk1P0FinalS3137ConditionalActual`: source 17:20:18 is newer than its olean
+  (15:54:14); watchdog START 17:21 is rebuilding it.  Current source already imports
+  `Mzk1P0QVFamNormBridgeDonorActual` and defines the **unconditional**
+  `finalPaperNormalizedComparison : paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T`
+  using `Mzk1P0QVFamNormBridgeDonorActual.finalPaperNormalizedComparison_noS45`.
+  It also keeps the conditional `..._ofNormBridge` wrapper and the S45-strict
+  `finalPaperNormalizedComparison_strict`.
+- `Mzk1P0FinalS3137DictionaryActual`: source 16:10:40, olean 16:14:21.  Its
+  `finalDictionaryCombined` **still takes `S : S45SourceFields`** and proves the
+  comparison via `paperNormalizedComparison_of_sourceFields`; it has only a
+  conditional `finalDictionaryCombined_ofNormBridge`.  It has **not yet been updated**
+  to use the unconditional donor comparison.
+- `Mzk1P0FinalS3137AxiomProbeActual`: still probes the conditional
+  `finalPaperNormalizedComparison_noS45_ofNormBridge`, not the new unconditional
+  `finalPaperNormalizedComparison`/`finalDictionaryCombined_noS45`.
+
+Exact remaining integration work (source edits, not done here):
+
+1. In `Mzk1P0FinalS3137DictionaryActual`, add the S45-free combined theorem
+   `finalDictionaryCombined_noS45 (rel) (lock)` whose first conjunct is
+   `Mzk1P0FinalS3137ConditionalActual.finalPaperNormalizedComparison` (or directly
+   `Mzk1P0QVFamNormBridgeDonorActual.finalPaperNormalizedComparison_noS45 T`),
+   keeping `rel` and `lock`.  Drop `S` from this new theorem; leave the old
+   S45 version for compatibility/strict use.
+2. Retouch/rebuild `Mzk1P0FinalS3137DictionaryActual` after that source edit; its
+   current olean predates the donor GREEN and the new unconditional path.
+3. Retarget `Mzk1P0FinalS3137AxiomProbeActual` to
+   `finalPaperNormalizedComparison` and `finalDictionaryCombined_noS45`, then retouch
+   to get fresh axioms after the dictionary rebuild.
+4. Optionally drop `s45` from `FinalBridgeConditions`/`finalBridgeConditions_of` for
+   the paper-comparison part; keep the structure field only if a consumer still needs
+   the original S45 source condition.
+5. Rebuild `Mzk1P0FinalS3137ConditionalActual` (currently in progress) and verify its
+   new olean is later than the donor; then verify final dependency freshness.
+
+No Lean changes made; this is the exact integration/dependency state.
