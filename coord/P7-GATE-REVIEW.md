@@ -1711,3 +1711,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Bridge DONE 04:44:24. All green.
 - Statement-layer DeepStatementLayerV2: unified 26 field-as-type theorems to (H)(h:H.x):H.x:=h; retouched, next error pending.
 - #C B/A remain named gaps; no fake.
+
+
+### 20.194 CRITICAL scope caveat: Galois inhabitants include sigma=1; no provenance (abc, 2026-11-16 04:20)
+- Mzk1Ind1GaloisIntegralActionActual (Qp) and GeneralActual (K) green; probes three axioms; no sorry/True.
+- BUT inhabitants come from sigma : AlgClosure K ≃ₐ[K] ..., including sigma=1; beta=refl; integral units fixed. Structures ActualInd1UnitAction/IntegralUnitStableAlgebraicAction have no provenance field tying algAction/beta to actual Ind1/Ind2 procession arrow. Nonempty is trivially true via sigma=1.
+- Therefore this does NOT close the actual Ind1/Ind2 source arrow; only a local K-automorphism nonempty construction. Must not claim beta source globally closed; either add substantive provenance (not bare Prop) or keep source gap explicit. abc ledger updated.
