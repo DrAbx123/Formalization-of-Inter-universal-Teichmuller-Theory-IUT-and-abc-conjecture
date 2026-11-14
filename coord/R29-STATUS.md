@@ -2985,3 +2985,5 @@
 - 29:40: CRITICAL R1 C3.q single local vs Bad global sum; GlobalSumAggregation conditional not proven; hq blocked. Gate 20.578 written.
 
 - 29:50: search global q/SourcePilotRegionData construction; mainline. gate 20.579 written.
+
+- 30:00: WithVal uniform γ type mismatch; use target basis/mem_iff. stage4. gate 20.580 written.
