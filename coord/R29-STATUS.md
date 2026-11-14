@@ -2437,3 +2437,5 @@
 - 07:50: task-129 complete (LPaperData/ObjectLockData conditional + exact missing tower/unitMass/theta-sign). stepxi corrected extraction queued using invariantImage A_H, D_r inside, map subtype; no inhabitant. gate 20.303 written.
 
 - 08:00: exact fixes: TruncatedUnitsCard imports IntegralTraceDualTensorInclusion/DifferentDegreeUpperBound; CongruenceUnits unfold map/IsLocalHom; odd-p maxHeartbeats; IVThm110/Ind1Corrected retouch. LocalRingUnitsCard green 18:45. gate 20.304 written.
+
+- 08:10 USER CORRECTION tower: rootBaseQpDegree=[F_v:Qp], localCompletionDegree=[K_w:(Fmod)_v], kPlaceQpDegree=[K_w:Qp]; need dBase,e,n,m; m*dL=n*dF and dK=n*rootBaseQpDegree wrong; F/K places only share Fmod. task-129 reopened stage4; hull/mainline warned. gate 20.305 written.
