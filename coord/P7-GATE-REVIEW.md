@@ -2934,3 +2934,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.399 URGENT KernelBridge regression: range theorem sorryAx (abc, 2026-11-17 18:30)
 - Current src 23:13:29 FAIL 15:15:55 no olean; lines27/30/33/74 rw mismatch; range_kernelToAQuotient_eq proof fails -> auto sorryAx. Old olean 23:05:29 range theorem also has sorryAx -> NOT acceptable. kernelToAQuotient_ker_eq itself standard but file not green; previous 'fixed green' invalid.
 - Stepxi to delete range_kernelToAQuotient_eq immediately, keep kernelToAQuotient_ker_eq + quotientKernelEquivRange if fresh green; no sorryAx acceptance. HullUnitZero conditional green (scale=1, probe 15:10:14 standard); IutIVCongruenceCard probe 15:06:07 standard. P2Bridge paused.
+
+
+### 20.400 Kernel source clean; UnitInvariance fresh change/rw errors (2026-11-17 18:40)
+- KernelBridge source 23:19 has no range theorem; old log 23:15 errors are stale. Waiting fresh; if quotientKernelEquivRange fails delete it, keep kernelToAQuotient_ker_eq.
+- UnitInvariance log 23:15: :37:4 change failed; :47:6 change failed; :59:10/:62:10 rw pattern miss. qpilot to report/fix explicit algebraMap/Units ext.
+- GaloisPlaceAlignment no log; stage4 to report/queue. No fake.
