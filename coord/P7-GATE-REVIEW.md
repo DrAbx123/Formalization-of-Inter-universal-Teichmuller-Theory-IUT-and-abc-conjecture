@@ -1402,3 +1402,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14CongruenceActualGap DONE 03:04:25 (52s): MissingCongruenceUnitsEquiv e; MissingTruncatedUnitsCard e s; torsion_card_eq_actual_of_missing. #C actual split into two objectives.
 - Mzk1BoxDistinguishedVarpiProbe GREEN (packetHull_with_theta_varpi and packetHull_normalizedLogVolume_le_box).
 - ActualHBridge/P14ii still pending; final hM/hB fix pending.
+
+
+### 20.142 Audit: CongruenceActualGap conditional; VarpiProbe covers box lemma (abc, 2026-11-15 17:30)
+- Mzk1IutIVProp14CongruenceActualGap DONE 03:04:25: no sorry/True/axiom; MissingCongruenceUnitsEquiv, MissingTruncatedUnitsCard, torsion_card_eq_actual_of_missing conditional (he/hc/hs/hq/hcop); no dedicated probe but reuses verified torsion_card_eq_actual_of_unitsEquiv.
+- Mzk1BoxDistinguishedVarpiProbe DONE 01:31:19: source no sorry/True/axiom; probe output covers both packetHull_with_theta_varpi and packetHull_normalizedLogVolume_le_box, both three axioms. Correct earlier note: VarpiAxiomProbeActual had 1 item, but VarpiProbe covers box lemma as well.

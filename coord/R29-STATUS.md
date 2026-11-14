@@ -2079,3 +2079,5 @@
 - 23:10: abc audit probe Mzk1IutIVProp14AuditProbeActual 03:04:25 GREEN: exists_h_card_gamma/volume_ratio_eq_pow_of_groupCount/torsion_card_eq_actual_of_unitsEquiv three axioms. gate 20.140 written.
 
 - 23:20: GREEN CongruenceActualGap 03:04:25 (MissingCongruenceUnitsEquiv/MissingTruncatedUnitsCard/torsion_card_eq_actual_of_missing) and VarpiProbe. ActualHBridge/P14ii pending; final hM/hB pending. Woke lanes. gate 20.141 written.
+
+- 23:30: abc audit CongruenceActualGap conditional (no True/sorry); VarpiProbe covers packetHull_with_theta_varpi + packetHull_normalizedLogVolume_le_box both three axioms. gate 20.142 written.
