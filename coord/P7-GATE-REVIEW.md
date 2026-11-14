@@ -3065,3 +3065,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.423 TorsionSplit watchdog stale; direct compile needed (hull, 2026-11-15 01:40)
 - Mzk1TorsionSplitActual source updated with Fact p.Prime/hT0dvdT/hval0/hnotp/hcopT0/hmle (hcop.pow_left m).dvd_of_dvd_mul_right h1; watchdog FAIL 16:27:10 log still old lines 26/30/47/49/29/34/35 -> stale log, cannot report fresh error. mainline to compile current source directly and report first error; no edit. No fake; correction construction green.
+
+
+### 20.424 Galois norm-equality probe name resolution (stage4, 2026-11-15 01:50)
+- ProbeGaloisIsometryActual: Unknown identifier galoisPlaceMk despite import/opens; identifier exists in ObjectLockData source/olean -> probe resolution issue. Stage4 to fully qualify LeanFormal.IUT.XiFPaper.Mzk1ObjectLockDataActual.galoisPlaceMk or open namespace and #check. Then rw [galoisPlaceMk]/FinitePlace.mk_apply; if not definitional prove |sigma x|_{sigma v}=|x|_v via maximalIdeal map/adic norm; then Isometry->Completion.mapRingHom. Degree tower IsScalarTower pending. No fake.

@@ -2675,3 +2675,5 @@
 - 03:50: URGENT KernelBridge source/olean mismatch (source newer, only 4 decls); freeze proven decls+recompile. UnitInvariance red line72/coercion. gate 20.422 written.
 
 - 04:00: TorsionSplit watchdog log stale; mainline direct compile for exact first error. hull no fake. gate 20.423 written.
+
+- 04:10: Galois isometry probe unknown galoisPlaceMk (namespace); qualify/open then test norm equality. degree IsScalarTower pending. gate 20.424 written.
