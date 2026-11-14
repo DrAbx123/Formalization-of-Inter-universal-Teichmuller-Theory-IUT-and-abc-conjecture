@@ -2946,3 +2946,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1BaseChangeQCorrespondenceActual DONE 15:16:49: baseChangePlaceCompletionCorrespondence (hplace) with completionMap from NumberFieldFinitePlace.completionMap; n=relativeCompletionDegree; completionMap_norm=norm_completionMap_pow green. (b) closed. Only (a) hplace: comap_F(nativeBaseSectionPlace b)=nativeBadLift.lift b remains.
 - nativeBadLift = Classical.choose(comap_surjective) in NativeBadLiftActual; nativeBaseSectionPlace = sectionFiniteLift = Classical.choose(other statement). Different choices, so (a) not provable as-is. Legitimate fix (our construction): redefine nativeBadLift to sectionFiniteLift maybe rfl; assess downstream impact. Mainline to report.
 - KernelBridge fresh DONE 15:21:15 no range theorem, probes three axioms; range equality still missing. UnitInvariance topology deps removed/use Algebra.smul_def, pending.
+
+
+### 20.402 Torsion log donor GREEN; local ramification bound blocker (hull, 2026-11-17 19:00)
+- Mzk1TorsionLogDonorActual DONE 15:26:19: log_torsion_ratio_ge_neg_log {q1 T C} (hq1)(hC)(hTpos)(hT:T<=q1*C): -log C <= log(q1/T). Usable q1=q-1,T=#torsion.
+- mu_{p^a} subset K -> p^{a-1}(p-1) | eK: Mathlib only global cyclotomic IsCyclotomicExtension.Rat.ramificationIdx_span_zeta_sub_one (Q(ζ)); repo lacks local subfield Qp(ζ)⊂K rep and local ramification multiplicativity e(K/Qp)=e(K/L)e(L/Qp). Exact missing: construct local L=Qp(ζ_{p^a}), embedding from mu_{p^a}, multiplicativity. Not single tactic.
+- Accepted conditional hTub: #T <= (q-1)*p^{v_p(eK)+1} as explicit gap; hull to write conditional per-place theorem, continue searching local cyclotomic donor in parallel. No fake.

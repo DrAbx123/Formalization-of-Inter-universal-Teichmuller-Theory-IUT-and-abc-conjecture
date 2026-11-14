@@ -2631,3 +2631,5 @@
 - 00:10: Kernel source clean (no range theorem), unit change/rw errors, alignment no log. Wake qpilot/stepxi/stage4. gate 20.400 written.
 
 - 00:20: BaseChange constructor green (b closed); (a) choice mismatch nativeBadLift vs sectionFiniteLift; fix by aligning our nativeBadLift. KernelBridge fresh green no range. UnitInvariance topology deps removed. gate 20.401 written.
+
+- 00:30: torsion log donor GREEN 15:26:19; local ramification bound mu_pa->p^{a-1}(p-1)|eK missing. Accepted conditional hTub for per-place; hull writes conditional, searches donor in parallel. gate 20.402 written.
