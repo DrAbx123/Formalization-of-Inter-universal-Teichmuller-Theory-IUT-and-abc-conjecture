@@ -2635,3 +2635,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.344 Ind1 KernelIntegers equivalence GREEN fresh no sorryAx (stepxi, 2026-11-17 09:00)
 - Mzk1Ind1KernelIntegersActual DONE 12:36:26; completionKernelEquivIntegers probe [propext,Classical.choice,Quot.sound], no sorryAx; both maps retained. left_inv/right_inv Subtype.ext+Units.ext+rfl pass.
 - Next: mod torsion to WQuotient=(Integers completionField)^x/tors; bridge AQuotient kernel quotient to WQuotient; then Z_p^d infinite divisibility. No fake.
+
+
+### 20.345 Kernel/units greens; pending floor hull/native (2026-11-17 09:10)
+- Mzk1Ind1KernelIntegersActual GREEN 20:36:26 (completionKernelEquivIntegers fresh probe three axioms; WQuotient equivalence added; abc to audit declarations).
+- Mzk1TruncatedUnitsCountActual GREEN 20:31:15; TruncFloorValProbe 12:37:12.
+- Still no olean: Mzk1IVThm110FloorNativeHullActual (floor hullLog=-M/M>=1 pending); qpilot retouched.
+- Mainline R1 shared q: SharedQPilot source actual; C3 q witness remains. Hull next span identity/p=2. stepxi next AQuotient kernel/Z_p^d. stage4 Galois action.
