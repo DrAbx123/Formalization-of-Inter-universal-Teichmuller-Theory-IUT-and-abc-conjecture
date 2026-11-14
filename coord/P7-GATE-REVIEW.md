@@ -1391,3 +1391,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   3. torsion_card_eq_actual_of_missing: both exact gaps + q=p^f + e*s + p∤q-1 => actual torsion count.
 - #C donor now split into two independent targets; no free hC. Next construct eEquiv/hcard via U/U_s=1+(p^s)^e O closed ball + cardQuot_pow_of_prime.
 - TorsionFromUnits GREEN 02:53:33; GroupCountBridge GREEN 02:53:32; ActualHBridge/P14ii pending; final pending hM/hB.
+
+
+### 20.140 Audit probe GREEN: GroupCountBridge/TorsionFromUnits three axioms (abc, 2026-11-15 17:10)
+- Mzk1IutIVProp14AuditProbeActual DONE 03:04:25 (olean): exists_h_card_gamma, volume_ratio_eq_pow_of_groupCount, torsion_card_eq_actual_of_unitsEquiv all [propext, Classical.choice, Quot.sound]; no sorryAx.
+- GroupCountBridge/TorsionFromUnits source no sorry/True/axiom; TorsionFromUnits remains conditional on eEquiv/hcard/hs/hq/hcop.
