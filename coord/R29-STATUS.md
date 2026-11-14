@@ -2255,3 +2255,5 @@
 - 16:10 CRITICAL Route A: S45-free final inequality via correction sign; donor gives ratio>=1, weight nonneg, correction<=0 (l>=5), exact_of_correction_nonpos => paperTheta<=paperQPilot. Implement qVFamNormRatio_ge_one/normRatioCorrectionSum_nonneg/paperNormalizedCorrection_nonpos/final_noS45; mainline/hull. gate 20.224 written.
 
 - 16:20: Route A simplified using existing `paperNormalizedComparison_exact_of_ratio_ge_one`: only need unconditional 1<=qVFamNormRatio. Prove via donor + default norm + qVFamDefaultNorm<1 + d>=1; coercion bridge is only gap. mainline/hull. gate 20.225 written.
+
+- 16:30: abc: S45FreeScalingRoute is RED after source edit; old DONE stale; :85 Measure.IsAddHaarMeasure invalid binder (need open MeasureTheory/full qualification). mainline fix. Do not count green. gate 20.226 written.

@@ -1911,3 +1911,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.225 Route A simplification: existing ratio>=1 comparison theorem (2026-11-16 10:10)
 - Green BadPlaceCorrectionSignAttackActual.paperNormalizedComparison_exact_of_ratio_ge_one (h : forall b, 1 <= qVFamNormRatio T b) : paperNormalizedThetaSum <= paperNormalizedQPilotSum. Also paperNormalizedComparison_exact_of_correction_nonpos and paperNormalizedCorrection_eq_factor_mul/correctionFactor_neg exist.
 - Therefore S45 elimination reduces to unconditional 1 <= qVFamNormRatio; then no S45/correction-zero needed for final inequality. Prove from donor generalNormalizedNormFormula + default norm_eq_absNorm_zpow + qVFamDefaultNorm<1 + d>=1; only formal gap is Completion/NormalizedCompletion coercion bridge for qVFam norms. Assigned mainline/hull; no fake.
+
+
+### 20.226 S45FreeScalingRoute RED after source edit (abc, 2026-11-16 10:20)
+- Source mtime 14:39:24; old DONE 06:36:39 (olean 14:36:38) predates source; latest START 06:40:29 FAIL 06:41:00 -> real error.
+- First error line85 [Measure.IsAddHaarMeasure mu]: invalid binder annotation, type not class instance; MeasureTheory not opened. Fix open MeasureTheory or fully qualify MeasureTheory.Measure.IsAddHaarMeasure; recompile. Old olean stale, no probe.
+- S45-free scope remains normalized representative only; actual q norm identification still explicit S45, not claimed.
