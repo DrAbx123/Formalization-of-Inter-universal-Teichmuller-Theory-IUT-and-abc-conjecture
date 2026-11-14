@@ -744,3 +744,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - `qhatLogReadout − paperQ = log ratio`；
   - 权重更正 `paperWeight_eq_inv_localCompletionDegree = 1/[K_w:F_v]`；`DegreeTowerInterface`（n_b 精确缺口）。
 - **仍未收口**：`Mzk1P0QThetaReadoutNormCorrectionActual`/Correspondence（等编）、S3137 条件版四项（S45/QHat/RootBase/A1）、`a1_delta_paper` GAP。
+
+
+### 20.49 A1.6 收口为条件定理（stage4，2026-11-15 01:20）
+- **GREEN 文件链**：`Mzk1A1InverseLatticeNormActual`、`Mzk1A1LatticeValuationIdentifyActual`（`inverseLambdaLattice_eq_inverseLattice`、`inverseLambdaLattice_eq_saturated_actual`）、`Mzk1A1QhatSaturationReadoutActual`、`Mzk1A1SignedReadoutProductActual`。
+- **但 `qVFamily_mem_saturatedLattice` 带显式参数**：`aval : rootBase→Nat`、`bval : rootNormedExtension→Nat`、`m e : Nat`、`he : 0<e`、`hram : ∀x, bval(algebraMap x)=e·aval x`、`hLambda : lambdaLattice = principalLattice bval m`。
+- **状态**：A1.6 的 signed readout 等式/measure/norm/delta 部分是定理；qhat↔J_s 的 valuation 识别以**principal-lattice recognition + ramification identity** 为显式输入。若这两条不能从实际 source 定义证明，A1.6 只能标 conditional，不得标 unconditional closed。
+- **下一步**：stage4 构造 `aval/bval/m/e` 并证 `hram/hLambda`，或明确记录条件性质。
