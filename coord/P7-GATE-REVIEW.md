@@ -3571,3 +3571,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.524 MAJOR Assembly/WQuotient/ActualData/CompletionTower fresh GREEN (2026-11-15 18:40)
 - Watchdog recovered. PrincipalDimAssembly DONE 20:39:16/olean 04:39:16 (principalDim_log_scaling_of_decomp, only hact explicit). WQuotientLattice DONE 20:39:19/04:39:19 (p=5 d=1 structure, no inhabitant). ActualRamifiedData DONE 20:40:00/04:39:59 (wired chosen; actualFn_spec/hdecomp/chosenSpec). CompletionTower re-DONE 20:40:07/04:40:07 (scalarTower/moduleFinite; finrank absent). ZpLatticeProbe green 20:39:08.
 - qpilot floor; hull Has*; stepxi WQuotient equiv; abc audit. No fake.
+
+
+### 20.525 Concrete integer-equiv donor chain (stepxi, 2026-11-15 18:50)
+- concretePlace_integersRingEquiv (Example36SourceLogKummerIdentification:327): Integers (Completion (comap concretePlace)) ≃+* Integers (Completion concretePlace). concreteGaussianFivePlace_comap (ConcreteFinitePlaceBoundary:44) = concreteFivePlace. concreteFivePadicIntEquiv (ConcreteSplitCurveFivePlace:57) : concreteLocalIntegers=Zp ≃+* concreteFiveCompletionIntegers. Compose -> Integers completionField ≃+* Zp; then Basis (Fin 1)/linear equiv/range unitLogHom. stepxi. No fake.
