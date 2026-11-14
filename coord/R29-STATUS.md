@@ -2591,3 +2591,5 @@
 - 20:50: general eEquiv route: P2NormBridge with N=s and uniformizer gives all-p norm/addVal criterion; no Irreducible p/eK=1. P2Bridge wrapper unnecessary; hull implement eEquiv. gate 20.380 written.
 
 - 21:00: HOT general logShell norm criterion GREEN 14:09:01 (all p) and kernel equality GREEN 14:03:42. Hull build eEquiv; stepxi first-iso equiv; abc probes. gate 20.381 written.
+
+- 21:10: audit general criterion/kernel bridge/consumer probes standard no sorryAx; old red void. P2Bridge paused. gate 20.382 written.

@@ -2835,3 +2835,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1GeneralLogShellNormCriterionActual DONE 14:09:01: norm_le_norm_logShellScale_iff (pi,hpi,x): ||x||<=||logShellScale p|| <-> (s*eK : ℕ∞)<=addVal x; ALL p, no parity/irreducibility of p. Uses P2NormBridge with N=s and logShellScale_eq_prime_pow_factor.
 - Mzk1Ind1KernelBridgeActual DONE 14:03:42: kernelToAQuotient_ker_eq with constructor simpa; no source sorry. Next AQuotientKernelBridge.equiv via first iso.
 - Hull to build eEquiv all-p from general criterion; stepxi equiv; abc probes. P2Bridge paused.
+
+
+### 20.382 Audit: general criterion/kernel bridge/consumer probes standard (abc, 2026-11-17 15:40)
+- GeneralLogShellNormCriterion: src 22:06:58 DONE 14:09:01 olean 22:09:00; probe 14:14:32 three axioms; no sorry.
+- KernelBridge: src 22:01:54 DONE 14:03:42 olean 22:03:41; old kernelToAQuotient_ker sorryAx replaced by kernelToAQuotient_ker_eq; probe 22:14:32 three axioms no sorryAx; old red record void.
+- IutIVCongruenceCard DONE 14:04:24 olean 22:04:23; probe 14:09:44 three axioms (old unknown obsolete). TruncatedUnitsSecondaryAxiomProbe 13:59:24 standard. P2Bridge paused no olean not accepted.
