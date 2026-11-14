@@ -2229,3 +2229,5 @@
 - 14:00: round-14 critical: investigate whether S45 ratio=1 is false from donor power relation (normalized=default^(1/d)) + SeparatedNormRatioRegime; hull/stage4. Final/probes green; residual old files; #C B/A gap; provenance gap. gate 20.213 written.
 
 - 14:20: AddLeProof probe GREEN 06:20:03; donor probe re-DONE 06:20:02. Prop18 no olean; S45 d>1 attempt assigned hull/stage4. gate 20.214 written.
+
+- 14:30: Prop18 FAIL same slash import at :1:17; Example36 olean exists. lattice to fix dot path. gate 20.215 written.

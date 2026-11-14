@@ -1841,3 +1841,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.214 AddLeProof probe GREEN; S45 d>1 attempt (2026-11-16 08:00)
 - Mzk1CanonicalAbsValueAddLeAxiomProbeActual DONE 06:20:03 (58s); donor probe re-DONE 06:20:02; both fresh.
 - Prop18Composite still no olean; residual old all-x files pending. S45 open; hull/stage4 to attempt actual d>1 regime or concrete S45.
+
+
+### 20.215 Prop18 root cause: slash import again (lattice, 2026-11-16 08:20)
+- Mzk1IUTIVProp18CompositeActual FAIL 06:20:53: :1:17 unexpected token '/', import uses slash; :2 invalid import; missing Example36 olean is cascade. Fix slash to dot path as Prop11. Retouch.
