@@ -1794,3 +1794,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor corrections (must prevent overclaim): (1) all-x generalNormalizedNormFormula FALSE under definitions (x=0 gives RHS=absNorm^0=1 vs norm 0); restrict x≠0, matching existing GeneralNormalizedNormFormula (x)(hx). (2) Mathlib AbsoluteValue.add_le' is archimedean f(x+y)≤fx+fy, NOT max; old CanonicalAbsValueAddLeProof target shape wrong and unverified. (3) adicCompletion ambient norm is canonical valued-adic; absNorm^(-nu/d) is normalized spectral; d≠1 differ. Use L:=NormalizedCompletion place, C:=adicCompletion only for Valued.v/nu. (4) nu_add_ge_min needs x≠0,y≠0,x+y≠0. (5) relativeCompletionDegree d=e*f is rfl; Real.rpow_le_rpow_left₀ absent, use Real.rpow_le_rpow_of_exponent_le.
 - Donor only power relation for x≠0, not equality; S45 not implied.
 - Composite Prop11 now packetDet_tensor_pos unknown; lattice retouch pending.
+
+
+### 20.207 MILESTONE GREEN: donor GeneralNormalizedNormBySpectralUniqueness (mainline/subagent, 2026-11-16 07:00)
+- DONE EXIT=0 05:58:55 (54s); olean 586400B mtime 13:58:55 > source 13:58:03; grep no sorry/admit/axiom/True.
+- Declarations include absNorm_gt_one/absNorm_pos, d_eq_e_mul_f : d place = e place * f place := rfl, toC, nu, nu_add_ge_min restricted (hx hy hxy), canonicalFun, canonicalFun_zero, canonicalFun_of_ne (x≠0), etc.
+- Donor restructure succeeded with NormalizedCompletion carrier, restricted nonzero formulas, honest add_le. Need probe (generalNormalizedNormFormula restricted, normalizedCanonicalPowerComparison, canonicalAbsValue_extends) and record power-not-equality/all-x false. S45 still not implied.
