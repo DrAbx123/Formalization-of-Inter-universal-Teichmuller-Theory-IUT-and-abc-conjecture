@@ -1737,3 +1737,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 8 final signatures: lowerPrimeValuation, upperPrimeValuation, scalarPrime_norm, padicUnit_norm_one, padicUnit_valuation_zero, scalarDVRDecomposition, unitUpperValuation, baseScalarValuationRelation. Only statement change (8) to nested exists m,u with 4-tuple, matching donor consumer.
 - Fixes: removed unused padicScalarValuedInstance (isDefEq timeout); added instAlgebraAdicCompletion + scalarAlgebra local Algebra Q instances; rebuilt lowerPrimeValuation; added algebraMap_ratCast_eq'; unitUpperValuation via padicIntEquiv.symm + valuation_completionMap. 16 real errors fixed.
 - Next donor restructure (inline canonicalFun/nu_add_ge_min/canonicalFun_add_le; AddLeProof downstream); donor probe; power formula ||x||_norm=absNorm^(-nu/d)=||x||_def^(1/d), not equality. S45 not donor-implied.
+
+
+### 20.198 New greens: StatementLayerConsumer; LNormCompat; ReadoutEqNative; BSR probe (2026-11-16 05:30)
+- Mzk1IUTIVStatementLayerConsumerActual DONE 05:22:28 (46s): prereq bundle projections hullDet/qTheta/abcReadout/sec1sec2/pnt_explicit_of_bundle; statement layer consumer compiles.
+- Mzk1P0LNormCompatActual DONE 05:23:21: only normInstanceCompatGap : Prop := CommonPrimeNormInstanceCompatRequired; interface/gap only, not actual norm compat.
+- Mzk1P0LReadoutEqNativeActual DONE 05:23:22: LReadoutEqNative structure only; not actual equality.
+- Mzk1BaseScalarValuationAxiomProbeActual DONE 05:28:57: 8 BSR signatures all [propext, Classical.choice, Quot.sound].
+- Dictionary probe fresh DONE 05:29:41. Donor subagent pending.
