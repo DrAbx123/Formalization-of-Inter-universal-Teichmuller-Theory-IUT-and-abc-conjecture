@@ -2279,3 +2279,5 @@
 - 18:10: stage4 exact hbridge route documented (toC/C vs L, norm_eq_absNorm_zpow + generalNormalizedNormFormula + WithZero.log/unzero + rpow_mul). mainline/hull implement; then final noS45. gate 20.235 written.
 
 - 18:20: noS45 wrapper GREEN 07:13:53 (conditional hbridge). New bridge files QVFamNormBridgeValue/Donor pending no olean. mainline build; then final noS45 integration. gate 20.236 written.
+
+- 18:30: hbridge exact errors documented (:45 instance, :50 Multiplicative, :51 Valued, :58 rw target, :43/:48 imports; d abbrev). mainline/hull fixing. wrapper conditional green. gate 20.237 written.

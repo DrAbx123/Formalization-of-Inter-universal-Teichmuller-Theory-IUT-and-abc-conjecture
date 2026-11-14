@@ -1974,3 +1974,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.236 New hbridge files pending; noS45 wrapper GREEN (2026-11-16 12:20)
 - Mzk1RouteAFinalNoS45WrapperActual DONE 07:13:53 (95s): finalPaperNormalizedComparison_noS45_of_norm_bridge (pointwise hbridge -> ratio>=1 -> RouteA), conditional on hbridge.
 - New bridge files Mzk1QVFamNormBridgeValueActual (src 15:18:21) and Mzk1P0QVFamNormBridgeDonorActual (15:20:27): no olean yet; build/report. If hbridge green, wrapper gives final noS45, integrate final.
+
+
+### 20.237 hbridge exact errors (hull, 2026-11-16 12:30)
+- Mainline Mzk1P0QVFamNormBridgeDonorActual FAIL 07:17:47: :45 unknown NumberField.FinitePlace.instNormedFieldValuedAdicCompletion; :50 Multivariable.toAdd -> Multiplicative.toAdd; :51 Valued (NormalizedCompletion place) synth fail; :58 rw [hnorm] target already RHS; :43 qVFamily / :48 qNorm_lt_one unknown (missing import/open). d abbrev vs relativeCompletionDegree needs dsimp/change.
+- Hull value-level: d simpa not unfolding both; change qVFamDefaultNorm before rw. Conditional ratio>=1 and wrapper GREEN; hbridge unconditional still blocked on d/norm instance/toC. No fake; S45 not used.
