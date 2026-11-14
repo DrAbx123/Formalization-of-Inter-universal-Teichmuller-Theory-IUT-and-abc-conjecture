@@ -2686,3 +2686,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Under same-q/place identification qVFamDefaultNorm=||baseQ.q||, donor power gives c_norm*log p = -(1/d)log n_def = baseQLogMagnitude/d <= baseQLogMagnitude (d>=1), strict if d>1/log>0. Thus actualQ<=M, NOT equality; equality S45-like false d>1.
 - Correct R1: actualQ<=M => -M<=-actualQ=Q_norm. R1 holds if P.signedQPilotLogVolume=-M (C3 readout=native base signed scalar), still no repo bridge. No normRatio=1 needed.
 - Mainline wrote conditional qVFamCoefficient_mul_log_le_baseQLogMagnitude and actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q; compile pending. Floor side only min(hullLog,-1)=-M, not aggregation equality. No fake.
+
+
+### 20.354 Audit: ObjectLockData regression/KernelBridge red/P2 missing (abc, 2026-11-17 10:50)
+- ObjectLockData current src 21:05:43 > olean 20:53:43; FAIL 13:03:32 line125 HSMul Gal (Ideal ...) synthInstanceFailed -> red; stage4 to restore last green or fix explicit letI.
+- KernelBridge FAIL 13:02:43 no olean; kernelToAQuotient_ker failed -> auto sorryAx; stepxi fix/remove.
+- FloorNativeObstruction FAIL 13:03:29 pending.
+- P2Bridge no source/log; hull to create.
+- Fresh GREEN: TruncatedUnitsPrimary 20:42:21 (unconditional, probes standard); TruncatedUnitsCount 20:31:15; KernelIntegers 20:36:26; ValuationData 20:30:12; N5FloorBridge 20:26:21; FloorNativeHull 20:47:20; HCor312Floor 20:15:21; SharedQPilot 20:08:55; ActualHull chain Proof 20:05:18 -> Bridge 20:06:50 -> ActualHull 20:15:24 -> probe 20:21:35; CorrectedExtraction defs probe 20:08:08; Odd 19:55:06.

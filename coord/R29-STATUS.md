@@ -2535,3 +2535,5 @@
 - 16:10: KernelBridge RED sorryAx (kernelToAQuotient_ker); P2 no log; obstruction pending. stepxi fix, hull p2, qpilot obstruction. gate 20.352 written.
 
 - 16:20: R1 direction corrected: actualQ<=M under same-q identification (strict d>1), equality false/S45-like. R1 needs P.signed=-M (still missing). Conditional lemmas pending. qpilot floor only min=-M. gate 20.353 written.
+
+- 16:30: audit: ObjectLockData regression HSMul line125, KernelBridge red sorryAx, P2 missing, FloorObstruction pending. Fresh greens: #C primary/count, KernelIntegers, ValuationData, Floor/HC312, SharedQPilot, ActualHull chain. stage4 restore/fix, stepxi fix, hull create p2. gate 20.354 written.
