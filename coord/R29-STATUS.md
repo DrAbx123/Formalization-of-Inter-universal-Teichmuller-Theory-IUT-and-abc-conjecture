@@ -2953,3 +2953,5 @@
 - 27:00: SG3b tensor product structural gap; mainline inspect Basis.piTensorProduct/decomposition. gate 20.562 written.
 
 - 27:10: PrincipalUnitsResidue Valued.v NNReal/valuationSubring bridge; qpilot. gate 20.563 written.
+
+- 27:20: norm lemma name Valued.toNormedField.norm_lt_one_iff; qpilot. gate 20.564 written.

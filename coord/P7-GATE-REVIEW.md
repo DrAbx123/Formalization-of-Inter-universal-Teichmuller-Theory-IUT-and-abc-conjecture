@@ -3748,3 +3748,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.563 PrincipalUnitsResidue use Valued.v: Valuation K NNReal (2026-11-15 24:10)
 - open scoped NormedField gives NormedField.toValued : Valued K ℝ≥0; Valued.v : Valuation K ℝ≥0. norm bridge `||x||<1 ↔ Valued.v x<1` via Valued.NormedValued.norm_lt_one_iff (NNReal). Subgroup: `(Valued.v).valuationSubring` principalUnitGroup; bridge (Integers K)^x to valuationSubring.unitGroup by same carrier/units congr. qpilot. No fake.
+
+
+### 20.564 norm lemma name Valued.toNormedField.norm_lt_one_iff (2026-11-15 24:20)
+- NormedValued.lean:245 lemma is Valued.toNormedField.norm_lt_one_iff, not Valued.NormedValued. qpilot fix name. No fake.
