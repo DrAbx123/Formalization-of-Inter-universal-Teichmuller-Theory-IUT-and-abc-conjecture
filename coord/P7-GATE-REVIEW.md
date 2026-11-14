@@ -2562,3 +2562,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1CongruenceUnitsEquivOddActual GREEN 19:55:06: congruenceUnits_equiv_primary_odd (residue field) + primary_odd_quot (O/(p)); no source sorry; p odd only. p=2 still needs (4)-norm criterion.
 - Fresh probes: target magnitude 19:55:57/19:55:53, N5HCor312Probe 19:55:53; corrected probes pending.
 - Still no olean: TruncatedUnitsCount, Floor, SharedQPilot, KernelIntegers; retouched/report.
+
+
+### 20.331 p=2 gap route; Floor open fix (2026-11-17 07:00)
+- p=2: logShellScale 2=4=2^2, (4)=m^{2eK}; cannot use irreducible-p norm lemma. Need mem_span_logShellScale_iff_norm_le / mem_span_four_iff_norm_le. Route via Ideal.mem_span_singleton, IsDiscreteValuationRing.addVal_le_iff_dvd, addVal_pow, addVal_prime_eq_ramificationExponent (IntegralTraceDualTensorInclusion:708-737); addVal(4)=2*eK. Need norm<->addVal bridge for Integers K; no general donor found. Combine primary N=eK*s (s=2) and kernel 1+4O. shehdd tasked; no fake.
+- Floor: open MeasureTheory MeasureTheory.Measure fixed; retouched.
