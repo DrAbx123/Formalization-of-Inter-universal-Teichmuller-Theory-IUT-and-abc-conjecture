@@ -841,3 +841,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **stepxi**：UnitQuotient/LogLattice clean；实际 `TimesMuQuotient` 识别 + β_a。
 - **qpilot/shehdd/lattice**：各自 pending 编译与下一步。
 - 纪律：条件实现优先，但不得把条件当已证；不能实现就写精确 donor gap。
+
+
+### 20.62 GREEN：Ind1 UnitQuotient 定义文件（stepxi，2026-11-15 02:50）
+- **`Mzk1Ind1UnitQuotientActual` DONE 00:49:19（55s）**：源只剩
+  `unitLogQuotientEquivOfMulEquiv (β : ((Integers K)ˣ/tors) ≃* ((Integers L)ˣ/tors))`
+  `: (unitLogHom K).range ≃* (unitLogHom L).range`；无 sorry；旧 log 的 `sorryAx` 是旧 run。
+- **待补 axiom probe**：对 `unitLogQuotientEquivOfMulEquiv` `#print axioms` 确认三公理；`Mzk1Ind1LogLatticeActionActual` 仅 structure（`SinglePlaceLogLatticeAction`，无 sorry），等编。
+- 唯一源缺口仍为实际 `TimesMuQuotient ((F.Mon v)ˣ) ≃* (Integers F)ˣ/tors` 识别 + actual source action 导出 β_a。
