@@ -3438,3 +3438,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.496 Ramified actual family p-defeq obstacle (hull, 2026-11-15 14:00)
 - Donors: fintype_fullPrimePlaces : Fintype (FinitePlaceAtPrime K p); FinitePlaceAtPrime.place; CommonPrimeCompletion instances. Proposed ofAtPrime K:=CommonPrimeCompletion place.
 - First obstacle: predicates use (d.places i).p = fixed p but logShellResidueCard_eq_prime_pow/index_decomp need completionRationalPrime place.val; only propositional equality. Fix define ofAtPrime p := (completionRationalPrime place.val).val (definitional), or cases place.property subst. hcoef explicit input. No fake.
+
+
+### 20.497 IsScalarTower base cast abandon congrArg (stage4, 2026-11-15 14:10)
+- congrArg PadicScalarField hprime fails (implicit K differs lower F/upper K); congrArg (fun n=>Qp_n) loses Fact prime. Base-field transport blocker, not donor. Fix: work entirely with CommonPrimeCompletion relativePlace/kPlaceAtPrime (same p) and relativeNormalizedCompletionScalarTower/Finite; then change actual adicCompletion goal if defeq or transport final degree. adicAbv pending. No fake.

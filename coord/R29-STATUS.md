@@ -2819,3 +2819,5 @@
 - 15:50: Ramified actual instance constructible except HasCoeff; use FinitePlaceAtPrime fintype donor; hcoef explicit input. hull. gate 20.495 written.
 
 - 16:00: Ramified actual family p-defeq obstacle; use completionRationalPrime in ofAtPrime or subst place.property. hull. gate 20.496 written.
+
+- 16:10: IsScalarTower abandon congrArg; use CommonPrimeCompletion tower directly then change. stage4. gate 20.497 written.
