@@ -2947,3 +2947,5 @@
 - 26:30: ActualData olean 05:41:21 with actual_paper312. abc audit; hull hq/hθ. gate 20.559 written.
 
 - 26:40: PrincipalUnitsResidue Valued.v ascription; hq/hθ inspect Haar product/readout definitions. gate 20.560 written.
+
+- 26:50: SG3b product-Haar missing; hull construct Measure.pi/IsAddHaar/scalar/product log. gate 20.561 written.

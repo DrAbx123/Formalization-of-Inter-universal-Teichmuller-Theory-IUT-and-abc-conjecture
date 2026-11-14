@@ -3736,3 +3736,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.560 Valued.v type ascription; hq/hθ gaps (2026-11-15 23:40)
 - PrincipalUnitsResidue: `(Valued.v (K:=K))` invalid named arg (DFunLike.coe); use `(Valued.v : Valuation K (WithZero (Multiplicative ℤ)))` then .integer; norm bridge Valued.v x.
 - hq/hθ: qPilotLogVolumeReading vs -A and thetaPilotHullLogVolumeReal vs sum logIdx+diff-sFactor*A missing. hull inspect actualC3LogShellTensorHaar/product Haar and qPilotLogVolumeReading definitions; report exact lemma/missing. No fake.
+
+
+### 20.561 SG3b product-Haar missing; construct Measure.pi route (2026-11-15 23:50)
+- Repo documents SG3b tensor-Haar product formula missing (Mzk1C3BlockPerPlaceActual:15/193; H5GapStatement SG3b). actualC3LogShellTensorHaar = Measure.addHaar arbitrary. Route: product measure Measure.pi of local addHaar, prove IsAddHaarMeasure, relate to Measure.addHaar by scalar (uniqueness), log volume of product region = sum local logs; then place terms -> actualLogIdx/diff. hull. No fake.
