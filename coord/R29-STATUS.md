@@ -2459,3 +2459,5 @@
 - 09:40: Ind1 v donor: use CompletionPlaceCoherentValuationActual Valued.v with WithZero(Multiplicative Z), not NormedField.valuation ℝ≥0; abstract F carries actual Valued instance. Norm-one units bridge separate. gate 20.314 written.
 
 - 09:50: sign fixed Dictionary 19:15:17; ObjectLockData corrected 19:14:35 (independent dBase/e/n/mRoot, relative mass, no negative). Assembly 19:14:37 predates Dictionary -> rebuild/probe. task-129 completed. gate 20.315 written.
+
+- 10:00: stage4 tower Galois concrete route suggested: FinitePlace action v.comp σ or HeightOneSpectrum; MulSemiringAction via RingOfIntegers.mapAlgEquiv; completionMap; finrank_mul_finrank. UnitMass same-dim transport missing. gate 20.316 written.

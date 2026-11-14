@@ -2471,3 +2471,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Stage4 corrected ObjectLockData GREEN 19:14:35: TrueTowerDataSource independent factors dBase,e,n,mRoot with rootBase=e*dBase, kPlace=n*dBase, s1915=mRoot*e*dBase; no m*dL=n*dF. mainline_lock_implies_extra_relation; KCompletionOverFSource (mK) -> RelativeFactorTowerData; ObjectLockRelativeMassDataSource dimension-normalized; ObjectLockThetaSignedDataSource theta_signed no negative + theta_nonneg; legacy negative obsolete.
 - BUT Assembly olean 19:14:37 earlier than Dictionary 19:15:17 -> rebuild Assembly after Dictionary and rerun probes before clean acceptance.
 - Stage4 next: actual F-place Galois action/alignment (Mathlib Ideal.exists_smul_eq_of_isGaloisGroup/isPretransitive_of_isGaloisGroup on primesOver + bridge to FinitePlace), completion embedding F_v->K_w and kPlace=mK*rootBase; unitMass same-dim relative mass.
+
+
+### 20.316 Tower Galois action concrete API route (2026-11-17 04:30)
+- stage4 missing: no MulSemiringAction (F≃ₐ[Fmod]F)(𝓞 F); no FinitePlace Galois action/maxIdeal(σ•v); no primesOver->FinitePlace bridge; no local IsGaloisGroup; degree tower IsScalarTower/finrank_mul_finrank missing (KCompletionOverFSourceGap).
+- Suggested: define action on FinitePlace F by MulRingNorm composition v ↦ v.comp σ, prove IsFinitePlace; or via HeightOneSpectrum.mk/maximalIdeal; build MulSemiringAction via RingOfIntegers.mapAlgEquiv; use Ideal.exists_smul_eq_of_isGaloisGroup/isPretransitive on primesOver after bridge or prove transitivity for absolute values; completionMap for embedding; finrank_mul_finrank for degree.
+- UnitMass same-dim transport/reference object missing; different dims extended ideals+normalized volume.
