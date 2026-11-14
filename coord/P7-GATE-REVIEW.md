@@ -3427,3 +3427,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.494 MAJOR RamifiedPlaceData fresh GREEN (2026-11-15 13:40)
 - Mzk1RamifiedPlaceDataActual DONE 19:38:48/olean 03:38:47: structure explicit iota; HasCorrection/HasLogIdx/HasCoeff/HasRes; perPlace_bounds_of_data. PrincipalDimActual DONE 19:38:06/olean 03:38:05. QpDecomp 03:13:28.
 - Next hull actual family/discharge HasX via index_decomp/res; qpilot hdecomp/hnorm/hchar/hact/floor; mainline cocycle/groups; stepxi ZpLattice; abc audit. No fake.
+
+
+### 20.495 RamifiedPlaceData actual instance plan/coefficient gap (hull, 2026-11-15 13:50)
+- Constructible given ι [Fintype ι] place : ι → FinitePlace F: places:=ofPlace; fn/hres via choose logShellResidueCard_eq_prime_pow; aExp/cCorr/HasCorrection via choose index_decomp_with_correction after hdecomp from logShellCongruenceQuotient/QFE; logIdx rfl; logp; logMu/diff.
+- Exact first missing: HasCoeff CoeffComparison (fn i)(Fdeg i) l (aExp i) actual arithmetic; no place-indexed residue degree/CoeffComparison connection. Also finite fiber Fintype and e_v/r/n parameter connection.
+- Donors for fiber: FinitePlaceFullPrimePacket.fintype_fullPrimePlaces : Fintype (FinitePlaceAtPrime K p); FinitePlaceCompletionDegreeGlobal.placesAboveFintype/upperPlaceFiberFintype. Hull build with hcoef explicit input; no fake.
