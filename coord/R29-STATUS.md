@@ -2677,3 +2677,5 @@
 - 04:00: TorsionSplit watchdog log stale; mainline direct compile for exact first error. hull no fake. gate 20.423 written.
 
 - 04:10: Galois isometry probe unknown galoisPlaceMk (namespace); qualify/open then test norm equality. degree IsScalarTower pending. gate 20.424 written.
+
+- 04:20: TorsionSplit direct compile only :35 ¬p∣T0 error; hull fix. Mainline C3BaseQ linarith fix. gate 20.425 written.

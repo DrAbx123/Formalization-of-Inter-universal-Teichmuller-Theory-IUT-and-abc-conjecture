@@ -3069,3 +3069,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.424 Galois norm-equality probe name resolution (stage4, 2026-11-15 01:50)
 - ProbeGaloisIsometryActual: Unknown identifier galoisPlaceMk despite import/opens; identifier exists in ObjectLockData source/olean -> probe resolution issue. Stage4 to fully qualify LeanFormal.IUT.XiFPaper.Mzk1ObjectLockDataActual.galoisPlaceMk or open namespace and #check. Then rw [galoisPlaceMk]/FinitePlace.mk_apply; if not definitional prove |sigma x|_{sigma v}=|x|_v via maximalIdeal map/adic norm; then Isometry->Completion.mapRingHom. Degree tower IsScalarTower pending. No fake.
+
+
+### 20.425 TorsionSplit direct compile exact error :35; C3BaseQ linarith (2026-11-15 02:00)
+- Direct lake env lean Mzk1TorsionSplitActual: exit 1, single error :35:6 Type mismatch: Nat.Prime.ne_one hp h1 has type False but expected ¬p ∣ T0. Old watchdog lines stale. Hull to fix line35 with actual ¬p∣T0 proof/remove branch.
+- Mainline C3BaseQIdentificationActual :95 linarith failure: target -baseQ/n=-M, gsc.global_eq M=baseQ/n; fix neg_div + congrArg Neg.neg. Report green.
