@@ -3981,3 +3981,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.619 Algebraic hlog.trans parse (2026-11-15 33:30)
 - hlog.trans horder.symm misparsed as function application to unitLog; use rw [hlog]; exact horder.symm or Iff.trans hlog horder.symm. qpilot. No fake.
+
+
+### 20.620 Algebraic Iff.trans instance mismatch (2026-11-15 33:40)
+- rw hlog fails instance mismatch; use exact Iff.trans hlog horder.symm or explicit mp/mpr composition. qpilot. No fake.

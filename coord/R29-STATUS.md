@@ -3065,3 +3065,5 @@
 - 36:20: core redefinition green olean 07:32:38; AlgebraicUnitLogarithm implicit rw fix. gate 20.618 written.
 
 - 36:30: Algebraic hlog.trans parse fix; qpilot. gate 20.619 written.
+
+- 36:40: Algebraic Iff.trans fix; qpilot. gate 20.620 written.
