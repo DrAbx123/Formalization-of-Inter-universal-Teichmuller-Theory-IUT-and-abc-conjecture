@@ -2383,3 +2383,5 @@
 - 02:40: clean acceptance chain verified. Assigned next hard gaps: mainline target reading bridge; hull #C B/L-side; qpilot IV Thm110; lattice IV statements; abc audit; stepxi provenance. gate 20.278 written.
 
 - 02:50: target reading bridge explicit source gap: PaperQPilotObjectActual has no unconditional inhabitant; conditional needs NativeC1PaperSource+SourcePilotRegionDonors+oneColumn; QPilotReadingAlignment no olean; PObjectObstruction red. Clean acceptance does not close it. gate 20.279 written.
+
+- 03:00 CRITICAL: target bridge sign barrier; paper comparison weaker than actual target for d>1; S45-free does not imply qPilot reading target. mainline/hull attack direct actual-target inequality or margin; flagged model not silent. Target bridge still S45/d=1. gate 20.280 written.

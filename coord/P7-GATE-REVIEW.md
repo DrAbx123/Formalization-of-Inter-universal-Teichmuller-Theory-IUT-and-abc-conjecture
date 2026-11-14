@@ -2247,3 +2247,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Target reading bridge gap open: Mzk1S3137ReadoutBridgeActual green 11-11; qPilot readout parameterized by P : PaperQPilotObjectActual I; qPilotReadoutInhabitationGap says inhabitant = paper source obligation. A716 Theorem311Source.PaperQPilotObject (constructor) vs N8Closure.PaperQPilotObjectActual (no unconditional inhabitant) not bridged.
 - Conditional inhabitant Mzk1PaperQPilotActualInhabitantOfPacketActual needs NativeC1PaperSource + SourcePilotRegionDonors + oneColumn (non-unconditional); Mzk1QPilotReadingAlignmentActual no olean. Old C3 no-go sourcePilotRegionData_isEmpty but Mzk1P0S3137PObjectObstructionActual FAIL 09:46:42/no olean -> no-go evidence not recompiled this revision.
 - Conclusion: target reading bridge remains explicit source gap; clean acceptance neither depends on nor closes it. No fake.
+
+
+### 20.280 CRITICAL target bridge sign barrier: S45-free paper comparison does not imply actual target (stage4, 2026-11-16 20:00)
+- BadPlacePaperNormalizedTargetBridgeActual: paperQ = actualQ + normRatioCorrectionSum; paperTheta = s13Theta + halfNormRatioCorrectionSum; half=norm/(2l). paperTheta<=paperQ <-> s13Theta<=actualQ+(norm-half). actualTargetMagnitude_of_paperComparison needs hcorr norm<=half, i.e. norm<=0, i.e. pointwise ratio<=1.
+- Donor gives ratio>=1; hcorr forces ratio=1 (S45/local degree one). Sign opposite to Route A: paper comparison is weaker than actual target for d>1; S45-free does not remove S45 from actual magnitude target.
+- Alternatives: (1) S45/ratio=1 or all local degree one; (2) flagged model route actualPaperXiFTargetMagnitude_actual depends on PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog (model c_norm/(2l), P7-flagged); (3) new direct actual-target inequality for d>1.
+- Assigned mainline/hull attack direct actual inequality/margin; no flagged model silently. Target bridge still S45/d=1.
