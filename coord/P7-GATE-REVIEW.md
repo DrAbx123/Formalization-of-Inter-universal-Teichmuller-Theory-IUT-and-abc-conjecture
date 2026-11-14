@@ -1002,3 +1002,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - LQThetaSourceArrow empty for theta>=0 (obstruction GREEN 01:08:02); use LPaperInstance_of_theta_nonneg, not arrow.
 - Mzk1P0LNormReadoutActual/ProductActual currently no olean; in WL; canonical theorems not yet official; do not claim GREEN.
 - Axiom probe 7 theorems: three axioms, no sorryAx.
+
+
+### 20.82 AUDIT: hobj in LNormComparison conditional is unused/vacuous (abc, 2026-11-15 05:55)
+- `LNormComparisonTarget_of_bounds`, `_of_local_bound`, `LPaperInstance_of_bounds` have `hobj : LGlobalLocalObjectLock` but proofs never consume it; it is only passed through.
+- `LGlobalLocalObjectLock` fields are just `bad_set_finite : Fintype Bad`, `single_place : Prop`, `local_eq_global_restriction : single_place`; no T.arithmetic<->I.arithmetic, no Bad<->tensorIndex map; it is a named placeholder, not a lock.
+- Real logical conditions are `hlock` (local normalized = global product; strong unproved equality), `hbound` (numeric inequality), `hlog` (return to raw target); `hobj` vacuous; `unitMass=1` unused.
+- Fix: remove hobj or strengthen to actual fields and use them (`arithmetic_eq`, `bad_index_equiv`, `local_readout_eq`); if fields cannot be typed, keep explicit GAP but do not include unused parameters in proved theorems.

@@ -1945,3 +1945,5 @@
 - 12:55: stepxi Mzk1Ind1IntegralUnitMapActual (queue): (Integers K)^x ->* (AlgebraicClosure K)^x via Units.map algebraMap, injective; natural one-way map, not iso. LocalMon pending; WF probe three axioms confirmed. Only source gap remains actual Ind1/Ind2 action -> beta_a.
 
 - 13:00: hull L normalized readout audit complete (coord/L-NORMALIZED-READOUT-AUDIT.md): raw thetaRead noncanonical; thetaNormReadL/thetaNormReadProduct canonical; thetaNormReadProduct=sum d log r=closedForm-1=coeff form; qRead canonical; unique gap LGlobalLocalObjectLock (local tensor vs global Bad); arrow empty theta>=0; LNormReadout files pending olean, not official. gate 20.81 written.
+
+- 13:05: abc audit: LNormComparison conditional hobj unused/vacuous; LGlobalLocalObjectLock is placeholder (no T<->I, Bad<->tensorIndex map). Told mainline remove hobj or strengthen to actual fields and consume projections; no fake lock. gate 20.82 written.
