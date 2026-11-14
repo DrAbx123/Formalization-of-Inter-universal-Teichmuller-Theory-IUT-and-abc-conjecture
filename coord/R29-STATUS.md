@@ -1865,3 +1865,5 @@
 - 08:50：A1.6 核对：`Mzk1A1QhatSaturationReadoutActual.qVFamily_mem_saturatedLattice` 仍带显式参数 `aval/bval/m/e/he/hram/hLambda`（`hLambda: lambdaLattice=principalLattice bval m`、`hram: bval(ιx)=e·aval x`）。已让 stage4 明确这两条能否从实际 source 定义证明；否则 A1.6 标 conditional，不得说 unconditional closed。gate §20.49 已写。
 
 - 08:55：stage4 确认 A1.6 最终定位 **conditional**：`inverseLambdaLattice_eq_saturated_actual`/`qVFamily_mem_saturatedLattice` 以 `hLambda`（principal-lattice recognition）+ `hram`（ramification identity）为输入；未构造 aval/bval/m、未证 hram。无条件 green 部分：signedReadout_eq_log_radius_sub_delta、mem_*_iff/inverseLambdaLattice_eq_normBall、product signed readout、inverseLambdaLattice_eq_inverseLattice。gate §20.50 已写。
+
+- 09:00：triage 六个 pending 首错并派修法：C17 `:47` quotientMap apply 展开；RootRadius `:60` unfold rootNormedLogVolume/change；PaperSums `:90` 补 `Mzk1RouteC0RootQLatticeActual`；Gamma `:36` 先 `nsmul_eq_mul` 再 zpow；BoxDistinguished `:31` 显式 `ord (K:=K)`；ContinuousAdd `:54` 先 `dist_eq_norm` 再 `pi_norm_lt_iff`；均要求去 sorryAx。
