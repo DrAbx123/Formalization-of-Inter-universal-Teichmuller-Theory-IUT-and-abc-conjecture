@@ -3744,3 +3744,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.562 SG3b tensor product structural gap (2026-11-15 24:00)
 - FinitePadicTensor = ⨂[Qp] i, M i (PiTensorProduct), not pi; actualC3LogShellTensorHaar=addHaar arbitrary. Mathlib Basis.piTensorProduct exists but gives basis coordinates, not product-of-fields decomposition. Need product algebra/measure decomposition or prove non-product; mainline inspect exact obstruction/route. hq/hθ gaps. No fake.
+
+
+### 20.563 PrincipalUnitsResidue use Valued.v: Valuation K NNReal (2026-11-15 24:10)
+- open scoped NormedField gives NormedField.toValued : Valued K ℝ≥0; Valued.v : Valuation K ℝ≥0. norm bridge `||x||<1 ↔ Valued.v x<1` via Valued.NormedValued.norm_lt_one_iff (NNReal). Subgroup: `(Valued.v).valuationSubring` principalUnitGroup; bridge (Integers K)^x to valuationSubring.unitGroup by same carrier/units congr. qpilot. No fake.

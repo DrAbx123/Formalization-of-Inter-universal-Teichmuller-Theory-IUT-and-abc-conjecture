@@ -2951,3 +2951,5 @@
 - 26:50: SG3b product-Haar missing; hull construct Measure.pi/IsAddHaar/scalar/product log. gate 20.561 written.
 
 - 27:00: SG3b tensor product structural gap; mainline inspect Basis.piTensorProduct/decomposition. gate 20.562 written.
+
+- 27:10: PrincipalUnitsResidue Valued.v NNReal/valuationSubring bridge; qpilot. gate 20.563 written.
