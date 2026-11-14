@@ -2715,3 +2715,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1ActualReadingTargetActual DONE 13:09:10: qVFamCoefficient_mul_log_le_baseQLogMagnitude (hsame-q) and actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q; direction actualQ<=M, no equality. Probe 7 items pending.
 - same-q exact missing: (a) qVFamTensorPlace= nativeBaseSectionPlace/bad F-place lift; (b) qVFamily T b = baseQ T b=nativeBaseQFamily T b same Tate parameter; (c) same Completion instance/canonical carrier. None in repo.
 - P.signed=-M exact missing: P.line.C3 place/lift correspondence to native base family; P.line.C3.q.q norm vs base q norm same q witness; global sum vs single place. No theorem. R1 remains explicit QSourceLeQNorm condition. No fake.
+
+
+### 20.359 Audit restored greens; HullUnitZero identifier fix (2026-11-17 11:40)
+- Fresh GREEN: FloorNativeObstruction 21:09:06 (probes 21:14:03 standard); ObjectLockData 21:09:06 (sign correct theta_signed=thetaNormReadProduct no minus + theta_nonneg; probes standard); ActualReadingTarget 21:09:09 (conditional aggregation/R1 core; probes standard). No actual sorry.
+- RED: HullUnitZero FAIL 13:13:24 unknown arithmeticTupleIQHullUnitRegionHaarLog; definition exists at LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullSignedLogVolume.lean:43 (arithmeticTupleIQHullUnitRegionHaarLog), so missing import; qpilot to import/rewrite explicit. KernelBridge still RED 13:02:43 no olean; P2Bridge no source/log.
