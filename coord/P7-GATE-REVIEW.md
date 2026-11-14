@@ -1023,3 +1023,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **Mzk1P2QHatNormCoherenceProofActual DONE 01:13:14**: qHatNormCoherence_proved; p2QHatNormInstanceAgreement_proved. QHatNormCoherence UNCONDITIONALLY CLOSED; bridge drops QHat (S45 / RootBase / A1Data + reading bridge). Need axiom probe.
 - **IutIVProp14GammaPGroupActual DONE 01:12:27**: integralLogShell_pow_smul_mem_integers, isPGroup_logShellIntegerQuotient, card_gamma_eq_pow_actual; need axiom probe; then actual h/torsion.
 - **Mzk1RootBaseCompletionGapActual DONE 01:13:12 is NEGATIVE**: rootBaseDegreeIdentity_false_of_relativeDegree: if K_w/F_v relative factor B>1 and tower C=B*A, naive identity rootBaseQpDegree=kPlaceQpDegree is FALSE; rootBaseDegreeIdentity_forces_relativeFactor_one. Do NOT treat RootBaseCompletionGap/degree identity as constructible; weight conversion needs explicit per-b factor B or corrected weight convention. Bridge RootBase item must change to relative-factor/tower equation, not identity.
+
+
+### 20.85 QHat/Gamma GREEN; bridge updated; RelativeFactorTowerData caveat (2026-11-15 06:30)
+- QHatNormCoherenceProof GREEN 01:13:14; QHat unconditionally closed; new QHat axiom probe queued.
+- GammaPGroup GREEN 01:12:27; shehdd probe queued; actual h sent to lattice.
+- bridge rewired: QHat removed; RootBaseCompletionGap replaced by `RelativeFactorTowerData : Prop := forall b, exists A B C, 0<A /\ rootBaseQpDegree=A /\ kPlaceQpDegree=C /\ C=B*A`. This is explicit per-b relative factor B, not degree identity. CAVEAT: this is only existence/divisibility (A|C), not an actual field tower (F_v may not embed in K_w); do not call it constructed tower; if used as condition, label as explicit condition, and check whether it is true/derivable. S45SourceFields / PaperToS3137A1Data / PaperS3137ReadingDictionary remain.
+- Final S3137 conditional signature to use these explicit items; no unitMass=1; old raw S3137 vacuous only record.
