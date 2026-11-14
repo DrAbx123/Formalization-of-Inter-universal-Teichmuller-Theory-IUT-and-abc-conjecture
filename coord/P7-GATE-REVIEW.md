@@ -3551,3 +3551,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.520 URGENT WQuotient finrank theorem sorryAx (2026-11-15 18:00)
 - Direct compile WQuotient src 04:27:39: :25 Module Q_[5] completionField synth fail; completionField_finrank_eq_one depends sorryAx; Required three axioms. Fix explicit Algebra/Module instance or DELETE theorem; keep d=1 structure. stepxi. No fake.
+
+
+### 20.521 ActualData reorder GREEN; Assembly/AdicAbv direct errors (2026-11-15 18:10)
+- Direct ActualRamifiedData src 04:29:44 EXIT=0 after reorder. Retouch; next HasCorrection/HasLogIdx/HasRes.
+- Assembly direct only :44 hchar_principalDimUnit call order (k)(u)(μ), current places tuple μ k u; fix. Then green likely.
+- AdicAbv direct: :22 unknown namespace LeanFormal.IUT (remove open; use Iut.valuation_of_comap); :58 rw comap; :62 change; :60 arg mismatch. mainline.
