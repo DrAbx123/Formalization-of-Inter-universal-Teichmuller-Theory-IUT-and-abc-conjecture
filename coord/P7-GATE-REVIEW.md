@@ -2416,3 +2416,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.306 USER CORRECTION: signed log-volume notation; unitMass relative-region route (2026-11-17 02:50)
 - Cor 3.12 uses -|log Θ| as notation for signed log-volume; proof handles nonnegative case separately. Cannot interpret as globally nonpositive -abs, nor add negative sign between two signed readings. theta_sign requiring thetaNormReadL=-thetaNormReadProduct remains an extra convention, not derivable from raw signed volumes. mainline/stage4/abc warned.
 - unitMass feasible direction: compare region mass relative to reference lattice using NormalizedHaarTransport.relative_log_mass_image_eq (LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean:39); cancels Haar scalar factor. For different-dimensional root field vs completion, compare extended ideals and dimension-normalized volume, not target Haar on low-dim image. No unitMass=1.
+
+
+### 20.307 Tower divisibility shortcut via Galoisity (user, 2026-11-17 03:00)
+- Project input has F/Fmod Galoisity; Mathlib has transitivity of Galois group on primes above. Move independently chosen F-place under current K-place via Galois, then extend to completion embedding F_v -> K_w. This yields divisibility rootBaseQpDegree | kPlaceQpDegree (RelativeFactorTowerData) without root descent.
+- Root field L_b -> K_w embedding still requires same Tate parameter/torsion/fixed-field proof, not just local relabeling. stage4/mainline/hull updated; no fake.

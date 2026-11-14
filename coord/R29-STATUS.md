@@ -2441,3 +2441,5 @@
 - 08:10 USER CORRECTION tower: rootBaseQpDegree=[F_v:Qp], localCompletionDegree=[K_w:(Fmod)_v], kPlaceQpDegree=[K_w:Qp]; need dBase,e,n,m; m*dL=n*dF and dK=n*rootBaseQpDegree wrong; F/K places only share Fmod. task-129 reopened stage4; hull/mainline warned. gate 20.305 written.
 
 - 08:20 USER CORRECTIONS: -|logΘ| is signed log-volume notation (nonnegative case separate), no extra negative between signed readings. unitMass route: relative_log_mass_image_eq region vs reference lattice; different dims compare extended ideals + dimension-normalized volume, not target Haar on low-dim image. stage4/mainline/abc updated. gate 20.306 written.
+
+- 08:30: tower divisibility shortcut: F/Fmod Galoisity + prime transitivity moves F-place under K-place -> F_v->K_w embedding -> divisibility; root L_b->K_w still Tate/torsion/fixed-field. stage4/mainline/hull updated. gate 20.307 written.
