@@ -3106,3 +3106,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.431 C3BaseQIdentification GREEN conditional structures (mainline, 2026-11-15 03:00)
 - Mzk1C3BaseQIdentificationActual DONE 16:32:35: C3BaseQElementIdentification (n_pos, log_relation ||P.line.C3.q||=-baseQLogMagnitude/n); GlobalSumCollapse (global_eq M=baseQLogMagnitude/n); ClauseBBaseQSourceIdentity (q_element_eq under casts); qPilotC3SignedAggregation_of_identification (id+gsc -> QPilotC3SignedAggregation P.signed=-M). No inhabitant; consumer conditional only.
 - Next mainline probe + attack actual inhabitants/exact missing; abc probe. No fake.
+
+
+### 20.432 C3BaseQ inhabitants exact missing sources (mainline, 2026-11-15 03:10)
+- Probe Mzk1C3BaseQIdentificationAxiomProbeActual DONE 16:37:17 three axioms.
+- (d1) C3BaseQElementIdentification not constructible; first exact missing OrigXiFPaperNativeRoot I := {T : SourceNativeInitialThetaData // T.arithmetic=I.initial.arithmetic} from S1494NativeArithmeticRootActual (no inhabitant). Weaker gaps: C3TensorIndexBadSourceMapActual only Nonempty Fmod ring-equiv; Mzk1RouteBBridge missing Fmod equality/place correspondence. Then C3.place.val=b.1/same q/n norm exponent.
+- (d2) GlobalSumCollapse too strong/false generally (M weighted sum; single-point only vanishing/singleton/weight1). Replace by direct aggregation target QPilotC3SignedAggregation P.signed=-M (or signed=-sum). No collapse source theorem.
+- (c) ClauseBBaseQSourceIdentity: completionMap green; missing clauseB q_comparison parameter (F) vs badPlaceQCandidate (K) same-q source; plus fPlace_lift gap. No bridge.
+- First Lean error expected missing T.arithmetic=I.initial.arithmetic. Mainline next: mark/drop GlobalSumCollapse overstrong, direct aggregation consumer, inspect OrigXiFPaperNativeRoot constructibility. No fake.
