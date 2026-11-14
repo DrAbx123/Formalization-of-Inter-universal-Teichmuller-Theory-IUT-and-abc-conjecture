@@ -2949,3 +2949,5 @@
 - 26:40: PrincipalUnitsResidue Valued.v ascription; hq/hθ inspect Haar product/readout definitions. gate 20.560 written.
 
 - 26:50: SG3b product-Haar missing; hull construct Measure.pi/IsAddHaar/scalar/product log. gate 20.561 written.
+
+- 27:00: SG3b tensor product structural gap; mainline inspect Basis.piTensorProduct/decomposition. gate 20.562 written.

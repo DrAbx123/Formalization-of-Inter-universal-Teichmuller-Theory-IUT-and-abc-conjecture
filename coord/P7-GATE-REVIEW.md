@@ -3740,3 +3740,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.561 SG3b product-Haar missing; construct Measure.pi route (2026-11-15 23:50)
 - Repo documents SG3b tensor-Haar product formula missing (Mzk1C3BlockPerPlaceActual:15/193; H5GapStatement SG3b). actualC3LogShellTensorHaar = Measure.addHaar arbitrary. Route: product measure Measure.pi of local addHaar, prove IsAddHaarMeasure, relate to Measure.addHaar by scalar (uniqueness), log volume of product region = sum local logs; then place terms -> actualLogIdx/diff. hull. No fake.
+
+
+### 20.562 SG3b tensor product structural gap (2026-11-15 24:00)
+- FinitePadicTensor = ⨂[Qp] i, M i (PiTensorProduct), not pi; actualC3LogShellTensorHaar=addHaar arbitrary. Mathlib Basis.piTensorProduct exists but gives basis coordinates, not product-of-fields decomposition. Need product algebra/measure decomposition or prove non-product; mainline inspect exact obstruction/route. hq/hθ gaps. No fake.
