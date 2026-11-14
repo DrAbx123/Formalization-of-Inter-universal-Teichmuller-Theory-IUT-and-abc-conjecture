@@ -1407,3 +1407,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.142 Audit: CongruenceActualGap conditional; VarpiProbe covers box lemma (abc, 2026-11-15 17:30)
 - Mzk1IutIVProp14CongruenceActualGap DONE 03:04:25: no sorry/True/axiom; MissingCongruenceUnitsEquiv, MissingTruncatedUnitsCard, torsion_card_eq_actual_of_missing conditional (he/hc/hs/hq/hcop); no dedicated probe but reuses verified torsion_card_eq_actual_of_unitsEquiv.
 - Mzk1BoxDistinguishedVarpiProbe DONE 01:31:19: source no sorry/True/axiom; probe output covers both packetHull_with_theta_varpi and packetHull_normalizedLogVolume_le_box, both three axioms. Correct earlier note: VarpiAxiomProbeActual had 1 item, but VarpiProbe covers box lemma as well.
+
+
+### 20.143 CRITICAL dependency: PlaceVolumeFinal2 imports broken B5 (hull, 2026-11-15 17:40)
+- Mzk1P1PlaceVolumeFinal2Actual GREEN 11-13 17:40:18 but imports Mzk1B5AssemblyNoHproductAttemptActual, which FAILS 11-14 02:58:38: B5ProductFormulaBridge not a proposition; unknown qPilotDetArithmeticDegree_eq_finiteIndex_add_arch_add_global; unknown PaperOModuleActual.LocalField. B5 olean is stale 11-13 15:21.
+- Therefore Final2 green olean predates dependency red and is NOT currently reproducible; need repair B5 or mark Final2 dependent on broken B5. SignFinal independent (placeLogVolume_nonneg_of_norm_le_one, placeLogVolume_nonpos_of_one_le_norm).
+- Both files grep no True/PUnit/sorry/axiom; no fake target, but reproducibility broken.

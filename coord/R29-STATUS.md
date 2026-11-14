@@ -2081,3 +2081,5 @@
 - 23:20: GREEN CongruenceActualGap 03:04:25 (MissingCongruenceUnitsEquiv/MissingTruncatedUnitsCard/torsion_card_eq_actual_of_missing) and VarpiProbe. ActualHBridge/P14ii pending; final hM/hB pending. Woke lanes. gate 20.141 written.
 
 - 23:30: abc audit CongruenceActualGap conditional (no True/sorry); VarpiProbe covers packetHull_with_theta_varpi + packetHull_normalizedLogVolume_le_box both three axioms. gate 20.142 written.
+
+- 23:40: CRITICAL hull dependency audit: PlaceVolumeFinal2 imports broken Mzk1B5AssemblyNoHproductAttemptActual (FAIL 02:58:38: B5ProductFormulaBridge not prop; unknown qPilot...; unknown PaperOModuleActual.LocalField). Final2 green predates B5 red, not reproducible; SignFinal independent. Ordered B5 repair/mark. gate 20.143 written.
