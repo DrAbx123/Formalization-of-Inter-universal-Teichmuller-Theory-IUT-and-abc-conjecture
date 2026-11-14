@@ -77,3 +77,16 @@
 ### 结论
 - 两文件 canonical 定理内容正确，但当前 **未 official GREEN**；audit 中标为待编译。
 - 不改 mainline；等其 owner 修 import/open 与隐式参数。
+
+## 8. mainline 修复后 tail（只读，2026-11-14）
+
+### `Mzk1P0LNormReadoutProductActual`（仍 FAIL 01:23:01）
+- `:83 unfold thetaNormReadProduct s1915ClosedForm at hnorm ⊢`：
+  `hnorm` 中不一定含 `thetaNormReadProduct`，`at hnorm` 会失败；
+  建议改成 `simp only [thetaNormReadProduct, s1915ClosedForm] at hnorm ⊢`。
+- `:84/:85 Function expected`：`thetaNormReadProduct T` 与 `qVFamNormalizedCoefficient T b`/`qVFamTensorP T b` 为自动隐式，
+  需 `(T := T)`/`(b := b)` 或显式 binder。
+- `:96 rw [Real.log_rpow ...]` 模式不匹配：需先把 `rootNormedElementNorm_eq_p_rpow` 后的表达式 `change` 成 `Real.log ((p:ℝ).rpow e)` 或用 `Real.log_rpow` 的显式等式。
+
+### `Mzk1P0LNormReadoutActual`
+- 01:21:12 START，结果待 watchdog。

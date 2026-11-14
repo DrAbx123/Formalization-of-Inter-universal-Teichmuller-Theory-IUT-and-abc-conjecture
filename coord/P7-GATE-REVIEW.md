@@ -1097,3 +1097,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `Mzk1P0FinalS3137ConditionalActual`: `FinalBridgeConditions.reading` field removed; replaced by comment `PaperS3137ReadingDictionary: EXPLICIT GAP (not defined; no True placeholder)`; rows updated.
 - bridge imports/opens added: BadPlaceRationalDegreeActual (qVFamTensorRationalBaseNorm), QPilotZeroLocusDivisorActual (qVFamily); PaperSourceCorrectionFreeFields via BadPlacePaperTargetStrictActual.
 - No True surrogate; item is undefined explicit GAP; if later needed, add real structure with typeable fields.
+
+
+### 20.95 GREEN: BoxDistinguishedVarpiActual; LNormReadoutProduct tail fixes (2026-11-15 08:55)
+- Mzk1BoxDistinguishedVarpiActual DONE 01:23:01 (110s): `packetHullDataWithVarpi`; `packetHull_with_theta_varpi` puts actual thetaVarpi into PacketHullData.varpi and still gets Box (11): arithmeticTupleNormalizedLogVolume <= (-ord_p thetaVarpi + sum ord delta + 1) log p + sum (3+log e). Uses letI := D.inst; no s1915A0/carrier equivalence.
+- LNormReadoutProduct tail: `:83 unfold ... at hnorm` fails (hnorm lacks thetaNormReadProduct) -> `simp only [thetaNormReadProduct, s1915ClosedForm] at hnorm ⊢`; `:84/:85 Function expected` -> explicit (T:=T)/(b:=b) for thetaNormReadProduct/qVFamNormalizedCoefficient/qVFamTensorP; `:96 Real.log_rpow` -> change to rpow form first. LNormReadoutActual start 01:21:12 pending; autoImplicit I/place and whnf timeout.
