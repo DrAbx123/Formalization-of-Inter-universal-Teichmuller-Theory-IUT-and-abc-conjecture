@@ -1330,3 +1330,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Status: A1Data must NOT be treated as sorry-free verified until current source is recompiled with no sorry warning; axiom probe failed 02:15:26 and must be retouched after recompile.
 - WeightA1AxiomProbe DONE 02:12:40 verified 4 theorems three axioms.
 - final FAIL 02:16:42 due missing Comparison/A1Data olean; source no True; wait retouch after dependencies verified.
+
+
+### 20.131 GREEN: VolumeRatioHaarActual (2026-11-15 15:25)
+- Mzk1IutIVProp14VolumeRatioHaarActual DONE 02:21:02 (101s): volume_ratio_eq_pow_of_haar. Next: GroupCountBridge -> ActualHBridge -> P14ii.
+- A1Data still stale DONE 02:16:59 vs source 02:17:11; no recompile. mainline ordered to retouch/remove stale olean and verify no sorry before final.
