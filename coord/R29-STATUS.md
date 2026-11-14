@@ -2155,3 +2155,5 @@
 - 07:50: lattice diagnosed statement-layer root: DeepStatementLayerV2 :17:61/:18:63 unexpected ';' syntax; consumer fails only missing olean. Assigned minimal syntax fix. gate 20.179 written.
 
 - 08:00: beta route: prove localGaloisUnitsAction preserves integers via integrality (Integers(AlgClosure Qp)=integral closure of Zp; sigma fixes Qp/Zp; integrality preserved both ways), not isometry. Then IntegralUnitStableAlgebraicAction Qp. Assigned stepxi. gate 20.180 written.
+
+- 08:10: Dictionary fresh GREEN/probe confirmed; stale rows :92/:118 need update to CONSTRUCTED; theta_sign sign inconsistency noted; DeepStatementLayerV2 syntax fixed and WL added. mainline to update rows/check sign. gate 20.181 written.

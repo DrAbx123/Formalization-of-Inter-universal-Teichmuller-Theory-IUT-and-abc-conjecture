@@ -1633,3 +1633,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - LocalAbsoluteGalois p = all Qp-algebra automorphisms of AlgebraicClosure Qp; localGaloisUnitsAction is actual unit action.
 - Missing stability lemma localGaloisUnitsAction_preserves_integers should follow from integrality, not continuity: Integers (AlgebraicClosure Qp) is integral closure of Integers Qp; sigma fixes Qp hence fixes Zp=Integers Qp; integral elements map to integral, and sigma.symm too. Use IsIntegralClosure/integralClosure.map/isIntegral_iff.
 - Then construct IntegralUnitStableAlgebraicAction Qp (mapsIntegers/mapsIntegers_symm) -> beta. Assigned stepxi; no fake.
+
+
+### 20.181 Dictionary fresh GREEN; stale rows/sign follow-up (hull/lattice, 2026-11-16 02:10)
+- Dictionary source 04:25:11 < olean 04:29:54 DONE 04:29:55; probe source 04:33:10 < olean 04:36:24 DONE 04:36:25; both three axioms. Binder order fixed (I)(place)(T)[Fintype](hM)(hB)(lock).
+- Stale rows: FinalS3137ConditionalActual:92 and PaperSumsBridgeActual:118 still say PaperS3137ReadingDictionary not defined/EXPLICIT GAP; must update to CONSTRUCTED (substantive lock; sign/unitMass explicit).
+- theta_sign negative vs LNormComparison hlock positive still inconsistent semantically; Dictionary lock is unproved field, no contradiction, but needs check/keep explicit.
+- DeepStatementLayerV2 syntax fixed by lattice (standard newline fields, no Prop/target/proof change); added to WL, waiting compile to unlock StatementLayerConsumer.
