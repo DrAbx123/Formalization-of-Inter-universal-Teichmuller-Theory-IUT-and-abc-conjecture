@@ -3523,3 +3523,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.514 MAJOR ActualRamifiedData hdecomp/chosen GREEN; WQuotient placeholder green (2026-11-15 17:00)
 - Mzk1ActualRamifiedDataActual DONE 20:15:49: actualFn_spec (1<=fn and q=p^fn); hdecompOf (T*index=q^A(q-1)) via quotient card+qfe; chosenA/chosenC via index_decomp_with_correction with actualFn_spec+hdecompOf. Next actualData aExp/cCorr:=chosen; HasCorrection via chosenSpec; HasLogIdx rfl; HasRes spec.2; hcoef explicit.
 - WQuotientLatticeActual failed declarations removed; empty placeholder direct EXIT=0. ZpLattice green unaffected. Rebuild WQuotient only with actual completionField prime or parameterized WQuotient. abc probe. No fake.
+
+
+### 20.515 UnitValuation/ZpLattice/ActualRamifiedData fresh greens (2026-11-15 17:10)
+- UnitValuation DONE 20:14:43/olean 04:14:42; ZpLattice 20:14:52/04:14:52; ActualRamifiedData 20:15:49/04:15:48; PrincipalDimInstantiateProbe 20:15:01. No olean WQuotient placeholder yet.
+- qpilot hact/assemble/floor; hull actualData chosen; stepxi WQuotient specialized; stage4 finrank; mainline adicAbv; abc audit. No fake.
