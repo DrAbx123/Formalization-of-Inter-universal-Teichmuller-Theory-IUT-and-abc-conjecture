@@ -2373,3 +2373,5 @@
 - 01:50: Dictionary probe fresh 09:32:49; StepXI green. Ordering: Assembly 17:22:46 predates Dictionary 17:25:50; rebuild Assembly + rows fix. Clean final acceptance after. gate 20.274 written.
 
 - 02:00: clean rebuild Final/Assembly/Dictionary 09:39:07/08 after Dictionary; ordering fixed. Re-probe fresh; rows check. gate 20.275 written.
+
+- 02:10 FINAL ACCEPTANCE: IUT 3.12 paper inequality S45-free PASS. Final DONE 09:46:51 (uncond finalPaperNormalizedComparison), Assembly 09:46:50 (uncond noS45), Dictionary 09:39:08 (uncond finalDictionaryCombined_noS45 rel/lock). Probes 09:46:47 three axioms incl noS45; donor probe 09:18:57. Strict S45 conditional; full S3137/abc not complete. gate 20.276 written.

@@ -2207,3 +2207,20 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - FinalS3137Conditional, FinalNoS45Assembly, FinalS3137Dictionary all DONE 09:39:07/08, olean 17:39:07/08, after Dictionary 17:25:50 -> ordering clean.
 - Probes at 09:32 predate rebuild; abc to re-run fresh probes for unconditional comparison/Assembly/Dictionary. Rows check mainline.
 - Semantics caveats unchanged: rel/lock/L explicit, unitMass=1 not claimed, strict S45 unproved. No fake.
+
+
+### 20.276 FINAL ACCEPTANCE: IUT 3.12 paper inequality S45-free PASS (2026-11-16 19:10)
+FILES (fresh, src<olean, grep sorry/admit/axiom=0):
+- Mzk1P0FinalS3137ConditionalActual: DONE 09:46:51, src 17:45:00, olean 17:46:50; rows 11. Theorem finalPaperNormalizedComparison : paperNormalizedThetaSum T <= paperNormalizedQPilotSum T, unconditional no S45; direct donor finalPaperNormalizedComparison_noS45. finalPaperNormalizedComparison_strict(S45) retained.
+- Mzk1P0FinalNoS45AssemblyActual: DONE 09:46:50, src 17:45:00, olean 17:46:50; rows 7. normPowerBridge_holds; finalPaperNormalizedComparison_noS45_uncond; finalDictionaryCombined_noS45_uncond(rel)(lock).
+- Mzk1P0FinalS3137DictionaryActual: DONE 09:39:08, src 17:40:54, olean 17:42:56; rows 8. finalDictionaryCombined_noS45(rel)(lock) unconditional comparison via donor; rel/lock explicit.
+PROBES (all three axioms propext/Classical.choice/Quot.sound; logs verified):
+- Mzk1P0FinalS3137AxiomProbeActual DONE 09:46:47: finalPaperNormalizedComparison, _strict, finalLPaperInstance, finalDictionaryCombined_noS45.
+- Mzk1P0FinalS3137DictionaryAxiomProbeActual DONE 09:46:47: finalDictionaryCombined (S), _ofNormBridge (conditional), _noS45 (unconditional).
+- Mzk1P0QVFamNormBridgeDonorAxiomProbeActual DONE 09:18:57: hbridge, ratio>=1, noS45 comparison.
+SEMANTICS:
+- final inequality = PASS (S45-free via Route A correction sign; power relation normalized=default^(1/d), not norm equality).
+- S45SourceFields only strict equality/correction-zero/R2 explicit condition; not used for comparison.
+- RelativeFactorTowerData (divisibility) and PaperS3137ObjectLock (B_b, unitMass, sign explicit data) remain explicit; unitMass=1 not assumed; L side hlock/hbound/hlog explicit.
+- No True/sorry/axiom; residual old all-x four files excluded.
+STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Full S3137/abc not complete; strict equality conditional; #C/provenance still gaps.
