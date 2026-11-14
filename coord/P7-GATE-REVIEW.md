@@ -1691,3 +1691,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - localStableAlgebraicAction sigma : IntegralUnitStableAlgebraicAction K.
 - localActualInd1UnitAction sigma : ActualInd1UnitAction K (algAction=localUnitsAction, beta=MulEquiv.refl, compatible fix.symm).
 - Beta source node closes for any local field K and K-automorphism class (integral quotient action identity). Does NOT cover abstract Ind1/Ind2 arrows not arising from field automorphisms; no overclaim.
+
+
+### 20.191 Final re-GREEN; Dictionary probe fresh; L-side red follow-up (mainline, 2026-11-16 03:50)
+- Mzk1P0FinalS3137ConditionalActual DONE 04:57:23 (107s): rows 10, finalBridgeConditionRows_length=10 fixed; fresh compile no error.
+- Mzk1P0FinalS3137DictionaryAxiomProbeActual DONE 04:57:19 (103s): paperS3137ReadingDictionary_of and finalDictionaryCombined both [propext, Classical.choice, Quot.sound]; fresh vs Dictionary olean; Dictionary DONE 04:57:24.
+- General K beta milestone recorded; beta source closed for any local field K K-automorphism class; not arbitrary Ind1/Ind2 arrows.
+- New red observed: Mzk1P0LNativeLSideBridgeActual FAIL 04:57:23, Mzk1P0LCommonPrimeNormActual FAIL, Mzk1P0LNormCompatActual FAIL 04:57:25; mainline to inspect first errors without touching BSR (subagent owns BSR).
