@@ -2563,3 +2563,5 @@
 - 18:30: unit invariance route via distribHaarChar and compact open lattice preserved by Zp^×; avoids determinant. qpilot implement/report. gate 20.366 written.
 
 - 18:40: first errors HullUnitZero (unfold/linarith) and P2 (synth/type/omega); KernelBridge kernelToAQuotient probe three axioms no sorryAx. gate 20.367 written.
+
+- 18:50: u•O=O blocker; route via integralClosure subring (isIntegral_algebraMap/algebraMap_mem', mul_mem, inverse) then distribHaarChar=1. qpilot. gate 20.368 written.

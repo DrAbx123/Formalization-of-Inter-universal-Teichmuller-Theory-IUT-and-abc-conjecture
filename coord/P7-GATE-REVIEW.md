@@ -2766,3 +2766,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - HullUnitZero log 21:28: :36:63 unsolved; :34:2 linarith failed; :41:6 synth failed; :34:45/:44:45 unfold arithmeticTupleIQHullUnitRegionHaarLog failed; :54:40 type mismatch; :50:63 unsolved. Function is def in FinitePlaceIQHullSignedLogVolume:43; use rw [show ... from rfl]/simp and verify import.
 - P2NormBridge log 21:28: :34:49 synthInstanceFailed; :58:39 type mismatch; :59:36 nonzeroness; :86:25/:49:8 rewrite pattern missing; :56:39 type mismatch; :57:36 nonzeroness; :86:2 omega. Hull to fix/report.
 - KernelBridge probe for kernelToAQuotient: [propext, Classical.choice, Quot.sound] (no sorryAx).
+
+
+### 20.368 u•O=O route; integralClosure donor (2026-11-17 13:10)
+- UnitSmulCanonicalUnitReferenceActual has unitMulLinearEquiv, open/compact/measure pos finite but no u•O=O or distribHaarChar=1. Exact blocker: algebraMap_unit_smul_canonicalUnitReference_eq.
+- Route: O=integralClosure Zp X; algebraMap u ∈ O via isIntegral_algebraMap/algebraMap_mem'; integralClosure subring mul_mem gives u•O⊆O; reverse with u^-1 => equality; then DistribChar:92 char=1 and μS invariance. qpilot to implement; no fake.
