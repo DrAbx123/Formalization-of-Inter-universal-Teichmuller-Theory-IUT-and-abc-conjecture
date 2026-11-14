@@ -2595,3 +2595,5 @@
 - 21:10: audit general criterion/kernel bridge/consumer probes standard no sorryAx; old red void. P2Bridge paused. gate 20.382 written.
 
 - 21:20: HOT general criterion/conditional eEquiv/BaseChange structures GREEN; eEquiv only actual f/hsurj/hker seam; R1 only structure inhabitants. gate 20.383 written.
+
+- 21:30: BaseChange correspondence structures + conditional R1 GREEN 14:15:28; probe queued. Remaining inhabitants (place/completion, q element, C3 aggregation). No fake. gate 20.384 written.

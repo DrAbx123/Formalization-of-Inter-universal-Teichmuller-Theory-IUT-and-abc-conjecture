@@ -2847,3 +2847,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1GeneralLogShellNormCriterionActual DONE 14:09:01: norm_le_norm_logShellScale_iff all p uniformizer.
 - Mzk1CongruenceUnitsEquivGeneralActual DONE 14:19:05: addVal_logShellScale; CongruenceUnitsPrimaryEquivTarget; congruenceUnits_equiv_primary_general_of_kernel (f,hsurj,hker -> Nonempty equivalence). Remaining actual seam: f=Units.map(Ideal.Quotient.mk I), I=span{logShellScale p}; hsurj local ring quotient units lift; hker via general criterion+addVal_logShellScale+addVal_le_iff_dvd. Hull to finish.
 - Mzk1BaseChangeQCorrespondenceActual DONE 14:15:28: BaseChangePlaceCompletionCorrespondence, BaseChangeQElementCorrespondence, QPilotC3SignedAggregation structures (no inhabitant); qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures conditional R1. Mainline to attack actual inhabitants.
+
+
+### 20.384 BaseChange correspondence structures green + probe queued (mainline, 2026-11-17 16:00)
+- Mzk1BaseChangeQCorrespondenceActual DONE 14:15:28: BaseChangePlaceCompletionCorrespondence (F/K place + comap + completionMap/norm), BaseChangeQElementCorrespondence (q_eq under casts), QPilotC3SignedAggregation (signed=-M), and qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures (R1 conditional). Type-correct: no F/K place or Completion element equality; casts only. No inhabitant, no sorry/axiom.
+- Exact remaining: inhabitants (i) place/completion correspondence, (ii) q element correspondence, (iii) C3 signed aggregation. (iii) is single C3 vs global Bad weighted sum obstruction; sum-equivalent form green nativeGlobalQPilotNormalizedLogMagnitude_eq. Probe Mzk1BaseChangeQCorrespondenceAxiomProbeActual queued.
