@@ -2585,3 +2585,5 @@
 - 20:20: #C B consumer green conditional eEquiv+hf; hf via FiniteField.card/CharP; hull to prove. P2Bridge unknown p fix by shehdd (include p). gate 20.377 written.
 
 - 20:30: #C B consumer hf solved via logShellResidueCard_eq_prime_pow; only eEquiv remains. Hull to build unconditional by_cases p=2 using odd-p + future p2 wrapper. gate 20.378 written.
+
+- 20:40: HullUnitZero conditional GREEN 22:03:40 (scale=1, 4-item obstruction); UnitInvariance X notation fix, u•O=O written. qpilot continue distribHaarChar/measure. gate 20.379 written.

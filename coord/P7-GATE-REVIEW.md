@@ -2820,3 +2820,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.378 #C B consumer: hf solved, only eEquiv left (hull, 2026-11-17 15:00)
 - Mzk1IutIVCongruenceCardActual DONE 14:04:24: congruenceQuotientCardinalityInput_exists_of_equiv (e) (he) (eEquiv) -> exists f, CongruenceQuotientCardinalityInput; logShellQFECardinalityHypothesis_exists_of_equiv similarly. hf via existing GREEN IntegralLogShellSharpBounds.logShellResidueCard_eq_prime_pow (exists f, 1<=f, q=p^f; internally charP + FiniteField.card).
 - Exact missing only eEquiv: O^×/(1+p^sO) ≃* (O/(p^s))^× (#C A). odd-p conditional green; p=2 wrapper shehdd pending. Hull to build unconditional by_cases p=2 structure, report exact missing branch; no edit p2 files.
+
+
+### 20.379 HullUnitZero conditional GREEN; UnitInvariance X fix (qpilot, 2026-11-17 15:10)
+- Mzk1IVThm110HullUnitZeroActual DONE 22:03:40: IQHullUnitRegion_eq_unitReference_of_scale_one; arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one; arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one; hullUnitZeroObstruction 4 items. Unconditional hullUnitLog=0 false; scale=1 only; scale!=1 needs Haar scaling formula.
+- UnitInvariance first errors TopologicalSpace X and rw patterns were caused by abbrev X being generalized to function; fixed with local notation X := ArithmeticTensorTupleBlock places tuple. Written algebraMap_unit_mem_integralClosure and algebraMap_unit_smul_canonicalUnitReference_eq; next distribHaarChar=1/μ invariance/lambda decomposition. No fake.
