@@ -1640,3 +1640,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Stale rows: FinalS3137ConditionalActual:92 and PaperSumsBridgeActual:118 still say PaperS3137ReadingDictionary not defined/EXPLICIT GAP; must update to CONSTRUCTED (substantive lock; sign/unitMass explicit).
 - theta_sign negative vs LNormComparison hlock positive still inconsistent semantically; Dictionary lock is unproved field, no contradiction, but needs check/keep explicit.
 - DeepStatementLayerV2 syntax fixed by lattice (standard newline fields, no Prop/target/proof change); added to WL, waiting compile to unlock StatementLayerConsumer.
+
+
+### 20.182 BaseScalar detailed error map (stage4, 2026-11-16 02:20)
+- :46 isDefEq timeout local padicScalarValuedInstance (inferInstanceAs/explicit instance/heartbeat); :49 Fact proof ⟨(completionRationalPrime place).property⟩; :59 Valued.v coeff equality instance mismatch (explicit have/change or Padic.norm_eq_zpow_neg_valuation); :113 pNat≠0 via Prime.ne_zero; :118 remove redundant rfl; :121 invalid let uq (dsimp only/change); :125 mkUnits_coe coercion spelling; :146/151 explicit letI : Algebra Q completionField; :140 split map_mul/map_zpow₀ + padicUnit_valuation_zero; :167 nested ∃ choose inner.
+- Route order: pNat/Fact + local Valued instance -> let/rewrite/coercion -> completionMap instance defeq -> nested exists. Donor circular dependency remains after BSR.
