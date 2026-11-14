@@ -1645,3 +1645,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.182 BaseScalar detailed error map (stage4, 2026-11-16 02:20)
 - :46 isDefEq timeout local padicScalarValuedInstance (inferInstanceAs/explicit instance/heartbeat); :49 Fact proof ⟨(completionRationalPrime place).property⟩; :59 Valued.v coeff equality instance mismatch (explicit have/change or Padic.norm_eq_zpow_neg_valuation); :113 pNat≠0 via Prime.ne_zero; :118 remove redundant rfl; :121 invalid let uq (dsimp only/change); :125 mkUnits_coe coercion spelling; :146/151 explicit letI : Algebra Q completionField; :140 split map_mul/map_zpow₀ + padicUnit_valuation_zero; :167 nested ∃ choose inner.
 - Route order: pNat/Fact + local Valued instance -> let/rewrite/coercion -> completionMap instance defeq -> nested exists. Donor circular dependency remains after BSR.
+
+
+### 20.183 Candidate actual beta inhabitant: local Galois action fixes integral units (stepxi, 2026-11-16 02:30)
+- New Mzk1Ind1GaloisIntegralActionActual (queue): for base K=Qp, integral units algebraMap into Qp; localGaloisUnitsAction sigma fixes Qp, so fixes integral units (Units.ext + commutes); no general integral-closure isometry needed.
+- Constructs localGaloisStableAlgebraicAction sigma : IntegralUnitStableAlgebraicAction Qp (mapsIntegers v=u bijective) and localGaloisActualInd1UnitAction sigma : ActualInd1UnitAction Qp (algAction=localGaloisUnitsAction, beta=refl, compatible=fix). Actual non-fake inhabitant; identity on integral quotient, actual Galois action.
+- If green + probe three axioms, beta source node closes. Need audit no sorry/True.
