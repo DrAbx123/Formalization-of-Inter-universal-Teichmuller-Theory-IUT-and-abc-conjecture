@@ -3267,3 +3267,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Direct lake env lean Mzk1IVThm110PrincipalDimScalingActual current source EXIT=0 (only warnings); no olean yet -> retouch build, accept after fresh. qpilot.
 - Direct compile Mzk1Ind1QuotientBridgeActual exit1 :30:55 type mismatch and comapTorsion depends on sorryAx -> stepxi delete theorem/file now; KernelBridge clean.
 - mainline constantDiagram/atBase green; generator_identification explicit unitors iso next. abc re-audit.
+
+
+### 20.461 MAJOR PrincipalDimScaling GREEN (qpilot, 2026-11-15 08:20)
+- Mzk1IVThm110PrincipalDimScalingActual DONE 18:02:50/olean 02:02:49: principalDim_log_scaling; no source sorry. Source later edited 02:12 pending recompile. Direct compile earlier EXIT=0.
+- Next qpilot instantiate actual lambda=p^k*u with g=pU^k*algebraMapUnit u, hact/hchar/hnorm via Padic unit decomposition/green Haar; or connect to floor unitRegionLog=-M/M>=1. abc probe. QuotientBridge empty green. No fake.

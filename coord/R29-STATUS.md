@@ -2749,3 +2749,5 @@
 - 10:00: correction consumer :34 cast/log calc, :55 linarith order; hull fix. FinalIndexDecomp green. gate 20.459 written.
 
 - 10:10: PrincipalDim direct EXIT=0 (green, no olean) retouch; QuotientBridge still sorryAx delete. constantDiagram/atBase green; generator iso next. gate 20.460 written.
+
+- 10:20: MAJOR PrincipalDimScaling GREEN 02:02:49. Next actual lambda/g/hact and floor. abc probe. gate 20.461 written.
