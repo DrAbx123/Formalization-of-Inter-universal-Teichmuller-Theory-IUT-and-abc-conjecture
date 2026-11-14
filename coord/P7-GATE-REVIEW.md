@@ -3237,3 +3237,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.455 A2PartialFields GREEN; watchdog logs stale on quotient/principal (2026-11-15 07:20)
 - Mzk1A2PartialFieldsActual DONE 17:45:23: structure A2PartialFields; a2PartialFieldsOfSingleton; a2BlockedFields 6 items. Probe 17:49:41.
 - QuotientBridge src 01:43, log 01:45 still Invalid F :16/17/29. PrincipalDim src 01:40, log 01:45 still λ :36/:60/:67/:69. Logs stale; mainline direct compile current sources; stepxi/qpilot retouch. No fake.
+
+
+### 20.456 URGENT QuotientBridge sorryAx; PrincipalDim exact errors (mainline, 2026-11-15 07:30)
+- Direct compile Mzk1Ind1QuotientBridgeActual exit1 :29:45 type mismatch h x^n=1 vs ↑x^n=1; comapTorsion_eq_torsionKernel depends on sorryAx -> DELETE file/theorem now; keep KernelBridge clean. stepxi.
+- PrincipalDim :67 unsolved ring goal Real.log(↑p^(-(k*finrank)))+log μO = -(k*finrank*log p)+log μO; use Real.log_zpow/log_pow+Nat.cast+linarith. :69 LT.lt.ne' vs NNReal.coe_ne_zero. qpilot fix. No fake.
+- A2 blocked fields no new donor; signAction constant pseudofunctor/Bicategory.Equivalence, quotient witness, groups, scalar extension, unique Subsingleton all missing.
