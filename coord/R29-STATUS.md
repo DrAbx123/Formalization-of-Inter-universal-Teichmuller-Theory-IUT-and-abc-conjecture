@@ -1863,3 +1863,5 @@
 - 08:45：**新 GREEN `Mzk1P0QThetaReadoutDictionaryActual` 00:01:14（101s）**：dictionary official（qhat=−c_norm log p、log r=−c_norm log p/(2l)、d_b log r=(1/(2l))d_b qhat、qhat−paperQ=log ratio；权重 1/[K_w:F_v]；DegreeTowerInterface）。已让 hull 用 dictionary 收 NormCorrection/Correspondence 与最终 correction/conditional 形式。C17 quotientMap 已修等编；zpadic/radius pending；lean=0 batch 间隙。gate §20.48 已写。
 
 - 08:50：A1.6 核对：`Mzk1A1QhatSaturationReadoutActual.qVFamily_mem_saturatedLattice` 仍带显式参数 `aval/bval/m/e/he/hram/hLambda`（`hLambda: lambdaLattice=principalLattice bval m`、`hram: bval(ιx)=e·aval x`）。已让 stage4 明确这两条能否从实际 source 定义证明；否则 A1.6 标 conditional，不得说 unconditional closed。gate §20.49 已写。
+
+- 08:55：stage4 确认 A1.6 最终定位 **conditional**：`inverseLambdaLattice_eq_saturated_actual`/`qVFamily_mem_saturatedLattice` 以 `hLambda`（principal-lattice recognition）+ `hram`（ramification identity）为输入；未构造 aval/bval/m、未证 hram。无条件 green 部分：signedReadout_eq_log_radius_sub_delta、mem_*_iff/inverseLambdaLattice_eq_normBall、product signed readout、inverseLambdaLattice_eq_inverseLattice。gate §20.50 已写。

@@ -751,3 +751,16 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **但 `qVFamily_mem_saturatedLattice` 带显式参数**：`aval : rootBase→Nat`、`bval : rootNormedExtension→Nat`、`m e : Nat`、`he : 0<e`、`hram : ∀x, bval(algebraMap x)=e·aval x`、`hLambda : lambdaLattice = principalLattice bval m`。
 - **状态**：A1.6 的 signed readout 等式/measure/norm/delta 部分是定理；qhat↔J_s 的 valuation 识别以**principal-lattice recognition + ramification identity** 为显式输入。若这两条不能从实际 source 定义证明，A1.6 只能标 conditional，不得标 unconditional closed。
 - **下一步**：stage4 构造 `aval/bval/m/e` 并证 `hram/hLambda`，或明确记录条件性质。
+
+
+### 20.50 A1.6 最终定位：conditional（stage4 确认，2026-11-15 01:25）
+- **无条件 green**：
+  - `signedReadout_eq_log_radius_sub_delta`（实际 measure/norm/delta）；
+  - `mem_lambdaLattice_iff`/`mem_qhatLattice_iff`/`inverseLambdaLattice_eq_normBall`；
+  - `productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`/`_le_closedForm_sub_one`（product/权重消费）；
+  - `inverseLambdaLattice_eq_inverseLattice`（无条件 set equality）。
+- **conditional**：`inverseLambdaLattice_eq_saturated_actual`、`qVFamily_mem_saturatedLattice` 以
+  `hLambda : lambdaLattice={y | m≤bval y}`（principal-lattice recognition）与
+  `hram : bval(algebraMap x)=e·aval x`（ramification identity）为输入。
+- **现状**：未构造 `aval/bval/m`，未从 ramification 定义证 `hram`；实际 DVR 供体有 `PaperRootExtensionDiscreteValuationActual.rootDiscreteValuation/rootUniformizer`（root 侧），base 侧尚未构造。
+- **结论**：A1.6 **conditional on principal-lattice recognition + ramification identity**；不得标 unconditional closed。
