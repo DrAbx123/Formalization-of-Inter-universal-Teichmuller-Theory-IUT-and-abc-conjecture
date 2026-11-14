@@ -2301,3 +2301,5 @@
 - 20:00: mainline ready to integrate final noS45; asked hull to report hbridge theorem/file/d spelling/DONE+olean/probe. No fake.
 
 - 20:10: hbridge/Literal still no olean; 1 lean. Woke lanes; formal fixes resent. No fake.
+
+- 20:20: hbridge place mismatch is rfl via qVFamTensorPlace abbrev; use change/dsimp; Donor toAdd Z->R cast. hull fix. gate 20.244 written.

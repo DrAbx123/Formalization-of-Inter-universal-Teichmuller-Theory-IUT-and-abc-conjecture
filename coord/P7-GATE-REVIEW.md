@@ -2016,3 +2016,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Value FAIL 07:36:32 line75 ring unsolved -(nu*d^-1)=-((d^-1)*nu): ring_nf/mul_comm.
 - Donor source 15:38:19 FAIL 07:40:17: line84 WithZero.unzero type mismatch -> unzero (a:=val) hv or direct unzero hv; line147-150 finalPaperNormalizedComparison_noS45 missing by after := causes line150 exact unknown; Fintype already line146. No olean.
 - hbridge still unproved; wrapper probe green; S45-free not unconditional. No fake.
+
+
+### 20.244 hbridge place mismatch is rfl + toAdd cast (2026-11-16 14:00)
+- qVFamTensorPlace is abbrev (nativeBadLift T).lift b (QVFamTensorCoefficientActual:47); Value nu place mismatch is rfl, use change/dsimp only [qVFamTensorPlace], not a new identification gap.
+- Donor line110 Multiplicative.toAdd gives Z but expected R: cast ((toAdd (unzero ...) : Z) : R).
+- Hull owns hbridge edits; mainline no concurrent edits. hbridge still red; wrapper conditional green; S45-free not unconditional. No fake.
