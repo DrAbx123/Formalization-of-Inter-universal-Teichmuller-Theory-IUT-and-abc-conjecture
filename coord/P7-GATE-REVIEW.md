@@ -3575,3 +3575,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.525 Concrete integer-equiv donor chain (stepxi, 2026-11-15 18:50)
 - concretePlace_integersRingEquiv (Example36SourceLogKummerIdentification:327): Integers (Completion (comap concretePlace)) ≃+* Integers (Completion concretePlace). concreteGaussianFivePlace_comap (ConcreteFinitePlaceBoundary:44) = concreteFivePlace. concreteFivePadicIntEquiv (ConcreteSplitCurveFivePlace:57) : concreteLocalIntegers=Zp ≃+* concreteFiveCompletionIntegers. Compose -> Integers completionField ≃+* Zp; then Basis (Fin 1)/linear equiv/range unitLogHom. stepxi. No fake.
+
+
+### 20.526 stepxi write integer equiv composition (2026-11-15 19:00)
+- Compose integersEquiv := concretePlace_integersRingEquiv.symm.trans concreteFivePadicIntEquiv.symm, aligning concreteFiveCompletionIntegers with Integers(Completion(comap concretePlace)) via concreteGaussianFivePlace_comap; add Module Zp instance; report first error. Basis (Fin 1)/range still missing. No fake.
