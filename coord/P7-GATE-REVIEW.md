@@ -3579,3 +3579,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.526 stepxi write integer equiv composition (2026-11-15 19:00)
 - Compose integersEquiv := concretePlace_integersRingEquiv.symm.trans concreteFivePadicIntEquiv.symm, aligning concreteFiveCompletionIntegers with Integers(Completion(comap concretePlace)) via concreteGaussianFivePlace_comap; add Module Zp instance; report first error. Basis (Fin 1)/range still missing. No fake.
+
+
+### 20.527 IntegersEquivZp arg error; UnitRegionScaling (2026-11-15 19:10)
+- Direct IntegersEquivZp: :17 Invalid argument p for DFunLike.coe; concreteFivePadicIntEquiv has no p arg (fixed concreteFivePrime). Remove (p:=5). stepxi.
+- UnitRegionScaling source ready after Assembly olean; qpilot direct compile; floor reduces to unitRegionLog=-M and 1<=M explicit. No fake.

@@ -2879,3 +2879,5 @@
 - 20:50: concrete integer ring equiv chain found for WQuotient equiv; stepxi compose. gate 20.525 written.
 
 - 21:00: stepxi writing integer equiv composition + Module instance. gate 20.526 written.
+
+- 21:10: IntegersEquivZp remove p arg; UnitRegionScaling compile/floor. gate 20.527 written.
