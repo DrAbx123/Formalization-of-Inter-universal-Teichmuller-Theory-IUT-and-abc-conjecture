@@ -2918,3 +2918,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.396 per-place log margin exact donor: torsion upper bound (hull, 2026-11-17 18:00)
 - Consumer Mzk1PerPlaceBoundHullActual.perPlace_inequality_of_mu_lower_diff needs qcoef <= logMu+(1-1/(2l))logIdx, equivalently qcoef <= logIdx+diff. qcoef=(f/Fdeg)*order*log p/(2l); logMu=(1+[p=2]-1/e-r/n)log p; logIdx=log(logShellIntegerIndex).
 - torsion-divided: logIdx=(eK*s-1)f log p + log((q-1)/#T); need lower bound log((q-1)/#T), i.e. #T upper bound. #T>q-1 possible (Qp(ζp): q=p,#T>=p). Tree has only finiteness/p-power info, no sharp upper bound. Suggested #T <= (q-1)*eK or (q-1)*p^{v_p(eK)} via reduction + p-power torsion ramification bound, giving log((q-1)/#T)>=-log eK; combine with paperShellLogMu_ge_lower and eK*s-1. Hull to attempt/report exact missing. No fake.
+
+
+### 20.397 Correct torsion bound candidate; ramification estimate missing (hull, 2026-11-17 18:10)
+- Proposal #T <= (q-1)eK FALSE: K=Qp(ζp) p odd has eK=p-1, q=p, #T=p(p-1) (Teichmuller p-1 + ζp p); (q-1)eK=(p-1)^2. Same for (q-1)p^{v_p(eK)}.
+- Correct candidate: #T <= (q-1)*p^{v_p(eK)+1}. Non-p part injects into residue units order | q-1; p-part: mu_{p^a} subset K -> Qp(ζ_{p^a}) subset K ramification p^{a-1}(p-1), so a-1<=v_p(eK).
+- Exact missing: mu_{p^a} subset K -> p^{a-1}(p-1) | eK (local field p-power roots ramification bound), not in tree/Mathlib. Then log((q-1)/#T) >= -(v_p(eK)+1)log p. Alternative explicit #T<=(q-1)C -> log donor. Hull to write conditional donor/search. No fake.
