@@ -43,3 +43,33 @@ def arithmeticTuplePureFractionalScalingData_ofGenerator
   1. 新增 default 版本的 scaling data structure；或
   2. 证明 norm-instance equality（S45）。
 - 不 fake 构造器。
+
+## 5. 更正/补充：default-norm variant 可构造（GREEN），但 downstream 不直接接受
+
+### 已写并 GREEN
+`Mzk1DefaultNormScalingVariantActual.lean`：
+- `DefaultNormPureFractionalScalingData`：
+  ```lean
+  structure DefaultNormPureFractionalScalingData where
+    localGenerator : (i : ι) → Completion (places i (tuple i)).val
+    localGenerator_norm : ∀ i, ‖localGenerator i‖ = (p : ℝ) ^ (-(c i))
+  ```
+- `defaultNormPureFractionalScalingData_ofGenerator`：从 g/hg 构造；
+- GREEN：**06:31:04（51s）**。
+
+### 关键更正
+- `CommonPrimeCompletion place := NormalizedCompletion place.val := Completion place.val`，
+  因此 default 与 normalized 的 **底层类型是 defeq**；
+- 所以 default generator 项可以 typecheck 到 `ArithmeticTuplePureFractionalScalingData.localGenerator` 的类型；
+- 真正的障碍不是类型，而是 **norm instance proposition**：
+  * default variant 的 `localGenerator_norm` 使用 default norm；
+  * existing `ArithmeticTuplePureFractionalScalingData.localGenerator_norm` 使用 normalized/spectral norm；
+  * 两个 proposition 不是 defeq；
+- 因此不能把 `DefaultNormPureFractionalScalingData` 直接当 existing structure 用；
+  需要 norm-instance bridge（S45 方向）或新增 default 版本 downstream。
+
+### 结论（更新）
+- default-norm structure + constructor **可行且已 GREEN**；
+- 但 existing tensor constructor 仍只产生 normalized-norm scaling data；
+- 要从 default supply 到 existing consumer，仍缺 `‖·‖_def = ‖·‖_norm` bridge；
+- 这仍是 norm-instance obstruction，不是纯类型 no-go。
