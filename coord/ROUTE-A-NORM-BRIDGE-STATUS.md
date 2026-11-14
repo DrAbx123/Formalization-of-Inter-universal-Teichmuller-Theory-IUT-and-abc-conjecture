@@ -25,3 +25,15 @@
 - ratio≥1 的**条件版**已 GREEN，且 wrapper 已接 mainline RouteA；
 - 无条件 hbridge 仍卡在 `d` abbrev / norm instance / `toC` 层；
 - 未 fake；S45 equality 未用于不等式。
+
+## GREEN FINAL（2026-11-14）
+
+- `Mzk1P0QVFamNormBridgeDonorActual`：DONE 09:15:34；olean 09:15:33；
+- `qVFamNormalizedNorm_eq_defaultNorm_rpow`：
+  `qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1 / (relativeCompletionDegree (k := ℚ) (qVFamTensorPlace T b) : ℝ))`；
+- `qVFamNormRatio_ge_one : 1 ≤ qVFamNormRatio T b`（无条件）；
+- `finalPaperNormalizedComparison_noS45`：无条件 paper comparison，不用 S45 equality；
+- Axiom probe `Mzk1P0QVFamNormBridgeDonorAxiomProbeActual` DONE 09:18:57：
+  三个定理均 `[propext, Classical.choice, Quot.sound]`，无 sorryAx。
+
+`Mzk1QVFamNormBridgeValueActual` 仍是重复 value-level 尝试，不作为 provider；Donor 是唯一 provider。
