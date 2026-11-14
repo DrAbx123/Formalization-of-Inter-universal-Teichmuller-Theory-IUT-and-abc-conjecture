@@ -3460,3 +3460,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1CompletionTowerActual DONE 19:44:30: commonPrimeTower_scalarTower (relativeNormalizedCompletionScalarTower), commonPrimeTower_moduleFinite, commonPrimeTower_finrank (finrank Qp upper = finrank Qp lower * finrank lower upper) via finrank_mul_finrank. No sorry.
 - Mzk1A2QuotientMorphismActual DONE 19:48:54: signActionSimplified with inversionSquared:=Iso.refl; quotientMorphismSimplified map=Hom.id, invariant=Iso.refl, cocycle:=rfl. So quotient morphism constructed; quotientWitness/groups/unique remain gaps. No sorry.
 - ActualRamifiedData direct only :48:36 NumberField ?m in hcoef binder; annotate i type. Hull. abc probe. No fake.
+
+
+### 20.501 MAJOR ActualRamifiedData GREEN (hull, 2026-11-15 14:50)
+- Mzk1ActualRamifiedDataActual DONE 19:54:19: ofAtPrime p=completionRationalPrime definitional; actualFn choose logShellResidueCard_eq_prime_pow; actualData (hcoef explicit) : RamifiedPlaceData (FinitePlaceAtPrime F p), aExp=0,cCorr=1 placeholder. No fake.
+- Next choose aExp/cCorr via index_decomp_with_correction with hdecomp; construct HasCorrection/HasLogIdx/HasRes; HasCoeff explicit. abc probe. No fake.
