@@ -3393,3 +3393,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.487 RamifiedPlaceData structure all-implicit params root cause (2026-11-15 12:30)
 - Current source `structure RamifiedPlaceData {ι : Type u} [Fintype ι]` makes all params implicit; `RamifiedPlaceData ι` => Function expected, term has type Type. Direct errors :31/:44/:57/:60/:74. Fix explicit `structure RamifiedPlaceData (ι : Type u) [Fintype ι]`. Then HasX/defs work. hull direct compile.
+
+
+### 20.488 IsScalarTower transport blocked on NormalizedCompletion elaboration (stage4, 2026-11-15 12:40)
+- inferInstanceAs Algebra Qp (NormalizedCompletion (lowerPlace T b)) fails failed to synthesize Field K, NormalizedCompletion implicit K not inferred from abbrev lowerPlace. Direct Algebra QpNat (NormalizedCompletion (lowerPlace T b)) also fails. Fix: annotate lowerPlace/upperPlace as FinitePlace F/K explicitly; use explicit normalizedCompletionAlgebra (K := T.arithmetic.F) (lowerPlace T b), avoid inferInstanceAs on abbreviation; then infer tower. Qp donor probe green. adicAbv pending. No fake.
