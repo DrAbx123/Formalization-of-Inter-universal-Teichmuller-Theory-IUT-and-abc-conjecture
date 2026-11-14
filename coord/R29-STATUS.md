@@ -2969,3 +2969,5 @@
 - 28:20: IsEquiv.uniformContinuous donor; stage4. stepxi cast. gate 20.570 written.
 
 - 28:30: URGENT IntegersEquiv ValuationSubring.toSubring mismatch/sorryAx; stepxi. gate 20.571 written.
+
+- 28:40: URGENT IntegersEquiv rw under Integers fails; fix congrArg or delete. gate 20.572 written.

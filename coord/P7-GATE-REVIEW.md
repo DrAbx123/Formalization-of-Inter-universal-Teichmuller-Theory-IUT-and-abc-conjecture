@@ -3781,3 +3781,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.571 URGENT IntegersEquiv ValuationSubring/Subring mismatch (2026-11-15 25:30)
 - Integers = Subring; concreteFiveCompletionIntegers = ValuationSubring. Equality type mismatch, composition sorryAx. Fix cast to `.toSubring`, add RingEquiv A.toSubring ≃+* A, then compose; or delete. stepxi. No fake.
+
+
+### 20.572 URGENT IntegersEquiv rw under Integers fails (2026-11-15 25:40)
+- Still mismatch Subring (Completion (comap...)) vs adicCompletion; rw doesn't rewrite inside Integers; composition sorryAx. Fix via explicit h:Completion... and congrArg (fun X => (NormedField.valuation (K:=X)).integer) h/Eq.ndrec; else delete cast+composition to clean. stepxi. No fake.
