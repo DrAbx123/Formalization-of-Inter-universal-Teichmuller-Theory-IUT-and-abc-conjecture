@@ -3871,3 +3871,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.592 MAJOR PrincipalUnitsResidue GREEN (2026-11-15 29:00)
 - Mzk1IVThm110PrincipalUnitsResidueActual DONE 22:38:52/olean 06:38:51: norm_lt_one_iff_valuation_lt_one; integersToA : (Integers K) ≃+* valuationSubring; integersUnitsEquivUnitGroup : (Integers K)^x ≃* valuationSubring.unitGroup (Units.mapEquiv + unitGroupMulEquiv.symm). No sorry/axiom.
 - Next subgroup equality principalUnits=A.principalUnitGroup.comap A.unitGroup.subtype via units equiv + mem_unitGroup_iff + norm bridge; quotient/residue card/coprime; unitLog norm/tensor. abc audit. No fake.
+
+
+### 20.593 subgroup final IsEquiv transfer (2026-11-15 29:10)
+- principalUnits_eq_comap_principalUnitGroup rfl fails: NormedField.valuation (u-1)<1 vs A.valuation(unitsImage u -1)<1. Use Valuation.isEquiv_valuation_valuationSubring + isEquiv_iff_val_lt_one; simp [integersUnitsEquivUnitGroup,integersToA] to align units image. qpilot. No fake.
