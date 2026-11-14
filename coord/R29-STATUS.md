@@ -1867,3 +1867,5 @@
 - 08:55：stage4 确认 A1.6 最终定位 **conditional**：`inverseLambdaLattice_eq_saturated_actual`/`qVFamily_mem_saturatedLattice` 以 `hLambda`（principal-lattice recognition）+ `hram`（ramification identity）为输入；未构造 aval/bval/m、未证 hram。无条件 green 部分：signedReadout_eq_log_radius_sub_delta、mem_*_iff/inverseLambdaLattice_eq_normBall、product signed readout、inverseLambdaLattice_eq_inverseLattice。gate §20.50 已写。
 
 - 09:00：triage 六个 pending 首错并派修法：C17 `:47` quotientMap apply 展开；RootRadius `:60` unfold rootNormedLogVolume/change；PaperSums `:90` 补 `Mzk1RouteC0RootQLatticeActual`；Gamma `:36` 先 `nsmul_eq_mul` 再 zpow；BoxDistinguished `:31` 显式 `ord (K:=K)`；ContinuousAdd `:54` 先 `dist_eq_norm` 再 `pi_norm_lt_iff`；均要求去 sorryAx。
+
+- 09:05：mainline 修 C17/RootRadius/PaperSums 首错（`AlgHom.commutes`、`unfold rootNormedLogVolume`+`congrArg log`、补 `Mzk1RouteC0RootQLatticeActual`）；hull Correspondence 只剩隐式参数顺序，修法已给；Gamma v16 用 `nsmul_eq_mul` 后再 push_cast/zpow，等编。dictionary GREEN 保持。
