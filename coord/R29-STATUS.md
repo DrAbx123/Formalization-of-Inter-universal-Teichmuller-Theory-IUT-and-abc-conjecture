@@ -1979,3 +1979,5 @@
 - 14:55: GREEN RootRadiusBridge 01:23:02 (log_rootImageRadius_eq_neg_coefficient_mul_logP; rootNormedLogVolume_eq_inv_twoL_mul_log_norm) -> WeightA1 unblocked. GREEN Gamma formal probe 01:22:11 three axioms. gate 20.96 written.
 
 - 15:00: all lanes inactive; woke mainline to recompile WeightA1/PaperSums/LNormReadoutProduct and produce final S3137 exact signature; woke abc to audit RootRadius/Gamma/Varpi/final. No new green after RootRadius. batch stale at 01:23. gate unchanged.
+
+- 15:10: verified current bridge source has no PaperS3137ReadingDictionary := True (grep only doc/rows); abc audit stale. Ordered axiom probes for RootRadiusBridge and Varpi (source clean but unprobed). mainline to recompile WeightA1/PaperSums/LNormReadoutProduct and final signature. gate 20.97 written.

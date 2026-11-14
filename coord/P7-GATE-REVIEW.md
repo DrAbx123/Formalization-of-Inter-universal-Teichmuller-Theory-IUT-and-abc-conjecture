@@ -1108,3 +1108,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P1RootRadiusBridgeActual DONE 01:23:02 (110s): log_rootImageRadius_eq_neg_coefficient_mul_logP; rootNormedLogVolume_eq_inv_twoL_mul_log_norm. Unblocks WeightA1Bridge/PaperSums.
 - Mzk1IutIVProp14GammaAxiomProbeActual DONE 01:22:11 (59s): three Gamma theorems depend only on [propext, Classical.choice, Quot.sound]; no sorryAx.
 - LNormReadoutProduct/Readout still pending; LNormProduct fixes retouched.
+
+
+### 20.97 True placeholder verified gone; missing probes for RootRadius/Varpi (2026-11-15 09:10)
+- Current grep of Mzk1P1PaperSumsToS3137BridgeActual.lean: PaperS3137ReadingDictionary appears only in doc row (line32) and rows (line113), both 'EXPLICIT GAP (not defined; True placeholder deleted)'; no `:= True` definition. abc's True finding was stale source.
+- RootRadiusBridge and BoxDistinguishedVarpi are source-clean but have no axiom probe files; audit status = source no sorry, axioms not formally verified. Ordered probes from mainline.
+- Bridge still FAIL; final S3137 pending recompile; no True in final.
