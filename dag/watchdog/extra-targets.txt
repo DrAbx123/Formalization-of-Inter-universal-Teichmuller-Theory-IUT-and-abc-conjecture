@@ -1079,3 +1079,6 @@ tmp/sheaf/xif/paper/Mzk1IutIVProp14P14iiAxiomProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1P14iiAuditAxiomProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1P0FinalS3137DictionaryActual.lean
 LeanFormal/IUT/Foundations/AlgebraicGeometry/GeneralNormalizedNormBySpectralUniqueness.lean
+tmp/sheaf/xif/paper/Mzk1GeneralNormalizedNormAxiomProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1P0LNormInstanceCompatFromSpectralActual.lean
+LeanFormal/IUT/Foundations/AlgebraicGeometry/BaseScalarValuationRelation.lean

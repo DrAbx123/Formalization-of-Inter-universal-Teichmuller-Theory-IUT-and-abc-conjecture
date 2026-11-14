@@ -2119,3 +2119,5 @@
 - 04:10: Dictionary tail :92/:93 invalid I + qVFamNormalizedCoefficient ambiguous; mainline to qualify/remove. Refreshed dag_plan includes donor (dirty 553); next batch compile. gate 20.163 written.
 
 - 04:20: donor compiling START 12:00:31 (PID 33304) + probe; no DONE yet. IntegrationAction green 03:54:09. Dictionary :92/:93 fix pending. Woke lanes. gate 20.164 written.
+
+- 04:30: donor FAIL missing BaseScalarValuationRelation.olean; added dep to WL and refreshed plan (dep dirty). Mainline to watch/force donor retry; dictionary fix pending. A1Data fresh audit passed three axioms. gate 20.165 written.

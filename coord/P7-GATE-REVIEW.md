@@ -1535,3 +1535,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - IntegrationAction GREEN 03:54:09 (structure only); iiiBoxConsumer GREEN 03:51:00; IV Prop 1.4 lane all green.
 - Dictionary tail :92/:93 invalid I and ambiguous qVFamNormalizedCoefficient; mainline fixing.
 - Woke all lanes: mainline donor/dictionary/compat; shehdd #C B; stepxi beta; lattice IV audit; abc/hull/stage4 donor audit.
+
+
+### 20.165 Donor dependency missing: BaseScalarValuationRelation (2026-11-15 22:30)
+- Donor build FAIL: object file BaseScalarValuationRelation.olean missing. Added LeanFormal/IUT/Foundations/AlgebraicGeometry/BaseScalarValuationRelation.lean to WL, refreshed dag_plan (targets 14837, dirty 548; dep dirty). Watchdog to build dep then retry donor after retry window.
+- Donor itself currently not dirty due failed-state retry window; mainline to retouch/clear if needed.
+- A1Data donor/probe fresh audit passed (source no sorry/True; probe three axioms).
