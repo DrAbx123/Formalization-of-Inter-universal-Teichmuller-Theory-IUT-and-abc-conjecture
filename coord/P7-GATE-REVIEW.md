@@ -3794,3 +3794,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.574 Wake qpilot/hull/stage4/abc (2026-11-15 26:00)
 - qpilot PrincipalUnits subgroup bridge; hull hq/hθ + region image; stage4 withValSigmaHom factorization; abc audit. Watchdog active 06:10:15 but no new DONE yet. No fake.
+
+
+### 20.575 PrincipalUnits subgroup route via isEquiv_valuation_valuationSubring (2026-11-15 26:10)
+- A=(NormedField.valuation).valuationSubring; Mathlib Valuation.isEquiv_valuation_valuationSubring : v.IsEquiv A.valuation. For units x: x∈A.unitGroup ↔ v x=1 ↔ ||x||=1; x∈(Integers K)^x iff v x=1. Build unitEquiv via Units.ext/Subtype.ext; then SetLike.ext + mem_principalUnits_iff. qpilot. No fake.

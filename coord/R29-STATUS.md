@@ -2975,3 +2975,5 @@
 - 28:50: IntegersEquiv placeholder green; SG3b product Haar instance green, scalar relation route. gate 20.573 written.
 
 - 29:00: wake qpilot/hull/stage4/abc; watchdog active 06:10:15 no new DONE. gate 20.574 written.
+
+- 29:10: PrincipalUnits subgroup via isEquiv_valuation_valuationSubring; qpilot. gate 20.575 written.
