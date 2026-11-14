@@ -2068,3 +2068,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P0FinalS3137DictionaryActual DONE 08:14:22 (100s): new finalDictionaryCombined_ofNormBridge (hbridge : forall b, normalized=default^(1/d); rel; lock) : paper comparison /\ RelativeFactorTowerData /\ Nonempty dictionary. Conditional on pointwise hbridge; original S45 version retained.
 - Mzk1P0FinalS3137AxiomProbeActual fresh 4 items three axioms incl noS45_ofNormBridge. Dictionary probe updated to 3 items incl finalDictionaryCombined_ofNormBridge, pending fresh output.
 - hbridge still red (hull): Value :71 unzero/absNorm presentation; Donor :93 hdef Ideal.absNorm vs absNorm. Defeq presentation, not math. After hbridge green instantiate hbridge:=fun b=>hull_hbridge T b; remove S45 premise; S45 strict-only. No fake.
+
+
+### 20.253 hbridge last hdef exponent/carrier (hull, 2026-11-16 15:30)
+- Donor FAIL 08:27:50: only hdef' left: target (NNReal .1 absNorm^m) = absNorm^(toAdd(unzero ...)); m vs opaque unzero proof. Fix simpa [m, WithZero.coe_unzero, absNorm] using hdef, or convert hdef using 1; simp [m, WithZero.coe_unzero]. Other components hlog/hm/hnorm'/final := by already pass.
+- Value default theorem nu carrier mismatch qVFamily.q vs generator: explicit show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q. No fake.
