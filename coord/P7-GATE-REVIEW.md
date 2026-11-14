@@ -2364,3 +2364,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - IntegralUnitLogShellSharpBounds.integralUnitToLogShellResidueUnits_ker_eq (hp2:p!=2)(hpi:Irreducible(p:Integers K)) : ker integralUnitToLogShellResidueUnits = logShellCongruenceUnits. This gives hker for odd p, s=1 with logShellScale p=p and span{p}=maximalIdeal; surjectivity via IsLocalRing.surjective_units_map_of_local_ringHom.
 - Remaining: identify congruenceUnitsMap (Units.map Ideal.Quotient.mk span{p}) with integralUnitToLogShellResidueUnits (IsLocalRing.residue); p=2 needs (p^s)=(4) norm<->ideal criterion, existing mem_span_prime_iff_norm_le_norm_prime_of_irreducible only for irreducible p not 4.
 - Next: wire odd-p primary via donor; p=2 separate norm criterion. No new Lean yet, no sorry.
+
+
+### 20.299 Odd-p #C A wiring names (2026-11-17 01:20)
+- Confirmed Mathlib: Ideal.quotEquivOfEq (ideal equality) gives quotient ring equiv; MonoidHom.ker_comp_of_injective (f)(g)(hg:Injective g) : (g.comp f).ker = f.ker.
+- Plan: hpi.maximalIdeal_eq -> maximalIdeal=span{p}; eRing := Ideal.quotEquivOfEq h; f := (Units.mapEquiv eRing.toMulEquiv).toMonoidHom.comp integralUnitToLogShellResidueUnits; hsurj := Units.mapEquiv.surjective.comp residue surj; hker := ker_comp_of_injective ... then donor integralUnitToLogShellResidueUnits_ker_eq. p=2 separate (4)-norm criterion.
+- stepxi depth subgroup first error fixed Nat.le_mul_of_pos_right _ hpos; DepthSubgroupEqualsKernel restored; retouched pending.

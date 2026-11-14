@@ -2425,3 +2425,5 @@
 - 06:50: #C A actual f/surj green, hker needs closed-radius<->ideal-membership bridge (no existing); B cardQuot green, next units count. New ObjectLockData gaps. gate 20.297 written.
 
 - 07:00: #C A odd p hker donor integralUnitToLogShellResidueUnits_ker_eq; wire odd primary; p=2 needs (4) norm<->ideal lemma. shehdd. gate 20.298 written.
+
+- 07:10: confirmed Ideal.quotEquivOfEq and MonoidHom.ker_comp_of_injective for odd-p #C A wiring; shehdd to implement. stepxi depth subgroup fixed/retouched. gate 20.299 written.
