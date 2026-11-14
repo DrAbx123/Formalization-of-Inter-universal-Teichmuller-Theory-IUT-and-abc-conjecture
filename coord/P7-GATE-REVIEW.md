@@ -3145,3 +3145,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.438 C3BaseQ re-green direct aggregation; probes (2026-11-15 04:10)
 - Mzk1C3BaseQIdentificationActual re-DONE 16:45:19 (direct GlobalSumAggregation replacement). KernelBridgeFinalProbe 16:48:43; FreshFourProbe 16:49:24; TorsionSplitProbe 16:41:02.
 - Next: mainline A2 inspect/compile; qpilot u•O=O; stepxi inhabitant; hull division; stage4 norm. abc probe. No fake.
+
+
+### 20.439 KernelBridge ofRange GREEN actual inhabitant (stepxi, 2026-11-15 04:20)
+- Mzk1Ind1KernelBridgeActual DONE 16:36:39; AQuotientKernelBridge.ofRange probe [propext,Classical.choice,Quot.sound], no sorryAx. Inhabitant constructed via range_kernelToAQuotient_eq + quotientKernelEquivRange + submonoidCongr.
+- Next stepxi: MulEquiv v.ker.toSubmonoid ~ v.ker (same carrier), transport equiv to subgroup; compose with completionKernelTimesMuEquiv (torsion.comap vs torsion ker bridge); Z_p^d. Report first error/GREEN. No fake.
