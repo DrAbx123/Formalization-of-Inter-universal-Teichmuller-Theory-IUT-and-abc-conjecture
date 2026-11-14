@@ -1822,3 +1822,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1TensorPacketPositivityActual DONE 06:06:46 (46s) alongside Mzk1IUTIVProp11CompositeActual GREEN 06:06:46.
 - AddLeProof (CanonicalAbsValueAddLeProof) still no olean; was added to WL/downstream; check first error.
 - Composite probe not yet confirmed; residual old all-x files no olean.
+
+
+### 20.211 Composite probe GREEN; residual old-file risk (abc, 2026-11-16 07:40)
+- Mzk1IUTIVProp11CompositeActual DONE 06:06:46; new probe DONE 06:12:10: iutIVProp11_tensorPacket_composite three axioms; no sorry/True.
+- Donor DONE 05:58:55 olean 14:04:02 + probe 06:04:01 three axioms. LS3137 DONE 05:57:00 + probe 06:00:57 two axioms.
+- Residual old files: GeneralNormalizedNormFinal (all-x no hx), Consumer (all-x), NormalizedNormSpectralBridge (hx but no olean), GeneralNormalizedNormFinalWiringFixed (depends old), GeneralNormalizedNormFormula (no olean); all no olean and not consumable until hx/fix names.
+- S45 not donor-implied; independent explicit condition.
