@@ -1290,3 +1290,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New Mzk1P1WeightA1AxiomProbeActual (queue) for four WeightA1 theorems.
 - Comparison import fix: LPaper312Statement from Mzk1S3137LReadoutActual.
 - Remaining final conditions: S45SourceFields; RelativeFactorTowerData (divisibility); PaperS3137ReadingDictionary (undefined GAP); d_F; unitMass=1 not assumed.
+
+
+### 20.125 A1Data UNCONDITIONAL; final conditions reduce (mainline, 2026-11-15 14:25)
+- local_degree_pos (green, Mzk1P0QHatHaarScalingActual) is unconditional; so paperToS3137A1Data : PaperToS3137A1Data T constructed unconditionally with a1_delta_paper b := a1Delta_eq_neg_coefficient_logP_sub_signed (local_degree_pos b).
+- Gate: PaperToS3137A1Data EXPLICIT GAP -> CONSTRUCTED (unconditional).
+- Remaining final conditions: S45SourceFields; RelativeFactorTowerData (divisibility-only explicit condition); PaperS3137ReadingDictionary (undefined explicit GAP); d_F normalization; unitMass=1 not assumed.
+- Comparison import fixed; WeightA1 axiom probe queued; BoundWeak still pending.
