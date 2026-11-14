@@ -966,3 +966,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   - `thetaNormReadProduct_eq_closedForm_sub_one : = s1915ClosedForm T - 1` (s1915 normalized hull formula).
 - Step (3): use S709 rootImageRadius_eq_rootNorm + S305 rootNormedElementNorm_pow_twoL_eq_qVFamNormalizedNorm to rewrite sum d log r as sum -(d c_norm)/(2l) log P; compare with qReadActual = OrigXiFSourceLQScalar as explicit bound condition `LNormComparisonTarget_of_bounds`; no new constants, no unitMass=1.
 - **Object mismatch flagged**: thetaNormReadProduct is GLOBAL Bad sum; LPaperInstance is single-place/C3 local; need restrict T/Bad to the place or explicit bridge; do not silently equate global and local.
+
+
+### 20.77 GREEN: LQThetaArrow obstruction; product readout coefficient form; global-local lock (2026-11-15 05:05)
+- Mzk1P0LQThetaArrowObstructionActual DONE 01:08:02 (106s): lQThetaSourceArrow_isEmpty_of_theta_nonneg; lQThetaArrowGapFields (q_mem needs qComponentMemGap+CommonPrimeNormCompat; normalization_eq impossible for theta>=0; theta<0 still needs normalization). Do not construct empty arrow.
+- Mzk1P0LNormReadoutProductActual (queue): thetaNormReadProduct_eq_sum (sum d_b log r_b) and _eq_closedForm_sub_one (s1915ClosedForm-1); new thetaNormReadProduct_eq_neg_sum_coefficient (sum -(d_b c_norm_b)/(2l) log P_b; S709/S305 + log_rpow + ring).
+- OBJECT MISMATCH: thetaNormReadProduct is global Bad sum; LPaperInstance is single place/C3 local. No T.arithmetic=I.initial.arithmetic identity or tensorIndex<->Bad correspondence in tree. Added explicit LGlobalLocalObjectLock (single_place Prop + local_eq_global_restriction) and lNormGlobalLocalObjectLockGap := Nonempty; do not equate global with local.
+- Next: LNormComparisonTarget_of_bounds with (hobj : LGlobalLocalObjectLock) and (hbound : qReadActual <= thetaNormReadProduct) or local version; object alignment and numerical bound separate; no unitMass=1.
