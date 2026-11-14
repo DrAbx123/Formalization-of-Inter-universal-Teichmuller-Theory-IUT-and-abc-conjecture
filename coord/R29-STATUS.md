@@ -2577,3 +2577,5 @@
 - 19:40: MAJOR P2NormBridge GREEN 21:48:01 (norm/addVal threshold). Next shehdd P2Bridge wrapper N=2, kernel 1+4O, primary p=2. abc probe. gate 20.373 written.
 
 - 19:50: #C B secondary general-e GREEN 13:53:57 (span power + corrected units card). Hull to connect primary/secondary into assembly consumer; abc probe. P2 wrapper pending. gate 20.374 written.
+
+- 20:00: P2Bridge error root cause missing hp2:p=2; add hypothesis/subst. shehdd. P2NormBridge probe three axioms. gate 20.375 written.

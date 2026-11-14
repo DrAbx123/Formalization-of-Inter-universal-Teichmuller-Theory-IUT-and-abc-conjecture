@@ -2800,3 +2800,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.374 #C B secondary general-e GREEN (hull, 2026-11-17 14:10)
 - Mzk1TruncatedUnitsSecondaryActual DONE 13:53:57 (src 13:51, fresh olean): span_logShellScale_pow_eq_maximalIdeal_pow (e): Ideal.span{(logShellScale p)^e}=m^(eK*s*e); truncatedUnitsCardCorrected e (he:1<=e): secondary units card (q-1)q^(eK*s*e-1). Probe pending.
 - Hull to identify actual consumer and connect primary+secondary into one units-count theorem/dictionary; report exact missing. P2 wrapper shehdd owns; no concurrent edits.
+
+
+### 20.375 P2Bridge first error: missing hp2 hypothesis (2026-11-17 14:20)
+- Mzk1P2BridgeActual error :33:4 type mismatch. Root cause: p2_norm_le_four_iff_addVal has variable p but no (hp2 : p = 2); ||p^2|| != ||4|| without it. Add hp2 and subst/simp [hp2] before applying norm bridge N=2; logShellScale_two also needs p=2 context. shehdd to fix/report.
+- P2NormBridge GREEN 21:48:01 probe 21:53:09 three axioms; not complete P2Bridge.
