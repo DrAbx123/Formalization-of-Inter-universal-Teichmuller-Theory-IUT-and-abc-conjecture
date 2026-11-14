@@ -2537,3 +2537,5 @@
 - 16:20: R1 direction corrected: actualQ<=M under same-q identification (strict d>1), equality false/S45-like. R1 needs P.signed=-M (still missing). Conditional lemmas pending. qpilot floor only min=-M. gate 20.353 written.
 
 - 16:30: audit: ObjectLockData regression HSMul line125, KernelBridge red sorryAx, P2 missing, FloorObstruction pending. Fresh greens: #C primary/count, KernelIntegers, ValuationData, Floor/HC312, SharedQPilot, ActualHull chain. stage4 restore/fix, stepxi fix, hull create p2. gate 20.354 written.
+
+- 16:40: ObjectLockData restored GREEN 21:09:06; FloorNativeObstruction GREEN 21:09:06; ActualReadingTarget re-DONE. KernelBridge still red/no olean; P2Bridge missing. gate 20.355 written.

@@ -2694,3 +2694,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - FloorNativeObstruction FAIL 13:03:29 pending.
 - P2Bridge no source/log; hull to create.
 - Fresh GREEN: TruncatedUnitsPrimary 20:42:21 (unconditional, probes standard); TruncatedUnitsCount 20:31:15; KernelIntegers 20:36:26; ValuationData 20:30:12; N5FloorBridge 20:26:21; FloorNativeHull 20:47:20; HCor312Floor 20:15:21; SharedQPilot 20:08:55; ActualHull chain Proof 20:05:18 -> Bridge 20:06:50 -> ActualHull 20:15:24 -> probe 20:21:35; CorrectedExtraction defs probe 20:08:08; Odd 19:55:06.
+
+
+### 20.355 ObjectLock restored/FloorObstruction green (2026-11-17 11:00)
+- ObjectLockData DONE 21:09:07/olean 21:09:06 (source 21:05:43) fresh; failing ring-level/bridge/transitivity blocks removed; green API retained. Root cause: explicit letI still failed SMulDistribClass G (O_F) F and HSMul; next safe section-start #synth or explicit SMulDistribClass G (O_Fmod) (O_F) via smul_distrib_smul.
+- FloorNativeObstruction DONE 21:09:07/olean 21:09:06: M>=1 necessary, M>1 forces hullLog=-M, unit-relative decomposition; no fake.
+- ActualReadingTarget re-DONE 13:09:10; abc to audit. KernelBridge still no olean; P2Bridge missing.
