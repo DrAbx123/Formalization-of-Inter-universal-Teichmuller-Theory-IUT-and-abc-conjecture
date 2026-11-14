@@ -3701,3 +3701,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - ActualRamifiedData DONE 21:31:17: actual_A_le_Lbar_add_Dbar (perPlace bounds -> A_le) green; fixes remove qlog_div_eq rw, cast completionRationalPrime.val. HasCorrection/LogIdx/Res/Coeff done; HasCoeff/hmu0/hl/hc explicit; unramified explicit.
 - BadToC3TensorMap structure has thetaValue_compat : Prop (not proof) so Nonempty is trivially inhabit able; DO NOT use True/vacuous inhabitant (toy/fake). Need intended proposition from docstring/theta data; hhullRead via dimension/additive shift. mainline.
 - qpilot integralUnitExponent_coprime via quotient/residue units; tensor unit ball. abc audit. No fake.
+
+
+### 20.553 quotient↔residue units donor found (qpilot, 2026-11-15 22:30)
+- Mathlib ValuationSubring.unitsModPrincipalUnitsEquivResidueFieldUnits: (Integers K)^x / principalUnits ≃* (ResidueField A)^x. Need Fintype residue field, card=p^f, coprime p (p^f-1) via Nat.coprime_pow_sub_one, transfer card to quotient; integralUnitExponent=card quotient => coprime. Then unitLog_norm_le_one (p odd; p=2 separate), then tensor unit ball. qpilot implement; no fake.
