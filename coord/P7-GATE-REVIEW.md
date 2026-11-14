@@ -2790,3 +2790,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.372 P2 fixes applied by shehdd; primary probe confirmed (2026-11-17 13:50)
 - shehdd fixed P2NormBridge: hpnorm via congrArg norm hcoep; hcoenorm via rw [norm_pow]; hnormx simpa [hcoex,norm_mul,norm_unit_eq_one,norm_pow]. Retouched, fresh pending.
 - Hull stopped editing; TruncatedUnitsPrimary DONE 12:42:22 olean 12:42:21 and probe 12:47:13 axioms span_logShellScale_eq_maximalIdeal_pow/truncatedUnitsCardPrimary standard no sorryAx. Hull assigned general-e #C B secondary.
+
+
+### 20.373 MAJOR P2NormBridge GREEN (shehdd, 2026-11-17 14:00)
+- Mzk1P2NormBridgeActual DONE 13:48:02/olean 21:48:01 (59s): norm_le_norm_natCast_iff_addVal_ge (pi,hpi,x!=0,N): ||x||<=||p^N|| <-> N*eK <= addVal x toNat; no source sorry. Fixes: congrArg norm hcoep, norm_pow, simpa hnormx.
+- Next shehdd: Mzk1P2BridgeActual wrapper with N=2 (p^2=4): ||x||<=||4|| <-> 2eK <= addVal x for x!=0; x=0 addVal top; then kernel 1+4O equivalence + TruncatedUnitsCardPrimary (verify s=2/logShellScale 2=4). abc to probe/audit.

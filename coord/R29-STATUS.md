@@ -2573,3 +2573,5 @@
 - 19:20: hull assigned general-e #C B secondary units card (N=eK*s*e, span power). p2 wrapper waits shehdd. gate 20.371 written.
 
 - 19:30: shehdd applied P2 fixes; fresh pending. Hull primary/probe confirmed no sorryAx; hull general-e secondary assigned. gate 20.372 written.
+
+- 19:40: MAJOR P2NormBridge GREEN 21:48:01 (norm/addVal threshold). Next shehdd P2Bridge wrapper N=2, kernel 1+4O, primary p=2. abc probe. gate 20.373 written.
