@@ -1836,3 +1836,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - CRITICAL: is S45 qVFamNormRatio=1 actually FALSE/refutable? Donor power relation gives normalized=default^(1/d); d≠1 means ratio≠1 unless default=1. SeparatedNormRatioRegime records ratio≠1 regime. hull/stage4 to determine if actual T/b refutes S45; if false, route obstruction must be reported, no fake unconditional.
 - Residual old all-x files: Final/Consumer/SpectralBridge/FinalWiringFixed, no olean, must add hx/fix names or exclude.
 - #C B/A gap; source arrow provenance gap; non-lane statement red pending.
+
+
+### 20.214 AddLeProof probe GREEN; S45 d>1 attempt (2026-11-16 08:00)
+- Mzk1CanonicalAbsValueAddLeAxiomProbeActual DONE 06:20:03 (58s); donor probe re-DONE 06:20:02; both fresh.
+- Prop18Composite still no olean; residual old all-x files pending. S45 open; hull/stage4 to attempt actual d>1 regime or concrete S45.
