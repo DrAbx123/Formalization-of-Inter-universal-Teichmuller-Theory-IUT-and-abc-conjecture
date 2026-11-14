@@ -893,3 +893,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - 实定义 `tmp/sheaf/n8/closure/SourcePilotRegion.lean:59`：`structure SourcePilotRegionData` 含 `p/place/q/thetaPacket/qUnit/roots/roots'/kummerClass/rootChange/tensorIndex/tensorPlaces/tensorTuple/tensorUnit/tensorLanding/tensorLanding_q` 等字段；**不是空类型**。
 - S3137 的 `P.line.C3` 类型即该 structure；hull 之前“S1429 空类型”可能是另一个 wrapper/alias，需 `#check` 确认 exact path。
 - **继续 actual P 构造**：`PaperQPilotObjectActual` = `line : QPilotLineActual`（C1/C2/C3）+ strip/oneColumn/logKummer/oneZero；优先 `qread_eq : qPilotLogVolumeReading P = -localLogMagnitude (qVFamily T b)`。若 C3 实际不可构造，再列精确字段缺口。
+
+
+### 20.68 关键路线裁决：旧 S3137 P 类型为空，非空目标改 L-carrier（2026-11-15 03:45）
+- **hull 新证 `sourcePilotRegionData_isEmpty`**（`S1429CompletionRootObstructionActual:167-173`）：`roots : NatRootSystem qUnit` 与 `no_completionRootSystem` 矛盾；`QPilotLineActual.C3` 即该类型 ⇒ `PaperQPilotObjectActual I` 为空。
+- 因此旧 raw S3137 `qPilotLogVolumeReading P` / `thetaPilotHullLogVolumeReal` 侧 **vacuous**；不能作为 abc 的非空目标。
+- **实际非空载体**：`SourcePilotRegionDataL`（S1391）+ `Mzk1S3137LReadoutActual.LPaper312Statement`；`Mzk1P0LPaperInstanceActual` 已给
+  `LPaperInstance_of_theta_nonneg (h : 0 ≤ thetaReadActual) : LPaperInstance`；
+  缺 `LQThetaSourceArrow`（`q_mem_thetaRegion` + `normalization_eq`）。
+- **分配**：mainline 编 `Mzk1P0S3137PObjectObstructionActual` 并攻 L 侧 `LQThetaSourceArrow`/`LPaperInstance`；hull 继续 NormCorrection probe + 只读 L 侧 donor；旧 S3137 只作 vacuous 记录，不冒充。
