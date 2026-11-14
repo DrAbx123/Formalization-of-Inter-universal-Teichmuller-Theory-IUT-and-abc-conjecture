@@ -2454,3 +2454,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1Ind1DepthSubgroupActual GREEN 11:13:38: mem_depthSubgroup, int_eq_zero_of_forall_dvd_pow, DepthSubgroupEqualsKernel_of_divisible; probes three axioms, no sorryAx.
 - Mzk1Ind1CorrectedExtractionActual DONE 11:13:39; correctedDepthLayer_le_invariant (Subgroup.mem_map) and Required_iff added; A_H=invariantUnitLayer fixed units image; correctedDepthLayer takes D_r inside A_H then map subtype. No inhabitant.
 - Next: actual valuation A_F->Multiplicative Z kernel W_F; W_F infinite divisibility (r,p)=1; A_H≅L^x/mu(L), D_r(A_H)=O_L^x/mu(L); ActualSourceUnitLayer compat. abc to audit/probe.
+
+
+### 20.313 Ind1 actual valuation interface (stepxi, 2026-11-17 04:00)
+- Donor search: NormedField.valuation target not Multiplicative Z; IntegralUnits only units/log, no kernel=W_F theorem and no r-divisibility. Mzk1Ind1ValuationDataActual queued: AQuotient F:=TimesMuQuotient F^x; WQuotient F:=(Integers F)^x/tors; structure LocalValuationData { unitToA : WQuotient -> AQuotient; v : AQuotient ->* Multiplicative Z; range_unitToA_eq_ker; infinitelyDivisible : forall r coprime p, forall x, InfinitelyDivisibleFor r x }; Required=Nonempty no inhabitant.
+- Second donor: A_H≅L^x/mu(L), D_r(A_H)=O_L^x/mu(L); third ActualSourceUnitLayer compat. Suggested v via Valued.v + WithZero.unzero; divisibility via O_F^x/tors ≅ Z_p^d and r invertible. No fake.
