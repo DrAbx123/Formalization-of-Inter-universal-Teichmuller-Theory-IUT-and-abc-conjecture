@@ -3442,3 +3442,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.497 IsScalarTower base cast abandon congrArg (stage4, 2026-11-15 14:10)
 - congrArg PadicScalarField hprime fails (implicit K differs lower F/upper K); congrArg (fun n=>Qp_n) loses Fact prime. Base-field transport blocker, not donor. Fix: work entirely with CommonPrimeCompletion relativePlace/kPlaceAtPrime (same p) and relativeNormalizedCompletionScalarTower/Finite; then change actual adicCompletion goal if defeq or transport final degree. adicAbv pending. No fake.
+
+
+### 20.498 quotient cocycle: try Iso.refl coherence simplification (mainline, 2026-11-15 14:20)
+- Cocycle exact first missing after cat_disch/ext; manual bicategorical coherence blocked. Idea: since inversion=Hom.id and comp id id defeq id, set signActionCandidate.inversionSquared := Iso.refl _ and quotient invariant := Iso.refl _; retry cocycle may become rfl/simp. If still deep keep explicit gap. Mainline probe.
+- quotientWitness descend/factor/descendTwoCell/twoCell_ext no donor; groups coverCategory no donor; unique gap. No fake.

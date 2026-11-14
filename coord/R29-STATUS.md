@@ -2821,3 +2821,5 @@
 - 16:00: Ramified actual family p-defeq obstacle; use completionRationalPrime in ofAtPrime or subst place.property. hull. gate 20.496 written.
 
 - 16:10: IsScalarTower abandon congrArg; use CommonPrimeCompletion tower directly then change. stage4. gate 20.497 written.
+
+- 16:20: quotient cocycle try inversionSquared/invariant := Iso.refl to simplify; mainline. groups/unique gaps. gate 20.498 written.
