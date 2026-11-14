@@ -2219,3 +2219,5 @@
 - 13:10: GREEN probes LS3137LFinal 06:00:57 (2) and donor 06:04:01 (3), all three axioms. Five donor corrections verified. S45 boundary: donor unrelated to S45/paper comparison; no overclaim. gate 20.208 written.
 
 - 13:20: probe greens donor 06:04:01 (3) + LS3137 06:00:57 (2). S45 boundary no overclaim. Composite now real error 0<c; lattice to fix. gate 20.208 updated.
+
+- 13:20 FINAL: donor 06:04:03/probe 06:04:01; composite GREEN 06:06:46; LS3137 GREEN 05:57/probe 06:00:57. All three axioms. Residual old all-x files no olean must fix before build. S45 not implied. gate 20.209 written.
