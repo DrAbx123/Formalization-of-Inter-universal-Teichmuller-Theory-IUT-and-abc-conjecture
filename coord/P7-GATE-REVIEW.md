@@ -1446,3 +1446,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Rows: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION; A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP (no True); unitMass=1 NOT CLAIMED; old raw S3137 vacuous RECORD ONLY.
 - B5 GREEN 03:26:34 (olean 11:26:33 > source 11:23:30); Final2 recompiled 03:29:42 after B5 -> reproducible now.
 - Need final axiom probe; final is conditional, not unconditional 3.12/abc closure.
+
+
+### 20.148 Final axiom probe GREEN; B5/Final2 audit (abc, 2026-11-15 19:40)
+- Mzk1FinalAuditAxiomProbeActual DONE 03:33:29 (olean): finalPaperNormalizedComparison, finalLPaperInstance, finalBridgeConditions_of, B5..._of_bridge all [propext, Classical.choice, Quot.sound].
+- final rows consistent: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION (not field tower); A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP undefined no True; unitMass=1 NOT CLAIMED; old raw S3137 P RECORD ONLY. No unused binders.
+- B5 DONE 03:26:34: no True/sorry; conditional assembly B5ProductFormulaBridge (relativeDetLog = finite index + arch), ..._of_bridge; MissingB5ProductFormulaBridge is exact GAP.
+- Final2 DONE 03:29:42: status-only row file, no theorems; not substantive progress.
