@@ -3879,3 +3879,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.594 subgroup apply IsEquiv iff to x=u.val-1 (2026-11-15 29:20)
 - `isEquiv_iff_val_lt_one.mp` needs explicit x=(u.val:K)-1; current h missing x. Then rw h and align unitsImage u with u.val via congr/simp. qpilot. No fake.
+
+
+### 20.595 isEquiv_iff_val_lt_one implicit x named arg (2026-11-15 29:30)
+- The theorem statement uses ∀ {x}; apply `(x := ((u.val:K)-1))` named. Then rw h/align unitsImage. qpilot. No fake.
