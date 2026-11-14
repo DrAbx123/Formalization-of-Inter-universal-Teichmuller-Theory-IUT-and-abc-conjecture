@@ -2937,3 +2937,5 @@
 - 25:40: principalUnits subgroup equality via norm_lt_one_iff; qpilot. gate 20.554 written.
 
 - 25:50: thetaValueCompat non-vacuous definition; check relation/mismatch; basePlace Fmod; region equality likely false. mainline. gate 20.555 written.
+
+- 26:00: NormedValued.norm_lt_one_iff donor for qpilot; ThetaValueCompat ∀b generally false, basePlace needs Fmod equality; keep gaps. gate 20.556 written.

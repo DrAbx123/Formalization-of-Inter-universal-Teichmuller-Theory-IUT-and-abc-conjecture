@@ -3713,3 +3713,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.555 Non-vacuous thetaValueCompat/basePlace (mainline, 2026-11-15 22:50)
 - Intended ThetaValueCompat: forall b j, C3.thetaPacket.scale j = qVFamilyThetaValue T b j; source theater version uses sourceThetaValue. Existing QVThetaValueRelation/QVThetaValueMismatch/SourceTheaterQNeQVFamily. basePlace_compat needs Fmod equality; only ring equiv Nonempty known. mainline formalize and check relation/mismatch. region thetaPilotHull vs C3PerPlaceUpdateRegionAll likely false (unit log-shell vs radius rho); hhullRead shift can absorb but region equality not. No fake.
+
+
+### 20.556 General norm_lt_one_iff donor; theta compat ∀b likely false (2026-11-15 23:00)
+- Mathlib Valued.NormedValued.norm_lt_one_iff (NormedValued.lean:245): ||x||<1 ↔ Valued.v x<1; with NormedField.v_eq_valuation gives general NormedField.valuation bridge, then principalUnits subgroup equality + residue units donor. qpilot.
+- ThetaValueCompat ∀b version: C3.thetaPacket.scale j independent of b but qVFamilyThetaValue depends on b; with j exponent nonzero implies all qVFam q norms equal, generally false. No per-coordinate C3 theta field. QVThetaValueRelation arbitrary n; QVThetaValueMismatch/SourceTheaterQNeQVFamily record mismatch. basePlace_compat strict form needs Fmod equality; only ring equiv. So BadToC3TensorMap paper semantics blocked on per-coordinate theta data + Fmod equality; no True fill. mainline gap.
