@@ -2052,3 +2052,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1FinalAuditAxiomProbeActual olean 16:03:38: final comparison, finalL, finalBridge, B5 conditional all three axioms.
 - abc's earlier list omitted noS45 bridge; corrected separately. Both fresh.
 - LiteralCarrierAxiomProbe 08:03:09 three axioms; LiteralCarrier GREEN 07:53:24.
+
+
+### 20.250 hbridge latest elaboration fixes (stage4, 2026-11-16 15:00)
+- Donor no olean; fail 16:10 source edited. Fixes: :71 xC local let -> dsimp only [xC]; simpa [toC] using hx or change/rw toC_apply; :79 remove exact Subsingleton.elim after congr 1; :86 change -WithZero.log val = -m or simp only [nu,xC,val] before rw hlog; :94 change ‖(qVFamily T b).q‖=absNorm^((m:Z):R) then simpa [qVFamDefaultNorm,toC] using hdef or convert using 2. All elaboration; route unchanged. Generic/RouteA green.

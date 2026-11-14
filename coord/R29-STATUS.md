@@ -2315,3 +2315,5 @@
 - 21:10: both final probes fresh 16:03:38; new probe includes noS45_ofNormBridge three axioms. abc list omitted it, corrected. LiteralCarrier probe three axioms. gate 20.249 written.
 
 - 21:20: hbridge still no olean; hull owns; mainline prepare integration. 12 lean, log 16:09.
+
+- 21:30: hbridge elaboration fixes :71 dsimp xC, :79 remove Subsingleton, :86 change val, :94 change/simpa hdef. hull fix. gate 20.250 written.
