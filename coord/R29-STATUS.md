@@ -2901,3 +2901,5 @@
 - 22:40: MAJOR FloorUnitRegion GREEN 05:03:37; ActualData duplicate decl; abc first missing regionVolume<=normalizedWeight bridge. gate 20.536 written.
 
 - 22:50: hscale1 not from choose; try hull⊆unitReference then helper scale:=1 with proof. qpilot. gate 20.537 written.
+
+- 23:00: abc bridge audit: first missing logShellPoint abc->C3 tensor + c3NormalizedTensorHaar region estimate; then hhullRead normalized/actual Haar. mainline search. gate 20.538 written.

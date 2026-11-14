@@ -3635,3 +3635,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.537 hscale1 unprovable from choose; try hull subset (2026-11-15 20:50)
 - arithmeticTupleIQHullUnitScale = choose (exists lam!=0, hull ⊆ lam•unitReference); spec only existence, no lam=1/minimality => hscale1 not provable as is.
 - Try prove hull ⊆ canonicalUnitReference by unfolding definitions; if true, redefine helper scale to 1 with proof (not fake) and recheck downstream. Else record scale!=1/hullUnitLog=0 open gap. qpilot. No fake.
+
+
+### 20.538 abc bridge precise type audit (mainline, 2026-11-15 21:00)
+- Cor312EpsilonArithmeticComparison fields: logShellPoint : Nat->Nat->Nat->X; height_le_normalizedRegionVolume; regionVolume_le_normalizedWeight (logVolume normalizedComparisonRegion <= (1+eps)*arithmeticWeight + logVolume hull + D). IQHullLogVolumeInterface: imageSet⊆hull⊆scaleShift''unitRegion, logVolume monotone ENNReal, no subadditivity. thetaPilotHullLogVolumeReal C3 = log(actualC3LogShellTensorHaar C3 (thetaPilotHull C3)); candidate interface logVolume=c3NormalizedTensorHaar, unitRegion=C3PerPlaceUpdateRegionAll, scaleShift=id, hull/imageSet explicit.
+- Smallest bridge: regionVolume_le_normalizedWeight_of_thetaReading. First missing constructor = logShellPoint (abcRationalPoint -> C3LogShellTensorBlock log-shell image) + c3NormalizedTensorHaar region estimate (IUT IV §2 main estimate); then hhullRead normalized vs actual Haar identification. mainline search existing maps/donors; qpilot hscale.
