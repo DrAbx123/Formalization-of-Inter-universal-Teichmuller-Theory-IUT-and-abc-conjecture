@@ -2885,3 +2885,5 @@
 - 21:20: UnitRegionScaling direct GREEN; IntegersEquiv Fact/type alignment blockers. qpilot floor; stepxi cast. gate 20.528 written.
 
 - 21:30: IntegersEquiv cleared to placeholder; blockers Fact/completion-integers cast. WQuotient interface green/equiv missing. gate 20.529 written.
+
+- 21:40: AdicAbv coe RingEquiv alignment; define m with e x / simp coe_toRingHom. mainline. gate 20.530 written.

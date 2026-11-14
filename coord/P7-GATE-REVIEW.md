@@ -3594,3 +3594,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.529 IntegersEquiv cleared; WQuotient interface stays (2026-11-15 19:30)
 - IntegersEquivZp experiment red/too heavy; stepxi cleared file to placeholder. Blockers: local Fact Prime 5; concreteFivePadicIntEquiv target concreteFiveHeightOne.adicCompletionIntegers Q vs needed Integers(Completion(comap concretePlace)); concreteGaussianFivePlace_comap only place equality; no direct Completion/Integers cast lemma. WQuotient p=5 d=1 interface green, equiv missing; Zp^d root interface ready.
 - No fake.
+
+
+### 20.530 AdicAbv coe RingEquiv alignment (mainline, 2026-11-15 19:40)
+- absNorm/hw/hφ/hval now pass. Current :81 change fails: m uses valuation K' ... ((e:K→+*K') x) vs target (e x), not defeq under change. Fix define m with e x, `simp only [RingEquiv.coe_toRingHom]` before change, or hcoe : ((e:K→+*K') x)=e x := rfl. Then by_cases m=0/toNNReal. No fake.
