@@ -2393,3 +2393,5 @@
 - 03:40: user shortcut: derive logQ bound from hCor312 by rearrangement for l>=7,dmod>=1; l=5 separate. #C: distinguish p-ideal vs m-ideal to determine ramification factor. qpilot/hull assigned. gate 20.283 written.
 
 - 03:50: shehdd context exhausted for task-127; #C A reassigned to hull combined with #C B. Alignment: logShellCongruenceUnits radius 1+p^s O vs target (p^s)^e; resolve pairing first.
+
+- 04:10: user says no context exhaustion. Reassigned task-127 back to shehdd; told lattice resume task-130 and ignore auto-probes. Continue all lines.
