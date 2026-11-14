@@ -3155,3 +3155,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.440 MAJOR UnitInvariance smul GREEN (qpilot, 2026-11-15 04:30)
 - Mzk1IVThm110UnitInvarianceActual DONE 00:53:10: membership lemmas, image=O, algebraMapUnit : X^x (val/inv algebraMap, val_inv/inv_val by change/map_mul/Units.mul_inv), algebraMapUnit_smul_canonicalUnitReference_eq : (algebraMapUnit u)•O=O. No source sorry.
 - Next qpilot: Mzk1IVThm110HaarUnitInvarianceActual with MeasurableSpace/BorelSpace/IsAddHaarMeasure; O positive finite; distribHaarChar_eq_of_measure_smul_eq_mul s=O -> char=1; distribHaarChar_mul -> μ(u•S)=μS; λ=p^k*u/principalDim. abc probe.
+
+
+### 20.441 A2 first missing SourceSignQuotientData xF geometry (mainline, 2026-11-15 04:40)
+- C3BaseQ direct aggregation DONE 16:45:19 + probe 16:53:57 three axioms.
+- A2 gate SourceNativeArithmeticToSourceGate no inhabitant. S1532A2FirstField = SourceSignQuotientData (S1280Arithmetic l); its structure has xF : HyperbolicOrbicurve A.F, xF_geometry : SourceOncePuncturedGeometry A.curve xF, ellipticInvolution/squared/unique, signAction/inversion, cF/quotient/witness, xFGroups/cFGroups/fGroupInclusion, xK/cK/extensions, etc. No Nonempty/constructor. SourceClauseAssembly not first missing (S1494ClauseAssemblyFromNative green). hroot also explicit gap.
+- Mainline to keep A2 as source-geometry gap; check if xF or realizedHyperbolicOrbicurve can help; next (c) ClauseBBaseQSourceIdentity same-q source. No fake.
