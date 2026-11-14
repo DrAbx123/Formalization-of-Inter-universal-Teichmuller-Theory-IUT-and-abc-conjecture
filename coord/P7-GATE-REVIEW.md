@@ -2776,3 +2776,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.369 P2 fresh errors persist; stage4/stepxi asked (2026-11-17 13:20)
 - P2NormBridge log 21:38: :58:39 type mismatch; :59:36 nonzeroness; :86:25 rewrite missing; hn : sorry=e; :49:8 rewrite missing; :56:39/:57:36; :86:2 omega; :47:8 rewrite; :83:2 no goals; :51:55 type mismatch. Hull to report exact first lines/fix or hand off.
 - stage4 asked ring-level/SMulDistribClass status; stepxi asked kernel equality/equiv. No new green; KernelBridge olean 21:18:05 with kernelToAQuotient probe three axioms.
+
+
+### 20.370 P2NormBridge handed to shehdd (2026-11-17 13:30)
+- Hull handed off P2NormBridge (FAIL 13:43:10) to avoid concurrent edits. Exact fixes: :47 use congrArg norm hcoep for hpnorm; :51 hcoenorm rw [norm_pow]; exact hpnorm.symm; :83 hnormx No goals -> calc/simp only. shehdd to take over and report fresh first error/GREEN. Hull stops editing file.
+- Primary/probe green retained TruncatedUnitsPrimary 12:42:22/12:47:13.
