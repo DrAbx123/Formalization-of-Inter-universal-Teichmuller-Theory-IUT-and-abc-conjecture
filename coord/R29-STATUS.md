@@ -1913,3 +1913,5 @@
 - 11:25：NormCorrection 精确修：本地 `qhatLogReadout` 改为 `abbrev` 别名指向 Correspondence 同名 def（解决 hbound 类型不匹配）；`:67/:99 linarith` 前加 `ring_nf`；`:134` 随别名解决。已发 hull。
 
 - 11:30：**审计 probe GREEN：`Mzk1BoxDistinguishedScalarProbe` 00:56:51（ord_pow/ord_theta/distinguished_theta_order 三公理）、`Mzk1IutIVProp14HaarIndexAxiomProbe` 00:56:56（mu_lambda_eq_index_mul/toReal 三公理）；`Mzk1Ind1LogLatticeActionActual` 00:56:57（仅 structure，无 proof/sorry）**。qpilot 正在写 `Mzk1BoxDistinguishedVarpiActual`；lattice 接 HaarIndexPow；stepxi 接 WF/实际单位识别。gate §20.65 已写。
+
+- 11:35：**GREEN `Mzk1P0QThetaReadoutNormCorrectionActual` 00:57:51（108s）**：q 侧 correction 链完成（qhat−paperQ=log ratio；1/[K_w:F_v] 与 d_b 两权重分列；`paperQDegree≤closedForm−1−Σd log ratio`；S45+norms 下 `paperQDegree≤closedForm−1`）。已派 hull 做 axiom probe + S3137 读数层 correction；mainline 继续 QHat/RootRadius/PaperSums；abc 核对权重。gate §20.66 已写。

@@ -874,3 +874,16 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **`Mzk1Ind1LogLatticeActionActual` DONE 00:56:57（55s）**：仅 `SinglePlaceLogLatticeAction` structure（F/L/p/instances 显式参数），无 proof/sorry；旧 log 的 `NormedAlgebra` 错误是旧 run。
 - `Mzk1BoxDistinguishedScalarActual` 00:53:39 GREEN；`Mzk1IutIVProp14HaarIndexActual` 00:53:43 GREEN；`Mzk1Ind1UnitQuotientActual` 00:53:44 GREEN + probe 三公理。
 - 下一步：qpilot `Mzk1BoxDistinguishedVarpiActual`（PacketHullData.varpi）；lattice HaarIndexPow→hμΛ；stepxi WF/实际单位识别。
+
+
+### 20.66 GREEN：q/Theta NormCorrection 完成（hull，2026-11-15 03:25）
+- **`Mzk1P0QThetaReadoutNormCorrectionActual` DONE 00:57:51（108s）**：
+  - `qhatLogReadout_sub_paperQ_eq_log_ratio`：`qhatLogReadout − paperQSignedReadout = log(qVFamNormRatio)`（norm agreement 下）；
+  - `qhatLogReadoutGlobal_sub_paperQ_eq_sum_log_ratio`：权重 `nativeBadLocalWeight = 1/[K_w:F_v]`，差 = `Σ w log ratio`；
+  - `qhatLogReadoutDegreeGlobal_sub_paperQ_eq_sum_degree_log_ratio`：权重 `d_b`，差 = `Σ d_b log ratio`；
+  - `paperQDegree_le_closedForm_sub_one_sub_correction`：`paperQDegree ≤ (s1915ClosedForm−1) − Σ d_b log ratio`；
+  - `paperQDegree_le_closedForm_sub_one_of_fields (S : PaperSourceCorrectionFreeFields T)`：`paperQDegree ≤ s1915ClosedForm−1`（S45 + norm agreement）。
+- **权重分列**：paper 1/[K_w:F_v]、product d_b；`Σ w log ratio` 与 `Σ d_b log ratio` 未混用。
+- **两条件分开**：`hnorm : ‖c0QHat‖=qVFamNormalizedNorm`（P2）与 `S.normRatio_one`（S45）。
+- 关键修复：本地 `qhatLogReadout` 改为 Correspondence 同名 def 的 abbrev 别名；linarith 前 `ring_nf`。
+- **下一步**：axiom probe（5 定理三公理）、S3137 读数层 correction 定理（或精确 `PaperS3137ReadingDictionary` 字段）；mainline 继续 QHat/RootRadius/PaperSums。
