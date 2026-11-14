@@ -2561,3 +2561,5 @@
 - 18:20: Qp unit decomposition donor Padic.unitCoeff_spec; remaining unit-invariance of Haar under ||u||=1 not found. qpilot to report exact missing lemma. gate 20.365 written.
 
 - 18:30: unit invariance route via distribHaarChar and compact open lattice preserved by Zp^×; avoids determinant. qpilot implement/report. gate 20.366 written.
+
+- 18:40: first errors HullUnitZero (unfold/linarith) and P2 (synth/type/omega); KernelBridge kernelToAQuotient probe three axioms no sorryAx. gate 20.367 written.

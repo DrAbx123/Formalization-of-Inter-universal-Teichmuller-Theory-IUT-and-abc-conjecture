@@ -2760,3 +2760,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.366 Unit invariance route via distribHaarChar/lattice (2026-11-17 12:50)
 - Instead of determinant, prove unit invariance: u in Zp^× preserves a compact open additive lattice L (u•L=L since u,u^-1 integral). Then distribHaarChar_mul (Haar/DistribChar:83) and distribHaarChar_eq_of_measure_smul_eq_mul (:92) yield distribHaarChar block u =1, hence μ(u•S)=μS. Need compact open lattice in ArithmeticTensorTupleBlock preserved by unit action (product of integer rings).
 - Then lambda=p^k*u decomposition via Padic.unitCoeff_spec + p^k formula; get principalDim log||lambda||. qpilot to implement/report first blocker.
+
+
+### 20.367 Fresh first errors HullUnitZero/P2 (2026-11-17 13:00)
+- HullUnitZero log 21:28: :36:63 unsolved; :34:2 linarith failed; :41:6 synth failed; :34:45/:44:45 unfold arithmeticTupleIQHullUnitRegionHaarLog failed; :54:40 type mismatch; :50:63 unsolved. Function is def in FinitePlaceIQHullSignedLogVolume:43; use rw [show ... from rfl]/simp and verify import.
+- P2NormBridge log 21:28: :34:49 synthInstanceFailed; :58:39 type mismatch; :59:36 nonzeroness; :86:25/:49:8 rewrite pattern missing; :56:39 type mismatch; :57:36 nonzeroness; :86:2 omega. Hull to fix/report.
+- KernelBridge probe for kernelToAQuotient: [propext, Classical.choice, Quot.sound] (no sorryAx).
