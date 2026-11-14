@@ -2532,3 +2532,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - qpilot FloorActual blocked on missing upstream HCor312Actual.olean; build upstream first.
 - shehdd odd-p full first error needed; structural target logShellResidueField.
 - stage4 ring-level IsGaloisGroup/primesOver bridge/transitivity/degree tower next.
+
+
+### 20.326 Ind1 ValuationData sorryAx cleared fresh (stepxi, 2026-11-17 06:10)
+- Mzk1Ind1ValuationDataActual DONE 11:41:33; fresh probe torsion_le_ker_unitValuationHom and LocalValuationDataRequired both three axioms [propext, Classical.choice, Quot.sound], no sorryAx. Previous sorryAx was 11:37 stale auto-sorry from failed map_one/change; current source uses unitsToValuedUnits + unitsWithZeroEquiv composition.
+- KernelIntegers upstream olean now exists; stepxi to rebuild and prove left_inv/right_inv MulEquiv, mod torsion WQuotient, Z_p^d divisibility.
