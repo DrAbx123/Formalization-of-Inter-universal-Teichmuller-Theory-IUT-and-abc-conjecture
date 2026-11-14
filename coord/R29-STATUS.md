@@ -2317,3 +2317,5 @@
 - 21:20: hbridge still no olean; hull owns; mainline prepare integration. 12 lean, log 16:09.
 
 - 21:30: hbridge elaboration fixes :71 dsimp xC, :79 remove Subsingleton, :86 change val, :94 change/simpa hdef. hull fix. gate 20.250 written.
+
+- 21:40: hbridge tiny fixes: Donor remove rfl/coe_unzero; Value explicit show NormalizedCompletion both q uses. hull fix. gate 20.251 written.

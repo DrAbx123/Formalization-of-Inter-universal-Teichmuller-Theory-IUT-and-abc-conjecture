@@ -2056,3 +2056,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 
 ### 20.250 hbridge latest elaboration fixes (stage4, 2026-11-16 15:00)
 - Donor no olean; fail 16:10 source edited. Fixes: :71 xC local let -> dsimp only [xC]; simpa [toC] using hx or change/rw toC_apply; :79 remove exact Subsingleton.elim after congr 1; :86 change -WithZero.log val = -m or simp only [nu,xC,val] before rw hlog; :94 change ‖(qVFamily T b).q‖=absNorm^((m:Z):R) then simpa [qVFamDefaultNorm,toC] using hdef or convert using 2. All elaboration; route unchanged. Generic/RouteA green.
+
+
+### 20.251 hbridge near-green exact tiny fixes (abc, 2026-11-16 15:10)
+- Donor src 16:08:02 FAIL 08:14:16: hlog line79 rw already closed, line80 rfl No goals -> delete rfl or simpa [WithZero.coe_unzero] using (coe_unzero hval).symm.
+- Value src 15:44:10 FAIL 08:14:15: line70 change carrier mismatch for nu (qVFamTensorPlace) (qVFamily).q -> explicit show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q both places, matching lines52/62.
+- hbridge not green yet; wrapper conditional green; S45-free not unconditional. No fake.
