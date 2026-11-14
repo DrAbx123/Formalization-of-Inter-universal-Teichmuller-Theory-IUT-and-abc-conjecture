@@ -2095,3 +2095,5 @@
 - 01:45: final axiom probe GREEN 03:33:29 (4 items three axioms). B5 conditional with MissingB5ProductFormulaBridge exact GAP; Final2 status-only no theorem. final rows consistent. gate 20.148 written.
 
 - 02:00: mainline final fresh recompile 03:33:31 empty output => no warning/sorry; final probe 03:37:33 three axioms. B5 03:26:34; Final2 03:29:42 reproducible. P14ii hp 1<p -> 0<p fixed by linarith. gate 20.149 written.
+
+- 02:10: round-6 tails: P14ii hp still 1<p (fix call site linarith/explicit 0<p); IntegrationAction calc double application; LS3137LFinal isDefEq timeout. Woke mainline/lattice/stepxi/shehdd/abc/hull. Final/probes green. gate 20.150 written.

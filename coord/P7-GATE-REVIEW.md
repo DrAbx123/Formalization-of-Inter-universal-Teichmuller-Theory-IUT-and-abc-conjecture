@@ -1461,3 +1461,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Final2 DONE 03:29:42 after B5 GREEN 03:26:34 => reproducible; B5 green 03:26:34.
 - P14ii first error: volume_ratio_eq_pow_actualH hp needs 0 < (p:Real), hp is 1 < (p:Real); fix with (by linarith). Retouched; next compile.
 - Final rows unchanged: S45 EXPLICIT CONDITION; RelativeFactorTowerData divisibility EXPLICIT CONDITION; A1Data CONSTRUCTED; PaperS3137ReadingDictionary EXPLICIT GAP (no True); unitMass=1 not assumed; old raw S3137 vacuous record only.
+
+
+### 20.150 Round-6 tails: P14ii hp, IntegrationAction calc, LS3137 timeout (2026-11-15 20:10)
+- P14ii log 11:36:44 still hp:1<(p:Real) expected 0<(p:Real); fix call site with by linarith/explicit hp0 and recompute.
+- IntegrationAction :48 calc: LHS integersUnitsToAlgClosure (Classical.choose ..) vs expected double application; fix inverse/choose_spec or invFun left_inv/right_inv.
+- LS3137LFinal :18 isDefEq timeout 200000; may need explicit C3L/instances/maxHeartbeats; no fake.
+- Final S3137/probes green; B5/Final2 reproducible; P14ii remains last IV 1.10 file.
