@@ -1501,3 +1501,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Final S3137 conditional GREEN; P14ii probe GREEN; IV core chain green.
 - Remaining unconditional obstruction: S45 field qVFamNormRatio=1. qVFamNormalizedGenerator is qVFamily.q coerced to CommonPrimeCompletion (NormalizedCompletion spectral norm), while qVFamDefaultNorm uses Completion default valuation norm. qVFamPureFractionalScalingDataGapActual explicitly records no tree theorem identifies these norm instances. hull/stage4 to investigate exact obstruction/route; no fake.
 - Other tails: iiiBoxConsumer (prop14iii_box_formal + IsAddHaarMeasure), IntegrationAction calc, LS3137LFinal timeout, #C actual B/A, source beta.
+
+
+### 20.157 GREEN: iiiBoxConsumer; Box RED cleared; ReadingDictionary plan (2026-11-15 21:35)
+- Mzk1IutIVProp14iiiBoxConsumerActual DONE 03:51:00 (57s): box_readout_le; uses fully qualified prop14iii_box_formal + [Measure.IsAddHaarMeasure C.mu]; no fake/sorry/axiom.
+- Box (11) chain: iiiBoxFormalActual.prop14iii_box_formal -> iiiBoxConsumerActual.box_readout_le; IV directory Box RED cleared.
+- mainline ReadingDictionary plan: fields (a) theta_product_eq (green), (b) q_paper_eq (rfl), (c) coeff_eq_of_ratio (green), (d) object_lock (single-place vs Bad global sum + per-b weight factor B_b + sign/unitMass). Lead approved but object_lock must be substantive object/equality datum, not bare Prop/True; (a)-(c) to be constructed, (d) explicit GAP.

@@ -2109,3 +2109,5 @@
 - 03:05: GREEN P14iiAxiomProbe 03:47:14 (p14ii_logVolume_actual three axioms) and iiiBoxActual 03:47:15 stub. iiiBoxConsumer still red: unknown prop14iii_box_formal + missing IsAddHaarMeasure; qpilot to fix. gate 20.155 written.
 
 - 03:20: round-7 direction: final/P14ii green; remaining unconditional obstruction is qVFamNormRatio=1 (CommonPrimeCompletion spectral vs Completion default norm), explicit in QVFamPureFractionalScalingDataGapActual. hull/stage4 investigate norm instance; other tails assigned. gate 20.156 written.
+
+- 03:35: GREEN iiiBoxConsumer 03:51:00 (box_readout_le); IV Box RED cleared. mainline ReadingDictionary plan approved: construct (a) theta_product_eq, (b) q_paper_eq rfl, (c) coeff_eq_of_ratio, keep substantive object_lock explicit (no bare Prop/True). gate 20.157 written.
