@@ -113,3 +113,60 @@ for the final inequality.
   l≥5 → correction nonpos → `paperNormalizedComparison_exact_of_correction_nonpos`.
 
 No Lean changes made.
+
+## Route A ratio proof — read-only verification (2026-11-14 14:50)
+
+The ratio proof already exists in
+`tmp/sheaf/xif/paper/Mzk1GenericNormBridgeActual.lean` (source; currently no olean):
+
+- `normalized_norm_eq_default_norm_rpow`: for a finite place and `x ≠ 0`,
+  `‖x‖_normalized = ‖x‖_default ^ (1/d)`, proved from the donor
+  `generalNormalizedNormFormula`, the green default formula
+  `norm_eq_absNorm_zpow`, the identity
+  `WithZero.log (Valued.v x) = Multiplicative.toAdd (WithZero.unzero ...)`, and
+  `Real.rpow_mul`.  This is exactly the carrier/instance bridge that was listed as
+  an "explicit remaining gap" in `Mzk1P0S45FreeFinalRouteAActual`.
+- `qVFamNormalizedNorm_eq_defaultNorm_rpow`: the qVFam specialization via
+  `simpa [qVFamNormalizedNorm, qVFamDefaultNorm, qVFamNormalizedGenerator,
+    qVFamTensorPlace, NormalizedCompletion, CommonPrimeCompletion]`.
+- `qVFamDefaultNorm_pos`, `qVFamDefaultNorm_lt_one` (from `qNorm_lt_one`).
+- `qVFamNormRatio_ge_one`: `1 ≤ qVFamNormRatio T b`, using
+  `d = relativeCompletionDegree (k := ℚ) (qVFamTensorPlace T b)`,
+  `relativeCompletionDegree_pos`, `1/d ≤ 1`, and
+  `Real.rpow_le_rpow_of_exponent_ge` (with `0 < default < 1`).
+
+Status caveat: the file currently has **no olean**.  The latest watchdog error is a
+stale import error for `Mzk1P0S45FreeFinalRouteAActual` at line 2, but the current
+source line 2 is `GeneralNormalizedNormBySpectralUniqueness` and the file does **not**
+import RouteA; this is a source/log race, so the proof should be re-run/verified by the
+watchdog.  No source change was made.
+
+### Route A wrapper dependency
+
+`Mzk1P0S45FreeFinalRouteAActual` currently fails only at
+`:53:16 unknown identifier badPlaceNativeBadLocalWeight_nonneg`.  That theorem is in
+`PaperBadPlaceTensorGeometryActual.lean:277`; RouteA must import/open
+`PaperBadPlaceTensorGeometryActual` (or qualify the name).  After that:
+
+1. `Mzk1GenericNormBridgeActual.qVFamNormRatio_ge_one`
+2. `Mzk1P0S45FreeFinalRouteAActual.normRatioCorrectionSum_nonneg_of_ratio_ge_one`
+3. `...paperNormalizedCorrection_nonpos_of_sum_nonneg`
+4. `...finalPaperNormalizedComparison_noS45_of_ratio_ge_one`
+5. a final wrapper `finalPaperNormalizedComparison_noS45 := ... (qVFamNormRatio_ge_one T)`
+
+Exact import/dependency direction:
+`Mzk1GenericNormBridgeActual` → `Mzk1P0S45FreeFinalRouteAActual` → final S3137 files.
+Generic does not import RouteA, so no cycle.
+
+### Integration into final
+
+- Replace `finalPaperNormalizedComparison (S : S45SourceFields T)` in
+  `Mzk1P0FinalS3137ConditionalActual` by the no-S45 wrapper.
+- `finalDictionaryCombined` can drop its `S` argument for the paper inequality;
+  `rel`/`Dictionary` never use `S`.
+- Keep S45 only for correction-zero/strict equality targets.
+
+Bottom line: the ratio proof is already present and consistent with the donor formula;
+the only concrete fixes are (i) watchdog re-run of Generic after the stale import race,
+(ii) RouteA import/open of `PaperBadPlaceTensorGeometryActual`, (iii) final wrapper
+substitution.  No Lean changes made in this read-only check.
