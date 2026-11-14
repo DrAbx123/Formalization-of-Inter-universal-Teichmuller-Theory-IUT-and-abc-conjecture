@@ -2582,3 +2582,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.334 p=2 bridge step6 lemma name (2026-11-17 07:30)
 - pow_le_pow_iff_right_of_lt_one₀ (ha₀:0<a)(ha₁:a<1) : a^m <= a^n ↔ n <= m (Algebra/Order/GroupWithZero/Basic:586). Use a=||p||, 0<||p||<1; then addVal(p^N)=N*eK, x=u*p^n. shehdd.
 - norm_le_norm_natCast_iff_addVal_ge target/route recorded; no fake.
+
+
+### 20.335 p=2 bridge handoff to hull after units (2026-11-17 07:40)
+- shehdd confirmed p=2 bridge route/donors/step6 lemma pow_le_pow_iff_right_of_lt_one₀, but could not write compiled proof. No sorry added.
+- Hull to take over after #C B units closes: norm_le_norm_natCast_iff_addVal_ge via eq_unit_mul_pow_irreducible/addVal_mul/addVal_pow/addVal_prime/norm_uniformizer/pow_le_pow_iff_right_of_lt_one₀; then N=2eK kernel 1+4O, combine primary count. shehdd to hand lines after one more attempt.
