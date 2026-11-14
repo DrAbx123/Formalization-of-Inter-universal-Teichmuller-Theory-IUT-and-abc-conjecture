@@ -2655,3 +2655,5 @@
 - 02:10: stage4 alignedCompletionMapAtComap green; cast via place equality avoids sigma-extension; degree tower IsScalarTower missing. Task cast/finrank. gate 20.412 written.
 
 - 02:20: MAJOR NativeBadLift redefined aligned (lift=comap_F sectionFiniteLift) GREEN 23:55:16; alignment now rfl. Mainline instantiate BaseChange place/completion, then q element/C3. abc audit. gate 20.413 written.
+
+- 02:30: sigma-extension donors Completion.mapRingHom/Isometry.mapRingHom for native->moved F completion; stage4 implement. degree tower IsScalarTower still. gate 20.414 written.

@@ -3013,3 +3013,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - tmp/sheaf/n8/closure/NativeBadLiftActual DONE 15:55:17/olean 23:55:16: lift b := NumberFieldFinitePlace.comap (k:=F) (sectionFiniteLift (nativePlaceSelection T) b.1); lift_comap by comap_comap + sectionFiniteLift_comap. So NativeBadLiftAlignment / BaseChange hplace should be rfl.
 - Mainline to instantiate baseChangePlaceCompletionCorrespondence without hplace, define actual inhabitant, probe, then (c) q element/(d) C3 aggregation; report downstream importer breakage. abc audit. No fake.
 - GaloisAlignmentProbe 15:55:26; Paper312SourceExponent 15:54:35. Unit/Kernel/Galois green.
+
+
+### 20.414 Sigma-extension donor: Completion.mapRingHom (stage4, 2026-11-17 21:00)
+- Mzk1GaloisRingBridgeActual DONE 00:02:06: alignedCompletionMapMoved (h) casts alignedCompletionMapAtComap along place equality, giving Completion(movedF)→+*Completion(K). Blocker: need Completion(nativeF)→Completion(movedF) sigma-extension (alignment doesn't identify moved with native).
+- Donors: UniformSpace.Completion.mapRingHom (Topology/Algebra/UniformRing:155) for continuous ring hom; MetricSpace.Completion.Isometry.mapRingHom (MetricSpace/Completion:217) for isometry. Use sigma ring hom F(native place)→F(moved place); finite-dimensional linear maps continuous; places correspondence gives continuity/isometry. Then compose. Also IsScalarTower degree tower still missing. Report first error/GREEN.
