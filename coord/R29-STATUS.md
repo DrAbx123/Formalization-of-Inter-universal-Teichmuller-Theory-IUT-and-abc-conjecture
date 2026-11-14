@@ -2641,3 +2641,5 @@
 - 01:00: BaseChange (a) safe explicit NativeBadLiftAlignment gap; global redefinition viable but 137 files risk. Mainline prepares impact plan; no edit. gate 20.405 written.
 
 - 01:10: nativeBadLift redefinition impact plan; bounded experiment A+73 importers, continue/revert based on breakage; no core red. gate 20.406 written.
+
+- 01:20: UnitInvariance membership GREEN 15:36:28; Kernel range equality GREEN 15:36:34; ofRange pending. qpilot Set.ext/measure; stepxi ofRange/composition. gate 20.407 written.

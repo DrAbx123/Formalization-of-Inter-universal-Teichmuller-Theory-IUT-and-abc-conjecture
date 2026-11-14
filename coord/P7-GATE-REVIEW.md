@@ -2972,3 +2972,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.406 nativeBadLift global redefinition impact plan (mainline, 2026-11-17 19:40)
 - New defs/probe fresh 15:37:14 three axioms. Impact: 123 files direct nativeBadLift, 73 direct imports; transitive 300-500 files; build 1-2h. (A) NativeBadLiftActual rewrite lift:=comap_F(sectionFiniteLift) + lift_comap comap_comap/sectionFiniteLift_comap. (B) risk files depending on Classical.choose equality: S438QVFamilyKSideCandidateActual/C7QPilotRegionActual/O2PaperComparison2; Mzk1CompletionMapSelfActual notes no equality theorem. (C)(D) mostly recompile/rfl.
 - Decision: bounded experiment by mainline (git backup, redefine A, build 73 importers first; if only mechanical continue, else revert and keep NativeBadLiftAlignment explicit gap). Do not leave core red. No fake.
+
+
+### 20.407 UnitInvariance membership GREEN; Kernel range equality GREEN (2026-11-17 19:50)
+- Mzk1IVThm110UnitInvarianceActual DONE 15:36:28: algebraMap_unit_mem_integralClosure, algebraMap_unit_mul_mem_integralClosure, algebraMap_unit_inv_mul_mem_integralClosure; no source sorry. Next Set.ext u•O=O, then distribHaarChar/measure.
+- Mzk1Ind1KernelBridgeActual DONE 15:36:34: range_kernelToAQuotient_eq GREEN probe three axioms; source also has kernelToAQuotient_ker_eq/quotientKernelEquivRange/AQuotientKernelBridge.ofRange pending fresh. Next subgroup bridge/compose WQuotient/Z_p^d.
+- TorsionLogDonorProbe 15:36:21. NativeBadLiftActual olean 12:46 old; mainline experiment pending. abc probes.
