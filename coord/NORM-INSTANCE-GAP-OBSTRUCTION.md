@@ -130,3 +130,32 @@ lower shared module (or inline the add_le proof into
 `CanonicalAbsValueAddLeProof` import the built donor; also build
 `BaseScalarValuationRelation` first.  Until then, `NormValuationCompatible` stays
 unproved and the qVFamily norm-instance gap remains conditional/ratio-explicit.
+
+
+## BaseScalar deps check (2026-11-14, read-only)
+
+Donor `GeneralNormalizedNormBySpectralUniqueness` still has no olean.  Its blocked
+dependency `BaseScalarValuationRelation.lean` also has no olean, and this is **not**
+a missing-import situation:
+
+- All five imports of `BaseScalarValuationRelation.lean` already have oleans:
+  `FinitePlaceExtension`, `FinitePlacePadicScalarStructure`,
+  `Example36CompletionNormFormulaActual`, `Mathlib.NumberTheory.Padics.PadicIntegers`,
+  `PadicScalarValuationConstruction`.
+- The file itself fails at proof/instance level.  First error:
+  `BaseScalarValuationRelation.lean:125:6: rewrite failed`, pattern
+  `↑↑(PadicInt.mkUnits hunorm)` not found in target
+  `q = ↑↑(pNat place)^m * (algebraMap ℤ_[pNat place] (scalarField place)) ↑(PadicInt.mkUnits hunorm)`;
+  Lean notes the target is not type-correct under the `instances` transparency level,
+  i.e. an instance-unfolding/defeq issue.
+- Additional errors at lines 140 (`unsolved goals`), 146/151
+  (`synthesized type class instance is not definitionally equal ...`), and 167
+  (`Application type mismatch`).
+
+So the donor chain is blocked by an upstream proof/instance issue, not by a missing
+olean.  The formula comparison remains source-level: if the donor were built,
+`generalNormalizedNormFormula` (`||x||_normalized = absNorm^(-nu/d)`) plus the green
+default formula `norm_eq_absNorm_zpow` (`||x||_default = absNorm^m`, `m = -nu`) gives
+`||x||_normalized = ||x||_default^(1/d)`, matching the expected relation.
+Next route: fix the BaseScalar instance/rewrite errors first, then the donor circular
+dependency described above.

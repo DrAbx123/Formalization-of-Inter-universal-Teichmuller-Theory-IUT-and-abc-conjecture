@@ -1565,3 +1565,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary first errors: localCompletionDegree unknown (need import/open ProcessionNormalizationWeightsActual); qVFamNormRatio unknown (need import/open QVFamNormalizedCoefficientBridgeActual); Fintype (Bad ...) synth fails inside structures (add explicit [Fintype] instance binder); actualUnitMassL/thetaNormReadL named (I:=I) invalid (auto-bound params; use bare names or add explicit params in LNormReadout).
 - PaperS3137ObjectLock/ReadingDictionary need explicit hM/hB and Fintype binders; then dictionary (a)(b)(c) construction.
 - BaseScalarValuationRelation still compiling (lean PID 20468) no olean yet; donor waits.
+
+
+### 20.170 BaseScalar proof/instance errors block donor (hull/stage4, 2026-11-15 23:40)
+- BaseScalarValuationRelation no olean; imports all have oleans, so errors are proof/instance-level:
+  :125 rewrite pattern ↑↑(PadicInt.mkUnits hunorm) not found (instances transparency/defeq); :140 unsolved goals; :146/:151 synthesized instance not defeq (DivisionRing.toRatAlgebra vs instAlgebraAdicCompletion); :167 application mismatch scalarDVRDecomposition vs expected exists x.
+- Donor blocked by upstream BaseScalar, not missing olean. After green, donor cycle add_le fix (inline/lower shared module). Power formula remains source-level, not official; S45 ratio=1 still explicit.
+- Note coord/S45-NORM-INSTANCE-OBSTRUCTION-AUDIT.md section 12 updated; coord/NORM-INSTANCE-GAP-OBSTRUCTION.md updated.
