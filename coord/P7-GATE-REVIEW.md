@@ -2825,3 +2825,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.379 HullUnitZero conditional GREEN; UnitInvariance X fix (qpilot, 2026-11-17 15:10)
 - Mzk1IVThm110HullUnitZeroActual DONE 22:03:40: IQHullUnitRegion_eq_unitReference_of_scale_one; arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one; arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one; hullUnitZeroObstruction 4 items. Unconditional hullUnitLog=0 false; scale=1 only; scale!=1 needs Haar scaling formula.
 - UnitInvariance first errors TopologicalSpace X and rw patterns were caused by abbrev X being generalized to function; fixed with local notation X := ArithmeticTensorTupleBlock places tuple. Written algebraMap_unit_mem_integralClosure and algebraMap_unit_smul_canonicalUnitReference_eq; next distribHaarChar=1/μ invariance/lambda decomposition. No fake.
+
+
+### 20.380 General uniformizer eEquiv route; P2Bridge p=2 wrapper unnecessary (2026-11-17 15:20)
+- Hull found p!=2 branch still lacks uniformizer version (p not irreducible when eK>1), and p=2 wrapper red. Root fix: P2NormBridge norm_le_norm_natCast_iff_addVal_ge holds for ARBITRARY p with actual uniformizer pi; take N=s=logShellScaleExponentFactor p and use logShellScale_eq_prime_pow_factor : logShellScale p=p^s. Then ||x||<=||logShellScale p|| <-> s*eK <= addVal x, all p including ramified odd/p=2; no Irreducible p/eK=1. Build eEquiv parity-free. P2Bridge wrapper unnecessary; shehdd paused to avoid duplicate.
