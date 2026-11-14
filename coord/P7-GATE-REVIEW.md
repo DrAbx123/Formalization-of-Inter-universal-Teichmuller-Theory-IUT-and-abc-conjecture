@@ -3187,3 +3187,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.446 A2 xF/xF_geometry removed from gap; 8 fields remain (mainline, 2026-11-15 05:30)
 - Mzk1A2GeometricCorePartialActual DONE 17:06:06: xFOfStackPoint via realizedHyperbolicOrbicurve/sourceStackPointEtaleFiber; xFOfStackPoint_geometry; exists_xF_xF_geometry. First two SourceSignQuotientData fields constructible degenerately (signature inserted, not geometric). So first gap now ellipticInvolution (+squared/unique).
 - Remaining 8: ellipticInvolution/squared/unique; signAction/inversion; cF/quotient/witness; xFGroups/cFGroups/fGroupInclusion; xK/cK/extensions/type; V tuple. Full SQ still no inhabitant. Probe 17:10:19. Mainline next search ellipticInvolution donor. No fake.
+
+
+### 20.447 MAJOR actual index/QFE connection GREEN (hull, 2026-11-15 05:40)
+- Mzk1IndexQFEConnectionActual DONE 17:11:06: qfe_quotient_card_actual (quotient=q^(eK*s-1)(q-1)) via general eEquiv+truncatedUnitsCardPrimary; index_eq_qfe_quotient_div (hquot,hTpos): logShellIntegerIndex=q^A(q-1)/#T via logShellCongruenceQuotient_card_eq_torsion_mul and Nat.mul_div_right. Exact missing connection closed.
+- Next hull assemble final index=q^(A-k)*(p^r*((q-1)/T0)) with a=A-k,c=p^r*((q-1)/T0) using torsion_split/ceil/quotient/index_pow; feed correction/Paper312. Unramified a=0 condition4 separate. abc probe. No fake.
