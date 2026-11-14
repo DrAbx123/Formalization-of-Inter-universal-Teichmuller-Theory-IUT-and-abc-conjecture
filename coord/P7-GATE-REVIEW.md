@@ -2352,3 +2352,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1ObjectLockDataActual GREEN 18:28:52: TrueTowerDataSource/UnitMassDataSource/ThetaSignDataSource gaps explicit; relativeFactorTowerData_of_tower (kPlaceQpDegree=n*rootBaseQpDegree); mainline_lock_implies_factorization; no actual data.
 - Mzk1Ind1InfiniteDivisibleActual GREEN 18:21:23.
 - qpilot logQ, shehdd A, stepxi depth subgroup still pending; retouched/report next.
+
+
+### 20.297 #C A actual f/surj; hker norm-ideal bridge missing (2026-11-17 01:00)
+- shehdd added congruenceUnitsMap=Units.map (Ideal.Quotient.mk I), congruenceUnitsMap_surjective via IsLocalRing.surjective_units_map_of_local_ringHom. Remaining hker: ker = logShellCongruenceUnits, needs equivalence u in closed-radius principal units <-> (u:K)-1 in Ideal.span{logShellScale p}. No existing bridge found; exact missing lemma.
+- hull: cardQuot_maximalIdeal_pow green; next units card q=cardQuot(m), nonunits=m/m^N, card=q^(N-1), units=(q-1)q^(N-1).
+- New greens: CongruenceUnitsEquiv conditional 18:21, TruncatedUnitsCard defs+cardQuot 18:27, ObjectLockData gaps 18:28, InfiniteDivisible 18:21.

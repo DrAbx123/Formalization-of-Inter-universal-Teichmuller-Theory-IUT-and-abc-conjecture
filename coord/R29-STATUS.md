@@ -2421,3 +2421,5 @@
 - 06:30: found Integers DVR/Dedekind instances (integersIsDiscreteValuationRing/integersIsDedekindDomain, LocalDifferentUpperBound:52-53); hull can use cardQuot_pow_of_prime for #C B. gate 20.295 written.
 
 - 06:40: greens: #C A conditional 18:21, cardQuot_maximalIdeal_pow 18:27, ObjectLockData gaps 18:28, InfiniteDivisible 18:21. Next: #C units card from cardQuot, actual f/hsurj/hker, object lock tower/unitMass/thetaSign, logQ/depth subgroup. gate 20.296 written.
+
+- 06:50: #C A actual f/surj green, hker needs closed-radius<->ideal-membership bridge (no existing); B cardQuot green, next units count. New ObjectLockData gaps. gate 20.297 written.
