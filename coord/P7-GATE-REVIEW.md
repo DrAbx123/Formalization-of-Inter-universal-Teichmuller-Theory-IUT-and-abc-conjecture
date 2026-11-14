@@ -3609,3 +3609,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Lead generated .lake/build/lib/lean/tmp/.../Mzk1IVThm110UnitRegionScalingActual.olean 04:52:34 via lake env lean -o (direct EXIT=0).
 - qpilot next floorQSigned_eq_native_of_unitRegion (hscale1: IQHullUnitScale=1, hM: unitRegionLog=-M, hMone:1<=M -> floor qSigned=-M) via HullUnitZero scale_one + FloorNativeHull.floorQSigned_eq_native_of_hull. scale!=1 requires hull unit log volume=0/scale Haar, explicit gap.
 - abc audit; no fake.
+
+
+### 20.533 ActualData HasLogIdx/perPlace binder errors (2026-11-15 20:10)
+- Direct :202 HasLogIdx after dsimp goal Real.log ↑logShellIntegerIndex = Real.log ↑logShellIntegerIndex; add rfl. :211 Fact Prime ?m stuck in perPlace binders; annotate ∀ i : FinitePlaceAtPrime F p and chosenC args. hull.
+- FloorUnitRegion arg order fixed (named places/tuple/label/μ/T); pending. No fake.
