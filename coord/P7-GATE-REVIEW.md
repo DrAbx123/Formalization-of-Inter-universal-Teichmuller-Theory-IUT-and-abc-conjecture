@@ -1413,3 +1413,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1P1PlaceVolumeFinal2Actual GREEN 11-13 17:40:18 but imports Mzk1B5AssemblyNoHproductAttemptActual, which FAILS 11-14 02:58:38: B5ProductFormulaBridge not a proposition; unknown qPilotDetArithmeticDegree_eq_finiteIndex_add_arch_add_global; unknown PaperOModuleActual.LocalField. B5 olean is stale 11-13 15:21.
 - Therefore Final2 green olean predates dependency red and is NOT currently reproducible; need repair B5 or mark Final2 dependent on broken B5. SignFinal independent (placeLogVolume_nonneg_of_norm_le_one, placeLogVolume_nonpos_of_one_le_norm).
 - Both files grep no True/PUnit/sorry/axiom; no fake target, but reproducibility broken.
+
+
+### 20.144 GREEN: ActualSourceUnitLayer; ActualHBridge; NormalizedSourceConditional; PlaceVolumeFinal2 (2026-11-15 18:20)
+- Mzk1Ind1ActualSourceUnitLayerActual DONE 03:14:34 (51s): ActualSourceUnitLayer, actualSourceUnitLayer_self/nonempty, actualSourceUnitLogRangeEquiv, ActualInd1UnitAction, actualInd1LogRangeEquiv.
+- Mzk1IutIVProp14ActualHBridgeActual DONE 03:14:35 (52s): actualGammaH, actualGammaH_spec, volume_ratio_eq_pow_actualH. P14ii next.
+- Mzk1P1NormalizedSourceConditionalActual DONE 03:15:24 (101s): paperNormalizedComparison_of_sourceFields, paperXiFTargetStrict_of_sourceFields, paperNormalizedComparison_with_corrections.
+- Mzk1P1PlaceVolumeFinal2Actual DONE 03:18:57 (67s) but B5 source mtime 11:19:24 later and B5 olean stale 11-13 23:21; Final2 not yet reproducible against current B5. Recompile B5 then Final2.
