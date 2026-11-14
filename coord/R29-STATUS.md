@@ -2883,3 +2883,5 @@
 - 21:10: IntegersEquivZp remove p arg; UnitRegionScaling compile/floor. gate 20.527 written.
 
 - 21:20: UnitRegionScaling direct GREEN; IntegersEquiv Fact/type alignment blockers. qpilot floor; stepxi cast. gate 20.528 written.
+
+- 21:30: IntegersEquiv cleared to placeholder; blockers Fact/completion-integers cast. WQuotient interface green/equiv missing. gate 20.529 written.

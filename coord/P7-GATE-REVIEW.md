@@ -3589,3 +3589,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.528 UnitRegionScaling direct GREEN; IntegersEquiv blockers (2026-11-15 19:20)
 - Direct UnitRegionScaling src 04:44:39 EXIT=0: unitRegionLog_eq_canonical_add_principalDim; floor only unitRegionLog=-M and 1<=M explicit. qpilot retouch.
 - IntegersEquiv: :15 missing Fact Prime 5; concreteFivePadicIntEquiv for concreteFiveHeightOne adicCompletion Q vs target Integers(Completion(comap concretePlace)); need cast concreteGaussianFivePlace_comap + concreteFivePlace.maximalIdeal=concreteFiveHeightOne. stepxi. No fake.
+
+
+### 20.529 IntegersEquiv cleared; WQuotient interface stays (2026-11-15 19:30)
+- IntegersEquivZp experiment red/too heavy; stepxi cleared file to placeholder. Blockers: local Fact Prime 5; concreteFivePadicIntEquiv target concreteFiveHeightOne.adicCompletionIntegers Q vs needed Integers(Completion(comap concretePlace)); concreteGaussianFivePlace_comap only place equality; no direct Completion/Integers cast lemma. WQuotient p=5 d=1 interface green, equiv missing; Zp^d root interface ready.
+- No fake.
