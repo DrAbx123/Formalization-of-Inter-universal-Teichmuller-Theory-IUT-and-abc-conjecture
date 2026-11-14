@@ -3447,3 +3447,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.498 quotient cocycle: try Iso.refl coherence simplification (mainline, 2026-11-15 14:20)
 - Cocycle exact first missing after cat_disch/ext; manual bicategorical coherence blocked. Idea: since inversion=Hom.id and comp id id defeq id, set signActionCandidate.inversionSquared := Iso.refl _ and quotient invariant := Iso.refl _; retry cocycle may become rfl/simp. If still deep keep explicit gap. Mainline probe.
 - quotientWitness descend/factor/descendTwoCell/twoCell_ext no donor; groups coverCategory no donor; unique gap. No fake.
+
+
+### 20.499 PrincipalDimInstantiate direct errors/fixes (2026-11-15 14:30)
+- :33 exact_mod_cast (u.ne_zero) gives ¬↑u=0 vs goal ¬↑↑u=0; prove intro h; have : (u:Zp)=0 := by exact_mod_cast h; exact u.ne_zero this.
+- :29 ring unsolved target ↑(-k)*log p = -(log p*↑k); use ring_nf.
+- :50 second map_mul no occurrence after first; use only rw [hsplit, map_mul], then NNReal.coe_mul/distribHaarChar_algebraMapUnit_eq_one/mul_one.
+- Audits: PrincipalDimActual 03:38:05 and RamifiedPlaceData 03:38:47 fresh three axioms. ZpLattice red 19:37:56. No fake.

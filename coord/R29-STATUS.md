@@ -2823,3 +2823,5 @@
 - 16:10: IsScalarTower abandon congrArg; use CommonPrimeCompletion tower directly then change. stage4. gate 20.497 written.
 
 - 16:20: quotient cocycle try inversionSquared/invariant := Iso.refl to simplify; mainline. groups/unique gaps. gate 20.498 written.
+
+- 16:30: PrincipalDimInstantiate fixes u.ne_zero/ring_nf/map_mul; audits PrinDim+Ramified green; ZpLattice red. gate 20.499 written.
