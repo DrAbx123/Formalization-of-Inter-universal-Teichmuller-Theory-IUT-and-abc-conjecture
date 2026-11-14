@@ -1873,3 +1873,5 @@
 - 09:15：stage4 A1.6 轮次收口：新 GREEN `Mzk1A1ValuationInputsActual`（named Props + conditional `qVFamily_mem_saturatedLattice_of_valuationData`，无 inhabitant）；A1.6 固定 conditional（principal-lattice + ramification），`coord/A1-TENSOR-PROD-PROBE.md` 已记录；root 侧 DVR 供体存在、base 侧显式 aval/bval/ramification 不在树内，一轮不能证，不再投入；无条件 measure/norm 部分保持 green。gate §20.51 已写。
 
 - 09:20：按新 tail 派精确修法：C17 用 `finrank_eq_one_iff_of_nonzero'`（带 prime）；PaperSums 补 `QVFamNormalizedGeneratorSupplyActual`；RootRadius `change` RHS 显式化+log_pow；Correspondence 用 `ne_of_lt/ne_of_gt` 替代 `.ne`；Gamma 内层 smul 再 `smul_eq_mul` 后 zpow；ContinuousAdd 删多余 `sub_zero`。
+
+- 09:25：Gamma v17：`nsmul_eq_mul` 后补 `simp only [smul_eq_mul]` 转内层 K-smul，再 push_cast/zpow；第二定理 change/eq_zero_iff 保持；retouch 等编。
