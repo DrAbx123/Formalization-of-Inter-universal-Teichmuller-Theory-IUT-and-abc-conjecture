@@ -2945,3 +2945,5 @@
 - 26:20: PrincipalUnitsResidue use Valued.v/ValuationSubring integer; qpilot. gate 20.558 written.
 
 - 26:30: ActualData olean 05:41:21 with actual_paper312. abc audit; hull hq/hθ. gate 20.559 written.
+
+- 26:40: PrincipalUnitsResidue Valued.v ascription; hq/hθ inspect Haar product/readout definitions. gate 20.560 written.

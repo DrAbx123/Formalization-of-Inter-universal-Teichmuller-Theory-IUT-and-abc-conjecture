@@ -3731,3 +3731,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.559 ActualData olean with actual_paper312 (2026-11-15 23:30)
 - Lead compiled current ActualData source to olean 05:41:21 via lake env lean -o (EXIT=0); includes actual_A_le and actual_paper312. abc audit. Next hull hq:qReading=-A and hθ:thetaSide=Lbar+Dbar-sFactor*A via qPilotLogVolumeReading_eq_log_norm/theta definitions. No fake.
+
+
+### 20.560 Valued.v type ascription; hq/hθ gaps (2026-11-15 23:40)
+- PrincipalUnitsResidue: `(Valued.v (K:=K))` invalid named arg (DFunLike.coe); use `(Valued.v : Valuation K (WithZero (Multiplicative ℤ)))` then .integer; norm bridge Valued.v x.
+- hq/hθ: qPilotLogVolumeReading vs -A and thetaPilotHullLogVolumeReal vs sum logIdx+diff-sFactor*A missing. hull inspect actualC3LogShellTensorHaar/product Haar and qPilotLogVolumeReading definitions; report exact lemma/missing. No fake.
