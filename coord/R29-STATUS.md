@@ -2533,3 +2533,5 @@
 - 16:00: stage4 instance scoping nuance: MulSemiringAction G F must be letI before synth; distinguish (O_F) F vs (O_Fmod) (O_F) class. Report first failure/GREEN. gate 20.351 written.
 
 - 16:10: KernelBridge RED sorryAx (kernelToAQuotient_ker); P2 no log; obstruction pending. stepxi fix, hull p2, qpilot obstruction. gate 20.352 written.
+
+- 16:20: R1 direction corrected: actualQ<=M under same-q identification (strict d>1), equality false/S45-like. R1 needs P.signed=-M (still missing). Conditional lemmas pending. qpilot floor only min=-M. gate 20.353 written.

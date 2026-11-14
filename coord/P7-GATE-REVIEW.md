@@ -2679,3 +2679,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110FloorNativeObstructionActual pending; log tail shows theorem target only.
 - Mzk1P2BridgeActual no source/log; hull to create/retouch p=2 bridge with uniformizer pi/hpi/hp_rel, N=2eK, kernel 1+4O.
 - Green: TruncatedUnitsPrimary 20:42:21; ObjectLockData 20:53:43; BaseQLogVolume/NativeGlobal recompiled 12:52/12:54; FloorNativeHullProbe 12:58:43.
+
+
+### 20.353 Correct R1 direction: actualQ<=M, equality false for d>1 (mainline, 2026-11-17 10:40)
+- Definitions: actualQPilotMagnitudeClassical=sum w_b*(c_norm_b*log p_b); M=sum w_b*baseQLogMagnitude_b; baseQLogMagnitude=-log||baseQ.q|| at nativeBaseSectionPlace; c_norm=-logb||qVFamNormalizedGenerator|| at qVFamTensorPlace; different q/place/carrier.
+- Under same-q/place identification qVFamDefaultNorm=||baseQ.q||, donor power gives c_norm*log p = -(1/d)log n_def = baseQLogMagnitude/d <= baseQLogMagnitude (d>=1), strict if d>1/log>0. Thus actualQ<=M, NOT equality; equality S45-like false d>1.
+- Correct R1: actualQ<=M => -M<=-actualQ=Q_norm. R1 holds if P.signedQPilotLogVolume=-M (C3 readout=native base signed scalar), still no repo bridge. No normRatio=1 needed.
+- Mainline wrote conditional qVFamCoefficient_mul_log_le_baseQLogMagnitude and actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q; compile pending. Floor side only min(hullLog,-1)=-M, not aggregation equality. No fake.
