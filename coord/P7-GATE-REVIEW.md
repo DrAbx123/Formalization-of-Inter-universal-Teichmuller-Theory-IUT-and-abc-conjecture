@@ -1609,3 +1609,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary source 12:25:11 < olean 12:29:54, DONE 04:29:55; current source has reordered binders (I)(place)(T)[Fintype](hM)(hB)(lock) and named args; finalDictionaryCombined compiled.
 - finalDictionaryCombined: S45SourceFields + RelativeFactorTowerData + PaperS3137ObjectLock -> paper comparison /\ RelativeFactorTowerData /\ Nonempty (PaperS3137ReadingDictionary ...). No True; all args consumed.
 - Probe old log 12:22 predates current olean (finalDictionaryCombined unknown); must retouch/recompile probe. theta_sign negative vs hlock positive remains explicit lock sign; do not claim both.
+
+
+### 20.177 GREEN: Dictionary axiom probe three axioms; finalDictionaryCombined official (2026-11-16 01:30)
+- Mzk1P0FinalS3137DictionaryAxiomProbeActual DONE 04:36:25 (100s): paperS3137ReadingDictionary_of and finalDictionaryCombined both [propext, Classical.choice, Quot.sound]; no sorryAx.
+- finalDictionaryCombined exact signature: (S:S45SourceFields T)(rel:RelativeFactorTowerData T)(lock:PaperS3137ObjectLock I place T) -> (paperNormalizedThetaSum T <= paperNormalizedQPilotSum T) /\ RelativeFactorTowerData T /\ Nonempty (PaperS3137ReadingDictionary (I:=I)(place:=place)(T:=T)(hM:=hM)(hB:=hB)(lock:=lock)). All three consumed; no True.
+- Sign: ObjectLock.theta_sign negative vs LNormComparison hlock positive; two different explicit lock conventions, not both asserted/one proved. Reading-dictionary sign/unitMass gap remains explicit.
+- BaseScalarBounded blocked; donor/compat not proved; S45 not donor-implied.

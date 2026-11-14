@@ -2147,3 +2147,5 @@
 - 07:10: Dictionary FAIL exact :132 positional args/binder order; mainline to use named args and reorder (I)(place)(T)[Fintype](hM)(hB)(lock); probe failed because finalDictionaryCombined unknown. Old olean unusable. gate 20.175 written.
 
 - 07:20: Dictionary FRESH GREEN 04:29:55 (source 12:25:11 < olean 12:29:54); finalDictionaryCombined compiled after binder/named args. Probe stale must retouch; theta_sign sign remains explicit. gate 20.176 written.
+
+- 07:30: Dictionary probe GREEN 04:36:25 (paperS3137ReadingDictionary_of + finalDictionaryCombined three axioms). finalDictionaryCombined official; sign/unitMass lock explicit. BaseScalar blocked; S45 explicit. gate 20.177 written.
