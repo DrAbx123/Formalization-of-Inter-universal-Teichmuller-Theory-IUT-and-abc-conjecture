@@ -2699,3 +2699,5 @@
 - 05:50: ceil_decomp/exponent_decomp GREEN 16:44:24; next index identity/a=A-k/c=p^r*((q-1)/T0). Unramified a=0 condition4 remains. gate 20.434 written.
 
 - 06:00: norm equality valuation route donors valuation_of_mk'/valuation_of_algebraMap; stage4. IsScalarTower pending. gate 20.435 written.
+
+- 06:10: GlobalSumCollapse replaced by direct GlobalSumAggregation; A2 gate exact missing for OrigXiFPaperNativeRoot. mainline compile/probe/A2 inspect. gate 20.436 written.

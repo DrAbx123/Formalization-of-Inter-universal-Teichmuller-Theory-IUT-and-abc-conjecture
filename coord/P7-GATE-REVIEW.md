@@ -3129,3 +3129,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.435 Norm equality via HeightOneSpectrum.valuation donor (stage4, 2026-11-15 03:40)
 - Stage4 reduced to w.asIdeal=v.asIdeal.comap e.symm, need ||embedding w x||=v(e x). Donors: IsDedekindDomain.HeightOneSpectrum.valuation (AdicValuation:328), valuation_of_mk' (:339), valuation_of_algebraMap (:345). Route: prove w.valuation K x = v.valuation K (e x) by Valuation.ext + valuation_of_mk' on x=r/s (e extends to K); then unfold adicAbv/norm_embedding. Then Isometry/Completion.mapRingHom; IsScalarTower pending. No fake.
+
+
+### 20.436 GlobalSumCollapse replaced by direct aggregation; A2 gate exact missing (mainline, 2026-11-15 03:50)
+- Mzk1C3BaseQIdentificationActual edited: removed over-strong GlobalSumCollapse; added GlobalSumAggregation (I)(P): log||P.line.C3.q|| = -(sum_b W_b baseQLogMagnitude_b) (direct M sum); consumer qPilotC3SignedAggregation_of_aggregation -> QPilotC3SignedAggregation, using nativeGlobalQPilotNormalizedLogMagnitude_eq. Compile/probe pending.
+- OrigXiFPaperNativeRoot I no unconditional inhabitant: S1494 paperNativeRoot_nonempty_of_a2Gate needs SourceNativeArithmeticToSourceGate (A2 gate, named open card); S1532 paperNativeRoot_of_a2 needs hroot I.initial.arithmetic=S1280Arithmetic l + S1532A2FirstField + S1532A2Assembly. Cannot construct from existing actual I; exact first source = A2 gate/fields (not mechanical root).
+- (d1) chain: OrigXiFPaperNativeRoot (A2 gate) -> T.arithmetic=I.initial.arithmetic -> Fmod/place correspondence -> same q -> norm exponent n. Mainline compile/probe + inspect A2 fields. No fake.
