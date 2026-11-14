@@ -2477,3 +2477,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - stage4 missing: no MulSemiringAction (F≃ₐ[Fmod]F)(𝓞 F); no FinitePlace Galois action/maxIdeal(σ•v); no primesOver->FinitePlace bridge; no local IsGaloisGroup; degree tower IsScalarTower/finrank_mul_finrank missing (KCompletionOverFSourceGap).
 - Suggested: define action on FinitePlace F by MulRingNorm composition v ↦ v.comp σ, prove IsFinitePlace; or via HeightOneSpectrum.mk/maximalIdeal; build MulSemiringAction via RingOfIntegers.mapAlgEquiv; use Ideal.exists_smul_eq_of_isGaloisGroup/isPretransitive on primesOver after bridge or prove transitivity for absolute values; completionMap for embedding; finrank_mul_finrank for degree.
 - UnitMass same-dim transport/reference object missing; different dims extended ideals+normalized volume.
+
+
+### 20.317 Assembly ordering still stale; Ind1 unitValuationHom (2026-11-17 04:40)
+- Assembly olean 19:14:37 still predates Dictionary 19:15:17; mainline told force retouch Assembly after Dictionary, rerun probes. Clean acceptance not valid until then.
+- stepxi added unitValuationHom via Valued.v + WithZero.unitsWithZeroEquiv for [Valued F (WithZero (Multiplicative Z))]. Missing: torsion F^x <= ker (roots of unity valuation=1, torsion-free value group); kernel-WQuotient bridge (norm-one units/Integers); WQuotient infinite divisibility via Z_p^d.
+- Hull TruncatedUnitsCount, qpilot IVThm110Actual, shehdd odd-p still no olean; retouched/report.
