@@ -3090,3 +3090,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.428 Correction: index decomposition false for f>1; ceil formula (hull, 2026-11-15 02:30)
 - index=q^(A-m)*((q-1)/T0) FALSE for f>1: q^A=p^(fA); dividing by T=p^m T0 gives p^(fA-m), while q^(A-m)=p^(f(A-m)) differs by p^(m(f-1)). Counterexample p=2,f=2,q=4,A=2,m=1,T0=1,T=2: LHS 24, RHS 12.
 - Correct: k=ceil(m/f), r=f*k-m (0<=r<f), index=q^(A-k)*(p^r*((q-1)/T0)); a=A-k, c=p^r*((q-1)/T0). Only r=0 pure. Need ceil/div identity from q=p^f and m<=fA. Hull to implement; condition4 on a=A-k, c contains p^r; unramified a=0 still issue. No fake.
+
+
+### 20.429 Status: Galois norm equality missing lemma; ceil piecewise k/r (2026-11-15 02:40)
+- Stage4 probe resolved: galoisPlaceMk explicit T; after rw goal ||embedding(equivOfRingEquiv(mapRingEquiv σ)) v x||=v(σ.symm x), simp no progress -> not definitional. Missing lemma: ||embedding(equivOfRingEquiv e v) x||=||embedding v (e x)|| via FinitePlace.norm_embedding/adicAbv + maximalIdeal map/Valuation.comap; then isometry/Completion.mapRingHom. IsScalarTower still pending.
+- Hull ceil: Nat has no ceilDiv; implement piecewise m=f*(m/f)+m%f; k=m/f + if m%f=0 then 0 else 1; r=if m%f=0 then 0 else f-m%f; prove f*k=m+r and index=q^(A-k)*(p^r*((q-1)/T0)). a=A-k; unramified a=0 condition4 still fails, correction no help.
+- No fake.

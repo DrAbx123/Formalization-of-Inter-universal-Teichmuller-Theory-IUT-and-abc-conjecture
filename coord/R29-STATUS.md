@@ -2685,3 +2685,5 @@
 - 04:40: MAJOR torsion_split GREEN 16:31:40 (T=p^m*T0, T0|q-1, m<=fA). Next index decomposition a=A-m/c=(q-1)/T0. gate 20.427 written.
 
 - 04:50: correction index decomposition false f>1; correct k=ceil(m/f), r=fk-m, index=q^(A-k)*(p^r*((q-1)/T0)), a=A-k. Hull implement. gate 20.428 written.
+
+- 05:00: Galois norm equality lemma missing; hull piecewise k/r (no Nat ceil). Unramified a=0 condition4 remains. gate 20.429 written.
