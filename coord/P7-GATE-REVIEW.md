@@ -2254,3 +2254,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Donor gives ratio>=1; hcorr forces ratio=1 (S45/local degree one). Sign opposite to Route A: paper comparison is weaker than actual target for d>1; S45-free does not remove S45 from actual magnitude target.
 - Alternatives: (1) S45/ratio=1 or all local degree one; (2) flagged model route actualPaperXiFTargetMagnitude_actual depends on PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog (model c_norm/(2l), P7-flagged); (3) new direct actual-target inequality for d>1.
 - Assigned mainline/hull attack direct actual inequality/margin; no flagged model silently. Target bridge still S45/d=1.
+
+
+### 20.281 #C B formula obstruction; alternative actual hull-containment route (2026-11-16 20:10)
+- #C B: existing hcard ideal (logShellScale p)^e = (p^s)^e has K-valuation e_K*s*e, so claimed q^(e*s-1) units card only if e_K=1 (unramified). In general target false. Hull instructed: report obstruction, propose corrected exponent (q-1)q^(e_K*s*e-1) using LogShellQFECardinalityHypothesis; or state e_K=1. No fake proof.
+- Alternative actual target: mainline reported PaperLevelXiFTargetProofActual/PaperLevelXiFTargetBridgeActual hull-containment route gives actual magnitude actualThetaHullMagnitudeRoot <= actualQPilotMagnitudeClassical unconditionally (per-b hull containment, no margin). Decision: potentially legitimate if actual hull containment, not flagged model c_norm/(2l). Mainline to audit dependencies/probes; if clean, wire to actual magnitude target. (G1) PaperQPilotObjectActual inhabitant, (G2) theta reading identity, (G3) q reading identity still needed.
+- Target reading bridge remains S45/correction-sign open; paper comparison alone not sufficient.
