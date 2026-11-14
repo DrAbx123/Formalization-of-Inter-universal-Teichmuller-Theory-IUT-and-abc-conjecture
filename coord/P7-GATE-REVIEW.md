@@ -3484,3 +3484,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.505 quotientWitness 3/5 fields constructible (mainline, 2026-11-15 15:30)
 - OrbicurveSignQuotientWitness candidate: descend := fun Y inv => inv.map; factor := leftUnitor inv.map; descendTwoCell := fun Y s t alpha => alpha.app all OK. First exact missing descendTwoCell_factor (Orbicurve:737-747) target whiskerLeft id alpha = iso unitors; cat_disch fails, need manual ext+unitor. Second missing twoCell_ext needs whiskerLeft 𝟙 alpha = alpha (unitor lemma absent). groups coverCategory no donor; unique gap. Mainline manual ext. No fake.
+
+
+### 20.506 CompletionTower finrank removed; orientation/Module.Free fix (stage4, 2026-11-15 15:40)
+- Green CompletionTower only scalarTower+moduleFinite (source 03:59:50). finrank attempt removed: Module.Free Qp lower synth timeout (even of_divisionRing); orientation of finrank_mul_finrank is product = upper, not upper = product. Fix explicit letI Module Qp lower := Algebra.toModule; haveI Module.Free := of_divisionRing; state product equality; higher heartbeats. Then transport degree/rootBase. adicAbv pending. No fake.
