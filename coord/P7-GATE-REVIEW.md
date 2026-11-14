@@ -3465,3 +3465,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.501 MAJOR ActualRamifiedData GREEN (hull, 2026-11-15 14:50)
 - Mzk1ActualRamifiedDataActual DONE 19:54:19: ofAtPrime p=completionRationalPrime definitional; actualFn choose logShellResidueCard_eq_prime_pow; actualData (hcoef explicit) : RamifiedPlaceData (FinitePlaceAtPrime F p), aExp=0,cCorr=1 placeholder. No fake.
 - Next choose aExp/cCorr via index_decomp_with_correction with hdecomp; construct HasCorrection/HasLogIdx/HasRes; HasCoeff explicit. abc probe. No fake.
+
+
+### 20.502 ActualRamifiedData hdecomp orientation (hull, 2026-11-15 15:00)
+- IntegralLogShellIndexArithmetic:89 logShellCongruenceQuotient_card_eq_torsion_mul_logShellIntegerIndex: quotient = T*index. hquot qfe_quotient_card_actual: quotient = q^A(q-1). hdecomp by calc T*index = quotient := hdec.symm; _ = q^A(q-1) := hquot. Then nested choose a,c; actualFn_spec choose_spec; HasLogIdx rfl/HasRes spec. Hull.

@@ -2829,3 +2829,5 @@
 - 16:40: MAJOR CompletionTower GREEN 19:44:30 (scalar/module/finrank); A2QuotientMorphism GREEN 19:48:54 (cocycle rfl via Iso.refl). ActualRamifiedData binder ?m fix. abc probe. gate 20.500 written.
 
 - 16:50: MAJOR ActualRamifiedData GREEN 19:54:19 (ofAtPrime/actualFn/actualData hcoef explicit). Next choose aExp/cCorr/Has*. abc probe. gate 20.501 written.
+
+- 17:00: hdecomp orientation quotient=T*index; calc T*index=hdec.symm then hquot. hull choose a/c. gate 20.502 written.
