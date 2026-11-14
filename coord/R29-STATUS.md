@@ -1879,3 +1879,5 @@
 - 09:35：**GREEN `Mzk1ContinuousAddZpadicActual` 00:23:12（48s）**：`continuous_of_addHom_fin_zpadic` official，三公理无 sorryAx；已让 stepxi 接 W_F 识别/β_a 连续→ℤ_p/ℚ_p 线性链，并清 UnitQuotient/LogLattice。gate §20.52 已写。
 
 - 09:45：Correspondence `b` 参数错误根因：named `(b:=b)` 解析到 proof binder；已让 hull 改用位置参数 `qhat_lattice_measure_pos (T:=T) b` + 显式 `ne_of_gt/ne_of_lt`，若仍错则展开 `qhat_haar_scaling_actual` 内联证 hQ0。
+
+- 09:50：新 tail 修法：C17 用根 namespace `finrank_eq_one_iff_of_nonzero'`（不带 FiniteDimensional 前缀）；PaperSums `RootBaseCompletionGap` 的 `b` 未绑定→改 ∀b/加 binder；RootRadius `linarith` 改 `rw [← h]`/eq_div_iff；Correspondence `:198` 需**产品** measure hQ0/hQtop（`c0ProductQ=Set.pi` + `productHaar_pi` + Finset.prod），不是局部 ∀b。
