@@ -2473,3 +2473,5 @@
 - 10:50: IVThm110 green; hCor312 reduced to S2953 certificate producer. hupper follows from hCTheta (ratio def) when |log q|≠0, likely no independent Box estimate; producer may need actual StepXIFiniteCertificate/readings. qpilot to check. gate 20.321 written.
 
 - 11:00: IV hCor312 reduced to actual certificate producer (arithmeticTupleSignedFloorCertificate exists) + N5 qSigned=-|log q| + CTheta source normalization. hupper derivable. qpilot build wiring; mainline check N5/R1 overlap. gate 20.322 written.
+
+- 11:10: clean chain ordering fixed Dictionary 11:15:17 -> Assembly 11:28:52; Assembly probe fresh pending. R1 same-q witness/R3 T->C3 remain; N5/R1 overlap check. gate 20.323 written.

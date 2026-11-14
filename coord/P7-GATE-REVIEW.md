@@ -2512,3 +2512,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - hupper derivable from hCTheta (ratio definition), not independent Box 11. Actual StepXI certificate producer exists: LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullSignedCertificateNonvacuous.lean arithmeticTupleSignedFloorCertificate (qSigned=min(hullLog,-1), thetaSigned=IQHullUnitRegionHaarLog, q_le_hull/hull_le_theta, q_negative).
 - Exact missing actual objects: (1) N5 source q-pilot signed condition qSigned=-|log q|, recorded named hypothesis qSideSignedValueCondition in FinitePlaceStepVLambda; actual cert qSigned is engineered min(hullLog,-1). (2) CThetaPaper=thetaLogVolume/|log q| source normalization incl dmod/dFpd/fFpd/eStar/etaPrm/logQ source identification. (3) connect engineered qSigned/thetaSigned to source q/theta readings.
 - qpilot to build hCor312_of_actual_certificate; mainline to check overlap with R1 same-q witness/N5. No fake.
+
+
+### 20.323 Clean chain ordering fixed; R1/R3 next (mainline, 2026-11-17 05:40)
+- Dictionary olean 11:15:17 (theta_sign signed no extra negative) -> Assembly DONE 11:28:54/olean 11:28:52 after Dictionary. Assembly probe retouched, fresh pending. Final/Dictionary probes DONE 11:28:48 all three axioms.
+- R1 missing same-q-witness P.line.C3.q.q = qVFamNormalizedGenerator + place/Bad index/weight; numerical core green. R3 missing T root hull -> C3 target hull carrier/region + oneLabel lattice containment, then relative_log_mass_image_eq dimension-normalized/extended ideal, no negative, no target Haar on low-dim image.
+- Tower correction recorded rootBase=e*dBase, kPlace=n*dBase; divisibility via Galoisity+transitivity; root L_b->K_w still Tate/torsion/fixed-field.
+- Mainline also to check N5 qSigned=-|log q| overlap with R1.
