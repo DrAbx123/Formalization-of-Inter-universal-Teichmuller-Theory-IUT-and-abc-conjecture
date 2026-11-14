@@ -3828,3 +3828,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.582 R1 construction gap: no descent map; try RelativeNormQProperties (2026-11-15 27:20)
 - F->Fmod maps: relativeTraceFmodAddHom additive only; relativeNormCompletion multiplicative but RelativeNormQProperties (norm(nativeQActual.q) nonzero, valuation<1) missing; no unrestricted descent (BaseQDescentData docstring). MissingBaseQData also needs base roots/kummerClass and arithmetic_fmod_eq (only ring equiv). mainline try prove RelativeNormQProperties from norm formula/q facts; report first missing; no fake.
+
+
+### 20.583 GaloisCompletion fresh green (2026-11-15 27:30)
+- Mzk1GaloisCompletionActual DONE 22:18:39/olean 06:18:37: only withValMovedSigma def, no uniform theorem, no sorry. GaloisProbeAudit DONE 22:13:57. stage4 continue uniform; hull hq/hθ; abc audit. PrincipalUnits red. No fake.
