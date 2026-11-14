@@ -2875,3 +2875,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.388 GaloisRingBridge strengthened: native primes + transitivity (stage4, 2026-11-17 16:50)
 - Mzk1GaloisRingBridgeActual DONE 22:34:55/olean 22:34:54: nativeFmodPrime from b.1; nativeBadFPlace_liesOver/nativeKContraction_liesOver; nativeFPrimeOver/nativeKPrimeOver; exists_galois_move_nativeF (sigma with sigma•nativeFPrimeOver.1=nativeKPrimeOver.1). Ring-level IsGaloisGroup/primesOver/transitivity green.
 - Next: convert sigma•P=Q to galoisPlaceMk sigma(nativeBadToFPlace b)=comap_F(nativeBadToKPlace b) via HeightOneSpectrum.equivOfRingEquiv asIdeal map/comap_symm, sigma•P.1=P.1.map(MulSemiringAction.toRingHom) equality to mapRingEquiv by RingHom.ext/RingOfIntegers.ext, maximalIdeal_injective+galoisPlaceMk_maximalIdeal. Then alignedCompletionMap/degree tower. abc probe.
+
+
+### 20.389 MAJOR unconditional #C A eEquiv (hull, 2026-11-17 17:00)
+- Mzk1CongruenceUnitsEquivGeneralActual re-DONE 14:34:05/olean 22:34:04: congruenceUnits_equiv_primary_general (π)(hπ): CongruenceUnitsPrimaryEquivTarget UNCONDITIONAL (all p, actual uniformizer; no parity/irreducible p). Proof builds f=Units.map(Ideal.Quotient.mk I), I=span{logShellScale p}; hsurj via IsLocalRing.surjective_units_map_of_local_ringHom; hker via mk_eq_one_iff_sub_mem + general criterion + addVal_logShellScale + addVal_le_iff_dvd. No source sorry.
+- Next hull connect to congruenceQuotientCardinalityInput_of_equiv and Prop1.4 consumer; abc probe. GaloisRingBridgeProbe2 14:39:51 green.

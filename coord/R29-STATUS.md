@@ -2605,3 +2605,5 @@
 - 22:00: fresh errors unit/kernel/eEquiv; kernel log stale; hull eEquiv actual seam failing. Wake qpilot/stepxi/hull. Probes green. gate 20.387 written.
 
 - 22:10: GaloisRingBridge strengthened 22:34:55: native F/K primes + exists sigma move. Next alignment via maximalIdeal_injective. gate 20.388 written.
+
+- 22:20: MAJOR unconditional #C A eEquiv 14:34:05 (all p uniformizer, no parity). Hull connect to consumer/Prop1.4; abc probe. gate 20.389 written.
