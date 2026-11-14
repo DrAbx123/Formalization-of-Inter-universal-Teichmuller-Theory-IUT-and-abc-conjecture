@@ -3376,3 +3376,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.483 PrincipalDimActual exact errors/fixes (qpilot, 2026-11-15 11:50)
 - Current errors: :36:15 rw pattern miss ?f(?a^?n) on char(pU^k*unit)=p^(-kD); :47:50 Classical.choose param type (exists_pow_mul_zpUnit p not passed); :49:9 HPow X Z; :48:13/:55:17 HSMul Qp (Set X); :66:68 distribHaarChar_primeScalar_pow_mul_unit arg order. Fixes: exists_pow_mul_zpUnit (p:=p); map_pow->map_zpow; explicit Set.smul_set or Units action/hact; call order; NNReal.coe_zpow/Real.rpow. QpDecomp green. No fake.
+
+
+### 20.484 RamifiedPlaceData root cause: field notation on namespace defs (2026-11-15 12:00)
+- Source 03:13:27 FAIL 19:18:30 no olean no literal sorry. HasCorrection/HasLogIdx/HasCoeff/HasRes are namespace defs not structure fields; `d.HasRes` invalid field notation line74, cascades lines82-85, line80 unsolved. Fix binders to (hcard : HasCorrection d) etc; keep dsimp. hull. No fake.

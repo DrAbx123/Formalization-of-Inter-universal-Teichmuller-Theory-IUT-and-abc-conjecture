@@ -2793,3 +2793,5 @@
 - 13:40: QpDecomp/A2XK probes green. RamifiedPlaceData red lines75/80/86 invalid field notation; hull fix. gate 20.482 written.
 
 - 13:50: PrincipalDimActual errors :36/:47/:48/:49/:55/:66; fixes p:=p/map_zpow/Set.smul_set/call order/NNReal.coe_zpow. qpilot. gate 20.483 written.
+
+- 14:00: RamifiedPlaceData root cause field notation HasX d -> fix to HasX d binders; hull. gate 20.484 written.
