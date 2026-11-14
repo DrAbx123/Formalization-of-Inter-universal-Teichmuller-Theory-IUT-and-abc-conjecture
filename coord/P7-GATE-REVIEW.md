@@ -1143,3 +1143,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - L readout is analytic Haar-mass ratio: thetaNormReadL/thetaNormReadProduct, qReadActual=log||q.q||; thetaNormReadProduct=s1915ClosedForm-1=sum d_b log r_b.
 - Missing interfaces: (1) unit group vs completion field q/Haar; (2) SourceUnitQuotientIdentification inhabitant; (3) q/tensorUnit <-> integral unit representative, unitLog -> log||q|| bridge; (4) product/global version: SourceUnitBridge single field K/L vs global Bad product hull, no per-block multiplicative assembly.
 - Reusable: unitLogQuotientEquivOfMulEquiv; still need source unit identification and L readout alignment. SourceUnitBridge does NOT directly give LQThetaSourceArrow.normalization_eq or thetaNormReadL normalization.
+
+
+### 20.103 Audit corrections: RootRadius/Varpi probes ARE green; bridge missing imports (2026-11-15 10:00)
+- RootRadiusAxiomProbeActual DONE 01:31:20 and VarpiAxiomProbeActual DONE 01:31:19; logs show both three axioms; abc's 'unverified' status was stale; update ledger.
+- bridge current FAIL 01:31:53: missing qVFamTensorRationalBaseNorm (BadPlaceRationalDegreeActual), PaperSourceCorrectionFreeFields (BadPlacePaperTargetStrictActual), Mzk1A1SignedReadoutProductActual namespace, localCompletionDegree (ProcessionNormalizationWeightsActual), forall MeasurableSpace/Borel instances. mainline ordered to fix; final retouch after bridge green.
