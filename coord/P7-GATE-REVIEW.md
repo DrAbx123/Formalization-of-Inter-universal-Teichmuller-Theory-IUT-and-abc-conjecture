@@ -1162,3 +1162,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14HaarIndexPowActual DONE 01:36:43 (95s): mu_lambda_toReal_eq_pow_mul.
 - Mzk1P0LNormReadoutProductActual DONE 01:36:49 (101s): thetaNormReadProduct; thetaNormReadProduct_eq_sum (sum d_b log r_b); _eq_closedForm_sub_one (s1915ClosedForm-1); _eq_neg_sum_coefficient (sum -(d_b c_norm)/(2l) log p); LGlobalLocalObjectLock record only; rows 6.
 - Need axiom probes for both; then hmuLambda/volume_ratio and bridge/final.
+
+
+### 20.106 LNormReadL definition fixed: haarLogVolume clamps negative logs (mainline, 2026-11-15 10:35)
+- `haarLogVolume` (FinitePlaceIQHullInterface:51) is `if mu S = top then top else ENNReal.ofReal (Real.log (mu S).toReal)`; its `.toReal` clamps negative log to 0, so `actualC3LogShellTensorLogVolumeL` is NOT equivalent to `thetaReadActual = Real.log (mu region).toReal` (root cause of linarith failure).
+- Fix: `Mzk1P0LNormReadoutActual.thetaNormReadL := thetaReadActual I place - log actualUnitMassL` (no clamped actualC3LogShellTensorLogVolumeL); rfl theorem `= thetaReadActual - logU`; qRead_le_thetaRead_of_normTarget linarith works; LNormComparisonConditional signature unchanged.
+- thetaNormReadProduct (S1915 product-space) independent; hlock : thetaNormReadL = thetaNormReadProduct remains explicit condition.
+- PaperSums unknown namespace: import inserted; need Mzk1A1SignedReadoutProductActual.olean present (currently true); transient if not compiled.

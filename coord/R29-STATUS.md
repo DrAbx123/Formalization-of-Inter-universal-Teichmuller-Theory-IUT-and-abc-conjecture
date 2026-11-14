@@ -1997,3 +1997,5 @@
 - 16:20: GREEN HaarIndexPow 01:36:43 (mu_lambda_toReal_eq_pow_mul); GREEN LNormReadoutProduct 01:36:49 (thetaNormReadProduct_eq_sum/closedForm-1/neg_sum_coefficient; object lock record only). Probes requested; lattice next hmuLambda/volume_ratio; mainline bridge/final. gate 20.105 written.
 
 - 16:40: stepxi added tautological `sourceUnitQuotientIdentification_self` (W=(Integers K)^x/tors, equiv=refl) + self_nonempty, explicitly interface consistency only, NOT source W identification; LocalMon/IntegralMap probes queued. Woke lanes for bridge/Volume chain/torsion#C/StepV/L audit/stepxi audit. batch 01:36:49 last; 4 lean.
+
+- 16:50: root cause LNormReadoutActual: haarLogVolume `.toReal` clamps negative logs to 0 (ofReal), so not equal thetaReadActual. mainline changed thetaNormReadL = thetaReadActual - log unitMassL (no clamped term); rfl/linarith fixed; LNormComparison signature unchanged. PaperSums import needs A1SignedReadoutProductActual olean. gate 20.106 written.
