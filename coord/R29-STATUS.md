@@ -2339,3 +2339,5 @@
 - 23:10: donor/Estimates still no olean; 12 lean. Woke lanes; hull continues donor. No fake.
 
 - 23:20: hbridge corrections: Donor toAdd alpha:=Z; Value use generator for L/nu and toC for C/default, qVFamily.q not defeq L. hull fix. gate 20.259 written.
+
+- 23:30: GREEN EstimatesStatementLayer 08:53:44. hbridge still no olean; hull. Next statement-layer. gate 20.260 written.

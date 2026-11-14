@@ -2104,3 +2104,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Donor toAdd alpha is Z not Multiplicative Z: let m:Z := Multiplicative.toAdd (alpha:=Z) (WithZero.unzero (alpha:=Multiplicative Z) (x:=val) hval); same h2.
 - Value: qVFamily.q is Completion C; generator is NormalizedCompletion L; they are not defeq. Use x:=qVFamNormalizedGenerator for nu/normalized formula; use toC x for default formula (toC x = qVFamily.q defeq); qVFamDefaultNorm unfolds to norm of qVFamily.q; simpa [qVFamDefaultNorm, qVFamNormalizedGenerator, toC]. This is real carrier issue, not a simple show; still not a new math gap if toC identity is used.
 - hbridge still red; wrapper/dictionary/assembly conditional green+probes; not unconditional. No fake.
+
+
+### 20.260 GREEN EstimatesStatementLayer (2026-11-16 16:40)
+- Mzk1IUTIVEstimatesStatementLayerActual DONE 08:53:44 (43s) after removing Prop from 11 structures and projection binders.
+- hbridge Donor/Value still no olean; carrier/toAdd remaining; hull owns. Woke lanes.
