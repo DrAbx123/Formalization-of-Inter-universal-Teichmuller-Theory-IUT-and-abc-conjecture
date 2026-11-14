@@ -2524,3 +2524,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.324 N5 magnitude nonneg donor found (2026-11-17 05:50)
 - PaperXiFGlobalDirectActual.nativeGlobalQPilotNormalizedLogMagnitude_nonneg (line55) : 0 <= nativeGlobalQPilotNormalizedLogMagnitude T; proof sum_nonneg with baseQLogMagnitude_pos. DirectScalarComparisonActual.paperQPilotSignedLog = -nativeGlobalQPilotNormalizedLogMagnitude (rfl).
 - Use this to discharge S3013MagnitudeNonnegTarget; N5 then reduces to shared StepV q/native q witness (S3013StepVQInterface uninhabited). Mainline/qpilot instructed.
+
+
+### 20.325 URGENT sorryAx in Ind1 ValuationData probe; units arithmetic; floor upstream (2026-11-17 06:00)
+- Probe log: torsion_le_ker_unitValuationHom depends on [propext, sorryAx, Classical.choice, Quot.sound] though source grep no sorry and no olean currently. Treat RED until cleared; stepxi to rebuild fresh and #print axioms unitValuationHom/multiplicative_int_eq_one_of_pow_eq_one/isOfFinOrder_iff_pow_eq_one/CommGroup.mem_torsion to locate sorryAx. Do not accept green with sorryAx.
+- Hull units arithmetic goal q^N=q^(N-1)*q; use pow_succ'/Nat.pow_succ' + mul_comm; report.
+- qpilot FloorActual blocked on missing upstream HCor312Actual.olean; build upstream first.
+- shehdd odd-p full first error needed; structural target logShellResidueField.
+- stage4 ring-level IsGaloisGroup/primesOver bridge/transitivity/degree tower next.

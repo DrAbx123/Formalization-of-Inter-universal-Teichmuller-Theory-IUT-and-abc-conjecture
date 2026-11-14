@@ -2477,3 +2477,5 @@
 - 11:10: clean chain ordering fixed Dictionary 11:15:17 -> Assembly 11:28:52; Assembly probe fresh pending. R1 same-q witness/R3 T->C3 remain; N5/R1 overlap check. gate 20.323 written.
 
 - 11:20: N5 magnitude nonneg donor found PaperXiFGlobalDirectActual:55; use to discharge S3013MagnitudeNonnegTarget; N5 then only shared StepV q/native q witness. gate 20.324 written.
+
+- 11:30: URGENT sorryAx probe in Ind1 ValuationData (source no sorry) treat red until fresh audit. hull units pow_succ fix; qpilot Floor upstream missing; odd-p first error; stage4 Galois instance. gate 20.325 written.
