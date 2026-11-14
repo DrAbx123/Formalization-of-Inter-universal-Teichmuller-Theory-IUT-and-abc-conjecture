@@ -2923,3 +2923,5 @@
 - 24:30: valuation IsEquiv route for withValSigmaHom; stage4. gate 20.547 written.
 
 - 24:40: adicAbv_lt_one donor toNNReal_lt_one_iff found; stage4 IsEquiv. gate 20.548 written.
+
+- 24:50: ActualData remove qlog_div_eq rw; secondary subtype error may cascade. hull. gate 20.549 written.

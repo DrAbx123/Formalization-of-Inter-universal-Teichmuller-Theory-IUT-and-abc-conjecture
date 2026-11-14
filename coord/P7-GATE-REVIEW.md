@@ -3683,3 +3683,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.548 adicAbv_lt_one donor found (stage4, 2026-11-15 22:40)
 - WithZeroMulInt.toNNReal_lt_one_iff (Data/Int/WithZero.lean:95) with e=absNorm and one_lt_absNorm_nnreal (FinitePlace:130); connect adicAbv K v x to toNNReal (absNorm_ne_zero v) ((v.valuation K) x) via FinitePlace:166/rfl; get adicAbv<1 iff valuation<1; then Valuation.IsEquiv + IsEquiv.restrict + UniformContinuous. No fake.
+
+
+### 20.549 ActualData :256 remove qlog_div_eq rw (2026-11-15 22:50)
+- Direct :256 rw qlog_div_eq pattern not found because target already fn/(Fdeg*(2l))*logp. Remove rw, exact actualDataCore_perPlace_bounds ... i; secondary completionRationalPrime Nat.Primes/subtype mismatch may cascade. hull. No fake.
