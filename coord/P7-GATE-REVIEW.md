@@ -3862,3 +3862,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.590 integersToA implicit K stuck; use explicit valuationSubring (2026-11-15 28:40)
 - :25 IsUltrametricDist ?m from abbrev A/K inference. Use explicit (NormedField.valuation (K:=K)).valuationSubring in statement/binders and unitGroupMulEquiv; avoid A abbrev. qpilot. No fake.
+
+
+### 20.591 integersToA K inference; use (K:=K) (2026-11-15 28:50)
+- Units.mapEquiv integersToA sees Integers ?m not K. Fix `Units.mapEquiv (integersToA (K := K))` and explicit K on valuationSubring/unitGroupMulEquiv. qpilot. No fake.

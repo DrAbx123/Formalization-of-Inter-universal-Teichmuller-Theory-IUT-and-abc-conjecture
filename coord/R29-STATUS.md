@@ -3007,3 +3007,5 @@
 - 31:30: PrincipalUnits units equiv via integersToA; qpilot. gate 20.589 written.
 
 - 31:40: integersToA explicit valuationSubring K; qpilot. gate 20.590 written.
+
+- 31:50: integersToA K inference fix; qpilot. gate 20.591 written.
