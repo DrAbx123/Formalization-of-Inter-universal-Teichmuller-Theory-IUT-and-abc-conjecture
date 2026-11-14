@@ -2795,3 +2795,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.373 MAJOR P2NormBridge GREEN (shehdd, 2026-11-17 14:00)
 - Mzk1P2NormBridgeActual DONE 13:48:02/olean 21:48:01 (59s): norm_le_norm_natCast_iff_addVal_ge (pi,hpi,x!=0,N): ||x||<=||p^N|| <-> N*eK <= addVal x toNat; no source sorry. Fixes: congrArg norm hcoep, norm_pow, simpa hnormx.
 - Next shehdd: Mzk1P2BridgeActual wrapper with N=2 (p^2=4): ||x||<=||4|| <-> 2eK <= addVal x for x!=0; x=0 addVal top; then kernel 1+4O equivalence + TruncatedUnitsCardPrimary (verify s=2/logShellScale 2=4). abc to probe/audit.
+
+
+### 20.374 #C B secondary general-e GREEN (hull, 2026-11-17 14:10)
+- Mzk1TruncatedUnitsSecondaryActual DONE 13:53:57 (src 13:51, fresh olean): span_logShellScale_pow_eq_maximalIdeal_pow (e): Ideal.span{(logShellScale p)^e}=m^(eK*s*e); truncatedUnitsCardCorrected e (he:1<=e): secondary units card (q-1)q^(eK*s*e-1). Probe pending.
+- Hull to identify actual consumer and connect primary+secondary into one units-count theorem/dictionary; report exact missing. P2 wrapper shehdd owns; no concurrent edits.
