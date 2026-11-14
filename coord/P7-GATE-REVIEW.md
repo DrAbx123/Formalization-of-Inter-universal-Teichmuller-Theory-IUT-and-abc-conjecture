@@ -800,3 +800,13 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - `A1ValuationData` 出现仅定义 + 假设；无 Nonempty/choice/instance/True/PUnit；olean GREEN。
 - **mainline 三修**：① `Mzk1Cor312B5IndexChainActual` 去 structure 改显式 h/hbase/hF，保留 B5Index SNF；② C17 加 `Field (R⧸p)`/`Field (S⧸P)` instances；③ RootRadius 先 `push_cast` 归一并 `h2' : 2*↑l ≠0` 再 `inv_mul_cancel_left₀`；PaperSums 补 `BadPlacePaperTargetStrictActual` import。
 - **watchdog**：plan/order mtime 08:40、state 08:40，进程 alive；无 stall。
+
+
+### 20.55 Correspondence 权重审计 + NormCorrection 实例修法（abc，2026-11-15 02:10）
+- **Correspondence（GREEN 00:34:54）权重是 d_b，不是 paper 1/[K_w:F_v]**：
+  - `c0ProductQ_normalizedLog_eq_sum_qhat_actual`：`rootExtensionProductNormalizedLog = Σ_b d_b log‖c0QHat_b‖`；
+  - `sum_degree_qhatLogReadout_le_closedForm_sub_one`：`Σ_b d_b qhatLogReadout_b ≤ s1915ClosedForm−1`（无条件）；
+  - 文件未使用 `nativeBadLocalWeight`；paper weight 只在 paper sums/NormCorrection 的 global 版。
+- **条件分离**：qhat Haar scaling 已无条件关闭（S865）；`P2QHatNormInstanceAgreement` 独立未证；1/[K_w:F_v] vs d_b 由 `RootBaseCompletionGap` 单列。
+- **NormCorrection 首错 `:128`**：缺 `[∀ b, MeasurableSpace (qVFamTensorBlock T b)]`/`[∀ b, BorelSpace ...]` section 实例（Correspondence 有），导致 `sum_degree_qhatLogReadout_le_closedForm_sub_one` synthInstanceFailed，linarith 连带失败；方向 `paper=qhat−Σd log ratio ≤ closed−1−Σd log ratio` 正确，无需符号假设。
+- 修法：补两个 instance 变量即可。
