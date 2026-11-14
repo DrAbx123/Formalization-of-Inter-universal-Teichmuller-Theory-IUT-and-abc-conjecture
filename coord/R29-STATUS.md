@@ -2073,3 +2073,5 @@
 - 22:25: current tails: Final structure needs hM/hB instance binders; GroupCountBridge NormedAlgebra stuck (explicit K/p); ActualSourceUnitLayer missing Mul/CommGroup quotient instance; TorsionFromUnits :40; LS3137LFinal isDefEq timeout. Sent fixes. gate 20.137 written.
 
 - 22:55: GREEN GroupCountBridge 02:53:32 (exists_h_card_gamma, volume_ratio_eq_pow_of_groupCount) and TorsionFromUnits 02:53:33 (torsion_card_eq_actual_of_unitsEquiv). Volume chain unblocked; actual eEquiv/hcard donor remains. gate 20.138 written.
+
+- 23:00: shehdd #C gap split: MissingCongruenceUnitsEquiv e + MissingTruncatedUnitsCard e s -> torsion_card_eq_actual_of_missing; no free hC. Next actual eEquiv/hcard. gate 20.139 written.

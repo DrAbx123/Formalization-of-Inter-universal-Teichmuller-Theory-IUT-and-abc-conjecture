@@ -1382,3 +1382,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1IutIVProp14GroupCountBridgeActual DONE 02:53:32 (51s): exists_h_card_gamma; volume_ratio_eq_pow_of_groupCount. Unblocks ActualHBridge/P14ii.
 - Mzk1IutIVProp14TorsionFromUnitsActual DONE 02:53:33 (51s): torsion_card_eq_actual_of_unitsEquiv; actual eEquiv/hcard donor remains.
 - Need probes; final still pending hM/hB fix; Volume chain advances.
+
+
+### 20.139 #C actual gap split into two exact objects (shehdd, 2026-11-15 17:00)
+- New Mzk1IutIVProp14CongruenceActualGapActual (queue):
+  1. MissingCongruenceUnitsEquiv e := Nonempty (U/U_s ≃* (O/(p^{s e}))^x);
+  2. MissingTruncatedUnitsCard e s := #truncatedUnits = (q-1)q^(e*s-1);
+  3. torsion_card_eq_actual_of_missing: both exact gaps + q=p^f + e*s + p∤q-1 => actual torsion count.
+- #C donor now split into two independent targets; no free hC. Next construct eEquiv/hcard via U/U_s=1+(p^s)^e O closed ball + cardQuot_pow_of_prime.
+- TorsionFromUnits GREEN 02:53:33; GroupCountBridge GREEN 02:53:32; ActualHBridge/P14ii pending; final pending hM/hB.
