@@ -3603,3 +3603,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.531 UnitRegionScaling build/floor; watchdog backlog (2026-11-15 19:50)
 - UnitRegionScaling direct EXIT=0; lead started background lake build job pwsh-202db132c91e41f4 for olean. floor remains unitRegionLog=-M and 1<=M explicit; hact explicit. Watchdog active but backlog P0/P1/B5; our files need direct builds.
 - hull HasLogIdx/perPlace; stepxi Fact5+Completion cast; stage4 finrank split; qpilot floor. No fake.
+
+
+### 20.532 UnitRegionScaling olean generated; floor route (2026-11-15 20:00)
+- Lead generated .lake/build/lib/lean/tmp/.../Mzk1IVThm110UnitRegionScalingActual.olean 04:52:34 via lake env lean -o (direct EXIT=0).
+- qpilot next floorQSigned_eq_native_of_unitRegion (hscale1: IQHullUnitScale=1, hM: unitRegionLog=-M, hMone:1<=M -> floor qSigned=-M) via HullUnitZero scale_one + FloorNativeHull.floorQSigned_eq_native_of_hull. scale!=1 requires hull unit log volume=0/scale Haar, explicit gap.
+- abc audit; no fake.
