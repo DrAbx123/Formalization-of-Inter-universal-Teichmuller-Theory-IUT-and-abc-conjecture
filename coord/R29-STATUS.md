@@ -2615,3 +2615,5 @@
 - 22:50: KernelBridge fresh GREEN 23:05:29; next range_eq_ker/Z_p^d. HullUnitZeroProbe2 green. UnitInvariance/alignment pending. gate 20.392 written.
 
 - 23:00: Ind1 range_eq_ker route via Quotient.out representative; stepxi implement. gate 20.393 written.
+
+- 23:10: COR3.12 obstruction: pure q^a needs #T=q-1, false in ramified (Qp(ζp) p-torsion). Conditional pure bridge with hT green; trace consumer necessity. No fake. gate 20.394 written.

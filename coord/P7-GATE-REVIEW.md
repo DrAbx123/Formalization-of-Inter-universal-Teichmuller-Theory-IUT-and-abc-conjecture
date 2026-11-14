@@ -2901,3 +2901,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.393 Ind1 range_eq_ker bridge: quotient representative route (stepxi, 2026-11-17 17:30)
 - KernelBridge green. Exact missing: MonoidHom.mrange kernelToAQuotient = (quotientValuationHom h).ker.toSubmonoid.
 - Route: forward v(class subtype y)=unitValuationHom y=1. Reverse x in v.ker: representative y:=Quotient.out x (AQuotient=TimesMuQuotient F^x); Quotient.out_eq; v x=unitValuationHom y; v x=1 => y in ker; class subtype y = x. Prove range equality via subset antisymm. Then compose quotientKernelEquivRange with submonoidCongr. Z_p^d remains.
+
+
+### 20.394 Cor3.12 pure q^a obstruction: #T=q-1 generally false (hull, 2026-11-17 17:40)
+- Cor3.12 ResiduePowerCondition (index residueCard a) := index=residueCard^a; Mzk1Paper312FinalBoundActual uses it condition (1).
+- Existing QFE gives torsion-divided logShellIntegerIndex = q^(eK*s-1)*(q-1)/#T, not pure q^a. Existing torsion_dvd_sub_one only gives q^(...)*((q-1)/#T).
+- Pure needs #T=q-1 (stronger than divisibility); generally FALSE in ramified case: K=Qp(ζp) has p-torsion, q=p, #T>p-1. Unramified Teichmuller #T=q-1 only. So pure Cor3.12 not unconditional from QFE; needs explicit hT/unramified/torsion-free-p assumption.
+- Hull wrote conditional logShellIntegerIndex_eq_residueCard_pow_of_torsion_eq_sub_one (hT). Next trace Cor3.12 consumer necessity vs sufficiency. No fake.
