@@ -1651,3 +1651,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - New Mzk1Ind1GaloisIntegralActionActual (queue): for base K=Qp, integral units algebraMap into Qp; localGaloisUnitsAction sigma fixes Qp, so fixes integral units (Units.ext + commutes); no general integral-closure isometry needed.
 - Constructs localGaloisStableAlgebraicAction sigma : IntegralUnitStableAlgebraicAction Qp (mapsIntegers v=u bijective) and localGaloisActualInd1UnitAction sigma : ActualInd1UnitAction Qp (algAction=localGaloisUnitsAction, beta=refl, compatible=fix). Actual non-fake inhabitant; identity on integral quotient, actual Galois action.
 - If green + probe three axioms, beta source node closes. Need audit no sorry/True.
+
+
+### 20.185 MILESTONE GREEN: actual beta inhabitant at base Qp (stepxi, 2026-11-16 02:50)
+- Mzk1Ind1GaloisIntegralActionActual DONE 04:43:30 (51s); no sorry/True; probes localGaloisUnitsAction_fixes_integralUnits and localGaloisActualInd1UnitAction both [propext, Classical.choice, Quot.sound].
+- localGaloisUnitsAction_fixes_integralUnits (sigma) (u): localGaloisUnitsAction p sigma (integersUnitsToAlgClosure u)=integersUnitsToAlgClosure u.
+- localGaloisStableAlgebraicAction sigma : IntegralUnitStableAlgebraicAction Qp with mapsIntegers/mapsIntegers_symm v=u.
+- localGaloisActualInd1UnitAction sigma : ActualInd1UnitAction Qp with algAction=localGaloisUnitsAction, beta=MulEquiv.refl, compatible via fix.symm.
+- Actual non-fake inhabitant; beta source node closed for base Qp (integral quotient identity). General K needs K-version localGaloisAlgEquiv; not claimed.
