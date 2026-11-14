@@ -2663,3 +2663,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.349 Ind1 first-iso bridge route (stepxi, 2026-11-17 10:00)
 - WQuotient green 12:41:34 probes three axioms. Missing: ker(unitValuationHom -> AQuotient)=torsion, then first iso to v.ker; no donor lemma. Second gap WQuotient ≅ Z_p^d / r-divisibility no donor.
 - Route: incl:ker unitValuationHom→Fˣ; q:Fˣ→AQuotient=TimesMuQuotient Fˣ; wToA=q.comp incl; kernel=torsion via quotientMap_ker + torsion<=ker; kerLift/first-iso gives ker/torsion ≃* range wToA; range_unitToA_eq_ker relates to v.ker. Construct AQuotientKernelBridge structure/bijective, then divisibility. No fake.
+
+
+### 20.350 Floor native obstruction: M>=1 necessary (qpilot, 2026-11-17 10:10)
+- FloorNativeHull GREEN 20:47:20 (hullLog=-M & M>=1 -> floor qSigned=native). New pending obstruction file: M_ge_one_of_floor_eq_native (floor qSigned<=-1 and if M<1 then -M>-1 so equality impossible); hullLog_eq_neg_M_of_floor_eq_native_of_one_lt. Thus M>=1 is necessary, not an assumption; M>1 forces actual hullLog=-M.
+- hullLog is Haar log of canonical tensor hull; M is sum weights*baseQLogMagnitude; hullLog-unitLog=arithmeticTupleHullUnitLogVolume (field-product normalized log, not base-q sum). Exact first missing: arithmeticTupleHullUnitLogVolume=-M plus M>=1; no fake.
