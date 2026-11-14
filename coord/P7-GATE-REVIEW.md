@@ -1315,3 +1315,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mzk1Ind1ActualSourceUnitLayerActual extended (retouch): structure ActualInd1UnitAction K L { beta : ActualSourceUnitLayer K ≃* ActualSourceUnitLayer L; fromProcession : Prop }; ActualInd1UnitActionRequired; consumer actualInd1LogRangeEquiv A := actualSourceUnitLogRangeEquiv A.beta.
 - Structure has no inhabitant; only source node = construct beta from actual Ind1/Ind2 procession action and prove fromProcession. Old FPrimeStrip.isoMon acts on (AlgClosure)^x, not integral-unit quotient; no fake.
 - Written into gap doc.
+
+
+### 20.129 GREEN: VolumeActual; A1Data; WeightA1/Alignment probes (2026-11-15 15:05)
+- IutIVProp14VolumeActual DONE 02:11:46 (50s); unblocks VolumeRatioHaar -> GroupCountBridge -> ActualHBridge -> P14ii.
+- Mzk1P1PaperSumsA1DataActual DONE 02:16:59 (102s): paperToS3137A1Data; paperToS3137A1Data_nonempty; A1Data now verified olean.
+- Mzk1P1WeightA1AxiomProbeActual DONE 02:12:40 (104s): four WeightA1 theorems all [propext, Classical.choice, Quot.sound].
+- Mzk1BoxPrincipalAlignmentProbe DONE 02:12:39 (103s): principalScalarReadout_eq_log_norm three axioms.
+- Final still pending recompile.
