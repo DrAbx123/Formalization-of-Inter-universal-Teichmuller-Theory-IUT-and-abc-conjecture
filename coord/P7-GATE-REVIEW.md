@@ -3630,3 +3630,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1IVThm110FloorUnitRegionActual DONE 21:03:37/olean 05:03:37: floorQSigned_eq_native_of_unitRegion (hscale1: IQHullUnitScale=1, hM: unitRegionLog=-M, hMone:1<=M -> floor qSigned=S3013QSigned); scaleNeOneGap explicit. No sorry.
 - ActualData duplicate perPlace_bounds declaration at :228; hull delete duplicate.
 - abc/IV analysis: existing final consumers green conditional; first non-tautological missing = regionVolume_le_normalizedWeight/UndilatedRegionBound bridge Cor3.12/IV theta-pilot -> comparisonRegion logVolume. mainline inspect smallest bridge. No fake.
+
+
+### 20.537 hscale1 unprovable from choose; try hull subset (2026-11-15 20:50)
+- arithmeticTupleIQHullUnitScale = choose (exists lam!=0, hull ⊆ lam•unitReference); spec only existence, no lam=1/minimality => hscale1 not provable as is.
+- Try prove hull ⊆ canonicalUnitReference by unfolding definitions; if true, redefine helper scale to 1 with proof (not fake) and recheck downstream. Else record scale!=1/hullUnitLog=0 open gap. qpilot. No fake.
