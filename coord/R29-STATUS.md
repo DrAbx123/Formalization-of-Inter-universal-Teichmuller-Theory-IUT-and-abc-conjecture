@@ -2045,3 +2045,5 @@
 - 19:55: A1Data UNCONDITIONAL via green local_degree_pos; paperToS3137A1Data constructed, nonempty. Remaining final: S45 / RelativeFactor(divisibility) / ReadingDictionary(undefined) / d_F; unitMass=1 not assumed. gate 20.125 written.
 
 - 20:05: GREEN LNormComparisonConditional 02:08:48 (LNormComparisonTarget_of_bounds/_of_local_bound/LPaperInstance_of_bounds) and PrincipalPacketAlignment 02:08:47 (principalScalarReadout_eq_log_norm/PacketScalarAlignment/missing list). Final dep satisfied; mainline to retouch/recompile Final. gate 20.126 written.
+
+- 20:10: mainline running Final; woke hull/qpilot/shehdd/lattice/stepxi/abc/stage4 with next tasks. Final/A1Data/WeightA1 probes still pending; no new DONE after 02:08:48.
