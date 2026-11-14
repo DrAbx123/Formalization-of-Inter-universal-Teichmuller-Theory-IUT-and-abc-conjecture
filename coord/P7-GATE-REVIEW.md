@@ -1127,3 +1127,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Axiom probe (log): sourceUnitLogRangeEquiv_apply depends on [propext, Classical.choice, Quot.sound]; no sorryAx.
 - Beta_a algebraic/log half assembled; only actual W <-> (Integers K)^x/tors identification remains.
 - LNormReadoutActual lean rewrite pending; bridge/WeightA1/probes pending.
+
+
+### 20.100 GREEN: RootRadius/Varpi axiom probes three axioms; torsion/weight fixes (2026-11-15 09:45)
+- Mzk1P1RootRadiusAxiomProbeActual DONE 01:31:20 (101s): log_rootImageRadius_eq_neg_coefficient_mul_logP and rootNormedLogVolume_eq_inv_twoL_mul_log_norm both [propext, Classical.choice, Quot.sound]; no sorryAx.
+- Mzk1BoxDistinguishedVarpiAxiomProbeActual DONE 01:31:19 (101s): packetHull_with_theta_varpi [propext, Classical.choice, Quot.sound]; no sorryAx.
+- WeightA1Bridge fixed missing imports PaperRootCompletionTensorActual/QVFamNormalizedGeneratorSupplyActual/PaperRootExtensionHaarActual/Mzk1RouteC0RootQLatticeActual.
+- ReadoutProduct :96: remove change, use explicit hlog = Real.log_rpow ...; rw [hlog]; ring.
+- Torsion actual: add finite_integralUnitTorsion/finite_logShellCongruenceQuotient/finite_logShellIntegerQuotient before obtain; only #C donor remains.
+- Lattice chain root: IutIVProp14VolumeActual olean missing; retouched Prop14Volume->GroupCountBridge->ActualHBridge->P14ii; HaarIndexPow add import Mathlib/open LocalFieldIntegralUnits.
