@@ -2815,3 +2815,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.377 #C B consumer green; hf via FiniteField.card (2026-11-17 14:40)
 - Mzk1IutIVCongruenceCardActual DONE 13:59:25: congruenceQuotient_card_actual (e,he,eEquiv) and congruenceQuotientCardinalityInput_of_equiv (he,hf,eEquiv); conditional on eEquiv and hf: logShellResidueCard=p^f. Feeds IutIVProp14GroupCountActual.logShellQFECardinalityHypothesis_actual.
 - hf donor: Mathlib FiniteField.card (FieldTheory/Finite/Basic:256): finite field CharP p => exists n:ℕ+, q=p^n. Apply to logShellResidueField K with CharP instance, choose f=n. Hull to prove/report. eEquiv p=2 owned shehdd; P2Bridge audit found unknown p, add include p/binder.
+
+
+### 20.378 #C B consumer: hf solved, only eEquiv left (hull, 2026-11-17 15:00)
+- Mzk1IutIVCongruenceCardActual DONE 14:04:24: congruenceQuotientCardinalityInput_exists_of_equiv (e) (he) (eEquiv) -> exists f, CongruenceQuotientCardinalityInput; logShellQFECardinalityHypothesis_exists_of_equiv similarly. hf via existing GREEN IntegralLogShellSharpBounds.logShellResidueCard_eq_prime_pow (exists f, 1<=f, q=p^f; internally charP + FiniteField.card).
+- Exact missing only eEquiv: O^×/(1+p^sO) ≃* (O/(p^s))^× (#C A). odd-p conditional green; p=2 wrapper shehdd pending. Hull to build unconditional by_cases p=2 structure, report exact missing branch; no edit p2 files.
