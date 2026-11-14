@@ -810,3 +810,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **条件分离**：qhat Haar scaling 已无条件关闭（S865）；`P2QHatNormInstanceAgreement` 独立未证；1/[K_w:F_v] vs d_b 由 `RootBaseCompletionGap` 单列。
 - **NormCorrection 首错 `:128`**：缺 `[∀ b, MeasurableSpace (qVFamTensorBlock T b)]`/`[∀ b, BorelSpace ...]` section 实例（Correspondence 有），导致 `sum_degree_qhatLogReadout_le_closedForm_sub_one` synthInstanceFailed，linarith 连带失败；方向 `paper=qhat−Σd log ratio ≤ closed−1−Σd log ratio` 正确，无需符号假设。
 - 修法：补两个 instance 变量即可。
+
+
+### 20.56 纪律提醒：`WFUnitQuotientIdentification` 的 `Fin 0` 是 toy placeholder（2026-11-15 02:15）
+- stepxi 的 W_F 链结构当前写 `sourceAddEquiv : sourceUnitQuotient ≃+ (Fin 0 → ℤ_[p])`，把 W 硬编码成平凡群；虽无 inhabitant，但违反 no-toy-carrier 纪律。
+- 已要求改为参数化实际维度/实际 W：`sourceAddEquiv : sourceUnitQuotient ≃+ W`，`wEquiv : W ≃ₜ+ (Fin d → ℤ_[p])`；不要用 `Fin 0`/`PUnit`/`True` 作载体。
+- 结构仍无 inhabitant，标 GAP；WFLattice 连续链本身不依赖该结构。
