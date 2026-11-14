@@ -1058,3 +1058,11 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.89 GREEN: Gamma axiom probe three theorems three axioms (2026-11-15 07:20)
 - `_ProbeGammaAxioms.lean` DONE 01:20:29 (36s): integralLogShell_pow_smul_mem_integers, isPGroup_logShellIntegerQuotient, card_gamma_eq_pow_actual all depend on [propext, Classical.choice, Quot.sound]; no sorryAx.
 - Gamma official + audited; lattice ActualHBridge/P14ii unblocked; shehdd can write torsion actual.
+
+
+### 20.90 Final S3137 conditional landed; torsion actual interface (2026-11-15 08:00)
+- New Mzk1P0FinalS3137ConditionalActual (queue):
+  - `finalPaperNormalizedComparison (S : S45SourceFields T) : paperNormalizedThetaSum T <= paperNormalizedQPilotSum T` (S45 condition -> paper-normalized comparison);
+  - `finalLPaperInstance (hlock) (hbound) (hlog) : LPaperInstance I place` (all params consumed; no unused lock);
+  - `FinalBridgeConditions` data-only recording four explicit conditions/GAPs, 8 rows with status; S45 = EXPLICIT CONDITION; RelativeFactorTowerData = EXPLICIT CONDITION (divisibility, not tower); A1Data/ReadingDictionary = EXPLICIT GAP; unitMass=1 NOT CLAIMED; raw S3137 P vacuous = RECORD ONLY.
+- Mzk1IutIVProp14TorsionActual (queue): `torsion_card_eq_actual_of_congruenceCard` with hC : card C = (q-1)p^(f(es-1)), hq, hcop; uses card_gamma_eq_pow_actual + card_logShellCongruenceQuotient + green torsion_card_eq_of_congruenceCard; output exists h,m with #Gamma=p^h, #T=(q-1)p^m, h+m=f(es-1). Only remaining actual input = #C=(q-1)q^(es-1) donor (U/U_s equiv + cardQuot_pow_of_prime).

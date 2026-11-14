@@ -1961,3 +1961,5 @@
 - 13:50: hull audit LNormReadout compile fixes: add import/open QVFamNormalizedGeneratorSupplyActual; log_mul change/ring_nf; explicit I/place params; whnf maxHeartbeats/change. Sent mainline. Files correct but not official. gate 20.88 written.
 
 - 13:55: GREEN _ProbeGammaAxioms 01:20:29: 3 Gamma theorems only three axioms, no sorryAx. Gamma official+audited; lattice ActualHBridge/P14ii unblocked; shehdd torsion actual. Woke all lanes. gate 20.89 written.
+
+- 14:00: mainline landed Mzk1P0FinalS3137ConditionalActual (finalPaperNormalizedComparison under S45; finalLPaperInstance consumes hlock/hbound/hlog; FinalBridgeConditions data-only with 8 rows/status). shehdd landed Mzk1IutIVProp14TorsionActual (torsion_card_eq_actual_of_congruenceCard; only hC actual #C donor remains). gate 20.90 written.
