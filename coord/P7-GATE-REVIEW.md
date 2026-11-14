@@ -1770,3 +1770,8 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - BSR green cleared upstream blocker.
 - Donor GeneralNormalizedNormBySpectralUniqueness no olean; latest restructure/type errors: (1) :61 unknown relativeCompletionDegree_eq_ramificationIdx_mul_inertiaDeg -> import FinitePlaceCompletionDegreeGlobal; (2) K/L aliases now functions of place, bare K/L uses must be K place/L place consistently (AbsoluteValue (L place), q : K place, spectralNorm (K place) (L place), forall x : L place); (3) circular add_le remains: move shared canonicalAbsValue/nu/absNorm/d + add_le to lower module or inline, AddLeProof downstream.
 - After 1/2 donor builds; then 3. Formula normalized=default^(1/d).
+
+
+### 20.203 Composite root cause: slash import syntax (lattice, 2026-11-16 06:20)
+- Mzk1IUTIVProp11CompositeActual real first error :1:17 unexpected token '/': import LeanFormal/IUT/... uses slash; Lean 4 requires dot path. Fixed to import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.Volume. Example36 olean actually exists; previous 'missing olean' was cascade from import parse failure.
+- Retouched; next first error/GREEN pending.
