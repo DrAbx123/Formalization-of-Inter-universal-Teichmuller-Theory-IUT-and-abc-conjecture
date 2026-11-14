@@ -3709,3 +3709,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.554 principalUnits↔valuation principalUnitGroup bridge (qpilot, 2026-11-15 22:40)
 - First blocker: principalUnits (||u-1||<1) = valuation integer principalUnitGroup.comap subtype (valuation(u-1)<1); prove via SetLike.ext + norm_lt_one_iff_valued_lt_one. Then unitsModPrincipalUnitsEquivResidueFieldUnits, residue field Fintype/card/coprime p(p^f-1), integralUnitExponent_coprime, unitLog_norm_le_one. qpilot. No fake.
+
+
+### 20.555 Non-vacuous thetaValueCompat/basePlace (mainline, 2026-11-15 22:50)
+- Intended ThetaValueCompat: forall b j, C3.thetaPacket.scale j = qVFamilyThetaValue T b j; source theater version uses sourceThetaValue. Existing QVThetaValueRelation/QVThetaValueMismatch/SourceTheaterQNeQVFamily. basePlace_compat needs Fmod equality; only ring equiv Nonempty known. mainline formalize and check relation/mismatch. region thetaPilotHull vs C3PerPlaceUpdateRegionAll likely false (unit log-shell vs radius rho); hhullRead shift can absorb but region equality not. No fake.

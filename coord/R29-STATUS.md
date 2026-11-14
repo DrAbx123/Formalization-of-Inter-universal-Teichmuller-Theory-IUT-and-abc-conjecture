@@ -2935,3 +2935,5 @@
 - 25:30: quotient/residue units donor found; qpilot implement exponent coprime/unitLog norm/tensor ball. gate 20.553 written.
 
 - 25:40: principalUnits subgroup equality via norm_lt_one_iff; qpilot. gate 20.554 written.
+
+- 25:50: thetaValueCompat non-vacuous definition; check relation/mismatch; basePlace Fmod; region equality likely false. mainline. gate 20.555 written.
