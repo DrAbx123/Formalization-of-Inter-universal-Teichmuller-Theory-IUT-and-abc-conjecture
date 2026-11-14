@@ -3935,3 +3935,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.608 quotient transport map_comap_eq_self (2026-11-15 31:40)
 - Goal H ≤ range f not range=⊤; prove htop: range f=⊤ via MonoidHom.range_eq_top.mpr surjective, rw [htop], exact le_top. qpilot. No fake.
+
+
+### 20.609 quotient transport GREEN olean 07:12:09; audit 8 decls accepted (2026-11-15 31:50)
+- quotientEquivPrincipalUnits direct EXIT=0; lead olean 07:12:09. Previous 07:07:33 audit (residue card/coprime+6 decls) probe-fresh three axioms, accepted.
+- Next qpilot quotient card -> integralUnitExponent_coprime -> unitLog_norm_le_one/tensor. abc audit new olean. No fake.
