@@ -3007,3 +3007,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1GaloisRingBridgeActual DONE 23:55:29/olean 23:55:27: alignedCompletionMapAtComap (b): Completion(comap_F Kplace) ->+* Completion(Kplace) via FinitePlaceExtension.completionMap; injective; alignment theorems retained.
 - Blockers: (1) completionMap starts at comap place not native F-place; need sigma-extension or moved=native theorem. KEY: alignment equality galoisPlaceMk σ(nativeBadToFPlace)=comap_F(Kplace) gives equality of Completion types via congrArg Completion/cast, so compose cast with alignedCompletionMapAtComap; no sigma-extension needed. (2) degree tower needs IsScalarTower Qp (Completion lower) (Completion upper); absent, synthInstanceFailed. (3) degree invariance rootBaseQpDegree(native F)=rootBaseQpDegree(moved F) needed; Galois automorphism preserves local degree.
 - Stage4 to cast completion via alignment, construct IsScalarTower/finrank_mul_finrank; report first error/GREEN. No fake.
+
+
+### 20.413 MAJOR NativeBadLift redefined to aligned lift GREEN (mainline, 2026-11-17 20:50)
+- tmp/sheaf/n8/closure/NativeBadLiftActual DONE 15:55:17/olean 23:55:16: lift b := NumberFieldFinitePlace.comap (k:=F) (sectionFiniteLift (nativePlaceSelection T) b.1); lift_comap by comap_comap + sectionFiniteLift_comap. So NativeBadLiftAlignment / BaseChange hplace should be rfl.
+- Mainline to instantiate baseChangePlaceCompletionCorrespondence without hplace, define actual inhabitant, probe, then (c) q element/(d) C3 aggregation; report downstream importer breakage. abc audit. No fake.
+- GaloisAlignmentProbe 15:55:26; Paper312SourceExponent 15:54:35. Unit/Kernel/Galois green.

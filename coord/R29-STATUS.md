@@ -2653,3 +2653,5 @@
 - 02:00: a_v source = LogShellResiduePowerCardHypothesis; conditional consumer GREEN 15:54:35. Exact missing construction from QFE; hull correction route. gate 20.411 written.
 
 - 02:10: stage4 alignedCompletionMapAtComap green; cast via place equality avoids sigma-extension; degree tower IsScalarTower missing. Task cast/finrank. gate 20.412 written.
+
+- 02:20: MAJOR NativeBadLift redefined aligned (lift=comap_F sectionFiniteLift) GREEN 23:55:16; alignment now rfl. Mainline instantiate BaseChange place/completion, then q element/C3. abc audit. gate 20.413 written.
