@@ -2109,3 +2109,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 ### 20.260 GREEN EstimatesStatementLayer (2026-11-16 16:40)
 - Mzk1IUTIVEstimatesStatementLayerActual DONE 08:53:44 (43s) after removing Prop from 11 structures and projection binders.
 - hbridge Donor/Value still no olean; carrier/toAdd remaining; hull owns. Woke lanes.
+
+
+### 20.261 URGENT temporary sorry in Donor source (mainline, 2026-11-16 16:50)
+- Mainline reports current Mzk1P0QVFamNormBridgeDonorActual source contains temporary `m : Z := Multiplicative.toAdd sorry`; project prohibits sorry. Hull owns. Instruction: remove immediately, use WithZero.unzero (a:=val) hval or revert to last sorry-free version; no green until grep clean. Donor latest errors :116 unknown hm + :115 unsolved. Value :71 unzero rw-match.
+- Integration files (Assembly/Final/Dictionary) remain green conditional + probes; hbridge not proved; S45 not claimed; power not equality.
+- EstimatesStatementLayer GREEN 08:53:44; next PaperIUTIVSection2Statement removing Prop + WL.

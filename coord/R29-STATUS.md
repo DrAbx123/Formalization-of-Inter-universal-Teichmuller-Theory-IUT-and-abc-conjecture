@@ -2341,3 +2341,5 @@
 - 23:20: hbridge corrections: Donor toAdd alpha:=Z; Value use generator for L/nu and toC for C/default, qVFamily.q not defeq L. hull fix. gate 20.259 written.
 
 - 23:30: GREEN EstimatesStatementLayer 08:53:44. hbridge still no olean; hull. Next statement-layer. gate 20.260 written.
+
+- 23:40 URGENT: Donor source has temporary sorry (toAdd sorry); hull instructed remove immediately/revert; abc audit. No green until clean. Estimates green; next Section2Statement. gate 20.261 written.
