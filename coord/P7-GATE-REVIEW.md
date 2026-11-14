@@ -1017,3 +1017,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   `p2QHatNormInstanceAgreement_proved : P2QHatNormInstanceAgreement T`.
 - If green: QHatNormCoherence unconditionally closed; bridge reduces to S45 / RootBaseCompletionGap / PaperToS3137A1Data + PaperS3137ReadingDictionary. Old QHatAttempt is historical only; no norm_algebraMap.
 - `hobj` audit fix: mainline removed unused hobj from three conditional theorems; LGlobalLocalObjectLock retained only as text GAP record (fields not typeable), not in any proven theorem. New signatures consume only hlock/hbound/hlog.
+
+
+### 20.84 QHat GREEN unconditional; Gamma GREEN; RootBase degree identity is FALSE (2026-11-15 06:15)
+- **Mzk1P2QHatNormCoherenceProofActual DONE 01:13:14**: qHatNormCoherence_proved; p2QHatNormInstanceAgreement_proved. QHatNormCoherence UNCONDITIONALLY CLOSED; bridge drops QHat (S45 / RootBase / A1Data + reading bridge). Need axiom probe.
+- **IutIVProp14GammaPGroupActual DONE 01:12:27**: integralLogShell_pow_smul_mem_integers, isPGroup_logShellIntegerQuotient, card_gamma_eq_pow_actual; need axiom probe; then actual h/torsion.
+- **Mzk1RootBaseCompletionGapActual DONE 01:13:12 is NEGATIVE**: rootBaseDegreeIdentity_false_of_relativeDegree: if K_w/F_v relative factor B>1 and tower C=B*A, naive identity rootBaseQpDegree=kPlaceQpDegree is FALSE; rootBaseDegreeIdentity_forces_relativeFactor_one. Do NOT treat RootBaseCompletionGap/degree identity as constructible; weight conversion needs explicit per-b factor B or corrected weight convention. Bridge RootBase item must change to relative-factor/tower equation, not identity.
