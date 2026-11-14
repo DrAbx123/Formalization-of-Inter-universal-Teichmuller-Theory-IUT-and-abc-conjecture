@@ -3001,3 +3001,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Actual source exponent a is named hypothesis in IntegralLogShellIndexResidueFormula: LogShellResiduePowerCardHypothesis a : Nat.card(O^×/logShellCongruenceUnits)=q^a * #torsion; consumer logShellIntegerIndex_eq_residueCard_pow_of_powerCardHypothesis: hcard -> index=q^a. Correction version with c. a_v independent, not eK*s-1/log_q(index).
 - Mzk1Paper312SourceExponentActual DONE 15:54:35: perPlace_of_powerCardHypothesis (hcard)(hres:q=p^f)(hcoef)(hlogp_eq)(hmu) -> qcoef <= (1-1/(2l))log index + logMu. Conditional consumer GREEN.
 - Exact missing: construct pure hypothesis from QFE quotient (q-1)q^(eK*s-1): pure needs #T=q-1 and a=eK*s-1 (unramified eK=s=1 gives a=0/condition4 fail); correction c=(q-1)/#T needs divisibility and c=1 for pure; no a_v<->eK,s formula. Hull to construct correction hypothesis and assess. No fake.
+
+
+### 20.412 Galois bridge strengthened: alignedCompletionMapAtComap (stage4, 2026-11-17 20:40)
+- Mzk1GaloisRingBridgeActual DONE 23:55:29/olean 23:55:27: alignedCompletionMapAtComap (b): Completion(comap_F Kplace) ->+* Completion(Kplace) via FinitePlaceExtension.completionMap; injective; alignment theorems retained.
+- Blockers: (1) completionMap starts at comap place not native F-place; need sigma-extension or moved=native theorem. KEY: alignment equality galoisPlaceMk σ(nativeBadToFPlace)=comap_F(Kplace) gives equality of Completion types via congrArg Completion/cast, so compose cast with alignedCompletionMapAtComap; no sigma-extension needed. (2) degree tower needs IsScalarTower Qp (Completion lower) (Completion upper); absent, synthInstanceFailed. (3) degree invariance rootBaseQpDegree(native F)=rootBaseQpDegree(moved F) needed; Galois automorphism preserves local degree.
+- Stage4 to cast completion via alignment, construct IsScalarTower/finrank_mul_finrank; report first error/GREEN. No fake.
