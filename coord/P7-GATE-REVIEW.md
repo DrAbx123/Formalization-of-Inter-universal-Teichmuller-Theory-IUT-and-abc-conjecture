@@ -3480,3 +3480,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - PrincipalDimInstantiate direct only :57:64 distribHaarChar_algebraMapUnit_eq_one expects (u)(μ), call passed μ as u; fix places tuple u μ.
 - CompletionTower final DONE 19:59:50/olean 03:59:49 (prior FAIL stale). ActualRamifiedData 19:54:19 probe 19:59:42; A2QuotientMorphism 19:48:54 probe 03:53:40.
 - qpilot fix; abc acknowledged. No fake.
+
+
+### 20.505 quotientWitness 3/5 fields constructible (mainline, 2026-11-15 15:30)
+- OrbicurveSignQuotientWitness candidate: descend := fun Y inv => inv.map; factor := leftUnitor inv.map; descendTwoCell := fun Y s t alpha => alpha.app all OK. First exact missing descendTwoCell_factor (Orbicurve:737-747) target whiskerLeft id alpha = iso unitors; cat_disch fails, need manual ext+unitor. Second missing twoCell_ext needs whiskerLeft 𝟙 alpha = alpha (unitor lemma absent). groups coverCategory no donor; unique gap. Mainline manual ext. No fake.

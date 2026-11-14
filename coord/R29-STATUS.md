@@ -2835,3 +2835,5 @@
 - 17:10: MAJOR A2PartialFields quotient integrated GREEN 19:53:42 (15 groups; 3 blocked). abc probe; mainline quotientWitness/groups. gate 20.503 written.
 
 - 17:20: Instantiate :57 argument order u/μ; CompletionTower final green 03:59:49. qpilot. gate 20.504 written.
+
+- 17:30: quotientWitness 3/5 fields; descendTwoCell_factor/twoCell_ext missing unitor coherence; mainline manual ext. gate 20.505 written.
