@@ -2933,3 +2933,5 @@
 - 25:20: MAJOR ActualData/A_le GREEN 21:31:17. BadToC3TensorMap vacuous Prop must not be True; mainline semantic. qpilot exponent coprime. gate 20.552 written.
 
 - 25:30: quotient/residue units donor found; qpilot implement exponent coprime/unitLog norm/tensor ball. gate 20.553 written.
+
+- 25:40: principalUnits subgroup equality via norm_lt_one_iff; qpilot. gate 20.554 written.

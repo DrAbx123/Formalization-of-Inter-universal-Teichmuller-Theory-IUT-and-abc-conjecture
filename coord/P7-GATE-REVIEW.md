@@ -3705,3 +3705,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.553 quotient↔residue units donor found (qpilot, 2026-11-15 22:30)
 - Mathlib ValuationSubring.unitsModPrincipalUnitsEquivResidueFieldUnits: (Integers K)^x / principalUnits ≃* (ResidueField A)^x. Need Fintype residue field, card=p^f, coprime p (p^f-1) via Nat.coprime_pow_sub_one, transfer card to quotient; integralUnitExponent=card quotient => coprime. Then unitLog_norm_le_one (p odd; p=2 separate), then tensor unit ball. qpilot implement; no fake.
+
+
+### 20.554 principalUnits↔valuation principalUnitGroup bridge (qpilot, 2026-11-15 22:40)
+- First blocker: principalUnits (||u-1||<1) = valuation integer principalUnitGroup.comap subtype (valuation(u-1)<1); prove via SetLike.ext + norm_lt_one_iff_valued_lt_one. Then unitsModPrincipalUnitsEquivResidueFieldUnits, residue field Fintype/card/coprime p(p^f-1), integralUnitExponent_coprime, unitLog_norm_le_one. qpilot. No fake.
