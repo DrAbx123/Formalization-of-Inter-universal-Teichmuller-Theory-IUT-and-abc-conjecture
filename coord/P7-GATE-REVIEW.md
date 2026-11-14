@@ -2172,3 +2172,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Dictionary source 16:10/olean 16:14: finalDictionaryCombined still S45; only conditional _ofNormBridge. NOT yet updated.
 - FinalS3137AxiomProbe still probes conditional noS45_ofNormBridge, not unconditional.
 - Remaining: (1) add finalDictionaryCombined_noS45(rel)(lock) first conjunct from unconditional Final comparison/donor, drop S; (2) rebuild Dictionary after donor; (3) retarget probe to unconditional comparison/finalDictionaryCombined_noS45; (4) optional drop s45 from FinalBridgeConditions; (5) verify Conditional olean newer than donor. Assigned mainline; no fake.
+
+
+### 20.271 MILESTONE: unconditional finalPaperNormalizedComparison GREEN (2026-11-16 18:20)
+- Mzk1P0FinalS3137ConditionalActual DONE 09:22:47 (src 17:20:18, olean 17:22:46) after donor GREEN. Source defines theorem finalPaperNormalizedComparison : paperNormalizedThetaSum T <= paperNormalizedQPilotSum directly from Mzk1P0QVFamNormBridgeDonorActual.finalPaperNormalizedComparison_noS45 (T:=T), NO S45 premise. Keeps finalPaperNormalizedComparison_strict(S45) and conditional _ofNormBridge.
+- Mzk1P0FinalNoS45AssemblyActual DONE 09:22:46: normPowerBridge_holds, finalPaperNormalizedComparison_noS45_uncond, finalDictionaryCombined_noS45_uncond (rel)(lock) unconditional; rows 7; no sorry/axiom.
+- This is the S45-free final IUT 3.12 paper inequality under standard T/[Fintype]/[hM][hB] assumptions. S45 ratio=1 remains strict-only/unproved.
+- Need: probe retarget to unconditional theorems (Assembly probe old currently), Dictionary unconditional finalDictionaryCombined_noS45, rows freshness, final audit/acceptance.
