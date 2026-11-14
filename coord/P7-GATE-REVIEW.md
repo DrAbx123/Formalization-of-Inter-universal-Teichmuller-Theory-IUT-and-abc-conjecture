@@ -2434,3 +2434,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Fresh GREEN: TruncatedUnitsCard 18:51 (probe 19:02, only cardQuot, primary unproved); LocalRingUnitsCard 18:45.47 (probe 18:51.59); ActualHullTargetMagnitude 18:52.03 (probe 19:03.25, deps PaperLevelXiFTargetProof/Bridge stale); ActualReadingTarget 19:03.32 (probe stale, rerun). Main/Height/logQ fresh.
 - RED: CongruenceUnitsEquiv FAIL 11:02.42 (IsLocalHom/Nontrivial); IVThm110Actual FAIL 11:03.23 (hfac shape; source fixed); Ind1DepthSubgroup FAIL 11:02.33; TruncatedUnitsCount FAIL 11:03.27. 4 Adapted statement-only.
 - unitMass route: relative_log_mass_image_eq region/reference; different dims extended ideals + dimension-normalized volume; unitMass=1 not claimed.
+
+
+### 20.310 Fresh target chain; R1 numerical core GREEN (mainline, 2026-11-17 03:30)
+- PaperLevelXiFTargetProofActual src 2026-10-28 18:54 < olean 2026-11-05 18:33 fresh; BridgeActual src 2026-10-28 19:02 < olean 2026-11-05 18:30 fresh. Mzk1ActualHullTargetMagnitudeActual DONE 10:52:04 (131s), probe 10:52:00 four items all three axioms: actualTargetMagnitude_actual, actualPaperXiFTarget, globalQPilotLog_le_globalThetaHullLog, perBQPilotLog_le_perBThetaHullLog -> fresh unconditional evidence.
+- R1 numerical core in Mzk1ActualReadingTargetActual DONE 11:03:33: qVFamDefaultNorm_le_qVFamNormalizedNorm, log_qVFamDefaultNorm_le_log_normalized from donor ratio>=1 + positivity; no ratio=1.
+- R1 still missing same-q-witness P.line.C3.q.q = qVFamNormalizedGenerator + place/Bad index/weight. R3 still missing T root hull -> C3 target hull public carrier/region + oneLabel lattice containment, then relative_log_mass_image_eq dimension-normalized/extended ideal, no negative sign.
+- Tower correction recorded: rootBase=e*dBase, kPlace=n*dBase; divisibility via F/Fmod Galoisity+transitivity; root L_b->K_w still Tate/torsion/fixed-field.
