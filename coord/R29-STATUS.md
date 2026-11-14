@@ -3073,3 +3073,5 @@
 - 37:00: unitLog no explicit p; qpilot. gate 20.622 written.
 
 - 37:10: Algebraic explicit lambda/check hlog; qpilot. gate 20.623 written.
+
+- 37:20: Algebraic #check unitLog signatures; qpilot. gate 20.624 written.
