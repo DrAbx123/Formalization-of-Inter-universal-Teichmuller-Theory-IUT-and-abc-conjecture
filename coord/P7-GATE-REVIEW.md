@@ -3401,3 +3401,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.489 IsScalarTower base-field cast blocker (stage4, 2026-11-15 12:50)
 - Explicit types fix K inference, but normalizedCompletionAlgebra base is PadicScalarField lowerPlace, not syntactically QpNat; completionRationalPrime_comap is propositional only. Need cast: letI algPad : Algebra (PadicScalarField lowerPlace) actualLower := normalizedCompletionAlgebra ...; letI : Algebra Qp actualLower := (completionRationalPrime_comap ...).symm ▸ algPad; same upper; then CommonPrimeCompletion tower/finrank. adicAbv pending. No fake.
+
+
+### 20.490 RamifiedPlaceData only arg-order error (2026-11-15 13:00)
+- Direct compile src 03:26: only error :97:4: perPlace_diff_of_correction applied to (d.cCorr i) but first explicit arg is hcard. Fix remove d.cCorr i; pass hcard/hres/hcoef/hlogp_eq/hmu0/hl/hc/hlogIdx/hdiff. Then green. hull direct compile.

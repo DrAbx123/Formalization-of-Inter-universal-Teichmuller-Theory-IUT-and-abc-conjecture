@@ -2805,3 +2805,5 @@
 - 14:40: IsScalarTower transport NormalizedCompletion implicit K elaboration; annotate places/explicit algebra. stage4. gate 20.488 written.
 
 - 14:50: IsScalarTower base-field cast PadicScalarField->Qp via completionRationalPrime_comap; stage4. gate 20.489 written.
+
+- 15:00: RamifiedPlaceData only arg-order error; remove d.cCorr i. hull. gate 20.490 written.
