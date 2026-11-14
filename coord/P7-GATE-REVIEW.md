@@ -3412,3 +3412,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - PrincipalDimActual :38:59 unexpected ')' expected ':' in hact; extra paren; simplify cast Units product.
 - ZpLattice :14:8 introN no binders; target def InfinitelyDivisibleFor needs rw/change before intro.
 - Tasks sent; no fake.
+
+
+### 20.492 MAJOR RamifiedPlaceData direct GREEN (2026-11-15 13:20)
+- Direct lake env lean Mzk1RamifiedPlaceDataActual src 03:32:39 EXIT=0 (green, no olean yet). Structure explicit iota; HasCorrection/HasLogIdx/HasCoeff/HasRes; perPlace_bounds_of_data composes perPlace_diff_of_correction. Earlier Proj.olean read transient resolved.
+- Hull retouch build; next actual RamifiedPlaceData from ofPlace family + discharge HasX via index_decomp_with_correction; report first missing. abc audit. No fake.

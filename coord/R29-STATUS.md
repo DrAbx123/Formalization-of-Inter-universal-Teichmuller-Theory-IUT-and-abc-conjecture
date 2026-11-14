@@ -2809,3 +2809,5 @@
 - 15:00: RamifiedPlaceData only arg-order error; remove d.cCorr i. hull. gate 20.490 written.
 
 - 15:10: Ramified stale Mathlib olean read; Principal hact extra paren :38; ZpLattice intro needs unfold. Tasks sent. gate 20.491 written.
+
+- 15:20: MAJOR RamifiedPlaceData direct EXIT=0 green (no olean) retouch; next actual data family/discharge HasX. abc audit. gate 20.492 written.
