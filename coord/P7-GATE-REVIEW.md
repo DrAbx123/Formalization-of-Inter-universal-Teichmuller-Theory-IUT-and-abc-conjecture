@@ -2022,3 +2022,7 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - qVFamTensorPlace is abbrev (nativeBadLift T).lift b (QVFamTensorCoefficientActual:47); Value nu place mismatch is rfl, use change/dsimp only [qVFamTensorPlace], not a new identification gap.
 - Donor line110 Multiplicative.toAdd gives Z but expected R: cast ((toAdd (unzero ...) : Z) : R).
 - Hull owns hbridge edits; mainline no concurrent edits. hbridge still red; wrapper conditional green; S45-free not unconditional. No fake.
+
+
+### 20.245 hbridge narrowed to elaboration/coercion (stage4, 2026-11-16 14:10)
+- BridgeDonor no olean; latest fail 15:50, errors elaboration not math: :84/:90/:104/:110 WithZero.unzero returns Multiplicative Z but :R annotation makes target Multiplicative R; bind m : Z := Multiplicative.toAdd (alpha:=Z) (unzero (x:=val) hv), then (m:R). :85 ring closes. :97 simpa only mismatch -> change literal ‖qVFamNormalizedGenerator‖ shape then exact hnorm. Final body := by/direct term. Route correct; Generic/RouteA green.

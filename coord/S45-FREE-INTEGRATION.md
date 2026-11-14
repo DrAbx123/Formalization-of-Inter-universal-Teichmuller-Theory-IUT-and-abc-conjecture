@@ -332,3 +332,57 @@ Tries the cleaner value-level proof:
 5. Add `[Fintype (Bad ...)]` for the final global comparison only.
 
 No Lean changes made; the hbridge route is otherwise exactly as described above.
+
+## hbridge latest status (2026-11-14 15:40, read-only)
+
+`Mzk1P0QVFamNormBridgeDonorActual` has been edited since the previous check and is
+close: the latest run's remaining errors are
+
+- `:84:51` `WithZero.unzero hv` / `WithZero.unzero (show val ≠ 0 from hv)`:
+  the implicit `x` argument of `WithZero.unzero` is not inferred from the local
+  `let val := Valued.v (toC ...)`; elaboration expects `?m ≠ 0`.  Give the implicit
+  explicitly, e.g.
+  `WithZero.unzero (x := val) hv` (or restate `hv` for the exact
+  `WithZero` value term appearing in `WithZero.log val`).
+- `:150:2` `Unknown identifier exact` in
+  `finalPaperNormalizedComparison_noS45`: the theorem body starts with
+  `:= have h ...; exact ...` and is missing `by` (term/tactic mode mismatch).
+  Add `:= by` before the `have`, or use the direct term
+  `finalPaperNormalizedComparison_noS45_of_ratio_ge_one T (fun b => qVFamNormRatio_ge_one T b)`.
+
+Earlier errors (donor argument type, missing imports, Fintype) no longer appear in
+the latest tail; Generic conditional and RouteA remain green.  Once the two fixes above
+land, BridgeDonor should produce the unconditional
+`qVFamNormalizedNorm_eq_defaultNorm_rpow` and `qVFamNormRatio_ge_one` and the final
+S45-free wrapper can be imported.
+
+No Lean changes made.
+
+## hbridge latest error interpretation (2026-11-14 15:52, read-only)
+
+The latest BridgeDonor run has narrowed further; the remaining errors are now
+**elaboration/coercion**, not mathematical:
+
+- `:84:34`, `:90:30`, `:104:33`, `:110:32`:
+  `WithZero.unzero hv` returns `Multiplicative ℤ`, but the surrounding
+  `Multiplicative.toAdd ... : ℝ` makes Lean infer the target
+  `Multiplicative ℝ` (because `toAdd`'s implicit `α` is inferred from the expected
+  real type).  Fix by fixing the value-group parameter explicitly:
+  `Multiplicative.toAdd (α := ℤ) (WithZero.unzero (x := val) hv)`, then
+  `((... : ℤ) : ℝ)`, or define `m : ℤ := Multiplicative.toAdd ...` first and cast
+  `(m : ℝ)`; do not put the `: ℝ` coercion directly around the `toAdd` term.
+- `:85:73` unsolved `ring` goal: same `unzero/toAdd` type issue in `hm`; after
+  fixing the ℤ annotation, the `rw [hnu]; ring` step should close.
+- `:97:4` `simpa only [...] using hnorm` type mismatch: both sides print the same
+  `absNorm^...` term, but the norm instance/coercion is not definitionally identical
+  under `simpa only`.  Use a `change` to the literal
+  `‖qVFamNormalizedGenerator T b‖ = ...` shape before `exact hnorm`, or use
+  `convert hnorm using 2` and close the instance goal by `rfl`.
+
+So the hbridge proof route itself is correct; the remaining work is:
+1. bind `m := Multiplicative.toAdd (α := ℤ) (WithZero.unzero (x := val) hv)` and use
+   `(m : ℝ)` in `hm`/`hdef'`/calc;
+2. use `change`/`convert` for `hnorm'` instead of `simpa only`;
+3. final theorem body needs `:= by` (or direct term) as noted earlier.
+
+No Lean changes made.
