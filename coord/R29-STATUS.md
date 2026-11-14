@@ -3045,3 +3045,5 @@
 - 34:40: quotient transport map_comap_eq_self fix; qpilot. gate 20.608 written.
 
 - 34:50: quotient transport green olean 07:12:09; prior 8 decls audit accepted. Next quotient card/integralUnitExponent_coprime/unitLog. gate 20.609 written.
+
+- 35:00: integralUnitExponent opacity; qpilot test cardExponent file before core change. gate 20.610 written.
