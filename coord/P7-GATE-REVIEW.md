@@ -3397,3 +3397,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.488 IsScalarTower transport blocked on NormalizedCompletion elaboration (stage4, 2026-11-15 12:40)
 - inferInstanceAs Algebra Qp (NormalizedCompletion (lowerPlace T b)) fails failed to synthesize Field K, NormalizedCompletion implicit K not inferred from abbrev lowerPlace. Direct Algebra QpNat (NormalizedCompletion (lowerPlace T b)) also fails. Fix: annotate lowerPlace/upperPlace as FinitePlace F/K explicitly; use explicit normalizedCompletionAlgebra (K := T.arithmetic.F) (lowerPlace T b), avoid inferInstanceAs on abbreviation; then infer tower. Qp donor probe green. adicAbv pending. No fake.
+
+
+### 20.489 IsScalarTower base-field cast blocker (stage4, 2026-11-15 12:50)
+- Explicit types fix K inference, but normalizedCompletionAlgebra base is PadicScalarField lowerPlace, not syntactically QpNat; completionRationalPrime_comap is propositional only. Need cast: letI algPad : Algebra (PadicScalarField lowerPlace) actualLower := normalizedCompletionAlgebra ...; letI : Algebra Qp actualLower := (completionRationalPrime_comap ...).symm ▸ algPad; same upper; then CommonPrimeCompletion tower/finrank. adicAbv pending. No fake.

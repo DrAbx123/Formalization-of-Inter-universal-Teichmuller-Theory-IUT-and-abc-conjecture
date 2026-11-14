@@ -2803,3 +2803,5 @@
 - 14:30: RamifiedPlaceData root cause all-implicit structure params; fix explicit (ι : Type u) [Fintype ι]. hull. gate 20.487 written.
 
 - 14:40: IsScalarTower transport NormalizedCompletion implicit K elaboration; annotate places/explicit algebra. stage4. gate 20.488 written.
+
+- 14:50: IsScalarTower base-field cast PadicScalarField->Qp via completionRationalPrime_comap; stage4. gate 20.489 written.
