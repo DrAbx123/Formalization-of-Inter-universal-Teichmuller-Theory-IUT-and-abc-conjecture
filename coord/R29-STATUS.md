@@ -2443,3 +2443,5 @@
 - 08:20 USER CORRECTIONS: -|logΘ| is signed log-volume notation (nonnegative case separate), no extra negative between signed readings. unitMass route: relative_log_mass_image_eq region vs reference lattice; different dims compare extended ideals + dimension-normalized volume, not target Haar on low-dim image. stage4/mainline/abc updated. gate 20.306 written.
 
 - 08:30: tower divisibility shortcut: F/Fmod Galoisity + prime transitivity moves F-place under K-place -> F_v->K_w embedding -> divisibility; root L_b->K_w still Tate/torsion/fixed-field. stage4/mainline/hull updated. gate 20.307 written.
+
+- 08:40: TruncatedUnitsCard green 18:51 but only cardQuot; next units via LocalRingUnitsCard. Target magnitude recompiled 18:52+probe. IVThm110/odd-p/Ind1 corrected pending. gate 20.308 written.

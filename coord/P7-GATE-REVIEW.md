@@ -2421,3 +2421,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.307 Tower divisibility shortcut via Galoisity (user, 2026-11-17 03:00)
 - Project input has F/Fmod Galoisity; Mathlib has transitivity of Galois group on primes above. Move independently chosen F-place under current K-place via Galois, then extend to completion embedding F_v -> K_w. This yields divisibility rootBaseQpDegree | kPlaceQpDegree (RelativeFactorTowerData) without root descent.
 - Root field L_b -> K_w embedding still requires same Tate parameter/torsion/fixed-field proof, not just local relabeling. stage4/mainline/hull updated; no fake.
+
+
+### 20.308 TruncatedUnitsCard green but no units proof; target magnitude fresh (2026-11-17 03:10)
+- Mzk1TruncatedUnitsCardActual GREEN 18:51:03 after import fix, but only defs + cardQuot_maximalIdeal_pow; no units/primary proof. Hull to combine Mzk1LocalRingUnitsCardActual.natCard_units_eq_card_sub_maximalIdeal with cardQuot_maximalIdeal_pow for #(O/m^N)^x=(q-1)q^(N-1), N=eK*s.
+- Mzk1ActualHullTargetMagnitudeActual recompiled GREEN 18:52:04 + probe 18:52:00; dependency freshness to be checked by abc/mainline.
+- qpilot IVThm110Actual, shehdd odd-p, stepxi corrected extraction still no olean; retouched/report.
