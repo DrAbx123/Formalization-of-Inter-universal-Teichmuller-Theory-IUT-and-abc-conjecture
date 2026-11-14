@@ -2725,3 +2725,5 @@
 - 08:00: MAJOR index/QFE connection GREEN 17:11:06 (index=q^A(q-1)/T). Next assemble final a=A-k,c=p^r*((q-1)/T0). Unramified a=0 condition4 separate. gate 20.447 written.
 
 - 08:10: MAJOR HaarUnitInvariance GREEN 01:14:58 (char=1, μ invariance, explicit ContinuousConstSMul). Next lambda decomposition/principalDim/floor. gate 20.448 written.
+
+- 08:20: KernelBridge fresh clean 01:15:01; Haar green; final index/principal files pending. gate 20.449 written.

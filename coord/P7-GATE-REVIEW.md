@@ -3197,3 +3197,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.448 MAJOR HaarUnitInvariance GREEN (qpilot, 2026-11-15 05:50)
 - Mzk1IVThm110HaarUnitInvarianceActual DONE 01:14:58: distribHaarChar_algebraMapUnit_eq_one via distribHaarChar_eq_of_measure_smul_eq_mul s=O (O positive finite, u•O=O); measure_algebraMapUnit_smul_eq μ(u•S)=μS via distribHaarChar_mul. No sorry/axiom. Uses explicit [ContinuousConstSMul X^x X] actual continuity condition (not fake); unconditional composition not yet.
 - Next qpilot: lambda=p^k*u decomposition via Padic.unitCoeff + p^k formula -> unitRegionLog=canonicalUnitReferenceLog+principalDim*log||scale||; then floor unitRegionLog=-M/M>=1. abc probe. No fake.
+
+
+### 20.449 KernelBridge fresh clean; Haar green; final index/principal files pending (2026-11-15 06:00)
+- Mzk1Ind1KernelBridgeActual DONE 17:15:02/olean 01:15:01 after deleting quotient bridge; A2IndexKernelProbe 17:19:31; HaarUnitInvariance 17:14:58. No final index/principal files yet.
+- Tasks: qpilot create PrincipalDimScaling; hull create final index decomposition; stepxi new-file quotient/Z_p^d; abc audit. No fake.
