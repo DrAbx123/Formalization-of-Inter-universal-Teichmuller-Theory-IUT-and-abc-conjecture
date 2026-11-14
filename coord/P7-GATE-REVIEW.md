@@ -902,3 +902,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
   `LPaperInstance_of_theta_nonneg (h : 0 ≤ thetaReadActual) : LPaperInstance`；
   缺 `LQThetaSourceArrow`（`q_mem_thetaRegion` + `normalization_eq`）。
 - **分配**：mainline 编 `Mzk1P0S3137PObjectObstructionActual` 并攻 L 侧 `LQThetaSourceArrow`/`LPaperInstance`；hull 继续 NormCorrection probe + 只读 L 侧 donor；旧 S3137 只作 vacuous 记录，不冒充。
+
+
+### 20.69 GREEN：NormCorrection/Dictionary axiom probe 7 定理三公理（2026-11-15 03:55）
+- **`Mzk1P0NormCorrectionAxiomProbeActual` DONE 01:02:52（108s）**：
+  - NormCorrection 5 定理：`qhatLogReadout_sub_paperQ_eq_log_ratio`、`...Global...`、`...DegreeGlobal...`、`paperQDegree_le_closedForm_sub_one_sub_correction`、`..._of_fields`；
+  - Dictionary 2 定理：`qhatLogReadout_eq_neg_normalizedCoeff_log_p`、`sum_degree_log_radius_eq_div_twoL_mul_sum_degree_qhat`；
+  - 全部 `[propext, Classical.choice, Quot.sound]`，无 sorryAx。
+- L-carrier 路线：`LQThetaSourceArrow` 两 field 精确阻塞 = `qComponentMemGap`（显式）+ `CommonPrimeNormInstanceCompat`（norm instance）；mainline 写 attempt（donor rfl），绿后组装条件版 `LQThetaSourceArrow`/`LPaperInstance`。
+- 旧 raw S3137 P 侧 vacuous 记录保留；不冒充非空。
