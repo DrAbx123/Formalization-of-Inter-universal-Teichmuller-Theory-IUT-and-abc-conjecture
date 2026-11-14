@@ -2275,3 +2275,5 @@
 - 17:50: GREEN RouteA probe 07:05:12 (3) and Generic conditional green 07:02:18/probe 07:08:06 (3). Generic depends on hbridge; need prove hbridge from donor for unconditional. gate 20.234 written.
 
 - 18:00: scheduled check: Generic green 07:02; Literal no olean; hbridge still needed. Woke mainline/hull/lattice/abc. 1 lean, log 15:09.
+
+- 18:10: stage4 exact hbridge route documented (toC/C vs L, norm_eq_absNorm_zpow + generalNormalizedNormFormula + WithZero.log/unzero + rpow_mul). mainline/hull implement; then final noS45. gate 20.235 written.

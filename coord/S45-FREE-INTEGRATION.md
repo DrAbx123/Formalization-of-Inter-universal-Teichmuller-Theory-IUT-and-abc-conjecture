@@ -170,3 +170,122 @@ Bottom line: the ratio proof is already present and consistent with the donor fo
 the only concrete fixes are (i) watchdog re-run of Generic after the stale import race,
 (ii) RouteA import/open of `PaperBadPlaceTensorGeometryActual`, (iii) final wrapper
 substitution.  No Lean changes made in this read-only check.
+
+## Generic/RouteA integration status (2026-11-14 15:00, read-only)
+
+Current status:
+
+- `Mzk1P0S45FreeFinalRouteAActual`: **GREEN** (olean 14:55:39).  It proves the
+  conditional wrapper
+  `finalPaperNormalizedComparison_noS45_of_ratio_ge_one : (∀ b, 1 ≤ qVFamNormRatio T b) →
+    paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T`.
+- `Mzk1GenericNormBridgeActual`: **NO olean**.  The source was rewritten at 15:00:47:
+  it now contains only the **conditional** lemma
+  `qVFamNormRatio_ge_one_of_norm_bridge (d : ℕ) (hd : 1 ≤ d)
+    (hbridge : qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1 / (d : ℝ))) :
+    1 ≤ qVFamNormRatio T b`.
+  The earlier donor-derived `normalized_norm_eq_default_norm_rpow` /
+  `qVFamNormalizedNorm_eq_defaultNorm_rpow` / unconditional
+  `qVFamNormRatio_ge_one` are **no longer present** in the current source (search finds
+  only the conditional lemma).  Its latest log is stale (line-2 import RouteA and old
+  line numbers), while the current source line 2 is
+  `QVFamNormalizedCoefficientBridgeActual`; a watchdog re-run of the current file is
+  needed.
+- `Mzk1P0S45RefutationSchemeActual`: also conditional; needs an explicit
+  `hpow : qVFamNormalizedNorm = default^(1/s1915LocalDegree)` plus `1 < d`.
+
+**Integration consequence:** the final S45-free substitution is **blocked on restoring
+the bridge lemma**
+`qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1 / d)`
+for `d = relativeCompletionDegree (k := ℚ) (qVFamTensorPlace T b)`.  RouteA is already
+green; once that bridge is available, the exact chain is:
+
+```
+qVFamNormalizedNorm_eq_defaultNorm_rpow (restored)
+  → qVFamNormRatio_ge_one (Generic, or instantiate the conditional lemma)
+  → Mzk1P0S45FreeFinalRouteAActual.finalPaperNormalizedComparison_noS45_of_ratio_ge_one
+  → finalPaperNormalizedComparison_noS45
+  → final S3137 paper inequality without S45
+```
+
+The bridge proof content from the earlier source was:
+1. donor `generalNormalizedNormFormula` for `x ≠ 0`;
+2. green `norm_eq_absNorm_zpow` for the default norm;
+3. `WithZero.log (Valued.v x) = Multiplicative.toAdd (WithZero.unzero ...)`,
+   hence `nu x = -m`;
+4. rewrite both formulas and `Real.rpow_mul` to obtain
+   `normalized = default^(1/d)`.
+It needs imports `GeneralNormalizedNormBySpectralUniqueness` and
+`FinitePlaceCompletionNormTransport`, plus the qVFam specialization through
+`qVFamNormalizedNorm/qVFamDefaultNorm/qVFamNormalizedGenerator`.
+
+No Lean changes made; this is the exact remaining dependency for Generic/RouteA
+integration.
+
+## hbridge proof route (read-only, 2026-11-14 15:10)
+
+Target:
+```
+qVFamNormalizedNorm T b =
+  (qVFamDefaultNorm T b) ^ (1 / (relativeCompletionDegree (k := ℚ)
+    (qVFamTensorPlace T b) : ℝ))
+```
+
+Exact carrier issue: `qVFamDefaultNorm` lives on the **default** valued adic
+completion `C = (qVFamTensorPlace T b).maximalIdeal.adicCompletion F`, while
+`qVFamNormalizedNorm` is the norm on `L = NormalizedCompletion place`
+(=`CommonPrimeCompletion`), with the spectral instance.  The donor supplies
+`toC : L place → C place` (definitionally the identity) and `nu` on `L`; the
+green transport file supplies the default norm formula on `C`.
+
+Proof route (all green inputs):
+
+1. Let `x : L place := qVFamNormalizedGenerator T b`; `hx : x ≠ 0` from
+   `qVFamNormalizedGenerator_ne_zero`.
+2. `hdef := norm_eq_absNorm_zpow (P := qVFamTensorPlace T b) (toC place x) hx'`
+   where `hx' : toC place x ≠ 0` is `by simpa [GeneralNormalizedNormBySpectralUniqueness.toC] using hx`.
+   This gives `‖toC x‖_C = absNorm ^ m`, with
+   `m = Multiplicative.toAdd (WithZero.unzero (Valued.v (toC x)))`.
+3. `hnorm := generalNormalizedNormFormula (F := T.arithmetic.F) (qVFamTensorPlace T b) x hx`
+   gives `‖x‖_L = absNorm ^ (-(nu place x)/d)`.
+4. Log/unzero bridge: with `hv : Valued.v (toC place x) ≠ 0`
+   (`valuation_ne_zero_of_ne_zero`), prove
+   `WithZero.log (Valued.v (toC place x)) = m` by
+   `conv_lhs => rw [← WithZero.coe_unzero hv]; rfl`, hence
+   `nu place x = -m` by `unfold nu; rw [hlog]; ring`.
+5. Rewrite `hdef` using `qVFamDefaultNorm = ‖(qVFamily T b).q‖` and the
+   definitional equality `toC x = (qVFamily T b).q` (or `simpa [toC, qVFamDefaultNorm,
+   qVFamNormalizedGenerator]`), so `qVFamDefaultNorm = absNorm ^ m`.
+6. Algebra: `absNorm^(-nu/d) = absNorm^(m/d)` (by `hnu`) and
+   `absNorm^(m/d) = (absNorm^m)^(1/d)` by `Real.rpow_mul`
+   (`absNorm_pos`) plus `Real.rpow_intCast`/`Real.rpow_natCast` as needed;
+   hence `qVFamNormalizedNorm = qVFamDefaultNorm ^ (1/d)`.
+7. Specialize `d := relativeCompletionDegree (k := ℚ) (qVFamTensorPlace T b)`;
+   no S45 and no norm equality used.
+
+Exact imports for a new hbridge file:
+`GeneralNormalizedNormBySpectralUniqueness`, `FinitePlaceCompletionNormTransport`,
+`QVFamNormalizedCoefficientBridgeActual`, `QVFamNormalizedGeneratorSupplyActual`,
+`QPilotZeroLocusDivisorActual` (for `qVFamily`/`qNorm_lt_one`), plus
+`Mathlib.Tactic`.
+
+Then integration:
+```
+hbridge
+  → qVFamNormRatio_ge_one (Generic, currently conditional on hbridge)
+  → RouteA.finalPaperNormalizedComparison_noS45_of_ratio_ge_one
+  → finalPaperNormalizedComparison_noS45
+```
+
+Pitfalls to expect:
+- Do not try to state both norms on the same type via typeclass inference; use
+  `toC`/`C place` for the default formula and `L place` for the donor formula, then
+  only compare the resulting real numbers.
+- `norm_eq_absNorm_zpow` needs the nonzero hypothesis for `toC x`;
+  `simpa [toC]` from `hx`.
+- `Real.rpow_mul` requires base positivity; use the donor's `absNorm_pos`.
+- `qVFamDefaultNorm` and `qVFamNormalizedNorm` unfold to the same underlying
+  element; `simpa [qVFamDefaultNorm, qVFamNormalizedNorm, qVFamNormalizedGenerator,
+  GeneralNormalizedNormBySpectralUniqueness.toC]`.
+
+No Lean changes made; this is the exact hbridge proof route.

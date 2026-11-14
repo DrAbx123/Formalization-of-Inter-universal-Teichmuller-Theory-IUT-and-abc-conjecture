@@ -1962,3 +1962,10 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - RouteA source 14:52:29 DONE 06:55:40 olean 14:55:39; no sorry/True; probe 07:05:12 three axioms. Explicit remaining gap: carrier/instance bridge from normalized=default^(1/d) to 1<=ratio.
 - GenericNormBridge source 15:00:47 DONE 07:02:18 olean 15:02:17; no sorry/True; probe 07:08:06 three axioms. qVFamDefaultNorm_pos/lt_one; qVFamNormRatio_ge_one_of_norm_bridge (d)(hd)(hbridge). Conditional only; hbridge still needed; S45/norm-instance explicit.
 - Need prove hbridge qVFamNormalizedNorm=default^(1/d) from donor; then Generic unconditional.
+
+
+### 20.235 Exact hbridge proof route (stage4, 2026-11-16 12:10)
+- Target qVFamNormalizedNorm = qVFamDefaultNorm^(1/d), d=relativeCompletionDegree(k:=Q)(qVFamTensorPlace). Carrier split: C=adicCompletion default, L=NormalizedCompletion/CommonPrimeCompletion normalized; donor toC:L→C rfl; L has nu.
+- Route: x:=qVFamNormalizedGenerator hx ne_zero; hdef := norm_eq_absNorm_zpow (toC x) gives ||toC x||_C=absNorm^m; hnorm := generalNormalizedNormFormula x hx gives ||x||_L=absNorm^(-nu x/d); WithZero.log(Valued.v(toC x))=m via coe_unzero => nu x=-m; simpa unfolds norms to qVFamDefaultNorm=absNorm^m; absNorm^(-nu/d)=absNorm^(m/d)=(absNorm^m)^(1/d) via Real.rpow_mul absNorm_pos + casts => hbridge.
+- Imports: GeneralNormalizedNormBySpectralUniqueness, FinitePlaceCompletionNormTransport, QVFamNormalizedCoefficientBridgeActual, QVFamNormalizedGeneratorSupplyActual, QPilotZeroLocusDivisorActual, Mathlib.Tactic. Pitfalls: keep C/L norm instances separate, compare reals; toC x≠0; absNorm_pos.
+- Then hbridge -> ratio>=1 -> RouteA -> final noS45. Assigned mainline/hull.
