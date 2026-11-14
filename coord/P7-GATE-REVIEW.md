@@ -2732,3 +2732,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.361 KernelBridge fresh DONE without failed declaration (stepxi, 2026-11-17 12:00)
 - Mzk1Ind1KernelBridgeActual DONE 13:13:16 (61s), olean generated; failed kernelToAQuotient_ker deleted; only def kernelToAQuotient + structure AQuotientKernelBridge (no proof declaration). Old sorryAx/type mismatch is pre-deletion residual. Fresh #print axioms kernelToAQuotient added, pending no-axioms confirmation. Next re-add kernel equality under new name with Subgroup.mem_subgroupOf, then AQuotientKernelBridge.equiv, Z_p^d divisibility.
+
+
+### 20.362 KernelBridge clean; HullUnitZero/P2 pending (2026-11-17 12:10)
+- KernelBridge source clean: failed kernelToAQuotient_ker deleted; only kernelToAQuotient + AQuotientKernelBridge + #print axioms. DONE 13:18:06 olean; source mtime after DONE so fresh probe pending; old log sorryAx stale. No red.
+- HullUnitZero still no olean; qpilot to add import FinitePlaceIQHullSignedLogVolume or explicit log expression. P2NormBridge still no olean; hull retouch. Stage4 asked ring-level status.
+- Fresh probes: ActualReadingTarget 13:14:01; RestoredGreens 13:14:04.
