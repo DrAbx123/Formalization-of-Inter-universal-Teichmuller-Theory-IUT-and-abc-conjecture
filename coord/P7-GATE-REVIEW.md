@@ -2962,3 +2962,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.404 Cor3.12 exponent obstruction: a_v not eK*s-1 (hull, 2026-11-17 19:20)
 - Consumer chain perPlace_bound_of_torsion_le -> perPlace_inequality_of_mu_lower_diff -> A_le_Lbar_add_Dbar -> paper312_of_local_bounds exists. Missing: actual Lean defs qcoef/logIdx/logMu/diff; hbase arithmetic substituting torsion index.
 - Obstruction: for unramified odd p eK=1,s=1, eK*s-1=0, logIdx=log((q-1)/#T)=0 (Teichmuller) so hbase qcoef <= L-(1-1/(2l))log C may be false for C=p. Thus paper a_v (condition4 a_v>=1/(Fdeg*2l)) is NOT eK*s-1; it is independent/larger source input. Exact missing: (1) per-place definitions; (2) relation a_v to eK*s-1 or paper a input; (3) separate handling if forcing a=eK*s-1. No fake.
+
+
+### 20.405 BaseChange fPlace lift: safe explicit gap vs global redefinition (mainline, 2026-11-17 19:30)
+- nativeBaseSectionPlace is K-place; nativeBadLift.lift is F-place; direct redefinition type-incorrect. Viable redefinition: nativeBadLift.lift b := comap_F(sectionFiniteLift (nativePlaceSelection) b.1), then alignment rfl; but 137 files reference nativeBadLift/nativeBadToFPlace, full rebuild risk. Safe plan implemented: nativeBaseContractionFPlace b := comap_F(nativeBaseSectionPlace b); comap_Fmod = b.1 green; NativeBadLiftAlignment b := nativeBaseContractionFPlace b = nativeBadLift.lift b = explicit gap (a). baseChange constructor takes hplace; (b) norm power closed.
+- Decision: keep explicit gap now; mainline to prepare precise global-redefinition impact plan (files/proofs/build estimate) without editing; compile new defs/probe. No fake.

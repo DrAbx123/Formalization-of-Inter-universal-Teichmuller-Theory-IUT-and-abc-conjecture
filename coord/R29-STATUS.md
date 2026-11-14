@@ -2637,3 +2637,5 @@
 - 00:40: conditional per-place torsion GREEN 15:31:29 with hTub explicit gap; local donor absent. Hull connect to A_le_Lbar_add_Dbar/hbase arithmetic. gate 20.403 written.
 
 - 00:50: Cor3.12 exponent obstruction: a_v cannot be eK*s-1 (unramified eK=1 gives logIdx=0/hbase false); trace actual Paper312 a_v definitions. No fake. gate 20.404 written.
+
+- 01:00: BaseChange (a) safe explicit NativeBadLiftAlignment gap; global redefinition viable but 137 files risk. Mainline prepares impact plan; no edit. gate 20.405 written.
