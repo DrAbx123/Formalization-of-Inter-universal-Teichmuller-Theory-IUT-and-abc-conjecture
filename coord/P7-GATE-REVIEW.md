@@ -3349,3 +3349,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.477 IsScalarTower probe GREEN (stage4, 2026-11-15 10:50)
 - ProbeScalarTowerActual DONE 03:05:07: after packaging nativeBadToKPlace as FinitePlaceAtPrime K via (completionRationalPrime ...).val, #synth IsScalarTower Qp (CommonPrimeCompletion relativeCommonPrimePlace kPlace) (CommonPrimeCompletion kPlace) via relativeNormalizedCompletionScalarTower, and Module.Finite via relativeNormalizedCompletionFinite. Qp-level scalar tower/finite module donor exist.
 - Next stage4 transfer CommonPrimeCompletion/NormalizedCompletion to adicCompletion (defeq Completion), apply Module.finrank_mul_finrank for finrank Qp upper = mK*finrank Qp lower; moved-place degree invariance needed. adicAbv norm equality pending. No fake.
+
+
+### 20.478 MAJOR A2 xK/cK GREEN; 14 groups closed, 3 blocked (mainline, 2026-11-15 11:00)
+- Mzk1A2PartialFieldsActual DONE 19:04:21: xKCurve/xKCurve_signature/genus/xKExtensionCandidate; cK analogues; structure fields xK/xKType/xKExtension/xK_eq_extension and cK...; target_stack/genus_preserved rfl due point fiber defeq and Equivalence.id. Closed 14 groups: xF/geom/involution/squared/signAction/inversion_eq/cF/V group/V_section/stackExtension/xK group/cK group. Blocked 3: quotientWitness; xFGroups/cFGroups/fGroupInclusion; unique_elliptic_involution. Probe updated. abc probe; mainline quotient/groups. No fake.

@@ -2781,3 +2781,5 @@
 - 12:40: QpDecomp direct compile only assoc goal; use rw [mul_assoc]. qpilot. gate 20.476 written.
 
 - 12:50: IsScalarTower probe GREEN 03:05:07; next transfer to adicCompletion/finrank_mul_finrank. adicAbv pending. gate 20.477 written.
+
+- 13:00: MAJOR A2 xK/cK GREEN 19:04:21; 14 groups closed, 3 blocked (quotientWitness/groups/unique). mainline quotient/groups; abc probe. gate 20.478 written.
