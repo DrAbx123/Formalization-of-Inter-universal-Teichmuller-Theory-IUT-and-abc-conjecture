@@ -2343,3 +2343,5 @@
 - 23:30: GREEN EstimatesStatementLayer 08:53:44. hbridge still no olean; hull. Next statement-layer. gate 20.260 written.
 
 - 23:40 URGENT: Donor source has temporary sorry (toAdd sorry); hull instructed remove immediately/revert; abc audit. No green until clean. Estimates green; next Section2Statement. gate 20.261 written.
+
+- 23:50: no sorry in hbridge files verified. unzero named arg is x; Donor restore hm. hull fix. Estimates green; next Section2Statement. gate 20.262 written.

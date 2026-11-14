@@ -2115,3 +2115,9 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - Mainline reports current Mzk1P0QVFamNormBridgeDonorActual source contains temporary `m : Z := Multiplicative.toAdd sorry`; project prohibits sorry. Hull owns. Instruction: remove immediately, use WithZero.unzero (a:=val) hval or revert to last sorry-free version; no green until grep clean. Donor latest errors :116 unknown hm + :115 unsolved. Value :71 unzero rw-match.
 - Integration files (Assembly/Final/Dictionary) remain green conditional + probes; hbridge not proved; S45 not claimed; power not equality.
 - EstimatesStatementLayer GREEN 08:53:44; next PaperIUTIVSection2Statement removing Prop + WL.
+
+
+### 20.262 hbridge last fixes; no sorry (2026-11-16 17:00)
+- Grep confirms zero sorry in Donor/Value now; keep clean.
+- Mathlib WithZero.unzero named arg is x (verified Mathlib/Algebra/GroupWithZero/WithZero.lean lines330-331), not a. Donor :94 fix unzero (x:=val) hval; restore hm after hnu: have hm : ((m:Z):R) = -(nu (qVFamTensorPlace T b) (qVFamNormalizedGenerator T b) : R) := by rw [hnu]; push_cast; ring; then rw [hm]. Should yield olean.
+- hbridge still red; wrapper/assembly conditional green; no unconditional claim. EstimatesStatementLayer green; PaperIUTIVSection2Statement Prop removed + WL.
