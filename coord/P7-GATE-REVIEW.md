@@ -2427,3 +2427,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1TruncatedUnitsCardActual GREEN 18:51:03 after import fix, but only defs + cardQuot_maximalIdeal_pow; no units/primary proof. Hull to combine Mzk1LocalRingUnitsCardActual.natCard_units_eq_card_sub_maximalIdeal with cardQuot_maximalIdeal_pow for #(O/m^N)^x=(q-1)q^(N-1), N=eK*s.
 - Mzk1ActualHullTargetMagnitudeActual recompiled GREEN 18:52:04 + probe 18:52:00; dependency freshness to be checked by abc/mainline.
 - qpilot IVThm110Actual, shehdd odd-p, stepxi corrected extraction still no olean; retouched/report.
+
+
+### 20.309 Sign-risk correction dispatched; current fresh/red (abc, 2026-11-17 03:20)
+- SIGN: Cor3.12 -|logTheta| is signed log-volume notation, not globally nonpositive -abs; no extra negative between signed readings. PaperS3137ObjectLock.theta_sign (Dictionary:91) and ObjectLockThetaSignDataSource currently thetaNormReadL=-thetaNormReadProduct, conflicting with Conditional hlock thetaNormReadL=thetaNormReadProduct. Mainline/stage4 instructed change to signed equality without extra negative; rebuild Final/Dictionary/Assembly/ObjectLockData; rows/probes. q-side neg_abs cannot transfer to Theta side.
+- Fresh GREEN: TruncatedUnitsCard 18:51 (probe 19:02, only cardQuot, primary unproved); LocalRingUnitsCard 18:45.47 (probe 18:51.59); ActualHullTargetMagnitude 18:52.03 (probe 19:03.25, deps PaperLevelXiFTargetProof/Bridge stale); ActualReadingTarget 19:03.32 (probe stale, rerun). Main/Height/logQ fresh.
+- RED: CongruenceUnitsEquiv FAIL 11:02.42 (IsLocalHom/Nontrivial); IVThm110Actual FAIL 11:03.23 (hfac shape; source fixed); Ind1DepthSubgroup FAIL 11:02.33; TruncatedUnitsCount FAIL 11:03.27. 4 Adapted statement-only.
+- unitMass route: relative_log_mass_image_eq region/reference; different dims extended ideals + dimension-normalized volume; unitMass=1 not claimed.

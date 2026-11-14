@@ -2445,3 +2445,5 @@
 - 08:30: tower divisibility shortcut: F/Fmod Galoisity + prime transitivity moves F-place under K-place -> F_v->K_w embedding -> divisibility; root L_b->K_w still Tate/torsion/fixed-field. stage4/mainline/hull updated. gate 20.307 written.
 
 - 08:40: TruncatedUnitsCard green 18:51 but only cardQuot; next units via LocalRingUnitsCard. Target magnitude recompiled 18:52+probe. IVThm110/odd-p/Ind1 corrected pending. gate 20.308 written.
+
+- 08:50: sign-risk: lock/ObjectLock negative theta_sign conflicts with signed convention; mainline/stage4 to change to thetaNormReadL=thetaNormReadProduct and rebuild. Fresh green list + red list recorded. hfac/IsLocalHom/DepthSubgroup fixes dispatched. gate 20.309 written.
