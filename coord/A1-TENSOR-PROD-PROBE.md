@@ -404,3 +404,23 @@ Verification:
   2. `A1RamificationIdentity`: `bval (algebraMap (rootBase) (rootNormedExtension) x) = e * aval x` for the actual normalized base valuation `aval` and ramification index `e`.
 - Both are concrete valuation statements, not arbitrary comparison hypotheses; the actual discrete DVR/uniformizer on `rootNormedExtension` exists (`PaperRootExtensionDiscreteValuationActual.rootDiscreteValuation`, `rootUniformizer`), but the base discrete valuation and the ramification theorem were not constructed in this batch.
 - Do not report A1.6 as unconditionally closed. No hscale/hid/blockEquiv hypotheses were used.
+
+
+### A1.6 consolidated unconditional / conditional lists (aligned 2026-11-14)
+
+**Unconditional (green, actual measures/norms, no valuation inputs):**
+
+1. `Mzk1A1QhatSaturationReadoutActual.signedReadout_eq_log_radius_sub_delta`: `a1SignedTerm = log(rootImageRadius) - a1Delta`, i.e. `(1/d_F)log(mu(qhatLattice)/mu(O)) = log||lambda|| - a1Delta`.
+2. `Mzk1A1DeltaExplicitActual.a1SignedTerm_le_log_radius` (plus `a1SignedTerm_eq_log_radius_sub_delta`, `a1Delta_eq_log_radius_sub_signedTerm`, `a1LocalQLog_le_degree_log_radius`).
+3. `Mzk1A1InverseLatticeNormActual.mem_lambdaLattice_iff`, `mem_qhatLattice_iff`, `inverseLambdaLattice_eq_normBall`, `qhatBall_subset_lambdaBall` — actual lattices are norm balls.
+4. `Mzk1A1LatticeInverseActual.qhatLattice_subset_lambdaLattice`, `c0QHat_mem_lambdaLattice`, `algebraMap_qVFamily_mem_lambdaLattice`, `qVFamily_mem_inverseLambdaLattice`.
+5. `Mzk1A1LatticeValuationIdentifyActual.inverseLambdaLattice_eq_inverseLattice` (set equality, no valuation input).
+6. `Mzk1A1SignedReadoutProductActual.productQ_normalizedLog_eq_sum_a1LocalQLog`, `a1LocalQLog_eq_degree_log_radius_sub_degree_delta`, `totalDelta_nonneg`, `productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`, `productQ_normalizedLog_le_closedForm_sub_one`.
+
+**Conditional (valuation-gate inputs):**
+
+1. `Mzk1A1LatticeValuationIdentifyActual.inverseLambdaLattice_eq_saturated_actual` — conditional on `hLambda : lambdaLattice = principalLattice bval m` and `hram : bval(iota x)=e*aval x`.
+2. `Mzk1A1QhatSaturationReadoutActual.qVFamily_mem_saturatedLattice` — same two inputs.
+3. `Mzk1A1ValuationInputsActual.A1ValuationData` — bundled Prop of the two inputs; **no inhabitant, no Nonempty theorem, no instance is provided**. File is green and contains only the definitions plus `qVFamily_mem_saturatedLattice_of_valuationData (h : A1ValuationData)`, which is conditional on the bundled Prop.
+
+**No-inhabitant check:** `A1ValuationData` occurs only as the type of the hypothesis in `qVFamily_mem_saturatedLattice_of_valuationData`; there is no theorem constructing it, no `Classical.choice` inhabitant, no `True`/`PUnit` substitute. The gate remains conditional; do not report A1.6 as unconditionally closed.

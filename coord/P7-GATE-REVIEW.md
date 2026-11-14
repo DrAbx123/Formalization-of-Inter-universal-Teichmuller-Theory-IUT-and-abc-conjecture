@@ -791,3 +791,12 @@ B3 有限位比例条件构造：`Mzk1FinitePlaceHaarRatioActual.lean`（**carri
 - **解锁**：`Mzk1P0QThetaReadoutNormCorrectionActual`（Correspondence olean 满足）、最终 correction/conditional 形式、#1 的 q 侧读数桥。
 - **两条件仍分开**：P2 norm agreement `‖c0QHat‖=qVFamNormalizedNorm`；S45 `qVFamNormRatio=1`；权重 1/[K_w:F_v]，不混 d_b。
 - 其余 pending：C17/RootRadius/PaperSums/Gamma/BoxDistinguished 等。
+
+
+### 20.54 A1.6 清单对齐 + mainline 三处修复（2026-11-15 02:05）
+- **stage4**：`coord/A1-TENSOR-PROD-PROBE.md` 已分段 consolidated：
+  - unconditional：`signedReadout_eq_log_radius_sub_delta`、`a1SignedTerm_le_log_radius`、`mem_*_iff`/`inverseLambdaLattice_eq_normBall`/`qhatBall_subset_lambdaBall`、`qhatLattice_subset_lambdaLattice`/`qVFamily_mem_inverseLambdaLattice`、`inverseLambdaLattice_eq_inverseLattice`、SignedReadoutProduct；
+  - conditional：`inverseLambdaLattice_eq_saturated_actual`、`qVFamily_mem_saturatedLattice`、`A1ValuationData`/`_of_valuationData`（仅 hypothesis）。
+- `A1ValuationData` 出现仅定义 + 假设；无 Nonempty/choice/instance/True/PUnit；olean GREEN。
+- **mainline 三修**：① `Mzk1Cor312B5IndexChainActual` 去 structure 改显式 h/hbase/hF，保留 B5Index SNF；② C17 加 `Field (R⧸p)`/`Field (S⧸P)` instances；③ RootRadius 先 `push_cast` 归一并 `h2' : 2*↑l ≠0` 再 `inv_mul_cancel_left₀`；PaperSums 补 `BadPlacePaperTargetStrictActual` import。
+- **watchdog**：plan/order mtime 08:40、state 08:40，进程 alive；无 stall。
