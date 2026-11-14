@@ -3282,3 +3282,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.463 MAJOR Paper312 correction consumer GREEN (hull, 2026-11-15 08:40)
 - Mzk1Paper312CorrectionConsumerActual DONE 18:25:59: perPlace_of_correction (hcard: correction hypothesis a c)(hres:q=p^f)(hcoef:CoeffComparison f Fdeg l a)(hlogp_eq)(hmu)(hl)(hc:1<=c) -> qcoef <= (1-1/(2l))*log index + logMu. c>=1 log c>=0 helps. FinalIndexDecomp gives a=A-k,c=p^r*((q-1)/T0).
 - Remaining separate: unramified A=0 => a=0 condition4 FAIL, c=1/log c=0 no help; need direct log/diff. Hull next feed A_le_Lbar_add_Dbar/paper312_of_local_bounds and handle unramified. abc probe. No fake.
+
+
+### 20.464 A2PartialFields expanded signAction GREEN (mainline, 2026-11-15 08:50)
+- Mzk1A2PartialFieldsActual DONE 18:25:17: added signAction : OrbicurveSignAction xF (degenerate signActionCandidate) and sign_action_inversion_eq (rfl). Closed fields now 9 groups: xF/xF_geometry/ellipticInvolution/squared/signAction/inversion_eq/cF/V group/V_section.
+- Blocked 4: quotient/quotientWitness; xFGroups/cFGroups/fGroupInclusion; xK/cK/scalar extensions/type; unique_elliptic_involution. Probe updated. Mainline inspect donors (unique via Cat.Hom.ext/Subsingleton). No fake.
