@@ -2905,3 +2905,5 @@
 - 23:00: abc bridge audit: first missing logShellPoint abc->C3 tensor + c3NormalizedTensorHaar region estimate; then hhullRead normalized/actual Haar. mainline search. gate 20.538 written.
 
 - 23:10: hscale1 obstruction precise: no hull⊆O/unique; only redefine scale:=1 with proof after inclusion, downstream recheck. qpilot try inclusion. gate 20.539 written.
+
+- 23:20: hscale1 likely false (coordinate norms>1); scale=1 route not provable, switch to scale!=1 gap. qpilot inspect coordinate formulas. gate 20.540 written.
