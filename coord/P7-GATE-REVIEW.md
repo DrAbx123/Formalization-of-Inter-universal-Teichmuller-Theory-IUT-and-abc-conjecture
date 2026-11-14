@@ -3927,3 +3927,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.606 Nat.dvd_sub no third arg (2026-11-15 31:20)
 - Nat.dvd_sub hpow hdvd already returns divisibility; remove Nat.sub_le arg; then prove sub=1 via Nat.sub_sub_self/one_le_pow and simpa. qpilot. No fake.
+
+
+### 20.607 MAJOR residue card/coprime GREEN olean 07:07:33 (2026-11-15 31:30)
+- Lead edited Nat.dvd_sub proof; direct EXIT=0 and olean 07:07:33: residue_field_card_exists, residue_units_card_coprime. Next transfer quotient via units equiv/subgroup equality to (Integers K)^x/principalUnits, card=residue units card, integralUnitExponent_coprime; then unitLog/tensor. abc audit. No fake.
