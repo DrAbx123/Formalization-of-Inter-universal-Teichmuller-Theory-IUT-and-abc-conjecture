@@ -1855,3 +1855,5 @@
 - 08:20：shehdd Gamma 第一定理按 lead 的 zpow 证明替换 field_simp（zpow_add₀/指数 ring=0/zpow_zero/one_mul/exact hy），第二定理保留 change/eq_zero_iff；retouch 等编，不再盲修。
 
 - 08:30：给 hull Correspondence 精确修法：`:129` 用 `Real.log_mul hpow.ne'`（非 positivity）；`:175 Nonempty (Bad ...)` 从 `nativePlaceSelection_nonempty` 构造 `haveI`（Bad 是 `{p // p∈V_mod_bad}`）；不改 s1915A0/model。
+
+- 08:35：triage：`Mzk1ContinuousAddZpadicActual` log 有 `:20 No goals to be solved` + `#print axioms` 含 sorryAx（失败声明合成，非允许 green）；已让 stepxi 修 `:20`、删 `#print axioms`、确认三公理，Ind1 两个文件的 sorryAx 同理。`Mzk1C17ResidueFieldEquivConstructActual` 首错：`Ideal.quotientMapₐ ?m hle` 第一参数应是 `Algebra.ofId R S`；已让 mainline 改成 `quotientMapₐ (Algebra.ofId R S) hle`。WeightA1Bridge 依赖 RootRadius olean 缺，等 RootRadius 先绿。
