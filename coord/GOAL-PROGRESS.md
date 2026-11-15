@@ -83,7 +83,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
 | SG3b | 结构缺口 | tensor product/measure/region 分解 |
 | A2 | blocked 3 | quotientWitness/groups/unique |
-| WQuotient | 主缺口 | `completionField ≃+* ℚ_[5]` 已有 clean interface；§7.4 更短路线：unitLogTorsionQuotientEquivRange + range=5•Integers K，构造 range ≃* Multiplicative (Integers K) via Φ=5⁻¹•x/Ψ=5•a（stepxi/lattice） |
+| WQuotient | 主缺口 | completionField≃ℚ_[5] clean interface；§7.4 range route：unitLogTorsionQuotientEquivRange + range=5•Integers K。first missing：Integers ℚ_[5] 与 ℤ_[5] 非 defeq，需 padicCanonicalIntegerEquiv transport + Irreducible(5:Integers K) + range preimage choice；stepxi 实现 |
 | abc | 未证 | UndilatedHeightBound、UndilatedRegionBound、regionVolume_le_normalizedWeight、hQ/hSlack 等 |
 
 ## 4. 已有 donor（不要重证）
