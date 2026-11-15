@@ -1362,3 +1362,111 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
 - [supersedes earlier next-step suggestions in this chat] 不再新开旧 C3 inhabitant、B2 通用分解、norm 桥或 unitMass inhabitant 任务。S1429 已证旧 C3 为空；#7/norm/unitMass 复用当前实现。
 - [proposed; existing owners retained] P0：沿已有 N8 输入决定及 core/L/native 接回一个实际源 tensor/readout 消费者；P1：按 R2.1 的最小非零赋值证明 count 指定局部生成元，并带真实 f_v 接 B5；P2：实际标签块的 q/Theta 坐标与读数比较；分母/载体失配时做 P3 逐素数迹下降和指数计算。
 - 禁止用 margin-1 强字典、全 Bad 同 p、residue-one、normRatio product=1 或任意 arch/Haar 等式替代这些构造。整体 P7 仍开放；各既有 lane 归属和调度不变。
+
+
+## 2026-11-14 — 当前 chat：六 gap 路线交接（建议，未派发）
+
+- [completed: research only] P7-SIX-GAPS-ROUTES-20261114.md 已完整追加攻击计划；节点 p7-six-gaps-route-assessment-20261114。无 Lean 改动/新构建，各 owner 不变。
+- [proposed A1] 实际单块 J=ι⁻¹(λO)：ceil 公式与 qO⊆J；继而在真实 tensor 上给 J 的原文允许像生成元证书，备选算实际 determinant。消费者 #1/#6/#10；不新派 blockEquiv inhabitant/no-go 任务。
+- [proposed A6] 用 H、1+H、2+H 不交证当前根 hull 相对质量≤1/3，接 s1915ClosedForm≤0 和 paperBox=0；尚未验收。
+- [proposed A4/A7/A8/A5] 真实 f/e 接 B5；per-b 乘积优先，tensor 按 prime 分组；真实 capsule 位置-标签评价；复用 S3139 后补局部作用和跨列兼容。
+- [reuse] A2 norm/log bridge、A3 求和归一化、S3139 商/identity mutation、标准 Real 模型 Nonempty、C1 infinite-place choice 均不重做。原文 source/landing 证明独立开放。
+
+
+## 2026-11-14 — 当前 chat：IV 1.4 / Box 最小剩余包（建议，未派发）
+
+- [completed: research only] IUTIV-PROP14-TO-BOX-PLAN-20261114.md；节点 iutiv-prop14-to-box-plan-20261114。各 owner 不变，未写 Lean，四项验收 NOT_RUN。
+- [proposed next] P14-CARD：实际同余商与 quotient-units 等价、阶 (q-1)q^(es-1)，构造已有 LogShellQFECardinalityHypothesis，不再让最终消费者接自由 hqfe。
+- [proposed following] P14-PGROUP：实际 log 商是有限 p-group，配合既有精确序列算实际扭元阶；P14-EXACT：商环计数+Haar scaling 给 d=ef，接未缩放 log 像的精确体积。
+- [proposed consumer] P14-BOX-LOCAL：提取 Prop14Lattice 到全部 latticeAut，覆盖原文 Ind3 基准及同一 hull；STEP-V-SOURCE：实际 q 赋值、R4、允许像与 distinguished bound 接入。此路径不要求先完成精确 (ii)。
+- [reuse; no duplicate proof task] LocalDifferentUpperBound 的 1.3(ii)，ArchimedeanTensorMetric/MultiTensorMetric，Section2 的 theta affine bound、1.6 和 2.1(ii)。不把 P7 paperBox 的 C0 吸收当 IV 真实 Box。
+
+<!-- p7-three-gaps-closure-20261114 -->
+
+
+## 2026-11-14 — 三缺口路线交接（建议，未派发）
+
+节点 p7-three-gaps-closure-20261114；owner 为本 chat root（研究文档），既有源码 owner 不变。
+
+- 已交付重要思路：coord/P7-THREE-GAPS-CLOSURE-20261114.md §7–9。
+- 源端 beta_a：缩减为实际单位模挠群的代数同构，连续性由 p^n 邻域基自动得出；候选构造为惯性阿贝尔像/有限 Kummer 逆极限。相关实际 arithmetic realization 仍待证明。
+- packet 源 scalar：从现有 torsion23_rational、kernel_field_identification、q_comparison 推 alpha in K_v，构造 root extension -> K_v 真实嵌入及逐标签 order/readout；然后消费现有 PacketHullData 与 StepV 平均。
+- 不重复派发 Ind1 log/perfection 通用后半段、packet hull 包装、一般 Haar 缩放证明。用户要求本 chat 不再编译；本项不产生新构建队列或自动派工。
+
+<!-- p7-711-automatic-continuity-review-20261114 -->
+
+- 2026-11-14，p7-711-automatic-continuity-review-20261114 已完成自然语言复核：§7.1 有限秩实际单位格命题保留，补严格同余/矩阵证明；不是新 green 供体，不派发重复任务、不编译。后续源端 beta 构造的优先级不变。
+
+
+<!-- p7-reading-first-attack-20261114 -->
+## 2026-11-14 — reading-first 后续建议（研究交付，未新派工）
+
+- [completed: research only] P7-READING-FIRST-ATTACK-20261114.md；node p7-reading-first-attack-20261114；不编译。
+- [existing reading owner] 做同源局部单向运输和原 raw/dimension/reference 校准；不再新建接受 G2/G3/hbound 的 wrapper。
+- [existing IV owner] 复用在写的 Mzk1IVThm110LogQActual；由实际 15-torsion + canonical SL2 image 证明 l!=5，接 actual hCor312 后的吸收。不新增 l=5 或独立 logQ 任务。
+- [existing source owner] full isoMon 的 fixed-points -> torsion -> divisible-subgroup 路线；D-only source realization 仍为真实缺口，不用 id 实例替代覆盖。
+- [existing #C owner] 先把 actual U_c 与 ideal (p^s) 对齐；B 数 m^(eK*s)，或直接单位过滤指数计数。保留原文 e/f，不设 residue-one。
+- 不改变现有 lane 归属，不启动任何构建。原目标仍未验收。
+
+<!-- ind1-dprime-realization-routes-20261114 -->
+## 2026-11-14 — D⊢ realization 后续建议（研究交付，不新派工）
+
+- [completed: research only] `IND1-DPRIME-REALIZATION-ROUTES-20261114.md`；节点 `ind1-dprime-realization-routes-20261114`；无 Lean 修改/编译。
+- [existing source owner] 优先实际 tame quotient → 惯性保持 → 直接消费 `PadicField.unitsInertiaEquiv` 构造 beta。local CFT 与下游 log/perfection 不重复派发。
+- [existing source owner] 完整 isoMon 需要的最小追加为 q/Frobenius 保持、Artin 像的整数 valuation 字典、transfer/conjugation 的全有限层粘合；报告 §5 给具体证明。
+- [existing procession owner] 复用已有 transition lifts，把所有 component 分解成基点 stabilizer；证明真实 D⊢ 箭头域的全覆盖及 capsule 运输，再用已有 Ism sourceDifference。不要把箭头域定义成已有 lift 的像。
+- [existing extraction owner] 候选改在固定域像 `invariantImage rho H` 内部取可除部分，再包含到 ambient；明确 selected H 与实际 K_v 的对应。本 chat 未覆盖其文件。
+- 验收状态均 NOT_RUN。数学新责任为 actual tame 有限层、source realization 与全覆盖；本项不触发构建或自动线程。
+
+<!-- p7-tower-mass-sign-routes-20261114 -->
+## 2026-11-14 — 三个 object-lock 分量后续建议（未派工）
+
+- [completed: research only] `P7-TOWER-MASS-SIGN-ROUTES-20261114.md`，节点 `p7-tower-mass-sign-routes-20261114`。不编译，不改 Lean。
+- [existing tower owner] 先区分 Fmod/F/K：d₁=c*d₀、n₀=t*c，实际 RelativeFactor B=t；用现有 Galois tower + prime transitivity / S1444 section 构造 completion embedding。不要填错误的 `m*dL=n₀*d₁`。
+- [existing source owner] q choice transport 走共同 j₀ 与 inverse-j 唯一性；再做 torsion→Tate quotient fixedness→root in K→adjoin embedding。S1647/S1660 的条件 root 包装不重做。
+- [existing volume owner] 复用 `relative_log_mass_image_eq` 与 full tensor lattice；实际参考格变化计算有限指数 κ。保留 cross-field degree、tensor 维数及 procession 权重，剪掉不必要的 `unitMass_eq` 中间要求。
+- [existing reading owner] 保留 signed 同向比较；原文 `−|log Θ|` 不按 `-abs` 实现。核实 pure-tensor image / full lattice / original hull，原 target 的 raw 仿射换算须完整验收。
+- 四项验收 NOT_RUN；没有因文档交付新增构建队列或改变 owner。
+
+<!-- p7-global-q-hull-construction-20261115 -->
+## 2026-11-15 — 全局 q 与 integral hull 后续建议（研究交付，不派工）
+
+- [completed: research only] P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md；node p7-global-q-hull-construction-20261115；本 chat 单线程、不编译。
+- [existing q/source owner] 复用 S3133 divisor/readout 与 clause-B qVFamily，补 qTuple/∏q_b O_b 的加权 product Haar 实现；保留 q order、residue degree 和实际权重。无需全局 principal generator。
+- [existing hull owner] 直接复用 tensorCore_fieldProduct、integralSpan_subset_hull / integralSpan_eq_hull。选有限合法源像、计算 factor valuations 与 O-saturation；证明足以覆盖实际 q 大小的加权预算。不要把 pure-tensor image 为 product 当作前置。
+- [existing norm owner] PadicField.FieldNorm 已有 v_norm/nrm_norm；优先做 actual completion / normalized norm 运输。只要 contraction 可先用 nrm_norm，避开精确离散值群比例。
+- [existing reading owner] 登记 raw/relative、q/root、place/procession、degree/reference 校准。旧单点 C3 不能未经语义重审承载新全局 reading。
+- 不改变 owner、不新建构建任务。未证 source 预算与原目标连接保持显式；四项验收 NOT_RUN。
+
+<!-- p7-global-q-hull-ag-to-abc-20261115 -->
+- 同一研究包已扩展 §10–16，不新派工。A2 owner 可采用实际 quotient stack + finite-etale fibre functor；先重审退化 partial 与过强 unique 语义。W owner 可复用 Gaussian degree-one/Integers 字典，构造 log(u^4)/20 的实际 quotient equivalence。
+- ABC owner 可直接走 epsilon families，避免为最终 ABC 额外攻 UndilatedRegionBound；具体 initial-data/SL2、真实 IV Box、uniform discrepancy、Belyi 全局化与阈值见报告 §15。原 reading/global 语义和实际源矩阵估计仍由对应 owner 落地。
+
+<!-- p7-global-q-roadmap-deduplicated-20261115 -->
+## 2026-11-15 — P7 单文件路线整合交付（不新派工）
+
+- [completed: research document only] coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md 已按查重重写为 §1–15；node p7-global-q-hull-construction-20261115。既有 owner 保持不变。
+- [reuse, no duplicate task] 一般 truncated/congruence units 的 actual producer、Γ p-group、Section2 Chebyshev、Frey-height/ABC、finite étale orbit quotient、polynomial Belyification 已在正文指出。
+- [next, existing source/hull owners] 先给同一实际 packet 的有限合法源列及赋值/参考格表，证明其积分环 span 在原 hull 内；选择 D1+H1 主线验证。其他不确定节点的 S1/G1 及各自三路替代详见正文，不以新增输入收口。
+- 本包不运行编译，不修改 Lean，不标记数学节点完成；四项验收 NOT_RUN。
+
+
+
+<!-- node09-final-conditional-20261115 -->
+## 2026-11-15 — Node09 最终 conditional / residual（mainline，green）
+
+- [completed] `Node09FinalABCBridgeActual.final_abcHeightBound_of_cards`（watchdog DONE 05:09:05）：cards family → ABC height bound；无 inhabitant/fake。
+- [completed] `Node09ComparisonCardsActual`（05:07:40）：direct point-volume card + weight dictionary exact input structure；`toEpsilonComparison`/`toCor312Interface` conditional bridge。
+- [completed] `Node09GapDonorSurveyActual`（05:06:29）/ `Node09GapDictionaryActual`（05:05:26）：gap1/gap2 reduced donors；hsplit/hptfin actual；hunit canonical absorb；hweightvol/hpoint genuine cards；两 dictionary 联合可反驳。
+- [completed] `Node09FinalConditionalActual.final_paper312_conditional`（05:00:17）：paper312 conditional endpoint（residual horder/hcoef/hmu0/hl/hc/hlocal/hbase 显式在 `Node09Paper312Inputs`）。
+- [next, paper-level] 提供 cards family：direct point-volume card `(vol {scaleShift point}).toReal ≤ (1+ε)·weight + D1` + weight dictionary；或采用 one-way strict route，不阻塞在 exact weighted-q。
+- [exact missing, no fake] horder（qV order=1）、hcoef（3.12 CoeffComparison，有反例）、hbase（`PadicValuedCoherence (K := NativeBaseCompletionRaw)`）、hlogp Fmod=Q transport、paper312→ABC interface dictionary。
+
+
+<!-- node09-cards-frontier-20261115 -->
+## 2026-11-15 — cards → ABC frontier 条件链（mainline，green）
+
+- [completed] `Node09CardsToFrontierActual.frontier_of_cards`（watchdog DONE 05:16:23）：cards family → `ABCFrontier.{0}`。
+- [completed] `Node09CardsToFrontierActual.abcConjecture_of_cards`（同次 DONE）：cards family → `ABCConjecture`（conditional，经 frozen `abcConjecture_of_frontier`）。
+- [completed] axiom probe `Node09CardsToFrontierAxiomProbe`（05:17:56）：两定理仅 `[propext, Classical.choice, Quot.sound]`。
+- [exact residual] cards family 本身是唯一 paper-level 输入（direct point-volume card + weight dictionary；hsplit/hptfin actual、hunit 可 absorb；无 inhabitant/fake）。

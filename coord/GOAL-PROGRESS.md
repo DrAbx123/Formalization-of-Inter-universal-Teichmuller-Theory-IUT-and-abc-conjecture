@@ -1230,3 +1230,34 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 
 - Final conditional ABC bridge green; watchdog idle. Cards family paper-level; exact inputs horder/hcoef/hbase/hlogp/cards. Only 2 stale probes FAIL.
 - Assigned: mainline cards/one-way; hull point-volume donors; stage4 Uniform ambient; qpilot hfr/hlog; stepxi WQ; lattice probe; abc/shehdd audit.
+
+### 7.75 最终状态（2026-11-15 13:27，无编译）
+
+- ✅ final ABC conditional bridge green：Node09FinalABCBridge DONE 05:09:05（final_abcHeightBound_of_cards；唯一残余 cards family）；A2Node03Node04AxiomProbe 也 DONE 05:06:10；
+- ❌ 仅 stale probes FAIL：GaloisCompletionCurrentProbe / PadicGaloisProbe（05:04:43）；无产品级 real red；
+- 📌 最终 exact inputs：**horder / hcoef / hbase / cards family**；其余均为条件归约或文档化；
+- 已同步 `coord/AUDIT-HQ-HTHETA-WIRING.md` §10、`coord/AUDIT-REV15-ASSET-MAP.md` §8。
+
+## 7.94 13:11 WQ donor blocker
+
+- WQ Irreducible: no ring equiv PadicField.Integers p Q5 ~ mainline Integers; normedIntegerEquivValuative only mainline NormedField.integer <-> ValuativeRel.integer.
+- Next: stepxi identity-carrier ring equiv + mem_integers transfer, or maximalIdeal=span{5}; no donor/fake.
+
+## 7.95 13:16 MAJOR conditional ABC
+
+- DONE: Node09CardsToFrontier 05:16:23: frontier_of_cards -> ABCFrontier; abcConjecture_of_cards -> ABCConjecture conditional via abcConjecture_of_frontier. Only cards family paper-level; no inhabitant/axiom.
+- Endpoints: cards -> ABC height bound (FinalABCBridge) and cards -> ABCFrontier -> ABCConjecture (conditional). Goal active; abc not unconditional.
+
+### 7.76 Node09CardsToFrontier DONE：frontier_of_cards + abcConjecture_of_cards（条件）（2026-11-15 13:29，无编译）
+
+- ✅ Node09CardsToFrontier DONE 05:16:23（olean 13:16:23 > src 13:15:32；sorryAx=0）；
+- 📌 frontier_of_cards：cards family → **ABCFrontier**（F4/F5 同 carrier/point；gap1/gap2 归约）；
+- 📌 abcConjecture_of_cards：cards family → **ABCConjecture**（via abcConjecture_of_frontier）；
+- 📌 唯一 paper-level 输入 = cards family（direct point-volume card + weight dictionary + hval/hunit/hsplit/hptfin）；no inhabitant/axiom；无 unconditional claim；
+- ✅ Mzk1QVFiberWeighted DONE 05:16:45（olean 13:16:45 > src 13:14:55）。
+
+## 7.96 13:18 CardsToFrontier probe clean
+
+- DONE: Node09CardsToFrontierAxiomProbe 05:17:56: frontier_of_cards/abcConjecture_of_cards only [propext, Classical.choice, Quot.sound].
+- Final conditional endpoints: cards -> ABC height bound; cards -> ABCFrontier -> ABCConjecture. Unique paper-level residual cards family; paper312 residual horder/hcoef/hbase/hlogp.
+- Goal active; abc not unconditional; no fake.

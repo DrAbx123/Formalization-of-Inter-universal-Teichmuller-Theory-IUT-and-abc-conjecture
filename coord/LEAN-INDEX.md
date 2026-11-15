@@ -201,3 +201,22 @@
 - R1 归约：`qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures`（BaseChangeQ:165-182）到 `hq : qVFamDefaultNorm = ‖baseQ q‖` + `QPilotC3SignedAggregation`；
 - 缺口：`ClauseBBaseQSourceIdentity`（completionMap qV = baseQ q）+ same-q `hq`；
 - `actualFn` 缺 q 重数位置：`Mzk1ActualRamifiedDataActual.lean` :39-52 actualFn、:134-148 actualData、:165-179 actualDataCore（fn:=actualFn）、:240-256 actual_A_le_Lbar_add_Dbar LHS 无 mult_b；`Mzk1RamifiedPlaceDataActual.lean:17-27` 结构无 mult 字段。
+
+
+## 9. Node09 最终 conditional（2026-11-15 05:09:05 watchdog DONE）
+
+- 最终定理：`tmp/sheaf/xif/paper/Node09FinalABCBridgeActual.lean` 的 `final_abcHeightBound_of_cards`（cards family → ABC height bound）。
+- cards 输入：`Node09ComparisonCardsActual.Node09ComparisonCards`（direct point-volume card + weight dictionary + hval/hunit/hsplit/hptfin；无 inhabitant）。
+- conditional bridge：`Node09ComparisonCards.toCor312Interface` → `Cor312ToABCBridgeInterface` → `cor312ToABCBridge_heightBound`。
+- gap donors：`Cor312ComparisonGapReduction.cor312Gap1...`/`cor312Gap2...`；hsplit/hptfin actual 于 `Cor312ComparisonGapSupplyLayer`；hunit canonical absorb；hweightvol/hpoint 是 genuine cards（两 dictionary 联合可反驳）。
+- paper312 endpoint：`Node09FinalConditionalActual.final_paper312_conditional`（residual 见 `Node09Paper312Inputs`）。
+- exact missing：cards family（paper-level）、paper312→ABC dictionary、horder/hcoef/hbase/hlogp transport；不 fake。
+
+
+### Node09 cards → ABC frontier（2026-11-15 05:16:23 watchdog DONE）
+
+- `tmp/sheaf/xif/paper/Node09CardsToFrontierActual.lean`：
+  - `frontier_of_cards : (∀ ε>0, ∃ D₀ D₁, Node09ComparisonCards X W logShellPoint ε D₀ D₁) → ABCFrontier.{0}`；
+  - `abcConjecture_of_cards : (cards family) → ABCConjecture`（conditional）。
+- axiom probe `Node09CardsToFrontierAxiomProbe`（05:17:56）：仅 `[propext, Classical.choice, Quot.sound]`。
+- 与 `Node09FinalABCBridgeActual.final_abcHeightBound_of_cards` 一起构成 cards→ABC 的最终 conditional 端点；cards family 仍是唯一 paper-level input，无 inhabitant/fake。
