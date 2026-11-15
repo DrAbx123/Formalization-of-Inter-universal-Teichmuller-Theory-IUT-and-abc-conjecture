@@ -4043,3 +4043,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.634 stage4 value-group blocked; try defeq change/OrderMonoidIso (2026-11-15 39:30)
 - γ type mismatch ValueGroup₀ (Valued.v WithVal w) vs comap; identical underlying WithZero(Multiplicative ℤ). Try change/let γ' : WithZero(Multiplicative ℤ), or explicit OrderMonoidIso from comap_apply, then conjugate. If fails mark UniformContinuous explicit gap. hull no hq/hθ donor; supports unitLog target. No fake.
+
+
+### 20.635 stage4 value-group iso construction task (2026-11-15 39:40)
+- ValueGroup₀ is WithZero (range subtype), not plain; explicit valueGroupIso from comap to w via σ/σ.symm and comap_apply needed, then conjugate h.orderMonoidIso. stage4. UniformContinuous explicit gap until iso. No fake.

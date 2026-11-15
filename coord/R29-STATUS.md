@@ -3095,3 +3095,5 @@
 - 39:20: hq/hθ no donor; hull supports unitLog target. gate 20.633 written.
 
 - 39:30: stage4 value-group defeq/OrderMonoidIso attempt; hull no donor. gate 20.634 written.
+
+- 39:40: stage4 value-group iso construction task. gate 20.635 written.
