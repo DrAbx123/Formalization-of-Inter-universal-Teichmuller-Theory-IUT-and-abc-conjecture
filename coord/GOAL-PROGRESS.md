@@ -1394,3 +1394,70 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - 📌 hsingleton_le_weight_iff_degreeBound：singleton 上界 ↔ untruncated degree 上界（cor312GapDict_singletonVolume_toReal_le_iff；非 height comparison）；
 - 📌 残余仅 **degree upper bound + weight dictionary inhabitant**；无 singleton product-volume donor；no inhabitant；
 - ✅ final conditional endpoints green 维持。
+
+## 7.108 13:32 DegreeUpper DONE
+
+- DONE: Node09DegreeUpper 05:32:35: exists_pointMap_degree_eq_weight; exists_pointMap_degree_le_weight under hdeg degree faithfulness (D1=0). Satisfiability only; actual point map degree bound / P7 product-region comparison still paper-level. No inhabitant/fake.
+
+### 7.88 Node09DegreeUpper DONE（2026-11-15 13:53，无编译）
+
+- ✅ Node09DegreeUpper DONE 05:32:35（olean 13:32:34 > src 13:31:13；sorryAx=0/errors=0）；
+- 📌 exists_pointMap_degree_eq_weight：hdeg（degree faithfulness）下 constant theta-pilot 构造 → degree = arithmeticWeight；
+- 📌 exists_pointMap_degree_le_weight：同 hdeg 下 degree ≤ (1+eps)·weight + 0（D₁=0）；
+- 📌 仅 **satisfiability**；actual point map 的 degree upper bound 仍 paper-level；无 singleton product-volume donor；no inhabitant of cards family；
+- ✅ final conditional endpoints green 维持。
+
+## 7.109 13:34 SourceCards DONE
+
+- DONE: Node09SourceCards 05:34:14: sourceSingletonCards bridge via hweight_le_singleton_of_weightDictionary + singletonVolume_toReal_le_iff. Only hweightDictionary + hdegreeBound (actual point map degree upper bound) remain paper-level; no inhabitant/fake.
+
+### 7.89 Node09SourceCards DONE（2026-11-15 13:55，无编译）
+
+- ✅ Node09SourceCards DONE 05:34:14（olean 13:34:14 > src 13:33:40；sorryAx=0/errors=0）；
+- 📌 sourceSingletonCards：source data → Node09SingletonPointCards（输入 hval/hunit/hsplit/hptfin/hregion_fin + hweightDictionary + hdegreeBound；hweight_le_singleton 由 weightDictionary，hsingleton_le_weight 由 cor312GapDict_singletonVolume_toReal_le_iff + hdegreeBound）；
+- 📌 仅 **hweightDictionary + hdegreeBound** paper-level（hdegreeBound = actual point map degree upper bound，P7 product region comparison 未形式化）；no inhabitant/fake；
+- ✅ final conditional endpoints green 维持。
+
+## 7.110 13:36 ProductVolumeResidual DONE
+
+- DONE: Node09ProductVolumeResidual 05:36:32: P7 product volume is q-ideal global product, not value-monoid singleton; hdegreeBound needs (1) singleton <= product region containment, (2) product region <= weight bound; both no donor; exact composition documented, no inhabitant.
+- Residual paper-level hweightDictionary + hdegreeBound; SourceCards bridge green.
+
+### 7.90 Node09ProductVolumeResidual DONE（2026-11-15 13:57，无编译）
+
+- ✅ Node09ProductVolumeResidual DONE 05:36:32（olean 13:36:31 > src 13:35:43；sorryAx=0）；
+- 📌 P7 product volume（q-ideal V(J_q;C_q)）≠ singleton value-monoid volume；
+- 📌 hdegreeBound 需 (1) singleton ≤ product（containment/membership）+ (2) product ≤ (1+eps)weight + D1（weighted q-ideal 估计）；**两者均无 donor**；
+- 📌 仅 abstract composition `degreeBound_of_singleton_le_product_and_product_le_weight`；no inhabitant；
+- ✅ final conditional endpoints green 维持。
+
+## 7.111 13:36 singleton subset insight
+
+- ProductVolumeResidual accepted. Insight: normalizedComparisonRegion definition includes scaleShift point singleton, so singleton <= region volume should follow by subset monotonicity; only product-region <= weight estimate remains. Mainline/hull to prove.
+
+### 7.91 ProductVolumeResidual accepted；singleton 包含于 region 定义性 -> comparison (1) 可证（2026-11-15 13:59，无编译）
+
+- ProductVolumeResidual DONE 05:36:32 接受；
+- normalizedComparisonRegion = scaleShift '' (unitRegion ∪ {point})（Cor312ToABCBridgeInterface.lean:201-203）→ singleton {scaleShift point} 定义性包含其中；
+- comparison (1) singleton <= region 可由 W.logVolume_mono 直接得（无需 paper-level donor）；
+- 仅 (2) product <= (1+eps)weight + D1 仍 paper-level；建议后续加 singleton_subset/regionVolume 小引理（watchdog）；no inhabitant；final endpoints green 维持。
+
+## 7.112 13:36 singleton subset confirmed
+
+- abc read source: normalizedComparisonRegion definitionally contains singleton scaleShift point; comparison (1) provable by W.logVolume_mono (precedents Cor312ComparisonGapReduction.lean:147/158, ABCFrontierSingletonReduction.lean:189). Mainline to add singleton_subset_normalizedComparisonRegion + singletonVolume_le_regionVolume; residual only (2) product-region <= weight.
+
+## 7.113 13:38 RegionMono DONE
+
+- DONE: Node09RegionMono 05:38:37: singletonVolume_le_normalizedComparisonRegion + singleton_toReal_le_of_region_toReal_le. Comparison (1) removed; hdegreeBound only needs normalizedComparisonRegion volume bound (paper-level IUT IV estimate). No inhabitant/fake.
+
+### 7.92 Node09RegionMono DONE（2026-11-15 14:01，无编译）
+
+- Node09RegionMono DONE 05:38:37（olean 13:38:37；当前源 13:39:08 pending）；
+- singleton ⊆ normalizedComparisonRegion 已证（定义性 + logVolume_mono）；singletonVolume_le_normalizedComparisonRegion + toReal bridge 已证；
+- comparison (1) 移除；hdegreeBound/hsingleton_le_weight 只需 region-volume bound；剩余 paper-level = normalized comparison-region volume <= (1+eps)weight + D1（IUT IV main log-volume estimate，无 donor）；no inhabitant；
+- final conditional endpoints green 维持。
+
+## 7.114 13:40 cycle
+
+- DONE: RegionMono updated 05:40:00; hull SingletonComparisonRegion 05:39:19; comparison (1) removed. Only normalizedComparisonRegion volume bound remains paper-level.
+- Assigned: mainline/hull region bound donors; stage4 Uniform; qpilot hlog; stepxi WQ probe; abc/shehdd audit.
