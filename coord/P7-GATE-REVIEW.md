@@ -4061,3 +4061,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.638 missingPowerLogEstimate hx obstruction (2026-11-15 40:10)
 - principal units only ||x-1||<1; ramified K values p^{-1/e}>1/2. hx≤r<1/2 not derivable. Options: Qp/unramified specialization; explicit hunit_half actual normalization input; or p=2 radius. qpilot Qp version + explicit hypothesis; mainline check actual K e. No fake.
+
+
+### 20.639 generic unitLog bound GREEN olean 08:41:32 (2026-11-15 40:20)
+- UnitLogNormBound direct+olean 08:41:32: unitLog_norm_le_one_of_principal_bound (explicit hbound ≤1/3 actual normalization input) using exp_bound + integralUnitExponent coprime/norm. qpilot Qp specialization via Padic.norm_lt_pow_iff_norm_le_pow_sub_one; p=2 separate. No fake.

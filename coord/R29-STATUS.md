@@ -3103,3 +3103,5 @@
 - 40:00: UnitLogNormBound green olean 08:38:26; missingPowerLogEstimate remains. gate 20.637 written.
 
 - 40:10: hx obstruction ramified K; qpilot Qp/explicit; mainline check actual K. gate 20.638 written.
+
+- 40:20: generic unitLog bound green olean 08:41:32; qpilot Qp specialization. gate 20.639 written.
