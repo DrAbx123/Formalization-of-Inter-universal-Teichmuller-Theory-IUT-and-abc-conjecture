@@ -596,3 +596,11 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: Node09HqAssemblyLink paper312_of_MqFiber_bounds 03:35:40 (fiber/MqFiber wrapper; no bijection); WQ current 03:34:03; QVWeighted 03:33:17; OneWayConsumer 03:34:30; Galois 03:34:32; A2IntegrationConsumer 03:34:05.
 - RED: A2CompletionConsumer 03:35:18; Node09Paper312Rat 03:32:12; Node09Paper312Weight 03:34:29; Irreducible transport pending.
 - Next: mainline connect paper312_of_MqFiber_bounds to Paper312Assembly; qpilot no duplicate wrapper; lattice A2 consumer; stepxi irreducible.
+
+## 7.36 11:36 cycle
+
+- DONE: Node09Paper312Weight 03:35:40 (qVWeight/qVWeight_log_eq_localLogMagnitude/A_le_Lbar.../paper312_of_qVWeight via Paper312Assembly); Node09Paper312Rat 03:36:43 (generic paper312_of_mult exact interface); Node09HqAssemblyLink 03:35:40 paper312_of_MqFiber_bounds; WQ current 03:34:03; QVWeighted 03:33:17; OneWay 03:34:30; Galois 03:34:32.
+- Paper312Assembly main chain connected via qVWeight wrapper; no duplicate wrapper.
+- Exact residuals: hbase actual RelativeNormQProperties inhabitant; hmult Bad index; hlogp Fmod=Q transport; hper 3.12 per-place estimate; hA0 qVWeight nonneg.
+- MqFiber gaps: fiber count Bad/FinitePlace (not bijection); closedBallLog_eq_localLogMagnitude (ClosedBallMassFormula).
+- A2CompletionConsumer field notation fixed pending.
