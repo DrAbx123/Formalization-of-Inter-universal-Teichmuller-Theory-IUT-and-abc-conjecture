@@ -4065,3 +4065,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.639 generic unitLog bound GREEN olean 08:41:32 (2026-11-15 40:20)
 - UnitLogNormBound direct+olean 08:41:32: unitLog_norm_le_one_of_principal_bound (explicit hbound ≤1/3 actual normalization input) using exp_bound + integralUnitExponent coprime/norm. qpilot Qp specialization via Padic.norm_lt_pow_iff_norm_le_pow_sub_one; p=2 separate. No fake.
+
+
+### 20.640 UnitLogNormBound fresh DONE; wake stage4/hull (2026-11-15 40:30)
+- Watchdog DONE UnitLogNormBound 00:41:25/probe 00:41:24, olean 08:41:32. stage4 valueGroupIso range membership; hull tensor unit ball support. mainline/qpilot/abc running. No fake.
