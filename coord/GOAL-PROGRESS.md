@@ -518,3 +518,22 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: WQ RingEquiv 03:25:57; A2FullData 03:26:00; ValueGroup interface 03:26:26; Node09ActualHyp 03:24:07; A2VFieldsConsumer 03:23:45; WQ reverse 03:22:37.
 - RED: QVWeighted 03:25:12 (:105 type mismatch); ProductFiber regression 03:26:24 (:59 no goals); Node09Paper312Rat 03:26:23 (fiberMult unknown); A2FullDataConsumer 03:27:10 (type mismatch).
 - Next: mainline import fiberMult; qpilot align hper; hull revert ProductFiber DONE; lattice FullDataConsumer; stepxi padicIntegersEquivZp/Irreducible.
+
+### 7.23 复核：ProductFiber DONE 03:27:31；QV/Node09Paper312Rat/A2FullDataConsumer red（2026-11-15 11:35，无编译）
+
+- ✅ ProductFiber DONE 03:27:31（olean 11:27:31 > src 11:26:40；interface；log 旧错误残留）；
+- ✅ WQ RingEquiv 03:25:57 / A2FullData 03:26:00 / ValueGroup interface 03:26:26 仍有效；
+- ❌ QVWeighted FAIL 03:25:12（源 11:26:48 pending；`assumption` 失败 + **universe levels 签名错误 parity printing** + Type mismatch :105；olean stale）；
+- ❌ Node09Paper312Rat FAIL 03:26:23（unsolved/Function expected；无 olean）；A2FullDataConsumer FAIL 03:27:10（Type mismatch :34:46；无 olean）。
+
+### 7.24 复核 2（2026-11-15 11:37，无编译）
+
+- ✅ WQ 最新 **DONE 03:28:20**（olean 11:28:19 > src 11:27:55；forward/reverse/normedIntegerEquivValuative 已含）；ProductFiber 03:27:31、A2FullData 03:26:00、ValueGroup interface 03:26:26 继续有效。
+- ❌ QVWeighted 最新 FAIL 03:28:46（源 11:28:35；无 olean；universe-level/assumption/Type mismatch）；Node09Paper312Rat（前次 03:26:23）与 A2FullDataConsumer（前次 03:27:10）retry START 03:29:03 pending。
+
+## 7.31 11:29 cycle
+
+- DONE: A2FullDataConsumer 03:29:34; WQMembership 03:28:20 (forward/reverse/RingEquiv); ProductFiber 03:27:31; ValueGroup interface 03:26:26; A2FullData 03:26:00.
+- RED: QVWeighted 03:28:46 (:105 weighted type mismatch); Node09Paper312Rat retry (fiberMult import).
+- PENDING: 4 stale/dirty probes; stepxi irreducible_five_integers pending.
+- Next: qpilot align QV hper or exact interface; mainline fix Node09Paper312Rat import; stepxi Irreducible; stage4 UniformContinuous gap; hull closed-ball mass missing.
