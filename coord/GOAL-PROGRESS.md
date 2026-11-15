@@ -675,3 +675,16 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 
 - WQ Phi/Psi plan accepted coord/WQ-PHI-PSI-PLAN.md; exact missing: irreducible transport, subgroup/range bridge, integral preimage choice, 5-scalar injectivity, Multiplicative scalar conversion. stepxi to write conditional composition in new file (no inhabitant).
 - One-way hθ/hq accepted via node0609_rpRegion_volume_le_hull; exact mass/ProductHaar optional.
+
+### 7.35 ROUTE DECISION + 残余验证（2026-11-15 12:05，无编译）
+
+- ✅ **one-way hθ/hq 接受 `Mzk1Node0609OneWayConsumerActual.node0609_rpRegion_volume_le_hull`**（DONE 03:34:30；olean 11:34:29 > src 11:33:20；由 rp_strict_measure_resolved 取 le_of_lt）；
+- ✅ **exact weighted-q equality 在 inequality path 不再要求**：ProductHaarToFiberMult/MqFiber/ClosedBallMassFormula 降级为 exact/可选；ProductFiber/QVWeighted 不再 blocker；
+- 已更新 `coord/AUDIT-HQ-HTHETA-WIRING.md` §8、`coord/AUDIT-REV15-ASSET-MAP.md` §6；
+- 残余：**4 stale probes**（GaloisValOnlyProbe stale、TaskEProbe stale、GaloisCompletionCurrentProbe FAIL、PadicGaloisProbe FAIL）；**IntegralUnitLogarithm dirty**（源 11:43:18 > olean 08:27:48；最后 watchdog FAIL 2026-11-14T23:29:57；siblings fresh）；Paper312 主链 green 维持。
+
+## 7.43 11:44 cycle
+
+- DONE: Node09WeightHA0 03:44:37 (hA0_of_qVWeight actual; paper312_of_qVWeight_actual only hper left); IntegralUnitLogarithm 03:44:15 fresh DONE; Node09ResidueNorm 03:42:09; Paper312 main chain green.
+- RESIDUAL: hbase actual RelativeNormQProperties; hmult Bad index; hlogp habsNorm missing; hper 3.12 per-place estimate; WQ irreducible/PhiPsi conditional pending.
+- A2Node04HandoffConsumer current red; 4 stale probes.
