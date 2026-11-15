@@ -1667,3 +1667,51 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 ## 7.135 14:12 ABC inhabitant scan DONE
 
 - DONE: Node09ABCInhabitantScan 06:12:11: no ABCConjecture/ABCFrontier inhabitant anywhere; only sorry/explicit-target/statement files; all bridges conditional. No unconditional ABC route; paper-level inputs SNamed/frozen gap2 and actual-p hweightDictionary necessary. No fake.
+
+## 7.136 14:12 S3135 route
+
+- Hull: S3135 abcConjecture_of_endToEndInputsV2 conditional on four cards: PointLogShellFaithfulness, ScalingLogDegreeZero, ActualUnitHullCard, ActualPointWeightCard. ActualUnitHullCard likely provable from D+finiteness (choose D0). Assigned mainline to attempt; other cards paper-level.
+
+### 7.111 EXHAUSTIVE SEARCH：无 ABC/ABCFrontier inhabitant；bridge circular（2026-11-15 14:41，无编译）
+
+- abcFrontier_iff_abcConjecture（ABCFrontier.lean:354）；abcFrontierRealLine_iff_abcConjecture(:337)；cor312ToABCBridgeInterface_nonempty_iff_abcConjecture（Cor312ToABCBridgeInterface.lean:605）→ bridge 非空 <=> ABC（circular）；
+- 被反驳 frontier：abcFrontierPointwiseReduced_not_inhabited、not_ABCFrontierGapReduced、GapReducedV2、PointwiseWeakened、PointwiseReduced、frontierSingletonWeight_finiteness_pointHeight；
+- 树中无 ABC/ABCFrontier/realLine inhabitant；Node09 frontier/abcConjecture 仅条件于 cards family；final endpoints 保持 conditional；no fake。
+
+### 7.112 S3135EndToEndV2 DONE 审计（2026-11-15 14:43，无编译）
+
+- S3135EndToEndV2Actual（历史 DONE 2026-11-10 01:18:53）：s3135_abcConjecture_of_endToEndInputsV2 条件于四 cards：hpt(S3135PointLogShellFaithfulness)、hzero(S3135ScalingLogDegreeZero)、hunit(S3135ActualUnitHullCard)、hpoint(S3135ActualPointWeightCard)；
+- 证明：hzero -> normalization；hpt+hnorm -> F4；hunit+hpoint -> F5；F4+F5 -> ABCFrontier -> ABC；
+- Lead 分类：ActualUnitHullCard 或可由 D+finiteness 证；ScalingLogDegreeZero/PointWeightCard paper-level；hpt 与 S3135ValueGroupSplitting 缺口相关；
+- 结论：条件端点，不构成 ABC inhabitant；no fake。
+
+## 7.137 14:14 S3135 Card U DONE
+
+- DONE: Node09S3135CardU 06:14:10: s3135_actualUnitHullCard_holds unconditional (D0=max degreeBound 0). F5 only Card P (hpoint/frozen gap2) remains; F4 cards PointLogShellFaithfulness + ScalingLogDegreeZero exact paper-level. No fake.
+
+### 7.113 Node09S3135CardU DONE（2026-11-15 14:45，无编译）
+
+- Node09S3135CardU DONE 06:14:10（olean 14:14:09 > src 14:13:38；sorryAx=0）；
+- s3135_actualUnitHullCard_holds：Card U **无条件**（D₀=max D.degreeBound 0；无 hull finiteness）；
+- s3135_actualFrontierRegionClause_of_pointWeightCard：F5 仅需 Card P；
+- CardStatus：F5 余 Card P；ScalingLogDegreeZero 缺 equality to 0（iff normalized-scaling family）；PointLogShellFaithfulness exact missing（full value-group faithfulness implies）；
+- no fake；Card P + 两 F4 cards 仍 paper-level；S3135 非 ABC inhabitant。
+
+## 7.138 14:14 Card U audit
+
+- Card U unconditional DONE; F5 only Card P; F4 cards ScalingLogDegreeZero/PointLogShellFaithfulness exact. Mainline to compare Card P with Node09 hpoint/frozen gap2 and unify. No fake.
+
+## 7.139 14:15 ResidualMap DONE
+
+- DONE: Node09S3135ResidualMap 06:15:49: s3135_pointWeightCard_iff_node09HpointFamily (rfl). Unified single paper input: Card P = Node09 hpoint = frozen gap2 second comparison; F4 cards PointLogShellFaithfulness/ScalingLogDegreeZero separate exact. No fake.
+
+### 7.114 Node09S3135ResidualMap DONE（2026-11-15 14:47，无编译）
+
+- Node09S3135ResidualMap DONE 06:15:49（olean 14:15:49 > src 14:15:07）；
+- s3135_pointWeightCard_iff_node09HpointFamily：Card P ↔ Node09HpointFamily（rfl）；
+- 统一：Card P / Node09 hpoint / frozen gap2 second comparison 为同一 paper input（hpoint_of_comparison 链条）；
+- F4 两 cards 分离（hpt=hzero：PointLogShellFaithfulness/ScalingLogDegreeZero），与 hpoint 逻辑分离，无 identification theorem；both paper-level；no fake。
+
+## 7.140 14:17 blocked assessment
+
+- Exhaustive scan: no ABCConjecture/ABCFrontier inhabitant; no unconditional route. Unified exact residual: Card P/Node09 hpoint/frozen gap2; S3135PointLogShellFaithfulness; S3135ScalingLogDegreeZero; actual-p hweightDictionary. Paper312 residual horder/hcoef/hbase/hlogp. Conditional endpoints green; no fake. Concrete blocker persists >3 rounds; reporting blocked for new input/donor.
