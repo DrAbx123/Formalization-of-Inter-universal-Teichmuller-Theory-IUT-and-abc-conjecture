@@ -30529,3 +30529,31 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - `coord/GOAL-PROGRESS.md` §2/§3/§4/§7 已同步（含本节审计指针）；
 - Task G wiring 交付：`coord/AUDIT-HQ-HTHETA-WIRING.md`；
 - 本审计**未做 Lean 编译**（只读 + watchdog log）。
+<!-- p7-global-q-roadmap-deduplicated-20261115 -->
+## 2026-11-15 — P7 构造路线定点查重与全局化更正（root，research only）
+
+保留此前结论历史，当前活动正文统一为 coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md §1–15；节点 p7-global-q-hull-construction-20261115。单线程，无 Lean 修改/编译；源码观察不构成本轮 kernel/target 验收。
+
+- 修正早先 B/A formalization 仍缺的静态清单：Mzk1TruncatedUnitsPrimaryActual.truncatedUnitsCardPrimary、Mzk1CongruenceUnitsEquivGeneralActual.congruenceUnits_equiv_primary_general、Mzk1IutIVCongruenceCardActual.congruenceQuotientCardinalityInput_exists_actual 已见实际证明体；Γ p-group / actualGammaH 亦已在树。仍需实际参数与最终 Prop1.4 公式连接。
+- Section2 当前已有 iutIVProp21ii_theta_two_sided_eventually、iutIVProp16_index_le_four_thirds_nthPrime；不再据旧文件头笼统列“PNT 全缺”。本轮未重编。
+- 复用界限：S2020 的矩阵结果限固定 l=5，S2835 大像定理仍收 Serre-style 输入；GenEll16 已有 polynomial Belyification，不等于实际 scheme finite map/noncritical protected-set witness；finite étale orbit functions 与 gluing 已有，真实 quotient descent producer 仍须实例化。
+- 连续性更正：实际 W≃ℤp^d 后，群同态保持 pⁿW，自动连续；不得再将 wild homomorphism 作为这一有限秩情形的障碍。真正缺口是实际源子层与一般源箭头作用/覆盖。
+- 原文全局化更正：GenEll Theorem2.1 先用高分歧覆盖消 boundary，再对残差点列用 compactness/noncritical maps。路线给实际 Fermat cover，避免误用固定 cusp-preserving map family。采用 IV Remark2.3.1(v) 的 2·deg(E)/deg(ω) 上界；GenEll05.paper_epsilon_absorption 的常数依赖当前 htE/logDiff，不当 uniform theorem。
+- 新路线机制：D（不动点/Kummer/reciprocity）、H（积分饱和/determinant/Fourier）、S（isogeny-height/Frobenius/模曲线）、G（projective-polynomial/RR-jets/额外局部 packets），每条写构造、研究叶子与首个验证产物；确定部分仅一条。不得据此声称 3.12、IV 或 abc 已完成。
+
+后续动作：实际 source packet 的有限源列、valuation 与参考格表，交 integral-span 包含和明确 weighted 预算。证据路径与哈希在同节点 JSON。
+
+
+## 2026-11-15 — revision15：现有 DONE 资产 → 节点 01–11 映射（abc，只读，无编译）
+
+- 交付：**`coord/AUDIT-REV15-ASSET-MAP.md`**（逐节点映射表 + superseded 清单 + RED/pending 表）。
+- 可复用主线（按 revision15 §15.1 D1+H1+S1+G1）：
+  * 04：PadicFieldValuedQp/Bridge、GaloisCompletion（old olean valueGroup DONE 02:21:06）、Ind1/Kernel 链、Truncated/Congruence/IutIVCongruenceCard/PrincipalUnits/CardExponent；
+  * 06：S3133 四件 + QPilotGlobalLogVolumeFromQActual + QVMultiplicityBridge（DONE 02:27:50）；
+  * 07：ThetaUnitLatticeBound（cond. hpos/hfin）、LocalFieldIntegralHullSpan/H0 donor、FinitePadicIntegerTensorLattice；
+  * 08：Paper312 Assembly/Correction/Unramified + FinalIndex/IndexQFE + Torsion/Ceil/IndexDivision/Quotient/IndexPow；
+  * 09：IVThm110 conditional display、S3171（hSlack derived）、Cor312ToABC（conditional）、IutIVProp14 donors；
+  * 10–11：ABCMainEstimate/ABCHeightEstimate conditional、ABCEllipticHeightCriterion donor。
+- **superseded**：① single `C3.q` 全局和（C3BaseQ/GlobalSumAggregation/BaseChangeQ consumer）→ 真实 packet + S3133 weighted；② `hsub` 方向（canonicalHull⊆actualRegion）→ unit-lattice 单向；③ `hCor312` 作为终点（IVThm110 display/S3171/Cor312ToABC/IVThm110LogQ）→ logQ 由 08 的 3.12 给出；④ 退化 A2 point-stack/identity producer（A2PartialFields/ScalarStack/SignAction/Involution）→ 实际 U/[-1]/[U/G]；⑤ 精确 θ hull 等式 → H0/单向下界；⑥ `BaseQFamilyActual` arbitrary DVR candidate 不作 qVFamily 替代；⑦ `hbound`/free compatibility/`Nonempty` Required 只作接口，不作终点；⑧ tautology/spec-only（IutIVTruncatedUnitsCardCorrected/Ind1CorrectedExtraction）只作接口。
+- RED/pending 与节点关联：RelativeNormFieldNorm FAIL 02:30:44（04）；TaskE FAIL 02:02:47（04）；WQuotientLattice pending（04）；hpos/hfin GAP（07/09）；GaloisCompletion/ThetaUnitLattice 当前源重编 pending（04/07）；IV/Cor312 conditional 不作终点（09/10）。
+- 本任务**未编译 Lean**；statement_compiles/proof_body_checked/kernel_closed/target_accepted = NOT_RUN（除已有 DONE 历史证据）。

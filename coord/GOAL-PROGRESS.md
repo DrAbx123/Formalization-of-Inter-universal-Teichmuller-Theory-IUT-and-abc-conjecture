@@ -138,3 +138,36 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
   - `Mzk1ThetaUnitLatticeBoundActual` 当前源 10:31:11 新于 olean 10:21:03 → 旧绿不覆盖当前源；
   - `Mzk1GaloisCompletionActual` 当前源 10:31:00 重编 pending（旧 DONE 02:21:06 仅覆盖旧版本）。
 - 详细审计：`AUDIT_LEDGER.md`；Task G wiring：`coord/AUDIT-HQ-HTHETA-WIRING.md`；索引：`coord/LEAN-INDEX.md`。
+
+
+### 7.1 revision15 资产映射（abc，2026-11-15 10:45）
+
+- 映射表：`coord/AUDIT-REV15-ASSET-MAP.md`（节点 01–11 × 现有 DONE 资产；只读审计，无编译）。
+- 可复用主线：04（PadicFieldValuedQp/Bridge/Ind1/Kernel/Truncated/Congruence/PrincipalUnits/CardExponent）、06（S3133 四件 + QPilotGlobalLogVolumeFromQActual + QVMultiplicityBridge DONE 02:27:50）、07（ThetaUnitLatticeBound cond. hpos/hfin + H0 donors）、08（Paper312 链 + FinalIndex/IndexQFE + Torsion/Ceil/IndexDivision/Quotient/IndexPow）、09（IVThm110 display/S3171/Cor312ToABC conditional + IutIVProp14 donors）、10–11（ABCMainEstimate/ABCHeightEstimate + ABCEllipticHeightCriterion）。
+- 已替代（不再作终点/证明目标）：
+  1. single `C3.q` 全局和（C3BaseQ/GlobalSumAggregation/BaseChangeQ consumer）→ 真实 packet + S3133 weighted aggregation；
+  2. `hsub` 方向（`canonicalHull⊆actualRegion`）→ unit-lattice 单向 `tensorIntegerRegion_subset_actualRegion`；
+  3. `hCor312` 作为终点（IVThm110 display/S3171/Cor312ToABC/IVThm110LogQ）→ logQ 由 08 的 3.12 给出；
+  4. 退化 A2 point-stack/identity producer → 实际 U/[-1]/[U/G]；
+  5. 精确 θ hull 等式 → H0/单向下界；
+  6. `BaseQFamilyActual` arbitrary DVR candidate 不作 `qVFamily` 替代；
+  7. `hbound`/free compatibility/`Nonempty` Required 只作接口；
+  8. tautology/spec-only（IutIVTruncatedUnitsCardCorrected/Ind1CorrectedExtraction）只作接口。
+- RED/pending：RelativeNormFieldNorm FAIL 02:30:44、TaskE FAIL 02:02:47、WQuotientLattice pending、hpos/hfin GAP、GaloisCompletion/ThetaUnitLattice 当前源重编 pending。
+
+## 7.2 revision15 审计映射与当前 red（2026-11-15 10:40）
+
+- 资产映射：`coord/AUDIT-REV15-ASSET-MAP.md`（abc）；
+- 可复用：PadicFieldValuedQp 02:12:07、S3133 四件、QVMultiplicityBridge 02:27:50、ThetaUnitLattice（条件）、PrincipalUnits/CardExponent、Paper312 08 组；
+- superseded：single C3.q 全局和、错误 hsub 方向、hCor312-as-endpoint、退化 A2 point-stack、精确 θ hull 等式、BaseQFamily arbitrary candidate；
+- 当前 red：
+  - `ThetaUnitLatticeBound` 02:37:24（hpos/hfin 参数/重写）；
+  - `GaloisCompletion` 02:37:27（valueGroupIso 重写/类型）；
+  - `TaskEIntegersRingEquiv` 02:38:36（unsolved type equalities）；
+  - `QVIndexMap` 02:37:43（badPlaceIndex/qV function application）；
+  - `RelativeNormFieldNorm`（Module.Finite/IsScalarTower）；
+  - TaskECompletion（Field GaussianField）；
+  - stale probes。
+- 已让各 owner 先恢复 green 或显式 gap；不伪绿。
+
+- WQuotient §7.4: stepxi 已建 Mzk1Ind1WQuotientFiveIsoActual，先证 normedIntegerEquivValuative + padicIntegersEquivZp，再 transport Irreducible(5)/Φ/Ψ；等待 watchdog。
