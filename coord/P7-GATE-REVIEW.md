@@ -4109,3 +4109,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.649 Q2 fresh DONE; hull obstruction file (2026-11-15 42:00)
 - DONE UnitLogNormQpTwo 01:00:21/olean 09:00:21; bridge olean 09:00:23. hull writes Mzk1HqHthetaStructuralObstructionActual documenting single local q/global sum, no q product, region not product, no product Haar/log; no fake/sorry. abc audit. No fake.
+
+
+### 20.650 MAJOR generic p=2 half bound GREEN olean 09:04:45 (2026-11-15 42:10)
+- Mzk1IVThm110UnitLogNormHalfActual direct+olean 09:04:45: unitLog_norm_le_one_of_principal_bound_half via hull norm_log1p_le_half + exp_bound direct/norm_div. mainline instantiate actual p≥3/p=2; qpilot tensor unit ball. abc audit. No fake.
