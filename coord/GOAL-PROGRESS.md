@@ -295,3 +295,18 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: QVProductRegion 02:59:36 (clean donor interface, rpRegion etc); A2GroupsExtension 02:59:15; WQ clean interface 02:58:06; Node09Relative/Hq DONE.
 - RED: ValueGroupActual 02:57:22 (rewrite 38/54); ProductFiberMultBridgeGap 02:58:30 (unknown residueNormBase/ProductHaarToFiberMult); WQ small lemma source pending.
 - RUNNING: Node09HqWeightedRegion. Next: qPilot log eq -Σ mult log, define Mq; A2 groups combine; stage4 valueGroup; hull product fiber interface.
+
+### 7.9 QV donor interface / A2GroupsExtension DONE；WQ 当前源 red（2026-11-15 11:04，无编译）
+
+- ✅ QV `Mzk1QVProductRegionActual` **DONE 02:59:36**（olean 10:59:36 > src 10:57:45；仅 donor interface：productRegionDonorNames + length）；
+- ✅ A2 `Mzk1A2Node03GroupsExtensionActual` **DONE 02:59:15**（olean 10:59:15 > src 10:57:44；Data + Required，interface 无 inhabitant）；
+- ❌ WQ：旧 clean DONE 02:58:06（olean 10:58:06）；**当前源 10:59:04 FAIL 03:00:19**，`normedInteger_mem_valuativeInteger` 仍带 synthetic sorryAx + Type mismatch；当前源 reject；
+- ❌ ValueGroup FAIL 02:57:22（rewrite :38/:54）；ProductFiber FAIL 02:58:30（Function expected、unknown residueNormBase/ProductHaarToFiberMult；重试 pending）；
+- 运行中：Node09HqWeightedRegion（theorem node09_hq_weighted_region）START 02:59:50。
+
+## 7.13 11:01 cycle
+
+- DONE: QVProductRegion 02:59:36; A2GroupsExtension 02:59:15; ProductFiberMultBridgeGap 03:00:45; Node09Relative/Hq; A2SourceWitness; Node0609.
+- RED: WQ current 03:00:19 (small lemma again sorryAx/type; remove, restore clean interface); ValueGroup 02:57:22 (rewrite).
+- RUNNING: Node09HqWeightedRegion; A2 SourceSignQuotientAssembly; QVWeighted pending.
+- ProductFiber exact missing: rootExtensionHaar closed-ball mass formula; Bad↔FinitePlaceAtPrime bijection.
