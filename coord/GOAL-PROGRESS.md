@@ -616,3 +616,18 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: Node09Paper312Weight 03:35:40 (qVWeight wrapper -> Paper312Assembly); Node09Paper312Rat 03:36:43 (generic paper312_of_mult); Node09HqAssemblyLink 03:35:40 (paper312_of_MqFiber_bounds); A2CompletionConsumer 03:37:40; OneWay 03:34:30; Galois 03:34:32; QVWeighted 03:33:17; WQ old clean 03:34:03.
 - RED: WQ current 03:36:22 (:74 symm ring hom; stepxi fixed to .toRingHom pending); stale probes/IntegralUnitLogarithm dirty.
 - Residual: hbase/hmult/hlogp/hper/hA0; MqFiber fiber count + closedBall log/mass.
+
+### 7.31 Node09Paper312Weight/HqAssembly/Rat + A2CompletionConsumer DONE；WQ red（2026-11-15 11:52，无编译）
+
+- ✅ Node09Paper312Weight DONE 03:35:40（olean 11:35:39 > src 11:34:45；qVWeight_log_eq_localLogMagnitude/A_le_Lbar_add_Dbar_of_qVWeight/paper312_of_qVWeight/RemainingMissing）；
+- ✅ Node09HqAssemblyLink 03:35:40（paper312_of_MqFiber_bounds）；Node09Paper312Rat 03:36:43（paper312_of_mult）；
+- ✅ A2CompletionConsumer DONE 03:37:40（olean 11:37:40 > src 11:37:00；toSourceCompletionSignQuotient/quotientWitness）；
+- ❌ WQ 当前源 11:38:11 FAIL 03:36:22（:71 Application mismatch、:72/:74 Type mismatch；olean 11:34:02 stale）；
+- 继续有效：QVWeighted 03:33:17、OneWay 03:34:30、Galois 03:34:32。
+
+## 7.38 11:39 cycle
+
+- DONE: Paper312 main chain (Node09Paper312Weight/Rat/HqAssembly) all connected; A2CompletionConsumer 03:37:40; OneWay 03:34:30; Galois 03:34:32; QVWeighted 03:33:17; WQ old clean 03:34:03.
+- WQ irreducible_five_integers deferred: still :74 type mismatch; stepxi to delete theorem, keep membership/RingEquiv/padicIntegersEquivZp green; exact gap.
+- RED: Node09ResidueNorm 03:39:38; A2Node03Node04Handoff 03:38:52; stale probes.
+- Next: mainline Node09ResidueNorm; lattice handoff; stepxi clean WQ; actual residuals hbase/hlogp/hper/hA0.
