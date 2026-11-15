@@ -32368,3 +32368,25 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 
 ### 路线
 - mainline N0–N11；cards/S3135 auxiliary；Ambient placeholder；UniformContinuitySource exact gap；no fake。
+
+## 2026-11-15 — Audit 12:00：N5 GlobalSumAggregation 需 C3BaseQElementIdentification + ClauseBBaseQSourceIdentity；N1 analytic partial retry；N3 active；无新 mainline green（abc，只读，无编译）
+
+### N5
+- `GlobalSumAggregation` structure 于 `Mzk1C3BaseQIdentificationActual.lean:71`（同文件 docs 定义 C3BaseQElementIdentification / GlobalSumCollapse / ClauseBBaseQSourceIdentity；NO inhabitant）；
+- N5 `GlobalSumAggregation` 需 **C3BaseQElementIdentification**（C3 q 与 native base q 同一 source q up to base-change norm exponent n：`log ||C3.q.q|| = -baseQLogMagnitude b / n`）与 **ClauseBBaseQSourceIdentity**（clause-B 参数 = native badPlaceQCandidate under completion map）；
+- `Mzk1C3BaseQCorrespondenceBridgeActual`（源 20:03:00；retry START 12:03:55）：`clauseBBaseQSourceIdentity_iff_correspondence`：`Nonempty ClauseBBaseQSourceIdentity ↔ Nonempty BaseChangeQElementCorrespondence`；另有双向构造器；**未新增 source data**，仍缺 BaseChangeQElementCorrespondence inhabitant；
+
+### N1
+- `Node09TateQSeriesAnalyticPartialActual`：最新 FAIL 12:02:06；retry START 12:03:55；无 olean；analytic partial 仍 red/pending；
+
+### N3
+- active construction：`Mzk1A2Node04TensorUnitBallInhabitantActual`（源 20:02:37；START 12:03:55）运行中；
+
+### 其他
+- `Mzk1WQUniformizerAssociatedActual` retry START 12:03:55（此前 FAIL 05:53:03 unknown nrm_zero）；
+- `Node09TateHSpecialValueActual`：FAIL 12:02:58；无 olean；
+- Galois probes FAIL 12:03:37（stale）；
+- **无新 mainline green**；mainline N0–N11；cards/S3135 auxiliary；no fake。
+
+## 2026-11-15 20:05 N5 DEDUPE CORRECTION
+- N5 dedupe: earlier S3133/QVWeighted/HqAssemblyLink assets are green; new N5 bridge Mzk1QVRealifiedBridge (11:59:12) reused S3133; remaining N5 gaps are C3/base identities and reading bridges. See coord/P7-ROUTE-NODE-STATUS.md.
