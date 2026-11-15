@@ -489,3 +489,17 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
   - hlogp: log completionRationalPrime = log residueNormBase(b i) needs Fmod=Q index compatibility/comap_self bridge;
   - hper: 3.12 per-place mult inequality, not provided by localLogMagnitude equality.
 - RED: QVWeighted retry; ValueGroup 03:21:11 (revert interface needed).
+
+### 7.21 Node09ActualHyp/VFieldsConsumer/WQ reverse DONE；QV/ValueGroup red（2026-11-15 11:30，无编译）
+
+- ✅ `Node09ActualHypothesesActual` DONE 03:24:07（olean 11:24:06 > src 11:23:08；hA0_of_fiberMult/hs0_of_le/hs1_of_le/**paper312_of_fiberMult_actual**/Node09RemainingMissing）；
+- ✅ `Mzk1A2Node03VFieldsConsumerActual` DONE 03:23:45（olean 11:23:45 > src 11:22:41；VFieldsAndProducerData/sourceSignQuotientDataWithVFieldsAndProducerWitness/Required interface）；
+- ✅ WQ reverse DONE 03:22:37（olean 11:22:36；`valuativeInteger_mem_normedInteger` 与 forward 均标准三公理；当前源 11:24:29 新增 normedIntegerEquivValuative，pending）；
+- ❌ QVWeighted FAIL 03:23:01（retry START 03:24:22；olean 11:20:03 stale）；ValueGroup FAIL 03:21:11（源 11:24:27 pending；olean 11:16:29 stale）。
+
+## 7.29 11:26 cycle
+
+- DONE: WQMembership RingEquiv 03:25:57 (normedIntegerEquivValuative); A2Node03FullData 03:26:00; Node09ActualHypotheses 03:24:07; A2VFieldsConsumer 03:23:45; WQ reverse 03:22:37.
+- RED: QVWeighted 03:25:12 (assumption/type at 104/105); ValueGroup unresolved (interface revert).
+- RUNNING: Node09Paper312Rat; ProductFiber; ValueGroup; QVWeighted retries.
+- Next: stepxi trans padicCanonicalIntegerEquiv/Irreducible; lattice A2 full consumer; qpilot QV fix; stage4 revert ValueGroup interface.
