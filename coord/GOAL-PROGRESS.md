@@ -247,3 +247,22 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: WQ clean interface 02:53:33 (fresh source); GaloisCompletion 02:54:00 (green val_eq/surj); A2 producer/consumer; RelativeNormQProperties 02:49:10.
 - RED: A2SourceWitnessConsumer 02:53:35 (constructor/type mismatch); Node09HqMult 02:53:56 (not defeq/type); Node09Relative 02:53:37 (ambiguous); QVProductRegion 02:52:48 (application mismatch); Node0609ProductBridge 02:52:49 (function expected).
 - Next: owners fix explicit signatures or reduce to clean interfaces; stepxi adds one small WQ lemma; stage4 valueGroup small block + ambient route.
+
+### 7.5 WQ/Galois DONE 与 red 批次（abc，2026-11-15 10:56，无编译）
+
+- ⚠️ WQ：`Mzk1Ind1WQuotientFiveIsoActual` **DONE 02:53:33**（olean 10:53:32）；latest `WQuotientFiveIsoRequired` 标准三公理（clean interface）；但当前源 10:54:42 更新、重编 pending；`normedIntegerEquivValuative` 旧输出仍带 sorryAx/unknown `padicMulValuation_le_one_iff_norm_le_one` → 仅接口可用，def/当前源待 fresh DONE + probe。
+- ✅ Galois：`Mzk1GaloisCompletionActual` **DONE 02:54:00**（olean 10:53:59 > src 10:52:21）；当前源仅 `withValMovedSigma`/`_surjective`/`_val_eq` 三 decl，无 valueGroup；接受该 3-decl 版本；stage4 valueGroup 待重新提交。
+- ❌ A2SourceWitness FAIL 02:53:35（sorryAx=1；unknown `Iut.SourceSignQuotientData`）；Node09Hq FAIL 02:53:56；Node09RelativeNorm FAIL 02:51:37（Ambiguous term）；QV FAIL 02:52:48；Node0609 FAIL 02:52:49（重试/待修）。
+- fresh probe 待下一批 DONE 后补 WQ/Galois。
+
+### 7.6 Node0609/Node09Hq/A2SourceWitness DONE；WQ 当前源 red（abc，2026-11-15 10:58，无编译）
+
+- ✅ `Mzk1Node0609ProductBridgeActual` DONE **02:55:08**（olean 10:55:07 > src 10:53:55；rpRegion_normalizedLog_eq_sum/WeightedQSumBridge/bridgeRows 3）；`Node09HqMultConsumerActual` DONE **02:56:15**（olean 10:56:14 > src 10:54:16）；`Mzk1A2Node03SourceWitnessConsumerActual` DONE **02:55:53**（olean 10:55:52 > src 10:54:49；旧 log 残留 FAIL 02:53:35 错误，当前 DONE 干净，fresh probe 后补）；`GaloisCompletionActual` DONE 02:54:00（3-decl 版接受）。
+- ❌ **WQ 当前源 red**：`Mzk1Ind1WQuotientFiveIsoActual` 当前源 10:54:42 FAIL 02:55:51；`normedInteger_mem_valuativeInteger` 依赖 **[sorryAx]**，unknown `padicMulValuation_le_one_iff_norm_le_one`、Type mismatch；仅旧 clean interface（02:53:33）可用，def/新源待修。
+- ❌ Node09Relative FAIL 02:51:37（Ambiguous term；源未变）；QVProductRegion FAIL 02:55:07（unknown `rootExtensionProductHaar`、synthInstance/Type mismatch；源 10:55:58，重试 pending）。
+
+## 7.10 10:56 cycle
+
+- DONE: Node0609ProductBridge 02:55:08; A2SourceWitness 02:55:53; Node09HqMultConsumer 02:56:15; Galois 3-decl 02:54:00.
+- RED: WQ current 02:55:51 (small lemma sorryAx/unknown padicMulValuation lemma; remove lemma restore clean interface); QVProductRegion 02:55:07 (unknown rootExtensionProductHaar/Nonempty Bad/type); Node09RelativeNorm 02:51:37 (NativeFCompletion ambiguous).
+- Next: WQ cleanup; QV imports/exact interface; Node09Relative qualify; A2 groups; Node0609 WeightedQSum; stage4 valueGroup small block.
