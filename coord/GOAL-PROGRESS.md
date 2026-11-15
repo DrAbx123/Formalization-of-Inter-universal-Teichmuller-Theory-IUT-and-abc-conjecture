@@ -466,3 +466,17 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: A2SourceVFields 03:21:54; QVWeighted 03:20:03 (old source; current pending); Node09HqAssemblyLink 03:18:55; ProductFiber 03:18:56; WQMembership forward 03:19:40; A2Remaining 03:19:42.
 - RED: ValueGroup 03:21:11 (attempted actual proof; revert interface-only); Node09ActualHypotheses 03:21:08 (needs 0≤Fdeg).
 - Next: stage4 revert ValueGroup interface; mainline add 0≤Fdeg/reduce exact; qpilot QVWeighted wrapper; lattice A2 VFields consumer; stepxi WQ reverse.
+
+### 7.20 A2SourceVFields/WQMembership DONE；ValueGroup/Node09ActualHyp red（2026-11-15 11:28，无编译）
+
+- ✅ A2Node03SourceVFields DONE 03:21:54（olean 11:21:53 > src 11:20:18；SourceVFieldsData+Required interface）；
+- ✅ WQMembership DONE 03:22:37（olean 11:22:36 > src 11:21:30；forward only，reverse 未交付）；
+- ❌ ValueGroup FAIL 03:21:11（unknown `withValMovedSigma_toMonoidWithZeroHom_val_eq`；red）；
+- ❌ Node09ActualHyp FAIL 03:21:08（:35 div_nonneg/positivity，缺 0≤Fdeg/l 正性假设；retry START 03:22:08 pending）；
+- ⚠️ QVWeighted 源 11:21:29 > olean 11:20:03；retry 03:22:08 pending。
+
+## 7.27 11:23 cycle
+
+- DONE: A2SourceVFields 03:21:54; WQMembership forward 03:22:37; A2Remaining 03:19:42; QVWeighted 03:20:03 (old; current retry); Node09HqAssemblyLink 03:18:55; ProductFiber 03:18:56.
+- RED: ValueGroup 03:21:11 (unknown toMonoidWithZeroHom lemma/unsolved); Node09ActualHyp 03:21:08 (requires 0≤Fdeg); QVWeighted retry.
+- PENDING: A2VFieldsConsumer. Next: stage4 revert interface; mainline add 0≤Fdeg; qpilot QV wrapper; lattice VFields consumer; stepxi WQ reverse not delivered.
