@@ -688,3 +688,25 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: Node09WeightHA0 03:44:37 (hA0_of_qVWeight actual; paper312_of_qVWeight_actual only hper left); IntegralUnitLogarithm 03:44:15 fresh DONE; Node09ResidueNorm 03:42:09; Paper312 main chain green.
 - RESIDUAL: hbase actual RelativeNormQProperties; hmult Bad index; hlogp habsNorm missing; hper 3.12 per-place estimate; WQ irreducible/PhiPsi conditional pending.
 - A2Node04HandoffConsumer current red; 4 stale probes.
+
+### 7.36 Node09WeightHA0 / IntegralUnitLogarithm DONE；WQuotientFiveConditional red（2026-11-15 12:07，无编译）
+
+- ✅ `Node09WeightHA0Actual` DONE 03:44:37（olean 11:44:37 > src 11:43:38；**hA0_of_qVWeight**、paper312_of_qVWeight_actual）；
+- ✅ `IntegralUnitLogarithm` DONE 03:44:15（olean 11:44:14 > src 11:43:18；dirty 解除）；
+- ✅ Paper312 主链 green 维持（Assembly/Correction/Unramified/SourceExponent + Weight/Rat/HqAssemblyLink/Node09WeightHA0）；
+- ❌ 新 `Mzk1WQuotientFiveConditionalActual` FAIL 03:45:09（import `Mzk1WQuotientFiveIsoActual` olean 不存在；无 olean）。
+
+## 7.44 11:45 cycle
+
+- DONE: Node09WeightHA0 03:44:37 (hA0 actual/paper312_of_qVWeight_actual only hper left); IntegralUnitLogarithm 03:44:15 fresh; Paper312 main chain green.
+- RED: Mzk1WQuotientFiveConditionalActual 03:45:09 bad import name (should be Mzk1Ind1WQuotientFiveIsoActual); A2Node04LocalTransportInterface pending.
+- Next: stepxi fix import; mainline hlogp habsNorm/hper; lattice local transport; abc/shehdd audit.
+
+## 7.45 11:45 cycle
+
+- DONE: Node09WeightHA0 03:44:37; IntegralUnitLogarithm 03:44:15; A2Node04HandoffConsumer 03:44:17; paper312 main chain green.
+- Residual precision:
+  - hlogp habsNorm: target Ideal.absNorm place.maximalIdeal, donor gives comap place; need rational-place comap-id/quotient transport (Rat.HeightOneSpectrum.span_natGenerator + quotient card) or prove residueNormBase(comap place)=residueNormBase place.
+  - hper: genuine 3.12 per-place estimate missing; qVFamily_localLogMagnitude_eq only equality.
+  - hbase: needs PadicValuedCoherence NativeBaseCompletionRaw / completion normalization donor, cannot transport Qp coherence directly.
+- RED: WQuotientFiveConditional 03:45:09 bad import; fix to Ind1WQuotientFiveIso module. A2LocalTransport pending.
