@@ -231,3 +231,19 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE preserved: WQ clean interface 02:46:36; A2 producer/consumer; RelativeNormQProperties 02:49:10; TaskECompletion; ProductHaar gap.
 - NEW RED: WQ 02:51:13 (new normedIntegerEquiv proof produced sorryAx; revert clean interface); A2SourceWitnessConsumer 02:51:14 (sorryAx not structure); Node09HqMult/RelativeNorm consumers function expected/ambiguous; QVProductRegion still wrong namespace/line16; Node0609ProductBridge function expected.
 - All owners instructed: revert/clean first, no sorryAx; then small blocks. Watchdog only.
+
+
+### 7.4 新失败批次（abc，2026-11-15 10:55，无编译）
+
+- ❌ WQ：`Mzk1Ind1WQuotientFiveIsoActual` FAIL 02:51:13，当前源 10:51:57 重建 pending；log **sorryAx=5**，unknown `padicMulValuation_le_one_iff_norm_le_one`、Type mismatch；旧 02:46:36 clean-interface 证据不覆盖当前源。
+- ❌ A2SourceWitness：`Mzk1A2Node03SourceWitnessConsumerActual` FAIL 02:51:14，源 10:52:10 pending；log **sorryAx=1**；unknown `Iut.SourceSignQuotientData`（应为 `LeanFormal.IUT.InitialThetaSource.SourceSignQuotientData`）+ constructor 失败。
+- ❌ Node09：`Node09HqMultConsumerActual` FAIL 02:51:36（Function expected :54/:57/:73/:76）；`Node09RelativeNormConsumerActual` FAIL 02:51:37（Ambiguous term :84/:88/:89/:90）；均无 sorryAx。
+- ❌ Node0609：`Mzk1Node0609ProductBridgeActual` FAIL 02:50:26（unknown rootExtensionClosedBall_measure_pos/_lt_top、Function expected）；重试 pending。
+- ❌ QV：`Mzk1QVProductRegionActual` FAIL 02:50:26（Function expected :24、unknown T :25、synthInstance :27、unknown qProductRegion_measure_lt_top :31）；重试 pending。
+- 重试 START 02:51:52：Node0609/QV；WQ/A2SourceWitness/Node09 源已改，待下一轮 DONE。
+
+## 7.9 10:54 cycle
+
+- DONE: WQ clean interface 02:53:33 (fresh source); GaloisCompletion 02:54:00 (green val_eq/surj); A2 producer/consumer; RelativeNormQProperties 02:49:10.
+- RED: A2SourceWitnessConsumer 02:53:35 (constructor/type mismatch); Node09HqMult 02:53:56 (not defeq/type); Node09Relative 02:53:37 (ambiguous); QVProductRegion 02:52:48 (application mismatch); Node0609ProductBridge 02:52:49 (function expected).
+- Next: owners fix explicit signatures or reduce to clean interfaces; stepxi adds one small WQ lemma; stage4 valueGroup small block + ambient route.
