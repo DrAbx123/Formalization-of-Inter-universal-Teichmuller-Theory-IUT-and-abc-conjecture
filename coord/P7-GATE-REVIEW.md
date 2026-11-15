@@ -4083,3 +4083,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.643 hull tensor ball support; assign p=2 log1p half lemma (2026-11-15 41:00)
 - LocalFieldProductHull unitRegion/region lemmas: compact, region_eq_mul_unitRegion, measure bounds, norm_le_one_of_compact_powers, continuous_ringHom_mem_unitRegion, continuous_ringEquiv_image_unitRegion. Tensor ball norm reusable; missing power estimate/product Haar/log volume.
 - hull assigned p=2 norm_log1p_le_half (||x||≤1/2 -> ||log1p x||≤1/2 or ≤1) to bypass strict r<1/2. No fake.
+
+
+### 20.644 p generic/p=2 possible; NormalizedCompletion Qp norm bridge task (2026-11-15 41:10)
+- Actual p generic (Fact Prime only), p=2 allowed. NormalizedCompletion spectral norm, normalizedCompletionRingEquiv identity only; real Qp bridge rationalCompletionPadicEquiv only uniform/ring, no norm preservation. Missing NormOneClass + dim-1 spectral norm bridge. mainline implement new file: NormOneClass from spectralNorm_one, norm equality via finrank=1/algebraMap bijective/spectralNorm_extends, principal bound. p≥3 qpilot, p=2 hull. No fake.
