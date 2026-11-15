@@ -4212,3 +4212,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.668 GaloisCompletion valueGroup GREEN (2026-11-15 47:20)
 - watchdog DONE 02:21:06/olean 10:21:05: withValMovedSigma, surjective, val_eq, valueGroup_comap_eq all compile. Next ambient identity valueGroupIso/conjugate orderMonoidIso/UniformContinuous/Completion.mapRingHom. Progress record coord/GOAL-PROGRESS.md created.
+
+
+### 20.669 QV multiplicity bridge GREEN; RelativeNorm instance fail (2026-11-15 47:30)
+- watchdog DONE 02:27:50 Mzk1QVMultiplicityBridgeActual: qVEffectiveMultiplicity_eq_order_mul_localResidueDegree (order(q_v)*localResidueDegree; no sorry). hq remaining index map Bad→FinitePlaceAtPrime and hperPlace wiring.
+- RelativeNormFieldNormActual FAIL 02:27:51: missing local instance SMul/Algebra ℚ_[pBase] NativeBaseCompletionRaw (letI proof-level only); mainline adding file-level local instances + Eq.ndrec + FiniteDimensional.

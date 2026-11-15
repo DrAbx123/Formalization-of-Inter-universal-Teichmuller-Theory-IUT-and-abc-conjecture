@@ -3165,3 +3165,5 @@
 - 47:20: 新建 coord/GOAL-PROGRESS.md，记录 goal/3.12/IV/abc 当前状态、watchdog DONE、RED 原因、donor、下一步；LEAN-INDEX 加链接。
 
 - 47:20: GaloisCompletion valueGroup_comap_eq DONE 02:21:06; progress file GOAL-PROGRESS created. gate 20.668.
+
+- 47:30: QV bridge DONE 02:27:50; RelativeNorm FAIL instance layer; progress synced. gate 20.669.

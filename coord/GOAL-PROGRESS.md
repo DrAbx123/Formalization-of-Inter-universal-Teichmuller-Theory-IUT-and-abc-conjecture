@@ -1,6 +1,6 @@
 # GOAL PROGRESS（目标进度记录）
 
-更新时间：2026-11-15 10:26（Asia/Shanghai）
+更新时间：2026-11-15 10:30（Asia/Shanghai）
 Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase active，rounds 14/256）
 
 ## 0. 目标锁定
@@ -48,6 +48,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | `Mzk1CheckSharpDonorProbeActual` | 02:03:56 | #check-only |
 | S3133 四件 | 01:55–01:57 | 全局 q 除数/加权读数/q 重数 donor |
 | `QPilotGlobalLogVolumeFromQActual` | 01:54:53 | qVEffectiveMultiplicity donor |
+| `Mzk1QVMultiplicityBridgeActual` | **02:27:50** | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` GREEN；保留 q 的消失阶，不是 residue degree |
 | `NormalizedNormValuationResidueActual` | 01:47:54 | residue-degree norm valuation 条件 |
 | 更早的 principal/residue/card/unitLog 链 | 07:12–09:57 | 均 watchdog/probe 三公理；unitLog 为 support-only |
 
@@ -61,7 +62,8 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | `Mzk1ThetaUnitLatticeBoundActual` | DONE 但条件 | `hpos : 0 < μ(tensorIntegerRegion)`、`hfin : μ(...) < ⊤` 是 explicit hypothesis；donor `Mzk1TensorRegionNormalizationActual` 也把 positivity/finiteness 记为 GAP |
 | `Mzk1ThetaFullLatticeBoundActual` | 方向作废 | hsub 原为 `canonicalHull ⊆ actualRegion`，实际 `actualRegion ⊆ canonicalHull`；不要再用旧 hsub |
 | R1 | 结构缺口 | `C3.q` 单 local vs global q 族；缺 `ClauseBBaseQSourceIdentity` + same-q `hq` |
-| hq | 接线缺口 | `qVEffectiveMultiplicity = order(q_v)*localResidueDegree` 尚未映射到 `FinitePlaceAtPrime.mult` |
+| hq | 接线缺口（bridge 已绿） | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` DONE 02:27:50；仍缺 index map `Bad → FinitePlaceAtPrime F p` 与 `actual_A_le_Lbar_add_Dbar_mult` 的 hperPlace 接线 |
+| relativeNorm field norm | FAIL 02:27:51 | `SMul ℚ_[pBase] NativeBaseCompletionRaw` 缺文件级 local instance；mainline 修 Fact/Algebra/Eq.ndrec/FiniteDimensional 后 watchdog 重跑 |
 | hθ | 单向缺 hpos/hfin | 已证 `unitLatticeLogVolume_le_thetaHull` 条件版；需 raw unit-region positivity/finiteness 或 normalized Haar |
 | stage4 completion | 未完成 | `UniformContinuous`/`Completion.mapRingHom`/`alignedCompletionMapMoved` 未全闭 |
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
@@ -100,8 +102,8 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 ## 6. 下一步队列
 
 1. stage4：valueGroup_comap_eq 已绿，做 ambient identity valueGroupIso、conjugate orderMonoidIso、UniformContinuous/Completion；
-2. qpilot：QVMultiplicityBridge import/namespace + `Bad → FinitePlaceAtPrime` index map；
+2. qpilot：QVMultiplicityBridge 已 DONE；写 `Bad → FinitePlaceAtPrime` index map 并接 `actual_A_le_Lbar_add_Dbar_mult`；
 3. hull：unit-region hpos/hfin 或 normalized Haar；不要再用旧 hsub；
 4. lattice：TaskE 当前源 watchdog 重跑确认；随后 (b)/(c) WQuotient；
-5. mainline：FieldNorm/relativeNorm 与 R1 hq 接线；
+5. mainline：RelativeNormFieldNorm 的文件级 local instances 修好后接 `PadicField.v_norm`；R1 hq 接线；
 6. abc：UndilatedHeight/Region 与 hQ/hSlack 最小缺口。
