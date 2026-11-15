@@ -1856,3 +1856,54 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 ## 7.156 20:10 N5 5-gap execution
 
 - No valid reason for analysis-only loop; 5 N5 gaps now assigned with concrete first targets and files: qpilot C3BaseQElementIdentification+ClauseBBaseQSourceIdentity; hull MissingQPilotOneColumnReading+WeightedQSumBridge; mainline MissingRealifiedGlobalFrobenioidPresentation. Board: coord/N5-GAP-EXECUTION.md.
+
+### 7.126 N5 五 gaps ownership/status（2026-11-15 20:08，无编译）
+
+- qpilot：C3BaseQElementIdentification（Mzk1C3BaseQIdentificationActual.lean:59）+ ClauseBBaseQSourceIdentity（:81），均 no inhabitant；CorrespondenceBridge 将其 reduce 到 BaseChangeQElementCorrespondence；
+- hull：MissingQPilotOneColumnReading（S3133QPilotOneColumnRegionActual.lean:142；Data := Nonempty :153）+ WeightedQSumBridge（Mzk1Node0609ProductBridgeActual.lean:48 def Prop localLogSum = weightedQSum），均 no inhabitant；
+- mainline：MissingRealifiedGlobalFrobenioidPresentation（S3133QPilotPaperMissingActual.lean:67；Data :79），no inhabitant；
+- mainline N0–N11；cards/S3135 auxiliary；no fake。
+
+## 7.157 20:08 N1 analytic power series DONE
+
+- DONE 12:06:58: Node09TateQSeriesAnalyticPartial with analyticAt_padicPowerSeriesEval (f : PowerSeries (PadicInt 5)) : AnalyticAt Q5 (fun q => padicPowerSeriesEval f q) 5 (ofScalars + coeff bound + radius + eball). Next: apply to tateHFormal/c4/Delta, prove H(5)!=0, tateJQSeries=1/H, analyticAt, derivative. N5 two files qpilot must create now; hull N5 reading/WeightedQSum; mainline Frobenioid. No fake.
+
+### 7.127 Node09TateQSeriesAnalyticPartial DONE（2026-11-15 20:10，无编译）
+
+- analytic partial DONE 12:06:58（olean 20:06:58 > src 20:06:13；sorryAx=0）；
+- analyticAt_padicPowerSeriesEval：任意 f : PowerSeries (PadicInt 5)，AnalyticAt Q_5 (fun q => padicPowerSeriesEval f q) 5；
+- 证明用 norm_coeff_padicPowerSeries_le_one（lemma A 已有）+ ofScalars + le_radius_of_bound + norm_p_lt_one + ofScalars_sum_eq + analyticOnNhd；
+- N1 剩余：lemma B（evaluation ↔ c4^3/Δ pointwise identity）+ deriv tateJQSeries 5 ≠ 0；之后 AnalyticAt.div（Δ(5)≠0）；
+- 本条为 N1 major actual lemma green；no fake。
+
+## 7.158 20:10 N1 analytic DONE / execution
+
+- N1 analyticAt_padicPowerSeriesEval DONE 12:06:58 (major). Next HSpecialValue fix + H(5)!=0 + tateJQSeries=1/H + deriv.
+- N5: #1/#2/#5 files created/running; #3/#4 still not created (hull pushed). N3 tensor Field instance fix. No fake.
+
+### 7.128 N1 analytic DONE；N5 #1/#2/#5 running/#3/#4 未创建；HSpecialValue/tensor red（2026-11-15 20:12，无编译）
+
+- N1 analyticAt_padicPowerSeriesEval DONE 12:06:58（主 lemma green）；
+- N5 #1/#2：C3BaseQIdentificationConstruction FAIL 12:09:10（unknown c3BaseQElementIdentification_of_log_/baseChangeQElementCorrespondence_of_）；CorrespondenceBridge FAIL 12:07:38；
+- N5 #5：FrobenioidPresentationConstruction FAIL 12:09:09（universe explicit params/Function expected）；
+- N5 #3/#4：未创建；
+- HSpecialValue FAIL 12:06:58（type mismatch :28:61；源 20:08:36 pending）；tensor FAIL 12:04:33（synthInstance :22/:31）；
+- mainline N0–N11；cards/S3135 auxiliary；no fake。
+
+## 7.159 20:12 N5 first-error fixes
+
+- N1 analyticAt_padicPowerSeriesEval DONE 12:06:58. N5: C3 construction arg/import fix (structure literal + qVFamily import); Frobenioid doc/universe fix; hull #3/#4 still not created. HSpecialValue ring/summable fix; Tensor Field instance fix. No fake.
+
+### 7.129 N5 first errors：C3 import/arg、Frobenioid universe/doc（2026-11-15 20:14，无编译）
+
+- C3 construction first errors：:28:37 Application type mismatch、:36:50 Function expected、:46:46 Application type mismatch、:48:7 unknown c3BaseQElementIdentification_of_log_relation；使用 PaperQPilotObjectActual 未 import + open 未 import 的 QPilotZeroLocusDivisorActual → import/arg 问题；
+- Frobenioid first errors：:29:27 Function expected、:30:12 invalid explicit universe parameters（GlobalRealifiedFrobenioidCarrier local variable）、:31:25 Function expected → universe/doc 问题；文件同时记录 missing fields 1-5（documentation/spec only）；
+- #3/#4 未创建；HSpecialValue/Tensor red 维持；mainline N0–N11；no fake。
+
+## 7.160 20:12 N5 #3/#4 DONE doc-only / fixes
+
+- Hull Mzk1QVMissingReadingConstruction and Mzk1WeightedQSumBridgeConstruction DONE 12:12:14 but documentation-only structures/rows, not actual inhabitants; disclosed. C3 construction fix: baseQLogMagnitude b (T implicit), import qVFamily file, ClauseB arg order. HSpecialValue rewrite :41/:46 fix. Tensor Field fix. No fake.
+
+## 7.161 20:13 N5 #3/#4 correction
+
+- Hull files DONE 12:12:14 but documentation-only structures/rows; NO inhabitant. MissingQPilotOneColumnReading needs qReading=realifiedLogVolume theorem; WeightedQSumBridge needs localLogSum=weightedQSum (ClosedBallMassFormula + Bad/fiber alignment). Not marked green. C3 fix: baseQLogMagnitude b, import qVFamily, arg order. No fake.
