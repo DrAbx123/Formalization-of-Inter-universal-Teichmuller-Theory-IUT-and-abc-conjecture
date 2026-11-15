@@ -452,3 +452,17 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - PENDING/RUNNING: Node09ActualHypotheses (mainline); A2SourceVFields (lattice); ValueGroup retry; QVWeighted now green.
 - RED stale only plus WQ reverse not delivered.
 - Next: instantiate paper312 hypotheses; A2 VFields; WQ reverse/Irreducible; stage4 UniformContinuous exact gap; closed-ball mass missing.
+
+### 7.19 QVWeighted DONE 03:20:03；ValueGroup/Node09ActualHypotheses red（2026-11-15 11:26，无编译）
+
+- ⚠️ QVWeighted DONE 03:20:03（olean 11:20:03；fiber 路线 QVBadPlaceFiber/MqFiber/MqFiber_eq_sum_localLog/actual_A_le_Lbar_add_Dbar_of_fiberMult/paper312_of_MqFiber_bounds）；当前源 11:21:26 新于 olean → 重编 pending；
+- ✅ Node09HqAssemblyLink（03:18:55）、WQMembership forward（03:19:40）、A2Node03RemainingFields（03:19:42）继续有效；
+- ❌ ValueGroup 当前源 11:20:03 FAIL 03:21:11：unknown `withValMovedSigma_toMonoidWithZeroHom_val_eq`(:47/:62)、unsolved；尝试实际值群证明缺 lemma；
+- ❌ Node09ActualHypotheses（新）：源 11:21:26；FAIL 03:21:08（Application type mismatch :35:35、positivity :35:23）；无 olean；theorems hA0_of_fiberMult/hs0_of_le/hs1_of_le/paper312_of_fiberMult_actual/Node09RemainingMissing；
+- 运行中：A2Node03SourceVFields START 03:21:25。
+
+## 7.26 11:22 cycle
+
+- DONE: A2SourceVFields 03:21:54; QVWeighted 03:20:03 (old source; current pending); Node09HqAssemblyLink 03:18:55; ProductFiber 03:18:56; WQMembership forward 03:19:40; A2Remaining 03:19:42.
+- RED: ValueGroup 03:21:11 (attempted actual proof; revert interface-only); Node09ActualHypotheses 03:21:08 (needs 0≤Fdeg).
+- Next: stage4 revert ValueGroup interface; mainline add 0≤Fdeg/reduce exact; qpilot QVWeighted wrapper; lattice A2 VFields consumer; stepxi WQ reverse.
