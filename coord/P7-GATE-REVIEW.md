@@ -4099,3 +4099,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.647 NormOne/Qp audit accepted (2026-11-15 41:40)
 - NormalizedNormOne source 08:43:57/olean 08:50:28; UnitLogNormQp source 08:41:50/olean 08:51:24; no sorry; probe Mzk1NormOneQpProbeActual DONE 00:54:45/olean 08:54:45: 4 items three axioms. accepted. qpilot p=2/actual; mainline norm bridge; hull p=2 log1p; stage4 valueGroup. No fake.
+
+
+### 20.648 MAJOR p=2 branch + norm bridge GREEN oleans (2026-11-15 41:50)
+- UnitLogNormQpTwoActual olean 08:59:28: principalUnit_norm_sub_one_le_half_Q2, unitLog_norm_le_one_Q2 (uses Mzk1P2Log1pHalfActual.norm_log1p_le_half).
+- NormalizedCompletionPadicBridgeActual olean 09:00:23: norm_eq_padic, principal_unit_norm_le_inv_prime/third, NormOneClass; first gap completionMap_self_rat for rationalCompletionPadicEquiv form (not needed for bound).
+- mainline instantiate NormalizedCompletion unitLog p≥3; qpilot general p=2 principal_bound_half. No fake.
