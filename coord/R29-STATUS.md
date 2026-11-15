@@ -3115,3 +3115,5 @@
 - 41:00: hull tensor ball support; assign p=2 log1p half lemma. gate 20.643 written.
 
 - 41:10: p generic/p=2; mainline NormalizedCompletion norm bridge. gate 20.644 written.
+
+- 41:20: MAJOR NormOneClass + Qp p>=3 unitLog norm green oleans 08:50:28/08:51:24. Next p=2/actual bridge. gate 20.645 written.
