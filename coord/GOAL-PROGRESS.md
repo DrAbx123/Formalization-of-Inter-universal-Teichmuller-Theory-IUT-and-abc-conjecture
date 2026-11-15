@@ -670,3 +670,8 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - One-way hθ/hq route accepted: use node0609_rpRegion_volume_lt_hull/le_hull (strict, GREEN); do NOT require exact ProductHaarToFiberMult or ClosedBallMassFormula for inequality path. Exact weighted-q equality remains optional gap.
 - Current main chain green remains Paper312Assembly+Node09 wrappers; residual actual hbase/hmult/hlogp/hper/hA0.
 - A2Node04HandoffConsumer running; WQ irreducible deferred.
+
+## 7.42 11:44 cycle
+
+- WQ Phi/Psi plan accepted coord/WQ-PHI-PSI-PLAN.md; exact missing: irreducible transport, subgroup/range bridge, integral preimage choice, 5-scalar injectivity, Multiplicative scalar conversion. stepxi to write conditional composition in new file (no inhabitant).
+- One-way hθ/hq accepted via node0609_rpRegion_volume_le_hull; exact mass/ProductHaar optional.
