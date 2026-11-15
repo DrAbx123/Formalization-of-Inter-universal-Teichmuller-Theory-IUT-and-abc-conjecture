@@ -4026,3 +4026,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.630 UnitLogNorm natCast/algebraMap (2026-11-15 38:50)
 - change natCast=algebraMap fails; use rw [← map_natCast (algebraMap ℚ_[p] K) n], norm_algebraMap', Padic.norm_natCast_eq_one_iff. Remove overlapping [Algebra]. qpilot. No fake.
+
+
+### 20.631 UnitLogNorm two lemmas GREEN; downstream ripple split (2026-11-15 39:00)
+- Mzk1IVThm110UnitLogNormActual direct+olean 08:23:10: padicValNat_eq_zero_of_coprime, norm_natCast_eq_one_of_coprime. qpilot continues power/log1p estimate.
+- UnitPerfectionFunctoriality:92 algebraicUnitLog_eq_map rw motive fails; FinitePlaceSourceAlgebraicUnitPerfection:96 change fails (core helper ripple). mainline fix explicit args/rebuild; no fake.
