@@ -4185,3 +4185,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - watchdog DONE: Mzk1ThetaFullLatticeBoundActual 02:04:29 (fullLattice_le_thetaHull_of_bridges, conditional hsub/hunit); Mzk1TaskGDonorProbeActual 02:04:29; Mzk1CheckSharpDonorProbe 02:03:56; Mzk1PadicFieldValuedQpActual 02:01:55 (三公理).
 - hθ remaining: hsub arithmeticTupleCanonicalHull ⊆ actualC3LogShellTensorRegion; hunit 1≤Haar(unitReference).toReal; or exact missing identification TensorRegionCoordinateProduct. hull 用 integralSpan_eq_hull 尝试.
 - stepxi: PadicFieldQpCoherence chain located; write concrete inhabitant next.
+
+
+### 20.664 ActualData mult GREEN; Qp coherence first error; hsub direction corrected (2026-11-15 46:20)
+- watchdog DONE: Mzk1ActualRamifiedDataActual 02:06:23 (mult field wired through RamifiedPlaceData); S3171/consumers/RamifiedPlaceData previously DONE.
+- Mzk1PadicFieldValuedQpActual concrete proof FAIL: x=0 goal wval 0/valGen=0; produced sorryAx; stepxi fixing with simp [PadicField.v,wval].
+- hull definition check: canonicalHull = e.symm '' hull(e '' actualRegion), so actualRegion ⊆ canonicalHull (not reverse). Correct full lattice: tensorIntegerRegion ⊆ tensorLogShellRegion=actualRegion; missing unit-lattice relative Haar volume/normalized Haar scaling. Rewrite bound accordingly; no fake.
