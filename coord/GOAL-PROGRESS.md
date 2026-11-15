@@ -604,3 +604,15 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - Exact residuals: hbase actual RelativeNormQProperties inhabitant; hmult Bad index; hlogp Fmod=Q transport; hper 3.12 per-place estimate; hA0 qVWeight nonneg.
 - MqFiber gaps: fiber count Bad/FinitePlace (not bijection); closedBallLog_eq_localLogMagnitude (ClosedBallMassFormula).
 - A2CompletionConsumer field notation fixed pending.
+
+### 7.30 Node09HqAssemblyLink MqFiber bounds DONE；Node09Paper312Rat DONE；WQ 新源 red（2026-11-15 11:50，无编译）
+
+- ✅ Node09HqAssemblyLink DONE 03:35:40（olean 11:35:39 > src 11:34:17；weightedRegion_of_fiberMult/paper312_of_fiberMult_bounds/**paper312_of_MqFiber_bounds**）；
+- ✅ Node09Paper312Rat DONE 03:36:43（olean 11:36:43 > src 11:35:51；paper312_of_mult + Node09Paper312RatRemainingMissing）；
+- ❌ WQ 当前源 11:35:13 FAIL 03:36:22（:71 Application mismatch、:72/:74 Type mismatch；olean 11:34:02 stale）；Node09Paper312Weight 前次 FAIL 03:34:29 仍 red。
+
+## 7.37 11:37 cycle
+
+- DONE: Node09Paper312Weight 03:35:40 (qVWeight wrapper -> Paper312Assembly); Node09Paper312Rat 03:36:43 (generic paper312_of_mult); Node09HqAssemblyLink 03:35:40 (paper312_of_MqFiber_bounds); A2CompletionConsumer 03:37:40; OneWay 03:34:30; Galois 03:34:32; QVWeighted 03:33:17; WQ old clean 03:34:03.
+- RED: WQ current 03:36:22 (:74 symm ring hom; stepxi fixed to .toRingHom pending); stale probes/IntegralUnitLogarithm dirty.
+- Residual: hbase/hmult/hlogp/hper/hA0; MqFiber fiber count + closedBall log/mass.
