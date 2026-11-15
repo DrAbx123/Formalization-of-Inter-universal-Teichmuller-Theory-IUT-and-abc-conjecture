@@ -4202,3 +4202,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - Mzk1PadicFieldValuedQpActual DONE 02:12:07 via watchdog: padicField_v_eq_valuation (all x:Qp), padicFieldQpCoherence, padicValuedCoherence_qp; tail #print axioms shows only propext/Classical.choice/Quot.sound, no sorryAx. This closes the PadicField.v=Padic.valuation normalization for Qp.
 - Mzk1GaloisCompletionActual DONE 02:07:39 (val equality), then new valueGroup line FAIL 02:12:11; stage4 fixing with MonoidWithZeroHom.mem_valueGroup.
 - hull ThetaUnitLatticeBound FAIL: unknown actualC3LogShell_eq_integralLogShell, subset/zero_mem/IsFiniteMeasureOnCompacts; hull fixing.
+
+
+### 20.667 ThetaUnitLatticeBound/GaloisCompletion DONE (2026-11-15 47:00)
+- watchdog DONE 02:21:03 Mzk1ThetaUnitLatticeBoundActual (70s): unit-lattice bound file compiles; 02:21:06 Mzk1GaloisCompletionActual (73s): GaloisCompletion now includes valueGroup/val equality (no sorry).
+- Mzk1PadicValuedOnlyProbe 02:21:00; GaloisValOnlyProbe 02:21:06.
+- TaskECompletion still FAIL (unknown CompletionFieldQFiveEquivRequired/instance). QVMultiplicityBridge running 02:21:24.
