@@ -323,3 +323,22 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - WQ source now clean (structure+Required only); old FAIL 03:00:19 stale; retouch pending fresh DONE.
 - DONE: ProductFiberMultBridgeGap 03:00:45; QVProductRegion 02:59:36; A2GroupsExtension 02:59:15; Node09Relative/Hq; A2SourceWitness; Node0609.
 - PENDING files in whitelist but not STARTed: Node09HqWeightedRegion, Mzk1QVWeightedActual, Mzk1A2Node03SourceSignQuotientAssemblyActual, Mzk1ValueGroupActual; owners asked ensure watchdog picks them.
+
+## 7.15 11:05 watchdog stall resolved
+
+- Node09HqWeightedRegionActual lean compile hung >5min (CPU 297s); killed; watchdog FAIL 03:05:00 exit 4294967295. mainline asked to split/rewrite small proof or exact interface.
+- watchdog resumed at 03:05:14, new cycle includes A2Assembly/ProductFiber/ValueGroup/WQ/probes.
+
+### 7.11 WQ clean interface DONE；ProductFiber/A2Assembly/ValueGroup red（2026-11-15 11:08，无编译）
+
+- ✅ WQ `Mzk1Ind1WQuotientFiveIsoActual` **DONE 03:05:47**（olean 11:05:47 > src 11:04:31；当前源仅 structure + Required，clean interface 接受；旧 log sorryAx 为旧源残留）；
+- ❌ ProductFiber：FAIL 03:06:14（unknown `ProductHaarToFiberMult`/`ClosedBallMassFormula`/`BadPlaceBijection`，Function expected；无 olean）；
+- ❌ A2SourceSignQuotientAssembly：FAIL 03:05:50（@[simp] 非法、Type mismatch :39/:45、非 defeq :41；无 olean）；
+- ❌ ValueGroup：FAIL 03:06:17（rewrite :38/:40/:54/:58 未匹配；无 olean）；
+- Node09HqWeighted：上次 EXIT=4294967295 hang/kill（03:05:00），已重启 03:06:31 pending。
+
+## 7.16 11:09 cycle
+
+- WQ clean interface DONE 03:05:47; probe three axioms, current source clean (old lemma stale).
+- Node09HqWeightedRegion FAIL 03:09:01: actualLogIdx unknown (missing import/open) + deterministic heartbeat timeout (74/76/45); mainline to fix import and split/simplify, no maxHeartbeats hack.
+- Retry running: A2SourceSignQuotientAssembly (clean interface), ProductFiberMultBridgeGap (revert/repair), QVWeighted (conditional BadPlaceBijection).
