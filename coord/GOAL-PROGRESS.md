@@ -404,3 +404,16 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - CORRECTION: BadPlaceBijection generally false (Bad is bad subset, FinitePlaceAtPrime all places). Replace with fiber/injection or use Node09 b:FinitePlaceAtPrime→Bad; do not claim bijection.
 - ClosedBallMassFormula no donor; remains exact missing.
 - Next: qpilot fiber interface, mainline A_bound→Paper312Assembly, stage4 UniformContinuous, WQ reverse, A2Unique.
+
+### 7.16 ValueGroup/A2UniqueInvolution DONE；BadPlaceBijection 更正（2026-11-15 11:20，无编译）
+
+- ✅ `Mzk1ValueGroupActual` DONE 03:16:30（olean 11:16:29 > src 11:14:51；ValueGroupTransportData interface）；新 `Mzk1A2Node03UniqueInvolutionActual` DONE 03:17:20（olean 11:17:19 > src 11:15:53；Data+Required interface）。
+- 📌 **BadPlaceBijection generally false**：Bad 是 F-places 子集，无总双射；树中已移除；QVWeighted 改用 `QVBadPlaceFiber`（fiber 映射）+ MqFiber/MqFiber_eq_sum_localLog/actual_A_le_Lbar_add_Dbar_of_fiberMult；ProductFiber 改用 ClosedBallMassFormula + bridgeRows(4)。
+- ⚠️ ProductFiber 源 11:17:25 > olean 11:10:08、QVWeighted 源 11:17:07 > olean 11:15:21 → 均重编 pending；WQMembership 当前源 FAIL 03:17:17（Application type mismatch :32:32）→ red。
+
+## 7.22 11:18 cycle
+
+- DONE: ValueGroup 03:16:30 (ValueGroupTransportData interface); A2UniqueInvolution 03:17:20; Node09HqWeighted 03:15:21; QVWeighted 03:15:21; A2AssemblyConsumer 03:14:14.
+- RED: WQMembership reverse 03:17:17 (application mismatch); Node09HqAssemblyLink 03:17:43 (Function expected 47/50).
+- PENDING rebuild: QVWeighted new fiber source; ProductFiber new bridgeRows(4) source.
+- BadPlaceBijection corrected to fiber/Node09 b; no bijection claim.
