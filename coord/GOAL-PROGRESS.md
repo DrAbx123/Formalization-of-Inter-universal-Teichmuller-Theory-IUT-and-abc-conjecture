@@ -1099,3 +1099,66 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - CONFIRMED exact-missing inputs: horder (order=1 has order>1 counterexample), hcoef (CoeffComparison, numeric counterexample), hbase (Nonempty FinitePlaceQCandidate, absence of donor).
 - No unconditional route from current tree; final Paper312/IV/abc must remain conditional on horder/hcoef/hbase (+hmu0/hl/hc), or wait for new mathematical inputs/donors.
 - Goal remains active; cannot mark complete. No fake.
+
+## 7.81 12:54 QVFiber hreindex GREEN
+
+- QVFiberWeighted DONE 04:54:06: MqFiberBadSumBridge_of_logBridge green; hreindex auto from hlog; remaining hfr/hlog explicit, ClosedBallLogRatio conditional.
+- Exact inputs horder/hcoef/hbase remain; UniformProof red :57; 2 stale probes.
+
+### 7.65 QVFiberWeighted DONE；hreindex green；hfr/hlog exact（2026-11-15 13:07，无编译）
+
+- ✅ Mzk1QVFiberWeighted DONE 04:54:06（olean 12:54:05 > src 12:52:42；sorryAx=0）；
+- 📌 MqFiberBadSumBridge_of_logBridge：hlog_bad（bad/fiber log 识别）→ **hreindex green**（不用双射，Finset.sum_fiberwise_of_maps_to）；
+- 📌 fiberMult_eq_fiberMultWeighted_of_section：hsec+huniq(section+fiber singleton) → hfr；
+- 📌 剩余 exact：**hfr**（一般无 section/singleton 时不可证）、**hlog**（per-fiber log 识别）；MqFiber_eq_badWeighted_of_fiber 仍 conditional 于 hfr/hlog/hreindex。
+
+## 7.82 12:54 UniformProof placeholder
+
+- UniformProof actual failed :57 ↑γ type mismatch; reverted placeholder; exact missing ambient unit-transfer via ValueGroup₀.embedding/unitsWithZeroEquiv/order reflection, not direct WithZero cast. UniformContinuitySource interface green.
+- QVFiber hreindex green; residual horder/hcoef/hbase; 2 stale probes.
+
+### 7.66 QVFiber hreindex green；ResidualInputs red；UniformProof placeholder（2026-11-15 13:09，无编译）
+
+- ✅ QVFiberWeighted DONE 04:54:06（hreindex green via MqFiberBadSumBridge_of_logBridge）；当前源 12:55:13 rerun pending；
+- ❌ Node09ResidualInputs FAIL 04:55:10（Function expected :40/:54；lead 记 unknown qVFamily；retry 04:55:25；无 olean）；
+- 📌 UniformProof 当前源 12:55:16 = 3 行 placeholder（import + 注释；无定理、无 red；actual UniformContinuous proof 仍缺 ambient unit-transfer）；
+- 📌 exact missing ambient unit-transfer 记录。
+
+## 7.83 12:56 ResidualInputs DONE
+
+- DONE: Node09ResidualInputs 04:56:19: Node09Paper312Inputs + paper312_of_inputs conditional integration; horder/hlocal/hcoef/hmu0/hl/hc explicit; hbase/hlogp residual documented.
+- DONE: UniformProof placeholder 04:56:22 (no theorem, interface gap).
+- QVFiber rerun red 04:56:19 (hreindex previous green; check source). 2 stale probes.
+- Conditional paper312 endpoint now exists; connect to IV/abc consumers next.
+
+### 7.67 ResidualInputs/UniformProof DONE；QVFiber rerun red（2026-11-15 13:11，无编译）
+
+- ✅ Node09ResidualInputs DONE 04:56:19（olean 12:56:19 > src 12:55:15；Node09Paper312Inputs + paper312_of_inputs + Node09ResidualMissing）；
+- ✅ UniformProof DONE 04:56:22（olean 12:56:21 > src 12:55:16；3 行 placeholder，无定理）；
+- ❌ QVFiberWeighted rerun FAIL 04:56:19（源 12:56:59、retry 04:57:07；synthInstance :79、unsolved :65/:97、Type mismatch :107/:110）；hreindex green（04:54:06）维持。
+
+## 7.84 12:57 QVFiber revert
+
+- Node09ResidualInputs DONE 04:56:19 accepted; UniformProof placeholder 04:56:22 accepted.
+- QVFiber rerun red after hfr attempt (synth/unsolved/type); qpilot to revert 04:54:06 hreindex green; hfr/hlog exact.
+
+## 7.85 13:00 MAJOR
+
+- DONE: Node09FinalConditional 05:00:17: final_paper312_conditional conditional endpoint; Node09FinalResidualMissing documents horder/hcoef/hmu0/hl/hc/hlocal actual+transport/hbase/hlogp and IV/ABC consumer bridge gap (Cor312ToABCBridgeInterface height_le_normalizedRegionVolume + regionVolume_le_normalizedWeight).
+- Next: IV/ABC consumer bridge mapping; Uniform/QVFiber optional; WQ actual.
+
+### 7.68 Node09FinalConditional DONE（final_paper312_conditional + residual list）（2026-11-15 13:13，无编译）
+
+- ✅ Node09FinalConditional DONE 05:00:17（olean 13:00:16 > src 12:59:24；sorryAx=0；final_paper312_conditional 条件于 Node09Paper312Inputs；paper312_of_inputs）；
+- 📌 残余：horder、hcoef（counterexample → 不可无条件）、hmu0/hl/hc、hlocal(Fmod=Q transport)、hbase(PadicValuedCoherence/normalization transport)、hlogp transport、**IV/ABC consumer bridge gap**（Cor312ToABCBridgeInterface 的 height_le_normalizedRegionVolume / regionVolume_le_normalizedWeight 字段；无从 ExplicitPaper312Inequality 到 hull/epsilon interface 的直接映射）。
+
+## 7.86 13:03 MAJOR
+
+- DONE: Node09ABCBridgeConditional 05:03:42: Node09ABCBridgeInterface + toCor312 + heightBound conditional via cor312ToABCBridge_heightBound. Gaps: height_le_normalizedRegionVolume, regionVolume_le_normalizedWeight; no direct Paper312->hull mapping yet.
+- paper312 final conditional endpoint + ABC conditional bridge now exist; exact inputs horder/hcoef/hbase and gaps 1/2 remain.
+
+### 7.69 Node09ABCBridgeConditional DONE（2026-11-15 13:15，无编译）
+
+- ✅ Node09ABCBridgeConditional DONE 05:03:42（olean 13:03:33 > src 13:02:43；sorryAx=0）；
+- 📌 `Node09ABCBridgeInterface`（carrier/hullData/epsilonComparison）+ `toCor312` + `heightBound`（条件：∀ε>0 ∃A，ABC triple 的 logHeight ≤ (1+ε)·weight + A）；
+- 📌 残余：缺 A/Lbar/Dbar → normalizedRegionVolume / height/weight 的 dictionary；**gap 1 `height_le_normalizedRegionVolume`**；**gap 2 `regionVolume_le_normalizedWeight`**；frozen consumer 提供字段后 heightBound 直接适用。
