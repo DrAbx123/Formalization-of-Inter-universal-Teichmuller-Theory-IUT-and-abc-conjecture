@@ -348,3 +348,25 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: A2SourceSignQuotientAssembly 03:09:46 (clean AssemblyData+Required); ProductFiberMultBridgeGap 03:10:09 (restored exact gap); WQ clean interface 03:05:47; QVProductRegion 02:59:36; A2GroupsExtension 02:59:15; Node09Relative/Hq.
 - RED: QVWeighted 03:10:08; Node09HqWeighted 03:09:01 (import actualLogIdx + heartbeat); ValueGroup 03:06:17 (coercion); stale probes.
 - Woken idle lanes: qpilot QVWeighted fix; mainline Node09 import/split; stage4 toMonoidWithZeroHom variant; lattice A2 next; hull ClosedBallMass/BadPlaceBijection; stepxi Values bridge; abc/shehdd audit.
+
+### 7.12 A2Assembly/ProductFiber DONE（interface）；QVWeighted/Node09Hq red（2026-11-15 11:12，无编译）
+
+- ✅ `Mzk1A2Node03SourceSignQuotientAssemblyActual` DONE 03:09:46（olean 11:09:45 > src 11:07:12；Data+Required interface）；
+- ✅ `Mzk1ProductFiberMultBridgeGapActual` DONE 03:10:09（olean 11:10:08 > src 11:07:15；ProductHaarToFiberMult/ClosedBallMassFormula/BadPlaceBijection 显式 gap interfaces，no inhabitant）；
+- ❌ 新 `Mzk1QVWeightedActual` FAIL 03:10:08（Function expected :27、unknown F :33、unsolved :30、unknown theorem :48）；
+- ❌ Node09HqWeighted FAIL 03:09:01（源 11:09:16；retry START 03:10:24）；ValueGroup FAIL 03:06:17；Galois probes stale；
+- WQ clean interface DONE 03:05:47（olean 11:05:47），当前源 11:10:45 pending rebuild。
+
+### 7.13 URGENT：QVWeighted unacceptable；Node09Hq timeout；ValueGroup red（2026-11-15 11:14，无编译）
+
+- ⛔ **`Mzk1QVWeightedActual` UNACCEPTABLE**：FAIL 03:10:08（retry 03:11:28）；无 olean；failed context 有 synthetic sorry placeholders + unknown theorem `qPilotQGlobalLogVolume_eq_neg_sum_fiberMult`(:48)、unknown F(:33)、Function expected(:27)、unsolved(:30)；源无字面 sorry 仍拒绝，直到 fresh DONE+probe。
+- ❌ `Node09HqWeightedRegionActual`：FAIL 03:11:14；deterministic timeout（isDefEq/whnf/tactic, maxHeartbeats 800000）、typeclass stuck；无 olean。
+- ❌ `Mzk1ValueGroupActual`：FAIL 03:06:17；retry 03:11:28；rewrite 未匹配；无 olean。
+- ✅ WQ clean interface：DONE 03:11:58，olean 11:11:58 > src 11:10:45；structure+Required 接受。
+- ❌ `Mzk1A2Node03AssemblyConsumerActual`：FAIL 03:12:00；`toSourceSignQuotientData`/`toWitness` invalid field（AssemblyData 缺字段）。
+
+## 7.18 11:12 cycle
+
+- DONE: WQ PhiPsi interface 03:11:58 (WQuotientFiveIsoPhiPsi + Required, three axioms); WQ clean 03:11:58; A2Assembly 03:09:46; ProductFiber 03:10:09.
+- RED: QVWeighted 03:12:23 (synthetic sorry/unknown theorem); A2AssemblyConsumer 03:12:00 (invalid fields); Node09HqWeighted 03:11:14 (heartbeat/NumberField stuck); ValueGroup 03:12:25 (rewrite/type).
+- Instructions: qpilot delete failing proof/clean conditional interface; mainline split Node09Hq tiny; stage4 ValueGroup exact interface; lattice A2 consumer fields/exact interface; stepxi search actual Phi/Psi donors.
