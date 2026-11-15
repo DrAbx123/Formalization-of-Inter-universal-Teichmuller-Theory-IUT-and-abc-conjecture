@@ -111,6 +111,8 @@
 - **接线要求**：hq 右端不能只用 `actualFn`（residue degree）；必须保留 q 的消失阶/重数（`qVEffectiveMultiplicity` 或 `mult_b`）。
 
 ### 局部范数公式
+
+- 2026-11-15: `Mzk1PadicFieldValuedQpActual` watchdog DONE 02:12:07: `padicField_v_eq_valuation` + `padicFieldQpCoherence` + `padicValuedCoherence_qp`; `PadicField.v p x = Padic.valuation x` for Qp now proved (three axioms).
 - `tmp/local-cft-port/PadicField/FieldNorm.lean`：
   - `PadicField.v_norm`：`v p (Algebra.norm K x) = f p K L * v p x`；
   - `PadicField.nrm_norm`；

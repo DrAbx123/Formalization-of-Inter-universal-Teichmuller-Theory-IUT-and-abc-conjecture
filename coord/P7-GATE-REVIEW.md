@@ -4191,3 +4191,14 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - watchdog DONE: Mzk1ActualRamifiedDataActual 02:06:23 (mult field wired through RamifiedPlaceData); S3171/consumers/RamifiedPlaceData previously DONE.
 - Mzk1PadicFieldValuedQpActual concrete proof FAIL: x=0 goal wval 0/valGen=0; produced sorryAx; stepxi fixing with simp [PadicField.v,wval].
 - hull definition check: canonicalHull = e.symm '' hull(e '' actualRegion), so actualRegion ⊆ canonicalHull (not reverse). Correct full lattice: tensorIntegerRegion ⊆ tensorLogShellRegion=actualRegion; missing unit-lattice relative Haar volume/normalized Haar scaling. Rewrite bound accordingly; no fake.
+
+
+### 20.665 GaloisCompletion val equality watchdog DONE (2026-11-15 46:30)
+- Mzk1GaloisCompletionActual DONE 02:07:39 via watchdog: withValMovedSigma_val_eq proved by change WithVal.valuation + WithVal.congr_apply/valuation_toVal/valuation_apply_eq_ofVal/Valuation.comap_apply + rfl; no giant rfl. Next valueGroup equality/UniformContinuous (stage4).
+- Qp coherence: hp Fact unnamed + x=0 wval simplification; stepxi fixing; remove sorryAx.
+
+
+### 20.666 MAJOR PadicFieldQpCoherence inhabited; Galois val equality DONE (2026-11-15 46:40)
+- Mzk1PadicFieldValuedQpActual DONE 02:12:07 via watchdog: padicField_v_eq_valuation (all x:Qp), padicFieldQpCoherence, padicValuedCoherence_qp; tail #print axioms shows only propext/Classical.choice/Quot.sound, no sorryAx. This closes the PadicField.v=Padic.valuation normalization for Qp.
+- Mzk1GaloisCompletionActual DONE 02:07:39 (val equality), then new valueGroup line FAIL 02:12:11; stage4 fixing with MonoidWithZeroHom.mem_valueGroup.
+- hull ThetaUnitLatticeBound FAIL: unknown actualC3LogShell_eq_integralLogShell, subset/zero_mem/IsFiniteMeasureOnCompacts; hull fixing.
