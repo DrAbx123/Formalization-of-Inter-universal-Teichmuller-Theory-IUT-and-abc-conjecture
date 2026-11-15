@@ -4073,3 +4073,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.641 actual K=Qp unramified; NormOneClass/principal bound route (2026-11-15 40:40)
 - mainline: ABC Fmod=Q (S1720 etc), C3 place finite over Q => CommonPrimeCompletion place has e=f=1, K=Qp unramified; no Completion=Qp type equality bridge, only normalizedCompletionRingEquiv. No NormOneClass instance on NormalizedCompletion/CommonPrimeCompletion; principal-unit ≤1/2 not donor; p≥3 can get 1/p≤1/3, p=2 needs separate. qpilot build NormOneClass + Qp principal bound; mainline determine actual p/bridge. No fake.
+
+
+### 20.642 UnitLogNormBound audit accepted; stage4 valueGroup equality plan (2026-11-15 40:50)
+- abc: UnitLogNormBound source 08:36:47, olean 08:38:26, probe 00:41:24; exp_bound + norm_integralUnitExponent_eq_one three axioms; accepted.
+- stage4: valueGroup equality via valueMonoid closure containment both ways; needs withValMovedSigma surjective; then ambient identity iso/conjugate. No fake.
