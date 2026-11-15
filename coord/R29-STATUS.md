@@ -3085,3 +3085,5 @@
 - 38:30: unitLog norm ingredients/or first two lemmas; qpilot. gate 20.628 written.
 
 - 38:40: CardExponent audit accepted (eq/coprime three axioms). qpilot unitLog ingredients. gate 20.629 written.
+
+- 38:50: UnitLogNorm natCast/algebraMap fix; qpilot. gate 20.630 written.
