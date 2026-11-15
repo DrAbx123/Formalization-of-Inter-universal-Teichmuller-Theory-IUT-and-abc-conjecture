@@ -30557,3 +30557,1814 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - **superseded**：① single `C3.q` 全局和（C3BaseQ/GlobalSumAggregation/BaseChangeQ consumer）→ 真实 packet + S3133 weighted；② `hsub` 方向（canonicalHull⊆actualRegion）→ unit-lattice 单向；③ `hCor312` 作为终点（IVThm110 display/S3171/Cor312ToABC/IVThm110LogQ）→ logQ 由 08 的 3.12 给出；④ 退化 A2 point-stack/identity producer（A2PartialFields/ScalarStack/SignAction/Involution）→ 实际 U/[-1]/[U/G]；⑤ 精确 θ hull 等式 → H0/单向下界；⑥ `BaseQFamilyActual` arbitrary DVR candidate 不作 qVFamily 替代；⑦ `hbound`/free compatibility/`Nonempty` Required 只作接口，不作终点；⑧ tautology/spec-only（IutIVTruncatedUnitsCardCorrected/Ind1CorrectedExtraction）只作接口。
 - RED/pending 与节点关联：RelativeNormFieldNorm FAIL 02:30:44（04）；TaskE FAIL 02:02:47（04）；WQuotientLattice pending（04）；hpos/hfin GAP（07/09）；GaloisCompletion/ThetaUnitLattice 当前源重编 pending（04/07）；IV/Cor312 conditional 不作终点（09/10）。
 - 本任务**未编译 Lean**；statement_compiles/proof_body_checked/kernel_closed/target_accepted = NOT_RUN（除已有 DONE 历史证据）。
+## 2026-11-15 — 最新 DONE/FAIL 批次审计（abc，只读，无编译）
+
+### ✅ DONE（watchdog）
+- `RelativeNormFieldNormActual`：源 10:39:31；**DONE 02:41:36Z**；olean **10:41:36 > src**；无 sorry；theorems `relativeNormRaw_nrm`、`relativeNormRaw_nrm_lt_one`、`relativeNormRaw_valued_lt_one_via_nrm`；此前 FAIL 02:30:44 已过时；
+- `Mzk1TaskEIntegersRingEquivActual`：**DONE 02:40:03Z**；olean 10:40:02 > src 10:39:22；structures `IntegersCompletionFieldZFiveEquiv` + `...Required`（Nonempty，无 inhabitant）；
+- `Mzk1TaskEUnitsTorsionActual`：**DONE 02:41:13Z**；olean 10:41:12 > src 10:39:58；structures `UnitsCompletionFieldZFiveEquiv`/`UnitsTorsionQuotientEquiv` + Required（Nonempty）；
+- `Mzk1ThetaUnitLatticeBoundActual`：源 10:39:02；**DONE 02:40:26Z**；olean **10:40:25 > src**（当前源 fresh）；`tensorIntegerRegion_subset_actualRegion`、`unitLatticeLogVolume_le_thetaHull`（**条件 hpos/hfin**）；
+- `Mzk1QVIndexMapActual`：**DONE 02:39:01Z**；olean 10:39:01 > src 10:38:43；`badPlaceIndex`、`qVMultAt`、`fiberMult`、`fiberMult_eq_zero_of_not_mem` — **node06 hq index map 的实际接线**；
+- `Mzk1TaskEWQuotientFiveActual`：**DONE 02:38:34Z**；olean 10:38:34 > src 10:36:53；`WQuotientFiveEquiv`/`PadicExpData` + Required（均 Nonempty，无 inhabitant）。
+
+### ❌ RED/reject
+- **`Mzk1Ind1WQuotientFiveIsoActual`：REJECT（sorryAx）**：最新 FAIL 02:42:20Z；无 olean；源 grep 无字面 sorry，但 per-file log **sorryAx=3**，`padicIntegersEquivZp` depends on `[sorryAx]`；另 errors：unknown `normedIntegerEquivValuative`、apply 不能 unify；当前重建 START 02:43:43 pending；
+- `Mzk1GaloisCompletionActual`：最新 **FAIL 02:40:28Z**；olean 10:21:05 stale；当前源 10:42:59，START 02:43:43 pending；
+- `Mzk1TaskECompletionFieldEquivActual`：最新 **FAIL 02:42:25Z**；olean 09:54:32 stale；START 02:43:43 pending；
+- `Mzk1QVProductRegionActual`：最新 **FAIL 02:43:29Z**；无 olean；errors `Function expected at`（:37/38）、unknown `qProductLogVolume_eq_qPilotQGlobalLogVolume`、unsolved goals；lead 称 running；
+- hθ donor 检查：**树内没有 `tensorIntegerRegion = unitRegion` 的等式 donor**（grep 无命中）；已有仅 `isOpen_tensorIntegerLattice`/`isOpen_arithmeticTupleValuationIntegerLattice` 等 lattice 开性，不足以给 hpos/hfin。
+
+### 过期 probe（stale）
+- `Mzk1TaskEProbeActual` olean 10:01:32 < TaskE 源 10:42:48 → stale；
+- `Mzk1GaloisValOnlyProbeActual` olean 10:21:05 < Galois 源 10:42:59 → stale；
+- `Mzk1GaloisCompletionCurrentProbeActual`、`Mzk1PadicGaloisProbeActual`：02:39:05 FAIL（含已不存在目标/旧源）；
+- `Mzk1PrincipalUnitsFullProbeActual` olean 06:55 < PrincipalUnits 源/olean 07:10/07:12 → stale；
+- 仍 fresh：`Mzk1TaskGDonorProbeActual`(10:04:28)、`Mzk1PadicValuedOnlyProbeActual`(10:20:59)、`Mzk1ThetaBridgeProbeActual`(10:07:35)。
+
+### 指针
+- `coord/GOAL-PROGRESS.md` **§7.2** 已加本节摘要；node06 的 index map/fiberMult 已绿，node06/09 下一步做 carrier check（hull 确认无 tensorIntegerRegion=unitRegion donor）。
+## 2026-11-15 — 最新 DONE/red 批次（abc，只读，无编译）
+
+### ✅ DONE/accept
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 02:46:36Z**；olean 10:46:35 > src 10:45:52；当前源为 clean interface（`WQuotientFiveIso` structure + `WQuotientFiveIsoRequired := Nonempty`；另有 `normedIntegerEquivValuative` def）；log 中早期 sorryAx/`Fact (Nat.Prime 5)` 错误属旧版本尝试，**最新输出 `WQuotientFiveIsoRequired` 为 `[propext, Classical.choice, Quot.sound]`** → 作为 clean interface 接受；`normedIntegerEquivValuative` 建议后续 fresh probe；
+- `Mzk1TaskEWQuotientFiveActual`：DONE 02:38:34；olean 10:38:34 > src 10:36:53；log **sorryAx=0、errors=0**；`WQuotientFiveEquiv`/`PadicExpData` Required，均无 inhabitant；
+- `RelativeNormQPropertiesActual`：**DONE 02:49:10Z**；olean 10:49:09 > src 10:47:29；`relativeNormQProperties_of_hypotheses`；
+- `Mzk1A2Node03QuotientStackProducerActual`：**DONE 02:46:38Z**；olean 10:46:38 > src 10:46:03；`A2QuotientStackProducerData`/`toWitness`/`A2QuotientStackProducerRequired`；
+- `Mzk1A2Node03QuotientStackConsumerActual`：**DONE 02:48:48Z**；olean 10:48:48 > src 10:48:14；`A2Node03QuotientStackConsumerData.toWitness`、`nonempty_witness`、`Required_iff`；
+- `Mzk1TaskECompletionFieldEquivActual`：最新 **DONE 02:45:31Z**；olean 10:45:30 > src 10:44:30；`CompletionFieldQFiveEquiv` + Required + iff；
+- `Mzk1ProductHaarIdentificationGapActual`：DONE 02:44:40；olean 10:44:40 > src 10:43:12；显式 gap：`TensorIntegerRegionProductIdentification`（e '' integerRegion = productRegion）、`P3CarrierProductIdentification`（carrierEquiv '' region = Set.pi localRegion），均 no inhabitant；gapRows 4。
+
+### ❌ RED/REJECT
+- **`Mzk1GaloisCompletionActual`**：最新 **FAIL 02:49:13Z**；当前源 10:48:04；olean 10:44:42 stale；当前源无 valueGroup 定理（仅 `withValMovedSigma`/`_surjective`/`_val_eq`）；stage4 仍 red；
+- **`Mzk1QVProductRegionActual`**：最新 **FAIL 02:48:03Z**（随后 START 02:49:27）；errors：**line16 unknown namespace `LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotBaseChange`**（实际 namespace 为 `LeanFormal.IUT.ArithmeticQPilotBaseChange`）、line31 unknown `residueNormBase`、rfl 失败、Function expected；修 `open LeanFormal.IUT.ArithmeticQPilotBaseChange` 后重试。
+
+### 运行中/待观察
+- 02:49:27 START：`Mzk1Node0609ProductBridgeActual`、`Mzk1QVProductRegionActual`、`Mzk1PadicGaloisProbeActual`、`Mzk1GaloisCompletionCurrentProbeActual`。
+
+### 指针
+- `coord/GOAL-PROGRESS.md` **§7.3** 已加本批摘要。
+## 2026-11-15 — 新失败批次：WQ/A2SourceWitness sorryAx；Node09/QV/Node0609 Function expected（abc，只读，无编译）
+
+### ❌ FAIL/REJECT
+- **`Mzk1Ind1WQuotientFiveIsoActual`**：最新 **FAIL 02:51:13Z**；当前源 10:51:57（重建 pending）；olean 10:46:35 stale；per-file log **sorryAx=5**；errors：`padicMulValuation_le_one_iff_norm_le_one` unknown、Type mismatch（:32/:36）；当前版本**不接受**（此前 02:46:36 的 clean-interface build 仅覆盖旧源）；
+- **`Mzk1A2Node03SourceWitnessConsumerActual`**：最新 **FAIL 02:51:14Z**；当前源 10:52:10（重建 pending）；log **sorryAx=1**；errors：`Unknown identifier Iut.SourceSignQuotientData`（:23/:28/:30；应为 `LeanFormal.IUT.InitialThetaSource.SourceSignQuotientData` 或 open 后裸名）、line33 constructor 无适用构造子；不接受；
+- **`Node09HqMultConsumerActual`**：FAIL 02:51:36Z；无 sorryAx；errors `Function expected at`（:54/:57/:73/:76）；当前源 10:52:25 重建 pending；
+- **`Node09RelativeNormConsumerActual`**：FAIL 02:51:37Z；无 sorryAx；errors `Ambiguous term`（:84/:88/:89/:90）；当前源 10:49:57（无新编辑）；不接受；
+- **`Mzk1Node0609ProductBridgeActual`**：FAIL 02:50:26Z；无 sorryAx；errors unknown `rootExtensionClosedBall_measure_pos`/`_lt_top`、`Function expected at`（:30/:32/:34/:41）；重试 START 02:51:52 pending；
+- **`Mzk1QVProductRegionActual`**：FAIL 02:50:26Z；无 sorryAx；errors `Function expected at`(:24)、unknown `T`(:25)、synthInstanceFailed(:27)、unknown `qProductRegion_measure_lt_top`(:31)；重试 START 02:51:52 pending。
+
+### 规则
+- WQ/A2SourceWitness 当前失败尝试均含 **synthetic sorryAx**；在其 watchdog DONE 且 probe 干净前一律 reject；不接受旧 clean-interface 证据覆盖新源。
+- Node09/QV/Node0609 的 Function expected/unknown 错误为接口/实参问题，非 sorry；等重试 DONE 后再 audit。
+## 2026-11-15 — WQ clean interface / Galois DONE；A2SourceWitness/Node09/QV/Node0609 red（abc，只读，无编译）
+
+### ✅/⚠️ DONE
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 02:53:33Z**，olean 10:53:32；当前源 10:54:42 新于 olean → 重编 pending；latest log 输出 `WQuotientFiveIsoRequired` 为标准三公理（clean interface）；但 `normedIntegerEquivValuative` 旧输出仍带 sorryAx，errors 含 unknown `padicMulValuation_le_one_iff_norm_le_one`；def/当前源待 fresh DONE 后再审。
+- `Mzk1GaloisCompletionActual`：**DONE 02:54:00Z**；olean 10:53:59 > src 10:52:21；当前源仅 3 decls（`withValMovedSigma`/`_surjective`/`_val_eq`，无 valueGroup）；log :106 错误属旧长版本；接受当前 3-decl 版本；valueGroup 分支待重新提交。
+
+### ❌ red
+- `Mzk1A2Node03SourceWitnessConsumerActual`：FAIL 02:53:35；log sorryAx=1；unknown `Iut.SourceSignQuotientData`（应为 `LeanFormal.IUT.InitialThetaSource.SourceSignQuotientData`）+ constructor 失败。
+- `Node09HqMultConsumerActual`：FAIL 02:53:56；源 10:54:16 pending；Function expected :54/:57/:73/:76；无 sorryAx。
+- `Node09RelativeNormConsumerActual`：FAIL 02:51:37；源 10:49:57 未变；Ambiguous term :84/:88/:89/:90；无 sorryAx。
+- `Mzk1QVProductRegionActual`：FAIL 02:52:48；重试 START 02:54:14 pending；Function expected/unknown T/qProductRegion_measure_lt_top；无 sorryAx。
+- `Mzk1Node0609ProductBridgeActual`：FAIL 02:52:49；重试 START 02:54:14 pending；unknown rootExtensionClosedBall_measure_pos/_lt_top、Function expected；无 sorryAx。
+
+### 待办
+- fresh probe：WQ（当前源）与 Galois（当前 3-decl 版本）在下一批 DONE 后补；本轮未编译。
+
+## 2026-11-15 — Node0609/Node09Hq/A2SourceWitness DONE；WQ 当前源 red；Node09Relative/QV red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1Node0609ProductBridgeActual`：**DONE 02:55:08Z**；olean **10:55:07 > src 10:53:55**；无当前 sorryAx；decls `rpRegion_normalizedLog_eq_sum`、`WeightedQSumBridge`、`bridgeRows`(3)；
+- `Node09HqMultConsumerActual`：**DONE 02:56:15Z**；olean **10:56:14 > src 10:54:16**；无当前 sorryAx（log 旧 errors 属前次尝试）；
+- `Mzk1A2Node03SourceWitnessConsumerActual`：**DONE 02:55:53Z**；olean **10:55:52 > src 10:54:49**；per-file log mtime 10:53:34 为旧 FAIL（02:53:35）残留（unknown `Iut.SourceSignQuotientData`/constructor/sorry 占位），当前 DONE 未写新错误 → **按 watchdog 接受；fresh probe 后补**；
+- `Mzk1GaloisCompletionActual`：**DONE 02:54:00Z**；olean 10:53:59 > src 10:52:21；当前源仅 3 decls（无 valueGroup）；接受该 3-decl 版本。
+
+### ❌ RED/REJECT
+- `Mzk1Ind1WQuotientFiveIsoActual`：旧源 clean interface DONE 02:53:33；**当前源 10:54:42 FAIL 02:55:51Z**：`normedInteger_mem_valuativeInteger` 依赖 **[sorryAx]**、unknown `padicMulValuation_le_one_iff_norm_le_one`、Type mismatch；**当前源 reject**（仅旧 clean interface 可用，def/新源待修）；
+- `Node09RelativeNormConsumerActual`：FAIL 02:51:37Z；源 10:49:57 未变；`Ambiguous term` :84/:88/:89/:90；无 sorryAx；不接受；
+- `Mzk1QVProductRegionActual`：FAIL 02:55:07Z；当前源 10:55:58；errors unknown `rootExtensionProductHaar`(:23)、synthInstanceFailed(:27/:31)、Type mismatch(:32)；重试 pending。
+
+### 待办
+- fresh probe：WQ（旧 clean interface）、Galois（3-decl）、A2SourceWitness、Node0609/Node09Hq 在下一批 DONE 后统一补；本轮未编译。
+
+## 2026-11-15 — 状态复核（Node0609/Node09Hq/A2SourceWitness DONE；WQ/QV/Node09Relative/ValueGroup red）（abc，只读，无编译）
+
+### ✅ 确认 DONE
+- `Mzk1Node0609ProductBridgeActual`：DONE 02:55:08；olean 10:55:07 > src 10:53:55；
+- `Node09HqMultConsumerActual`：DONE 02:56:15；olean 10:56:14 > src 10:54:16；
+- `Mzk1A2Node03SourceWitnessConsumerActual`：DONE 02:55:53；olean 10:55:52 > src 10:54:49（旧 log FAIL 02:53:35 残留）。
+
+### ❌ red/pending
+- `Mzk1Ind1WQuotientFiveIsoActual`：当前源 10:57:34；最新 DONE 仍是旧 clean-interface 02:53:33（olean 10:53:32）；**当前源最新 FAIL 02:55:51**（`normedInteger_mem_valuativeInteger` 带 synthetic sorryAx、unknown `padicMulValuation_le_one_iff_norm_le_one`）；当前源 red/待重编；
+- `Mzk1QVProductRegionActual`：最新 **FAIL 02:57:20**；errors unknown `rootExtensionProductHaar`(:23)、synthInstanceFailed(:27/:28)、Type mismatch(:32)；无 olean；
+- `Node09RelativeNormConsumerActual`：源 10:56:36（已改，pending rebuild）；最新 FAIL 02:51:37（Ambiguous term :84/:88/:89/:90）；无 olean；
+- **新文件 `Mzk1ValueGroupActual`**（Galois valueGroup 拆分）：源 10:56:28；最新 **FAIL 02:57:22**；errors rewrite 未匹配 :38/:54；无 olean；**red**（valueGroup 分支仍需修）。
+
+## 2026-11-15 — WQ clean DONE 02:58:06 / Node09Relative DONE 02:58:29；QV/ValueGroup/ProductFiber red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 02:58:06Z**；olean 10:58:06；latest log `WQuotientFiveIsoRequired` 为标准三公理（clean interface）；`normedInteger_mem_valuativeInteger` 的 sorryAx 属旧尝试；**当前源 10:59:04 新于 olean → 重编 pending**，def 需重验；
+- `Node09RelativeNormConsumerActual`：**DONE 02:58:29Z**；olean **10:58:29 > src 10:56:36**；无 sorryAx；接受；
+- `Node09HqMultConsumerActual`：DONE 02:56:15Z；olean 10:56:14 > src 10:54:16；接受。
+
+### ❌ red
+- `Mzk1QVProductRegionActual`：最新 FAIL 02:57:20Z；重试 START 02:58:44；errors unknown `rootExtensionProductHaar`、synthInstanceFailed、Type mismatch；无 olean；
+- `Mzk1ValueGroupActual`（Galois valueGroup 拆分）：FAIL 02:57:22Z；errors rewrite :38/:54 未匹配；无 olean；
+- `Mzk1ProductFiberMultBridgeGapActual`：**FAIL 02:58:30Z**；无 olean；errors `Function expected at`(:15)、unknown `residueNormBase`(:24)、unknown `ProductHaarToFiberMult`(:30)；
+
+### 运行中
+- 02:58:44 START：`Mzk1A2Node03GroupsExtensionActual`、`Mzk1QVProductRegionActual`。
+
+## 2026-11-15 — QV doner interface / A2GroupsExtension DONE；WQ 当前源 red；ValueGroup/ProductFiber red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1QVProductRegionActual`：**DONE 02:59:36Z**；olean 10:59:36 > src 10:57:45；无 sorryAx；内容为 **donor interface**：`productRegionDonorNames` + `productRegionDonorNames_length`（未构造实际 region）；
+- `Mzk1A2Node03GroupsExtensionActual`：**DONE 02:59:15Z**；olean 10:59:15 > src 10:57:44；无 sorryAx/errors；`A2Node03GroupsExtensionData` + `A2Node03GroupsExtensionRequired`（interface，无 inhabitant）；
+- `Mzk1Ind1WQuotientFiveIsoActual`：旧源 **DONE 02:58:06** clean interface（olean 10:58:06；Required 标准三公理）；**当前源 10:59:04 FAIL 03:00:19Z**：`normedInteger_mem_valuativeInteger` 仍依赖 **[sorryAx]**、Type mismatch（`WithZero.exp x.valuation` vs `ValuativeRel.valuation`）；当前源 reject；
+- `Node09RelativeNormConsumerActual`（02:58:29）和 `Node09HqMultConsumerActual`（02:56:15）此前已接受。
+
+### ❌ red
+- `Mzk1ValueGroupActual`：FAIL 02:57:22Z；rewrite :38/:54 未匹配；无 olean；
+- `Mzk1ProductFiberMultBridgeGapActual`：FAIL 02:58:30Z；重试 START 02:59:50；无 olean；errors Function expected :15、unknown residueNormBase :24、unknown ProductHaarToFiberMult :30。
+
+### 运行中
+- `Node09HqWeightedRegionActual`（src 10:59:09；theorem `node09_hq_weighted_region`）START 02:59:50 pending；
+- `Mzk1ProductFiberMultBridgeGapActual` retry pending。
+
+## 2026-11-15 — ProductFiber gap interface DONE 03:00:45；WQ/ValueGroup red；Node09HqWeighted running（abc，只读，无编译）
+
+### ✅ DONE（interface 接受）
+- `Mzk1ProductFiberMultBridgeGapActual`：**DONE 03:00:45Z**；olean **11:00:45 > src 10:59:41**；无 sorryAx；内容为显式 gap interface：`ProductHaarToFiberMult`（Prop：product-region normalized log = (1/(2l))·Σ fiberMult/Fdeg·log(residueNormBase)，**no inhabitant**）+ `bridgeRows`(3)；
+- `Mzk1QVProductRegionActual`（02:59:36）：donor interface（productRegionDonorNames + length）；
+- `Mzk1A2Node03GroupsExtensionActual`（02:59:15）：Data + Required（interface）。
+
+### ❌ red/pending
+- `Mzk1Ind1WQuotientFiveIsoActual`：当前源 **11:02:04**（新于上次构建）；最新 **FAIL 03:00:19Z**；log sorryAx=7；`normedInteger_mem_valuativeInteger` 带 synthetic sorryAx、Type mismatch；**当前源 red**，仅旧 clean DONE 02:58:06 可用；
+- `Mzk1ValueGroupActual`：源 11:00:50（已改，pending rebuild）；最新 FAIL 02:57:22Z；无 olean；red；
+
+### 运行中
+- `Node09HqWeightedRegionActual`：源 10:59:09；START 02:59:50，尚无 DONE/FAIL；theorem `node09_hq_weighted_region`。
+
+## 2026-11-15 — WQ clean interface DONE 03:05:47；ProductFiber/A2Assembly/ValueGroup red；Node09HqWeighted restart（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 03:05:47Z**；olean **11:05:47 > src 11:04:31**；当前源仅 `structure WQuotientFiveIso` + `def WQuotientFiveIsoRequired := Nonempty`（无 normedInteger def）；log 尾部 sorryAx/normedInteger 输出属旧源残留 → **clean interface 接受**（无 def）；
+- 之前 QV donor interface（02:59:36）、A2GroupsExtension interface（02:59:15）、Node09Relative（02:58:29）、Node09HqMult（02:56:15）仍有效。
+
+### ❌ red
+- `Mzk1ProductFiberMultBridgeGapActual`：最新 **FAIL 03:06:14Z**；当前源 11:02:13；errors unknown `ProductHaarToFiberMult`(:30)、`ClosedBallMassFormula`(:36)、`BadPlaceBijection`(:37)、Function expected(:45)；无 olean；
+- `Mzk1A2Node03SourceSignQuotientAssemblyActual`：**FAIL 03:05:50Z**；源 11:03:32；errors `@[simp]` 不能加于非命题/定义（:35）、Type mismatch(:39/:45)、非 defeq(:41)；无 olean；
+- `Mzk1ValueGroupActual`：最新 **FAIL 03:06:17Z**；源 11:04:46；rewrite 未匹配 :38/:40/:54/:58；无 olean；
+- `Mzk1GaloisCompletionCurrentProbeActual`/`Mzk1PadicGaloisProbeActual`：FAIL 03:06:17Z（stale probes，Galois 当前源无 valueGroup）。
+
+### 运行中
+- `Node09HqWeightedRegionActual`：上次 **FAIL EXIT=4294967295（hang/kill）03:05:00Z**；已重启 START 03:06:31；源 11:05:31 pending。
+
+## 2026-11-15 — A2Assembly/ProductFiber DONE（interface）；QVWeighted/Node09Hq red；WQ 当前源 pending（abc，只读，无编译）
+
+### ✅ DONE（interface）
+- `Mzk1A2Node03SourceSignQuotientAssemblyActual`：**DONE 03:09:46Z**；olean **11:09:45 > src 11:07:12**；无 sorryAx；`A2Node03SourceSignQuotientAssemblyData` + Required（interface，无 inhabitant）；
+- `Mzk1ProductFiberMultBridgeGapActual`：**DONE 03:10:09Z**；olean **11:10:08 > src 11:07:15**；无 sorryAx；显式 gap interface：`ProductHaarToFiberMult`(Prop) + `ClosedBallMassFormula`/`BadPlaceBijection` structures + `bridgeRows`(3)；均 no inhabitant；
+
+### ❌ red/pending
+- **`Mzk1QVWeightedActual`（新）**：源 11:10:45；最新 **FAIL 03:10:08Z**；无 olean；`Mq` def + `qPilotQGlobalLogVolume_eq_neg_sum_fiberMult` theorem；errors：Function expected(:27)、unknown `F`(:33)、unsolved goals(:30)、unknown theorem(:48)；
+- `Node09HqWeightedRegionActual`：最新 **FAIL 03:09:01Z**；源 11:09:16；retry START 03:10:24；无 olean；
+- `Mzk1ValueGroupActual`：最新 FAIL 03:06:17Z（red，源 11:04:46）；
+- `Mzk1GaloisCompletionCurrentProbeActual`/`Mzk1PadicGaloisProbeActual`：FAIL 03:06:17（stale）。
+
+### WQ
+- `Mzk1Ind1WQuotientFiveIsoActual`：clean interface **DONE 03:05:47Z**；olean 11:05:47；**当前源 11:10:45 新于 olean → 重编 pending**。
+
+## 2026-11-15 — URGENT：QVWeighted UNACCEPTABLE（synthetic sorry context/unknown theorem）；Node09Hq timeouts；ValueGroup red（abc，只读，无编译）
+
+### ⛔ QVWeighted — UNACCEPTABLE until clean
+- `Mzk1QVWeightedActual`：源 11:10:48；**无 olean**；最新 **FAIL 03:10:08Z**；retry START 03:11:28（无新结果）；
+- 源 grep 无字面 `sorry`，但 failed elaboration 的 error context 出现 **synthetic sorry placeholders**（`sorry` 上下文）+ **unknown theorem**：`qPilotQGlobalLogVolume_eq_neg_sum_fiberMult`(:48) unknown；另有 Function expected(:27)、unknown `F`(:33)、unsolved goals(:30)；
+- 结论：**在 fresh DONE + probe 干净前一律不接受**（不得以 Prop/名字存在冒充证明）。
+
+### ❌ Node09HqWeighted — heartbeat/timeout red
+- `Node09HqWeightedRegionActual`：源 11:11:32；最新 **FAIL 03:11:14Z**；无 olean；
+- errors：**deterministic timeout at `isDefEq`/`whnf`/`tactic execution`（maxHeartbeats 800000）**、typeclass instance stuck、Function expected；无 sorryAx；
+- 需要拆小/提高 heartbeats 或降低 unification 规模；当前不接受。
+
+### ❌ ValueGroup red
+- `Mzk1ValueGroupActual`：源 11:10:41；最新 FAIL 03:06:17Z；retry START 03:11:28；无 olean；errors rewrite :38/:40/:54/:58 未匹配。
+
+### ✅ WQ clean interface
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 03:11:58Z**；olean **11:11:58 > src 11:10:45**；当前源仅 structure + Required（clean interface）；接受接口。
+
+### ❌ 新 red
+- `Mzk1A2Node03AssemblyConsumerActual`：FAIL 03:12:00Z；`A2Node03SourceSignQuotientAssemblyData` 上 `toSourceSignQuotientData`/`toWitness` invalid field（assembly data 未提供这些字段）；不接受。
+
+## 2026-11-15 — WQ PhiPsi GREEN 03:11:58；A2AssemblyConsumer/QVWeighted/Node09Hq/ValueGroup red（abc，只读，无编译）
+
+### ✅ WQ PhiPsi（clean interface）
+- `Mzk1Ind1WQuotientFiveIsoActual`：**DONE 03:11:58Z**；olean **11:11:58 > src 11:10:45**；
+- 当前源新增 `structure WQuotientFiveIsoPhiPsi`（phi/psi/left_inv/right_inv）+ `WQuotientFiveIsoPhiPsiRequired := Nonempty`；`#print axioms` 输出：`WQuotientFiveIsoPhiPsiRequired` 与 `WQuotientFiveIsoRequired` 均 `[propext, Classical.choice, Quot.sound]`；
+- **接受为 clean Phi/Psi interface**（无 inhabitant）；不是实际同构证明。
+
+### ❌ red
+- `Mzk1A2Node03AssemblyConsumerActual`：FAIL 03:12:00Z；当前源 11:13:31（pending rebuild）；errors：`A2Node03SourceSignQuotientAssemblyData` 上 `toSourceSignQuotientData`/`toWitness` invalid field（AssemblyData 缺字段）；
+- `Mzk1QVWeightedActual`：**FAIL 03:13:31Z**（重试后仍红）；无 olean；errors：unknown `qPilotQGlobalLogVolume_eq_neg_sum_fiberMult`(:48)、unknown `productLogFiberIdentity_iff`(:39)、Function expected(:28/:31)、apply unify(:40)、unsolved goals(:30)；failed context 出现 synthetic sorry placeholders → **reject**；
+- `Node09HqWeightedRegionActual`：**FAIL 03:13:31Z**；无 olean；errors：unknown `RelativeNormCompletion.nativeBadBasePlace`(:25/:36)、Invalid argument name `X`(:41)、typeclass instance stuck(:71)；此前 heartbeat timeout（isDefEq/whnf）；**reject**；
+- `Mzk1ValueGroupActual`：FAIL 03:12:25Z；无 olean；rewrite :38/:40/:54/:58 未匹配；**red**。
+
+## 2026-11-15 — 最新 DONE：Node09HqWeighted/QVWeighted/WQMembership/ A2AssemblyConsumer（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Node09HqWeightedRegionActual`：**DONE 03:15:21Z**；olean **11:15:21 > src 11:13:46**；无 sorryAx；`Node09HqWeightedRegion` structure + theorem `node09_hq_weighted_region_of_components`；接受；
+- `Mzk1QVWeightedActual`：**DONE 03:15:21Z**；olean **11:15:21 > src 11:14:25**；**sorryAx=0**；当前源：`QVBadPlaceBijection` structure、`Mq` def、`ProductLogFiberIdentity` Prop、`productLogFiberIdentity_iff`；log 中旧尝试 errors/`(bij : sorry)` 属前次 FAIL，最新构建输出干净 → **接受（interface/条件定理；fresh probe 后补）**；
+- `Mzk1A2Node03AssemblyConsumerActual`：**DONE 03:14:14Z**；olean **11:14:14 > src 11:13:31**；无当前 sorryAx；`toWitness`/`toSourceSignQuotientData`/`nonempty_witness`/`Required_iff`；接受；
+- `Mzk1WQMembershipTransferActual`：DONE 03:14:57Z；olean 11:14:56；log sorryAx=0/errors=0；`normedInteger_mem_valuativeInteger` 标准三公理；但**当前源 11:15:44 新于 olean → 重编 pending**。
+
+### 备注
+- QVWeighted 早前日志的 synthetic sorry context 属 **FAIL 03:13:31/03:10:08** 旧尝试；当前 DONE 03:15:21 且 sorryAx=0，故接受；仍建议 fresh probe 确认无 sorryAx。
+
+## 2026-11-15 — ValueGroup/A2UniqueInvolution DONE；BadPlaceBijection 更正；ProductFiber/QV 新源 pending；WQMembership red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1ValueGroupActual`：**DONE 03:16:30Z**；olean **11:16:29 > src 11:14:51**；无 sorry；当前源为 interface：`structure ValueGroupTransportData`（valueGroup 相等，no inhabitant）；接受为显式 gap interface；
+- `Mzk1A2Node03UniqueInvolutionActual`（新）：**DONE 03:17:20Z**；olean **11:17:19 > src 11:15:53**；`A2Node03UniqueInvolutionData` + `Required`（interface）；接受；
+- 先前接受：Node09HqWeighted（03:15:21）、QVWeighted 旧来源（03:15:21，olean 11:15:21）、A2AssemblyConsumer（03:14:14）。
+
+### 📌 更正：BadPlaceBijection generally false
+- `BadPlaceBijection`（Bad ↔ FinitePlaceAtPrime）**一般不成立**（Bad 只是 F-places 的子集，不存在总双射）；当前树已无此 structure；
+- 替换：QVWeighted 改用 **`QVBadPlaceFiber`**（`FinitePlaceAtPrime F p → Bad ...` 总映射，fiber/index 路线；附带 `MqFiber`、`MqFiber_eq_sum_localLog`、`actual_A_le_Lbar_add_Dbar_of_fiberMult`）；ProductFiber 改用 `ClosedBallMassFormula` + bridgeRows(4)；
+- 后续任何消费 Bijection 的旧接口都应改 fiber/injection；不能用双射消去 fiber 求和。
+
+### ⚠️ 当前源 pending / red
+- `Mzk1ProductFiberMultBridgeGapActual`：源 **11:17:25 > olean 11:10:08** → 重编 pending（当前源 bridgeRows 4 + ClosedBallMassFormula）；
+- `Mzk1QVWeightedActual`：源 **11:17:07 > olean 11:15:21** → 重编 pending（当前源 QVBadPlaceFiber/MqFiber/actual_A_le_Lbar_add_Dbar_of_fiberMult）；
+- `Mzk1WQMembershipTransferActual`：源 11:15:44；最新 **FAIL 03:17:17Z**（Application type mismatch :32:32）；无当前 olean → red；
+- `Mzk1A2Node03AssemblyConsumerActual`（03:14:14）与 `Node09HqWeightedRegionActual`（03:15:21）此前已接受，源均 < olean。
+
+## 2026-11-15 — ValueGroup/A2Unique 接受；WQMembership reverse red；Node09HqAssemblyLink red；QV/ProductFiber pending（abc，只读，无编译）
+
+### ✅ 已接受（interface）
+- `Mzk1ValueGroupActual`：DONE 03:16:30；olean 11:16:29 > src 11:14:51；`ValueGroupTransportData`（valueGroup 相等 interface，no inhabitant）；
+- `Mzk1A2Node03UniqueInvolutionActual`：DONE 03:17:20；olean 11:17:19 > src 11:15:53；`A2Node03UniqueInvolutionData` + Required；
+
+### ❌ red/pending
+- **WQMembership reverse red**：`Mzk1WQMembershipTransferActual` 当前源 11:18:24（已截断为仅 forward `normedInteger_mem_valuativeInteger`）；最新 **FAIL 03:17:17Z**（Application type mismatch :32:32，出现在旧源 reverse 方向）；olean 11:14:56 stale；当前源待重编，reverse 方向尚未交付；
+- **Node09HqAssemblyLink red**：新文件 `Node09HqAssemblyLinkActual` 源 11:17:50；START 03:18:01，无 olean；旧尝试 log errors：`Function expected at`(:28/:31/:47/:50) — `fiberMult` 实际签名需 `L : NativeBadLift` 与 `hp`（`fiberMult X L p hp i`），直接 `fiberMult X b i` arity 不符；待修；
+- `Mzk1ProductFiberMultBridgeGapActual`：源 11:17:25 > olean 11:10:08 → 重编 pending（START 03:18:01）；
+- `Mzk1QVWeightedActual`：源 11:17:07 > olean 11:15:21 → 重编 pending（START 03:18:01）。
+
+## 2026-11-15 — Node09HqAssemblyLink/WQMembership/ProductFiber/A2RemainingFields DONE；QVWeighted pending（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Node09HqAssemblyLinkActual`：**DONE 03:18:55Z**；olean **11:18:55 > src 11:17:50**；无当前错误（log 旧 FAIL errors 残留）；theorems `weightedRegion_of_fiberMult`、**`paper312_of_fiberMult_bounds`**（fiberMult 版 3.12 assembly）；接受；
+- `Mzk1WQMembershipTransferActual`：**DONE 03:19:40Z**；olean **11:19:39 > src 11:18:24**；当前源仅 forward `normedInteger_mem_valuativeInteger`；接受当前源（**reverse 方向仍未交付**）；
+- `Mzk1ProductFiberMultBridgeGapActual`：**DONE 03:18:56Z**；olean **11:18:56 > src 11:17:25**；当前源 bridgeRows(4)+`ClosedBallMassFormula`（BadPlaceBijection 已移除）；接受 interface；
+- `Mzk1A2Node03RemainingFieldsActual`（新）：**DONE 03:19:42Z**；olean **11:19:41 > src 11:18:33**；`A2Node03RemainingFieldsData` + `correctedUnique` + `Required`（interface）；接受；
+- 先前接受：ValueGroup（03:16:30 interface）、A2Unique（03:17:20 interface）。
+
+### ⚠️ pending
+- `Mzk1QVWeightedActual`：源 **11:19:09 > olean 11:15:21**；START 03:19:11；重编 pending（当次源含 QVBadPlaceFiber/MqFiber 等）；
+- WQMembership reverse：未交付（当前源无 reverse 定理）。
+
+## 2026-11-15 — QVWeighted 03:20:03；ValueGroup/Node09ActualHypotheses red（abc，只读，无编译）
+
+### ⚠️ QVWeighted（DONE 版本）
+- `Mzk1QVWeightedActual`：**DONE 03:20:03Z**；olean **11:20:03**；当时源已包含 `QVBadPlaceFiber`、`MqFiber`、`MqFiber_eq_sum_localLog`、`actual_A_le_Lbar_add_Dbar_of_fiberMult`、`paper312_of_MqFiber_bounds`（fiber 路线，无 Bijection）；
+- **但当前源 11:21:26 新于 olean → 重编 pending**；旧 DONE 仅覆盖 ≤11:20 版本。
+
+### ✅ 继续有效
+- Node09HqAssemblyLink DONE 03:18:55；WQMembership forward DONE 03:19:40；A2Node03RemainingFields DONE 03:19:42；ValueGroup 早前 interface DONE 03:16:30（但当前源已改为尝试证明，见下）。
+
+### ❌ red
+- `Mzk1ValueGroupActual` 当前源 11:20:03：最新 **FAIL 03:21:11Z**；errors unknown `withValMovedSigma_toMonoidWithZeroHom_val_eq`(:47/:62)、unsolved goals；即不再满足 interface-only，尝试实际值群证明但缺 lemma；red；
+- `Node09ActualHypothesesActual`（新）：源 11:21:26；最新 **FAIL 03:21:08Z**；errors Application type mismatch(:35:35)、positivity/nonneg 失败(:35:23)；无 olean；theorems 含 `hA0_of_fiberMult`/`hs0_of_le`/`hs1_of_le`/`paper312_of_fiberMult_actual` + `Node09RemainingMissing`；当前源待重编；
+- 运行中：`Mzk1A2Node03SourceVFieldsActual` START 03:21:25。
+
+## 2026-11-15 — A2SourceVFields/WQMembership DONE；ValueGroup/Node09ActualHyp red；QV pending（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1A2Node03SourceVFieldsActual`：**DONE 03:21:54Z**；olean **11:21:53 > src 11:20:18**；log 干净（sorryAx=0/errors=0）；`A2Node03SourceVFieldsData` structure + `A2Node03SourceVFieldsRequired`（interface）；接受；
+- `Mzk1WQMembershipTransferActual`：**DONE 03:22:37Z**；olean **11:22:36 > src 11:21:30**；当前源仅 forward `normedInteger_mem_valuativeInteger`；接受 forward；**reverse 仍未交付**；
+
+### ❌ red/pending
+- `Mzk1ValueGroupActual`：源 11:20:03；最新 **FAIL 03:21:11Z**；unknown `withValMovedSigma_toMonoidWithZeroHom_val_eq`(:47/:62)、unsolved goals；已尝试实际值群证明但缺 lemma；red；
+- `Node09ActualHypothesesActual`：源 11:21:26；最新 **FAIL 03:21:08Z**；retry START 03:22:08；errors :35:35 Application type mismatch、:35:23 positivity/nonneg 失败（`div_nonneg hfib hFdeg.le` 处；缺 0 ≤ Fdeg / l 正性等显式假设）；当前源待重编；
+- `Mzk1QVWeightedActual`：源 **11:21:29 > olean 11:20:03**；retry START 03:22:08；pending；
+- 备注：`Mzk1WQMembershipTransferActual` 03:22:37 仍为 forward-only（reverse 方向未交付）。
+
+## 2026-11-15 — Node09ActualHyp/VFieldsConsumer DONE；WQ reverse DONE；QV/ValueGroup red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ActualHypothesesActual`：**DONE 03:24:07Z**；olean **11:24:06 > src 11:23:08**；无当前 sorry（旧 log errors 残留）；theorems `hA0_of_fiberMult`、`hs0_of_le`、`hs1_of_le`、**`paper312_of_fiberMult_actual`**、`Node09RemainingMissing`；接受；
+- `Mzk1A2Node03VFieldsConsumerActual`：**DONE 03:23:45Z**；olean **11:23:45 > src 11:22:41**；`A2Node03VFieldsAndProducerData` + `sourceSignQuotientDataWithVFieldsAndProducerWitness` + Required；接受 interface；
+- **WQ reverse DONE**：`Mzk1WQMembershipTransferActual` **DONE 03:22:37Z**；olean 11:22:36；latest log 输出 **`valuativeInteger_mem_normedInteger`** 与 `normedInteger_mem_valuativeInteger` 均 `[propext, Classical.choice, Quot.sound]`；当前源 11:24:29 新增 `normedIntegerEquivValuative`，**新于 olean → 重编 pending**；
+
+### ❌ red/pending
+- `Mzk1QVWeightedActual`：最新 **FAIL 03:23:01Z**；源 11:23:27；retry START 03:24:22；olean 11:20:03 stale；red；
+- `Mzk1ValueGroupActual`：最新 FAIL 03:21:11Z；源 11:24:27（已改，pending）；olean 11:16:29 stale；red。
+
+## 2026-11-15 — WQ RingEquiv/A2FullData/ValueGroup DONE；QV/Node09Paper312Rat/ProductFiber red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1WQMembershipTransferActual`：**DONE 03:25:57Z**；olean **11:25:57 > src 11:24:29**；latest log 输出 **`normedIntegerEquivValuative`**、`normedInteger_mem_valuativeInteger`、`valuativeInteger_mem_normedInteger` 均 `[propext, Classical.choice, Quot.sound]`（sorryAx 计数来自旧尝试行）→ **接受（含 RingEquiv）**；
+- `Mzk1A2Node03FullDataActual`：**DONE 03:26:00Z**；olean **11:25:59 > src 11:24:31**；`A2Node03FullData` structure + `toWitness` + `A2Node03FullDataRequired`（interface）；接受；
+- `Mzk1ValueGroupActual`：**DONE 03:26:26Z**；olean **11:26:25 > src 11:24:27**；当前源回到 interface-only：`structure ValueGroupTransportData`；接受 interface（无 inhabitant）；
+
+### ❌ red
+- `Mzk1QVWeightedActual`：最新 **FAIL 03:25:12Z**；源 11:23:27；olean 11:20:03 stale；red；
+- `Mzk1ProductFiberMultBridgeGapActual`：FAIL **03:26:24Z**（新尝试）；待查错误/源；
+- `Node09Paper312RatActual`（新）：FAIL **03:26:23Z**；无 olean；
+
+### pending
+- `Mzk1A2Node03FullDataConsumerActual`：源 11:26:33；尚无 DONE/FAIL。
+
+## 2026-11-15 — 复核批次：ProductFiber DONE 03:27:31；QV/Node09Paper312Rat/A2FullDataConsumer red（abc，只读，无编译）
+
+### ✅ DONE（最新，覆盖 lead 所称 red）
+- `Mzk1ProductFiberMultBridgeGapActual`：**DONE 03:27:31Z**；olean **11:27:31 > src 11:26:40**；当前源 interface（bridgeRows 等；BadPlaceBijection 已移除）；log 中 BadPlaceBijection/Function expected 属旧尝试 → **接受**；
+- 先前：WQ RingEquiv DONE 03:25:57（forward/reverse/normedIntegerEquivValuative 标准三公理）；A2Node03FullData DONE 03:26:00（interface）；ValueGroup DONE 03:26:26（interface ValueGroupTransportData）；
+
+### ❌ red
+- `Mzk1QVWeightedActual`：最新 **FAIL 03:25:12Z**；源 11:26:48（重编 pending）；errors：`:104 assumption failed`、**`Error pretty printing signature: incorrect number of universe levels ... paper312_of_MqFiber_bounds`**、`:105 Type mismatch`；无 olean（11:20:03 stale）；
+- `Node09Paper312RatActual`（新）：FAIL **03:26:23Z**；无 olean；errors unsolved goals :40:46、Function expected :60/:65；
+- `Mzk1A2Node03FullDataConsumerActual`：FAIL **03:27:10Z**；无 olean；error :34:46 Type mismatch。
+
+## 2026-11-15 — 复核 2：WQ 新 DONE 03:28:20；QVWeighted 仍 red 03:28:46；Node09Paper312Rat/A2FullDataConsumer retry（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1WQMembershipTransferActual`：**DONE 03:28:20Z**（最新）；olean **11:28:19 > src 11:27:55**；此前 03:25:57 已含 forward/reverse/normedIntegerEquivValuative；接受；
+- `Mzk1ProductFiberMultBridgeGapActual`：DONE 03:27:31；olean 11:27:31 > src 11:26:40；接受 interface；
+- `Mzk1A2Node03FullDataActual`：DONE 03:26:00；olean 11:25:59 > src 11:24:31；接受 interface；
+- `Mzk1ValueGroupActual`：DONE 03:26:26；olean 11:26:25 > src 11:24:27；interface ValueGroupTransportData；接受。
+
+### ❌ red / pending
+- `Mzk1QVWeightedActual`：最新 **FAIL 03:28:46Z**；源 11:28:35；无 olean（11:20:03 stale）；red（universe-level 签名/assumption/Type mismatch 等问题）；
+- `Node09Paper312RatActual`：前次 FAIL 03:26:23；retry START 03:29:03 pending；无 olean；
+- `Mzk1A2Node03FullDataConsumerActual`：前次 FAIL 03:27:10；retry START 03:29:03 pending；无 olean。
+
+## 2026-11-15 — A2FullDataConsumer DONE 03:29:34；QVWeighted/Node09Paper312Rat red（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1A2Node03FullDataConsumerActual`：**DONE 03:29:34Z**；olean **11:29:33 > src 11:27:47**；theorem `A2Node03FullData.exists_sourceSignQuotientData`；接受；
+- `Mzk1WQMembershipTransferActual`：DONE 03:28:20；olean 11:28:19 > src 11:27:55；forward/reverse/normedIntegerEquivValuative 已含；
+- `Mzk1ProductFiberMultBridgeGapActual`：DONE 03:27:31；olean 11:27:31 > src 11:26:40；interface；
+- `Mzk1ValueGroupActual`：DONE 03:26:26；olean 11:26:25 > src 11:24:27；interface ValueGroupTransportData。
+
+### ❌ red/pending
+- `Mzk1QVWeightedActual`：最新 **FAIL 03:28:46Z**；源 11:28:35；无 olean（11:20:03 stale）；red；
+- `Node09Paper312RatActual`：最新 **FAIL 03:29:55Z**；源 11:30:17（已改，pending）；无 olean；
+- 新 START：`Mzk1GaloisCompletionActual` 03:30:09（stage4 重启）。
+
+## 2026-11-15 — ROUTE CORRECTION：one-way hθ/hq 用 rp_strict_measure_resolved；ClosedBallMassFormula 仅 exact equality（abc，只读，无编译）
+
+- 新 donor（历史 DONE）：`tmp/sheaf/xif/paper/Mzk1HaarProductStrictMainlineActual.lean:165`
+  **`theorem rp_strict_measure_resolved : rpVolume T (rpRegion T) < rpVolume T (s1902Hull T)`**；
+  * 构造：`rpRequirement : XiEContainmentRequirement`（qRegion/thetaPossibleImages = rpRegion；hullRegion = s1902Hull；possible_in_hull = rpRegion_subset_hull；strict_measure 由 rpRegion_measure_lt_full）；
+  * 证据：watchdog **DONE 2026-11-11T02:50:29Z**；olean 2026-11-11 10:50:29 > src 10:48:19；
+  * **用途：one-way hθ/hq 直接消费**（strict containment/严格测度不等式），不需要 `ClosedBallMassFormula`；
+- `ClosedBallMassFormula` / `ProductHaarToFiberMult` **仅用于 exact product-Haar 等式支线**；one-way 主线不等待；
+- `BadPlaceBijection` generally false（已记录）；fiber 路线用 `QVBadPlaceFiber`(total map)/injection；
+- 更新文件：`coord/AUDIT-HQ-HTHETA-WIRING.md` §7、`coord/AUDIT-REV15-ASSET-MAP.md` §5。
+
+## 2026-11-15 — A2Integration DONE 03:31:50；WQ Irreducible/Node09Paper312Rat/OneWayConsumer/Galois red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1A2Node03IntegrationActual`：**DONE 03:31:50Z**；olean **11:31:50 > src 11:30:43**；`structure A2Node03Interface` + `toWitness` + `A2Node03InterfaceRequired := Nonempty`（interface）；接受；
+- 先前接受：A2FullDataConsumer（03:29:34）、WQMembership 旧源（03:28:20）、ProductFiber（03:27:31）、ValueGroup interface（03:26:26）。
+
+### ❌ red/pending
+- **WQ Irreducible/current source red**：`Mzk1WQMembershipTransferActual` 当前源 11:32:59（含 `padicIntegersEquivZp`/`normedIntegerEquivValuative`）；最新 **FAIL 03:31:48Z**；errors :32:32、:58:21 unsolved goals、:70:19/:71:19 Application type mismatch；olean 11:28:19 stale；旧 DONE 03:28:20 只覆盖旧源；
+- `Node09Paper312RatActual`：最新 **FAIL 03:32:12Z**；源 11:30:17；无 olean；
+- **OneWayConsumer red**：`Mzk1Node0609OneWayConsumerActual`：FAIL **03:32:12Z**；源 11:31:18；无 olean；
+- **Galois red**：`Mzk1GaloisCompletionActual`：最新 **FAIL 03:31:02Z**；源 11:29:25；olean 10:53:59 stale；
+
+### pending
+- `Mzk1A2Node03IntegrationConsumerActual`：源 11:32:54；无 DONE/FAIL；
+- `Mzk1QVWeightedActual`：retry START 03:32:27。
+
+## 2026-11-15 — QVWeighted DONE 03:33:17；WQ 当前源 DONE 03:34:03；A2IntegrationConsumer DONE 03:34:05；Node09Paper312Rat/OneWay/Galois red/pending（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1QVWeightedActual`：**DONE 03:33:17Z**；olean **11:33:16 > src 11:31:56**；sorryAx=0；clean interface/one-way：`QVBadPlaceFiber`、`MqFiber`、`MqFiber_eq_sum_localLog`、`actual_A_le_Lbar_add_Dbar_of_fiberMult`（fiber 路线；log 旧 errors 残留）；接受；
+- `Mzk1WQMembershipTransferActual`：**DONE 03:34:03Z**；olean **11:34:02 > src 11:32:59**；latest log 输出 `padicIntegersEquivZp`、`normedIntegerEquivValuative`、forward、reverse 均 `[propext, Classical.choice, Quot.sound]` → **WQ 当前源已绿**（覆盖 lead 所称 current red）；
+- `Mzk1A2Node03IntegrationConsumerActual`：**DONE 03:34:05Z**；olean **11:34:05 > src 11:32:54**；theorems `A2Node03Interface.nonempty_witness`、`A2Node03Interface.exists_sourceSignQuotientData`；接受；
+- 先前接受继续：A2Node03Integration（03:31:50）、A2FullDataConsumer（03:29:34）、ProductFiber（03:27:31）、ValueGroup（03:26:26）。
+
+### ❌ red/pending
+- `Node09Paper312RatActual`：最新 **FAIL 03:32:12Z**；源 11:30:17；无 olean；red；
+- `Mzk1Node0609OneWayConsumerActual`：前次 FAIL 03:32:12；retry START 03:33:31 pending；无 olean；
+- `Mzk1GaloisCompletionActual`：前次 FAIL 03:31:02；retry START 03:33:31 pending；olean 10:53:59 stale。
+
+## 2026-11-15 — 确认：WQ/QV/A2IntegrationConsumer DONE；新增 OneWayConsumer/Galois DONE；Node09Paper312Rat/Weight red（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1WQMembershipTransferActual`：**DONE 03:34:03Z**；olean **11:34:02 > src 11:32:59**；RingEquiv/padicIntegersEquivZp + forward/reverse 均标准三公理；接受；
+- `Mzk1QVWeightedActual`：**DONE 03:33:17Z**；olean 11:33:16 > src 11:31:56；sorryAx=0；clean interface/one-way；接受；
+- `Mzk1A2Node03IntegrationConsumerActual`：**DONE 03:34:05Z**；olean 11:34:05 > src 11:32:54；nonempty_witness/exists_sourceSignQuotientData；接受；
+- **新** `Mzk1Node0609OneWayConsumerActual`：**DONE 03:34:30Z**；olean **11:34:29 > src 11:33:20**；theorems `node0609_rpRegion_volume_lt_hull`、`node0609_rpRegion_volume_le_hull`、rows(3)；接受（rpRegion/hull 单向体积）；
+- **新** `Mzk1GaloisCompletionActual`：**DONE 03:34:32Z**；olean **11:34:32 > src 11:33:27**；当前源 3 decls（withValMovedSigma/surjective/val_eq）；接受当前源；valueGroup 仍在独立 ValueGroup interface。
+
+### ❌ red
+- `Node09Paper312RatActual`：最新 FAIL 03:32:12Z；源 11:30:17；无 olean；
+- **新** `Node09Paper312WeightActual`：FAIL **03:34:29Z**；无 olean；errors synthInstanceFailed(:68/:69/:70)、Type mismatch(:76)。
+
+## 2026-11-15 — Node09HqAssemblyLink MqFiber bounds DONE 03:35:40；Node09Paper312Rat DONE 03:36:43；WQ 新源 red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09HqAssemblyLinkActual`：**DONE 03:35:40Z**；olean **11:35:39 > src 11:34:17**；theorems `weightedRegion_of_fiberMult`、`paper312_of_fiberMult_bounds`、**`paper312_of_MqFiber_bounds`**；无 sorryAx；接受；
+- `Node09Paper312RatActual`：**DONE 03:36:43Z**；olean **11:36:43 > src 11:35:51**；theorem `paper312_of_mult` + `Node09Paper312RatRemainingMissing`；接受（此前 FAIL 03:32:12 已过时）；
+- 继续有效：QVWeighted（03:33:17）、OneWay（03:34:30）、Galois（03:34:32）、A2IntegrationConsumer（03:34:05）。
+
+### ❌ red
+- `Mzk1WQMembershipTransferActual`：当前源 **11:35:13**（新于 olean 11:34:02）；最新 **FAIL 03:36:22Z**；errors :71:19 Application type mismatch、:72:27/:74:27 Type mismatch；旧 DONE 03:34:03 仅覆盖旧源 → **当前源 red**；
+- `Node09Paper312WeightActual`：此前 FAIL 03:34:29（synthInstance :68/:69/:70、Type mismatch :76）；无 olean。
+
+## 2026-11-15 — Node09Paper312Weight/HqAssembly/Rat + A2CompletionConsumer DONE；WQ red :74（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09Paper312WeightActual`：**DONE 03:35:40Z**；olean **11:35:39 > src 11:34:45**；theorems `qVWeight_log_eq_localLogMagnitude`、`A_le_Lbar_add_Dbar_of_qVWeight`、`paper312_of_qVWeight`、`Node09Paper312WeightRemainingMissing`；接受；
+- `Node09HqAssemblyLinkActual`：**DONE 03:35:40Z**；olean 11:35:39 > src 11:34:17；含 **`paper312_of_MqFiber_bounds`**；接受；
+- `Node09Paper312RatActual`：**DONE 03:36:43Z**；olean 11:36:43 > src 11:35:51；`paper312_of_mult` + RemainingMissing；接受；
+- `Mzk1A2Node03CompletionConsumerActual`：**DONE 03:37:40Z**；olean **11:37:40 > src 11:37:00**；`A2Node03Interface.toSourceCompletionSignQuotient` + `..._quotientWitness`（simp）；接受；
+- 继续有效：QVWeighted 03:33:17、OneWay 03:34:30、Galois 03:34:32、A2IntegrationConsumer 03:34:05。
+
+### ❌ red
+- `Mzk1WQMembershipTransferActual`：当前源 **11:38:11**（新于 olean 11:34:02）；最新 **FAIL 03:36:22Z**；errors :71:19 Application type mismatch、:72:27/:74:27 Type mismatch（:74 处 symm ring hom 参数方向）；旧 DONE 03:34:03 仅覆盖旧源 → **current red，待重编/修**。
+
+## 2026-11-15 — WQ irreducible red/deferred；Node09ResidueNorm/A2Handoff red；Paper312 主链 green（abc，只读，无编译）
+
+### ❌ red/deferred
+- `Mzk1WQMembershipTransferActual`：**WQ irreducible 仍 red/deferred**；当前源 11:40:21（新），最新 DONE 03:38:51（olean 11:38:50）覆盖中间源；新 START 03:40:15 pending；前次 FAIL 03:36:22（:74 symm ring hom）仍在历史；irreducible/padicIntegersEquiv 分支未验收；
+- `Node09ResidueNormActual`：源 11:39:55；**FAIL 03:39:38Z**；retry START 03:40:15；errors rewrite :22:8、Type mismatch :27:4；无 olean；
+- `Mzk1A2Node03Node04HandoffActual`（A2Handoff）：源 11:38:17；**FAIL 03:38:52Z**；error Type mismatch :22:35；无 olean；
+
+### ✅ Paper312 主链 green（既有 DONE）
+- `Mzk1Paper312AssemblyActual`（DONE 02:47:32 / 2026-11-14）、`CorrectionConsumerActual`（02:25:58）、`UnramifiedActual`（02:39:39）、`SourceExponentActual`（23:54:34）；
+- 新链：`Node09Paper312WeightActual` DONE 03:35:40、`Node09Paper312RatActual` DONE 03:36:43、`Node09HqAssemblyLinkActual` DONE 03:35:40（含 paper312_of_MqFiber_bounds）；
+- 以上链条 green 记录维持；不因 WQ/Node09ResidueNorm/A2Handoff red 而失效。
+
+## 2026-11-15 — WQ clean DONE 03:40:43；Paper312 主链 green；Node09ResidueNorm/A2Handoff red（abc，只读，无编译）
+
+### ✅ WQ clean（当前源 fresh）
+- `Mzk1WQMembershipTransferActual`：**DONE 03:40:43Z**；olean **11:40:43 > src 11:40:21**；latest log 输出 **`padicIntegersEquivZp`**、`normedIntegerEquivValuative`、`normedInteger_mem_valuativeInteger` 均 `[propext, Classical.choice, Quot.sound]`（sorryAx 计数来自旧尝试行）→ **WQ clean 接受**；
+
+### ✅ Paper312 主链 green（维持）
+- Assembly（02:47:32/11-14）、CorrectionConsumer（02:25:58）、Unramified（02:39:39）、SourceExponent（23:54:34）；Node09Paper312Weight（03:35:40）、Rat（03:36:43）、HqAssemblyLink（03:35:40 含 paper312_of_MqFiber_bounds）；
+
+### ❌ red/pending
+- `Node09ResidueNormActual`：源 11:40:58；最新 **FAIL 03:40:46Z**；retry START 03:41:00；errors rewrite :22:8、Type mismatch :27:4；无 olean；
+- `Mzk1A2Node03Node04HandoffActual`（A2Handoff）：源 11:41:24；最新 FAIL 03:38:52Z；retry START 03:41:00；error Type mismatch :22:35；无 olean。
+
+## 2026-11-15 — Node09ResidueNorm/A2Handoff DONE；WQ clean；Paper312 主链 green（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ResidueNormActual`：**DONE 03:42:09Z**；olean **11:42:09 > src 11:41:37**；theorem `residueNormBase_rat_eq_of_absNorm` + `Node09ResidueNormRemainingMissing`；接受；
+- `Mzk1A2Node03Node04HandoffActual`（A2Handoff）：**DONE 03:41:31Z**；olean **11:41:30 > src 11:41:24**；`structure A2Node04HandoffData` + `A2Node04HandoffRequired := Nonempty`（interface）；接受；
+- `Mzk1WQMembershipTransferActual`（WQ clean）：**DONE 03:40:43Z**；olean **11:40:43 > src 11:40:21**；`padicIntegersEquivZp`/`normedIntegerEquivValuative`/forward/reverse 均标准三公理；接受；
+- Paper312 主链 green 维持：Assembly 02:47:32、CorrectionConsumer 02:25:58、Unramified 02:39:39、SourceExponent 23:54:34；新链 Weight 03:35:40、Rat 03:36:43、HqAssemblyLink 03:35:40。
+
+## 2026-11-15 — ROUTE DECISION：one-way hθ/hq 接受 node0609_rpRegion_volume_le_hull；残余验证（4 stale probes + IntegralUnitLogarithm dirty）（abc，只读，无编译）
+
+### 路线决定（Lead）
+- **接受 one-way 终点**：`Mzk1Node0609OneWayConsumerActual.node0609_rpRegion_volume_le_hull`（DONE 03:34:30Z；olean 11:34:29 > src 11:33:20）：`rpVolume T (rpRegion T) ≤ rpVolume T (s1902Hull T)`，由 `node0609_rpRegion_volume_lt_hull`（=`rp_strict_measure_resolved`）取 `le_of_lt`；
+- **exact weighted-q equality 不再要求**（inequality path）：`ProductHaarToFiberMult`/`MqFiber` equality、`ClosedBallMassFormula` 降级为 exact/可选强化；ProductFiber（03:27:31）、QVWeighted（03:33:17）DONE 不再 blocker；
+- 更新：`coord/AUDIT-HQ-HTHETA-WIRING.md` §8、`coord/AUDIT-REV15-ASSET-MAP.md` §6；
+
+### 残余验证
+- **4 stale probes**（与 shehdd 报告一致）：
+  1. `Mzk1GaloisValOnlyProbeActual`：olean 10:21:05 < GaloisCompletion 当前 olean 11:34:32 → stale；
+  2. `Mzk1TaskEProbeActual`：olean 10:01:32 < TaskECompletion 当前 olean 10:45:30 → stale；
+  3. `Mzk1GaloisCompletionCurrentProbeActual`：无 olean，FAIL 03:40:01Z；
+  4. `Mzk1PadicGaloisProbeActual`：无 olean，FAIL 03:40:01Z；
+  * 其余 probe 仍 fresh（PadicValuedOnly 10:20:59、ThetaBridge 10:07:35、TaskGDonor 10:04:28 等）；
+- **IntegralUnitLogarithm dirty**：`LeanFormal/IUT/Foundations/LocalFields/IntegralUnitLogarithm.lean` 源 **11:43:18 > olean 08:27:48**；最新 watchdog 条目为 2026-11-14T23:29:57 **FAIL** → 源码 dirty/未重建；同目录 `IntegralUnitLogarithmCongruenceEquiv`（src 13:40:11 / olean 13:40:39）与 `...TorsionFinite`（13:41:49 / 13:42:16）fresh；
+- **Paper312 主链 green 维持**：Assembly 02:47:32、CorrectionConsumer 02:25:58、Unramified 02:39:39、SourceExponent 23:54:34；新链 Weight 03:35:40、Rat 03:36:43、HqAssemblyLink 03:35:40。
+
+## 2026-11-15 — Node09WeightHA0 DONE 03:44:37；IntegralUnitLogarithm fresh DONE 03:44:15；Paper312 主链 green（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09WeightHA0Actual`：**DONE 03:44:37Z**；olean **11:44:37 > src 11:43:38**；theorems **`hA0_of_qVWeight`**、**`paper312_of_qVWeight_actual`**；接受；
+- `IntegralUnitLogarithm`（dirty resolved）：**DONE 03:44:15Z**；olean **11:44:14 > src 11:43:18**；无当前错误；dirty 状态解除；接受；
+- Paper312 主链 green 维持：Assembly 02:47:32、CorrectionConsumer 02:25:58、Unramified 02:39:39、SourceExponent 23:54:34；新链 Weight 03:35:40、Rat 03:36:43、HqAssemblyLink 03:35:40、Node09WeightHA0 03:44:37。
+
+### ❌ red
+- **新** `Mzk1WQuotientFiveConditionalActual`：FAIL **03:45:09Z**；errors：import 的模块 `tmp.sheaf.xif.paper.Mzk1WQuotientFiveIsoActual` 的 olean 不存在（依赖未构建/命名不对）；无 olean；当前 red/pending。
+
+## 2026-11-15 — Node09AbsNormRat/A2LocalTransport DONE；WQ conditional red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09AbsNormRatActual`：**DONE 03:50:00Z**；olean 11:49:51；theorems **`absNorm_rat_eq`**、**`residueNormBase_rat_eq`**；但**当前源 11:50:10 新于 olean → 重编 pending**；
+- `Mzk1A2Node04LocalTransportInterfaceActual`（A2LocalTransport）：**DONE 03:48:08Z**；olean **11:48:08 > src 11:47:39**；`A2Node04LocalTransportInterface` structure + `toHandoff` + `Required`（interface）；接受；Consumer 文件 src 11:51:06 尚无 olean（pending）；
+- Paper312/main chain green 维持（Assembly/Correction/Unramified/SourceExponent + Weight/Rat/HqAssemblyLink/Node09WeightHA0）。
+
+### ❌ red
+- `Mzk1WQuotientFiveConditionalActual`：最新 **FAIL 03:49:11Z**；当前源 11:51:01（pending rebuild）；无 olean；errors：**invalid field notation** `D.phi`/`D.psi`(:41/:42/:46)；**:44 `theorem WQuotientFiveActualIso_of_hypotheses : WQuotientFiveIso` 的类型不是 Prop**（`WQuotientFiveIso` 为 Type，应改 `def`）；lead 记 invalid K 参数；不接受。
+
+## 2026-11-15 — 复核：Node09AbsNormRat/A2LocalTransportInterface DONE；WQ conditional/A2Consumer red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09AbsNormRatActual`：**最新 DONE 03:51:44Z**；olean **11:51:44**；theorems `absNorm_rat_eq`、`residueNormBase_rat_eq`；**当前源 11:51:53 略新于 olean → 重编 pending**；
+- `Mzk1A2Node04LocalTransportInterfaceActual`：**DONE 03:48:08Z**；olean **11:48:08 > src 11:47:39**；`A2Node04LocalTransportInterface` + `toHandoff` + Required（interface）；接受；
+- Paper312/main chain green 维持。
+
+### ❌ red
+- **WQ conditional** `Mzk1WQuotientFiveConditionalActual`：最新 **FAIL 03:52:05Z**；当前源 11:52:12 pending；无 olean；errors：invalid field `D.phi`/`D.psi`（:45/:49）、**:47 `theorem WQuotientFiveActualIso_of_hypotheses` 类型非 Prop**（应 def）；lead 记 invalid K 参数；不接受；
+- **A2LocalTransportConsumer** `Mzk1A2Node04LocalTransportConsumerActual`：**FAIL 03:51:46Z**；源 11:51:06；无 olean；error `Function expected at` :31:14；不接受。
+
+## 2026-11-15 — Node09AbsNormRat hlogp DONE 03:52:49；A2LocalTransportInterface/Consumer DONE；WQ conditional red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09AbsNormRatActual`：**DONE 03:52:49Z**；olean **11:52:49 > src 11:51:53**；theorems `absNorm_rat_eq`、`residueNormBase_rat_eq`、**`hlogp_rat_of_place_prime_eq`**；接受；
+- `Mzk1A2Node04LocalTransportInterfaceActual`：DONE 03:48:08Z；olean 11:48:08 > src 11:47:39；Interface/toHandoff/Required；接受；
+- `Mzk1A2Node04LocalTransportConsumerActual`：**DONE 03:52:51Z**；olean **11:52:51 > src 11:52:19**；defs `completionFieldEquiv'`、`integersEquiv'`、`unitsTorsionEquiv'` + theorem `nonempty_handoff`；接受（此前 FAIL 03:51:46 已过时）；
+- Paper312/main chain green 维持。
+
+### ❌ red
+- `Mzk1WQuotientFiveConditionalActual`：最新 **FAIL 03:53:10Z**；当前源 11:54:10（pending rebuild）；无 olean；WQ conditional 仍 red/aux（invalid field :45/:49、theorem 类型非 Prop :47、invalid K 参数）。
+
+## 2026-11-15 — ⛔ WQ placeholder DONE 03:54:50 但含 synthetic sorryAx（不接受）；Node09HlogpTransport/A2Consumer extension red（abc，只读，无编译）
+
+### ⛔ WQ placeholder — DONE 但不能接受
+- `Mzk1WQuotientFiveConditionalActual`：**DONE 03:54:50Z**；olean **11:54:50 > src 11:54:10**；
+- 但 latest log 输出：**`WQuotientFiveActualIso_of_hypotheses` depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]**（synthetic sorryAx）；且有错误上下文 `D has type WQuotientFiveActualData which does not have the necessary form`（invalid field）；
+- 结论：**DONE=EXIT 0 不代表 kernel-clean；该 placeholder 不接受**，需要真实证明/无 synthetic sorryAx 后重新审计；不得作为 WQ 同构证据。
+
+### ❌ red
+- `Node09HlogpTransportActual`（新）：**FAIL 03:54:51Z**；源 11:55:05；retry START 03:55:07；无 olean；errors Function expected :24:34、unknown `residueNormBase_field_cast` :32:16、unsolved :30:46；
+- `Mzk1A2Node04LocalTransportConsumerActual`（extension）：**FAIL 03:54:53Z**；源 11:55:22（新于 olean 11:52:51）；errors Function expected :31:14、unknown constant `A2Node04HandoffData.toSourceCompletionSignQuotient` :39:2。
+
+## 2026-11-15 — 审计裁定：WQ placeholder 非 kernel-clean 证据；Hlogp/A2Consumer red（abc，只读，无编译）
+
+- **裁定（Lead）**：`Mzk1WQuotientFiveConditionalActual` 的 DONE 03:54:50 **不是 kernel-clean 证据**：其 `WQuotientFiveActualIso_of_hypotheses` 带 **historical synthetic sorryAx**；只能作为 **auxiliary placeholder**，**不构成 WQ 同构证明**，不得列入 WQ 证据链；
+- 最新状态复核：
+  * `Mzk1WQuotientFiveConditionalActual`：DONE 03:54:50（olean 11:54:50 > src 11:54:10）但 synthetic sorryAx → **不接受为证据**；
+  * `Node09HlogpTransportActual`：**FAIL 03:56:11Z**（重试后仍红）；源 11:55:05；无 olean；
+  * `Mzk1A2Node04LocalTransportConsumerActual`：当前源 **11:56:52**（新于 olean 11:52:51）；START 03:56:25 构建中；此前 FAIL 03:54:53（Function expected :31、unknown toSourceCompletionSignQuotient :39）→ red/pending。
+
+## 2026-11-15 — hull：node06/09 one-way hθ/hq bound accepted；residual exact weighted-q gap
+
+- **accepted one-way bound**：`Mzk1Node0609OneWayConsumerActual.node0609_rpRegion_volume_le_hull`（GREEN 03:34:30Z）：
+  ```lean
+  rpVolume T (rpRegion T) ≤ rpVolume T (s1902Hull T)
+  ```
+  由 `Mzk1HaarProductStrictMainlineActual.rp_strict_measure_resolved` + `le_of_lt`；不需要 `ClosedBallMassFormula`。
+- **residual exact weighted-q gap**（optional，不阻塞单向）：
+  1. `ClosedBallMassFormula`：`rootExtensionHaar T b (closedBall 0 r) = ENNReal.ofReal (constant * r^localDegree)`；
+     仓库只有 `rootExtensionHaar = Measure.addHaar`、`rootExtensionHaar_ball_strict`（strict inequality）、pos/fin；无半径公式；
+  2. `ProductHaarToFiberMult`：`rpVolume T (rpRegion T) ≤ (1/(2l)) * ∑ i, fiberMult X b i / Fdeg * log (residueNormBase (b i).1)`；
+  3. Bad↔FinitePlace bijection 已从 critical path 移除；Node09 只用函数 `b : FinitePlaceAtPrime F p → Bad (...)`；
+- **next donor needed**：p-adic closed-ball Haar mass formula（`mass = const * r^degree`）或 normalized product reference measure 定理；
+  当前无 donor；mass formula 只对 exact equality 路线必需。
+- 接口位置：`tmp/sheaf/xif/paper/Mzk1ProductFiberMultBridgeGapActual.lean`（closedBall_logMass_of_formula、ProductHaarToFiberMult、ClosedBallMassFormula）、`Mzk1Node0609OneWayConsumerActual.lean`。
+
+## 2026-11-15 — Node09HlogpTransport DONE 03:58:37；HperInput DONE 04:00:54；WQProbe fresh DONE 03:57:35；A2Consumer retry pending（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09HlogpTransportActual`：**DONE 03:58:37Z**；olean **11:58:36 > src 11:57:27**；theorem **`hlogp_fmod_rat`** + `Node09HlogpTransportRemainingMissing`；接受；
+- `Node09HperInputActual`：**DONE 04:00:54Z**（lead 时 running，现绿）；olean **12:00:53 > src 11:59:58**；theorem **`hper_of_mult_eq_actualFn`** + `Node09HperRemainingMissing`；接受；
+- `Mzk1WQProbeActual`：**DONE 03:57:35Z**；olean **11:57:35 > src 11:56:50**；log 输出 `WQuotientFiveIsoRequired`、`WQuotientFiveIsoPhiPsiRequired`、`normedIntegerEquivValuative` 均 `[propext, Classical.choice, Quot.sound]` → **fresh probe 干净**（注意：仅证实 interface/axioms；WQ placeholder 的实际同构证明仍未交付，§7.41 裁定不变）；
+
+### ⚠️ pending/red
+- `Mzk1A2Node04LocalTransportConsumerActual`：最新 **FAIL 03:56:55Z**；当前源 **12:00:55**（新于 olean 11:52:51）；**retry 尚未启动**（pending）；
+- WQ placeholder `Mzk1WQuotientFiveConditionalActual`：仍按 §7.41 裁定 **非 kernel-clean**，不作证据。
+
+## 2026-11-15 — A2LocalTransportConsumer DONE 04:01:47；GaloisToMZ DONE 04:02:14（提供 withValMovedSigma lemma）；QVMqFiberInterface red 04:02:10（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1A2Node04LocalTransportConsumerActual`：**DONE 04:01:47Z**；olean **12:01:47**；defs completionFieldEquiv'/integersEquiv'/unitsTorsionEquiv' + `nonempty_handoff`；**当前源 12:02:30 新于 olean → 重编 pending**；
+- `Mzk1GaloisToMZActual`（新）：**DONE 04:02:14Z**；olean **12:02:13 > src 12:00:50**；theorem **`withValMovedSigma_toMonoidWithZeroHom_val_eq`** — 正是 ValueGroup 之前缺的 lemma（§7.19 的 unknown identifier 现已由该文件提供）；接受；
+
+### ❌ red
+- `Mzk1QVMqFiberInterfaceActual`（新）：**FAIL 04:02:10Z**；源 12:01:02；无 olean；errors synthInstanceFailed(:30:5)、unknown `rootExtensionHaar`(:36:12)；不接受；
+
+### 📌 hmult/exact 缺口（Lead 记录）
+- hmult exact 仍缺：**`horder`**、**`hresidueDegree`**、**`hlogShellResidueCard`**；
+- 以及 `hper`/`hbase` 残余条件；按 inequality path 可先用 one-way donor，exact 分支继续补这些假设。
+
+## 2026-11-15 — 复核：GaloisToMZ DONE 04:02:14 有效；A2Consumer extension 仍 red 04:03:14；QVMqFiber retry pending（abc，只读，无编译）
+
+### ✅ DONE（维持）
+- `Mzk1GaloisToMZActual`：**DONE 04:02:14Z**；olean **12:02:13 > src 12:00:50**；theorem `withValMovedSigma_toMonoidWithZeroHom_val_eq`；接受；
+
+### ❌ red/pending
+- `Mzk1A2Node04LocalTransportConsumerActual`：**extension 最新 FAIL 04:03:14Z**；源 **12:03:29**（新于 olean 12:01:47）；A2Consumer extension 仍 red/pending；
+- `Mzk1QVMqFiberInterfaceActual`：最新 FAIL 04:02:10Z；源 12:02:50；retry START 04:03:29 pending；无 olean；
+- 既有：WQ placeholder 非 kernel-clean（§7.41）；QVMqFiber 若再 DONE 需查 synthInstance/unknown rootExtensionHaar 是否修掉。
+
+## 2026-11-15 — QVMqFiberInterface DONE 04:03:54；A2Consumer extension red（invalid fields）；GaloisToMZ DONE（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1QVMqFiberInterfaceActual`：**DONE 04:03:54Z**；olean **12:03:54 > src 12:02:50**；sorryAx=0（2 旧 errors 残留）；内容为 **interface**：`badFiberCount`、`BadFiberIndexBridge`、`ClosedBallLogRatioAtRpRadius`(Prop)、`closedBallDonors`(4)（均 no inhabitant）；接受为 interface；
+- `Mzk1GaloisToMZActual`：DONE 04:02:14Z；olean 12:02:13 > src 12:00:50；`withValMovedSigma_toMonoidWithZeroHom_val_eq`；接受；
+
+### ❌ red/pending
+- `Mzk1A2Node04LocalTransportConsumerActual`（extension）：最新 **FAIL 04:03:14Z**；源 **12:04:33**（新于 olean 12:01:47）；新 START 04:04:08 pending；errors：unknown `A2Node04HandoffData.toSourceCompletionSignQuotient`(:43)、invalid field `toSourceCompletionSignQuotient`(:52) 与 `toSourceSignQuotientData`(:56)（Interface 未提供这些字段）；不接受。
+
+## 2026-11-15 — QVMqFiberInterface DONE 04:03:54；hmult exact missing 已定义（pending build）；A2Consumer extension red（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1QVMqFiberInterfaceActual`：DONE 04:03:54Z；olean 12:03:54 > src 12:02:50；interface（badFiberCount/BadFiberIndexBridge/ClosedBallLogRatioAtRpRadius/closedBallDonors 4，no inhabitant）；
+
+### 📌 QVMqFiber hmult exact missing — 已定义，pending build
+- 新 `Mzk1QVFiberWeightedActual`（源 12:05:00；**尚无 olean**）：
+  * `fiberMultWeighted`（fiber-summed qV effective multiplicity）；
+  * **`MqFiberBadSumBridge`**（explicit missing **hmult/fiber identity** 作为 Prop，no inhabitant）；
+  * theorem `MqFiber_eq_badWeighted_of_fiber`（条件于 hfr/hlog/hreindex）；
+- 新 `Node09LogShellCardActual`（源 12:04:08；无 olean）：theorem **`logShellResidueCard_eq_absNorm`**（覆盖 hlogShellResidueCard 缺口）；
+- 新 `Mzk1ValueGroupProofActual`（源 12:05:04；无 olean）：ValueGroup 证明尝试（使用 GaloisToMZ 的 withValMovedSigma lemma）；
+- 状态：三者均 **pending build**，未形成证据；等 watchdog DONE 后再审。
+
+### ❌ red/pending
+- `Mzk1A2Node04LocalTransportConsumerActual`（extension）：最新 FAIL 04:03:14Z；源 **12:05:02**（新于 olean 12:01:47）；invalid fields toSourceCompletionSignQuotient/toSourceSignQuotientData；不接受。
+
+## 2026-11-15 — Node09LogShellCard red（缺依赖 olean）；A2Consumer red :31/:52/:56；QVFiberWeighted/ValueGroupProof pending（abc，只读，无编译）
+
+### ❌ red/pending
+- `Node09LogShellCardActual`：最新 **FAIL 04:06:09Z**；源 12:04:08；无 olean；error：import 模块 `LeanFormal/IUT/Foundations/NumberField/FinitePlaceNormalizedCompletion` 的 **olean 不存在**（依赖未构建）；不接受；
+- `Mzk1A2Node04LocalTransportConsumerActual`（extension）：最新 FAIL 04:04:38Z；源 12:05:02；新 START 04:06:23 pending；errors：invalid field `toSourceCompletionSignQuotient`(:52)、`toSourceSignQuotientData`(:56)（较早尝试另有 :31 `Function expected`）；不接受；
+- `Mzk1QVFiberWeightedActual`：源 12:05:00；START 04:06:23 pending；无 olean；
+- `Mzk1ValueGroupProofActual`：源 12:05:04；START 04:06:23 pending；无 olean；
+- `Mzk1QVMqFiberInterfaceActual` DONE 04:03:54 维持（interface）。
+
+## 2026-11-15 — LogShellCard/QVFiberWeighted/ValueGroupProof DONE；A2Consumer DONE 04:06:57（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09LogShellCardActual`：**DONE 04:09:37Z**；olean **12:09:37 > src 12:09:10**；**exact interface only**：仅 `Node09LogShellCardRemainingMissing`（记录 ResidueCardBridge 缺口、planned proof route、blocker=缺 `FinitePlaceNormalizedCompletion` olean、下游 localResidueDegree=actualFn 路线、horder clause-B input、hbase 需 PadicValuedCoherence）；**无定理/无 inhabitant**；
+- `Mzk1QVFiberWeightedActual`：**DONE 04:09:18Z**；olean **12:09:17 > src 12:08:18**；`fiberMultWeighted`、**`MqFiberBadSumBridge`**（explicit missing hmult/fiber identity Prop，no inhabitant）、条件定理 `MqFiber_eq_badWeighted_of_fiber`；接受为 conditional/interface；
+- `Mzk1ValueGroupProofActual`：**DONE 04:10:24Z**；olean **12:10:23 > src 12:09:25**；theorem **`valueGroupTransportData : ValueGroupTransportData (T := T) σ v`**（用 GaloisToMZ 的 `withValMovedSigma_toMonoidWithZeroHom_val_eq`；log sorryAx=0）；**ValueGroupTransportData 由 interface 变为实际证明**（建议 fresh probe 补 axioms）；
+- `Mzk1A2Node04LocalTransportConsumerActual`：**DONE 04:06:57Z**；olean **12:06:56 > src 12:05:02**；extension 现已绿（先前 04:03:14/04:04:38 red 已过时）；
+
+### 📌 残余
+- **hmult exact 仍无 inhabitant**：`MqFiberBadSumBridge` 作为显式假设；horder/hbase 残余见 LogShellCard note；
+- stale chain 已被 touched/enqueued in plan（Lead 记录）。
+
+## 2026-11-15 — 复核确认：ValueGroupProof/A2Consumer/LogShellCard/QVFiberWeighted DONE；stale chain 重建中（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1ValueGroupProofActual`：DONE 04:10:24Z；olean **12:10:23 > src 12:09:25**；theorem **`valueGroupTransportData : ValueGroupTransportData`**（actual proof，no synthetic sorryAx）；
+- `Mzk1A2Node04LocalTransportConsumerActual`（extension）：DONE 04:06:57Z；olean **12:06:56 > src 12:05:02**；green；
+- `Node09LogShellCardActual`：DONE 04:09:37Z；olean 12:09:37 > src 12:09:10；**exact interface only**（RemainingMissing；无定理）；
+- `Mzk1QVFiberWeightedActual`：DONE 04:09:18Z；olean 12:09:17 > src 12:08:18；conditional MqFiber bridge（`MqFiberBadSumBridge` no inhabitant）；
+
+### ⏳ stale chain 重建中
+- watchdog START 04:13:28Z：`LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceCompletionDegree.lean`、`LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceNormalizedCompletion.lean`（解决 LogShellCard blocker 的 stale olean 依赖）；pending。
+
+## 2026-11-15 — stale LeanFormal chain 4/4 DONE；LogShellCard rerun red；QVFiberWeighted rerunning；ValueGroupProof accepted（abc，只读，无编译）
+
+### ✅ stale chain 4/4 DONE
+- `LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceNormalizedCompletion.lean`：**DONE 04:13:56Z**；
+- `.../FinitePlaceCompletionDegree.lean`：**DONE 04:13:57Z**；
+- `.../FinitePlaceCompletionDegreeGlobal.lean`：**DONE 04:14:25Z**；
+- `.../FinitePlaceCompletionLocalInputs.lean`：**DONE 04:14:28Z**；
+→ LogShellCard 的 stale olean blocker（FinitePlaceNormalizedCompletion）已解决；
+
+### ✅ ValueGroupProof accepted
+- `Mzk1ValueGroupProofActual`：DONE 04:10:24Z；olean 12:10:23 > src 12:09:25；theorem `valueGroupTransportData : ValueGroupTransportData`（actual proof，no synthetic sorryAx）；接受；
+
+### ❌/⏳ rerun
+- `Node09LogShellCardActual`：**rerun FAIL 04:15:09Z**；当前源 12:14:39；errors：`unfold` 失败（local variable `logShellResidueCard` 无定义 :20）、Invalid argument name `K`(:36:25)、Function expected(:36:66)、`unfold residueNormBase` 无定义(:37)；旧 DONE 04:09:37 仅为 interface-only 版本，已被当前 red 源覆盖；
+- `Mzk1QVFiberWeightedActual`：rerun START 04:14:42Z；当前源 12:14:24（旧 olean 12:09:17 已 stale）；pending。
+
+## 2026-11-15 — QVFiberWeighted rerun DONE 04:20:13；Node09LogShellCard red 04:15:09；Uniform running（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1QVFiberWeightedActual`：**rerun DONE 04:20:13Z**；olean **12:20:13 > src 12:19:11**；sorryAx=0（旧 errors 残留）；decls：`fiberMultWeighted`、**`MqFiberBadSumBridge`**（explicit hmult/fiber identity Prop，no inhabitant）、条件定理 `MqFiber_eq_badWeighted_of_fiber`；接受为 conditional/interface；
+
+### ❌ red
+- `Node09LogShellCardActual`：**FAIL 04:15:09Z**（最新）；源 12:14:39；无新 olean（旧 12:09:37 为 interface-only 版本）；errors：unfold `logShellResidueCard`/`residueNormBase` 无定义 :20/:37、Invalid argument name `K` :36:25、Function expected :36:66；当前源 red；
+
+### ⏳ running
+- `Mzk1UniformActual`：源 12:19:45；START 04:20:28；无 olean；running/pending。
+
+## 2026-11-15 — Uniform red（GroupWithZero/rewrite）；LogShellCard red（residueNormBase）；QVFiberWeighted/stale chain DONE（abc，只读，无编译）
+
+### ✅ 维持
+- `Mzk1QVFiberWeightedActual`：DONE 04:20:13Z；olean 12:20:13 > src 12:19:11；conditional hmult bridge；
+- stale LeanFormal chain 4/4 DONE（FinitePlaceNormalizedCompletion 04:13:56、Degree 04:13:57、DegreeGlobal 04:14:25、LocalInputs 04:14:28）；
+
+### ❌ red
+- `Mzk1UniformActual`（新）：**FAIL 04:21:20Z**；源 12:19:45；无 olean；errors：**synthInstanceFailed(:41:5)**（GroupWithZero 实例）、**rewrite failed(:45:6, :37:8 motive is not type correct)**、Application type mismatch；不接受；
+- `Node09LogShellCardActual`：**FAIL 04:15:09Z**；源 12:14:39；无新 olean；errors：**unfold `residueNormBase` 失败(:37)**、`logShellResidueCard` 无定义(:20)、Invalid argument name `K`(:36:25)、Function expected(:36:66)；不接受。
+
+## 2026-11-15 — Node09LogShellCard DONE 04:26:11（reverted exact interface）；upstream 两文件 enqueued（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09LogShellCardActual`：**DONE 04:26:11Z**；olean **12:26:11 > src 12:26:07**；**reverted exact interface**：仅 `Node09LogShellCardRemainingMissing`（无定理/无 inhabitant）；接受 interface；
+- `Mzk1QVFiberWeightedActual` DONE 04:20:13、stale chain 4/4 DONE 维持；
+
+### ⏳ upstream enqueued（extra-targets 已加入）
+- `LeanFormal/IUT/Foundations/LocalFields/IntegralLogShellIndexArithmetic.lean`：源 **12:26:55**；旧 olean 18:24:59 stale；**START 04:27:09 运行中**；
+- `LeanFormal/IUT/Foundations/LocalFields/IntegralLogShellIndexResidueFormula.lean`：源 **12:26:55**；旧 olean 01:38:39 stale；**pending 构建**；
+- 两者为 LogShellCard 的上游依赖（index arithmetic / residue formula）；DONE 后需重新审计 LogShellCard 的 exact interface 与后续 consumer。
+
+## 2026-11-15 — Uniform/A2Consumer/LogShellCard/QVFiberWeighted DONE；upstream Arithmetic DONE；仅 4 stale FAIL（abc，只读，无编译）
+
+### ✅ DONE（当前源 fresh）
+- `Mzk1UniformActual`：**DONE 04:25:13Z**；olean **12:25:12 > src 12:24:04**；`structure UniformContinuitySource`（interface）；接受；
+- `Mzk1A2Node04LocalTransportConsumerActual`：**DONE 04:22:05Z**；olean **12:22:04 > src 12:20:51**；接受；
+- `Node09LogShellCardActual`：DONE 04:26:11Z；olean 12:26:11 > src 12:26:07；reverted exact interface（RemainingMissing）；
+- `Mzk1QVFiberWeightedActual`：DONE 04:20:13Z；olean 12:20:13 > src 12:19:11；conditional hmult bridge；
+
+### ✅ 上游
+- `LeanFormal/IUT/Foundations/LocalFields/IntegralLogShellIndexArithmetic.lean`：**DONE 04:27:37Z**；olean **12:27:36 > src 12:26:55**；
+- `IntegralLogShellIndexResidueFormula.lean`：START 04:27:37，running；
+
+### ❌ 仅存 stale FAIL
+- 最近仍在日志的最后一批 FAIL 为 2 个 stale probes（`Mzk1GaloisCompletionCurrentProbeActual` 04:24:08、`Mzk1PadicGaloisProbeActual` 04:24:07）；其余 FAIL（LogShellCard/QVFiberWeighted/Uniform 旧尝试等）均已被后续 DONE 覆盖；lead 记 **仅 4 stale FAIL**（均为 stale/superseded，不作证据）。
+
+## 2026-11-15 — 两个 IntegralLogShellIndex 上游 DONE；无 real red；仅 stale probes + pending（abc，只读，无编译）
+
+### ✅ 上游 DONE
+- `LeanFormal/IUT/Foundations/LocalFields/IntegralLogShellIndexArithmetic.lean`：**DONE 04:27:37Z**；olean **12:27:36 > src 12:26:55**；
+- `LeanFormal/IUT/Foundations/LocalFields/IntegralLogShellIndexResidueFormula.lean`：**DONE 04:28:05Z**；olean **12:28:04 > src 12:26:55**；
+
+### ✅ 无 real red
+- watchdog 04:27 之后无 FAIL 记录；最近 FAIL 均为 stale probes（GaloisCompletionCurrentProbe/PadicGaloisProbe 等，04:24 前），已被后续 DONE/重跑覆盖；
+
+### ⏳ 残余（lead 记：4 stale probes + 4 pending）
+- extra-targets 非构建项 3 个：`Mzk1CheckSharpDonorProbeActual`、`Mzk1GaloisCompletionCurrentProbeActual`、`Mzk1PadicGaloisProbeActual`（+ `Mzk1GaloisValOnlyProbeActual` 旧 olean stale = 第 4 个 stale probe）；
+- pending：`Node09LogShellCardActual` START 04:28:33 重跑中（上游 DONE 后重审），另有 3 个 queue pending（按 lead 计数）；
+- heartbeat 04:28:28：running=0, pending=0（随后 START 04:28:33）。
+
+## 2026-11-15 — LogShellCard reverted DONE 04:29:21；ResidueCardBridge 仍被 lake stale module mapping 阻塞（compat shim 构建中）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09LogShellCardActual`：**DONE 04:29:21Z**；olean **12:29:21 > src 12:29:09**；**reverted exact interface 保持**（仅 `Node09LogShellCardRemainingMissing`，无定理）；接受 interface；
+
+### 📌 ResidueCardBridge blocker（lake stale module mapping）
+- 模块已从 `LeanFormal/IUT/Foundations/NumberField/FinitePlaceNormalizedCompletion` 移到 `LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceNormalizedCompletion`；
+- 新路径 olean **存在**（DONE 04:13:56；mtime 12:13:56）；**旧路径 olean 仍缺失**（`.lake/build/lib/lean/LeanFormal/IUT/Foundations/NumberField/FinitePlaceNormalizedCompletion.olean` = NONE）；
+- 旧路径有 **compatibility shim**（`.../Foundations/NumberField/FinitePlaceNormalizedCompletion.lean`：552B，纯 import shim，无 decl/axiom/proof；mtime **12:30:27**）；
+- shim 已加入 extra-targets；watchdog **START 04:30:41**，**olean 仍 NONE** → 阻塞待 shim 构建完成；
+- 4 chain + 2 upstream DONE（FinitePlaceNormalizedCompletion/Degree/DegreeGlobal/LocalInputs + IntegralLogShellIndexArithmetic/ResidueFormula），但旧 olean 依赖仍被引用 → ResidueCardBridge 暂保留 exact interface，不写证明。
+
+## 2026-11-15 — compatibility shim DONE 04:31:06；旧路径 olean 恢复；mainline 重试 ResidueCardBridge（abc，只读，无编译）
+
+### ✅ shim DONE
+- `LeanFormal/IUT/Foundations/NumberField/FinitePlaceNormalizedCompletion.lean`（compatibility shim）：**DONE 04:31:06Z**；olean **12:31:06 > src 12:30:27**；
+- **旧路径 olean 现在存在**：`.lake/build/lib/lean/LeanFormal/IUT/Foundations/NumberField/FinitePlaceNormalizedCompletion.olean`（之前 NONE）；→ stale module mapping 阻塞解除；
+
+### ⏳ mainline 重试 ResidueCardBridge
+- `Node09LogShellCardActual`：源 **12:31:12** 新于 olean 12:29:21 → 重编 pending；mainline 正用恢复的旧 olean 重试 ResidueCardBridge（exact interface 文件），待 watchdog 新 DONE/FAIL 后再审；
+- 4 chain + 2 upstream DONE 与 exact interface 记录维持。
+
+## 2026-11-15 — LogShellCard retry FAIL 04:31:47；须恢复 exact interface 04:29:21；bridge 移新文件（abc，只读，无编译）
+
+### ❌ 当前状态
+- `Node09LogShellCardActual`：源 **12:32:18**（新于 olean 12:29:21）；最新 **FAIL 04:31:47Z**（之后 START 04:32:30 重跑）；
+- errors：Invalid argument name `K`(:36:25)、Function expected(:36:66)、**`unfold` 失败：`residueNormBase` has no definition(:37:9)**、`change` failed(:22:2)；
+- 当前源尝试加入 `theorem logShellResidueCard_eq_absNorm`(:18) 与 `theorem logShellResidueCard_eq_residueNormBase`(:37)，但均未通过；
+
+### 📌 行动（Lead 裁定）
+- **exact interface 04:29:21 必须恢复**：`Node09LogShellCardActual` 回退为仅 `Node09LogShellCardRemainingMissing`（DONE 04:29:21；olean 12:29:21 仍存在）；
+- **bridge 写到新文件**（ResidueCardBridge 独立文件），不要把实际证明放回 LogShellCard；
+- 恢复后再 enqueue 验证；bridge 新文件依赖 compat shim（04:31:06 DONE）+ 4 chain/2 upstream DONE。
+
+## 2026-11-15 — ResidueCardBridgeAttempt DONE 04:35:30；LogShellCard restored green 04:33:16；major blocker cleared（abc，只读，无编译）
+
+### ✅ DONE
+- `ResidueCardBridgeAttempt`（新文件）：**DONE 04:35:30Z**；olean **12:35:30 > src 12:35:04**；theorems **`logShellResidueCard_eq_absNorm`**、**`logShellResidueCard_eq_residueNormBase`**；log sorryAx=0（2 条旧 errors 属此前失败尝试：`Ideal.absNorm_apply.symm` unknown、unsolved goals）；接受（建议 fresh probe 补 axioms）；
+- `Node09LogShellCardActual`：**restored DONE 04:33:16Z**；olean **12:33:16 > src 12:33:03**；exact interface 恢复（仅 `Node09LogShellCardRemainingMissing`）；
+
+### 📌 Major blocker cleared
+- stale module mapping 链：compat shim DONE 04:31:06（旧路径 olean 恢复）→ LogShellCard exact interface 恢复 → ResidueCardBridgeAttempt 实际 bridge DONE；
+- 旧路径 `Foundations/NumberField/FinitePlaceNormalizedCompletion.olean` 已存在；
+- 后续：bridge 可供 hmult/exact 分支消费；需 fresh probe（`logShellResidueCard_eq_absNorm`/`_eq_residueNormBase`）确认标准三公理。
+
+## 2026-11-15 — Node09HresidueDegree DONE 04:39:33；ResidueCardBridgeAxiomProbe DONE 04:40:35（标准三公理）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09HresidueDegreeActual`：**DONE 04:39:33Z**；olean **12:39:32 > src 12:38:38**；theorem **`localResidueDegree_rat_eq_actualFn`**；接受；
+
+### ✅ Axiom probe（fresh：probe olean > targets）
+- `ResidueCardBridgeAxiomProbe`：**DONE 04:40:35Z**；olean **12:40:35 > src 12:39:39**；sorryAx=0（log）；
+- #print 输出均 `[propext, Classical.choice, Quot.sound]`：
+  * `ResidueCardBridgeAttempt.logShellResidueCard_eq_absNorm`；
+  * `ResidueCardBridgeAttempt.logShellResidueCard_eq_residueNormBase`；
+  * `Node09HresidueDegreeActual.localResidueDegree_rat_eq_actualFn`；
+- probe olean 12:40:35 > attempts（ResidueCardBridgeAttempt 12:35:30；HresidueDegree 12:39:32）→ fresh 有效；
+- **ResidueCardBridge 与 localResidueDegree=actualFn 均标准三公理，接受为证据**。
+
+## 2026-11-15 — Node09HmultReduction DONE 04:46:48（hmult_of_horder/hper_of_horder）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09HmultReductionActual`：**DONE 04:46:48Z**；olean **12:46:47 > src 12:45:55**；sorryAx=0（14 条旧 errors 残留）；
+- theorems：
+  * **`hmult_of_horder`**（对每 place）：`hmult + horder + hlocal ⇒ mult i = actualFn i`；即 **hmult 只余 horder**（+ hlocal 的 residue-degree 识别）；
+  * **`hper_of_horder`**：`hcoef + hmu0 + hl + hc + hmult + horder + hlocal ⇒ hper`（经 `hper_of_mult_eq_actualFn`）；应用 reduction 后 **hper 仅余 hcoef / hmu0 / hl / hc**（+horder/hlocal 输入）；
+  * `Node09HmultRemainingMissing` 明文列出：horder、hmult（定义选择）、hlocal（Fmod=Q transport，base-rational 已由 `localResidueDegree_rat_eq_actualFn` DONE）、hcoef、hmu0、hl/hc；
+- 接受（conditional reductions；residual 集中为 horder + hcoef/hmu0/hl/hc + hlocal）。
+
+## 2026-11-15 — A2LocalTransportConsumer DONE 04:49:34；Node09HlocalUpper red 04:48:50（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1A2Node04LocalTransportConsumerActual`：**DONE 04:49:34Z**；olean **12:49:33 > src 12:48:28**；sorryAx=0；defs completionFieldEquiv'/integersEquiv'/unitsTorsionEquiv' + `nonempty_handoff` + 新 `toNode03`；接受；
+
+### ❌ red
+- `Node09HlocalUpperActual`（新）：**FAIL 04:48:50/04:50:37Z**（最新 FAIL 04:50:37）；源 **12:50:48**（新于失败时刻，pending rebuild）；无 olean；theorems 目标 `localResidueDegree_rat_eq_actualFn_upper`(:27)、`hlocal_upper_of_place_eq`(:61)；errors：**rewrite motive is not type correct(:68:14)**、rewrite 未匹配(:72:6)；不接受；
+- 其他近期文件无 real red。
+
+## 2026-11-15 — Node09HlocalUpper DONE 04:51:46；coverage 分析：k:=ℚ 覆盖任意 NumberField F，但只给 over-ℚ；Fmod 仍需 hk transport（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09HlocalUpperActual`：**DONE 04:51:46Z**；olean **12:51:45 > src 12:50:48**；log sorryAx=0（5 条旧 errors 残留）；接受；
+
+### 📌 Coverage 结论（回答 lead）
+- **`localResidueDegree_rat_eq_actualFn_upper`**（L27-55）：
+  * 声明变量为 `{F : Type*} [Field F] [NumberField F] {p : Nat} [Fact p.Prime]`，`(place : FinitePlaceAtPrime F p)`；`localResidueDegree (k := ℚ) place.val = actualFn place`；
+  * 所以 **覆盖任意 F（NumberField over ℚ），并非只 F=ℚ**；但结论是 **相对 ℚ 的 localResidueDegree**，不是相对 `Fmod`；
+  * 证明用 `actualFn_spec place`、`residueNormBase_eq_lower_pow (k := ℚ)`、`logShellResidueCard_eq_residueNormBase`、`completionRationalPrime_comap (k := ℚ)`；
+- **`hlocal_upper_of_place_eq`**（L61-72）：把 over-ℚ 结果转成 over-`Fmod` 需要显式假设：
+  * `hplace : (nativeBadLift X.S).lift (b i) = i.val`；
+  * `hk : (localResidueDegree (k := X.S.arithmetic.Fmod) (lift (b i)) : ℝ) = (localResidueDegree (k := ℚ) i.val : ℝ)`；
+  * `hlocal_rat : (localResidueDegree (k := ℚ) i.val : ℝ) = (actualFn i : ℝ)`；
+  * 结论 `localResidueDegree (k := Fmod) (lift (b i)) = actualFn i`；
+  * 即 **Fmod=ℚ transport 仍作为 hk 假设保留**（若 Fmod=ℚ 则 hk 近乎定义相等），不是自动从 over-ℚ 得到；
+
+### 📌 hmult/hper 残余（维持 §7.61）
+- **hmult 只余 horder**（+ hlocal residue-degree 识别；hmult 本身为 mult 定义选择）；
+- **hper 只余 hcoef / hmu0 / hl / hc**（+ horder/hlocal 输入；经 `hper_of_horder` 归约）。
+
+## 2026-11-15 — CONFIRMED exact-missing：hcoef / hbase / horder（无 donor / 有反例；不存在无条件证明路线）（abc，只读，无编译）
+
+### 📌 三个 exact-missing 输入（Lead 裁定，确认）
+1. **horder**：`(qVFamily X.S (b i)).order = 1`；
+   - 无 donor；order 一般可 >1（存在反例）→ **不能无条件证明**；
+2. **hcoef**：`CoeffComparison (actualFn i) Fdeg l (chosenA i)`（每 place）；
+   - 无 donor / 反例方向已确认 → **exact missing**；
+3. **hbase**：`Nonempty (FinitePlaceQCandidate (nativeBadBasePlace X))`；
+   - **absence of donor**（树中无构造/base 对象无 inhabitant）→ **不能无条件证明**；
+
+### 结论
+- **不存在从当前 tree 无条件推出最终目标（hθ/hq/hmult/hper 闭合）的路线**；
+- 最终结果必须保持为 **conditional on horder/hcoef/hbase**（外加 hmu0/hl/hc 等算术输入）或等待新的数学输入/donor；
+- hmult 只余 horder；hper 只余 hcoef/hmu0/hl/hc（维持 §7.61/§7.63）；
+- 已同步写入 `coord/AUDIT-HQ-HTHETA-WIRING.md` §9、`coord/AUDIT-REV15-ASSET-MAP.md` §7。
+
+## 2026-11-15 — QVFiberWeighted DONE 04:54:06：hreindex green（MqFiberBadSumBridge_of_logBridge）；hfr/hlog 仍 exact（abc，只读，无编译）
+
+### ✅ DONE
+- `Mzk1QVFiberWeightedActual`：**DONE 04:54:06Z**；olean **12:54:05 > src 12:52:42**；sorryAx=0；接受；
+
+### 📌 新归约
+- **`MqFiberBadSumBridge_of_logBridge`**（L60-85）：由 **bad/fiber log 识别** `hlog : ∀ b, Real.log (residueNormBase b.1) = logBase (idx b)` 推出 `MqFiberBadSumBridge X idx logBase`；使用 `Finset.sum_fiberwise_of_maps_to`，**不用双射** → **hreindex green**；
+- **`fiberMult_eq_fiberMultWeighted_of_section`**（L90+）：由 section `hsec : ∀ i, idx (b i) = i` + fiber singleton `huniq` 推出 `hfr`；
+
+### 📌 剩余 exact
+- **hfr**：`fiberMult X b i = fiberMultWeighted X idx i`；仅当 section + fiber singleton（`huniq`）才可得 → 一般情况仍是 exact input（fiber 可多元素/无 section 时不可证）；
+- **hlog**：`∀ i, Real.log (residueNormBase ((b i).1)) = logBase i`（per-fiber log 识别）；仍 exact；
+- 组合：`hreindex` 已从 hlog_bad 推出；`MqFiber_eq_badWeighted_of_fiber` 仍需 **hfr + hlog + hreindex**；final residual = hfr/hlog + section 条件。
+
+## 2026-11-15 — QVFiber hreindex green；Node09ResidualInputs red（unknown qVFamily/Function expected）；UniformProof placeholder（abc，只读，无编译）
+
+### ✅ QVFiber hreindex
+- `Mzk1QVFiberWeightedActual`：DONE 04:54:06Z（olean 12:54:05 > src 12:52:42；`MqFiberBadSumBridge_of_logBridge` → hreindex green）；**当前源 12:55:13 rerun START 04:55:25**（待新 DONE/FAIL）；
+
+### ❌ red
+- `Node09ResidualInputsActual`：最新 **FAIL 04:55:10Z**；源 12:55:15；retry START 04:55:25；无 olean；errors `Function expected at`(:40:42、:54:9)；lead 记 **unknown qVFamily**（当前源/当次尝试）；不接受；
+
+### 📌 UniformProof placeholder/interface
+- `Mzk1UniformProofActual`：当前源 12:55:16 为 **3 行 placeholder**（`import Mzk1UniformActual` + 注释：“actual UniformContinuous proof remains the explicit gap in UniformContinuitySource”）；
+- **无定理、无 red theorem**；START 04:55:25 构建；无 olean；接受为 placeholder/interface（actual proof 仍缺 ambient unit-transfer，exact missing）。
+
+## 2026-11-15 — Node09ResidualInputs/UniformProof DONE；QVFiber rerun red（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ResidualInputsActual`：**DONE 04:56:19Z**；olean **12:56:19 > src 12:55:15**；sorryAx=0；`structure Node09Paper312Inputs`（L32）、theorem **`paper312_of_inputs`**（L52）、`Node09ResidualMissing`（L77）；接受；
+- `Mzk1UniformProofActual`：**DONE 04:56:22Z**（placeholder）；olean **12:56:21 > src 12:55:16**；当前源仍为 3 行 placeholder（import + 注释，**无定理**）；接受为 placeholder/interface；
+
+### ❌ red
+- `Mzk1QVFiberWeightedActual`：**rerun FAIL 04:56:19Z**；当前源 12:56:59（新于 olean 12:54:05）；retry START 04:57:07 pending；errors：synthInstanceFailed(:79:8)、unsolved goals(:65:41、:97:53)、Type mismatch(:107:6、:110:6)；hreindex green（04:54:06 DONE）仍有效，但当前源 red。
+
+## 2026-11-15 — Node09FinalConditional DONE 05:00:17：final_paper312_conditional + residual list（含 IV/ABC consumer bridge gap）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09FinalConditionalActual`：**DONE 05:00:17Z**；olean **13:00:16 > src 12:59:24**；sorryAx=0（1 条旧 error 残留）；接受；
+- theorem **`final_paper312_conditional`**：给定 `Node09Paper312Inputs X b Fdeg l logMu sFactor`，得 `ExplicitPaper312Inequality`（用 `paper312_of_inputs`）；**conditional endpoint，无隐藏 axiom**；
+
+### 📌 `Node09FinalResidualMissing` 列出残余（全为显式输入/缺口）
+1. paper312 endpoint 本身 conditional（inputs explicit）；
+2. **horder**：`(qVFamily X.S (b i)).order = 1`（clause-B witness 无 order spec）；
+3. **hcoef**：`CoeffComparison (actualFn i) Fdeg l (chosenA i)`；真实 3.12 算术；`Mzk1PerPlaceInequalityActual` 记录反例 → **不可无条件推出**；
+4. hmu0 / hl / hc（算术界）；
+5. **hlocal**：Fmod 的 localResidueDegree = actualFn；upper places 已有数学（Node09HlocalUpper），**Fmod=Q place equality / k transport 显式**；
+6. **hbase**：`PadicValuedCoherence (p := pBase X) (K := NativeBaseCompletionRaw X)`；**Qp normalization transport 缺失**；
+7. **hlogp transport**：rational-place residueNormBase donor 已实（Node09AbsNormRat），Fmod=Q place/prime transport 显式（Node09HlogpTransport）；
+8. **IV/ABC consumer bridge gap**：外部 consumer 是 `LeanFormal.IUT.ABCBridge.Bridge.Cor312ToABCBridgeInterface`（`Cor312EpsilonArithmeticComparison`），需要两个命名 gap 字段 **`height_le_normalizedRegionVolume`**、**`regionVolume_le_normalizedWeight`**；**目前没有从 `ExplicitPaper312Inequality` 到该 hull/epsilon interface 的直接映射**。
+
+## 2026-11-15 — Node09ABCBridgeConditional DONE 05:03:42（Node09ABCBridgeInterface/toCor312/heightBound 条件；gaps documented）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ABCBridgeConditionalActual`：**DONE 05:03:42Z**；olean **13:03:33 > src 13:02:43**；sorryAx=0（1 条旧 error 残留）；接受；
+- 内容：
+  * **`structure Node09ABCBridgeInterface`**：`carrier : Type u`、`hullData : IQHullLogVolumeInterface carrier`、`epsilonComparison : ∀ ε > 0, Cor312EpsilonArithmeticComparison hullData ε`；
+  * **`toCor312`**：由该 interface 构造 frozen consumer `Cor312ToABCBridgeInterface`；
+  * **`heightBound`**（条件）：∀ ε>0, ∃ A, ∀ a b c, IsABCTriple a b c → `Height.logHeight₁ (abcRationalPoint a c) ≤ (1+ε)·arithmeticWeight + A`；由 `cor312ToABCBridge_heightBound I.toCor312` 得到；
+
+### 📌 `Node09ABCBridgeResidualMissing` 明确缺口
+- ExplicitPaper312Inequality 只给 IUT-volume 不等式 `A ≤ Lbar + Dbar`，**不涉及 ABC height/arithmetic weight/carrier/normalized comparison region**；
+- **缺 dictionary**：把 paper312 A/Lbar/Dbar 映射到 `logVolume (normalizedComparisonRegion …)` 与 `Height.logHeight / arithmeticWeight`；
+- **gap 1：`height_le_normalizedRegionVolume`**（IUT IV arithmetic line-bundle comparison）；
+- **gap 2：`regionVolume_le_normalizedWeight`**（IUT IV main log-volume estimate with hull bound）；
+- frozen consumer `Cor312ToABCBridgeInterface`：一旦提供 hullData + epsilonComparison 字段，`cor312ToABCBridge_heightBound` 直接适用，无需 further gap。
+
+## 2026-11-15 — IV/ABC conditional bridge green（gaps 1/2 documented）；A2Node03Node04AxiomProbe probe-only red（abc，只读，无编译）
+
+### ✅ 维持
+- `Node09ABCBridgeConditionalActual`：DONE 05:03:42Z（olean 13:03:33 > src 13:02:43；sorryAx=0）；`Node09ABCBridgeInterface`/`toCor312`/`heightBound` 条件；**IV/ABC conditional bridge green**；gaps `height_le_normalizedRegionVolume` / `regionVolume_le_normalizedWeight` 已文档化；
+
+### ❌ probe-only red
+- `Mzk1A2Node03Node04AxiomProbeActual`：**FAIL 05:01:29Z**；error **unknown constant `A2Node03Interface.toWitness`**(:21:14)；无 olean；当前源 **13:05:16**（已改，pending rebuild）；**probe-only，不影响产品证据**；
+- 运行中：`Node09GapDictionaryActual` START 05:04:59。
+
+## 2026-11-15 — Node09GapDictionary DONE 05:05:26：gap1/gap2 约化为条件 donor；hweightvol/hunit/hpoint 仍 paper-level；字典缺失文档化（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09GapDictionaryActual`：**DONE 05:05:26Z**；olean **13:05:26 > src 13:04:53**；sorryAx=0、errors=0（干净）；接受；
+
+### 📌 归约
+- **`gap1_of_weight_bound`**：由 valuation bound `hval` + `hweightvol`（weight ≤ normalizedRegionVolume）→ gap1 结论（`cor312Gap1_height_le_normalizedRegionVolume_of_weight_bound`）；
+- **`gap2_of_inputs`**：由 `hunit` + `hsplit` + `hptfin` + `hpoint` → gap2 结论（`cor312Gap2_regionVolume_le_normalizedWeight_of_split_pointBound_unitRegionBound`）；
+
+### 📌 仍缺（paper-level）
+- **hweightvol**：weight-vs-region-volume comparison，**无 abstract supply**；有 negative calibration `cor312Gap1_exists_carrier_arithmeticWeight_gt_normalizedComparisonRegionVolume` → 不可由现有抽象推出；
+- **hunit**（unit-region normalization）、**hpoint**（point-volume/height comparison）：**paper-level open inputs**；
+- `hsplit`/`hptfin` 已由 `Cor312ComparisonGapSupplyLayer.cor312GapSupply_sourceInterface_hsplit / _hptfin` 对 value-realized source interface 提供；
+- **dictionary 缺失**：ExplicitPaper312Inequality（A ≤ Lbar + Dbar）不是关于 carrier/ABC height/weight/normalizedComparisonRegion 的命题；消费 `final_paper312_conditional` 需额外提供 `IFQHullLogVolumeInterface carrier`、`logShellPoint`、以及 A/Lbar/Dbar → normalized region log-volume / Height/arithmeticWeight 的 dictionary（`Node09GapDictionaryMissing` 明文）。
+- 运行：`Mzk1A2Node03Node04AxiomProbeActual` START 05:05:41（source 13:05:16 重试）。
+
+## 2026-11-15 — Node09GapDonorSurvey DONE 05:06:29：hunit absorbable、hsplit/hptfin actual；hweightvol/point-height dictionaries jointly refutable；direct point-volume card paper-level（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09GapDonorSurveyActual`：**DONE 05:06:29Z**；olean **13:06:29 > src 13:06:18**；sorryAx=0/errors=0；接受；
+
+### 📌 `Node09GapDonorSurvey`（每项含 exact Lean 声明/状态）
+- **hsplit**：value-realized carrier 已证 → `Cor312ComparisonGapSupplyLayer.cor312GapSupply_sourceInterface_hsplit`；
+- **hptfin**：已证 → `cor312GapSupply_sourceInterface_hptfin`；
+- **hunit**：约化为 degree-bound/hull-volume 比较 `cor312GapSupply_sourceInterface_hunit_of_degreeBound_le_hullVolume`；可用 canonical 常数 `max D.degreeBound 0`（`cor312CarrierSpec_exists_hunitConstant`）满足，且**可吸收进结论的 additive constant** → 不是 residual card；
+- **hweightvol**：约化为 weight dictionary `cor312GapSupply_sourceInterface_weightvol_of_degreeDictionary`；weight dictionary 是真 card，非定理（`cor312GapDict_weightDictionary_not_universal`）；
+- **hpoint**：约化为 point-height dictionary `cor312GapDict_sourcePointBound_of_degree_le_height`；point-height dictionary 是真 card，非定理（`cor312GapDict_pointHeightDictionary_not_universal`）；
+
+### 📌 `Node09GapResidualPaperInputs`（paper-level 残余）
+- **两个 dictionary 联合可反驳**：`cor312CarrierSpec_dictionaries_jointly_refutable`、`cor312CarrierSpec_not_inhabited`；在 (1,2,3) 处 arithmeticWeight = log 6 > log 3 = logHeight → 同一 point map 下两 card 不能同时成立；
+- 因此 **gap1+gap2 不存在 unconditional / dictionary-only supply**；hweightvol 与 hpoint 必须替换为 **direct point-volume card**：`(vol {scaleShift (logShellPoint a b c)}).toReal ≤ (1+eps)*arithmeticWeight + D1`，且与 weight dictionary 兼容（task-level decision，现有模块未取）；
+- hunit 不是 residual card（已 canonicalize/absorb）；
+- **exact missing bridge**：从 `ExplicitPaper312Inequality (A ≤ Lbar + Dbar)` 到 normalized region/height/weight dictionary 的映射仍缺。
+
+## 2026-11-15 — Node09ComparisonCards DONE 05:07:40：exact input structure（direct point-volume card + weight dictionary）；toEpsilonComparison/toCor312Interface 条件；cards family paper-level（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ComparisonCardsActual`：**DONE 05:07:40Z**；olean **13:07:39 > src 13:07:05**；sorryAx=0/errors=0；接受；
+
+### 📌 `structure Node09ComparisonCards (X) (W) (logShellPoint) (eps D₀ D₁) : Prop`
+- 字段：`heps`、`hD₀`、`hval`、**`hweightvol`**（weight ≤ normalizedRegionVolume，genuine card）、`hunit`、`hsplit`、`hptfin`、**`hpoint`**（direct point-volume card：`(logVolume {scaleShift point}).toReal ≤ (1+eps)*weight + D₁`）；
+- 所有字段均为 **explicit paper-level inputs**，无字段从 carrier 推导；
+
+### 📌 条件构造
+- **`toEpsilonComparison`**：由 cards 构造 `Cor312EpsilonArithmeticComparison W eps`：gap1 由 `hval + hweightvol`，gap2 由 `hunit + hsplit + hptfin + hpoint`；
+- **`toCor312Interface`**：给定 card family `cards : ∀ eps>0, Node09ComparisonCards X W logShellPoint eps D₀ (Aeps eps)`，构造 frozen `Cor312ToABCBridgeInterface`；
+- **`Node09ComparisonCardsDoc`**：direct point-volume card 是**替代被反驳 point-height dictionary** 的 paper-level 输入；weight dictionary 是真 card（`cor312GapDict_weightDictionary_not_universal`）；hsplit/hptfin 在 value-realized source interface 实际可得；hunit 可 canonicalize/吸收；两 dictionary jointly refutable；
+- **cards family 本身无 inhabitant = paper-level input**；桥接为 conditional。
+
+## 2026-11-15 — Node09FinalABCBridge DONE 05:09:05：final_abcHeightBound_of_cards；唯一残余输入为 cards family；无 inhabitant/axiom（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09FinalABCBridgeActual`：**DONE 05:09:05Z**；olean **13:09:04 > src 13:08:34**；sorryAx=0/errors=0；接受；
+- theorem **`final_abcHeightBound_of_cards`**：
+  * 输入：`X`、`W : IQHullLogVolumeInterface X`、`logShellPoint`、`Aeps : ℝ → ℝ`、`D₀`、以及 **cards family**：`∀ ε>0, Node09ComparisonCards X W logShellPoint ε D₀ (Aeps ε)`；
+  * 结论：`∀ ε>0, ∃ A, ∀ ABC triple, Height.logHeight₁ ≤ (1+ε)·arithmeticWeight + A`；
+  * 证明：`cor312ToABCBridge_heightBound` 应用于 `Node09ComparisonCards.toCor312Interface X W logShellPoint Aeps D₀ cards`（frozen Cor 3.12 → ABC consumer）；
+
+### 📌 残余（`Node09FinalABCBridgeResidual`，唯一 paper-level 输入）
+- **唯一 remaining input = cards family**（∀ε>0 的 Node09ComparisonCards）；
+- cards 编码：**direct point-volume card** + **weight dictionary** + reduced hval/hunit/hsplit/hptfin；
+- **no inhabitant constructed，no axiom introduced**；dictionaries jointly refutable → direct point-volume card 是 intended paper-level replacement；
+- 一旦 cards family 供给，`final_abcHeightBound_of_cards` 经 `cor312ToABCBridge_heightBound` **闭合 ABC height bound，无 additional gap**。
+
+## 2026-11-15 — 最终状态：final ABC conditional bridge green；仅 stale probes FAIL；exact inputs = horder/hcoef/hbase/cards family（abc，只读，无编译）
+
+### ✅ 最终链路 green
+- `Node09FinalABCBridgeActual`：DONE 05:09:05Z；olean 13:09:04 > src 13:08:34；`final_abcHeightBound_of_cards`；唯一残余输入 = cards family；
+- 全链：Node09FinalConditional（final_paper312_conditional）→ Node09ABCBridgeConditional（Node09ABCBridgeInterface/toCor312/heightBound）→ Node09GapDictionary（gap1/gap2 归约）→ Node09GapDonorSurvey → Node09ComparisonCards（explicit input structure）→ **Node09FinalABCBridge（final_abcHeightBound_of_cards）**；
+- `Mzk1A2Node03Node04AxiomProbeActual`：**DONE 05:06:10Z**（此前 probe-only red 已解除）；
+
+### ❌ 仅 stale probes FAIL
+- watchdog 05:00 后剩余 FAIL：`Mzk1GaloisCompletionCurrentProbeActual`（05:04:43）、`Mzk1PadicGaloisProbeActual`（05:04:43，均 stale probes，无 olean）；
+- 其他 FAIL（A2Node03Node04AxiomProbe 05:01:29、ABCBridgeConditional 05:02:31）均已被后续 DONE 覆盖；**无产品级 real red**；
+
+### 📌 最终 exact inputs（无条件下不可得；均需显式供给）
+1. **horder**：`(qVFamily X.S (b i)).order = 1`（无 donor；order>1 反例）；
+2. **hcoef**：每 place `CoeffComparison (actualFn i) Fdeg l (chosenA i)`（反例记录于 Mzk1PerPlaceInequalityActual）；
+3. **hbase**：`Nonempty (FinitePlaceQCandidate (nativeBadBasePlace X))` / PadicValuedCoherence（absence of donor）；
+4. **cards family**：`∀ ε>0, Node09ComparisonCards X W logShellPoint ε D₀ (Aeps ε)`（direct point-volume card + weight dictionary；两 dictionary jointly refutable，故 point-volume card 为 paper-level replacement）；
+- 其余（hmult/hper 的 hcoef/hmu0/hl/hc、hlocal transport、hlogp transport、hreindex/hfr/hlog 等）均已条件归约或文档化。
+
+## 2026-11-15 — Node09CardsToFrontier DONE 05:16:23：frontier_of_cards → ABCFrontier；abcConjecture_of_cards → ABCConjecture 条件（via abcConjecture_of_frontier）；仅 cards family paper-level（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09CardsToFrontierActual`：**DONE 05:16:23Z**；olean **13:16:23 > src 13:15:32**；sorryAx=0（5 条旧 errors 残留）；接受；
+- **`frontier_of_cards`**：cards family（`∀ ε>0, ∃ D₀ D₁, Node09ComparisonCards X W logShellPoint ε D₀ D₁`）→ **`ABCFrontier`**；构造两个 clause：F4 `FrontierHeightComparisonClause`（gap1 归约）与 F5 `FrontierRegionComparisonClause`（gap2 归约），同一 carrier/point；
+- **`abcConjecture_of_cards`**：同一 cards family → **`ABCConjecture`**，经 `abcConjecture_of_frontier.{0} (frontier_of_cards …)`；
+
+### 📌 残余（`Node09CardsToFrontierResidual`）
+- **唯一 paper-level 输入 = cards family**：每 ε>0 存在 D₀ D₁ 与 Node09ComparisonCards；
+- cards 组成：direct point-volume card、weight dictionary、hval、hunit、hsplit、hptfin；**no inhabitant constructed**；
+- `frontier_of_cards` 构造 ABCFrontier；`abcConjecture_of_cards` 条件推出 ABCConjecture；**无 unconditional claim / 无 axiom**；
+
+### 附带
+- `Mzk1QVFiberWeightedActual`：**DONE 05:16:45Z**；olean **13:16:45 > src 13:14:55**；hreindex/hfr/hlog 归约版本 rerun green；接受。
+
+## 2026-11-15 — WQPadicIntegersBridge DONE 05:18:59（当前源再变，pending）；CardsToFrontierAxiomProbe 干净（标准三公理）；final conditional endpoints green（abc，只读，无编译）
+
+### ✅ CardsToFrontierAxiomProbe — clean
+- `Node09CardsToFrontierAxiomProbe`：**DONE 05:17:56Z**；olean **13:17:55 > src 13:17:15**；log sorryAx=0；
+- #print 输出均 `[propext, Classical.choice, Quot.sound]`：`frontier_of_cards`、`abcConjecture_of_cards`；probe olean 13:17:55 > CardsToFrontier olean 13:16:23 → fresh；**接收**；
+
+### ⚠️ WQPadicIntegersBridge
+- `Mzk1WQPadicIntegersBridgeActual`：**DONE 05:18:59Z**；olean **13:18:58**；decls：`padicNrm_self`、`padicIntegersEquivMainline`、`irreducible_uniformizerMainline`；
+- **但当前源 13:19:49 新于 olean → 重编 pending**；log 中 **sorryAx=1**（旧尝试 synthetic);旧 DONE 版本仅覆盖 ≤13:18:58 源；当前源待 fresh DONE + probe；
+
+### ✅ final conditional endpoints green（维持）
+- final_paper312_conditional（Node09FinalConditional）、Node09ABCBridgeConditional（toCor312/heightBound）、final_abcHeightBound_of_cards（Node09FinalABCBridge）、frontier_of_cards/abcConjecture_of_cards（Node09CardsToFrontier）均 DONE；cards family 为唯一 paper-level 输入；
+
+## 2026-11-15 — URGENT 确认：WQPadicIntegersBridge 当前源仍待 fresh DONE+probe（旧 log sorryAx=1）（abc，只读，无编译）
+
+### ⏳ WQPadicIntegersBridge — HOLD
+- `Mzk1WQPadicIntegersBridgeActual`：源 **13:19:50 > olean 13:18:58**；最新 START **05:20:04**（运行中）；
+- 旧 log：`padicIntegersEquivMainline` 曾依赖 **[sorryAx]**（synthetic，来自旧失败尝试；同 log 后段又有标准三公理的重复 #print，属混合 stale 输出）；
+- **裁定保持**：旧 DONE 05:18:59 仅覆盖 ≤13:18:58 源；**当前源在 fresh DONE + 新 probe（>目标 olean、标准三公理）前不接收**；
+
+### ❌ 其他
+- 新 `Node09SingletonPointCardsActual`：**FAIL 05:20:34Z**（无 olean）；不接受，待修/重跑。
+
+## 2026-11-15 — WQ bridge 最新 FAIL 05:20:57（HOLD 维持）；SingletonPointCards red :57；QVFiber rerun FAIL（abc，只读，无编译）
+
+### ⏳ WQPadicIntegersBridge — HOLD（更新证据）
+- `Mzk1WQPadicIntegersBridgeActual`：最新 **FAIL 05:20:57Z**（源 13:19:50；olean 13:18:58 stale；log **sorryAx=2**）；
+- **HOLD 维持**：旧 DONE 05:18:59 不覆盖当前源；fresh DONE + probe 前不接收；
+
+### ❌ red
+- `Node09SingletonPointCardsActual`：最新 FAIL 05:20:34Z；error **Application type mismatch :57:31**（lead：fix pending）；源 13:20:45；retry START 05:21:13；无 olean；
+- `Mzk1QVFiberWeightedActual`：**FAIL 05:20:58Z**（rerun）；无新 olean；red/pending；
+
+### ✅ final conditional endpoints green 维持
+- FinalConditional、ABCBridgeConditional、FinalABCBridge、CardsToFrontier（+ probe 标准三公理）；cards family 为唯一 paper-level 输入。
+
+## 2026-11-15 — 复核：WQ bridge HOLD（源再更新 13:22:14）；QVFiber/SingletonPointCards 重跑中（abc，只读，无编译）
+
+- ⏳ `Mzk1WQPadicIntegersBridgeActual`：源 **13:22:14** > olean 13:18:58；新 START 05:21:55；旧 log sorryAx=2 → **HOLD 维持，fresh DONE+probe 前不接收**；
+- ⏳ `Mzk1QVFiberWeightedActual`：源 13:21:39 > olean 13:16:45；START 05:21:55；rerun 中；
+- ⏳ `Node09SingletonPointCardsActual`：源 13:21:49；无 olean；START 05:21:55；rerun 中（此前 :57 Application type mismatch fix pending）；
+- ✅ final conditional endpoints green 维持（FinalConditional/ABCBridgeConditional/FinalABCBridge/CardsToFrontier；cards family 唯一 paper-level 输入）。
+
+## 2026-11-15 — Node09SingletonPointCards DONE 05:22:26（singleton point-volume 两界 → comparison cards）；WQ bridge HOLD（sorryAx=3）；QVFiber FAIL（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09SingletonPointCardsActual`：**DONE 05:22:26Z**；olean **13:22:25 > src 13:21:49**；sorryAx=0；接受；
+- `structure Node09SingletonPointCards`：heps/hD₀/hval/hunit/hsplit/hptfin + **hregion_fin** + **hweight_le_singleton**（`ofReal weight ≤ logVolume singleton`）+ **hsingleton_le_weight**（`singleton.toReal ≤ (1+eps)·weight + D₁`，两界）；
+- **`toComparisonCards`**：singleton cards → `Node09ComparisonCards`：hweightvol 由 `cor312Gap1_weight_le_normalizedRegionVolume_of_singletonVolume` + hregion_fin（toReal 转换）得到，hpoint = hsingleton_le_weight；
+- Doc：该路线**用两侧 point-volume/weight 比较替代被反驳的 point-height dictionary**；cards family 经 toComparisonCards 获得；剩余 paper-level 输入 = 两 singleton 不等式 + hval/hunit/hsplit/hptfin；**no inhabitant constructed**；
+
+### ⏳/❌
+- `Mzk1WQPadicIntegersBridgeActual`：最新 **FAIL 05:22:47Z**；源 13:22:15；log **sorryAx=3** → **HOLD 维持**（fresh DONE+probe 前不接收）；
+- `Mzk1QVFiberWeightedActual`：**FAIL 05:22:48Z**（rerun）→ red/pending；
+- ✅ final conditional endpoints green 维持。
+
+## 2026-11-15 — 复核：SingletonPointCards accepted；WQ bridge HOLD（源更新 13:24:06）；QVFiber rerun；SingletonFinal FAIL（abc，只读，无编译）
+
+- ✅ `Node09SingletonPointCardsActual`：DONE 05:22:26；olean 13:22:25 > src 13:21:49；sorryAx=0；**接受**；
+- ⏳ `Mzk1WQPadicIntegersBridgeActual`：源 **13:24:06**（再次更新）> olean 13:18:58；最近 FAIL 05:22:47（log sorryAx=3）；新构建 pending → **HOLD 维持**；
+- ⏳ `Mzk1QVFiberWeightedActual`：源 13:23:25 > olean 13:16:45；START 05:23:32 rerun；pending；
+- ❌ 新 `Node09SingletonFinalActual`：**FAIL 05:24:01Z**（无 olean）；red/pending；
+- ✅ final conditional endpoints green 维持。
+
+## 2026-11-15 — WQ bridge 当前源 clean 但 pending；SingletonFinal red 05:24:01；QVFiber DONE 05:24:24（abc，只读，无编译）
+
+### ⏳ WQ bridge
+- `Mzk1WQPadicIntegersBridgeActual`：当前源 **13:24:06**；**grep 无 sorry/axiom**（clean source）；仍无当前 olean（13:18:58 stale）；最近 FAIL 05:22:47 属旧源；**HOLD：等 fresh DONE + probe**；
+
+### ❌ red
+- `Node09SingletonFinalActual`：**FAIL 05:24:01Z**；源 **13:24:23**（已改，pending rebuild）；无 olean；red；
+
+### ✅ DONE
+- `Mzk1QVFiberWeightedActual`：**DONE 05:24:24Z**；olean **13:24:23 > src 13:23:25**；log sorryAx=0；接受；
+
+### ✅ final endpoints green 维持
+
+## 2026-11-15 — QVFiber accepted；WQ bridge 无 fresh DONE；SingletonFinal 最新 DONE 05:25:08（旧 D₀/8-field errors 已过时）（abc，只读，无编译）
+
+### ✅ QVFiber
+- `Mzk1QVFiberWeightedActual`：DONE 05:24:24Z；olean 13:24:23 > src 13:23:25；log sorryAx=0；**接受**；
+
+### ⏳ WQ bridge
+- `Mzk1WQPadicIntegersBridgeActual`：源 13:24:06；START 05:24:39；**尚无 fresh DONE**（旧 FAIL 05:22:47 属旧源；olean 13:18:58 stale）→ **HOLD 维持**；
+
+### ✅ SingletonFinal（最新状态，覆盖 lead 所称 red）
+- `Node09SingletonFinalActual`：**最新 DONE 05:25:08Z**；olean **13:25:07 > src 13:24:23**；
+- log 中 :26:63 Application type mismatch、:29:12 **Node09ComparisonCards.mk 8-field 只给 3** 属 **FAIL 05:24:01 旧尝试**；当前源已修并 DONE；sorryAx 计数 0；
+- theorems：`frontier_of_singleton_cards`、`abcConjecture_of_singleton_cards`、`final_abcHeightBound_of_singleton_cards`；接受；
+- 注意：D₀/8-field 残余在旧尝试中存在，当前 DONE 证据显示已修复；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09SingletonFinal DONE 05:25:08：frontier/abcConjecture/final_abcHeightBound_of_singleton_cards；仅 singleton 两界 + reduced fields paper-level；no inhabitant/fake（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09SingletonFinalActual`：**DONE 05:25:08Z**；olean **13:25:07 > src 13:24:23**；接受；
+- theorems：
+  * **`frontier_of_singleton_cards`**：singleton cards family（`∀ ε>0, ∃ D₀ D₁, Node09SingletonPointCards …`）→ **`ABCFrontier`**（经 `toComparisonCards` + `frontier_of_cards`）；
+  * **`abcConjecture_of_singleton_cards`**：同一 cards family → **`ABCConjecture`**（经 `abcConjecture_of_frontier`）；
+  * **`final_abcHeightBound_of_singleton_cards`**：→ `∀ ε>0, ∃ A, ∀ ABC triple, logHeight₁ ≤ (1+ε)·weight + A`（经 `bridgeInterface_of_frontier` + `cor312ToABCBridge_heightBound`）；
+
+### 📌 `Node09SingletonFinalResidual`（paper-level 输入）
+- **singleton 两界**：`hweight_le_singleton`（ofReal weight ≤ singleton volume）与 `hsingleton_le_weight`（singleton.toReal ≤ (1+eps)·weight + D₁）；
+- `hregion_fin, hval, hunit, hsplit, hptfin` 均为 reduced inputs：hsplit/hptfin 对 value-realized source interface 实际可得；hunit 可 canonicalize；hregion_fin 由 region finiteness 得；
+- P7 report §9.1/9.2 给 q-ideal product-region volume（weighted M_q），但**无 singleton point-volume donor**：需比较 point singleton 与 product region/arithmeticWeight，即 paper-level IUT IV estimate；
+- **no inhabitant constructed；conditional bridge only**；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09SingletonFinal refined DONE 05:27:22：hweight_le_singleton → weight dictionary；hsingleton_le_weight → degree upper bound；无 singleton product-volume donor（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09SingletonFinalActual`：**refined DONE 05:27:22Z**；olean **13:27:21 > src 13:26:15**；theorems 不变（`frontier_of_singleton_cards`/`abcConjecture_of_singleton_cards`/`final_abcHeightBound_of_singleton_cards`）；接受；
+
+### 📌 `Node09SingletonFinalResidual` 细化
+1. **hweight_le_singleton** → **weight dictionary**：value-realized carrier 上 singleton volume = point 的 `sourceSetVolume`；`cor312GapDict_singletonVolume_toReal_eq_max` 把 toReal 识别为 `max sourceLocalLogDegree 0`；weight dictionary `arithmeticWeight ≤ sourceLocalLogDegree`（`cor312GapDict_weightDictionary_iff_scalingSeparated`）经 ofReal 单调性给出 ENNReal 下界；
+2. **hsingleton_le_weight** → **degree upper bound**：经 `cor312GapDict_singletonVolume_toReal_le_iff` 等价于 untruncated degree 上界 `sourceLocalLogDegree v (scaleShift point) ≤ (1+eps)·arithmeticWeight + D1`；是**直接 degree/point-volume 估计，不是 height comparison**；
+3. **无 singleton product-volume donor**：P7 §9.1/9.2 只给 q-ideal product-region volume（weighted M_q），需把 point singleton 与 product region/arithmeticWeight 比较 → paper-level IUT IV estimate；
+4. `hregion_fin/hval/hunit/hsplit/hptfin` 仍为 reduced inputs（hsplit/hptfin actual for value-realized；hunit canonicalizable；hregion_fin 由 region finiteness）；
+- **no inhabitant constructed；conditional bridge only**；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09SingletonWeight DONE 05:30:22：hweight_le_singleton_of_weightDictionary；hsingleton_le_weight_iff_degreeBound；仅 degree upper bound + weight dictionary inhabitant 剩余（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09SingletonWeightActual`：**DONE 05:30:22Z**；olean **13:30:22 > src 13:29:52**；sorryAx=0；接受；
+- **`hweight_le_singleton_of_weightDictionary`**：由 weight dictionary（`arithmeticWeight ≤ sourceLocalLogDegree`）证明 `ofReal weight ≤ sourceSetVolume {scaling*point}`；用 `cor312GapSupply_sourceSetVolume_singleton` + `ENNReal.ofReal_le_ofReal`；
+- **`hsingleton_le_weight_iff_degreeBound`**：singleton 上界 ↔ **untruncated degree 上界** `sourceLocalLogDegree v x ≤ (1+eps)·arithmeticWeight + D₁`；用 `cor312GapDict_singletonVolume_toReal_le_iff`（**不是 height comparison**）；
+
+### 📌 `Node09SingletonWeightResidual`
+- hweight_le_singleton 已由 weight dictionary 证明；
+- **hsingleton_le_weight 仍 = untruncated degree upper bound**（paper-level）；
+- P7 §9.1/9.2 只给 q-ideal product-region volume；**无 singleton point-volume donor**；比较 singleton 与 product region 仍是 paper-level IUT IV estimate；
+- **no inhabitant constructed**；weight dictionary 是 genuine card（在 degree faithfulness 下 satisfiable），degree upper bound 仍 paper-level；
+- 结论：**仅 degree upper bound + weight dictionary inhabitant 剩余**；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09DegreeUpper DONE 05:32:35：exists_pointMap_degree_eq_weight / exists_pointMap_degree_le_weight（hdeg 下 satisfiability；actual point map 仍 paper-level）（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09DegreeUpperActual`：**DONE 05:32:35Z**；olean **13:32:34 > src 13:31:13**；sorryAx=0/errors=0；接受；
+- **`exists_pointMap_degree_eq_weight`**：在 **degree faithfulness** `hdeg : ∀ b, logDegreeAt 0 0 v (posRealAction (ofAdd b)) = b` 下，∃ point map q 使 `sourceLocalLogDegree v (D.scaling * q a b c) = arithmeticWeight (abcRationalPoint a c)`；构造用 `constantThetaPilotPoint` + 除以 `Fintype.card (SourceVolumeIndex l)`（非零由 `cor312GapDict_sourceVolumeIndex_card_ne_zero`）；
+- **`exists_pointMap_degree_le_weight`**：在 hdeg + `eps ≥ 0` 下，∃ q 使 degree ≤ `(1+eps)·weight + 0`（D₁ = 0）；
+
+### 📌 `Node09DegreeUpperResidual`
+- **仅 satisfiability**，不是 application 的 actual point map 的证明；
+- paper-level 输入仍是 **actual point 的 degree upper bound**：`sourceLocalLogDegree v (scaleShift point) ≤ (1+eps)·arithmeticWeight + D1`；
+- P7 §9.1/9.2 只给 q-ideal product-region volume；无 singleton point-volume donor；比较 singleton 与 product region 仍 paper-level IUT IV estimate；
+- **no inhabitant of cards family constructed**；本文件只证 degree-faithfulness satisfiability 方向并记录 exact residual；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09SourceCards DONE 05:34:14：sourceSingletonCards 桥 → singleton cards → final endpoints；仅 hweightDictionary + hdegreeBound paper-level；no inhabitant/fake（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09SourceCardsActual`：**DONE 05:34:14Z**；olean **13:34:14 > src 13:33:40**；sorryAx=0/errors=0；接受；
+- **`sourceSingletonCards`**：从 source data（`I`, v, R, n, D, p）构造 `Node09SingletonPointCards (I.ThetaPilotPoint v) (sourceUnitRegionHaarInterface…) p eps D₀ D₁`；输入 heps/hD₀/hD₁ + hval/hunit/hsplit/hptfin/hregion_fin + **hweightDictionary + hdegreeBound**；
+  * hweight_le_singleton 由 `hweight_le_singleton_of_weightDictionary`；
+  * hsingleton_le_weight 由 `cor312GapDict_singletonVolume_toReal_le_iff` 的 mpr 应用于 `hdegreeBound`；
+
+### 📌 `Node09SourceCardsResidual`
+- **hweightDictionary**：`arithmeticWeight x ≤ sourceLocalLogDegree v (D.scaling * p a b c)`；genuine card，degree faithfulness 下 satisfiable；
+- **hdegreeBound**：actual point map 的 degree upper bound `sourceLocalLogDegree ≤ (1+eps)·weight + D₁`；**paper-level IUT IV input**（P7 product region comparison 未形式化）；
+- hval/hunit/hsplit/hptfin/hregion_fin 为 reduced inputs（hsplit/hptfin 有 actual source-interface 版本；hunit canonicalizable；hregion_fin 由 region finiteness）；
+- **sourceSingletonCards 产生 Node09SingletonPointCards，但不构造两个 paper cards 的 inhabitant**；
+- 结论：**仅 hweightDictionary + hdegreeBound paper-level**；no inhabitant/fake；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — Node09ProductVolumeResidual DONE 05:36:32：P7 product volume 非 singleton；hdegreeBound 需 singleton≤product + product≤weight；两者均无 donor；仅 exact composition（abc，只读，无编译）
+
+### ✅ DONE
+- `Node09ProductVolumeResidualActual`：**DONE 05:36:32Z**；olean **13:36:31 > src 13:35:43**；sorryAx=0（6 条旧 errors 残留）；接受；
+- **`degreeBound_of_singleton_le_product_and_product_le_weight`**：抽象组合 `singleton ≤ product` + `product ≤ (1+eps)·weight + D1` ⇒ `singleton ≤ (1+eps)·weight + D1`（`le_trans`）；仅记录精确的 paper-level 分解，**不构造任一输入**；
+
+### 📌 `Node09ProductVolumeResidual`
+- P7 §9.1/9.2 形式化的是 **q-ideal product-region volume** `V(J_q;C_q) = -Σ_b n_b f_b log p_b`（weighted M_q），**不是** Node09SingletonPointCards 的 **value-monoid singleton volume**；
+- 推 hdegreeBound 需两个比较：
+  * **(1)** singleton volume `{scaleShift (logShellPoint a b c)}` ≤ product-region volume（**containment/membership comparison**）；
+  * **(2)** product-region volume ≤ `(1+eps)·arithmeticWeight + D1`（weighted q-ideal volume-to-arithmetic-weight estimate）；
+- **(1)(2) 均无 donor**（current tree）；
+- **no inhabitant constructed**；abstract composition 仅文档化 exact missing shape；
+
+### ✅ final conditional endpoints green 维持
+
+## 2026-11-15 — ProductVolumeResidual accepted；insight：singleton 包含于 normalizedComparisonRegion 定义性成立 → comparison (1) 可由 logVolume_mono 证明；仅 (2) product<=weight 保留（abc，只读，无编译）
+
+### ProductVolumeResidual accepted
+- Node09ProductVolumeResidualActual DONE 05:36:32；olean 13:36:31 > src 13:35:43；
+
+### 定义性验证（已读源码）
+- normalizedComparisonRegion W logShellPoint a b c := W.scaleShift '' (W.unitRegion ∪ {logShellPoint a b c})（Cor312ToABCBridgeInterface.lean:201-203）；
+- singleton {W.scaleShift (logShellPoint a b c)} 定义性包含于该 region：W.scaleShift point 属于 W.scaleShift '' (unitRegion ∪ {point})（Set.mem_image + Or.inr rfl）；
+- 故 comparison (1) singleton volume <= region volume 可由 W.logVolume_mono（IQHullLogVolumeInterface 字段；使用处见 Cor312ComparisonGapReduction.lean:147/158、ABCFrontierSingletonReduction.lean:189 等）直接得到，无需 paper-level donor；
+
+### 剩余
+- 仅 (2) product-region volume <= (1+eps)*arithmeticWeight + D1 仍 paper-level（weighted q-ideal volume 到 arithmetic weight 估计）；
+- 建议（下一步、非本轮）：添加 singleton_subset_normalizedComparisonRegion + singletonVolume_le_regionVolume 小引理（watchdog 验证），把 hdegreeBound 残余压成 (2)；
+- no inhabitant constructed；final conditional endpoints green 维持。
+
+## 2026-11-15 — Node09RegionMono DONE 05:38:37：comparison (1) 由单调性移除；仅 region-volume bound 留 paper-level（abc，只读，无编译）
+
+### DONE
+- Node09RegionMonoActual：DONE 05:38:37Z；olean 13:38:37；当前源 13:39:08 新于 olean（pending rebuild）；接受 DONE 版本；
+- singleton_subset_normalizedComparisonRegion：{W.scaleShift point} ⊆ normalizedComparisonRegion W logShellPoint a b c（定义：point ∈ unitRegion ∪ {point}，Set.mem_union_right + mem_singleton）；
+- singletonVolume_le_regionVolume / singletonVolume_le_normalizedComparisonRegion：由 W.logVolume_mono 直接得；
+- singleton_toReal_le_of_region_toReal_le：region ≤ Xb + region finiteness ⇒ singleton.toReal ≤ Xb（ENNReal.toReal_mono 桥）；
+
+### Node09RegionMonoResidual
+- comparison (1) singleton <= region 已证明（logVolume_mono + 定义）；
+- 因此 hdegreeBound/hsingleton_le_weight 现在只需 **region-volume bound**：(normalizedComparisonRegion volume).toReal <= (1+eps)*weight + D1 + region finiteness；
+- 剩余 paper-level = **normalized comparison-region volume <= weighted arithmetic bound**（IUT IV main log-volume estimate）；current tree 无 donor；
+- no inhabitant；本文件仅用单调性移除 comparison (1)；
+
+### final conditional endpoints green 维持
+
+## 2026-11-15 — RegionMono updated DONE 05:40:00；hull SingletonComparisonRegion DONE 05:39:19；comparison (1) removed（abc，只读，无编译）
+
+### DONE
+- Node09RegionMonoActual：updated DONE 05:40:00Z；olean 13:40:00 > src 13:39:08（此前 pending 已解决）；theorems singleton_subset_normalizedComparisonRegion / singletonVolume_le_regionVolume / singletonVolume_le_normalizedComparisonRegion / singleton_toReal_le_of_region_toReal_le + Residual；accept；
+- Mzk1SingletonComparisonRegionActual（hull 层）：DONE 05:39:19Z；olean 13:39:18 > src 13:38:22；theorems singleton_subset_normalizedComparisonRegion（同定义性证明）与 singletonVolume_le_normalizedComparisonRegionVolume（W.logVolume_mono）；accept；
+
+### 残余
+- comparison (1) removed（两文件独立证明）；
+- hdegreeBound/hsingleton_le_weight 现在仅需 region-volume bound：(normalizedComparisonRegion volume).toReal <= (1+eps)*weight + D1 + region finiteness；
+- 剩余 paper-level 仅 **normalized comparison-region volume <= weighted arithmetic bound**（IUT IV main log-volume estimate）；无 donor；no inhabitant；
+
+### final conditional endpoints green 维持
+
+## 2026-11-15 — Node09Gap2ToCards DONE 05:42:31：hpoint_of_comparison 由 gap2 field 导出；cards 链仅剩 frozen gap2（regionVolume_le_normalizedWeight）；no donor/fake（abc，只读，无编译）
+
+### DONE
+- Node09Gap2ToCardsActual：DONE 05:42:31Z；olean 13:42:30 > src 13:41:23；sorryAx=0/errors=0；
+- hpoint_of_comparison：给定 C : Cor312EpsilonArithmeticComparison W epsilon，∃ D1，singleton.toReal <= (1+epsilon)*weight + D1；构造 D1 = (W.logVolume W.hull).toReal + D；使用 C.regionVolume_le_normalizedWeight、singletonVolume_le_regionVolume（RegionMono）、C.comparisonRegion_logVolume_lt_top、ENNReal.toReal_mono、ring；
+
+### Node09Gap2ToCardsResidual
+- hpoint 已由 frozen gap-2 field regionVolume_le_normalizedWeight 经单调性（singleton <= region）+ hull term 吸收导出；
+- 剩余输入 = 恰好 frozen gap-2 paper link regionVolume_le_normalizedWeight（IUT IV main log-volume estimate）；
+- Mzk1LocalEstimateConsumerQpilotActual / Mzk1GapCorrespondenceAuditQpilotActual 识别其为 IUT IV local-estimate comparison；Mzk1ABCEntryGap2QpilotActual 仅消费；
+- no donor produces regionVolume_le_normalizedWeight；paper-level；no inhabitant/fake；
+- cards chain 现在仅需 frozen gap2 field；comparison (1) 已由 RegionMono 移除；
+
+### final conditional endpoints green 维持
+
+## 2026-11-15 — ROUND18 audit status：final conditional endpoints green；paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase（abc，只读，无编译）
+
+### Final endpoints green（fresh：olean > src）
+- Node09FinalConditional（05:00:17；final_paper312_conditional）；
+- Node09ABCBridgeConditional（05:03:42；Node09ABCBridgeInterface/toCor312/heightBound）；
+- Node09FinalABCBridge（05:09:05；final_abcHeightBound_of_cards）；
+- Node09CardsToFrontier（05:16:23；frontier_of_cards/abcConjecture_of_cards；probe 标准三公理）；
+- Node09SingletonFinal（05:27:22 refined；frontier/abcConjecture/final_abcHeightBound_of_singleton_cards）；
+- Node09RegionMono（05:40:00；comparison (1) removed）；Node09Gap2ToCards（05:42:31；hpoint_of_comparison）；
+
+### Paper-level 输入（仅两个）
+1. **frozen gap2**：Cor312EpsilonArithmeticComparison.regionVolume_le_normalizedWeight（IUT IV main log-volume estimate；no donor）；
+2. **hweightDictionary**：arithmeticWeight <= sourceLocalLogDegree（genuine card，degree faithfulness 下 satisfiable）；
+
+### Residual（链上非 paper-level 的显式输入）
+- horder（qVFamily order = 1；无 donor/反例）；
+- hcoef（CoeffComparison；反例已记录）；
+- hbase（Nonempty FinitePlaceQCandidate / PadicValuedCoherence；absence of donor）；
+
+### 其他
+- 05:40 后唯一 FAIL：Mzk1QVFiberWeightedActual 05:41:49（rerun 失败；非 paper-level，待修）；stale probes 仍为已知（GaloisCompletionCurrent/PadicGalois）；
+- no inhabitant/fake；final endpoints green 维持。
+
+## 2026-11-15 — Node09FrozenGap2Investigation DONE 05:46:22：frozen gap2 命名形式/等价 documented，无 producer；hull ABCGap2RegionVolume_finiteC3 仅 conditional on hpoint/hunit（abc，只读，无编译）
+
+### DONE
+- Node09FrozenGap2InvestigationActual：DONE 05:46:22Z；olean 13:46:22 > src 13:46:13；sorryAx=0/errors=0；
+
+### Frozen gap2 命名形式（documented）
+- 字段：Cor312EpsilonArithmeticComparison.regionVolume_le_normalizedWeight = ∃D, ∀ABC triples, (logVolume region).toReal <= (1+eps)*weight + (logVolume hull).toReal + D；
+- 等价 local-estimate：Mzk1GapCorrespondenceAuditQpilotActual.gap2_iff_bridge（localEstimateOfRegion W logShellPoint a b c = (logVolume normalizedComparisonRegion).toReal）；
+- 等价 ENNReal：Mzk1ABCBridgeGap2ConsumerActual.SNamed regionVolume eps weight theta D := regionVolume <= ofReal((1+eps)*weight + theta + D)；gap2_real_bound / gap2_ennreal_bound 相互转换；
+- 条件归约：Mzk1ABCBridgeGap2Conditional.gap2_conditional_reduction（SNamed + nonneg -> real-form region bound）；
+
+### Producer / donor 调查
+- P7 §9.1/9.2 只给 q-ideal product volume；无 formal containment/volume comparison 到 value-monoid normalizedComparisonRegion；
+- 树中无 producer of regionVolume_le_normalizedWeight / localEstimate_le_weight / SNamed；唯一 provider 是 reduced conditional cor312Gap2_regionVolume_le_normalizedWeight_of_split_pointBound_unitRegionBound（hpoint/hunit 为 paper-level）；
+- hull donor ABCGap2RegionVolume_finiteC3（ABCGap2FiniteC3Supply.lean:38）：hsplit/hptfin 由 actual theorems 供给（cor312GapSupply_sourceInterface_hsplit/_hptfin），但**仍 conditional on hdeg hunit + hpoint**（显式假设）；
+- 结论：**frozen gap2 仍是唯一新增 paper-level 输入**；no inhabitant/no fake；
+
+### 同时维持
+- paper-level 仅 frozen gap2 + hweightDictionary；final conditional endpoints green。
+
+## 2026-11-15 — ROUND19 audit status：paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase；probes running（abc，只读，无编译）
+
+### Paper-level 输入（仅两个，维持）
+1. frozen gap2：Cor312EpsilonArithmeticComparison.regionVolume_le_normalizedWeight（IUT IV main log-volume estimate；命名等价形式见 FrozenGap2Investigation；无 producer）；
+2. hweightDictionary：arithmeticWeight <= sourceLocalLogDegree（genuine card，degree faithfulness 下 satisfiable）；
+
+### Residual（显式输入）
+- horder（qVFamily order = 1；无 donor/反例）；
+- hcoef（CoeffComparison；反例已记录）；
+- hbase（Nonempty FinitePlaceQCandidate / PadicValuedCoherence；absence of donor）；
+
+### Round19 probes running
+- START 05:47:48：Mzk1PadicGaloisProbeActual、Mzk1GaloisCompletionCurrentProbeActual（已知 stale probes；待结果）；
+- 新 Mzk1CheckWeightedSignatureProbe：源 13:48:35；无 olean（pending）；
+- 其余已知 probe（CheckSharpDonor/GaloisValOnly 等）仍 stale，不作证据；
+
+### 维持
+- final conditional endpoints green（FinalConditional/ABCBridgeConditional/FinalABCBridge/CardsToFrontier/SingletonFinal/RegionMono/Gap2ToCards）；
+- no inhabitant/fake。
+
+## 2026-11-15 — WeightDictionaryScaling/RelativeNormInterface DONE；CheckWeightedSignatureProbe/Galois probes/WQUniformizer red（abc，只读，无编译）
+
+### DONE
+- Node09WeightDictionaryScalingActual：DONE 05:49:28Z；olean 13:49:28 > src 13:48:34；theorems hweightDictionary_iff_scalingSeparatedForActualP（actual point map p 的 weight dictionary <=> scaling-separated inequality）与 hweightDictionary_implies_scalingFreeForActualP（scaling logDegree <= 0 时给 scaling-free 形式）；Residual：no universal theorem for application actual p（cor312GapDict_weightDictionary_not_universal 反例；cor312GapDict_exists_pointMap_weightDictionary 仅 degree-faithfulness satisfiability）；frozen gap2 由 gap2_iff_bridge 识别为 localEstimate_le_weight，无 producer；no inhabitant/fake；
+- Mzk1A2Node04RelativeNormInterfaceActual：DONE 05:49:25Z；olean 13:49:25 > src 13:48:47；structure A2Node04RelativeNormInterface + Required（interface）；accept；
+
+### red
+- Mzk1CheckWeightedSignatureProbe：FAIL 05:49:49Z；unknown identifiers MqFiber_eq_badWeighted_of_fiber / MqFiberBadSumBridge_of_logBridge（probe import/open 问题；源 13:50:22 已改 pending）；probe-only；
+- Galois probes stale FAIL 05:48:44（Mzk1GaloisCompletionCurrentProbeActual / Mzk1PadicGaloisProbeActual；已知 stale，不作证据）；
+- Mzk1WQUniformizerAssociatedActual（新）：FAIL 05:50:52Z；errors unsolved goals :21:27/:27:27、unknown PadicField.nrm_zero :29:14；无 olean；red；
+
+### 维持
+- paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase；final conditional endpoints green；
+
+## 2026-11-15 — 复核：WeightDictionaryScaling/RelativeNormInterface DONE；WQUniformizer red；CheckWeightedSignatureProbe retry；RelativeNormConsumer DONE；Gap2Source running（abc，只读，无编译）
+
+### DONE
+- Node09WeightDictionaryScalingActual：DONE 05:49:28（olean 13:49:28 > src 13:48:34）维持；
+- Mzk1A2Node04RelativeNormInterfaceActual：DONE 05:49:25（olean 13:49:25 > src 13:48:47）维持；
+- Mzk1A2Node04RelativeNormConsumerActual（新）：DONE 05:51:34Z；olean 13:51:34 > src 13:50:58；def A2Node04RelativeNormInterface.relativeNorm' + theorems relativeNorm_norm_formula / relativeNorm_q_contraction；accept；
+
+### red/pending
+- Mzk1WQUniformizerAssociatedActual：FAIL 05:50:52Z；源 13:49:11；无 olean；red（unsolved :21/:27、unknown PadicField.nrm_zero :29）；
+- Mzk1CheckWeightedSignatureProbe：retry START 05:51:08（源 13:50:22；前次 unknown MqFiber theorem）；pending；
+- Galois probes stale FAIL 05:48:44（已知 stale，不作证据）；
+- 新 Node09Gap2SourceActual：START 05:51:08；源 13:50:52；theorem hpoint_of_SNamed；无 olean；running；
+
+### 维持
+- paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase；final endpoints green。
+
+## 2026-11-15 — Node09Gap2Source DONE 05:52:00（hpoint_of_SNamed）；CheckWeightedSignatureProbe DONE 05:52:01 archived；WQ helper red（abc，只读，无编译）
+
+### DONE
+- Node09Gap2SourceActual：DONE 05:52:00Z；olean 13:52:00 > src 13:50:52；
+  * hpoint_of_SNamed：SNamed family + nonnegativity hR + region finiteness hfin -> ∃D1 singleton hpoint bound（hull 吸收进 D1）；用 gap2_real_bound + singleton<=region + ENNReal.toReal_mono + ring；
+  * Node09Gap2SourceResidual：SNamed regionVolume eps weight theta D 是命名 ENNReal 估计 regionVolume <= ofReal((1+eps)*weight + theta + D)；对 comparison region 恰为 frozen gap2 的 ENNReal 形式（gap2_real_bound/gap2_ennreal_bound 转换）；hpoint_of_SNamed 表明 source-data SNamed family 可推 hpoint；
+  * 树中无 producer of SNamed；SNamed 仍 paper-level IUT IV main log-volume estimate，须作为 source data 供给；no fake；accept；
+- Mzk1CheckWeightedSignatureProbe：DONE 05:52:01Z；olean 13:52:00 > src 13:50:22；log sorryAx=0（输出展示 MqFiberBadSumBridge_of_logBridge 签名；此前 unknown identifier 已解决）；probe-only，**已 archived**；accept as probe clean；
+
+### red/pending
+- Mzk1WQUniformizerAssociatedActual：源 13:51:44；retry START 05:52:15（此前 FAIL 05:50:52：unsolved :21/:27、unknown PadicField.nrm_zero :29）；无 olean；red/pending；
+- Galois probes stale FAIL 05:48:44（已知 stale，不作证据）；
+
+### 维持
+- paper-level 仅 frozen gap2 + hweightDictionary（frozen gap2 = SNamed/frozen ENNReal field）；residual horder/hcoef/hbase；final endpoints green。
+
+## 2026-11-15 — WQUniformizer FAIL 05:53:03 后 archived/reverted（stepxi）；Gap2Source/CheckWeighted DONE 维持（abc，只读，无编译）
+
+### WQUniformizer — archived/reverted
+- Mzk1WQUniformizerAssociatedActual：最新 FAIL 05:53:03Z（errors unknown PadicField.nrm_zero :29:14/:31:14、unsolved goals :27:27/:29:27）；
+- **源文件现已不存在**（stepxi archive/revert），olean NONE；不作为证据；
+
+### DONE 维持
+- Node09Gap2SourceActual：DONE 05:52:00Z；olean 13:52:00 > src 13:50:52（hpoint_of_SNamed；SNamed = frozen gap2 ENNReal 形式；无 producer；no fake）；
+- Mzk1CheckWeightedSignatureProbe：DONE 05:52:01Z；olean 13:52:00（probe 证据保留）；**源文件已 archived/deleted**（probe-only，已 archive）；
+
+### 维持
+- paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase；final conditional endpoints green；no inhabitant/fake。
+
+## 2026-11-15 — 状态确认：SNamed 仅 numeric witness，无 actual producer；hweightDictionary scaling-separated 无 universal；final endpoints green（abc，只读，无编译）
+
+### SNamed — 只有 numeric witness（无 actual producer）
+- 树中存在 SNamed 的 numeric inhabitants（如 Mzk1StepXIGap2NumericWitnessActual.gap2_numeric_SNamed、Mzk1ABCBridgeGap2NumericActual、Mzk1Gap2NumericWitnessQpilotActual），但均为数值特例（eps/weight/theta/D 取具体数），不是实际 analytic producer；
+- 新 Node09PM7SNamedActual（源 13:54:20；pending build）只给条件组合：SNamed_of_region_le_weightedQPilot，需 (i) (comparison region volume).toReal <= -qPilotRealifiedLogVolume X 与 (ii) -qPilotRealifiedLogVolume X <= (1+eps)*weight + theta + D；两者均无 donor（No inhabitant）；
+- 结论：SNamed/regionVolume_le_normalizedWeight 仍 paper-level；numeric witness 不构成实际 producer；no fake；
+
+### hweightDictionary — scaling-separated，无 universal
+- Node09WeightDictionaryScalingActual DONE 05:49:28；
+- hweightDictionary_iff_scalingSeparatedForActualP：actual p 的 weight dictionary <=> scaling-separated inequality；hweightDictionary_implies_scalingFreeForActualP：scaling logDegree<=0 时给 scaling-free；
+- 无 universal actual-p theorem：cor312GapDict_weightDictionary_not_universal 给反例；cor312GapDict_exists_pointMap_weightDictionary 仅 degree-faithfulness satisfiability；
+
+### 维持
+- final conditional endpoints green（FinalConditional/ABCBridgeConditional/FinalABCBridge/CardsToFrontier/SingletonFinal/RegionMono/Gap2ToCards）；
+- paper-level 仅 frozen gap2（SNamed 形式）+ hweightDictionary；residual horder/hcoef/hbase；no inhabitant/fake；
+
+## 2026-11-15 — CRITICAL AUDIT：hdeg + SourceUnitRegionHaarData D 联合不一致；sourceUnitRegionHaarInterface 仅在 hdeg 失败时存在；检查 cards/final endpoints 的 hdeg+D 冲突（abc，只读，无编译）
+
+### 核心引理（已读源码）
+- **iqCarrierModel_sourceHaarData_not_nonempty_of_degreeFaithful**（IQCarrierConcreteModel.lean:583-590）：
+  * `(hdeg : forall b, I.logDegreeAt 0 0 v (R.posRealAction (ofAdd b)) = b) -> Not (Nonempty (I.SourceUnitRegionHaarData v R n))`；
+  * 即 **hdeg 与 D 联合不一致**：hdeg 下不存在任何 SourceUnitRegionHaarData；
+  * 机制：D -> sourceUnitRegionHaarData_to_compactnessInput -> ValueHullCompactnessInput，而后者由 frozen theorem not_nonempty_valueHullCompactnessInput_of_degreeFaithful 反证；
+- **sourceHullVolume_eq_top_of_degreeFaithful**（SourceImageHullVolume.lean:428-449）：hdeg -> `I.sourceHullVolume v R n = ⊤`；
+- **not_exists_sourceHullLogDegreeBound_of_degreeFaithful**（同文件:414-423）：hdeg -> 不存在 hull log-degree bound；
+- **cor312CarrierSpec_not_inhabited / cor312CarrierSpec_dictionaries_jointly_refutable**（Cor312CarrierRealizationSpec.lean:64-72 及声明）：四字段 carrier spec 无 inhabitant；weight/point-height dictionaries 在 (1,2,3) 冲突（log6>log3）；
+- **iqCarrierModel_valueCarrier_hmem_degreeDictionary_incompatible**（IQCarrierConcreteModel.lean:596+）：value carrier 上 unitRegion membership + weight dictionary 不相容；
+
+### 对 cards / final endpoints 的影响（精确）
+1. **Node09DegreeUpperActual 是 vacuous context**：其变量含 `D : SourceUnitRegionHaarData v R n`，而 theorems `exists_pointMap_degree_eq_weight` / `exists_pointMap_degree_le_weight` 假设 `hdeg`；由上述引理 hdeg+D 不一致 → **该文件所有定理的假设不可同时满足，不能用于实际 discharge hdegreeBound**；
+2. **Node09SourceCards 的 residual 解释失效**：它本身不假设 hdeg（D + hweightDictionary + hdegreeBound 为显式输入），但其 residual 声称 hweightDictionary 可在 degree faithfulness 下 satisfiable；该 satisfiability 路线在 actual D 存在时**空**（hdeg 与 D 互斥），不能作为 hweightDictionary 的实现证据；
+3. **Node09ComparisonCards / final endpoints**：不假设 hdeg，也不直接假设 D；其为抽象 W/logShellPoint 上的条件定理，**未被上述引理直接反驳**；cards family 仍是 paper-level 输入（无 inhabitant），本身未证明不可满足（树中无 `Not (Nonempty (Node09ComparisonCards ...))`），但**其唯一候选 discharge 路径（sourceSingletonCards + degree-faithful hweightDictionary）在 actual source data 上为空/不可用**；
+4. **hull interface 存在性**：sourceUnitRegionHaarInterface 定义于 D 之上；若 D 存在则 hdeg 必然失败（由 1 的逆否），所以 degree-faithful hull interface **不可能**；frozen hull obstructions（hull volume ⊤、no hull degree bound）进一步封死 hdeg 路线的实际可用性；
+
+### 结论（记录）
+- **hdeg + D jointly inconsistent**（exact: iqCarrierModel_sourceHaarData_not_nonempty_of_degreeFaithful）；
+- **cards/final endpoints 的假设本身不直接包含 hdeg+D**，故不是形式矛盾/即刻 vacuous；
+- 但 **degree-faithfulness satisfiability 证据路线（Node09DegreeUpper、Node09SourceCards residual 解释）在 actual D 上 vacuous**；cards family 仍无 inhabitant；final conditional endpoints 保持 conditional，不能声称已 discharge hweightDictionary；
+- no fake；不得把 vacuous hdeg 路线当作 hweightDictionary/degree upper bound 的实际供给。
+
+## 2026-11-15 — CRITICAL 记录（Lead 确认）：hdeg+D inconsistent；DegreeUpper vacuous；hweightDictionary no evidence；cards/final endpoints 非形式 vacuous 但无 discharge path（abc，只读，无编译）
+
+### 精确事实（源码行号）
+1. **hdeg + D 不一致**：`iqCarrierModel_sourceHaarData_not_nonempty_of_degreeFaithful`（IQCarrierConcreteModel.lean:583-590）
+   `hdeg -> Not (Nonempty (I.SourceUnitRegionHaarData v R n))`；故任何同时带 hdeg 与 D 的上下文为空；
+2. **Node09DegreeUpper vacuous**：`Node09DegreeUpperActual` 变量含 `D : I.SourceUnitRegionHaarData v R n`，theorems `exists_pointMap_degree_eq_weight` / `exists_pointMap_degree_le_weight` 假设 `hdeg`；hdeg+D 不一致 ⇒ 假设不可满足 ⇒ 两个定理在 actual D 上 vacuous，**不能作 hdegreeBound 的实际供给**；
+3. **hweightDictionary 无证据**：
+   - `Node09WeightDictionaryScalingActual`（DONE 05:49:28）只给 iff scaling-separated 与 scaling-free 蕴含（在 scaling logDegree<=0 时），并明确 no universal actual-p theorem（`cor312GapDict_weightDictionary_not_universal` 反例），仅 `cor312GapDict_exists_pointMap_weightDictionary` 的 degree-faithfulness satisfiability；
+   - 而 degree-faithfulness 路线在 actual D 上 vacuous（事实 1）→ hweightDictionary **没有任何 actual evidence**；
+4. **cards/final endpoints 非形式 vacuous，但无 discharge path**：
+   - `Node09ComparisonCards`/`Node09SingletonPointCards` 及 final endpoints（FinalConditional/ABCBridgeConditional/FinalABCBridge/CardsToFrontier/SingletonFinal/Gap2ToCards/RegionMono）均**不假设 hdeg+D**；树中**无** `Not (Nonempty (Node09ComparisonCards ...))`，故非形式矛盾/即刻 vacuous；
+   - 但唯一候选 discharge：sourceSingletonCards（Node09SourceCards）需要 hweightDictionary + hdegreeBound；hweightDictionary 无证据（事实 3），degree-faithfulness 满足路线 vacuous（事实 1）→ **无 discharge path**；
+   - hull obstructions 进一步封死：`sourceHullVolume_eq_top_of_degreeFaithful`（SourceImageHullVolume.lean:428）、`not_exists_sourceHullLogDegreeBound_of_degreeFaithful`、`cor312CarrierSpec_not_inhabited`（四字段 spec 无 inhabitant）、dictionaries jointly refutable；
+
+### 结论
+- **不得**把 DegreeUpper/degree-faithfulness 路线当 hweightDictionary 或 hdegreeBound 的实际证明；
+- cards family 仍 paper-level 输入（direct point-volume card + weight dictionary）；final endpoints 保持 conditional，且**无实际 discharge**；
+- no fake；本记录仅确认现状，不改变已接受 DONE 文件的 interface/conditional 地位。
+
+## 2026-11-15 — Node09PM7SNamed DONE 05:56:17；Node09HullConsistencyAudit DONE 05:57:07（cards consistent conditional on D without hdeg；DegreeUpper vacuous/isolated）（abc，只读，无编译）
+
+### DONE
+- Node09PM7SNamedActual：DONE 05:56:17Z；olean 13:56:16 > src 13:54:20；sorryAx=0；
+  * SNamed_of_region_le_weightedQPilot：由 (i) comparison region volume <= -qPilotRealifiedLogVolume X 与 (ii) -qPilotRealifiedLogVolume X <= (1+eps)*weight + theta + D 组合出 SNamed（经 gap2_ennreal_bound）；
+  * residual：(i)/(ii) 均无 donor；SNamed 仍 paper-level；no fake；accept conditional；
+- Node09HullConsistencyAuditActual：DONE 05:57:07Z；olean 13:57:07 > src 13:56:49；sorryAx=0；**documentation-only audit**；accept；
+  * obstruction 1：cor312CarrierSpec_dictionaries_jointly_refutable / not_inhabited（四字段包同时含 weight dictionary (c) + point-height dictionary (d)，(1,2,3) 处 refuted）；cards 链用 **direct point-volume card + weight dictionary，不用 point-height dictionary** → **不被 obstruction 1 反驳**；
+  * obstruction 2：HunitEpsilonTransferReduction.cor312GapSupply_not_exists_epsilon_hullBound_of_degreeFaithful + not_nonempty_valueHullCompactnessInput_of_degreeFaithful：hdeg 与 SourceUnitRegionHaarData/ValueHullCompactnessInput 不相容；等价 sourceHullVolume=⊤ under hdeg；
+  * findings：
+    - Node09SourceCards/SingletonWeight/Gap2Source/RegionMono/SingletonPointCards/ComparisonCards/final endpoints 均假设 D 但**不假设 hdeg** → 不在 hdeg+D 不一致前提空间内；
+    * **唯一同时假设 D 与 hdeg 的 Node09 文件是 Node09DegreeUpperActual**（exists_pointMap_degree_eq/le_weight）→ hdeg+D 不一致 ⇒ theorems vacuous；**no importers**、不被 cards 链使用；flag: 不得作为 actual point map 证据，保持 out of main chain；
+    - 无其他 Node09 theorem 同时假设 hdeg+D；SourceCards 的 hweightDictionary/hdegreeBound 是任意 source-data 假设，不是 hdeg；
+    - consistency verdict：cards chain **consistent conditional on D（without hdeg）** + direct point-volume card/weight dictionary；hull obstructions 不矛盾；无 theorem 断言 dictionaries/SNamed/frozen gap2 的 inhabitant；
+    - no fake；audit 不证明 D 本身 consistent，仅证明 Node09 链不使用被反驳的 hdeg+D 或 dictionary pair；
+
+## 2026-11-15 — 复核：PM7SNamed/HullConsistencyAudit DONE；cards consistent conditional on D（无 hdeg）；Ambient red（abc，只读，无编译）
+
+### DONE 维持
+- Node09PM7SNamedActual DONE 05:56:17：SNamed_of_region_le_weightedQPilot；P7 weighted volume 两个 comparison（(i) region <= -qPilotRealifiedLogVolume；(ii) weighted <= (1+eps)weight+theta+D）均无 donor；SNamed 仍 paper-level；
+- Node09HullConsistencyAudit DONE 05:57:07：cards chain consistent conditional on D（without hdeg）；obstruction1 不反驳 cards（用 direct point-volume card）；obstruction2 hdeg+D 不一致；
+
+### DegreeUpper
+- Node09DegreeUpper 唯一同时含 D+hdeg 的 Node09 文件；hdeg+D 不一致 → vacuous；**no importers、不被 cards 链使用；isolated / out of main chain**；
+
+### Paper-level（当前残余）
+- **两个 singleton 不等式**：hweight_le_singleton（由 weight dictionary 的 scaling-separated/implied 形式支撑但无 universal actual-p proof）与 hsingleton_le_weight（degree upper bound）；
+- **P7 comparisons**：(i) comparison region volume <= -qPilotRealifiedLogVolume X；(ii) -qPilotRealifiedLogVolume X <= (1+eps)*weight + theta + D；
+- 以及 frozen gap2/hweightDictionary；均无 actual producer/inhabitant；
+
+### red
+- Mzk1AmbientActual（新）：FAIL 05:55:11Z；源 13:54:09；无 olean；theorem ambient_value_eq；errors invalid ▸ notation :29:14、unsolved goals :33:55；不接受；
+
+## 2026-11-15 — Mzk1AmbientActual DONE 05:59:11（ambient_value_eq）；需 fresh axioms probe；Galois probes stale FAIL 06:00:18（abc，只读，无编译）
+
+### DONE（待 probe）
+- Mzk1AmbientActual：DONE 05:59:11Z；olean 13:59:10 > src 13:58:35；theorem ambient_value_eq；log 当前无 sorryAx（log mtime 13:55:11 属旧失败，DONE 构建无新错误输出）；
+- **fresh axioms probe 仍需补**（#print axioms ambient_value_eq；在 fresh probe 确认标准三公理前不作 kernel-clean 证据）；
+
+### stale probes
+- Mzk1PadicGaloisProbeActual / Mzk1GaloisCompletionCurrentProbeActual：START 05:59:25；FAIL 06:00:18（已知 stale probes，无 olean；不作证据）；
+
+### 维持
+- paper-level：两个 singleton 不等式 + P7 comparisons (i)/(ii) + frozen gap2/hweightDictionary；cards chain consistent conditional on D（无 hdeg）；DegreeUpper vacuous/isolated；no fake。
+
+## 2026-11-15 — CRITICAL：dictionary sat/not_universal theorems 因 D+hdeg vacuous；hweightDictionary exact input neither proven nor refuted；仅 scaling-separated genuine（abc，只读，无编译）
+
+### 已读源码（Cor312GapDictionaryLayer.lean）
+- cor312GapDict_exists_pointMap_weightDictionary（:200-224）：假设 `D : SourceUnitRegionHaarData` + `hdeg` → 由 hdeg+D 不一致，**vacuous satisfiability**；
+- cor312GapDict_weightDictionary_not_universal（:268+）：同样假设 D + hdeg → **vacuous counterexample**；
+- cor312GapDict_exists_pointMap_pointHeightDictionary（:230-259）：D + hdeg → vacuous；
+- cor312GapDict_pointHeightDictionary_not_universal（:297+）：D + hdeg → vacuous；
+- 因此 **hweightDictionary exact input（arithmeticWeight <= sourceLocalLogDegree v (D.scaling * p a b c)）既未被证明也未被反驳**：satisfiability 与 counterexample 均在 vacuous premise context 中；
+
+### 仍 genuine 的定理
+- cor312GapDict_weightDictionary_iff_scalingSeparated（:176-181）：no D/hdeg，genuine iff：weight ≤ ld(lam*q) ↔ weight ≤ ld lam + ld q；
+- cor312GapDict_weightDictionary_implies_scalingFree（:187-192）：genuine conditional（需 hlam : ld lam ≤ 0）：weight ≤ ld(lam*q) -> weight ≤ ld q；
+- cor312GapDict_singletonVolume_toReal_eq_max / _le_iff（:152-169）：genuine；
+- Node09WeightDictionaryScalingActual 的 iff/implies 定理：D 只在名字/参数中，无 hdeg，genuine（vacuous 的是库中 sat/not_universal 两族）；
+
+### 结论
+- **hweightDictionary 仍为 exact open input**：无有效证明、无有效反驳；satisfiability/counterexample 均 vacuous；
+- **唯一 genuine 形式是 scaling-separated**：weight ≤ ld(lam) + ld(q)（+ hlam 时得 scaling-free）；
+- cards/final endpoints 不受影响：hweightDictionary 作为任意 paper-level source-data 假设；cards chain consistent conditional on D（without hdeg）；no fake。
+
+
+## 2026-11-15 — Node09 dictionary-status vacuity correction（mainline）
+
+- 发现：`cor312GapDict_exists_pointMap_weightDictionary`、`cor312GapDict_exists_pointMap_pointHeightDictionary`、`cor312GapDict_weightDictionary_not_universal`、`cor312GapDict_pointHeightDictionary_not_universal` 均假设 `D` + `hdeg`；hull 已证该前提对不一致（`sourceHullVolume_eq_top_of_degreeFaithful` 与 finiteness 矛盾；`cor312GapSupply_not_exists_epsilon_hullBound_of_degreeFaithful`），故全部 vacuous，不能作为 weight/point-height dictionary 的 satisfiable 或 refutable 证据。
+- Genuine：`cor312GapDict_weightDictionary_iff_scalingSeparated`、`cor312GapDict_weightDictionary_implies_scalingFree` 不依赖 hdeg，保留为 actual-p dictionary 的真实归约。
+- 结论：actual-p `hweightDictionary` 在现有树中既未证明也未反驳，保持 exact paper-level input；`Node09DegreeUpperActual` 同样是 hdeg+D vacuous，已从证据链排除。
+- 已更新 Node09 residual doc strings 并 fresh watchdog DONE；无 Lean 主链代码改动、无 fake。
+
+## 2026-11-15 — CORRECTION（Lead）：Ambient DONE 05:59:11 是 stale placeholder；实际 ambient_value_eq FAIL 06:07:19；axiom probe unknown constant；UniformContinuitySource 仍 exact gap（abc，只读，无编译）
+
+### 更正（supersedes §7.107 中对 Ambient 的接受）
+- Mzk1AmbientActual：**DONE 05:59:11 只是 stale placeholder compile**（当时源为占位；olean 13:59:10）；
+- 实际目标 `ambient_value_eq` 尝试：**FAIL 06:07:19**，errors：invalid ▸ notation（failed to compute motive）:29:14、unsolved goals :33:55/:36:55（embedding equality 未解）；
+- 当前源 **14:10:11 已回退为 3 行 placeholder**：`import Mzk1UniformActual` + 注释 “ambient value equality remains the explicit gap; earlier DONE was a stale placeholder compile”；
+- 新 START 06:10:23（仍有构建在跑）；olean 13:59:10 stale；**不接受 Ambient 作为证据**；
+
+### axiom probe
+- ProbeAxiomsAmbientActual（源 14:06:23；无 olean）：`#print axioms ...Mzk1AmbientActual.ambient_value_eq`；因当前 Ambient placeholder 中不存在该 theorem → **unknown constant**；probe 无效；
+
+### UniformContinuitySource
+- Mzk1UniformActual DONE 04:25:13（structure UniformContinuitySource）；Mzk1UniformProofActual DONE 04:56:22 为 3 行 placeholder；
+- **UniformContinuitySource 仍是 exact gap**（ambient unit-transfer/equality 未形式化）；
+
+### 结论
+- Ambient 无有效证据；ambient_value_eq 仍 open；UniformContinuitySource exact gap 维持；probe 因 unknown constant 无效；no fake。
+
+## 2026-11-15 — Ambient 复核：DONE 06:11:20 仍是 placeholder compile（无 ambient_value_eq）；probe FAIL unknown constant；UniformContinuitySource exact gap（abc，只读，无编译）
+
+- Mzk1AmbientActual：当前源 14:10:11 仍为 **3 行 placeholder**；DONE 06:11:20（olean 14:11:20 > src）只是 **placeholder compile**，**不含 ambient_value_eq**；
+- 实际 ambient_value_eq 尝试 FAIL 06:07:19（embedding equality unsolved: invalid ▸ :29、unsolved :33/:36）——已记录；
+- ProbeAxiomsAmbientActual：FAIL 06:07:19；因 placeholder 无 ambient_value_eq → **unknown constant**；probe 无效；
+- Galois probes：FAIL 06:11:20 / 06:11:21（stale，不作证据）；
+- **UniformContinuitySource 仍是 exact gap**（Mzk1UniformProof placeholder；ambient unit-transfer 未形式化）；
+- 结论：Ambient 无有效内容；DONE=placeholder，不构成证据；no fake。
+
+
+## 2026-11-15 — ABCConjecture/ABCFrontier inhabitant exhaustive scan（mainline）
+
+- 全树（LeanFormal、tmp/local-cft-port、tmp/external、tmp/ported、verification、metadata-probes）扫描：不存在 ABCConjecture 或 ABCFrontier 的 inhabitant/construction。
+- 唯一出现直接构造的是 `verification/abc_with_sorry.lean`（sorryAx，无效）与 `verification/abc_without_sorry.lean`（故意未完成、预期失败、非 library）。
+- `ABCFrontier.{0} ↔ ABCConjecture`、`Nonempty Cor312ToABCBridgeInterface ↔ ABCConjecture`；其它 bridge/frontier 定理均为条件映射；`Cor312ToABCCards` 明确不证明链/估计；`UnprovedTarget` 为 pending obligation。
+- 结论：当前树无无条件 ABC 路线；Node09 cards chain 的 exact paper inputs（SNamed/frozen gap2、actual-p hweightDictionary）仍必要；no fake。
+
+## 2026-11-15 — EXHAUSTIVE SEARCH：无 ABC/ABCFrontier inhabitant；多个 frontier 被反驳；realLine 无 inhabitant；bridge nonempty <=> ABCConjecture（circular）（abc，只读，无编译）
+
+### 精确等价定理（已读源码）
+- `abcFrontier_iff_abcConjecture : ABCFrontier.{0} ↔ ABCConjecture`（ABCFrontier.lean:354）；
+- `abcFrontierRealLine_iff_abcConjecture : ABCFrontierRealLine ↔ ABCConjecture`（ABCFrontier.lean:337）；
+- `cor312ToABCBridgeInterface_nonempty_iff_abcConjecture : Nonempty Cor312ToABCBridgeInterface.{0} ↔ ABCConjecture`（Cor312ToABCBridgeInterface.lean:605）；
+- 即 **bridge 非空与 ABC 等价（循环）**：不能用 bridge existence 证明 ABC，除非已有 ABC；
+
+### 被反驳的 frontier（frozen）
+- `abcFrontierPointwiseReduced_not_inhabited`（ABCFrontierPointwisePremiseReduction.lean:136）；
+- `not_ABCFrontierGapReduced`（ABCFrontierHeightWeightRefutation.lean:75）；
+- `not_ABCFrontierGapReducedV2`（:80）；
+- `not_ABCFrontierPointwiseWeakened`（:85）；
+- `not_ABCFrontierPointwiseReduced`（ABCFrontierSingletonReduction.lean:156）；
+- `not_frontierSingletonWeight_finiteness_pointHeight`（:176）；
+
+### 搜索结论
+- 树中**无 inhabitant of ABCConjecture / ABCFrontier / ABCFrontierRealLine**（ABC unproven；realLine frontier 与 ABC 等价 → 亦无 witness）；
+- 我们的 Node09 `frontier_of_cards`/`abcConjecture_of_cards`/singleton 版本仅在 **cards family** 假设下构造 ABCFrontier/ABCConjecture，属条件路径，不是 inhabitant；
+- cards family 的 paper-level 输入（direct point-volume card + weight dictionary、P7 comparisons）仍未供给；因此最终 endpoints 保持 conditional，且不能与 frozen bridge 等价性合成出无条件 ABC；
+- no fake；frontier calibration 只说明等价强度，不证明 ABC。
+
+## 2026-11-15 — S3135EndToEndV2 DONE（历史 2026-11-10 01:18:53）：s3135_abcConjecture_of_endToEndInputsV2 条件于四 cards；ActualUnitHullCard 或可由 D+finiteness 证；ScalingLogDegreeZero/PointWeightCard paper-level（abc，只读，无编译）
+
+### 文件/状态
+- `tmp/sheaf/xif/paper/S3135EndToEndV2Actual.lean`：源 2026-11-10 01:17:33；olean 2026-11-10 01:18:53（历史 DONE）；
+- theorem **`s3135_abcConjecture_of_endToEndInputsV2 : ABCConjecture`**（条件于 `S3135EndToEndInputsV2`）；
+
+### 四 cards（structure S3135EndToEndInputsV2）
+1. **hpt** : `S3135PointLogShellFaithfulness I v R`（pointwise log-shell value-group faithfulness）；
+2. **hzero** : `S3135ScalingLogDegreeZero I v R n D`（normalized scaling log-degree 为零）；
+3. **hunit** : `S3135ActualUnitHullCard I v R n D`（unit-region normalization vs θ-pilot hull bound）；
+4. **hpoint** : `S3135ActualPointWeightCard I v R n D (abcSourcePoint I v R)`（point volume vs arithmetic weight）；
+
+### 证明结构
+- hzero -> S3135ScalingNormalization（`s3135_normalization_of_scalingLogDegreeZero`）；
+- hpt + hnorm -> F4（`s3135_actualF4_of_pointFaithfulness`）；
+- hunit + hpoint -> F5（`s3135_actualFrontierRegionClause_of_cards`）；
+- F4+F5 -> ABCFrontier -> `abcConjecture_of_frontier`；
+
+### Card 状态（Lead 分类）
+- **ActualUnitHullCard**：可能可由 D + finiteness 证明（candidate provable；需后续 watchdog 构造/验收）；
+- **ScalingLogDegreeZero**：paper-level（未证）；
+- **PointWeightCard**：paper-level（未证）；
+- hpt：point log-shell faithfulness，与 S3135ValueGroupSplitting 缺口相关（源注释记录 reduced+exact missing）；
+- 结论：S3135 端到端为 **conditional on four cards**，与 Node09 cards 路线并列；不构成 ABC inhabitant；no fake。
+
+## 2026-11-15 — Node09S3135CardU DONE 06:14:10：Card U unconditional；F5 仅余 Card P；F4 cards exact paper-level（abc，只读，无编译）
+
+### DONE
+- Node09S3135CardUActual：DONE 06:14:10Z；olean 14:14:09 > src 14:13:38；sorryAx=0；
+- **s3135_actualUnitHullCard_holds**：**Card U 无条件成立**；取 D₀ = max D.degreeBound 0；证明 ofReal degreeBound <= ofReal D₀ <= hull + ofReal D₀；**无需 hull finiteness**；纠正此前把 card U 当 paper-level 的读法；
+- **s3135_actualFrontierRegionClause_of_pointWeightCard**：F5 在 actual carrier 上**仅需 Card P**（+ 无条件 hsplit/hptfin）；
+
+### Node09S3135CardStatus（精确残余）
+- Card U：已无条件 discharge；
+- F5 现仅余 **Card P**（S3135ActualPointWeightCard，即 frozen hpoint input）；
+- **S3135ScalingLogDegreeZero**：carrier 只给 `sourceLocalLogDegree v D.scaling <= 0`；缺失为「等于 0」，等价于 normalized-scaling family S3135ScalingNormalization for every eps>0（已有 iff 定理）；
+- **S3135PointLogShellFaithfulness**：exact missing card；full value-group faithfulness S3135ValueGroupDegreeFaithfulness 可推出它（existing theorem），但 tree 只证了 cyclic log-q faithfulness（logDegreeAt_posRealAction_nsmul_log_q）；
+- **no fake**；Card P 与两个 F4 cards 仍为 exact paper-level inputs；
+
+### 对 S3135 端点影响
+- s3135_abcConjecture_of_endToEndInputsV2 条件集可缩减：hunit 不再需要（Card U unconditional）；F5 仅 Card P；F4 仍 hzero/hpt 两 paper cards；
+- S3135 仍非 ABC inhabitant。
+
+## 2026-11-15 — Node09S3135ResidualMap DONE 06:15:49：Card P = Node09 hpoint；单一 paper input（Card P/hpoint/frozen gap2 second comparison）；F4 两 cards 分离（abc，只读，无编译）
+
+### DONE
+- Node09S3135ResidualMapActual：DONE 06:15:49Z；olean 14:15:49 > src 14:15:07；f
+- Node09HpointFamily : Prop := ∀ eps>0, ∃D1, ∀ABC triples, (sourceSetVolume singleton).toReal <= (1+eps)*weight + D1；
+- **s3135_pointWeightCard_iff_node09HpointFamily**：S3135ActualPointWeightCard (Card P) ↔ Node09HpointFamily（rfl）；
+
+### Node09S3135ResidualMap 关键内容
+- **Card P = Node09 hpoint family**（source carrier 上 family over eps>0）；
+- Node09 hpoint 又可由 frozen gap2 region-volume field 导出（`singletonVolume_le_regionVolume` + ENNReal.toReal_mono，Node09Gap2ToCardsActual.hpoint_of_comparison）；
+- 因此 **Card P、Node09 hpoint、frozen gap2 second comparison 是同一个 paper input**（统一为单一 paper input）；
+- Card U 无条件 discharge（Node09S3135CardUActual）；F5 在 actual carrier 上仅余 Card P + actual hsplit/hptfin；
+- **F4 两 cards 分离**：S3135PointLogShellFaithfulness（exact missing；full value-group faithfulness implies；只证 cyclic log-q）与 S3135ScalingLogDegreeZero（exact missing；carrier 给 scaling logDegree <= 0；iff normalized-scaling family genuine）；
+- F4 是 height-comparison frontier clause，与 Node09 hpoint（region/point-volume side）逻辑上分离；**无 theorem 识别两者**；both paper-level；
+- no fake / no new axiom；
+
+### 统一残余
+- **单一 paper input**：Card P / Node09 hpoint / frozen gap2 second comparison（三者同一）；
+- **F4 两 cards**：hzero + hpt（独立 paper-level）；
+- 两个 F4 cards 与统一 paper input 共同构成残余（非唯一卡片）。
+
+
+## 2026-11-15 — Node09 unified residual（mainline）
+
+- `Node09UnifiedResidualActual`（watchdog DONE 06:17:06）记录统一 residual：单一 upper-bound paper input = Card P = `S3135ActualPointWeightCard` = Node09 hpoint = frozen gap2 regionVolume bound；F4 两卡 = `S3135PointLogShellFaithfulness` + `S3135ScalingLogDegreeZero`；separate lower input = actual-p `hweightDictionary`（scaling-separated，既未证明也未反驳）。
+- Card U 已无条件证明；hsplit/hptfin actual；singleton≤region monotonic；hpoint 由 frozen gap2 推出；cards→frontier/ABC conditional；无 fake/no new axiom。
+
+## 2026-11-15 — ROUND21 audit：Node09UnifiedResidual DONE；ProbeAxiomsAmbient FAIL unknown constant；S3135 F4 cards exact；无 ABC inhabitant（abc，只读，无编译）
+
+### DONE
+- Node09UnifiedResidualActual：DONE 06:17:06Z；olean 14:17:06 > src 14:16:49；documentation-only（无 inhabitant/无 axiom）；
+- Node09UnifiedResidual 库存：
+  * upper point-volume input：**Card P = S3135ActualPointWeightCard = Node09 hpoint family = frozen gap2 regionVolume_le_normalizedWeight**（经 singleton<=region 单调性）→ **单一 paper-level input**；等价定理：s3135_pointWeightCard_iff_node09HpointFamily、hpoint_of_comparison；
+  * weight dictionary：actual-p hweightDictionary 为 genuine conditional input，等价于 scaling-separated；available degree-faithfulness status theorems 假设 D+hdeg → vacuous；**actual-p dictionary neither proved nor refuted**；
+  * F4 card 1：S3135PointLogShellFaithfulness，exact missing；full value-group faithfulness implies；只证 cyclic log-q；
+  * F4 card 2：S3135ScalingLogDegreeZero，exact missing；carrier 只给 <=0；等价 normalized-scaling family；
+  * discharged：Card U unconditional；hsplit/hptfin actual；singleton<=region 单调性；hpoint 由 frozen gap2 得；
+  * conditional chain：cards family -> Node09ComparisonCards -> Cor312ToABCBridgeInterface -> ABC 高度界/ABCConjecture，全部 conditional；
+  * no fake/no sorry/no new axiom；
+- Node09UnifiedResidualConclusion：
+  * one new upper-bound paper input：Card P/Node09 hpoint/frozen gap2（同一陈述）；
+  * two F4 paper cards：S3135PointLogShellFaithfulness + S3135ScalingLogDegreeZero；
+  * one separate lower-bound input：actual-p hweightDictionary（scaling-separated form）；
+  * everything else discharged/actual/conditional；
+  * **no unconditional ABC route exists（ABC inhabitant scan）**；
+
+### FAIL
+- ProbeAxiomsAmbientActual：最新 FAIL 06:18:12Z；仍 **unknown constant**（placeholder 无 ambient_value_eq）；probe 无效；
+- 维持：Ambient 为 placeholder；UniformContinuitySource exact gap；
+
+### 其余
+- S3135 F4 cards exact（见 Node09UnifiedResidual）；no ABC inhabitant；
+- final conditional endpoints green（conditional）；no fake。
+
+## 2026-11-15 — Node09S3135F4Investigation DONE 06:20:19：ScalingLogDegreeZero 对 canonical compactness D 实际可证；PointLogShellFaithfulness exact；Card P under F4 = ABC-strength（abc，只读，无编译）
+
+### DONE
+- Node09S3135F4InvestigationActual：DONE 06:20:19Z；olean 14:20:18 > src 14:19:27；sorryAx=0；
+- **s3135_scalingLogDegreeZero_compactness**：对 canonical normalized compactness Haar data `I.sourceOModuleCompactness_haarData v R n C`，**S3135ScalingLogDegreeZero 被证明**（scaling=1、logDegree=0；经 S2614_compactnessScalingLogDegreeZero）；
+
+### Node09S3135F4Status（精确）
+- **ScalingLogDegreeZero**：对 canonical compactness D **实际已证**；对 arbitrary paper-side D 仅给 <=0，缺失 equality to 0（等价 normalized-scaling family，existing iff）；
+- **PointLogShellFaithfulness**：**exact missing, not proved**；full value-group faithfulness 可推出（existing），但只证 cyclic log-q；S3135FinalResidualActual 记录唯一 constructed value-layer model 的 faithfulness **被反驳** → cannot assume arbitrary realization；
+- **Card P** = Node09 hpoint；在两个 F4 cards 下等价于 **ABCHeightWeightAdditiveBoundV2**（S3135FinalResidualActual.s3135_pointWeightCard_iff_additiveBound）→ **ABC-strength**；无 donor；
+- Card U unconditional；F5 仅余 Card P + actual hsplit/hptfin；
+- F4 cards + Card P 条件推出 ABCConjecture（s3135_abcConjecture_of_minimalResiduals）；no inhabitant/no fake；
+
+### 结论更新
+- ScalingLogDegreeZero：canonical compactness 情形已 discharged（非 paper-level）；
+- PointLogShellFaithfulness：仍 exact paper-level；
+- Card P：ABC-strength（under F4），无 donor；
+- 仍无 ABC inhabitant / unconditional route。
+
+## 2026-11-15 — HOUSEKEEPING：ProbeAxiomsAmbient FAIL unknown ambient_value_eq → archive；2 Galois probes stale；goal blocked；no new evidence（abc，只读，无编译）
+
+- ProbeAxiomsAmbientActual：FAIL 06:29:09Z；无 olean；error 仍为 **unknown constant** `ambient_value_eq`（Ambient placeholder 无此 theorem）→ **archive**（probe 无效，不作证据）；
+- Mzk1PadicGaloisProbeActual / Mzk1GaloisCompletionCurrentProbeActual：FAIL 06:23:08Z（均）；无 olean → **stale probes**，不作证据；
+- watchdog 当前 idle（pending=0）；
+- **goal blocked**（Lead 记录）；本轮无新证据；
+- Ambient 仍 placeholder；UniformContinuitySource 仍 exact gap；无 ABC inhabitant；cards/S3135 残余不变（single upper input Card P/hpoint/frozen gap2 + F4 两 cards + actual-p hweightDictionary（scaling-separated））；
+- no fake；housekeeping only。
+
+## 2026-11-15 — ROUND23 audit：route re-anchor 到 N0–N11；cards/S3135 为 auxiliary，非 mainline（abc，只读，无编译）
+
+### 路线重锚（Lead 决定）
+- **mainline 路线重新锚定为 N0–N11**（revision15 节点图；具体节点映射见 `coord/AUDIT-REV15-ASSET-MAP.md` 与 `coord/AUDIT-HQ-HTHETA-WIRING.md`）；
+- **cards/S3135 链（Node09ComparisonCards/Node09Final*/S3135EndToEndV2 等）为 auxiliary**：提供 conditional 端点与等价/残余记录，**不作为 mainline**；
+- 后续审计/进度只以 N0–N11 mainline 为准；cards/S3135 的 DONE/接口记录保留，但不得当作 mainline 证据或主线完成度；
+
+### 当前状态（read-only 采样）
+- watchdog 11:50 附近 idle（pending=0），仅一个 stale Galois probe START 11:50:13；无新 DONE/证据；
+- Ambient placeholder；UniformContinuitySource exact gap；无 ABC inhabitant；paper-level 残余（Card P/hpoint/frozen gap2 + F4 cards + hweightDictionary scaling-separated）不因重锚改变；
+- no fake。
+
+## 2026-11-15 — ROUND23 audit：N1/N3/N5 精确缺口（N1 Tate q 缺 TateJQSeriesAnalyticAtFive；N3 缺 RelativeNormQProperties inhabitant；N5 缺 S2135PrimeAlignmentRequired / MissingQPilotOneColumnReading）；cards/S3135 auxiliary（abc，只读，无编译）
+
+### 精确缺口（已读源码）
+1. **N1 actual Tate q**：
+   - `LeanFormal/IUT/Foundations/PAdicAnalytic/TateQSeriesAnalytic.lean:60`：`def TateJQSeriesAnalyticAtFive : Prop := AnalyticAt ℚ_[5] tateJQSeries 5 ∧ deriv tateJQSeries 5 ≠ 0`；
+   - **Prop interface only，no inhabitant**；文件本身 DONE（源 00:44:55；olean 00:48:59）；
+   - 条件构造 `exists_analytic_qTate_localInverse`（给 h : TateJQSeriesAnalyticAtFive 时用 Mathlib p-adic analytic local inverse 得 qTate）；
+   - 缺口 = q=5 处 analyticity + nonzero derivative 的实际证明；
+2. **N3 relative norm**：
+   - `tmp/sheaf/xif/paper/RelativeNormCompletion.lean:99` structure `RelativeNormQProperties`；
+   - `RelativeNormQPropertiesActual`（DONE 02:49:10）只给 **relativeNormQProperties_of_hypotheses**（条件）；**无 actual RelativeNormQProperties inhabitant**；
+   - N3 实际 HBase/RelativeNorm 仍缺 actual Qp coherence/tower/finite/cast inhabitants（见 Node09ActualHypotheses/Node09Paper312Rat residual）；
+3. **N5**：
+   - `S2135PrimeAlignmentRequired` def 于 `tmp/sheaf/xif/paper/S2135Layer1SplitActual.lean:67`（Prop；S2280 note：`qVFamTensorP T b ∈ primeStrip 2 7`）；**无 inhabitant/donor**；
+   - `MissingQPilotOneColumnReading` structure / `MissingQPilotOneColumnReadingData := Nonempty` 于 `S3133QPilotOneColumnRegionActual.lean:142/158`；**无 inhabitant**；
+
+### 路线地位
+- mainline = N0–N11；上述 N1/N3/N5 为 mainline 缺口；
+- cards/S3135 链（Node09/S3135）继续为 **auxiliary**，不作 mainline 证据/完成度；
+- no fake；无新 DONE；no compile。
+
+## 2026-11-15 — N5 更正：S2135PrimeAlignmentRequired 对 arbitrary source data 可能为假（counterexample pattern qVFamTensorP=11），不能作 theorem；记录为 source input/restriction；N5 或可经 S3133 realified log volume bypass（abc，只读，无编译）
+
+### 精确内容（已读源码）
+- `S2135PrimeAlignmentRequired : Prop := qVFamTensorP T b ∈ primeStrip 2 7`（S2135Layer1SplitActual.lean:67-68）；
+- 文件文档（:20-38）明确：
+  * 包的 v 的 rational prime 落在 primeStrip 2 7，但 b 只约束 residue characteristic（odd），**不保证** qVFamTensorP T b ∈ primeStrip 2 7；
+  * aligned package 会强制 qVFamTensorP ∈ strip；因此当 actual rational prime 在 strip 外时**不存在 aligned split package**（s2135_aligned_prime_mem、s2135_no_aligned_package_of_prime_not_mem）；
+  * **counterexample pattern：qVFamTensorP = 11（strip 2..7 之外）→ S2135 假**；
+- 结论：**S2135PrimeAlignmentRequired 不能作为 theorem 对 arbitrary source data 证明**；只能记录为 **source input / restriction**（限定应用或新增数据条件）；
+
+### N5 可能 bypass
+- N5 可考虑经 **S3133 realified log volume** 路线（S3133RealifiedQPilotLogVolumeActual / S3133QPilotLogVolumeAgreementActual / S3133QPilotReadoutActual 等 DONE 资产）绕过 S2135 prime alignment；
+- 目前仅为候选 bypass，需后续审计确认其是否满足 N5 所需接口；
+
+### 路线
+- mainline N0–N11；cards/S3135 仍 auxiliary；no fake；no compile。
+
+## 2026-11-15 — Node09TateAnalyticBlocker / Mzk1QVRealifiedBridge FAIL（首错 :23 type mismatch；MqBad invalid arg p）（abc，只读，无编译）
+
+### FAIL
+- `Node09TateAnalyticBlockerActual`：源 19:54:01；无 olean；最新 **FAIL 11:53:41Z**；error **Type mismatch :23:2**（theorem tateJQSeries_analyticAt_five_of_parts）；retry START 11:54:20 运行中；
+- `Mzk1QVRealifiedBridgeActual`：源 19:52:50；无 olean；最新 **FAIL 11:54:05Z**；error **:28:40 Invalid argument name `p` for function `MqBad`**（theorem qPilotRealifiedLogVolume_eq_neg_MqBad :27；另一目标 qPilotRealifiedLogVolume_eq_neg_fiberWeighted :38）；
+
+### 路线地位
+- 两者分别属 N5 Tate analytic blocker 与 S3133 realified/QV bypass 候选；均 auxiliary/candidate，不改变 mainline N0–N11 状态；
+- cards/S3135 auxiliary；Ambient placeholder / UniformContinuitySource exact gap；no ABC inhabitant；no fake；
+- 待 retry DONE 后再审。
+
+## 2026-11-15 — Node09TateAnalyticBlocker DONE 11:56:14（documentation）；N1 exact missing：c4^3/Delta at q=5 analyticity + deriv≠0；tateJQSeries 非有理（abc，只读，无编译）
+
+### DONE
+- Node09TateAnalyticBlockerActual：DONE 11:56:14Z；olean 19:56:14 > src 19:55:05；sorryAx=0；documentation-only；
+
+### N1 exact missing（记录）
+- **tateJQSeries 不是 rational in q**：`TateCurve.a4`/`a6` 是 infinite Lambert series（`TateCurve.lambertSeries`, sum n^k q^n/(1-q^n)）；c4^3、Delta 是这些 infinite series 的多项式表达；比值为 infinite series，不是 rational function；
+- **first missing analytic lemma**：`AnalyticAt Q_5 (fun q => (weierstrassCurve Q_5 q).c₄ ^ 3) 5` 与 `AnalyticAt Q_5 (fun q => (weierstrassCurve Q_5 q).Δ) 5`；等价于 integral series C4K^3/DK 在 q=5 的 p-adic power-series evaluation 的 analyticity（TateQSeriesCoefficients/TateQSeriesEval）；
+- **no donor**：TateQSeriesCoefficients 只证 coefficient/Lambert reindex 与 integrality；TateQSeriesEval 只证 evaluation map additive/multiplicative 且与 c4,c6,Delta,H 等同；二者均未证 evaluation tsum 的 HasFPowerSeriesAt/AnalyticAt；TateQSeriesAnalytic 明确记录 AnalyticAt tateJQSeries 5 missing；
+- **second missing input**：`deriv tateJQSeries 5 ≠ 0`；无 q-series quotient 的 derivative computation；q=5 非 inverse-j parameter（Example36TateUniformization: j_Tate(5) ≠ j_split）；
+- 条件构造已存在：`TateQSeriesAnalytic.exists_analytic_qTate_localInverse`（以 TateJQSeriesAnalyticAtFive 为显式假设）；无 inhabitant；
+- analyticAt reduction note：若分子 c4^3/分母 Delta 在 q=5 analyticity 供给，则 `AnalyticAt.div`（Delta(5)≠0）可给 tateJQSeries analyticity；但两 series analyticity 正是缺失 lemmas，未形式化；
+- no fake/no new axiom；
+
+### 路线
+- N1 仍缺 actual Tate q 的 analyticity + deriv≠0；cards/S3135 auxiliary；mainline N0–N11；
+
+## 2026-11-15 — Node09TateAnalyticMathlib DONE 11:58:23：Mathlib chain 已识别；首批 missing local lemmas A（系数界）+ B（point-value identity）；deriv≠0 独立（abc，只读，无编译）
+
+### DONE
+- Node09TateAnalyticMathlibActual：DONE 11:58:23Z；olean 19:58:23 > src 19:58:14；sorryAx=0；documentation-only；
+
+### Mathlib usable chain（4.32.2）
+1. `FormalMultilinearSeries.ofScalars`（OfScalars.lean:38）；`ofScalars_apply_eq`(:122)、`ofScalars_sum_eq`(:134)；
+2. `FormalMultilinearSeries.hasFPowerSeriesOnBall`（Basic.lean:1074）；
+3. `le_radius_of_bound` / `le_radius_of_bound_nnreal`（ConvergenceRadius.lean:97/102）；
+4. `hasFPowerSeriesOnBall_changeOrigin` / `changeOrigin_eval` / `analyticAt_changeOrigin`（ChangeOrigin.lean:252/258/297）；
+5. `AnalyticAt.div`（Constructions.lean:1115）；
+
+### 首批缺失 local lemmas
+- **lemma A（coefficient norm bound）**：integral series C4K^3 与 DK over Z_5 的系数界，如 `∀ n, ||(((C4K^3).coeff n : PadicInt 5) : Q_5)|| <= 1`，DK 同；TateQSeriesCoefficients/TateQSeriesEval 提供 formal series 与 evaluation identities，但**未提供该 boundedness**；
+- **lemma B（point-value identity）**：ofScalars sum 在 q 的值与 `TateCurve c4(q)^3`、`Delta(q)` 的识别；TateQSeriesEval 证 evaluation multiplicative 且 evaluates C4K/DK（ingredients），但 ofScalars series 与 tateJQSeries 分子/分母的**exact pointwise equality 尚需组装**；
+- **独立缺失**：`deriv tateJQSeries 5 != 0`；无 infinite q-series quotient 的 derivative computation；
+- no fake/no new axiom；
+
+### N1 状态
+- analyticity 路线已明确到 Mathlib chain + 两个 local lemmas（A/B）；deriv≠0 独立；无 donor/inhabitant；
+
+## 2026-11-15 — N5 bridge DONE 11:59:12（Mzk1QVRealifiedBridge）；N1 Mathlib chain + A/B 已识别，active construction 进行（abc，只读，无编译）
+
+### N5 bridge DONE
+- `Mzk1QVRealifiedBridgeActual`：DONE 11:59:12Z；olean 19:59:11 > src 19:58:16；log sorryAx=0；
+- theorems：**`qPilotRealifiedLogVolume_eq_neg_MqBad`**（:27）、**`qPilotRealifiedLogVolume_eq_neg_fiberWeighted`**（:34）；
+- 此前 FAIL 的 MqBad invalid argument p 已修复；接受为 N5 realified bridge；
+
+### N1 状态
+- Mathlib chain + 首批 missing local lemmas A（coefficient norm bound）/B（point-value identity）已识别（§7.123）；
+- active construction：`Node09TateQSeriesAnalyticPartialActual`（源 20:00:19；pending build）theorem **`analyticAt_padicPowerSeriesEval`**（analyticity of p-adic power series evaluation）；
+- `ProbeEmbeddingActual`（新 probe）：FAIL 11:59:44（synthInstanceFailed + Application type mismatch :12）→ probe-only，非产品；
+
+### 路线
+- mainline N0–N11；cards/S3135 auxiliary；Ambient placeholder；UniformContinuitySource exact gap；no fake。

@@ -220,3 +220,51 @@
   - `abcConjecture_of_cards : (cards family) → ABCConjecture`（conditional）。
 - axiom probe `Node09CardsToFrontierAxiomProbe`（05:17:56）：仅 `[propext, Classical.choice, Quot.sound]`。
 - 与 `Node09FinalABCBridgeActual.final_abcHeightBound_of_cards` 一起构成 cards→ABC 的最终 conditional 端点；cards family 仍是唯一 paper-level input，无 inhabitant/fake。
+
+
+### Node09 cards 链最终 residual（2026-11-15 05:42:31 watchdog DONE）
+
+- `Node09Gap2ToCardsActual.hpoint_of_comparison`：`Cor312EpsilonArithmeticComparison W ε` 的 gap2 field → singleton point-volume bound（hull 吸收进 D1）。
+- `Node09RegionMonoActual`（05:40:00）：singleton ⊆ normalizedComparisonRegion；volume monotonicity。
+- 唯一 remaining paper-level input：`regionVolume_le_normalizedWeight`（frozen gap2，等价于 `localEstimate_le_weight`；无 unconditional donor）。
+- cards 链：SingletonPointCards → ComparisonCards → FinalABCBridge/CardsToFrontier；未 fake。
+
+
+### CORRECTION（2026-11-15）：DegreeUpper vacuous 排除；Node09 exact inputs
+
+- `Node09DegreeUpperActual` 假设 D+hdeg，hull 已证不一致 ⇒ vacuous；无 importer、不在 main chain，从 evidence 移除。
+- `Node09PM7SNamedActual`（05:56:17）：SNamed from P7 weighted volume (i) region ≤ -qPilotRealifiedLogVolume、(ii) -qPilotRealifiedLogVolume ≤ weight+theta+D。
+- `Node09WeightDictionaryScalingActual`（05:49:28）：weight dictionary ⇔ scaling-separated；无 universal theorem。
+- cards chain 只假设 D、不假设 hdeg；exact paper inputs = SNamed/frozen gap2 + hweightDictionary scaling。
+
+- [inhabitant search] ABCFrontier.{0} ↔ ABCConjecture；Cor312ToABCBridgeInterface nonempty ↔ ABCConjecture；Node09ComparisonCards 无构造 inhabitant；realLine 只是强度校准，不是 source-faithful carrier。替代路线：cards/SNamed exact input。
+
+
+### CORRECTION（2026-11-15）：dictionary status vacuous；final residual wording
+
+- 四个 cor312GapDict status 定理均假设 D+hdeg ⇒ vacuous（不得引用）；仅 `weightDictionary_iff_scalingSeparated` / `_implies_scalingFree` 真实。
+- actual-p hweightDictionary 既未证明也未反驳，保持 exact paper-level input。
+- SNamed/frozen gap2 由 P7 weighted volume (i) region ≤ -qPilotRealifiedLogVolume、(ii) -qPilotRealifiedLogVolume ≤ weight+theta+D 推出；`Node09PM7SNamedActual`。
+- `Node09DegreeUpperActual` vacuous、排除证据；Node09 doc strings 已更新并 fresh DONE。
+
+
+### ABC inhabitant 全树扫描（2026-11-15 06:12:11 watchdog DONE）
+
+- `Node09ABCInhabitantScanActual`：无 ABCConjecture/ABCFrontier inhabitant；`verification/abc_with_sorry.lean` 用 sorry，`abc_without_sorry.lean` 故意失败；`ABCFrontier.{0} ↔ ABCConjecture`、bridge interface nonempty ↔ ABCConjecture；cor312ToABCCards 不证明链。
+- tmp/local-cft-port、tmp/external、tmp/ported 无 ABC 构造。
+- 结论：无无条件 ABC 路线；Node09 exact paper inputs 仍必要。
+
+
+### Node09 统一 residual（2026-11-15 06:17:06 watchdog DONE）
+
+- `Node09UnifiedResidualActual`：single upper-bound paper input = Card P / Node09 hpoint / frozen gap2；F4 两卡 = `S3135PointLogShellFaithfulness` + `S3135ScalingLogDegreeZero`；separate lower input = actual-p `hweightDictionary` scaling form。
+- Card U 无条件 DONE；hsplit/hptfin actual；singleton≤region monotonic；hpoint 由 frozen gap2 推出；无 ABC/hull 无条件 inhabitant。
+
+## 2026-11-15 20:02 (Asia/Shanghai) ROUTE RE-ANCHOR / N1-N3-N5 CYCLE - new Lean files
+
+- tmp/sheaf/xif/paper/Node09TateAnalyticMathlibActual.lean (Mathlib chain, DONE 11:58:23)
+- tmp/sheaf/xif/paper/Node09TateAnalyticBlockerActual.lean (N1 blocker docs, DONE 11:56:14)
+- tmp/sheaf/xif/paper/Node09TateQSeriesAnalyticPartialActual.lean (N1 construction, active)
+- tmp/sheaf/xif/paper/Mzk1QVRealifiedBridgeActual.lean (N5 realified bridge, DONE 11:59:12)
+- tmp/sheaf/xif/paper/Mzk1WQUniformizerAssociatedActual.lean (range route helper, pending)
+- tmp/sheaf/xif/paper/Mzk1A2Node04TensorUnitBallInhabitantActual.lean (tensor inhabitant, pending)

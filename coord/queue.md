@@ -1470,3 +1470,54 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
 - [completed] `Node09CardsToFrontierActual.abcConjecture_of_cards`（同次 DONE）：cards family → `ABCConjecture`（conditional，经 frozen `abcConjecture_of_frontier`）。
 - [completed] axiom probe `Node09CardsToFrontierAxiomProbe`（05:17:56）：两定理仅 `[propext, Classical.choice, Quot.sound]`。
 - [exact residual] cards family 本身是唯一 paper-level 输入（direct point-volume card + weight dictionary；hsplit/hptfin actual、hunit 可 absorb；无 inhabitant/fake）。
+
+
+<!-- node09-cards-chain-final-20261115 -->
+## 2026-11-15 — cards 链最终 residual（mainline，green）
+
+- [completed] `Node09Gap2ToCardsActual.hpoint_of_comparison`（watchdog DONE 05:42:31）：frozen gap2 region field → singleton point-volume bound。
+- [completed] `Node09RegionMonoActual`（05:40:00）：singleton ⊆ normalizedComparisonRegion / volume monotonicity。
+- [chain green] SingletonPointCards 05:22:26 → ComparisonCards 05:07:40 → FinalABCBridge 05:09:05 / CardsToFrontier 05:16:23 / SingletonFinal 05:25:08。
+- [exact remaining] `Cor312EpsilonArithmeticComparison.regionVolume_le_normalizedWeight`（frozen gap2；与 `localEstimate_le_weight` 等价；无无条件 donor，不 fake）。
+- [next] 检查 Qpilot local estimate 能否在具体 source data 产生 region bound；否则保持 frozen gap2 为 paper-level exact input。
+
+
+<!-- node09-degreeupper-retraction-20261115 -->
+## 2026-11-15 — CORRECTION：DegreeUpper 排除；SNamed/hweightDictionary exact inputs（mainline）
+
+- [RETRACT] `Node09DegreeUpperActual` 的 hdeg+D 前提对不一致（hull obstruction），两个定理 vacuous；无 importer、不在 cards chain；从 evidence 移除，不再作为 actual point map 的 degree 证据。
+- [completed/green] `Node09PM7SNamedActual`（05:56:17）：SNamed 由 P7 weighted volume (i) region ≤ -qPilotRealifiedLogVolume 与 (ii) -qPilotRealifiedLogVolume ≤ weight+theta+D 推出；两者 paper-level。
+- [completed/green] `Node09WeightDictionaryScalingActual`（05:49:28）：actual p weight dictionary ⇔ scaling-separated；无 universal theorem。
+- [exact paper inputs] SNamed/frozen gap2 + hweightDictionary scaling；cards 链只假设 D、不假设 hdeg；no fake。
+
+- [inhabitant search] 无独立于 ABC/paper input 的 ABCFrontier/Cor312EpsilonArithmeticComparison/Node09ComparisonCards inhabitant；ABCFrontier↔ABCConjecture、bridgeInterface nonempty↔ABC；替代路线 = cards/SNamed exact input。
+
+
+<!-- node09-dictionary-vacuity-correction-20261115 -->
+## 2026-11-15 — CORRECTION：dictionary status vacuous；residual wording 更新（mainline）
+
+- [RETRACT] 四个 cor312GapDict status 定理（exists_pointMap_weightDictionary / exists_pointMap_pointHeightDictionary / weightDictionary_not_universal / pointHeightDictionary_not_universal）均假设 D+hdeg，在 hull obstruction 下 vacuous；不得引用。
+- [genuine] 仅 `weightDictionary_iff_scalingSeparated` / `_implies_scalingFree` 真实；actual-p hweightDictionary 既未证明也未反驳，为 exact input。
+- [final residual] SNamed/frozen gap2（P7 weighted volume (i)/(ii)）+ actual-p hweightDictionary scaling form；cards chain 只假设 D、不假设 hdeg。
+- [updated docs] Node09ComparisonCards/GapDonorSurvey/SingletonWeight/SourceCards/WeightDictionaryScaling/DegreeUpper 的文档串已更正并 fresh watchdog DONE；无 fake。
+
+
+<!-- node09-abc-inhabitant-scan-20261115 -->
+## 2026-11-15 — ABC inhabitant 扫描（mainline）
+
+- [completed/scan] `Node09ABCInhabitantScanActual`（watchdog DONE 06:12:11）：全树无 ABCConjecture/ABCFrontier inhabitant；仅 sorry 文件/故意失败文件；bridge/frontier 全条件；tmp/local-cft-port/external/ported 无出现。
+- [conclusion] 无无条件 ABC 路线；cards chain exact inputs（SNamed/frozen gap2、actual-p hweightDictionary）必要；no fake。
+
+
+<!-- node09-unified-residual-20261115 -->
+## 2026-11-15 — Node09 统一 residual（mainline）
+
+- [completed] `Node09UnifiedResidualActual`（watchdog DONE 06:17:06）：single upper input = Card P/Node09 hpoint/frozen gap2；F4 两卡 = PointLogShellFaithfulness + ScalingLogDegreeZero；separate lower input = actual-p hweightDictionary；Card U/hsplit/hptfin/monotonic 已 discharged；no fake。
+
+## 2026-11-15 20:02 (Asia/Shanghai) ROUTE RE-ANCHOR / N1-N3-N5 CYCLE
+
+- Mainline re-anchored to coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md N0-N11; cards/S3135 are auxiliary, not mainline evidence.
+- N1 actual Tate q: Mathlib analyticity chain identified (ofScalars -> hasFPowerSeriesOnBall -> le_radius_of_bound -> changeOrigin -> AnalyticAt.div). Current construction Node09TateQSeriesAnalyticPartial; blocker h5 coercion NNReal/ENNReal. H(5)!=0 reduces to norm_padicPowerSeriesEval_le_one; coeff bounds already available; deriv!=0 still open.
+- N3: RelativeNormQProperties and §7.2 ValueGroup0.embedding unit lemma under construction; TensorUnitBall actual inhabitant being built from arithmeticTensorBlocksAlgEquiv.
+- N5: Mzk1QVRealifiedBridge DONE 11:59:12 (bypasses S2135); GlobalSumAggregation still needs C3BaseQElementIdentification + ClauseBBaseQSourceIdentity. S2135 is source input, not theorem.
+- Watchdog: no fake/sorry/extra axiom; accepted evidence only via dag/watchdog/watchdog.log.
