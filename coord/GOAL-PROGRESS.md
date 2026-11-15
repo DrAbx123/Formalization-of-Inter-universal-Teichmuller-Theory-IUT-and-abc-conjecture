@@ -390,3 +390,17 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: Node09HqWeightedRegion 03:15:21 (tiny exact interface, 53s, no maxHeartbeats); QVWeighted 03:15:21; WQMembershipTransfer 03:14:57; A2AssemblyConsumer 03:14:14; WQ PhiPsi interface 03:11:58.
 - ValueGroup remains red; stage4 to add toMonoidWithZeroHom variant or exact interface.
 - Next: Node09 A_bound to Paper312Assembly; QVWeighted bad-place/closed-ball discharge; WQ reverse membership+Irreducible; A2 consumer wiring; hull closed-ball mass donor; stepxi membership reverse.
+
+### 7.15 最新 DONE：Node09HqWeighted/QVWeighted/A2AssemblyConsumer；WQMembership pending（2026-11-15 11:18，无编译）
+
+- ✅ `Node09HqWeightedRegionActual` DONE 03:15:21（olean 11:15:21 > src 11:13:46；Node09HqWeightedRegion + node09_hq_weighted_region_of_components）；
+- ✅ `Mzk1QVWeightedActual` DONE 03:15:21（olean 11:15:21 > src 11:14:25；sorryAx=0；QVBadPlaceBijection/Mq/ProductLogFiberIdentity/productLogFiberIdentity_iff；旧 synthetic sorry 属 FAIL 旧尝试，接受但 fresh probe 后补）；
+- ✅ `Mzk1A2Node03AssemblyConsumerActual` DONE 03:14:14（olean 11:14:14 > src 11:13:31；toWitness/toSourceSignQuotientData/nonempty_witness/Required_iff）；
+- ⚠️ `Mzk1WQMembershipTransferActual` DONE 03:14:57（olean 11:14:56；normedInteger_mem_valuativeInteger 标准三公理；log sorryAx=0），**当前源 11:15:44 新于 olean → 重编 pending**。
+
+## 7.21 11:16 cycle
+
+- DONE: ValueGroupActual 03:16:30 (source fresh); Node09HqWeighted 03:15:21; QVWeighted 03:15:21; WQMembershipTransfer 03:14:57; A2AssemblyConsumer 03:14:14.
+- CORRECTION: BadPlaceBijection generally false (Bad is bad subset, FinitePlaceAtPrime all places). Replace with fiber/injection or use Node09 b:FinitePlaceAtPrime→Bad; do not claim bijection.
+- ClosedBallMassFormula no donor; remains exact missing.
+- Next: qpilot fiber interface, mainline A_bound→Paper312Assembly, stage4 UniformContinuous, WQ reverse, A2Unique.
