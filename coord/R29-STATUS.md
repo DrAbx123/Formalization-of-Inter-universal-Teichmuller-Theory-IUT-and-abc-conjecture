@@ -3129,3 +3129,5 @@
 - 42:10: MAJOR generic p=2 half bound green olean 09:04:45. mainline actual instantiate; qpilot tensor ball. gate 20.650 written.
 
 - 42:20: MAJOR actual unitLog norm green olean 09:09:03; stage4 surjectivity green; tensor ball decomposition correction. gate 20.651 written.
+
+- 42:30: hq/hθ obstruction file green; tensor ball decomposition obstruction. gate 20.652 written.

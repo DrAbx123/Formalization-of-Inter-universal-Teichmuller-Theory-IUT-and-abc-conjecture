@@ -4119,3 +4119,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - NormalizedCompletionUnitLogActual direct+olean 09:09:03: unitLog_norm_le_one_normalizedCompletion p≥3, _p2 p=2 (explicit NormedAlgebra Q2). Uses bridge principal bounds + exp_bound/half.
 - stage4 Mzk1GaloisCompletionActual DONE 09:07:01/olean 09:07:00 with withValMovedSigma_surjective via WithVal.congr factorization; next valueGroup equality.
 - TensorUnitBall file wrong-level: tensorLogShellRegion is tensor, not distribution; inspect FinitePadicTensorFieldDecomposition. No fake.
+
+
+### 20.652 hq/hθ obstruction file GREEN; tensor ball exact obstruction (2026-11-15 42:30)
+- hull Mzk1HqHthetaStructuralObstructionActual DONE 01:10:15: interface Props HqGlobalSumFormula/HthetaLinearForm/HthetaProductHaarFormula/TensorRegionCoordinateProduct + 6 audit rows; no inhabitant/sorry/axiom.
+- TensorUnitBall wrong-level: FinitePadicTensorFieldDecomposition e is AlgEquiv+continuous only, no isometry/contractive norm; cannot derive e(''shell)⊆unitRegion from local unitLog norms. Missing contractive/tensor norm donor. qpilot clean red file to compiling placeholder. No fake.
