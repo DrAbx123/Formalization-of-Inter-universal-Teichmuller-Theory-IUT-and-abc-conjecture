@@ -4221,3 +4221,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.670 QVIndexMap GREEN; hq fiber-sum remains (2026-11-15 47:40)
 - watchdog DONE 02:33:15 Mzk1QVIndexMapActual: badPlaceIndex Bad→FinitePlaceAtPrime X.S.arithmetic.F, qVMultAt=qVEffectiveMultiplicity. Remaining hq: fiber-sum mult i over badPlaceIndex fibers, match A-term, feed actual_A_le_Lbar_add_Dbar_mult; all places vs bad places exact gap.
+
+
+### 20.671 hθ hpos/hfin explicit GAP retained (2026-11-15 47:50)
+- unitLatticeLogVolume_le_thetaHull conditional on hpos=0<mu(tensorIntegerRegion), hfin=mu L<top. No donor for interior/positivity; no global IsFiniteMeasureOnCompacts addHaar instance; NormalizedTensorHaarData existence GAP. hull/abc to check equality to tensorIntegerLattice and class instance; no fake.
+
+
+### 20.672 stage4 §7.2 ambient-threshold route (2026-11-15 47:55)
+- stage4: avoid standalone valueGroupIso. Use ValueGroup₀ f = WithZero(valueGroup f) and units ≃ valueGroup via WithZero.withZeroUnitsEquiv; transfer target γ membership via valueGroup_comap_eq to same ambient Bˣ value γs, then withValMovedSigma_val_eq gives source ball→target ball; Valued.mem_nhds_zero/ContinuousAt/uniformContinuous_of_continuousAt_zero. Then Completion.mapRingHom. Watchdog only.

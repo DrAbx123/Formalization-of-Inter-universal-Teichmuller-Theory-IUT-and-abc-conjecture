@@ -1,11 +1,11 @@
 # GOAL PROGRESS（目标进度记录）
 
-更新时间：2026-11-15 10:30（Asia/Shanghai）
-Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase active，rounds 14/256）
+更新时间：2026-11-15 10:36（Asia/Shanghai）
+Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase active，rounds 14/256）
 
 ## 0. 目标锁定
 
-从基础三公理（`propext`, `Classical.choice`, `Quot.sound`），严格按 `coord/P7-GAP-ATTACK-PLAN.md` 路径，**无条件**构建：
+从基础三公理（`propext`, `Classical.choice`, `Quot.sound`），严格按 `coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md` 路径，**无条件**构建：
 
 1. IUT 3.12；
 2. IUT IV Thm 1.10；
@@ -20,6 +20,19 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 - 所有编译用 watchdog；
 - teammate 可以按需使用一次性 agent，Lead 尽量不用一次性 agent；
 - 其余目标不变：三公理、无条件 3.12/IV/abc、禁 sorry/额外 axiom/toy、不改 paper object。
+
+## 0c. Revision 15 路线变更（P7-GLOBAL-Q-HULL-CONSTRUCTION）
+
+- 正文路线：`coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md`；
+- 主线：实际 abc 三元组 → Frey 曲线/Tate q → 合格 Θ-data → 全局 q/θ-hull → reading 比较 → IV Thm 1.10 → abc；不再以 hbound/hCor312/Nonempty/free compatibility 为终点；
+- 全局 q：用 `qVFamily b` 的有限乘积区域，`n_b=v_b(q_b)`，`#k_b=p_b^{f_b}`，`d_b=e_bf_b`；旧 `C3.q` 仅作局部实例/投影，不再要求单点 log 等于任意全局和；
+- 权重：以重复局部因子/公共分母实现 `M_q=Σ w_b n_b f_b log p_b`；不是把希望 scalar 定义成人工 q；
+- θ-hull：用 actual tensor 自身的有限域乘积分解、完整 tensor 格/整基、`integralSpan_eq_hull`、relative Haar transport；不要求 arbitrary tensor norm 或 pure-tensor box；
+- A2：实际商栈 `[U/C₂]`，不用退化 point stack；
+- WQuotient：Gaussian p=5 具体分支用 explicit log `Φ([u])=1/20 log(u^4)`，不把 p=5 当一般 Ind1；
+- RelativeNorm：先用 `PadicField.nrm_norm` 得 contraction，再按需用 `v_norm` 精确赋值；
+- stage4：用 ambient value threshold 直接证 UniformContinuous，不用 giant WithVal rfl；
+- 所有编译 watchdog。
 
 ## 1. 目标状态总表
 
@@ -65,7 +78,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | R1 | 结构缺口 | `C3.q` 单 local vs global q 族；缺 `ClauseBBaseQSourceIdentity` + same-q `hq` |
 | hq | 接线缺口（index map 已绿） | QVMultiplicityBridge 02:27:50 + QVIndexMap 02:33:15 已 DONE；仍缺 fiber-sum `mult i` 及 `hperPlace` 等式（all places vs bad places） |
 | relativeNorm field norm | **FAIL 02:30:44**（最新） | 缺 `Module.Finite (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:87）与 `IsScalarTower ℚ_[pBase] (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:89/:91）；:94 type mismatch；mainline 修文件级 local instances 后 watchdog 重跑 |
-| hθ | 单向缺 hpos/hfin | 已证 `unitLatticeLogVolume_le_thetaHull` 条件版；需 raw unit-region positivity/finiteness 或 normalized Haar |
+| hθ | 单向缺 hpos/hfin | `unitLatticeLogVolume_le_thetaHull` DONE 02:21:03 条件版；hpos `0∈interior tensorIntegerRegion` 与 hfin `IsFiniteMeasureOnCompacts addHaar` 均无 donor，显式 GAP；NormalizedTensorHaarData existence 也 GAP |
 | stage4 completion | 未完成 | `UniformContinuous`/`Completion.mapRingHom`/`alignedCompletionMapMoved` 未全闭 |
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
 | SG3b | 结构缺口 | tensor product/measure/region 分解 |
