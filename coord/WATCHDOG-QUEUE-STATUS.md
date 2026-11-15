@@ -1,150 +1,123 @@
 # Watchdog 队列与索引状态
 
-快照时间：2026-11-15 09:44 CST（依据 state.json / watchdog.log mtime）
+快照时间：2026-11-15 09:58 CST（watchdog.log 最新 DONE 01:58:32Z）
 范围：只读审计；未运行 Lean 编译，未修改任何 Lean 源或索引文件。
 
-## 1. 数据源与计数
+## 1. 当前 whitelist
 
-| 数据源 | 当前计数/说明 |
-|---|---|
-| `dag/watchdog/extra-targets.txt` | 1363 个唯一路径；0 个不存在路径 |
-| `tmp/xif_guarded_results.log` | 13924 条历史结果：DONE=9694，FAIL=4226 |
-| `dag/watchdog/state.json` | 175 个 failed 记录；其中 122 仍在 whitelist，53 已不在 whitelist |
-| `dag/watchdog/watchdog.log` 最近 400 行 | 10 个当前/最近 START 未终结 |
-| whitelist 无任何结果 | 43 个（pending/unrun/路径格式问题） |
+| 项 | 数值 |
+|---|---:|
+| 非空行 | 75 |
+| 唯一路径 | 74 |
+| 重复条目 | 1：`Mzk1IVThm110Actual.lean` 出现 2 次 |
+| 不存在路径 | 0 |
+| 绝对/反斜杠路径 | 0（已统一为相对路径） |
 
-注意：results 是累计历史，不是本轮 batch 结果；DONE/FAIL 数不代表当前队列状态。
+结论：当前 whitelist 是 74 个唯一相对路径，不是 75 个唯一文件；75 是含重复行的行数。
 
-## 2. 当前运行时（最近 log START 未终结）
+## 2. 当前状态（基于最近 log + results/state）
 
+| 状态 | 数量 |
+|---|---:|
+| DONE | 60 |
+| RUNNING（最近 START 未终结） | 6 |
+| FAIL（最近失败） | 5 |
+| PENDING（无结果） | 3 |
+
+### 2.1 当前 RUNNING
+- `tmp/sheaf/xif/paper/Mzk1ActualRamifiedDataActual.lean`
 - `tmp/sheaf/xif/paper/Mzk1GaloisCompletionActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1IVThm110TensorUnitBallActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P2DetHaarConsumerActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P2NoDetRankOneActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P2DetCoefficientFinalActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1NativeHaarNormalizationActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1UnitMassNormalizationBridgeActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1Ob33B5GeneratorCandidateActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1Ob33B5CountUnconditionalAttemptActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1IVThm110SlackReductionActual.lean`
+- `tmp/sheaf/xif/paper/Mzk1IVThm110Actual.lean`
+- `tmp/sheaf/xif/paper/Mzk1ThetaFullLatticeBoundActual.lean`
+- `tmp/sheaf/xif/paper/Mzk1Cor312ToABCConsumerActual.lean`
+- `tmp/sheaf/xif/paper/Mzk1RamifiedPlaceDataActual.lean`
 
-## 3. Failed / pending 分类
+### 2.2 当前 DONE（本轮里程碑）
+- `S3171IUTIVSection1DisplayActual` @01:52:21Z
+- `Mzk1PadicFieldValuedBridgeActual` @01:49:56Z
+- `Mzk1TaskECompletionFieldEquivActual` @01:54:33Z
+- `QPilotGlobalLogVolumeFromQActual` @01:54:53Z
+- `S3133RealifiedQPilotDivisorActual` @01:55:48Z
+- `S3133QPilotReadoutActual` @01:55:52Z
+- `S3133RealifiedQPilotLogVolumeActual` @01:56:41Z
+- `S3133QPilotLogVolumeAgreementActual` @01:57:36Z
+- `Cor312ToABCBridgeInterface` @01:58:32Z
+另有 51 个 whitelist 文件在更早批次 DONE。
 
-### 3.1 state failed
-- 总 failed 记录：**175**
-- 仍在 whitelist：**122**
-- 已不在 whitelist（清理候选）：**53**
-- 最近源码被 retouch、但 state 仍是 failed：**4**
-  - `tmp/sheaf/xif/paper/Mzk1P1LocalizedFractionalIdealMapActual.lean`
-  - `tmp/sheaf/xif/paper/Mzk1IVThm110UnitRegionScalingActual.lean`
-  - `LeanFormal/IUT/Foundations/LocalFields/IntegralUnitLogarithm.lean`
-  - `tmp/sheaf/xif/paper/Mzk1P2Log1pHalfActual.lean`
+### 2.3 当前 FAIL（5）
+1. `LeanFormal/IUT/Foundations/LocalFields/IntegralUnitLogarithm.lean`
+2. `tmp/sheaf/xif/paper/Mzk1GaloisCompletionCurrentProbeActual.lean`
+3. `tmp/sheaf/xif/paper/Mzk1IVThm110UnitRegionScalingActual.lean`
+4. `tmp/sheaf/xif/paper/Mzk1P2Log1pHalfActual.lean`
+5. `tmp/sheaf/xif/paper/Mzk1TaskEProbeActual.lean`
 
-### 3.2 stale olean 假错
-按 per-file log 最后一条 error 是否包含
-`object file ... does not exist` / `failed to read file` 分类：
+其中 stale olean/依赖假错：**2**
+- `Mzk1IVThm110UnitRegionScalingActual`
+- `Mzk1TaskEProbeActual`
 
-- whitelist 内 stale dependency 假错：**45**
-- 全 state 内 stale dependency：**81**
-- 其余 94 条需按真实证明错误处理。
+其他 3 条需按 per-file 首错处理；IntegralUnitLogarithm 是 fail 后 retouch 的 dirty 核心文件之一。
 
-stale 样例：
-- `tmp/sheaf/xif/paper/Mzk1P2Route2SummaryActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P1CountLocalGeneratorActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P1LocalValuationGeneratorActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1P1CountFromGeneratorAttemptActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1B5FiniteIndexExpansionIffActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1C17ResNormDegreeGapOfResidueOneActual.lean`
-- `tmp/sheaf/xif/paper/Mzk1C17ResidueOneBothSidesActual.lean`
+### 2.4 当前 PENDING（3）
+- `tmp/sheaf/xif/paper/Mzk1IVThm110UnitLogNormHalfActual.lean`
+- `tmp/sheaf/xif/paper/NormalizedCompletionPadicBridgeActual.lean`
+- `tmp/sheaf/xif/paper/NormalizedCompletionUnitLogActual.lean`
 
-处理原则：**不要改证明**；等依赖 DONE 后 retouch 本文件。watchdog 的 RETRY TRANSIENT 会处理一部分。
+## 3. 活跃文件是否全部入队
 
-### 3.3 pending / 无结果
-whitelist 中 43 个无历史结果，显著分组：
-- 活跃 root 文件（约 19）：
-  - `GlobalThetaPilotPossibleImagesActual`
-  - `GlobalThetaPilotPossibleImageGeometryActual`
-  - `GlobalThetaPilotProcessionActual`
-  - `GlobalThetaPilotPlaceComparisonActual`
-  - `S778PaperQPilotHalfRegionActual`
-  - `OrigXiFPaperQPilotObjectActual`
-  - `Mzk1P1LocalizedSpanProofActual`
-  - `Mzk1IVThm110UnitLogNormHalfActual`
-  - `BasePlaceQCandidateActual`
-  - `BaseQContractionUnconditional`
-  - `BaseQDescentAssembly`
-  - `NormalizedNormValuationResidueActual`
-  - `NormalizedCompletionUnitLogActual`
-  - `NormalizedCompletionPadicBridgeActual`
-  - `Mzk1ResidueGaloisWProbeActual`
-  - `Mzk1PadicFieldValuedBridgeActual`
-  - `RelativeNormFieldNormActual`
-  - `Mzk1ThetaFullLatticeBoundActual`
-  - `S3171IUTIVSection1DisplayActual`
-- external FLT port 路径（13 条），例如
-  `tmp/external/ported/flt/FLT/.../AdicValuation.lean`；
-- TauCetiPort 绝对 Windows 路径（11 条），例如
-  `D:\lean\tmp\sheaf\xif\paper\TauCetiPort\...`。
+### 3.1 已完整入队
+- **IV 主线**：29/29 全部在 whitelist。
+- **S3133 / qPilot global log / Cor312 接口**：相关主入口在 whitelist，且多数已 DONE。
+- **Normalized completion / unitLog / norm valuation 的代表入口**：部分已入队（详见 3.2）。
 
-## 4. 活跃类别 whitelist 覆盖
-
-| 类别 | 目录内总数 | whitelist 内 | 未进 whitelist |
+### 3.2 未整体入队（按目录扫描）
+| 类别 | 目录内总数 | whitelist | 缺口 |
 |---|---:|---:|---:|
-| principal | 38 | 29 | 9 |
-| card（窄） | 83 | 17 | 66 |
-| unitLog | 13 | 8 | 5 |
-| norm valuation | 19 | 12 | 7 |
+| P1 | 184 | 0 | 184 |
+| Ob33 | 18 | 0 | 18 |
+| B5 | 41 | 0 | 41 |
+| P2 | 68 | 1 | 67 |
+| P3 | 119 | 0 | 119 |
 | stage4 | 105 | 0 | 105 |
-| hq / hθ | 48 | 13 | 35 |
-| tensor | 210 | 29 | 181 |
-| P1 | 184 | 108 | 76 |
-| Ob33 | 18 | 18 | 0 |
-| B5 | 41 | 41 | 0 |
-| IV | 29 | 29 | 0 |
-| P2 | 68 | 66 | 2 |
-| P3 | 119 | 119 | 0 |
+| hq / hθ | 48 | 1 | 47 |
+| tensor | 210 | 1 | 209 |
 
-说明：
-- 宽泛 `Card|Principal|UnitLog|Norm` 模式会命中大量 adapted/probe/archive 文件，不能全加入队列；上表 card/principal 等只是找“可能活跃”候选。
-- **stage4 全部 105 个都不在 whitelist**。若 Stage4 仍是活跃线，这是最大覆盖缺口；若已归档，应在索引中明确标注。
-- hq/hθ 只进了 `Mzk1HqHthetaStructuralObstructionActual`，acceptance/gate 文件均未入 whitelist。
-- P2 仅缺两个：
-  - `tmp/sheaf/xif/paper/Mzk1P2DeficitActual.lean`
-  - `tmp/sheaf/xif/paper/Mzk1P2FaithfulLogMuShaActual.lean`
+解释：
+- 当前 whitelist 是**精选当前主线 74 文件**，不是全目录队列；
+- 因此“所有活跃文件都已排队”只在“当前 74 文件 active set”意义上成立；
+- 若 P1/Ob33/B5/P3/stage4/hq/tensor 仍算活跃线，则**没有全部入队**，尤其 stage4 整组 0/105、tensor 1/210。
 
-## 5. 队列卫生问题
+## 4. 队列卫生与 stale 状态
 
-1. **路径格式不一致**
-   whitelist 含绝对 Windows 路径（`D:/lean/...` 与 `D:\lean\...`），而 watchdog 正常使用相对路径（`tmp/...`）。这些会被当作不同条目/no-result；建议统一为相对路径并去重。
+- whitelist 已无绝对 Windows 路径，已统一相对路径。
+- 唯一重复：`Mzk1IVThm110Actual.lean` 出现 2 次，可去重。
+- state.json 仍有历史 failed 记录：175 条（其中 122 在 whitelist、53 已不在 whitelist）；全库 stale olean 假错 81 条。
+- fail 后已 retouch、等待重编的 dirty 文件 4 个：
+  - `Mzk1P1LocalizedFractionalIdealMapActual`
+  - `Mzk1IVThm110UnitRegionScalingActual`
+  - `IntegralUnitLogarithm`
+  - `Mzk1P2Log1pHalfActual`
 
-2. **external/TauCeti 非项目根**
-   whitelist 含 `tmp/external/ported/flt/...` 的 Mathlib 副本与 `TauCetiPort` 绝对路径；它们不是当前项目 lean_lib，建议从活跃 whitelist 移出，另设 donor 列表。
+处理原则：stale 假错只在依赖 DONE 后 retouch，不改证明；真实 fail 按 per-file 首错修。
 
-3. **state 外失败记录 53 条**
-   这些已不在 whitelist，仍占 state.json；建议只读清理/归档，不要在 state 中保留为活动失败。
+## 5. 索引覆盖审计（未改索引）
 
-4. **历史 results 与当前状态混淆**
-   `tmp/xif_guarded_results.log` 是累计 13924 条；不能用 DONE/FAIL 总数判断当前 gate，必须看每文件最新结果 + state + 当前 batch log。
-
-## 6. 索引覆盖审计（上次报告摘要）
-
-实际 Lean 根但无 `_INDEX/README.md`：
+缺少 `_INDEX/README.md` 的实际 Lean 根：
 - `external/`（462 个 .lean）
 - `Heights/`（64）
 - `OrbicurveCores/`（134）
 - `Genl/`（9）
 
-活跃根缺本地 `_INDEX`：
+活跃子根缺本地 `_INDEX`：
 - `LeanFormal/IUT/`
 - `LeanFormal/Archive/`
 - `Iut/Foundations/`
 
-这些目录都不在 `lakefile.toml` 的 `lean_lib`（`LeanFormal`、`Iut`、`PadicField` 等）中，故建议索引标注为 “archive/port，未入 lakefile”，不要当作活跃构建根。
+这些目录都不在 `lakefile.toml` 的 `lean_lib`（LeanFormal/Iut/PadicField 等）中，建议索引标为 archive/port，不当作活跃构建根。
 
 非 Lean 根/生成目录，不建议建 `_INDEX`：
 `coord`、`logs`、`metadata-probes`、`scripts`、`verification`、`iut-audit-20261113`、`vendor`、`Mathlib`。
 
-已核对存在且路径正确的索引/ donor：
+已核对存在且路径正确的索引/donor：
 - `tmp/local-cft-port/PadicField/FieldNorm.lean`
 - `tmp/local-cft-port/_INDEX/README.md`
 - `tmp/external/ported/_INDEX/README.md`
@@ -154,24 +127,22 @@ whitelist 中 43 个无历史结果，显著分组：
 - `Iut/_INDEX/README.md`
 - `LocalClassFieldTheory/_INDEX/README.md`
 
-## 7. 禁止 direct lean 下的下一步队列
+## 6. 禁止 direct lean 下的下一步队列
 
-1. **P0 路径卫生**：统一 whitelist 为相对路径；去重绝对路径；把 external FLT/TauCetiPort 移出活跃 whitelist（另设 donor 列表）。
-2. **P0 stale 重建**：对 45 个 whitelist stale-dependency 文件，等依赖 DONE 后 retouch；不修改证明。
-3. **P0 dirty 4 文件**：自然 retouch 后由 watchdog 重编，优先核 `IntegralUnitLogarithm.lean` 这种核心定义。
-4. **P1 活跃缺口补齐**（经 owner 确认）：
-   - P2 两个缺失：`Mzk1P2DeficitActual`、`Mzk1P2FaithfulLogMuShaActual`；
-   - Hq/hθ acceptance/gate 文件按当前主线筛选后加入；
-   - Stage4 若仍活跃，整组 105 个需要单独批次，不要零散加。
-5. **P1 pending 分类**：43 个 no-result 中，先处理 19 个活跃 root 文件；external/TauCeti 绝对路径不应作为 pending。
-6. **P2 索引修复**：补 `LeanFormal/IUT/_INDEX` 或明确代管；给缺失根加 archive/port 行；更新 `coord/LEAN-INDEX.md` §1 规则“每个 lean_lib/活动根”。
+1. **等当前 6 RUNNING 收尾**；不要在此期间改这些文件。
+2. **清理 whitelist**：删 `Mzk1IVThm110Actual.lean` 重复行；保持 74 个唯一相对路径。
+3. **2 个 stale FAIL**：`Mzk1IVThm110UnitRegionScalingActual`、`Mzk1TaskEProbeActual` 等依赖 DONE 后 retouch。
+4. **3 个 PENDING** 由 watchdog 自然抽取；若长时间不跑，再确认是否在 whitelist 中（当前在）。
+5. **P1/Ob33/B5/P3/stage4/hq/tensor**：按 owner 确认后分组补入 whitelist；不要零散全加 700+ 文件。
+6. **索引修复**：补 `LeanFormal/IUT/_INDEX` 或明确代管；给缺失根加 archive/port 行；更新 `coord/LEAN-INDEX.md` 规则为“每个 lean_lib/活动根”。
 
-## 8. 状态结论
+## 7. 状态结论
 
-- 当前 watchdog 有 **10 个近期 running**；
-- whitelist **1363 条**，其中 **43 条无结果**；
-- state 记录 **175 failed**：**122 在 whitelist**，**81 全库 stale 假错**，**45 在 whitelist**；
-- **stage4/hq/tensor 是 whitelist 覆盖缺口最大三类**；
-- 索引缺根：`external`、`Heights`、`OrbicurveCores`、`Genl`，以及活跃子根 `LeanFormal/IUT` 的本地索引。
+- whitelist：**75 行 / 74 唯一 / 0 缺失路径**；
+- 状态：**DONE 60 / RUNNING 6 / FAIL 5 / PENDING 3**；
+- 活跃 IV 主线 29/29 已入队；
+- 但 P1/Ob33/B5/P3/stage4/hq/tensor 没有整组入队；当前是 74 文件精选队列；
+- stale 假错 2 条在 whitelist 内，dirty 4 条等待重编；
+- 索引缺根已列于 §5。
 
 未直接编译；所有验证以 watchdog 的 DONE/FAIL 为准。
