@@ -184,3 +184,21 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: QVIndexMap 02:39:01; TaskEWQuotientFive 02:38:34; TaskEIntegers 02:40:03; ThetaUnit 02:40:26（条件形）; TaskEUnitsTorsion 02:41:13; RelativeNormFieldNorm 02:41:36。
 - RED: GaloisCompletion 02:40:28 (valueMonoid/valueGroup rewrite); TaskECompletion (Field GaussianField); Ind1WQuotientFiveIso 02:39:59 (unknown normedIntegerEquivValuative + sorryAx — reject).
 - 已派 owner 修复/清理；RUNNING=0，按 rev16 非空闲补 runnable targets。
+
+- A2 node03 计划文档：coord/A2-NODE03-QUOTIENT-STACK-PRODUCER.md（quoted witness 字段/4步构造/donors/missing；无 Lean、无 fake）。
+- TaskECompletion 回退 clean exact interface；Ind1WQuotientFiveIso 仍 sorryAx，必须清理。
+
+
+### 7.2 最新 DONE/FAIL 批次（abc，2026-11-15 10:45，只读，无编译）
+
+- ✅ DONE：`RelativeNormFieldNormActual` **02:41:36**（relativeNormRaw_nrm/_lt_one/_valued_lt_one_via_nrm；此前 FAIL 过时）；`Mzk1TaskEIntegersRingEquivActual` 02:40:03（Required 结构，无 inhabitant）；`Mzk1TaskEUnitsTorsionActual` 02:41:13（Units/Torsion Required 结构）；`Mzk1ThetaUnitLatticeBoundActual` 02:40:26（源 10:39:02 < olean 10:40:25，当前源 fresh；条件 hpos/hfin）；**`Mzk1QVIndexMapActual` 02:39:01**（badPlaceIndex/qVMultAt/fiberMult，node06 hq index map）；`Mzk1TaskEWQuotientFiveActual` 02:38:34（WQuotientFiveEquiv/PadicExpData Required，无 inhabitant）。
+- ❌ RED：**`Mzk1Ind1WQuotientFiveIsoActual` REJECT（sorryAx）** — FAIL 02:42:20，log sorryAx=3、`padicIntegersEquivZp` 依赖 [sorryAx]、unknown `normedIntegerEquivValuative`；`Mzk1GaloisCompletionActual` FAIL 02:40:28；`Mzk1TaskECompletionFieldEquivActual` FAIL 02:42:25；`Mzk1QVProductRegionActual` FAIL 02:43:29（Function expected/unknown theorem），running；三者/一者均有 pending START。
+- hθ：树内**无 `tensorIntegerRegion = unitRegion` donor**；仅 lattice 开性（`isOpen_tensorIntegerLattice` 等），hpos/hfin 仍为 explicit GAP；node06/09 下一步 carrier check。
+- stale probes：TaskEProbe(10:01:32) < TaskE 源；GaloisValOnlyProbe(10:21:05) < Galois 源 10:42:59；GaloisCurrentProbe/PadicGaloisProbe FAIL；PrincipalUnitsFullProbe 06:55 < 07:12。
+
+## 7.5 最新节点（2026-11-15 10:48）
+
+- DONE: ProductHaarIdentificationGap 02:44:40; TaskECompletion clean interface 02:45:31; A2Node03 producer interface 02:46:38; GaloisCompletion source green 02:44:43 (val_eq/surj only, valueGroup removed).
+- node06/09: carrier = RootExtensionProductCarrier = S1902Carrier; rpRegion/fullRegion measure pos/lt_top GREEN in Mzk1HaarProductStrictMainlineActual; qVFamTensorP in rpRadius. hpos/hfin for node06/09 covered; C3 tensor identification not needed for node06/09.
+- RED: Ind1WQuotientFiveIso (Fact5/stale sorryAx, clean interface rebuild pending); QVProductRegion (unknown residueNormBase/qProductLogVolume); RelativeNormQProperties (Algebra ℚ_[pBase] NativeFCompletion).
+- stage4: restore valueGroup_comap_eq via simpa mem_valueMonoid_iff, then ambient threshold. mainline: relativeNorm into QProperties. lattice: A2 consumer. hull: product-region→hq bridge.
