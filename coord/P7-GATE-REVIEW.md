@@ -4047,3 +4047,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.635 stage4 value-group iso construction task (2026-11-15 39:40)
 - ValueGroup₀ is WithZero (range subtype), not plain; explicit valueGroupIso from comap to w via σ/σ.symm and comap_apply needed, then conjugate h.orderMonoidIso. stage4. UniformContinuous explicit gap until iso. No fake.
+
+
+### 20.636 UnitPerfection/FinitePlace GREEN via lake build; UnitLogNormBound direct green (2026-11-15 39:50)
+- mainline rebuilt stale oleans with lake build: UnitPerfectionFunctoriality exit0 3449 jobs, FinitePlaceSourceAlgebraicUnitPerfection exit0 3573 jobs; no source changes. Rule: rebuild stale deps.
+- Mzk1IVThm110UnitLogNormBoundActual direct EXIT=0 08:32:38 has unitLog_norm_le_one_of_exp_bound/missingPowerLogEstimate. qpilot fill hnorm via norm_natCast_eq_one_of_coprime + integralUnitExponent_coprime; then missing power estimate.
+- stage4 valueGroupIso plan: range subtype MulEquiv via σ/σ.symm/comap_apply, lift WithZero.map'; missing range membership lemmas. No fake.

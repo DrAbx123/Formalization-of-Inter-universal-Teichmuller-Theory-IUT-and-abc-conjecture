@@ -3097,3 +3097,5 @@
 - 39:30: stage4 value-group defeq/OrderMonoidIso attempt; hull no donor. gate 20.634 written.
 
 - 39:40: stage4 value-group iso construction task. gate 20.635 written.
+
+- 39:50: downstream green via lake build; UnitLogNormBound direct green; stage4 iso plan. gate 20.636 written.
