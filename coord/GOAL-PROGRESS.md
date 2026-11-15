@@ -62,7 +62,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 | S3133 四件 | 01:55–01:57 | 全局 q 除数/加权读数/q 重数 donor |
 | `QPilotGlobalLogVolumeFromQActual` | 01:54:53 | qVEffectiveMultiplicity donor |
 | `Mzk1QVMultiplicityBridgeActual` | **02:27:50** | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` GREEN；保留 q 的消失阶，不是 residue degree |
-| `Mzk1QVIndexMapActual` | **02:33:15** | `badPlaceIndex : Bad → FinitePlaceAtPrime X.S.arithmetic.F`、`qVMultAt = qVEffectiveMultiplicity` GREEN |
+| `Mzk1QVIndexMapActual` | 02:33:15 DONE，当前源 FAIL 02:35:53 | `badPlaceIndex` GREEN；新增 fiber Fintype 需求 `{b // badPlaceIndex b = i}` 未解 |
 | `NormalizedNormValuationResidueActual` | 01:47:54 | residue-degree norm valuation 条件 |
 | 更早的 principal/residue/card/unitLog 链 | 07:12–09:57 | 均 watchdog/probe 三公理；unitLog 为 support-only |
 
@@ -83,7 +83,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
 | SG3b | 结构缺口 | tensor product/measure/region 分解 |
 | A2 | blocked 3 | quotientWitness/groups/unique |
-| WQuotient | 主缺口 | `completionField ≃+* ℚ_[5]` 已有 clean interface（lattice 报 olean）；还需 (b) Integers、(c) units/torsion |
+| WQuotient | 主缺口 | `completionField ≃+* ℚ_[5]` 已有 clean interface；§7.4 更短路线：unitLogTorsionQuotientEquivRange + range=5•Integers K，构造 range ≃* Multiplicative (Integers K) via Φ=5⁻¹•x/Ψ=5•a（stepxi/lattice） |
 | abc | 未证 | UndilatedHeightBound、UndilatedRegionBound、regionVolume_le_normalizedWeight、hQ/hSlack 等 |
 
 ## 4. 已有 donor（不要重证）

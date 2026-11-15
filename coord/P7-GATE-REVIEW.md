@@ -4229,3 +4229,11 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.672 stage4 §7.2 ambient-threshold route (2026-11-15 47:55)
 - stage4: avoid standalone valueGroupIso. Use ValueGroup₀ f = WithZero(valueGroup f) and units ≃ valueGroup via WithZero.withZeroUnitsEquiv; transfer target γ membership via valueGroup_comap_eq to same ambient Bˣ value γs, then withValMovedSigma_val_eq gives source ball→target ball; Valued.mem_nhds_zero/ContinuousAt/uniformContinuous_of_continuousAt_zero. Then Completion.mapRingHom. Watchdog only.
+
+
+### 20.673 WQuotient §7.4 range-equality route (2026-11-15 48:00)
+- stepxi: use unitLogTorsionQuotientEquivRange (WQuotient ≃* range unitLogHom) and unitLog_range_eq_prime_smul_integers_of_odd_unramified (range=(5:K)•Integers K). Construct range ≃* Multiplicative (Integers K) via Φ=5⁻¹•x (choose integral preimage) and Ψ=5•a; Multiplicative toAdd/ofAdd; no p-adic exp. stepxi/lattice coordinate; watchdog only.
+
+
+### 20.674 QVIndexMap fiber Fintype / TaskE GaussianField / WQuotient range route (2026-11-15 48:10)
+- QVIndexMap current source FAIL 02:35:53: need Fintype {b // badPlaceIndex b=i} + DecidableEq; qpilot filter/subtype. RelativeNorm FAIL 02:35:59: IsScalarTower/PadicField.v; mainline explicit hTower. TaskE FAIL Field GaussianField; lattice import fix. WQuotient §7.4 range route accepted (stepxi).
