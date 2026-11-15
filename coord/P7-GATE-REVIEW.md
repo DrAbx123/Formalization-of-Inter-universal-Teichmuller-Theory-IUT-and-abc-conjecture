@@ -4151,3 +4151,10 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.658 Algebra.norm local formula type mismatch (2026-11-15 43:30)
 - hull: norm_eq_absNorm_zpow base number field/adicCompletion; relNorm objects integral rings; Algebra.norm base local field K, x not integral; incompatible. Donor gives completion norm e*f scaling, not Algebra.norm. mainline inspect relativeNormCompletion and Algebra.norm_eq_prod/det route or exact missing. No fake.
+
+
+### 20.659 Lean 索引体系 + watchdog-only 政策（2026-11-15 43:40）
+- 新建 `coord/LEAN-INDEX.md` 总索引；每个实际 Lean 根目录/port 目录建 `_INDEX/README.md`：LeanFormal, tmp, Iut, LocalClassFieldTheory, Pi1, Belyi, WeilCurves, CurvesJacobian, PadicLogVolume, TateCurvesTheta, ContinuousKummerTheory, Oka, TemperedFundamentalGroups, EllipticCurves, FormalSchemes, tmp/sheaf, tmp/sheaf/xif/paper, tmp/local-cft-port, tmp/external/ported, vendor_clone_*。
+- AGENTS.md 增加规则：所有 Lean 验证只走 watchdog（extra-targets + watchdog.log），禁止直接 lake env lean；先查索引避免重复找 donor。
+- 索引第5节记录已存在 donor：S3133 global q divisor/weighted readout/qVEffectiveMultiplicity；PadicField.FieldNorm.v_norm 可 import；tensor etale/product decomposition 与 relative Haar transport；第6节记录 θ hull 降级为真实 hull 内大满格单向界，hq 必须保留 q 重数。
+- watchdog SlackReduction DONE 01:40:23；qpilot 接口变更（S3171 hSlack derived）已批准。
