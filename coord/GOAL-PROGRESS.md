@@ -342,3 +342,9 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - WQ clean interface DONE 03:05:47; probe three axioms, current source clean (old lemma stale).
 - Node09HqWeightedRegion FAIL 03:09:01: actualLogIdx unknown (missing import/open) + deterministic heartbeat timeout (74/76/45); mainline to fix import and split/simplify, no maxHeartbeats hack.
 - Retry running: A2SourceSignQuotientAssembly (clean interface), ProductFiberMultBridgeGap (revert/repair), QVWeighted (conditional BadPlaceBijection).
+
+## 7.17 11:10 cycle
+
+- DONE: A2SourceSignQuotientAssembly 03:09:46 (clean AssemblyData+Required); ProductFiberMultBridgeGap 03:10:09 (restored exact gap); WQ clean interface 03:05:47; QVProductRegion 02:59:36; A2GroupsExtension 02:59:15; Node09Relative/Hq.
+- RED: QVWeighted 03:10:08; Node09HqWeighted 03:09:01 (import actualLogIdx + heartbeat); ValueGroup 03:06:17 (coercion); stale probes.
+- Woken idle lanes: qpilot QVWeighted fix; mainline Node09 import/split; stage4 toMonoidWithZeroHom variant; lattice A2 next; hull ClosedBallMass/BadPlaceBijection; stepxi Values bridge; abc/shehdd audit.
