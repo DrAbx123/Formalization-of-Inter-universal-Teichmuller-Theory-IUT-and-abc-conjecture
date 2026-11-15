@@ -3077,3 +3077,5 @@
 - 37:20: Algebraic #check unitLog signatures; qpilot. gate 20.624 written.
 
 - 37:30: stale kernel olean rebuilt; Algebraic p on theorem. gate 20.625 written.
+
+- 38:10: core helper green; stale olean chain; integralUnitExponent=cardExponent task. gate 20.626 written.

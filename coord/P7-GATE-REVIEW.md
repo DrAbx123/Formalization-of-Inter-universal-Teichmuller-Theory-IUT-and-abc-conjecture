@@ -4005,3 +4005,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.625 stale kernel olean/rebuild; Algebraic p on theorem (2026-11-15 37:30)
 - Earlier arity mismatch from stale IntegralUnitLogarithmKernel olean built before core redefinition; Lead rebuilt kernel olean 07:51:53. Algebraic now only NormedAlgebra ℚ_[?m] stuck; call unitLog_eq_zero_iff_isOfFinOrder with (K:=F)(p:=p). qpilot. No fake.
+
+
+### 20.626 core helper green + stale olean chain; integralUnitExponent=cardExponent (2026-11-15 38:10)
+- Core IntegralUnitLogarithm olean 07:32:38; Kernel olean 07:51:53; AlgebraicUnitLogarithm olean 08:00:33; Hom olean 08:03:59; LogarithmLocalInverse 08:06:55; IntegralUnitLogarithmRationalization 08:07:47; AlgebraicUnitLogarithmRationalization 08:08:39 green. Stale oleans caused arity errors; further UnitPerfection/FinitePlace errors likely stale IntegralUnitPerfectionTopology/FinitePlaceSourceGaloisLogShell.
+- integralUnitExponent and cardExponent both Nat.card quotient => definitionally equal; add integralUnitExponent_eq_cardExponent rfl and integralUnitExponent_coprime via cardExponent_coprime. qpilot. No fake.
