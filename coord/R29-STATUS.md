@@ -3107,3 +3107,5 @@
 - 40:20: generic unitLog bound green olean 08:41:32; qpilot Qp specialization. gate 20.639 written.
 
 - 40:30: UnitLogNormBound fresh DONE; wake stage4/hull. gate 20.640 written.
+
+- 40:40: actual K=Qp unramified; qpilot NormOneClass/principal bound; mainline actual p/bridge. gate 20.641 written.
