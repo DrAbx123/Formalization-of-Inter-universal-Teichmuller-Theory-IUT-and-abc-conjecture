@@ -41,8 +41,8 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | `Mzk1IVThm110Actual` | 01:59:08 | IV 条件 display |
 | `Cor312ToABCBridgeInterface` | 01:58:32 | bridge interface |
 | `Mzk1RamifiedPlaceDataActual` | 01:59:07 | 含 `mult : ι → ℝ` |
-| `Mzk1ThetaUnitLatticeBoundActual` | 02:21:03 | unit-lattice 单向界，条件 hpos/hfin |
-| `Mzk1GaloisCompletionActual` | **02:21:06 / olean 10:21:05** | `withValMovedSigma`、`withValMovedSigma_surjective`、`withValMovedSigma_val_eq`、`valueGroup_comap_eq` 全部编译；下一步 UniformContinuous |
+| `Mzk1ThetaUnitLatticeBoundActual` | 02:21:03 / olean 10:21:03 | unit-lattice 单向界，条件 hpos/hfin；**当前源 10:31:11 新于 olean，待 watchdog 重编确认** |
+| `Mzk1GaloisCompletionActual` | **02:21:06 / olean 10:21:05** | `withValMovedSigma`、`withValMovedSigma_surjective`、`withValMovedSigma_val_eq`、`valueGroup_comap_eq` 全部编译（abc probe `Mzk1GaloisValOnlyProbeActual` 02:21:06 标准三公理）；**当前源 10:31:00 已改（valueGroupIso 等），START 02:31:00 待 DONE/FAIL**；下一步 UniformContinuous |
 | `Mzk1ThetaFullLatticeBoundActual` | 02:04:29 | conditional；hsub 方向已确认错误，被 unit-lattice 路线替代 |
 | `Mzk1TaskGDonorProbeActual` | 02:04:29 | 17 项标准三公理，sorryAx=0 |
 | `Mzk1CheckSharpDonorProbeActual` | 02:03:56 | #check-only |
@@ -56,14 +56,14 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 
 | 文件/目标 | 状态 | 精确原因/owner |
 |---|---|---|
-| stage4 UniformContinuous | 未完成 | valueGroup_comap_eq 已 DONE 02:21:06；仍需 ambient identity valueGroupIso、conjugate orderMonoidIso、Completion.mapRingHom |
-| `Mzk1QVMultiplicityBridgeActual` | FAIL 02:19:38 | unknown `qVFamily`/`qVEffectiveMultiplicity...`（缺 S3133 import/open）；qpilot 修 |
+| stage4 UniformContinuous | 未完成 | valueGroup_comap_eq 已 DONE 02:21:06；仍需 ambient identity valueGroupIso、conjugate orderMonoidIso、Completion.mapRingHom；当前源 10:31:00 重编 START 02:31:00 pending |
+| `Mzk1QVMultiplicityBridgeActual` | 已绿（02:27:50，见 §2） | 旧 FAIL 02:19:38 已被修复；`qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` DONE，oleans 10:27:50 > src 10:26:30 |
 | `Mzk1TaskECompletionFieldEquivActual` | 证据冲突 | lattice 报 olean green，但 watchdog 02:20:37 FAIL（`Field GaussianField` synth、unknown Required）；需 watchdog 当前源重跑 |
-| `Mzk1ThetaUnitLatticeBoundActual` | DONE 但条件 | `hpos : 0 < μ(tensorIntegerRegion)`、`hfin : μ(...) < ⊤` 是 explicit hypothesis；donor `Mzk1TensorRegionNormalizationActual` 也把 positivity/finiteness 记为 GAP |
+| `Mzk1ThetaUnitLatticeBoundActual` | DONE 但条件 | `hpos : 0 < μ(tensorIntegerRegion)`、`hfin : μ(...) < ⊤` 是 explicit hypothesis；donor `Mzk1TensorRegionNormalizationActual` 也把 positivity/finiteness 记为 GAP；**当前源 10:31:11 新于 olean 10:21:03，待重编** |
 | `Mzk1ThetaFullLatticeBoundActual` | 方向作废 | hsub 原为 `canonicalHull ⊆ actualRegion`，实际 `actualRegion ⊆ canonicalHull`；不要再用旧 hsub |
 | R1 | 结构缺口 | `C3.q` 单 local vs global q 族；缺 `ClauseBBaseQSourceIdentity` + same-q `hq` |
 | hq | 接线缺口（bridge 已绿） | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` DONE 02:27:50；仍缺 index map `Bad → FinitePlaceAtPrime F p` 与 `actual_A_le_Lbar_add_Dbar_mult` 的 hperPlace 接线 |
-| relativeNorm field norm | FAIL 02:27:51 | `SMul ℚ_[pBase] NativeBaseCompletionRaw` 缺文件级 local instance；mainline 修 Fact/Algebra/Eq.ndrec/FiniteDimensional 后 watchdog 重跑 |
+| relativeNorm field norm | **FAIL 02:30:44**（最新） | 缺 `Module.Finite (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:87）与 `IsScalarTower ℚ_[pBase] (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:89/:91）；:94 type mismatch；mainline 修文件级 local instances 后 watchdog 重跑 |
 | hθ | 单向缺 hpos/hfin | 已证 `unitLatticeLogVolume_le_thetaHull` 条件版；需 raw unit-region positivity/finiteness 或 normalized Haar |
 | stage4 completion | 未完成 | `UniformContinuous`/`Completion.mapRingHom`/`alignedCompletionMapMoved` 未全闭 |
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
@@ -89,7 +89,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
   - `FinitePlaceIntegralTensorCovolume.arithmeticTupleLogTensorUnitLogVolume_le_hull`（仅单向）。
 - IV stage4：
   - `withValMovedSigma_surjective`、`withValMovedSigma_val_eq` 已绿；
-  - `valueGroup_comap_eq` 尚未当前源绿。
+  - `valueGroup_comap_eq` 在 olean 10:21:05 已绿（DONE 02:21:06）；当前源 10:31:00 正在重编（START 02:31:00）。
 
 ## 5. 索引 / watchdog
 
@@ -107,3 +107,20 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 4. lattice：TaskE 当前源 watchdog 重跑确认；随后 (b)/(c) WQuotient；
 5. mainline：RelativeNormFieldNorm 的文件级 local instances 修好后接 `PadicField.v_norm`；R1 hq 接线；
 6. abc：UndilatedHeight/Region 与 hQ/hSlack 最小缺口。
+
+
+## 7. 最新审计指针（abc，2026-11-15 10:35，只信 watchdog）
+
+- **接受（watchdog DONE）**：
+  - `Mzk1QVMultiplicityBridgeActual` DONE 02:27:50，olean 10:27:50 > src 10:26:30；`qVEffectiveMultiplicity_eq_order_mul_localResidueDegree`；
+  - `Mzk1ThetaUnitLatticeBoundActual` DONE 02:21:03，olean 10:21:03（条件 hpos/hfin）；
+  - `Mzk1GaloisCompletionActual` valueGroup DONE 02:21:06，olean 10:21:05；probe `Mzk1GaloisValOnlyProbeActual` 02:21:06 标准三公理、sorryAx=0（仅该 olean 版本；当前源 10:31:00 重编 pending）；
+  - `Mzk1PadicFieldValuedQpActual` DONE 02:12:07；probe `Mzk1PadicValuedOnlyProbeActual` 02:21:00 五项标准三公理、sorryAx=0；
+  - `Mzk1TaskGDonorProbeActual` DONE 02:04:30，17 项标准三公理、sorryAx=0；S3133 四件 + `QPilotGlobalLogVolumeFromQActual` DONE 01:54–01:57；
+  - `Mzk1ThetaFullLatticeBoundActual` DONE 02:04:29（hsub/hunit 条件；hsub 方向已被 unit-lattice 路线替代）。
+- **拒绝（当前源 red / stale）**：
+  - `RelativeNormFieldNormActual` FAIL 02:30:44（缺 Module.Finite/IsScalarTower instances；无 olean）；
+  - `Mzk1TaskECompletionFieldEquivActual` FAIL 02:02:47（`theorem ... : Prop :=` 应为 `def`；synthInstanceFailed）；
+  - `Mzk1ThetaUnitLatticeBoundActual` 当前源 10:31:11 新于 olean 10:21:03 → 旧绿不覆盖当前源；
+  - `Mzk1GaloisCompletionActual` 当前源 10:31:00 重编 pending（旧 DONE 02:21:06 仅覆盖旧版本）。
+- 详细审计：`AUDIT_LEDGER.md`；Task G wiring：`coord/AUDIT-HQ-HTHETA-WIRING.md`；索引：`coord/LEAN-INDEX.md`。

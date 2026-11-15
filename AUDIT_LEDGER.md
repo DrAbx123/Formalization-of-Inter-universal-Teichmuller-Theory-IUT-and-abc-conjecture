@@ -28856,3 +28856,1676 @@ A788-A805 (green files under tmp/sheaf/xif/paper, all EXIT=0 + olean + gate trio
 - extra-targets 485 = clean DONE 465 + red 0 + in-progress 0 + ole-only 20 + missing 0。
 - Mzk1B5FractionalExpansionUncondActual DONE 2026-11-13T14:00:11Z（52s），olean 存在；唯一 red 消除。
 - gate build 状态全绿（red=0）；P7 仍 NOT PASSED，build green ≠ P7 gate pass。
+## 2026-11-13 — theta_eq 标量归约（abc，1 条）
+
+- `Mzk1ThetaScalarAlignActual` **DONE 14:11:27Z（54s，olean=True）**：`thetaPilotHullLogVolumeReal_eq_dim_mul_packetNormalized`（θread = blockDim·packetNorm，定义级）、`..._eq_sumDegree_mul_packetNormalized`（域分解 e 下 Σdeg 形式）、**`theta_eq_iff_sumDegree_mul_packetNormalized_eq`**（theta_eq ⇔ `(Σdeg)·packetNorm = s1915ClosedForm`）。
+- 结论：#7 cancel（`Mzk1P7ThetaDegCancelActual:47-58`）是定义级除法重写，**不能**直接证 theta_eq；theta_eq 现只余一个标量方程，仍需 C3↔S1902 hull mass 识别（named input，不 fake）。
+## 2026-11-13 — #10 citizen unitMass 实际构造（1 条）
+
+- `Mzk1C3S1902UnitMassCitizenActual` **DONE 14:08:27Z（olean 42,104B）**：`actualUnitMass=(s1915UnitMass T).toReal`；`actualUnitMass_pos` 用 `s1915_unitMass_pos/lt_top`；`actualC3S1902UnitMassData` 填 `C3S1902UnitMassData` 并给 `Nonempty`。
+- `unitMass=1` 仍 GAP：`rootExtensionHaar = Measure.addHaar` 未归一，项目无 normalized unit-ball mass 定理；`localUnitMassProduct_eq_one` 是 normalizedHaar 侧，不能直接等同。
+- #10 状态：公式层/通用与 Bad-index product/unitMass citizen 实际构造 DONE；blockEquiv 与 `NativeBadPrimeData` 仍缺；保持 CONDITIONAL/PARTIAL。
+
+## 2026-11-13 — #1 同源箭头候选：B5 FullProductFormula/Count（abc，1 条）
+
+- p7-doc §12 追加：`Mzk1B5FullProductFormulaActual.full_product_formula_log`（DONE 14:15:51Z）、`Mzk1B5FullProductFormulaCountActual.arch_log_eq_count_sum`/`finite_log_sum_eq_neg_count_sum`（DONE 14:23:04Z）、`Mzk1B5LocalGlobalProductFormulaActual.log_absNorm_eq_sum_count_mul_log`（DONE 13:09:21Z）、`Mzk1B5FractionalAbsNormFormulaActual.log_absNorm_fractional_eq_num_sub_den`（DONE 13:16:43Z）作为 #1 `q_eq_sum`/place-求和恒等式的候选供体。
+- 限制：B5 是同一元素在 K 的位集合上的乘积公式；qVFamily 是逐 bad 模位独立 clause-B 参数（`QPilotZeroLocusDivisorActual:55-62`），仍需 base q↔qVFamily 源映射与 **C3↔S1902 mass identification**；HullQDictionary 仍唯一 named input，不升级为已证。
+## 2026-11-13 — B5 full product formula（qpilot，2 条）
+
+- `Mzk1B5FullProductFormulaActual` **DONE 14:15:51Z（olean 56,208B）**：`full_product_formula_log`——
+  `(∑_arch w.mult·log(w x)) + (∑ᶠ_finite log(w x)) = 0`（`x : K`、`x≠0`），由 Mathlib
+  `NumberField.prod_abs_eq_one` 取 log 证；正性用 `InfinitePlace.pos_iff`/`FinitePlace.pos_iff`。
+- `Mzk1B5FullProductFormulaCountActual` **DONE 14:23:04Z（olean 118,112B）**：
+  `finite_log_sum_eq_neg_count_sum`（finite log 和 = −count 加权和）与
+  `arch_log_eq_count_sum`（arch log 和 = count 加权和，`x : 𝓞K`、`x≠0`）。
+  这是 #1 readout 的“同源箭头”principal integral 版本。
+- 精确缺口：任意 fractional ideal `I` 没有 canonical principal generator；`relativeDetLog` 的 arch 消去仍需
+  `PrincipalGeneratorData` 或逐无限位 arch metric 相容，未冒充。
+
+
+## 2026-11-13 — 当前 chat：P7 下一轮攻法与旧 C3 入口纠正（研究交付）
+
+- 单线程定向复核，已向 coord/P7-GAP-ATTACK-PLAN.md 追加 P7-NEXT-ATTACK-SOURCE-FIRST-20261113；版本与范围：dag/nodes/p7-next-attack-source-first-20261113.json。
+- 关键已有供体：S1429CompletionRootObstructionActual.sourcePilotRegionData_isEmpty 已证明旧 SourcePilotRegionData 为空；此前本 chat 建议遗漏该证据，现纠正。不得继续要求旧 C3 inhabitant 或以空类型上的条件比较核销 P7。复用已有 N8 输入决定、C3Roots、S1314、S1391 和 L 侧张量适配；保留原目标全部语义并重审消费者，不静默改目标。
+- 三条具体路线：实际源系数/q 格包含；count 指定局部生成元与真实加权 determinant；逐素数域分解/迹下降及精确指数损失。R2 给有限生成元最小赋值的完整数学步骤；最终源 production/实际比较仍未证成。
+- 去重：当前 normZpowBridge_of_ne_zero/localNormGeneratorBridge_proved 已有；actualC3S1902UnitMassData 已有；#7 五文件计算复用。消掉辅助要求的方法是保留 f_v、按 p_b 分块及计算真实 normRatio/Haar 参照，不是假定 f=1、全坏位同 p 或 raw mass=1。
+- 源接口纠正：CountLocalizationBridge 只存在某个指数，并未绑定 count；placeLogVolume 的负号与 Haar log 区分；globalLogVolume 的有限理想 norm 不自动包含 arch metric；HullQDictionary 的 margin 1 不是原不等式必需条件。
+- 未改 Lean、未调度、未改 owner；statement_compiles/proof_body_checked/kernel_closed/target_accepted 均 NOT_RUN。源码阅读不替代当前构建/公理/原文语义验收。下一步为 P0 core/L 消费者接回与 P1 count 指定局部生成元。
+
+
+## 2026-11-13 B4 无条件 canonical diagonal volume ratio（stage4）
+
+- 文件：`tmp/sheaf/xif/paper/Mzk1CanonicalDiagUncondFinalActual.lean`；watchdog DONE 14:44:03Z（53s），olean 216,480B。
+- 定理：`canonical_diag_volume_ratio_uncond (f : d → Nat)`：无额外假设，`(addHaarMeasure coordinateCompacts (coordDual f))/... = (∏ p^{f i})⁻¹`。
+- 构造：`mem_span_pow_iff`（纯范数）、`coordDual_eq_pi_fractional`、`coordDual_le_coordSmall`、`hLc/hLo`（coordSmall=padicIntegerCoordinateLattice 紧/开）、`hXc/hXo`（isCompact_univ_pi/isOpen_set_pi + S1015 开性）。
+- 意义：**绕开并删除 diagHomeo image bridge GAP**；#7 + B4 收口。
+
+## 2026-11-13 — GATE-STATUS-R29 §35（B4 DONE，NormZpow 在修）
+
+- extra-targets 493：clean 472 + red 1（Mzk1B5NormZpowActual）+ ole-only 20 + missing 0。
+- B4：Mzk1CanonicalDiagUncondFinalActual DONE 14:44:03Z（53s），canonical_diag_volume_ratio_uncond 无条件；B4 image bridge GAP 可删。
+- 预期 NormZpow 绿后：clean 473 + red 0 + ole-only 20 = 493。
+- P7 NOT PASSED；未改 Lean。
+## 2026-11-13 — P0 迁移映射 + native core（紧急转向）
+
+- S1429 `sourcePilotRegionData_isEmpty`：旧 C3 空类型；旧 C3 参数的实际构造全部 vacuous，禁止 IsEmpty 消去冒充比较。
+- 新增 `coord/P0-SOURCE-MIGRATION-MAP.md`：900 提及文件分组（S3137/hull-GAP 43、C3 tensor ~100、P7 13、B5/Ob33 5、其余 triage），字段级迁移到 `SourcePilotRegionCore`/`actualSourcePilotRegionDataL`/`C3LogShellTensorL`/`C3Roots`/`qVFamTensor*`。
+- 新增 `tmp/sheaf/xif/paper/Mzk1P0NativeSourceCoreActual.lean`：从 T,b 构造 root（代数闭包）+ qVFamily + qVFamTensorBlock/readout，无旧 C3、无 IsEmpty elim。
+- 旧 C3 的 green 结论一律标 vacuous/historical；P0 下一步重接 S3137 L-side readout。
+## 2026-11-13 — #10 native finite-place 字典（1 条）
+
+- `Mzk1NativeFinitePlaceDictionaryActual` **DONE 14:58:15Z（olean 121,504B）**：`NativeFinitePlaceDictionaryData`（p + `NativeBadPrimeData` + carrier measurability，不依赖旧 C3）；`nativeDictionary_unitMassProduct_eq_one`（native carrier 上 ∏ normalized μ_b(O_b)=1）；`nativeDictionary_unitMass_eq_actual`（actualUnitMass 为 T-only）。
+- `unitMass=1` 仍 GAP：rootExtensionHaar 未归一 additive，需 normalized unit-ball 比较；blockEquiv 仍缺。
+
+## 2026-11-13 — P2 (R1.2) 首包：系数整性原型（abc，1 条）
+
+- `Mzk1P2LabelBlockCoefficientActual` **DONE 14:54:36Z（62s，olean=True）**：`p2Coefficient = qhat/λ`、**`p2Coefficient_mem_unitBall`（c_b ∈ O_{L_b}）**、`p2QHat_eq_lambda_mul_coefficient`、纯张量 `p2PureTensorCoefficient_mem_productUnitBall`、`P2LabelBlockData` + `p2_labelBlock_qGen_mem`。
+- `Mzk1P2LabelBlockSumActual` **DONE 14:59:39Z（62s，olean=True）**：`p2_productUnitBall_add_mem`（ultrametric 三角，`Mzk1RootExtensionUltrametricActual:50`）、`P2LabelBlockSumData`、**`p2_labelBlockSum_qGen_mem`**（多标签有限和 `g^q_a=Σ_i c_ia g^θ_i` 整性传递）。
+- 边界：这是对已给 integral generators 的整性传递，不是源构造；缺失映射（native q→根扩张→qhat、theta 允许像→λ、旧 C3 `tensorLanding_q` 空类型 S1429、多索引落点）已写入 `coord/P7-GAP-ATTACK-PLAN.md` 的 P2 状态小节。
+## 2026-11-13 — #10/P1 native batch（6 文件，1 条）
+
+- DONE：`Mzk1NativeUnitMassOneActual`（30424B）、`Mzk1NativeBlockEquivCandidateActual`（24248B）、`Mzk1P1FinitePlaceFvActual`（48352B）、`Mzk1P1LocalUnitProductTActual`（30952B）、`Mzk1P3HaarScaleDockingActual`（88200B）、`Mzk1P1CountLocalValuationNativeActual`（192856B）。
+- `Mzk1P1LocalUnitProductTActual` 先因 `CommonPrimeCompletion`/`nativeBadToKPlaceAtPrime` 未开命名空间而失败；全限定名后 DONE。
+- 边界：unitMass=1（rootExtensionHaar 未归一）、blockEquiv inhabitant、NativeBadPrimeData 实际来源仍 GAP；无 axiom/sorry。
+
+## 2026-11-13 — P0 native 迁移里程碑 GREEN（1 条）
+
+- 旧 C3 空（S1429 `sourcePilotRegionData_isEmpty`）；P0 不构造旧 C3、不用 IsEmpty。
+- GREEN：Mzk1P0NativeSourceCoreActual、Mzk1P0NativeReadoutActual、Mzk1P0NativeTensorLandingActual、Mzk1P0NativeS3137ChainActual、Mzk1P0MigrationRowsActual、Mzk1P0NativeEquivActual；外部 Mzk1P0NativeTensorConsumerActual、Mzk1S3137LReadoutActual 也 green。
+- 端到端：T,b → actualNativeSourceCore → nativeQReadout/nativeThetaReadout → nativeLandingPacket/nativeTensorPacket；无新 named input。
+- OPEN：NativeComparison（q≤θ）未证明；下一步接 S3137/L-side 消费者。
+## 2026-11-13 — P0.5 native comparison 半端到端（1 条）
+
+- GREEN `Mzk1P0NativeComparisonActual`（15:29:00Z）：nativeComparison_of_theta_nonneg、LComparison_of_nativeComparison、LComparison_of_theta_nonneg。
+- 精确缺失：T→I donor（q alignment）、L/native theta landing-normalization、P2 R1.2 系数整性；不新增 named input。
+- P2 供体：Mzk1P2LabelBlockCoefficientActual（R1.2 green）、Mzk1P2DetCoefficientActual（det green）、Mzk1P2DetWeightedNonnegActual（R1.3 pending）。
+## 2026-11-13 — #10 NativeBadPrime 精确归约 / normalized unit mass GAP（1 条）
+
+- `Mzk1NativeBadPrimeSourceActual` **DONE 15:27:26Z**：`nativeBadToKPlace_completionRationalPrime`（native K-place 的 rational prime = 底层 Bad 模位的 prime）；`NativeBadModuliFixedPrime p`；`nativeBadPrimeData_of_moduliFixed`。实际来源 GAP 精确化为“所有 Bad 模位固定 p”。
+- `Mzk1NativeNormalizedUnitMassOneActual` 归一化 unit mass=1 尝试失败并收为 GAP：`rootNormedExtension T b` 为 `IntermediateField`，本上下文无 MeasurableSpace/SigmaFinite 实例，无法构造 `Measure.pi`；`localUnitMassScalar` 的 pos/finite green。
+- blockEquiv inhabitant 仍未构造；unitMass=1（实际 additive）/NativeBadModuliFixedPrime 为剩余精确 GAP；无 axiom/sorry。
+
+## 2026-11-13 — P0.5b alignment 结论（1 条）
+
+- GREEN `Mzk1P0AlignmentGapsActual`（15:39:35Z）：nativeQReadout=-p2NativeQMagnitude；P2Gap⇒-rootQhatMagnitude；NativeLatticeMissing。
+- GREEN `Mzk1P0ThetaAlignmentActual`（15:42:07Z）：ThetaAlignment、thetaNormalizationFactor、log 恒等式、LPaperInstance_of_nativeComparison_of_alignments。
+- q 最小缺失：NativeLattice T、SourceDefinition31Data（无 native 构造器）、arithmetic transport、index_equiv、place binding、qVFamily=concreteQCandidate 识别；P6/C1 donor package 依赖旧 C3 空，不能直接用。
+- theta 最小缺失：factor=exp(Ltheta-nativeTheta) 的预期 Haar 归一化/landing；stepxi LQThetaSourceArrowMissing。
+## 2026-11-13 — #10 normalized unit mass conditional（1 条）
+
+- `Mzk1RootExtensionCarrierDataActual` **DONE 15:43:22Z（olean 54,752B）**：`RootExtensionCarrierData` 记录逐 b `SigmaFinite (rootExtensionHaar T b)` 的精确缺失数据。
+- `Mzk1NativeNormalizedUnitMassConditionalActual` **DONE 15:48:26Z（olean 76,872B）**：`normalizedRootExtensionHaar`（单位球归一化）、`normalizedProduct_unitBall`、`normalizedUnitMass_eq_one`，条件为 `[∀b, SigmaFinite (normalizedRootExtensionHaar T b)]`。
+- 实际 `s1915UnitMass=1` 仍 GAP（additive rootExtensionHaar 未归一）；blockEquiv inhabitant / NativeBadModuliFixedPrime 仍精确 GAP；无 axiom/sorry。
+
+## 2026-11-13 — P0.5c SourceCompletion→SourceDefinition31Data 装配路径（1 条）
+
+- GREEN `Mzk1P0SourceDataBridgeActual`（15:50:45Z）：from C + D4D9Supply + native input + hX + index equiv -> donorsOf -> NativeOriginalInputDonors；sourceData_arithmetic rfl。
+- 映射缺口：SourceCompletion clauses A-F 不直接给 D4D9Supply 的 selection/d4 cards/d5 frozen datum/orbicurve/sections/cusp/D9 五槽；精确最小缺失见 P0.5 map §9。
+## 2026-11-13 — P0.5d 论文输入包（1 条）
+
+- GREEN `Mzk1P0PaperInputActual`（15:57:24Z）：P05PaperInput = SourceCompletion + D4D9Supply + N8NativeInput + hX + index_equiv + place binding；导出 paperDonors/paperOriginalInput。
+- `PaperComparisonInput` 记录 q/theta 读数等式；`LPaperInstance_of_paperComparison` 条件转移 GREEN。
+- 唯一剩余桥：q 值识别 concreteQCandidate=qVFamily、theta Haar 归一化、V-index 同一性。
+## 2026-11-13 — P0.6 三个剩余桥（1 条）
+
+- GREEN `Mzk1P0ComparisonBridgesActual`（16:03:42Z）：QReadoutBridge/ThetaReadoutBridge/VIndexBridge、toPaperComparison、LPaperInstance_of_bridges。
+- q 桥不能无条件证：concreteQCandidate 与 qVFamily 是两个不同 Classical.choice；精确缺失=canonical q-choice/place transport。
+- theta 桥：factor 恒等式已有；精确缺失=Haar landing/归一化常数。
+- V-index：NativePlaces X.S vs FinitePrimePlace 2 7 类型/基数不同，无树内等价；精确缺失 VIndexBridge。
+## 2026-11-13 — #10 actual unitMass explicit factor（1 条）
+
+- `Mzk1NativeUnitMassActualFactorActual` **DONE 16:10:02Z（olean 58,392B）**：`actualUnitMassENN = rootExtensionProductHaar(unitBall)`；`actualUnitMassENN_eq_prod_rootUnitMass`（条件 `[∀b,SigmaFinite rootExtensionHaar]`）；`actualUnitMassENN_toReal_eq_prod`；`actualUnitMassENN=1 ↔ ∏_b rootUnitMass b=1`。
+- 结论：实际 unitMass 的显式因子是 `∏_b c_b`（c_b=local unit-ball mass）；`=1` 需该乘积=1，仍 GAP。blockEquiv inhabitant / NativeBadModuliFixedPrime 仍未构造。无 axiom/sorry。
+
+## 2026-11-14 — P0.6 q donor（1 条）
+
+- GREEN `Mzk1P0NativeQDonorActual`（16:10:03Z）：NativeQDonor = badPrimeSource + qVFamily q；donorQReadout=nativeQReadout rfl；旧 concreteQCandidate 不改。
+- 消费者切换：用 donor.source/donor.q；theta landing 与 V-index 仍为精确缺口。
+## 2026-11-13 — P2 批量包（R1.2/R1.3，6 文件全 green，abc）
+
+- `Mzk1P2RelativeMassActual` DONE 15:34:31Z：`p2RExact=Σ d_b(log‖λ‖−log‖qhat‖)=−Σ d_b log‖c‖≥0`；与 `c0RemainderV2` 的 `correction` 精确对齐（不假设相等）。
+- `Mzk1P2R13vsC0RemainderActual` DONE 15:49:54Z：`R−c0V2=correction` 与 `Σ d_b(2l log‖λ‖−log‖qhat‖)` 形式。
+- `Mzk1P2LabelBlockCompleteActual` DONE 15:54:42Z：实际秩一块四来源（sourceQ/sourceTheta/landing/weight），`Q=λc`、`Q∈λO`。
+- `Mzk1P2QNativeSourceArrowActual` DONE 15:29:01Z：native qVFamily 嵌入 = `qhat`；首个缺口 `P2QNativeReadingGap`（实数 log 读数未对齐）。
+- `Mzk1P2ThetaAllowedImageActual` DONE 16:22:05Z：实际 theta 值 ∈ λO；λ∈λO；ThetaLabel image ⊆ λO。
+- `Mzk1P2WeightedSumActual` DONE 15:49:55Z：`R = W_λ−W_qhat`；`W_qhat−W_λ=Σd log‖c‖`；`c0RemainderV2=−(2l−1)W_λ`。
+- 边界：缺失映射（native 实数 q 读数→qhat log 范数；theta 换根/单位允许像；旧 C3 tensorLanding 空类型 S1429；多索引落点）保持记录；未 fake。
+## 2026-11-14 — P0.6 剩余桥结论（1 条）
+
+- GREEN `Mzk1P0RemainingBridgeDataActual`（16:31:11Z）：VIndexDatum + nonempty iff。
+- V-index：NativePlaces X.S 与 FinitePrimePlace 2 7 类型/语义不同；只能作为 paper input V-strip 字段，不能从 T 构造。
+- theta：factor 恒等式已有；精确缺失=block landing + haar_scale=0。
+## 2026-11-13 — #10 unitMass factor / blockEquiv 状态（1 条）
+
+- `Mzk1NativeUnitMassActualFactorActual` **DONE 16:10:02Z（olean 58,392B）**：explicit `actualUnitMassENN = ∏ c_b`（conditional SigmaFinite）、toReal 因子、`=1 ↔ ∏c_b=1`。
+- `Mzk1NativeUnitMassNormalizedFactorActual` **DONE 16:38:23Z（olean 29,360B）**：记录 scalar `c⁻¹*actual=1` 由 factor 定理直接得；`c=1` 仍 GAP；条件 normalized product=1 已在 conditional 文件。
+- blockEquiv：P3 tensor core 给出 `ArithmeticTensorTupleBlock ≃ₐ ∏ E_j` 的存在性，但 C3 tensor place fiber 无 `Fintype/DecidableEq` 实例，且 `E_j` 与 S1902 `rootNormedExtension` 的逐 fiber 对齐未构造；blockEquiv inhabitant 仍 GAP。
+- NativeBadModuliFixedPrime：仍无 native 字段可证；精确输入=所有 Bad 模位固定 p。无 axiom/sorry。
+
+## 2026-11-14 — #10 unitMass 归一化 chain / blockEquiv 障碍（1 条）
+
+- green：`Mzk1NativeUnitMassNormalizedProofActual`、`Mzk1RootUnitMassCitizenActual`、`Mzk1DetHaarDegreeFactorActual`（c_ne_top/c_eq_one_iff/c_le_one_iff/DetHaarTransportData.apply）、`Mzk1UnitMassDetHaarConsumerActual`、`Mzk1ThetaRootNormalizedUnitMassActual`、`Mzk1ThetaRootCarrierHaarActual`；unitMass factor c=∏c_b，normalized citizen=1。
+- blockEquiv 障碍：`Mzk1BlockIndexObstructionActual`（card 不等 ⇒ 无 indexEquiv）、`Mzk1BlockProductAlignmentObstructionActual`（IsEmpty index ⇒ 无 alignment）、`Mzk1BlockAlignmentCardActual`（D 存在 ⇒ card J=card Bad）；旧 base-completion 张量版 finrank/cardinality 双阻塞，正确载体 ThetaRootCarrier；inhabitant 仍 GAP。
+
+
+## 2026-11-14 — P7 六缺口：弱比较构造与三平移路线（单线程）
+
+- 报告 coord/P7-SIX-GAPS-ROUTES-20261114.md，全文追加攻击计划；源码哈希见 dag/nodes/p7-six-gaps-route-assessment-20261114.json。仅相关源码及本地原文，无外部调研/Lean 改动/新构建。
+- A1 绕行草案：保留实际 tensor 因子，构造根格逆像 J=π_F^ceil(v_L(λ)/e)O_F；已有 q=λc、c 整给 qO_F⊆J，取整损失由实际整数赋值支付。下一步用原文允许像的有限生成元证书进入 paper hull，或算真实 determinant 界。后半未完成，不冒充原目标闭合。
+- 读数接入应使用有符号参照格 log，并证明原文符号/权重/offset 对应。当前 nativeTensorLogVolume/nativeLSideThetaReadout 经 ENNReal.toReal，不适合强行与负 log norm 精确识别。用户要求绕过该点推进，不以 no-go 为终点。
+- A4 已有 residueFieldEquiv→f=1；weight=1 还需 e=1/finite/agree。绝对 f 与相对 f 必须区分；一般路线保留 N(v)=p^f 与 degree weights。
+- A5 查重更正：S3139 partial quotient、etHT mutation 已有；标准模型 SourceProcessionCapsuleContract/SourceLGPData 也已有 inhabitant；全局 Fmod→Real 已被后续文件重分类，C1 actual infinite-place choice 已存在。真正待证是局部 source 对象/作用/允许像；S3138 profile 的 possibleImage 为单点集，不能据此宣布原文全部可能像已实现。
+- A6 新自然语言证明：实际根球半径<1，p 奇，H、1+H、2+H 两两不交且包含于 O。Haar 有限可加性给 ratio≤1/3；Bad 非空和乘积公式给当前 S1915 raw closed form≤1−log3<0，处理 disc=cond=1 的当前数值目标。未 Lean 检查，不能自动用于除以 D 的平均或扩大的 multiradial hull。
+- A7 复用已存在的逐 b/逐 p 模型，只给共同 Q_p tensor 做 prime fibers。A8 裸 BadThetaLabelMap 只有函数字段，常值 1 可填；缺的是原文标签语义，主线用 place-label/capsule 多指标及不变性。
+- 四项验收 NOT_RUN，P7/3.12 仍开放；未派发/改 owner。下一步实际单块收缩格与允许像证书，或 #9 三平移证明。历史保留，本条作修订与推进建议。
+
+## 2026-11-13 — P2 大波次收口（21 文件全 green，abc）
+
+- 21/21 watchdog DONE（18 proof + 3 status）；`Mzk1P2QReadoutBridgeActual` 断链完成；
+- **符号修正保留历史**：原 `-log‖qhat‖=localLogMagnitude` 为伪等式（两 norm instance 不同）；改为条件 `localLogMagnitude = -log‖c0QHat‖ + log(qVFamNormRatio)`，条件 `P2QHatNormInstanceAgreement`；旧结论不删除、以条件形式保留；
+- 实质新定理：`p2RExact_nonneg`、`p2RExact_eq_c0RemainderV2_add_correction`、`p2Coefficient_mem_unitBall`、`p2_labelBlockSum_qGen_mem`、`p2MultiIndexLanding_mem`、`p2Unit_mul_mem_integers`、`p2UnitOperation_norm_one`、`p2LabelWeight_eq_finrank`、`p2RootChange_oldC3_isEmpty`；
+- 仍未关闭：`P2QHatNormInstanceAgreement`（qVFamNormRatio=1）为显式条件；旧 C3 tensorLanding 空类型（S1429）不可用；实际 production 的 same-origin source/theta landing 未构造。
+
+## 2026-11-14 — IV 1.4：用 log 精确序列与有限 p-group 计数闭合局部公式的路线
+
+- 报告 coord/IUTIV-PROP14-TO-BOX-PLAN-20261114.md，节点 iutiv-prop14-to-box-plan-20261114。针对性本地查重及原文核对；不是全仓逐一定理审计。
+- 新构造证明草案：s=1(奇 p)/2(p=2)，Lambda=p^(-s)log(O^x)。已有 1→torsion→O^x/U_s→Lambda/O→0。DVR 单位商阶为 (q-1)q^(es-1)；任意 log 商元素被某个 p 幂杀死，故商阶 p^h。由实际扭元 p-primary 阶 p^m 得 h+m=f(es-1)。Haar p 缩放与 #O/pO=q^e 给 d=ef，故 log-volume=-(f+m)/(ef)*log p。未实现新 Lean 叶子，不能标闭合。
+- 剪枝事实：原文 IV Step V 明确使用 Prop1.4(iii) 第二条上界，不依赖 (ii) 的精确扭元公式。Iut Prop14Lattice 是待验证源码供体；现量词为 indAut=tensorAut，证明仅需 latticeAut，可提取推广。ShellBound 的 shell 定理多一个 distinguished-slot 误差，不能丢；建议用原文基准区域和统一最大阶容器。
+- 旧状态修正：1.3(ii) 已有 DifferentDegreeUpperBound + LocalDifferentUpperBound 实际局部域证明；1.5 已有 arch tensor 分解/度量；Section2 已有 theta<=1.3x+300 与原文所需 1.6/2.1(ii)。文件头旧 machine-gap 不再用于重派工作。
+- 接口注意：S3136BDClassChainToolActual.IsBDLe f g 字面为 g-f 有上界；IV Cor2.3 目标 RHS-height 有下界。复用时按定义反转参数/由 owner 联动修正，不按命名误接。未改该文件。
+- 保留真实 Box 的 -(l+1)Q/24、S、(l+5)T；A6 的项目 surrogate 仅在其原范围。四项验收 NOT_RUN，source possible-image/hull/readout 接入仍待证明；未宣称全局目标完成。
+
+<!-- p7-three-gaps-closure-20261114 -->
+
+
+## 2026-11-14 — 三缺口的构造路线与核验边界
+
+本 chat 单线程；记录 p7-three-gaps-closure-20261114。详见 coord/P7-THREE-GAPS-CLOSURE-20261114.md。
+
+- qhatHaarScaling 的实际供体是 S865.rootHaarFactor_normPow_actual + rootHaarFactor_eq_ratio + 实际单位球正有限性。独立初版 qhat_haar_scaling_actual 局部检查 green，公理仅 propext/Classical.choice/Quot.sound。后扩展版本曾遇 ENNReal.mul_pos API 错误；修正后用户要求停止编译，因此最终整文件未验证，不继承初版整体绿色状态。
+- 修正过强源需求：实际 W_F=O_F^×/tors 具有 p^n W_F 邻域基，代数群同态自动连续。此论证不扩张为任意 DPrimeStrip.G 的自动连续性。
+- 建议 beta_a 从 J_F=im(I_F -> G_F^ab)（非 I_F^ab）经实际单位 reciprocity 与群箭头导出；报告给 wild/tame characteristic 刻画及证明步骤。真实 tame realization 与单位 reciprocity 未证为现成供体，仍为内部源节点；备选有限 Kummer 路线同样显式保留 coefficient transport/unit-kernel/naturality 的证明责任。
+- 新的正向 S1902 主线：原文 I Def3.1 与 SourceClauseC 具有 E[2·3] 有理及 K 为 E[l] 核域；推 E[2l] 在 K/K_v 上有理。SourceClauseB 的实际 Tate 点商及等变性使 alpha^(2l)=q 的 Tate 点固定，从而 sigma(alpha)/alpha in q^Z cap mu_(2l)={1}，故 alpha in K_v。可取实际 root-extension 嵌入，而无需域等价；按各自真实次数归一化的 principal scalar log-volume 相等。
+- 数学路线未形式化的运输步骤：全局—局部 torsion、同源 q comparison、共同局部闭包；以及最终实际作用覆盖/Ind3/权重。未宣称 paper R<=Box、Cor3.12 或 ABC 已闭合。
+
+<!-- p7-711-automatic-continuity-review-20261114 -->
+
+## 2026-11-14 — §7.1 自动连续性争议复核
+
+任务 p7-711-automatic-continuity-review-20261114，owner 当前 chat root，阶段 1，自审。用户质疑实际 W_F≈Zp^d 可能有 wild 群同构。复核保留限定命题：固定同一 p、有限秩、两端标准 p-adic 拓扑时，任意群同态 Zp^d→Zp^e 均连续。完整证明与 Hom_Z(Zp^d,Zp^e)=Mat_(e,d)(Zp) 的无循环证明补入报告 §7.1.1；实际单位商使用已有 quotient-log homeomorphism 取得 p^n 邻域基。不将该结论用于未实化 DPrimeStrip 或任意 Qp 线性映射。四项机器验收 NOT_RUN，无编译，无源 beta inhabitant；保留原报告历史，新增审查说明。
+
+## 2026-11-13 — A2 norm-instance 收口（abc）
+
+- Green: `Mzk1P2QHatNormAgreementUnconditionalActual`（`p2QHatNormStandardAgreement_iff_ratio_one`、`p2QHatNormStandardAgreement_iff`）、`Mzk1P2QReadoutUnconditionalActual`（`p2QReadoutBridge_defaultNorm`、`p2QReadoutBridge_standardAgreement_iff`）、`Mzk1P2QHatNormRootBaseActual`（re-export）。
+- 精确等价：`qVFamNormalizedNorm = qVFamDefaultNorm ↔ qVFamNormRatio = 1`（= `PaperSourceCorrectionFreeFields.normRatio_one`，已知 source 条件，**非新 gap**）。
+- **重要区分**：`P2QHatNormInstanceAgreement`（`‖c0QHat‖ = qVFamNormalizedNorm`）**不是**上述 ratio 等价；`c0QHat` 范数为 normalized instance，`qVFamDefaultNorm` 为 adic instance，属 norm-instance coherence。探针（donor hq' calc）显示最后一个 `norm_algebraMap'` 的 RHS 实例与目标 adic 实例不同。
+- Donor `Mzk1P0QHatNormExponentActual` 已 revert（abc 在 Lead 授权下进行的 hq'/ring 改动已撤回），标记 obsolete；未用于任何新 olean。
+- 无条件结论仅：`localLogMagnitude(qVFamily) = -log(qVFamDefaultNorm)`（按定义）；不带 `qVFamNormRatio=1` 的 `‖c0QHat‖` 读数**未**声称。
+## 2026-11-13 — A2 最终状态（abc，只读检查 #1 norm-instance）
+
+- **A2 最终状态**：default/adic q 读数无条件（`p2QNativeReading_defaultNorm`、`p2QReadoutBridge_defaultNorm`）；标准 norm agreement 等价（`qVFamNormalizedNorm = qVFamDefaultNorm ↔ qVFamNormRatio = 1`，即 `PaperSourceCorrectionFreeFields.normRatio_one`）；**`P2QHatNormInstanceAgreement`（`‖c0QHat‖ = qVFamNormalizedNorm`）是独立 norm-instance coherence，未证**。
+- **#1 只读检查**：`Mzk1P0QThetaReadoutCorrespondenceActual.qhatLogReadout`（及 `Mzk1P0QHatHaarScalingActual.qhat_signed_readout_eq_log_norm`）由 `qhatHaarScaling` 证得 `= Real.log ‖c0QHat T b‖`，即 **normalized completion norm**；`S3137QThetaPilotLogVolumeReadingsActual.qPilotLogVolumeReading = -|Real.log ‖P.line.C3.q.q‖|`，即 **raw Completion 的 adic/default norm**（`‖q‖<1` 时为 `log(adic norm)`）。
+- **精确 norm-instance 缺口**：`qhatLogReadout - qPilotLogVolumeReading = Real.log (qVFamNormRatio)`（在同一 q 对象识别下）；两者一致 iff `qVFamNormRatio=1`，即已知 source 条件；不是新 gap，也不是可省略的符号。
+- 未写代码；仅读数。
+## 2026-11-13 — #1 norm-instance correction 精确关系（hull 文件 + 符号/权重核对，abc）
+
+- hull 独立文件：`tmp/sheaf/xif/paper/Mzk1P0QThetaReadoutNormCorrectionActual.lean`（2026-11-14 07:35 mtime；未见 watchdog DONE，暂按未验收记录）。
+- **点态精确关系**（hull 定理 `qhatLogReadout_sub_paperQ_eq_log_ratio`，条件 `‖c0QHat‖=qVFamNormalizedNorm`）：
+  `qhatLogReadout − paperQSignedReadout = Real.log (qVFamNormRatio)`；
+  其中 `paperQSignedReadout := -localLogMagnitude (qVFamily)`。
+- **符号核对（一致）**：我们的 `p2NativeQReading_eq_neg_log_qhat_add_ratio` 为
+  `localLogMagnitude = −log‖c0QHat‖ + log ratio`；两边取负得
+  `qhatLogReadout − paperQSignedReadout = log‖c0QHat‖ + localLogMagnitude = log ratio`（用 `qhatLogReadout = log‖c0QHat‖`），
+  与 hull 符号完全一致；无正负号冲突。
+- **权重核对（不一致，需保留区分）**：hull 全局式 `qhatLogReadoutGlobal − paperQSignedReadoutGlobal = Σ_b nativeBadLocalWeight_b * log ratio_b`；
+  `nativeBadLocalWeight = localNormalizedWeight = 1/[K_w : (F_mod)_v]`（**1/剩余次数 f**），
+  而 P2 R1.3 的质量权重是 `d_b = s1915LocalDegree b = Module.finrank ℚ_[p] (rootNormedExtension T b)`（**局部次数 [L:Q_p]**）。
+  因此 **hull 全局 Σw 与 P2 的 Σd 不是同一权重**；点态关系可互译，全局比较必须显式换权重（1/f vs d_b），不能把两式等同。
+- 结论：#1 signed q 读数差 = `log(qVFamNormRatio)`（条件 ratio=1）；符号一致；全局只在 hull 的 1/f 权重下成立。
+## 2026-11-13 — paperNormalized sums vs A1 product / 1/f vs d_b 换算（只读，abc）
+
+### paperNormalized 定义（BadPlacePaperNormalizedComparisonActual）
+- `paperNormalizedQPilotSum = Σ_b nativeBadLocalWeight_b * paperNormalizedCoefficient_b * log p_b`；
+- `paperNormalizedThetaSum = Σ_b nativeBadLocalWeight_b * (paperNormalizedCoefficient_b/(2l)) * log p_b`，故 **`paperNormalizedThetaSum = paperNormalizedQPilotSum/(2l)`**（逐项同权，精确）；
+- `nativeBadLocalWeight_b = localNormalizedWeight = 1/f_b`，`f_b = localCompletionDegree = finrank_{F_mod,v} K_w`。
+
+### A1 对象（Mzk1A1SignedReadoutProductActual）
+- `productQ_normalizedLog = Σ_b a1LocalQLog_b`，而 `a1LocalQLog_b = log μ(c0QLattice_b) − log μ(O_b)`；
+- 由 `qhatLogReadout = a1LocalQLog_b/d_b = log‖c0QHat_b‖`（normalized），得
+  `productQ_normalizedLog = Σ_b d_b * log‖qhat_b‖`；
+- `s1915ClosedForm − 1 = Σ_b d_b * log r_b`，`r_b = rootImageRadius_b`；
+- 由 `c_norm = paperCoeff − log ratio/log p`、`log‖qhat‖ = −c_norm log p`：
+  **`productQ_normalizedLog = −Σ_b d_b paperCoeff_b log p_b + Σ_b d_b log(qVFamNormRatio_b)`**。
+
+### 精确差异（结论：不是同一对象）
+1. **权重不同**：paper sums 用 `1/f_b`；A1 product/closed form 用 `d_b`；
+2. **符号/offset 不同**：`productQ` 是 `−d_b·paperCoeff·logp` 之和，并加 `Σ d_b log ratio`；paper sum 是 `+ (1/f_b)·paperCoeff·logp` 之和；
+3. `paperNormalizedThetaSum` 与 `paperNormalizedQPilotSum` 仅差 `1/(2l)`；与 `s1915ClosedForm−1` 无一般等价（`log r` vs `paperCoeff·logp/(2l)` 不同对象）。
+
+### 1/f 与 d_b 的精确换算（只读结论）
+数学上 `d_b = s1915LocalDegree b = Module.finrank ℚ_[p] (rootNormedExtension T b) = [L_b:Q_p] = n_b · e_b · f_b`，其中 `n_b=[L_b:K_b]`，`e_b` 为 `K_b/Q_p` 分歧指数，`f_b=localCompletionDegree`。故
+`nativeBadLocalWeight_b = 1/f_b = n_b·e_b / d_b`，即 `d_b · nativeBadLocalWeight_b = n_b · e_b`。
+仓库现有 FINITE/AGREE 只给 `f_b = relativeCompletionDegree`；**没有** `e_b`/`n_b` 的 source 数据或定理，故 1/f 与 d_b 不能由现有定义直接换算为常数；逐 b 需 `e_b,n_b`。
+只有特殊情形 `f_b=1`（如 `localCompletionDegree_eq_one_of_unram_residue` 条件）才有 `nativeBadLocalWeight=1`，仍不等于 `d_b`（除非 d_b=1）。
+
+### 与 strict 的关系
+`PaperXiFTargetStrict := normRatioCorrectionSum=0 ∧ halfNormRatioCorrectionSum=0 ∧ thetaHullCoefficientCorrection=0`；其 `paperNormalizedComparison_exact_of_strict` 只在 **paper 的 1/f 权重**下给出 `thetaSum ≤ qPilotSum`，与 A1 的 `d_b` 权重式不是同一比较；不得直接互译。
+## 2026-11-13 — `actualPaperXiFTarget` 的模型依赖（只读，abc）
+
+- `PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget : ActualPaperXiFTarget T` 的证明：`unfold ActualPaperXiFTarget` → `actualQPilotSigned_eq_globalQPilotLog`、`actualThetaHullLogRoot_eq_globalThetaHullLog` → **`PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog`**；
+- 该模型：`perBQPilotLog` 用 `rootNormCoefficient = qVFamNormalizedCoefficientFamily`（= **c_norm**）；`perBThetaHullLog` 用 `rootHalfCoefficient = c_norm/(2l)`；全局权重 `nativeBadLocalWeight = 1/f_b`；每 b 不等式来自 `qPilotNormLog_le_rootNormHullLog`（normalized norm 模型）；
+- 因此 `actualPaperXiFTarget` 是 **proof-local normalized c_norm 模型**下的 `Σ(1/f)·qPilot ≤ Σ(1/f)·ThetaHull`，**不是**原文 paper 对象：
+  * 不含 `paperNormalizedCoefficient`（paper 版 = c_norm + log ratio/log p，差 norm-ratio 修正）；
+  * 不含 `paperNormalizedQPilotSum/paperNormalizedThetaSum`（其系数是 paper coeff）；
+  * 不是 `PaperXiFTargetStrict`/`paperNormalizedComparison_exact_of_strict` 的 strict 条件版；
+  * 不是 3.12 的 Q≤Theta 原文陈述。
+- 结论：不得把该 GREEN 当作 3.12 或 paper-level Q≤Theta；它只是 c_norm/(2l) 模型的 target 组装。若需要原文对象，必须补 `paperCoeff − c_norm = log ratio/log p` 修正与 1/f↔d 权重换算。
+## 2026-11-13 — 权重语义更正（Lead 核对，abc 记录）
+
+**更正**：`nativeBadLocalWeight = localNormalizedWeight = 1/[K_w : F_v] = 1/(e_w · f_w)`，其中 `[K_w:F_v]` 是**完备局部域在 F_v 上的次数 e·f**，不是剩余次数 f。此前 ledger/A2 中“1/f”表述**作废**（保留历史条目不改，以本条为准）。
+
+- `s1915LocalDegree b = [L_b : Q_p]`（`Module.finrank ℚ_[p] (rootNormedExtension T b)`）；
+- `n_b := [L_b : K_w]`（根扩张次数）；若基域 `F_v = Q_p`，则 `d_b = s1915LocalDegree = n_b · [K_w:Q_p] = n_b · e_w · f_w`；
+- 精确换算：**`nativeBadLocalWeight_b = 1/(e_w·f_w) = n_b / d_b`**，即 `d_b · nativeBadLocalWeight_b = n_b`（取代此前 `n_b·e_b` 表述）；
+- `Σ_b nativeBadLocalWeight_b · log ratio_b` 的符号/可加性结论**不受影响**：该式逐 b 仍为权重乘 `log ratio_b`；只是权重数值语义由 1/f 更正为 1/(e·f)。
+- 与 A1 `d_b` 权重的关系：paper 权重 `1/(e·f)` 与 A1 权重 `d_b` 相差因子 `d_b·weight = n_b`；两者不可混用，跨线比较需显式换算（历史条目中 `1/f↔d` 的数值换算同步作废）。
+## 2026-11-13 — 权重换算的 degree tower 可行性核对（只读，abc）
+
+- **tower 方向已确认（现有 green 探针）**：`Mzk1A1TensorProdProbeActual.rootNormedExtension_finrank_tower`（olean=True）证明
+  `Module.finrank ℚ_[p] (rootNormedExtension T b) = Module.finrank ℚ_[p] (rootBase T b) * Module.finrank (rootBase T b) (rootNormedExtension T b)`；
+  即 `[L_b:Q_p] = [F_v:Q_p] * [L_b:F_v]`（`rootBase = sourceRootField = NormalizedCompletion(qVFamTensorPlace)`，是 **F-place 的完备化**）。实例链：`NormalizedCompletion` 的 `NormedAlgebra ℚ_[p]` → `Algebra ℚ_[p] rootBase`；`IntermediateField` 给 `Algebra rootBase rootExtension`；继承 `Algebra ℚ_[p] rootExtension` 与 `IsScalarTower`；两侧 `FiniteDimensional` 由 `rootNormedExtensionFiniteDimensional` / `rootNormedExtensionFiniteDimensionalQp` 提供。故 tower 步骤可由 `rw [Module.finrank_mul_finrank]` 直接证（探针已 green）。
+- **但 `weight = n_b/d_b` 的最终换算还需要 F_v 与 K_w 的 local-degree 兼容**：
+  `nativeBadLocalWeight = 1/localCompletionDegree(nativeBadToKPlace) = 1/[K_w:Q_p]`（**K-place**），
+  而 `d_b = s1915LocalDegree = [L_b:Q_p]` 以 **F-place** `qVFamTensorPlace` 为基（`rootBase = F_v`）。
+  tower 只给 `d_b = [F_v:Q_p]·[L_b:F_v]`；要得到 `d_b = n_b·[K_w:Q_p]`（从而 `weight=n_b/d_b`）还需
+  `[K_w:Q_p] = [F_v:Q_p]`（或 root extension 以 K_w 为基/`L_b` 与 `K_w` 的局部等同）。
+  该 K/F 局部兼容**当前定义中没有直接定理**；不是 tower 定理本身能单独给出的。
+- 结论：塔方向/实例 OK，tower 部分不再是 GAP；`weight_conversion` 的剩余单点是 F_v ↔ K_w 的局部次数/基域兼容（若 source 数据已有 `F=K` 或 `[K_w:Q_p]=[F_v:Q_p]`，即可由现有实例补齐）。
+## 2026-11-13 — P2QHatNormInstanceAgreement 定义/bridge 条件一致性只读核对（abc）
+
+- `Mzk1P2QNativeReadingCorrectedActual`（GREEN 23:49:11Z，olean=True）定义：
+  `def P2QHatNormInstanceAgreement : Prop := ∀ b, ‖c0QHat T b‖ = qVFamNormalizedNorm T b`；
+- 同文件 `p2NativeQReading_eq_neg_log_qhat_add_ratio` 的假设就是**逐 b 同一等式** `h : ‖c0QHat T b‖ = qVFamNormalizedNorm T b`；`p2NegLogQhat_eq_localLogMag_sub_ratio` 同假设，结论 `-log‖qhat‖ = localLogMagnitude − log ratio`；**定义与 bridge 条件逐字一致，无隐藏假设/无更强条件**；
+- 文件头已明确：该 agreement 是 **independent c0QHat norm-instance coherence**，**NOT equivalent to `qVFamNormRatio=1`**（S45 source condition），不得合并；
+- `Mzk1P1PaperSumsToS3137BridgeActual`：`def QHatNormCoherence := P2QHatNormInstanceAgreement T`，行表标 `EXPLICIT CONDITION`（未声称已证）；同文件另列 `RootBaseCompletionGap`（rootBase = K 的 bad K-place 完备化）与 `PaperToS3137A1Data` 为 EXPLICIT GAP —— 与前述 F_v↔K_w tower 兼容 caveat 一致；
+- 结论：green 文件自洽；A2 仍以 “standard agreement 等价（normalized=default ↔ ratio=1）+ c0QHat norm-instance agreement 条件未证” 记录，无误标。
+## 2026-11-14 — `Mzk1P0QThetaReadoutCorrespondenceActual` GREEN 00:34:54Z 只读核对（abc）
+
+- **权重**：该文件全局式用 **`d_b = s1915LocalDegree = [L_b:Q_p]`**：`c0ProductQ_normalizedLog = Σ_b d_b * log‖c0QHat_b‖`（`c0ProductQ_normalizedLog_eq_sum_qhat_actual`），以及 `Σ_b d_b * qhatLogReadout_b ≤ s1915ClosedForm − 1`（`sum_degree_qhatLogReadout_le_closedForm_sub_one`，无条件）；**未使用** `nativeBadLocalWeight = 1/[K_w:F_v]`（paper weight）。
+- **条件状态**：`qhatHaarScaling` 已由 `qhatHaarScaling_actual`（S865 `qhat_haar_scaling_actual`）无条件给出；`qhatLogReadout_eq_log_norm` 无条件；局部定义 `qhatLogReadout = (1/d_b)·log(μ(c0Q)/μ(O))`，故 `a1LocalQLog = d_b·qhatLogReadout`。
+- **两条件分离确认**：
+  1. qhat Haar scaling：本文件已无条件关闭（不再是 GAP）；
+  2. `P2QHatNormInstanceAgreement`（`‖c0QHat‖ = qVFamNormalizedNorm`）：本文件不使用、也未证，作为独立条件保留；
+  3. paper weight `1/[K_w:F_v]` 与 `d_b` 的换算：本文件不涉及；由 `RootBaseCompletionGap`（rootBase = K 的 bad K-place 完备化）单独记录。
+- 结论：该 GREEN 只是在 **d_b 权重 + normalized c0QHat** 下的 qhat 全局对应；不能当 paper weight sum；两条件分离无误标。
+
+### `Mzk1P0QThetaReadoutNormCorrectionActual` 预期形式（当前 FAIL，非本 lane 文件）
+- 预期（与 hull 设计一致）：点态 `qhatLogReadout − paperQSignedReadout = log ratio`（条件 `hnorm`）；全局两种权重：`nativeBadLocalWeight=1/[K_w:F_v]` 版本与 `s1915LocalDegree=d_b` 版本，分别 `Σ w log ratio`；
+- 当前首错：`:128` `sum_degree_qhatLogReadout_le_closedForm_sub_one` 需要 `[∀ b, MeasurableSpace (qVFamTensorBlock T b)]` / `[∀ b, BorelSpace ...]`，NormCorrection 未声明 → synthInstanceFailed；`linarith` 失败是 hbound 未能 elaborate 的后果，方向本身正确（`paper = qhat − Σdlogratio ≤ closed−1−Σdlogratio`），不需要额外符号假设；
+- 修复建议：把 measurable/Borel instance 变量补进 NormCorrection 的 section（与 Correspondence 相同）；不涉及本题 lane 文件改动。
+## 2026-11-14 — S45 条件 donor 只读搜索（abc）
+
+### ① `RootHullScalingFormulaAt` / `qVFamNormRatio=1`：**无无条件定理**
+- `RootHullScalingFormulaAt` 定义见 `BadPlaceThetaHullCorrectionFormulaActual:85`；现有定理均为**条件**：
+  * `BadPlaceRootHullScalingFormulaActual.rootHullScalingFormulaAt_of_halfScalingData (G : RootHullHalfScalingDataGap T b)`；
+  * `BadPlaceHalfRootSupplyActual.rootHullScalingFormulaAt_of_halfRoot (R : HalfRootInCompletion) (hull_eq : ...)`；
+  * `Mzk1Stage4HullScalingFormulaConsumerActual.stage4_hull_scaling_formula` 同条件；
+  * `PaperSourceCorrectionFreeFields.rootHull_scaling` 是 structure **字段/假设**，不是定理；
+- `qVFamNormRatio T b = 1`：所有命中均为**等价/条件/命名条件**：
+  * `BadPlaceSourceFieldsObstructionActual.qVFamNormRatio_eq_one_iff_norm_eq`（ratio=1 ↔ normalized=default）；
+  * `S109/S118/S92`：ratio=1 ↔ valuation/degree 条件；
+  * `BadPlacePaperNormalizedActual.NormRatioOneSourceCondition := ∀ b, ratio=1`（Def）；`PaperSourceCorrectionFreeFields.normRatio_one`（字段）；
+  * `Mzk1P2QHatNormAgreementUnconditionalActual.p2QHatNormStandardAgreement_iff_ratio_one`（等价）；
+- **结论：仓库中没有无条件证明 `RootHullScalingFormulaAt` 或 `qVFamNormRatio=1`；二者均为 S45 source conditions。**
+
+### ② norm instance 来源与 `QHatNormCoherence`
+- `qVFamNormalizedNorm := ‖qVFamNormalizedGenerator‖`，generator 类型 `CommonPrimeCompletion (qVFamTensorPlaces T b () ()) = NormalizedCompletion (qVFamTensorPlace T b).val`；norm 实例 `commonPrimeCompletionNormedField := inferInstanceAs (NormedField (NormalizedCompletion place.val))` = `normalizedCompletionNontriviallyNormedField`（**normalized/spectral**）；
+- `qVFamDefaultNorm := ‖(qVFamily T b).q‖`，`qVFamily : FinitePlaceQCandidate ((nativeBadLift T).lift b)`，`q` 在 `Completion ((nativeBadLift T).lift b)`，norm 为 **adic/default** `instNormedFieldValuedAdicCompletion`；
+- `c0QHat` 的范数经 `rootNormedExtension`/`rootNormedAmbient` 的 `NormedAlgebra (NormalizedCompletion (qVFamTensorPlace))` 继承 → **normalized**；
+- 已证 coherence：`Mzk1P2NormalizedCompletionNormCoherenceActual.commonPrimeCompletion_norm_eq_normalized`（normalized vs CommonPrime normalized，rfl 级）；
+- **结论（`QHatNormCoherence` = `‖c0QHat‖=qVFamNormalizedNorm`）**：数学上是同一 normalized completion norm 的 coherence，**预期可证**，不是新数学条件；但仓库尚无完成 Lean 证明：直接 `norm_algebraMap'` 的实例搜索在当前形式下会产生 adic/normalized 选择歧义（探查记录：donor hq' 出现 isDefEq timeout/type mismatch）。需要显式 `letI := normalizedCompletionNontriviallyNormedField` + `change`/显式 `@norm` 的桥，而不是 `rfl`。
+- **与 `QVFamNormInstanceGap` 区分**：`QVFamNormInstanceGap` 是 normalized=default（= ratio=1）；`QHatNormCoherence` 是 c0QHat=normalized；前者是 source condition，后者是 instance coherence，**不可混同**。
+## 2026-11-14 — `Mzk1P0QThetaReadoutNormCorrectionActual` GREEN 00:57:51 核对（abc）
+
+### 定理/权重/条件（逐个）
+1. `qhatLogReadout_eq_log_norm`：`qhatLogReadout = Real.log‖c0QHat‖`，**无条件**（经 Correspondence→S865）；
+2. `qhatLogReadout_sub_paperQ_eq_log_ratio (h : ‖c0QHat T b‖=qVFamNormalizedNorm T b)`：`qhatLogReadout − paperQSignedReadout = log(qVFamNormRatio)`，**点态 + hnorm 条件**；
+3. `qhatLogReadoutGlobal_sub_paperQ_eq_sum_log_ratio (h : ∀ b, hnorm)`：权重 **`nativeBadLocalWeight = 1/[K_w:F_v]`**（paper weight），`Σ w·log ratio`；
+4. `qhatLogReadoutDegreeGlobal_sub_paperQ_eq_sum_degree_log_ratio (h : ∀ b, hnorm)`：权重 **`s1915LocalDegree = d_b`**，`Σ d_b·log ratio`；
+5. `paperQDegree_le_closedForm_sub_one_sub_correction (hnorm)`：`paperQDegreeGlobal ≤ (s1915ClosedForm−1) − Σ d_b log ratio`；
+6. `paperQDegree_le_closedForm_sub_one_of_fields (S : PaperSourceCorrectionFreeFields) (hnorm)`：`paperQDegreeGlobal ≤ s1915ClosedForm−1`（ratio=1 与 root scaling 由 S 提供）。
+
+结论：两种权重**分别**使用、未混用；条件分离清楚：qhat scaling 无条件；`hnorm`（c0QHat norm agree）独立条件；`S45SourceFields/PaperSourceCorrectionFreeFields` 只在 (6) 使用。
+
+### 实际源一致性
+- `qhatLogReadout` 是 `Mzk1P0QThetaReadoutCorrespondenceActual.qhatLogReadout` 的 abbrev，**名实一致**；
+- **但 `paperQSignedReadout := -localLogMagnitude (qVFamily T b)`，不是字面 `S3137QThetaPilotLogVolumeReadingsActual.qPilotLogVolumeReading P = -|log‖P.line.C3.q.q‖|`**；两者等同需要 **same-origin q 识别**（`qVFamily` ↔ `P.line.C3.q`）与 adic norm 一致，本文件未证、也未假设；此属独立 gap（与 1/[K_w:F_v] vs d_b 权重无关）。
+
+### 最终 S3137 目标 axiom probe 清单（供主 lane 用 `#print axioms`）
+- **Correspondence**（GREEN）：`qhatLogReadout_eq_log_norm`、`c0ProductQ_normalizedLog_eq_sum_qhat_actual`、`sum_degree_qhatLogReadout_le_closedForm_sub_one`；
+- **NormCorrection**（GREEN 00:57:51）：上列 6 个定理；
+- **A1 product**（GREEN）：`productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta`、`productQ_normalizedLog_le_closedForm_sub_one`；
+- **Dictionary/bridge**（`Mzk1P1PaperSumsToS3137BridgeActual`，当前 **FAIL/无 olean**，暂不可 probe）：`paper_sum_weight_eq_inv`、`paper_coefficient_degree_factor`；及 Def `S45SourceFields`、`QHatNormCoherence`、`RootBaseCompletionGap`、`PaperToS3137A1Data`；
+- **Assembly**（GREEN）：`cor312_of_s3137Comparison`、`cor312_of_s3137Membership`；
+- **S3137 target**：`S3137QThetaPilotLogVolumeReadingsActual.qThetaPilotLogVolumeComparison`/`_iff`（文件无 watchdog entry，但 olean 存在）；`Mzk1S3137ComparisonAttemptActual` 当前 FAIL/无 olean，暂不可 probe。
+- 注意：bridge/comparison-attempt 未 green 前，最终 `#print axioms` 只能覆盖 Correspondence+NormCorrection+A1+Assembly，不能宣称 S3137 全链闭合。
+## 2026-11-14 — L 侧 `LQThetaSourceArrow` donor 只读搜索（abc）
+
+目标：`Mzk1P0LPaperInstanceActual.LQThetaSourceArrow` 的两字段 `q_mem_thetaRegion` / `normalization_eq`。
+
+### `q_mem_thetaRegion`（tensorUnit ∈ actualC3LogShellTensorRegionL）
+- `Mzk1P0LQThetaMemActual`（GREEN）：`def qComponentMemGap := ∀ i, q.q ∈ actualC3LogShellL i`；`theorem tensorUnit_mem_thetaRegion_of_qComponentMem (hq : qComponentMemGap)` 条件证出目标 membership；**无无条件版**；
+- `Mzk1P0LQThetaComponentActual`（当前 **FAIL/无 olean**）：`tensorUnit_mem_thetaRegion_conditional (h : qComponentMemGap)` 同条件；另 `CommonPrimeNormInstanceCompat`（HeightOne/CommonPrime norm 兼容）与 `thetaRegion_nonempty_actual`（只有非空）；
+- 结论：membership 不能由现有 green donor 直接给出；精确缺口是 `qComponentMemGap`（逐局部 log-shell 的 q 成员）及其 norm-instance 兼容。
+
+### `normalization_eq`（thetaReadActual = log‖q.q‖）
+- `Mzk1P0LThetaMeasureReadActual`（GREEN）：`thetaReadActual = log(Haar measure of actual tensor region)`（raw measure，非 norm）；
+- `Mzk1P0LReadoutLogActual`（GREEN）：`qReadActual = log‖q.q‖`（q 侧，非 theta）；
+- `Mzk1P0LNormalizationActual`（GREEN）：**`def lThetaNormalizationGap : Prop := thetaReadActual = log‖q.q‖`**（就是目标；未证）；`lThetaNormFactor := thetaReadActual − log‖q.q‖`；`LThetaNormalizationData` 仅 tautological；
+- `Mzk1P0LNormalizationFactorActual`：`normalizationEqGap := lThetaNormalizationGap`；`explicitNormFactor := lThetaNormFactor`；
+- `Mzk1P0LNormalizationBridgeActual`（当前 **FAIL/无 olean**）：`C0NormalizationBridge.normalization_eq : thetaReadActual = log‖q.q‖ + log unitMass`，即需 `unitMass=1`；`Mzk1P0LHaarUnitBallActual.unitMassOneGap : actualUnitMass = 1`；
+- `Mzk1P0LNormalizationSignActual`：只有 `lThetaNormFactor = thetaReadActual − logNorm`（rfl）和不等式 `−qReadActual ≤ factor`（theta≥0），**不是 equality**；
+- 结论：无 donor 直接证明 `normalization_eq`；精确缺口 = `lThetaNormalizationGap`（或 `C0NormalizationBridge` + `unitMassOneGap`）。
+
+### Arrow 组装状态
+- `Mzk1P0LQThetaArrowActual`/`...FinalActual`（GREEN）：只定义 `ArrowMissing`/`arrowGapFinal := LQThetaSourceArrowMissing`，**没有构造 arrow**；
+- `Mzk1P0NativeLQThetaArrowActual`：rows 明确 “not proved here”。
+
+### 可复用 green donor 清单（不能单独闭合 arrow）
+`Mzk1P0LPaperInstanceActual`（qRead/thetaRead 定义、`LPaperInstance_of_theta_nonneg`）、`Mzk1P0LThetaMeasureReadActual`（theta=log measure）、`Mzk1P0LReadoutLogActual`（q=log norm）、`Mzk1P0LNormalizationActual`（gap/factor 定义）、`Mzk1P0LNormalizationFactorActual`、`Mzk1P0LNormalizationSignActual`（不等式）、`Mzk1P0LQThetaMemActual`（成员条件定理）、`Mzk1P0LHaarUnitBallActual`（unitMassOneGap）。
+
+**结论：L 侧 donor 只把两个 arrow 字段化归为 `qComponentMemGap`（+norm compat）与 `lThetaNormalizationGap`/`unitMassOneGap`；没有可消费的无条件构造。**
+## 2026-11-14 — `Mzk1P0LNormReadoutActual` unit-mass/normalized Target 只读审计（abc）
+
+### 定义对照
+- **L 新对象**（`Mzk1P0LNormReadoutActual`）：
+  * `actualUnitBallL := {x | ∀ i, ‖x i‖ ≤ 1}`（L tensor block 的逐坐标闭单位球）；
+  * `actualUnitMassL := (actualC3LogShellTensorHaarL (C3LAt) actualUnitBallL).toReal`；而 `actualC3LogShellTensorHaarL = Measure.addHaar`（**未归一化加性 Haar**）；
+  * `thetaNormReadL := actualC3LogShellTensorLogVolumeL − log actualUnitMassL`；
+  * `LNormComparisonTarget := qReadActual ≤ thetaNormReadL`。
+- **旧对象**：
+  * `Mzk1C3S1902UnitMassCitizenActual.actualUnitMass := (s1915UnitMass T).toReal`；
+  * `S1915ThetaHullA0Actual.s1915UnitMass := rootExtensionProductHaar (rootExtensionProductUnitBall)`（rootExtension 的**乘积单位球** Haar，`rootExtensionProductHaar` 是一族 Haar 的乘积，仍含任意缩放）。
+
+### 关系结论
+- 新 `actualUnitMassL` 与旧 `actualUnitMass`/`s1915UnitMass` **没有现成等式定理**；概念上都是“单位球 Haar 质量”，但载体不同（L tensor block vs rootExtension product）且 Haar 归一化未固定。
+- `Measure.addHaar` 在每处任意乘正常数；L 的 `actualUnitMassL` 因此**非 canonical**；旧的 `s1915UnitMass` 同样取决于 `rootExtensionProductHaar` 的未定缩放。两者至多相差一个由 block equivalence + 每因子 Haar 缩放决定的乘积常数，需显式 bridge 才可比较。
+- **`thetaNormReadL` 是 canonical 形式**：它是 `log(Haar(region)/Haar(unitBall))` 的比（`thetaNormReadL_eq_log_div` 在正性条件下），对全局 Haar 缩放 `Haar ↦ c·Haar` 分子分母同乘 `c`，**值不变**；因此 normalized target 是唯一不依赖 Haar 归一化的形式。
+- `unitMass=1` 在一般情形是**假 GAP**（无 normalized unit-ball mass 定理，见 `Mzk1C3S1902UnitMassCitizenActual` rows 与 `LNormReadoutActual` rows）；故旧 raw target 不 canonical，normalized target 才是正确比较对象。
+- 文件内的条件关系：`qRead_le_thetaRead_of_normTarget` 需 `log(actualUnitMassL) ≥ 0` 才能从 normalized target 推到旧 raw target；不是无条件等价。
+## 2026-11-14 — L product readout vs 局部 LPaperInstance / S709+S305 链只读审计（abc）
+
+### 1) `Mzk1P0LNormReadoutProductActual` 全局对象 vs L 局部对象
+- 全局签名：`thetaNormReadProduct (T : SourceNativeInitialThetaData) [Fintype (Bad (nativePlaceSelection T))] : Real`；
+  `thetaNormReadProduct_eq_sum : = Σ_{b : Bad} d_b * log r_b`；`thetaNormReadProduct_eq_closedForm_sub_one : = s1915ClosedForm − 1`；
+  基于 **product space** `rootExtensionProductHaar`、全局 `Bad` 求和。
+- L 局部签名：`Mzk1P0LPaperInstanceActual.LPaperInstance (I : OriginalInput) (place) : Prop := LPaper312Statement (C3LAt I place) (C3LAt I place)`；`LNormComparisonTarget := qReadActual ≤ thetaNormReadL`；单 place、`SourcePilotRegionDataL` 的 `tensorIndex`、`actualC3LogShellTensorHaarL = Measure.addHaar`。
+- **无定理连接两者**。需要显式 bridge：
+  a. **输入/索引 bridge**：`T ↔ I`（native `SourceNativeInitialThetaData` vs `OriginalInput`）与 `Bad (nativePlaceSelection T) ↔ (C3LAt I place).tensorIndex`（或 L `tensorPlaceIndex`）；现有 `Mzk1P0LSourceIdentActual.core_eq` 只在 I 内部（actualSourcePilotRegionDataL core），**不连到 T**；
+  b. **global/local bridge**：全局 Σ_b 与单 place 局部目标的匹配（需限定单个 b 或对 L index set 求和并识别）；
+  c. **测度/载体 bridge**：`rootExtensionProductHaar`（product）vs `actualC3LogShellTensorHaarL`（tensor `Measure.addHaar`）；normalized ratio 的缩放不变性只在同一 block equiv + 同 scaling 下成立，现无 bridge 定理；
+  d. **q same-origin bridge**：L `(C3LAt).q` vs `qVFamily q`。
+- 结论：`thetaNormReadProduct` 与 `LPaperInstance` **对象不匹配**，必须显式 `LToProductReadoutBridge`（index/measure/q 三字段）；当前无 donor。
+
+### 2) S709/S305 rootImageRadius-qhat 链
+- `S709RootImageRadiusFormulaActual`：`rootImageRadius_eq_rootNorm : r_b = rootNormedElementNorm`；`rootImageRadius_eq_p_rpow : r_b = p^{-c_norm/(2l)}`；
+- `S305SingleLambdaNormActual.rootNormedElementNorm_pow_twoL_eq_qVFamNormalizedNorm`：`rootNormedElementNorm^{2l} = qVFamNormalizedNorm`；
+- ⇒ **`qVFamNormalizedNorm = r_b^{2l}`，`log r_b = (1/(2l)) log(qVFamNormalizedNorm_b)`**；
+- 又 `c0Alpha = qrootElem = qrootUnit = rootNormedUnit = rootNormedElement`，`c0QHat = c0Alpha^{2l}`；由 `norm_pow` 得 **`‖c0QHat‖ = r_b^{2l} = qVFamNormalizedNorm_b`** —— 这是 **`QHatNormCoherence` 的 proof route**（避免 `norm_algebraMap'` 实例搜索；具体签名 `c0Alpha`/`qrootElem`/`rootNormedUnit` 均 rfl）。
+- 由此 `thetaNormReadProduct = Σ_b d_b log r_b = (1/(2l)) Σ_b d_b qhatLogReadout_b = (1/(2l)) * productQ_normalizedLog`（用 Correspondence `productQ=Σd qhat` 与 S305 rfl 链）；
+- 结合 NormCorrection：`qhatLogReadout = paperQSignedReadout + log ratio`，得 `Σd log r = (1/(2l))(Σd paperQ + Σd log ratio)`；
+- **能否界住 qRead**：需要 (i) same-origin q（qVFamily ↔ C3LAt.q）与 (ii) ratio correction 符号/零化；无这两条时只能给上述**等式**，不能给 `Σd log r ≤ Σd qRead` 类型界。仓库当前无该无条件界。
+- 一致性：`sum_degree_qhatLogReadout_le_closedForm_sub_one` 与 `qhat = 2l log r`、`closed−1 = Σd log r ≤ 0` 相容（2l>1 ⇒ Σd qhat=2l(closed−1) ≤ closed−1）。
+## 2026-11-14 — `Mzk1P0LNormComparisonConditionalActual` hobj/hlock/hbound 分离只读核对（abc）
+
+- 文件三定理签名：
+  * `LNormComparisonTarget_of_bounds (hobj : LGlobalLocalObjectLock T) (hlock : thetaNormReadL I place = thetaNormReadProduct T) (hbound : qReadActual I place ≤ thetaNormReadProduct T) : LNormComparisonTarget I place`；
+  * `LNormComparisonTarget_of_local_bound (hobj) (hbound : qReadActual ≤ thetaNormReadL) : LNormComparisonTarget I place`；
+  * `LPaperInstance_of_bounds (hobj) (hlock) (hbound) (hlog : 0 ≤ log(actualUnitMassL)) : LPaperInstance I place`。
+- **关键发现：`hobj` 在三定理中均未被使用**（proof 只 `unfold`/`rw [hlock]`/`exact hbound`；`hobj` 只被透传）。
+- `LGlobalLocalObjectLock`（`Mzk1P0LNormReadoutProductActual:98`）字段只有 `bad_set_finite : Fintype (Bad ...)`、`single_place : Prop`、`local_eq_global_restriction : single_place` —— **没有 T.arithmetic ↔ I.initial.arithmetic 或 Bad ↔ tensorIndex 的实际映射**，因此它不是 object lock，只是命名占位；`Nonempty` 也几乎不提供信息。
+- 逻辑内容分离（实际）：
+  * `hlock`：局部 normalized readout = 全局 product readout（强等式，未由定义推出）；
+  * `hbound`：数值不等式（global 或 local 版）；
+  * `hlog`：`log(actualUnitMassL) ≥ 0`，仅用于回到旧 raw target；
+  * `hobj`：**vacuous/decorative**，不缩小对象缺口；`unitMass=1` 未使用。
+- 因此真正的对象匹配缺口仍完全开放，需要**实际 map** 的 bridge（T↔I、Bad↔tensorIndex、product Haar↔tensor addHaar、q same-origin），而不是现有 `LGlobalLocalObjectLock`。
+- L 侧最终条件签名（当前文件）：`LGlobalLocalObjectLock T`（弱/未用）、`thetaNormReadL = thetaNormReadProduct`、`qReadActual ≤ thetaNormReadProduct`、`0 ≤ log(actualUnitMassL)` → `LPaperInstance`；其中后三条是实际逻辑条件，第一条应删除或加强。
+## 2026-11-14 — QHat/Gamma axiom probe 与最终 S3137 条件版状态（abc）
+
+### 公理 probe 结果（watchdog DONE）
+- `Mzk1P2QHatAxiomProbeActual` **DONE 01:18:09Z**（2 项）：`qHatNormCoherence_proved`、`p2QHatNormInstanceAgreement_proved` 均只依赖 `[propext, Classical.choice, Quot.sound]`；
+- `_ProbeGammaAxioms.lean` **DONE 01:20:29Z**（3 项）：`integralLogShell_pow_smul_mem_integers`、`isPGroup_logShellIntegerQuotient`、`card_gamma_eq_pow_actual` 均只依赖同样三公理；
+- 支撑：`Mzk1P2QHatNormCoherenceProofActual` **DONE 01:13:14Z**（`qHatNormCoherence_proved : ‖c0QHat T b‖=qVFamNormalizedNorm` via `norm_pow` + S305；`p2QHatNormInstanceAgreement_proved`），**A2 的 QHat condition 已无条件关闭**（此前条件版可退役为历史）。
+
+### 最终 S3137 条件版（`Mzk1P0FinalS3137ConditionalActual`）状态
+- `finalPaperNormalizedComparison (S : S45SourceFields) : paperThetaSum ≤ paperQSum`（条件，PROVED conditional）；
+- `finalLPaperInstance (hlock) (hbound) (hlog) : LPaperInstance`（条件，PROVED conditional；**hobj 已从最终版删除**，与 hobj 审计一致）；
+- 文件依赖 `Mzk1P1PaperSumsToS3137BridgeActual`，后者当前 **FAIL**（首错：`qVFamily`/`qVFamTensorRationalBaseNorm`/`PaperSourceCorrectionFreeFields` 未在作用域；缺 import/open），故 `FinalS3137Conditional` 暂无 olean、未验收。
+
+### 每项状态
+| 条件 | 实际内容 | 状态 |
+|---|---|---|
+| `S45SourceFields` | `Nonempty (PaperSourceCorrectionFreeFields T)`（ratio=1 + root-hull scaling） | EXPLICIT SOURCE CONDITION |
+| `RelativeFactorTowerData` | 仅 `∀b, ∃A B C, 0<A ∧ A=rootBaseQpDegree ∧ C=kPlaceQpDegree ∧ C=B*A`（整除，**非域塔**；B>1 时 A=C 假） | EXPLICIT CONDITION/GAP |
+| `PaperToS3137A1Data` | structure，a1Delta = paper coefficient 字典 | EXPLICIT GAP |
+| `PaperS3137ReadingDictionary` | **`def ... : Prop := True`** | **VACUOUS PLACEHOLDER（不算条件，需替换为真实结构）** |
+| `QHatNormCoherence`/`P2QHatNormInstanceAgreement` | `‖c0QHat‖=qVFamNormalizedNorm` | **PROVED（01:13Z；probe 标准三公理）** |
+| `unitMass = 1` | — | NOT CLAIMED |
+| 旧 raw S3137 P 侧 | `sourcePilotRegionData_isEmpty` | VACUOUS / RECORD ONLY |
+| L 侧 `hlock`/`hbound`/`hlog` | `thetaNormReadL=thetaNormReadProduct`、qRead≤global product、log unitMass≥0 | EXPLICIT CONDITIONS（hobj 已删） |
+
+**警告**：`PaperS3137ReadingDictionary := True` 与 rows 中 “EXPLICIT GAP” 标签不符；它不是 paper sums→S3137 的真实 bridge，不能计入条件闭合。
+## 2026-11-14 — RootRadiusBridge/Varpi/Gamma probe 与 final S3137 True/未用参数审计（abc）
+
+### green / probe 状态
+- `Mzk1P1RootRadiusBridgeActual`：**DONE 01:23:02Z，olean=True**；源码扫描无 `sorry`/`axiom`/`True`；2 定理（`log_rootImageRadius_eq_neg_coefficient_mul_logP`、`rootNormedLogVolume_eq_inv_twoL_mul_log_norm`）；**无对应 `#print axioms` probe 文件 → 公理状态未形式验证**（仅源码级）。
+- `Mzk1BoxDistinguishedVarpiActual`：**DONE 01:23:01Z，olean=True**；无 `sorry`/`axiom`/`True`；主定理 `packetHull_with_theta_varpi`；**probe `Mzk1BoxDistinguishedVarpiProbe` 当前无 olean/无 watchdog DONE**（目标含 `packetHull_with_theta_varpi`、`packetHull_normalizedLogVolume_le_box`）→ 公理状态未形式验证。
+- `Mzk1IutIVProp14GammaAxiomProbeActual`：**DONE 01:22:11Z**；3 项（`integralLogShell_pow_smul_mem_integers`、`isPGroup_logShellIntegerQuotient`、`card_gamma_eq_pow_actual`）均仅 `[propext, Classical.choice, Quot.sound]`；`_ProbeGammaAxioms` 01:20:29Z 同结果（重复 probe）。
+- `Mzk1P2QHatAxiomProbeActual`：DONE 01:18:09Z，2 项标准三公理（见前条）。
+
+### final S3137 条件版 True/未用参数检查
+- `Mzk1P0FinalS3137ConditionalActual`（当前无 olean/未验收；依赖 bridge FAIL）：
+  * `FinalBridgeConditions` 已**删除** `reading : PaperS3137ReadingDictionary` 字段（文件内注明 “True placeholder deleted”）；结构字段仅 `s45`、`relFactor`、`a1`；
+  * 两个定理参数均被使用：`finalPaperNormalizedComparison (S)` 用 S；`finalLPaperInstance (hlock)(hbound)(hlog)` 三者均用；无 unused binder；
+  * 但**依赖 `Mzk1P1PaperSumsToS3137BridgeActual` 仍定义 `PaperS3137ReadingDictionary : Prop := True`**（该 def 未被 final 使用，但仍是残留 placeholder，须清理）；
+  * bridge 当前 **FAIL**（首错 `qVFamily`/`qVFamTensorRationalBaseNorm`/`PaperSourceCorrectionFreeFields` 缺 import/open），故 final 文件不可验收。
+- 结论：final 文件自身无 True/未用参数；依赖 bridge 的 True placeholder 与 FAIL 是当前两个待清理点。
+## 2026-11-14 — 更正：bridge 当前源无 `PaperS3137ReadingDictionary := True`；RootRadius/Varpi 公理未形式验证（abc）
+
+- **更正前条**：“bridge 仍定义 `PaperS3137ReadingDictionary := True`” 是**旧源**（读取时 mtime 09:21 前）。当前 `Mzk1P1PaperSumsToS3137BridgeActual.lean`（mtime **09:27:50**）grep 只有：
+  * `line32` doc 说明（explicit GAP）；
+  * `line113` rows `("PaperS3137ReadingDictionary", "EXPLICIT GAP (not defined; True placeholder deleted per no-True discipline)", ...)`；
+  **没有 `:= True` 定义**；`Mzk1P0FinalS3137ConditionalActual` 的 `FinalBridgeConditions` 也无 `reading` 字段（line71 注释注明 no True placeholder）。此前 “True placeholder 残留” 结论作废，以本条为准。
+- 但当前 bridge 源 **尚未被 watchdog 重编**（最后 build 01:18Z FAIL 对应旧源；mtime 09:27:50 更新后无新 START/DONE），故 bridge/final 仍无 olean；需 retouch 后重验。
+- **公理状态标记**：
+  * `Mzk1P1RootRadiusBridgeActual`（DONE 01:23:02Z）：源码无 `sorry`/`axiom`/`True`，但 **无 axiom probe 文件 → 公理未形式验证**；不得当已审计；
+  * `Mzk1BoxDistinguishedVarpiActual`（DONE 01:23:01Z）：源码无 `sorry`/`axiom`/`True`，但 `Mzk1BoxDistinguishedVarpiProbe` 未编译（无 olean/无 DONE）→ **公理未形式验证**；不得当已审计；
+  * 已形式验证的仅：`Mzk1P2QHatAxiomProbeActual`（2 项）与 `Mzk1IutIVProp14GammaAxiomProbeActual`/`_ProbeGammaAxioms`（3 项），均 `[propext, Classical.choice, Quot.sound]`。
+## 2026-11-14 — SourceUnitBridge probe + bridge/final 当前源审计（abc）
+
+### `Mzk1Ind1SourceUnitBridgeActual`（DONE 01:30:31Z）
+- 公理 probe：`sourceUnitLogRangeEquiv_apply` → `[propext, Classical.choice, Quot.sound]`（标准三公理）；
+- 源码无 `True`/`sorry`/`axiom`；核心结构 `SourceUnitQuotientIdentification` 是**显式缺失 source 数据**（注释 “no inhabitant is supplied”），`sourceUnitLogRangeEquiv` 在其存在假设下构造；不是 fake，是显式条件桥。
+
+### `Mzk1P1PaperSumsToS3137BridgeActual` 当前源（mtime 09:27:50）
+- `PaperS3137ReadingDictionary` 仅出现在 doc 行32 与 rows 行113（均标 EXPLICIT GAP；无 `:= True` 定义）；**无 True**；
+- 但当前 source **未编译通过**（最新 FAIL 01:31:53Z）：
+  * 缺 import/open：`qVFamTensorRationalBaseNorm`、`PaperSourceCorrectionFreeFields`、`Mzk1A1SignedReadoutProductActual` namespace、`localCompletionDegree`；
+  * 缺 `[∀ b, MeasurableSpace (qVFamTensorBlock T b)]` / Borel instance 变量（synthInstanceFailed）；
+  * 需补齐后 retouch；bridge 无 olean → final 无法验收。
+
+### `Mzk1P0FinalS3137ConditionalActual` 当前源
+- 无 `True` 字段：`FinalBridgeConditions` 只有 `s45`/`relFactor`/`a1`（line71 注释注明 no True placeholder）；
+- 最新 FAIL 01:30:11Z（依赖 bridge 无 olean）；bridge 绿后需 retouch final；
+- 两个主定理参数全部使用，无 unused binder。
+
+### 公理状态标记（继续）
+- 已形式验证：SourceUnitBridge（1 项）、QHat probe（2 项）、Gamma probe（3 项）；
+- **未形式验证**：`Mzk1P1RootRadiusBridgeActual`、`Mzk1BoxDistinguishedVarpiActual`（无 probe/未编译），只可记 “源码无 sorry，公理未验证”。
+## 2026-11-14 — 更正：RootRadius/Varpi axiom probes 已 GREEN（abc）
+
+- **更正前条**“RootRadiusBridge/Varpi 公理未形式验证”是旧状态（probe 文件当时未编译）。当前：
+  * `Mzk1P1RootRadiusAxiomProbeActual` **DONE 01:31:20Z，olean=True**：
+    `log_rootImageRadius_eq_neg_coefficient_mul_logP`、`rootNormedLogVolume_eq_inv_twoL_mul_log_norm` 均 `[propext, Classical.choice, Quot.sound]`；
+  * `Mzk1BoxDistinguishedVarpiAxiomProbeActual` **DONE 01:31:19Z，olean=True**：
+    `packetHull_with_theta_varpi` → `[propext, Classical.choice, Quot.sound]`；
+    **范围注意**：该 probe 只含 `packetHull_with_theta_varpi` 一项；旧 `Mzk1BoxDistinguishedVarpiProbe` 中的 `packetHull_normalizedLogVolume_le_box` **不在**此 probe 内（若需该定理公理需另加 probe）。
+- 因此：RootRadiusBridge 与 Varpi 的两个定理公理状态**已形式验证（标准三公理）**；不要把旧“未验证”当现状。
+- `P1PaperSumsToS3137BridgeActual` 当前 FAIL 01:31:53Z 已确认由 import/instances 缺失引起，mainline 修复中；bridge 绿后 final 需 retouch。
+- 公理已验证集合现为：SourceUnitBridge(1)、QHat(2)、Gamma(3)、RootRadius(2)、Varpi(1) —— 均为 `[propext, Classical.choice, Quot.sound]`。
+## 2026-11-14 — `sourceUnitQuotientIdentification_self` 只读审计（abc）
+
+- 定义（`Mzk1Ind1SourceUnitBridgeActual:55`）：`sourceUnitQuotientIdentification_self K : SourceUnitQuotientIdentification ((Integers K)ˣ ⧸ torsion) K`，`equiv := MulEquiv.refl _`；即 **把 W 取成目标整性单位模挠商** 的自同构。
+- 文件注释已明说：“Tautological self-identification … it is NOT the source-level W identification; it only records that the interface is consistent.”
+- `sourceUnitQuotientIdentification_self_nonempty` 只证**该选定 W 下** interface 非空；它**不能**当作实际 source W（全局单位/idele 商等）的识别，也不能把 `sourceUnitLogRangeEquiv` 的 source 端换成真实 source 数据。
+- 构建状态：文件 mtime **01:38:44Z** 晚于最后 watchdog DONE **01:30:31Z**；self 定义/probe 尚未重编，当前绿色 probe 只覆盖 `sourceUnitLogRangeEquiv_apply`（标准三公理）；不得把 self 当已验证。
+- 结论：`self` 仅 interface 一致性/非空见证；**不能替代 source W 识别**；真正缺失仍是 `SourceUnitQuotientIdentification W_actual K`（W_actual 为 source 单位群）的 inhabitant。
+## 2026-11-14 — PrincipalScalar probe / final S3137 状态审计（abc）
+
+- `Mzk1BoxPrincipalScalarActual`：**DONE 01:52:13Z，olean=True**；源码无 `True`/`sorry`/`axiom`；定理 `principal_region_normalized_scalar (hd : principalDim T b ≠ 0) (lam)`：`log(rootHaarFactor)/d = log‖lam‖`（维数归一化 principal region 标量读数）；无 probe 构建。
+- `Mzk1BoxPrincipalScalarProbe`：**无 olean、无 watchdog entry**（仅在 `extra-targets.txt` 中排队）；`#print axioms principal_region_normalized_scalar` **尚未执行** → 公理未形式验证；不得当已审计。
+  * 注：PrincipalScalarActual 的 per-file log 尾部可见旧版 line37 错误，但最新 DONE 01:52:13Z 为权威；当前源绿。
+- `Mzk1P0FinalS3137ConditionalActual`：最新 **FAIL 01:51:57Z**（依赖 `Mzk1P0LNormReadoutProductActual`/`Mzk1P0LNormComparisonConditionalActual` 无 olean），01:55:45Z 有 START、**尚无结果，olean=False**；因此 final 当前**未验收**。
+  * 当前源无 `True`（仅 strings/comments 提及 “True placeholder deleted”），`FinalBridgeConditions` 无 reading 字段；两主定理参数全部使用、无 unused binder（此前已核）。
+- 结论：PrincipalScalar 源绿但公理未验证；final 未 olean（依赖缺 olean），均不得当闭合。
+## 2026-11-14 — final S3137 当前源 True/未用参数核对 + bridge 绿（abc）
+
+- `Mzk1P1PaperSumsToS3137BridgeActual`：**DONE 01:43:47Z，olean=True**（bridge 已绿）。
+- `Mzk1P0FinalS3137ConditionalActual` 当前源（mtime 09:54）核对：
+  * **无 `True`**：`FinalBridgeConditions` 无 reading 字段；`PaperS3137ReadingDictionary` 只出现在注释 line71 与 rows 字符串 line79（均标 not defined/True placeholder deleted），无 `:= True`；
+  * **无未用参数**：`finalPaperNormalizedComparison (S)` 使用 S（rcases/apply）；`finalLPaperInstance (hlock)(hbound)(hlog)` 三者均由 `LPaperInstance_of_bounds` 消费；section 变量 `I/place/T/p` 均出现在签名或被打开定义中；结构 `FinalBridgeConditions` 只用 T，无多余 binder；
+  * 仍 **olean=False**：最新 FAIL 01:57:16Z 原因是 import `Mzk1P0LNormReadoutProductActual` / `Mzk1P0LNormComparisonConditionalActual` **无 olean**；
+- 依赖状态：`Mzk1P0LNormReadoutProductActual` **DONE 01:36:49Z**；`Mzk1P0LNormReadoutActual` **DONE 01:57:32Z**；`Mzk1P0LNormComparisonConditionalActual` **FAIL 01:55:55Z**，其首错仅为当时缺 `Mzk1P0LNormReadoutActual.olean`（时间顺序问题，非源错误）。
+- 结论：final 源无 True/未用参数；只差 retouch 顺序——ReadoutActual 已绿，需重编 `ComparisonConditional`，再 retouch `FinalS3137Conditional`；当前不得当已验收。
+## 2026-11-14 — `Mzk1P1PaperSumsA1DataActual` 只读审计（abc）
+
+- 源码无 `True` / `sorry` / `axiom`；
+- `noncomputable def paperToS3137A1Data : PaperToS3137A1Data T`，字段 `a1_delta_paper := fun b => a1Delta_eq_neg_coefficient_logP_sub_signed (local_degree_pos b)`；
+- **RHS 与 bridge 字段逐项一致**：bridge (`PaperToS3137A1Data.a1_delta_paper`) 与 `Mzk1P1WeightA1BridgeActual.a1Delta_eq_neg_coefficient_logP_sub_signed` 的 RHS 均为
+  `-((c_norm/(2l))*log P) - (1/d)*(log μ(c0QLattice) - log μ(O))`（完全同名对象/括号）；
+- **hd 为显式参数而非 inhabitant**：`a1Delta_eq_neg_coefficient_logP_sub_signed (hd : 0 < s1915LocalDegree T b)`；构造时由 **green** `local_degree_pos` 逐 b 提供，`paperToS3137A1Data` 本身无 hd 参数；
+- 因此 `PaperToS3137A1Data` 状态更新为 **CONSTRUCTED（给定/已由 green local_degree_pos 提供正性，不再是不解释 GAP）**；
+- **验收注意**：文件已入 `extra-targets.txt` 但**尚无 watchdog build entry/olean**（尚未编译验证），且无 axiom probe；当前只能说“源级构造完成、待 watchdog 验收”，不得写成已闭合。
+## 2026-11-14 — A1Data/WeightA1 probe 未 olean；final 源无 True（abc）
+
+- `Mzk1P1PaperSumsA1DataActual`：源级构造已完成（前条），当前 **START 02:10:56Z**，**尚无 DONE/olean** → 待 watchdog 验收；
+- `Mzk1P1PaperSumsA1DataAxiomProbeActual`（`#print axioms paperToS3137A1Data_nonempty`）：**无 olean、无 watchdog entry**（在 extra-targets 队列中）→ **公理未验证**；
+- `Mzk1P1WeightA1AxiomProbeActual`（4 项：`nativeBadLocalWeight_eq_inv_total_local_degree`、`s1915LocalDegree_eq_finrank`、`a1Delta_eq_neg_coefficient_logP_sub_signed`、`weight_conversion_cond`）：**无 olean、无 watchdog entry** → **公理未验证**；
+  * `weight_conversion_cond` 存在（`Mzk1P1WeightA1BridgeActual:82`），显式条件 `hdF : finrank rootBase = localCompletionDegree`、`hdpos : 0 < finrank rootBase`；
+- `Mzk1P0FinalS3137ConditionalActual` 当前源 grep：`True` 只出现在注释 line73 与 rows 字符串 line91（“True placeholder deleted”），**无 `:= True`**；但 latest 仍 **FAIL 02:03:54Z**（缺 `Mzk1P0LNormReadoutProductActual`/`Mzk1P0LNormComparisonConditionalActual` olean），**oleon=False**，未验收。
+- 结论：A1Data 源构造完成但未编译；两 probe 均未执行（公理未验证）；final 源无 True 但依赖未绿，未验收。
+## 2026-11-14 — A1Data green 但源在 DONE 后又被修改；probe/final 状态（abc）
+
+- `Mzk1P1PaperSumsA1DataActual`：watchdog **DONE 02:16:59Z**（olean=True）；**但源 mtime 02:17:11Z > DONE 时间**，即当前源在 green 之后又被编辑，**当前源尚未重编**。
+- 其 per-file log 在 DONE 前出现 `warning: declaration uses 'sorry'`（line44）——说明 green 的 olean 对应的构建源可能含 `sorry`；**当前源 grep 已无 `sorry`/`True`**（只有 `local_degree_pos` 显式提供），但未重编验证。结论：**A1Data 当前不得当 sorry-free 已验收**；需 retouch 当前源 + 重看 warnings。
+- `Mzk1P1PaperSumsA1DataAxiomProbeActual`：FAIL 02:15:26Z（当时 A1Data 无 olean）；**未执行成功，公理未验证**；A1Data 当前源重编后需 retouch probe。
+- `Mzk1P1WeightA1AxiomProbeActual`：**DONE 02:12:40Z，olean=True**；4 项（`nativeBadLocalWeight_eq_inv_total_local_degree`、`s1915LocalDegree_eq_finrank`、`a1Delta_eq_neg_coefficient_logP_sub_signed`、`weight_conversion_cond`）均 `[propext, Classical.choice, Quot.sound]`。
+- `Mzk1P0FinalS3137ConditionalActual`：FAIL 02:16:42Z（当时缺 `Mzk1P0LNormComparisonConditionalActual` 与 `Mzk1P1PaperSumsA1DataActual` olean）；源无 True（仅注释/rows 字符串）；仍待依赖重编后 retouch。
+## 2026-11-14 — A1Data 源仍晚于 olean；probe 对旧 olean；final 自有错误（abc）
+
+- `Mzk1P1PaperSumsA1DataActual`：最新 DONE **02:21:11Z**，但源 mtime **10:21:26** > olean mtime **10:21:10** → **olean 再次早于当前源**；当前源尚未验证。
+- 当前源 grep **无 `sorry`/`True`**；per-file log 里 `declaration uses `sorry``（line44）属**较早构建尝试**（同批还有错误），不能据此判定最新源；但也不能把当前源当已验证，必须等 mainline 停止编辑后重编。
+- `Mzk1P1PaperSumsA1DataAxiomProbeActual`：DONE **02:21:08Z**，`paperToS3137A1Data_nonempty` → `[propext, Classical.choice, Quot.sound]`；但 probe 构建早于 A1Data 最新 DONE（02:21:11）且针对**旧 olean**；当前源重编后需 retouch probe 复验。
+- `Mzk1P0FinalS3137ConditionalActual`：FAIL **02:21:19Z**，除依赖顺序外，**自身首错**：
+  * `paperNormalizedQPilotSum` unknown（缺 import/open，实际定义在 `BadPlacePaperNormalizedComparisonActual`）；
+  * 缺 `[∀ b, MeasurableSpace (qVFamTensorBlock T b)]` / Borel instance 变量（synthInstanceFailed）。
+- 结论：A1Data **未验收**（源晚于 olean）；probe 只对旧 olean；final **不通过**且需源码补 import/instances——当前不能写 accepted。
+## 2026-11-14 — GroupCountBridge / TorsionFromUnits 审计（abc）
+
+- `Mzk1IutIVProp14GroupCountBridgeActual`：**DONE 02:53:32Z，olean=True**；源码无 `sorry`/`True`/`axiom`；
+  * `exists_h_card_gamma (hΓ : IsPGroup p (Multiplicative Γ)) : ∃ h, Nat.card Γ = p^h`（条件：P-group；定理本身条件式）；
+  * `volume_ratio_eq_pow_of_groupCount`：纯实数指数运算桥（条件 hexp/hμΛ/hL）。
+- `Mzk1IutIVProp14TorsionFromUnitsActual`：**DONE 02:53:33Z，olean=True**；源码无 `sorry`/`True`/`axiom`；
+  * `torsion_card_eq_actual_of_unitsEquiv`：在**显式假设** `eEquiv`（单位商 ≃* 商单位群）、`hcard`、`hs`、`hq`、`hcop` 下给出 `∃ h m, ...`（条件定理，非无条件）。
+- **新增 audit probe**（abc 只读添加，`Mzk1IutIVProp14AuditProbeActual`）：**DONE 03:04:25Z，olean=True**；
+  三项 `exists_h_card_gamma`、`volume_ratio_eq_pow_of_groupCount`、`torsion_card_eq_actual_of_unitsEquiv` 均只依赖 `[propext, Classical.choice, Quot.sound]`。
+- 结论：两文件源绿、无 True/sorry，公理已形式验证（标准三公理）；TorsionFromUnits 是条件定理，条件清单如上，不冒充无条件。
+## 2026-11-14 — CongruenceActualGap / VarpiProbe 审计（abc）
+
+- `Mzk1IutIVProp14CongruenceActualGap`：**DONE 03:04:25Z，olean=True**；源码无 `sorry`/`True`/`axiom`；
+  * 定义显式 gap：`MissingCongruenceUnitsEquiv`（单位商 ≃* 截断单位群的 Nonempty）与 `MissingTruncatedUnitsCard`（截断单位群基数公式）；
+  * `torsion_card_eq_actual_of_missing (he) (hc) (hs) (hq) (hcop) : ∃ h m, ...` 是**条件定理**（两个 gap + 三条算术假设），不冒充无条件；
+  * 无专属 axiom probe；其证明复用已公理验证的 `torsion_card_eq_actual_of_unitsEquiv`。
+- `Mzk1BoxDistinguishedVarpiProbe`：**DONE 01:31:19Z，olean=True**；源码无 `sorry`/`True`/`axiom`；
+  * probe 输出两项：`packetHull_with_theta_varpi`、`packetHull_normalizedLogVolume_le_box`，均 `[propext, Classical.choice, Quot.sound]`；
+  * 更正此前“Varpi 仅 1 项 probe”的范围注记：旧 `VarpiProbe` 已同时覆盖 box 引理；`...AxiomProbeActual` 只含 1 项。
+- 结论：两 green 均无 True/sorry；Varpi box 引理公理已验证；CongruenceActualGap 是显式条件归约。
+## 2026-11-14 — ActualSourceUnitLayer / ActualHBridge / NormalizedSourceConditional 审计（abc）
+
+- `Mzk1Ind1ActualSourceUnitLayerActual` **DONE 03:14:34Z，olean=True**：源码无 `True`/`sorry`/`axiom`；
+  * `ActualSourceUnitLayer K := (Integers K)ˣ ⧸ torsion`（definitional 层）；`actualSourceUnitLayer_self` 为 refl 自识别（仅 interface 一致性，**不是**把任意 source W 识别为该商）；
+  * `ActualInd1UnitAction` 结构含 `beta : layer K ≃* layer L` 与 **`fromProcession : Prop`**（只是 Prop 字段，无证明/语义内容）；故 `ActualInd1UnitActionRequired := Nonempty ...` 几乎只等价于存在 β —— **不能当真实 Ind1/Ind2 procession 来源证据**；需把 `fromProcession` 改为实质命题/证明后才能作为 source action。
+- `Mzk1IutIVProp14ActualHBridgeActual` **DONE 03:14:35Z，olean=True**：无 `True`/`sorry`/`axiom`；
+  * `actualGammaH := Classical.choose (card_gamma_eq_pow_actual)`；`actualGammaH_spec : Nat.card = p^actualGammaH`；`volume_ratio_eq_pow_actualH` 纯算术（条件 hexp/hμΛ/hL）。
+- `Mzk1P1NormalizedSourceConditionalActual` **DONE 03:15:24Z，olean=True**：无 `True`/`sorry`/`axiom`；
+  * `paperNormalizedComparison_of_sourceFields (S : PaperSourceCorrectionFreeFields)`、`paperXiFTargetStrict_of_sourceFields`、`paperNormalizedComparison_with_corrections` 均**条件定理**；S 是原文 S45 source 条件；
+  * 显式 `hM : ∀ b, MeasurableSpace`、`hB : BorelSpace` 变量（include），非 inhabitant。
+- **新增 audit probe**：`Mzk1AuditProbe720Actual` **DONE 03:23:12Z，olean=True**；6 项（`actualGammaH_spec`、`volume_ratio_eq_pow_actualH`、`paperNormalizedComparison_of_sourceFields`、`paperXiFTargetStrict_of_sourceFields`、`paperNormalizedComparison_with_corrections`、`actualSourceUnitLayer_self_nonempty`）均 `[propext, Classical.choice, Quot.sound]`。
+- `Mzk1P0FinalS3137ConditionalActual`：最新 FAIL **03:15:08Z**（`paperNormalizedComparison_of_sourceFields` unknown 因当时 Normalized olean 未生成；其 olean 03:15:24 才出现）→ **final 仍 pending**，需 retouch 后重验。
+## 2026-11-14 — FINAL S3137 条件版 GREEN 03:29:47 + B5/Final2 审计与 final axiom probe（abc）
+
+### Final S3137（`Mzk1P0FinalS3137ConditionalActual`）
+- **DONE 03:29:47Z，olean=True**；源码无 `True`/`sorry`；row 表与实现一致：
+  * `S45SourceFields` → **EXPLICIT CONDITION**（原文 S45 normalized-source hypothesis）；
+  * `RelativeFactorTowerData` → **EXPLICIT CONDITION**（仅整除 `C=B*A`，**非域塔**；B>1 时 A=C 假）；
+  * `PaperToS3137A1Data` → **CONSTRUCTED**（A1Data 文件，`local_degree_pos` 提供 hd）；
+  * `PaperS3137ReadingDictionary` → **EXPLICIT GAP (not defined; no True)**；
+  * `unitMass=1` NOT CLAIMED；旧 raw S3137 P 侧 RECORD ONLY；
+- 结构 `FinalBridgeConditions` 字段 `s45/relFactor/a1`；`finalBridgeConditions_of` 全部使用；`finalLPaperInstance (hlock)(hbound)(hlog)` 全用；**无 unused binder**。
+
+### B5（`Mzk1B5AssemblyNoHproductAttemptActual`，DONE 03:26:34Z）
+- 无 `True`/`sorry`；条件 assembly：`B5ProductFormulaBridge`（命名 bridge：relativeDetLog = finite index + arch），`qPilotDetArithmeticDegree_eq_finiteIndex_add_arch_add_global_of_bridge` 在其假设下证明；`MissingB5ProductFormulaBridge` 是**精确 GAP**（未断言）。
+
+### Final2（`Mzk1P1PlaceVolumeFinal2Actual`，DONE 03:29:42Z）
+- **状态-only 行文件**：仅 `placeVolumeFinal2Rows`（一行 re-export “GREEN”），**无可证明定理**；不得当实质证明进展。
+
+### final axiom probe（abc 新增 `Mzk1FinalAuditAxiomProbeActual`）
+- **DONE 03:33:29Z，olean=True**；4 项：
+  `finalPaperNormalizedComparison`、`finalLPaperInstance`、`finalBridgeConditions_of`、`B5..._of_bridge`；
+  全部 `[propext, Classical.choice, Quot.sound]`。
+## 2026-11-14 — FINAL 新鲜重编 + final probe 复跑 + P14ii pending（abc）
+
+- `Mzk1P0FinalS3137ConditionalActual`：源 mtime **11:31:44**，最新 **DONE 03:33:31Z**，olean mtime **11:33:30** > 源 → **新鲜重编已覆盖当前源**；源码 `True` 只出现在注释 line16 与 rows 字符串 line92（均说明 no True placeholder），**无 `:= True`、无 `sorry`/`axiom`**。
+- final probe 复跑：`Mzk1FinalAuditAxiomProbeActual` **DONE 03:43:57Z，olean=True**（START 03:42:14 > final olean 11:33:30，确保针对新 olean）；4 项：
+  `finalPaperNormalizedComparison`、`finalLPaperInstance`、`finalBridgeConditions_of`、`B5Assembly..._of_bridge` → 均 `[propext, Classical.choice, Quot.sound]`。
+- `Mzk1IutIVProp14P14iiActualActual`：最新 **FAIL 03:36:44Z，olean=False**（未编译通过）；内容源 mtime 11:40:29（晚于 FAIL），实际状态 = **P14ii pending/未验收**。
+- 结论：Final 新鲜源无 True/sorry、公理已验证；P14ii 仍 pending，不得计入完成。
+## 2026-11-14 — 更正：P14ii GREEN 03:43:09（此前 FAIL 03:36:44 为旧状态）
+
+- `Mzk1IutIVProp14P14iiActualActual`：源 mtime **11:40:58**；watchdog **DONE 03:43:09Z**；olean mtime **11:43:08 > 源** → **新鲜重编已覆盖当前源**；
+- 源码无 `sorry`/`True`/`axiom`；主定理 `p14ii_logVolume_actual`；
+- 新增 probe：`Mzk1P14iiAuditAxiomProbeActual` **DONE 03:47:14Z，olean=True**；`p14ii_logVolume_actual` → `[propext, Classical.choice, Quot.sound]`；
+- 此前 ledger 中 “P14ii FAIL 03:36:44 / pending” 记录作废（该 FAIL 是当前 DONE 之前的旧构建），以本条为准。
+## 2026-11-14 — P14ii probe / final 复核（abc）
+
+- `Mzk1IutIVProp14P14iiActualActual`：DONE **03:43:09Z**，olean **11:43:08**；源 mtime **11:40:58** < olean → 当前源已覆盖；源码无 `sorry`/`True`/`axiom`；
+- `Mzk1P14iiAuditAxiomProbeActual`：DONE **03:47:14Z**，olean **11:47:14**（晚于 P14ii olean）；`p14ii_logVolume_actual` → `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1P0FinalS3137ConditionalActual`：DONE **03:33:31Z**，olean **11:33:30**；源 mtime **11:31:44** < olean → 当前源已覆盖；`True` 仅注释/rows 字符串，无 `:= True`/`sorry`/`axiom`；
+- `Mzk1FinalAuditAxiomProbeActual`：DONE **03:43:57Z**，olean **11:43:56**（晚于 final olean）；4 项（两 final 定理 + `finalBridgeConditions_of` + B5 conditional theorem）均 `[propext, Classical.choice, Quot.sound]`。
+- 结论：P14ii probe、final 及 final probe 均新鲜且标准三公理；无 True/sorry。
+## 2026-11-14 — A1Data donor/probe 新鲜复核（abc）
+
+- `Mzk1P1PaperSumsA1DataActual`：源 mtime **10:21:26**；watchdog **DONE 02:25:50Z**；olean mtime **10:25:49 > 源** → 新鲜；源码 grep **无 `sorry`/`True`/`axiom`**；
+  * per-file log 尾仍含较早构建尝试的 `warning: declaration uses sorry`/`defProp` 行；当前源无 sorry，且最新 DONE 在源之后；以当前源+DONE 为准，历史 warning 不构成本次验收证据；
+- `Mzk1P1PaperSumsA1DataAxiomProbeActual`：源 mtime **10:33:39**；**DONE 02:35:43Z**；olean **10:35:42 > 源**；probe 在 donor olean 之后；
+  * `paperToS3137A1Data_nonempty` → `[propext, Classical.choice, Quot.sound]`（标准三公理）；
+- 结论：A1Data donor/probe 均新鲜、无 sorry/True、公理标准三公理。
+## 2026-11-14 — ActualSourceUnitLayer / IntegrationAction 新鲜复核 + probe（abc）
+
+- `Mzk1Ind1ActualSourceUnitLayerActual`：源 mtime **12:03:03**；DONE **04:05:14Z**；olean **12:05:14** > 源 → 新鲜；源码无 `sorry`/`True`/`axiom`；
+  * `ActualSourceUnitLayer K := (Integers K)ˣ/tors`；`actualSourceUnitLayer_self_nonempty` 为 interface 非空；`ActualInd1UnitAction` 已更新为实质字段：`algAction` + `beta` + **`compatible`（∀u, ∃v, beta(mk u)=mk v ∧ integersUnitsToAlgClosure v = algAction(...)）**，不再是空 Prop marker；
+  * 仍未提供 `ActualInd1UnitActionRequired := Nonempty ...` 的 inhabitant（source action donor pending）。
+- `Mzk1Ind1IntegrationActionActual`：源 mtime **12:05:53**；DONE **04:09:20Z**；olean **12:09:20** > 源 → 新鲜；源码无 `sorry`/`True`/`axiom`；
+  * `IntegralUnitStableAlgebraicAction` 含 `algAction` + `mapsIntegers` + `mapsIntegers_symm`（实质性双向整性保持）；`Required := Nonempty`；`integralUnitStableAlgebraicActionRequired_iff : Required ↔ Nonempty` 是 **Iff.rfl 重述**，未提供 inhabitant（source action donor pending）。
+- **probe**（abc 新增只读）：`Mzk1Ind1AuditProbeActual` **DONE 04:14:13Z，olean=True**；
+  * `actualSourceUnitLayer_self_nonempty` 与 `integralUnitStableAlgebraicActionRequired_iff` → 均 `[propext, Classical.choice, Quot.sound]`；
+- **日志注意**：per-file log 早前构建曾出现 `sorryAx`（旧 decl `inducedIntegralUnitEquiv`/`inducedSourceUnitEquiv`，当前源已无）；以当前 DONE+新 probe 为准，旧 sorryAx 不算现行；
+- **donor/dictionary pending**：`ActualInd1UnitActionRequired`/`IntegralUnitStableAlgebraicActionRequired` 的 inhabitant 仍缺；`PaperS3137ReadingDictionary` 仍 undefined GAP。
+## 2026-11-14 — Dictionary final theorem 编译审计（abc）
+
+- 新文件 `Mzk1P0FinalS3137DictionaryActual`：结构 `PaperS3137ReadingDictionary` 已从 undefined GAP 变为**实质结构**（字段 `theta_product_eq`/`q_paper_eq`/`coeff_eq_of_ratio`，依赖实质 `PaperS3137ObjectLock`：`B/B_pos/weight_relation/unitMass_eq/theta_sign`），无 True；
+- 但当前源（mtime **12:17:53**）**FAIL 04:22:05Z**（START 04:20:15 晚于源，真实错误）：
+  `finalDictionaryCombined:132` 位置参数应用不匹配：`PaperS3137ReadingDictionary hM ...` 期望首参 `SourceNativeInitialThetaData`（section 变量 T/I/place 被自动前置），而非 `hM`；
+  修复建议：改用命名参数 `(hM := hM) (hB := hB) (I := I) (place := place) (T := T) (lock := lock)`（与 `paperS3137ReadingDictionary_of` 的返回类型写法一致）。
+- `Mzk1P0FinalS3137DictionaryAxiomProbeActual`：FAIL 04:22:01Z；`paperS3137ReadingDictionary_of` 的 `#print axioms` 输出标准三公理，但 `finalDictionaryCombined` 因文件 FAIL 而 unknown → **probe 不完整，未验收**。
+- 旧 olean mtime 12:15:04 早于当前源 12:17:53，不可用；结论：dictionary final theorem **尚未编译通过**，待修复参数顺序后重验。
+## 2026-11-14 — 更正：Dictionary final theorem 已 GREEN（04:29:55Z）+ probe GREEN（04:36:25Z）
+
+- `Mzk1P0FinalS3137DictionaryActual`：源 mtime **12:25:11**；**DONE 04:29:55Z**；olean **12:29:54 > 源** → 新鲜；源码无 `sorry`/`True`/`axiom`（`True` 仅注释 line70 “(not True)”）；
+  * `PaperS3137ReadingDictionary` 为**实质结构**（theta_product_eq/q_paper_eq/coeff_eq_of_ratio）依赖实质 `PaperS3137ObjectLock`（B/B_pos/weight_relation/unitMass_eq/theta_sign）；
+  * `finalDictionaryCombined (S : S45SourceFields) (rel : RelativeFactorTowerData) (lock : PaperS3137ObjectLock) : paperTheta≤paperQ ∧ RelativeFactorTowerData ∧ Nonempty dictionary`；参数全部使用；
+  * 此前 FAIL 04:22:05（位置参数错位）已修复（改用命名参数 `(I:=I) (place:=place) (T:=T) (hM:=hM) (hB:=hB) (lock:=lock)`）；
+- `Mzk1P0FinalS3137DictionaryAxiomProbeActual`：源 **12:33:10**；**DONE 04:36:25Z**；olean **12:36:24 > 源**；
+  * `paperS3137ReadingDictionary_of`、`finalDictionaryCombined` → 均 `[propext, Classical.choice, Quot.sound]`；
+- 结论：Dictionary final theorem **已编译并公理验证**，但依赖显式 source 条件 `S45SourceFields`、`RelativeFactorTowerData` 与实质 `PaperS3137ObjectLock`，不是无条件闭合。
+## 2026-11-14 — Ind1 beta source for K-automorphism class
+
+**Fact.** `Mzk1Ind1GaloisIntegralActionActual` (DONE 04:43:30Z) and `Mzk1Ind1GaloisIntegralGeneralActual` (DONE 04:52:18Z) construct actual `IntegralUnitStableAlgebraicAction K` and `ActualInd1UnitAction K` from any `σ : AlgebraicClosure K ≃ₐ[K] AlgebraicClosure K`: `σ` fixes `K` pointwise, hence fixes the embedded integral units; the induced action on `(Integers K)ˣ/tors` is the identity, so `beta = MulEquiv.refl` is actual. Axiom probes: `[propext, Classical.choice, Quot.sound]`, no `sorryAx`.
+
+**Scope.** Closes the beta source node only for the K-automorphism class. It does NOT claim that arbitrary Ind1/Ind2 procession arrows factor through field automorphisms; non-field arrows still need actual source action data. No non-canonical `≃*` or `Nonempty` filler is used.
+
+**Files.** `tmp/sheaf/xif/paper/Mzk1Ind1GaloisIntegralActionActual.lean`, `tmp/sheaf/xif/paper/Mzk1Ind1GaloisIntegralGeneralActual.lean`, interfaces in `Mzk1Ind1ActualSourceUnitLayerActual`/`IntegrationActionActual`. Details: `coord/IND1-BETA-SOURCE-GAP.md`.
+
+## 2026-11-14 — Galois integral action (Qp / general K) 审计 + probes（abc）
+
+- `Mzk1Ind1GaloisIntegralActionActual`（Qp）：**DONE 04:43:30Z，olean 12:43:30**；源码无 `sorry`/`True`/`axiom`；
+  * `localGaloisUnitsAction_fixes_integralUnits (σ : LocalAbsoluteGalois p) (u)`：`localGaloisUnitsAction p σ (toAlg u) = toAlg u`（σ 固定 Qp ⇒ 固定嵌入的整性单位）；
+  * `localGaloisStableAlgebraicAction σ : IntegralUnitStableAlgebraicAction ℚ_[p]`；`localGaloisActualInd1UnitAction σ : ActualInd1UnitAction ℚ_[p]`（beta=refl）；
+- `Mzk1Ind1GaloisIntegralGeneralActual`（general K）：**DONE 04:52:18Z，olean 12:52:17**；无 `sorry`/`True`/`axiom`；
+  * `localUnitsAction (σ : AlgebraicClosure K ≃ₐ[K] AlgebraicClosure K)`；`localUnitsAction_fixes_integralUnits`；`localStableAlgebraicAction`、`localActualInd1UnitAction`（beta=refl）；
+- **probes**：
+  * `Mzk1Ind1GaloisActionAuditProbeActual`（Qp 专用）**DONE 04:52:18Z**：`localGaloisStableAlgebraicAction`、`localGaloisActualInd1UnitAction`、非空 inhabitants `audit_actualStableAction_nonempty`/`audit_actualInd1Action_nonempty` 均 `[propext, Classical.choice, Quot.sound]`；
+  * `Mzk1Ind1GaloisGeneralAuditProbeActual`（general K）**DONE 05:00:52Z**：`localStableAlgebraicAction`、`localActualInd1UnitAction`、非空 inhabitants `audit_generalStableAction_nonempty`/`audit_generalActualInd1Action_nonempty` 均 `[propext, Classical.choice, Quot.sound]`；
+- **scope（重要）**：这些 inhabitant 来自 **K-代数自同构类** `σ : AlgebraicClosure K ≃ₐ[K] AlgebraicClosure K`（含 `σ = 1`），`beta = refl`；它们只见证局部 `ActualInd1UnitAction`/`IntegralUnitStableAlgebraicAction` 结构在 K-自同构下非空，**不是**原文 Ind1/Ind2 的 **procession 来源箭头**；当前结构无 provenance 字段，故不能用来宣称 source action/Ind1-2 arrow 已闭合；且因 `σ=1` 使 `Nonempty` 对任意此类 K 平凡成立，语义强度有限。
+**Audit correction (2026-11-14).** The K-automorphism inhabitants are only a local nonempty construction. Since `σ = 1` is allowed and neither structure has a field tying `algAction`/`beta` to the actual source procession arrow, `ActualInd1UnitActionRequired`/`IntegralUnitStableAlgebraicActionRequired` being nonempty is NOT evidence for the actual Ind1/Ind2 source arrow. The source arrow gap remains open; do not claim global beta-source closure. See exact wording in `coord/IND1-BETA-SOURCE-GAP.md`.
+
+## 2026-11-14 — Dictionary probe 05:04 与 LQThetaComponent 审计（abc）
+
+- `Mzk1P0FinalS3137DictionaryAxiomProbeActual`：源 **13:02:06**；**DONE 05:04:50Z**；olean **13:04:50 > 源** → 新鲜；无 sorry/True；
+  * `paperS3137ReadingDictionary_of`、`finalDictionaryCombined` → 均 `[propext, Classical.choice, Quot.sound]`（旧日志中此前失败输出是历史）。
+- `Mzk1P0LQThetaComponentActual`：源 **13:06:20**；**DONE 05:08:51Z**；olean **13:08:51 > 源** → 新鲜；源码无 `sorry`/`True`/`axiom`；
+  * `CommonPrimeNormInstanceCompat`：实质结构（`toCommonPrime` + `norm_eq : ‖x‖=‖toCommonPrime x‖`），`CommonPrimeNormInstanceCompatRequired := Nonempty`（无 inhabitant）；
+  * `tensorUnit_mem_thetaRegion_conditional (h : qComponentMemGap I place)` 条件 membership；`thetaRegion_nonempty_actual` 非空；
+  * 文件内 probe 两项 → 均 `[propext, Classical.choice, Quot.sound]`；
+- 边界：`qComponentMemGap` 与 `CommonPrimeNormInstanceCompatRequired` 仍未证；LQTheta membership 仍条件，不因文件绿而闭合。
+## 2026-11-14 — 新 donor 与 L 侧 interface caveat 审计（abc）
+
+### donor：`BaseScalarValuationRelation`（LeanFormal）
+- `LeanFormal/IUT/Foundations/AlgebraicGeometry/BaseScalarValuationRelation.lean` **DONE 05:22:40Z**；
+- probe `Mzk1BaseScalarValuationAxiomProbeActual` **DONE 05:28:57Z**：`padicUnit_valuation_zero`、`scalarDVRDecomposition`、`unitUpperValuation`、`baseScalarValuationRelation` → 均 `[propext, Classical.choice, Quot.sound]`。
+
+### L 侧 GREEN 文件 — 均为 interface/gap 定义，非 inhabitant
+- `Mzk1P0LNormCompatActual` **DONE 05:23:21Z**：仅 `def normInstanceCompatGap := CommonPrimeNormInstanceCompatRequired`（gap 别名，无证明）；
+- `Mzk1P0LCommonPrimeNormActual` **DONE 05:36:54Z**：`commonPrimeNormGap` + `commonPrimeNormGap_iff : gap ↔ Nonempty (...) := Iff.rfl`（重述，无 inhabitant）；
+- `Mzk1P0LReadoutEqNativeActual` **DONE 05:23:22Z**：仅 structure `LReadoutEqNative`（字段 qRead_eq/thetaRead_eq，无 inhabitant）；
+- `Mzk1P0LNativeLSideBridgeActual` **DONE 05:36:55Z**：structure `NativeLSideBridge`（readout + theta_nonneg）+ `Required := Nonempty`（无 inhabitant）；
+- 均无 `sorry`/`True`/`axiom`；但**只是接口/缺口别名**，不能当 L 侧 donor 闭合，也不能关闭 `LQThetaSourceArrow` 的 `q_mem_thetaRegion`/`normalization_eq`。
+- `Mzk1P0LS3137LFinalActual`：最新 **START 05:38:21Z，尚无 DONE/olean**；内容为 `qReading_final`/`qReading_nonpos_final` 基础 re-export，pending。
+## 2026-11-14 — 新 green 扫描 / LFinal 与 Composite 状态（abc）
+
+- `Mzk1IUTIVStatementLayerConsumerActual`：**DONE 05:22:28Z，olean 13:22:28**；源码无 `sorry`/`True`/`axiom`；
+  * 结构 `Mzk1IUTIVPrereqBundle` + 条件 consumer：`iut312TopStatementData_of_bundle`、`hullDet_of_bundle`、`qTheta_of_bundle`、`abcReadout_of_bundle`、`sec1sec2_transfer_of_bundle`、`pnt_explicit_of_bundle`；均为 bundle→结论的**条件组装**，无新 inhabitant；无专属 axiom probe（未验证）。
+- `Mzk1P0LS3137LFinalActual`：**当前 RED**（FAIL 05:47:13Z，构建晚于源 13:43:49）；首错 `Invalid argument name I`（line14），另有 stuck `Norm`、unknown `qReading_final` 与含 `sorry` 的未解目标；不得当 green。
+- `Mzk1IUTIVProp11CompositeActual`：源 13:50:53，旧 FAIL 05:44:18（当时缺 `Example36LocalGaloisInvariantMonoid.olean` 且 line1 头破损），依赖 olean 现已 True；**当前源尚无新 START/DONE，pending**。
+- `Mzk1DeepStatementLayerV2Actual`：**DONE 05:03:27Z（10s）**；仅 statement 结构（`IUTIVProp11Statement` 等），自注 “sorry/axioms; no closure claim”，**非实质证明**。
+- L 侧 interface caveat（前条）仍有效：NormCompat/CommonPrimeNorm/ReadoutEqNative/NativeLSideBridge 都只是接口/缺口别名，无 inhabitant；`LS3137LFinal` 还红。
+## 2026-11-14 — 更正：DeepStatementLayer / LS3137LFinal 的 sorry 分类（abc）
+
+- `Mzk1DeepStatementLayerV2Actual`（DONE 05:03:27Z）：grep `sorry|axiom` 仅命中 **注释 line12**（“sorry/axioms; no closure claim”），**无实际 sorry/axiom 命令**；文件仅是 statement 结构层（structures-only），不是证明文件；不得写成“含 sorry”。
+- `Mzk1P0LS3137LFinalActual`：**当前源（mtime 13:51:02）grep 无 sorry/axiom**；此前 FAIL 05:47:13 的 `sorryAx`/unsolved goal 是 **elaboration 失败生成的 synthetic placeholder**（`qPilotLogVolumeReadingL_nonpos C3L` 类型类 stuck），不是源级 sorry；
+  * 源在 FAIL 后又被修改（13:51:02 > FAIL 时间），**当前构建 pending**（尚无新 START/DONE）；不能记为源含 sorry。
+- 分类：Deep = structure-only statement layer；LS3137LFinal = source sorry-free 但 elaboration instance stuck + pending rebuild。
+## 2026-11-14 — Donor 更正记录 + LS3137LFinal 审计（abc）
+
+### LS3137LFinal（已 GREEN）
+- `Mzk1P0LS3137LFinalActual`：源 13:51:02；**DONE 05:57:00Z**；olean **13:56:59 > 源**；源码无 `sorry`/`axiom`；
+- probe `Mzk1P0LS3137LFinalAxiomProbeActual` **DONE 06:00:57Z**：`qReading_final`、`qReading_nonpos_final` 均 `[propext, Classical.choice, Quot.sound]`；旧 per-file log 中 synthetic `sorryAx`/unknown 是修复前失败构建，不是当前源。
+
+### Donor `GeneralNormalizedNormBySpectralUniqueness`（GREEN 05:58:55Z）与五项更正
+1. `generalNormalizedNormFormula (x : L place) (hx : x ≠ 0)`：**仅对 x≠0**；header 明确 `f 0 = 0` 由 junk value 强制，全 x 形式 FALSE；
+2. `CanonicalAbsValueAddLeProof` 的旧目标形状（`f(x+y) ≤ max(fx,fy)`）**错误/未验证**：Mathlib `AbsoluteValue.add_le'` 是 archimedean `f(x+y) ≤ f x + f y`，不是 max；该文件当前无 olean（未验证）；
+3. carrier：`L := NormalizedCompletion place`（spectral normalized），`C := place.maximalIdeal.adicCompletion F`（adic canonical）仅用于 `Valued.v`/`nu`；公式 `absNorm^(-nu/d)` 是 normalized spectral；
+4. `nu_add_ge_min (x y) (hx : x≠0) (hy : y≠0) (hxy : x+y≠0)`；
+5. `d_eq_e_mul_f : d = e * f := rfl`；使用 `Real.rpow_le_rpow_of_exponent_le`（不是不存在的 `Real.rpow_le_rpow_left₀`）。
+- donor probe `Mzk1GeneralNormalizedNormAxiomProbeActual` **DONE 06:04:01Z**：`generalNormalizedNormFormula`、`normalizedCanonicalPowerComparison`、`canonicalAbsValue_extends` 均 `[propext, Classical.choice, Quot.sound]`。
+
+### S45 / overclaim 边界
+- 上述是 **base-field norm/completion** 更正，与 S45 source condition（`qVFamNormRatio=1` + root-hull scaling）无关；**不得用这些 norm donor 宣称 S45 或 paper 比较已闭合**。
+- `CanonicalAbsValueAddLeProof` 旧 max-bound 目标仍为未验证/错误形状，不能作为 donor 消费。
+## 2026-11-14 — donor/composite/LS3137 最终审计 + residual risk（abc）
+
+### 已 GREEN 并 probe
+- donor `GeneralNormalizedNormBySpectralUniqueness`：**DONE 05:58:55Z**，olean **14:04:02**；probe `Mzk1GeneralNormalizedNormAxiomProbeActual` **DONE 06:04:01Z**：`generalNormalizedNormFormula`（x≠0）、`normalizedCanonicalPowerComparison`、`canonicalAbsValue_extends` → 均 `[propext, Classical.choice, Quot.sound]`；
+- composite `Mzk1IUTIVProp11CompositeActual`：**DONE 06:06:46Z**，olean **14:06:45**；源码无 sorry/True/axiom；新增 probe `Mzk1IUTIVProp11CompositeAxiomProbeActual` **DONE 06:12:10Z**：`iutIVProp11_tensorPacket_composite` → `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1P0LS3137LFinalActual`：**DONE 05:57:00Z**，olean **13:56:59**；probe **DONE 06:00:57Z**：`qReading_final`、`qReading_nonpos_final` 标准三公理。
+
+### Residual risk（旧文件仍 all-x/无 olean）
+- `GeneralNormalizedNormFinal.lean`：`generalNormalizedNormFormula (x : N place)` **无 hx（all-x 旧形状）**；ole=**False**；
+- `GeneralNormalizedNormConsumer.lean`：`generalNormalizedNormFormula_consumer (x : N place)` **无 hx**，调用旧 all-x 公式；ole=False；
+- `NormalizedNormSpectralBridge.lean`：有 hx 形，但 ole=False；`GeneralNormalizedNormFinalWiringFixed.lean`：有 hx 形但依赖旧 Consumer/Formula，ole=False；`GeneralNormalizedNormFormula.lean`：ole=False；
+- 结论：这些旧 Final/Consumer/SpectralBridge/FinalWiringFixed **必须补 hx/fix 名称后才能 build**；当前不得消费，不得当作已修复。
+
+### S45 边界
+- 以上 donor 均为 **base-field norm/completion** 修复；**S45（qVFamNormRatio=1 + root-hull scaling）不由这些 donor 推出**，仍为独立显式 source condition；不得 overclaim。
+## 2026-11-14 — Final/Donor/Composite/AddLeProof probes 复核 + S45 obstruction inquiry（abc）
+
+### probes（均针对当前 olean 之后）
+- `Mzk1FinalAuditAxiomProbeActual`：**DONE 06:20:49Z**，olean 14:20:48 > final olean 12:57:23；4 项（两 final 定理、`finalBridgeConditions_of`、B5 conditional）→ 均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1GeneralNormalizedNormAxiomProbeActual`：**DONE 06:20:02Z**，olean 14:20:02 > donor olean 14:04:02；`generalNormalizedNormFormula`(x≠0)、`normalizedCanonicalPowerComparison`、`canonicalAbsValue_extends` → 标准三公理；
+- `Mzk1IUTIVProp11CompositeAxiomProbeActual`：**DONE 06:17:01Z**，olean 14:17:00 > composite olean 14:06:45；`iutIVProp11_tensorPacket_composite` → 标准三公理；
+- `Mzk1CanonicalAbsValueAddLeAxiomProbeActual`：**DONE 06:20:03Z**，olean 14:20:02；`canonicalAbsValue_add_le` → 标准三公理；
+  * `CanonicalAbsValueAddLeProof` 源 **DONE 06:12:20Z**，olean True；定理 `canonicalAbsValue_add_le` 证明 **max 版本**（通过 green `canonicalFun_add_le`），max≤sum ⇒ archimedean 版本；
+  * 更正：此前 “旧 AddLeProof 目标形状错误” 指旧的错误目标；当前文件已改为经 `canonicalFun_add_le` 的合法 max 证明；但 `AbsoluteValue.add_le'` 字段本身由 donor 的 `canonicalFun_add_le_sum` 提供，不是此文件新增。
+
+### S45 obstruction inquiry（记录）
+- S45 条件 = `PaperSourceCorrectionFreeFields`：`normRatio_one`（`qVFamNormRatio=1`）+ `rootHull_scaling`（`RootHullScalingFormulaAt`）；
+- 精确 obstruction 谓词（`BadPlaceSourceFieldsObstructionActual`）：
+  * `NormRatioObstructionAt := qVFamNormRatio ≠ 1`、`RootHullScalingObstructionAt := ¬ RootHullScalingFormulaAt`；全局存在版本 `NormRatioObstruction`/`RootHullScalingObstruction`；
+  * `papersourceFields_iff_no_obstruction : Nonempty PaperSourceCorrectionFreeFields ↔ ¬NormRatioObstruction ∧ ¬RootHullScalingObstruction`；
+  * `qVFamNormRatio_eq_one_iff_norm_eq`、`normRatioObstructionAt_iff_norm_ne`（normalized=default）。
+- 仓库中**既无无条件 S45 证明，也无反例/obstruction 存在性证明**；norm 新 donor（GeneralNormalizedNorm…）与 S45 无关，**不能推出 S45**；S45 仍是独立显式 source condition，不得 overclaim。
+## 2026-11-14 — S45NormRatioRealization / Prop18Composite / DefaultNormScalingVariant 审计与 probes（abc）
+
+### `Mzk1S45NormRatioRealizationActual`（GREEN 06:28:02Z）
+- 源码无 `sorry`/`True`/`axiom`；
+- 定理：`qVFamNormRatio_eq_one_iff_gap : ratio=1 ↔ QVFamNormInstanceGap`（**等价，不是 S45 的证明**）；`qVFamNormRatio_mul_default`、`qVFamNormRatio_pos`、`qVFamNormRatio_ne_one_of_gap_false`；
+- **S45 仍为显式条件**（`QVFamNormInstanceGap`），该文件只把 S45 realization 精确写成 ratio=1 ↔ gap；不 overclaim；
+- probe `Mzk1S45Prop18AuditProbeActual` **DONE 06:34:29Z**：上述 4 定理均 `[propext, Classical.choice, Quot.sound]`。
+
+### `Mzk1IUTIVProp18CompositeActual`（GREEN 06:23:15Z）
+- 源码无 sorry/True/axiom；`iutIVProp18_legendre_twoTorsion_composite`：在 `[IsElliptic]` 条件下给 Legendre 两挠多项式/判别式/参数非 0,1/2-division 判据；composite 复用现有 Legendre 资产，**无新 paper input、无 closure**；
+- probe 同上：`iutIVProp18_legendre_twoTorsion_composite` → 标准三公理。
+
+### `Mzk1DefaultNormScalingVariantActual`（GREEN 06:31:04Z）
+- 源码无 sorry/True/axiom；`DefaultNormPureFractionalScalingData`：`localGenerator : Completion place`（**default norm**）+ `localGenerator_norm`；constructor `defaultNormPureFractionalScalingData_ofGenerator`；
+- **不是替换** `ArithmeticTuplePureFractionalScalingData`：generator 类型 `Completion place` vs `CommonPrimeCompletion place`；`DefaultNormScalingConsumerGap : Prop` 记录 consumer 需 bridge；
+- probe `Mzk1DefaultNormScalingVariantAxiomProbeActual`（retouched）**DONE 06:36:37Z**：constructor → `[propext, Classical.choice, Quot.sound]`。
+## 2026-11-14 — S45FreeScalingRoute 审计（当前 RED）（abc）
+
+- `Mzk1S45FreeScalingRouteActual`：源 mtime **14:39:24**；旧 **DONE 06:36:39Z**（olean 14:36:38，早于源）；最新 **START 06:40:29Z → FAIL 06:41:00Z**（晚于源，真实错误）；
+- 首错：line85 `[Measure.IsAddHaarMeasure μ]` → `invalid binder annotation, type is not a class instance ?m.22`；
+  * 原因：文件未 `open MeasureTheory`（也未限定 `MeasureTheory.Measure.IsAddHaarMeasure`），`Measure`/`Measure.IsAddHaarMeasure` 未解析为类；
+  * 建议修复：加 `open MeasureTheory`（或写全限定 `[MeasureTheory.Measure.IsAddHaarMeasure μ]`）；
+- 当前源 grep 无 `sorry`/`True`/`axiom`；旧 olean 早于源不可用；无 probe（未绿前不能 probe）；
+- 内容边界（注释）：S45-free 路线仅构造**normalized representative** `q`（`‖q i‖=r i^(1/d i)`）的 scaling data；实际 `q` 范数识别仍是 S45/norm-instance 条件，未声称。
+## 2026-11-14 — Section2ElementaryComposite + S45FreeScalingRoute 最终审计（abc）
+
+### `Mzk1IUTIVSection2ElementaryCompositeActual`（GREEN 06:44:39Z）
+- 源 14:40:39；**DONE 06:44:39Z**；olean **14:44:38 > 源**；源码无 sorry/True/axiom；
+- `iutIVSection2_elementary_composite`：合取 (Prop2.1(ii) two-sided theta eventual)、(Prop1.6 prime-counting)、(Prop1.6 nth-prime index)、(Prop2.1(i) log x≤x)；全部由现有 `IUTIV.Estimates.Section2` 引理直接组合；**无新 paper input、无 closure**；
+- probe `Mzk1IUTIVSection2CompositeAxiomProbeActual` **DONE 06:55:11Z**：`iutIVSection2_elementary_composite` → `[propext, Classical.choice, Quot.sound]`。
+
+### `Mzk1S45FreeScalingRouteActual`（更正：已 GREEN 06:51:35Z）
+- 源 14:48:01；**DONE 06:51:35Z**；olean **14:51:34 > 源**；源码无 sorry/True/axiom；
+- 定理：`norm_pow_eq_of_norm_eq_rpow`、`norm_normalizedScalingGenerator`、`arithmeticTuplePureFractionalScalingData_ofNormalizedRepresentative`、`arithmeticTupleNormalizedLogVolume_ofNormalizedRepresentative`；
+- **scope caveat**：S45-free 仅对 normalized representative `q`（`‖q i‖=r i^(1/d i)`）构造 scaling data；实际 q 范数识别仍是 S45/norm-instance 显式条件，未声称；
+- probe `Mzk1S45FreeScalingRouteAxiomProbeActual` **DONE 06:55:13Z**：4 定理均 `[propext, Classical.choice, Quot.sound]`。
+- 此前 06:41:00 FAIL（缺 `open MeasureTheory` 类注解）已被这次修复构建取代。
+## 2026-11-14 — RouteA + GenericNormBridge 审计（abc）
+
+### `Mzk1P0S45FreeFinalRouteAActual`（GREEN 06:55:40Z）
+- 源 14:52:29；**DONE 06:55:40Z**；olean **14:55:39 > 源**；源码无 `sorry`/`True`/`axiom`（line17 仅注释“remaining gap”）；
+- 定理：`normRatioCorrectionSum_nonneg_of_ratio_ge_one (h : ∀b, 1≤ratio)`、`paperNormalizedCorrection_nonpos_of_sum_nonneg`、`finalPaperNormalizedComparison_noS45_of_ratio_ge_one`；
+- **explicit remaining gap**：由 donor `normalized=default^(1/d)` 推 `1≤ratio` 的 carrier/instance bridge，不假设；
+- probe `Mzk1P0RouteAAxiomProbeActual` **DONE 07:05:12Z**：3 定理均 `[propext, Classical.choice, Quot.sound]`。
+
+### `Mzk1GenericNormBridgeActual`（GREEN 07:02:18Z，此前 pending）
+- 源 15:00:47；**DONE 07:02:18Z**；olean **15:02:17 > 源**；源码无 sorry/True/axiom；
+- `qVFamDefaultNorm_pos`、`qVFamDefaultNorm_lt_one`；`qVFamNormRatio_ge_one_of_norm_bridge (d) (hd:1≤d) (hbridge : normalized = default^(1/d)) : 1≤ratio`；
+- probe `Mzk1GenericNormBridgeAxiomProbeActual` **DONE 07:08:06Z**：3 项均标准三公理；
+- **关系/边界**：Generic 只是 **条件地** 提供 RouteA 所缺的 `1≤ratio`（依赖 hbridge）；S45/norm-instance 仍显式，不能据此宣称 S45-free 路线已无条件闭合。
+## 2026-11-14 — RouteA/Generic probe 新鲜度 + hbridge pending 记录（abc）
+
+- `Mzk1P0RouteAAxiomProbeActual`：**DONE 07:05:12Z**，probe olean **15:05:11** > RouteA olean **14:55:39** → 针对当前 RouteA；3 定理均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1GenericNormBridgeAxiomProbeActual`：**DONE 07:08:06Z**，probe olean **15:08:05** > Generic olean **15:02:17** → 针对当前 Generic；3 定理均标准三公理；
+- **hbridge pending（唯一缺口）**：`hbridge : qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1/(d:ℝ))` 在仓库中**没有证明**；Generic 只把它作为显式假设，RouteA 把它列为 explicit remaining gap；
+  * 该等式是 donor `normalized = default^(1/d)` 与 actual q 载体/norm instance 之间的 bridge；与 S45 `qVFamNormRatio=1` 不同，但同样未闭合；
+  * 相关 pending：`RootBaseCompletionGap`（rootBase ↔ K 的 bad K-place 完备化）与 norm-instance 一致；
+- 结论：RouteA 是 **conditional S45-free reduction**（给 `1≤ratio` 则 comparison）；Generic **conditional 补 ratio≥1**（给 hbridge）；**hbridge 未证**，S45-free 路线未无条件闭合，不 overclaim。
+## 2026-11-14 — QVFamNormBridge Value/Donor + RouteA wrapper 审计（abc）
+
+### `Mzk1RouteAFinalNoS45WrapperActual`（GREEN 07:13:53Z）
+- 源 15:10:19；**DONE 07:13:53Z**；olean **15:13:52 > 源**；无 sorry/True/axiom；
+- `finalPaperNormalizedComparison_noS45_of_norm_bridge (d) (hd : ∀b,1≤d b) (hbridge : ∀b, qVFamNormalizedNorm = qVFamDefaultNorm^(1/(d b))) : paperNormalizedThetaSum ≤ paperNormalizedQPilotSum`；
+- **hbridge 仍是显式假设**；无 S45 等式使用；
+- probe `Mzk1RouteAFinalNoS45WrapperProbeActual` **DONE 07:23:23Z**：该定理 → `[propext, Classical.choice, Quot.sound]`。
+
+### `Mzk1QVFamNormBridgeValueActual`（当前 RED 07:23:24Z）
+- 源 15:18:21；最新 **FAIL 07:23:24Z**：line75 `ring` unsolved goal
+  `-(nu_normalized * d⁻¹) = -((d⁻¹) * nu_default)`；目标 hbridge (`qVFamNormalizedNorm_eq_defaultNorm_rpow`) 仍**未证**；无 olean。
+### `Mzk1P0QVFamNormBridgeDonorActual`（当前 RED 07:23:24Z）
+- 源 15:20:27；最新 **FAIL 07:23:24Z**：`paperNormalizedQPilotSum` unknown（缺 import/open），且 line135/136 `T` 未绑定；无 olean；其中 unconditional `qVFamNormRatio_ge_one`/`finalPaperNormalizedComparison_noS45` 尚未成立，不可消费。
+
+- 结论：仅 wrapper 条件版 GREEN+probe；**hbridge (`normalized=default^(1/d)`) 仍未证**；Value/Donor 红；S45-free 路线仍未无条件闭合。
+## 2026-11-14 — hbridge 最新编译审计（abc）
+
+- `Mzk1QVFamNormBridgeValueActual`：源 15:21:50；最新 **FAIL 07:23:24Z**；首错 line75 `ring` unsolved：
+  `-(nu_normalized * ↑d⁻¹) = -((↑d)⁻¹ * nu_default)`（建议 `ring_nf` 或 `rw [mul_comm]`）；**hbridge 未证**；无 olean；
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 15:28:08；最新 **FAIL 07:30:28Z**；
+  * 结构原因：section 只声明 `variable (T) (b)`，**缺 `[Fintype (Bad (nativePlaceSelection T))]`**；`qVFamNormRatio_ge_one`/`finalPaperNormalizedComparison_noS45` 等用到 `Finset` 和 paper sums，触发 `Fintype` synthInstanceFailed，并级联 `T` unknown/`exact` unknown；
+  * 修复建议：在 `variable (T)` 后加 `variable [Fintype (Bad (nativePlaceSelection T))]`；
+  * 其中 `qVFamNormalizedNorm_eq_defaultNorm_rpow`（hbridge）**尚未编译成功**；无 olean；
+- 结论：wrapper 条件版绿+probe 标准已记；**hbridge 仍 pending**（Value ring 失败 + Donor 缺 Fintype），S45-free 未无条件闭合。
+## 2026-11-14 — hbridge 仍 RED（最新首错与修复建议）（abc）
+
+- `Mzk1QVFamNormBridgeValueActual`：源 15:21:50；最新 **FAIL 07:36:32Z**；首错仍 line75 `ring` unsolved（`-(nu*d⁻¹) = -((d⁻¹)*nu)`）；**建议 `ring_nf` 或 `rw [mul_comm]`**；无 olean。
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 15:38:19；最新 **FAIL 07:40:17Z**；
+  * line84：`WithZero.unzero (show val ≠ 0 from hv)` → type mismatch（`val ≠ 0` vs `?m ≠ 0`）；建议显式 `WithZero.unzero (a := val) hv` 或直接 `WithZero.unzero hv`；
+  * line147-150：`finalPaperNormalizedComparison_noS45` 证明以 `:=` 后直接 `have` 开始，缺 `by`；导致 line150 `exact` unknown；建议 `:= by`；
+  * line146 已加 `[Fintype (Bad (nativePlaceSelection T))]`；
+  * 无 olean；hbridge 未证。
+- 结论：hbridge 仍未编译通过；wrapper probe 已 green（此前记录）；S45-free 未无条件闭合。
+## 2026-11-14 — hbridge 最新（07:47/07:50）首错：carrier 层次问题（abc）
+
+- `Mzk1QVFamNormBridgeValueActual`：源 15:44:10；最新 **FAIL 07:47:21Z**；
+  * 首错：target 类型不正确 —— `nu (qVFamTensorPlace T b) (qVFamily T b).q`：`(qVFamily T b).q` 类型为 `Completion … ((nativeBadLift T).lift b)`，而 `nu qVFamTensorPlace` 期望 `L … (qVFamTensorPlace T b)`；
+  * 这是**载体/place 识别缺口**（不是单纯 ring）：需要 `(nativeBadLift T).lift b` 与 `qVFamTensorPlace T b` 的恒等/transport 引理（或改用正确的 `nu` 参数类型）；
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 15:47:41；最新 **FAIL 07:50:17Z**；
+  * line110：`Multiplicative.toAdd (WithZero.unzero …)` 期望 `Multiplicative ℝ`，但参数是 `Multiplicative ℤ`；
+  * 修复：内层显式标 `ℤ` 再转 `ℝ`：`((Multiplicative.toAdd (WithZero.unzero (x := val) hv) : ℤ) : ℝ)`；
+- 结论：hbridge 仍红；Value 暴露的 carrier mismatch 是此前 `RootBaseCompletionGap` 之外的**place 识别**缺口；wrapper 条件版仍绿（此前已 probe），S45-free 未无条件闭合。
+## 2026-11-14 — LiteralCarrier + Final probe 4 项复核（abc）
+
+### `Mzk1IUTIVLiteralCarrierReductionActual`（GREEN 07:53:24Z）
+- 源 15:50:57；**DONE 07:53:24Z**；olean **15:53:24 > 源**；源码无 `sorry`/`True`/`axiom`；
+- 定理：`normalizedLogVolume_region_eq_log_char`、`literalGap1_iff`、`literalGap2_iff`；
+  * 后两者是**精确 reduction**：Gap1 ↔ `LiteralHeightComparison`（具体 Haar 特征高度不等式）、Gap2 ↔ `LiteralMainEstimate`（Haar 对数体积主估计）；算术输入仍是显式命名输入；**无 closure 声明**；
+- probe `Mzk1IUTIVLiteralCarrierAxiomProbeActual` **DONE 08:03:09Z**：3 定理均 `[propext, Classical.choice, Quot.sound]`。
+
+### Final S3137 probe 重跑（4 项）
+- Final 源 15:49:29；**DONE 07:54:15Z**；olean 15:54:14；源码无实际 `True`/`sorry`/`axiom`（`True` 仅注释 line17）；
+- `Mzk1FinalAuditAxiomProbeActual` 重新触发生效 **DONE 08:03:38Z**，olean **16:03:38 > final olean 15:54:14**；4 项：`finalPaperNormalizedComparison`、`finalLPaperInstance`、`finalBridgeConditions_of`、B5 conditional theorem → 均 `[propext, Classical.choice, Quot.sound]`。
+## 2026-11-14 — 新 Final 专属 probe `Mzk1P0FinalS3137AxiomProbeActual`（与旧 4 项 probe 分开记录）（abc）
+
+- 新 probe `Mzk1P0FinalS3137AxiomProbeActual`：源 16:00:45；**DONE 08:03:38Z**；olean **16:03:38 > final olean 15:54:14** → fresh；
+  * 4 项：`finalPaperNormalizedComparison`、**`finalPaperNormalizedComparison_noS45_ofNormBridge`**、`finalLPaperInstance`、`finalBridgeConditions_of`；
+  * 全部 `[propext, Classical.choice, Quot.sound]`（log 确认，新 probe 不含 B5）；
+- 旧 probe `Mzk1FinalAuditAxiomProbeActual`（另一 4 项：final 3 项 + B5 conditional theorem）也 fresh：DONE 08:03:38Z，olean 16:03:38 > 15:54:14，同样标准三公理；
+  * **两个 probe 分开、均 fresh，不混淆**；
+- `finalPaperNormalizedComparison_noS45_ofNormBridge (hbridge : ∀b, qVFamNormalizedNorm T b = (qVFamDefaultNorm T b)^(1/d_b)) : paperNormalizedThetaSum ≤ paperNormalizedQPilotSum`：条件定理；hbridge 仍 pending（Value/Donor 红），**S45-free final 仍条件**，不 overclaim。
+## 2026-11-14 — hbridge 最新（08:14/08:16）首错与修复点（abc）
+
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 16:08:02；最新 **FAIL 08:14:16Z**；首错：
+  * `hlog` 证明 line79-80：`rw [show val = ↑(WithZero.unzero hval) ...]` 已闭合目标，随后 line80 `rfl` 报 **No goals to be solved**；
+  * 修复：删 line80 `rfl`，或把 line79-80 改为 `simpa [WithZero.coe_unzero] using (WithZero.coe_unzero hval).symm` 形态；
+- `Mzk1QVFamNormBridgeValueActual`：源 15:44:10；最新 **FAIL 08:14:15Z**；首错仍是 line70 `change` 中 `nu (qVFamTensorPlace T b) (qVFamily T b).q` 的 carrier mismatch：
+  * `(qVFamily T b).q` 需显式 `show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q`（与 line52/62 一致）；line70 两处 `(qVFamily T b).q` 都要该 `show`；
+- 结论：hbridge 仍未绿；Donor 已从 Fintype/scope 错误推进到 hlog 小错误；Value 需统一 carrier `show`；wrapper 条件版仍绿，S45-free 未无条件闭合。
+## 2026-11-14 — Dictionary re-DONE + probe + hbridge 状态（abc）
+
+### Dictionary 重编（GREEN 08:14:22Z）
+- `Mzk1P0FinalS3137DictionaryActual`：源 16:10:40；**DONE 08:14:22Z**；olean **16:14:21 > 源**；源码无实际 `True`/`sorry`/`axiom`（`True` 仅注释 line74）；
+- 新增 `finalDictionaryCombined_ofNormBridge (hbridge : ∀b, qVFamNormalizedNorm = qVFamDefaultNorm^(1/d)) (rel) (lock) : paper comparison ∧ RelativeFactorTowerData ∧ Nonempty dictionary`；**去掉 S45SourceFields，但仍条件于 hbridge**；
+- probe `Mzk1P0FinalS3137DictionaryAxiomProbeActual` 重跑 **DONE 08:21:05Z**，olean **16:21:05 > dictionary olean 16:14:21** → fresh；3 项：`paperS3137ReadingDictionary_of`、`finalDictionaryCombined`、`finalDictionaryCombined_ofNormBridge` → 均 `[propext, Classical.choice, Quot.sound]`。
+
+### hbridge 仍 RED
+- `Mzk1QVFamNormBridgeValueActual`：最新 FAIL **08:14:15Z**（carrier mismatch 未修，无新 olean）；
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 16:18:38；最新 FAIL **08:24:28Z**（仍有 simp/unused 之外的首错；无 olean）；
+- 结论：Dictionary 的 S45-free conjunct 仍**条件于 hbridge**，hbridge 未绿 → 不构成无条件闭合；wrapper 条件版仍绿。
+## 2026-11-14 — ABCStatementLayer 审计（abc）
+
+- `Mzk1IUTIVABCStatementLayerActual`：源 16:20:49；**DONE 08:23:34Z**；olean **16:23:34 > 源**；grep `sorry|True|axiom` **仅命中注释 line15**（“no sorry/axioms; no closure claim”），**无实际 sorry/axiom**；
+- 内容：**statement-layer skeleton** — structures `G0TargetStatement`、`G3RouteStatement`、`HWStatement`、`IUTIVCarrierStatement`、`NamedInputsStatement`，加投影重述定理（`g0_abc`、`g3_gapReduced`、`g3_pointwiseReduced`、`hw_heightWeight`、`carrier_iqHull`、`named_n1`、`named_n2`；均 `h ↦ h`）；无 closure 声明，registry 14041；
+- 归属：**structure-only statement layer，非实质证明进展**；无 probe 必要（投影定理无数学内容）；不得据此宣称 ABC/IUT IV 陈述层已证。
+## 2026-11-14 — `Mzk1P0FinalNoS45AssemblyActual` 审计 + probe（abc）
+
+- `Mzk1P0FinalNoS45AssemblyActual`：源 16:34:59；**DONE 08:38:07Z**；olean **16:38:06 > 源**；源码无 `sorry`/`True`/`axiom`；
+- `def NormPowerBridge : Prop := ∀b, qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1/relativeCompletionDegree)`（**显式 power input，不是 norm equality**）；
+- `finalPaperNormalizedComparison_noS45 (hbridge : NormPowerBridge) : paperTheta≤paperQ`（条件）；
+- `finalDictionaryCombined_noS45 (hbridge)(rel)(lock) : paper comparison ∧ RelativeFactorTowerData ∧ Nonempty Dictionary`（条件）；
+- rows 准确：`NormPowerBridge` = EXPLICIT INPUT；两定理 = PROVED (conditional on bridge)；`S45 ratio=1` = NOT USED（仅 strict equality 需要）；
+- probe `Mzk1P0FinalNoS45AssemblyAxiomProbeActual` **DONE 08:41:29Z**，olean 16:41:28 > 16:38:06 → fresh；两定理 → 均 `[propext, Classical.choice, Quot.sound]`；
+- 边界：hbridge 仍 pending（Value/Donor 红），故 drop-S assembly **仍是条件结论**；不得当无条件 S45-free final；wrapper 条件版仍绿。
+## 2026-11-14 — hbridge 最新首错（08:47/08:48）（abc）
+
+- `Mzk1QVFamNormBridgeValueActual`：源 16:29:55；最新 **FAIL 08:47:59Z**；
+  * 首错：`show NormalizedCompletion (qVFamTensorPlace T b) from (qVFamily T b).q` **不成立**：`(qVFamily T b).q : Completion ((nativeBadLift T).lift b)` 与 `NormalizedCompletion (qVFamTensorPlace T b)` **不是 defeq**；
+  * 意味着需要真正的 **place transport**：`(nativeBadLift T).lift b` ↔ `qVFamTensorPlace T b` 的识别/同构；仅靠 `show` 无法通过；这是 hbridge 的核心阻碍；
+- `Mzk1P0QVFamNormBridgeDonorActual`：源 16:50:06；最新 **FAIL 08:48:00Z**；
+  * line79-80：`WithZero.unzero (α := Multiplicative ℤ) (x := val) (proof)` 参数名/元素指定错误（Lean 解析为 `WithZero.unzero val`）；
+  * 修复：用 `WithZero.unzero (a := val) hval`（或直接 `WithZero.unzero hval`），随后 `((Multiplicative.toAdd ... : ℤ) : ℝ)`；
+- 结论：hbridge 仍未绿；Value 的 place 识别缺口是实质性的，非 tactic 小修；wrapper/dictionary/NoS45Assembly 条件版均绿+probe 标准，但不构成无条件闭合。
+## 2026-11-14 — EstimatesStatementLayer 审计（abc）
+
+- `Mzk1IUTIVEstimatesStatementLayerActual`：源 16:51:03；**DONE 08:53:44Z**；olean **16:53:44 > 源**；grep `sorry|True|axiom` **仅注释 line15**（“no sorry/axioms; no closure claim”），无实际命令；
+- 内容：**pure statement/projection layer** — structures `IUTIVProp11Statement`、`Prop12Statement`、`Prop14Statement`、`Prop15Statement`、`Prop18Statement`、`Thm110ActualStatement`、`Prop22PNTStatement`、`Sec2ArithmeticTransitionStatement`、`Sec1ToSec2GapStatement`、`HeightInputStatement`、`UndilatedInputStatement`；加投影重述定理（`prop11_tensorRing`、`prop12_estimate`、`prop14_localLog` 等，均 `h ↦ h`）；
+- 无 closure 声明，registry frozen 14041；**structure-only statement layer，非实质证明进展**；无 probe 必要；不得据此宣称 IUT IV estimates 已证。
+## 2026-11-14 — URGENT：hbridge 文件 sorry 检查（abc）
+
+- `Mzk1P0QVFamNormBridgeDonorActual`（当前源 mtime **17:02:37**）：`Select-String -Pattern 'sorry'` **零命中**（无 `sorry` 子串）；line76 现为 `let m : ℤ := Multiplicative.toAdd (α := ℤ) (WithZero.unzero (x := val) hval)`，**临时 `toAdd sorry` 已删除**；
+- `Mzk1QVFamNormBridgeValueActual`（源 16:29:55）：`sorry` **零命中**；
+- 当前状态：两文件均 **无 olean**；Donor 最新 FAIL 09:02:08（exponent 等式未解；此后源又改到 17:02:37，新构建 pending）；Value 最新 FAIL 09:02:08（carrier `(qVFamily T b).q` vs `NormalizedCompletion (qVFamTensorPlace T b)` mismatch）；
+- 结论：**源级 sorry 已不存在**（满足“任何 sorry 必须移除”）；但两文件仍因其他错误未绿 → **不得标 green**；待最新构建通过后再验收/probe。
+## 2026-11-14 — PaperIUTIVSection2Statement 审计（abc）
+
+- `Mzk1PaperIUTIVSection2StatementActual`：源 17:00:56；**DONE 09:05:32Z**；olean **17:05:31 > 源**；grep `sorry|True|axiom` **仅命中 header 注释 line8**（“NO proof, NO sorry, NO axiom, NO fake closure”），**无实际 sorry/axiom**；
+- 内容：**statement skeleton** — `RegionalLogVolumeEstimate (estimate : Prop) := estimate`、`ArchimedeanTensorMetricData (data : Prop) := data`、`HeightComparisonEstimate (estimate : Prop) := estimate`（均 Prop 恒等包装），结构 `IUTIVSection2Statement (regional tensor height : Prop)` 仅捆绑三个任意 Prop；`regionalVolume_of` 是平凡投影；
+- 自注 “NO proof / statement skeleton / PENDING-VERIFY”；无数学内容、无 closure；**不得当实质证明进展**；无 probe 必要；不得据此宣称 IUT IV Section2 estimates 已证。
+## 2026-11-14 — MAJOR：Donor hbridge GREEN 09:15:34 + probe 09:18:57；ReuseIndexAdapted 审计（abc）
+
+### `Mzk1P0QVFamNormBridgeDonorActual`（GREEN 09:15:34Z）
+- 源 **17:12:27**；**DONE 09:15:34Z**；olean **17:15:33 > 源** → fresh；`sorry|True|axiom` grep **零命中**；
+- **hbridge 无条件证明**：`qVFamNormalizedNorm T b = (qVFamDefaultNorm T b) ^ (1 / relativeCompletionDegree (k:=ℚ) (qVFamTensorPlace T b))`；
+- `qVFamNormRatio_ge_one : 1 ≤ qVFamNormRatio T b`（无条件）；
+- `finalPaperNormalizedComparison_noS45 (T) [Fintype (Bad ...)] : paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T`（**去掉 S45 ratio=1 的无条件比较**）；
+- probe `Mzk1DonorHbridgeAuditProbeActual` **DONE 09:18:57Z**，olean **17:18:56 > donor olean 17:15:33** → fresh；
+  * 三项：`qVFamNormalizedNorm_eq_defaultNorm_rpow`、`qVFamNormRatio_ge_one`、`finalPaperNormalizedComparison_noS45` → 均 `[propext, Classical.choice, Quot.sound]`；
+- **边界**：仍只证 comparison（不等式）；strict equality/`qVFamNormRatio=1` 的 S45 条件未被证明；dictionary/wrapper 现可实例化 hbridge，但 consumer 需另行重编验证。
+
+### `Mzk1IUTIVReuseIndexActualAdapted`（GREEN 09:15:28Z）
+- 源 17:11:05；**DONE 09:15:28Z**；olean **17:15:27 > 源**；grep 仅注释 line21 “No axiom/sorry”；
+- 内容：**reuse index** — `abbrev IUTIVGapBundle := IUTIVSec1Sec2Gap`、re-export `iutivGap_bridge_of`、6 行 cross-region reuse 表；其中 anchors 多数 “olean absent at this revision”，一行 “existing red file”；无新 proof/无重复理论；
+- 边界：`IUTIVSec1Sec2Gap` 本身是 gap bundle，**不是 closure**；此文件只是诚实复用清单，不计证明进度。
+## 2026-11-14 — MILESTONE 验收证据：Final S3137 09:22:47 + Assembly noS45_uncond（abc）
+
+### 文件与新鲜度
+- `Mzk1P0FinalS3137ConditionalActual`：源 **17:20:18**；**DONE 09:22:47Z**；olean **17:22:46 > 源**；`sorry|True|axiom` grep 仅注释 L18；
+- `Mzk1P0FinalNoS45AssemblyActual`：源 **17:20:18**；**DONE 09:22:46Z**；olean **17:22:46 > 源**；grep **零命中**；
+- `Mzk1P0FinalS3137DictionaryActual`：源 16:10:40；DONE 08:14:22Z；olean 16:14:21 > 源；grep 仅注释 L74；**未在 09:22 重编**（assembly 使用其 conditional lemma）。
+
+### 新定理（源级签名）
+- Final：`finalPaperNormalizedComparison : paperNormalizedThetaSum T ≤ paperNormalizedQPilotSum T` — **无条件**，由 `Mzk1P0QVFamNormBridgeDonorActual.finalPaperNormalizedComparison_noS45` 提供；
+  * 仍保留 `finalPaperNormalizedComparison_strict (S : S45SourceFields)`（S45 版本，已冗余）与 `finalPaperNormalizedComparison_noS45_ofNormBridge`（bridge 条件版）；
+- Assembly：`normPowerBridge_holds : NormPowerBridge`（由 hull donor hbridge 无条件）；`finalPaperNormalizedComparison_noS45_uncond`（**无条件** comparison）；`finalDictionaryCombined_noS45_uncond (rel) (lock)`（comparison ∧ rel ∧ Nonempty Dictionary；**无 S45/hbridge 条件，但仍需 rel + 实质 lock 输入**）。
+
+### 新 probe（fresh，created 09:24:43 > 09:22:47）
+- `Mzk1MilestoneFreshProbeActual`：**DONE 09:25:48Z**，olean **17:25:47 > final/assembly olean 17:22:46**；7 项：
+  * Final：`finalPaperNormalizedComparison`、`finalPaperNormalizedComparison_noS45_ofNormBridge`、`finalLPaperInstance`、`finalBridgeConditions_of`；
+  * Assembly：`normPowerBridge_holds`、`finalPaperNormalizedComparison_noS45_uncond`、`finalDictionaryCombined_noS45_uncond`；
+  → 均 `[propext, Classical.choice, Quot.sound]`；
+- 旧 Assembly probe 08:41 **predates 09:22，不得引用**（已被本 probe 取代）。
+
+### 验收 caveats（必须报）
+- **rows 过期**：Final `finalBridgeConditionRows` line112 仍写 `finalPaperNormalizedComparison` “S45 => ... PROVED (conditional)”，与现无条件定理不符；rows 未列 `noS45_ofNormBridge`/uncond 变体；需修正 row 文本后再作最终验收展示；
+- **Dictionary “unconditional” 精确含义**：`finalDictionaryCombined_noS45_uncond` 无 S45/hbridge 条件，但**仍依赖 `RelativeFactorTowerData` + 实质 `PaperS3137ObjectLock`**（B/B_pos/weight_relation/unitMass_eq/theta_sign）；这两者不是证明出来的；
+- L 侧仍依赖 `hlock`/`hbound`/`hlog`；`unitMass=1` NOT CLAIMED；strict equality/correction-zero 仍需 S45；
+- 结论：**paper comparison 已无条件 S45-free 成立**（在此 T/Fintype 下），但完整 S3137 最终目标仍带显式 rel/lock/L 侧条件；不得把 unconditional comparison 夸大为全部 S3137 闭合。
+## 2026-11-14 — 更新 Dictionary 09:25:51 + StepXIAdapted + 最终验收证据（abc）
+
+### `Mzk1P0FinalS3137DictionaryActual`（更新后 GREEN 09:25:51Z）
+- 源 **17:24:27**；**DONE 09:25:51Z**；olean **17:25:50 > 源**；grep 仅注释 L76；
+- 新增 **`finalDictionaryCombined_noS45 (rel : RelativeFactorTowerData) (lock : PaperS3137ObjectLock) : comparison ∧ RelativeFactorTowerData ∧ Nonempty Dictionary`**；
+  * comparison 由 Donor `finalPaperNormalizedComparison_noS45` 提供 → **无 S45/hbridge 条件**；
+  * **rel 与 lock 仍显式消费**（不是证明）；
+- probe `Mzk1DictionaryMilestoneProbeActual` **DONE 09:32:49Z**，olean **17:32:48 > dictionary 17:25:50** → fresh；3 项：`finalDictionaryCombined_noS45`、`finalDictionaryCombined`、`paperS3137ReadingDictionary_of` → 均 `[propext, Classical.choice, Quot.sound]`。
+
+### `Mzk1IUTIVStepXINamedInputsActualAdapted`（GREEN 09:22:36Z）
+- 源 17:20:56；**DONE 09:22:36Z**；olean **17:22:36 > 源**；grep 仅注释 L14（“No axiom/sorry”）；
+- 内容：statement/interface layer — `StepXISec1Sec2Input (d e b : Prop)` + 投影定理（`stepxi_sec1_display`/`sec2_estimate`/`sec1_to_sec2`）+ 10 行 named inputs 表；**无实质数学内容**，不计证明进度。
+
+### 最终验收证据 + caveats
+- Final S3137：DONE 09:22:47，olean 17:22:46 > 源；无实际 sorry/True/axiom；`finalPaperNormalizedComparison` 无条件；`Mzk1MilestoneFreshProbeActual` 09:25:48 标准三公理；
+- Assembly：DONE 09:22:46，olean **17:22:46**；两个 uncond 定理 + 7 行 rows；无 sorry；但 **ole = 17:22:46 早于更新后 Dictionary ole 17:25:50** → **consumer 证据 ordering 过期**；需重编 Assembly（及导入它的 final consumer）后再作最终验收；
+- Dictionary：DONE 09:25:51，olean 17:25:50；新 uncond theorem + fresh probe 09:32:48；
+- **rows 仍过期**：Final rows line112 仍写 `finalPaperNormalizedComparison` “S45 => PROVED (conditional)”；Dictionary rows 仍 5 行、未列 `finalDictionaryCombined_noS45`；需修 rows 后再展示验收；
+- 语义边界：rel/lock 与 L 侧 hlock/hbound/hlog 仍是显式输入（未证）；unitMass=1 NOT CLAIMED；strict equality/correction-zero 仍需 S45；
+- 结论：paper comparison + dictionary combined 已**在给定 rel/lock 下无条件（无 S45/hbridge）**；完整 S3137 仍非无条件闭合；Assembly 需在 Dictionary 后重编以形成干净的最终证据链。
+## 2026-11-14 — CLEAN FINAL ACCEPTANCE（abc，09:50:34Z）
+
+### 新鲜度链（严格）
+- Dictionary `Mzk1P0FinalS3137DictionaryActual`：源 17:40:54；**DONE 09:42:57Z**；olean **17:42:56**；
+- Assembly `Mzk1P0FinalNoS45AssemblyActual`：源 17:45:00；**DONE 09:46:50Z**；olean **17:46:50 > Dictionary 17:42:56** ✓；
+- Final `Mzk1P0FinalS3137ConditionalActual`：源 17:45:00；**DONE 09:46:51Z**；olean **17:46:50 > Dictionary 17:42:56** ✓；
+- probe `Mzk1CleanAcceptanceProbeActual`：**DONE 09:50:34Z**；olean **17:50:33 > Assembly/Final 17:46:50** ✓ → 干净链 Dictionary→Assembly/Final→probe。
+
+### 源与 rows
+- 三文件 grep `sorry|True|axiom` **仅注释**（Dictionary L76、Final L18；Assembly 零命中）；无实际 sorry/axiom；
+- Final rows 已更新：`finalPaperNormalizedComparison` = **PROVED (unconditional, no S45)**；`finalPaperNormalizedComparison_strict` = PROVED (conditional, strict only)；
+- Dictionary rows 已更新：含 `finalDictionaryCombined_noS45` = **PROVED (unconditional, no S45)**；rows_length = 8；
+
+### probe 结果（fresh，5 项）
+- Final：`finalPaperNormalizedComparison`；
+- Assembly：`normPowerBridge_holds`、`finalPaperNormalizedComparison_noS45_uncond`、`finalDictionaryCombined_noS45_uncond`；
+- Dictionary：`finalDictionaryCombined_noS45`；
+→ 均 `[propext, Classical.choice, Quot.sound]`（标准三公理）。
+
+### 验收 caveats（仍成立）
+- `finalDictionaryCombined_noS45 (rel)(lock)` 的 **rel = RelativeFactorTowerData 与 lock = PaperS3137ObjectLock 仍是显式输入**，未证；
+- L 侧仍 `hlock`/`hbound`/`hlog`；`unitMass=1` NOT CLAIMED；
+- **strict equality / correction-zero 的 S45 仍未证**；unconditional 仅限 paper comparison 与 combined target（在给定 rel/lock 下）；
+- 旧 probes（08:41、09:25/09:32）predate clean rebuild → 本 probe 为唯一 fresh 证据。
+## 2026-11-14 — Target reading bridge gap 审计（abc；clean acceptance 证据保持）
+
+### Clean acceptance 证据（未变，继续有效）
+- Dictionary olean **17:42:56**；Assembly olean **17:46:50**；Final olean **17:46:50**；`Mzk1CleanAcceptanceProbeActual` olean **17:50:33**；5 项标准三公理（详见上条）；
+- 结论保持：在给定 rel/lock 下 paper comparison + dictionary combined 无 S45/hbridge 条件；**这不关闭 target reading bridge**。
+
+### Target reading bridge gap（仍开）
+- `Mzk1S3137ReadoutBridgeActual`（green 11-11 21:32:32）：S3137 q-pilot readout 定理全部以 `P : PaperQPilotObjectActual I` 为参数（implication）；文件 header + `qPilotReadoutInhabitationGap : String` 明确记录 **inhabitant = paper source obligation**；
+- 两个 q-pilot 对象不可混淆：A716 `Theorem311Source.PaperQPilotObject`（有 green constructor，另一对象）vs `N8Closure.PaperQPilotObjectActual`（C1/C2/C3/strip/oneColumn/logKummer；**无无条件 inhabitant**）；桥接需源侧构造，未给出；
+- 条件 inhabitant 存在但依赖显式 source data：`Mzk1PaperQPilotActualInhabitantOfPacketActual.paperQPilotObjectActualOfPacket_nonempty` 需 `NativeC1PaperSource P` + `SourcePilotRegionDonors D` + `oneColumn`（**非无条件**）；`Mzk1QPilotReadingAlignmentActual` 当前 **no olean**（未验收）；
+- 旧 C3 路线 **no-go**：`S1429CompletionRootObstructionActual.sourcePilotRegionData_isEmpty`（旧 C3 为空）；当前 `Mzk1P0S3137PObjectObstructionActual` **FAIL 09:46:42 / no olean**，该 no-go 证据在本 revision 未重编，需重验；
+- 结论：target reading bridge（`PaperQPilotObjectActual` inhabitant / 与 A716 对象桥）**仍是显式 source gap**；clean final acceptance 的 S3137 comparison/dictionary 结果不依赖也不关闭它；不得混为一谈。
+
+<!-- p7-reading-first-attack-20261114 -->
+## 2026-11-14 — reading-first：可剪枝的强输入与同余理想修正
+
+来源：本 chat 对本地原文、近端消费者及必要供体的有界核对；详细证明在 coord/P7-READING-FIRST-ATTACK-20261114.md；节点 p7-reading-first-attack-20261114。
+
+- 新数学证明：现有 hCor312 在 l>=7,dmod>=1,X,Y>=0 下推出现有 hQ/slack。IUT IV 原文 Thm 1.10（本地 L1255–1292）由其 15-torsion 条件排除 l=5，故原文没有本次算法的 l=5 残留。actual hCor312 的来源构造不因此消失。
+- 有效捷径：actual hull 包含已供货；normRatio>=1 对 signed default-q -> normalized-q 是有利方向。不必强求 norm equality。该捷径不能从局部跳到全局，也不能丢掉原 raw Haar 常数/维数。
+- 新源构造引理（自然语言）：对实际局部 F，D_r(F^x/mu)=O_F^x/mu（r与p互素）。在实际等变 isoMon 上先作固定点下降，再模挠和限制，给单位层作用。一般 DPrimeStrip 的 realization/全部箭头覆盖仍开放；先对代数闭包模挠再取固定点会引入有理分幂，不能恢复整数格。
+- 更正保留历史：旧数学 #C=(q-1)q^(e*s-1) 的 e=v_K(p) 正确；新接口把 e 再加到 (p^s)^e，导致 A 配对错层。应回到 ideal(p^s)=m^(eK*s)，或按 actual U_n 过滤直接计数。仅修 B 为 eK*s*e 不能修复 A。
+- 版本和复用：报告记录已有 Mzk1ActualReadingTargetActual、Mzk1IVThm110LogQActual、Mzk1IutIVTruncatedUnitsCardCorrectedActual；未重复建 Lean 文件，未编译。四项验收 NOT_RUN，单人自审非独立审查，整体目标未闭合。
+
+<!-- ind1-dprime-realization-routes-20261114 -->
+## 2026-11-14 — 一般 D⊢ realization：local CFT 供体更正与构造路线
+
+来源：当前 chat 定向读取本地 IUT III Prop.1.2(vi)、Thm.3.11(i)，actual source / unit / Ism 消费者及 local-cft-port 证明源码。报告 `coord/IND1-DPRIME-REALIZATION-ROUTES-20261114.md`；哈希证据见同名 DAG 节点。单线程，未编译，未改 Lean。
+
+- 更正保留历史：先前“惯性路线没有 local reciprocity 供体”的调查过宽。`PadicField.unitsInertiaEquiv`、`galAbEquiv`、`artin_transfer`、`artin_baseChange`、`abRec_conj` 已有实际证明源码；S2027/S2098 已有项目接入。真实尚缺为一般源箭头的惯性识别与自然性，不是重新证明 local CFT。
+- 新数学证明：在 actual tame quotient T⋊Zhat 中，q 的 Zhat 作用由模 q^n−1 的阶 n 判定为忠实；无非平凡闭正规 pro-p 子群；T 是最大闭正规阿贝尔子群，因为正规阿贝尔 A 中投影 t 满足 (q^t−1)^2 T=0。于是 P 与 I 被同一 p 的连续局部 Galois 同构保持。完整 actual tame finite-layer 描述仍待证明/接入，报告给 Hensel/根扩张/ramification 的构造分解。
+- 有效构造：用已有单位 Artin 等价定义 beta=rho'⁻¹ alpha_ab rho。prime-to-p torsion 恢复 q，tame 共轭作用恢复标准 quotient Frobenius，Artin 像识别为无分歧商中 Z 的逆像；由 transfer 粘合有限层乘法同构，给完整 isoMon 路线。未假设箭头来自域同构。
+- 覆盖缩减：现有 `fdPrimeStripVerticalCore_*_toD` 仅覆盖指定 links；一般 a_i=t_sigma(i) s_i t_i⁻¹，须对所有 residual stabilizers 构造动作。Ism 选择差复用现有 `sourceDifference/orbitOf_eq`，保留所有 open H 的 invariantImage。
+- 失败候选的可行修正：在全 Fbar^×/mu 中取无限 r 可除部分得到整个群，不能提取单位格；应先取 actual H 的 fixed-field image，再在该 image 内取可除部分，最后映回 ambient。现有 `TimesMuKummer.invariantImage` 可复用，旧 containsFixedUnits 方向不是积分单位所需语义。
+- 边界：本次为自然语言证明/路线，未做独立审查；四项机器/目标验收 NOT_RUN。actual source adapter、tame finite-layer proof、全部 procession/capsule 覆盖仍开放，没有把这些升格为调用者假设或已证供体。
+
+## 2026-11-14 — task-125 ABC estimates GREEN + 新 green/red 审计 + frontier 精确 obstruction（abc）
+
+### task-125 交付（我们的两个文件）
+- `Mzk1ABCHeightEstimateActual`：**DONE 10:09:30Z**，olean 18:09:29；无 sorry/True/axiom；
+  * donor = `ABCBridge/Bridge/ABCFrontier.lean:146` `FrontierHeightComparisonClause`；`abcHeightEstimate_of_frontierHeightComparison` 给出 hheight 形状；probe `Mzk1NewGreensAuditProbeActual` 10:21:32 → 标准三公理；
+- `Mzk1ABCMainEstimateActual`：**DONE 10:39:04Z**，源 18:27:32，olean 18:39:04；无 sorry/True/axiom；
+  * donor = `ABCFrontier.lean:173` `FrontierRegionComparisonClause`；`abcMainEstimate_of_frontierRegionComparison` 给出 hmain 形状；
+  * `abcConjecture_of_frontierHeightRegionEstimates : F4 → F5 → ABCConjecture`（经 `abcConjecture_of_literalLogVolumeEstimates`）；`abcFormAdditiveHeightBound_...` 同理；
+  * probe `Mzk1NewGreens3AuditProbeActual` 10:45:54（olean 18:45:53）→ 8 项全标准三公理；
+  * 修复记录：初次 main FAIL 仅因依赖 olean 未生成 + `ABCFormAdditiveHeightBound` 未 open `...Stage5ABCFormActual`；补 open 后绿。
+
+### logQ（`Mzk1IVThm110LogQActual`，GREEN 10:33:52Z）
+- 源 18:32:44，olean 18:33:51；无 sorry；`logQ_coeff_pos`（7≤l 数值）、`hCor312_absorb`、`logQ_bound_of_hCor312`（**条件于 hCor312**：`Q≤4dlS+5l²E`）；
+- **l=5 独立输入仍缺**（`l5RemainingInput`）；probe 标准三公理。
+
+### reading transport（`Mzk1ActualReadingTargetActual`，GREEN 10:40:00Z）
+- 源 18:37:05，olean 18:39:59；无实际 sorry；`qNorm_le_hRoot` **无条件**（中间箭头）、`QSourceLeQNorm`/`HRootLeHTarget` 为显式单向条件；
+- `qPilotLogVolumeReading_le_thetaPilotHullLogVolumeReal_of_transport`、`paperCor312Readout_of_transport` 条件于 R1/R3；probe 标准三公理。
+
+### 其余新 green/red
+- `Mzk1Ind1InfiniteDivisibleActual` GREEN 10:21:23，源 18:15:48 < olean；无 sorry；probe 2 项仅 `[propext]`（标准三公理子集）；
+- `Mzk1ObjectLockDataActual` GREEN 10:28:52，源 18:24:06 < olean；probe `mainline_lock_implies_factorization`、`relativeFactorTowerData_of_tower` 标准三公理；`TrueTowerDataGap`/`ObjectLockActualDataGap` 是显式 source data gap（未证），非 True 占位；
+- `Mzk1ActualHullTargetMagnitudeActual` 重编 GREEN 10:16:06，source 18:09:17 < olean；probe（`Mzk1ActualHullTargetMagnitudeAxiomProbeActual` 10:22:20）4 项标准三公理；**但依赖 olean 旧于源**：`PaperLevelXiFTargetProofActual` 源 02:54:08 > olean 02:33:01、`PaperLevelXiFTargetBridgeActual` 源 03:02:01 > olean 02:30:34 → 需重编 donor 后才能作无条件证据；
+- `Mzk1IutIVTruncatedUnitsCardCorrectedActual` GREEN 10:03:20（源 17:57:46 < olean）；内容**仅 spec/target**：`TruncatedUnitsCardCorrected` 是 Prop，`truncatedUnitsCardCorrected_eq_original_of_unramified` 为 `h↦h` 恒等重述；`truncatedUnitsCard_of_corrected_unramified` 从 corrected Prop 提取 card 等式（条件式），**未证 card 恒等式**；probe 标准三公理；
+- `Mzk1TruncatedUnitsCardActual`：18:27:59 曾 GREEN（旧源）；当前源 18:36:38 重编 **FAIL 10:39:06**：unknown `integersIsDiscreteValuationRing`、`integersIsDedekindDomain`、`dvr_maximalIdeal_ne_bot`；primary 仍未证；**当前不可当 green**；
+- `Mzk1CongruenceUnitsEquivActual`：18:21:31 曾 GREEN（旧源）；当前源 18:36:38 重编 **FAIL 10:39:06**：`IsLocalRing.surjective_units_map_of_local_ringHom` 得 `IsLocalHom → Surj`，缺少 `IsLocalHom` 参数；**当前 red**；`congruenceUnits_equiv_primary/pow` 为条件 defs，缺 `ker congruenceUnitsMap = logShellCongruenceUnits`；
+- 4 个 Statement*Adapted GREEN（10:09:58/10:10:18）：纯 statement/projection 层（Prop 恒等包装，无 closure 声明）；**非实质数学进展**。
+
+### 实际 frontier clause 攻击 / 精确 obstruction
+- `ABCFrontier` 与 `ABCConjecture` **等强**（`abcFrontier_iff_abcConjecture`）→ 无条件证两个 clause 即证 ABC，不存在更弱捷径；
+- `no_constantRegion_heightComparison`：三连无关的固定 region 不可能压住无界高度；`no_heightDictionary_into_finiteHull`：region 落入有限 hull + height≤volume 的形状不可能；
+- `ABCFrontierHeightWeightRefutation.not_FrontierHeightWeightClause`/`not_ABCFrontierGapReduced`/`not_ABCFrontierGapReducedV2`/`not_ABCFrontierPointwiseWeakened`：反例 (1,8,9) 推翻 `(1+1/10)·weight` 型单向 naive clause；
+- 结论：不应试图无条件证 F4/F5（等价 ABC）；task-125 只把它们作为显式 donor clause 消费。
+
+<!-- p7-tower-mass-sign-routes-20261114 -->
+## 2026-11-14 — Tower/mass/sign：基域修正与相对体积路线
+
+报告 `coord/P7-TOWER-MASS-SIGN-ROUTES-20261114.md`；版本见同名 DAG 节点。本 chat 单线程，未改 Lean、未编译，四项验收 NOT_RUN。
+
+- 精确更正：`rootBaseQpDegree`=[F_u:Qp]，`localCompletionDegree`=[K_w:(Fmod)_v]；当前 TrueTowerDataSource 同时取这两个字段后要求 m*dL=n*dF，混用了基域。正确式是 m*dL=t*d₁=n₀*d₀，d₁=c*d₀、n₀=t*c。旧报告以 Fmod 为 dF 时的数学公式保留，错误的源码实例不能复用。
+- 新可行构造：原 F/Fmod Galois 性 + Mathlib `exists_smul_eq_of_isGaloisGroup`，把 native F-place 运输到任意选定 K-place 的 F-shadow，延拓成 completion embedding。RelativeFactor 整除可先做。S1444 的原文 section/q transport 已有；q 的进一步 choice 对齐可用共同 j₀ 与 inverse-j 开单位盘唯一性，报告给 norm/完整参数两个层次的证明。
+- 根下降：E[2] 与 E[l] 有理推 E[2l] 有理；实际等变 Tate torsion 商中 gα/α=q^k，范数给 k=0，固定域给 α∈K_w。依赖实际代数闭包 torsion 比较与局部 base-change，不能凭现有 rational-point comparison 就称完成。
+- unitMass 的可删强条件：已有 `NormalizedHaarTransport.relative_log_mass_image_eq` 抵消 Haar 比例；参考格变化用 κ=log[C:C∩U]−log[U:C∩U]。理想扩张给 V_K=m V_L，原 weight 给 (1/n₀)V_K=(d₀/dL)V_L；不把低维 embedding image 当 K 的正测度集合。
+- 原文 sign 事实：本地 IUT III L10324 起及证明开头允许记号 −|log Θ| 非负，该记号不是字面 -abs。两个 signed log-volume 的运输不自动产生负号；magnitude/dual 必须有真实操作和相应参考格。
+- 区域语义事实：`actualC3LogShellTensorRegionL` 使用 pure-tensor image；已有 `tensorLogShellLattice` / `submoduleTensorSpan` 提供 compact-open full lattices。compact/full rational span 不推出原 image 正测度。不得用 log(0)=0 假收口；源 hull 连接与目标定义审查仍开放。
+- 原 raw target 边界：`log μ(H)=D*s(H;C)+κ+log μ(U)`。`addHaar` 的任意 PositiveCompacts 选择不提供 unit mass=1 或≥1。最终 q/theta 的原文归一化及共同仿射转换必须证明，不以新增 hlog/budget 字段替代。
+## 2026-11-14 — Sign/unitMass 更正 + freshness 修正 green/red list（abc）
+
+### Sign 约定更正（重要）
+- Cor3.12 的 **`-|log Θ|` 是 signed log-volume 的记号**，不是全局非正的 `-abs`；非负情形单独处理；**不得在 signed readings 之间额外插入负号**；
+- 现仓库约定（`SourceSignedLogVolumeCorrectedActual`）：`correctedSourceHullLogVolume := Σ_j -log(thetaValueAt ... j)`（可为任意实数），`correctedSourceSignedHullLogVolume := - correctedSourceHullLogVolume`；`CorrectedSourceXifComparison` 直接用 signed q ≤ signed hull（正情形等价单独给出）；
+- **审计发现符号风险**：`Mzk1P0FinalS3137DictionaryActual.PaperS3137ObjectLock.theta_sign` 写 `thetaNormReadL = -thetaNormReadProduct`，`Mzk1ObjectLockDataActual.ObjectLockThetaSignDataSource.theta_sign` 同样带负号；而 `Mzk1P0FinalS3137ConditionalActual` 的 `hlock` 用 `thetaNormReadL = thetaNormReadProduct`。按上述约定**不应加负号**，这两个带负号的数据字段**未通过审计**（sign-risk），其消费者（dictionary lock、assembly uncond combined）继承风险；需 owner 修正/重证；
+- q 侧 `qPilotLogVolumeReading_eq_neg_abs` 仅是 q-norm≤1 的 q 侧结论，**不能转移到 Θ 侧 signed 记号**。
+
+### unitMass 路线更正
+- 正确路线：用 `NormalizedHaarTransport.relative_log_mass_image_eq`（LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean:39），比较 region vs reference lattice；
+- 不同维数比较：通过 extended ideals + dimension-normalized volume（见 `FinitePlaceIntegralTensorCovolume.lean:172`、`LocalFieldProductLogVolumeTransport.lean:54` 的 `relative_log_mass_image_eq` 用法）；不是直接令 unitMass=1；
+- `unitMass=1` 仍 NOT CLAIMED；`actualUnitMassL` 非 canonical、与 `s1915UnitMass` 无现成等式。
+
+### 修正后 fresh GREEN（olean ≥ source）
+- `Mzk1TruncatedUnitsCardActual` olean 18:51:03 ≥ src 18:49:13；probe 19:02:40 标准三公理；**但仅 `cardQuot_maximalIdeal_pow` 等定义/重写引理，primary units card 未证**；
+- `Mzk1LocalRingUnitsCardActual` olean 18:45:47 ≥ src 18:40:04；probe 18:51:59 标准（`natCard_units_eq_card_sub_maximalIdeal`）；
+- `Mzk1ActualHullTargetMagnitudeActual` olean 18:52:03 ≥ src 18:47:15；probe 19:03:25 标准 4 项；**dependency stale**：`PaperLevelXiFTargetProofActual` src 02:54:08 > olean 02:33:01、`PaperLevelXiFTargetBridgeActual` src 03:02:01 > olean 02:30:34 → 不能作最终无条件证据；
+- `Mzk1ActualReadingTargetActual` olean 19:03:32 ≥ src 19:00:06；但旧 probe 18:45:53 **predates** 新 olean → probe stale，需重跑；
+- `Mzk1ABCMainEstimateActual`（18:39:04）、`Mzk1ABCHeightEstimateActual`（18:09:29）、`Mzk1IVThm110LogQActual`（18:33:51）仍 fresh，各 probe 标准；
+
+### 当前 RED
+- `Mzk1CongruenceUnitsEquivActual`：FAIL 11:02:42，olean 18:21:31 过期；`IsLocalHom` 缺参 / quotient `Nontrivial` 失败；`equiv_primary/pow` 仅条件 defs，缺 kernel 等式；
+- `Mzk1IVThm110Actual`：FAIL 11:03:23，无 olean；
+- `Mzk1Ind1DepthSubgroupActual`：FAIL 11:02:33，无 olean；
+- `Mzk1TruncatedUnitsCountActual`：FAIL 11:03:27，无 olean。
+- 4 个 `Statement*Adapted` 仍为 statement/projection only。
+
+## 2026-11-14 — Corrected chain re-audit + stepxi valuation greens / fresh red list（abc）
+
+### Clean chain（sign 修正后）
+- Dictionary `theta_sign : thetaNormReadL = thetaNormReadProduct`（无负号）；**DONE 11:15:18Z，olean 19:15:17**；
+- Assembly **DONE 11:28:54Z，olean 19:28:52 > Dictionary 19:15:17** ✓；probe `Mzk1P0FinalNoS45AssemblyAxiomProbeActual` 重跑 **DONE 11:38:12Z，olean 19:38:11**：`normPowerBridge_holds`/`finalPaperNormalizedComparison_noS45_uncond`/`finalDictionaryCombined_noS45_uncond` → 标准三公理；
+- Final（不 import Dictionary）olean 19:15:23；probe 19:42:34 > 19:15:23：`finalPaperNormalizedComparison` 标准；
+- ObjectLockData 修正：`theta_signed : thetaNormReadL = thetaNormReadProduct` + `theta_nonneg`；olean **19:14:35 > src 19:10:14**；probe `mainline_negative_theta_sign_forces_zero` 标准；
+- **sign 修正已核**：Dictionary/ObjectLockData 均无负号；legacy 负号仅作为被 `mainline_negative_theta_sign_forces_zero` 证明会强制 zero 的额外条件保留。
+
+### 新 GREEN
+- `Mzk1Ind1ValuationDataActual`：**DONE 11:41:33Z，olean 19:41:33 > src 19:38:23**；无 sorry；probe **DONE 11:48:52Z**（olean 19:48:51）：`torsion_le_ker_unitValuationHom`、`unitValuationHom`、`LocalValuationDataRequired` → 均标准三公理；**无 sorryAx**（此前 sorryAx 为旧 olean，已确认 stale）；
+- `Mzk1IVThm110Actual`：**DONE 11:28:50Z，olean 19:28:49 > src 19:21:29**；无实际 sorry（仅注释 “No sorry/extra axiom”）；hQ eliminated、hCor312 仍显式；probe clean chain 19:42:34：`thm110_display_of_hCor312`、`thm110_display_of_actual_data` 标准；
+- `Mzk1Ind1DepthSubgroupActual`：DONE 11:13:38，olean 19:13:37 > src 19:13:07；probe 3 项标准；
+- `Mzk1LocalRingUnitsCardActual`：olean 18:45:47，probe 18:51:59 标准；
+- `Mzk1TruncatedUnitsCardActual`：olean 18:51:03，probe 19:02:40 标准；**仅 cardQuot 引理，primary units card 未证**。
+
+### 当前 RED / pending
+- `Mzk1Ind1CorrectedExtractionActual`：**当前源 FAIL 11:41:32Z**（unsolved `x ∈ invariantUnitLayer`）；旧 olean 19:13:38 中 `correctedDepthLayer_le_invariant`/`Required_iff` **含 sorryAx** → 不可使用；
+- `Mzk1Ind1KernelIntegersActual`：FAIL 11:49:03Z（源 19:45:34），无 olean；先前首错为缺 `ValuationData/NormalizedLogNormConsumer` olean，最新错误需 owner 复核；
+- `Mzk1IVThm110HCor312FloorActual`：FAIL 11:48:13Z（源 19:46:36），无 olean；先前首错为缺 `Mzk1IVThm110HCor312Actual.olean`；
+- `Mzk1CongruenceUnitsEquivOddActual`：FAIL 11:44:24Z（源 19:42:16），无 olean；首错 unsolved goal `(Integers K)ˣ/logShellCongruenceUnits ≃* logShellResidueFieldˣ`；
+- `Mzk1TruncatedUnitsCountActual`：START 11:48:03Z 后尚无结果，pending；
+- **依赖 stale 仍存**：`PaperLevelXiFTargetProofActual` src 19:08:09 > olean 02:33:01、`PaperLevelXiFTargetBridgeActual` src 19:08:09 > olean 02:30:34 → ActualHullTargetMagnitude 的 probe 标准但依赖未重编，不能作最终证据；
+- 4 个 Statement*Adapted 仍 statement/projection only。
+## 2026-11-14 — 最新 red/green（KernelBridge sorryAx、FloorNativeObstruction、ObjectLockData 回归、P2Bridge 缺失）（abc）
+
+### RED（不予接受）
+- `Mzk1Ind1KernelBridgeActual`：**FAIL 13:02:43Z**，无 olean；源码**没有字面 sorry**，但 `kernelToAQuotient_ker`（L19）proof 失败（`simpa`/rw 未匹配 `kernelToAQuotient u =1` 与 torsion 目标）→ **合成 sorryAx**；in-file `#print axioms kernelToAQuotient_ker` 给出 `[propext, sorryAx, Classical.choice, Quot.sound]` → **不得接受**；
+- `Mzk1IVThm110FloorNativeObstructionActual`：**FAIL 13:03:29Z**（源 21:04:36 更新后仍 FAIL）；无 olean；pending/red；
+- `Mzk1ObjectLockDataActual`：**当前源 RED** — 源 21:05:43 > olean 20:53:43；最新 **FAIL 13:03:32Z**，首错 `HSMul Gal(T.arithmetic.F/T.arithmetic.Fmod) (Ideal …)` synthInstanceFailed（line125）；旧 olean 20:53:43 的 green 是**旧源**，当前不可用；
+- **P2Bridge**：仓库中**无 source、无 log**（不存在），不能计入任何 green；
+
+### fresh GREEN（olean ≥ source，且 probe 标准、无 sorryAx）
+- `Mzk1TruncatedUnitsPrimaryActual`：DONE 12:42:22Z，olean **20:42:21 > src 20:38:34**；无 sorry；
+  * `span_logShellScale_eq_maximalIdeal_pow` + `truncatedUnitsCardPrimary` **无条件**；
+  * probes：`Mzk1TruncatedUnitsPrimaryAxiomProbeActual` 12:47:13 与 `Mzk1TruncatedUnitsPrimaryProbeActual` 12:53:39 → 两定理均标准三公理；
+- `Mzk1TruncatedUnitsCountActual`：olean 20:31:15 > src 20:28:07；probe 12:47:13：`card_units_quotient_maximalIdeal_pow` 无条件、`truncatedUnitsCardPrimary_of_span_eq` 标准；
+- `Mzk1Ind1KernelIntegersActual`：olean 20:36:26 > src 20:32:02；无 sorry；probe 12:46:32 / 20:41:30：`completionKernelEquivIntegers`、`completionKernelTimesMuEquiv`（W quotient）、`completionKernelToIntegers`、`completionIntegersToKernel`、`completion_valued_one_iff_norm_one`、`completionWQuotientNormal` → 标准三公理；
+- `Mzk1Ind1ValuationDataActual`：olean 20:30:12 > src 20:26:45；probe 20:37:11：`torsion_le_ker_unitValuationHom`、`unitValuationHom_eq_one_iff` 等标准；
+- `Mzk1IVThm110N5FloorBridgeActual`：olean 20:26:21 > src 20:20:54；`qSideSignedValueCondition_of_native_qSigned_eq` 无条件、`floor_qSideSignedValueCondition` 条件于 `FloorNativeQBridge`；probe 20:37:11 标准；
+- `Mzk1IVThm110FloorNativeHullActual`：olean 20:47:20 > src 20:40:48；`signedFloorCertificate_qSigned_eq_min`（rfl）与 `floorQSigned_eq_native_of_hull`（条件 hM/hMone 两条显式 gap）probe 20:58:42 标准；
+- `Mzk1IVThm110HCor312FloorActual`：olean 20:15:21 > src 20:10:57；`certificateOfFloorData`/`hCor312_of_floor_data` 条件于 hN5/htheta/hCTheta；probe 20:26:18 标准；
+- `Mzk1SharedQPilotActual`：olean 20:08:55 > src 20:06:00；probe 20:21:35 标准；3-item gap 显式；
+- `Mzk1ActualHullTargetMagnitudeActual` 干净链：`PaperLevelXiFTargetProofActual` 20:05:18 > src 19:53:40、`PaperLevelXiFTargetBridgeActual` 20:06:50 > src 19:53:40、ActualHull 20:15:24、probe 20:21:35 标准 4 项；
+- `Mzk1Ind1CorrectedExtractionActual` 20:01:30 > src 19:59:57（旧 sorryAx stale）；defs probe 20:08:08：`invariantUnitLayer`/`correctedDepthLayer`/`Ind1CorrectedExtractionRequired` 标准；
+- `Mzk1CongruenceUnitsEquivOddActual` 19:55:06 > src 19:51:26；`congruenceUnits_equiv_primary_odd`/`_odd_quot` probe 20:08:08 标准；
+- N5/HCor312/CTheta (19:45–19:49) + probe 19:55:52 标准；IVThm110 19:28:49 + probe 19:42:34 标准。
+## 2026-11-14 — Restored greens + HullUnitZero/KernelBridge red（abc）
+
+### fresh GREEN（olean ≥ src，no actual sorry，probes 标准）
+- `Mzk1IVThm110FloorNativeObstructionActual`：DONE 13:09:07Z，olean **21:09:06 > src 21:09:01**；无 sorry；probe `Mzk1RestoredGreensProbeActual` 21:14:03：`M_ge_one_of_floor_eq_native`、`hullLog_eq_neg_M_of_floor_eq_native_of_one_lt`、`hullLog_eq_neg_M_iff_unitLog` → 标准三公理；
+- `Mzk1ObjectLockDataActual`：DONE 13:09:07Z，olean **21:09:06 > src 21:05:43**；无实际 sorry（TrueTower/True 仅名字/注释）；**sign 正确**：`theta_signed = thetaNormReadProduct`（L176-177，无负号）+ `theta_nonneg`；probe：`mainline_lock_implies_extra_relation`、`galoisPlaceMk_maximalIdeal`、`relativeFactorTowerData_of_completionTower` → 标准三公理；
+- `Mzk1ActualReadingTargetActual`：DONE 13:09:10Z，olean **21:09:09 > src 21:07:01**；无实际 sorry；probe：`qVFamDefaultNorm_le_qVFamNormalizedNorm`、`log_qVFamDefaultNorm_le_log_normalized`、`actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q`、`qNorm_le_hRoot` → 标准三公理。
+
+### RED / pending
+- `Mzk1IVThm110HullUnitZeroActual`：**FAIL 13:13:24Z**（源 21:13:48，无 olean）；首错 **unknown identifier `arithmeticTupleIQHullUnitRegionHaarLog`**（该函数不存在；正确对象是 `Real.log (μ (arithmeticTupleIQHullUnitRegion places tuple)).toReal`，见 `FinitePlaceIQHullSharpUpperBound.lean`），导致 places/tuple/μ cascade、`⊢ sorry = sorry`；**claims 不接受**；三个 donor 事实中 `arithmeticTupleIQHullLogVolumeInterface_hull_logVolume_toReal`/`arithmeticTupleHullUnitLogVolume_nonneg`/`..._le_unitRegionHaarLog` 存在；
+- `Mzk1Ind1KernelBridgeActual`：**仍 RED**（最新 FAIL 13:02:43；源 21:07:46 后续改，无 olean）；`kernelToAQuotient_ker` proof 失败 → **合成 sorryAx**；不得接受；
+- **P2Bridge**：无 source、无 log（不存在）。
+## 2026-11-14 — P2NormBridge GREEN 21:48:01 审计 + probe（abc）
+
+- `Mzk1P2NormBridgeActual`：源 21:46:34；**DONE 13:48:02Z**；olean **21:48:01 > src**；源码无 `sorry`/`True`/`axiom`；
+- theorem `norm_le_norm_natCast_iff_addVal_ge (π : Integers K) (hπ : Irreducible π) (x) (hx : x ≠ 0) (N) : ‖(x:K)‖ ≤ ‖((p^N : Nat) : K)‖ ↔ N * logShellRamificationExponent = (addVal x).toNat`（在 `[IsDiscreteValuationRing (Integers K)]` 实例下）；证明用 uniformizer 分解 `p = u·π^e`、`‖p‖=p⁻¹` 等，真实推导；
+- probe `Mzk1P2NormBridgeProbeActual`：**DONE 13:53:10Z**，olean **21:53:09 > 21:48:01** → fresh；`norm_le_norm_natCast_iff_addVal_ge` → `[propext, Classical.choice, Quot.sound]`；
+- 边界：该定理**条件于 DVR 实例**（`hDVR`）与 uniformizer π；是 p=2 norm/addVal 桥引理，不是完整 P2Bridge；**P2Bridge wrapper 仍无 source/log**（不存在）。
+## 2026-11-14 — TruncatedUnitsSecondary GREEN + P2Bridge red（abc）
+
+- `Mzk1TruncatedUnitsSecondaryActual`：源 21:49:34；**DONE 13:53:57Z**；olean **21:53:56 > src**；无 sorry/True/axiom；
+  * `span_logShellScale_pow_eq_maximalIdeal_pow (e)`：`(p^s)^e` ideal = m^(eK*s*e)（由 primary 版本 + pow_mul 推出）；
+  * `truncatedUnitsCardCorrected (e) (he : 1 ≤ e)`：由 span 恒等式 + `card_units_quotient_maximalIdeal_pow` 得 secondary card；
+- probe `Mzk1TruncatedUnitsSecondaryProbeActual`：**DONE 13:59:24Z**，olean **21:59:23 > 21:53:56** → fresh；两定理 → 均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1P2BridgeActual`（wrapper）：源 21:50:53；**FAIL 13:53:11Z**，无 olean；无源级 sorry，但 `p2_norm_le_four_iff_addVal` 首错 **unknown `p`**（L27/31/32：`p` 只出现在 proof 中，未被 include/theorem binder 带入）；L33 type mismatch、unsolved `2*↑(sorry())=2*sorry()` cascade；**red，不接受**；
+- `Mzk1P2NormBridgeActual` probe 已记（21:53:09 标准）。
+## 2026-11-14 — GeneralLogShellNormCriterion / KernelBridge 修复 green + congruence card probe（abc）
+
+- `Mzk1GeneralLogShellNormCriterionActual`：源 22:06:58；**DONE 14:09:01Z**；olean **22:09:00 > src**；无 sorry/True/axiom；
+  * `norm_le_norm_logShellScale_iff`（all p uniformizer）；probe `Mzk1GeneralLogShellKernelProbeActual` **DONE 14:14:32Z**（olean 22:14:32 > 22:09:00）：→ `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1Ind1KernelBridgeActual`：源 22:01:54；**DONE 14:03:42Z**；olean **22:03:41 > src**；无源级 sorry；
+  * **旧 `kernelToAQuotient_ker`（sorryAx）已改为 `kernelToAQuotient_ker_eq`**；probe 22:14:32：→ 标准三公理（**无 sorryAx**）；此前 red 记录作废，以本条为准；
+- `Mzk1IutIVCongruenceCardActual`：源 22:01:58；DONE 14:04:24Z；olean 22:04:23 > src；4 个条件定理（eEquiv 显式）；
+- `Mzk1IutIVCongruenceCardProbeActual`：**DONE 14:09:44Z**（olean 22:09:44）；`congruenceQuotient_card_actual`、`congruenceQuotientCardinalityInput_of_equiv`、`logShellQFECardinalityHypothesis_exists_of_equiv` → 均标准三公理；log 中旧 unknown 错误为前一次尝试，已过时；
+- `Mzk1TruncatedUnitsSecondaryAxiomProbeActual`：DONE 13:59:24Z（olean 21:59:23）；两定理标准；与我们的 SecondaryProbe 一致；
+- **P2Bridge paused**（无 olean，未接受）。
+## 2026-11-14 — CongruenceUnitsEquivGeneral / BaseChangeQCorrespondence greens（abc）
+
+- `Mzk1CongruenceUnitsEquivGeneralActual`：源 22:15:10；**DONE 14:19:05Z**；olean **22:19:05 > src**；无 sorry/True/axiom；
+  * `addVal_logShellScale : addVal(logShellScale p) = (s * eK : ℕ∞)`（由 `addVal_pow`+`addVal_prime_eq_ramificationExponent` 推出）；
+  * `CongruenceUnitsPrimaryEquivTarget : Prop := Nonempty (units/logShellCongruenceUnits ≃* quotient)`；
+  * `congruenceUnits_equiv_primary_general_of_kernel (f)(hsurj)(hker) : Target`（**条件于显式 map/kernel**）；
+  * probe `Mzk1CongruenceGeneralBaseChangeProbeActual` **DONE 14:24:55Z**（olean 22:24:54 > 22:19:05）：两项 → 标准三公理；
+- `Mzk1BaseChangeQCorrespondenceActual`：源 22:15:18；**DONE 14:15:28Z**；olean **22:15:28 > src**；无实际 sorry（仅 header 注释）；
+  * structures `BaseChangePlaceCompletionCorrespondence`、`BaseChangeQElementCorrespondence`、`QPilotC3SignedAggregation`；
+  * `qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures`（conditional R1）；probe 22:24:54 → 标准三公理；no inhabitant/no axiom。
+- `Mzk1GeneralLogShellNormCriterionActual`（14:09）已记：`norm_le_norm_logShellScale_iff` probe 22:14:32 标准。
+## 2026-11-14 — GaloisRingBridge GREEN + probe（abc）
+
+- `Mzk1GaloisRingBridgeActual`：源 22:19:21；**DONE 14:24:59Z**；olean **22:24:58 > src**；无 sorry/True/axiom；
+  * `galoisFmodMulSemiringAction`：Fmod 上的 trivial Galois MulSemiringAction；
+  * `galoisSMulDistribClass`：补上 `SMulDistribClass G (O_Fmod) (O_F)`，proof 降维到 F 并用 g fixes Fmod；
+  * `galoisRingIsGaloisGroup`：ring-level `IsGaloisGroup`（via `iff_isFractionRing`）；
+  * `primesOverMkPlace` 桥 + `exists_galois_smul_primesOver`（Mathlib `exists_smul_eq_of_isGaloisGroup`）；
+  * probe `Mzk1GaloisRingBridgeProbeActual` **DONE 14:30:05Z**（olean **22:30:04 > 22:24:58**）：4 项（两 instance、IsGaloisGroup instance、定理）→ 均 `[propext, Classical.choice, Quot.sound]`；
+- `ProbeGaloisRingSynthActual`：FAIL 14:24:58，无 olean；**temporary probe，不属 mainline**，不计入主证据。
+## 2026-11-14 — MAJOR：CongruenceUnitsEquivGeneral 无条件 primary equivalence（abc）
+
+- `Mzk1CongruenceUnitsEquivGeneralActual`：源 22:30:17；**DONE 14:34:05Z**；olean **22:34:04 > src**；无 sorry/True/axiom；
+  * **`congruenceUnits_equiv_primary_general (π : Integers K) (hπ : Irreducible π) : CongruenceUnitsPrimaryEquivTarget`** — **无条件**（all p；实际 uniformizer π）：`Nonempty (units/logShellCongruenceUnits ≃* quotient)`；
+  * `congruenceUnits_equiv_primary_general_of_kernel (f)(hsurj)(hker)` 条件版本保留；
+  * `addVal_logShellScale : addVal(logShellScale p) = (s*eK : ℕ∞)`；
+  * probe `Mzk1CongruenceGeneralMajorProbeActual` **DONE 14:43:52Z**（olean **22:43:51 > 22:34:04**）：3 项 → 均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1GaloisRingBridgeProbe2Actual`（GaloisRingBridge 22:34:55 新增）**DONE 14:39:51Z**（olean 22:39:50）：`nativeFmodPrime`、`nativeBadFPlace_liesOver`、`nativeKContraction_liesOver`、`nativeFPrimeOver`、`nativeKPrimeOver`、`exists_galois_move_nativeF` → 6 项均标准三公理；
+- 边界：无条件的是 **抽象 unit quotient ≃ 抽象 residue quotient**（依赖 π 的 existence/uniformizer `Irreducible π`），不是与具体 native map 的等同；native map/kernel 与 `eEquiv` 的具体化仍由后续 consumer 负责。
+## 2026-11-14 — MAJOR：CongruenceCard 无条件 exists 形式（abc）
+
+- `Mzk1IutIVCongruenceCardActual`：源 22:40:53；**re-DONE 14:44:39Z**；olean **22:44:38 > src**；无 sorry/True/axiom；
+  * **`congruenceQuotientCardinalityInput_exists_actual (e) (he : e = eK) : ∃ f, CongruenceQuotientCardinalityInput e f`** — **无条件**；proof：DVR instance + `exists_irreducible` 取 π + `congruenceUnits_equiv_primary_general`（无条件 units equiv）+ `logShellResidueCard_eq_prime_pow`；
+  * **`logShellQFECardinalityHypothesis_exists_actual (e) (he) : ∃ f, LogShellQFECardinalityHypothesis e f`** — **无条件**；由上一行 + `logShellQFECardinalityHypothesis_actual`；
+  * 条件形式 `..._of_equiv`/`..._exists_of_equiv` 保留；
+  * probe `Mzk1CongruenceCardActualProbeActual` **DONE 14:49:21Z**（olean **22:49:19 > 22:44:38**）：两项 `_actual` + `congruenceQuotient_card_actual` → 均标准三公理；
+- `Mzk1CongruenceGeneralMajorProbeActual`（14:43:52）已记：`congruenceUnits_equiv_primary_general`/`addVal_logShellScale`/`..._of_kernel` 标准；
+- 边界：`he` 仍要求 `e = logShellRamificationExponent`（关系给定，不是自动）；对象为抽象 quotient card，不涉及具体 native map。
+## 2026-11-14 — KernelBridge 回归 red；HullUnitZero 条件版；CongruenceCard probe 重跑（abc）
+
+### RED：`Mzk1Ind1KernelBridgeActual`
+- 当前源 23:13:29；最新 **FAIL 15:15:55Z**，无 olean；
+- 错误：lines27/30/33/74 rw 未匹配（`kernelToAQuotient y ∈ (quotientValuationHom h).ker.toSubmonoid` 等）；`range_kernelToAQuotient_eq` proof 失败 → **合成 sorryAx**；
+- 旧 olean 23:05:29 中 `range_kernelToAQuotient_eq` 也带 `sorryAx`（同一证明问题）→ **不得接受**；`kernelToAQuotient_ker_eq` 本身标准但整文件未绿；
+- 此前“KernelBridge 修复 green”仅指旧 olean 且含 range 的 sorryAx，**以本条 red 为准**。
+
+### HullUnitZero（GREEN 22:03:39Z，但**条件版**）
+- `Mzk1IVThm110HullUnitZeroActual`：源 22:01:53；**DONE 14:03:40Z**；olean 22:03:39 > src；无 sorry；
+- 定理均为 `_of_scale_one (hscale : arithmeticTupleIQHullUnitScale = 1)`：
+  * `IQHullUnitRegion_eq_unitReference_of_scale_one`；
+  * `arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one`；
+  * `arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one`；
+- **不是无条件 hullUnitLog=0**；`hullUnitZeroObstruction` 记录需要 scale 关系而非 scale=1；
+- probe `Mzk1HullUnitZeroProbe2Actual` **DONE 15:10:14Z**（olean 23:10:13 > 22:03:39）：3 项标准三公理。
+
+### `Mzk1IutIVCongruenceCardActual`（GREEN 22:49:22Z）
+- 源 22:47:04；DONE 14:49:23Z；olean 22:49:22；无 sorry；
+- probe `Mzk1CongruenceCardActualProbeActual` 重跑 **DONE 15:06:07Z**（olean 23:06:07 > 22:49:22）：`congruenceQuotientCardinalityInput_exists_actual`、`logShellQFECardinalityHypothesis_exists_actual`、`congruenceQuotient_card_actual` → 均标准三公理。
+
+### 其他
+- `Mzk1CongruenceGeneralMajorProbeActual` 22:43:51 有效（目标 olean 22:34:04）；
+- **P2Bridge paused**（无 olean，不接受）。
+## 2026-11-15 — URGENT：KernelBridge olean 安全性 / UnitInvariance red（abc）
+
+### KernelBridge（`Mzk1Ind1KernelBridgeActual`）
+- 当前 **olean 23:46:45**（DONE 15:46:45）对三类声明 probe（`Mzk1KernelBridgeSafetyProbeActual`）：
+  * `range_kernelToAQuotient_eq` → `[propext, Classical.choice, Quot.sound]` ✓；
+  * `kernelToAQuotient_ker_eq` → 标准三公理 ✓；
+  * `quotientKernelEquivRange` → 标准三公理 ✓（**无 sorryAx**）；
+  * **`ofRange` 不存在**（unknown identifier）→ 不是 sorryAx 定理，是旧尝试/日志里的名字；当前 olean 不含它；
+- log 中 errors lines68/74/106 与 `sorryAx` 均来自 **FAIL 15:41:29 及更早尝试**；DONE 15:46:45 后 olean 已无需这些 synthetic placeholder（probe 确认当前 olean 干净）；
+- **但**：当前源 mtime **00:20:44 > olean 23:46:45**，且当前源码只列 4 个 decls（无 `quotientKernelEquivRange`）→ **oleans 与当前源不一致，当前源未验证**；不能用此 olean 作当前源证据，必须重编后再 probe；若当前源加入新 `ofRange` 类声明，需重新检查 sorryAx。
+
+### UnitInvariance（`Mzk1IVThm110UnitInvarianceActual`）RED
+- 最新 **FAIL 16:04:39**（源 23:44:51）；无当前 olean（旧 23:41:22 stale）；
+- 首错 line72 `rw` pattern 未匹配；`↑↑u` 类型不匹配：`ℤ_[p]` vs `{ x // ‖x‖ ≤ 1 }`（Integers 子类型 coercion）；
+- **red，不接受**；此前 probe 的 3 个旧定理标准，但第 4 个 unknown + 新源 build fail，整文件未绿。
+## 2026-11-15 — UnitInvariance smul/KernelBridge ofRange/CeilDecomp/IndexPow/TorsionSplit 审计（abc）
+
+- `Mzk1IVThm110UnitInvarianceActual`：源 00:51:17；**DONE 16:53:10Z**；olean **00:53:10 > src**；无 sorry；
+  * `algebraMapUnit_smul_canonicalUnitReference_eq`（smul O=O）probe **DONE 16:58:14Z**（olean 00:58:13 > 00:53:10）→ `[propext, Classical.choice, Quot.sound]`；其余 `algebraMap_unit_mem_integralClosure` 等此前 probe 亦标准；旧 olean 23:41 stale 已废弃；
+- `Mzk1Ind1KernelBridgeActual`：源 00:31:18；**DONE 16:36:39Z**；olean **00:36:38 > src**；无 sorry；
+  * `Mzk1KernelBridgeFinalProbeActual` **DONE 16:48:43Z**（olean 00:48:42 > 00:36:38）：`kernelToAQuotient`、`range_kernelToAQuotient_eq`、`kernelToAQuotient_ker_eq`、`quotientKernelEquivRange`、`AQuotientKernelBridge.ofRange` → 均标准三公理，**无 sorryAx**；
+- `Mzk1TorsionSplitActual`：**DONE 16:31:40Z**，olean 00:31:40 > src 00:30:15；无 sorry；`torsion_split` probe 00:41:01 → 标准三公理；
+- `Mzk1CeilDecompActual`：**DONE 16:44:24Z**，olean 00:44:24 > src 00:41:45；无 sorry；`ceil_decomp` → 标准三公理；`exponent_decomp` → `[propext, Quot.sound]`（标准三公理子集）；
+- `Mzk1IndexPowIdentityActual`：**DONE 16:48:33Z**，olean 00:48:32 > src 00:45:39；无 sorry；`index_pow_identity` → `[propext]`（标准三公理子集）；
+- `Mzk1C3BaseQIdentificationActual`：**re-DONE 16:45:19Z**（源 00:40:49；olean 00:45:18）；无 sorry；
+  * 结构 `C3BaseQElementIdentification`/`GlobalSumAggregation`/`ClauseBBaseQSourceIdentity`（direct aggregate；旧 over-strong `GlobalSumCollapse` 已删除，改为 `GlobalSumAggregation`）；
+  * `qPilotC3SignedAggregation_of_aggregation`（conditional on `GlobalSumAggregation`）→ probe 00:49:23 标准三公理；`c3BaseQRows_length` 不依赖公理；
+- `Mzk1FreshFourProbeActual` 16:49:24、`Mzk1TorsionSplitProbeActual` 16:41 均有效。
+## 2026-11-15 — MAJOR QuotientDecomp/IndexDivision GREEN；KernelBridge quotient bridge red（abc）
+
+- `Mzk1QuotientDecompActual`：源 00:59:13；**DONE 17:01:31Z**；olean **01:01:31 > src**；无 sorry/True/axiom；
+  * `quotient_decomp (hp)(hT0pos)(hq : q=p^f)(hT : T=p^m*T0)(hT0 : T0|q-1)(hm : m≤f*A) : q^A*(q-1)/T = p^(f*A-m)*((q-1)/T0)` — 真实 Nat division cancellation；
+  * probe `Mzk1QuotientIndexProbeActual` **DONE 17:10:10Z**（olean 01:10:09 > 01:01:31）：→ `[propext, Quot.sound]`（标准三公理子集，无需 Classical.choice）；
+- `Mzk1IndexDivisionActual`：源 01:02:29；**DONE 17:05:58Z**；olean **01:05:58 > src**；无 sorry；
+  * `index_division` = `quotient_decomp` re-export；probe → `[propext, Quot.sound]`；
+- **KernelBridge quotient bridge RED**：`Mzk1Ind1KernelBridgeActual` 源 01:00:44；最新 **FAIL 17:01:43**；无 olean（旧 00:53:15）；
+  * 新 `comapTorsion_eq_torsionKernel` proof 失败：lines147/150 type mismatch（`Function.IsPeriodicPt` vs 等式）；lines68/74/106 旧错误；
+  * **合成 sorryAx**：`comapTorsion_eq_torsionKernel` 依赖 `[propext, sorryAx, Classical.choice, Quot.sound]`；**不接受**，quotient bridge still pending。
+## 2026-11-15 — MAJOR HaarUnitInvariance / KernelBridge clean / A2+IndexQFE probes（abc）
+
+- `Mzk1IVThm110HaarUnitInvarianceActual`（MAJOR）：源 01:12:42；**DONE 17:14:58Z**；olean **01:14:57 > src**；无 sorry/True/axiom；
+  * `distribHaarChar_algebraMapUnit_eq_one`：`distribHaarChar (algebraMapUnit u) = 1`（用 `distribHaarChar_eq_of_measure_smul_eq_mul` + canonical unit reference 正有限 mass）；
+  * `measure_algebraMapUnit_smul_eq`：μ(u • S) = μ S（`distribHaarChar_mul`）；
+  * 显式 `[ContinuousConstSMul ...]`、`[μ.IsAddHaarMeasure]` 假设；probe `Mzk1HaarInvarianceProbeActual` **DONE 17:23:19Z**（olean 01:23:18 > 01:14:57）：两定理均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1Ind1KernelBridgeActual`（clean，删除 comapTorsion bridge 后）：源 01:11:48；**DONE 17:15:02Z**；olean **01:15:01 > src**；无 sorry；
+  * probe（`Mzk1A2IndexKernelProbeActual` 17:19:31，olean 01:19:30）：`kernelToAQuotient`、`range_kernelToAQuotient_eq`、`kernelToAQuotient_ker_eq`、`quotientKernelEquivRange`、`AQuotientKernelBridge.ofRange`、`ofRangeKernel` → 均标准三公理，**无 sorryAx**；
+- `Mzk1A2GeometricCorePartialActual`：源 01:01:26；DONE 17:06:07Z；olean 01:06:06 > src；无 sorry；`xFOfStackPoint_geometry`、`exists_xF_xF_geometry` probe（17:10:19 / 17:19:31）→ 标准三公理；
+- `Mzk1IndexQFEConnectionActual`（MAJOR）：源 01:07:07；DONE 17:11:06Z；olean 01:11:05 > src；无 sorry；`qfe_quotient_card_actual`、`index_eq_qfe_quotient_div` → 标准三公理；
+- `Mzk1A2IndexKernelProbeActual` **DONE 17:19:31Z**（olean 01:19:30）：A2 2 项 + IndexQFE 2 项 + Kernel 6 项均标准；
+- 备注：final index/principal 文件仍 pending。
+## 2026-11-15 — MAJOR FinalIndexDecomp + A2InvolutionCandidate（abc）
+
+- `Mzk1FinalIndexDecompActual`（MAJOR）：源 01:25:09；**DONE 17:28:49Z**；olean **01:28:48 > src**；无 sorry/True/axiom；
+  * `index_decomp_with_correction {f}(hf:0<f)(hq : q=p^f)(hdecomp : T_index * index = q^(eK*s-1)*(q-1)) : ∃ a c, index = q^a*c ∧ LogShellResiduePowerCardCorrectionHypothesis a c`；
+  * 真实组合 `torsion_split` + `ceil_decomp` + `exponent_decomp` + `quotient_decomp` + `index_pow_identity` + `qfe_quotient_card_actual`；
+  * probe `Mzk1FinalIndexDecompProbeActual` **DONE 17:36:37Z**（olean **01:36:36 > 01:28:48**）：→ `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1A2InvolutionCandidateActual`：源 01:18:01；**DONE 17:23:21Z**；olean **01:23:20 > src**；无 sorry；
+  * `a2EllipticInvolutionCandidate := HyperbolicOrbicurve.Hom.id`（**degenerate identity candidate**，非 paper involution）；
+  * `a2InvolutionSquaredGap`、`a2InvolutionUniquenessGap` 为 exact Prop gaps（**no inhabitant**）；
+  * probe `Mzk1A2InvolutionProbeActual` **DONE 17:32:40Z**（olean 01:32:39）：candidate + 两个 gap defs → 均标准三公理；rows_length 无公理；
+- 边界：A2 candidate 只是 `Hom.id` 退化占位，不声称是论文 elliptic involution；squared/uniqueness 仍为显式 gap。
+## 2026-11-15 — QuotientBridge red / PrincipalDim red / A2PartialFields green（abc）
+
+### RED：`Mzk1Ind1QuotientBridgeActual`（quotient bridge）
+- 当前源 02:05:11；最新 **FAIL 18:07:50Z**；旧 olean 01:57:57 **stale**（旧源）；
+- errors：line30 unknown `comapTorsion_eq_torsionKernel`（自引用失败后）、lines29/30 type mismatch `h : x^n=1` vs `↑x^n=1`；
+- **合成 sorryAx**：`comapTorsion_eq_torsionKernel` 依赖 `[propext, sorryAx, Classical.choice, Quot.sound]`；**不接受**；
+
+### RED：`Mzk1IVThm110PrincipalDimScalingActual`
+- 源 01:59:32；最新 **FAIL 17:57:56Z**，无 olean；
+- errors lines67/68/69：unsolved goals、Type mismatch、strict positivity 未证；`principalDim_log_scaling` 未绿；**不接受**。
+
+### GREEN：`Mzk1A2PartialFieldsActual`
+- 源 01:43:29；**DONE 17:45:23Z**；olean **01:45:23 > src**；无 sorry；
+- probe `Mzk1A2PartialFieldsAxiomProbeActual` **DONE 17:49:41Z**（olean 01:49:41 > 01:45:23）：`a2PartialFieldsOfSingleton` → 标准三公理；
+- 备注：A2PartialFields 的其余显式字段仍为 source data（无 inhabitant）。
+## 2026-11-15 — MAJOR A2SignAction / PrincipalDim re-green / QuotientBridge empty（abc）
+
+- `Mzk1A2SignActionActual`（MAJOR）：源 02:13:38；**DONE 18:17:36Z**；olean **02:17:35 > src**；无 sorry/True/axiom；
+  * `constantDiagram`（constant pseudofunctor，obj=X.stack.fiber，maps=𝟙）；`atBaseCandidate := Bicategory.Equivalence.id`；`signActionCandidate`（inversion=Hom.id + unitor coherences）；
+  * `signActionOfStackPoint_inversion_eq : (signActionOfStackPoint A).inversion = a2EllipticInvolutionCandidate A`（rfl）；
+  * **degenerate**（identity action），非 paper geometry；`quotientWitness`/`groups`/`scalar stackExtension` 为 3 个显式 remaining gaps；
+  * probe `Mzk1A2SignPrincipalProbeActual` **DONE 18:25:19Z**（olean 02:25:19）：4 个 A2 decls → 均标准三公理；
+- `Mzk1IVThm110PrincipalDimScalingActual`：源 02:12:27；**re-DONE 18:17:36Z**；olean **02:17:35 > src**；无 sorry；
+  * `principalDim_log_scaling` probe 02:25:19 → 标准三公理；此前 FAIL 记录作废；
+- `Mzk1Ind1QuotientBridgeActual`：源 02:12:27；**DONE 18:17:37Z**；olean **02:17:36 > src**；**源已删除 `comapTorsion_eq_torsionKernel`（空文件）**；无 sorry；
+  * 旧 log 中 :30 sorryAx 属删除前尝试，已过时；当前无 unsafe 声明 → **clean empty green**；
+## 2026-11-15 — Probe freshness 汇总（A2Partial/A2Sign/CorrectionConsumer）（abc）
+
+- `Mzk1A2PartialFieldsAxiomProbeActual`：**DONE 18:29:52Z**，olean **02:29:51 > A2PartialFields olean 02:25:17**；`a2PartialFieldsOfSingleton` → 标准三公理；
+- `Mzk1A2SignPrincipalProbeActual`：**DONE 18:25:19Z**，olean 02:25:19；A2Sign 4 decls + PrincipalDim `principalDim_log_scaling` → 均标准三公理；
+- `Mzk1Paper312ConsumerProbeActual`（CorrectionConsumer）：**DONE 18:30:35Z**，olean **02:30:34 > src 02:24:14 / olean 02:25:58**；`perPlace_of_correction` → 标准三公理；
+- 文件新鲜度：A2PartialFields 02:25:17 > src 02:21:33；A2Sign 02:17:35 > src 02:13:38；PrincipalDim 02:17:35 > src 02:12:27；CorrectionConsumer 02:25:58 > src 02:24:14；均 fresh；
+- `perPlace_of_correction` 条件于 `LogShellResiduePowerCardCorrectionHypothesis`/`hres`/`CoeffComparison`/`logMu≥0` 等**显式假设**，不是无条件。
+
+### pending（lead 列）
+- principal actual lambda/floor、stage4、Z_p^d 仍未完成。
+## 2026-11-15 — A2ScalarStackExtension / Paper312Unramified green；QpDecomp pending（abc）
+
+- `Mzk1A2ScalarStackExtensionActual`：源 02:33:27；**DONE 18:38:58Z**；olean **02:38:58 > src**；无 sorry/True/axiom；
+  * `pointStack`（constant one-point étale stack as EtaleStackOverField）；
+  * `pointStackScalarExtension : SourceEtaleStackScalarExtension F K (pointStack F)`（result=pointStack K，fiberEquivalence=Equivalence.id；**degenerate point-stack**）；
+  * `quotientWitness`/`groups`/`unique_elliptic_involution` 为 3 个显式 remaining gaps；
+  * probe `Mzk1ScalarUnramProbeActual` **DONE 18:43:07Z**（olean 02:43:06）：两 defs → 标准三公理；rows_length 无公理；
+- `Mzk1Paper312UnramifiedActual`：源 02:36:10；**DONE 18:39:40Z**；olean **02:39:39 > src**；无 sorry；
+  * `unramified_odd_obstruction`：`¬ (log3/(2·1) ≤ 0 + (1−1/2)·0)`（p=3,f=1,Fdeg=l=1，logMu=0,a=0,c=1 的**数值 no-go**）；
+  * `perPlace_diff_of_correction`：由 `perPlace_of_correction` + diff reduction 组合的条件定理；
+  * probe 02:43:06：两定理 → 均标准三公理；
+- **QpDecomp pending**：`Mzk1IVThm110QpDecompActual` 源 02:34:38，无 olean；最新 **FAIL 18:38:41** → red/pending。
+## 2026-11-15 — MAJOR Paper312Assembly GREEN；QpDecomp 仍 red（abc）
+
+- `Mzk1Paper312AssemblyActual`：源 02:44:01；**DONE 18:47:32Z**；olean **02:47:32 > src**；无 sorry/True/axiom；
+  * `qlog_div_eq (fn Fdeg logp l) : (fn/Fdeg*logp)/(2l) = fn/(Fdeg*(2l))*logp`（field_simp）；
+  * `A_le_Lbar_add_Dbar_of_correction (h : ∀i, ...) : (1/(2l))*Σ(fn_i/Fdeg_i*logp_i) ≤ Σ(logIdx_i+diff_i)`（用 `A_le_Lbar_add_Dbar`）；
+  * `paper312_of_correction_bounds (hs0)(hs1)(hA0)(h) : ExplicitPaper312Inequality sFactor ((1/(2l))*Σ qlog) (Σ logIdx) (Σ diff)`（条件于 sFactor bounds 与 per-place bounds）；
+  * probe `Mzk1Paper312AssemblyProbeActual` **DONE 18:52:23Z**（olean **02:52:23 > 02:47:32**）：3 定理均标准三公理；
+- **QpDecomp 仍 red**：`Mzk1IVThm110QpDecompActual` 源 02:51:15，无 olean；最新 **FAIL 18:51:25** → pending/不接受。
+## 2026-11-15 — QpDecomp GREEN + A2PartialXK probe + RamifiedPlaceData red（abc）
+
+- `Mzk1IVThm110QpDecompActual`：源 03:13:20；**DONE 19:13:29Z**；olean **03:13:28 > src**；无 sorry/True/axiom；
+  * `exists_pow_mul_zpUnit (lam : ℚ_[p]) (h : lam ≠ 0) : ∃ k : ℤ, ∃ u : ℤ_[p]ˣ, lam = p^k * (u:ℚ_[p])` — 用 valuation/zpow 的真实分解；
+  * probe `Mzk1QpDecompProbeActual` **DONE 19:17:24Z**（olean **03:17:24 > 03:13:28**）：→ `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1A2PartialFieldsActual` re-green 03:04:20（源 03:01:35）+ xK/cK 新内容：`xKCurve`/`xKCurve_signature`/`cKCurve`/`cKCurve_signature`/`xKExtensionCandidate`/`cKExtensionCandidate`/`a2PartialFieldsOfSingleton`；
+  * probe `Mzk1A2PartialXKProbeActual` **DONE 19:13:48Z**（olean 03:13:48 > 03:04:20）：7 项 → 均标准三公理；
+- **RED：`Mzk1RamifiedPlaceDataActual`**：源 03:13:27；最新 **FAIL 19:09:46Z**，无 olean；
+  * errors：lines75/80/86 `invalid field notation`（投影表达式非 `C ...` 形式）+ line80 unsolved goals；per lead hull/donor 仍在修；**不接受**。
+## 2026-11-15 — RamifiedPlaceData 复审计（仍 red；field notation 根因）（abc）
+
+- `Mzk1RamifiedPlaceDataActual`：源 03:13:27；最新 **FAIL 19:18:30Z**，无 olean；源码无字面 sorry；
+- 根因：`HasCorrection`/`HasLogIdx`/`HasCoeff`/`HasRes` 是**namespace 级 defs**，不是 `RamifiedPlaceData` 的 structure fields/projections；
+  * 当前 `perPlace_bounds_of_data` 用 `d.HasCorrection` 等 **field notation** → line74:35 `Invalid field HasRes`（environment 无该 projection），lines82-85 `Unknown identifier HasCorrection/...` cascade，line80 unsolved goals（含 synthetic `sorry ()`）；
+  * **修复**：binder 改为 `(hcard : HasCorrection d) (hlogIdx : HasLogIdx d) (hcoef : HasCoeff d) (hres : HasRes d)`；body 的 `dsimp [HasCorrection] at hcard` 保留即可；
+- 结论：**不接受**；等 owner 按上述修复后重编/重验。
+## 2026-11-15 — MAJOR PrincipalDimActual / RamifiedPlaceData re-green（abc）
+
+- `Mzk1IVThm110PrincipalDimActual`（MAJOR）：源 03:35:30；**DONE 19:38:05Z**；olean **03:38:05 > src**；无 sorry/True/axiom；
+  * `principalDimUnit (k : ℤ) (u : ℤ_[p]ˣ)`；`principalDim_log_scaling_actual`；
+  * probe `Mzk1PrinDimRamProbeActual` **DONE 19:44:22Z**（olean **03:44:21 > 03:38:05**）：两 decls → 标准三公理；
+- `Mzk1RamifiedPlaceDataActual`：源 03:38:27；**DONE 19:38:48Z**；olean **03:38:47 > src**；无 sorry；
+  * 已按 field-notation 修复（binders 用 `HasCorrection d` 等）；`perPlace_bounds_of_data` 编译通过；
+  * probe 03:44:21：`perPlace_bounds_of_data`、`HasCorrection`、`HasRes` → 均标准三公理；旧 log line97 错误为前次尝试，已过时；
+- **ZpLattice pending/red**：`Mzk1Ind1ZpLatticeDivisibleActual` 源 03:40:46；无 olean；最新 **FAIL 19:37:56**。
+## 2026-11-15 — MAJOR ActualRamifiedData / A2QuotientMorphism green；CompletionTower/Instantiate red（abc）
+
+- `Mzk1ActualRamifiedDataActual`（MAJOR）：源 03:51:41；**DONE 19:54:19Z**；olean **03:54:19 > src**；无 sorry/True/axiom；
+  * `ofAtPrime (place : FinitePlaceAtPrime F p) : RamifiedPlace`；`actualFn`；`actualData`；
+  * probe `Mzk1ActualRamDataProbeActual` **DONE 19:59:42Z**（olean **03:59:41 > 03:54:19**）：3 decls → 均标准三公理；
+- `Mzk1A2QuotientMorphismActual`：源 03:47:39；**DONE 19:48:54Z**；olean **03:48:53 > src**；无 sorry；
+  * `constantDiagram`/`atBaseCandidate`/`signActionSimplified`/`quotientMorphismSimplified`；probe 03:53:40 → 均标准三公理；rows_length 无公理；
+- **RED：`Mzk1CompletionTowerActual`**：源 03:55:11；最新 **FAIL 19:54:27Z**；无 olean；error line62 `failed to synthesize ...`；**不接受**；
+- **RED：`Mzk1IVThm110PrincipalDimInstantiateActual`**：源 03:49:40；无 olean；最新 **FAIL 19:53:40**；**pending/不接受**。
+## 2026-11-15 — WQuotientLattice / ActualRamified / UnitValuation / ZpLattice：watchdog 停摆（abc）
+
+- **watchdog 停摆**：log mtime **04:18:57**（now 04:37），heartbeat 20:13:54 running=0 pending=48；04:29 起入队/触碰的构建均未处理 → olean 无法生成，独立 probe 阻塞；
+- `Mzk1Ind1WQuotientLatticeActual`：源 **04:29:44**（04:21:31 版本为 p=5 特化），**无 olean**；源码无 sorry；
+  * `structure WQuotientLatticeIdentification (d : Nat) (equiv : completionWQuotient ≃* ZpLattice 5 d)` — **no inhabitant**；
+  * `def WQuotientLatticeIdentificationRequired : Prop := Nonempty ...`；**direct EXIT=0（lead 报告）但无 olean、无法 probe**；
+- `Mzk1ActualRamifiedDataActual`：当前源 **04:35:13**（actualFn_spec/hdecompOf/chosenA/chosenC/chosenSpec 新增），olean **04:15:48 stale**；无 sorry；probe 阻塞；
+- `Mzk1IVThm110UnitValuationActual`：olean 04:14:42（旧源 04:09:57），当前源 04:17:12 → **stale**；无 olean 重建；
+- `Mzk1Ind1ZpLatticeDivisibleActual`：olean **04:14:52 > src 04:12:19** ✓；但 probe 未构建（watchdog 停摆）→ 尚无独立公理证据；
+- `Mzk1CompletionTowerActual`：源 04:08:19；最新 **FAIL 20:12:24** → red；
+- A2PartialFields（已核）：olean 03:53:41 > src 03:51:47；`Mzk1A2PartialFieldsAxiomProbeActual` **DONE 19:59:03**（olean 03:59:02）→ `a2PartialFieldsOfSingleton` 标准三公理；结构含 `quotient : OrbicurveSignInvariantMorphism`（由 quotientMorphismSimplified 构造），3 blocked fields（quotientWitness/groups/unique ell involution），TwoCell coherence 仍 exact gap；
+- PrincipalDimInstantiate probe（已核）：`Mzk1PrincipalDimInstantiateProbeActual` DONE 20:15:01（olean 04:15:00）→ `log_norm_decomp`/`hchar_principalDimUnit` 标准三公理。
+## 2026-11-15 — 三 probe 审计 + ActualRamified 现状（abc）
+
+- `Mzk1UnitRegionScalingProbeActual`：**DONE 21:02:40Z**，olean **05:02:40 > UnitRegionScaling olean 04:52:34**；
+  * `unitRegionLog_eq_canonical_add_principalDim` → `[propext, Classical.choice, Quot.sound]`；rows_length 无公理；
+- `Mzk1AdicAbvEquivAxiomProbeActual`：**DONE 21:03:31Z**，olean **05:03:30 > AdicAbv olean 04:57:09**；
+  * `adicAbv_equivOfRingEquiv`、`absNorm_equivOfRingEquiv` → 均标准三公理；
+- `Mzk1FloorUnitRegionProbeActual`（abc）：**DONE 21:13:06Z**，olean **05:13:05 > FloorUnitRegion olean 05:03:37**；
+  * `floorQSigned_eq_native_of_unitRegion` → `[propext, Classical.choice, Quot.sound]`；`scaleNeOneGap_length` 无公理；
+- **ActualRamifiedData 现状 RED**（05:06 direct 修复后源仍不稳）：当前源 05:10:56；最新 **FAIL 21:13:01Z**；olean 仍 04:39:59 stale；
+  * errors：line202 unsolved goals、line211 typeclass stuck、line219 unknown `actualDataCore_hasCoeff`、line228 `actualDataCore_perPlace_bounds` 重复声明；**不接受**，等 owner 清重复/补 hasCoeff 后重编。
+- 其他：Fresh5 probe（旧 olean）输出 WQuotient Required/actualFn_spec/hdecompOf/chosenA/chosenC/chosenSpec/actualDataCore_hasCorrection/_hasRes/PDAssembly/CompletionTower 2/UnitValuation 均标准；`actualDataCore_hasLogIdx` unknown（旧 olean 未含）。ConcreteFiveCast red：unknown `LeanFormal.IUT.Completion`。
+## 2026-11-15 — MAJOR ActualRamifiedData（lead olean 05:41:21）/ ConcreteFiveCast 直接只读 probe（abc）
+
+- watchdog 自 **05:32:49** 再次停摆（now 05:49），probe 无法入队构建；改用**直接只读 `lake env lean`**（不生成 olean）核对公理；
+- `Mzk1ActualRamifiedDataActual`：源 05:35:11；**lead 生成 olean 05:41:21 > src**；无 sorry/True/axiom；
+  * direct probe exit=0：`actualDataCore_hasCoeff`、`actualDataCore_perPlace_bounds`、`actual_A_le_Lbar_add_Dbar`、**`actual_paper312`** → 均标准三公理 `[propext, Classical.choice, Quot.sound]`；**无 sorryAx**；
+  * `actual_paper312` 条件于 `actualDataCore` 数据假设（条件定理，非无条件）；
+- `Mzk1Ind1ConcreteFiveCastActual`：源 05:13:15；**olean 05:18:24 > src**；无 sorry；
+  * direct probe exit=0：`concreteFiveCompletion_eq` → 标准三公理；
+- 备注：直接只读 probe 仅 stdout 证据，不产生 olean；watchdog 恢复后仍需 probe-fresh olean 补证。
+## 2026-11-15 — watchdog 重启后 probe-fresh 补证（abc）
+
+- watchdog 重启（job pwsh-7c84b86adf7041f5，log 活跃 05:50:35+）；
+- `Mzk1ActualFinalProbeActual`：**DONE 21:52:12Z**，olean **05:52:11 > ActualRamified olean 05:41:21**；
+  * `actualDataCore_hasCoeff`、`actualDataCore_perPlace_bounds`、`actual_A_le_Lbar_add_Dbar`、**`actual_paper312`** → 均 `[propext, Classical.choice, Quot.sound]`；无 sorryAx；
+- `Mzk1ConcreteFiveCastProbeActual`：**DONE 21:51:27Z**，olean **05:51:27 > ConcreteFive olean 05:18:24**；`concreteFiveCompletion_eq` → 标准三公理；
+- 此前 direct lean stdout 证据与本次 probe-fresh 一致。
+## 2026-11-15 — freshness/axioms 汇总（stale/red only + green 清单）（abc）
+
+### RED/pending
+- **`Mzk1IVThm110PrincipalUnitsResidueActual` RED/pending**：源 06:00:47；**无 olean**；最新 **FAIL 22:07:37Z**；源码无字面 sorry；不接受；
+- **`Mzk1GaloisCompletionActual` pending**：源 06:10:58；**无 olean、暂无 watchdog 条目**（未构建）；源码 `grep` 无 sorry/axiom；theorem `withValMovedSigma_uniformContinuous` 待构建；
+
+### fresh/green（probe-fresh，公理标准）
+- FloorUnitRegion：src 04:57:28 < olean 05:03:37；probe 05:13:05；`floorQSigned_eq_native_of_unitRegion` 标准三公理；
+- AdicAbv：src 04:54:04 < olean 04:57:09；probe 05:03:30；`adicAbv_equivOfRingEquiv`/`absNorm_equivOfRingEquiv` 标准；
+- ActualData：src 05:35:11 < olean 05:41:21；probe 05:52:11；`actual_paper312` 等 4 项标准；
+- ConcreteFiveCast：src 05:13:15 < olean 05:18:24；probe 05:51:27；`concreteFiveCompletion_eq` 标准；
+- **stage4 Galois probe `ProbeGaloisIsometryActual`**：src 05:34:24 < olean 05:52:20；`Mzk1GaloisProbeAuditActual` **DONE 22:13:57Z**（olean **06:13:57 > 05:52:20**）：`galoisPlaceMk_apply`、`adicAbv_lt_one_iff`、`valuation_isEquiv_comap` → 均标准三公理；
+- 旧 `Mzk1Stage4HullScalingFormulaConsumerActual` 无 olean（旧文件，非本次新绿）。
+## 2026-11-15 — GaloisCompletion def / GaloisProbeAudit / PrincipalUnits（abc）
+
+- `Mzk1GaloisCompletionActual`：源 06:15:27；**DONE 22:18:39Z**；olean **06:18:37 > src**；无 sorry/axiom；
+  * 唯一 decl **`withValMovedSigma`**（WithVal(comap valuation) →+* WithVal(moved valuation)，由 σ 与 WithVal.equiv 组合）；
+  * probe `Mzk1GaloisCompletionProbeActual` **DONE 22:23:28Z**（olean **06:23:27 > 06:18:37**）→ `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1GaloisProbeAuditActual`（stage4 Galois probe 审计）：DONE 22:13:57Z（olean 06:13:57 > ProbeGaloisIsometry 05:52:20）；`galoisPlaceMk_apply`/`adicAbv_lt_one_iff`/`valuation_isEquiv_comap` 标准三公理；
+- **PrincipalUnits 仍 RED**：`Mzk1IVThm110PrincipalUnitsResidueActual` 源 06:19:40；无 olean；最新 **FAIL 22:17:27Z**；不接受。
+## 2026-11-15 — MAJOR PrincipalUnitsResidue：norm bridge 绿，新 decls 源 red（abc）
+
+- `Mzk1IVThm110PrincipalUnitsResidueActual`：
+  * **green 部分**：源 06:37:22 版本 **DONE 22:38:52Z，olean 06:38:51**；`norm_lt_one_iff_valuation_lt_one`（`‖x‖<1 ↔ NormedField.valuation x<1`）probe `Mzk1PrincipalUnitsProbeActual` **DONE 22:42:34Z**（olean 06:42:34 > 06:38:51）→ 标准三公理；
+  * **当前源 06:42:00 新增 `integersToA`/`integersUnitsEquivUnitGroup`/`principalUnits_eq_comap_principalUnitGroup` 后 FAIL 22:42:35Z**（无新 olean，06:38:51 stale）：
+    - line12:62/64 `synthInstanceFailed`；
+    - line25:49、line37:65 `typeclass instance problem is stuck`（`Integers K`/`valuationSubring` 处）；
+    - line40:7 unknown `integersUnitsEquivUnitGroup`（前置 def 失败 cascade）；
+    - line57 `rfl` failed；
+  * **新 decls 不接受**；建议 owner 用 `set_option trace.Meta.synthInstance true` 定位缺失实例（`Integers K` 与 `NormedField.valuation` 的实例链）。
+## 2026-11-15 — MAJOR PrincipalUnitsResidue 全量 GREEN（abc）
+
+- `Mzk1IVThm110PrincipalUnitsResidueActual`：源 06:49:49；**DONE 22:51:07Z**；olean **06:51:43 > src**；无 sorry/axiom；
+- decls 6 个：`norm_lt_one_iff_valuation_lt_one`、`integersToA`、`integersUnitsEquivUnitGroup`、`principalUnits_eq_comap_principalUnitGroup`、`quotientEquivResidueUnits`、`card_quotient_eq_card_residueUnits`；
+- probe `Mzk1PrincipalUnitsFullProbeActual` **DONE 22:55:35Z**（olean **06:55:35 > 06:51:43**）：6 项 → 均 `[propext, Classical.choice, Quot.sound]`；
+- 旧 log lines37/40/52/57/59 errors 属 22:46:50 FAIL 尝试，已过时；当前 olean 经 probe 验证干净。
+## 2026-11-15 — PrincipalUnitsResidue 07:07:33（含 residue card 两定理）审计（abc）
+
+- `Mzk1IVThm110PrincipalUnitsResidueActual`：源 07:06:21；**DONE 23:07:22Z**；olean **07:07:33 > src**；无 sorry/axiom；
+- 新增 `residue_field_card_exists`、`residue_units_card_coprime`；
+- probe `Mzk1PrincipalUnitsFinalProbeActual` **DONE 23:11:53Z**（olean **07:11:52 > 07:07:33**）：
+  * `residue_field_card_exists`、`residue_units_card_coprime`、`quotientEquivResidueUnits`、`card_quotient_eq_card_residueUnits`、`principalUnits_eq_comap_principalUnitGroup` → 均 `[propext, Classical.choice, Quot.sound]`；
+- 该文件 8 个 decls 全部有 fresh probe 证据；无 sorryAx。
+## 2026-11-15 — PrincipalUnitsResidue 新 olean 07:12:09（quotientEquivPrincipalUnits）（abc）
+
+- `Mzk1IVThm110PrincipalUnitsResidueActual`：源 07:10:22；**olean 07:12:09 > src**（lead 生成）；DONE 23:11:54Z；无 sorry/axiom；
+- 新增 `quotientEquivPrincipalUnits`（L124）；
+- probe `Mzk1PrincipalUnitsQuotProbeActual` **DONE 23:15:38Z**（olean **07:15:38 > 07:12:09**）→ `[propext, Classical.choice, Quot.sound]`；
+- 此前 8 decls 已 probe-accepted；当前共 9 decls，均有 fresh 证据。
+## 2026-11-15 — CardExponent 07:26:06 审计（abc）
+
+- `Mzk1IVThm110CardExponentActual`：源 07:24:00；**olean 07:26:06 > src**；DONE 23:24:59Z；无 sorry/axiom；
+- decls：`cardExponent := Nat.card ((Integers K)ˣ ⧸ principalUnits)`、`cardExponent_pos`、`pow_cardExponent_mem`、`cardExponent_eq_residueUnits`、`cardExponent_coprime`；
+- probe `Mzk1CardExponentProbeActual` **DONE 23:29:46Z**（olean **07:29:45 > 07:26:06**）：5 项 → 均 `[propext, Classical.choice, Quot.sound]`；
+- 备注：qpilot 将把核心 `integralUnitExponent` helper 改为 `Nat.card` quotient（Lead-approved，无 paper object），下游需重建；重建后需复查消费者 olean 新鲜度。
+## 2026-11-15 — CardExponent 08:12:54（integralUnitExponent 两定理）审计（abc）
+
+- `Mzk1IVThm110CardExponentActual`：源 08:11:40；**olean 08:12:54 > src**；无 sorry/axiom；
+- 新增 `integralUnitExponent_eq_cardExponent`、`integralUnitExponent_coprime`（核心 helper 链）；
+- probe `Mzk1CardExponentCoreProbeActual` **DONE 00:14:10Z（08:14:10 local）**（olean **08:14:10 > 08:12:54**）：
+  * `integralUnitExponent_eq_cardExponent`、`integralUnitExponent_coprime`、`cardExponent_coprime` → 均 `[propext, Classical.choice, Quot.sound]`；
+- 核心 helper 链绿；此前 5 decls 已有 fresh probe。
+## 2026-11-15 — UnitLogNorm / CardExponent / core helper chain（stale/red only）（abc）
+
+### RED/pending
+- **`Mzk1IVThm110UnitLogNormBoundActual` RED/pending**：源 08:27:55；**无 olean**；最新 **FAIL 00:26:59Z**；是 `integralUnitExponent` 的消费者；不接受；
+
+### fresh/green
+- `Mzk1IVThm110UnitLogNormActual`：源 08:21:07；**olean 08:23:10 > src**；无 sorry；
+  * `padicValNat_eq_zero_of_coprime`、`norm_natCast_eq_one_of_coprime` probe `Mzk1UnitLogNormProbeActual` **DONE 00:31:47Z**（olean **08:31:46 > 08:23:10**）→ 均标准三公理；
+- `Mzk1IVThm110CardExponentActual`：源 08:11:40；olean 08:12:54 > src；此前 probe 08:14:10 覆盖 integralUnitExponent 两定理/`cardExponent_coprime` → 标准；
+- core helper 链的 integralUnitExponent 消费者扫描：仅 CardExponent（fresh）与其 probe + UnitLogNormBound（red）。
+## 2026-11-15 — UnitLogNormBound 08:38:26（norm_integralUnitExponent_eq_one）审计（abc）
+
+- `Mzk1IVThm110UnitLogNormBoundActual`：源 08:36:47；**olean 08:38:26 > src**（lead 生成）；无 sorry/axiom；
+- decls：`unitLog_norm_le_one_of_exp_bound`、`missingPowerLogEstimate`（3 gaps）、`norm_integralUnitExponent_eq_one`；
+- probe `Mzk1UnitLogNormBoundProbeActual` **DONE 00:41:24Z**（olean **08:41:23 > 08:38:26**）：
+  * `unitLog_norm_le_one_of_exp_bound`、**`norm_integralUnitExponent_eq_one`** → 均 `[propext, Classical.choice, Quot.sound]`；`missingPowerLogEstimate_length` 无公理；
+- 旧 FAIL 00:36:19 属前版本；当前 olean 经 probe 验证，**接受**。
+## 2026-11-15 — NormOne 08:50:28 / UnitLogNormQp 08:51:24 审计（abc）
+
+- `Mzk1IVThm110NormalizedNormOneActual`：源 08:43:57；**olean 08:50:28 > src**；DONE 00:45:53Z；无 sorry/axiom；
+  * instances `normalizedCompletionNormOne`、`commonPrimeCompletionNormOne`（NormOneClass）；
+- `Mzk1IVThm110UnitLogNormQpActual`：源 08:41:50；**olean 08:51:24 > src**；DONE 00:45:54Z；无 sorry；
+  * `principalUnit_norm_sub_one_le_inv_p_Qp`、**`unitLog_norm_le_one_Qp`**（Qp principal bound，p≥3 语境）；
+- probe `Mzk1NormOneQpProbeActual` **DONE 00:54:45Z**（olean **08:54:45 > 08:50:28/08:51:24**）：4 项 → 均 `[propext, Classical.choice, Quot.sound]`；无 sorryAx。
+## 2026-11-15 — Residue/Tensor/GaloisCompletion 审计（abc）
+
+- `NormalizedNormValuationResidueActual`：源 09:22:26；**olean 09:25:57 > src**；无 sorry；
+  * `AlgebraNormValuationPowerResidue`（Prop）、`NativeQRelativeNormContraction`（Prop）、`nativeQRelativeNormContraction_of_residue_power`；
+  * probe：3 项 → 均 `[propext, Classical.choice, Quot.sound]`；
+- `Mzk1IVThm110TensorUnitBallActual`（placeholder）：源 09:20:46；**olean 09:27:59 > src**；
+  * 仅 `missingTensorUnitBallDonors`（missing donor 列表）+ `missingTensorUnitBallDonors_length`（无公理）；无定理声明；
+- `Mzk1GaloisCompletionActual`：
+  * 旧 olean 09:20:56（DONE 01:20:57）：`withValMovedSigma`、`withValMovedSigma_surjective` → 标准三公理（probe 已核）；
+  * **当前源 09:29:34 FAIL 01:33:15Z**：`withValMovedSigma_val_eq`/`valueGroup_comap_eq` 失败 — lines45/55 rfl/unsolved goals、line83 rw 未匹配、line89 unknown `Subgroup.closure_le.mpr`、lines84/90 No goals；
+  * **新定理 RED，当前源不接受**；旧 olean 与当前源不一致；
+- `Mzk1HalfPadicBridgeProbeActual` DONE 01:10:21：UnitLogNormHalf + 11 个 PadicBridge 目标 → 均标准三公理；
+- UnitLog norm 扫描 = support-only（lead）；hull 发现 norm=absNorm^v donors（信息）。
+<!-- p7-global-q-hull-construction-20261115 -->
+## 2026-11-15 — R1/hq/hθ 审计修正与构造捷径（静态研究，无编译）
+
+保留旧结论，追加修正：全局 q 不只 scalar，S3133RealifiedQPilotDivisorActual/LogVolumeActual 和 QPilotReadoutActual 已有对象及求和；一般 baseQ 候选与 clause-B qVFamily 来源不同，主线应使用后者。actualFn 是剩余次数，不能充当 q order；现有 paperNormalizedThetaSum 仅为 q scalar 的 1/(2l) 倍。
+
+关键漏项：LocalFieldIntegralHullSpan.integralSpan_eq_hull / integralSpan_subset_hull 已给实际积分环 span 与 hull 的连接；Mzk1P3TensorCoreActual 已给 tensor 自身的 field-product 分解；NormalizedHaarTransport/productHaar 供体已有。PadicField/FieldNorm.lean 已证 nrm_norm 与 v_norm，范数赋值缺口降为 actual completion 实例运输，非从零数学。
+
+有效构造路线：同源 qTuple 与局部理想 product（有理权重清分母）；Norm 的除子推送；实际 determinant line 与 D_q/(2l) 避开非必要根下降；有限合法 possible-image 集的积分环饱和 Γ，坐标最小赋值计算其 product Haar 下界，或算 log[OΛ:Λ] 的体积增益。原文依据为 IUT III Definition 3.8(i)、Remark 3.9.5 的 hull 和 determinant 构造。
+
+研究报告 coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md；哈希/依赖登记 dag/nodes/p7-global-q-hull-construction-20261115.json。本次未证明实际源的一般赋值预算、未闭合旧单点到全局 reading、未宣称 Cor3.12 完成。四项验收 NOT_RUN，无 Lean 改动，无构建，无新线程。
+
+## 2026-11-15 — 大任务 G：hq/hθ/R1 donor wiring 审计（abc，只读）
+
+- 交付：**`coord/AUDIT-HQ-HTHETA-WIRING.md`**（20.5KB）：四 donor 定理清单→R1/hq 字段 wiring、actualFn 缺 q 重数的精确行号、hθ 单向界审计与唯一缺失 identification、LEAN-INDEX 覆盖/错误。
+- 关键结论：
+  * 四 donor（S3133RealifiedQPilotDivisor/LogVolume/QPilotReadout/QPilotLogVolumeAgreement）源与 olean fresh；**当前 watchdog.log 无条目**，仅 `tmp/xif_guarded_results.log` EXIT=0 且 SIZE 与当前源一致 + 标准三公理 → 按“只信 watchdog”规则为**未获当前 watchdog 证据**；
+  * `qVEffectiveMultiplicity` 定义在 `QPilotGlobalLogVolumeFromQActual.lean:50-53`（LEAN-INDEX:102 误归到 Divisor 文件）；`mult_b = order(q_v)·localResidueDegree`；
+  * `qPilotRealifiedLogVolume_eq = -Σ mult_b·log(residueNormBase)`、`qPilotNormalizedGlobalReadout_eq = nativeQVPilotNormalizedSignedLogVolume` 是 hq/R1 的直接 donor；
+  * **actualFn 缺 q 重数精确位置**：`Mzk1ActualRamifiedDataActual.lean:39-52`（actualFn 仅 residue-card 指数）、:73-104（hdecompOf）、:134-148（actualData）、:165-179（actualDataCore `fn:=actualFn`）、:240-256（actual_A_le_Lbar_add_Dbar LHS 无 mult_b）；RamifiedPlaceData 结构 :17-27 无重数字段；
+  * hθ：`integralSpan_eq_hull`（LocalFieldIntegralHullSpan:73-79）为等式 donor；`FinitePlaceIntegralTensorCovolume` 仅 `⊆`(:96-123) + `logTensorUnitLogVolume ≤ hullUnitLogVolume`(:143-155)；当前单向路线下**唯一缺失 identification = 乘积坐标识别 `TensorRegionCoordinateProduct`**（→ Haar/log 乘积 → hθ 线性形式）；精确等式路线才需反向包含；
+  * LEAN-INDEX 错误：qVEffectiveMultiplicity 归错文件、`QPilotGlobalLogVolumeFromQActual` 文件名缺失、:84 “无 equality” 与 :153-159 自相矛盾、covolume 只列 relative-Haar 未列单向引理、:86 stage4 状态 stale（当前 GaloisCompletion FAIL 01:51:09）。
+- 本任务：**未做任何 Lean 编译**（只读审计）。
+<!-- p7-global-q-hull-ag-to-abc-20261115 -->
+- 补充静态事实：Mzk1A2PartialFieldsActual 的具体 producer 使用 point-stack/identity 等退化构造；其字段数不是实际椭圆几何完成度。SourceCompletionSignQuotient.unique_elliptic_involution 的当前全量词含 id；报告提出按真实非恒等 involution/原文 sign action 语义修正，而不以 Subsingleton Hom 假填。
+- 新构造捷径：Gaussian 5-place 已有 completion finrank=1；NormalizedLogNormComparison 已有 norm_integer_eq_valued_integer。实际 WQuotient 可经 Q5 用 [u]↦log(u^4)/20 与 z↦[exp(5z)] 构造，或对可除性消费者直接在 log 格内除以 prime-to-5 整数。
+- 原文核对：IUT IV Cor2.2 的 prime avoidance/P1–P7、isogeny-height 分支、transvection/SL2 与真实 logQ 估计；Cor2.3 仍需实际局部到全局的 Belyi/height/conductor 图。报告给覆盖这些节点到 ABC 的候选路线，未把它们当已证明条件。
+- 强度剪枝：当前 UndilatedRegionBound 比 RegionVolumeFamily 更强；最终任意 ε 的 ABC 可直接消费 epsilon family，不要求 ε=0 版本。无编译/Lean 修改；四项验收仍 NOT_RUN。
+
+## 2026-11-15 — TaskG donor watchdog 补证 + theta 单向桥 + TaskE/CheckSharp（abc）
+
+### watchdog DONE（仅 watchdog 证据）
+- `QPilotGlobalLogVolumeFromQActual.lean`：**DONE 01:54:53Z**，olean 09:54:52（source/olean fresh）；
+- `S3133RealifiedQPilotDivisorActual`：**DONE 01:55:48Z**，olean 09:55:48；
+- `S3133QPilotReadoutActual`：**DONE 01:55:52Z**，olean 09:55:51；
+- `S3133RealifiedQPilotLogVolumeActual`：**DONE 01:56:41Z**，olean 09:56:40；
+- `S3133QPilotLogVolumeAgreementActual`：**DONE 01:57:36Z**，olean 09:57:35；
+- `Mzk1TaskGDonorProbeActual`：**DONE 02:04:30Z**，olean **10:04:28** > 全部 donor olean；**17 targets 全标准三公理、sorryAx=0**；
+- `Mzk1ThetaFullLatticeBoundActual`：源 10:02:25；**DONE 02:04:29Z**，olean **10:04:28 > src**；
+  * `fullLattice_le_thetaHull_of_bridges (hsub : arithmeticTupleCanonicalHull ⊆ actualC3LogShellTensorRegion) (hunit : 1 ≤ Haar(canonicalUnitReference).toReal) : arithmeticTupleLogTensorUnitLogVolume ≤ thetaPilotHullLogVolumeReal` — **hsub/hunit 为 hθ 唯一剩余桥**；用 `arithmeticTupleLogTensorUnitLogVolume_le_hull` + region/Haar 单调性 + `thetaPilotHullLogVolumeReal_eq_actualRegion`；
+  * probe `Mzk1ThetaBridgeProbeActual` **DONE 02:07:36Z**（olean 10:07:35 > 10:04:28）→ 标准三公理，sorryAx=0；
+- `Mzk1CheckSharpDonorProbe`：源 10:02:16；**DONE 02:03:56Z**，olean 10:03:55；#check-only（`logShellResidueCard_eq_prime_pow`），0 errors、无 sorryAx、无 axiom 声明。
+
+### RED
+- `Mzk1TaskECompletionFieldEquivActual`：当前源 10:02:10（`concreteFiveCompletion_eq_lowerCompletion`/`CompletionFieldQFiveEquiv`/...），最新 **FAIL 02:02:47Z**；olean 09:54:32 stale；
+  * line32:48/35:34 `synthInstanceFailed`（completion 实例）；
+  * **line46 根因**：`theorem CompletionFieldQFiveEquivRequired : Prop := Nonempty ...` — 定理类型 `Prop` 不是 Prop，应改为 **`def ... : Prop := ...`**；
+  * line48/49 cascade（unknown constant / ⟨⟩ notation）；
+  * 旧 TaskE probe（10:01:32）对应旧 olean，**不构成当前源证据**；**不接受**。
+## 2026-11-15 — PadicFieldValuedQp 接受 / GaloisCompletion val 部分接受、valueGroup 拒绝（abc，仅 watchdog 证据）
+
+### ✅ ACCEPTED：`Mzk1PadicFieldValuedQpActual`
+- 源 10:10:25；**DONE 02:12:07Z**；olean **10:12:07 > src**；无 sorry/axiom；
+- 5 decls：`valuedQp_apply`、`padicValuedCoherence_of_qp`、`padicField_v_eq_valuation`、`padicFieldQpCoherence`、`padicValuedCoherence_qp`；
+- probe `Mzk1PadicValuedOnlyProbeActual` **DONE 02:21:00Z**（olean **10:20:59 > 10:12:07**）：5 项均 `[propext, Classical.choice, Quot.sound]`，**sorryAx=0**；
+
+### ✅ ACCEPTED（旧 olean 版本）：GaloisCompletion 的 val equality
+- `Mzk1GaloisCompletionActual` 旧版本 **DONE 02:07:39Z**；olean 10:07:39；
+- probe `Mzk1GaloisValOnlyProbeActual` **DONE 02:21:06Z**（olean **10:21:05 > 10:07:39**）：`withValMovedSigma_surjective`、`withValMovedSigma_val_eq` → 均标准三公理，sorryAx=0；
+  * 注意：该证据对应 **10:07:39 的 olean**，不是当前源；
+
+### ❌ REJECTED：GaloisCompletion 当前源 / valueGroup
+- 当前源 10:10:46；最新 **FAIL 02:12:11Z**；当前源无新 olean；
+- `valueGroup_comap_eq` 在当前 olean 10:07:39 中 **unknown constant**（未被构建），当前源 proof 失败 → **valueGroup 拒绝**，当前源整体不接受；
+- 仅 stage4 的 val equality（旧 olean）通过；stage4 仍需修复 valueGroup 后重编。
+## 2026-11-15 — 最新 watchdog DONE/FAIL 审计（abc，只读，无编译）
+
+### ✅ 接受
+- `Mzk1QVMultiplicityBridgeActual`：源 10:26:30；**DONE 02:27:50Z**；olean **10:27:50 > src**；无 sorry/axiom；theorem `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree`（= order(q_v) × localResidueDegree；Task G 的 mult_b 桥）；
+- `Mzk1ThetaUnitLatticeBoundActual`：**DONE 02:21:03Z**；olean 10:21:03；theorems `tensorIntegerRegion_subset_actualRegion`、`unitLatticeLogVolume_le_thetaHull`（条件 hpos/hfin）；**但当前源 10:31:11 > olean 10:21:03 → 当前源待重编**；
+- `Mzk1GaloisCompletionActual`：**DONE 02:21:06Z**；olean 10:21:05；旧版本 `withValMovedSigma*` + `valueGroup_comap_eq` 全部编译；abc probe `Mzk1GaloisValOnlyProbeActual` DONE 02:21:06（olean 10:21:05 > 10:07:39）→ 2 目标标准三公理、sorryAx=0（**仅旧 olean 版本**）；**当前源 10:31:00 已改（valueGroupIso 等），START 02:31:00 pending**；
+- `Mzk1PadicFieldValuedQpActual`：DONE 02:12:07；probe `Mzk1PadicValuedOnlyProbeActual` DONE 02:21:00（olean 10:20:59）→ 5 项标准三公理、sorryAx=0；
+- `Mzk1ThetaFullLatticeBoundActual`：DONE 02:04:29；conditional（hsub/hunit）；probe `Mzk1ThetaBridgeProbeActual` DONE 02:07:36 标准三公理。
+
+### ❌ 拒绝/red/stale
+- `RelativeNormFieldNormActual`：源 10:29:38；**无 olean**；最新 **FAIL 02:30:44Z**；errors：:87 缺 `Module.Finite (NativeBaseCompletionRaw X) (NativeFCompletion X)`；:89/:91 缺 `IsScalarTower ℚ_[pBase] (NativeBaseCompletionRaw X) (NativeFCompletion X)`；:94 type mismatch；
+- `Mzk1TaskECompletionFieldEquivActual`：当前源 10:02:10；FAIL 02:02:47Z；`theorem ... : Prop :=`（应为 `def`）+ synthInstanceFailed；不接受；
+- 上列 ThetaUnitLattice/GaloisCompletion **当前源均新于其 DONE olean**，旧绿不覆盖当前源，待 watchdog 重编。
+
+### 指针
+- `coord/GOAL-PROGRESS.md` §2/§3/§4/§7 已同步（含本节审计指针）；
+- Task G wiring 交付：`coord/AUDIT-HQ-HTHETA-WIRING.md`；
+- 本审计**未做 Lean 编译**（只读 + watchdog log）。

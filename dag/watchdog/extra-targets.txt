@@ -84,3 +84,5 @@ tmp/sheaf/xif/paper/S3133RealifiedQPilotLogVolumeActual.lean
 tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean
 
 tmp/sheaf/xif/paper/RelativeNormFieldNormActual.lean
+tmp/sheaf/xif/paper/Mzk1QVIndexMapActual.lean
+tmp/sheaf/xif/paper/Mzk1TaskEIntegersRingEquivActual.lean
