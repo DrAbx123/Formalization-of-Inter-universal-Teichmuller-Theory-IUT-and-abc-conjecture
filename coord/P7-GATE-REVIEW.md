@@ -4105,3 +4105,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - UnitLogNormQpTwoActual olean 08:59:28: principalUnit_norm_sub_one_le_half_Q2, unitLog_norm_le_one_Q2 (uses Mzk1P2Log1pHalfActual.norm_log1p_le_half).
 - NormalizedCompletionPadicBridgeActual olean 09:00:23: norm_eq_padic, principal_unit_norm_le_inv_prime/third, NormOneClass; first gap completionMap_self_rat for rationalCompletionPadicEquiv form (not needed for bound).
 - mainline instantiate NormalizedCompletion unitLog p≥3; qpilot general p=2 principal_bound_half. No fake.
+
+
+### 20.649 Q2 fresh DONE; hull obstruction file (2026-11-15 42:00)
+- DONE UnitLogNormQpTwo 01:00:21/olean 09:00:21; bridge olean 09:00:23. hull writes Mzk1HqHthetaStructuralObstructionActual documenting single local q/global sum, no q product, region not product, no product Haar/log; no fake/sorry. abc audit. No fake.
