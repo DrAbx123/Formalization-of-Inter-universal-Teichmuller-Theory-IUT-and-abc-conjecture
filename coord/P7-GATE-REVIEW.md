@@ -4147,3 +4147,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.657 hull found norm=absNorm^v donors (2026-11-15 43:20)
 - FinitePlaceCompletionNormTransport: norm_eq_absNorm_zpow, logNorm_eq_absNorm_mul, log_absNorm_eq_relativeResidueDegree_mul, logNorm_completionMap_eq_mul (e*f). f*v route via logs possible; missing algebra norm vs completionMap identification. hull attempts log||Algebra.norm x||=f log||x||. No fake.
+
+
+### 20.658 Algebra.norm local formula type mismatch (2026-11-15 43:30)
+- hull: norm_eq_absNorm_zpow base number field/adicCompletion; relNorm objects integral rings; Algebra.norm base local field K, x not integral; incompatible. Donor gives completion norm e*f scaling, not Algebra.norm. mainline inspect relativeNormCompletion and Algebra.norm_eq_prod/det route or exact missing. No fake.

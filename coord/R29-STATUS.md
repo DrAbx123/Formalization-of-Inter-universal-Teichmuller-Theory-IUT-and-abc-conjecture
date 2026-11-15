@@ -3141,3 +3141,5 @@
 - 43:10: local norm valuation ideal donor; hull attempts DVR absNorm identity. gate 20.656 written.
 
 - 43:20: hull found norm=absNorm^v donors; attempts algebra norm log formula. gate 20.657 written.
+
+- 43:30: Algebra.norm local formula type mismatch; mainline det/prod route. gate 20.658 written.
