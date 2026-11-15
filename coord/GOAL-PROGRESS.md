@@ -480,3 +480,12 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: A2SourceVFields 03:21:54; WQMembership forward 03:22:37; A2Remaining 03:19:42; QVWeighted 03:20:03 (old; current retry); Node09HqAssemblyLink 03:18:55; ProductFiber 03:18:56.
 - RED: ValueGroup 03:21:11 (unknown toMonoidWithZeroHom lemma/unsolved); Node09ActualHyp 03:21:08 (requires 0≤Fdeg); QVWeighted retry.
 - PENDING: A2VFieldsConsumer. Next: stage4 revert interface; mainline add 0≤Fdeg; qpilot QV wrapper; lattice VFields consumer; stepxi WQ reverse not delivered.
+
+## 7.28 11:24 cycle
+
+- DONE: Node09ActualHypotheses 03:24:07 (hA0_of_fiberMult/hs0/hs1/paper312_of_fiberMult_actual; 52s); A2VFieldsConsumer 03:23:45; WQ reverse 03:22:37; WQ forward 03:19:40.
+- Exact remaining for paper312 actual:
+  - hbase: Nonempty FinitePlaceQCandidate(nativeBadBasePlace X) via actual RelativeNormQProperties/Qp coherence;
+  - hlogp: log completionRationalPrime = log residueNormBase(b i) needs Fmod=Q index compatibility/comap_self bridge;
+  - hper: 3.12 per-place mult inequality, not provided by localLogMagnitude equality.
+- RED: QVWeighted retry; ValueGroup 03:21:11 (revert interface needed).
