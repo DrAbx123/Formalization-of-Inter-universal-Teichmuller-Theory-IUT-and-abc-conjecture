@@ -417,3 +417,17 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - RED: WQMembership reverse 03:17:17 (application mismatch); Node09HqAssemblyLink 03:17:43 (Function expected 47/50).
 - PENDING rebuild: QVWeighted new fiber source; ProductFiber new bridgeRows(4) source.
 - BadPlaceBijection corrected to fiber/Node09 b; no bijection claim.
+
+### 7.17 ValueGroup/A2Unique 接受；WQMembership reverse red；Node09HqAssemblyLink red（2026-11-15 11:22，无编译）
+
+- ✅ ValueGroup DONE 03:16:30（interface ValueGroupTransportData）；A2Unique DONE 03:17:20（interface Data+Required）。
+- ❌ WQMembership：当前源 11:18:24 仅 forward；最新 FAIL 03:17:17（Application type mismatch :32:32，旧源 reverse）；olean 11:14:56 stale，reverse 未交付。
+- ❌ Node09HqAssemblyLink（新）：源 11:17:50；START 03:18:01；旧 log errors Function expected :28/:31/:47/:50（`fiberMult` arity：需 L + hp），待修；无 olean。
+- ⚠️ ProductFiber（源 11:17:25 > olean 11:10:08）、QVWeighted（源 11:17:07 > olean 11:15:21）重编 pending（START 03:18:01）。
+
+## 7.23 11:19 cycle
+
+- DONE: Node09HqAssemblyLink 03:18:55/55s: weightedRegion_of_fiberMult + paper312_of_fiberMult_bounds (ExplicitPaper312Inequality conditional on hbase/hlogp/hper/hA0/hs0/hs1; no BadPlaceBijection).
+- DONE: ValueGroup 03:16:30 interface; A2Unique 03:17:20; Node09HqWeighted/QVWeighted 03:15:21; A2AssemblyConsumer 03:14:14.
+- RED: WQMembership reverse 03:17:17 (reverted to one-direction); ProductFiber/QVWeighted new sources rebuilding.
+- Next: instantiate hbase/hlogp/hper/hA0/hs0/hs1 for Fmod=Q; qpilot fiber route; stage4 valueGroup_eq/UniformContinuous; hull closed-ball mass missing.
