@@ -1907,3 +1907,31 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 ## 7.161 20:13 N5 #3/#4 correction
 
 - Hull files DONE 12:12:14 but documentation-only structures/rows; NO inhabitant. MissingQPilotOneColumnReading needs qReading=realifiedLogVolume theorem; WeightedQSumBridge needs localLogSum=weightedQSum (ClosedBallMassFormula + Bad/fiber alignment). Not marked green. C3 fix: baseQLogMagnitude b, import qVFamily, arg order. No fake.
+
+### 7.130 Audit 12:10 更新（2026-11-15 20:16，无编译）
+
+- hull #3/#4 DONE document-only：Mzk1QVMissingReadingConstructionActual、Mzk1WeightedQSumBridgeConstructionActual（local structures + rows，无 inhabitant）；
+- Frobenioid presentation construction 后续 DONE 12:12:41（documentation/spec only；correction to red）；
+- C3 construction FAIL 12:11:25，retry 12:12:57；HSpecialValue FAIL 12:12:17，retry 12:12:56；
+- N1 analyticAt DONE 12:06:58；mainline N0–N11；cards/S3135 auxiliary；no fake。
+
+## 7.162 20:14 C3 mechanical fix
+
+- Lead fixed C3 construction import QPilotZeroLocusDivisorActual + baseQLogMagnitude b; qpilot to verify/ClauseB. HSpecialValue source rewritten 30 lines; old :41/:46 errors stale, wait fresh compile. Hull #3/#4 doc-only. No fake.
+
+### 7.131 C3 fix pending；HSpecialValue DONE；hull #3/#4 doc-only（2026-11-15 20:18，无编译）
+
+- C3 construction source 20:14:20（baseQLogMagnitude b + import fix）> 上次 build（FAIL 12:13:56 pre-fix）；无 olean；待 fresh DONE；
+- HSpecialValue 30 行重写 DONE 12:14:40（olean 20:14:40 > src 20:13:46；sorryAx=0；tateHFormal_eq_X_add_sq_mul / padicPowerSeriesEval_tateHFormal_eq_X_add_sq_mul）；
+- hull #3/#4 doc-only DONE 12:12:14 维持；N1 analyticAt DONE；mainline N0–N11；no fake。
+
+## 7.163 20:20 route compliance correction
+
+- User correct: stop self-invented paths. Deviations: cards/S3135 as mainline; N1 analytic inverse-j detour instead of §5.1 fixed-point q; N5 C3/base instead of §9.1 product q volume; N3 ambient embedding instead of §7.1-7.4; doc-only interfaces counted as progress. Corrected in coord/P7-ROUTE-COMPLIANCE.md. Assigned P1 fixed-point, P4 product volume, P5 packet table, D1 fixed units per route.
+
+### 7.132 ROUTE CORRECTION：deviation 记录（2026-11-15 20:20，无编译）
+
+- 此前将 cards/S3135 与 ad hoc N5 当 mainline → **route deviation**；
+- 正确路线：**P1–P8 / D1-H1-S1-G1**；
+- 后续审计只按正确路线；cards/S3135/adhoc N5 降级 off-route/auxiliary，不计 mainline；
+- no new DONE；no fake。
