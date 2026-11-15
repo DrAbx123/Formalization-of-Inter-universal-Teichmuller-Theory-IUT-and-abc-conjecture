@@ -225,3 +225,9 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: WQ clean interface 02:46:36（三公理）; A2 producer 02:46:38; A2 consumer 02:48:48; RelativeNormQProperties 02:49:10; TaskECompletion 02:45:31; ProductHaarIdentificationGap 02:44:40.
 - RED: GaloisCompletion 02:49:13（stage4 重加 valueGroup 导致，需立即回退 green）; QVProductRegion 02:48:03（错误 namespace IUTIII.Corollary312.ArithmeticQPilotBaseChange，应 LeanFormal.IUT.ArithmeticQPilotBaseChange + residueNormBase donor）; Node0609ProductBridge 02:50:26（Function expected 32/41）.
 - 下一步：stage4 回退；qpilot 修 namespace；hull 修 bridge/exact interface；mainline Node09HqMult/RelativeNorm consumer running；lattice A2 source witness consumer running；stepxi normedIntegerEquivValuative 小块 running。
+
+## 7.8 10:51 cycle
+
+- DONE preserved: WQ clean interface 02:46:36; A2 producer/consumer; RelativeNormQProperties 02:49:10; TaskECompletion; ProductHaar gap.
+- NEW RED: WQ 02:51:13 (new normedIntegerEquiv proof produced sorryAx; revert clean interface); A2SourceWitnessConsumer 02:51:14 (sorryAx not structure); Node09HqMult/RelativeNorm consumers function expected/ambiguous; QVProductRegion still wrong namespace/line16; Node0609ProductBridge function expected.
+- All owners instructed: revert/clean first, no sorryAx; then small blocks. Watchdog only.
