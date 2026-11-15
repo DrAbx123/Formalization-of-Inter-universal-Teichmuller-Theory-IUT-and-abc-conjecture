@@ -437,3 +437,18 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: ProductFiberMultBridgeGap 03:18:56 (BadPlaceBijection removed; Node09 b route; exact missing ClosedBallMassFormula + ProductHaarToFiberMult); A2RemainingFields 03:19:42; Node09HqAssemblyLink 03:18:55.
 - RED: WQMembership reverse old 03:17:17 (reverted one-direction); QVWeighted current source pending.
 - Next: mainline instantiate paper312 hypotheses; qpilot fiber route; hull closed-ball mass; lattice next node03 fields; stage4 valueGroup_eq; stepxi WQ forward DONE.
+
+### 7.18 Node09HqAssemblyLink/WQMembership/ProductFiber/A2RemainingFields DONE（2026-11-15 11:24，无编译）
+
+- ✅ Node09HqAssemblyLink DONE 03:18:55（olean 11:18:55 > src 11:17:50；weightedRegion_of_fiberMult + paper312_of_fiberMult_bounds）；
+- ✅ WQMembership DONE 03:19:40（olean 11:19:39 > src 11:18:24；当前源仅 forward mem theorem；reverse 未交付）；
+- ✅ ProductFiber DONE 03:18:56（olean 11:18:56 > src 11:17:25；bridgeRows 4 + ClosedBallMassFormula interface）；
+- ✅ 新 A2Node03RemainingFields DONE 03:19:42（olean 11:19:41 > src 11:18:33；Data/correctedUnique/Required interface）；
+- ⚠️ QVWeighted 源 11:19:09 > olean 11:15:21，START 03:19:11 pending。
+
+## 7.25 11:20 cycle
+
+- DONE: QVWeighted 03:20:03 (fiber route current source); Node09HqAssemblyLink 03:18:55; ProductFiber 03:18:56; WQMembership forward 03:19:40; A2RemainingFields 03:19:42; ValueGroup interface 03:16:30.
+- PENDING/RUNNING: Node09ActualHypotheses (mainline); A2SourceVFields (lattice); ValueGroup retry; QVWeighted now green.
+- RED stale only plus WQ reverse not delivered.
+- Next: instantiate paper312 hypotheses; A2 VFields; WQ reverse/Irreducible; stage4 UniformContinuous exact gap; closed-ball mass missing.
