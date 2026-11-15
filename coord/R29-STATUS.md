@@ -3093,3 +3093,5 @@
 - 39:10: wake stage4/hull/abc; watchdog active 08:30:04. gate 20.632 written.
 
 - 39:20: hq/hθ no donor; hull supports unitLog target. gate 20.633 written.
+
+- 39:30: stage4 value-group defeq/OrderMonoidIso attempt; hull no donor. gate 20.634 written.

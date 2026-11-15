@@ -4039,3 +4039,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.633 hq/hθ still no donor; hull supports unitLog target (2026-11-15 39:20)
 - Recent files no Measure.pi/product Haar/tensor region product/q product decomposition; grep 0. hq single local log vs paperQPilotLogVolume_finitePlace multi missing; hθ region coordinate product missing. UnitLogNorm only local unit, not multi-place/region. hull switches to inspect unitLog_norm_le_one/tensor unit ball statements and reusable local norm lemmas. No fake.
+
+
+### 20.634 stage4 value-group blocked; try defeq change/OrderMonoidIso (2026-11-15 39:30)
+- γ type mismatch ValueGroup₀ (Valued.v WithVal w) vs comap; identical underlying WithZero(Multiplicative ℤ). Try change/let γ' : WithZero(Multiplicative ℤ), or explicit OrderMonoidIso from comap_apply, then conjugate. If fails mark UniformContinuous explicit gap. hull no hq/hθ donor; supports unitLog target. No fake.
