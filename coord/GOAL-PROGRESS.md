@@ -1162,3 +1162,66 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - ✅ Node09ABCBridgeConditional DONE 05:03:42（olean 13:03:33 > src 13:02:43；sorryAx=0）；
 - 📌 `Node09ABCBridgeInterface`（carrier/hullData/epsilonComparison）+ `toCor312` + `heightBound`（条件：∀ε>0 ∃A，ABC triple 的 logHeight ≤ (1+ε)·weight + A）；
 - 📌 残余：缺 A/Lbar/Dbar → normalizedRegionVolume / height/weight 的 dictionary；**gap 1 `height_le_normalizedRegionVolume`**；**gap 2 `regionVolume_le_normalizedWeight`**；frozen consumer 提供字段后 heightBound 直接适用。
+
+## 7.87 13:03 ABC conditional bridge audit
+
+- Accepted: Node09ABCBridgeConditional 05:03:42; Node09ABCBridgeInterface/toCor312/heightBound conditional; gaps height_le_normalizedRegionVolume and regionVolume_le_normalizedWeight documented; paper312 dictionary missing.
+- Probe-only red A2Node03Node04AxiomProbe (unknown toWitness); no main-chain red; 2 probes running.
+
+### 7.70 IV/ABC conditional bridge green；A2Node03Node04AxiomProbe probe-only red（2026-11-15 13:17，无编译）
+
+- ✅ Node09ABCBridgeConditional DONE 05:03:42 维持：IV/ABC conditional bridge green；gaps 1/2 documented；
+- ❌ Mzk1A2Node03Node04AxiomProbe FAIL 05:01:29（unknown constant A2Node03Interface.toWitness :21:14；无 olean；源 13:05:16 pending）→ probe-only red，非产品证据；
+- ⏳ Node09GapDictionaryActual START 05:04:59 running。
+
+## 7.88 13:05 GapDictionary DONE
+
+- DONE: Node09GapDictionary 05:05:26: gap1_of_weight_bound, gap2_of_inputs reduced conditional; hweightvol/hunit/hpoint paper-level; no direct paper312->normalizedComparisonRegion dictionary; documented exact.
+- ABC conditional bridge green; gaps still explicit inputs. Goal active; no unconditional abc.
+
+### 7.71 Node09GapDictionary DONE（2026-11-15 13:19，无编译）
+
+- ✅ Node09GapDictionary DONE 05:05:26（olean 13:05:26 > src 13:04:53；sorryAx=0/errors=0）；
+- 📌 gap1 约化为 hval + **hweightvol**；gap2 约化为 **hunit + hsplit + hptfin + hpoint**（hsplit/hptfin 由 Cor312ComparisonGapSupplyLayer 提供）；
+- 📌 仍 paper-level：**hweightvol**（negative calibration，无 abstract supply）、**hunit**、**hpoint**；
+- 📌 dictionary 缺失 documented：A ≤ Lbar + Dbar 与 carrier/height/weight/normalizedComparisonRegion 之间无映射；需 IFQHullLogVolumeInterface carrier + logShellPoint + dictionary；
+- ⏳ A2Node03Node04AxiomProbe 重试 START 05:05:41。
+
+## 7.89 13:06 GapDonorSurvey DONE
+
+- DONE: Node09GapDonorSurvey 05:06:29: hsplit/hptfin actual; hunit absorbable; hweightvol/point-height dictionaries jointly refutable (1,2,3 counterexample), so no unconditional/dictionary-only gap1+gap2. True residual: direct point-volume card + weight dictionary (paper-level).
+- Goal active; abc conditional only; no fake.
+
+### 7.72 Node09GapDonorSurvey DONE（2026-11-15 13:21，无编译）
+
+- ✅ Node09GapDonorSurvey DONE 05:06:29（olean 13:06:29 > src 13:06:18；sorryAx=0/errors=0）；
+- 📌 survey：hsplit/hptfin 已证；hunit 约化为 degreeBound≤hullVolume 且 absorvable（canonical max D.degreeBound 0）；hweightvol/hpoint 各约化为 weight/point-height dictionary（真 card，非定理）；
+- 📌 residual paper inputs：**两 dictionary jointly refutable**（(1,2,3): log6 > log3）→ 无 unconditional/dictionary-only supply；须替换为 **direct point-volume card**；hunit 非 residual；paper312 → dictionary 映射仍缺（exact missing bridge）。
+
+## 7.90 13:06 decision
+
+- Paper-level residual precision: direct point-volume card + weight dictionary (hweightvol/hpoint genuine cards, dictionaries jointly refutable); hunit absorbable; hsplit/hptfin actual.
+- Decision: mainline to create exact input structure for direct point-volume card + weight dictionary, conditional bridge only, no inhabitant/fake.
+
+## 7.91 13:07 ComparisonCards DONE
+
+- DONE: Node09ComparisonCards 05:07:40: structure Node09ComparisonCards with direct point-volume card hpoint + weight dictionary hweightvol; toEpsilonComparison/toCor312Interface conditional; no inhabitant/fake. Cards family paper-level input.
+- IV/ABC conditional chain: cards family -> Cor312ToABCBridgeInterface -> height bound. Goal active; abc still conditional.
+
+### 7.73 Node09ComparisonCards DONE（2026-11-15 13:23，无编译）
+
+- ✅ Node09ComparisonCards DONE 05:07:40（olean 13:07:39 > src 13:07:05；sorryAx=0/errors=0）；
+- 📌 `Node09ComparisonCards` structure 字段：heps/hD₀/hval/**hweightvol**/hunit/hsplit/hptfin/**hpoint**（direct point-volume card），全部 paper-level inputs；
+- 📌 `toEpsilonComparison`（gap1←hval+hweightvol；gap2←hunit+hsplit+hptfin+hpoint）+ `toCor312Interface`（card family ∀eps>0 → Cor312ToABCBridgeInterface）均为条件构造；
+- 📌 cards family 无 inhabitant → paper-level input；direct point-volume card 替代被反驳的 point-height dictionary。
+
+## 7.92 13:09 FINAL CONDITIONAL ABC BRIDGE
+
+- DONE: Node09FinalABCBridge 05:09:05 final_abcHeightBound_of_cards: cards family -> ABC height bound via Cor312ToABCBridgeInterface/cor312ToABCBridge_heightBound. Only remaining paper-level input = cards family (direct point-volume card + weight dictionary + reduced hval/hunit/hsplit/hptfin). No inhabitant/fake.
+- Goal active; abc conditional, not unconditional. Exact inputs horder/hcoef/hbase + cards family + dictionary remain.
+
+### 7.74 Node09FinalABCBridge DONE（2026-11-15 13:25，无编译）
+
+- ✅ Node09FinalABCBridge DONE 05:09:05（olean 13:09:04 > src 13:08:34；sorryAx=0/errors=0）；
+- 📌 `final_abcHeightBound_of_cards`：cards family（∀ε>0 Node09ComparisonCards）→ ∀ε>0 ∃A，ABC triple logHeight ≤ (1+ε)weight + A；经 frozen `cor312ToABCBridge_heightBound`；
+- 📌 唯一残余输入 = cards family（direct point-volume card + weight dictionary + reduced hval/hunit/hsplit/hptfin）；no inhabitant/axiom；cards 供给后无 additional gap。
