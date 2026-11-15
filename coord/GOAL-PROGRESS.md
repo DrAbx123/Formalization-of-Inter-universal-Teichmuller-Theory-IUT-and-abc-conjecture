@@ -537,3 +537,23 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - RED: QVWeighted 03:28:46 (:105 weighted type mismatch); Node09Paper312Rat retry (fiberMult import).
 - PENDING: 4 stale/dirty probes; stepxi irreducible_five_integers pending.
 - Next: qpilot align QV hper or exact interface; mainline fix Node09Paper312Rat import; stepxi Irreducible; stage4 UniformContinuous gap; hull closed-ball mass missing.
+
+### 7.25 A2FullDataConsumer DONE；QVWeighted/Node09Paper312Rat red（2026-11-15 11:39，无编译）
+
+- ✅ `Mzk1A2Node03FullDataConsumerActual` DONE 03:29:34（olean 11:29:33 > src 11:27:47；exists_sourceSignQuotientData）；
+- ✅ WQ 03:28:20、ProductFiber 03:27:31、ValueGroup interface 03:26:26 继续有效；
+- ❌ QVWeighted 最新 FAIL 03:28:46（源 11:28:35；无 olean；universe-level/assumption/Type mismatch）；Node09Paper312Rat 最新 FAIL 03:29:55（源 11:30:17 pending；无 olean）；
+- 新 START：GaloisCompletion 03:30:09（stage4 重启）。
+
+### 7.26 ROUTE CORRECTION：one-way hθ/hq 用 rp_strict_measure_resolved（2026-11-15 11:42，无编译）
+
+- ✅ 新 donor（历史 watchdog DONE 2026-11-11T02:50:29）：`Mzk1HaarProductStrictMainlineActual.rp_strict_measure_resolved : rpVolume T (rpRegion T) < rpVolume T (s1902Hull T)`（file:165；olean 10:50 > src 10:48）；经 `rpRequirement : XiEContainmentRequirement`（qRegion/thetaPossibleImages=rpRegion；hullRegion=s1902Hull；strict_measure=rpRegion_measure_lt_full）。
+- **one-way hθ/hq 直接使用它**；`ClosedBallMassFormula`/`ProductHaarToFiberMult` 只用于 exact product-Haar 等式，one-way 主线不等待。
+- `BadPlaceBijection` generally false；fiber 路线 = `QVBadPlaceFiber`(total map)/injection。
+- 已更新 `coord/AUDIT-HQ-HTHETA-WIRING.md` §7、`coord/AUDIT-REV15-ASSET-MAP.md` §5。
+
+## 7.32 11:32 cycle
+
+- DONE: A2Node03Integration 03:31:50; A2FullDataConsumer 03:29:34; WQMembership RingEquiv 03:28:20; ProductFiber 03:27:31; ValueGroup interface 03:26:26.
+- RED: WQMembership Irreducible 03:31:48 (revert to RingEquiv-only if fails); Node09Paper312Rat 03:32:12; Node0609OneWayConsumer 03:32:12; Galois 03:31:02; QVWeighted retry.
+- One-way hθ/hq route: use rp_strict_measure_resolved, no ClosedBallMassFormula.
