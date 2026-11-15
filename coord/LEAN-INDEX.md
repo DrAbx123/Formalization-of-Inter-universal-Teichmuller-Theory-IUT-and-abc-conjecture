@@ -4,6 +4,8 @@
 
 ## 0. 强制规则
 
+- 进度记录：`coord/GOAL-PROGRESS.md`（目标状态/已 DONE/当前 RED/下一步）。
+
 1. **所有 Lean 编译只走 watchdog**：
    - 把目标 `.lean` 路径加入 `dag/watchdog/extra-targets.txt`；
    - 不要用 `lake env lean` 直接验证/生成 olean；

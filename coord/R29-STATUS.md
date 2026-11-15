@@ -3161,3 +3161,7 @@
 - 46:40: MAJOR Qp coherence DONE 02:12:07 (three axioms); Galois val equality DONE 02:07:39 then valueGroup red; ThetaUnit red. gate 20.666.
 
 - 47:00: ThetaUnitLatticeBound/GaloisCompletion DONE 02:21:03/02:21:06; TaskE still FAIL; QV bridge running. gate 20.667.
+
+- 47:20: 新建 coord/GOAL-PROGRESS.md，记录 goal/3.12/IV/abc 当前状态、watchdog DONE、RED 原因、donor、下一步；LEAN-INDEX 加链接。
+
+- 47:20: GaloisCompletion valueGroup_comap_eq DONE 02:21:06; progress file GOAL-PROGRESS created. gate 20.668.

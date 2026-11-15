@@ -1,4 +1,6 @@
+LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean
 LeanFormal/IUT/Foundations/LocalFields/IntegralUnitLogarithm.lean
+tmp/sheaf/xif/paper/Mzk1ActualRamifiedDataActual.lean
 tmp/sheaf/xif/paper/Mzk1ActualRamifiedDataActual.lean
 tmp/sheaf/xif/paper/Mzk1AdicAbvEquivActual.lean
 tmp/sheaf/xif/paper/Mzk1AdicAbvEquivAxiomProbeActual.lean
@@ -6,11 +8,15 @@ tmp/sheaf/xif/paper/Mzk1AdicAbvProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1CardExponentCoreProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1CardExponentProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1CompletionTowerActual.lean
+tmp/sheaf/xif/paper/Mzk1ContextGoalCheckActual.lean
 tmp/sheaf/xif/paper/Mzk1Cor312SignedArithmeticActual.lean
+tmp/sheaf/xif/paper/Mzk1Cor312ToABCConsumerActual.lean
 tmp/sheaf/xif/paper/Mzk1GaloisCompletionActual.lean
 tmp/sheaf/xif/paper/Mzk1GaloisCompletionCurrentProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1GaloisCompletionProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1GaloisValOnlyProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1HqHthetaStructuralObstructionActual.lean
+tmp/sheaf/xif/paper/Mzk1IVThm110Actual.lean
 tmp/sheaf/xif/paper/Mzk1IVThm110Actual.lean
 tmp/sheaf/xif/paper/Mzk1IVThm110CardExponentActual.lean
 tmp/sheaf/xif/paper/Mzk1IVThm110FloorNativeHullActual.lean
@@ -49,12 +55,21 @@ tmp/sheaf/xif/paper/Mzk1P0FinalS3137DictionaryAxiomProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1P0FinalStatusRowsActual.lean
 tmp/sheaf/xif/paper/Mzk1P2Log1pHalfActual.lean
 tmp/sheaf/xif/paper/Mzk1PadicFieldValuedBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1PadicFieldValuedQpActual.lean
+tmp/sheaf/xif/paper/Mzk1PadicGaloisProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1PadicValuedOnlyProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1PrincipalUnitsFinalProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1PrincipalUnitsFullProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1PrincipalUnitsProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1PrincipalUnitsQuotProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1QVMultiplicityBridgeActual.lean
+tmp/sheaf/xif/paper/Mzk1RamifiedPlaceDataActual.lean
 tmp/sheaf/xif/paper/Mzk1TaskECompletionFieldEquivActual.lean
+tmp/sheaf/xif/paper/Mzk1TaskEProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1TaskGDonorProbeActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaBridgeProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1ThetaFullLatticeBoundActual.lean
+tmp/sheaf/xif/paper/Mzk1ThetaUnitLatticeBoundActual.lean
 tmp/sheaf/xif/paper/Mzk1UnitLogNormBoundProbeActual.lean
 tmp/sheaf/xif/paper/Mzk1UnitLogNormProbeActual.lean
 tmp/sheaf/xif/paper/NormalizedCompletionPadicBridgeActual.lean
@@ -67,11 +82,5 @@ tmp/sheaf/xif/paper/S3133QPilotReadoutActual.lean
 tmp/sheaf/xif/paper/S3133RealifiedQPilotDivisorActual.lean
 tmp/sheaf/xif/paper/S3133RealifiedQPilotLogVolumeActual.lean
 tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean
-tmp/sheaf/xif/paper/Mzk1TaskGDonorProbeActual.lean
-tmp/sheaf/xif/paper/Mzk1TaskEProbeActual.lean
-tmp/sheaf/xif/paper/Mzk1Cor312ToABCConsumerActual.lean
-tmp/sheaf/xif/paper/Mzk1IVThm110Actual.lean
-LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean
 
-tmp/sheaf/xif/paper/Mzk1RamifiedPlaceDataActual.lean
-tmp/sheaf/xif/paper/Mzk1PadicFieldValuedQpActual.lean
+tmp/sheaf/xif/paper/RelativeNormFieldNormActual.lean
