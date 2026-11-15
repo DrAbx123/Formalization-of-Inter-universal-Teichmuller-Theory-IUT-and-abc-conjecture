@@ -3167,3 +3167,5 @@
 - 47:20: GaloisCompletion valueGroup_comap_eq DONE 02:21:06; progress file GOAL-PROGRESS created. gate 20.668.
 
 - 47:30: QV bridge DONE 02:27:50; RelativeNorm FAIL instance layer; progress synced. gate 20.669.
+
+- 47:40: QVIndexMap DONE 02:33:15; hq remaining fiber-sum mult. gate 20.670.

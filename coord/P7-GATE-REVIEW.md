@@ -4217,3 +4217,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.669 QV multiplicity bridge GREEN; RelativeNorm instance fail (2026-11-15 47:30)
 - watchdog DONE 02:27:50 Mzk1QVMultiplicityBridgeActual: qVEffectiveMultiplicity_eq_order_mul_localResidueDegree (order(q_v)*localResidueDegree; no sorry). hq remaining index map Bad→FinitePlaceAtPrime and hperPlace wiring.
 - RelativeNormFieldNormActual FAIL 02:27:51: missing local instance SMul/Algebra ℚ_[pBase] NativeBaseCompletionRaw (letI proof-level only); mainline adding file-level local instances + Eq.ndrec + FiniteDimensional.
+
+
+### 20.670 QVIndexMap GREEN; hq fiber-sum remains (2026-11-15 47:40)
+- watchdog DONE 02:33:15 Mzk1QVIndexMapActual: badPlaceIndex Bad→FinitePlaceAtPrime X.S.arithmetic.F, qVMultAt=qVEffectiveMultiplicity. Remaining hq: fiber-sum mult i over badPlaceIndex fibers, match A-term, feed actual_A_le_Lbar_add_Dbar_mult; all places vs bad places exact gap.

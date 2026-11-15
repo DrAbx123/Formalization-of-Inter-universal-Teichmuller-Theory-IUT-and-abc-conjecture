@@ -49,6 +49,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | S3133 四件 | 01:55–01:57 | 全局 q 除数/加权读数/q 重数 donor |
 | `QPilotGlobalLogVolumeFromQActual` | 01:54:53 | qVEffectiveMultiplicity donor |
 | `Mzk1QVMultiplicityBridgeActual` | **02:27:50** | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` GREEN；保留 q 的消失阶，不是 residue degree |
+| `Mzk1QVIndexMapActual` | **02:33:15** | `badPlaceIndex : Bad → FinitePlaceAtPrime X.S.arithmetic.F`、`qVMultAt = qVEffectiveMultiplicity` GREEN |
 | `NormalizedNormValuationResidueActual` | 01:47:54 | residue-degree norm valuation 条件 |
 | 更早的 principal/residue/card/unitLog 链 | 07:12–09:57 | 均 watchdog/probe 三公理；unitLog 为 support-only |
 
@@ -62,7 +63,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 | `Mzk1ThetaUnitLatticeBoundActual` | DONE 但条件 | `hpos : 0 < μ(tensorIntegerRegion)`、`hfin : μ(...) < ⊤` 是 explicit hypothesis；donor `Mzk1TensorRegionNormalizationActual` 也把 positivity/finiteness 记为 GAP；**当前源 10:31:11 新于 olean 10:21:03，待重编** |
 | `Mzk1ThetaFullLatticeBoundActual` | 方向作废 | hsub 原为 `canonicalHull ⊆ actualRegion`，实际 `actualRegion ⊆ canonicalHull`；不要再用旧 hsub |
 | R1 | 结构缺口 | `C3.q` 单 local vs global q 族；缺 `ClauseBBaseQSourceIdentity` + same-q `hq` |
-| hq | 接线缺口（bridge 已绿） | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` DONE 02:27:50；仍缺 index map `Bad → FinitePlaceAtPrime F p` 与 `actual_A_le_Lbar_add_Dbar_mult` 的 hperPlace 接线 |
+| hq | 接线缺口（index map 已绿） | QVMultiplicityBridge 02:27:50 + QVIndexMap 02:33:15 已 DONE；仍缺 fiber-sum `mult i` 及 `hperPlace` 等式（all places vs bad places） |
 | relativeNorm field norm | **FAIL 02:30:44**（最新） | 缺 `Module.Finite (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:87）与 `IsScalarTower ℚ_[pBase] (NativeBaseCompletionRaw X) (NativeFCompletion X)`（:89/:91）；:94 type mismatch；mainline 修文件级 local instances 后 watchdog 重跑 |
 | hθ | 单向缺 hpos/hfin | 已证 `unitLatticeLogVolume_le_thetaHull` 条件版；需 raw unit-region positivity/finiteness 或 normalized Haar |
 | stage4 completion | 未完成 | `UniformContinuous`/`Completion.mapRingHom`/`alignedCompletionMapMoved` 未全闭 |
@@ -102,7 +103,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase act
 ## 6. 下一步队列
 
 1. stage4：valueGroup_comap_eq 已绿，做 ambient identity valueGroupIso、conjugate orderMonoidIso、UniformContinuous/Completion；
-2. qpilot：QVMultiplicityBridge 已 DONE；写 `Bad → FinitePlaceAtPrime` index map 并接 `actual_A_le_Lbar_add_Dbar_mult`；
+2. qpilot：QVMultiplicityBridge/QVIndexMap 已 DONE；写 fiber-sum `mult i` 并证 A-term 等于 fiber 求和，接 `actual_A_le_Lbar_add_Dbar_mult`；
 3. hull：unit-region hpos/hfin 或 normalized Haar；不要再用旧 hsub；
 4. lattice：TaskE 当前源 watchdog 重跑确认；随后 (b)/(c) WQuotient；
 5. mainline：RelativeNormFieldNorm 的文件级 local instances 修好后接 `PadicField.v_norm`；R1 hq 接线；
