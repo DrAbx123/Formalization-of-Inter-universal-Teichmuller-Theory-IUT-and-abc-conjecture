@@ -1715,3 +1715,24 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 ## 7.140 14:17 blocked assessment
 
 - Exhaustive scan: no ABCConjecture/ABCFrontier inhabitant; no unconditional route. Unified exact residual: Card P/Node09 hpoint/frozen gap2; S3135PointLogShellFaithfulness; S3135ScalingLogDegreeZero; actual-p hweightDictionary. Paper312 residual horder/hcoef/hbase/hlogp. Conditional endpoints green; no fake. Concrete blocker persists >3 rounds; reporting blocked for new input/donor.
+
+## 7.141 Round21 start
+
+- Goal active round21. UnifiedResidual DONE 06:17:06. F4 cards S3135ScalingLogDegreeZero/PointLogShellFaithfulness exact; Card P/hpoint/gap2 unified. ProbeAxiomsAmbient FAIL. Assigned F4 construct/refute; no fake.
+
+### 7.115 ROUND21 audit（2026-11-15 14:49，无编译）
+
+- Node09UnifiedResidual DONE 06:17:06（olean 14:17:06 > src 14:16:49；documentation-only）；
+- 残余结论：单一 upper input（Card P/Node09 hpoint/frozen gap2）+ 两个 F4 cards（PointLogShellFaithfulness、ScalingLogDegreeZero）+ 一个独立 lower input（actual-p hweightDictionary scaling-separated）；其余 discharged/actual/conditional；
+- actual-p hweightDictionary neither proved nor refuted（degree-faithfulness status vacuous）；
+- ProbeAxiomsAmbient FAIL 06:18:12 unknown constant；Ambient placeholder；UniformContinuitySource exact gap；
+- no ABC inhabitant / no unconditional route；no fake。
+
+## 7.142 14:19 F4 counterexample / blocked
+
+- Hull: S3135ScalingLogDegreeZero no donor; S3135PointLogShellFaithfulness exact missing and concrete-model counterexample (sourceHaarActual_pointFaithfulness_false). Thus S3135 route cannot be unconditional for concrete model.
+- Combined with no ABCConjecture/ABCFrontier inhabitant and unified paper inputs (Card P/hpoint/frozen gap2, F4 cards, actual-p hweightDictionary), unconditional 3.12/IV/ABC impossible from current tree without new math inputs. No fake.
+
+## 7.143 14:20 F4 canonical D
+
+- DONE: Node09S3135F4Investigation 06:20:19: S3135ScalingLogDegreeZero actual for canonical D=sourceOModuleCompactness_haarData; arbitrary D only <=0. PointLogShellFaithfulness exact; Card P ABC-strength under F4. Assigned canonical-D PointFaithfulness/Card P search; no fake.
