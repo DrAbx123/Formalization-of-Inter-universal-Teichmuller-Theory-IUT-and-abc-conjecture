@@ -722,3 +722,9 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: A2Node04LocalTransportInterface 03:48:08 (after import A2Node03Node04HandoffActual).
 - WQ conditional still stale: source import fixed to Mzk1Ind1W... and PadicField.FieldNorm; watchdog still sees old Mzk1WQuotientFiveIsoActual/tmp.local errors; waiting fresh run.
 - Main chain green; residual hlogp/hper/hbase/hmult; one-way hθ/hq accepted.
+
+## 7.47 11:50 cycle
+
+- DONE: Node09AbsNormRat 03:50:00 (hlogp habsNorm); A2Node04LocalTransportInterface 03:48:08; WQ clean 03:40:43; paper312 main chain green.
+- WQ conditional red: invalid named K for unitLog/unitLogHom; stepxi changed to explicit type ascription, pending fresh.
+- Residual: hper 3.12 per-place estimate; hbase NativeBaseCompletionRaw coherence; hmult index; WQ irreducible/PhiPsi.
