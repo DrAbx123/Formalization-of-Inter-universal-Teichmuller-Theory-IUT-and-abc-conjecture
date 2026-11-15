@@ -4113,3 +4113,9 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.650 MAJOR generic p=2 half bound GREEN olean 09:04:45 (2026-11-15 42:10)
 - Mzk1IVThm110UnitLogNormHalfActual direct+olean 09:04:45: unitLog_norm_le_one_of_principal_bound_half via hull norm_log1p_le_half + exp_bound direct/norm_div. mainline instantiate actual p≥3/p=2; qpilot tensor unit ball. abc audit. No fake.
+
+
+### 20.651 MAJOR actual unitLog norm GREEN; stage4 surjectivity green (2026-11-15 42:20)
+- NormalizedCompletionUnitLogActual direct+olean 09:09:03: unitLog_norm_le_one_normalizedCompletion p≥3, _p2 p=2 (explicit NormedAlgebra Q2). Uses bridge principal bounds + exp_bound/half.
+- stage4 Mzk1GaloisCompletionActual DONE 09:07:01/olean 09:07:00 with withValMovedSigma_surjective via WithVal.congr factorization; next valueGroup equality.
+- TensorUnitBall file wrong-level: tensorLogShellRegion is tensor, not distribution; inspect FinitePadicTensorFieldDecomposition. No fake.
