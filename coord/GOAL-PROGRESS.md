@@ -1,7 +1,7 @@
 # GOAL PROGRESS（目标进度记录）
 
 更新时间：2026-11-15 10:36（Asia/Shanghai）
-Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase active，rounds 14/256）
+Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase active，rounds 14/256）
 
 ## 0. 目标锁定
 
@@ -62,7 +62,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 | S3133 四件 | 01:55–01:57 | 全局 q 除数/加权读数/q 重数 donor |
 | `QPilotGlobalLogVolumeFromQActual` | 01:54:53 | qVEffectiveMultiplicity donor |
 | `Mzk1QVMultiplicityBridgeActual` | **02:27:50** | `qVEffectiveMultiplicity_eq_order_mul_localResidueDegree` GREEN；保留 q 的消失阶，不是 residue degree |
-| `Mzk1QVIndexMapActual` | 02:33:15 DONE，当前源 FAIL 02:35:53 | `badPlaceIndex` GREEN；新增 fiber Fintype 需求 `{b // badPlaceIndex b = i}` 未解 |
+| `Mzk1QVIndexMapActual` | **02:39:01** | current source DONE；badPlaceIndex + qVMultAt + fiber Fintype 通过 |
 | `NormalizedNormValuationResidueActual` | 01:47:54 | residue-degree norm valuation 条件 |
 | 更早的 principal/residue/card/unitLog 链 | 07:12–09:57 | 均 watchdog/probe 三公理；unitLog 为 support-only |
 
@@ -83,7 +83,7 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 | norm valuation | 部分 | Qp 的 `PadicField.v=Padic.valuation` 已证；`NormalizedCompletion` 的 ℤ-valued Valued/norm bridge 仍 exact gap |
 | SG3b | 结构缺口 | tensor product/measure/region 分解 |
 | A2 | blocked 3 | quotientWitness/groups/unique |
-| WQuotient | 主缺口 | completionField≃ℚ_[5] clean interface；§7.4 range route：unitLogTorsionQuotientEquivRange + range=5•Integers K。first missing：Integers ℚ_[5] 与 ℤ_[5] 非 defeq，需 padicCanonicalIntegerEquiv transport + Irreducible(5:Integers K) + range preimage choice；stepxi 实现 |
+| WQuotient | 进行中 | stepxi `Mzk1Ind1WQuotientFiveIsoActual` 已写 normedIntegerEquivValuative + padicIntegersEquivZp；等 watchdog；后续 transport Irreducible(5)+range Φ/Ψ |
 | abc | 未证 | UndilatedHeightBound、UndilatedRegionBound、regionVolume_le_normalizedWeight、hQ/hSlack 等 |
 
 ## 4. 已有 donor（不要重证）
@@ -171,3 +171,16 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 15**，phase act
 - 已让各 owner 先恢复 green 或显式 gap；不伪绿。
 
 - WQuotient §7.4: stepxi 已建 Mzk1Ind1WQuotientFiveIsoActual，先证 normedIntegerEquivValuative + padicIntegersEquivZp，再 transport Irreducible(5)/Φ/Ψ；等待 watchdog。
+
+## 7.3 最新工作状态（2026-11-15 10:42）
+
+- watchdog DONE：QVIndexMap 02:39:01（fiberMult）、TaskEWQuotientFive 02:38:34、TaskEIntegersRingEquiv 02:40:03、ThetaUnitLattice 02:40:26（条件 hpos/hfin 恢复 GREEN）。
+- 当前 FAIL：GaloisCompletion 02:40:28（valueGroupIso rewrite/type）、RelativeNormFieldNorm 02:39:09（IsScalarTower/PadicField.v）、Ind1WQuotientFiveIso 02:39:59（Fact5/open 已修待重跑）、TaskECompletion(stale)。
+- 已派：qpilot product region/M_q；mainline relativeNorm；stage4 valueGroup revert+ambient route；hull hpos/hfin 或 node06/09 product Haar；lattice TaskE(c)/A2 plan；stepxi WQuotient；abc audit；shehdd queue。
+- 不改定时提醒/目标。
+
+## 7.4 10:41 cycle（2026-11-15 10:44）
+
+- DONE: QVIndexMap 02:39:01; TaskEWQuotientFive 02:38:34; TaskEIntegers 02:40:03; ThetaUnit 02:40:26（条件形）; TaskEUnitsTorsion 02:41:13; RelativeNormFieldNorm 02:41:36。
+- RED: GaloisCompletion 02:40:28 (valueMonoid/valueGroup rewrite); TaskECompletion (Field GaussianField); Ind1WQuotientFiveIso 02:39:59 (unknown normedIntegerEquivValuative + sorryAx — reject).
+- 已派 owner 修复/清理；RUNNING=0，按 rev16 非空闲补 runnable targets。

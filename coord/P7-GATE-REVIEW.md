@@ -4249,3 +4249,14 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.677 WQuotient integer bridge file queued (2026-11-15 48:35)
 - stepxi Mzk1Ind1WQuotientFiveIsoActual: normedIntegerEquivValuative (NormedField integer ≃+* ValuativeRel integer) identity/membership transfer via mem_integers_iff + padicMulValuation_le_one_iff_norm_le_one + vle_one_iff; trans padicCanonicalIntegerEquiv to Integers Q5 ≃+* Z5; then transport Irreducible(5) + Φ/Ψ. Watchdog only; no fake.
+
+
+### 20.678 QVIndexMap DONE; goal revision16 reminder (2026-11-15 48:45)
+- watchdog DONE 02:39:01 Mzk1QVIndexMapActual current source: badPlaceIndex + qVMultAt + fiber Fintype compile; hq fiber-sum mult next.
+- Goal revision16: keep teammates non-idle; reminder synced to revision16 text; progress file synced.
+- RelativeNormFieldNorm/TaskEIntegers/stale probes still red; owners fixing.
+
+
+### 20.679 RelativeNorm DONE; WQuotient sorryAx urgent (2026-11-15 48:50)
+- RelativeNormFieldNorm watchdog DONE 02:41:36: relativeNormRaw_nrm/nrm_lt_one/valued_lt_one_via_nrm conditional green. Next fill RelativeNormQProperties + hq product region.
+- Ind1WQuotientFiveIso FAIL 02:39:59: unknown normedIntegerEquivValuative + padicIntegersEquivZp sorryAx; reject, stepxi clean. GaloisCompletion/TaskE red.
