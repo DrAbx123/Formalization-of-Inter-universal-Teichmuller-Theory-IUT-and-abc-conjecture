@@ -4124,3 +4124,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.652 hq/hθ obstruction file GREEN; tensor ball exact obstruction (2026-11-15 42:30)
 - hull Mzk1HqHthetaStructuralObstructionActual DONE 01:10:15: interface Props HqGlobalSumFormula/HthetaLinearForm/HthetaProductHaarFormula/TensorRegionCoordinateProduct + 6 audit rows; no inhabitant/sorry/axiom.
 - TensorUnitBall wrong-level: FinitePadicTensorFieldDecomposition e is AlgEquiv+continuous only, no isometry/contractive norm; cannot derive e(''shell)⊆unitRegion from local unitLog norms. Missing contractive/tensor norm donor. qpilot clean red file to compiling placeholder. No fake.
+
+
+### 20.653 stage4 valueGroup toMonoidWithZeroHom/rfl timeout (2026-11-15 42:40)
+- valueGroup expects MonoidWithZeroHom: use (Valued.v).toMonoidWithZeroHom. Giant rfl times out; prove withValMovedSigma_val_eq via WithVal.congr_apply + Valuation.comap_apply small lemmas. Removed failed lemmas; surjectivity green restored. stage4. No fake.
