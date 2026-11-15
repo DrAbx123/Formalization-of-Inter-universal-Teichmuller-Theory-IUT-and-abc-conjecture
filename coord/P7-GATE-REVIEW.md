@@ -4158,3 +4158,17 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 - AGENTS.md 增加规则：所有 Lean 验证只走 watchdog（extra-targets + watchdog.log），禁止直接 lake env lean；先查索引避免重复找 donor。
 - 索引第5节记录已存在 donor：S3133 global q divisor/weighted readout/qVEffectiveMultiplicity；PadicField.FieldNorm.v_norm 可 import；tensor etale/product decomposition 与 relative Haar transport；第6节记录 θ hull 降级为真实 hull 内大满格单向界，hq 必须保留 q 重数。
 - watchdog SlackReduction DONE 01:40:23；qpilot 接口变更（S3171 hSlack derived）已批准。
+
+
+### 20.660 hθ 关键 donor integralSpan_eq_hull + 索引审计修正（2026-11-15 44:00）
+- 用户指出已有 donor：LocalFieldIntegralHullSpan.lean:73 integralSpan_eq_hull；tensor 版本 FinitePadicTensorLogShellHull.lean:89；FinitePlaceArithmeticIQHull.lean:61。
+- hθ 路线修正：运输到 tensor 自己的域乘积分解 → 积分环生成 hull → 算乘积体积；pure-tensor image 不必是直积盒；下界可用实际 possible images 有限生成元构造 hull 内满格，用行列式/逐坐标赋值算体积。
+- 索引审计：补 external/Genl/Heights/OrbicurveCores/LeanFormal/IUT/LeanFormal/Archive/Iut/Foundations 的 _INDEX；中心表加未入 lakefile 根；非活动目录列明；WQuotient 最小缺失链入索引。
+- 所有 Lean 编译仍只走 watchdog；stepxi bridge 入队。
+
+
+### 20.661 大任务 watchdog 结果（2026-11-15 45:00）
+- watchdog 收敛到约 70 目标并从 09:46 重启；不再 direct lean。
+- DONE via watchdog：S3171IUTIVSection1DisplayActual 01:52:21（hSlack derived）；Mzk1PadicFieldValuedBridgeActual 01:49:56（三公理，符号修为 0<v）；Mzk1TaskECompletionFieldEquivActual 01:54:33（clean 精确接口，无 sorry）；QPilotGlobalLogVolumeFromQActual 01:54:53；Mzk1TaskGDonorProbeActual 01:54:56；S3133RealifiedQPilotDivisorActual 01:55:48；S3133QPilotReadoutActual 01:55:52；S3133RealifiedQPilotLogVolumeActual 01:56:41；S3133QPilotLogVolumeAgreementActual 01:57:36。
+- 仍 FAIL/red：Mzk1GaloisCompletionActual（val equality/closure_le，stage4 修）；Mzk1ThetaFullLatticeBoundActual/TaskEProbe/Cor312B5 等旧/新文件需清理。
+- 索引修正：qVEffectiveMultiplicity 在 QPilotGlobalLogVolumeFromQActual:50-53；covolume 单向 ..._le_hull；hq mult 字段 / TensorRegionCoordinateProduct 已是明确缺口。

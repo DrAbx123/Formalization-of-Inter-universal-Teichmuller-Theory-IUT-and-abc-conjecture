@@ -17,7 +17,7 @@
 3. 先查本索引再 grep，避免重复找 donor：
    - 大审计：`coord/P7-GATE-REVIEW.md`、`coord/R29-STATUS.md`、`AUDIT_LEDGER.md`；
    - 历史审计表：`coord/AUDIT-05-XIF-S2601-S3286.md` 等 `coord/AUDIT-*.md`。
-4. 每个实际 Lean 根目录有 `_INDEX/README.md`；先进该目录的 `_INDEX` 再进子目录。
+4. 每个 lean_lib/活动根有 `_INDEX/README.md`；archive/port 根也有索引；先进该目录的 `_INDEX` 再进子目录。
 
 ## 1. Lean 根目录地图
 
@@ -34,7 +34,16 @@
 | `WeilCurves/`、`CurvesJacobian/`、`EllipticCurves/`、`FormalSchemes/` | 代数几何/曲线 port | `_INDEX` |
 | `Oka/`、`TemperedFundamentalGroups/`、`ContinuousKummerTheory/`、`TateCurvesTheta/`、`PadicLogVolume/` | 专题 port | `_INDEX` |
 
+| `external/` | 顶层外部 port/参考源码（未列入活动 lean_lib） | 仅 donor/参考，非活动根 |
+| `Genl/` | archive/port（9 个 .lean，未列入活动 lean_lib） | 非活动 |
+| `Heights/` | archive/port（64 个 .lean，未列入活动 lean_lib） | 非活动 |
+| `OrbicurveCores/` | archive/port（134 个 .lean，未列入活动 lean_lib） | 非活动 |
+
 注意：`tmp` 下大量 `vendor_clone_*` / `vendor_clone_lcft` / 第三方 clone 只是参考副本，**不是活动目标**；只有 `tmp/sheaf`、`tmp/local-cft-port`、`tmp/external/ported` 是当前可复用区。
+
+## 1b. 非活动/生成目录（不建 _INDEX 入口）
+
+`coord/`、`logs/`、`metadata-probes/`、`scripts/`、`verification/`、`iut-audit-20261113/`、`vendor/`、`Mathlib/`：生成/日志/外部依赖，不是 Lean 活动根；不要在其下建索引或逐份重证。
 
 ## 2. 当前活动主线（tmp/sheaf/xif/paper）
 
@@ -74,7 +83,7 @@
 2. **hq 右端 actualFn 是 residue degree**，不含 q 消失阶；接线必须用 `qVEffectiveMultiplicity`/order 保留 q 重数。
 3. **hθ**：region product / product Haar / log=Σlocal 仍缺；`LocalFieldProductHull` 有 subset/compactness 但无 equality。
 4. **norm valuation**：`PadicField.v_norm` 已给正确公式（可直接 import）；缺 completion 侧 `Algebra ℚp`/tower/finite 实例与 canonical norm 归一化。
-5. **IV stage4**：`UniformContinuous` 卡在 valueGroup iso；`withValMovedSigma_surjective` 已绿。
+5. **IV stage4**：`UniformContinuous` 卡在 valueGroup iso；`withValMovedSigma_surjective` 已绿；**当前 watchdog FAIL 01:51:09**（closure_le/val 等式），源 09:49:50，修复中。
 6. **tensor unit ball**：`FinitePadicTensorFieldDecomposition` 只有 AlgEquiv+连续，无 isometry/contractive norm。
 
 ## 4. 大审计/状态文档顺序
@@ -90,8 +99,8 @@
 ### 全局 q / 加权读数 / q 重数
 - `tmp/sheaf/xif/paper/S3133RealifiedQPilotDivisorActual.lean`：
   - `qPilotRealifiedDivisor`；
-  - `qVEffectiveMultiplicity`；
-  - `mult_b = order(q_v(b)) * localResidueDegree`。
+  - `mult_b = qVEffectiveMultiplicity = order(q_v(b)) * localResidueDegree`；
+  - **定义在 `tmp/sheaf/xif/paper/QPilotGlobalLogVolumeFromQActual.lean:50-53`**（不在 Divisor 文件）。
 - `tmp/sheaf/xif/paper/S3133RealifiedQPilotLogVolumeActual.lean`：
   - `qPilotRealifiedLogVolume = -∑ mult_b * log(residueNormBase b)`。
 - `tmp/sheaf/xif/paper/S3133QPilotReadoutActual.lean`：
@@ -114,7 +123,9 @@
 - `LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorFieldDecomposition.lean`：
   - `exists_finiteNormedFieldProduct_piTensor`（AlgEquiv+连续，无 isometry）。
 - `LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIntegralTensorCovolume.lean`：
-  - `arithmeticTupleLogTensorUnitLogVolume_eq_relativeHaarLog`。
+  - `arithmeticTupleLogTensorUnitLogVolume_eq_relativeHaarLog`；
+  - **单向界** `arithmeticTupleLogTensorUnitLogVolume_le_hull`（:143）；
+  - 注意：只有单向 `lattice log volume ≤ hull log volume`，没有 arithmetic-tuple covolume equality。
 - `LeanFormal/IUT/Foundations/LocalFields/FinitePadicHaarScaling.lean`、`FinitePlaceLogShellDiscrepancy.lean`：
   - Haar 推前/relative Haar log.
 
@@ -133,6 +144,21 @@
 
 ## 7. 最近 watchdog 结果（只信 watchdog）
 
+### watchdog DONE 2026-11-15 09:52-09:57
+- S3171IUTIVSection1DisplayActual 01:52:21（hSlack derived）
+- Mzk1PadicFieldValuedBridgeActual 01:49:56（三公理）
+- Mzk1TaskECompletionFieldEquivActual 01:54:33（clean 精确接口）
+- QPilotGlobalLogVolumeFromQActual 01:54:53
+- Mzk1TaskGDonorProbeActual 01:54:56
+- S3133RealifiedQPilotDivisorActual 01:55:48
+- S3133QPilotReadoutActual 01:55:52
+- S3133RealifiedQPilotLogVolumeActual 01:56:41
+- S3133QPilotLogVolumeAgreementActual 01:57:36
+
+### 仍 red
+- Mzk1GaloisCompletionActual（val equality/closure_le，stage4）
+- Mzk1ThetaFullLatticeBoundActual / TaskEProbe / Cor312B5 旧探针需清理
+
 - `Mzk1IVThm110SlackReductionActual`：START 01:38:28 → **DONE EXIT=0 01:40:23**（115s）；`thm110_slack_of_hCor312` kernel-closed。
   - 可将 S3171 的 `hSlack` 改为由 `hCor312` 推出（Lead 已批准；同步 S3171/Mzk1Cor312ToABCConsumerActual 等消费者）。
 - watchdog 主进程：node PID 26324（2026-11-15 09:39:27 启动）；log 持续更新。
@@ -140,3 +166,34 @@
 ## 8. 接口变更记录
 
 - 2026-11-15：批准 qpilot 把 `S3171IUTIVSection1DisplayActual.Thm110DisplayInputs.hSlack` 改为 derived（由 `hCor312` + `l≥7` + `d≥1` + nonneg 推出），保留结构兼容则加 `Thm110DisplayInputsOfCor312`；同步消费者。这是改我们的答案，不改 paper 对象。
+
+### 已有 hθ 关键 donor：integralSpan_eq_hull
+
+- `LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldIntegralHullSpan.lean:73`：
+  `integralSpan_eq_hull [Finite J]`：紧致且各坐标非退化时，实际积分环生成的模 = holomorphic hull。
+- 已用该 donor 的 tensor 版本：
+  - `LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellHull.lean:89`（tensor product image）；
+  - `LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticIQHull.lean:61`。
+- **hθ 新路线（用户 2026-11-15 指令）**：
+  1. 先运输到 tensor 自己的域乘积分解；
+  2. 用积分环生成 hull（`integralSpan_eq_hull`）；
+  3. 计算乘积体积；
+  4. pure-tensor image 不需要是直积盒子；
+  5. 下界可用实际 possible images 的有限生成元，在 hull 内构造满格，用行列式/逐坐标赋值算体积。
+
+### WQuotient 最小缺失链（lattice 审计）
+
+- `concreteFivePadicIntEquiv` 已存在，无需重证；
+- `completionWQuotient` 载体是 Gaussian completion 的整数环商，不是 concreteFiveCompletionIntegers；
+- 最小缺：
+  (a) 域同构 `completionField ≃+* ℚ_[5]`（主缺口）；
+  (b) 整数环同构 `Integers completionField ≃+* ℤ_[5]`（沿 (a) 运输）；
+  (c) 单位商 `Units(ℤ_[5])/torsion ≃* Multiplicative ℤ_[5]`（p-adic log `1+5ℤ_5 ≅ ℤ_5`）。
+
+### hq 接线（abc 审计，2026-11-15）
+
+- hq 公式：`qPilotRealifiedLogVolume_eq = -Σ_b mult_b·log(residueNormBase b)`（LogVolume:74-83）；
+- `mult_b = qVEffectiveMultiplicity = order(q_v)·localResidueDegree`，定义在 `QPilotGlobalLogVolumeFromQActual.lean:50-53`；
+- R1 归约：`qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures`（BaseChangeQ:165-182）到 `hq : qVFamDefaultNorm = ‖baseQ q‖` + `QPilotC3SignedAggregation`；
+- 缺口：`ClauseBBaseQSourceIdentity`（completionMap qV = baseQ q）+ same-q `hq`；
+- `actualFn` 缺 q 重数位置：`Mzk1ActualRamifiedDataActual.lean` :39-52 actualFn、:134-148 actualData、:165-179 actualDataCore（fn:=actualFn）、:240-256 actual_A_le_Lbar_add_Dbar LHS 无 mult_b；`Mzk1RamifiedPlaceDataActual.lean:17-27` 结构无 mult 字段。
