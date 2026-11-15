@@ -557,3 +557,16 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - DONE: A2Node03Integration 03:31:50; A2FullDataConsumer 03:29:34; WQMembership RingEquiv 03:28:20; ProductFiber 03:27:31; ValueGroup interface 03:26:26.
 - RED: WQMembership Irreducible 03:31:48 (revert to RingEquiv-only if fails); Node09Paper312Rat 03:32:12; Node0609OneWayConsumer 03:32:12; Galois 03:31:02; QVWeighted retry.
 - One-way hθ/hq route: use rp_strict_measure_resolved, no ClosedBallMassFormula.
+
+### 7.27 A2Integration DONE；WQ Irreducible/Node09Paper312Rat/OneWayConsumer/Galois red（2026-11-15 11:44，无编译）
+
+- ✅ `Mzk1A2Node03IntegrationActual` DONE 03:31:50（olean 11:31:50 > src 11:30:43；A2Node03Interface/toWitness/Required interface）；
+- ❌ WQMembership 当前源 11:32:59 FAIL 03:31:48（含 padicIntegersEquivZp；errors :32/:58/:70/:71；olean 11:28:19 stale；旧 DONE 03:28:20 只覆盖旧源）；
+- ❌ Node09Paper312Rat FAIL 03:32:12；OneWayConsumer `Mzk1Node0609OneWayConsumerActual` FAIL 03:32:12（src 11:31:18，无 olean）；Galois FAIL 03:31:02（olean 10:53:59 stale）；
+- pending：A2IntegrationConsumer 源 11:32:54；QVWeighted retry 03:32:27。
+
+## 7.33 11:33 cycle
+
+- DONE: QVWeighted 03:33:17 clean interface (QVBadPlaceFiber/MqFiber/MqFiber_eq_sum_localLog/actual_A...; no failed wrapper); A2Integration 03:31:50; A2FullDataConsumer 03:29:34; WQ RingEquiv 03:28:20; ProductFiber 03:27:31; ValueGroup interface 03:26:26.
+- RED: WQMembership current 03:31:48 (source with padicIntegersEquivZp; perhaps stale); Node09Paper312Rat 03:32:12 (rewrite comap place); Node0609OneWayConsumer 03:32:12 (unknown s1902Hull); Galois 03:31:02 (:85).
+- Next: stepxi clean WQ source; mainline fix/reduce Node09Rat; hull import s1902; stage4 revert Galois; qpilot wrapper in Node09 link.
