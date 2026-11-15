@@ -3079,3 +3079,5 @@
 - 37:30: stale kernel olean rebuilt; Algebraic p on theorem. gate 20.625 written.
 
 - 38:10: core helper green; stale olean chain; integralUnitExponent=cardExponent task. gate 20.626 written.
+
+- 38:20: MAJOR integralUnitExponent_coprime green olean 08:12:54. Next unitLog_norm_le_one/stale deps. gate 20.627 written.

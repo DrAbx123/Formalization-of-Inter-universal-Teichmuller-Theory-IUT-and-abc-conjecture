@@ -4010,3 +4010,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.626 core helper green + stale olean chain; integralUnitExponent=cardExponent (2026-11-15 38:10)
 - Core IntegralUnitLogarithm olean 07:32:38; Kernel olean 07:51:53; AlgebraicUnitLogarithm olean 08:00:33; Hom olean 08:03:59; LogarithmLocalInverse 08:06:55; IntegralUnitLogarithmRationalization 08:07:47; AlgebraicUnitLogarithmRationalization 08:08:39 green. Stale oleans caused arity errors; further UnitPerfection/FinitePlace errors likely stale IntegralUnitPerfectionTopology/FinitePlaceSourceGaloisLogShell.
 - integralUnitExponent and cardExponent both Nat.card quotient => definitionally equal; add integralUnitExponent_eq_cardExponent rfl and integralUnitExponent_coprime via cardExponent_coprime. qpilot. No fake.
+
+
+### 20.627 MAJOR integralUnitExponent_coprime GREEN olean 08:12:54 (2026-11-15 38:20)
+- CardExponent new import core; direct+olean 08:12:54: integralUnitExponent_eq_cardExponent rfl, integralUnitExponent_coprime via cardExponent_coprime. Next unitLog_norm_le_one v_p(exponent)=0; rebuild stale IntegrityPerfection/GaloisLogShell deps. abc audit. No fake.
