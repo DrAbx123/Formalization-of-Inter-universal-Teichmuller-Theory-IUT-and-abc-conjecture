@@ -583,3 +583,16 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 16**，phase act
 - ✅ WQ 当前源 DONE 03:34:03（olean 11:34:02 > src 11:32:59；padicIntegersEquivZp/normedIntegerEquivValuative/forward/reverse 均标准三公理）；
 - ✅ A2Node03IntegrationConsumer DONE 03:34:05（olean 11:34:05 > src 11:32:54；nonempty_witness/exists_sourceSignQuotientData）；
 - ❌ Node09Paper312Rat FAIL 03:32:12（源 11:30:17；无 olean）；OneWayConsumer retry 03:33:31 pending；Galois retry 03:33:31 pending（olean 10:53:59 stale）。
+
+### 7.29 确认 WQ/QV/A2IntegrationConsumer；OneWayConsumer/Galois 新 DONE（2026-11-15 11:48，无编译）
+
+- ✅ WQ DONE 03:34:03（olean 11:34:02 > src 11:32:59；padicIntegersEquivZp/normedIntegerEquivValuative/forward/reverse 标准三公理）；QVWeighted DONE 03:33:17（olean 11:33:16 > src 11:31:56；sorryAx=0；clean interface/one-way）；A2IntegrationConsumer DONE 03:34:05（olean 11:34:05 > src 11:32:54）；
+- ✅ 新 OneWayConsumer `Mzk1Node0609OneWayConsumerActual` DONE 03:34:30（olean 11:34:29 > src 11:33:20；node0609_rpRegion_volume_lt_hull/le_hull/rows 3）；
+- ✅ 新 GaloisCompletion DONE 03:34:32（olean 11:34:32 > src 11:33:27；当前源 3 decls）；
+- ❌ Node09Paper312Rat FAIL 03:32:12（无 olean）；新 Node09Paper312Weight FAIL 03:34:29（synthInstance :68/:69/:70、Type mismatch :76）。
+
+## 7.35 11:35 cycle
+
+- DONE: Node09HqAssemblyLink paper312_of_MqFiber_bounds 03:35:40 (fiber/MqFiber wrapper; no bijection); WQ current 03:34:03; QVWeighted 03:33:17; OneWayConsumer 03:34:30; Galois 03:34:32; A2IntegrationConsumer 03:34:05.
+- RED: A2CompletionConsumer 03:35:18; Node09Paper312Rat 03:32:12; Node09Paper312Weight 03:34:29; Irreducible transport pending.
+- Next: mainline connect paper312_of_MqFiber_bounds to Paper312Assembly; qpilot no duplicate wrapper; lattice A2 consumer; stepxi irreducible.
