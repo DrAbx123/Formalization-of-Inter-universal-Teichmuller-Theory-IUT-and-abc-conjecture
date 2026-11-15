@@ -3083,3 +3083,5 @@
 - 38:20: MAJOR integralUnitExponent_coprime green olean 08:12:54. Next unitLog_norm_le_one/stale deps. gate 20.627 written.
 
 - 38:30: unitLog norm ingredients/or first two lemmas; qpilot. gate 20.628 written.
+
+- 38:40: CardExponent audit accepted (eq/coprime three axioms). qpilot unitLog ingredients. gate 20.629 written.
