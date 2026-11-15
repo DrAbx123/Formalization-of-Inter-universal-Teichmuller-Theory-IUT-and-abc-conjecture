@@ -4014,3 +4014,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.627 MAJOR integralUnitExponent_coprime GREEN olean 08:12:54 (2026-11-15 38:20)
 - CardExponent new import core; direct+olean 08:12:54: integralUnitExponent_eq_cardExponent rfl, integralUnitExponent_coprime via cardExponent_coprime. Next unitLog_norm_le_one v_p(exponent)=0; rebuild stale IntegrityPerfection/GaloisLogShell deps. abc audit. No fake.
+
+
+### 20.628 unitLog norm ingredients route (2026-11-15 38:30)
+- Easy: padicValNat.eq_zero_of_not_dvd + Prime.coprime_iff_not_dvd; norm_natCast_eq_one_of_coprime via NormedAlgebra.norm_algebraMap' + Padic.norm_natCast_eq_one_iff [NormOneClass K]. Remaining hard: principal-unit power log1p estimate/p=2 radius; exact missing. qpilot new file. No fake.
