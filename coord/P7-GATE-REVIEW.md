@@ -4128,3 +4128,7 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 
 ### 20.653 stage4 valueGroup toMonoidWithZeroHom/rfl timeout (2026-11-15 42:40)
 - valueGroup expects MonoidWithZeroHom: use (Valued.v).toMonoidWithZeroHom. Giant rfl times out; prove withValMovedSigma_val_eq via WithVal.congr_apply + Valuation.comap_apply small lemmas. Removed failed lemmas; surjectivity green restored. stage4. No fake.
+
+
+### 20.654 unitLog norm lane consumer scan (2026-11-15 42:50)
+- Mainline to determine if algebraic unitLog norm is critical-path or support-only; `Mzk1IVThm110FloorNativeObstructionActual` unitLog is volume, different. Continue norm-valuation/actual integration. No fake.
