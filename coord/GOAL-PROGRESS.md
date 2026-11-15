@@ -1,7 +1,7 @@
 # GOAL PROGRESS（目标进度记录）
 
-更新时间：2026-11-15 10:24（Asia/Shanghai）
-Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（revision 12，phase active，rounds 14/256）
+更新时间：2026-11-15 10:26（Asia/Shanghai）
+Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（**revision 14**，phase active，rounds 14/256）
 
 ## 0. 目标锁定
 
@@ -12,6 +12,14 @@ Goal：`goal-9baa9641-5902-46a4-87f0-1430e6005d13`（revision 12，phase active�
 3. abc 猜想。
 
 禁止 `sorry`、额外 axiom、`PUnit/True/toy carriers/value-layer surrogate`；不改 paper object；维护审计与编译 gate。**所有 Lean 编译只走 watchdog**。
+
+## 0b. 目标 revision 14 的新增约束
+
+- 必须查询/同步 `coord/GOAL-PROGRESS.md`；
+- Lead 负责统筹，不负责具体细节；
+- 所有编译用 watchdog；
+- teammate 可以按需使用一次性 agent，Lead 尽量不用一次性 agent；
+- 其余目标不变：三公理、无条件 3.12/IV/abc、禁 sorry/额外 axiom/toy、不改 paper object。
 
 ## 1. 目标状态总表
 
