@@ -3111,3 +3111,5 @@
 - 40:40: actual K=Qp unramified; qpilot NormOneClass/principal bound; mainline actual p/bridge. gate 20.641 written.
 
 - 40:50: UnitLogNormBound audit accepted; stage4 valueGroup equality plan. gate 20.642 written.
+
+- 41:00: hull tensor ball support; assign p=2 log1p half lemma. gate 20.643 written.

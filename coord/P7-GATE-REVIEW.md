@@ -4078,3 +4078,8 @@ STATUS: IUT 3.12 paper-normalized inequality formalized S45-free (3 axioms). Ful
 ### 20.642 UnitLogNormBound audit accepted; stage4 valueGroup equality plan (2026-11-15 40:50)
 - abc: UnitLogNormBound source 08:36:47, olean 08:38:26, probe 00:41:24; exp_bound + norm_integralUnitExponent_eq_one three axioms; accepted.
 - stage4: valueGroup equality via valueMonoid closure containment both ways; needs withValMovedSigma surjective; then ambient identity iso/conjugate. No fake.
+
+
+### 20.643 hull tensor ball support; assign p=2 log1p half lemma (2026-11-15 41:00)
+- LocalFieldProductHull unitRegion/region lemmas: compact, region_eq_mul_unitRegion, measure bounds, norm_le_one_of_compact_powers, continuous_ringHom_mem_unitRegion, continuous_ringEquiv_image_unitRegion. Tensor ball norm reusable; missing power estimate/product Haar/log volume.
+- hull assigned p=2 norm_log1p_le_half (||x||≤1/2 -> ||log1p x||≤1/2 or ≤1) to bypass strict r<1/2. No fake.
