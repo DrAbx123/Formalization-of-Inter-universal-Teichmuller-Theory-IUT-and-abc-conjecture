@@ -1,18 +1,18 @@
 # Unfinished 100% AI LeanFormal IUT audit project
 
-## 从这里接手（2026-11-22）
+## Where to resume (2026-11-22)
 
-> **时间或算力有限时，下次只追一个点。** 在 IUT III 推论 3.12 的固定算例中，从原文的求值构造出 $z=E_\tau(1)$，证明它属于第二行在素数 3 处的原允许区域 $U_{2,3}$。
+> **With limited time or compute, follow one point.** In the fixed example for IUT III, Corollary 3.12, use the paper's evaluation map to construct $z=E_\tau(1)$ and prove that it belongs to $U_{2,3}$, the region of allowed images in row 2 at the prime 3.
 
-**目前做到哪里。** 固定 $p=3,\ \ell=5,\ d=3$，用 `G` 表示好位、`B` 表示坏位。具体模型中，目标元组 `(G,B,B)` 的默认标记在槽 2，参考点的投影绝对值为 $3^{-6/5}$。交换槽 2 和槽 0 时，源元组 `(B,B,G)` 的标记好槽 2 随参考元 `1` 搬到目标好槽 0，各指定投影都是 `1`。这段模型计算已经完成。现在开放的是这次换位和落点在**同一原文输入**中的来源。[已有换位定理](Iut/Concrete/Ind1Invariance.lean#L592) · [交接 §19.3](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#193-原文来源桥的精确形状)
+**What the model already shows.** Fix $p=3$, $\ell=5$, and $d=3$. The labels `G` and `B` denote good and bad places. In the target tuple `(G,B,B)`, the default mark is at slot 2, where the projection of the reference point has absolute value $3^{-6/5}$. Swapping slots 2 and 0 carries the reference point `1` and its mark from good slot 2 of `(B,B,G)` to good slot 0 of `(G,B,B)`. Every designated projection of the transported point equals `1`. The open step is to show that the paper permits this marked output for the same input. [Reindexing theorem](Iut/Concrete/Ind1Invariance.lean#L592) · [Handoff, section 19.3](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#193-%E5%8E%9F%E6%96%87%E6%9D%A5%E6%BA%90%E6%A1%A5%E7%9A%84%E7%B2%BE%E7%A1%AE%E5%BD%A2%E7%8A%B6)
 
-1. **起点。** 打开 III 注记 3.10.2 的交换图，下排 `env → gau` 是来自 II 推论 4.10(ii) 的求值。对一组相容代表，跨列识别（IPL）在 prime-strip 层的六箭头复合可先走下排 `LGP → lgp`，再走 `lgp` 的 Kummer 竖箭头。沿这两步追 `(B,B,G)` 的点 `1` 和标记 2，查它们在目标第 1 列的落点。[原文交换图](coord/IUT-TEXT/III.txt#L9069) · [已推导的图等式 (15.1a)](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#152-固定-293将成功证书压到一个单位或原输出的两个数)
-2. **本次交付。** 写出目标列中原文允许的输出 $D_\tau$，说明它来自这个固定输入，给出 $z$ 在其中的位置和槽 0 的投影，证明 $z\in U_{2,3}$。若已得到该点在指定张量块上的乘法稳定满秩整格 $L$，只需检查乘以 $z$ 在 $L/3L$ 上的行列式非零，即可确认同一见证的各指定投影都是单位。[原文对允许像的定义](coord/IUT-TEXT/III.txt#L10376) · [模 3 检验及适用条件](coord/GRH-METHODS-FOR-IUT-20261122.md#iii312-固定输入上的判据)
-3. **停止条件。** 拿到上述成员证明，就交接这个元组的结果。若某条箭头只给出未标记的标量或形式换位，就记下最后保有标记的对象、所缺映射的起点和终点，以及缺哪条原文依据，到此停手。
+1. **Start at the diagram in IUT III, Remark 3.10.2.** Its bottom arrow `env → gau` is the evaluation from IUT II, Corollary 4.10(ii). For a compatible choice of representatives, the six arrows of the cross-column identification (IPL) reduce at the prime-strip level to two. Follow the bottom arrow `LGP → lgp`, then the vertical Kummer arrow at `lgp`. Trace the point `1` of `(B,B,G)` and its mark at slot 2 through both arrows into column 1. [Diagram in the paper](coord/IUT-TEXT/III.txt#L9069) · [Derivation of identity (15.1a)](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#152-%E5%9B%BA%E5%AE%9A-293%E5%B0%86%E6%88%90%E5%8A%9F%E8%AF%81%E4%B9%A6%E5%8E%8B%E5%88%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E4%BD%8D%E6%88%96%E5%8E%9F%E8%BE%93%E5%87%BA%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0)
+2. **Prove membership.** Exhibit an allowed output $D_\tau$ in the target column for this fixed input. Identify $z$ in that output and its projection at slot 0, then prove $z\in U_{2,3}$. If multiplication by $z$ preserves a full $\mathbf Z_3$-lattice $L$ in the specified tensor block, a nonzero determinant on $L/3L$ certifies that every designated projection of this same point is a unit. [Definition of the allowed images](coord/IUT-TEXT/III.txt#L10376) · [Mod 3 test and its hypotheses](coord/GRH-METHODS-FOR-IUT-20261122.md#iii312-%E5%9B%BA%E5%AE%9A%E8%BE%93%E5%85%A5%E4%B8%8A%E7%9A%84%E5%88%A4%E6%8D%AE)
+3. **Stop at this tuple.** Once membership is proved, record the proof and stop. If an arrow gives only an unmarked scalar or a formal permutation, record the last object that still carries the mark, the domain and codomain of the missing map, and the statement needed from the paper. That is the stopping point for this attempt.
 
-**通过后再扩展。** 先用同一求值与换位的相容性处理另一换位 `(2,1)` 和其余受影响元组，再按原文的秩与权重核对读数，得到固定输入的比较。一般输入的比较和原允许像的有限性仍待证明，后续才接 IUT IV 的高度估计与整数 ABC。[交接 §19.5](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#195-暂停点验收和下一动作) · [项目目标](GOAL.md)
+**After membership is proved.** Use compatibility of the same evaluation with reindexing to handle the transposition `(2,1)` and the other affected tuples. Check the rank normalization and weights in the paper's readout to obtain the comparison for this fixed input. The comparison for general inputs and finiteness of the hull's log-volume remain open on the route to the height estimates in IUT IV and the integer ABC conjecture. [Handoff, section 19.5](coord/R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#195-%E6%9A%82%E5%81%9C%E7%82%B9%E9%AA%8C%E6%94%B6%E5%92%8C%E4%B8%8B%E4%B8%80%E5%8A%A8%E4%BD%9C) · [Project goals](GOAL.md)
 
-[心得](./心得.md)
+[Project notes](./%E5%BF%83%E5%BE%97.md)
 
 This repository is a source-oriented, auditable Lean 4 project for the
 bottom-up study of Mochizuki's IUT I--IV papers and the ABC bridge.  The
