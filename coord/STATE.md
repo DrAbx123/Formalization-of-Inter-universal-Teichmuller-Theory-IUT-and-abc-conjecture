@@ -4846,3 +4846,5 @@ CITABLE 10) -> Thm2.5 unconditional.  No new long tasks before pause; all files 
 - 2026-11-19｜[§16 暂停交接](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#本轮暂停交接)。固定 \(p=3,\ell=5,d=3\) 的模型侧全槽计算已写清；仓库 Lean 供体确认 scalar profile 不能恢复标记投影，值层 xi-f 链不等于 paper xi-f，且值层 hull 有无界/top 反例。原文剩余首缺口是实际 III.3.10.2 evaluation 到允许输出 carrier/区域的来源映射；下一次固定 \((G,B,B)\)、\(\tau=(2,0)\) 检查 \(E_\tau(1)\in U_{2,3}\) 或区域包含。四项验收 NOT_RUN；用户已要求暂停。
 
 - 2026-11-20｜[本仓与 LANA 的比较及联络入口](REPO-LANA-COMPARISON-20261120.md)。LANA main 固定为 `553076af459e7a401bfee63a4607814d1c854477`。两仓 `Iut/` 共有的 694 个 `.lean` 路径统一换行后全部相同；本地 q 重数、张量整格/Haar、旧 C3 根系障碍与原允许输出的缺口分列。固定例仅开放第二行恰等于 q，两行均开放才多 `3 log(3)/80`。研究比较文档，未更改 Lean 或推进原目标的四项验收。
+
+- 2026-11-22｜[RH 两条路线的可借步骤](GRH-METHODS-FOR-IUT-20261122.md)。已给出按同一见证检出标记整投影同时为单位的局部判据，区分固定模型的两种读数。原 III.3.10.2 的允许落点与实际读数仍开放。§18.5 的固定底数要求已与 Dirichlet GRH 的变底数界逐项比较。四项 Lean 验收均未运行。

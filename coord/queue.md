@@ -1561,3 +1561,5 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
 - [2026-11-19 暂停交接：§16 原 III.3.12](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#本轮暂停交接)。不要从论文开头重审。恢复后先读交接 §19.3/19.5，固定 \(p=3,\ell=5,d=3\)、目标 \((G,B,B)\)、\(\tau=(2,0)\)，在已有 `ThetaRegion` 点证据上追实际 evaluation carrier map，证明 \(E_\tau(1)\in U_{2,3}\) 或区域包含，再识别原文 readout。S3138 scalar profile、值层 hull 和静态 Ind1 区域不再作为来源桥替代物；四项形式验收均未运行。
 
 - 2026-11-20｜[LANA 合作建议，未发出、未派工](REPO-LANA-COMPARISON-20261120.md#review-contract)。可先提交一条 q 重数或相对 Haar 对照供审阅；原 III.3.12 仍从交接 §19.3 的 `(B,B,G) → (G,B,B)`、`τ=(2,0)` 检查实际求值与 `E_τ(1) ∈ U₂,₃`。不导入整仓，不把 LANA 的固定标签变体与全槽 literal 反向连用。
+
+- 2026-11-22｜[同一见证的模 3 检查](GRH-METHODS-FOR-IUT-20261122.md)。沿用 §19.3 现有 owner。在 `(B,B,G;2) → (G,B,B;0)` 追 III.3.10.2 原求值的点 `1`，记录落入 `U₂,₃` 的原输出及其标记投影，再应用范数乘积判据。在整数 ABC 分支继续按 §18.5 验收指定的底数 2。
