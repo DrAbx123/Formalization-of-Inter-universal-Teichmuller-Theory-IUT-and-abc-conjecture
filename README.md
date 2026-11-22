@@ -1,4 +1,4 @@
-# Unfinished 100% AI LeanFormal IUT audit project
+# This is the most comprehensive repository for the formalization of the IUT conjecture outside of the 'Lana' project. There remains only one—in my view, massive—gap; however, due to a lack of funding, work cannot continue. Please proceed by following the roadmap below. And please contact me if you want more detail about the idea and workflow via shitao_huang@u.nus.edu. At the same time, if you have a position of PhD in areas related to biology, ai, astromy, optic, feel free to contact me as well. Thanks. 
 
 ## Where to resume (2026-11-22)
 
@@ -44,4 +44,4 @@ Run Lean verification through the watchdog. Add the affected `.lean` path to
 entry in `dag/watchdog/watchdog.log`. [Watchdog instructions](coord/LEAN-INDEX.md)
 
 # If it've benefited your project, I'll more than excited.
-# It's paused cause the ability of the AI is far more than enough to achieve the goal
+# It's paused cause the ability of the AI is no more than enough（maybe) to achieve the goal and so as my wallet
