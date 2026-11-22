@@ -44,6 +44,7 @@ __pycache__/
 *.out
 *.err
 *.time
+*.pid
 *.status
 *.exit
 *.bak*
