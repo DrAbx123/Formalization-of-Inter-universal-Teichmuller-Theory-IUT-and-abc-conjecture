@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG03bSectionsBasicActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.divisorSections_restrict
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.divisorSections_mono_coeff
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.unit_germ_mem_divisorSections_zero

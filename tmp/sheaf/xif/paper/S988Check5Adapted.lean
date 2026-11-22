@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S945CarrierTopologyActual
+open LeanFormal.IUT LeanFormal.IUT.InitialThetaSource LeanFormal.IUT.InitialThetaSource.PlacePartitionReduction LeanFormal.IUT.N8Closure LeanFormal.IUT.XiFPaper.PaperFinalLValuedTensorCarrierActual LeanFormal.IUT.XiFPaper.S945CarrierTopologyActual LeanFormal.IUT.XiFPaper.QVFamTensorCoefficientActual
+#check LeanFormal.IUT.XiFPaper.S945CarrierTopologyActual.S945CarrierTopologyData.mk

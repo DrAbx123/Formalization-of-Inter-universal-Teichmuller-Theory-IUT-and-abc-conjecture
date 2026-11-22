@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S3123FiberStrongTransActual
+#print axioms LeanFormal.IUT.XiFPaper.S3123FiberStrongTransActual.S3123FiberStrongTrans

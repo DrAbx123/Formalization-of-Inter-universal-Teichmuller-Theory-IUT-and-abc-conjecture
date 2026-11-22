@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullStepXIContractConsumerTreeActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullStepXIContractConsumerTreeActualAdapted.stepXIContractTree_cor312

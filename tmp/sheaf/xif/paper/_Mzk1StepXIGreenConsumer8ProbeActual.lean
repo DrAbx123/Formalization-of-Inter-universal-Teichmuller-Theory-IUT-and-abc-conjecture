@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIGreenConsumer8Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIGreenConsumer8Actual.stepXIGreenConsumer8_contracts

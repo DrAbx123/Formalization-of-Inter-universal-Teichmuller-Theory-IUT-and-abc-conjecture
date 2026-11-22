@@ -1,0 +1,6 @@
+import LeanFormal.IUT.ABCBridge.Arithmetic.RationalBoundaryPrimeSupport
+import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
+#check Ideal.exists_maximal_ideal_liesOver_of_isIntegral
+#check Ideal.absNorm
+#check Ideal.absNorm_eq_pow_inertiaDeg'
+#check prime_of_mem_arithmeticPrimeSupport

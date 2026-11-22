@@ -1,0 +1,25 @@
+tmp\sheaf\xif\paper\Mzk1BadSumWeightBoundExplicitActual.lean:37:5: error: unknown namespace `LeanFormal.IUT.XiFPaper.Mzk1LanaBridgeAuditActual`
+tmp\sheaf\xif\paper\Mzk1BadSumWeightBoundExplicitActual.lean:76:47: error: Application type mismatch: The argument
+  T
+has type
+  SourceNativeInitialThetaData l
+of sort `Type 1` but is expected to have type
+  IsABCTriple ?m.49 ?m.50 ?m.51
+of sort `Prop` in the application
+  arithmeticWeight_abc_eq_log_natRadical T
+tmp\sheaf\xif\paper\Mzk1BadSumWeightBoundExplicitActual.lean:83:47: error: Application type mismatch: The argument
+  T
+has type
+  SourceNativeInitialThetaData l
+of sort `Type 1` but is expected to have type
+  IsABCTriple ?m.84 ?m.85 ?m.86
+of sort `Prop` in the application
+  arithmeticWeight_abc_eq_log_natRadical T
+'LeanFormal.IUT.XiFPaper.Mzk1BadSumWeightBoundExplicitActual.arithmeticWeight_abc_eq_log_natRadical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1BadSumWeightBoundExplicitActual.badSumWeightBound_iff_nat' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1BadSumWeightBoundExplicitActual.explicitRows_length' does not depend on any axioms

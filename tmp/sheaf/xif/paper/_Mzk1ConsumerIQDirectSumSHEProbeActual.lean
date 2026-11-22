@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerIQDirectSumSHEActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerIQDirectSumSHEActual.iqDirectSum_membership_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerIQDirectSumSHEActual.iqDirectSum_mem_span_pi

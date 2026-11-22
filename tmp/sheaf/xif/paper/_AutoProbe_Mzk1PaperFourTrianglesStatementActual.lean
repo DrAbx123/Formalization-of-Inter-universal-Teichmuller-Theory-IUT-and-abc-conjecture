@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1PaperFourTrianglesStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFourTrianglesStatementActual.Triangle1BPSMultiradial
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFourTrianglesStatementActual.Triangle2Descent
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFourTrianglesStatementActual.Triangle3HDD

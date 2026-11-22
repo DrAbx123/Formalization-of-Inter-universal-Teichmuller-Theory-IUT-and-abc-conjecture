@@ -1,0 +1,12 @@
+from sage.libs.pari import pari
+pari.allocatemem(8*1024*1024*1024)
+E = EllipticCurve([0,-1,0,-142,701])
+print("start division field", flush=True)
+K = E.division_field(5)
+print("deg", K.degree(), flush=True)
+print("disc", K.discriminant().factor(), flush=True)
+EK = E.change_ring(K)
+print("start torsion basis", flush=True)
+B = EK.torsion_basis(5)
+print("basis len", len(B), flush=True)
+for P in B: print("P", P, flush=True)

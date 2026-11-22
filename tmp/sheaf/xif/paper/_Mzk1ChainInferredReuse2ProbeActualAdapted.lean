@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ChainInferredReuse2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainInferredReuse2ActualAdapted.chain_hull_candidate_le
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainInferredReuse2ActualAdapted.chainInferred2Rows_length

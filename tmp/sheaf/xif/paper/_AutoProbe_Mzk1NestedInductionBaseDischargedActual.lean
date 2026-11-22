@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionBaseDischargedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseDischargedActual.paperScopeLemma24Statement_of_stepProvider
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseDischargedActual.algebraicNestedInductionInput_of_stepProvider
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseDischargedActual.baseDischargedRows

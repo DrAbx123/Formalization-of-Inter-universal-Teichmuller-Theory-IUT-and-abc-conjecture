@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2325DomainComparisonActual
+open LeanFormal.IUT.XiFPaper.S2325DomainComparisonActual
+#print axioms S2325GalIsoMatrixQuot_of_restriction
+#print axioms S2325S2310Iso_of_restriction

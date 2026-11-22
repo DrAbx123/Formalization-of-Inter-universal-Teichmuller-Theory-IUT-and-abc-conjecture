@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2535D5FinalConsumersActual
+open LeanFormal.IUT.XiFPaper.S2535D5FinalConsumersActual
+#print axioms S2535D5LargeImageFive_of_exact
+#print axioms S2535Pair_of_imageTail
+#print axioms S2535Pair_of_twelveCycle
+#print axioms S2535Pair_of_rangeTop

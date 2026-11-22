@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3132ConcreteSourceVFormInstantiatedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteSourceVFormInstantiatedActual.concreteExample36RawLogVolume_eq_canonical
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteSourceVFormInstantiatedActual.concreteExample36CanonicalReadout

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2053PaperORootStackAlignment
+#print axioms LeanFormal.IUT.XiFPaper.S2053PaperORootStackAlignment.S2053ComponentD_root_pow
+#print axioms LeanFormal.IUT.XiFPaper.S2053PaperORootStackAlignment.S2053ComponentD_theta_value
+#print axioms LeanFormal.IUT.XiFPaper.S2053PaperORootStackAlignment.S2053ComponentD_available

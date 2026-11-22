@@ -1,0 +1,24 @@
+/-- The componentwise 2-cell `Sigma ; Sigma -> 1` on the underlying functors. -/
+noncomputable def S1932SqNatTrans (U : LocallyDiscrete (Iut.SchemeOverField S1726K)ᵒᵖ) :
+    ((Pseudofunctor.StrongTrans.vcomp S1932Sigma S1932Sigma).app U).toFunctor ⟶
+      ((Pseudofunctor.StrongTrans.id S1898Stack).app U).toFunctor where
+  app P := eqToHom (by
+    rw [S1932SigmaSq_obj, S1932IdApp_obj]
+    apply Discrete.ext
+    exact S1932Sq_point U P)
+  naturality X Y f := by
+    haveI : IsDiscrete (S1898Stack.obj U : Type) := Discrete.isDiscrete _
+    exact Subsingleton.elim _ _
+
+/-- The reverse componentwise 2-cell. -/
+noncomputable def S1932SqNatTransRev (U : LocallyDiscrete (Iut.SchemeOverField S1726K)ᵒᵖ) :
+    ((Pseudofunctor.StrongTrans.id S1898Stack).app U).toFunctor ⟶
+      ((Pseudofunctor.StrongTrans.vcomp S1932Sigma S1932Sigma).app U).toFunctor where
+  app P := eqToHom (by
+    rw [S1932SigmaSq_obj, S1932IdApp_obj]
+    apply Discrete.ext
+    exact (S1932Sq_point U P).symm)
+  naturality X Y f := by
+    haveI : IsDiscrete (S1898Stack.obj U : Type) := Discrete.isDiscrete _
+    exact Subsingleton.elim _ _
+

@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3128Stage1FourthJointConsequencesActual
+import tmp.sheaf.xif.paper.S3128Stage1FourthJointCompleteActual
+import tmp.sheaf.xif.paper.S3127G2FreeQuotientExistsConsumer2Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointConsequencesActual.S3128Stage1FourthJointConsequences
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointCompleteActual.S3128Stage1FourthJointComplete
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2FreeQuotientExistsConsumer2Actual.S3127G2FreeQuotientExistsConsumer2_universal
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2FreeQuotientExistsConsumer2Actual.S3127G2FreeQuotientExistsConsumer2_exists

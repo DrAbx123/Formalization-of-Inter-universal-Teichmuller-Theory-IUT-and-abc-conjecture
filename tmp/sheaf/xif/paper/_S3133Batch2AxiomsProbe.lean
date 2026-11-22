@@ -1,0 +1,30 @@
+import tmp.sheaf.xif.paper.S3133QPilotBatchAInputActual
+import tmp.sheaf.xif.paper.S3133RealifiedQPilotLogVolumeActual
+import tmp.sheaf.xif.paper.S3133QPilotLogVolumeAgreementActual
+import tmp.sheaf.xif.paper.S3133QPilotLogVolumeSignActual
+
+/-! Axioms probe for the second qpilot S3133 batch: realified q-pilot divisor /
+log-volume, Batch A Q_C input, the same-input agreement package, and the sign /
+positivity statements.  No proofs, no sorry. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.nativeBadLocalWeight_pos'
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.totalLocalLogMagnitude_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.qPilotQGlobalLogVolume_neg
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.qPilotQGlobalLogMagnitude_eq_total
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.nativeNormalizedLogMagnitude_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeSignActual.qPilotNormalizedGlobalReadout_neg
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotDivisorActual.globalDegree_primeDivisor_pow
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotDivisorActual.globalDegree_qPilotRealifiedDivisor
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotLogVolumeActual.qPilotRealifiedLogVolume_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotLogVolumeActual.qPilotRealifiedLogVolume_eq_qPilotQGlobalLogVolume
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotLogVolumeActual.qPilotRealifiedLogVolume_eq_neg_sum_localLogMagnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotLogVolumeActual.qPilotRealifiedLogVolume_eq_sum_localSignedLog
+#print axioms LeanFormal.IUT.XiFPaper.S3133RealifiedQPilotLogVolumeActual.realifiedLogVolume_factor_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotBatchAInputActual.qPilotBatchAInput_QC
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotBatchAInputActual.qPilotBatchAInput_QC_eq_normalized
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotBatchAInputActual.qPilotBatchAInput_QC_eq_neg_weightedMagnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotBatchAInputActual.qPilotBatchAInput_QC_independent_of_hull
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeAgreementActual.qPilotGlobalLogVolume_eq_neg_classicalLog
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeAgreementActual.realified_presentation_logVolume_agreement
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotLogVolumeAgreementActual.qPilotLogVolume_sameInput_package

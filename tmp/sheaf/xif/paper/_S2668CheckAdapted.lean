@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2668FiberCoherenceActual
+#check LeanFormal.IUT.XiFPaper.S2668FiberCoherenceActual.S2668FiberPseudofunctor
+#check LeanFormal.IUT.XiFPaper.S2668FiberCoherenceActual.S2668FiberFunctor

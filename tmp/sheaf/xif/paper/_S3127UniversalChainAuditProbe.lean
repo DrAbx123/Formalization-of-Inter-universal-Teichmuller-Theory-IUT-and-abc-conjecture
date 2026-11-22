@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.S3127G2UniversalParamActual
+import tmp.sheaf.xif.paper.S3127G2HPhiConsumerActual
+import tmp.sheaf.xif.paper.S3127G2LiftGeneralFacConsumerActual
+import tmp.sheaf.xif.paper.S3127G2LiftGeneralUniqActual
+import tmp.sheaf.xif.paper.S3127G2AffineLiftExistsUniqueActual
+import tmp.sheaf.xif.paper.S3127G2UniversalDataOfLiftActual
+import tmp.sheaf.xif.paper.S3127G2UniversalDataOfLiftPreimageActual
+import tmp.sheaf.xif.paper.S3127FreeQuotientExistsInterfaceActual
+import tmp.sheaf.xif.paper.S3127FreeQuotientPaperInputConsumerActual
+import tmp.sheaf.xif.paper.S3127G2FreeQuotientExistsFinalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalParamActual.S3127G2Universal_of_phi
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2HPhiConsumerActual.S3127G2HPhiConsumer
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2LiftGeneralFacConsumerActual.S3127G2LiftGeneralFacConsumer
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2LiftGeneralUniqActual.affineQuotientCoverLiftGeneral_uniq
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2AffineLiftExistsUniqueActual.S3127G2AffineLift_existsUnique
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataOfLiftActual.S3127G2UniversalDataOfLift_raw
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataOfLiftPreimageActual.S3127G2UniversalDataOfLift_lift
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientExistsInterfaceActual.S3127FreeQuotientExists_of_freeAction_and_universalData
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientPaperInputConsumerActual.S3127FreeQuotientExists_of_paperInputData
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2FreeQuotientExistsFinalActual.S3127G2FreeQuotientExists_final

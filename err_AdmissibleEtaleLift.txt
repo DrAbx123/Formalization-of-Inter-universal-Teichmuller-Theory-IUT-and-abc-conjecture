@@ -1,0 +1,6 @@
+TemperedFundamentalGroups\SemistableReduction\AdmissibleEtaleLift.lean:132:53: error: Type mismatch
+  IsScalarTower.of_algebraMap_eq fun x => ?m.201
+has type
+  @IsScalarTower ?m.189 ?m.190 ?m.191 Algebra.toSMul Algebra.toSMul Algebra.toSMul
+but is expected to have type
+  @IsScalarTower (Rf f) (Rf f ⧸ Jf J f) S₀ (Submodule.Quotient.instSMul (Jf J f)) this✝.toSMul this.toSMul

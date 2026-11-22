@@ -1,0 +1,2 @@
+import Mathlib.CategoryTheory.Limits.Shapes.Images
+#check CategoryTheory.Limits.hasImages_of_hasStrongEpiMonoFactorisations

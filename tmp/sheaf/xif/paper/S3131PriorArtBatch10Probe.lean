@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3131IUTIVEstimatesPriorArtActual
+import tmp.sheaf.xif.paper.S3131StepXIHullPriorArtActual
+import tmp.sheaf.xif.paper.S3131IUTIVEstimatesReusePlanActual
+import tmp.sheaf.xif.paper.S3131ModelRoutePriorArtReuseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131IUTIVEstimatesPriorArtActual.S3131IUTIVEstimatesPriorArt_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131StepXIHullPriorArtActual.S3131StepXIHullPriorArt_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131IUTIVEstimatesReusePlanActual.S3131IUTIVEstimatesReusePlan_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131ModelRoutePriorArtReuseActual.S3131ModelRoutePriorArtReuse_length

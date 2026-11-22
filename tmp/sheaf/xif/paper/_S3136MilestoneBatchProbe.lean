@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3136ThetaPilotCorrespondenceActual
+import tmp.sheaf.xif.paper.S3136ModelAssemblyPipelineActual
+import tmp.sheaf.xif.paper.S3136Source31AssemblyWiringActual
+import tmp.sheaf.xif.paper.S3136ClassABDClassConcreteInstancesActual
+import tmp.sheaf.xif.paper.S3136AuditArtifactManifestActual
+import tmp.sheaf.xif.paper.S3136ClassBRemainingWorkLedgerActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136ThetaPilotCorrespondenceActual.lgpThetaPilotCorrespondence_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelAssemblyPipelineActual.lgpModelPipeline_compact_volume_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.S3136Source31AssemblyWiringActual.lgpSource31Data_full_reduction
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassABDClassConcreteInstancesActual.isBDLe_add
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassABDClassConcreteInstancesActual.isBDEq_of_bounded_abs
+#print axioms LeanFormal.IUT.XiFPaper.S3136AuditArtifactManifestActual.lgpAuditArtifactManifest_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassBRemainingWorkLedgerActual.lgpClassBRemainingWork_length

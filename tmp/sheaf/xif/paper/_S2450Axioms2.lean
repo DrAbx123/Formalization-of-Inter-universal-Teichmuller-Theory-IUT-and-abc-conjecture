@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2450ResidueIsAlgClosedActual
+#print axioms LeanFormal.IUT.XiFPaper.S2450ResidueIsAlgClosedActual.S2450_residue_isAlgClosed
+#print axioms LeanFormal.IUT.XiFPaper.S2450ResidueIsAlgClosedActual.S2450_frobenius_surjective

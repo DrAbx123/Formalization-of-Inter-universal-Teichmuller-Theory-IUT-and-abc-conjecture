@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24Descent2Actual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24Descent2Actual.s3135_rational_polynomial_definedOver
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24Descent2Actual.s3135_belyiPolynomial_definedOver

@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S1779CorrectFiniteEtaleTargetActual
+
+open CategoryTheory CategoryTheory.Limits
+open LeanFormal.IUT.XiFPaper.S1779CorrectFiniteEtaleTargetActual
+open LeanFormal.IUT.XiFPaper.S1779CorrectFiniteEtaleTargetActual.S1779FiniteEtaleClosure
+
+#check S1779CorrectFiniteEtaleTargetActual.S1779FiniteEtaleClosure.FiniteEtaleClosure.tensorCocone
+#check FiniteEtaleClosure.tensorCocone
+#check finiteEtale_tensorCocone_pt
+#check tensorCocone_isColimit

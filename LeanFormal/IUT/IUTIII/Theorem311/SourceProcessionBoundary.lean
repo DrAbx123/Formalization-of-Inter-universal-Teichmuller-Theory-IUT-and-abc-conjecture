@@ -524,7 +524,7 @@ def sourceProcessionBoundary : Obligation :=
         "obligation; the Q(i)-at-5 instance is constructed without sorry."
     dependsOn :=
       [ "IUT-I.hodge-theater-history-composition",
-        "IUT-III.parametric-d-stage",
+        "IUT-III.parametric-D-stage-certificates",
         "IUT-III.concrete-route-normal-form" ] }
 
 end LeanFormal.IUT.Audit

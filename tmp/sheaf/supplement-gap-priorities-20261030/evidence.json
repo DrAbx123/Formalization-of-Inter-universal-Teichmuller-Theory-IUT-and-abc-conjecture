@@ -1,0 +1,158 @@
+{
+  "schema": "iut-exploration-evidence/v1",
+  "task": "supplement-gap-priorities-20261030",
+  "captured_at_utc": "2026-10-30T09:21:15.226846+00:00",
+  "head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "version_rule": "Source bytes and hashes control; the dirty workspace is not identified by HEAD alone.",
+  "scope": "Single-agent priority review, no new mathematical proof; previous report preserved.",
+  "report": {
+    "path": "D:/lean/coord/reports/supplement-gap-priorities-20261030.md",
+    "sha256": "13090c11200bcf76f5032ebc1e707d9e9e2c29f15aee77b00012943018874ee6"
+  },
+  "node": {
+    "path": "D:/lean/dag/nodes/supplement-gap-priorities-20261030.json",
+    "sha256": "7f67296022973a20448d36e64a166a88a05f827574fa9611123151fdcc400726"
+  },
+  "source_files": [
+    {
+      "path": "D:/lean/coord/reports/gap-exploration-20261030.md",
+      "sha256": "e339f0d3db19ae2b3dcae6f42f7641602e0457e1cef90d2e8922259f92acf744",
+      "bytes": 34671,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/coord/reports/gap-exploration-20261030.md"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTIII/Corollary312/Routes.lean",
+      "sha256": "9e6aada367f7266f6352f1fabd2eba78af07a16dc0366c66a6e2904c701e44f9",
+      "bytes": 5678,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/LeanFormal/IUT/IUTIII/Corollary312/Routes.lean"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSHETransportLaws.lean",
+      "sha256": "7032fd6a893dbf822337ea9f4d3fa2224fa12b87beabc34f062499b1ae970622",
+      "bytes": 22011,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSHETransportLaws.lean"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean",
+      "sha256": "cc7d5775ee072b9c0cde34d7cb0ff43b760e729ad17738fd4b5f24cf70959560",
+      "bytes": 13550,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean",
+      "sha256": "01f055b25dde3ea142684a4b43cfee21f649003c99e452ae76d037876c1e1244",
+      "bytes": 32121,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/SourceArithmeticHolomorphicLanding.lean"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf",
+      "sha256": "c0e63b629aa174aa065e93d08defe3e5d0837c8778aab527383798baf8ca6e32",
+      "bytes": 1021306,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf",
+      "sha256": "9a32b2485b5875574d7470256d3414b88ee6ac3ed8a39a82ea7332e25072ee9c",
+      "bytes": 347480,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "bytes": 484319,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt",
+      "sha256": "4d9d62353124e9739ca1da50a083eb3f13cb227076222132e67f96413a7fe3cf",
+      "bytes": 29923,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-FINALEVALUATIONQMARK-DEPENDENCY-AUDIT-20261026.md",
+      "sha256": "401adff5cd367f210aa5b0128edbb72db3b446be5a4320313143164d3203a4d1",
+      "bytes": 7233,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/n8/closure/C9-FINALEVALUATIONQMARK-DEPENDENCY-AUDIT-20261026.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md",
+      "sha256": "f475cf0373d6f82a556ecaab7ca47dea48abda807bc818ceea74744268f64d4f",
+      "bytes": 10925,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-ROUTE-20261023.md",
+      "sha256": "216538c2d8df8a66d26a10692c5fd9e5d879ca5450b252f7756e009497d43c45",
+      "bytes": 37372,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-ROUTE-20261023.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md",
+      "sha256": "2ffd043e680061eb4bb80429643c8c873d7f242026ad2e71ea5a3bcc94f1de42",
+      "bytes": 18758,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9XiESourceConditionLogic.lean",
+      "sha256": "cfbdd627c300ea42d48f02f6a98e2aa93d3b41ec7dedbc288f33ccef762c90a1",
+      "bytes": 1400,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/n8/closure/C9XiESourceConditionLogic.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/TASK.md",
+      "sha256": "1af8dcb7c5896910670acdc0c154927b0542e8aaef0c3528e13b358c2f784f0f",
+      "bytes": 1704,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/supplement-gap-priorities-20261030/TASK.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/IPLAPTActual.lean",
+      "sha256": "dc3b976de91750c4f9309b97680be4658d6acda851f85fb13cfd74aeffd6bf8e",
+      "bytes": 11954,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/xif/paper/IPLAPTActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+      "sha256": "dc35543c0d0b71dd5369a201d4fc124d67983b7c272de7c01c9711869929ad1c",
+      "bytes": 3940,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/PaperXiFProof.lean",
+      "sha256": "c93233550b51fae764abe5c5807017b1603de530faf85a96ab2f3882c5c5f464",
+      "bytes": 11117,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/xif/paper/PaperXiFProof.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/SHEOutputActual.lean",
+      "sha256": "4efbcbd7ea040a4ea814d1fa706c3e7ed99b6c7b5cbf181614d871713f282788",
+      "bytes": 11030,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/xif/paper/SHEOutputActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/ThetaLinkActual.lean",
+      "sha256": "108b89f05ad1abc4058ce6043b3377002680ab05069bec62a4c30714050a9142",
+      "bytes": 17206,
+      "snapshot": "D:/lean/tmp/sheaf/supplement-gap-priorities-20261030/snapshots/tmp/sheaf/xif/paper/ThetaLinkActual.lean"
+    }
+  ],
+  "previous_report_unchanged": true,
+  "pdf_visual_checks": [
+    "Formalization 2026 p.10",
+    "EssLgc 2024 p.155"
+  ],
+  "other_rendered_pages_not_claimed_visually_checked": [
+    "Formalization 2026 p.11",
+    "EssLgc 2024 pp.150,153"
+  ],
+  "statement_compiles": "not_run",
+  "proof_body_checked": "not_run",
+  "kernel_closed": "not_run",
+  "target_accepted": false,
+  "not_run": [
+    "Lean",
+    "Project build",
+    "comparator",
+    "axiom probe",
+    "independent review"
+  ]
+}

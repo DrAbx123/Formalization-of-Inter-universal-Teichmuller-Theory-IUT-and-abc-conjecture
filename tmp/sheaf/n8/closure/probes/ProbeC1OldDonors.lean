@@ -1,0 +1,3 @@
+import tmp.sheaf.n8.closure.C1FromOldBindingDonors
+#print axioms LeanFormal.IUT.N8Closure.C1Actual.c1ActualData_exists_of_nativeOldBindingDonors
+#print axioms LeanFormal.IUT.N8Closure.C1Actual.sourceInputBinding_exists_of_nativeOldBindingDonors

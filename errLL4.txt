@@ -1,0 +1,16 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:77:4: error: Type mismatch
+  pow_ne_zero ?m.189 (ENNReal.ofReal_ne_zero_iff.mpr (primeFactor_pos T b))
+has type
+  ENNReal.ofReal (primeFactor T b) ^ ?m.189 ≠ 0
+but is expected to have type
+  0 < ENNReal.ofReal (primeFactor T b) ^ e b
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:83:10: error: Function expected at
+  pow_le_one₀ (le_of_lt (ENNReal.ofReal_pos.mpr (primeFactor_pos T b)))
+    (le_of_lt (ENNReal.ofReal_lt_one.mpr (primeFactor_lt_one T b)))
+but this term has type
+  ENNReal.ofReal (primeFactor T b) ^ ?m.239 ≤ 1
+
+Note: Expected a function because this term is being applied to the argument
+  _
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:122:16: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:127:10: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead

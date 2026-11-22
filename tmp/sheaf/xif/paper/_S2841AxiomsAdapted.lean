@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2842A6AllPlacesFieldsActual
+open LeanFormal.IUT.XiFPaper.S2841A6PlaceSelectionActual
+open LeanFormal.IUT.XiFPaper.S2842A6AllPlacesFieldsActual
+#print axioms S2841Q_maximal
+#print axioms S2841PlaceSelection
+#print axioms S2842A6AllPlacesFields

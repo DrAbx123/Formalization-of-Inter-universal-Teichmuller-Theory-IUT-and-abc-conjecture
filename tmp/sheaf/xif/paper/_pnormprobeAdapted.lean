@@ -1,0 +1,12 @@
+import Mathlib
+open MeasureTheory
+#check Padic.norm_eq_zpow_neg_valuation
+#check Padic.norm_p
+#check Padic.valuation
+#check Padic.norm_eq
+#check Padic.norm_def
+#check Padic.norm_eq_zpow_neg_valuation
+#check Padic.valuation_eq
+#check Padic.norm_neg
+#check Padic.norm_mul
+#check Padic.norm_pow

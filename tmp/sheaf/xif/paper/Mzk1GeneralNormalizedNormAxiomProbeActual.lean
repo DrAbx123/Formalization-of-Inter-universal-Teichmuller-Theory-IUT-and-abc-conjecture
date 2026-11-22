@@ -1,0 +1,5 @@
+/- Copyright (c) 2026 LeanFormal contributors. All rights reserved. -/
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.GeneralNormalizedNormBySpectralUniqueness
+#print axioms LeanFormal.IUT.GeneralNormalizedNormBySpectralUniqueness.generalNormalizedNormFormula
+#print axioms LeanFormal.IUT.GeneralNormalizedNormBySpectralUniqueness.normalizedCanonicalPowerComparison
+#print axioms LeanFormal.IUT.GeneralNormalizedNormBySpectralUniqueness.canonicalAbsValue_extends

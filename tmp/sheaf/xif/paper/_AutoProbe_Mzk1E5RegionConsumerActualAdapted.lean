@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1E5RegionConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5RegionConsumerActual.regionVolumeFamily_of_undilatedBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5RegionConsumerActual.heightComparisonFamily_of_undilatedBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5RegionConsumerActual.abcConjecture_of_undilatedBounds

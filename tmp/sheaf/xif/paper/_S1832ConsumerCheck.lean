@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S1832ActualCoverPullbacksActual
+
+open CategoryTheory CategoryTheory.Limits
+open LeanFormal.IUT.XiFPaper.S1832ActualCoverPullbacksActual
+
+#check S1832FirstMissing_iff_S1762
+#check S1832HasPullback_id_right
+#check S1832PreGaloisCategoryOfSquares
+
+#print axioms S1832FirstMissing_iff_hasPullbacks
+#print axioms S1832HasPullback_id_right
+#print axioms S1832HasPullbacks_of_squares

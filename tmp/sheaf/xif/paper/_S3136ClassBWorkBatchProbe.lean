@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3136Source31RemainingSlotsActual
+import tmp.sheaf.xif.paper.S3136ClassBProofStepMapActual
+import tmp.sheaf.xif.paper.S3136Cor22MainEstimateShapeActual
+import tmp.sheaf.xif.paper.S3136Cor22ConditionsShapeActual
+import tmp.sheaf.xif.paper.S3136ClassBTheoremTargetsIndexActual
+import tmp.sheaf.xif.paper.S3136ConstructibleHypothesisInstantiationActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136Source31RemainingSlotsActual.lgpSource31Data_full_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassBProofStepMapActual.lgpThm110ProofStepMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136Cor22MainEstimateShapeActual.LGPCor22MainEstimateShape
+#print axioms LeanFormal.IUT.XiFPaper.S3136Cor22ConditionsShapeActual.LGPC1Shape
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassBTheoremTargetsIndexActual.lgpClassBTheoremTargets_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ConstructibleHypothesisInstantiationActual.lgpNativeHaarFamily_provides_additiveHaar
+#print axioms LeanFormal.IUT.XiFPaper.S3136ConstructibleHypothesisInstantiationActual.lgpModelThetaPacket_provides_thetaValues

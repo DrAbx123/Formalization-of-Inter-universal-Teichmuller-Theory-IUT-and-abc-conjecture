@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G3RefutationConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RefutationConsumerActual.gapReduced_refuted
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RefutationConsumerActual.gapReducedV2_refuted
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RefutationConsumerActual.pointwiseWeakened_refuted

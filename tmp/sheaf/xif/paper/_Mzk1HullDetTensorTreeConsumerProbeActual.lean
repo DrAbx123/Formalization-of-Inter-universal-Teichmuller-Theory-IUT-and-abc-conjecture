@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullDetTensorTreeConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullDetTensorTreeConsumerActual.detTensorTree_frozenFromBundle

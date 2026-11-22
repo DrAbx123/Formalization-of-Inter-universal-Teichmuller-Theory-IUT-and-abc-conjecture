@@ -1,0 +1,768 @@
+{
+  "task": "C9-JH-OUTPUT-REGION-20261025",
+  "all_assertions_passed": true,
+  "arithmetic": "exact integer series, rational exponents, finite fields",
+  "cases": [
+    {
+      "ell": 5,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        12,
+        90,
+        520,
+        2535,
+        10896
+      ],
+      "norm_product_factor_degrees_checked": 75,
+      "transverse_constant_checks": [
+        {
+          "p": 11,
+          "discriminant_mod_p": 9,
+          "expected_ell_power_mod_p": 9
+        },
+        {
+          "p": 31,
+          "discriminant_mod_p": 25,
+          "expected_ell_power_mod_p": 25
+        }
+      ],
+      "local_regions": {
+        "N": 20,
+        "eta_exponent": 12,
+        "selected_J_q_exponent": 2,
+        "full_line_product_constant": "5^(-30)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-1/12",
+            "native_per_log_p": "-1/30",
+            "gain_needed_per_log_p": "1/20"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-1/4",
+            "native_per_log_p": "-1/10",
+            "gain_needed_per_log_p": "3/20"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-7/8",
+            "native_per_log_p": "-7/20",
+            "gain_needed_per_log_p": "21/40"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-10",
+            "native_per_log_p": "-4",
+            "gain_needed_per_log_p": "6"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 7,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        24,
+        324,
+        3200,
+        25650,
+        176256
+      ],
+      "norm_product_factor_degrees_checked": 147,
+      "transverse_constant_checks": [
+        {
+          "p": 29,
+          "discriminant_mod_p": 16,
+          "expected_ell_power_mod_p": 16
+        },
+        {
+          "p": 43,
+          "discriminant_mod_p": 36,
+          "expected_ell_power_mod_p": 36
+        }
+      ],
+      "local_regions": {
+        "N": 84,
+        "eta_exponent": 24,
+        "selected_J_q_exponent": 6,
+        "full_line_product_constant": "7^(-84)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-1/9",
+            "native_per_log_p": "-1/42",
+            "gain_needed_per_log_p": "11/126"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-1/3",
+            "native_per_log_p": "-1/14",
+            "gain_needed_per_log_p": "11/42"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-7/6",
+            "native_per_log_p": "-1/4",
+            "gain_needed_per_log_p": "11/12"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-40/3",
+            "native_per_log_p": "-20/7",
+            "gain_needed_per_log_p": "220/21"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 11,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        48,
+        1224,
+        21952,
+        309876,
+        3657312
+      ],
+      "norm_product_factor_degrees_checked": 363,
+      "transverse_constant_checks": [
+        {
+          "p": 23,
+          "discriminant_mod_p": 16,
+          "expected_ell_power_mod_p": 16
+        },
+        {
+          "p": 67,
+          "discriminant_mod_p": 23,
+          "expected_ell_power_mod_p": 23
+        }
+      ],
+      "local_regions": {
+        "N": 440,
+        "eta_exponent": 48,
+        "selected_J_q_exponent": 20,
+        "full_line_product_constant": "11^(-264)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-1/6",
+            "native_per_log_p": "-1/66",
+            "gain_needed_per_log_p": "5/33"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-1/2",
+            "native_per_log_p": "-1/22",
+            "gain_needed_per_log_p": "5/11"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-7/4",
+            "native_per_log_p": "-7/44",
+            "gain_needed_per_log_p": "35/22"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-20",
+            "native_per_log_p": "-20/11",
+            "gain_needed_per_log_p": "200/11"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 13,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        60,
+        1890,
+        41480,
+        710955,
+        10120572
+      ],
+      "norm_product_factor_degrees_checked": 507,
+      "transverse_constant_checks": [
+        {
+          "p": 53,
+          "discriminant_mod_p": 36,
+          "expected_ell_power_mod_p": 36
+        },
+        {
+          "p": 79,
+          "discriminant_mod_p": 45,
+          "expected_ell_power_mod_p": 45
+        }
+      ],
+      "local_regions": {
+        "N": 780,
+        "eta_exponent": 60,
+        "selected_J_q_exponent": 30,
+        "full_line_product_constant": "13^(-390)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-7/36",
+            "native_per_log_p": "-1/78",
+            "gain_needed_per_log_p": "85/468"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-7/12",
+            "native_per_log_p": "-1/26",
+            "gain_needed_per_log_p": "85/156"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-49/24",
+            "native_per_log_p": "-7/52",
+            "gain_needed_per_log_p": "595/312"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-70/3",
+            "native_per_log_p": "-20/13",
+            "gain_needed_per_log_p": "850/39"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 17,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        84,
+        3654,
+        109480,
+        2536485,
+        48386268
+      ],
+      "norm_product_factor_degrees_checked": 867,
+      "transverse_constant_checks": [
+        {
+          "p": 103,
+          "discriminant_mod_p": 18,
+          "expected_ell_power_mod_p": 18
+        },
+        {
+          "p": 137,
+          "discriminant_mod_p": 44,
+          "expected_ell_power_mod_p": 44
+        }
+      ],
+      "local_regions": {
+        "N": 1904,
+        "eta_exponent": 84,
+        "selected_J_q_exponent": 56,
+        "full_line_product_constant": "17^(-714)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-1/4",
+            "native_per_log_p": "-1/102",
+            "gain_needed_per_log_p": "49/204"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-3/4",
+            "native_per_log_p": "-1/34",
+            "gain_needed_per_log_p": "49/68"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-21/8",
+            "native_per_log_p": "-7/68",
+            "gain_needed_per_log_p": "343/136"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-30",
+            "native_per_log_p": "-20/17",
+            "gain_needed_per_log_p": "490/17"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 19,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        96,
+        4752,
+        161408,
+        4225320,
+        90801216
+      ],
+      "norm_product_factor_degrees_checked": 1083,
+      "transverse_constant_checks": [
+        {
+          "p": 191,
+          "discriminant_mod_p": 40,
+          "expected_ell_power_mod_p": 40
+        },
+        {
+          "p": 229,
+          "discriminant_mod_p": 75,
+          "expected_ell_power_mod_p": 75
+        }
+      ],
+      "local_regions": {
+        "N": 2736,
+        "eta_exponent": 96,
+        "selected_J_q_exponent": 72,
+        "full_line_product_constant": "19^(-912)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-5/18",
+            "native_per_log_p": "-1/114",
+            "gain_needed_per_log_p": "46/171"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-5/6",
+            "native_per_log_p": "-1/38",
+            "gain_needed_per_log_p": "46/57"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-35/12",
+            "native_per_log_p": "-7/76",
+            "gain_needed_per_log_p": "161/57"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-100/3",
+            "native_per_log_p": "-20/19",
+            "gain_needed_per_log_p": "1840/57"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 23,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        120,
+        7380,
+        309760,
+        9971610,
+        262350144
+      ],
+      "norm_product_factor_degrees_checked": 1587,
+      "transverse_constant_checks": [
+        {
+          "p": 47,
+          "discriminant_mod_p": 37,
+          "expected_ell_power_mod_p": 37
+        },
+        {
+          "p": 139,
+          "discriminant_mod_p": 64,
+          "expected_ell_power_mod_p": 64
+        }
+      ],
+      "local_regions": {
+        "N": 5060,
+        "eta_exponent": 120,
+        "selected_J_q_exponent": 110,
+        "full_line_product_constant": "23^(-1380)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-1/3",
+            "native_per_log_p": "-1/138",
+            "gain_needed_per_log_p": "15/46"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-1",
+            "native_per_log_p": "-1/46",
+            "gain_needed_per_log_p": "45/46"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-7/2",
+            "native_per_log_p": "-7/92",
+            "gain_needed_per_log_p": "315/92"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-40",
+            "native_per_log_p": "-20/23",
+            "gain_needed_per_log_p": "900/23"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 29,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        156,
+        12402,
+        669448,
+        27584115,
+        924866748
+      ],
+      "norm_product_factor_degrees_checked": 2523,
+      "transverse_constant_checks": [
+        {
+          "p": 59,
+          "discriminant_mod_p": 9,
+          "expected_ell_power_mod_p": 9
+        },
+        {
+          "p": 233,
+          "discriminant_mod_p": 141,
+          "expected_ell_power_mod_p": 141
+        }
+      ],
+      "local_regions": {
+        "N": 10556,
+        "eta_exponent": 156,
+        "selected_J_q_exponent": 182,
+        "full_line_product_constant": "29^(-2262)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-5/12",
+            "native_per_log_p": "-1/174",
+            "gain_needed_per_log_p": "143/348"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-5/4",
+            "native_per_log_p": "-1/58",
+            "gain_needed_per_log_p": "143/116"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-35/8",
+            "native_per_log_p": "-7/116",
+            "gain_needed_per_log_p": "1001/232"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-50",
+            "native_per_log_p": "-20/29",
+            "gain_needed_per_log_p": "1430/29"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 31,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        168,
+        14364,
+        832832,
+        36817326,
+        1322981856
+      ],
+      "norm_product_factor_degrees_checked": 2883,
+      "transverse_constant_checks": [
+        {
+          "p": 311,
+          "discriminant_mod_p": 40,
+          "expected_ell_power_mod_p": 40
+        },
+        {
+          "p": 373,
+          "discriminant_mod_p": 366,
+          "expected_ell_power_mod_p": 366
+        }
+      ],
+      "local_regions": {
+        "N": 13020,
+        "eta_exponent": 168,
+        "selected_J_q_exponent": 210,
+        "full_line_product_constant": "31^(-2604)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-4/9",
+            "native_per_log_p": "-1/186",
+            "gain_needed_per_log_p": "245/558"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-4/3",
+            "native_per_log_p": "-1/62",
+            "gain_needed_per_log_p": "245/186"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-14/3",
+            "native_per_log_p": "-7/124",
+            "gain_needed_per_log_p": "1715/372"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-160/3",
+            "native_per_log_p": "-20/31",
+            "gain_needed_per_log_p": "4900/93"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 37,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        204,
+        21114,
+        1477640,
+        78632055,
+        3392555292
+      ],
+      "norm_product_factor_degrees_checked": 4107,
+      "transverse_constant_checks": [
+        {
+          "p": 149,
+          "discriminant_mod_p": 80,
+          "expected_ell_power_mod_p": 80
+        },
+        {
+          "p": 223,
+          "discriminant_mod_p": 53,
+          "expected_ell_power_mod_p": 53
+        }
+      ],
+      "local_regions": {
+        "N": 22644,
+        "eta_exponent": 204,
+        "selected_J_q_exponent": 306,
+        "full_line_product_constant": "37^(-3774)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-19/36",
+            "native_per_log_p": "-1/222",
+            "gain_needed_per_log_p": "697/1332"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-19/12",
+            "native_per_log_p": "-1/74",
+            "gain_needed_per_log_p": "697/444"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-133/24",
+            "native_per_log_p": "-7/148",
+            "gain_needed_per_log_p": "4879/888"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-190/3",
+            "native_per_log_p": "-20/37",
+            "gain_needed_per_log_p": "6970/111"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 41,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        228,
+        26334,
+        2053672,
+        121614801,
+        5831453628
+      ],
+      "norm_product_factor_degrees_checked": 5043,
+      "transverse_constant_checks": [
+        {
+          "p": 83,
+          "discriminant_mod_p": 23,
+          "expected_ell_power_mod_p": 23
+        },
+        {
+          "p": 739,
+          "discriminant_mod_p": 105,
+          "expected_ell_power_mod_p": 105
+        }
+      ],
+      "local_regions": {
+        "N": 31160,
+        "eta_exponent": 228,
+        "selected_J_q_exponent": 380,
+        "full_line_product_constant": "41^(-4674)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-7/12",
+            "native_per_log_p": "-1/246",
+            "gain_needed_per_log_p": "95/164"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-7/4",
+            "native_per_log_p": "-1/82",
+            "gain_needed_per_log_p": "285/164"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-49/8",
+            "native_per_log_p": "-7/164",
+            "gain_needed_per_log_p": "1995/328"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-70",
+            "native_per_log_p": "-20/41",
+            "gain_needed_per_log_p": "2850/41"
+          }
+        ]
+      }
+    },
+    {
+      "ell": 43,
+      "unit_coefficients_checked_through_q_degree": 40,
+      "first_six_unit_coefficients": [
+        1,
+        240,
+        29160,
+        2390720,
+        148750020,
+        7489944288
+      ],
+      "norm_product_factor_degrees_checked": 5547,
+      "transverse_constant_checks": [
+        {
+          "p": 173,
+          "discriminant_mod_p": 10,
+          "expected_ell_power_mod_p": 10
+        },
+        {
+          "p": 431,
+          "discriminant_mod_p": 217,
+          "expected_ell_power_mod_p": 217
+        }
+      ],
+      "local_regions": {
+        "N": 36120,
+        "eta_exponent": 240,
+        "selected_J_q_exponent": 420,
+        "full_line_product_constant": "43^(-5160)",
+        "normalized_examples": [
+          {
+            "ord_q": "1/3",
+            "seed_per_log_p": "-11/18",
+            "native_per_log_p": "-1/258",
+            "gain_needed_per_log_p": "235/387"
+          },
+          {
+            "ord_q": "1",
+            "seed_per_log_p": "-11/6",
+            "native_per_log_p": "-1/86",
+            "gain_needed_per_log_p": "235/129"
+          },
+          {
+            "ord_q": "7/2",
+            "seed_per_log_p": "-77/12",
+            "native_per_log_p": "-7/172",
+            "gain_needed_per_log_p": "1645/258"
+          },
+          {
+            "ord_q": "40",
+            "seed_per_log_p": "-220/3",
+            "native_per_log_p": "-20/43",
+            "gain_needed_per_log_p": "9400/129"
+          }
+        ]
+      }
+    }
+  ],
+  "independent_Velu_curve_checks": [
+    {
+      "ell": 5,
+      "p": 101,
+      "curve_a": 1,
+      "curve_b": 0,
+      "curve_point_count": 100,
+      "rational_ell_torsion_count": 25,
+      "J_values_from_Velu": [
+        68,
+        36,
+        24,
+        5,
+        24,
+        36
+      ],
+      "product": 84,
+      "expected_constant_mod_p": 84
+    },
+    {
+      "ell": 7,
+      "p": 197,
+      "curve_a": 1,
+      "curve_b": 0,
+      "curve_point_count": 196,
+      "rational_ell_torsion_count": 49,
+      "J_values_from_Velu": [
+        172,
+        191,
+        182,
+        1,
+        172,
+        191,
+        1,
+        182
+      ],
+      "product": 191,
+      "expected_constant_mod_p": 191
+    },
+    {
+      "ell": 11,
+      "p": 353,
+      "curve_a": 7,
+      "curve_b": 72,
+      "curve_point_count": 363,
+      "rational_ell_torsion_count": 121,
+      "J_values_from_Velu": [
+        331,
+        131,
+        185,
+        166,
+        16,
+        122,
+        22,
+        22,
+        222,
+        256,
+        213,
+        58
+      ],
+      "product": 1,
+      "expected_constant_mod_p": 1
+    }
+  ],
+  "totals": {
+    "primes": 12,
+    "unit_coefficients_compared": 492,
+    "transverse_constant_checks": 24,
+    "native_valuation_cases": 48,
+    "independent_Velu_curves": 3
+  },
+  "scope": {
+    "general_proofs": "in companion natural-language record; finite checks supplement them",
+    "full_source_output_family_computed": false,
+    "strict_deficit_contradiction_proved": false,
+    "target_accepted": false
+  }
+}

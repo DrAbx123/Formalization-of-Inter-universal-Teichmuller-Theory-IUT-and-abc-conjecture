@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3065ChartYNonoverlapActual
+import tmp.sheaf.xif.paper.S3066ChartYOverlapPreimageActual
+noncomputable section
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.S3062ChartZPreservationProof
+open LeanFormal.IUT.XiFPaper.S3065ChartYNonoverlapActual
+open LeanFormal.IUT.XiFPaper.S3066ChartYOverlapPreimageActual
+namespace LeanFormal.IUT.XiFPaper.S3068PointRealizationClosed
+theorem S3068_pointRealization : S3062PointRealization :=
+  S3065_pointRealization S3066_chartYOverlapPreimage
+#check S3068_pointRealization
+#print axioms S3068_pointRealization
+end LeanFormal.IUT.XiFPaper.S3068PointRealizationClosed
+end

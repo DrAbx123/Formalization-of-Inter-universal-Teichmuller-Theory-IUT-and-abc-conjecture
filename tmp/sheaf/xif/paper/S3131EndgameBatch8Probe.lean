@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3131IV110ConstantArithmeticActual
+import tmp.sheaf.xif.paper.S3131GenEllEquivalenceShapeActual
+import tmp.sheaf.xif.paper.S3131BDClassCompositionActual
+import tmp.sheaf.xif.paper.S3131ThetaPilotDataShapeActual
+import tmp.sheaf.xif.paper.S3131Stage4ClassBIntegrationActual
+import tmp.sheaf.xif.paper.S3131StatementLedgerIndexActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131IV110ConstantArithmeticActual.estar_le_dstar
+#print axioms LeanFormal.IUT.XiFPaper.S3131IV110ConstantArithmeticActual.starFactor_value
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllEquivalenceShapeActual.reduction_of_equivalence
+#print axioms LeanFormal.IUT.XiFPaper.S3131BDClassCompositionActual.IsBDLe.trans
+#print axioms LeanFormal.IUT.XiFPaper.S3131ThetaPilotDataShapeActual.S3131ThetaPilotDataShape_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage4ClassBIntegrationActual.S3131Stage4ClassBIntegration_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131StatementLedgerIndexActual.S3131StatementLedgerIndex_length

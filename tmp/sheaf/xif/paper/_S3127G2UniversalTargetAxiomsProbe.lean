@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2UniversalTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalTargetActual.S3127G2QuotientUniversalOf

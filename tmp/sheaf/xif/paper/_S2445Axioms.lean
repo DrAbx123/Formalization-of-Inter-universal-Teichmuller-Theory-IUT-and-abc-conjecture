@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2445M2cExactMissingActual
+#print axioms LeanFormal.IUT.XiFPaper.S2445M2cExactMissingActual.S2445CommutatorWidthInput_of_inputs
+#print axioms LeanFormal.IUT.XiFPaper.S2445M2cExactMissingActual.S2445LocalArtinTorsionMap_of_inputs

@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1BoxPrincipalPacketAlignmentActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxPrincipalPacketAlignmentActual.principalScalarReadout_eq_log_norm

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.RestatedLemma24InductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InductionActual.s3135_polyEvalP1_comp
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InductionActual.s3135_CVInvariant_comp
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InductionActual.RestatedState

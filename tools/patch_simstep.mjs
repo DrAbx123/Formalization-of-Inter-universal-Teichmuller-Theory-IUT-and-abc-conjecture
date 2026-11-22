@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+const f='D:/lean/tools/dag_viz_server3.mjs';
+let s=readFileSync(f,'utf8');
+const a=s.indexOf('function simStep()');
+const b=s.indexOf('function fit()');
+if(a<0||b<0||b<=a) throw new Error('markers not found');
+const newSim = "function simStep(){ if(!DATA) return; const ns=filtered(); const W=innerWidth,H=innerHeight; ensurePos(ns); const set=new Set(ns.map(n=>n.id)); const es=(DATA.edges||[]).filter(e=>set.has(e.from)&&set.has(e.to)); const MINSEP=22;\n  for(const e of es){ const a=POS.get(e.from),b=POS.get(e.to); if(!a||!b) continue; const dx=b.x-a.x,dy=b.y-a.y; let d=Math.hypot(dx,dy); if(d<0.001) d=0.001; const ux=dx/d,uy=dy/d; const rest=14; const corr=Math.max(-6,Math.min(6,d-rest))*0.5; if(!(DRAG&&DRAG.id===e.from)){ a.x+=ux*corr; a.y+=uy*corr; } if(!(DRAG&&DRAG.id===e.to)){ b.x-=ux*corr; b.y-=uy*corr; } }\n  for(const e of es){ const a=POS.get(e.from),b=POS.get(e.to); if(!a||!b) continue; let dy=(b.y-a.y)+14; dy=Math.max(-4,Math.min(4,dy)); if(!(DRAG&&DRAG.id===e.to)){ b.y-=dy*0.25; } if(!(DRAG&&DRAG.id===e.from)){ a.y+=dy*0.15; } }\n  for(let pass=0;pass<4;pass++){ for(let i=0;i<ns.length;i++){ const a=POS.get(ns[i].id); for(let j=i+1;j<ns.length;j++){ const b=POS.get(ns[j].id); let dx=b.x-a.x,dy=b.y-a.y; let d2=dx*dx+dy*dy; if(d2>=MINSEP*MINSEP) continue; let d=Math.sqrt(d2); let ux,uy; if(d<0.001){ ux=Math.random()-0.5; uy=Math.random()-0.5; const nn=Math.hypot(ux,uy)||1; ux/=nn; uy/=nn; d=0.001; } else { ux=dx/d; uy=dy/d; } const push=(MINSEP-d)*0.5; if(!(DRAG&&DRAG.id===ns[i].id)){ a.x-=ux*push; a.y-=uy*push; } if(!(DRAG&&DRAG.id===ns[j].id)){ b.x+=ux*push; b.y+=uy*push; } } } }\n  for(const n of ns){ const p=POS.get(n.id); if(!p||(DRAG&&DRAG.id===n.id)) continue; p.vx*=0.5; p.vy*=0.5; if(p.x<30)p.x=30; if(p.x>W-30)p.x=W-30; if(p.y<30)p.y=30; if(p.y>H-30)p.y=H-30; } }";
+s = s.slice(0,a) + newSim + '\n' + s.slice(b);
+writeFileSync(f,s);
+console.log('simStep replaced');

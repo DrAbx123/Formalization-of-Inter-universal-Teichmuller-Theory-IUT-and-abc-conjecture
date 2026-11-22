@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.PaperThetaMagnitudeSignedActual
+#check LeanFormal.IUT.Theorem311Source.SourcePilotRegionDonors
+#check LeanFormal.IUT.XiFPaper.PaperThetaMagnitudeSignedActual.actualSignedC3

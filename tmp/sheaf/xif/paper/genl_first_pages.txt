@@ -1,0 +1,69 @@
+============================== mochizuki-mjou52.pdf pages 28
+Math. J. Okayama Univ. 52 (2010), 1 28
+ARITHMETIC ELLIPTIC CURVES
+IN GENERAL POSITION
+Shinichi MOCHIZUKI
+Abstract. We combine various well-known techniques from the theory
+of heights, the theory of  noncritical Belyi maps , and classical analytic
+number theory to conclude that the  ABC Conjecture , or, equivalently,
+the so-called  E ective Mordell Conjecture , holds for arbitrary rational
+points of the projective line minus three points if and only if it holds for
+rational points which are in  su ciently general position  in the sense
+that the following properties are satis ed: (a) the rational point under
+consideration is bounded away from the three points at in nity at a
+given  nite set of primes; (b) the Galois action on the l-power torsion
+points of the corresponding elliptic curve determines a surjection onto
+GL2(Zl), for some prime number l which is roughly of the order of
+the sum of the height of the elliptic curve and the logarithm of the
+discriminant of the minimal  eld of de nition of the elliptic curve, but
+does not divide the conductor of the elliptic curve, the rational primes
+that are absolutely rami ed in the minimal  eld of de nition of the
+elliptic curve, or the local heights [i.e., the orders of the q-parameter at
+primes of [bad] multiplicative reduction] of the elliptic curve.
+Introduction
+In the classical intersection theory of subvarieties, or cycles, on algebraic
+varieties, various versions of the  moving lemma  allow one to replace a
+given cycle by another cycle which is equivalent, from the point of view
+of intersection theory, to the given cycle, but is supported on subvarieties
+which are in a  more convenient  position   i.e., typically, a  more general 
+position, which is free of inessential, exceptional pathologies   within the
+ambient variety.
+In the present paper, after reviewing, partly for the purpose of establishing
+notation and terminology, the general theory of heights in  1, we proceed in
+ 2 to apply the theory of  noncritical Bel
+============================== mochizuki-etale-theta-frobenioid.pdf pages 112
+THE  ETALE THETA FUNCTION AND
+ITS FROBENIOID-THEORETIC MANIFESTATIONS
+Shinichi Mochizuki
+December 2008
+      
+    We develop the theory of the tempered anabelian and Frobenioid-theore-
+tic aspects of the   etale theta function , i.e., the Kummer class of the classical formal
+algebraic theta function associated to a Tate curve over a nonarchimedean mixed-
+characteristic local  eld. In particular, we consider a certain natural  environment 
+for the study of the  etale theta function, which we refer to as a  mono-theta environ-
+ment    essentially a Kummer-theoretic version of the classical theta trivialization
+  and show that this mono-theta environment satis es certain remarkable rigidity
+properties involving cyclotomes, discreteness, and constant multiples, all in a fash-
+ion that is compatible with the topology of the tempered fundamental group and the
+extension structure of the associated tempered Frobenioid.
+Contents:
+ 0. Notations and Conventions
+ 1. The Tempered Anabelian Rigidity of the  Etale Theta Function
+ 2. The Theory of Theta Environments
+ 3. Tempered Frobenioids
+ 4. General Bi-Kummer Theory
+ 5. The  Etale Theta Function via Tempered Frobenioids
+Introduction
+The fundamental goal of the present paper is to study the tempered anabelian
+[cf. [Andr e], [Mzk14]] and Frobenioid-theoretic [cf. [Mzk17], [Mzk18]] aspects of
+the theta function of a Tate curve over a nonarchimedean mixed-characteristic lo-
+cal  eld. The motivation for this approach to the theta function arises from the
+long-term goal of overcoming various obstacles that occur when one attempts to
+apply the Hodge-Arakelov theory of elliptic curves [cf.
+[Mzk4], [Mzk5]; [Mzk6],
+[Mzk7], [Mzk8], [Mzk9], [Mzk10]] to the diophantine geometry of elliptic curves
+over number  elds. That is to say, the theory of the present paper is motivated
+2000 Mathematical Subject Classi cation: Primary 14H42; Secondary 14H30.
+Typeset by AMS-TEX
+1

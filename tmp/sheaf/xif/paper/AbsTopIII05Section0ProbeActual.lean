@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.AbsTopIII05Section0ObjectsActual
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.countablyOrdered_int
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.OrientedGraph.frobeniusPictureGraph_adjacent
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.section0ObjectRows_length

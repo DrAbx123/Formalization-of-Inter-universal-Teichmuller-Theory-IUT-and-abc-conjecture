@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3134QParameterThetaScaleActual
+import tmp.sheaf.xif.paper.S3134ThetaHullDetNormalizationActual
+
+/-! Axioms probe for the S3134 fourth-joint batch 2. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134QParameterThetaScaleActual.S3134QParameter_log_scale_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3134QParameterThetaScaleActual.S3134OneColumnLogReadout_eq_gauss_mul_q
+#print axioms LeanFormal.IUT.XiFPaper.S3134QParameterThetaScaleActual.S3134QParameter_abs_log_pos_iff
+#print axioms LeanFormal.IUT.XiFPaper.S3134QParameterThetaScaleActual.S3134QThetaComparisonGap_qParameter_ne_one
+#print axioms LeanFormal.IUT.XiFPaper.S3134ThetaHullDetNormalizationActual.S3134ThetaHullDetLogVolume_eq_of_gap
+#print axioms LeanFormal.IUT.XiFPaper.S3134ThetaHullDetNormalizationActual.S3134ThetaHullDetLogVolumeSigned_eq_of_gap
+#print axioms LeanFormal.IUT.XiFPaper.S3134ThetaHullDetNormalizationActual.S3134FourthJointComposite_snd_eq_transport_thetaRegion

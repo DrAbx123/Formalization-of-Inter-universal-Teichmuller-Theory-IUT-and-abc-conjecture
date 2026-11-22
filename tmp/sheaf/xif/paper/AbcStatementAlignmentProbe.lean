@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbcStatementAlignmentActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbcStatementAlignmentActual.abcConjecture_iff_tauCeti
+#print axioms LeanFormal.IUT.XiFPaper.AbcStatementAlignmentActual.alignment_directions
+#print axioms LeanFormal.IUT.XiFPaper.AbcStatementAlignmentActual.radical_eq_ufm

@@ -303,4 +303,16 @@ def tateStableReductionBoundary : Obligation :=
       [ "Foundations.Geometry.tate-curve-local-reduction",
         "IUT-I.source-tate-stable-graph" ] }
 
+def sourceTateStableGraph : Obligation :=
+  { id := "IUT-I.source-tate-stable-graph"
+    source := "IUT I, Example 3.2(i); source semi-graph of the stable boundary"
+    status := VerificationStatus.interface
+    note :=
+      "Name-level registration of the source semi-graph carrier carried by " ++
+        "the imported `Iut.Foundations.SourceTateStableGraph` module: one " ++
+        "component and one nodal loop, with the compact marked open edge kept " ++
+        "separate. The concrete stable-reduction boundary over `Z_l` builds " ++
+        "on this graph in this module. No new mathematics is added by this " ++
+        "entry." }
+
 end LeanFormal.IUT.Audit

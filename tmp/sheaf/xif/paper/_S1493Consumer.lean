@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S1493KSideTateTransportActual
+
+open LeanFormal.IUT
+open LeanFormal.IUT.InitialThetaSource
+open LeanFormal.IUT.XiFPaper.S1493KSideTateTransportActual
+
+#check s1493CurveTransport
+#check completion_isAlgebraic
+#check sectionClosureEquiv
+#check sectionClosureEquiv_tateParameterUnit
+#check s1493KSideTateData_iff_pointTransport
+#check S1493KPointTransport

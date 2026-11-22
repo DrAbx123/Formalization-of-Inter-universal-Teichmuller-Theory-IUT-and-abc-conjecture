@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1G1P8DisplaySupplyActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1P8DisplaySupplyActual.g1p8_hCor312_supply
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1P8DisplaySupplyActual.g1p8DisplaySupply

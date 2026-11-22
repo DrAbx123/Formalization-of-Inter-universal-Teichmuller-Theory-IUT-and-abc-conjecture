@@ -1,0 +1,20 @@
+tmp\sheaf\n8\closure\TargetSignature.lean:37:0: warning: `N8TargetInput`: universes `ui`, `umon`, `upi` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+tmp\sheaf\n8\closure\TargetSignature.lean:55:8: error(lean.invalidField): Invalid field `sourceHullVolume`: The environment does not contain `LeanFormal.IUT.Theorem311Source.OriginalInput.sourceHullVolume`, so it is not possible to project the field `sourceHullVolume` from an expression
+  I.I
+of type `OriginalInput l V`
+tmp\sheaf\n8\closure\TargetSignature.lean:59:12: error(lean.invalidField): Invalid field `sourceHullVolume`: The environment does not contain `LeanFormal.IUT.Theorem311Source.OriginalInput.sourceHullVolume`, so it is not possible to project the field `sourceHullVolume` from an expression
+  I.I
+of type `OriginalInput l V`
+tmp\sheaf\n8\closure\TargetSignature.lean:69:8: error(lean.invalidField): Invalid field `sourceLocalLogDegree`: The environment does not contain `LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLocalLogDegree`, so it is not possible to project the field `sourceLocalLogDegree` from an expression
+  I.I
+of type `OriginalInput l V`
+tmp\sheaf\n8\closure\TargetSignature.lean:72:20: error(lean.invalidField): Invalid field `sourceHullVolume`: The environment does not contain `LeanFormal.IUT.Theorem311Source.OriginalInput.sourceHullVolume`, so it is not possible to project the field `sourceHullVolume` from an expression
+  I.I
+of type `OriginalInput l V`
+tmp\sheaf\n8\closure\TargetSignature.lean:80:9: error: too many explicit universe levels for `LeanFormal.IUT.N8Closure.TargetSignature.N8TargetInput`
+tmp\sheaf\n8\closure\TargetSignature.lean:81:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  AddGroup Label
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

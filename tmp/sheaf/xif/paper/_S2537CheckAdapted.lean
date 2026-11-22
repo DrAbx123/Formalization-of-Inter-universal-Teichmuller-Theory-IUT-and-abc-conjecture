@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2536LocalizedPowersActual
+#check @LeanFormal.IUT.XiFPaper.S2536LocalizedPowersActual.isIntegralClosure_localization_powers

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3136ConcreteExample36NativeDataActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136ConcreteExample36NativeDataActual.lgpConcreteExample36NativeData
+#print axioms LeanFormal.IUT.XiFPaper.S3136ConcreteExample36NativeDataActual.lgpConcreteExample36NativeData_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ConcreteExample36NativeDataActual.lgpConcreteExample36NativeData_of_completion

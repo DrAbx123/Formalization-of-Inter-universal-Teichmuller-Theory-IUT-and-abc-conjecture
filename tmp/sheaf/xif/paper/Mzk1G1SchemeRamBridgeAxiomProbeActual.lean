@@ -1,0 +1,9 @@
+/- Axiom probe for Mzk1G1SchemeRamBridgeActual (sophie 2026-11-18). -/
+import tmp.sheaf.xif.paper.Mzk1G1SchemeRamBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.mem_smoothLocus_specMap_comp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.smoothLocus_congr
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.mem_smoothLocus_specMap_algebraMap_of_smooth_away
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.mem_smoothLocus_specMap_chartMap_of_deriv_notMem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.mem_smoothLocus_specMap_evalAt_of_deriv_notMem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1SchemeRamBridgeActual.smoothAt_of_derivative_notMem_chartInf

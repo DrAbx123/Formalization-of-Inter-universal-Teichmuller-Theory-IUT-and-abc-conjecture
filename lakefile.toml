@@ -19,3 +19,31 @@ name = "LeanFormal"
 
 [[lean_lib]]
 name = "Iut"
+
+[[lean_lib]]
+name = "PadicField"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "Reciprocity"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "ClassFieldAxiom"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "Galois"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "Herbrand"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "Brauer"
+srcDir = "tmp/local-cft-port"
+
+[[lean_lib]]
+name = "ContinuousKummerTheory"
+srcDir = "tmp/local-cft-port/continuous-kummer-theory-main"

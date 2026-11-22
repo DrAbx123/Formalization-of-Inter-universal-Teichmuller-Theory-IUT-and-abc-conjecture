@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1MoebiusP1Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData.mapPoints_nonconstant
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData.mapPoints_comp_of_finite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData.derivativeNumerator_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData.mapsTo_specialSetQ_iff

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh07ConcreteBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.EtThConcreteBridgeLevel
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.etTh_sourceModel_eq_boundary_model
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.etThConcreteBridge_sourceFrobenioid_eq_boundary

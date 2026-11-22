@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1TargetImpliesFullShapeActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TargetImpliesFullShapeActual.Mzk1Lemma22Target_to_fullShape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TargetImpliesFullShapeActual.mzk1Lemma22TargetImpliesFullShape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TargetImpliesFullShapeActual.fullShape_of_induction

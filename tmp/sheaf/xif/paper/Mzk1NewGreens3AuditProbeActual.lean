@@ -1,0 +1,13 @@
+/- Read-only probes for main estimate/logQ/reading transport new greens (abc) -/
+import tmp.sheaf.xif.paper.Mzk1ABCMainEstimateActual
+import tmp.sheaf.xif.paper.Mzk1IVThm110LogQActual
+import tmp.sheaf.xif.paper.Mzk1ActualReadingTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCMainEstimateActual.abcMainEstimate_of_frontierRegionComparison
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCMainEstimateActual.abcConjecture_of_frontierHeightRegionEstimates
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCMainEstimateActual.abcFormAdditiveHeightBound_of_frontierHeightRegionEstimates
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110LogQActual.logQ_coeff_pos
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110LogQActual.logQ_bound_of_hCor312
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qNorm_le_hRoot
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qPilotLogVolumeReading_le_thetaPilotHullLogVolumeReal_of_transport
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.paperCor312Readout_of_transport

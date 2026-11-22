@@ -1,0 +1,2 @@
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.SourceQSideComparison
+#check LeanFormal.IUT.Theorem311Source.OriginalInput.sourceQSideNormalizedValue

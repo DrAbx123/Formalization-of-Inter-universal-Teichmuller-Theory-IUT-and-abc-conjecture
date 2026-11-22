@@ -1,0 +1,50 @@
+[
+ {
+  "module": "ContinuousKummerTheory.ContH1.Basic",
+  "bytes": 631504,
+  "sha": "5667742BBDD735FDB452E44E73CF8C8D221D42024D4E35B240E4985C5A781C23",
+  "mtime": "2026-11-01T16:52:53.037Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Hilbert90",
+  "bytes": 337128,
+  "sha": "220780AB6E8A3E0EF937F44FC972A93021C010B91D75269E358812F4D1106949",
+  "mtime": "2026-11-01T16:52:56.670Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.Basic",
+  "bytes": 611304,
+  "sha": "958ECF29800B5D8B2D9D82A6BF4888D5EA3F739C61DC897666EC0DB26B1CB65F",
+  "mtime": "2026-11-01T16:57:06.209Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.Equiv",
+  "bytes": 317032,
+  "sha": "78E83D6EEF80D62000C5A439BAB593C0A265F3AC0B77B7CD60EFF90A4D8DE952",
+  "mtime": "2026-11-01T16:59:07.444Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.Limit",
+  "bytes": 1029160,
+  "sha": "E5D3D47BAFA7782C4DE32D48B203519B5E97256F5099C0F371A077D61E82E646",
+  "mtime": "2026-11-01T17:01:46.402Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.ZHat",
+  "bytes": 814216,
+  "sha": "C50E8B0B2DD768552AC792CDB67CB4A603A0FFEF3F49CBEA7F1A7D7A714660BF",
+  "mtime": "2026-11-01T17:17:06.668Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.ProfiniteCompletion",
+  "bytes": 375800,
+  "sha": "38ED08B178708530DF2CA1301AC4BE4EF759A58360B2F1699822C5D9E0D79E6E",
+  "mtime": "2026-11-01T17:17:54.446Z"
+ },
+ {
+  "module": "ContinuousKummerTheory.Kummer.PAdic",
+  "bytes": 770360,
+  "sha": "5C8A0EA684AAAA4B91F535C2C368E4D672C0CCE4D058C0D5C420A91D6AD2B8CF",
+  "mtime": "2026-11-01T17:21:46.435Z"
+ }
+]

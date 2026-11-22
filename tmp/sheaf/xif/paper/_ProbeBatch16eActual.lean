@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1P1ProperFinalActual
+import tmp.sheaf.xif.paper.Mzk1URThetaHullUpperActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ProperFinalActual.p1GluedToBase_isProper
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ProperFinalActual.p1GluedToBase_isSeparated
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaHullUpperActual.padicFractionalLattice_eq_intCeil

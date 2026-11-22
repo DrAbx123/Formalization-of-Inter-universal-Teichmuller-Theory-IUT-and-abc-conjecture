@@ -1,0 +1,96 @@
+{
+  "task": "C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+    "sha256": "ec0bbb35abb1d28128a958ecbdaad27d600dfe81e1738af70ec28c0bb439e704"
+  },
+  "script": {
+    "path": "tmp/sheaf/n8/closure/c9_local_global_descent_20261024.py",
+    "sha256": "e6dfcc5f493d3df39b6bafe941ab0da86e59697882e4c0e75812ec850e4d2a34",
+    "command": "python tmp/sheaf/n8/closure/c9_local_global_descent_20261024.py",
+    "exit_code": 0
+  },
+  "certificate": {
+    "path": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-CERTIFICATE-20261024.json",
+    "sha256": "531fda10c107be448e2a1b62e2ea13063a08192dbda777889509c0d370b833ad",
+    "all_assertions_passed": true,
+    "scope": "Exact arithmetic line/Frobenioid submodel; normalization and composition bookkeeping; not complete IUT Theta-data"
+  },
+  "reused_record": {
+    "path": "tmp/sheaf/n8/closure/C9-CONTRADICTION-ATTACK-20261024.md",
+    "sha256": "bf2f92bc3e99497c1291e608cb9f6f499c4f36314a9eefb470ece529d80714ad"
+  },
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "version": "May 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf",
+      "loci": ["Example3.6(i)-(iii)", "Proposition3.7(v)", "Remark3.9.5(ix)(cQ3)", "Remark3.10.2", "Remark3.11.1(iii)", "Corollary3.12 proof(xi)"]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/The Geometry of Frobenioids I.txt",
+      "sha256": "34d0cbd7a3e583d77745e43d0a2d6ebd37626f66983d4989727e6c4ec78f3fac",
+      "version": "June 2008",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/The%20Geometry%20of%20Frobenioids%20I.pdf",
+      "loci": ["Theorem5.2(i)", "Proposition5.5(iv)", "Example6.3", "Theorem6.4(i)-(iv)"]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/The Geometry of Frobenioids II.txt",
+      "sha256": "eb58a3367c201e41288ddb4f3da6ecd8688a604b4fbce5fcc1f28a0b04f838da",
+      "version": "June 2008",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/The%20Geometry%20of%20Frobenioids%20II.pdf",
+      "loci": ["Example1.1", "Example3.3", "Example5.6", "Remark5.6.3"]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "version": "March 2024",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf",
+      "loci": ["Section3.8.2(iii)-(iv), pp122-123, LGIsl"]
+    },
+    {
+      "title": "Rene Schoof, Computing Arakelov class groups",
+      "version": "MSRI Publications 44 (2008), pp447-495",
+      "url": "https://library.slmath.org/books/Book44/files/14schoof.pdf",
+      "loci": ["Section2", "Proposition2.2", "algorithmic context"],
+      "access": "Primary publisher PDF read via web tool; local snapshot download timed out and is not claimed archived",
+      "local_sha256": null
+    }
+  ],
+  "proved_in_natural_language": [
+    "The listed cQ3 object data alone do not imply a global effective linear comparison; explicit arithmetic counterexample",
+    "The counterexample survives every finite number-field base change and every common positive tensor power",
+    "Given finite-support local comparison data, h-dQ=S-kappa, with S nonnegative",
+    "In the standard realified arithmetic model, the realified local poly-morphism data descend iff kappa=0",
+    "Finite construction of a descending multiplier using principalization and the unit logarithm basis",
+    "Arbitrary-length composition uses the model Frobenius weights; verified zero-cost isomorphisms can be eliminated",
+    "A degree-2 Frobenioid arrow does not prove the intended degree-1 volume inequality"
+  ],
+  "corrections": [
+    "Prior proposed cQ3 object-membership shortcut is insufficient; keep the actual morphism/gluing data",
+    "Do not silently replace a linear comparison by a morphism with larger Frobenius degree",
+    "Degree-zero sufficiency is for the standard realified model and local poly-morphisms after realification; not the original arithmetic category",
+    "A positive kappa is a defect of specified comparison data; the endpoint-invariant difference is kappa-S",
+    "Do not discard a genuine enlargement with positive S even if its kappa is zero"
+  ],
+  "open": [
+    "Construct actual source evaluation comparison data in the original target normalization",
+    "Prove from those source data either global descent or sufficient authorized hull/Ind3 enlargement",
+    "Original P1/P6 and fixed-native-q output coverage"
+  ],
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "actual_IUT_refutation_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

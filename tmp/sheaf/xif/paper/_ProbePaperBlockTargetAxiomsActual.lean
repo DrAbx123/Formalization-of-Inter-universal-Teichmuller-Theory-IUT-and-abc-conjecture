@@ -1,0 +1,8 @@
+/- Axiom probe for Mzk1PaperBlockTargetActual (sophie). -/
+import tmp.sheaf.xif.paper.Mzk1PaperBlockTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperBlockTargetActual.lambdaORegion_zero_mem_candidate
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperBlockTargetActual.leastLambdaOHull_subset_lambdaORegion_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperBlockTargetActual.lambdaORegion_zero_measure_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperBlockTargetActual.paperHull_measure_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperBlockTargetActual.qPilotPaperRegionLog_le_paperHullLog_unconditional

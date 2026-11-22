@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S1102PushforwardHullPositivityActual
+import tmp.sheaf.xif.paper.S1103Q1UGlobalWeightedActual
+#print axioms LeanFormal.IUT.XiFPaper.S1102PushforwardHullPositivityActual.s1102Hull_pos_fin_actual
+#print axioms LeanFormal.IUT.XiFPaper.S1103Q1UGlobalWeightedActual.s1103WeightedGlobal_of_exact
+#check LeanFormal.IUT.XiFPaper.S1103Q1UGlobalWeightedActual.s1103WeightedGlobal_of_exact

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1ChainABCClosureActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainABCClosureActualAdapted.chain_cor312Bridge_weightHeight

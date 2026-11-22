@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreChartBasicFactsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartBasicFactsActual.chartBasic_bundle

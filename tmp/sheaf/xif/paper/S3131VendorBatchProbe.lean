@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteComparisonDataActual
+import tmp.sheaf.xif.paper.S3131VendorSurveyDataActual
+import tmp.sheaf.xif.paper.S3131PaperRouteInterfaceMapActual
+import tmp.sheaf.xif.paper.S3131GenEllHonestyActual
+import tmp.sheaf.xif.paper.S3131PaperRouteThetaStatusActual
+import tmp.sheaf.xif.paper.S3131PaperRouteFieldObligationsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteComparisonDataActual.S3131PaperRouteComparisonData.magnitude_le
+#print axioms LeanFormal.IUT.XiFPaper.S3131VendorSurveyDataActual.S3131VendorSurveyAssets_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteInterfaceMapActual.S3131PaperRouteInterfaceMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllHonestyActual.S3131GenEllHonesty_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteThetaStatusActual.S3131PaperRouteThetaStatus_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteFieldObligationsActual.S3131PaperRouteFieldObligations_length

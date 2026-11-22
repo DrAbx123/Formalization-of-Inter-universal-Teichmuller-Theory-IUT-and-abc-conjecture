@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh06ThetaGroupObjectActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaGroupObjectActual.etTh_thetaCommutatorKernel_normal
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaGroupObjectActual.etTh_thetaToElliptic_mk
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaGroupObjectActual.etTh_thetaPowerKernel_normal

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1KummerThetaInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1KummerThetaInterfaceActual.kummerClass_continuous
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1KummerThetaInterfaceActual.kummerQuotient_injective
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1KummerThetaInterfaceActual.thetaPilot_orbit_containment
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1KummerThetaInterfaceActual.thetaPilot_generator_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1KummerThetaInterfaceActual.kummerThetaInterfaceRows_length

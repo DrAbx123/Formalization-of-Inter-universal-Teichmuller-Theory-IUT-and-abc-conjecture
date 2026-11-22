@@ -1,0 +1,30 @@
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:36:16: error(lean.unknownIdentifier): Unknown identifier `TemperedCover`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:37:4: error(lean.unknownIdentifier): Unknown identifier `AssociatedQuotient.IsGeometricallyConnected`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:43:10: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagram (l := l) (A := A) xF)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:49:4: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagram (l := l) (A := A) xF)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:56:26: error: Invalid argument name `l` for function
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:62:4: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagramOfSignQuotient (l := l) (A := A) R)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

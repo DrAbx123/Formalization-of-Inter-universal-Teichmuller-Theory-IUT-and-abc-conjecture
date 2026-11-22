@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3139FirstTriangleFinalCompositionLightActual
+
+-- S3139 light probe: first-triangle final composition (light) declarations.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleFinalCompositionLightActual.sourceArchimedeanCopyActionDataOfActual
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleFinalCompositionLightActual.FirstTriangleFinalResidual
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleFinalCompositionLightActual.firstTriangleFinalComposition

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtaleThetaSymmetricTruncLimitZeroActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.thetaQExponent_nat_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.etaleThetaSymmetricTrunc_coeff_zero_all
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.etaleThetaSymmetricCoeffLimit_zero

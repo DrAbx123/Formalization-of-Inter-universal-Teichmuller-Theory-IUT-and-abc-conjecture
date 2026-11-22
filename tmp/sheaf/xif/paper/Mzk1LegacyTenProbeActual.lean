@@ -1,0 +1,22 @@
+/- Read-only probes for 10 newly compiled legacy greens (abc) -/
+import tmp.sheaf.xif.paper.Mzk1CompletionMapSelfActual
+import tmp.sheaf.xif.paper.Mzk1C17QPLACEChoiceGapActual
+import tmp.sheaf.xif.paper.Mzk1PlaceEqSpecializationActual
+import tmp.sheaf.xif.paper.Mzk1BadPlaceUnitMassProductActual
+import tmp.sheaf.xif.paper.Mzk1P1FinitePlaceFvActual
+import tmp.sheaf.xif.paper.Mzk1PaperQPilotLineBundleSourceActual
+import tmp.sheaf.xif.paper.Mzk1P3WeightDegreeOneActual
+import tmp.sheaf.xif.paper.Mzk1P3DictQWeightDegreeActual
+import tmp.sheaf.xif.paper.Mzk1P3TameFromConductorActual
+import tmp.sheaf.xif.paper.Mzk1PrimeConductorWeightOneActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionMapSelfActual.completionMap_self_coe
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1C17QPLACEChoiceGapActual.qplace_comap_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PlaceEqSpecializationActual.comap_self_of_algebraMap_id
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BadPlaceUnitMassProductActual.badPlaceUnitMassProduct_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1FinitePlaceFvActual.nativeBad_localCompletionDegree_eq_relativeDegree
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperQPilotLineBundleSourceActual.qPilotIdealOfBadPrimes_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P3WeightDegreeOneActual.localCompletionDegree_eq_one_of_relativeDegree_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P3DictQWeightDegreeActual.nativeBadLocalWeight_eq_one_iff_degree_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P3TameFromConductorActual.tameConclusion_iff_unramResidueData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PrimeConductorWeightOneActual.nativeBadLocalWeight_eq_one_of_tame_data

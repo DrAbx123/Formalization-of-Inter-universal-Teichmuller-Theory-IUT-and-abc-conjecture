@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1MoebiusP1CActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MoebiusP1CActual.MoebiusDataC.derivativeNumerator_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MoebiusP1CActual.criticalValuesC_transport
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MoebiusP1CActual.MoebiusDataC.moebiusCriticalValuesC_eq_empty

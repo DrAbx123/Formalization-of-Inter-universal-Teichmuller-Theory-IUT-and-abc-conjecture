@@ -67,6 +67,11 @@ def finiteCertificateBridge : Obligation :=
     note :=
       "Contract assembly is proved once explicit target, IPL/SHE/APT evidence, " ++
         "and comparison bounds are supplied; source-facing construction of those " ++
-        "fields remains pending." }
+        "fields remains pending.  Conditional feeds from the landed cards " ++
+        "(Card-QCMP comparison faces, Card-AMPL certificate/theta slot, Card-IPL " ++
+        "exchange shape) are wired in `IUT-III.finite-certificate-link-evidence-wiring` " ++
+        "(`FiniteCertificateLinkEvidenceWiring.lean`); the (SHE)/(APT) slots remain " ++
+        "explicit parameterized ports and the source instantiation of the comparison " ++
+        "alignment remains pending." }
 
 end LeanFormal.IUT.Audit

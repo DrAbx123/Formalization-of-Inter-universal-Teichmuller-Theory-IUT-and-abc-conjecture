@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2220H1FiniteSurjActual
+#print axioms LeanFormal.IUT.XiFPaper.S2220H1FiniteSurjActual.S2220FiniteQuotientAction

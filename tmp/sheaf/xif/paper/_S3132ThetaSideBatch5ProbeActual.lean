@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3132RootedScalingDataTrivialActual
+import tmp.sheaf.xif.paper.S3132RootedScalingDataFormulaActual
+import tmp.sheaf.xif.paper.S3132ThetaSideSharpResidualReducedActual
+import tmp.sheaf.xif.paper.S3132ThetaSideComparisonRegionBundleActual
+import tmp.sheaf.xif.paper.S3132ThetaSideInventory13SlotActual
+import tmp.sheaf.xif.paper.S3132IVSection1SurveyRecordActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132RootedScalingDataTrivialActual.reducedResidual_iff_weightedIdentity
+#print axioms LeanFormal.IUT.XiFPaper.S3132RootedScalingDataTrivialActual.vformCanonical_of_weightedIdentity
+#print axioms LeanFormal.IUT.XiFPaper.S3132RootedScalingDataFormulaActual.rootedScalingDecomposition_of_paperGap
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideSharpResidualReducedActual.sharpResidual_iff_weightedIdentity
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideComparisonRegionBundleActual.comparisonRegionBundle_corollary312

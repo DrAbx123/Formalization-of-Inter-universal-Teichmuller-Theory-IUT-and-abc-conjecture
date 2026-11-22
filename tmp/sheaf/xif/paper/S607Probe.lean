@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S522QvPhiRamificationModelActual
+#check LeanFormal.IUT.XiFPaper.S522QvPhiRamificationModelActual.qvPhiRamificationModel
+#check LeanFormal.IUT.XiFPaper.S533QvPhiSubmonoidActual.qvOrderSubmonoid
+#check LeanFormal.IUT.XiFPaper.S511PhiCvCandidateActual.RamificationIndexData

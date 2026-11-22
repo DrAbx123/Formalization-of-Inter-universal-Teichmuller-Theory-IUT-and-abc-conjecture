@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1P4ProductQVolumeProofActual
+
+open LeanFormal.IUT.XiFPaper.Mzk1P4ProductQVolumeProofActual
+
+#print axioms productQLogVolume_eq_neg_sum_multiplicity_logResidue
+#print axioms productQLogVolume_eq_neg_sum_order_mul_residueDegree_logResidue
+#print axioms productQLogVolume_eq_neg_sum_n_mul_f_mul_log_residue
+#print axioms productQLogVolume_eq_sum_log_localHaarRatio

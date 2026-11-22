@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DChartDatumGreenConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DChartDatumGreenConsumerActual.dChartDatumGreen_bundle

@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S2057RootStackThetaPilotActual
+noncomputable section
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.S2057RootStackThetaPilotActual
+#check S2057RootStackThetaPilotObject
+#check s2057RootStackThetaPilotObject
+#check s2057RootStackThetaPilotObject_available
+#check sourceRoot_eq_hodgeTwoLthRoot
+#check s2057_root_pow
+#check s2057_thetaValue_eq
+#check S2057PaperUnitsAmbientData
+#check s2057Displacement
+#check s2057ThetaLink_generator
+#check S2057FirstMissing
+#check s2057ThetaLink312_of_firstMissing
+#check s2057_paperRootStackCarrier_impossible
+end

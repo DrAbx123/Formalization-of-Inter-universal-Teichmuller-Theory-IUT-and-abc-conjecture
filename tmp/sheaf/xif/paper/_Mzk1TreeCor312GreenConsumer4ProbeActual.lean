@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeCor312GreenConsumer4Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeCor312GreenConsumer4Actual.treeCor312GreenConsumer4_bundle

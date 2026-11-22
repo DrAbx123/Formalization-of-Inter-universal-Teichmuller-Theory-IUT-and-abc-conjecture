@@ -1,0 +1,4 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31RootLemmas
+open LeanFormal.IUT.Theorem311Source
+#check StageConstructionTrace
+#check LeanFormal.IUT.Theorem311Source.StageConstructionTrace

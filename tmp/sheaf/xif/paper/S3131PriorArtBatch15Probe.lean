@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131Gap2AdditiveWiringActual
+import tmp.sheaf.xif.paper.S3131OldCarrierBridgeReuseActual
+import tmp.sheaf.xif.paper.S3131OldHunitDReuseActual
+import tmp.sheaf.xif.paper.S3131CertificateThetaSlotReuseActual
+import tmp.sheaf.xif.paper.S3131RegionStatusTableActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131Gap2AdditiveWiringActual.S3131Gap2AdditiveWiring_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131OldCarrierBridgeReuseActual.S3131OldCarrierBridge_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131OldHunitDReuseActual.S3131OldHunitDReuse_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131CertificateThetaSlotReuseActual.S3131CertificateThetaSlotReuse_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131RegionStatusTableActual.S3131RegionStatusTable_length

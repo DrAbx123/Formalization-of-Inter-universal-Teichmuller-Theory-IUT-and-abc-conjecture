@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2172AffineBasisLiftActual
+open LeanFormal.IUT.XiFPaper.S2172AffineBasisLiftActual
+#print axioms S2172AffineTorsionEquiv
+#print axioms S2172AffineBasis
+#print axioms S2172AffineBasisLiftRequired_actual

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24StepProvider2Actual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StepProvider2Actual.s3135_mOfPoints_lt_of_forall_reducedDegree_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StepProvider2Actual.s3135_goal_transport

@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.GenEll21GeometricCoreConsumerActual
+open LeanFormal.IUT.XiFPaper.GenEll21GeometricCoreConsumerActual
+#check genEll21_geometricCore_consumer
+#check genEll21_geometricCore_of_problemD
+#check rational22_partial_available
+#check genEll05_ii_implies_i_consumer
+#check genEll05_ii_implies_i_consumer_with_rational22
+#print axioms genEll21_geometricCore_consumer
+#print axioms genEll21_geometricCore_of_problemD
+#print axioms rational22_partial_available
+#print axioms genEll05_ii_implies_i_consumer
+#print axioms genEll05_ii_implies_i_consumer_with_rational22

@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3135ScalingNormalizationActual
+import tmp.sheaf.xif.paper.S3135LogShellValueGroupActual
+
+/-! Axiom probes for task-11: the two F4 residual cards. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135ScalingNormalizationActual.scalingLogDegree_eq_zero_of_normalized_inequality
+#print axioms LeanFormal.IUT.XiFPaper.S3135ScalingNormalizationActual.s3135_normalization_family_iff_scalingLogDegreeZero
+#print axioms LeanFormal.IUT.XiFPaper.S3135ScalingNormalizationActual.s3135_actualF4_of_faithfulness_scalingZero
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellValueGroupActual.logDegreeAt_posRealAction_nsmul_log_q
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellValueGroupActual.s3135_degreeResidual_of_pointFaithfulness
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellValueGroupActual.s3135_actualF4_of_pointFaithfulness

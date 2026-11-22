@@ -1,0 +1,189 @@
+
+/-! ## 5. The compatibility square of the component isomorphism -/
+
+/-- The cancellation of the f-side site comparison against the inverse naturality
+comparison of the strong transformation f.map. -/
+theorem S2026FComparison_cancel (i : R.arrows.category) :
+    (S1864SiteComparisonLeft f (i.obj.hom.op.toLoc)).hom.app a
+      ≫ ((Cat.Hom.toNatIso (f.map.naturality (i.obj.hom.op.toLoc))).symm.app a).hom = 𝟙 _ :=
+  Iso.hom_inv_id_app (Cat.Hom.toNatIso (f.map.naturality (i.obj.hom.op.toLoc))) a
+
+/-- **The compatibility square** of the component of the reassembled isomorphism of
+iso-comma descent data at the index i. -/
+theorem S2026ComponentSquare (hR : R ∈ J S) (i : R.arrows.category) :
+    (f.map.app (U i.obj.left)).toFunctor.map (eA.hom.hom i) ≫ (D.obj i).obj.hom
+      = (((sitePseudofunctor f g).map (i.obj.hom.op.toLoc)).toFunctor.obj
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).obj.hom
+          ≫ (g.map.app (U i.obj.left)).toFunctor.map (eB.hom.hom i) := by
+  have hSCL := S2026FComparison_cancel (f := f) (a := a) (R := R) i
+  have h1 : (S1864SiteComparisonLeft f (i.obj.hom.op.toLoc)).hom.app a
+      ≫ (S2026MidIsoF (D := D) (a := a) (eA := eA)).hom.hom i
+      = (f.map.app (U i.obj.left)).toFunctor.map (eA.hom.hom i) := by
+    rw [S2026MidIsoF_hom, ← Category.assoc, hSCL, Category.id_comp]
+  have h1gen : ∀ {Y : C.source.fiber.obj (U i.obj.left)}
+      (k : (f.map.app (U i.obj.left)).toFunctor.obj ((S2004FstDescentData f g D).obj i) ⟶ Y),
+      (S1864SiteComparisonLeft f (i.obj.hom.op.toLoc)).hom.app a
+        ≫ ((S2026MidIsoF (D := D) (a := a) (eA := eA)).hom.hom i ≫ k)
+        = (f.map.app (U i.obj.left)).toFunctor.map (eA.hom.hom i) ≫ k := by
+    intro Y k
+    rw [← Category.assoc, h1]
+  have h2 : (S2026MidIsoG (D := D) (b := b) (eB := eB)).inv.hom.hom i
+      ≫ ((S1864SiteComparisonRight g (i.obj.hom.op.toLoc)).hom.app b
+          ≫ (g.map.app (U i.obj.left)).toFunctor.map (eB.hom.hom i)) = 𝟙 _ := by
+    rw [← S2026MidIsoG_hom]
+    exact S2026InvComp (S2026MidIsoG (D := D) (b := b) (eB := eB)) i
+  rw [S2026X_objHom, S2026X_obj_left, S2026X_obj_right, S2026X_obj_hom, S2026PsiIso_map_eq,
+    S2026MidComparison_hom]
+  simp only [Category.assoc]
+  rw [h1gen, h2]
+  simp only [Category.comp_id]
+
+/-- **The component of the reassembled isomorphism of iso-comma descent data** at the
+index i. -/
+noncomputable def S2026Component (hR : R ∈ J S) (i : R.arrows.category) :
+    ((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+      (fun (i : R.arrows.category) => i.obj.hom)).obj
+        (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).obj i ≅ D.obj i :=
+  ObjectProperty.isoMk
+    (P := fun Y : Comma (f.map.app (U i.obj.left)).toFunctor (g.map.app (U i.obj.left)).toFunctor =>
+      IsIso Y.hom)
+    (X := ((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+      (fun (i : R.arrows.category) => i.obj.hom)).obj
+        (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).obj i)
+    (Y := D.obj i)
+    (Comma.isoMk (S2026CompIso eA i) (S2026CompIso eB i)
+      (S2026ComponentSquare (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i))
+
+/-- The first projection of the component. -/
+theorem S2026Component_fst (hR : R ∈ J S) (i : R.arrows.category) :
+    (S1836IsoCommaFst (f.map.app (U i.obj.left)).toFunctor
+      (g.map.app (U i.obj.left)).toFunctor).map
+        (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i).hom
+      = eA.hom.hom i := rfl
+
+/-- The second projection of the component. -/
+theorem S2026Component_snd (hR : R ∈ J S) (i : R.arrows.category) :
+    (S1836IsoCommaSnd (f.map.app (U i.obj.left)).toFunctor
+      (g.map.app (U i.obj.left)).toFunctor).map
+        (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i).hom
+      = eB.hom.hom i := rfl
+
+/-! ## 6. The reassembled isomorphism of iso-comma descent data -/
+
+/-- **The reassembly**: the canonical descent datum of the reassembled iso-comma object
+S2026X is isomorphic to the given iso-comma descent datum D. -/
+noncomputable def S2026DescentIso (hR : R ∈ J S) :
+    (Pseudofunctor.toDescentData (sitePseudofunctor f g)
+      (fun (i : R.arrows.category) => i.obj.hom)).obj
+        (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR) ≅ D :=
+  Pseudofunctor.DescentData.isoMk
+    (fun i => S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i)
+    (by
+      intro Y q i₁ i₂ f₁ f₂ hf₁ hf₂
+      apply S1836IsoComma_hom_ext (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor
+      · simp only [Functor.map_comp]
+        have hL1 := S1956Fst_map f g (f₁.op.toLoc)
+          (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom
+        have hL2 : (A.source.fiber.map f₁.op.toLoc).toFunctor.map
+              ((S1836IsoCommaFst (f.map.app (U i₁.obj.left)).toFunctor
+                (g.map.app (U i₁.obj.left)).toFunctor).map
+                  (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom)
+            = (A.source.fiber.map f₁.op.toLoc).toFunctor.map (eA.hom.hom i₁) :=
+          congrArg (fun m => (A.source.fiber.map f₁.op.toLoc).toFunctor.map m)
+            (S2026Component_fst (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁)
+        have hL3 := S2026FstDHom (f := f) (g := g) (D := D) q i₁ i₂ f₁ f₂ hf₁ hf₂
+        have hR1 := S2026FstHom_ofObj (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR
+          q i₁ i₂ f₁ f₂ hf₁ hf₂
+        have hR2 : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)
+            = (A.source.fiber.map f₂.op.toLoc).toFunctor.map (eA.hom.hom i₂) :=
+          (S1956Fst_map f g (f₂.op.toLoc)
+            (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom).trans
+            (congrArg (fun m => (A.source.fiber.map f₂.op.toLoc).toFunctor.map m)
+              (S2026Component_fst (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂))
+        have hL : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₁.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom)
+            ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (D.hom q f₁ f₂ hf₁ hf₂)
+          = (A.source.fiber.map f₁.op.toLoc).toFunctor.map (eA.hom.hom i₁)
+            ≫ (S2004FstDescentData f g D).hom q f₁ f₂ hf₁ hf₂ :=
+          (congrArg (fun m => m ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map (D.hom q f₁ f₂ hf₁ hf₂)) hL1).trans
+            ((congrArg (fun m => m ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map (D.hom q f₁ f₂ hf₁ hf₂)) hL2).trans
+              (congrArg (fun m => (A.source.fiber.map f₁.op.toLoc).toFunctor.map (eA.hom.hom i₁)
+                ≫ m) hL3))
+        have hR : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+                (fun (i : R.arrows.category) => i.obj.hom)).obj
+                  (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom
+                  q f₁ f₂ hf₁ hf₂)
+            ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)
+          = ((Pseudofunctor.toDescentData A.source.fiber
+                (fun (i : R.arrows.category) => i.obj.hom)).obj a).hom q f₁ f₂ hf₁ hf₂
+            ≫ (A.source.fiber.map f₂.op.toLoc).toFunctor.map (eA.hom.hom i₂) :=
+          (congrArg (fun m => m ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map
+                (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                  (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)) hR1).trans
+            (congrArg (fun m => ((Pseudofunctor.toDescentData A.source.fiber
+                (fun (i : R.arrows.category) => i.obj.hom)).obj a).hom q f₁ f₂ hf₁ hf₂ ≫ m) hR2)
+        exact hL.trans ((eA.hom.comm q f₁ f₂ hf₁ hf₂).trans hR.symm)
+      · simp only [Functor.map_comp]
+        have hL1 := S1956Snd_map f g (f₁.op.toLoc)
+          (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom
+        have hL2 : (B.source.fiber.map f₁.op.toLoc).toFunctor.map
+              ((S1836IsoCommaSnd (f.map.app (U i₁.obj.left)).toFunctor
+                (g.map.app (U i₁.obj.left)).toFunctor).map
+                  (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom)
+            = (B.source.fiber.map f₁.op.toLoc).toFunctor.map (eB.hom.hom i₁) :=
+          congrArg (fun m => (B.source.fiber.map f₁.op.toLoc).toFunctor.map m)
+            (S2026Component_snd (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁)
+        have hL3 := S2026SndDHom (f := f) (g := g) (D := D) q i₁ i₂ f₁ f₂ hf₁ hf₂
+        have hR1 := S2026SndHom_ofObj (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR
+          q i₁ i₂ f₁ f₂ hf₁ hf₂
+        have hR2 : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)
+            = (B.source.fiber.map f₂.op.toLoc).toFunctor.map (eB.hom.hom i₂) :=
+          (S1956Snd_map f g (f₂.op.toLoc)
+            (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom).trans
+            (congrArg (fun m => (B.source.fiber.map f₂.op.toLoc).toFunctor.map m)
+              (S2026Component_snd (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂))
+        have hL : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₁.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₁).hom)
+            ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (D.hom q f₁ f₂ hf₁ hf₂)
+          = (B.source.fiber.map f₁.op.toLoc).toFunctor.map (eB.hom.hom i₁)
+            ≫ (S2004SndDescentData f g D).hom q f₁ f₂ hf₁ hf₂ :=
+          (congrArg (fun m => m ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map (D.hom q f₁ f₂ hf₁ hf₂)) hL1).trans
+            ((congrArg (fun m => m ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map (D.hom q f₁ f₂ hf₁ hf₂)) hL2).trans
+              (congrArg (fun m => (B.source.fiber.map f₁.op.toLoc).toFunctor.map (eB.hom.hom i₁)
+                ≫ m) hL3))
+        have hR : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+                (fun (i : R.arrows.category) => i.obj.hom)).obj
+                  (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom
+                  q f₁ f₂ hf₁ hf₂)
+            ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+              (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)
+          = ((Pseudofunctor.toDescentData B.source.fiber
+                (fun (i : R.arrows.category) => i.obj.hom)).obj b).hom q f₁ f₂ hf₁ hf₂
+            ≫ (B.source.fiber.map f₂.op.toLoc).toFunctor.map (eB.hom.hom i₂) :=
+          (congrArg (fun m => m ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor
+              (g.map.app (U Y)).toFunctor).map
+                (((sitePseudofunctor f g).map f₂.op.toLoc).toFunctor.map
+                  (S2026Component (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR i₂).hom)) hR1).trans
+            (congrArg (fun m => ((Pseudofunctor.toDescentData B.source.fiber
+                (fun (i : R.arrows.category) => i.obj.hom)).obj b).hom q f₁ f₂ hf₁ hf₂ ≫ m) hR2)
+        exact hL.trans ((eB.hom.comm q f₁ f₂ hf₁ hf₂).trans hR.symm))
+
+end Core

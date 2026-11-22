@@ -1,0 +1,6 @@
+import LeanFormal.IUT.ABCBridge.Arithmetic.ABCHeightArithmeticWeightComparison
+import LeanFormal.IUT.ABCBridge.Bridge.ABCEllipticHeightCriterion
+#print axioms LeanFormal.IUT.abcConjecture_iff_ABCHeightWeightAdditiveBoundV2
+#print axioms LeanFormal.IUT.abcConjecture_iff_freyJProductHeightCriterion
+#print axioms LeanFormal.IUT.abcConjecture_iff_freyJDenominatorHeightCriterion
+#print axioms LeanFormal.IUT.abcConjecture_iff_legendreJProductHeightCriterion

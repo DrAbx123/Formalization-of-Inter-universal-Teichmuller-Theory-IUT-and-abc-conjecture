@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll02cFinitenessInputActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll02cFinitenessInputActual.Prop14FinitenessPaperInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll02cFinitenessInputActual.prop14_iv_of_finitenessInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll02cFinitenessInputActual.s3135FinitenessCitations

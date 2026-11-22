@@ -1,0 +1,20 @@
+import tmp.sheaf.xif.paper.S3134FourthJointTriangleActual
+import tmp.sheaf.xif.paper.S3128Stage1FourthJointFullChainActual
+
+/-! Axioms probe for the S3134 fourth-joint batch (incl. signed-theta target). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointFullChainActual.S3128Stage1FourthJointFullChain
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointCompositeActual.S3134FourthJointComposite
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointCompositeActual.S3134FourthJointComposite_snd_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointCompositeActual.S3134HullDetReadout_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointCompositeActual.S3134SHEHDDHLatticeIdentification_rank
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointCompositeActual.S3134SHEHDDLoopData_ofActuals
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134QParameter_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134ThetaHullLogVolumeSigned_nonpos
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134QThetaComparison_ray_iff_magnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134QThetaComparison_magnitude_trivial
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134QThetaComparisonData
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointQThetaActual.S3134QThetaComparison_final
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointTriangleActual.S3134FourthJointTriangle_ofActuals
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointTriangleActual.S3134FourthJointTriangle_ipl_inputLink_eq_composite
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointTriangleActual.S3134FourthJointTriangle_final

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3132SharperThetaTargetReductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132SharperThetaTargetReductionActual.MissingCanonicalRootedThetaReadout_of_factor_zero_and_VForm
+#print axioms LeanFormal.IUT.XiFPaper.S3132SharperThetaTargetReductionActual.canonicalTarget_iff_factor_zero_of_VForm
+#print axioms LeanFormal.IUT.XiFPaper.S3132SharperThetaTargetReductionActual.canonicalTarget_iff_factor_eq

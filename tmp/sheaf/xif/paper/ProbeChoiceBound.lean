@@ -1,0 +1,4 @@
+import LeanFormal.IUT.IUTIV.Estimates.StepVProcessionAverage
+#check LeanFormal.IUT.IUTIV.StepVProcessionAverage.collectionChoiceBound
+#check LeanFormal.IUT.IUTIV.Estimates.StepVProcessionAverage.collectionChoiceBound
+#check LeanFormal.IUT.IUTIV.Estimates.collectionChoiceBound

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1QPilotNormPackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1QPilotNormPackageActual.qpilot_norm_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1QPilotNormPackageActual.localLogMagnitude_eq_neg_signed

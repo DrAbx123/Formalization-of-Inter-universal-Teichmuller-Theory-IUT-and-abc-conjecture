@@ -1,0 +1,7 @@
+'LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.abcConjecture_of_cRouteAssembly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.freyPackage_shape_of_assembly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.cRouteAssemblyRows_length' does not depend on any axioms

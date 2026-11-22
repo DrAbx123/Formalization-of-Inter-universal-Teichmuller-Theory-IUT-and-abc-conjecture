@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3139VendorCorollarySchemaActual
+import tmp.sheaf.xif.paper.S3139ConventionAbsorbedNeutralRegionActual
+import tmp.sheaf.xif.paper.S3139VendorProcessionLogVolumeLawsActual
+import tmp.sheaf.xif.paper.S3139RouteFinalResidualActual
+import tmp.sheaf.xif.paper.S3139Batch3ChecklistActual
+
+-- S3139 batch4 probe: CorollarySchema adaptation, convention absorption, log-volume laws,
+-- route final residual record.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorCorollarySchemaActual.sourceCor312ComparisonDataOfContract
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorCorollarySchemaActual.SourceCor312ComparisonData.qPilot_positive
+#print axioms LeanFormal.IUT.XiFPaper.S3139ConventionAbsorbedNeutralRegionActual.sourceConvention_absorbed_by_neutral_invariant_region
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorProcessionLogVolumeLawsActual.normalizedThenScaled_law
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteFinalResidualActual.firstTriangleRouteComposition_of_finalResidual

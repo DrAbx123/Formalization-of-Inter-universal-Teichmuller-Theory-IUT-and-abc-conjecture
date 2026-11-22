@@ -1,0 +1,3 @@
+import tmp.sheaf.n8.closure.C8DegreeActual
+#print axioms LeanFormal.IUT.N8Closure.C8DegreeActual.actualArithmeticDegree_eq_c8NormalizedLogVolume_of_residual
+#print axioms LeanFormal.IUT.N8Closure.C8DegreeActual.c8RelativeDetDegree_eq_actualArithmeticDegree

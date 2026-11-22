@@ -1,0 +1,32 @@
+{
+  "verified_at_utc": "2026-10-30T08:10:45.634051+00:00",
+  "kind": "documentation_and_snapshot_only",
+  "report_links_count": 75,
+  "unique_sources_captured": 78,
+  "missing_links": [],
+  "out_of_bounds_lines": [],
+  "source_changed_during_capture": [],
+  "snapshot_hash_errors": [],
+  "json_checks": {
+    "dag/nodes/gap-exploration-20261030.json": "parsed",
+    "tmp/sheaf/gap-exploration-20261030/evidence.json": "parsed",
+    "tmp/sheaf/gap-exploration-20261030/search-results.json": "parsed"
+  },
+  "new_node_references_exist": {
+    "xif-source-construction": true
+  },
+  "new_direct_back_edge": false,
+  "dag_check_scope": "Only this new node and its immediate existing consumer reference; no full historical DAG validation claimed.",
+  "search_exit_codes": {
+    "k_side_existing_and_consumers": 0,
+    "tensor_hull_existing": 0,
+    "measure_existing": 0,
+    "norm_candidates_production_and_history": 0,
+    "mathlib_norm_primitives": 0,
+    "latest_interface_shapes": 0,
+    "historical_tensor_build_evidence": 0,
+    "abc_boundary": 0
+  },
+  "no_lean_commands": true,
+  "pass": true
+}

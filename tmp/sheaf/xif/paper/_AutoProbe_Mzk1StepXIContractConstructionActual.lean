@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIContractConstructionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIContractConstructionActual.StepXIContractSourceData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIContractConstructionActual.StepXIContractSourceData.toContract
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIContractConstructionActual.sourceData_contract_exists

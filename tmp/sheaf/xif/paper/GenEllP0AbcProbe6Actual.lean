@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.GenEll01dHeightWiringActual
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01dHeightWiringActual.s3135_hBox_one
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01dHeightWiringActual.s3135_genEllHeight_mul_le_nonneg

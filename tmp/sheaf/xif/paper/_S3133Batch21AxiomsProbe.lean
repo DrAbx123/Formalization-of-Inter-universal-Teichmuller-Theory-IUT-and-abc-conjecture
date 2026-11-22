@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3133GaussianModelMapResidualFinalActual
+
+/-! Axioms probe: final R1 minimal residual (M1 + M2b). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133GaussianModelMapResidualFinalActual.S3133GaussianModelMapResidualFinal_m0
+#print axioms LeanFormal.IUT.XiFPaper.S3133GaussianModelMapResidualFinalActual.S3133GaussianModelMapResidualFinal_m3
+#print axioms LeanFormal.IUT.XiFPaper.S3133GaussianModelMapResidualFinalActual.S3133GaussianModelMapResidualFinal_of_minimal
+#print axioms LeanFormal.IUT.XiFPaper.S3133GaussianModelMapResidualFinalActual.S3133GaussianQParameterMatchAtBase_iff_clauseB
+#print axioms LeanFormal.IUT.XiFPaper.S3133GaussianModelMapResidualFinalActual.S3137R1_interface_final

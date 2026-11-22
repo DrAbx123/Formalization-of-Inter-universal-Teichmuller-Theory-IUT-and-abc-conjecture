@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeIQHullGreenAllActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeIQHullGreenAllActual.treeIQHullGreenAll_bundle

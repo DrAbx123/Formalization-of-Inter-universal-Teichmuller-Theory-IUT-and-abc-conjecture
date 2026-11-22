@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll07Section4StatementsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.GenEllS4StatementRow
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.genEllSection4Statements
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.genEllSection4Statements_length

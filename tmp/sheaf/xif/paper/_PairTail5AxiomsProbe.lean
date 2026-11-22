@@ -1,0 +1,3 @@
+import Iut.Foundations.SourceFrobenioidSystemPairFieldsSystemDataLabelActionReindexedSystemDataConsumer
+
+#print axioms Iut.FrobenioidSystem.PairFields.toSystemDataReindexedData

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll08MainReductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll08MainReductionActual.GenEllMainReductionStatement
+#print axioms LeanFormal.IUT.XiFPaper.GenEll08MainReductionActual.genEll_mainReduction_shape
+#print axioms LeanFormal.IUT.XiFPaper.GenEll08MainReductionActual.GenEllIUTIVSection2Consumer

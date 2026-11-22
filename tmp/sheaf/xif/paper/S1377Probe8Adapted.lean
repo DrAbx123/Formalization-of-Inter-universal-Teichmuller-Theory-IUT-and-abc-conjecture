@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S1372XCoordinateFormulaActual
+#check AddMonoid.nsmul_succ
+#check AddMonoid.nsmul_succ'
+#check AddMonoid.nsmul_zero
+#check nsmul_succ
+#check nsmul_succ'
+#check succ_nsmul
+#check AddMonoid.nsmul
+#check nsmul_eq_mul
+#check Nat.succ_eq_add_one

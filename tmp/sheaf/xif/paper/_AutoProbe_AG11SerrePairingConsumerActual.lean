@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG11SerrePairingConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG11SerrePairingConsumerActual.ag11ResidueTheorem
+#print axioms LeanFormal.IUT.XiFPaper.AG11SerrePairingConsumerActual.ag11SerrePairing_apply_mk
+#print axioms LeanFormal.IUT.XiFPaper.AG11SerrePairingConsumerActual.ag11SerdeReuse

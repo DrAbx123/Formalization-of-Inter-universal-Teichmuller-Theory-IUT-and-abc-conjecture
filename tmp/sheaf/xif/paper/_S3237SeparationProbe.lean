@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22HypPreservationSeparationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationSeparationActual.fq_ge_two_of_ge_two
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationSeparationActual.fq_le_one_of_mem_unit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationSeparationActual.lam_b_ge_two
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationSeparationActual.hyp_separation

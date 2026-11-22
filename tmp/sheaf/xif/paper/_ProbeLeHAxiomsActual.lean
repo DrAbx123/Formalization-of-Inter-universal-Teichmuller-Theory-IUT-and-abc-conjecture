@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BoxR2PaperThetaLeHActual
+set_option maxHeartbeats 8000000
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxR2PaperThetaLeHActual.paperThetaWeighted_le

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.ResidueCardBridgeAttempt
+import tmp.sheaf.xif.paper.Node09HresidueDegreeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.ResidueCardBridgeAttempt.logShellResidueCard_eq_absNorm
+#print axioms LeanFormal.IUT.XiFPaper.ResidueCardBridgeAttempt.logShellResidueCard_eq_residueNormBase
+#print axioms LeanFormal.IUT.XiFPaper.Node09HresidueDegreeActual.localResidueDegree_rat_eq_actualFn

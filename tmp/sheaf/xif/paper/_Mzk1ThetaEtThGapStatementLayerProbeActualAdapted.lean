@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1ThetaEtThGapStatementLayerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ThetaEtThGapStatementLayerActualAdapted.thetaEtThGapRows_length

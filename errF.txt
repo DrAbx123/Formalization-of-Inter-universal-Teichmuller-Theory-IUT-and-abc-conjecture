@@ -1,0 +1,6 @@
+'LeanFormal.IUT.XiFPaper.Mzk1FinalConditionalABCActual.final_conditional_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1FinalConditionalABCActual.final_theorem_package' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

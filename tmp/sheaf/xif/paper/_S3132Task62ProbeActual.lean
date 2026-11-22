@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3132UniformIndexConstructibleActual
+import tmp.sheaf.xif.paper.S3132UniformFiberMissingActual
+import tmp.sheaf.xif.paper.S3132UniformDependencyOrderActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132UniformIndexConstructibleActual.card_eq_of_missingData
+#print axioms LeanFormal.IUT.XiFPaper.S3132UniformFiberMissingActual.missingC3PacketUniformComparison_of_index_and_fiber
+#print axioms LeanFormal.IUT.XiFPaper.S3132UniformDependencyOrderActual.missingData_iff_pair
+#print axioms LeanFormal.IUT.XiFPaper.S3132UniformDependencyOrderActual.rank_card_of_missing

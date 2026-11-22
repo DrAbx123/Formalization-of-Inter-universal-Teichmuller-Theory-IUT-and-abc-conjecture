@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceUnramifiedCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.gPoly_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.gPoly_unramified_infty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.GChoiceDataUnramifiedShape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.canonicalBelyi_criticalPoints_row
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.canonicalBelyi_criticalValues_row
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.gChoice_unramified_of_criticalInTarget
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.mzk1GChoiceUnramifiedRows

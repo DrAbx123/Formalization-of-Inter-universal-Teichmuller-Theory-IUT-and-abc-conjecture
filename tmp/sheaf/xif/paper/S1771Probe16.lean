@@ -1,0 +1,12 @@
+import Mathlib.RingTheory.Etale.Finite
+import Mathlib.Algebra.Algebra.Prod
+#check @AlgEquiv.refl
+#check AlgEquiv.ofRingEquiv_apply
+#check AlgEquiv.coe_ofRingEquiv
+#check AlgEquiv.ofRingEquiv_symm_apply
+#check AlgEquiv.prodCongr_apply
+#check Equiv.prodCongr_apply
+#check AlgEquiv.refl_apply
+#check Ideal.Quotient.mk_surjective
+#check Module.Finite.of_surjective
+#check Module.Finite.quotient

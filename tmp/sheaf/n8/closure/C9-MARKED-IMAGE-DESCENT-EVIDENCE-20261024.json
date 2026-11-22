@@ -1,0 +1,97 @@
+{
+  "task": "C9-MARKED-IMAGE-DESCENT-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "status": "User correction incorporated: original contradiction target restored; no new contradiction or P6 proof",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-MARKED-IMAGE-DESCENT-20261024.md",
+    "sha256": "5485c9195c32d75f1fc4560b63f7befa5d37e48223b6102de1678b0f4701b521"
+  },
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "version": "December 2020",
+      "loci": [
+        "Cor4.8(iii)",
+        "Rmk4.8.1-2",
+        "Def4.9"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "version": "May 2020",
+      "loci": [
+        "Rmk2.4.2",
+        "Prop3.7(v)",
+        "Rmk3.9.5(cQ3,cQ4,Ob9)",
+        "Rmk3.10.2",
+        "Rmk3.11.1(iii)",
+        "Cor3.12 proof(xi-c)-(xi-f)"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "version": "March 2024",
+      "loci": [
+        "section3.10 Stp4-Stp8"
+      ]
+    }
+  ],
+  "offline_diagnostics": {
+    "script": {
+      "path": "tmp/sheaf/n8/closure/c9_marked_image_descent_20261024.py",
+      "sha256": "e4c4e9e1d9acfc3b4e2f9819f479401054cfa94939dbea6f8de4d81e6c521a32"
+    },
+    "certificate": {
+      "path": "tmp/sheaf/n8/closure/C9-MARKED-IMAGE-DESCENT-CERTIFICATE-20261024.json",
+      "sha256": "0eabae3d9a06110249890754f42238b95cb47fd59fafd8d78bdfebb0a80e556b"
+    },
+    "execution": "Executed previously in this work package, exit 0; not rerun after documentation-only correction",
+    "all_assertions_passed": true,
+    "scope": "Arithmetic category and nonunit Kummer model checks do not use the original bad-hull assumption and are pruned from the main attack"
+  },
+  "reused_records": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-CONTRADICTION-CONTAINERS-20261024.md",
+      "sha256": "6a0f21aa14f7044150edcab9bd753716b1e4858bcfec8a92cb9c262fbf701e9d"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+      "sha256": "ec0bbb35abb1d28128a958ecbdaad27d600dfe81e1738af70ec28c0bb439e704"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+      "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+    }
+  ],
+  "locked_target": {
+    "full_target": "For each original admissible complete C, preserve the association of its fixed native q to source-allowed final output data; produce its normalized volume class or the source-authorized one-sided approximation",
+    "approximation": "For every eps>0, some source-allowed final E has nu(E)>Q_C-eps",
+    "negation": "There exist an admissible C and eps0>0 such that every final source-allowed E has nu(E)<=Q_C-eps0",
+    "numeric_core": "Q_C<=nu(H_C), with the independently constructed actual full output hull and the already justified enlargement/readout interfaces",
+    "frozen": "same C, q, original gluing, target column, normalization"
+  },
+  "corrections": [
+    "Do not replace full-family coverage by per-branch volume preservation",
+    "Do not replace the original target by zero defect or global descent of every comparison",
+    "Hull-approximants preserve global volume but need not be pointwise contained in the original hull",
+    "One-sided approximation failure is a uniform positive gap, not merely absence of exact equality",
+    "No claim that auxiliary Kummer no-go is progress toward the actual contradiction"
+  ],
+  "next_action": "Under fixed bad h_C<Q_C, trace the actual source composite through the composite input/output labels in Stp7 and target-column log-Kummer readout; construct an actual escaping output or witness family without assuming preservation, global descent or compensation",
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root natural-language self-review only",
+    "actual_source_contradiction_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

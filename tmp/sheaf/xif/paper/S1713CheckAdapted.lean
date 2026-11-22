@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S1711RationalSplitAtFiveBridge
+#check S1711RationalSplitAtFive
+#check LeanFormal.IUT.XiFPaper.S1713SplitReductionActual.S1713_splitMultiplicativeReductionAtFive
+#print axioms S1711RationalSplitAtFive
+#print axioms LeanFormal.IUT.XiFPaper.S1713SplitReductionActual.S1713_splitMultiplicativeReductionAtFive

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.PaperQPilotObject
+#check LeanFormal.IUT.Theorem311Source.SourceProcessionBoundary.Input
+#check LeanFormal.IUT.Theorem311Source.OrigXiFPaperQPilotScalarExactFirstField

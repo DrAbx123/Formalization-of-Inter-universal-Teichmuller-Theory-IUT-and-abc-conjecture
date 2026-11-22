@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S1051PaperGlobalFinalActual
+#print axioms LeanFormal.IUT.XiFPaper.S1051PaperGlobalFinalActual.s1051FinalCor312
+#print axioms LeanFormal.IUT.XiFPaper.S1051PaperGlobalFinalActual.s1051PaperFinalCor312_of_input
+#check LeanFormal.IUT.XiFPaper.S1051PaperGlobalFinalActual.s1051FinalCor312

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2067PaperOActualParts
+#print axioms LeanFormal.IUT.XiFPaper.S2067PaperOActualParts.s2067PaperOActualParts
+#print axioms LeanFormal.IUT.XiFPaper.S2067PaperOActualParts.s2067PaperOActualParts_nonempty

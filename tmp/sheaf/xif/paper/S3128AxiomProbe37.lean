@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S3128SpecAutNaturalAttempt
+open LeanFormal.IUT.XiFPaper.S3128SpecAutNaturalAttempt

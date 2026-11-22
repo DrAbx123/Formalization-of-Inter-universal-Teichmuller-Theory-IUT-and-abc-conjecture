@@ -1,0 +1,8 @@
+/- Read-only final axiom probes (abc) -/
+import tmp.sheaf.xif.paper.Mzk1P0FinalS3137ConditionalActual
+import tmp.sheaf.xif.paper.Mzk1B5AssemblyNoHproductAttemptActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalPaperNormalizedComparison
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalLPaperInstance
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalBridgeConditions_of
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1B5AssemblyNoHproductAttemptActual.qPilotDetArithmeticDegree_eq_finiteIndex_add_arch_add_global_of_bridge

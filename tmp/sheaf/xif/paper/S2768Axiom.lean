@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2768FiveTorsionCardActual
+#print axioms LeanFormal.IUT.XiFPaper.S2768FiveTorsionCardActual.S2768_prePsi5_natDegree
+#print axioms LeanFormal.IUT.XiFPaper.S2768FiveTorsionCardActual.S2768_prePsi5_roots_card_auto
+#print axioms LeanFormal.IUT.XiFPaper.S2768FiveTorsionCardActual.S2768_fiveCriterion
+#print axioms LeanFormal.IUT.XiFPaper.S2768FiveTorsionCardActual.S2768_fiveTorsion_card

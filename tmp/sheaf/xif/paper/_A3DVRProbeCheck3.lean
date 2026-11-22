@@ -1,0 +1,10 @@
+import Mathlib
+#check @IsLocalization.nontrivial
+#check @IsLocalization.isDomain_of_le_nonZeroDivisors
+#check @IsLocalization.isDedekindDomain
+#check @intCast_zmod_eq_zero_iff_dvd
+#check @ZMod.intCast_zmod_eq_zero_iff_dvd
+#check @ZMod.natCast_zmod_eq_zero_iff_dvd
+#check @isUnit_iff_ne_zero
+#check @Int.castRingHom
+#check @IsLocalization.lift

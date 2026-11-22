@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2517RepresentableFiniteEtaleActual
+#print axioms LeanFormal.IUT.XiFPaper.S2517RepresentableFiniteEtaleActual.S2517Projection

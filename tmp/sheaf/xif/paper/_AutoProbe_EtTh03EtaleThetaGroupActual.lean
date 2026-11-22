@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh03EtaleThetaGroupActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh03EtaleThetaGroupActual.etTh_thetaCommutatorKernel_normal
+#print axioms LeanFormal.IUT.XiFPaper.EtTh03EtaleThetaGroupActual.etTh_thetaCommutatorKernel_le_derivedSubgroup
+#print axioms LeanFormal.IUT.XiFPaper.EtTh03EtaleThetaGroupActual.etTh_integralTateReduction_surjective

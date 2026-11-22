@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreLineBundleInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleInterfaceActual.LineBundlePullbackInterface
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleInterfaceActual.finrank_functionFieldSections_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleInterfaceActual.degree_eq_of_interface

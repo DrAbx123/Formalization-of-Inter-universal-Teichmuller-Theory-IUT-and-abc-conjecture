@@ -1,3 +1,54 @@
+# build outputs / caches
 /.lake
-/tmp
+/.lean-shadow
+/.tmpbuild
+/.scratch
+/.codex
+/.claude
+/.dsh-*
 /logs
+/%SystemDrive%/
+/dag/generated
+/dag/nodes
+/dag/watchdog
+/external
+/papers
+/vendor
+/tools/dsh-16g
+/tools/tectonic-0.17.0
+/tools/__pycache__
+__pycache__/
+*.pyc
+
+# project sources under tmp (everything else under tmp ignored)
+/tmp/*
+!/tmp/sheaf/
+!/tmp/sheaf/**
+!/tmp/local-cft-port/
+!/tmp/local-cft-port/**
+
+# generated Lean/build artifacts
+*.olean
+*.olean.private
+*.ilean
+*.trace
+*.server
+*.private
+*.hash
+*.norm
+*.c
+*.ir
+
+# logs / results / probe artifacts
+*.log
+*.out
+*.err
+*.time
+*.status
+*.exit
+*.bak*
+*.lock
+*.fdb_latexmk
+*.gz
+*.tar.gz
+*.zip

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1PreObjectStatementLayerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PreObjectStatementLayerActualAdapted.cor312Uncond_baseAxioms
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PreObjectStatementLayerActualAdapted.preObjectStatementLayerRows_length

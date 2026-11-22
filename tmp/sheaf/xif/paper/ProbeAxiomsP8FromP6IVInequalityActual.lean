@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1P8FromP6IVInequalityActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8FromP6IVInequalityActual.abcConjecture_of_p6IVInequality
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8FromP6IVInequalityActual.p8UniformHeightBound_of_p6IVInequality
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8FromP6IVInequalityActual.p8FromP6IVInequality_combined

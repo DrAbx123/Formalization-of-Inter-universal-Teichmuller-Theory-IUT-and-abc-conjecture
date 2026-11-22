@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1GeometricCoreRealStructureActual
+import tmp.sheaf.xif.paper.Mzk1Thm25ConclusionActual
+import tmp.sheaf.xif.paper.IUTExternalFrdDefsActual
+import tmp.sheaf.xif.paper.IUTExternalEtThStatementsActual
+import tmp.sheaf.xif.paper.IUTExternalCbGCStatementsActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCoreRealStructureActual.Mzk1RiemannRochRows_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25ConclusionActual.mzk1Thm25Conclusion_of_geometricCore
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25ConclusionActual.mzk1Thm25ResidualObligations_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalFrdDefsActual.iutExternalFrdStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalEtThStatementsActual.iutExternalEtThStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalCbGCStatementsActual.iutExternalCbGCStatements_length

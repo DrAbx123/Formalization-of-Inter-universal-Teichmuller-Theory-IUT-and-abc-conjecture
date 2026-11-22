@@ -1,0 +1,14 @@
+import Mathlib.Algebra.GroupWithZero.NonZeroDivisors
+import Mathlib.GroupTheory.Perm.Fin
+#check @Submonoid.closure_induction
+#check @Submonoid.closure_induction'
+#check @Subgroup.closure_induction
+#check @Submonoid.closure_induction_left
+#check @Tuple.sort
+#check @List.sort
+#check @Int.odd_iff_not_even
+#check @Int.not_even_iff_odd
+#check @Int.negOnePow_eq_iff
+#check @Int.two_mul_ediv_two_of_even
+#check @Int.mul_ediv_cancel'
+#check @Int.add_two_le_iff_lt_of_even_sub

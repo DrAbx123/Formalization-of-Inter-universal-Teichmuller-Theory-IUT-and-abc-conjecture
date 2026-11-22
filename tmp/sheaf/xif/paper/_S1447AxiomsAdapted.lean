@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1447ReportFMarkedTraceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.c9IplComposite_eq_markedMap
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.readout_qMark_eq_sourceQSide
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.readout_qMark_le_hullLog_of_bdd
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.s1447Comparison_of_bdd
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.valueLayerExactOutputWitness
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.s1447Comparison_of_signedCoverage
+#print axioms LeanFormal.IUT.XiFPaper.S1447MarkedTraceActual.s1447PaperComparison_of_outputReadoutProjection

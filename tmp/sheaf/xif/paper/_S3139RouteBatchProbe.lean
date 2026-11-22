@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.S3139VendorSurveyActual
+import tmp.sheaf.xif.paper.S3139TensorPacketScalarLogVolumeActual
+import tmp.sheaf.xif.paper.S3139C3ConventionRegionTransferActual
+import tmp.sheaf.xif.paper.S3139FirstTriangleRouteConclusionActual
+import tmp.sheaf.xif.paper.S3139MultiradialProcessionConsumerActual
+import tmp.sheaf.xif.paper.S3139RouteRegistryIdsActual
+import tmp.sheaf.xif.paper.S3139ComparisonRegionNeutralActual
+import tmp.sheaf.xif.paper.S3139VendorProcessionLogVolumeActual
+import tmp.sheaf.xif.paper.S3139RouteResidualNamedActual
+
+-- S3139 batch probe: C3 integration + route composition + vendor-adapted tools.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139TensorPacketScalarLogVolumeActual.sourceLGP_linearReadout_action
+#print axioms LeanFormal.IUT.XiFPaper.S3139C3ConventionRegionTransferActual.sourceConventionRegion_transfer
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleRouteConclusionActual.firstTriangleRouteConclusion
+#print axioms LeanFormal.IUT.XiFPaper.S3139MultiradialProcessionConsumerActual.sourceMultiradialProcessionConsumer
+#print axioms LeanFormal.IUT.XiFPaper.S3139ComparisonRegionNeutralActual.SourceConventionNeutralRegion.mem_transfer
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorProcessionLogVolumeActual.SourceProcessionTensorPacketLogVolume.logVolume_action
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteResidualNamedActual.firstTriangleRouteComposition_of_named
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleRouteCompositionActual.firstTriangleRouteComposition
+#print axioms LeanFormal.IUT.XiFPaper.S3139C3ConventionRegionConsumerActual.sourceInd1Convention_reindex_image

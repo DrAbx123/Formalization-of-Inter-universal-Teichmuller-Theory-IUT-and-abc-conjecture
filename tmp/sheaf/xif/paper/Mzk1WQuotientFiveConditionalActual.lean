@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Ind1WQuotientFiveIsoActual
+import Mathlib.Tactic
+
+noncomputable section
+namespace LeanFormal.IUT.XiFPaper.Mzk1WQuotientFiveConditionalActual
+end LeanFormal.IUT.XiFPaper.Mzk1WQuotientFiveConditionalActual

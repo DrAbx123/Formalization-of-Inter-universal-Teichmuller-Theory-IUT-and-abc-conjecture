@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3131F4aDegreeIdentityActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131F4aDegreeIdentityActualAdapted.s3135_valueMonoidIdentification_implies_degreeIdentity

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24BaseProviderActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BaseProviderActual.s3135_base_provider_complex
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BaseProviderActual.baseProviderRows_length

@@ -1,0 +1,7 @@
+'LeanFormal.IUT.XiFPaper.Mzk1PaperFaithfulRouteActual.paperFaithful_3_12_to_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1PaperFaithfulRouteActual.paperFaithful_gap1_and_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1PaperFaithfulRouteActual.paperFaithfulRows_length' does not depend on any axioms

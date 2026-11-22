@@ -1,0 +1,2645 @@
+[
+  {
+    "name": "S2400CoverRepresentableActual.lean",
+    "base": "S2400CoverRepresentableActual",
+    "size": 1642,
+    "mtime": "2026-11-02T17:51:01.598Z",
+    "sha": "A53CFBA2154B6FE5CEDA81EB54EA3452E5C97E07A34BAE5E28821748ADF31FE6",
+    "ole": {
+      "exists": true,
+      "size": 95768,
+      "sha": "E717C6FC575B913998577ECC83B7CCDCA536690513EF202C87C53DF3D92BB5ED",
+      "mtime": 1793641897495.7976,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2400-cover-representable.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2400: cover-map representability / exact first missing Date: 2026-11-03. Layer: **O** (D6(c) finite-etale input). No target change, no fake. ## Files read - `tmp/sheaf/xif/paper/S1728CoverCategoryActual.lean` (`S1728Cover`, `S1728CoverMap`, `S1728Paper`) - `Iut/Foundations/Orbicurve.lean` (`OrbicurveFiniteEtaleCover`, `OrbicurveFiniteEtaleCoverMap`) - `tmp/sheaf/xif/paper/S1742TwoYoneda"
+  },
+  {
+    "name": "S2401C1BridgeAuditActual.lean",
+    "base": "S2401C1BridgeAuditActual",
+    "size": 3867,
+    "mtime": "2026-11-02T17:52:36.082Z",
+    "sha": "F052BC162E5E87C705AD92B87BF040E0997F4F45AF0572A98FF9A8EDB79AEBFA",
+    "ole": {
+      "exists": true,
+      "size": 461376,
+      "sha": "2859336BFE8EBFAE22D5180F5EA8B7298AC35FA2B7D4D23A782A01CDA4EE41E8",
+      "mtime": 1793641992301.2354,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2402AxiomsProbe.lean",
+    "base": "S2402AxiomsProbe",
+    "size": 253,
+    "mtime": "2026-11-02T17:58:02.049Z",
+    "sha": "078E15A8C1F3A7746948DE0A01AB6CF1B2A6C6F348F97497AD8F56CE0BC24CD6",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2402AxiomsProbe2.lean",
+    "base": "S2402AxiomsProbe2",
+    "size": 200,
+    "mtime": "2026-11-02T17:58:24.361Z",
+    "sha": "3E604FE9179802252D18971489DDCE38DD9F48D001F84C2BF50CE4E222BDB8BC",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2402Check.lean",
+    "base": "S2402Check",
+    "size": 207,
+    "mtime": "2026-11-02T17:58:46.430Z",
+    "sha": "F9250E0CD3100AFD8872A390665DD6461D563773BD5206FF88E734125DA06D08",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2402EvalProbe.lean",
+    "base": "S2402EvalProbe",
+    "size": 860,
+    "mtime": "2026-11-02T17:59:09.750Z",
+    "sha": "0F6A2768130246A45BCA2F8548EF13E6F87C1D0AD037EFCFFEC07A42A293483C",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2402RootEvalDoneActual.lean",
+    "base": "S2402RootEvalDoneActual",
+    "size": 608,
+    "mtime": "2026-11-02T17:53:35.563Z",
+    "sha": "BB6883FCA4B51D724A5D8B81411BAD98504E40996A6C6F33D139A60297F8161A",
+    "ole": {
+      "exists": true,
+      "size": 2336,
+      "sha": "7952B89E671F328BBE5297741A0819C7F2D02CE9C382E063AC430BA3E5C051C8",
+      "mtime": 1793642099927.109,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2403RepresentableExamplesActual.lean",
+    "base": "S2403RepresentableExamplesActual",
+    "size": 3303,
+    "mtime": "2026-11-02T18:00:42.973Z",
+    "sha": "6CF8A1AEC31EFA1A416676FE98E44FE2074B9E8B3D3569833680778E9B555C9A",
+    "ole": {
+      "exists": true,
+      "size": 127992,
+      "sha": "C2E95BE3547815417D41A5A74D793CFCC2F55D38D14803F28A2A681EDE5AE32D",
+      "mtime": 1793642474772.5205,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2403-representable-examples.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2403: identity path-cover representability example Date: 2026-11-03. Layer: **O** (D6(c) finite-etale input). No target change, no fake. ## Files read - `tmp/sheaf/xif/paper/S2400CoverRepresentableActual.lean` - `tmp/sheaf/xif/paper/S2398HomOfStrongTransCompActual.lean` - `tmp/sheaf/xif/paper/S1641CoverMapCompositionActual.lean` - `tmp/sheaf/xif/paper/S2291UniformGraphCompatActual.lean` - `"
+  },
+  {
+    "name": "S2404QPilotArithmeticActual.lean",
+    "base": "S2404QPilotArithmeticActual",
+    "size": 4674,
+    "mtime": "2026-11-02T17:57:23.490Z",
+    "sha": "130D74F4B276B14CA9DF487D04E7432991C18505865340FF81B4261FF1ECBDB5",
+    "ole": {
+      "exists": true,
+      "size": 142688,
+      "sha": "44B0E5C8D5687B8F3E0DCFF7D4E47B1C7567D4F97F5D4E323595D2B3DEE73849",
+      "mtime": 1793642278281.5132,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2405RootEvalCorrectActual.lean",
+    "base": "S2405RootEvalCorrectActual",
+    "size": 1092,
+    "mtime": "2026-11-02T18:00:06.361Z",
+    "sha": "FFDDBF4325CF08B19EFE21D7F8AAAC0D44D95935C3E9715D5A78724986AD9849",
+    "ole": {
+      "exists": true,
+      "size": 27952,
+      "sha": "701F118D243AA8F9769B2E48607E489313D2A17110CE617B18B7D2CB561030C6",
+      "mtime": 1793642457102.1582,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2406PointProbe.lean",
+    "base": "S2406PointProbe",
+    "size": 1054,
+    "mtime": "2026-11-02T18:08:04.808Z",
+    "sha": "06B5D1531E1D570785B4C8F247E1D9DA9AEA785623E3295FB9159796B77CB8E1",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2406PointProbe2.lean",
+    "base": "S2406PointProbe2",
+    "size": 1225,
+    "mtime": "2026-11-02T18:09:05.523Z",
+    "sha": "FE2820288D5D70A20E65C696272235C37A098F70F14159C8FE3D784BA5AA27E0",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2406PointProbe3.lean",
+    "base": "S2406PointProbe3",
+    "size": 1641,
+    "mtime": "2026-11-02T18:10:30.455Z",
+    "sha": "F90798A5547C927BAAAE6BCCDBF759EF8DC49F81513ADF2983D0AC09FFC164B5",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2406PointProbe4.lean",
+    "base": "S2406PointProbe4",
+    "size": 1677,
+    "mtime": "2026-11-02T18:11:33.633Z",
+    "sha": "5E0895F7ED41D85E0D0B22521FF2E09931F302919811608A2EE2EAC0F77AA29E",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2406TwoTorsionPointsTransportActual.lean",
+    "base": "S2406TwoTorsionPointsTransportActual",
+    "size": 956,
+    "mtime": "2026-11-02T18:06:17.982Z",
+    "sha": "419B360332DC0AA799832EBFCB0848A3236D1BB7483A504FBC05B276E4BB29AE",
+    "ole": {
+      "exists": true,
+      "size": 2608,
+      "sha": "8726060ED253B298BAA27C23D002EB8910210B0035BB61EBA96DE918C8864658",
+      "mtime": 1793642859608.7476,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2407H1EquivActual.lean",
+    "base": "S2407H1EquivActual",
+    "size": 2327,
+    "mtime": "2026-11-02T18:04:42.501Z",
+    "sha": "896AC190952479B02FDF9CCF93B8ECC786622F11F70B6BB38E31D45F51ADC011",
+    "ole": {
+      "exists": true,
+      "size": 182264,
+      "sha": "1DFE90E81EF174FBC18B38EFC69B1458C614E78006E8E99FF84EBAB2ABCE6D41",
+      "mtime": 1793642739708.2925,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2407-h1-reverse-coboundary.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2407: external coboundary to internal cohomology Date: 2026-11-02. Layer O. Consumer: S2399 / S2384 / S2204. ## File tmp/sheaf/xif/paper/S2407H1EquivActual.lean Source SHA256 896ac190952479b02fdf9ccf93b8ecc786622f11f70b6bb38e31d45f51adc011 olean SHA256 1dfe90e81ef174fbc18b38efc69b1458c614e78006e8e99ff84ebab2abce6d41 EXIT=0. Axioms [propext, Classical.choice, Quot.sound]. ## Built S2407Ext"
+  },
+  {
+    "name": "S2408FiberSizesActual.lean",
+    "base": "S2408FiberSizesActual",
+    "size": 4103,
+    "mtime": "2026-11-02T18:10:11.039Z",
+    "sha": "B94EFC8F07F67DB605492C0B71AFF980EF1C0A734F907A570D0BE758D55793CB",
+    "ole": {
+      "exists": true,
+      "size": 120920,
+      "sha": "8E180268F0538A3DDE8BD9A6917E9E3716A27BE5141B9A0BB9935272B5308966",
+      "mtime": 1793643127352.4817,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2408-fiber-sizes.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2408: fibre sizes and factor multiset Date: 2026-11-03. Layer O; consumer S2217/S2397. ## Actual Lean: tmp/sheaf/xif/paper/S2408FiberSizesActual.lean SHA256 B94EFC8F07F67DB605492C0B71AFF980EF1C0A734F907A570D0BE758D55793CB EXIT=0 olean SHA256 8E180268F0538A3DDE8BD9A6917E9E3716A27BE5141B9A0BB9935272B5308966 size 120920 axioms propext, Classical.choice, Quot.sound. Definitions/th"
+  },
+  {
+    "name": "S2409StrongCoverRepresentableActual.lean",
+    "base": "S2409StrongCoverRepresentableActual",
+    "size": 2330,
+    "mtime": "2026-11-02T18:04:41.208Z",
+    "sha": "500CAC6A756F15564FA14248B2BE90D4B20B85B69E91E9A14D7E2E5467565B19",
+    "ole": {
+      "exists": true,
+      "size": 29240,
+      "sha": "E20507BBFBCC77993E6196582B229E8255697FA876308CEA4DF7F9ADAA51E7CC",
+      "mtime": 1793642715557.2893,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2409-strong-cover-representable.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2409: strong terminal cover representability example Date: 2026-11-03. Layer: **O** (D6(c) finite-etale input). No target change, no fake. ## Files read - `tmp/sheaf/xif/paper/S1852CoherentCoverActual.lean` (`StrongCover`, `CoherentCover`, `S1852TerminalStrong`, `S1852TerminalCoherent`) - `tmp/sheaf/xif/paper/S2403RepresentableExamplesActual.lean` - `tmp/sheaf/xif/paper/S2400CoverRepres"
+  },
+  {
+    "name": "S2410H1EquivDoneActual.lean",
+    "base": "S2410H1EquivDoneActual",
+    "size": 4095,
+    "mtime": "2026-11-02T18:17:55.203Z",
+    "sha": "8F4A6F50C49BD33B8F0AF1BADCB45EBB3FC9D983BBCB0A1F89E2815B62BF1F7E",
+    "ole": {
+      "exists": true,
+      "size": 110720,
+      "sha": "AB1F39CFD73C202D8A1169A67603DDB2C0EA29F2EE3DE7D7B98D176F9EB5DF5F",
+      "mtime": 1793643525966.103,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2410-h1-equivalence-finite.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2410: internal/external H^1 equivalence and finiteness of the actual H^1 Date: 2026-11-02. Layer O. Consumer: S2384 / S2214 / S2204 / S2114. ## File tmp/sheaf/xif/paper/S2410H1EquivDoneActual.lean Source SHA256 8f4a6f50c49bd33b8f0af1badcb45ebb3fc9d983bbcb0a1f89e2815b62bf1f7e olean SHA256 ab1f39cfd73c202d8a1169a67603ddb2c0ea29f2ee3de7d7b98d176f9eb5df5f EXIT=0. Axioms [propext, Classical.choi"
+  },
+  {
+    "name": "S2411PointBuildActual.lean",
+    "base": "S2411PointBuildActual",
+    "size": 1884,
+    "mtime": "2026-11-02T18:12:35.736Z",
+    "sha": "BC31028EFF22FCE228FDD51D7EDF8392C3C1C4C9514C0BBA7F65ECF35D1E0699",
+    "ole": {
+      "exists": true,
+      "size": 48464,
+      "sha": "CC63160A373E8646D0D254A6240E380240A965F0F5624E2296EA775B9B4F9523",
+      "mtime": 1793643284027.839,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2412ThreePointsTransportActual.lean",
+    "base": "S2412ThreePointsTransportActual",
+    "size": 2299,
+    "mtime": "2026-11-02T18:13:55.904Z",
+    "sha": "36EE149777C6043F999BD6E2A23DD30AB77605F880DDD468B1AF8D157B069A79",
+    "ole": {
+      "exists": true,
+      "size": 123152,
+      "sha": "CABD0B4863D59073B35C97E0A8B3EC08D8B09C19F29C8D00BC24B8DA9DA966F5",
+      "mtime": 1793643313670.0066,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2414DistinctProbe.lean",
+    "base": "S2414DistinctProbe",
+    "size": 1927,
+    "mtime": "2026-11-02T18:16:20.739Z",
+    "sha": "29AF837259F102733AB52EC9DB80BA628377FD9347A066EA847ECE52C017033A",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2414DistinctProbe2.lean",
+    "base": "S2414DistinctProbe2",
+    "size": 2058,
+    "mtime": "2026-11-02T18:17:19.377Z",
+    "sha": "D36D29279409208857F7AE43F59F677047B4BFA1B1AB837F5ABCD1AAE5D91A13",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2414DistinctProbe3.lean",
+    "base": "S2414DistinctProbe3",
+    "size": 2086,
+    "mtime": "2026-11-02T18:18:20.891Z",
+    "sha": "CB6D85D4463B72785D8CF852A24417A885BCB7AF97EE37EC93DF3A9E24EDFC81",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2414DistinctProbe4.lean",
+    "base": "S2414DistinctProbe4",
+    "size": 2074,
+    "mtime": "2026-11-02T18:19:20.029Z",
+    "sha": "091A1D29DBAAA1437EB56299DA156DB38EE516B7A0E4BF003ADC8BE197C46699",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2414ThreePointsDistinctActual.lean",
+    "base": "S2414ThreePointsDistinctActual",
+    "size": 2000,
+    "mtime": "2026-11-02T18:20:19.121Z",
+    "sha": "21F5EB8084FBE146281447219D87BB07328966935AB9447F2FF22C5758CF1441",
+    "ole": {
+      "exists": true,
+      "size": 46544,
+      "sha": "2B7EAD623919136555268631C2D7CBF40CB23879F2B21404ECDC22BF8713DBFE",
+      "mtime": 1793643669241.4753,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2415SideKPointActual.lean",
+    "base": "S2415SideKPointActual",
+    "size": 1434,
+    "mtime": "2026-11-02T18:24:22.486Z",
+    "sha": "A7F5A1464B364117CF893FBC79B30EC8D52B865C7071D35B81E7DB5CCCEFBE7E",
+    "ole": {
+      "exists": true,
+      "size": 2488,
+      "sha": "3C428D0950E1F55E341C2A8C8E24F901FA897E37DBB1A88B940104683622175B",
+      "mtime": 1793643987656.9297,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2417ActualPrimeInterface.lean",
+    "base": "S2417ActualPrimeInterface",
+    "size": 4639,
+    "mtime": "2026-11-02T18:26:24.875Z",
+    "sha": "8D119729A29E92F5B2C0AA0806F25B0FB42A92EE1745AA0ADB1720FA25265489",
+    "ole": {
+      "exists": true,
+      "size": 271152,
+      "sha": "7EBD3866FBC174CB5BBD974B94C1D57402D800E58348AE79C17DC922A79515C9",
+      "mtime": 1793644081067.371,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2419H1SurjLimitActual.lean",
+    "base": "S2419H1SurjLimitActual",
+    "size": 1892,
+    "mtime": "2026-11-02T18:23:37.952Z",
+    "sha": "A909CD78C588C23DB344510391F14D53E455BDACC1C3A08EC812257C46195060",
+    "ole": {
+      "exists": true,
+      "size": 116968,
+      "sha": "3F9D8E88FEA9CC7DA8382487F9F2F1EF1F1D45C09637EA2CAB5E093536883765",
+      "mtime": 1793643890855.7627,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2419-kummer-transition-surj.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2419: Kummer transition surjectivity Date: 2026-11-03. Layer O. Consumer: S2214 / S2410 / S2114. ## File tmp/sheaf/xif/paper/S2419H1SurjLimitActual.lean Source SHA256 a909cd78c588c23db344510391f14d53e455bdacc1c3a08ec812257c46195060 olean SHA256 3f9d8e88fea9cc7da8382487f9f2f1ef1f1d45c09637ea2cab5e093536883765 EXIT=0. Axioms [propext, Classical.choice, Quot.sound]. ## Built S2419QuotTransit"
+  },
+  {
+    "name": "S241SourceHullNoncompactActual.lean",
+    "base": "S241SourceHullNoncompactActual",
+    "size": 2248,
+    "mtime": "2026-10-29T11:30:56.867Z",
+    "sha": "118D90D3252123BE59F4EA97E8EBB760A730184DBCAFEB013055234CFFE5AF0E",
+    "ole": {
+      "exists": true,
+      "size": 26800,
+      "sha": "C25FD45D85D3D5DFBF1131D91896616E74C8360BD96E888248E40EA6CF18ABCE",
+      "mtime": 1793273518041.8123,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2410-h1-equivalence-finite.md",
+      "S2419-kummer-transition-surj.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2410: internal/external H^1 equivalence and finiteness of the actual H^1 Date: 2026-11-02. Layer O. Consumer: S2384 / S2214 / S2204 / S2114. ## File tmp/sheaf/xif/paper/S2410H1EquivDoneActual.lean Source SHA256 8f4a6f50c49bd33b8f0af1badcb45ebb3fc9d983bbcb0a1f89e2815b62bf1f7e olean SHA256 ab1f39cfd73c202d8a1169a67603ddb2c0ea29f2ee3de7d7b98d176f9eb5df5f EXIT=0. Axioms [propext, Classical.choi"
+  },
+  {
+    "name": "S2420DedekindApplyActual.lean",
+    "base": "S2420DedekindApplyActual",
+    "size": 2647,
+    "mtime": "2026-11-02T18:26:36.037Z",
+    "sha": "26F53AF2BE29DD0AA0DF26D5D67B43E2F609057BE2CD3987A388B8DCB2AE4393",
+    "ole": {
+      "exists": true,
+      "size": 86048,
+      "sha": "388DDEBDE81F1AFA4542A616D44C175F3C3DDF9BF626CBD9679FFDF66D054EFE",
+      "mtime": 1793644083175.0974,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2420H1InstanceFiniteActual.lean",
+    "base": "S2420H1InstanceFiniteActual",
+    "size": 1312,
+    "mtime": "2026-11-02T18:27:02.635Z",
+    "sha": "2C2245A9C41B16AAFA20ABBCB0AA1A09F02F447A0B55593D0BE561E286D33F75",
+    "ole": {
+      "exists": true,
+      "size": 28840,
+      "sha": "42E0757D00FB24FBD71087288F8654D2D3ACDC4A6E53F194BA687671BE46F946",
+      "mtime": 1793644110495.5334,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2420LCoprimeRepresentativeActual.lean",
+    "base": "S2420LCoprimeRepresentativeActual",
+    "size": 20027,
+    "mtime": "2026-11-02T18:37:59.491Z",
+    "sha": "60E37327DC093654FD8F36E387FCC81FF1A018349C1E3566D4C98C4D760FDC00",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2421StrictSign2Actual.lean",
+    "base": "S2421StrictSign2Actual",
+    "size": 1551,
+    "mtime": "2026-11-02T18:24:40.820Z",
+    "sha": "0895F6F2DEE31B2F9D864D0CA580E732C4884FDBBEDF3EE35F3C183AA806C800",
+    "ole": {
+      "exists": true,
+      "size": 3568,
+      "sha": "96EEF7062391796614C659B496B9A5B77D1928723E4FC983EC45DB479A4C600E",
+      "mtime": 1793643936303.8777,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2421-d9-mapcomp-check.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2421: mapComp' app check output unchanged; identity coherence not extracted Date: 2026-11-02. #check output: (S2152Q.mapComp' f g h hh).hom.toNatTrans.app M : (S2152Q.map h).toFunctor.obj M ⟶ (S2152Q.map f ≫ S2152Q.map g).toFunctor.obj M This is an action-category hom, but the .val lemma is still elaborated at a base-Type function type rather than SignGroup. The Iso.refl identity coh"
+  },
+  {
+    "name": "S2422H1MLInstanceActual.lean",
+    "base": "S2422H1MLInstanceActual",
+    "size": 1593,
+    "mtime": "2026-11-02T18:31:18.215Z",
+    "sha": "842A876E7CDF866D66504004F266A1ECEAD0E4AA7304E5EFA95067149B6FB105",
+    "ole": {
+      "exists": true,
+      "size": 33936,
+      "sha": "BB3DD918B8C5B3EF9C79FCC135916513294614C3A1C914C005EEEAA4AA7C2780",
+      "mtime": 1793644360236.6375,
+      "fresh": true
+    },
+    "logs": [
+      "S2422.out"
+    ],
+    "reportHits": [
+      "S2422-stage-descent3.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2422StageDescent3Actual.S2422StageDescentRequired (p : ℕ) [Fact (Nat.Prime p)] : Prop # S2422: stage descent third attempt exact surface Layer: O (S2179 stage compatibility). Source object: S2179TransferCompatible. Domain: Stage/toStage/torsion descent. Direction: exact surface; direct S2371-to-torsion route still needs coefficient formula. BUILT: - S2422StageDescentRe"
+  },
+  {
+    "name": "S2422MainlineC9Actual.lean",
+    "base": "S2422MainlineC9Actual",
+    "size": 5902,
+    "mtime": "2026-11-02T18:55:17.379Z",
+    "sha": "766FAEBC6F058871047D3A4497AC73ED8043B256BF3CD5C2BBC5AC2D9B05CF20",
+    "ole": {
+      "exists": true,
+      "size": 254152,
+      "sha": "717006842681BF5D1C3855F4B92C8FA17813C4CE7C5AD3FC5F9D7BB9B3E28F82",
+      "mtime": 1793645798682.6672,
+      "fresh": true
+    },
+    "logs": [
+      "S2422.out"
+    ],
+    "reportHits": [
+      "S2422-stage-descent3.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2422StageDescent3Actual.S2422StageDescentRequired (p : ℕ) [Fact (Nat.Prime p)] : Prop # S2422: stage descent third attempt exact surface Layer: O (S2179 stage compatibility). Source object: S2179TransferCompatible. Domain: Stage/toStage/torsion descent. Direction: exact surface; direct S2371-to-torsion route still needs coefficient formula. BUILT: - S2422StageDescentRe"
+  },
+  {
+    "name": "S2422StageDescent3Actual.lean",
+    "base": "S2422StageDescent3Actual",
+    "size": 843,
+    "mtime": "2026-11-02T18:22:23.468Z",
+    "sha": "B24F271FE50400BA040FE254190025E32E7D5F1D6DBF083B1DA19C3FEC1D2065",
+    "ole": {
+      "exists": true,
+      "size": 5752,
+      "sha": "2981392F9A0AD236285ED6B13A356F56674D2A30E4440AEF5F6F7330172667FB",
+      "mtime": 1793643817158.9026,
+      "fresh": true
+    },
+    "logs": [
+      "S2422.out"
+    ],
+    "reportHits": [
+      "S2422-stage-descent3.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2422StageDescent3Actual.S2422StageDescentRequired (p : ℕ) [Fact (Nat.Prime p)] : Prop # S2422: stage descent third attempt exact surface Layer: O (S2179 stage compatibility). Source object: S2179TransferCompatible. Domain: Stage/toStage/torsion descent. Direction: exact surface; direct S2371-to-torsion route still needs coefficient formula. BUILT: - S2422StageDescentRe"
+  },
+  {
+    "name": "S2423D9DescentActual.lean",
+    "base": "S2423D9DescentActual",
+    "size": 2630,
+    "mtime": "2026-11-02T18:23:25.175Z",
+    "sha": "87864E4550B3AD656227208713B4708AB77B148E4BFDC4948DCAF44F79BC9095",
+    "ole": {
+      "exists": true,
+      "size": 22112,
+      "sha": "1750D1DE2D439E47C4AF9E9ED4894C6D5D15DE999DCDE58F756105FA8B2020A4",
+      "mtime": 1793643852143.4644,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2424CoverCompositionActual.lean",
+    "base": "S2424CoverCompositionActual",
+    "size": 2031,
+    "mtime": "2026-11-02T18:26:29.495Z",
+    "sha": "16892C72FE3A474BBB0F2F564B4C59CC0CABC1D1ADE78BAD67C71A60B2364D1F",
+    "ole": {
+      "exists": true,
+      "size": 189968,
+      "sha": "B4CA7866A6B3FD8BE169EDDCD8D7DD88E03525F0767F22841EC20DC096C80B61",
+      "mtime": 1793644046301.3645,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2424-cover-composition.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2424: representable cover composition closure (exact missing) Date: 2026-11-03. Layer: **O** (D6(c) finite-etale input). No target change, no fake. ## Files read - `tmp/sheaf/xif/paper/S2403RepresentableExamplesActual.lean` - `tmp/sheaf/xif/paper/S2400CoverRepresentableActual.lean` - `tmp/sheaf/xif/paper/S1641CoverMapCompositionActual.lean` - `tmp/sheaf/xif/paper/S1742TwoYonedaActual.lean` "
+  },
+  {
+    "name": "S2425BProbe.lean",
+    "base": "S2425BProbe",
+    "size": 1155,
+    "mtime": "2026-11-02T18:34:37.980Z",
+    "sha": "1897C7F2ECB4114DD0211726665AC8D22D954E8F5E235FAE896A8C696C1BB94C",
+    "ole": {
+      "exists": true,
+      "size": 11080,
+      "sha": "D954AF17D88A2AA3BC00098023DC26E7A99C9EE72AC588C296D30DDA5B53C354",
+      "mtime": 1793644574635.4282,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2425H1SurjInternal.lean",
+    "base": "S2425H1SurjInternal",
+    "size": 5008,
+    "mtime": "2026-11-02T18:53:18.671Z",
+    "sha": "4EDBD9167CCAD5361C6F6523B0B039EE1B772091CE4383427700A05BF52ED300",
+    "ole": {
+      "exists": true,
+      "size": 162152,
+      "sha": "4A54430228C1165A877C8DD1252BBD5DD8F98CC89D52CB07A2FD901F19426D46",
+      "mtime": 1793645687629.4636,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2425H1SurjInternalDoneActual.lean",
+    "base": "S2425H1SurjInternalDoneActual",
+    "size": 2864,
+    "mtime": "2026-11-02T18:40:08.506Z",
+    "sha": "B3ED0AF94A330AE842305DDB449E20BFB9CB4116DE592D99F9A70FD586CD894C",
+    "ole": {
+      "exists": true,
+      "size": 80888,
+      "sha": "D3E1B85DCFCFD9C005E744C47FC05C472CBD8D28145910980331E4A40E7DC760",
+      "mtime": 1793644801467.714,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2425NatIsoCastHelpersActual.lean",
+    "base": "S2425NatIsoCastHelpersActual",
+    "size": 15758,
+    "mtime": "2026-11-02T18:46:08.829Z",
+    "sha": "7674E052CBB10332C1C883C20B460C3DDB0DDF9C248D22137D68681AAC3BFF29",
+    "ole": {
+      "exists": true,
+      "size": 530872,
+      "sha": "3D59BC443A4D3DD728648699BCCF9C95711E8180A5916CB3D8E5488A5E2B196D",
+      "mtime": 1793645684169.5977,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2425PermBarInvarianceActual.lean",
+    "base": "S2425PermBarInvarianceActual",
+    "size": 3680,
+    "mtime": "2026-11-02T18:28:25.638Z",
+    "sha": "170F312521AAAD51DAAD0DB7B9EFBAC7245338106D624683C570FB0BA572854E",
+    "ole": {
+      "exists": true,
+      "size": 82648,
+      "sha": "9476B00F7FD1C7816A68F6456FE94399F13236CBF221BD4527C606C057F1F4D0",
+      "mtime": 1793644198502.0188,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2426FilterBridgeActual.lean",
+    "base": "S2426FilterBridgeActual",
+    "size": 6900,
+    "mtime": "2026-11-02T18:27:50.489Z",
+    "sha": "7F7C8C1EB9A1FDAA6219FC57DEFC91FCBF7EF268BE00BC05A462BD4BABFC2908",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2426H1Lim1Actual.lean",
+    "base": "S2426H1Lim1Actual",
+    "size": 16682,
+    "mtime": "2026-11-02T18:57:36.550Z",
+    "sha": "2F2ACA1616112EF0F84C6615386F954BE3D99A00B74016172AA7190E9D186943",
+    "ole": {
+      "exists": true,
+      "size": 300664,
+      "sha": "8C92EF7C8BED218DA22461A95B8DCF0E6EF1686F1E79688D65E0FCE6854FCE98",
+      "mtime": 1793645921519.9487,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2427H2CompatCleanActual.lean",
+    "base": "S2427H2CompatCleanActual",
+    "size": 2401,
+    "mtime": "2026-11-02T19:06:25.005Z",
+    "sha": "1673B424FAF90922F212E367C96F689BB09C1470F403400D4860F9EDA366C6C9",
+    "ole": {
+      "exists": true,
+      "size": 109752,
+      "sha": "160CEB3A05DA6077A27BF42640B563D38BAD5C8ACE9C3103B74897DF0F057852",
+      "mtime": 1793646489248.1377,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2427-d9-psub-conditional.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2427: conditional Psub NatIso actual; sign projection input exact Date: 2026-11-02. Actual: - S2427Comp T : Q.presheafHom.obj T ≅ S2332Obj T (eqToIso S2271). - S2427SignProjection : Prop, the exact naturality square for these components. - S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N), built by NatIso.ofComponents + ext x. Axioms: propext, Clas"
+  },
+  {
+    "name": "S2427H2CompatRepActual.dirty.lean",
+    "base": "S2427H2CompatRepActual.dirty",
+    "size": 28582,
+    "mtime": "2026-11-02T18:37:34.354Z",
+    "sha": "7AE2444C2BD5C04AB4FFCA2F07A0496463AAA96D26AE08C3FC8CB01AA8B5C69B",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2427-d9-psub-conditional.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "dirty",
+    "evidenceSnippet": " # S2427: conditional Psub NatIso actual; sign projection input exact Date: 2026-11-02. Actual: - S2427Comp T : Q.presheafHom.obj T ≅ S2332Obj T (eqToIso S2271). - S2427SignProjection : Prop, the exact naturality square for these components. - S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N), built by NatIso.ofComponents + ext x. Axioms: propext, Clas"
+  },
+  {
+    "name": "S2427Probe.lean",
+    "base": "S2427Probe",
+    "size": 677,
+    "mtime": "2026-11-02T18:45:53.151Z",
+    "sha": "661E113258E4853A226D4EBF922F79DDAA059C22E13C3BA7889D8C4B603A8198",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2427-d9-psub-conditional.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2427: conditional Psub NatIso actual; sign projection input exact Date: 2026-11-02. Actual: - S2427Comp T : Q.presheafHom.obj T ≅ S2332Obj T (eqToIso S2271). - S2427SignProjection : Prop, the exact naturality square for these components. - S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N), built by NatIso.ofComponents + ext x. Axioms: propext, Clas"
+  },
+  {
+    "name": "S2427PsubNatIsoConditionalActual.lean",
+    "base": "S2427PsubNatIsoConditionalActual",
+    "size": 1842,
+    "mtime": "2026-11-02T18:26:33.882Z",
+    "sha": "F9B3EDD5DD742709ABDEC227FF312463B8D00F96B12BC199EC00792087ACE0C1",
+    "ole": {
+      "exists": true,
+      "size": 32576,
+      "sha": "B66CBECD8D53611EEB8F817D1E92B5D16E8DFD4154E54FBDF46350982E552ABB",
+      "mtime": 1793644051775.2534,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2427-d9-psub-conditional.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2427: conditional Psub NatIso actual; sign projection input exact Date: 2026-11-02. Actual: - S2427Comp T : Q.presheafHom.obj T ≅ S2332Obj T (eqToIso S2271). - S2427SignProjection : Prop, the exact naturality square for these components. - S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N), built by NatIso.ofComponents + ext x. Axioms: propext, Clas"
+  },
+  {
+    "name": "S2427RootPermCycleActual.lean",
+    "base": "S2427RootPermCycleActual",
+    "size": 10951,
+    "mtime": "2026-11-02T18:37:46.208Z",
+    "sha": "65EA5BCB5978BCCEC4889E159D9535D370A2DCA7E1C632FC7A7C9C9929735B36",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2427-d9-psub-conditional.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2427: conditional Psub NatIso actual; sign projection input exact Date: 2026-11-02. Actual: - S2427Comp T : Q.presheafHom.obj T ≅ S2332Obj T (eqToIso S2271). - S2427SignProjection : Prop, the exact naturality square for these components. - S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N), built by NatIso.ofComponents + ext x. Axioms: propext, Clas"
+  },
+  {
+    "name": "S2428D9FinalActual.lean",
+    "base": "S2428D9FinalActual",
+    "size": 1621,
+    "mtime": "2026-11-02T18:31:36.595Z",
+    "sha": "7334CEF49875FE00E3EDB90D22CA4E73C8C38BD9886190058528403A01DE221D",
+    "ole": {
+      "exists": true,
+      "size": 20024,
+      "sha": "F9B52E81409FA18E4A16DDA5F954841FFF211FD3E074F329EF1A6803C52E8E5F",
+      "mtime": 1793644350771.2437,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2428-d9-final.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2428: D9 integration — conditional Psub NatIso + S2134 descent halves actual; concrete missing Date: 2026-11-02. ## Integrated actual - S2427 conditional Psub NatIso: S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N). - S2428PsubNatIsoMissing S := forall M N, S2427SignProjection S M N. - S2428PsubNatIso_of_missing : S2428PsubNatIsoMissing S -> fora"
+  },
+  {
+    "name": "S2428FilterBridgeActual.lean",
+    "base": "S2428FilterBridgeActual",
+    "size": 2585,
+    "mtime": "2026-11-02T18:45:52.989Z",
+    "sha": "487D12CE98D6186F8FB8CF212B9888C476FD715685415F18EAFA780135A1D311",
+    "ole": {
+      "exists": true,
+      "size": 127608,
+      "sha": "0DE405A566CEB875A110D0F24BEB37E30112F7FA0717DEF6547687820A49DA7B",
+      "mtime": 1793645579519.8613,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2428-d9-final.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2428: D9 integration — conditional Psub NatIso + S2134 descent halves actual; concrete missing Date: 2026-11-02. ## Integrated actual - S2427 conditional Psub NatIso: S2427NatIso_of_signProjection : S2427SignProjection -> (Q.presheafHom M N ≅ S2332Psub S M N). - S2428PsubNatIsoMissing S := forall M N, S2427SignProjection S M N. - S2428PsubNatIso_of_missing : S2428PsubNatIsoMissing S -> fora"
+  },
+  {
+    "name": "S2429CompositeAssemblyActual.lean",
+    "base": "S2429CompositeAssemblyActual",
+    "size": 4427,
+    "mtime": "2026-11-02T19:07:54.429Z",
+    "sha": "B220AB8ED37AA8D2A7C103A3370475645DD5C9CB264D0824A1A5DFF121122C7C",
+    "ole": {
+      "exists": true,
+      "size": 79528,
+      "sha": "55AC6B2A2867B386F6FD5B283F8D297D55C7B750127A0ABA3E8836FBECE439BB",
+      "mtime": 1793646708441.0115,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2429-composite-assembly.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2429: cast-composition and composite Mono CLOSED; map iso exact Date: 2026-11-03. Layer: **O** (D6(c) finite-etale input). No target change, no fake. ## Deliverable `tmp/sheaf/xif/paper/S2429CompositeAssemblyActual.lean` ```text EXIT=0 olean=YES lines=116 SHA256=B220AB8ED37AA8D2A7C103A3370475645DD5C9CB264D0824A1A5DFF121122C7C olean path=.lake/build/lib/lean/tmp/sheaf/xif/paper/S2429Composi"
+  },
+  {
+    "name": "S2430D9CloseActual.lean",
+    "base": "S2430D9CloseActual",
+    "size": 1614,
+    "mtime": "2026-11-02T18:37:03.451Z",
+    "sha": "A44E86F3F82FCCE430C4569AECDBD36938A5CF05EC17C35BB4BDC22151FA9518",
+    "ole": {
+      "exists": true,
+      "size": 19736,
+      "sha": "27B223355F9721AB902B360AD3E4DA14E356C610A26C7F81B2FC053B10E5078A",
+      "mtime": 1793644695193.4958,
+      "fresh": true
+    },
+    "logs": [
+      "S2430TorsionDescentSubagentActual.out"
+    ],
+    "reportHits": [
+      "S2430-d9-close.md",
+      "S2430-mono-cast.md",
+      "S2430-torsion-descent-success.md",
+      "S2430TorsionDescentSubagentActual.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_cast_equiv_eq_trans.{u} {G : Type u} [Group G] {X A B : Subgroup G} (h : A = B) (e : ↥X ≃* ↥A) : h ▸ e = e.trans (MulEquiv.subgroupCongr h) LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_torsionCongr_coe.{u} {A B : Type u} [CommGroup A] [CommGroup B] (e : A ≃* B) (w : ↥(CommGroup.torsion A)) : ↑((torsionCongr e"
+  },
+  {
+    "name": "S2430H1FinalActual.lean",
+    "base": "S2430H1FinalActual",
+    "size": 2304,
+    "mtime": "2026-11-02T19:01:31.852Z",
+    "sha": "2F3AAC03588BDDFA388290A7A72964AE8FACC6B73F0D6FA3DC6852B68F1A621B",
+    "ole": {
+      "exists": true,
+      "size": 19688,
+      "sha": "FCCC051EF57D2EE1683FE5B591009B86DB9878CC4E5DA0728CBC65F9ADD1DD8B",
+      "mtime": 1793646153408.148,
+      "fresh": true
+    },
+    "logs": [
+      "S2430TorsionDescentSubagentActual.out"
+    ],
+    "reportHits": [
+      "S2430-d9-close.md",
+      "S2430-mono-cast.md",
+      "S2430-torsion-descent-success.md",
+      "S2430TorsionDescentSubagentActual.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_cast_equiv_eq_trans.{u} {G : Type u} [Group G] {X A B : Subgroup G} (h : A = B) (e : ↥X ≃* ↥A) : h ▸ e = e.trans (MulEquiv.subgroupCongr h) LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_torsionCongr_coe.{u} {A B : Type u} [CommGroup A] [CommGroup B] (e : A ≃* B) (w : ↥(CommGroup.torsion A)) : ↑((torsionCongr e"
+  },
+  {
+    "name": "S2430MonoCastActual.lean",
+    "base": "S2430MonoCastActual",
+    "size": 2496,
+    "mtime": "2026-11-02T19:07:57.248Z",
+    "sha": "6879CDF5C65B947FB58697C6FE44241C347B64D43BB501F20489175D1C5B1B4E",
+    "ole": {
+      "exists": true,
+      "size": 28624,
+      "sha": "2AF1458D3F15936D1F0B8E2EF3B303BEBA97FC2012ECCAEB81AB155D07516838",
+      "mtime": 1793646763220.002,
+      "fresh": true
+    },
+    "logs": [
+      "S2430TorsionDescentSubagentActual.out"
+    ],
+    "reportHits": [
+      "S2430-d9-close.md",
+      "S2430-mono-cast.md",
+      "S2430-torsion-descent-success.md",
+      "S2430TorsionDescentSubagentActual.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_cast_equiv_eq_trans.{u} {G : Type u} [Group G] {X A B : Subgroup G} (h : A = B) (e : ↥X ≃* ↥A) : h ▸ e = e.trans (MulEquiv.subgroupCongr h) LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_torsionCongr_coe.{u} {A B : Type u} [CommGroup A] [CommGroup B] (e : A ≃* B) (w : ↥(CommGroup.torsion A)) : ↑((torsionCongr e"
+  },
+  {
+    "name": "S2430TorsionDescentSubagentActual.lean",
+    "base": "S2430TorsionDescentSubagentActual",
+    "size": 5740,
+    "mtime": "2026-11-02T18:34:27.520Z",
+    "sha": "E9BB85FFB7ED00369423338F9A750105E40CF5DF5319AA8DEC831C5EE2B8F691",
+    "ole": {
+      "exists": true,
+      "size": 247120,
+      "sha": "E62865A5EFE58B4121DB8EE82BA6A571CF95C1AF94105F4284ACE0FD75A3615C",
+      "mtime": 1793644570544.6714,
+      "fresh": true
+    },
+    "logs": [
+      "S2430TorsionDescentSubagentActual.out"
+    ],
+    "reportHits": [
+      "S2430-d9-close.md",
+      "S2430-mono-cast.md",
+      "S2430-torsion-descent-success.md",
+      "S2430TorsionDescentSubagentActual.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": true,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-known",
+    "evidenceSnippet": "LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_cast_equiv_eq_trans.{u} {G : Type u} [Group G] {X A B : Subgroup G} (h : A = B) (e : ↥X ≃* ↥A) : h ▸ e = e.trans (MulEquiv.subgroupCongr h) LeanFormal.IUT.XiFPaper.S2430TorsionDescentSubagentActual.S2430_torsionCongr_coe.{u} {A B : Type u} [CommGroup A] [CommGroup B] (e : A ≃* B) (w : ↥(CommGroup.torsion A)) : ↑((torsionCongr e"
+  },
+  {
+    "name": "S2431CompositeMapIsoActual.lean",
+    "base": "S2431CompositeMapIsoActual",
+    "size": 8242,
+    "mtime": "2026-11-02T19:36:08.330Z",
+    "sha": "9D1E1C289BF344C6DE8B6EE6F6BF67856AC0A6A4CEC9A4F28A1330D0A432EA1A",
+    "ole": {
+      "exists": true,
+      "size": 100080,
+      "sha": "9574D3AEFCDC1AAC8A68AF91DD217A958569FFAD05F0D031D0E4DD6236DCE950",
+      "mtime": 1793648331475.308,
+      "fresh": true
+    },
+    "logs": [
+      "S2431MuQZMulAutSubagentActual.attempts.log",
+      "S2431MuQZMulAutSubagentActual.out",
+      "S2431TransferFinalActual.out"
+    ],
+    "reportHits": [
+      "S2431-compile.log",
+      "S2431-transfer-final.md",
+      "S2431-transfer-incident-status.md",
+      "S2431-transfer-status.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "dirty",
+    "evidenceSnippet": "ATTEMPT 1 EXIT=1 2026-11-03T02:44:19.4449218+08:00 D:\\lean\\tmp\\sheaf\\xif\\paper\\S2431MuQZMulAutSubagentActual.lean:172:86: error: unsolved goals p : ℕ inst✝ : Fact (Nat.Prime p) g : Gv p H : Index p w : ↥(CommGroup.torsion (Abelianization ↥H)) ⊢ (MulEquiv.toAdditive (torsionCongr (abelianizationCongr (S2200ConjEquiv p g H)))) (Additive.ofMul w) = Additive.ofMul ((torsionCongr (abelianiz"
+  },
+  {
+    "name": "S2431MuQZMulAutSubagentActual.lean",
+    "base": "S2431MuQZMulAutSubagentActual",
+    "size": 25607,
+    "mtime": "2026-11-02T18:36:49.833Z",
+    "sha": "C717ED605F250422BF01D62D4897C8BA287DC608B597FDFD785C29D4C71D3309",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2431MuQZMulAutSubagentActual.attempts.log",
+      "S2431MuQZMulAutSubagentActual.out",
+      "S2431TransferFinalActual.out"
+    ],
+    "reportHits": [
+      "S2431-compile.log",
+      "S2431-transfer-final.md",
+      "S2431-transfer-incident-status.md",
+      "S2431-transfer-status.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "dirty",
+    "evidenceSnippet": "ATTEMPT 1 EXIT=1 2026-11-03T02:44:19.4449218+08:00 D:\\lean\\tmp\\sheaf\\xif\\paper\\S2431MuQZMulAutSubagentActual.lean:172:86: error: unsolved goals p : ℕ inst✝ : Fact (Nat.Prime p) g : Gv p H : Index p w : ↥(CommGroup.torsion (Abelianization ↥H)) ⊢ (MulEquiv.toAdditive (torsionCongr (abelianizationCongr (S2200ConjEquiv p g H)))) (Additive.ofMul w) = Additive.ofMul ((torsionCongr (abelianiz"
+  },
+  {
+    "name": "S2431Probe.lean",
+    "base": "S2431Probe",
+    "size": 1933,
+    "mtime": "2026-11-02T18:40:42.061Z",
+    "sha": "745486C31E4854106BEA7C8CA6B4EC3FEAB8A8EC34437407309245F22CA4733D",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2431MuQZMulAutSubagentActual.attempts.log",
+      "S2431MuQZMulAutSubagentActual.out",
+      "S2431TransferFinalActual.out"
+    ],
+    "reportHits": [
+      "S2431-compile.log",
+      "S2431-transfer-final.md",
+      "S2431-transfer-incident-status.md",
+      "S2431-transfer-status.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "dirty",
+    "evidenceSnippet": "ATTEMPT 1 EXIT=1 2026-11-03T02:44:19.4449218+08:00 D:\\lean\\tmp\\sheaf\\xif\\paper\\S2431MuQZMulAutSubagentActual.lean:172:86: error: unsolved goals p : ℕ inst✝ : Fact (Nat.Prime p) g : Gv p H : Index p w : ↥(CommGroup.torsion (Abelianization ↥H)) ⊢ (MulEquiv.toAdditive (torsionCongr (abelianizationCongr (S2200ConjEquiv p g H)))) (Additive.ofMul w) = Additive.ofMul ((torsionCongr (abelianiz"
+  },
+  {
+    "name": "S2431RootPermCycleCleanActual.lean",
+    "base": "S2431RootPermCycleCleanActual",
+    "size": 9806,
+    "mtime": "2026-11-02T18:54:53.386Z",
+    "sha": "1DB3DADA97BA5994D0B64062481AEB34970319BD772A40B4CC07F9CDAE3BA99F",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2431MuQZMulAutSubagentActual.attempts.log",
+      "S2431MuQZMulAutSubagentActual.out",
+      "S2431TransferFinalActual.out"
+    ],
+    "reportHits": [
+      "S2431-compile.log",
+      "S2431-transfer-final.md",
+      "S2431-transfer-incident-status.md",
+      "S2431-transfer-status.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "dirty",
+    "evidenceSnippet": "ATTEMPT 1 EXIT=1 2026-11-03T02:44:19.4449218+08:00 D:\\lean\\tmp\\sheaf\\xif\\paper\\S2431MuQZMulAutSubagentActual.lean:172:86: error: unsolved goals p : ℕ inst✝ : Fact (Nat.Prime p) g : Gv p H : Index p w : ↥(CommGroup.torsion (Abelianization ↥H)) ⊢ (MulEquiv.toAdditive (torsionCongr (abelianizationCongr (S2200ConjEquiv p g H)))) (Additive.ofMul w) = Additive.ofMul ((torsionCongr (abelianiz"
+  },
+  {
+    "name": "S2431TransferFinalActual.lean",
+    "base": "S2431TransferFinalActual",
+    "size": 2178,
+    "mtime": "2026-11-02T18:39:23.967Z",
+    "sha": "5AF800C36973F6D87CEDA37D2C51800244C859FB7E80E59C19B53B3B2F9F05CD",
+    "ole": {
+      "exists": true,
+      "size": 59872,
+      "sha": "BF53CD101FA1DC639FC22F48922164A2F5FE0AC55C9273E671D87386EC21979F",
+      "mtime": 1793645152011.2537,
+      "fresh": true
+    },
+    "logs": [
+      "S2431MuQZMulAutSubagentActual.attempts.log",
+      "S2431MuQZMulAutSubagentActual.out",
+      "S2431TransferFinalActual.out"
+    ],
+    "reportHits": [
+      "S2431-compile.log",
+      "S2431-transfer-final.md",
+      "S2431-transfer-incident-status.md",
+      "S2431-transfer-status.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "clean-known",
+    "evidenceSnippet": "ATTEMPT 1 EXIT=1 2026-11-03T02:44:19.4449218+08:00 D:\\lean\\tmp\\sheaf\\xif\\paper\\S2431MuQZMulAutSubagentActual.lean:172:86: error: unsolved goals p : ℕ inst✝ : Fact (Nat.Prime p) g : Gv p H : Index p w : ↥(CommGroup.torsion (Abelianization ↥H)) ⊢ (MulEquiv.toAdditive (torsionCongr (abelianizationCongr (S2200ConjEquiv p g H)))) (Additive.ofMul w) = Additive.ofMul ((torsionCongr (abelianiz"
+  },
+  {
+    "name": "S2432Layer1SplitActual.lean",
+    "base": "S2432Layer1SplitActual",
+    "size": 1478,
+    "mtime": "2026-11-02T19:22:51.110Z",
+    "sha": "8741293E0D17280EA14E8E44DEA5BF560FF5B79703A53866807EA869A3770B07",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2432MuQZMulAutDoneActual.out"
+    ],
+    "reportHits": [
+      "S2432-d5-audit.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2432 (D5): compile-gate audit and exact missing Date: 2026-11-03. ## Gate results CLEAN / EXIT=0: 1) tmp/sheaf/xif/paper/S2420DedekindApplyActual.lean SHA256 26F53AF2BE29DD0AA0DF26D5D67B43E2F609057BE2CD3987A388B8DCB2AE4393 olean SHA256 388DDEBDE81F1AFA4542A616D44C175F3C3DDF9BF626CBD9679FFDF66D054EFE size 86048 s2420_minpoly_frobBar, s2420RootFactor_permBar: axioms trio only. 2"
+  },
+  {
+    "name": "S2432MuQZMulAutDoneActual.lean",
+    "base": "S2432MuQZMulAutDoneActual",
+    "size": 27700,
+    "mtime": "2026-11-02T19:28:20.875Z",
+    "sha": "00E7B1EF335FAB5DB8A7EDA796239E60B7F057C89F28A79545A630777FCC83F3",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2432MuQZMulAutDoneActual.out"
+    ],
+    "reportHits": [
+      "S2432-d5-audit.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2432 (D5): compile-gate audit and exact missing Date: 2026-11-03. ## Gate results CLEAN / EXIT=0: 1) tmp/sheaf/xif/paper/S2420DedekindApplyActual.lean SHA256 26F53AF2BE29DD0AA0DF26D5D67B43E2F609057BE2CD3987A388B8DCB2AE4393 olean SHA256 388DDEBDE81F1AFA4542A616D44C175F3C3DDF9BF626CBD9679FFDF66D054EFE size 86048 s2420_minpoly_frobBar, s2420RootFactor_permBar: axioms trio only. 2"
+  },
+  {
+    "name": "S2432PrestackCloseActual.lean",
+    "base": "S2432PrestackCloseActual",
+    "size": 1211,
+    "mtime": "2026-11-02T18:43:03.652Z",
+    "sha": "806D166B5380CE4FB44CE68EFAE72E492E448E8B340C455C992B00021A06D41A",
+    "ole": {
+      "exists": true,
+      "size": 42920,
+      "sha": "1960DBDB57EEFE3AF07A73C3F26E851810D172D4EDE68790CA906B1A6268D069",
+      "mtime": 1793645710066.0981,
+      "fresh": true
+    },
+    "logs": [
+      "S2432MuQZMulAutDoneActual.out"
+    ],
+    "reportHits": [
+      "S2432-d5-audit.md"
+    ],
+    "actualSorry": true,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "dirty",
+    "evidenceSnippet": " # S2432 (D5): compile-gate audit and exact missing Date: 2026-11-03. ## Gate results CLEAN / EXIT=0: 1) tmp/sheaf/xif/paper/S2420DedekindApplyActual.lean SHA256 26F53AF2BE29DD0AA0DF26D5D67B43E2F609057BE2CD3987A388B8DCB2AE4393 olean SHA256 388DDEBDE81F1AFA4542A616D44C175F3C3DDF9BF626CBD9679FFDF66D054EFE size 86048 s2420_minpoly_frobBar, s2420RootFactor_permBar: axioms trio only. 2"
+  },
+  {
+    "name": "S2433D9FinalActual.lean",
+    "base": "S2433D9FinalActual",
+    "size": 2213,
+    "mtime": "2026-11-02T18:42:58.541Z",
+    "sha": "517107C3B348B59AF0F55BB44FECB0C779493E562A4108681FDACD3A8EF37DD8",
+    "ole": {
+      "exists": true,
+      "size": 23816,
+      "sha": "E4D83F61FC66B4542501247E53EA6FFBCA4A09A5D021E020D9A3671F9D0A8ACB",
+      "mtime": 1793645080804.233,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2433-d9-final.md",
+      "S2433-nonidentity-strong.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2433: D9 final — exact three-input decomposition and ownership actual; no IsStack Date: 2026-11-02. Actual: - S2433PrestackOwnership : S2103FirstMissing K ↔ forall X M N, SlicePushNaturality ... (rfl). This is the D9 prestack half, a slice-push coherence; not a D6 strong certificate. - S2433EffDescentOwnership : S2134FirstMissing K ↔ S2134EffDescentOnEtaleFamilies K (rfl). - S2433SignProject"
+  },
+  {
+    "name": "S2433NonidentityStrongRepresentable.lean",
+    "base": "S2433NonidentityStrongRepresentable",
+    "size": 19787,
+    "mtime": "2026-11-02T19:34:47.344Z",
+    "sha": "890178D59040C3B0CE9FA34B18D557148937FD7B5958B57FFBFA89B80E442852",
+    "ole": {
+      "exists": true,
+      "size": 130512,
+      "sha": "9E7EED2EB452EC72EE88B46D59785374030E24D39477265F096BD7C858148FC8",
+      "mtime": 1793648156575.5,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2433-d9-final.md",
+      "S2433-nonidentity-strong.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2433: D9 final — exact three-input decomposition and ownership actual; no IsStack Date: 2026-11-02. Actual: - S2433PrestackOwnership : S2103FirstMissing K ↔ forall X M N, SlicePushNaturality ... (rfl). This is the D9 prestack half, a slice-push coherence; not a D6 strong certificate. - S2433EffDescentOwnership : S2134FirstMissing K ↔ S2134EffDescentOnEtaleFamilies K (rfl). - S2433SignProject"
+  },
+  {
+    "name": "S2434D9AttackActual.lean",
+    "base": "S2434D9AttackActual",
+    "size": 2750,
+    "mtime": "2026-11-02T18:53:19.553Z",
+    "sha": "C699C0E61B5CA98960FF559E73EE5231EE15B1664B1CD1179E85CE21539679F0",
+    "ole": {
+      "exists": true,
+      "size": 48608,
+      "sha": "E130FA85B61EAEFB53056F17310E323277AB2052370BEACB95B79AE3CF747EE8",
+      "mtime": 1793645657694.1753,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2435D9GateActual.lean",
+    "base": "S2435D9GateActual",
+    "size": 943,
+    "mtime": "2026-11-02T18:56:19.513Z",
+    "sha": "43BE62BB94890E1ABB99BC014FC63A58E6F0DA1FEFF1FCEBCB2A30A22A44A244",
+    "ole": {
+      "exists": true,
+      "size": 2584,
+      "sha": "31DCB633BB6C99D8360239648600EF049BE72467699634F951C821DE72CD069A",
+      "mtime": 1793645829316.2827,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2435-d9-gate.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # S2435: D9 compile gate report Date: 2026-11-02. Gate results: 1. S2425NatIsoCastHelpersActual.lean: EXIT=0, olean 530872, axioms propext/Classical.choice/Quot.sound. ACCEPTED. It provides natIsoOfPointwiseEqToIso and eqToIso/subtype cast helpers. 2. S2434D9AttackActual.lean: EXIT=0, olean 2641, axioms propext/Classical.choice/Quot.sound. ACCEPTED. It provides S2434SlicePush_iff_pullHom (actu"
+  },
+  {
+    "name": "S2436EffDescentCechActual.lean",
+    "base": "S2436EffDescentCechActual",
+    "size": 22476,
+    "mtime": "2026-11-02T19:41:09.423Z",
+    "sha": "02DBC15D9CE190D9F33BE41DD47597CB9D64F5F857361DD9C01F9E63212394A1",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2436-d9-pullhom-goal.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2436: SlicePushNaturality reduced to exact pullHom coherence Date: 2026-11-02. S2436SlicePushProofActual.lean compiles EXIT=0 and isolates the exact goal. After ext phi, change and unfolding slicePush/pullHom, the goal is: ((unop X2).iteratedSliceEquiv.inverse.sheafPushforwardContinuous ...).map (((J.over S).overMapPullback A f.unop).map phi) = ((J.pseudofunctorOver A).mapComp' ."
+  },
+  {
+    "name": "S2436S1493PointTransportActual.lean",
+    "base": "S2436S1493PointTransportActual",
+    "size": 17668,
+    "mtime": "2026-11-02T19:18:44.603Z",
+    "sha": "C9E9E8D7085399DB45903A585FA7E9BEF6F14C20C57B21CA6344521EBD5FADE8",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2436-d9-pullhom-goal.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2436: SlicePushNaturality reduced to exact pullHom coherence Date: 2026-11-02. S2436SlicePushProofActual.lean compiles EXIT=0 and isolates the exact goal. After ext phi, change and unfolding slicePush/pullHom, the goal is: ((unop X2).iteratedSliceEquiv.inverse.sheafPushforwardContinuous ...).map (((J.over S).overMapPullback A f.unop).map phi) = ((J.pseudofunctorOver A).mapComp' ."
+  },
+  {
+    "name": "S2436SlicePushProofActual.lean",
+    "base": "S2436SlicePushProofActual",
+    "size": 1642,
+    "mtime": "2026-11-02T19:05:21.961Z",
+    "sha": "2E0AF11FC12EA80EC6358A622A16E1E5678B1A39C67E25DD6B02C9B7F24835BE",
+    "ole": {
+      "exists": true,
+      "size": 2672,
+      "sha": "6395EAFE138ACEE95D26188617A967DD6407164DEDD457C87DD235359EDC9DA4",
+      "mtime": 1793646379395.5771,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2436-d9-pullhom-goal.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2436: SlicePushNaturality reduced to exact pullHom coherence Date: 2026-11-02. S2436SlicePushProofActual.lean compiles EXIT=0 and isolates the exact goal. After ext phi, change and unfolding slicePush/pullHom, the goal is: ((unop X2).iteratedSliceEquiv.inverse.sheafPushforwardContinuous ...).map (((J.over S).overMapPullback A f.unop).map phi) = ((J.pseudofunctorOver A).mapComp' ."
+  },
+  {
+    "name": "S2437PullHomCoherenceActual.lean",
+    "base": "S2437PullHomCoherenceActual",
+    "size": 7813,
+    "mtime": "2026-11-02T19:39:30.984Z",
+    "sha": "7FC62351541F42BB952C3C762074164E0082771CB9E2E435717F90BA227C3054",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2439D9ProofActual.lean",
+    "base": "S2439D9ProofActual",
+    "size": 3672,
+    "mtime": "2026-11-02T19:09:41.882Z",
+    "sha": "31606F3F2E9B7B5B85AF60AAC201F6C0361DB10BD8FAF85D133A186907A7FAF9",
+    "ole": {
+      "exists": true,
+      "size": 62160,
+      "sha": "4A3C0F1A160270A2E87671E20ED189BD14F0066EF048372229AD85B0B958D730",
+      "mtime": 1793646644525.5852,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2439-d9-interfaces.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2439: D9 minimal reusable interfaces actual; no IsStack Date: 2026-11-02. Actual interfaces: - S2439PullHomCoherence M N: explicit pullHom equality. S2439SlicePush_iff_coherence : SlicePushNaturality M N ↔ S2439PullHomCoherence M N (actual). - S2439AmalgamationInterface K: forall S R hR D, Nonempty (Amalgam ... D). S2439EffDescent_iff_amalgamation : S2134EffDescentOnEtaleFamilies K ↔ S2439Am"
+  },
+  {
+    "name": "S2440AmalgamationActual.lean",
+    "base": "S2440AmalgamationActual",
+    "size": 24692,
+    "mtime": "2026-11-02T19:36:25.496Z",
+    "sha": "235F63E59390599F1B03469A5358A05FDED1C8F1AD8955B00EF8B41454E3AFB0",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440C9SourceInputsActual.lean",
+    "base": "S2440C9SourceInputsActual",
+    "size": 6701,
+    "mtime": "2026-11-02T19:09:05.909Z",
+    "sha": "AEE72553A2EFD3916AB5A7072F7D6EEA946A44071302D9F0FA58264769A6270B",
+    "ole": {
+      "exists": true,
+      "size": 384864,
+      "sha": "8043D0A135F71E001BDEDA726E0C74C104A88D4474EE956F283330AC216C8AC1",
+      "mtime": 1793646652107.6353,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440H1H2IntegrationActual.lean",
+    "base": "S2440H1H2IntegrationActual",
+    "size": 2092,
+    "mtime": "2026-11-02T19:08:16.957Z",
+    "sha": "2C7A7545A3AC944113D9FC857440E522678EEBCBE81A5953A6CB90874EA30DA6",
+    "ole": {
+      "exists": true,
+      "size": 79840,
+      "sha": "A33E145CF68BA4C279E4B9E1B2A9C2A8106E2B6DEFF69FE2253019834CCFE409",
+      "mtime": 1793646605646.605,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440Probe.lean",
+    "base": "S2440Probe",
+    "size": 1373,
+    "mtime": "2026-11-02T19:21:39.919Z",
+    "sha": "1886B15D34FFBE848CC0EC04180F9F443BA16FA281145D443A9A360A3C1D9EFB",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440RangePairTransitiveSubagentActual.lean",
+    "base": "S2440RangePairTransitiveSubagentActual",
+    "size": 18883,
+    "mtime": "2026-11-02T18:37:43.007Z",
+    "sha": "F28E328D7574AC8D7F4C858FA60FB32ED04FC248D2A96253050F6219E35442B1",
+    "ole": {
+      "exists": true,
+      "size": 271464,
+      "sha": "F29846E9EF9FB0BDE5683C30559783C45B28DFC69E4DD03C70E9C6076BDFBCD6",
+      "mtime": 1793646496145.4243,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440RootPermCycleCleanActual.lean",
+    "base": "S2440RootPermCycleCleanActual",
+    "size": 7679,
+    "mtime": "2026-11-02T19:13:43.004Z",
+    "sha": "88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC",
+    "ole": {
+      "exists": true,
+      "size": 269680,
+      "sha": "34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9",
+      "mtime": 1793646922101.3657,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440UnivProbe.lean",
+    "base": "S2440UnivProbe",
+    "size": 1433,
+    "mtime": "2026-11-02T19:31:42.826Z",
+    "sha": "50C61905BC1B52D4ABC5E8B4D95D1721A8C343F9805A1350FA9B4EEB8CCE1C7D",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2440UnivProbe2.lean",
+    "base": "S2440UnivProbe2",
+    "size": 1014,
+    "mtime": "2026-11-02T19:42:05.012Z",
+    "sha": "8ED4A4234328B96F2CF3B573974C298AE2E4EBD5DE8760C3ECACBD81321CBE37",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2440-h1h2-integration.md",
+      "S2440-rootperm-clean.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2440: H^1 closure and the H^2 exact missing Date: 2026-11-03. Layer O. Consumers: S2145/S2142/S2138/S2114, S2112. ## Clean H^1 chain (all EXIT=0, axioms propext/Classical.choice/Quot.sound) S2425H1SurjInternal.lean source SHA256 4edbd9167ccad5361c6f6523b0b039ee1b772091ce4383427700a05bf52ed300 olean 162152 B SHA256 4a54430228c1165a877c8dd1252bbd5dd8f98cc89d52cb07a2fd901f19426d46 S2425"
+  },
+  {
+    "name": "S2441C9PaperCarrierActual.lean",
+    "base": "S2441C9PaperCarrierActual",
+    "size": 7054,
+    "mtime": "2026-11-02T19:27:09.792Z",
+    "sha": "58B0AF92BFEF79F05D9FE1ED06EA909D33FACAB8E14B3248AC9475E33D45B919",
+    "ole": {
+      "exists": true,
+      "size": 261424,
+      "sha": "FEB319BC7F7120F6835F59067D7ADCACF592C189D701D3A0D4C3C0992F389865",
+      "mtime": 1793647802663.7078,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2441H2RepresentativeActual.lean",
+    "base": "S2441H2RepresentativeActual",
+    "size": 5704,
+    "mtime": "2026-11-02T19:23:33.781Z",
+    "sha": "A38E705AC517070A6065099097A59025827F80E84798174E4B694B67594C0681",
+    "ole": {
+      "exists": true,
+      "size": 339280,
+      "sha": "391BC761682BCDD6755DC80E96278E19A47AB9066CECFD42A34875F7084E962E",
+      "mtime": 1793646906632.989,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2442ContinuitySubagentActual.lean",
+    "base": "S2442ContinuitySubagentActual",
+    "size": 25077,
+    "mtime": "2026-11-02T19:39:37.699Z",
+    "sha": "B97515AD2CDBA3434F6049C4E3857482E393A2F598858F1D2355379CAA1FA1DF",
+    "ole": {
+      "exists": true,
+      "size": 36832,
+      "sha": "F650CCC1F905AE782AA9F0323FC79E2F740E9DA1A8ACB847FD2ECFCBC0EC8670",
+      "mtime": 1793648010580.6987,
+      "fresh": false
+    },
+    "logs": [
+      "S2442MulAutDataSubagentActual.attempt1.out",
+      "S2442MulAutDataSubagentActual.attempt2.out",
+      "S2442MulAutDataSubagentActual.attempt3.out",
+      "S2442MulAutDataSubagentActual.attempts.log",
+      "S2442MulAutDataSubagentActual.attempts2.log",
+      "S2442MulAutDataSubagentActual.out",
+      "S2442MulAutDataSubagentActual.try1.out"
+    ],
+    "reportHits": [
+      "S2442-d9-blocked.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": "D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\build\\lib\\lean\\LeanFormal\\IUT\\Foundations\\AlgebraicGeometry\\InfinitePlacePsiCnsResidual.olean' D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\RingTheory\\Congruence\\Basic.olean.priv"
+  },
+  {
+    "name": "S2442MulAutDataSubagentActual.lean",
+    "base": "S2442MulAutDataSubagentActual",
+    "size": 23165,
+    "mtime": "2026-11-02T19:27:08.574Z",
+    "sha": "6ADA4825219481F3FECA2DA7C4AF3A0CFBF62436C8E8C206CF97613C46B16CAF",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [
+      "S2442MulAutDataSubagentActual.attempt1.out",
+      "S2442MulAutDataSubagentActual.attempt2.out",
+      "S2442MulAutDataSubagentActual.attempt3.out",
+      "S2442MulAutDataSubagentActual.attempts.log",
+      "S2442MulAutDataSubagentActual.attempts2.log",
+      "S2442MulAutDataSubagentActual.out",
+      "S2442MulAutDataSubagentActual.try1.out"
+    ],
+    "reportHits": [
+      "S2442-d9-blocked.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": "D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\build\\lib\\lean\\LeanFormal\\IUT\\Foundations\\AlgebraicGeometry\\InfinitePlacePsiCnsResidual.olean' D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\RingTheory\\Congruence\\Basic.olean.priv"
+  },
+  {
+    "name": "S2442QE5DegreeOrderSubagentActual.lean",
+    "base": "S2442QE5DegreeOrderSubagentActual",
+    "size": 17683,
+    "mtime": "2026-11-02T18:58:46.698Z",
+    "sha": "4F8CC5931797582759A8F460994519451B08586E6B82A79C60574646C7F02BB4",
+    "ole": {
+      "exists": true,
+      "size": 402368,
+      "sha": "D64997A5785A99267CA0BB776DEEF686EE2EC75C655A9C92CFB22CC6712B067C",
+      "mtime": 1793646607143.074,
+      "fresh": true
+    },
+    "logs": [
+      "S2442MulAutDataSubagentActual.attempt1.out",
+      "S2442MulAutDataSubagentActual.attempt2.out",
+      "S2442MulAutDataSubagentActual.attempt3.out",
+      "S2442MulAutDataSubagentActual.attempts.log",
+      "S2442MulAutDataSubagentActual.attempts2.log",
+      "S2442MulAutDataSubagentActual.out",
+      "S2442MulAutDataSubagentActual.try1.out"
+    ],
+    "reportHits": [
+      "S2442-d9-blocked.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": "D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\build\\lib\\lean\\LeanFormal\\IUT\\Foundations\\AlgebraicGeometry\\InfinitePlacePsiCnsResidual.olean' D:\\lean\\tmp\\sheaf\\xif\\paper\\S2442MulAutDataSubagentActual.lean:1:0: error: failed to read file 'D:\\lean\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\RingTheory\\Congruence\\Basic.olean.priv"
+  },
+  {
+    "name": "S2443OverMapCompatActual.lean",
+    "base": "S2443OverMapCompatActual",
+    "size": 1477,
+    "mtime": "2026-11-02T19:20:57.347Z",
+    "sha": "53677DC8F441F4DA0B470D7DCD6F29C7E0BFCF5219D5C3945F1F12D0368E28A9",
+    "ole": {
+      "exists": true,
+      "size": 2888,
+      "sha": "1D0920CDB004B0E98F41E5F277BAB0B8612FC600D382B6A017C35A062749AA07",
+      "mtime": 1793647333951.0767,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2443-over-api.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2443: Over API compatibility — exact missing functor iso Date: 2026-11-02. Mathlib APIs available (checked): - Over.iteratedSliceEquivOverMapIso (p : f ⟶ g) : f.iteratedSliceForward ⋙ Over.map p.left ⋙ g.iteratedSliceBackward ≅ Over.map p - GrothendieckTopology.overMapPullback - GrothendieckTopology.overMapPullbackComp - Functor.sheafPushforwardContinuousComp - Functor.sheafPushforwardContin"
+  },
+  {
+    "name": "S2444OverMapCompatIsoActual.lean",
+    "base": "S2444OverMapCompatIsoActual",
+    "size": 1244,
+    "mtime": "2026-11-02T19:26:47.147Z",
+    "sha": "AD36F71E040D37C114D560CE4F323D65D9A3AF13EC08FB83EF1C4DCDA90CE5A6",
+    "ole": {
+      "exists": true,
+      "size": 18840,
+      "sha": "FBF8EC16A54FF5BE29AAF27BAB9FB3A8F46734E94C70B673BC5A266B072938A8",
+      "mtime": 1793647702334.4978,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2444-overmap-iso.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2444: exact missing Over compatibility functor iso; no inhabitant Date: 2026-11-02. Actual type definition: S2444OverMapCompatIsoType p := (slicePush g) ⋙ (J.overMapPullback A (Over.Hom.left p)) ≅ ((J.over X).overMapPullback A p) ⋙ (slicePush f) No inhabitant is asserted. The direct candidate Iso.refl fails (composites are not definitionally equal). Construction needs: 1. sheafP"
+  },
+  {
+    "name": "S2445AxiomProbe.lean",
+    "base": "S2445AxiomProbe",
+    "size": 275,
+    "mtime": "2026-11-02T18:26:16.525Z",
+    "sha": "5894741D72060FD912E0EDFE8457317E8BE0CBD584DF166DD5C7F081B4E65CD5",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2445-d5-status.md",
+      "S2445-d9-signproj-env.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2445 D5 status: clean rootPerm alignment; final S2217 application missing Date: 2026-11-03. ## CLEAN / EXIT=0 1. tmp/sheaf/xif/paper/S2440RootPermCycleCleanActual.lean SHA256 88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC olean SHA256 34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9 size 269680 axioms propext, Classical.choice, Quot.sound; no so"
+  },
+  {
+    "name": "S2445AxiomProbe2.lean",
+    "base": "S2445AxiomProbe2",
+    "size": 296,
+    "mtime": "2026-11-02T18:30:09.960Z",
+    "sha": "5FD2709275E00601EFAFF96464649B662009D36FF2E819738B03014EF9E90F9F",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2445-d5-status.md",
+      "S2445-d9-signproj-env.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2445 D5 status: clean rootPerm alignment; final S2217 application missing Date: 2026-11-03. ## CLEAN / EXIT=0 1. tmp/sheaf/xif/paper/S2440RootPermCycleCleanActual.lean SHA256 88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC olean SHA256 34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9 size 269680 axioms propext, Classical.choice, Quot.sound; no so"
+  },
+  {
+    "name": "S2445D5FinalActual.lean",
+    "base": "S2445D5FinalActual",
+    "size": 2303,
+    "mtime": "2026-11-02T19:30:03.244Z",
+    "sha": "654E4122EF3A7060ACD90FE21FC5976325BBD442CAEADCE3B199FC0B5BFA1E50",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2445-d5-status.md",
+      "S2445-d9-signproj-env.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2445 D5 status: clean rootPerm alignment; final S2217 application missing Date: 2026-11-03. ## CLEAN / EXIT=0 1. tmp/sheaf/xif/paper/S2440RootPermCycleCleanActual.lean SHA256 88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC olean SHA256 34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9 size 269680 axioms propext, Classical.choice, Quot.sound; no so"
+  },
+  {
+    "name": "S2445D5LargeImageChainActual.lean",
+    "base": "S2445D5LargeImageChainActual",
+    "size": 6034,
+    "mtime": "2026-11-02T18:39:04.083Z",
+    "sha": "E34BAD303D2ED93F11C3FE8CF569331C6395097DCF2AE79D6CDB6C06F0CA4387",
+    "ole": {
+      "exists": true,
+      "size": 44368,
+      "sha": "25020AD028104D2A1F84B95EB8F2EFB322C78E1105E4D55005EFAB733311B9A7",
+      "mtime": 1793646701707.2947,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2445-d5-status.md",
+      "S2445-d9-signproj-env.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2445 D5 status: clean rootPerm alignment; final S2217 application missing Date: 2026-11-03. ## CLEAN / EXIT=0 1. tmp/sheaf/xif/paper/S2440RootPermCycleCleanActual.lean SHA256 88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC olean SHA256 34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9 size 269680 axioms propext, Classical.choice, Quot.sound; no so"
+  },
+  {
+    "name": "S2445SignProjectionActual.lean",
+    "base": "S2445SignProjectionActual",
+    "size": 1491,
+    "mtime": "2026-11-02T19:35:46.705Z",
+    "sha": "240D5CA2DE3CFE5CA7D6A7F0266411A7C9CF9CA1C88E83D71D2E594319E2BE44",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2445-d5-status.md",
+      "S2445-d9-signproj-env.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2445 D5 status: clean rootPerm alignment; final S2217 application missing Date: 2026-11-03. ## CLEAN / EXIT=0 1. tmp/sheaf/xif/paper/S2440RootPermCycleCleanActual.lean SHA256 88E6A0C79E2CD7FFADEAB936C157DC7CC6F887261986A3FABD95EDC2D00F53CC olean SHA256 34F87BFF37C5586CDA751107C7D6F70B544D6DF312A3AEBF1B074643A2F330B9 size 269680 axioms propext, Classical.choice, Quot.sound; no so"
+  },
+  {
+    "name": "S2446D5FinalActual.lean",
+    "base": "S2446D5FinalActual",
+    "size": 3374,
+    "mtime": "2026-11-02T19:37:32.887Z",
+    "sha": "4B4F9FACEC6015988BF08BB8CD77DAC5641E87533F92B67F7F84D2F7844ECB19",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2446-build-incident-status.md",
+      "S2446-build-incident.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2446: BUILD INCIDENT status — compilation halted Date: 2026-11-02. Per Lead instruction, all lake env lean / lake build / compilation commands are STOPPED. No new compile was started for this report. ## Incident Missing Mathlib build artifacts (observed): - Mathlib/Tactic/Widget/LibraryRewrite.olean - Mathlib/MeasureTheory/Integral/Bochner/Set.olean.private - Mathlib/Topology/Algebra/Unifor"
+  },
+  {
+    "name": "S2446RangeCycleTypeSubagentActual.lean",
+    "base": "S2446RangeCycleTypeSubagentActual",
+    "size": 14885,
+    "mtime": "2026-11-02T19:37:14.033Z",
+    "sha": "C5744CF64B74E96792B4E7D879D44C547DA3511E7AAC6D0299C7E6B14238646E",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2446-build-incident-status.md",
+      "S2446-build-incident.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2446: BUILD INCIDENT status — compilation halted Date: 2026-11-02. Per Lead instruction, all lake env lean / lake build / compilation commands are STOPPED. No new compile was started for this report. ## Incident Missing Mathlib build artifacts (observed): - Mathlib/Tactic/Widget/LibraryRewrite.olean - Mathlib/MeasureTheory/Integral/Bochner/Set.olean.private - Mathlib/Topology/Algebra/Unifor"
+  },
+  {
+    "name": "S2447D5GateIntegrationActual.lean",
+    "base": "S2447D5GateIntegrationActual",
+    "size": 2028,
+    "mtime": "2026-11-02T19:01:28.697Z",
+    "sha": "AB0F58105E7E1C1BED77F6E6744B5261A5B2DE103CB144A3C4AA19CBEC5DF9EE",
+    "ole": {
+      "exists": true,
+      "size": 16808,
+      "sha": "E24513C9955F6269AF132874C5A08EE3B990E59067C016671AD29DA5191BD153",
+      "mtime": 1793646153091.052,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2447-s2189-plan.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2447: S2189 proof plan and Lean skeleton (NO COMPILE, NOT ACTUAL) Status: planning only. Build incident in effect. No Lean compilation was performed for this report. Nothing below is claimed kernel-clean. Do not consume S2442MulAutDataSubagentActual.lean or S2442ContinuitySubagentActual.lean (unverified). Do not consume S2431MuQZMulAutSubagentActual.lean (invalid, compiles with errors/sorryAx"
+  },
+  {
+    "name": "S2449AxiomProbe.lean",
+    "base": "S2449AxiomProbe",
+    "size": 288,
+    "mtime": "2026-11-02T19:13:15.377Z",
+    "sha": "8F313DC4B0D1C7B85649CA127E773A51C12EF764DE832ECD2E5E00A0411A7F68",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2449-d5-gate-status.md",
+      "S2449-qside-plan.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # D5 large-image gate status (build incident pause) Date: 2026-11-03. No new compilation performed after the Mathlib artifact incident. This report records proof status only. ## Clean gate files (compiled EXIT=0 before the incident; source/olean hashes match) - S2440RangePairTransitiveSubagentActual.lean source 18883 B, SHA256 f28e328d7574ac8d7f4c858fa60fb32ed04fc248d2a96253050f6219e35442b1 "
+  },
+  {
+    "name": "S2449D5FinalStatusActual.lean",
+    "base": "S2449D5FinalStatusActual",
+    "size": 2313,
+    "mtime": "2026-11-02T19:04:45.175Z",
+    "sha": "D18371DDCC6C4266FDB055D732B286AADA1B599973DA903637F549503CDFA587",
+    "ole": {
+      "exists": true,
+      "size": 18024,
+      "sha": "D5511703EBF0198E16EBEF0470BBF226AF320C8CE2AE8D932629E6366C0005FD",
+      "mtime": 1793646790157.4546,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2449-d5-gate-status.md",
+      "S2449-qside-plan.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "clean-claimed",
+    "evidenceSnippet": " # D5 large-image gate status (build incident pause) Date: 2026-11-03. No new compilation performed after the Mathlib artifact incident. This report records proof status only. ## Clean gate files (compiled EXIT=0 before the incident; source/olean hashes match) - S2440RangePairTransitiveSubagentActual.lean source 18883 B, SHA256 f28e328d7574ac8d7f4c858fa60fb32ed04fc248d2a96253050f6219e35442b1 "
+  },
+  {
+    "name": "S2454Layer1Skeleton.lean",
+    "base": "S2454Layer1Skeleton",
+    "size": 2850,
+    "mtime": "2026-11-02T19:41:52.112Z",
+    "sha": "6E82A3EDD54D9C7A633B109BF18D4B84B4D7CBF354000FE94DFF726E791F40BD",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [
+      "S2454-qside-skeleton.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " # S2454 q-side skeleton report (BUILD HOLD, no compilation) ## Deliverables written - `tmp/sheaf/xif/paper/S2454Layer1Skeleton.lean` - corrected imports: S2195, S2232, S2040, plus explicit SourcePlacePartitionReduction and SourceDefinition31NativeContractBridgeReduction - binder: `T : LeanFormal.IUT.InitialThetaSource.SourceNativeInitialThetaData.{0} l` - binder: `b : LeanFormal.IUT.In"
+  },
+  {
+    "name": "S245SourceHullMeasureActual.lean",
+    "base": "S245SourceHullMeasureActual",
+    "size": 6237,
+    "mtime": "2026-10-29T12:11:44.621Z",
+    "sha": "8CD11A1A6FC33BE492CE56A581B30B5670CFCD8F6B4AE0C87CC11C0D361FD015",
+    "ole": {
+      "exists": true,
+      "size": 305120,
+      "sha": "D13DFC63C534696EBAEEFFC3EB0305C372E7464DBA3C3F03AC2721D7A9A7917A",
+      "mtime": 1793276041388.0054,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [
+      "S2450-d9-plan.md",
+      "S2451-d5-plan.md",
+      "S2452-d5-gate-plan.md",
+      "S2453-d6-plan.md",
+      "S2454-qside-skeleton.md"
+    ],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": true,
+    "status": "invalid-unverified",
+    "evidenceSnippet": " # S2450: D9 non-compiling proof plan (S2427SignProjection + S2444OverMapCompatIso) Date: 2026-11-02. BUILD HOLD: no lake command was run for this plan. No declaration is claimed actual. ## 0. Gate assumptions for post-build - Restore Mathlib artifacts via build coordinator; then run one serialized compile per file, no concurrent lake builds. - Allowed final axioms: propext, Classical.choice, Q"
+  },
+  {
+    "name": "S2460PairTransitiveFinalActual.lean",
+    "base": "S2460PairTransitiveFinalActual",
+    "size": 21384,
+    "mtime": "2026-11-02T19:39:18.390Z",
+    "sha": "172C5991A405C9D5FA33B057FC0BA8E3E335442B890030208FEDCCA15132A762",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2461AxiomProbe.lean",
+    "base": "S2461AxiomProbe",
+    "size": 223,
+    "mtime": "2026-11-02T19:27:02.824Z",
+    "sha": "DF170C8CFF3DC7C0678B4BDC69890CE24EAC566AD82EAE51DA6AD37E200C9067",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2461CycleTypeFinalActual.lean",
+    "base": "S2461CycleTypeFinalActual",
+    "size": 25963,
+    "mtime": "2026-11-02T19:32:15.051Z",
+    "sha": "C5DA57B1E9BD63508CAF0EEC7EEEAB5AF4573BFCE84CFC6CBD0C3312C8DA4297",
+    "ole": {
+      "exists": true,
+      "size": 88680,
+      "sha": "6FBAF697B7A3CC0C71018AD538F01DDCEBC5E6F509368D200EC65737844B842B",
+      "mtime": 1793647616742.2285,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": true,
+    "refuted": false,
+    "status": "dirty",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2462FullQE5FieldActual.lean",
+    "base": "S2462FullQE5FieldActual",
+    "size": 67,
+    "mtime": "2026-11-02T19:38:20.785Z",
+    "sha": "15699E647F28063565EA0CF5CFB19D769E113F54E6EFAF5F4B1145CD8B2CF7B8",
+    "ole": {
+      "exists": true,
+      "size": 2024,
+      "sha": "47E74934AD781D70D2F928CBA2C4B72CEE520E96EB906DB6ED0A958A5E61F8F6",
+      "mtime": 1793648522534.5417,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2465D5FinalIntegrationActual.lean",
+    "base": "S2465D5FinalIntegrationActual",
+    "size": 2725,
+    "mtime": "2026-11-02T19:28:08.710Z",
+    "sha": "DD96B73C240B726BC1126CCEAE36143FA2E1B138C3D25AD5238FD7A902BB02E7",
+    "ole": {
+      "exists": true,
+      "size": 16296,
+      "sha": "7C4FCE9EA1B81D2FE2E78329BF8A1C0B2B88F48A9B5EB69BB62959CB882A9941",
+      "mtime": 1793647365266.6113,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S2470FiberEquivActual.lean",
+    "base": "S2470FiberEquivActual",
+    "size": 4771,
+    "mtime": "2026-11-02T19:27:38.554Z",
+    "sha": "586501A9AB1B86E8A3E812A50C7C37CC084D85AE4AA8D2556D265D3F12757201",
+    "ole": {
+      "exists": false,
+      "size": 0,
+      "sha": "",
+      "mtime": 0,
+      "fresh": false
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  },
+  {
+    "name": "S247QPilotHaarInstancesActual.lean",
+    "base": "S247QPilotHaarInstancesActual",
+    "size": 3758,
+    "mtime": "2026-10-29T11:51:55.803Z",
+    "sha": "DCCAEA4AE06AA17C7608A7969A7CC8CF8F48659F98BBEE5CB4C5C4E7FA571412",
+    "ole": {
+      "exists": true,
+      "size": 60440,
+      "sha": "F6703B2B0D41B9D9B3F5FEC1AE72676D3B99B32F0FFC67CD6C128A655FC049FB",
+      "mtime": 1793274835042.6567,
+      "fresh": true
+    },
+    "logs": [],
+    "reportHits": [],
+    "actualSorry": false,
+    "actualAxiom": false,
+    "actualAdmit": false,
+    "refuted": false,
+    "status": "unknown",
+    "evidenceSnippet": " "
+  }
+]

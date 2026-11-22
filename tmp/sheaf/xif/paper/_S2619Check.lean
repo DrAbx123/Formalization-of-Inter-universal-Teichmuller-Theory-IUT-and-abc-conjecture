@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2619ActionGroupoidFiberSkeleton
+#check LeanFormal.IUT.XiFPaper.S2619ActionGroupoidFiberSkeleton.S2619PrestackGoal
+#check LeanFormal.IUT.XiFPaper.S2619ActionGroupoidFiberSkeleton.S2619PresheafHomSheafGoal

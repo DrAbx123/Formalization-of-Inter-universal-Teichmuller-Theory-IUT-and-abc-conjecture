@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1P1ValuativeUniquenessActual
+import tmp.sheaf.xif.paper.Mzk1G1FermatCurveSmoothActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ValuativeUniquenessActual.valuativeCriterion_uniqueness
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ValuativeUniquenessActual.chartMorphismInf_zero_ne_chartMorphism0_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartRing_locally_standardSmooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartSpec_smoothOfRelativeDimension
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartRing_exists_standardSmooth_localized

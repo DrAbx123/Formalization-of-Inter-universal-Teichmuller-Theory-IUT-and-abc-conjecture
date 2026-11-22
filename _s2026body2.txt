@@ -1,0 +1,205 @@
+
+/-! ## 4. The explicit hom field of the canonical descent data -/
+
+/-- The hom component of the canonical descent datum of the reassembled object. -/
+theorem S2026ToDescentData_hom_app (hR : R ∈ J S) {Y : Site} (q : Y ⟶ S)
+    (i₁ i₂ : R.arrows.category) (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+        (fun (i : R.arrows.category) => i.obj.hom)).obj
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom
+        q f₁ f₂ hf₁ hf₂)
+      = ((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+        ≫ ((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR) := rfl
+
+/-- The hom component of the canonical descent datum of the effective A-descent datum. -/
+theorem S2026AToDescentData_hom_app {Y : Site} (q : Y ⟶ S)
+    (i₁ i₂ : R.arrows.category) (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (((Pseudofunctor.toDescentData A.source.fiber
+        (fun (i : R.arrows.category) => i.obj.hom)).obj a).hom q f₁ f₂ hf₁ hf₂)
+      = (A.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app a
+        ≫ (A.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app a := rfl
+
+/-- The hom component of the canonical descent datum of the effective B-descent datum. -/
+theorem S2026BToDescentData_hom_app {Y : Site} (q : Y ⟶ S)
+    (i₁ i₂ : R.arrows.category) (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (((Pseudofunctor.toDescentData B.source.fiber
+        (fun (i : R.arrows.category) => i.obj.hom)).obj b).hom q f₁ f₂ hf₁ hf₂)
+      = (B.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app b
+        ≫ (B.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app b := rfl
+
+/-- The first projection of the structure morphism of the extracted A-descent datum. -/
+theorem S2026FstDHom {Y : Site} (q : Y ⟶ S) (i₁ i₂ : R.arrows.category)
+    (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (D.hom q f₁ f₂ hf₁ hf₂) = (S2004FstDescentData f g D).hom q f₁ f₂ hf₁ hf₂ := rfl
+
+/-- The second projection of the structure morphism of the extracted B-descent datum. -/
+theorem S2026SndDHom {Y : Site} (q : Y ⟶ S) (i₁ i₂ : R.arrows.category)
+    (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (D.hom q f₁ f₂ hf₁ hf₂) = (S2004SndDescentData f g D).hom q f₁ f₂ hf₁ hf₂ := rfl
+
+/-- The first projection of the canonical descent datum of the reassembled object is the
+canonical descent datum of the effective A-descent datum. -/
+theorem S2026FstHom_ofObj (hR : R ∈ J S) {Y : Site} (q : Y ⟶ S)
+    (i₁ i₂ : R.arrows.category) (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+          (fun (i : R.arrows.category) => i.obj.hom)).obj
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom q f₁ f₂ hf₁ hf₂)
+      = ((Pseudofunctor.toDescentData A.source.fiber
+          (fun (i : R.arrows.category) => i.obj.hom)).obj a).hom q f₁ f₂ hf₁ hf₂ := by
+  have h0 : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+          (fun (i : R.arrows.category) => i.obj.hom)).obj
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom q f₁ f₂ hf₁ hf₂)
+      = (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+          ≫ ((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)) :=
+    congrArg _ (S2026ToDescentData_hom_app (D := D) (a := a) (eA := eA) (b := b) (eB := eB)
+      hR q i₁ i₂ f₁ f₂ hf₁ hf₂)
+  have h1 : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+          ≫ ((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+        ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)) :=
+    Functor.map_comp _ _ _
+  have h2 : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (A.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left :=
+    S1956Fst_mapComp'_inv f g _ _ _ _ _
+  have h3 : (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (A.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left :=
+    S1956Fst_mapComp' f g _ _ _ _ _
+  have e1 := congrArg (fun m =>
+    m ≫ (S1836IsoCommaFst (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))) h2
+  have e2 := congrArg (fun m =>
+    (A.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left ≫ m) h3
+  have e3 : (A.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left
+        ≫ (A.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left
+      = ((Pseudofunctor.toDescentData A.source.fiber
+          (fun (i : R.arrows.category) => i.obj.hom)).obj a).hom q f₁ f₂ hf₁ hf₂ := by
+    rw [S2026X_obj_left, ← S2026AToDescentData_hom_app]
+  exact h0.trans (h1.trans (e1.trans (e2.trans e3)))
+
+/-- The second projection of the canonical descent datum of the reassembled object is the
+canonical descent datum of the effective B-descent datum. -/
+theorem S2026SndHom_ofObj (hR : R ∈ J S) {Y : Site} (q : Y ⟶ S)
+    (i₁ i₂ : R.arrows.category) (f₁ : Y ⟶ i₁.obj.left) (f₂ : Y ⟶ i₂.obj.left)
+    (hf₁ : f₁ ≫ i₁.obj.hom = q) (hf₂ : f₂ ≫ i₂.obj.hom = q) :
+    (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+          (fun (i : R.arrows.category) => i.obj.hom)).obj
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom q f₁ f₂ hf₁ hf₂)
+      = ((Pseudofunctor.toDescentData B.source.fiber
+          (fun (i : R.arrows.category) => i.obj.hom)).obj b).hom q f₁ f₂ hf₁ hf₂ := by
+  have h0 : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((Pseudofunctor.toDescentData (sitePseudofunctor f g)
+          (fun (i : R.arrows.category) => i.obj.hom)).obj
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).hom q f₁ f₂ hf₁ hf₂)
+      = (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+          ≫ ((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)) :=
+    congrArg _ (S2026ToDescentData_hom_app (D := D) (a := a) (eA := eA) (b := b) (eB := eB)
+      hR q i₁ i₂ f₁ f₂ hf₁ hf₂)
+  have h1 : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+        (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+          ≫ ((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+        ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)) :=
+    Functor.map_comp _ _ _
+  have h2 : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (B.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right :=
+    S1956Snd_mapComp'_inv f g _ _ _ _ _
+  have h3 : (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))
+      = (B.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right :=
+    S1956Snd_mapComp' f g _ _ _ _ _
+  have e1 := congrArg (fun m =>
+    m ≫ (S1836IsoCommaSnd (f.map.app (U Y)).toFunctor (g.map.app (U Y)).toFunctor).map
+          (((sitePseudofunctor f g).mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+              (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR))) h2
+  have e2 := congrArg (fun m =>
+    (B.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right ≫ m) h3
+  have e3 : (B.source.fiber.mapComp' i₁.obj.hom.op.toLoc f₁.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₁])).inv.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right
+        ≫ (B.source.fiber.mapComp' i₂.obj.hom.op.toLoc f₂.op.toLoc q.op.toLoc
+            (by rw [← Quiver.Hom.comp_toLoc, ← op_comp, hf₂])).hom.toNatTrans.app
+          (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right
+      = ((Pseudofunctor.toDescentData B.source.fiber
+          (fun (i : R.arrows.category) => i.obj.hom)).obj b).hom q f₁ f₂ hf₁ hf₂ := by
+    rw [S2026X_obj_right, ← S2026BToDescentData_hom_app]
+  exact h0.trans (h1.trans (e1.trans (e2.trans e3)))

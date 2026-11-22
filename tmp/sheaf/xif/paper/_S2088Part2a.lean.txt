@@ -1,0 +1,55 @@
+
+/-! ## 4. Item 1 at the curve level, and the transfer layer -/
+
+section Curve
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+/-- Item 1 for the actual curve fiber functor, Type level. -/
+theorem curve_preservesTerminalObjects :
+    PreservesLimitsOfShape (Discrete PEmpty.{1}) (curveGeometricFiberFunctor K Omega x) :=
+  preservesTerminalObjects_typeLevel (S := CurveBase K) (Omega := Omega) (x := x)
+
+/-- Limits of a fixed shape transfer from the Type-valued geometric fiber functor
+to the `FintypeCat`-valued lift. -/
+theorem preservesLimitsOfShape_of_typeLevel {J : Type*} [Category J]
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesLimitsOfShape J (curveGeometricFiberFunctor K Omega x)) :
+    PreservesLimitsOfShape J (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : PreservesLimitsOfShape J (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : PreservesLimitsOfShape J
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact preservesLimitsOfShape_of_comp_of_reflects _ FintypeCat.incl
+
+/-- Colimits of a fixed shape transfer from the Type-valued geometric fiber
+functor to the `FintypeCat`-valued lift. -/
+theorem preservesColimitsOfShape_of_typeLevel {J : Type*} [Category J]
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesColimitsOfShape J (curveGeometricFiberFunctor K Omega x)) :
+    PreservesColimitsOfShape J (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : PreservesColimitsOfShape J (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : PreservesColimitsOfShape J
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact preservesColimitsOfShape_of_comp_of_reflects _ FintypeCat.incl
+
+/-- Preservation of epimorphisms transfers to the `FintypeCat`-valued lift. -/
+theorem preservesEpimorphisms_of_typeLevel
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x)) :
+    Functor.PreservesEpimorphisms (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : Functor.PreservesEpimorphisms
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact Functor.preservesEpimorphisms_of_preserves_of_reflects _ FintypeCat.incl
+
+/-- Reflection of isomorphisms transfers to the `FintypeCat`-valued lift. -/
+theorem reflectsIsomorphisms_of_typeLevel
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms) :
+    (curveGeometricFiberFunctorFintype K hfin).ReflectsIsomorphisms := by
+  haveI h1 : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms := h
+  haveI h2 : (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl).ReflectsIsomorphisms := h1
+  exact reflectsIsomorphisms_of_comp _ FintypeCat.incl
+
+end Curve

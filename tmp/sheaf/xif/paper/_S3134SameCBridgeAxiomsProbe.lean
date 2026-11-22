@@ -1,0 +1,16 @@
+import tmp.sheaf.xif.paper.S3134SameCBridgeActual
+
+/-! Axioms probe for the S3134 same-C bridge (task-12). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134NativeSelectedNonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134NativeBadIncluded_injective
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134NativeInitialThetaInput
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_selectedPlaces
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_badPlaces
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_badIncluded
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_badFinite
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_stableReduction
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_torsionImage
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134SameCContractBridge_cuspParameter
+#print axioms LeanFormal.IUT.XiFPaper.S3134SameCBridgeActual.S3134Step3115_mainlineQC_le_thetaPilot_viaSameC

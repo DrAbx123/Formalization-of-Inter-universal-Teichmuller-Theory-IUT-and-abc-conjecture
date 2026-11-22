@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2480CycleTypeRepairActual
+open LeanFormal.IUT.XiFPaper.S2480CycleTypeRepairActual
+open LeanFormal.IUT.XiFPaper.S2203D5RangeActual
+#check S2480Target
+#check S2480FirstMissing
+#print S2480FirstMissing
+#print axioms S2480FirstMissing_iff_target
+#print axioms S2480Target_iff_rootCycle
+#print axioms S2480PairMatrix_cycleType
+#print axioms S2480D5LargeImageFive_of_firstMissing_and_pair
+#print axioms S2480S2057FactorizationData_uninhabitable

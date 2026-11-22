@@ -1,0 +1,272 @@
+/-
+  Actual image of the source integral units in the completion integral units.
+
+  Source: SourceIntegralUnitsComparison defines
+    SourceIntegralUnits S        = (O_F)^×
+    CompletionIntegralUnits S v  = (v.adicCompletionIntegers F)^×
+    sourceIntegralUnitsToCompletion S v : SourceIntegralUnits S ->* CompletionIntegralUnits S v.
+  The image below is the actual subgroup-theoretic image of that canonical map.
+  No arbitrary carrier and no identification with the full completion units is
+  introduced.  The exact image/quotient residual is stated at the end.
+-/
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.SourceIntegralUnitsComparison
+
+set_option relaxedAutoImplicit false
+set_option linter.unusedSectionVars false
+set_option linter.unusedVariables false
+set_option synthInstance.maxHeartbeats 1000000
+
+noncomputable section
+
+namespace LeanFormal.IUT.SourceIntegralUnitsImage
+
+open LeanFormal.IUT Theorem311Source
+open LeanFormal.IUT.SourceIntegralUnitsComparison
+
+universe u
+
+variable {l : PrimeGeFive} (S : SourceDefinition31Data l)
+  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers S.arithmetic.F))
+
+/-- The actual image subgroup of source integral units inside completion integral
+units, as the image of the canonical comparison hom. -/
+abbrev SourceIntegralUnitsImage : Subgroup (CompletionIntegralUnits S v) :=
+  (⊤ : Subgroup (SourceIntegralUnits S)).map (sourceIntegralUnitsToCompletion S v)
+
+/-- Membership in the actual image: exactly an element hit by some source unit. -/
+theorem mem_sourceIntegralUnitsImage_iff
+    {x : CompletionIntegralUnits S v} :
+    x ∈ SourceIntegralUnitsImage S v ↔
+      ∃ u : SourceIntegralUnits S, sourceIntegralUnitsToCompletion S v u = x := by
+  constructor
+  · intro hx
+    rw [SourceIntegralUnitsImage, Subgroup.mem_map] at hx
+    obtain ⟨u, -, rfl⟩ := hx
+    exact ⟨u, rfl⟩
+  · rintro ⟨u, rfl⟩
+    rw [SourceIntegralUnitsImage, Subgroup.mem_map]
+    exact ⟨u, Subgroup.mem_top u, rfl⟩
+
+/-- Every source unit maps into the actual image subgroup. -/
+theorem sourceIntegralUnitsToCompletion_mem_image (u : SourceIntegralUnits S) :
+    sourceIntegralUnitsToCompletion S v u ∈ SourceIntegralUnitsImage S v :=
+  ⟨u, by simp, rfl⟩
+
+/-- The image contains the identity of the completion integral-unit group. -/
+theorem one_mem_sourceIntegralUnitsImage :
+    (1 : CompletionIntegralUnits S v) ∈ SourceIntegralUnitsImage S v :=
+  (SourceIntegralUnitsImage S v).one_mem
+
+/-- The image is closed under multiplication. -/
+theorem mul_mem_sourceIntegralUnitsImage
+    {x y : CompletionIntegralUnits S v}
+    (hx : x ∈ SourceIntegralUnitsImage S v)
+    (hy : y ∈ SourceIntegralUnitsImage S v) :
+    x * y ∈ SourceIntegralUnitsImage S v :=
+  (SourceIntegralUnitsImage S v).mul_mem hx hy
+
+/-- The image is closed under inversion. -/
+theorem inv_mem_sourceIntegralUnitsImage
+    {x : CompletionIntegralUnits S v}
+    (hx : x ∈ SourceIntegralUnitsImage S v) :
+    x⁻¹ ∈ SourceIntegralUnitsImage S v :=
+  (SourceIntegralUnitsImage S v).inv_mem hx
+
+/-- The image is a subgroup of the actual completion integral-unit group. -/
+theorem sourceIntegralUnitsImage_le_completionIntegralUnits :
+    (SourceIntegralUnitsImage S v : Set (CompletionIntegralUnits S v)) ⊆
+      Set.univ :=
+  Set.subset_univ _
+
+/-! ## Exact image residual
+
+Constructed here: the actual subgroup image of `(O_F)^×` in
+`(v.adicCompletionIntegers F)^×`.
+
+NOT claimed:
+* that this image is all of `(v.adicCompletionIntegers F)^×`; completion
+  principal units and units outside the image of `O_F` are not identified;
+* that the image equals the norm-one subgroup of the completion;
+* that the image is the source Psi^cns integral-unit group.  The latter needs
+  the actual source Psi^cns object and integral-unit comparison.
+
+The exact next object is the quotient of the completion integral units by this
+actual image subgroup; it is formed in `SourceIntegralUnitsQuotient.lean`.
+-/
+
+
+/-- The image is definitionally the image subgroup of the comparison hom. -/
+theorem sourceIntegralUnitsImage_eq_map_top :
+    SourceIntegralUnitsImage S v =
+      (⊤ : Subgroup (SourceIntegralUnits S)).map (sourceIntegralUnitsToCompletion S v) :=
+  rfl
+
+/-- The underlying set of the image is exactly the range of the comparison. -/
+theorem sourceIntegralUnitsImage_coe_eq_range :
+    ((SourceIntegralUnitsImage S v : Subgroup (CompletionIntegralUnits S v)) :
+        Set (CompletionIntegralUnits S v)) =
+      Set.range (fun u : SourceIntegralUnits S =>
+        sourceIntegralUnitsToCompletion S v u) := by
+  ext x
+  constructor
+  · intro hx
+    simp only [SourceIntegralUnitsImage, Subgroup.mem_map] at hx
+    obtain ⟨u, -, rfl⟩ := hx
+    exact ⟨u, rfl⟩
+  · intro hx
+    rcases hx with ⟨u, rfl⟩
+    exact (mem_sourceIntegralUnitsImage_iff (S := S) (v := v)
+      (x := sourceIntegralUnitsToCompletion S v u)).mpr ⟨u, rfl⟩
+
+/-- The image is generated by the images of the source units. -/
+theorem sourceIntegralUnitsImage_eq_closure_range :
+    SourceIntegralUnitsImage S v =
+      Subgroup.closure (Set.range (fun u : SourceIntegralUnits S =>
+        sourceIntegralUnitsToCompletion S v u)) :=
+by
+  apply le_antisymm
+  · intro x hx
+    simp only [SourceIntegralUnitsImage, Subgroup.mem_map] at hx
+    obtain ⟨u, -, rfl⟩ := hx
+    exact Subgroup.subset_closure ⟨u, rfl⟩
+  · exact (Subgroup.closure_le (K := SourceIntegralUnitsImage S v)).mpr (by
+      rintro x ⟨u, rfl⟩
+      exact sourceIntegralUnitsToCompletion_mem_image S v u)
+
+/-- The source comparison maps the identity to the identity of the image. -/
+theorem sourceIntegralUnitsToCompletion_one :
+    sourceIntegralUnitsToCompletion S v (1 : SourceIntegralUnits S) =
+      (1 : CompletionIntegralUnits S v) :=
+  map_one (sourceIntegralUnitsToCompletion S v)
+
+/-- The source comparison maps inverses to inverses in the image. -/
+theorem sourceIntegralUnitsToCompletion_inv (u : SourceIntegralUnits S) :
+    sourceIntegralUnitsToCompletion S v u⁻¹ =
+      (sourceIntegralUnitsToCompletion S v u)⁻¹ :=
+  map_inv (sourceIntegralUnitsToCompletion S v) u
+
+/-- Monotonicity of the actual image under the comparison. -/
+theorem sourceIntegralUnitsImage_le_iff {H : Subgroup (CompletionIntegralUnits S v)} :
+    SourceIntegralUnitsImage S v ≤ H ↔
+      ∀ u : SourceIntegralUnits S, sourceIntegralUnitsToCompletion S v u ∈ H := by
+  constructor
+  · intro h u
+    exact h (sourceIntegralUnitsToCompletion_mem_image S v u)
+  · intro h x hx
+    rw [mem_sourceIntegralUnitsImage_iff] at hx
+    obtain ⟨u, rfl⟩ := hx
+    exact h u
+
+
+/-! ## Frozen imports and interface dependencies
+
+Imports exactly:
+- `SourceIntegralUnitsComparison` (the actual source/completion groups and the
+  canonical unit comparison);
+- through it, `SourceDefinition31Boundary` and Mathlib's adic-completion API.
+
+Declarations exported:
+- `SourceIntegralUnitsImage S v`;
+- `mem_sourceIntegralUnitsImage_iff`;
+- `sourceIntegralUnitsToCompletion_mem_image`;
+- subgroup identity/multiplication/inversion closure;
+- `sourceIntegralUnitsImage_eq_map_top`;
+- `sourceIntegralUnitsImage_coe_eq_range`;
+- `sourceIntegralUnitsImage_eq_closure_range`;
+- comparison identity/inverse lemmas;
+- image monotonicity criterion.
+
+Exact residual: the actual completion integral-unit group can contain units
+outside the image of `(O_F)^×`; no surjectivity, no norm-one equality, and no
+source Psi^cns identification is claimed.  The quotient by this image is the
+next file.
+-/
+
+/-! ## Interface checklist (audit)
+
+#check SourceIntegralUnitsImage
+#check mem_sourceIntegralUnitsImage_iff
+#check sourceIntegralUnitsToCompletion_mem_image
+#check sourceIntegralUnitsImage_eq_map_top
+#check sourceIntegralUnitsImage_coe_eq_range
+#check sourceIntegralUnitsImage_eq_closure_range
+#check sourceIntegralUnitsToCompletion_one
+#check sourceIntegralUnitsToCompletion_inv
+#check sourceIntegralUnitsImage_le_iff
+
+All exported objects are actual subgroups/maps built from the source contract and
+the completion integral units.  There is no `axiom`, `sorry`, `opaque`,
+`unsafe`, `Card`, or arbitrary carrier in this file.
+-/
+
+/-! ## Batch metadata
+
+- Batch: actual source integral units (Lead batch-draft mode).
+- Owner draft only; no per-file compile in this batch.
+- Exact imports frozen: `SourceIntegralUnitsComparison`.
+- Direct dependencies: `SourceDefinition31Data` actual source contract;
+  actual adic completion integers from Mathlib.
+- Exported declarations: image subgroup and its closure/range API.
+- Residual: no completion-unit surjectivity, no norm-one equality, no source
+  Psi^cns integral-unit identification.
+- No production edit; no promotion claim.
+-/
+
+/-! ## Exact consumer statement
+
+For every actual `S : SourceDefinition31Data l` and every actual finite place
+`v : HeightOneSpectrum (O_F)`, the declarations above construct the actual
+image subgroup
+
+  SourceIntegralUnitsImage S v ≤ (v.adicCompletionIntegers F)^×
+
+and prove that it is the image of the canonical unit comparison.  They do not
+prove any statement about the quotient or surjectivity; those are deliberately
+left to the next file and to the source-Psi residual.
+-/
+
+/-! ## Surjectivity/image characterization
+
+/-- The actual image is all completion integral units if and only if the
+canonical source-unit comparison is surjective. -/
+theorem sourceIntegralUnitsImage_eq_top_iff_surjective :
+    SourceIntegralUnitsImage S v = ⊤ ↔
+      Function.Surjective (sourceIntegralUnitsToCompletion S v) :=
+  Subgroup.map_eq_top_iff
+
+/-- A surjective source-unit comparison fills the completion integral-unit
+group. -/
+theorem sourceIntegralUnitsImage_eq_top_of_surjective
+    (h : Function.Surjective (sourceIntegralUnitsToCompletion S v)) :
+    SourceIntegralUnitsImage S v = ⊤ :=
+  (sourceIntegralUnitsImage_eq_top_iff_surjective S v).mpr h
+
+/-- If the actual image is the whole completion integral-unit group, the
+comparison is surjective. -/
+theorem sourceIntegralUnitsToCompletion_surjective_of_image_top
+    (h : SourceIntegralUnitsImage S v = ⊤) :
+    Function.Surjective (sourceIntegralUnitsToCompletion S v) :=
+  (sourceIntegralUnitsImage_eq_top_iff_surjective S v).mp h
+
+/-- Preimage form of membership in the actual image. -/
+theorem sourceIntegralUnitsToCompletion_mem_image_iff
+    (x : CompletionIntegralUnits S v) :
+    x ∈ SourceIntegralUnitsImage S v ↔
+      ∃ u : SourceIntegralUnits S, sourceIntegralUnitsToCompletion S v u = x :=
+  mem_sourceIntegralUnitsImage_iff S v
+
+/-- The actual image contains the image of every subgroup of source units. -/
+theorem image_le_sourceIntegralUnitsImage (H : Subgroup (SourceIntegralUnits S)) :
+    H.map (sourceIntegralUnitsToCompletion S v) ≤ SourceIntegralUnitsImage S v :=
+  Subgroup.map_mono le_top
+
+/-- Subgroup map monotonicity for the actual comparison. -/
+theorem sourceIntegralUnitsImage_mono {H K : Subgroup (SourceIntegralUnits S)}
+    (hHK : H ≤ K) :
+    H.map (sourceIntegralUnitsToCompletion S v) ≤ K.map (sourceIntegralUnitsToCompletion S v) :=
+  Subgroup.map_mono hHK
+-/
+
+end LeanFormal.IUT.SourceIntegralUnitsImage
+
+end

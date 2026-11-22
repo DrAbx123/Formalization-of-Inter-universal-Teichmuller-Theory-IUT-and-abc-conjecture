@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2088FiberFunctorCertificateActual
+noncomputable section
+open CategoryTheory AlgebraicGeometry CategoryTheory.Limits
+namespace PChk3
+#check @IsInitial.uniqueUpToIso
+#check @IsInitial.ofIso
+#check @isColimitEquivIsInitialOfIsEmpty
+#check @preservesColimitsOfShape_pempty_of_preservesInitial
+#check @PreservesFiniteCoproducts.of_preserves_binary_and_initial
+#check @CategoryTheory.Limits.PreservesFiniteCoproducts.of_preserves_binary_and_initial
+end PChk3

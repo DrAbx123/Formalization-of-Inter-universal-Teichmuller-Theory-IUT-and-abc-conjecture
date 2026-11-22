@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEllThm38EffectiveBoundsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEll_23040_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEllEffectiveBoundShapes
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEllEffectiveBoundShapes_length

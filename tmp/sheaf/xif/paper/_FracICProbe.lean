@@ -1,0 +1,2 @@
+import Mathlib.NumberTheory.NumberField.Basic
+#check @IsIntegralClosure.isFractionRing_of_finite_extension

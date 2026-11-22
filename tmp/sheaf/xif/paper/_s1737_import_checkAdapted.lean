@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1737FundamentalGroupFromGaloisActual
+
+#check LeanFormal.IUT.XiFPaper.S1737FundamentalGroupFromGaloisActual.S1737ContinuousAction_isFundamentalGroup
+#check LeanFormal.IUT.XiFPaper.S1737FundamentalGroupFromGaloisActual.S1737ActionForget_isFundamentalGroup_iff_allContinuous
+#check LeanFormal.IUT.XiFPaper.S1737FundamentalGroupFromGaloisActual.S1737S1726BaseFieldsActual
+#check LeanFormal.IUT.XiFPaper.S1737FundamentalGroupFromGaloisActual.S1737OrbicurveFields

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2890C3LatticeLogVolumeScalingConsumer
+import tmp.sheaf.xif.paper.S2891C3LatticeLogVolumeUnitConsumer
+
+#print axioms LeanFormal.IUT.XiFPaper.S2890C3LatticeLogVolumeScalingConsumer.C3Lattice_logVolume_scaling_consumer
+#print axioms LeanFormal.IUT.XiFPaper.S2891C3LatticeLogVolumeUnitConsumer.C3Lattice_logVolume_unit_consumer

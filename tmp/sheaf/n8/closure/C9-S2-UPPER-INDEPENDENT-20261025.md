@@ -1,0 +1,135 @@
+# C9 independent S2 attack: conditional H_C subset R_B+arch
+
+Task: task-302. Owner: kummer. Date: 2026-10-25.
+Short theorem/proof; no Lean/Project edits, no arbitrary region.
+Only this file written. target_accepted=false; P6 open.
+
+## 0. Inputs
+
+- C9-RA-SUBSET-RB-20261025.md (task-298), 147 lines,
+  SHA256 b89dc64ccbe6d6b564f629947b7cba0346cab8fa2ba58703ed5ab7b56e3ecc4e.
+- C9-SATURATION-UPPER-20261025.md (task-290), 185 lines,
+  SHA256 eb171c17ce6a9363e4f8df4abdfc9a9bc2047b7ef83cdcdfa619d13a3a8a6030.
+- C9-TARGET-EXTRA-NEW-20261025.md (task-285), 130 lines,
+  SHA256 a5356db164e2cbf62f8382dd5a9574ed587a73aff1bdc90efa15974ed8668dfd.
+- C9-TAME-LOG-DOMAIN-20261025.md, 251 lines,
+  SHA256 23b3514b94972de511f1b17e23ab3da832ed5bc63e89daca3875adeb07961f06.
+
+Convention: R_A=Hull(L_A), R_B=Hull(L_B), with L_A the B=O_K row lattice and
+L_B the B=I row lattice; task-298 proves R_A subset R_B. A_proc=11.5log pi
+is the B_I-zero arch bound. S2 is the target-upper inclusion
+
+    (S2) H_C subset R_B + arch.                                   (0.1)
+
+## 1. Theorem (conditional S2)
+
+Theorem 1.1 (S2 under source saturation). Assume:
+
+(H1) TAME section6 saturation: for the fixed all-bad r-tuple, the only actual
+     local row lattice branches are L_A (B=O_K) and L_B (B=I);
+(H2) task-285 no-new-region: full Ind1/procession/factor permutations,
+     BPS/Theta-gluing transport the same row lattices and preserve their
+     normalized weights/volumes; no new q/BPS/lattice class is created;
+(H3) the target possible-image hull H_C is the hull of these transported rows
+     plus the archimedean component, with no other local type/good/aggregate
+     region;
+(H4) the target arch component lies in the source arch container, so its
+     contribution is at most A_proc.
+
+Then
+
+    H_C subset R_B + arch.                                        (1.1)
+
+Proof. By (H1), every local row lattice is L_A or L_B. By task-298,
+L_A subset L_B, hence R_A=Hull(L_A) subset Hull(L_B)=R_B. Thus every
+transported row hull is contained in R_B. By (H2), transport/permutation/
+gluing/BPS does not produce a new region outside these row hulls; it only
+moves/permutes them. By (H3), H_C is the hull of these rows plus arch, so
+H_C subset R_B+arch. (H4) bounds the arch component by A_proc in the
+normalized-height comparison. QED.
+
+Corollary 1.2 (b=273 conditional). Under (H1)-(H4), for b=273,
+
+    h_C <= H_B+h_inf <= H_B+A_proc,
+    F=Q_C-h_C >= D_B-A_proc
+      = (38463/41)log12301 - 11.5log pi
+      = 8821.538890... >0.                                     (1.2)
+
+Thus under the saturation hypotheses S2 gives the b=273 P6 counterexample in
+both B branches (the bound uses the larger H_B; B=OK is contained in the same
+upper envelope). This is **conditional** on (H1)-(H4), not an unconditional
+theorem.
+
+## 2. Exact obstruction to unconditional S2
+
+The hypotheses (H1)-(H3) are not in the frozen source as theorems:
+
+1. TAME section6 explicitly states its classification is only for the listed
+   actual subfamily and is **not an upper bound for the entire C output
+   family**. It gives the two row lattices and their row heights, but not the
+   statement that no other local type/good/aggregate/q-BPS region occurs.
+2. Task-285 proves a source-conditional no-new-region statement under its
+   assumptions (i)-(iii); it is not a proved target saturation. Its bound is a
+   volume bound, not the inclusion H_C subset R_B+arch.
+3. The target H_C may contain other local types, good places, aggregate B=I
+   contributions, additional q/BPS rows, or a hull enlargement from taking the
+   hull of the union of rows. None is bounded above by R_B+arch in the frozen
+   corpus.
+4. TC-B is a lower-containment/saturation statement (source regions inside
+   H_C); it is not an upper inclusion H_C inside the source rows. TC equality
+   is not proved.
+
+Therefore S2 is **not proved unconditionally**. It is a conditional
+sufficient condition for the b=273 counterexample.
+
+## 3. Is there a countermodel to unconditional S2?
+
+An abstract countermodel is easy: take a target H_C that contains R_B plus one
+additional legitimate source row R' not contained in R_B. Then S2 fails and
+h_C can exceed H_B+h_inf. But this is not a **source** countermodel: the frozen
+corpus does not construct R', and adding it would be an arbitrary region
+(forbidden by the task). The known source rows are L_A,L_B, with L_A subset L_B,
+so they do not give a countermodel. The exact status is:
+
+- no source countermodel to S2 in the frozen corpus;
+- no source proof of S2 either;
+- S2 is exactly the missing target-upper saturation, equivalent to the
+  absence of additional source regions/local types beyond R_B.
+
+## 4. Classification
+
+| item | status |
+|---|---|
+| R_A subset R_B | PROVED (task-298) |
+| S2 H_C subset R_B+arch under H1-H4 | PROVED conditional |
+| S2 unconditional | NOT PROVED |
+| H1 TAME saturation of full C | CONDITIONAL/INFERRED; explicitly not upper |
+| H2 task-285 no-new-region | CONDITIONAL |
+| H3 target generated by rows | NOT PROVED |
+| H4 arch cap | CONDITIONAL/TC |
+| b=273 F>=8821 under H1-H4 | PROVED conditional |
+| b=273 unconditional counterexample | NOT OBTAINED |
+| source countermodel to S2 | NONE constructed |
+| missing target-upper saturation | EXACT OBSTRUCTION |
+
+## 5. Conclusion
+
+The independent S2 attack proves a clean conditional theorem: if the source
+saturation hypotheses (H1)-(H4) hold, then H_C subset R_B+arch, and for b=273
+F>=8821.538890>0; this would be the long-sought P6 counterexample. But the
+hypotheses are exactly the missing source statements: TAME section6 classifies
+only the listed subfamily and disclaims a whole-C upper bound; task-285 is a
+conditional no-new-region/volume statement, not an inclusion; TC-B is lower
+containment, not upper saturation. No source countermodel to S2 is constructed,
+so S2 is neither proved nor refuted in the frozen corpus. It remains the
+precise missing target-upper saturation condition.
+
+No arbitrary region added; no Lean/kernel closure; target_accepted=false;
+P6 conditional under S2, unconditional open.
+
+## 6. Status
+
+- Short natural-language theorem/obstruction only; no Lean/Project edits.
+- Conditional S2 proof and b=273 conditional counterexample recorded; exact
+  missing hypotheses identified.
+- target_accepted=false.

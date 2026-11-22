@@ -1,0 +1,2 @@
+
+## 2026-11-10 19:32 — abc FINAL 2.4 evidence bundle sent (Mzk1Lemma24StatementShape CITABLE EXIT0 4730, 2 decls probe_ok). Full file list: Proof/Proof2/GaloisUnion/Union/ConjInvariance/Measure/F0Bound/Descent/Descent2/Growth/BetaAvoidance/MainStatement/BelyiConsume/P1Application/Wiring/ShapeStep/StatementShape, all checker-CITABLE with trio probes. Remaining global items named (Lemma 2.3 normalization wiring, nested induction assembly, [Mzk1] deep inputs). Registry frozen 14041.

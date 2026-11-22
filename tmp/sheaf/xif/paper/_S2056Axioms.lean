@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2056IsometricClosureActual
+import tmp.sheaf.xif.paper.S2057NormBridgeFromIsometry
+#print axioms LeanFormal.IUT.XiFPaper.S2056IsometricClosureActual.S2056IntegralUnitsEquiv
+#print axioms LeanFormal.IUT.XiFPaper.S2056IsometricClosureActual.S2056IntegralUnitsIdentification_of_isometry
+#print axioms LeanFormal.IUT.XiFPaper.S2057NormBridgeFromIsometry.S2057NormBridgeOfIsometry
+#print axioms LeanFormal.IUT.XiFPaper.S2057NormBridgeFromIsometry.S2057NormBridgeOfIsometry_available

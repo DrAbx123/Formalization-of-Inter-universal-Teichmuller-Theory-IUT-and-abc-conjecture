@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S2676RangeCycleType1249Actual
+import tmp.sheaf.xif.paper.S2675LocalizedOrbit1249Actual
+import tmp.sheaf.xif.paper.S2674LocalizedOrbitSize1249Actual
+import tmp.sheaf.xif.paper.S2673LocalizedOrbitSizeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2673LocalizedOrbitSizeActual.S2673_localized_orbitSizeMultiset_eq_factorDegrees
+#print axioms LeanFormal.IUT.XiFPaper.S2673LocalizedOrbitSizeActual.S2673_orbitSizeMultiset_permBar
+#print axioms LeanFormal.IUT.XiFPaper.S2673LocalizedOrbitSizeActual.S2673_reductionEquiv_rootPerm
+#print axioms LeanFormal.IUT.XiFPaper.S2674LocalizedOrbitSize1249Actual.S2674_factorDegrees_fbar
+#print axioms LeanFormal.IUT.XiFPaper.S2674LocalizedOrbitSize1249Actual.S2674_fbar_factorization
+#print axioms LeanFormal.IUT.XiFPaper.S2674LocalizedOrbitSize1249Actual.residueEquivR1249
+#print axioms LeanFormal.IUT.XiFPaper.S2675LocalizedOrbit1249Actual.S2675_localized_orbitSize_1249
+#print axioms LeanFormal.IUT.XiFPaper.S2675LocalizedOrbit1249Actual.S2675_exists_localized_orbitSize_1249
+#print axioms LeanFormal.IUT.XiFPaper.S2676RangeCycleType1249Actual.S2676_rangeCycleType102
+#print axioms LeanFormal.IUT.XiFPaper.S2676RangeCycleType1249Actual.S2676_rangeCycleType102_of_localized

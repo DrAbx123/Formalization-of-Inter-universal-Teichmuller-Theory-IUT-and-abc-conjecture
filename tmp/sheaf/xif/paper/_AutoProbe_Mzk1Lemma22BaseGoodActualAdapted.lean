@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22BaseGoodActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22BaseGoodActual.eq_zero_or_infty_of_pos_card_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22BaseGoodActual.mem_posRatS_eq_of_card_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22BaseGoodActual.baseGood_exists

@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S2768C3NormalizedRegionConsumerActual
+import tmp.sheaf.xif.paper.S2812C3NormalizedHaarUnitInvarianceActual
+import tmp.sheaf.xif.paper.S2885C3ThetaQPilotScaleOneConsumer
+import tmp.sheaf.xif.paper.S2808C3NormalizedRegionLogZeroOfMeasureOneActual
+import tmp.sheaf.xif.paper.S2809C3ActualHaarLatticeFiniteActual
+import tmp.sheaf.xif.paper.S2791C3QPilotSumZeroConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2768C3NormalizedRegionConsumerActual.c3NormalizedRegionData_one_le
+#print axioms LeanFormal.IUT.XiFPaper.S2812C3NormalizedHaarUnitInvarianceActual.c3NormalizedTensorHaar_unit_smul
+#print axioms LeanFormal.IUT.XiFPaper.S2885C3ThetaQPilotScaleOneConsumer.C3ThetaQPilot_scale_one_consumer
+#print axioms LeanFormal.IUT.XiFPaper.S2808C3NormalizedRegionLogZeroOfMeasureOneActual.c3NormalizedRegion_haarLog_eq_zero_of_measure_one
+#print axioms LeanFormal.IUT.XiFPaper.S2809C3ActualHaarLatticeFiniteActual.C3ActualHaar_tensorLattice_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.S2791C3QPilotSumZeroConsumerActual.C3QPilotSum_zero_iff

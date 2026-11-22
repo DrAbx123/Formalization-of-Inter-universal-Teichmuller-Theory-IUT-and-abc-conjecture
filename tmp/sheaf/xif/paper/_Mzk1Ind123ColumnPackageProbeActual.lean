@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Ind123ColumnPackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind123ColumnPackageActual.ind_rotate_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind123ColumnPackageActual.columnRealization_all_package

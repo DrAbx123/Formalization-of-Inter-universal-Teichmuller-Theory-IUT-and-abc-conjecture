@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIClusterConsumer2Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIClusterConsumer2Actual.stepXIClusterConsumer2_bundle

@@ -1,0 +1,16 @@
+@AlgEquiv.symm_trans_apply : ∀ {R : Type u_1} {A₁ : Type u_2} {A₂ : Type u_3} {A₃ : Type u_4} [inst : CommSemiring R]
+  [inst_1 : Semiring A₁] [inst_2 : Semiring A₂] [inst_3 : Semiring A₃] [inst_4 : Algebra R A₁] [inst_5 : Algebra R A₂]
+  [inst_6 : Algebra R A₃] (e₁ : A₁ ≃ₐ[R] A₂) (e₂ : A₂ ≃ₐ[R] A₃) (x : A₃), (e₁.trans e₂).symm x = e₁.symm (e₂.symm x)
+probe_eq2.lean:3:8: error(lean.unknownIdentifier): Unknown constant `AlgEquiv.trans_symm_apply`
+@AlgEquiv.trans_apply : ∀ {R : Type u_1} {A₁ : Type u_2} {A₂ : Type u_3} {A₃ : Type u_4} [inst : CommSemiring R]
+  [inst_1 : Semiring A₁] [inst_2 : Semiring A₂] [inst_3 : Semiring A₃] [inst_4 : Algebra R A₁] [inst_5 : Algebra R A₂]
+  [inst_6 : Algebra R A₃] (e₁ : A₁ ≃ₐ[R] A₂) (e₂ : A₂ ≃ₐ[R] A₃) (x : A₁), (e₁.trans e₂) x = e₂ (e₁ x)
+@AlgEquiv.apply_symm_apply : ∀ {R : Type u_1} {A₁ : Type u_2} {A₂ : Type u_3} [inst : CommSemiring R]
+  [inst_1 : Semiring A₁] [inst_2 : Semiring A₂] [inst_3 : Algebra R A₁] [inst_4 : Algebra R A₂] (e : A₁ ≃ₐ[R] A₂)
+  (x : A₂), e (e.symm x) = x
+@AlgEquiv.symm_apply_apply : ∀ {R : Type u_1} {A₁ : Type u_2} {A₂ : Type u_3} [inst : CommSemiring R]
+  [inst_1 : Semiring A₁] [inst_2 : Semiring A₂] [inst_3 : Algebra R A₁] [inst_4 : Algebra R A₂] (e : A₁ ≃ₐ[R] A₂)
+  (x : A₁), e.symm (e x) = x
+@AlgHom.coe_comp : ∀ {R : Type u_1} {A : Type u_2} {B : Type u_3} {C : Type u_4} [inst : CommSemiring R]
+  [inst_1 : Semiring A] [inst_2 : Semiring B] [inst_3 : Semiring C] [inst_4 : Algebra R A] [inst_5 : Algebra R B]
+  [inst_6 : Algebra R C] (φ₁ : B →ₐ[R] C) (φ₂ : A →ₐ[R] B), ⇑(φ₁.comp φ₂) = ⇑φ₁ ∘ ⇑φ₂

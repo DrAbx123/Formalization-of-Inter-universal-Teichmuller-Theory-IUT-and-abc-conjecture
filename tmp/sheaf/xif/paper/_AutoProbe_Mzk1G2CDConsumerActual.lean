@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G2CDConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2CDConsumerActual.ABCHeightWeightAdditiveBoundV2_of_bridgeInterface
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2CDConsumerActual.exists_heightBound_constant_of_bridgeInterface
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2CDConsumerActual.bridgeInterface_nonempty_iff_abcConjecture

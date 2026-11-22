@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioOddActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioOddActual.odd_shift_pow
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioOddActual.belyi21R_nonpos_on_unit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioOddActual.belyi21R_neg_of_mem_unit

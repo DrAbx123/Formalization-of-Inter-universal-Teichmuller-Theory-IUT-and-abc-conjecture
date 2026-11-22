@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S1928BridgeAverageA0Actual
+
+open LeanFormal.IUT
+open LeanFormal.IUT.InitialThetaSource
+open LeanFormal.IUT.InitialThetaSource.PlacePartitionReduction
+open LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual
+
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_rootImageRadius_eq_rootNorm
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_closedForm_eq
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_average_eq
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_bridge_iff_identity
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_s1905FirstMissing_iff_scaled
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_bridge_false_of_closedForm_nonpos
+#check @LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_a0_lt_one
+#print axioms LeanFormal.IUT.XiFPaper.S1928BridgeAverageA0Actual.s1928_bridge_false_of_closedForm_nonpos

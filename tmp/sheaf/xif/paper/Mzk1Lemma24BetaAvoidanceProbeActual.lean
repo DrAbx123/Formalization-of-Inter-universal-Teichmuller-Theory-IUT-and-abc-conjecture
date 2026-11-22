@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24BetaAvoidanceActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BetaAvoidanceActual.s3135_poly_value_bound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BetaAvoidanceActual.s3135_beta_avoidance

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2599TInstancesActual
+#synth IsScalarTower LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual.S LeanFormal.IUT.XiFPaper.S2599TInstancesActual.T LeanFormal.IUT.XiFPaper.S2599TInstancesActual.L
+#synth IsIntegralClosure LeanFormal.IUT.XiFPaper.S2599TInstancesActual.T LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual.S LeanFormal.IUT.XiFPaper.S2599TInstancesActual.L
+#synth Algebra.IsIntegral LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual.S LeanFormal.IUT.XiFPaper.S2599TInstancesActual.T
+#synth IsFractionRing LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual.S LeanFormal.IUT.XiFPaper.S1720SourceArithmeticActual.S1720Field

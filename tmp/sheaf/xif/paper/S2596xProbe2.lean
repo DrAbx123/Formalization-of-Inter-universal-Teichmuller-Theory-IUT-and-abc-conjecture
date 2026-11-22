@@ -1,0 +1,9 @@
+import Mathlib.RingTheory.IntegralClosure.IntegralRestrict
+#check IsIntegralClosure.mk
+#check IsIntegralClosure.mk'
+#check IsIntegralClosure.of_isIntegral
+#check IsIntegralClosure.of_isIntegral_iff
+#check IsIntegralClosure.isIntegral_iff
+#check IsIntegralClosure.isIntegral_algebraMap
+#check IsIntegralClosure.isIntegral
+#check IsIntegralClosure.ringEquiv

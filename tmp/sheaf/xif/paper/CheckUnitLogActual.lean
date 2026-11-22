@@ -1,0 +1,5 @@
+import LeanFormal.IUT.Foundations.LocalFields.IntegralUnitLogarithmKernel
+open LeanFormal.IUT.LocalFieldLogarithm
+#check unitLog
+#check unitLog_eq_zero_iff_isOfFinOrder
+#check @unitLog_eq_zero_iff_isOfFinOrder

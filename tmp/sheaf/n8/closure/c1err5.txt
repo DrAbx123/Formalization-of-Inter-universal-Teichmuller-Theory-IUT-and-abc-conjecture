@@ -1,0 +1,20 @@
+tmp\sheaf\n8\closure\SourceInputBinding.lean:47:39: error: Invalid argument name `F` for function `finitePlaceValueGroup`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:48:39: error: Invalid argument name `F` for function `archimedeanValueGroup`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:52:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommMonoid (SourcePlaceValueGroup F (Sum.inl val✝))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tmp\sheaf\n8\closure\SourceInputBinding.lean:52:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommMonoid (SourcePlaceValueGroup F (Sum.inr val✝))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tmp\sheaf\n8\closure\SourceInputBinding.lean:73:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:76:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.place`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:73:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:82:8: warning: declaration uses `sorry`

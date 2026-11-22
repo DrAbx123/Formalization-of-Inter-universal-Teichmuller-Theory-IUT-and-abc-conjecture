@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3131AbsNormRatPlaceActual
+import tmp.sheaf.xif.paper.S3131R2NuV3Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131AbsNormRatPlaceActual.S3131AbsNorm_ratPlace_eq_natGenerator
+#print axioms LeanFormal.IUT.XiFPaper.S3131R2NuV3Actual.S3131Nu_qVFamNormalizedGenerator_eq_exponent

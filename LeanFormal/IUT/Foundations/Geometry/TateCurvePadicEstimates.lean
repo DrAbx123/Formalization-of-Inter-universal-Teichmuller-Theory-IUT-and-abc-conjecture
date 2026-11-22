@@ -2476,7 +2476,7 @@ def tateCurvePadicEstimates : Obligation :=
         "Tate uniformization, split multiplicative reduction of an input curve, " ++
         "or any source-faithful Hodge-theater identification."
     dependsOn :=
-      [ "Foundations.Geometry.tate-curve-arithmetic",
+      [ "Foundations.Geometry.tate-curve-arithmetic-closure",
         "Foundations.Arithmetic.prime-label-ge-five" ] }
 
 end LeanFormal.IUT.Audit

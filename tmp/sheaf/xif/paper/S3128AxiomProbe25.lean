@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128SurjAverageImageActual
+open LeanFormal.IUT.XiFPaper.S3128SurjAverageImageActual
+#print axioms S3128Surj_average_image

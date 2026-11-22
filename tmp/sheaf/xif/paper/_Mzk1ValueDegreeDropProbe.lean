@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24ValueDegreeDropActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ValueDegreeDropActual.aeval_mem_adjoin_simple
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ValueDegreeDropActual.valueDegreeDrop_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ValueDegreeDropActual.s3135_valueDegreeDrop_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ValueDegreeDropActual.fieldDegreeDrop_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ValueDegreeDropActual.valueDegreeDropRows

@@ -1,0 +1,3 @@
+tmp\sheaf\xif\paper\_A836StepXIGateProbe.lean:6:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.IUTIII.Corollary312.StepXI.stepXIContract_exists_of_singleComparison`
+tmp\sheaf\xif\paper\_A836StepXIGateProbe.lean:7:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.IUTIII.Corollary312.StepXI.singleComparison_of_stepXIContract`
+tmp\sheaf\xif\paper\_A836StepXIGateProbe.lean:8:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.ABCBridge.Geometry.arithmeticTupleSignedCor312Conclusion`

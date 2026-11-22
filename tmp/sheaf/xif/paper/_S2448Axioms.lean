@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2448ResidueFrobeniusAPI
+#print axioms LeanFormal.IUT.XiFPaper.S2448ResidueFrobeniusAPI.S2448ResidueImageDense
+#print axioms LeanFormal.IUT.XiFPaper.S2448ResidueFrobeniusAPI.S2448FrobeniusLift

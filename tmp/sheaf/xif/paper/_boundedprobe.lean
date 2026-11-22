@@ -1,0 +1,11 @@
+import Mathlib
+#check pi_norm_le_iff
+#check norm_le_pi_norm
+#check Metric.isBounded_closedBall
+#check Bornology.IsBounded.subset
+#check Bornology.IsBounded.mono
+#check Metric.isBounded_iff
+#check isBounded_closedBall
+#check Bornology.IsBounded
+#check Isometry.isBounded_preimage
+#check Bornology.IsBounded.preimage

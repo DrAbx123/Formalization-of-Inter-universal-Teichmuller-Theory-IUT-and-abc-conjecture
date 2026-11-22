@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3136Gap2AdditiveWiringActual
+import tmp.sheaf.xif.paper.S3136CertificateThetaSlotActual
+import tmp.sheaf.xif.paper.S3136RegionCObligationStatusActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136Gap2AdditiveWiringActual.lgpSourceInterface_hunit
+#print axioms LeanFormal.IUT.XiFPaper.S3136Gap2AdditiveWiringActual.lgpGap2_of_additive
+#print axioms LeanFormal.IUT.XiFPaper.S3136CertificateThetaSlotActual.lgpCertificateTheta_modelSlot
+#print axioms LeanFormal.IUT.XiFPaper.S3136RegionCObligationStatusActual.lgpCObligationStatus_length

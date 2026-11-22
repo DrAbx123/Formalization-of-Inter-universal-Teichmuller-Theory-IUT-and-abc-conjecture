@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2057DedekindFrobBridgeActual
+open LeanFormal.IUT.XiFPaper.S2057DedekindFrobBridgeActual
+#print axioms s2057InertiaDeg_eq_natDegree
+#print axioms S2057Psi5Q_separable
+#print axioms S2057Psi5F_separable
+#print axioms S2057FiveDivisionField_isGalois
+#print axioms s2057Target_of_rangeHypotheses

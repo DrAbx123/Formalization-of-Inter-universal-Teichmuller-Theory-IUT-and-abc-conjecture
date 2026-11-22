@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCorePreciseToOldActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCorePreciseToOldActual.toOldWitness
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCorePreciseToOldActual.toOldRecast
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCorePreciseToOldActual.genEll15GeometricCoreStatement_of_precise

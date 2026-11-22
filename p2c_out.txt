@@ -1,0 +1,9 @@
+'LeanFormal.IUT.XiFPaper.Mzk1PaperToClassicalABCActual.paperGap_iff_paper312Statement'' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1PaperToClassicalABCActual.paperGap_to_cor312Conclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1PaperToClassicalABCActual.classicalABCShape_to_ABCConjecture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

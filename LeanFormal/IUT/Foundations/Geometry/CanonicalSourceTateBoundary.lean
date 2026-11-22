@@ -204,4 +204,17 @@ def canonicalSourceTateStableBoundary : Obligation :=
       [ "Foundations.Geometry.tate-stable-reduction-boundary",
         "IUT-I.source-tate-stable-boundary" ] }
 
+def sourceTateStableBoundary : Obligation :=
+  { id := "IUT-I.source-tate-stable-boundary"
+    source := "IUT I, Example 3.2(i); source-facing local stable boundary"
+    status := VerificationStatus.interface
+    note :=
+      "Name-level registration of the source-facing local stable boundary " ++
+        "carried by the imported `Iut.Foundations.SourceTateStableBoundary` " ++
+        "module, whose dual graph is closed while the compact graph may carry " ++
+        "the marked open edge. The canonical `Z_l`/`Q_l` instance is " ++
+        "constructed in this module. No new mathematics is added by this " ++
+        "entry."
+    dependsOn := [ "IUT-I.source-tate-stable-graph" ] }
+
 end LeanFormal.IUT.Audit

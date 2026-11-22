@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingReductionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingReductionActual.BetaAvoidingReductionStatement

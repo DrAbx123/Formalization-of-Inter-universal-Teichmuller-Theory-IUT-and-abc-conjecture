@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S1720SourceArithmeticActual
+import tmp.sheaf.xif.paper.S1942PrePsiFiveActual
+import Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind
+open LeanFormal.IUT.XiFPaper.S1720SourceArithmeticActual
+open Polynomial
+#check IsGalois.of_separable_splitting_field
+#check Polynomial.SplittingField
+#check NumberField.Ideal.monicFactorsMod
+#check NumberField.Ideal.exponent
+#check NumberField.Ideal.inertiaDeg_primesOverSpanEquivMonicFactorsMod_symm_apply'
+#check Ideal.inertiaDeg

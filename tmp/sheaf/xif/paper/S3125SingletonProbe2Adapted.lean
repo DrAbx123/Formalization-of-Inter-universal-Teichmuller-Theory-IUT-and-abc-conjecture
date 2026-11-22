@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.EtaleCoverQuotientCategoryActual
+open LeanFormal.IUT.XiFPaper.EtaleCoverQuotientCategoryActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual
+open Iut CategoryTheory
+noncomputable section
+variable {F : Type} [Field F] {X : HyperbolicOrbicurve F}
+variable (A B : OrbicurveFiniteEtaleCover X)
+example : Subsingleton (A.source.Hom B.source) := inferInstance
+example : Subsingleton (OrbicurveFiniteEtaleCoverMap A B) := inferInstance

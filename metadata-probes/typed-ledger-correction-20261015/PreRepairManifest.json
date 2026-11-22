@@ -1,0 +1,2243 @@
+{
+ "manifest_version": "typed-ledger-prerepair-manifest-v1",
+ "run_id": "typed-ledger-correction-20261015",
+ "agent_id": "dsh_ledger_owner",
+ "source_path": "D:/lean/LeanFormal/IUT/IUTIII/Theorem311/SourcePacketDegreeLedger.lean",
+ "source_sha256": "F4B10D74E576A3ADFC73D32819D5BE14B2A4B532A97B28D91B5B8739077027FE",
+ "source_bytes": 64186,
+ "line_count": 1476,
+ "line_endings": "LF",
+ "frozen_original_manifest": {
+  "path": "D:/lean/metadata-probes/ledger-statement-correction-20261014/OriginalStatementManifest.json",
+  "raw_crlf_sha256": "139D6B4699BEB7AD43DD18A52A8B20E6B48C881C4E763175F644777EDB5EC59D",
+  "lf_normalized_sha256": "8eb971835908c23673952110d32ae919a471c0aa12afc036e8bb8b700247dfdd",
+  "unmodified": true
+ },
+ "accepted_prior_repairs": [
+  "columnProcessionSourceLedger_inclusion_action: the two authorised argument groupings plus the compatAction proof",
+  "columnProcessionSourceLedger_inclusion_degree: proof body replacement by compatDegree with unchanged signature"
+ ],
+ "declaration_count": 147,
+ "context_line_count": 17,
+ "declarations": [
+  {
+   "kind": "structure",
+   "name": "ThetaPacketLedger",
+   "line_span": [
+    52,
+    71
+   ],
+   "block_sha256": "be5e619aaad66141a8366a9cdce36adcb12f7cb3482fc9350b5ac571dabcbdbe",
+   "signature_sha256": "c239968ba324a8780c032834842f8da76b69451297e3e00c7467b39417f0f15f",
+   "fields": [
+    {
+     "name": "theater",
+     "sha256": "ea0609ffc412e9858882c7d49a27c114c8f262d6c1f7dbedfd42861db268914e"
+    },
+    {
+     "name": "packet",
+     "sha256": "56f41c5e25e6b1d3674a5f4eb8807ba86ca9a566a185bbae4558c79e66784fc4"
+    },
+    {
+     "name": "theater_source",
+     "sha256": "368198def092cd153b04c75f483194967dcf5c87aba957395f2571ef19754f92"
+    },
+    {
+     "name": "packet_source",
+     "sha256": "c968b6d3cc750d532c9895ed3adac5c14aad53edc5f7b57437e0204722e0a742"
+    },
+    {
+     "name": "q_source",
+     "sha256": "400395a1ec7f66a54c071aa6cfe44a0f7c962b46d641d4a8b9a62675447494b9"
+    },
+    {
+     "name": "q_positive",
+     "sha256": "043ffe4616c5c46afbaad3a38adf613260192aecc8c563d83cdb7ffad5241845"
+    },
+    {
+     "name": "scale_source",
+     "sha256": "bebe22f0425ef75c0e22d8c80288b9a9565ce46fa34b58067638e24ad672233d"
+    },
+    {
+     "name": "scale_positive",
+     "sha256": "4f9b8deb8c08cb403c16d963e9aac9a4a2a6ff7a4487cb6219f0515172103acc"
+    },
+    {
+     "name": "scale_nonzero",
+     "sha256": "dc0d106d075c0feccccc20fc968d31def3ddbb80fea42e57ad33a61e4bc1dd86"
+    },
+    {
+     "name": "scale_neg",
+     "sha256": "4c84992b495ab0adea5cb77249e6af9e5ae2ef86c740883eafb83f85d0467279"
+    },
+    {
+     "name": "log_scale",
+     "sha256": "09b3d7457f898eadf67e2d4521f55a925dba6b0728b89ef84141fc7dc5da1fe3"
+    },
+    {
+     "name": "log_volume",
+     "sha256": "cfcdf318388a4ad3642042fd1f5245a5d06f21a3d2c8d1a5d05380ddeef71477"
+    },
+    {
+     "name": "log_volume_neg",
+     "sha256": "f3e8ce141bf7bb40a0fa0465bf03742debf6f0b65f773431e5a556fdf2f918a7"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "thetaPacketLedgerAt",
+   "line_span": [
+    73,
+    96
+   ],
+   "block_sha256": "35a519bb1fa074e51687e342f18760df0c319a1e83666d9e2bb6af0f062dd80f",
+   "signature_sha256": "fb7f10e8c0d196cedbd4dedfca54aef6faa9f257068cb396f264e00c4d319c6a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_theater",
+   "line_span": [
+    98,
+    99
+   ],
+   "block_sha256": "9d70266ce3ffb4c69b27821ce34b51bc9deb5d6208ec39056ea9981e5bc2118b",
+   "signature_sha256": "9d70266ce3ffb4c69b27821ce34b51bc9deb5d6208ec39056ea9981e5bc2118b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_packet",
+   "line_span": [
+    101,
+    103
+   ],
+   "block_sha256": "0d491bebabfa95cd627880b26657afa759a3ad078ae28cbc927dc43908b64162",
+   "signature_sha256": "0d491bebabfa95cd627880b26657afa759a3ad078ae28cbc927dc43908b64162",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_q",
+   "line_span": [
+    105,
+    107
+   ],
+   "block_sha256": "aacab8033a4c4bef2a5e8a43d917b1b409d8fb11c1b920da7786e8a2d24cea67",
+   "signature_sha256": "aacab8033a4c4bef2a5e8a43d917b1b409d8fb11c1b920da7786e8a2d24cea67",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_source",
+   "line_span": [
+    109,
+    112
+   ],
+   "block_sha256": "eea5c148a3e0bea5d30289bcb65f09ff8efec1502215c28b513d234be467e93c",
+   "signature_sha256": "e0dafc57fdefb66ee20710097381d375407a042cf0fcf8923bdb6a71746bfb33",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_q_positive",
+   "line_span": [
+    114,
+    116
+   ],
+   "block_sha256": "852889041e504b6db0f33813d43de5eb603dc3671f23e3a5e83138d4b0a93845",
+   "signature_sha256": "8b7bf8087bbc17e37cc68416ac35fad7b843c7f12499b4c0435b292697465e5f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_source",
+   "line_span": [
+    118,
+    122
+   ],
+   "block_sha256": "b188321b3450fc6b56b561d60cb8cd93e60e566b8e56591c97767217f883ee37",
+   "signature_sha256": "5ba7bf8fb044a44cacd946413d37d790e19e7571ee75aed9da6be0d56a601eb9",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_positive",
+   "line_span": [
+    124,
+    127
+   ],
+   "block_sha256": "fdc87b7dedb1c711ac22f61be9682d8259f717d2aa5bde0f2fd4d941ce5bcb2e",
+   "signature_sha256": "4d9cc2a76cb59277689a2c8b8c036dd72083e3d4eccede733340e85544f7fa30",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_nonzero",
+   "line_span": [
+    129,
+    132
+   ],
+   "block_sha256": "c74700c28eef2bfc58e59b69a570c386ee636e4b2fda27e1f140544ec678cece",
+   "signature_sha256": "f04de4ed60dd871be9a9992605bf576af790e0f52494700465ead024a1be087f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_neg",
+   "line_span": [
+    134,
+    138
+   ],
+   "block_sha256": "0fa47e230330f33dac470f8cfba8e653548b5d7ab5d674063087f90a8e1618a1",
+   "signature_sha256": "a165638badab7cfc73f23e2d287dc7c7bf82741088e9dde6ff75a82e95c8f052",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_log_scale",
+   "line_span": [
+    140,
+    145
+   ],
+   "block_sha256": "3ae849f6136f57f176865f2fa08fdc79160ff7189ba1e3986262b90ff228690b",
+   "signature_sha256": "01ebebd56bbabf793dd333d988080bdb056fafabb6689738c23a0115e9187396",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_log_volume",
+   "line_span": [
+    147,
+    151
+   ],
+   "block_sha256": "a9228fce4552363cc5a819fd4f7ecbd1f14fc338f078da016b32f6bc0c4557bc",
+   "signature_sha256": "f56b31c49f2f01b9c58de007430fde79d0d52658fb9d9c86793130fcf22e5e29",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_log_volume_neg",
+   "line_span": [
+    153,
+    158
+   ],
+   "block_sha256": "cb03ec99b30ba1ffb87c6fed51b7c5e476f665b405414df00a55daa42c8def0c",
+   "signature_sha256": "8e4cbfce2249bb8bea7b8402f8dfa3baeae2fbaa618e27e673f885e98201bfbc",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_q_eq_initial",
+   "line_span": [
+    160,
+    163
+   ],
+   "block_sha256": "438b82b58cb20681976db9dd3a72adad2c87cff3ca6589a517e4572be319f603",
+   "signature_sha256": "438b82b58cb20681976db9dd3a72adad2c87cff3ca6589a517e4572be319f603",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_eq_initial",
+   "line_span": [
+    165,
+    169
+   ],
+   "block_sha256": "bdbf38f2052cfe6d87dd2bd082e4dde3c1c450f5a09d0c2588fd331400a9c113",
+   "signature_sha256": "bdbf38f2052cfe6d87dd2bd082e4dde3c1c450f5a09d0c2588fd331400a9c113",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_log_volume_eq_initial",
+   "line_span": [
+    171,
+    178
+   ],
+   "block_sha256": "91d26867fad743f854f835ef00e5b190baa99e61621cb8cb09b1566a4ee6a69f",
+   "signature_sha256": "91d26867fad743f854f835ef00e5b190baa99e61621cb8cb09b1566a4ee6a69f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLedgerAt_scale_product_eq_initial",
+   "line_span": [
+    180,
+    187
+   ],
+   "block_sha256": "451be30762ae56c79b739bc5d9ee8774f3a42898d5a878da567c281661508b20",
+   "signature_sha256": "451be30762ae56c79b739bc5d9ee8774f3a42898d5a878da567c281661508b20",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "ThetaPacketLinkLedger",
+   "line_span": [
+    191,
+    203
+   ],
+   "block_sha256": "c9eda806022d7b2ea5b7215fbddf2ba464622b9e66f9c42992728f2b39cd4bad",
+   "signature_sha256": "ba69cf847c241b660af41b578529d0bc5db3e30ad4d9ddb8defc7e076974565d",
+   "fields": [
+    {
+     "name": "source",
+     "sha256": "ad54572408057184bd1a73b92338c800cee828e12faf0c1330e18026cb256423"
+    },
+    {
+     "name": "target",
+     "sha256": "5b125601ebd5265ec0824f64ff219ff4bf95ec54c541a59bafac1646fa919ede"
+    },
+    {
+     "name": "q_transport",
+     "sha256": "7040d52ae986d056fb8ef16fbc4472b6316e8fca2eb3ea6a585518703960c47f"
+    },
+    {
+     "name": "scale_transport",
+     "sha256": "c5cee8a23726c36f785d7dd1883adc062c9664baae32eb77cf0983cb8255a148"
+    },
+    {
+     "name": "log_scale_transport",
+     "sha256": "e4a7eb77fb2f64caaa8f315a09a7fffc549f1053c0097ecad5fed20cca20b801"
+    },
+    {
+     "name": "log_volume_transport",
+     "sha256": "24808151b0b124f84ada3f7d19a9861191b118a9901c48487858595e1752aeb2"
+    },
+    {
+     "name": "scale_product_transport",
+     "sha256": "7320d22103082641bc56cb39eeab04e892a877a11b56c0432bad1eabd70c07d3"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "thetaPacketLinkLedgerAt",
+   "line_span": [
+    205,
+    220
+   ],
+   "block_sha256": "186530537d1a088bb7a3ccc26ea8ab7c35a6105feb94d6b8c178201fb049a29b",
+   "signature_sha256": "13f60da6b43df5d9cb822aacc0a3772d9c35fe4ec0217ae9eeca6476bacd6554",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_source",
+   "line_span": [
+    222,
+    224
+   ],
+   "block_sha256": "7bacf2854d49ef3e2cfd8f96240a1efc595d05e3033a7180f4cd17e4df0e3f1f",
+   "signature_sha256": "7bacf2854d49ef3e2cfd8f96240a1efc595d05e3033a7180f4cd17e4df0e3f1f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_target",
+   "line_span": [
+    226,
+    228
+   ],
+   "block_sha256": "30393edfcdec914f40faf833ca1359f56996f006886f526adcfa2258747b333b",
+   "signature_sha256": "30393edfcdec914f40faf833ca1359f56996f006886f526adcfa2258747b333b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_q",
+   "line_span": [
+    230,
+    233
+   ],
+   "block_sha256": "5237484b53e05964f043a385ce05eb877170c87d03ce01a97fb00e9a44ff0ed5",
+   "signature_sha256": "26368099e1e851186b9bb875b4adb338e080242bf19c9572abefb49c43b34a85",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_scale",
+   "line_span": [
+    235,
+    239
+   ],
+   "block_sha256": "d8d5370416b0024102360af38c591617adc97677ff8c85c0b433c3816cd4a5e6",
+   "signature_sha256": "864ec968e4f1b47342ecd592e2338f79c54b7fef4673dbe7210d7a8795f01a8a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_log_scale",
+   "line_span": [
+    241,
+    245
+   ],
+   "block_sha256": "edcc90854af56b3f8442fb5e833161c088b43c2d92be8d35bdc736dc4ef7eea1",
+   "signature_sha256": "66c2b418426de2d163ebf291f741a14bd865deaa2d7cbc5b1f39416441e39646",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_log_volume",
+   "line_span": [
+    247,
+    250
+   ],
+   "block_sha256": "6847b86537e05707ddb1f9ab7d0cbc1bb6e6123c11d3a6551bd2507e0a76b7d5",
+   "signature_sha256": "8649a9c517c76fc354ad265079a78c88c94650e234e41a20d44f348c289a04b5",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_scale_product",
+   "line_span": [
+    252,
+    257
+   ],
+   "block_sha256": "7e71b27ef121ed42938a2d40b47546fb31869d8be0cb19ae73217aa3257b5925",
+   "signature_sha256": "46fdc42aeddb92772b2d5487776a67c016d4fd0219c83f061fc2aba0c5df91a2",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_refl",
+   "line_span": [
+    259,
+    261
+   ],
+   "block_sha256": "f2357be20e703df47696239352f849e5a69774b3aad9ea5b774c8ea2b4bde7dc",
+   "signature_sha256": "f2357be20e703df47696239352f849e5a69774b3aad9ea5b774c8ea2b4bde7dc",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_symm",
+   "line_span": [
+    263,
+    266
+   ],
+   "block_sha256": "e13cdb4fc592f8fa3df78259632920584c8400845fc3228428937ec571929a6c",
+   "signature_sha256": "e13cdb4fc592f8fa3df78259632920584c8400845fc3228428937ec571929a6c",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_trans",
+   "line_span": [
+    268,
+    272
+   ],
+   "block_sha256": "2ecf3da82adbb8e5679b83b922b69a71b555d7ebb69fb622d0d41f5208a104cb",
+   "signature_sha256": "2ecf3da82adbb8e5679b83b922b69a71b555d7ebb69fb622d0d41f5208a104cb",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_horizontal",
+   "line_span": [
+    274,
+    277
+   ],
+   "block_sha256": "a84325099d5aec7b40165a16654bc51ce93c0e7dce72af89ebe7bb4eac73013a",
+   "signature_sha256": "a84325099d5aec7b40165a16654bc51ce93c0e7dce72af89ebe7bb4eac73013a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_vertical",
+   "line_span": [
+    279,
+    282
+   ],
+   "block_sha256": "4fa8987dfec75ac0483062a63f523769bce0dee575afade9b8b209c4e4462b1e",
+   "signature_sha256": "4fa8987dfec75ac0483062a63f523769bce0dee575afade9b8b209c4e4462b1e",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketLinkLedgerAt_translation",
+   "line_span": [
+    284,
+    287
+   ],
+   "block_sha256": "e0ee686386f325034cdc563175ca62bd12014b0fd4c6b6c6b5af3f96a9b31ed1",
+   "signature_sha256": "e0ee686386f325034cdc563175ca62bd12014b0fd4c6b6c6b5af3f96a9b31ed1",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "ThetaPacketFamilyLedger",
+   "line_span": [
+    291,
+    302
+   ],
+   "block_sha256": "035f913bb215381cd838cf87f2dbc844d12de8df5d308192600196402b908841",
+   "signature_sha256": "1234965819a8dcaac7e8898db8d00255726e66c2a059d12cc6bc8a34b02396da",
+   "fields": [
+    {
+     "name": "packet",
+     "sha256": "81e1f9ee72750ca21e52f4174f0de0f61785a42094dbdbba60fdee8dd3393258"
+    },
+    {
+     "name": "packet_source",
+     "sha256": "196f1f3eaf0ce6d2ed2fb1f2074a8a8457b4d4c70dd23bf61a89bdf062398109"
+    },
+    {
+     "name": "q_transport",
+     "sha256": "ee47039daaf7d9f0031eb511a6bc308e40c4d75f5faa2fe4b0f21a68a50234cd"
+    },
+    {
+     "name": "scale_transport",
+     "sha256": "5523be93a16c14877ddcdc376d37efe8d916c78d28a37e48297bf074a20d9bd5"
+    },
+    {
+     "name": "log_volume_transport",
+     "sha256": "6c62a219b0e46360a286a66ccc63afccb180d47cd900f726ab9b52b9f6f8d192"
+    },
+    {
+     "name": "permutation_q",
+     "sha256": "2ebee160d5f605bd6855399ecba74429c1c8b600a27abc282ff4613f0174aa3d"
+    },
+    {
+     "name": "permutation_scale",
+     "sha256": "c5db80a24fdfb0b76f46af8adf32874148dd71c10ea9d30f58074682627220d4"
+    },
+    {
+     "name": "permutation_log_volume",
+     "sha256": "3b9d1abed1f5f1540077b5bec84399e2e6b789e53e49867b0e90f5c4de98e857"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "thetaPacketFamilyLedger",
+   "line_span": [
+    304,
+    324
+   ],
+   "block_sha256": "1dc25878fab67864c5b638c910e9a478c37f6ea63c12dcf1d795123229a174a5",
+   "signature_sha256": "0a188cf9ed3cc0a401c33ab7c41974153aa2014a5782e0da0c252ad294600f0e",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_packet",
+   "line_span": [
+    326,
+    328
+   ],
+   "block_sha256": "bf5cf6f44671e867c61ebdbe7bb910613a92701d7df5e7e0bac19def69f534a0",
+   "signature_sha256": "bf5cf6f44671e867c61ebdbe7bb910613a92701d7df5e7e0bac19def69f534a0",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_q",
+   "line_span": [
+    330,
+    333
+   ],
+   "block_sha256": "30c7b97f536aa37c116fa17a6464775d52070e7392186a96de220e38fecdf93c",
+   "signature_sha256": "783be856d1dfc49205cf37495ddd02d3356829ea9697565da67d51a92907235f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_scale",
+   "line_span": [
+    335,
+    339
+   ],
+   "block_sha256": "c0db337996ab0f5f79c9ef4a6333b1ca7c37cd458c9228f31d19b85a1abc6bf3",
+   "signature_sha256": "c99df47ae8817a3f73ccbe22a98849d2767eb74e4e7ecc5f39628d3ab5f7aa5b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_log_volume",
+   "line_span": [
+    341,
+    344
+   ],
+   "block_sha256": "849379c1b2f20757a833306b49dbf82b195b4a219bb6592ee4bbc3b74cf3283c",
+   "signature_sha256": "8a795adcce6452b12c86f26b446b9e0c6278b1f8cf1966e85f7def53913b3d73",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_permutation_q",
+   "line_span": [
+    346,
+    349
+   ],
+   "block_sha256": "a5df9838e2444ca48d6097842e9ff5376c21e8f726edf23c40113fc438fcc379",
+   "signature_sha256": "81209b37ac11921b4280a66c142b5cef7f16a3d12c91a155cf9afa1dff6dc621",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_permutation_scale",
+   "line_span": [
+    351,
+    355
+   ],
+   "block_sha256": "5f4c33d0dc0067863d1fab4ca72c31b118538c344b0076c005dd24c44b4aa450",
+   "signature_sha256": "2472e8098b4f435e844caa95b8638096c2138749fc7d336e4b029b5ae7ca8c23",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "thetaPacketFamilyLedger_permutation_log_volume",
+   "line_span": [
+    357,
+    360
+   ],
+   "block_sha256": "e356dbd72863f5664afce244e141c342cea7b3f930c6a49343c23064231c4b5a",
+   "signature_sha256": "d2622aa730a56ea6d1b2056913b51da96cb6728570b9c3e9ae52e9f59a7ed874",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "PrimeStripDegreeLedger",
+   "line_span": [
+    364,
+    380
+   ],
+   "block_sha256": "e85c5f01442857e8db1d2667ad50c0e3ad19306abe25629a357fef0d3d9974de",
+   "signature_sha256": "11a7bbe69a66302a03205741c178c2c7adc9365c4e1788da20c76fab7650082e",
+   "fields": [
+    {
+     "name": "fStrip",
+     "sha256": "a2c2bdc8524651e4fa177e94f55514ebaff7743dcf13a7f4e1db92927b13d199"
+    },
+    {
+     "name": "dStrip",
+     "sha256": "cbafb2191201fdc652e39d092c5b3ab5eca1084054e251ee7799e344c10da071"
+    },
+    {
+     "name": "f_source",
+     "sha256": "9cd0fe87812c99c012ed75f554df08be34c2106b42b6ca8b7cd263a1fa73aaf6"
+    },
+    {
+     "name": "d_source",
+     "sha256": "b2fd4ee7313f3632b5ff2d6ca60d0e0057d101a8f13288a8d63e813c86cd8065"
+    },
+    {
+     "name": "fd_projection",
+     "sha256": "423e5636dff236de2700d8357f75567ec4e90c53ecd203bd17954bb43ad709bf"
+    },
+    {
+     "name": "action_mul",
+     "sha256": "0f69c383eed4c8da0b56f69970d900246e591edd0f5feee6f136283592e6a2c4"
+    },
+    {
+     "name": "action_one",
+     "sha256": "f89b3c4698a1c51dfe9cad1855135ebbd49cf886d566b6d575fb77d3b0855540"
+    },
+    {
+     "name": "degree_one",
+     "sha256": "b1f3d364c4ec27d2dc59b7e2b7cbc4f2cc1c2ed9e7be4e715a7bdd1212a5ae38"
+    },
+    {
+     "name": "degree_mul",
+     "sha256": "2f6b7f93919f8ff21ceb53a426b7ea4037d4040e1d291a2825269a96265f94be"
+    },
+    {
+     "name": "total_degree_mul",
+     "sha256": "e09b131ea2670f20519ab1ce36d964d2eadeec731c60885e8def6045c164d2f3"
+    },
+    {
+     "name": "total_degree_one",
+     "sha256": "568f221003bca193feee988b85a6899ba19499c683e9a08345ca7daa66b3f7b8"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "primeStripDegreeLedgerAt",
+   "line_span": [
+    382,
+    405
+   ],
+   "block_sha256": "303daad619437d9d56e7a8944e46c6567a689d105e9e732a04045c8eb9e638e4",
+   "signature_sha256": "d18184697eb5dcdbf9bd3a9a05c456fbcf5f1150305848657adc4ce3c37ceb15",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_fStrip",
+   "line_span": [
+    407,
+    408
+   ],
+   "block_sha256": "828dc63b3728b39fde57571574f3784c5e19364186e283a12167074a60ce6f64",
+   "signature_sha256": "828dc63b3728b39fde57571574f3784c5e19364186e283a12167074a60ce6f64",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_dStrip",
+   "line_span": [
+    410,
+    411
+   ],
+   "block_sha256": "9c74fd2d66750793a20072241106ea84ebca2191d9fa86ca0a8149a51b5bb6a3",
+   "signature_sha256": "9c74fd2d66750793a20072241106ea84ebca2191d9fa86ca0a8149a51b5bb6a3",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_toD",
+   "line_span": [
+    413,
+    416
+   ],
+   "block_sha256": "395f4b00df8e7c1a7c0fa13bfcc802177eba72a7ffb6b36fff690dbda73b7204",
+   "signature_sha256": "3dc7b817ea654c95f71116a01c05ba0568070190419fdb607e1d4155cf3a0c37",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_action_mul",
+   "line_span": [
+    418,
+    424
+   ],
+   "block_sha256": "da83319b4470221209714c0e150407f1094de2018706feb7709f8c459e296a8a",
+   "signature_sha256": "0328b6fc579d899eb0303127c7310a9cb9720a8b450ea57451147419d6589eb1",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_action_one",
+   "line_span": [
+    426,
+    429
+   ],
+   "block_sha256": "462f0b16e5bbe09e9bd7dfb0aff3f7d7e3f49e3935cc3740a1dee9071a12a3d1",
+   "signature_sha256": "d6f7a858468e2eb2b29756b9a0f035463dcd46567b754ecefcd89f3d8518a822",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_degree_one",
+   "line_span": [
+    431,
+    433
+   ],
+   "block_sha256": "6a02bd3da85b268ad35b0643d599b6def9d0e412043d31a72b4226d87de04236",
+   "signature_sha256": "d45be9a4750c280dea1cd54fdd40fa17afbd6b22e1c2cc8f867115426086c229",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_degree_mul",
+   "line_span": [
+    435,
+    440
+   ],
+   "block_sha256": "73b232981ccc81783dd81e4e48a2ea2a6feba44cb1cf3eb59702d6f6a9727d5d",
+   "signature_sha256": "d24275c64d77911ae86a64fb700e09435b0b1abdd44f5044730d16411bd67cab",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_total_degree_mul",
+   "line_span": [
+    442,
+    449
+   ],
+   "block_sha256": "7d8b75e351fc976f81f967a6926a4062150378b9f22d550731f84797a8d56a73",
+   "signature_sha256": "fc540537cd9e2ebd8739942eeb358b66b9eb7ae8b855bc8123e19aab3cea8538",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_total_degree_one",
+   "line_span": [
+    451,
+    455
+   ],
+   "block_sha256": "b13323f19a0ad18dc0d089f20f65d36ba731103e7231ca2048ac51695ce352c7",
+   "signature_sha256": "536a962c8f8c5ad99c451d347ea3b916da7be03cbe46969b8aa797c86733c042",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_degree_transport",
+   "line_span": [
+    457,
+    462
+   ],
+   "block_sha256": "5b365e8bf2092397ef242b963239be622a7a5ca8abfa96b2f437fbf6cdd0b8ae",
+   "signature_sha256": "5b365e8bf2092397ef242b963239be622a7a5ca8abfa96b2f437fbf6cdd0b8ae",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_action_transport",
+   "line_span": [
+    464,
+    472
+   ],
+   "block_sha256": "f7355d1b67af92010ec5f94427b8a15097f0aa3f3d24cfe29805cad353084aca",
+   "signature_sha256": "f7355d1b67af92010ec5f94427b8a15097f0aa3f3d24cfe29805cad353084aca",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripDegreeLedgerAt_total_degree_transport",
+   "line_span": [
+    474,
+    482
+   ],
+   "block_sha256": "39e92c5110854fba5fa68b77369d138fa6608b2e4ea25ec3087bfcff93f615f5",
+   "signature_sha256": "39e92c5110854fba5fa68b77369d138fa6608b2e4ea25ec3087bfcff93f615f5",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "PrimeStripLinkDegreeLedger",
+   "line_span": [
+    486,
+    504
+   ],
+   "block_sha256": "f3a8c0013b771a5b83c22788d24394af16f38889c6df5f588c431b6032a68a45",
+   "signature_sha256": "06af23b96f7f6f9f6b7a6de67f8b45e72a4a1c2daabe83e59bb59dc4af648597",
+   "fields": [
+    {
+     "name": "source",
+     "sha256": "e79007d41343089e030fd2443b728de05ba1b63e55336de6246810c5ed0251ce"
+    },
+    {
+     "name": "target",
+     "sha256": "7674e4a6061b61ae1b23a14169f275f60db6ca407a2fd4b9f4c4afd9b7d0d443"
+    },
+    {
+     "name": "link",
+     "sha256": "e297721542fe236ca102bdd1731bdf44c87147fed617754764d48c3c708d42da"
+    },
+    {
+     "name": "dLink",
+     "sha256": "202de5bae6f6346dad15ff9d0a3b1b75da5a419a94522da7aa9788e0cde9e766"
+    },
+    {
+     "name": "link_source",
+     "sha256": "d8fbd6020f31496bc22882fe058496fc41d0fbcba302efe67e3c3b2369a2a021"
+    },
+    {
+     "name": "dLink_source",
+     "sha256": "0b2bbc2531d426c5f922f9e0a7195c13b4e8c0849f6191c0812280e90b21e974"
+    },
+    {
+     "name": "projection",
+     "sha256": "79335ed66bdcc1090922bbd41102c1266f30e35aed4db279c9514e249e96be4c"
+    },
+    {
+     "name": "action",
+     "sha256": "528ecd4c60d25f47ae34e32e20a979b89d39efe09fe1089ebe07d9cd6c6f55b4"
+    },
+    {
+     "name": "degree",
+     "sha256": "45674e1bacf231feec4f7b5efcf69b224abff6dbc18220255cfec6fcfefbcf0d"
+    },
+    {
+     "name": "total_degree",
+     "sha256": "58edd26406f09c67741fe6d0096cb802f4bdfe0cbc3188ca2b991a0a58bc562f"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "primeStripLinkDegreeLedgerAt",
+   "line_span": [
+    506,
+    525
+   ],
+   "block_sha256": "22806f7a9e82d6e212d098d85ea08daac8d9351c83f4f46e6a949ea046fe272d",
+   "signature_sha256": "628f106b85fc3640273f732f1cca6dcf89949e596a5ff0fbff3f70b8cceb8924",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_source",
+   "line_span": [
+    527,
+    529
+   ],
+   "block_sha256": "988fd1da12829a4a1388c40fe23013ebc6f5362702e7ec2ea76469264cfe49cf",
+   "signature_sha256": "988fd1da12829a4a1388c40fe23013ebc6f5362702e7ec2ea76469264cfe49cf",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_target",
+   "line_span": [
+    531,
+    533
+   ],
+   "block_sha256": "0187ba19ae42807edb292391f583392208c39d88145e574a58f97aff9f296ff4",
+   "signature_sha256": "0187ba19ae42807edb292391f583392208c39d88145e574a58f97aff9f296ff4",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_link",
+   "line_span": [
+    535,
+    537
+   ],
+   "block_sha256": "fa27f48a05f4810ca070167e6d06a64d61a1b2247312a980175ccbd0c2e4b135",
+   "signature_sha256": "fa27f48a05f4810ca070167e6d06a64d61a1b2247312a980175ccbd0c2e4b135",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_dLink",
+   "line_span": [
+    539,
+    541
+   ],
+   "block_sha256": "0f54d8bfae6c2a941e9c4c65b83b0833d7b33a009dd1be7aaff4b9d13dba523b",
+   "signature_sha256": "0f54d8bfae6c2a941e9c4c65b83b0833d7b33a009dd1be7aaff4b9d13dba523b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_projection",
+   "line_span": [
+    543,
+    549
+   ],
+   "block_sha256": "6d93f2ad2e78ed9523b94268fdbba2713f3b4d069ee279e89c3e104d2ec6fecc",
+   "signature_sha256": "6b844317f4d9d9aa88f77cefed92ab5d92c469392b1acd2a2820b5261a65558a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_action",
+   "line_span": [
+    551,
+    559
+   ],
+   "block_sha256": "6c7e70cf651aee0a79b87898de1974bd02b40a43ed73aabd7e613342aacc0ed3",
+   "signature_sha256": "2ca982ee813325aa6da68b0c735b4611bcb1f1c63458c98ad36bbb977011942e",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_degree",
+   "line_span": [
+    561,
+    566
+   ],
+   "block_sha256": "793354ff31429e85c371256c6a1440fd79a0812cad00b769a45a19131f4db1d3",
+   "signature_sha256": "68efa24a096d7c2946c2686fd43e7f65a21ebbb3d1f3e22b3f592be4974bfc76",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_total_degree",
+   "line_span": [
+    568,
+    574
+   ],
+   "block_sha256": "1927e69a658d6e12f935a214ab6576282a7f4623fa0ef15d73f056175701501e",
+   "signature_sha256": "871064328489ae0c6ebb425c4ed9de2d42167ae5019bd933f83d106f831c5acd",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_refl",
+   "line_span": [
+    576,
+    580
+   ],
+   "block_sha256": "0e2abb9bba22d06c8d86cef1a0feb14736fc3626cb8785d4da7f23844632103f",
+   "signature_sha256": "0e2abb9bba22d06c8d86cef1a0feb14736fc3626cb8785d4da7f23844632103f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_symm",
+   "line_span": [
+    582,
+    586
+   ],
+   "block_sha256": "55fb18d0702d94d2dfd77290c37c53f44ae4f3f55b4aac43d000dc5eb26a3a5f",
+   "signature_sha256": "55fb18d0702d94d2dfd77290c37c53f44ae4f3f55b4aac43d000dc5eb26a3a5f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "primeStripLinkDegreeLedgerAt_trans",
+   "line_span": [
+    588,
+    594
+   ],
+   "block_sha256": "b0eda89ebe715b50f0b70f51cd46003a497eadf440c2c94123a14875bd573cf1",
+   "signature_sha256": "b0eda89ebe715b50f0b70f51cd46003a497eadf440c2c94123a14875bd573cf1",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "ColumnPacketDegreeLedger",
+   "line_span": [
+    598,
+    615
+   ],
+   "block_sha256": "392555a74c2f493646f8abcc71322b3835a4e4b1c30f1b6480eb628dcc15081d",
+   "signature_sha256": "37498ecb05a7cf3e56ff8cd7baf6b47bb3005d9e26a253951910e433a073311f",
+   "fields": [
+    {
+     "name": "fd_stage",
+     "sha256": "d2c561019576981661f1e28efb56f596ee41d6cc11a686d51dfc3a33a02052d4"
+    },
+    {
+     "name": "packet",
+     "sha256": "971a0615a323dd1c0364d18deddca5828f6ad755fa8db1630282c8aaf42515a6"
+    },
+    {
+     "name": "packet_source",
+     "sha256": "dd223d4ee462142378b5efd351742c8ef930df2151e30bb2d4b67cade255c27f"
+    },
+    {
+     "name": "q_positive",
+     "sha256": "e77e2efef8fede83865a88397bb0ac1705cafac545ad5783344874c472d07230"
+    },
+    {
+     "name": "scale_positive",
+     "sha256": "65cf3760cade075a682097932692a01db8e41deb3e9e348fa3ba96e12f8ba7b2"
+    },
+    {
+     "name": "scale_nonzero",
+     "sha256": "525dfffa04ce62cbd3385e060f9449e637993222c34348bb3034cda9b949108a"
+    },
+    {
+     "name": "log_volume",
+     "sha256": "b92d47f300b51ae421aa20a9ce924a033387c5a43ae1b7b694fd01752bc4ab76"
+    },
+    {
+     "name": "source_injective",
+     "sha256": "a253f214268399ca1d3777558b8fa359f40e9dafc6a470566f90575cb110e01b"
+    },
+    {
+     "name": "inclusion_map_injective",
+     "sha256": "37bdbd0bc10bff6883b2564b6d7b3d73ab3e750a17bf2286ae9a359814b91744"
+    },
+    {
+     "name": "inclusion_packet",
+     "sha256": "30e6c25632af6351716f43e851de4ab7d96c042438afaff8790228e6a9625f2b"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "columnPacketDegreeLedger",
+   "line_span": [
+    617,
+    641
+   ],
+   "block_sha256": "71aa099f6ec02e68799d5fef1b078379777597db686087e2e6ef17fc071423a8",
+   "signature_sha256": "53767466f0965a9133001fddd5c907b518a2a9a0c66b6dbcf8e7fa8e2d29065f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnPacketDegreeLedger_packet",
+   "line_span": [
+    643,
+    646
+   ],
+   "block_sha256": "29e608b7f10c559b30f7dc5155bd3d04b2b69128f11b4aa73593a702ae4047a8",
+   "signature_sha256": "29e608b7f10c559b30f7dc5155bd3d04b2b69128f11b4aa73593a702ae4047a8",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnPacketDegreeLedger_fd_stage",
+   "line_span": [
+    648,
+    651
+   ],
+   "block_sha256": "022225b302d3a16b612e29e17b97967e1b3a55bc40ebcbfb75c1b5fc8978804c",
+   "signature_sha256": "65474e34e991b1c15289756f4a1fa0fdf0e08095b6a3c09a9f50df731f0430b9",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnPacketDegreeLedger_q_positive",
+   "line_span": [
+    653,
+    656
+   ],
+   "block_sha256": "36c6c228c2a85dc2fd3cf9bd9b2ec912e4eeaa66489938c576b481bfbe1eb882",
+   "signature_sha256": "af09f6d2920372451272536e29197b3663a6900b0b22786d4dbb793249cca3db",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnPacketDegreeLedger_scale_positive",
+   "line_span": [
+    658,
+    661
+   ],
+   "block_sha256": "d2f2d3f7a88e3534d33d2258a2872ccd6d4c0da61cde8f14dd53e2adaec1cb86",
+   "signature_sha256": "89a171cec536a1d4df76f164edf960fd22ff2d14a6beeab380ba9578071b9893",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnPacketDegreeLedger_log_volume",
+   "line_span": [
+    663,
+    668
+   ],
+   "block_sha256": "4b6c2c513a9c2ac698280f1b5944cd246db390c6b3da9f45326c38b0766c6689",
+   "signature_sha256": "a828c66d73cab2320e648e7fe45592c77120141983ae03729374077454d4f972",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "ColumnStageSourceLedger",
+   "line_span": [
+    672,
+    707
+   ],
+   "block_sha256": "6876c0e77d1f989d1ae27f867626d8cc39e688078510f13b25dc243c3b720863",
+   "signature_sha256": "227b63b8cf22601cce20a3e49b5642c64ac08836d339b6f1d021d8eea1b8f74b",
+   "fields": [
+    {
+     "name": "fStage",
+     "sha256": "f46e23258ee4d13c973b52f4cab53734e335b04415b4fdd1a5081605e5a93221"
+    },
+    {
+     "name": "dStage",
+     "sha256": "469a35bd7d3ef4cc5b3d63be615a71fdef816d64e83cbca9fe3bd1818e99ef90"
+    },
+    {
+     "name": "fd_stage",
+     "sha256": "46d74a31ea9b0f347ff997280b819b41eaa79f72e8bdae0a633977579a6d7d6e"
+    },
+    {
+     "name": "source",
+     "sha256": "73b7b256c30af13e9a14117a94da5c7f0f6487884830b20faf55dcbd2a74767d"
+    },
+    {
+     "name": "source_f",
+     "sha256": "8cd5d7585ccdd4e734b7ad4ad56cb0b273a9921914ef9bc9998e4e63e31940f4"
+    },
+    {
+     "name": "source_d",
+     "sha256": "33bb61b84532a61a5edeaee1f40698654da19fca636ab629150d781ff8e4e032"
+    },
+    {
+     "name": "source_injective",
+     "sha256": "0e5b6e113cbf3ef05df8a7f5e51e199f2c5f1f7f36edc9dfc95dfafd3db84cc6"
+    },
+    {
+     "name": "packet",
+     "sha256": "971a0615a323dd1c0364d18deddca5828f6ad755fa8db1630282c8aaf42515a6"
+    },
+    {
+     "name": "packet_source",
+     "sha256": "5aa64117de0fdf27de59fdaa9bfec8877ca8153b1e89e072c1819a8728fac57f"
+    },
+    {
+     "name": "q_transport",
+     "sha256": "ee47039daaf7d9f0031eb511a6bc308e40c4d75f5faa2fe4b0f21a68a50234cd"
+    },
+    {
+     "name": "scale_transport",
+     "sha256": "ddd6014b2c00d0c6a5a8277c706263c39928d945dbb7c7b221c3158e5914b84e"
+    },
+    {
+     "name": "log_volume_transport",
+     "sha256": "6c62a219b0e46360a286a66ccc63afccb180d47cd900f726ab9b52b9f6f8d192"
+    },
+    {
+     "name": "fLink",
+     "sha256": "a983feecbf8226e20b7bb30c4587499f1121c5acf2d15394512ec7289f76a500"
+    },
+    {
+     "name": "dLink",
+     "sha256": "7831d2f59ed8513c085810f1bc7551dd13f211420253b224695e99202b2aff8c"
+    },
+    {
+     "name": "fLink_source",
+     "sha256": "8245f6e056879488a0388935c334a5ac8d9e516177b8db85e8ea31b907bd60e1"
+    },
+    {
+     "name": "dLink_source",
+     "sha256": "350e5e47e509a4de096ac1eb00703f1ada209bddaf661c24418f35a6724196a8"
+    },
+    {
+     "name": "fLink_action",
+     "sha256": "d1ee7df95b7e630f2a10007162479311fcde7fefa7c19bfcf9ca4bccba0a803e"
+    },
+    {
+     "name": "fLink_degree",
+     "sha256": "8a167867bd833914bbf7bb0c3f3f115db464bdf31a4f45e0914ee5e65aca7133"
+    },
+    {
+     "name": "fLink_total_degree",
+     "sha256": "ccfca792aae74c7bc6eaa072ee237cecdbbb4ac42137fb9fe55c0da77800eadf"
+    },
+    {
+     "name": "dLink_projection",
+     "sha256": "7132b874bc8fdcad6770318b82298ed47b093594d3549ad5474dabc78fb419a4"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "columnStageSourceLedger",
+   "line_span": [
+    709,
+    747
+   ],
+   "block_sha256": "f17d8fb6c7986e331b97a9bddc2743cd7fbcb0a182cefbe5d5863208048e5791",
+   "signature_sha256": "81aae5be676923c0247176a045c0295858b0a8f6610b72e2f4faeb41c247feaa",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fStage",
+   "line_span": [
+    749,
+    750
+   ],
+   "block_sha256": "724a7377c31da3d0563e09ac1ca69089aa158dfebbdce78c38dcb3231f5e336d",
+   "signature_sha256": "724a7377c31da3d0563e09ac1ca69089aa158dfebbdce78c38dcb3231f5e336d",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_dStage",
+   "line_span": [
+    752,
+    753
+   ],
+   "block_sha256": "c20fb3e99d9b3faa9d1dba2ce963132ad0c18b304cf50c77281b32bcb8b98589",
+   "signature_sha256": "c20fb3e99d9b3faa9d1dba2ce963132ad0c18b304cf50c77281b32bcb8b98589",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_source",
+   "line_span": [
+    755,
+    757
+   ],
+   "block_sha256": "fde816b68e43b18a9441a77b17d335c3e430c2c95f2c2bcea33642b7bebe70bc",
+   "signature_sha256": "fde816b68e43b18a9441a77b17d335c3e430c2c95f2c2bcea33642b7bebe70bc",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_packet",
+   "line_span": [
+    759,
+    762
+   ],
+   "block_sha256": "777f7120491118c5730cd341f52a7c848fb9afb9e337597cfbd140c1fb1d22cf",
+   "signature_sha256": "777f7120491118c5730cd341f52a7c848fb9afb9e337597cfbd140c1fb1d22cf",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fd_stage",
+   "line_span": [
+    764,
+    767
+   ],
+   "block_sha256": "1ab36fa8d47e866451aa9798b48bc66cea12784b84251bc1c1494ecc449f54e6",
+   "signature_sha256": "e8d5205ded34a9dfd7179fe476ea8650dba14dc73c5739769f39caede1f8ca86",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_source_injective",
+   "line_span": [
+    769,
+    771
+   ],
+   "block_sha256": "e18635a9f653605d724613e365c7a54264ec04c1b72bf007857a4a02fc35a528",
+   "signature_sha256": "a206f5a460b5316d33d16facb134cfd88e8a47e56f81263e8d0ac1425b529d5f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_q_transport",
+   "line_span": [
+    773,
+    777
+   ],
+   "block_sha256": "1b37aa3580db2d8eab16dc70014d55a063f63336fd997dda861861ab925fce45",
+   "signature_sha256": "96f6996d0c5fd2514bb41005f7547d937b881d0cc786540c02a7c3248ed9bdf6",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_scale_transport",
+   "line_span": [
+    779,
+    783
+   ],
+   "block_sha256": "7b79ce44200305a31a9779c4168a61f67eb54b95f69e62fe004fa7d0c678a3fc",
+   "signature_sha256": "61b26fed2aa762182dae6952e2c67725e7b185e33b554757dead56afe726a9fe",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_log_volume_transport",
+   "line_span": [
+    785,
+    789
+   ],
+   "block_sha256": "9c2d3e61feb199fa849987788af985bf230c23f4cb1c39bec437400adbdcf5b2",
+   "signature_sha256": "36c34e0244ae98a652d5cb719f57cd698b8b1ea069a51ed2f7f636641e08aacd",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_action",
+   "line_span": [
+    791,
+    800
+   ],
+   "block_sha256": "a108f2c608acb2ea8b3f1d4c2cf4e7f366f1c71a9af12d41734a5c40370e0b48",
+   "signature_sha256": "66c6c42e23a7a7e1271142b45803871c1af96ce7ddb1af4a3d16a21e7426a807",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_degree",
+   "line_span": [
+    802,
+    808
+   ],
+   "block_sha256": "c092223a1d596cedd5b15a8990bd9509842929be886ad36fdb2ab85ff2e22644",
+   "signature_sha256": "035c19f23abe27d60583fb9b3da688c4c27865ab092d50b077cdcb9fe04218ed",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_total_degree",
+   "line_span": [
+    810,
+    816
+   ],
+   "block_sha256": "c07a77e4668a9ec8980ee32b2dcb30c6676a3667aa7c51af6ceff5948f42ff9b",
+   "signature_sha256": "0e98fea4f6a60a3540fcdb927cf0f0426400f10ce64fa861973fce06d42e5e89",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_dLink_projection",
+   "line_span": [
+    818,
+    825
+   ],
+   "block_sha256": "453d390670229c572571b32327386eab90af8d331da1fed4b54aafd5e6fd68f6",
+   "signature_sha256": "13c4b0e0cc3364e5b6d2f284b88c34a975fee4639f2705491dafa043b232f148",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_refl",
+   "line_span": [
+    827,
+    832
+   ],
+   "block_sha256": "1aca0f5e220a1f061ef8ef79268912c486e22fae9d3d9403d23827aff7ffbdc7",
+   "signature_sha256": "1aca0f5e220a1f061ef8ef79268912c486e22fae9d3d9403d23827aff7ffbdc7",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_symm",
+   "line_span": [
+    834,
+    839
+   ],
+   "block_sha256": "eec5a7aede1ac0faf7ec897c06c0b9cb4356c17ea11c2d21897612ab2a5a5e60",
+   "signature_sha256": "eec5a7aede1ac0faf7ec897c06c0b9cb4356c17ea11c2d21897612ab2a5a5e60",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_fLink_trans",
+   "line_span": [
+    841,
+    847
+   ],
+   "block_sha256": "d8bf48619fd8ebb4b27614f57af95e2eb3de07e00a3e6355120ff0d044dfd63b",
+   "signature_sha256": "d8bf48619fd8ebb4b27614f57af95e2eb3de07e00a3e6355120ff0d044dfd63b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_dLink_refl",
+   "line_span": [
+    849,
+    854
+   ],
+   "block_sha256": "81ecddf7212d006cd02f8f8a528c2815470288d79448c9d3c8f79547c3d36383",
+   "signature_sha256": "81ecddf7212d006cd02f8f8a528c2815470288d79448c9d3c8f79547c3d36383",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_dLink_symm",
+   "line_span": [
+    856,
+    861
+   ],
+   "block_sha256": "e5e2666036ba5763edd866484a571dd5a4992ed58951954051c590bc82e1303b",
+   "signature_sha256": "e5e2666036ba5763edd866484a571dd5a4992ed58951954051c590bc82e1303b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnStageSourceLedger_dLink_trans",
+   "line_span": [
+    863,
+    869
+   ],
+   "block_sha256": "cee2d73f85ec74350180862e51a90dbeb5908beef800a43a35a509788af1bdc0",
+   "signature_sha256": "cee2d73f85ec74350180862e51a90dbeb5908beef800a43a35a509788af1bdc0",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "ColumnProcessionSourceLedger",
+   "line_span": [
+    871,
+    907
+   ],
+   "block_sha256": "02fd60d7900e7a910dc3d33f65194e8b5c24c9f0c3b1b021393d911d79239829",
+   "signature_sha256": "58157f8f98edaf8e8d13d3a0ac73f05fe01cb885efa53789519bc0c46835adc9",
+   "fields": [
+    {
+     "name": "stage",
+     "sha256": "80903748af8d8e79e369a8edff8a04ff0b6ff0bef3d346e83dbebb5d180103c9"
+    },
+    {
+     "name": "inclusion_map",
+     "sha256": "e7fed89915e764abc61ca117268adf9794c447bf3bce78c51b9e2a22d5f5efc4"
+    },
+    {
+     "name": "inclusion_injective",
+     "sha256": "2748d8d11a20c4a300a7c4ce17c59be63c72598e30da2b7699e6cea38babe6e2"
+    },
+    {
+     "name": "inclusion_source",
+     "sha256": "8c1309b3f6c4360ba6d4053ce18a53ce77ccefb101d2456efb163359ab3848a2"
+    },
+    {
+     "name": "inclusion_component",
+     "sha256": "a303d5aa6f20badea26b9ea6f05d5b417fec444075a56a30b9444de1fcc4f47f"
+    },
+    {
+     "name": "inclusion_component_source",
+     "sha256": "de16bbdfc83b20681c11e494e67d907dfed01314467a1787945d36d6a48ae16d"
+    },
+    {
+     "name": "inclusion_natural",
+     "sha256": "c15bdcd8ba0343b8cde10fc488b4d000c03595d9d627c74c7a517fd7d0c07fe1"
+    },
+    {
+     "name": "inclusion_refl",
+     "sha256": "1aaec75159a2744ddc8f6d18c126c6a141e31049b063a7bb23d09c0c172f39ab"
+    },
+    {
+     "name": "inclusion_trans",
+     "sha256": "8d9e8ced01ddc828dc3418417a69495e7564015014177b6f56c2e0a9f452de6d"
+    },
+    {
+     "name": "inclusion_d_component",
+     "sha256": "927e5932ad6d2718137c6b90b583c3fd8adfbc80b5a18b2b0854d287e0ec8619"
+    },
+    {
+     "name": "inclusion_d_component_source",
+     "sha256": "6984c13669fcfeb64d0bb76b1770c0186f4e40a7ed2e2fd278a58cda15e048de"
+    },
+    {
+     "name": "inclusion_d_natural",
+     "sha256": "0862575800a94311d94a8df5886444655fa03eeb1165f04265651c2733202a65"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "columnProcessionSourceLedger",
+   "line_span": [
+    909,
+    941
+   ],
+   "block_sha256": "5135708bce53a1f8ef02cc5375cc184a6aa01a5655ecdf48e35ec6f4f669b0b1",
+   "signature_sha256": "e11662f165846ca6e11c4f9467d4ef34669dd036db3445d040790e4b809524da",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_stage",
+   "line_span": [
+    943,
+    945
+   ],
+   "block_sha256": "e0f3e24bbf6f986172a552aaa942e223ebe77ff1433cbd8dbaf52d0cc98a9d8e",
+   "signature_sha256": "e0f3e24bbf6f986172a552aaa942e223ebe77ff1433cbd8dbaf52d0cc98a9d8e",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_injective",
+   "line_span": [
+    947,
+    950
+   ],
+   "block_sha256": "d04ff18e8a13029524af77acd59df2d269b93ca0a5dc764822054784e1ba03ae",
+   "signature_sha256": "f6f75f6c752a48623a1760ae7ee6e2e8ddc8f1bc5862a169c7f8b1d96389f5d9",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_source",
+   "line_span": [
+    952,
+    957
+   ],
+   "block_sha256": "845e36fbc6d5c406061487c3e7ecd80d47028001f587417d69a31801116446a3",
+   "signature_sha256": "e565b6fcee2db27394eeb4c501cca046eebc44fd2c17c3ed05f3231d4b388604",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_natural",
+   "line_span": [
+    959,
+    969
+   ],
+   "block_sha256": "2664c5a4b04db68472fe70d4b1db1fa4795d1431919d91f24e63d3f313df28e9",
+   "signature_sha256": "7e83208e4a140552318842282663d6d7e68b46b55895260d3df17856f97ae049",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_action",
+   "line_span": [
+    971,
+    981
+   ],
+   "block_sha256": "7e97a7157c93e06526fe7b473b1d75abc96f257c7d8e5b8744eb5c2f8c35f169",
+   "signature_sha256": "adba02e8f0abe97df6363d831e5198a529acbb9cd4d1fa65c0815dbee758fa62",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_degree",
+   "line_span": [
+    983,
+    990
+   ],
+   "block_sha256": "445b70846dc6da45041e5310b36fb8b72267a0f6175a3b0d4ddbac27cef68acd",
+   "signature_sha256": "9ec81feaad910f098b6d218e6e11c6bd2f3faa717e3e82133616d924cb25a51c",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_d_natural",
+   "line_span": [
+    992,
+    1002
+   ],
+   "block_sha256": "6242baa9bbc611ef3b5a896623c9d3469b976d18cec9cf3b7936b5430f661a20",
+   "signature_sha256": "f0526be6bf97f94d5f4a8c28f85e3e7b96f24beaf2aebd78d26773830d984709",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "columnProcessionSourceLedger_inclusion_total_degree",
+   "line_span": [
+    1004,
+    1014
+   ],
+   "block_sha256": "2da7b41e3ccc16db58bffa62198319adc598bd2565325dbba5d161a4a982ec2f",
+   "signature_sha256": "2da7b41e3ccc16db58bffa62198319adc598bd2565325dbba5d161a4a982ec2f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_zero",
+   "line_span": [
+    1018,
+    1023
+   ],
+   "block_sha256": "19b5c0198f6d0adfe67eb40cbfa5e5651ae843a7f7df254c4b105c8a559c33e1",
+   "signature_sha256": "19b5c0198f6d0adfe67eb40cbfa5e5651ae843a7f7df254c4b105c8a559c33e1",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_add",
+   "line_span": [
+    1025,
+    1036
+   ],
+   "block_sha256": "544dd4d331c81ef5caff2045ef67c071d8873b0c992bb52c065d6b20e4fd35ec",
+   "signature_sha256": "544dd4d331c81ef5caff2045ef67c071d8873b0c992bb52c065d6b20e4fd35ec",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_inverse",
+   "line_span": [
+    1038,
+    1047
+   ],
+   "block_sha256": "a6d69c680506ea2cc1f3706174e90b48bda4747b6c0fe4a2d2998e0e0cfc1b08",
+   "signature_sha256": "a6d69c680506ea2cc1f3706174e90b48bda4747b6c0fe4a2d2998e0e0cfc1b08",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_projection",
+   "line_span": [
+    1049,
+    1056
+   ],
+   "block_sha256": "d73d1b6f2b55a839fed62cd9397349133c62eb80afd38ac67fd20ed0c46b2200",
+   "signature_sha256": "4d85b0999ea3acaedf66eadc6ab45e4d3319c76410c4e1ebad7f30ad119046c5",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_component_bijective",
+   "line_span": [
+    1058,
+    1062
+   ],
+   "block_sha256": "ce6576d6fd8c531d9996268924bf7cb441f814dcb39942118aa6bf44441e1769",
+   "signature_sha256": "ce6576d6fd8c531d9996268924bf7cb441f814dcb39942118aa6bf44441e1769",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_total_degree_transport",
+   "line_span": [
+    1064,
+    1070
+   ],
+   "block_sha256": "c4504bf00843572fc39747ec8e7ef6bf638798694714b26fcaa030ba4ed64696",
+   "signature_sha256": "29add190ac7ecdb9badda854bd857668f1bb51eca2fa0e46e04140abdba639f0",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "TranslatedColumnSourceLedger",
+   "line_span": [
+    1074,
+    1102
+   ],
+   "block_sha256": "9ee876390d89a43ed4775434964fcb8892e6fa2e2ad6c85d354e5f702561d046",
+   "signature_sha256": "96c241e9935f14fa843533b7c520bb1c63f12b63d29a76273e7b0da0e1d6eca5",
+   "fields": [
+    {
+     "name": "base",
+     "sha256": "735067c2aa03ef6dc5e1fc432766d722665926d4aaae9aec6996021ee3121c2f"
+    },
+    {
+     "name": "target",
+     "sha256": "d4fd4b8579ae809e712bbe996059e8b859e2c05c39c552c8269dd3678646217a"
+    },
+    {
+     "name": "map",
+     "sha256": "fd9591746b99795dd14ad2d37650c84394a6413895129081d533efaffdceed3f"
+    },
+    {
+     "name": "map_identity",
+     "sha256": "5deb32b87f445c98a7d084ce276b3bd13fcc02a1e419066aadc37d0d4e491670"
+    },
+    {
+     "name": "packet_q",
+     "sha256": "3b1f8b562990ad5c6d29df9884bbf4d1f68b951aa3421ac194c35e90886e463c"
+    },
+    {
+     "name": "packet_scale",
+     "sha256": "4e65f912f859be7b66093b3316c1fa05ac51756f2e13c4e5546460fc3cfd44c7"
+    },
+    {
+     "name": "packet_log_volume",
+     "sha256": "944908f7690e287ad76adeb930debf406e99842379bcb9364c9ae7789d50bbfb"
+    },
+    {
+     "name": "component",
+     "sha256": "e4e400dc542cef6f7b9cf2b197a28967c84720ea9db469351fe8915c26649ede"
+    },
+    {
+     "name": "component_source",
+     "sha256": "92881bfbacfe295fff6863dd345632aeb3b1ea9bc2600d69b465cdb56d2b125c"
+    },
+    {
+     "name": "component_action",
+     "sha256": "41c6510f69887fd253682aceefd9512e6b165da69e03cd8a070331ebae737fd7"
+    },
+    {
+     "name": "component_degree",
+     "sha256": "b5c08e6437b90c63b6814478c6dfd9b5d802115f35739852dc90bf26d0101750"
+    },
+    {
+     "name": "component_total_degree",
+     "sha256": "1d5b9c0e0ccedd8f52081d53a817f93153e20d7dca0ab9d9254e6cfb065f44d9"
+    },
+    {
+     "name": "naturality",
+     "sha256": "675891f440bfe721c7225bebec7ddcbab875904809b3a1cd531671b22591963c"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "translatedColumnSourceLedger",
+   "line_span": [
+    1104,
+    1134
+   ],
+   "block_sha256": "5f95cbc62df79b913f6f858202883d103d15008d3af97e583bf1cb401d251a46",
+   "signature_sha256": "0b7a2332af27f986d62f21f16549cd15bf4a52bbeb245dde38b5967da9887326",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_map",
+   "line_span": [
+    1136,
+    1138
+   ],
+   "block_sha256": "c93ff20ae0583611f65bb142f5ede7b2f5ccf9e2dc677eeaba377cbd35c072d5",
+   "signature_sha256": "c93ff20ae0583611f65bb142f5ede7b2f5ccf9e2dc677eeaba377cbd35c072d5",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_component",
+   "line_span": [
+    1140,
+    1143
+   ],
+   "block_sha256": "d64f19160435d44569f3d1862d767849596b2871bbe1207ad8ef19e6fed66304",
+   "signature_sha256": "d64f19160435d44569f3d1862d767849596b2871bbe1207ad8ef19e6fed66304",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_q",
+   "line_span": [
+    1145,
+    1149
+   ],
+   "block_sha256": "910da7e32c68aec7a86f6c27ccc207ca21a276a6241d08d0c146394bae2cd81a",
+   "signature_sha256": "910da7e32c68aec7a86f6c27ccc207ca21a276a6241d08d0c146394bae2cd81a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_scale",
+   "line_span": [
+    1151,
+    1155
+   ],
+   "block_sha256": "95889f28f85d504f388e628bacb2581b48791b11c6a875c2e503de1b5d142158",
+   "signature_sha256": "95889f28f85d504f388e628bacb2581b48791b11c6a875c2e503de1b5d142158",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_log_volume",
+   "line_span": [
+    1157,
+    1161
+   ],
+   "block_sha256": "c914f4a5ebc25e8093aabfde2700ad5f2636ddeb6b1407a1138acf07a7cf6658",
+   "signature_sha256": "c914f4a5ebc25e8093aabfde2700ad5f2636ddeb6b1407a1138acf07a7cf6658",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_action",
+   "line_span": [
+    1163,
+    1172
+   ],
+   "block_sha256": "42b9d492e452e4f18708114f5b2c40596b5a39770813dcdb1c0d9222cb3b85d4",
+   "signature_sha256": "3e2d2c60f1629def7f22203da83c4e7c9f739f01bb3ae3c65ffa3b25cdd6aaf4",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_degree",
+   "line_span": [
+    1174,
+    1180
+   ],
+   "block_sha256": "3bbf10755116d913d2246155544bdbd43e18b11f39ab869588520b7e67385f6f",
+   "signature_sha256": "191742cd7f6f03b6b47035fab082e5ca9c033d3a601e3009c88ceef5671301b7",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_total_degree",
+   "line_span": [
+    1182,
+    1188
+   ],
+   "block_sha256": "7de1d261c080c9ec4f592de67375d3e64ca64efd3d540a00f74f34ef518a5945",
+   "signature_sha256": "dd249ef1f1d973226d60907af737b9ae08857aa37f524d86f03ad0e67f68783b",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "translatedColumnSourceLedger_natural",
+   "line_span": [
+    1190,
+    1198
+   ],
+   "block_sha256": "acadb78a1ddb56db686d0ad5a8cdb5e774ae91fb1cb2940ccb67949576b36ab8",
+   "signature_sha256": "02d5d9009a0a2fa3937c1fc2a3586c3db2d9b2a05a70b90fca30c52cbfb1b3e9",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "SpokeColumnSourceLedger",
+   "line_span": [
+    1200,
+    1234
+   ],
+   "block_sha256": "48db8af25c814f5a68dbc0bf364c784319f59eb2496b1214f78cf93c2255c0f1",
+   "signature_sha256": "3b273f8ce20d3d1aa54301c048e1ccd0fb17bd8af70cbf9e3339c9ff592240c1",
+   "fields": [
+    {
+     "name": "source",
+     "sha256": "d1dbde05c0c2acc14102f2636f1694ac26b33beded6775ba67cc52a2b86b9bdb"
+    },
+    {
+     "name": "target",
+     "sha256": "4a66e991ba978551333bdf451acd574af1069ce320a72af3a6826b24832f660b"
+    },
+    {
+     "name": "permutation",
+     "sha256": "97b20a8a9def05b20bb8f0c3097c1035a752378857fee9ba71d9e24727122716"
+    },
+    {
+     "name": "map",
+     "sha256": "fd9591746b99795dd14ad2d37650c84394a6413895129081d533efaffdceed3f"
+    },
+    {
+     "name": "map_identity",
+     "sha256": "5deb32b87f445c98a7d084ce276b3bd13fcc02a1e419066aadc37d0d4e491670"
+    },
+    {
+     "name": "packet_q",
+     "sha256": "45aae801c6ba4e01f73b14aa80237170464cf974b7169c5fcd19e6c8478860b0"
+    },
+    {
+     "name": "packet_scale",
+     "sha256": "a4f254531d7f5f1e2574a659c24acdc8f2f7a5c4e9e80109881cf18f73ea611b"
+    },
+    {
+     "name": "packet_log_volume",
+     "sha256": "84f71b446d9afc59d0ed4ae482796f0de85bdb161c28a28c46eeb41cf0f0fd0e"
+    },
+    {
+     "name": "component",
+     "sha256": "dfddcd7656635f2df356524dbecdda155e2c56c76992aca8d6eab89c6ccf0bb9"
+    },
+    {
+     "name": "component_source",
+     "sha256": "de58e729904167366e822eb8876bb0199270904bfda0cfdc27f710783408053a"
+    },
+    {
+     "name": "component_action",
+     "sha256": "bcc69b801a2005255c810ade1cbfe4a99d37fd4c992498733200ff5aa7c528b8"
+    },
+    {
+     "name": "component_degree",
+     "sha256": "782770f7ca93c8a9ef5ccc897d3582ad6efa6d2308e736693e927d3a0fb8b5b7"
+    },
+    {
+     "name": "naturality",
+     "sha256": "563ec203d1bc8d8b31411df9a169499aebdd5ebff002f0029b9cefe17c8ce23c"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "spokeColumnSourceLedger",
+   "line_span": [
+    1236,
+    1262
+   ],
+   "block_sha256": "97e8ee5d06f486290dea9f321283d89abcf221be1d7a4bbf1fa28428a81786e5",
+   "signature_sha256": "53d8f145783efc49cfc2770dea8ba064ba73e15646ac5fabf5e2f611e2ca2998",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_map",
+   "line_span": [
+    1264,
+    1266
+   ],
+   "block_sha256": "20acaeeba593f5e743be3f1aa72c5985c7e2b81b7cbd46fc29858ffbde23d588",
+   "signature_sha256": "20acaeeba593f5e743be3f1aa72c5985c7e2b81b7cbd46fc29858ffbde23d588",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_component",
+   "line_span": [
+    1268,
+    1271
+   ],
+   "block_sha256": "6d64f7373d6370c6143a97baa16386608a170b5315cfff6f3cd1828757055041",
+   "signature_sha256": "6d64f7373d6370c6143a97baa16386608a170b5315cfff6f3cd1828757055041",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_q",
+   "line_span": [
+    1273,
+    1278
+   ],
+   "block_sha256": "772e3f8bfdf759f0436353a7a7d7ba18257984700ec1904b5f0ff00e79d38d70",
+   "signature_sha256": "96a3f1611b26d11dcbe5482c046abe67a9ebbedbd6852f1b208571124b660161",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_scale",
+   "line_span": [
+    1280,
+    1285
+   ],
+   "block_sha256": "d6bd15b1062c7fe150927a9f3def9de670bf77a22f349307835325bacf251c6e",
+   "signature_sha256": "b8e99c59c45c73f524d5a0a5216a4fa0d356671f28a393dc2c1ebf733b02df07",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_log_volume",
+   "line_span": [
+    1287,
+    1292
+   ],
+   "block_sha256": "8c255de095db6e46c79e237a1d4c738edc98cf5e8548e0910d834453145e3b52",
+   "signature_sha256": "87aef00fb19852f5ac93a4e13c514d32f22b860c91773fc1b1264234a6b0bd36",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_action",
+   "line_span": [
+    1294,
+    1307
+   ],
+   "block_sha256": "8e812a114cd8393b0ff8f5532c6c5878562d7cc9b9ee0f5ee0bda8100be8add7",
+   "signature_sha256": "7f02cbfe50087c60186ab5bd0290ae12bbca2ef9661875c2363f48de93be5d48",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_degree",
+   "line_span": [
+    1309,
+    1318
+   ],
+   "block_sha256": "087e51ce10d00e80a888b4f037d7e038b4948164c2d82e9c9b2909d1bc7ad7a5",
+   "signature_sha256": "c0c229da71b2eace4cef2ecff8bdb630771e67b45de3ac834c0b7cdc84c1e56a",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_natural",
+   "line_span": [
+    1320,
+    1328
+   ],
+   "block_sha256": "98deba2883d21364c8021515f3d5e348ee2c44f8e0c6a38ace22f5a4dbb588f3",
+   "signature_sha256": "fe724fc8bb5fb1a006df9a0bb020451f43aa991efe93c4b5f665635d998a7a69",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_projection",
+   "line_span": [
+    1330,
+    1337
+   ],
+   "block_sha256": "272d9dee25fe447601c558740c076d6c50b394f591f5c2c88cfb3fdbfd723c8f",
+   "signature_sha256": "85aaa2ffc6ad04529bc80512a69c238b8e189611e7a778d077d49908dcd23cf5",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_total_degree_transport",
+   "line_span": [
+    1339,
+    1348
+   ],
+   "block_sha256": "0c7306f679f8a9dc93c0e020503a3dcf3152915c97605bbd9a1263629ad1dbd9",
+   "signature_sha256": "0c7306f679f8a9dc93c0e020503a3dcf3152915c97605bbd9a1263629ad1dbd9",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_identity",
+   "line_span": [
+    1350,
+    1354
+   ],
+   "block_sha256": "e7375e69dc9d10d53421cb4876e41e9e0166c751087a7867e93305be7fd9ad49",
+   "signature_sha256": "e7375e69dc9d10d53421cb4876e41e9e0166c751087a7867e93305be7fd9ad49",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_comp",
+   "line_span": [
+    1356,
+    1363
+   ],
+   "block_sha256": "de0818a972ecac829234feb192427ec9b281003048a979660acf42130bbba5a2",
+   "signature_sha256": "de0818a972ecac829234feb192427ec9b281003048a979660acf42130bbba5a2",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "spokeColumnSourceLedger_component_bijective",
+   "line_span": [
+    1365,
+    1370
+   ],
+   "block_sha256": "e0ae1354a1339dd07c53cc8947c3ba1df25d16a1553a4b58f7f5438b29431d06",
+   "signature_sha256": "e0ae1354a1339dd07c53cc8947c3ba1df25d16a1553a4b58f7f5438b29431d06",
+   "fields": []
+  },
+  {
+   "kind": "structure",
+   "name": "H1H2PacketDegreeLedger",
+   "line_span": [
+    1374,
+    1396
+   ],
+   "block_sha256": "c9307882c18e9b9270b66fd1a2a93c514d7173133fcecbc57245d198287b7b5c",
+   "signature_sha256": "93918dc6ce3f25c4bd2a17a42b9adc57513d11888ccc0c3b1f832c3d5f477600",
+   "fields": [
+    {
+     "name": "h1",
+     "sha256": "4de9bbbd74e424ab402100d8f142c2afbed9ffc2f44e80a1dd0e8af41d7e03ce"
+    },
+    {
+     "name": "h2_column",
+     "sha256": "04e815ef4e95304e6ebd30224c41c9e1569b2e1fdd65bf99fb12676af2d00065"
+    },
+    {
+     "name": "h2_procession",
+     "sha256": "0b3a820072a1f589c15b6b48586aae2d17a025285a73c67546be45005c01baed"
+    },
+    {
+     "name": "translation",
+     "sha256": "95aabc68f3ab553df916b7034e00e0adeb5887e97fa730662b161ed9933dc34a"
+    },
+    {
+     "name": "spoke",
+     "sha256": "2e072d8cf729361d136b40608dc61f302886305af25139b2edb82bdb00d6bb1e"
+    },
+    {
+     "name": "top_cardinality",
+     "sha256": "adef406e0e07b0b2eef1870b54f5fe06504bbb299677ac8fe976a683f5177cc2"
+    },
+    {
+     "name": "f_d_stage",
+     "sha256": "15f56c0f84a077137c62d3c5937fc503ff5c2584554c5b9e9e5dc28ae3f6223b"
+    },
+    {
+     "name": "horizontal_natural",
+     "sha256": "964534a6313390d3ef732ce0620731fe021a0a652f7273c467be73d5fcbb965d"
+    },
+    {
+     "name": "spoke_natural",
+     "sha256": "a07b55be9ed3ef1b91e9707e8601ef47851b0246f0edc45bb8793152fb66cd4c"
+    }
+   ]
+  },
+  {
+   "kind": "def",
+   "name": "h1H2PacketDegreeLedger",
+   "line_span": [
+    1398,
+    1412
+   ],
+   "block_sha256": "4668882c7a5d6a6b74068394f299f689edf998baa49539c7355e119910cf3d41",
+   "signature_sha256": "7f8990fe19c01e1da6523575d2a4539d1f84f388067227df59936b835dc160d1",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "h1H2PacketDegreeLedger_h1",
+   "line_span": [
+    1414,
+    1415
+   ],
+   "block_sha256": "fbc0a1b765de7966205baae37d3aa7c5c45b3f6c5dcf2fdbcddb6b09624e13bb",
+   "signature_sha256": "fbc0a1b765de7966205baae37d3aa7c5c45b3f6c5dcf2fdbcddb6b09624e13bb",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "h1H2PacketDegreeLedger_top_cardinality",
+   "line_span": [
+    1417,
+    1420
+   ],
+   "block_sha256": "a5ffe3c208a0bfd158090ad1b93becc890d3334caad372b97a274762afba5b64",
+   "signature_sha256": "588cf257b7cf80f1845ca4d4b4aaa0abf3244b90f375e2d6d068feaebd611395",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "h1H2PacketDegreeLedger_f_d_stage",
+   "line_span": [
+    1422,
+    1426
+   ],
+   "block_sha256": "81ba680732a4ac53c9778dff8e168b746f862ebe930ac225586eb5b2be918ccf",
+   "signature_sha256": "0c57f4da2321ba837cfaeaac304c22ada9ee99ba54ecd80d8360415572330042",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "h1H2PacketDegreeLedger_horizontal_natural",
+   "line_span": [
+    1428,
+    1437
+   ],
+   "block_sha256": "1641af7d97a92ec70dc9925dbf9f0c2f1c23acc0e521bde6a68d8c9720735d7e",
+   "signature_sha256": "402343e2d2c019fa38389893272a761bbdd816d17b055c3c8f13dd0352e4a75f",
+   "fields": []
+  },
+  {
+   "kind": "theorem",
+   "name": "h1H2PacketDegreeLedger_spoke_natural",
+   "line_span": [
+    1439,
+    1449
+   ],
+   "block_sha256": "0417aae8a7e1a8b6dffd65ad1b1eae74f32e309990221bb8001c9e72c8291971",
+   "signature_sha256": "0afd9b5b273f3d4ca8ade464cf00f1501b74a530c5f09c8db778ff5c55251202",
+   "fields": []
+  },
+  {
+   "kind": "def",
+   "name": "theorem311SourcePacketDegreeLedger",
+   "line_span": [
+    1458,
+    1474
+   ],
+   "block_sha256": "a3d63c0b7aeb3ed881a435284ae041b99819e672b9fd5f4152e214b0166e8383",
+   "signature_sha256": "f77412dae0d95b1ea0585a23cc7a6e280c2ea93569c5435875359bb225e7f776",
+   "fields": []
+  }
+ ],
+ "context_lines": [
+  {
+   "line": 11,
+   "text": "set_option linter.unusedSectionVars false",
+   "sha256": "1670ff12237885d683d3d82937362663642cbd9d747e7252db5dd9f2a97ab87e"
+  },
+  {
+   "line": 12,
+   "text": "set_option linter.unusedVariables false",
+   "sha256": "9ac20d6d496784a08a55579d67860b1e1b8206a07142c33b0d837fa4ae18a1ed"
+  },
+  {
+   "line": 13,
+   "text": "set_option linter.checkUnivs false",
+   "sha256": "ba7f24d930664bf9890aa99b969a615fe47c8d97d8b665e9cbfcb3fd2beab45e"
+  },
+  {
+   "line": 36,
+   "text": "namespace LeanFormal.IUT",
+   "sha256": "f20222be3366c4e3bc4681565111147dcd0e0fc14a01ac1142bf9f72303309ab"
+  },
+  {
+   "line": 38,
+   "text": "open scoped BigOperators",
+   "sha256": "44e80f16c2d8982925b90f1852220aea02298c1205184e61b1cfa5883f44f7a5"
+  },
+  {
+   "line": 40,
+   "text": "noncomputable section",
+   "sha256": "e31ffdecccec9ca586049080a5f3eacc885d03b4f3128e7815e3ce8fd53fa738"
+  },
+  {
+   "line": 42,
+   "text": "universe ua uv upi umon ui",
+   "sha256": "8fabd41b1fd11ae2cff31fb07913e7a82a4307ca4d412d3b79a8e6a921a03a70"
+  },
+  {
+   "line": 44,
+   "text": "namespace Theorem311Source",
+   "sha256": "b112e6d34231ef042c2c900ae89eab3863e29ad2946cdd36fefae3cf90965969"
+  },
+  {
+   "line": 45,
+   "text": "namespace OriginalInput",
+   "sha256": "2371622cac43bcf0fa551cb6a9d0666b33bdc06cb62e4abe1e741664c494d9de"
+  },
+  {
+   "line": 47,
+   "text": "variable {l : PrimeGeFive} {V : Type uv}",
+   "sha256": "9bf04a44b2a50567b3c173334f9a17acace11ee542a677e7534a95d5c5f9cbe1"
+  },
+  {
+   "line": 48,
+   "text": "variable (I : OriginalInput.{ua, uv, upi, umon, ui} l V)",
+   "sha256": "a47d64d6fc97c9e49cb4856f1143aa5223f88359a9b6e5f2d049f4a9b3b52866"
+  },
+  {
+   "line": 1451,
+   "text": "end OriginalInput",
+   "sha256": "13e493c4aebce1f3c0ea8b7c480a6da908a704fd17da0be9247c42da76049b00"
+  },
+  {
+   "line": 1452,
+   "text": "end Theorem311Source",
+   "sha256": "34093ab146981a04e923515f28716d520d627ba73e393b3371cb65343a713dd3"
+  },
+  {
+   "line": 1453,
+   "text": "end",
+   "sha256": "48332fe667bc51ac4a51ba0efe734441c90def55c60a26d7db275ecbbcf42f15"
+  },
+  {
+   "line": 1454,
+   "text": "end LeanFormal.IUT",
+   "sha256": "33e3d804736a554daadef6107bed7f354a172493c21bbceb6e1673fe6cfc0efa"
+  },
+  {
+   "line": 1456,
+   "text": "namespace LeanFormal.IUT.Audit",
+   "sha256": "4c64e22f0e979427603553e7251709271b051bb7dc9e81f37f382dc7d59d5310"
+  },
+  {
+   "line": 1476,
+   "text": "end LeanFormal.IUT.Audit",
+   "sha256": "828be144511528dd4bf2bb71a9e99bdf7c805f9d6af6a65f3ba7b74c27b3edcc"
+  }
+ ]
+}

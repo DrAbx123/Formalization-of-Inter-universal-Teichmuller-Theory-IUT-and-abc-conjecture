@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128PrincipalCoverCompatActual
+open LeanFormal.IUT.XiFPaper.S3128PrincipalCoverCompatActual
+#print axioms S3128PrincipalCover_compat

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll04cDifferentInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll04cDifferentInputsActual.Prop17DifferentTheoryInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll04cDifferentInputsActual.prop17_of_differentTheoryInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll04cDifferentInputsActual.s3135Prop17InputCitations

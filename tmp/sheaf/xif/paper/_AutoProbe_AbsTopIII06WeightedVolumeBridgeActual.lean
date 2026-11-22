@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII06WeightedVolumeBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.lgpWeightedLogVolume_mono
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.LGPWeightedVolumeBridge
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.LGPWeightedVolumeBridge.le_theta

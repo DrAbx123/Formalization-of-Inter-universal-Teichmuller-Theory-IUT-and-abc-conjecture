@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1G1EllipticHeightCriterionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.freyDiscriminant
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.ABCEllipticHeightCriterion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.abcStatement_of_ellipticHeightCriterion

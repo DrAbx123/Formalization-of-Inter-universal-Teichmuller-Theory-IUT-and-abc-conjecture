@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternalFrdDefsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalFrdDefsActual.IUTExternalFrdRow
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalFrdDefsActual.iutExternalFrdStatements
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalFrdDefsActual.iutExternalFrdStatements_length

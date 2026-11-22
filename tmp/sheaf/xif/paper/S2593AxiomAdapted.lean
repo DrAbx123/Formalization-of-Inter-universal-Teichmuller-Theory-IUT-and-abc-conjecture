@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2593ConditionalChainActual
+#print axioms LeanFormal.IUT.XiFPaper.S2593ConditionalChainActual.S2593Target_of_unique_remaining
+#print axioms LeanFormal.IUT.XiFPaper.S2593ConditionalChainActual.S2593_P0_exists

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ULSpecialPrimesNumericActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULSpecialPrimesNumericActual.log_two_three_five
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULSpecialPrimesNumericActual.specialPrimes_log_sum_le
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULStepHiiHsQActual.log_thirty_le_five
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULStepHiiHsQActual.log_thirty_mul_le

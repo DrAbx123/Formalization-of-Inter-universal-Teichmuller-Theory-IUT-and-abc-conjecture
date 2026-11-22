@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131PriorArtMapActual
+import tmp.sheaf.xif.paper.S3131PaperRouteV2RegionReuseActual
+import tmp.sheaf.xif.paper.S3131DictionaryFactsReuseActual
+import tmp.sheaf.xif.paper.S3131FactPrimeReuseActual
+import tmp.sheaf.xif.paper.S3131TheaterFamilyReuseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PriorArtMapActual.S3131PriorArtMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteV2RegionReuseActual.S3131V2ComparisonRegion
+#print axioms LeanFormal.IUT.XiFPaper.S3131DictionaryFactsReuseActual.S3131DictionaryFacts_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131FactPrimeReuseActual.S3131FactPrimeReuse_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131TheaterFamilyReuseActual.S3131TheaterFamilyReuse_length

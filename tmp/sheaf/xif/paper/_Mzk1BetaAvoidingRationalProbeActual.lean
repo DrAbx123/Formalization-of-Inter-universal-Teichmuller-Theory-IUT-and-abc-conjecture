@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBelyiRationalActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual.exists_betaAvoiding_card_le_two
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual.exists_betaAvoiding_of_step

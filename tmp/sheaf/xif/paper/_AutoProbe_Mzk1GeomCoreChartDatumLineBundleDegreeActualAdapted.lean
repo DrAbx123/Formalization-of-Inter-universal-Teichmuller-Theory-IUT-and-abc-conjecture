@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreChartDatumLineBundleDegreeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartDatumLineBundleDegreeActual.ledgerRows
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartDatumLineBundleDegreeActual.ledgerRows_length

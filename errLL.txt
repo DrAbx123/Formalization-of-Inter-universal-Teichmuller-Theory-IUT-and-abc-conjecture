@@ -1,0 +1,117 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:50:6: error(lean.unknownIdentifier): Unknown identifier `haarLogVolume_of_lt_top`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:48:81: error: unsolved goals
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝ : Fintype (Bad (nativePlaceSelection T))
+S : Set (S1902Carrier T)
+hfin : (s1902NormalizedHaar T) S < ∞
+hpos : 1 ≤ ((s1902NormalizedHaar T) S).toReal
+⊢ (NumberFieldFinitePlace.haarLogVolume (s1902NormalizedHaar T) S).toReal = Real.log ((s1902NormalizedHaar T) S).toReal
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:68:8: error(lean.unknownIdentifier): Unknown constant `ENNReal.prod_lt_top.ne`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:69:8: error: No goals to be solved
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:89:44: error(lean.unknownIdentifier): Unknown identifier `b`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:96:33: error(lean.invalidField): Invalid field `ne`: The environment does not contain `Function.ne`, so it is not possible to project the field `ne` from an expression
+  hPT
+of type
+  inverseFactorProduct T e = ∞ → False
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:105:29: error: Application type mismatch: The argument
+  hcT
+has type
+  s1902HaarScale T ≠ ∞
+but is expected to have type
+  s1902HaarScale T < ∞
+in the application
+  ENNReal.mul_lt_top hcT
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:110:29: error: Application type mismatch: The argument
+  hcT
+has type
+  s1902HaarScale T ≠ ∞
+but is expected to have type
+  s1902HaarScale T < ∞
+in the application
+  ENNReal.mul_lt_top hcT
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:112:64: error(lean.invalidField): Invalid field `ne'`: The environment does not contain `Function.ne'`, so it is not possible to project the field `ne'` from an expression
+  hμ0
+of type
+  (rootExtensionProductHaar T) (s1902UnitRegion T) = 0 → False
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:126:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T)
+in the target expression
+  (s1902NormalizedHaar T) (s1902UnitRegion T) ≤ (s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)
+
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝ : Fintype (Bad (nativePlaceSelection T))
+e : Bad (nativePlaceSelection T) → ℕ
+hc0 : s1902HaarScale T ≠ 0
+hcT : s1902HaarScale T ≠ ∞
+hμT : (rootExtensionProductHaar T) (s1902UnitRegion T) < ∞
+hμ0 : (rootExtensionProductHaar T) (s1902UnitRegion T) ≠ 0
+hP0 : inverseFactorProduct T e ≠ 0
+hPT : inverseFactorProduct T e ≠ ∞
+hinv : ENNReal.ofReal (primeFactor T sorry) ≠ ∞
+hmeas :
+  (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) =
+    (∏ b, (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹) * (rootExtensionProductHaar T) (s1902UnitRegion T)
+hμc_lt : (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) < ∞
+hμc0 : (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) ≠ 0
+hfinU : (s1902NormalizedHaar T) (s1902UnitRegion T) < ∞
+hfinC : (s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T) < ∞
+hSU :
+  Real.log ((s1902NormalizedHaar T) (s1902UnitRegion T)).toReal =
+    Real.log (s1902HaarScale T).toReal + Real.log ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal
+hSC :
+  Real.log ((s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal =
+    Real.log (s1902HaarScale T).toReal +
+      Real.log ((rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal
+hunit : (s1902NormalizedHaar T) (s1902UnitRegion T) = ENNReal.ofReal (Real.exp 1)
+hposU : 1 ≤ ((s1902NormalizedHaar T) (s1902UnitRegion T)).toReal
+⊢ (s1902NormalizedHaar T) (s1902UnitRegion T) ≤ (s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:150:26: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.log ((inverseFactorProduct T e).toReal * ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal)
+in the target expression
+  Real.log (s1902HaarScale T).toReal +
+      Real.log
+        ((∏ b, (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹).toReal *
+          ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal) =
+    Real.log (s1902HaarScale T).toReal + Real.log ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal +
+      ∑ b, ↑(e b) * (↑(Module.finrank ℚ_[qVFamTensorP T b] ↥(rootNormedExtension T b)) * Real.log ↑(qVFamTensorP T b))
+
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝ : Fintype (Bad (nativePlaceSelection T))
+e : Bad (nativePlaceSelection T) → ℕ
+hc0 : s1902HaarScale T ≠ 0
+hcT : s1902HaarScale T ≠ ∞
+hμT : (rootExtensionProductHaar T) (s1902UnitRegion T) < ∞
+hμ0 : (rootExtensionProductHaar T) (s1902UnitRegion T) ≠ 0
+hP0 : inverseFactorProduct T e ≠ 0
+hPT : inverseFactorProduct T e ≠ ∞
+hinv : ENNReal.ofReal (primeFactor T sorry) ≠ ∞
+hmeas :
+  (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) =
+    (∏ b, (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹) * (rootExtensionProductHaar T) (s1902UnitRegion T)
+hμc_lt : (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) < ∞
+hμc0 : (rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T) ≠ 0
+hfinU : (s1902NormalizedHaar T) (s1902UnitRegion T) < ∞
+hfinC : (s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T) < ∞
+hSU :
+  Real.log ((s1902NormalizedHaar T) (s1902UnitRegion T)).toReal =
+    Real.log (s1902HaarScale T).toReal + Real.log ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal
+hSC :
+  Real.log ((s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal =
+    Real.log (s1902HaarScale T).toReal +
+      Real.log ((rootExtensionProductHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal
+hunit : (s1902NormalizedHaar T) (s1902UnitRegion T) = ENNReal.ofReal (Real.exp 1)
+hposU : 1 ≤ ((s1902NormalizedHaar T) (s1902UnitRegion T)).toReal
+hposC : 1 ≤ ((s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal
+hunwrapU : (s1902LogVolume T (s1902UnitRegion T)).toReal = Real.log ((s1902NormalizedHaar T) (s1902UnitRegion T)).toReal
+hunwrapC :
+  (s1902LogVolume T (badInvScale T e '' s1902UnitRegion T)).toReal =
+    Real.log ((s1902NormalizedHaar T) (badInvScale T e '' s1902UnitRegion T)).toReal
+⊢ Real.log (s1902HaarScale T).toReal +
+      Real.log
+        ((∏ b, (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹).toReal *
+          ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal) =
+    Real.log (s1902HaarScale T).toReal + Real.log ((rootExtensionProductHaar T) (s1902UnitRegion T)).toReal +
+      ∑ b, ↑(e b) * (↑(Module.finrank ℚ_[qVFamTensorP T b] ↥(rootNormedExtension T b)) * Real.log ↑(qVFamTensorP T b))

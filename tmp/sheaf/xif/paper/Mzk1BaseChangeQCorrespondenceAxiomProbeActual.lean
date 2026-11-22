@@ -1,0 +1,5 @@
+/- Copyright (c) 2026 LeanFormal contributors. All rights reserved. -/
+import tmp.sheaf.xif.paper.Mzk1BaseChangeQCorrespondenceActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseChangeQCorrespondenceActual.nativeBaseContractionFPlace_comap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseChangeQCorrespondenceActual.baseChangePlaceCompletionCorrespondence
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseChangeQCorrespondenceActual.qPilotLogVolumeReading_le_actualQPilotSignedLogClassical_of_structures

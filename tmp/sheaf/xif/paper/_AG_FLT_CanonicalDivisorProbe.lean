@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.AG_FLT_CanonicalDivisorPromotionActual
+
+/-! Axioms probe: AG-FLT canonical divisor / genus promotion. -/
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_CanonicalDivisorPromotionActual.promotion_canonicalDivisorOf_apply
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_CanonicalDivisorPromotionActual.promotion_ell_canonicalDivisor_eq_genus_of_riemannRoch
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_CanonicalDivisorPromotionActual.promotion_degree_canonicalDivisor_eq_of_riemannRoch

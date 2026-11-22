@@ -1,0 +1,20 @@
+import tmp.sheaf.xif.paper.S3136LGPJvQSpanTopActual
+import tmp.sheaf.xif.paper.S3136LGPThetaClassLogWeightActual
+import tmp.sheaf.xif.paper.S3136LGPThetaValueUnitLayerActual
+import tmp.sheaf.xif.paper.S3136LGPBadWeightQpilotLogVolumeActual
+import tmp.sheaf.xif.paper.S3136NormalizationToolActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvQSpanTopActual.lgpQVDivisorExponent_pos'
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvQSpanTopActual.LGPJvQSpanEmbeddingGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaClassLogWeightActual.lgpThetaClassLogWeight_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaClassLogWeightActual.lgpThetaClassLogWeight_eq_total
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaClassLogWeightActual.LGPThetaClassLogChannelGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaValueUnitLayerActual.qVAlgClosedUnit_mem_localUnitLayer
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaValueUnitLayerActual.LGPUnitLayerQvGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadWeightQpilotLogVolumeActual.lgpBadQpilotNormalizedTotals_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadWeightQpilotLogVolumeActual.lgpBadQpilotNormalizedReading_agree
+#print axioms LeanFormal.IUT.XiFPaper.NormalizationToolActual.sum_normalized_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.NormalizationToolActual.normalized_pos
+#print axioms LeanFormal.IUT.XiFPaper.NormalizationToolActual.normalized_eq_of_agree
+#print axioms LeanFormal.IUT.XiFPaper.NormalizationToolActual.sum_normalized_eq_of_agree

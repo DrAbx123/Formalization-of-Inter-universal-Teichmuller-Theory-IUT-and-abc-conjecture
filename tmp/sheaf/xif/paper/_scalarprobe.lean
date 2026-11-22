@@ -1,0 +1,5 @@
+import Mathlib
+#check MeasureTheory.Measure.isAddLeftInvariant_eq_smul_of_innerRegular
+#check isAddLeftInvariant_eq_smul_of_innerRegular
+#check MeasureTheory.Measure.addHaarScalarFactor
+#check addHaarScalarFactor

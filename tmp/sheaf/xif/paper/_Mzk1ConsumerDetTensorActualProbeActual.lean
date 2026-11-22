@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerDetTensorActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerDetTensorActual.packetLogVolume_mul_consumer

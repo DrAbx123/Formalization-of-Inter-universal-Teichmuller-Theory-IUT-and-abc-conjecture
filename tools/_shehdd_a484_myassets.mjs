@@ -1,0 +1,11 @@
+import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+const ROOT='D:/lean';
+const queue=readFileSync(ROOT+'/dag/watchdog/extra-targets.txt','utf8').split('\n').filter(Boolean);
+console.log('Shehdd in queue: '+queue.filter(f=>f.includes('Shehdd')).length);
+const dir=ROOT+'/tmp/sheaf/xif/paper';
+const names=readdirSync(dir).filter(f=>f.startsWith('Shehdd')&&f.endsWith('.lean')&&!f.includes('Adapted'));
+const green=names.filter(n=>existsSync(ROOT+'/.lake/build/lib/lean/tmp/sheaf/xif/paper/'+n.replace('.lean','.olean')));
+console.log('my files='+names.length+' green='+green.length);
+console.log('green: '+green.map(n=>n.replace('.lean','')).join(', '));
+const miss=names.filter(n=>!green.includes(n));
+console.log('non-green count='+miss.length);

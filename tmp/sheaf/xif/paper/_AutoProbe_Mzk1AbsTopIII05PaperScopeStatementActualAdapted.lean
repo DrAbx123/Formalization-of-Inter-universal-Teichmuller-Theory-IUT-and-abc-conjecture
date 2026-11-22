@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1AbsTopIII05PaperScopeStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05PaperScopeStatementActual.Prop58iReconstruction
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05PaperScopeStatementActual.Prop58iiLogShellDiagram
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05PaperScopeStatementActual.Cor55Compatibility

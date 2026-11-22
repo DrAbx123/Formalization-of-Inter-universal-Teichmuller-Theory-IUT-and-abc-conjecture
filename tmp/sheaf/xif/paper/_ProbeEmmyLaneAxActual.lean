@@ -1,0 +1,20 @@
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLBoundaryActual
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLBranchSupportActual
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLChart0BoundaryActual
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLValueFiberActual
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLLambdaPointActual
+import tmp.sheaf.xif.paper.Mzk1G1PhiFixedLInfinityActual
+import tmp.sheaf.xif.paper.Mzk1G1B1ProducerAssemblyActual
+
+/-! Independent axiom audit for the B1 finite half and the chart0 dictionary. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLBoundaryActual.phiFixedL_boundaryPreimage_finite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLBranchSupportActual.phiFixedL_branch_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLChart0BoundaryActual.chartMorphism0_mem_boundarySetGlued_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLChart0BoundaryActual.phiFixedL_chart0_point_notMem_boundary_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLChart0BoundaryActual.phiFixedL_chart0_point_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLValueFiberActual.finite_primes_of_chart0_value
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLLambdaPointActual.phiFixedL_fiber_finite_p1Zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLLambdaPointActual.phiFixedL_fiber_finite_p1One
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PhiFixedLInfinityActual.phiFixedL_fiber_finite_p1Infinity
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1ProducerAssemblyActual.b1FiniteProducer_of_inputs

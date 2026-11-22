@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DChartCluster6Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DChartCluster6Actual.dChartCluster6Rows_length

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIConsumerBundleActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIConsumerBundleActual.stepXI_bundle
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIConsumerBundleActual.stepXIBundleRows_length

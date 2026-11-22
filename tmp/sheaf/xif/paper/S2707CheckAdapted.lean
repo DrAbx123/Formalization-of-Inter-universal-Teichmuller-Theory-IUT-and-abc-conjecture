@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2707PaperUnconditionalActual
+#check LeanFormal.IUT.XiFPaper.S2707PaperUnconditionalActual.S2707PaperUnconditional
+#print axioms LeanFormal.IUT.XiFPaper.S2707PaperUnconditionalActual.S2707PaperUnconditional

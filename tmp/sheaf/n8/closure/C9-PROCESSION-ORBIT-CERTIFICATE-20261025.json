@@ -1,0 +1,410 @@
+{
+  "task": "C9-PROCESSION-ORBIT-20261025",
+  "all_assertions_passed": true,
+  "small_exact_orbits": [
+    {
+      "distribution": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "10",
+          "1/2"
+        ]
+      ],
+      "cases": [
+        {
+          "r": 2,
+          "tuples": 4,
+          "permutations": 2,
+          "branch_log_volume_per_log_p": "-5",
+          "hull_log_volume_per_log_p": "-5/2",
+          "gain_per_log_p": "5/2"
+        },
+        {
+          "r": 3,
+          "tuples": 8,
+          "permutations": 6,
+          "branch_log_volume_per_log_p": "-20",
+          "hull_log_volume_per_log_p": "-5",
+          "gain_per_log_p": "15"
+        },
+        {
+          "r": 4,
+          "tuples": 16,
+          "permutations": 24,
+          "branch_log_volume_per_log_p": "-45",
+          "hull_log_volume_per_log_p": "-45/8",
+          "gain_per_log_p": "315/8"
+        },
+        {
+          "r": 5,
+          "tuples": 32,
+          "permutations": 120,
+          "branch_log_volume_per_log_p": "-80",
+          "hull_log_volume_per_log_p": "-5",
+          "gain_per_log_p": "75"
+        }
+      ]
+    },
+    {
+      "distribution": [
+        [
+          "0",
+          "1/5"
+        ],
+        [
+          "2/3",
+          "3/10"
+        ],
+        [
+          "7/2",
+          "1/2"
+        ]
+      ],
+      "cases": [
+        {
+          "r": 2,
+          "tuples": 9,
+          "permutations": 2,
+          "branch_log_volume_per_log_p": "-39/20",
+          "hull_log_volume_per_log_p": "-227/200",
+          "gain_per_log_p": "163/200"
+        },
+        {
+          "r": 3,
+          "tuples": 27,
+          "permutations": 6,
+          "branch_log_volume_per_log_p": "-39/5",
+          "hull_log_volume_per_log_p": "-1391/500",
+          "gain_per_log_p": "2509/500"
+        },
+        {
+          "r": 4,
+          "tuples": 81,
+          "permutations": 24,
+          "branch_log_volume_per_log_p": "-351/20",
+          "hull_log_volume_per_log_p": "-81027/20000",
+          "gain_per_log_p": "269973/20000"
+        },
+        {
+          "r": 5,
+          "tuples": 243,
+          "permutations": 120,
+          "branch_log_volume_per_log_p": "-156/5",
+          "hull_log_volume_per_log_p": "-61399/12500",
+          "gain_per_log_p": "328601/12500"
+        }
+      ]
+    },
+    {
+      "distribution": [
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "cases": [
+        {
+          "r": 2,
+          "tuples": 1,
+          "permutations": 2,
+          "branch_log_volume_per_log_p": "-2",
+          "hull_log_volume_per_log_p": "-2",
+          "gain_per_log_p": "0"
+        },
+        {
+          "r": 3,
+          "tuples": 1,
+          "permutations": 6,
+          "branch_log_volume_per_log_p": "-8",
+          "hull_log_volume_per_log_p": "-8",
+          "gain_per_log_p": "0"
+        },
+        {
+          "r": 4,
+          "tuples": 1,
+          "permutations": 24,
+          "branch_log_volume_per_log_p": "-18",
+          "hull_log_volume_per_log_p": "-18",
+          "gain_per_log_p": "0"
+        },
+        {
+          "r": 5,
+          "tuples": 1,
+          "permutations": 120,
+          "branch_log_volume_per_log_p": "-32",
+          "hull_log_volume_per_log_p": "-32",
+          "gain_per_log_p": "0"
+        }
+      ]
+    },
+    {
+      "distribution": [
+        [
+          "1",
+          "2/5"
+        ],
+        [
+          "4",
+          "3/5"
+        ]
+      ],
+      "cases": [
+        {
+          "r": 2,
+          "tuples": 4,
+          "permutations": 2,
+          "branch_log_volume_per_log_p": "-14/5",
+          "hull_log_volume_per_log_p": "-52/25",
+          "gain_per_log_p": "18/25"
+        },
+        {
+          "r": 3,
+          "tuples": 8,
+          "permutations": 6,
+          "branch_log_volume_per_log_p": "-56/5",
+          "hull_log_volume_per_log_p": "-824/125",
+          "gain_per_log_p": "576/125"
+        },
+        {
+          "r": 4,
+          "tuples": 16,
+          "permutations": 24,
+          "branch_log_volume_per_log_p": "-126/5",
+          "hull_log_volume_per_log_p": "-7812/625",
+          "gain_per_log_p": "7938/625"
+        },
+        {
+          "r": 5,
+          "tuples": 32,
+          "permutations": 120,
+          "branch_log_volume_per_log_p": "-224/5",
+          "hull_log_volume_per_log_p": "-61664/3125",
+          "gain_per_log_p": "78336/3125"
+        }
+      ]
+    }
+  ],
+  "procession_cases": [
+    {
+      "ell": 5,
+      "m": 2,
+      "full_branch_family_size": 3,
+      "two_place_largest_tuple_count": 8,
+      "half_bad_seed_per_a_log_p": "-5/4",
+      "half_bad_hull_per_a_log_p": "-3/8",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-5/2",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "166934457554567/281474976710656",
+        "upper": "20866807194321/35184372088832",
+        "decimal_midpoint": 0.5930703308172536
+      }
+    },
+    {
+      "ell": 7,
+      "m": 3,
+      "full_branch_family_size": 4,
+      "two_place_largest_tuple_count": 16,
+      "half_bad_seed_per_a_log_p": "-7/3",
+      "half_bad_hull_per_a_log_p": "-7/16",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-14/3",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "74662226813201/140737488355328",
+        "upper": "149324453626403/281474976710656",
+        "decimal_midpoint": 0.5305070289779312
+      }
+    },
+    {
+      "ell": 11,
+      "m": 5,
+      "full_branch_family_size": 6,
+      "two_place_largest_tuple_count": 64,
+      "half_bad_seed_per_a_log_p": "-11/2",
+      "half_bad_hull_per_a_log_p": "-141/320",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-11",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "146482395954013/281474976710656",
+        "upper": "73241197977007/140737488355328",
+        "decimal_midpoint": 0.5204100118092949
+      }
+    },
+    {
+      "ell": 13,
+      "m": 6,
+      "full_branch_family_size": 7,
+      "two_place_largest_tuple_count": 128,
+      "half_bad_seed_per_a_log_p": "-91/12",
+      "half_bad_hull_per_a_log_p": "-53/128",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-91/6",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "74249301641181/140737488355328",
+        "upper": "148498603282363/281474976710656",
+        "decimal_midpoint": 0.5275730191640182
+      }
+    },
+    {
+      "ell": 17,
+      "m": 8,
+      "full_branch_family_size": 9,
+      "two_place_largest_tuple_count": 512,
+      "half_bad_seed_per_a_log_p": "-51/4",
+      "half_bad_hull_per_a_log_p": "-717/2048",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-51/2",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "4801724397411/8796093022208",
+        "upper": "153655180717153/281474976710656",
+        "decimal_midpoint": 0.5458928623523907
+      }
+    },
+    {
+      "ell": 19,
+      "m": 9,
+      "full_branch_family_size": 10,
+      "two_place_largest_tuple_count": 1024,
+      "half_bad_seed_per_a_log_p": "-95/6",
+      "half_bad_hull_per_a_log_p": "-983/3072",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-95/3",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "39066318872213/70368744177664",
+        "upper": "156265275488853/281474976710656",
+        "decimal_midpoint": 0.5551657817507749
+      }
+    },
+    {
+      "ell": 23,
+      "m": 11,
+      "full_branch_family_size": 12,
+      "two_place_largest_tuple_count": 4096,
+      "half_bad_seed_per_a_log_p": "-23",
+      "half_bad_hull_per_a_log_p": "-12117/45056",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-46",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "40287772711823/70368744177664",
+        "upper": "161151090847293/281474976710656",
+        "decimal_midpoint": 0.5725236848067983
+      }
+    },
+    {
+      "ell": 29,
+      "m": 14,
+      "full_branch_family_size": 15,
+      "two_place_largest_tuple_count": 32768,
+      "half_bad_seed_per_a_log_p": "-145/4",
+      "half_bad_hull_per_a_log_p": "-49023/229376",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-145/2",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "41866922975941/70368744177664",
+        "upper": "167467691903765/281474976710656",
+        "decimal_midpoint": 0.594964759783652
+      }
+    },
+    {
+      "ell": 31,
+      "m": 15,
+      "full_branch_family_size": 16,
+      "two_place_largest_tuple_count": 65536,
+      "half_bad_seed_per_a_log_p": "-124/3",
+      "half_bad_hull_per_a_log_p": "-65439/327680",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-248/3",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "42329991433305/70368744177664",
+        "upper": "169319965733221/281474976710656",
+        "decimal_midpoint": 0.6015453583544446
+      }
+    },
+    {
+      "ell": 37,
+      "m": 18,
+      "full_branch_family_size": 19,
+      "two_place_largest_tuple_count": 524288,
+      "half_bad_seed_per_a_log_p": "-703/12",
+      "half_bad_hull_per_a_log_p": "-87359/524288",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-703/6",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "174239411870103/281474976710656",
+        "upper": "21779926483763/35184372088832",
+        "decimal_midpoint": 0.6190227419370711
+      }
+    },
+    {
+      "ell": 41,
+      "m": 20,
+      "full_branch_family_size": 21,
+      "two_place_largest_tuple_count": 2097152,
+      "half_bad_seed_per_a_log_p": "-287/4",
+      "half_bad_hull_per_a_log_p": "-629097/4194304",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-287/2",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "177071677289911/281474976710656",
+        "upper": "22133959661239/35184372088832",
+        "decimal_midpoint": 0.6290849700360166
+      }
+    },
+    {
+      "ell": 43,
+      "m": 21,
+      "full_branch_family_size": 22,
+      "two_place_largest_tuple_count": 4194304,
+      "half_bad_seed_per_a_log_p": "-473/6",
+      "half_bad_hull_per_a_log_p": "-599161/4194304",
+      "half_bad_native_per_a_log_p": "-1/2",
+      "uniform_hull_per_a_log_p": "-473/3",
+      "sharp_mass_threshold_for_fixed_target_orbit": {
+        "lower": "178375485489207/281474976710656",
+        "upper": "22296935686151/35184372088832",
+        "decimal_midpoint": 0.6337170272601877
+      }
+    }
+  ],
+  "four_dimensional_diagnostic": {
+    "M": "10",
+    "seed_ideal_exponents": [
+      "0",
+      "10",
+      "0",
+      "10"
+    ],
+    "flipped_ideal_exponents": [
+      "0",
+      "0",
+      "10",
+      "10"
+    ],
+    "hull_ideal_exponents": [
+      "0",
+      "0",
+      "0",
+      "10"
+    ],
+    "branch_log_volume": "-5",
+    "hull_log_volume": "-5/2",
+    "mean_based_bound_plus_one": "-4",
+    "is_complete_IUT_counterexample": false
+  },
+  "totals": {
+    "distributions": 4,
+    "exact_orbit_cases": 16,
+    "injection_transports_checked": 47296,
+    "prime_processions": 12,
+    "half_mass_checks": 199
+  },
+  "scope": {
+    "fixed_target_orbit_theorem": "proved in natural-language record",
+    "source_compatibility_with_IV_average_bound": "unresolved; do not count the orbit as an accepted complete-source escape",
+    "original_P6_proved": false,
+    "target_accepted": false
+  }
+}

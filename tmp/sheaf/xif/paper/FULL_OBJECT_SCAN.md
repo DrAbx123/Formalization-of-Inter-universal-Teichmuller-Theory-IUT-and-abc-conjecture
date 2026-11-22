@@ -1,0 +1,547 @@
+## double_square
+
+- none
+
+## paper_theta_qUnit
+
+- none
+
+## zero_label
+
+- PaperC3TensorBlockActual.lean:479: structure PaperNonzeroLabelsStillUnitCandidateGap : Type where
+- PaperC3TensorBlockActual.lean:485: def PaperNonzeroLabelsStillUnitCandidateGapRequired : Prop :=
+- PaperC3TensorBlockActual.lean:486: Nonempty PaperNonzeroLabelsStillUnitCandidateGap
+- PaperLambdaOHullEqualityActual.lean:54: paperThetaImagePoint (G := G) (l := l) (LeanFormal.IUT.Theorem311Source.OriginalInput.zeroSignedLabel (l := l)) = 1 := by
+- PaperLambdaOHullEqualityActual.lean:58: (gaussExponent (LeanFormal.IUT.Theorem311Source.OriginalInput.zeroSignedLabel (l := l)).1).toNat) :
+- PaperLambdaOHullEqualityActual.lean:60: rw [LeanFormal.IUT.Theorem311Source.OriginalInput.zeroSignedLabel_val, gaussExponent_zero]
+- PaperLambdaOHullEqualityActual.lean:71: exact ⟨LeanFormal.IUT.Theorem311Source.OriginalInput.zeroSignedLabel (l := l), paperThetaImagePoint_zero (G := G)⟩
+- PaperLambdaOHullNonzeroLabelsActual.lean:21: namespace LeanFormal.IUT.XiFPaper.PaperLambdaOHullNonzeroLabelsActual
+- PaperLambdaOHullNonzeroLabelsActual.lean:132: end LeanFormal.IUT.XiFPaper.PaperLambdaOHullNonzeroLabelsActual
+- PaperLambdaOHullQVFamilyActual.lean:1: import tmp.sheaf.xif.paper.PaperLambdaOHullNonzeroLabelsActual
+- PaperLambdaOHullQVFamilyActual.lean:31: open LeanFormal.IUT.XiFPaper.PaperLambdaOHullNonzeroLabelsActual
+- QVSameSourceThetaImageActual.lean:72: ⟨qVThetaImageVector T (zeroSignedLabel (l := l)), ⟨_, rfl⟩⟩
+- RootHullClosednessActual.lean:58: abbrev NonzeroLabel := {j : SignedLabel l.value // j.1 ≠ 0}
+- RootHullClosednessActual.lean:71: ⋃ j : NonzeroLabel (l := l),
+- RootHullClosednessActual.lean:89: theorem rootThetaRegion_subset_minimal (j : NonzeroLabel (l := l)) :
+- ThetaHullActual.lean:61: def zeroSignedLabel (l : PrimeGeFive) : SignedLabel l.value :=
+- ThetaHullActual.lean:67: theorem zeroSignedLabel_mem (l : PrimeGeFive) :
+- ThetaHullActual.lean:68: (zeroSignedLabel l).1 = 0 := rfl
+- ThetaHullActual.lean:89: ⟨zeroSignedLabel l⟩
+- ThetaHullActual.lean:129: exact_mod_cast (Fintype.card_pos_iff.mpr ⟨zeroSignedLabel l⟩)
+- ThetaHullActual.lean:258: ⟨zeroSignedLabel l⟩
+- ThetaHullIdentificationActual.lean:64: def zeroSignedLabel (l : PrimeGeFive) : SignedLabel l.value :=
+- ThetaHullIdentificationActual.lean:84: ⟨zeroSignedLabel l⟩
+- ThetaHullIdentificationActual.lean:97: exact_mod_cast (Fintype.card_pos_iff.mpr ⟨zeroSignedLabel l⟩)
+- ThetaHullIdentificationActual.lean:269: exact ⟨zeroSignedLabel l⟩
+
+## ennreal_ofReal
+
+- ConcretePaperSignedHullActual.lean:103: ENNReal.ofReal
+- ConcreteSignedHullActual.lean:103: ENNReal.ofReal
+- ConcreteSignedHullUnconditionalActual.lean:97: ENNReal.ofReal
+- GlobalPositiveHullFromCorrectedActual.lean:16: ENNReal.ofReal of a negative log-degree and not sourceHullVolume).
+- HaarSignedAverageProof.lean:15: = ENNReal.ofReal (c3ThetaSignedProcession C3).average
+- HaarSignedAverageProof.lean:39: ENNReal.ofReal conversion is faithful.
+- HaarSignedAverageProof.lean:116: /-- Nonnegativity of the signed average, needed for the ENNReal.ofReal readback. -/
+- HaarSignedAverageProof.lean:127: log-volume equals ENNReal.ofReal of the signed theta average. -/
+- HaarSignedAverageProof.lean:133: ENNReal.ofReal (c3ThetaSignedProcession C3).average := by
+- HaarSignedAverageProof.lean:139: exact ENNReal.ofReal_lt_top
+- HaarSignedAverageProof.lean:155: rw [hc6, ← ENNReal.ofReal_toReal (ne_of_lt hfin), hreal]
+- HaarSignedAverageProof.lean:163: ENNReal.ofReal (c3ThetaSignedProcession C3).average
+- HaarThetaAverageProof.lean:82: real logarithm rather than the ENNReal.ofReal truncation. -/
+- HaarThetaAverageProof.lean:118: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average := by
+- HaarThetaAverageProof.lean:126: exact ENNReal.ofReal_lt_top
+- HaarThetaAverageProof.lean:134: rw [hc6, ← ENNReal.ofReal_toReal (ne_of_lt hfin), hreal,
+- HaarThetaNormalizationActual.lean:39: The nonnegativity is required because haarLogVolume is ENNReal.ofReal of the
+- HaarThetaNormalizationActual.lean:130: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average := by
+- HaarThetaNormalizationActual.lean:144: exact ENNReal.ofReal_lt_top
+- HaarThetaNormalizationActual.lean:145: rw [hc6, ← ENNReal.ofReal_toReal (ne_of_lt hfin), hreal,
+- HaarUnitReferenceNormalizationActual.lean:68: ENNReal.ofReal ((canonicalUnitMass places tuple mu)⁻¹)
+- HaarUnitReferenceNormalizationActual.lean:72: exact ENNReal.ofReal_pos.mpr
+- HaarUnitReferenceNormalizationActual.lean:76: ENNReal.ofReal_ne_top
+- NormalizedHaarHnormalActual.lean:10: and mu = ENNReal.ofReal c * nu.  Since c > 0 and finite, mu is an additive
+- NormalizedHaarHnormalActual.lean:68: (ENNReal.ofReal (normalizedHaarScale (l := l) (V := V) (I := I)
+- NormalizedHaarHnormalActual.lean:77: (c := ENNReal.ofReal (normalizedHaarScale (l := l) (V := V) (I := I)
+- NormalizedHaarHnormalActual.lean:79: (ENNReal.ofReal_ne_zero_iff.mpr
+- NormalizedHaarHnormalActual.lean:81: ENNReal.ofReal_ne_top
+- PaperProcessionEqSigned.lean:92: ENNReal.ofReal
+- PaperProcessionEqSigned.lean:108: ENNReal.ofReal
+- PaperProcessionEqSigned.lean:128: ENNReal.ofReal
+- PaperProcessionNormalization.lean:117: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average := by
+- PaperProcessionNormalization.lean:121: ENNReal.ofReal
+- PaperProcessionNormalization.lean:127: exact ENNReal.ofReal_lt_top
+- PaperProcessionNormalization.lean:128: rw [← ENNReal.ofReal_toReal (ne_of_lt hfin)]
+- PaperProcessionNormalization.lean:129: exact congrArg ENNReal.ofReal h
+- PaperSignedHullActual.lean:36: = ENNReal.ofReal (c3ThetaProcession C3).average.
+- PaperSignedHullActual.lean:103: ENNReal.ofReal (c3ThetaProcession C3).average) :
+- PaperSignedHullActual.lean:123: ENNReal.ofReal (c3ThetaProcession C3).average) :
+- PaperSignedHullActual.lean:142: ENNReal.ofReal
+- PaperSignedHullActual.lean:156: ENNReal.ofReal
+- PaperSignedHullSignedActual.lean:34: = ENNReal.ofReal (c3ThetaSignedProcession C3).average,
+- PaperSignedHullSignedActual.lean:155: ENNReal.ofReal (c3ThetaSignedProcession C3).average) :
+- PaperSignedHullSignedActual.lean:174: ENNReal.ofReal (c3ThetaSignedProcession C3).average) :
+- PaperSignedHullSignedActual.lean:193: ENNReal.ofReal
+- PaperThetaMagnitudeActual.lean:32: 2. hnormal : actual C6 Haar log-volume = ENNReal.ofReal procession.average
+- PaperThetaMagnitudeActual.lean:112: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average) :
+- PaperThetaMagnitudeActual.lean:137: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average)
+- PaperThetaMagnitudeActual.lean:167: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average),
+- PaperThetaMagnitudeSignedActual.lean:95: ENNReal.ofReal
+- PositiveHullVsQPilotCorrectedActual.lean:11: ENNReal.ofReal (positivePointLogVolume v x),
+- PositiveHullVsQPilotCorrectedActual.lean:16: ENNReal.ofReal (sourceLocalLogDegree) and truncates the negative theta log to
+- PositiveHullVsQPilotCorrectedActual.lean:68: ENNReal.ofReal (positivePointLogVolume (I := I) v x)).toReal :=
+- PositiveThetaHullLogVolumeActual.lean:6: The old sourceSetVolume is iSup of ENNReal.ofReal (sourceLocalLogDegree).
+- PositiveThetaHullLogVolumeActual.lean:21: No ENNReal.ofReal truncation of a negative value is used.  No inequality is
+- PositiveThetaHullLogVolumeActual.lean:94: /-- This positive hull log-volume is not the old ENNReal.ofReal truncation: it
+- SignedHnormalActual.lean:21: ENNReal.ofReal
+- SignedHnormalActual.lean:120: exact ENNReal.ofReal_lt_top
+- SignedHnormalActual.lean:127: (ENNReal.ofReal
+- SignedHnormalActual.lean:138: exact ENNReal.ofReal_lt_top
+- SignedHnormalActual.lean:143: rw [← ENNReal.ofReal_toReal (ne_of_lt hfin), h,
+- SignedHnormalActual.lean:144: ENNReal.ofReal_toReal hnonneg]
+- SignedHullFromSource.lean:26: = ENNReal.ofReal procession.average.
+- SignedHullFromSource.lean:95: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average) :
+- SignedHullFromSource.lean:118: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average) :
+- SignedHullFromSource.lean:132: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average) :
+- SignedHullLogFromSourceActual.lean:19: -- signed real point log-volume. No ENNReal.ofReal and no averaging over
+- SignedHullNormalizationBridge.lean:107: ENNReal.ofReal (SignedHullNormalizationActual.procession l).average := by
+- SignedHullNormalizationBridge.lean:113: exact (ENNReal.ofReal_toReal (ne_of_lt hfin)).symm
+- SignedHullSupActual.lean:12: -- never goes through ENNReal.ofReal. The theta-pilot point value is exactly
+- SignedSourceTheoryGate.lean:69: ENNReal.ofReal
+- SignedXiFAssembly.lean:75: ENNReal.ofReal
+- SignedXiFAssembly.lean:91: ENNReal.ofReal
+- SignedXiFAssembly.lean:106: ENNReal.ofReal
+- SignedXiFAssembly.lean:126: ENNReal.ofReal
+- SignedXiFAssembly.lean:145: ENNReal.ofReal
+- SignedXiFAssembly.lean:160: ENNReal.ofReal
+- SourceHullVolumeSignCorrectedActual.lean:8: ENNReal.ofReal (sourceLocalLogDegree v x).
+- SourceHullVolumeSignCorrectedActual.lean:14: which is negative because thetaValueAt < 1.  ENNReal.ofReal truncates it to
+- SourceHullVolumeSignCorrectedActual.lean:51: ⨆ x ∈ S, ENNReal.ofReal (positivePointLogVolume (I := I) v x)
+- SourceHullVolumeSignCorrectedActual.lean:101: apply ENNReal.ofReal_of_nonpos
+- SourceHullVolumeSignCorrectedActual.lean:123: from the true positive point log-volume, not from ENNReal.ofReal of a negative
+- SourceHullVolumeSignCorrectedActual.lean:128: ENNReal.ofReal (positivePointLogVolume (I := I) v x) :=
+- SourceSignedLogVolumeCorrectedActual.lean:7: The old sourceSetVolume is an ENNReal supremum of ENNReal.ofReal
+- SourceSignedLogVolumeCorrectedActual.lean:9: ENNReal.ofReal, so the signed hull comparison built from its toReal can lose
+- SourceSignedLogVolumeCorrectedActual.lean:42: ENNReal.ofReal truncation. -/
+- SourceSignedLogVolumeCorrectedActual.lean:82: /-- No sourceSetVolume/ENNReal.ofReal occurs in the corrected hull value. -/
+- ThetaHullIdentificationActual.lean:109: ∑ j : SignedLabel l.value, ENNReal.ofReal (P.weight j) * f j
+- ThetaLinkActualCoreConstruction.lean:71: ENNReal.ofReal
+- ThetaLinkActualCoreConstruction.lean:104: ENNReal.ofReal
+- UnitReferenceNormalizationActual.lean:93: ENNReal.ofReal ((2 * unitReferenceMass places tuple mu)⁻¹)
+- UnitReferenceNormalizationActual.lean:97: exact ENNReal.ofReal_pos.mpr
+- UnitReferenceNormalizationActual.lean:101: ENNReal.ofReal_ne_top
+- WeakThetaHullDataActual.lean:13: `sourcePointVolume = ENNReal.ofReal (sourceLocalLogDegree)`.  For theta-pilot
+
+## sourceSetVolume
+
+- GlobalPositiveThetaHullLogVolumeActual.lean:6: The old sourceSetVolume is a sup of sourceLocalLogDegree truncated at zero.
+- GlobalPositiveThetaHullLogVolumeActual.lean:16: No truncation at zero and no sourceSetVolume are used.
+- GlobalThetaHullProductActual.lean:13: No single fixed-p Qp tensor block and no sourceSetVolume truncation is used.
+- GlobalThetaHullVsQPilotComparisonActual.lean:9: = sum_v Real.log (sourceSetVolume v (sourceHolomorphicHull v ...)).toReal,
+- GlobalThetaPilotHullLogVolumeActual.lean:12: The per-place actual source volume is I.sourceSetVolume v.  This file constructs
+- GlobalThetaPilotHullLogVolumeActual.lean:47: I.sourceSetVolume v (I.sourceHolomorphicHull v (R v) n)
+- GlobalThetaPilotHullLogVolumeActual.lean:51: I.sourceSetVolume v (I.possibleThetaPilotImageSet v (R v) n)
+- GlobalThetaPilotHullLogVolumeActual.lean:69: (I.sourceSetVolume v (I.sourceHolomorphicHull v (R v) n)).toReal := rfl
+- GlobalThetaPilotHullLogVolumeActual.lean:75: (I.sourceSetVolume v (I.possibleThetaPilotImageSet v (R v) n)).toReal := rfl
+- GlobalThetaPilotHullLogVolumeActual.lean:85: I.sourceSetVolume_mono v
+- GlobalThetaPilotHullLogVolumeActual.lean:122: (I.sourceSetVolume v (I.sourceHolomorphicHull v (R v) n)).toReal := rfl
+- IndeterminaciesActual.lean:266: I.sourceSetVolume v (I.carrierRegionAction v σ
+- IndeterminaciesActual.lean:277: I.sourceSetVolume v (I.labelRegionAction v τ
+- IndeterminaciesActual.lean:285: theorem sourceSetVolume_carrierPerm_fixed
+- IndeterminaciesActual.lean:288: I.sourceSetVolume v (I.carrierRegionAction v σ
+- IndeterminaciesActual.lean:290: I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n) := by
+- IndeterminaciesActual.lean:295: theorem sourceSetVolume_labelPerm_fixed
+- IndeterminaciesActual.lean:298: I.sourceSetVolume v (I.labelRegionAction v τ
+- IndeterminaciesActual.lean:300: I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n) := by
+- IndeterminaciesActual.lean:318: I.sourceSetVolume v (I.carrierRegionAction v ind1
+- IndeterminaciesActual.lean:320: I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n)
+- IndeterminaciesActual.lean:322: I.sourceSetVolume v (I.labelRegionAction v ind2
+- IndeterminaciesActual.lean:324: I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n)
+- IndeterminaciesActual.lean:339: volume_fixed_ind1 := I.sourceSetVolume_carrierPerm_fixed v R n σ
+- IndeterminaciesActual.lean:340: volume_fixed_ind2 := I.sourceSetVolume_labelPerm_fixed v R n τ
+- PositiveThetaHullLogVolumeActual.lean:6: The old sourceSetVolume is iSup of ENNReal.ofReal (sourceLocalLogDegree).
+- SourceSignedLogVolumeCorrectedActual.lean:7: The old sourceSetVolume is an ENNReal supremum of ENNReal.ofReal
+- SourceSignedLogVolumeCorrectedActual.lean:82: /-- No sourceSetVolume/ENNReal.ofReal occurs in the corrected hull value. -/
+- ThetaLinkLogKummerActual.lean:141: -(I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n)).toReal
+- ThetaLinkLogKummerActual.lean:146: -(I.sourceSetVolume v
+- ThetaLinkLogKummerActual.lean:152: -(I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n)).toReal := rfl
+- ThetaLinkLogKummerActual.lean:157: -(I.sourceSetVolume v
+- ThetaPilotHullProcessionActual.lean:65: I.sourceSetVolume v (thetaPilotHull (I := I) v R n : Set (I.ThetaPilotPoint v))
+- WeakIQComparisonDataActual.lean:65: I.sourceSetVolume v (thetaPilotImage (I := I) v R n)
+- WeakIQComparisonDataActual.lean:69: I.sourceSetVolume v (thetaPilotHull (I := I) v R n)
+- WeakIQComparisonDataActual.lean:75: I.sourceSetVolume_mono v (thetaPilotImage_subset_hull (I := I) v R n)
+- WeakIQComparisonDataActual.lean:85: thetaImageVolume_eq : thetaImageVolume = I.sourceSetVolume v thetaImage
+- WeakIQComparisonDataActual.lean:86: thetaHullVolume_eq : thetaHullVolume = I.sourceSetVolume v thetaHull
+- WeakIQComparisonDataActual.lean:110: I.sourceSetVolume v (I.possibleThetaPilotImageSet v R n) := rfl
+- WeakIQComparisonDataActual.lean:115: I.sourceSetVolume v (I.sourceHolomorphicHull v R n) := rfl
+
+## choice
+
+- BaseQFamilyActual.lean:16: constructed by Classical.choice from the actual finitePlaceQCandidate_nonempty
+- ConcreteC3DonorActual.lean:50: Classical.choice (finitePlaceQCandidate_nonempty place.val)
+- ConcreteC3DonorActual.lean:55: Classical.choice (finitePlaceQCandidate_nonempty place.val) := rfl
+- ConcreteC3DonorActual.lean:103: q_eq : q = Classical.choice (finitePlaceQCandidate_nonempty place.val)
+- ConcreteC3DonorActual.lean:131: Classical.choice (finitePlaceQCandidate_nonempty place.val) := rfl
+- ConcreteC3DonorAssemblyActual.lean:54: q_eq : q = Classical.choice (finitePlaceQCandidate_nonempty place.val)
+- ConcreteC3DonorCompletionActual.lean:77: landing_q : landing (Classical.choice
+- ConcreteC3DonorCompletionActual.lean:88: (Classical.choice (finitePlaceQCandidate_nonempty place.val)))
+- GlobalIQHullThetaPilotActual.lean:81: fun v => Classical.choice
+- GlobalIQHullThetaPilotActual.lean:90: exact Classical.choice_spec
+- NativeBadFintypeForTActual.lean:82: Classical.choice (nativeBadFintype_nonempty T)
+- NativeBadSetFiniteActual.lean:25: proved Nonempty by Classical.choice inside the existing closed module.  The
+- NativeQVPilotNormalizedLogVolumeActual.lean:10: baseQ := badPlaceQCandidate, a Classical.choice of a FinitePlaceQCandidate.
+- NativeSourceAssemblyExactSequenceActual.lean:17: actual group homomorphism and its right-inverse proof; no Classical.choice or
+- PaperC3SourceDataActual.lean:7: -- q: actual FinitePlaceQCandidate at G.place v (Classical.choice of the proved
+- PaperC3SourceDataActual.lean:44: Classical.choice (finitePlaceQCandidate_nonempty (G.place v).val)
+- PaperSourceGeometryQActual.lean:8: -- constructor from those data; no Classical.choice q is used.
+- ProcessionAlignmentActual.lean:71: alone does not provide a source-faithful map; no Classical.choice equivalence
+- QPilotZeroLocusDivisorActual.lean:58: (Classical.choice
+- QPilotZeroLocusDivisorActual.lean:68: (Classical.choice
+- S22DependentProductActual.lean:182: letI : ProperSpace (DependentCompletion T b) := Classical.choice (hproper b)
+- SHEOutputAlignmentActual.lean:27: Classical.choice would be arbitrary, not an actual construction.
+- SourceLocalTateSplitActual.lean:86: Classical.choice
+- WeakConcreteKummerLogActual.lean:54: (Classical.choice (finitePlaceQCandidate_nonempty place.val))
+
+## sorry
+
+- AdditiveFToFmodActual.lean:36: No arbitrary map, True/PUnit, axiom, or sorry is used.
+- AdjustedNormActual.lean:14: in the frozen source.  No arbitrary instance/axiom/sorry. -/
+- AdjustedNormedSpaceActual.lean:34: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- APTComparisonFromSource.lean:27: compatibility. No toy/True/PUnit/sorry/axiom. WRITE-ONLY: no lake.
+- ArithmeticLineBundleActual.lean:42: No arbitrary real/carrier, `True`, `PUnit`, `sorry`, or axiom is used.
+- BadPlacePaperConstantsActual.lean:16: No sorry/axiom/True/PUnit. -/
+- BaseFieldComparisonActual.lean:26: used. No True/PUnit, empty type, axiom, or sorry is used.
+- BasePlaceAtIActual.lean:36: No arbitrary place/True/PUnit/axiom/sorry.  WRITE-ONLY; compilation queued.
+- BaseQContractionUnconditional.lean:17: bound/axiom/sorry is used. -/
+- BaseQDescentAssembly.lean:16: and the partial actual object unconditionally.  No arbitrary q/axiom/sorry. -/
+- BaseQFamilyActual.lean:24: object.  No toy/True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- BaseQLogVolumeActual.lean:15: field.  No Missing-only structure.  No toy/True/PUnit/axiom/sorry.
+- BaseQLogVolumeQGlobalLinkActual.lean:19: toy/True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- BaseQNormActual.lean:32: No arbitrary q/axiom/sorry. -/
+- BaseQUnconditionalActual.lean:24: No arbitrary q/axiom/sorry. -/
+- BaseTensorDataActual.lean:38: asserted.  No PUnit toy, arbitrary map, axiom, or sorry is used.
+- BaseTensorDataAssembly.lean:22: unit, tensor, axiom, or sorry is used.
+- C3ActualThetaPacketWitnessConstruction.lean:46: No arbitrary theta packet, True, PUnit, axiom, or sorry is used.
+- C3DonorFieldsFromSource.lean:24: No toy data/True/PUnit/axiom/sorry. -/
+- C3GaussianThetaPacketActual.lean:24: No sorry, axiom, True, or PUnit is used. -/
+- C3LambdaOHullNontrivialActual.lean:27: No sorry, axiom, True, or PUnit. -/
+- C3LambdaONormalizedScalarActual.lean:14: No sorry, axiom, True, or PUnit. -/
+- C3LogShellTensorHolomorphicHullActual.lean:29: No True/PUnit, axiom, or sorry is used.
+- C3LogShellTensorPacketActual.lean:25: No arbitrary carrier, sorry, axiom, True, or PUnit is used. -/
+- C3PlaceTensorWitnessActual.lean:22: No True/PUnit/axiom/sorry and no inequality.  WRITE-ONLY; no local compile;
+- C3TensorIndexBadEquivConcreteActual.lean:27: No True/PUnit, empty type, axiom, or sorry is used.
+- C3TensorIndexBadSourceMapActual.lean:30: No True/PUnit, empty type, axiom, or sorry is used.
+- C3TensorPlaceLiteralIQIndexActual.lean:22: axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- CanonicalTateSplitProof.lean:35: arbitrary split certificate/axiom/sorry.  WRITE-ONLY; queue.
+- ClauseEToD7LocalGroupActual.lean:21: No toy/True/PUnit/axiom/sorry is used.
+- CompletionNormedFiniteActual.lean:38: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- CompletionNormedSpaceInequality.lean:37: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- CompletionValuedThetaHullMuLogActual.lean:21: No sorry, axiom, True, or PUnit. -/
+- ConcreteC3DonorActual.lean:20: No inequality, toy, axiom, or sorry. -/
+- ConcreteC3DonorCompletionActual.lean:20: axiom/sorry. -/
+- ConcreteC3RootTensorActual.lean:21: No PUnit/True, arbitrary data, axiom or sorry is used.
+- ConcreteCompletionImageToLiteralIQActual.lean:32: No empty type, no True/PUnit/axiom/sorry, no inequality.  WRITE-ONLY; no local
+- ConcreteGlobalPilotDataActual.lean:23: No toy/axiom/sorry. -/
+- ConcreteHnormalActual.lean:20: derived from unnormalized Haar data.  No sorry, axiom, True, or PUnit is used. -/
+- ConcreteKummerActionOnLiteralIQActual.lean:27: No empty type, no True/PUnit/axiom/sorry, no inequality.  WRITE-ONLY; no local
+- ConcretePaperXiFInclusionActual.lean:30: No True/PUnit, empty type, axiom, or sorry is used.
+- ConcreteQMagnitudeSourceComparisonActual.lean:23: No inequality is asserted.  No sorry, axiom, True, or PUnit is used. -/
+- ConcreteQPilotLogIdentificationActual.lean:27: No inequality/True/toy/axiom/sorry. -/
+- ConcreteSignedHullActual.lean:17: No sorry, axiom, True, or PUnit is used. -/
+- ConcreteSourceComparisonActual.lean:35: explicit. No True/PUnit, axiom, or sorry is used.
+- ConcreteSourceComparisonNumericActual.lean:28: No fake inequality, True/PUnit, axiom, or sorry is used.
+- ConcreteSourceQIdentificationActual.lean:29: q candidate C3.q.  No inequality/True/toy/axiom/sorry. -/
+- DefaultNormTensorBlockActual.lean:27: No fake block/norm/Haar; no sorry/axiom. -/
+- DirectScalarComparisonActual.lean:34: inequality/sorry/axiom. -/
+- DirectSignedComparisonActual.lean:43: No toy data, PUnit, True, axiom, or sorry is used.
+- ExactSequenceSplittingActual.lean:16: section/axiom/sorry. WRITE-ONLY: no lake.
+- FlUnitsThetaPilotActionActual.lean:29: No empty type, True, PUnit, axiom, or sorry is used.
+- FmodFNormCompatibilityActual.lean:22: inequality/axiom/sorry is used. -/
+- FmodTensorLandingActual.lean:23: axiom, or sorry is used.
+- FToFmodMapActual.lean:24: recorded. No arbitrary function, choice from countability, axiom, or sorry is
+- GlobalHullPaperXiFActual.lean:27: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalIQHullInterfaceActual.lean:26: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalIQHullThetaPilotActual.lean:26: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalKummerIndActionsActual.lean:24: No empty type, no True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- GlobalPositiveHullFromCorrectedActual.lean:30: True/PUnit, empty type, axiom, or sorry is used.
+- GlobalPositiveHullPaperXiFActual.lean:35: comparison.  No sorry, axiom, True, PUnit, or toy object is used.
+- GlobalPositiveThetaHullLogVolumeActual.lean:18: No PUnit/True, arbitrary data, axiom or sorry is used. -/
+- GlobalQElementActual.lean:33: No arbitrary element, unit substitution, True/PUnit, axiom, or sorry is used.
+- GlobalQPilotComparisonTruthActual.lean:35: inequality/axiom/sorry. -/
+- GlobalQPilotNormalizedLogVolumeActual.lean:25: target type is recorded.  No fake inequality/weight/sorry. -/
+- GlobalQPilotObjectActual.lean:24: No inequality/toy/axiom/sorry. -/
+- GlobalQPilotProcessionLogVolumeActual.lean:24: sorry, axiom, True, or PUnit is used. -/
+- GlobalQPilotVsSignedHullComparisonActual.lean:22: No sorry, axiom, True, or PUnit is used. -/
+- GlobalQVFamThetaHullSumActual.lean:26: No sorry, axiom, True, or PUnit. -/
+- GlobalRealifiedFrobenioidActual.lean:24: No toy/axiom/sorry. -/
+- GlobalThetaHullVsQPilotComparisonActual.lean:33: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotHullLogVolumeActual.lean:20: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotIQEmbeddingFromPrimeStripActual.lean:22: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotIQKummerActual.lean:29: No empty type, no True/PUnit, no axiom/sorry.  WRITE-ONLY; no local compile;
+- GlobalThetaPilotIQValueTransportActual.lean:30: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotKummerActual.lean:29: No raw sum, no empty type, no True/PUnit, no axiom/sorry.  WRITE-ONLY; no local
+- GlobalThetaPilotLogKummerCompatibilityActual.lean:24: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotLogVolumeActual.lean:31: q_v/theta-values procession candidate only.  No sorry, axiom, True, or PUnit. -/
+- GlobalThetaPilotPossibleImagesActual.lean:28: No True/PUnit, empty type, axiom, or sorry is used.
+- HaarSignedAverageProof.lean:43: True/PUnit/axiom/sorry is used.  WRITE-ONLY; compilation is queued.
+- HaarUnitReferenceNormalizationActual.lean:31: No arbitrary scaling, inequality assumption, True/PUnit, axiom, or sorry is
+- Ind2TensorActionActual.lean:13: -- No trivial action, no inequality, no sorry/axiom/True/PUnit/toy.
+- Ind3UpperSemiActual.lean:14: -- itself is not fitted. No sorry/axiom/True/PUnit/toy. WRITE-ONLY: no lake/lean.
+- IndeterminaciesActual.lean:27: No PUnit/True/axiom/sorry/placeholder is used.
+- IPLAPTDataActual.lean:39: No toy data, True, PUnit, axiom, or sorry is used.
+- KappaOrbitPairActual.lean:50: No identity pair, trivial action, True/PUnit, axiom, or sorry is used. The
+- KummerEvaluationArrowsActual2.lean:32: sorry is used. The only inputs are the actual kappa-orbit pair datum and the
+- KummerEvaluationSquareActual.lean:16: -- No inequality is judged; no sorry/axiom/True/PUnit/toy.
+- LGPTensorActionActual.lean:12: -- No artificial product carrier; no inequality; no sorry/axiom/True/PUnit/toy.
+- LinkedKappaActual.lean:40: No identity/toy group, no True/PUnit, no axiom or sorry is used.
+- LiteralIQCarrierActual.lean:33: No PUnit, True, sorry, axiom, or fake literal carrier is used.
+- LiteralIQCarrierConcrete.lean:43: No arbitrary type, `True`, `PUnit`, `sorry`, or axiom is used.
+- LiteralIQCarrierConstructionActual.lean:38: No arbitrary carrier, sorry, axiom, True, or PUnit is used. -/
+- LiteralIQCarrierTypeActual.lean:47: No arbitrary type/carrier, `True`, `PUnit`, `sorry`, or axiom is used.
+- LiteralIQHolomorphicHullActual.lean:45: supplied subset, and its containment is proved. No True/PUnit, axiom, or sorry
+- LiteralIQIndexProfileActual.lean:26: No True/PUnit, axiom, or sorry is used.
+- LocalBThetaHullLogVolumeActual.lean:22: No True/PUnit, empty type, axiom, or sorry is used.
+- LocalGroupBijectionActual.lean:26: file. No arbitrary global carrier or map is chosen; no toy/axiom/sorry is used.
+- LocalHullHaarNormalizationActual.lean:24: No sorry, axiom, True, or PUnit. -/
+- LocalNormValuationFormulaActual.lean:21: formula/axiom/sorry is used. -/
+- LowerKappaDonorActual.lean:51: No identity pair, toy action, True/PUnit, axiom, or sorry is used.
+- MonoAnalyticValueTransportActual.lean:17: No PUnit/True, arbitrary data, axiom or sorry is used.
+- MultiradialProcessionActual.lean:14: No inequality, equality judgement, arbitrary data, axiom, or sorry is used.
+- NativeAssemblyCompatActual.lean:20: PUnit/axiom/sorry. WRITE-ONLY: no lake.
+- NativeAssemblyCurveFieldsActual.lean:36: sorry is used.
+- NativeAssemblySplitIntegration.lean:15: fields stay explicit. No arbitrary data/axiom/sorry. WRITE-ONLY: no lake.
+- NativeBadSetFiniteActual.lean:29: axiom/sorry is used.  WRITE-ONLY; compilation is queued.
+- NativeCanonicalSplitCriterionActual.lean:32: criterion.  No arbitrary certificate/axiom/sorry.  WRITE-ONLY; queue.
+- NativeCoverPointDataActual.lean:22: No PUnit/True/axiom/sorry is used.
+- NativeCoverTotalSpaceActual.lean:27: No PUnit/True/axiom/sorry is used.
+- NativeCurveFieldsIntegration.lean:22: No PUnit/True/axiom/sorry is used.
+- NativeCurvePointFieldsActual.lean:23: No arbitrary type/map, PUnit, True, axiom, or sorry is used.
+- NativeCuspCountActual.lean:31: No arbitrary count/True/PUnit/axiom/sorry.  WRITE-ONLY; compilation queued.
+- NativeD7CuspActual.lean:30: toy/True/PUnit/axiom/sorry is used.
+- NativeGlobalQPilotNormalizedLogVolumeActual.lean:24: No I.initial badPlaces bridge is constructed.  No fake inequality/sorry. -/
+- NativeGlobalQPilotThetaPilotAlignmentActual.lean:24: inequality/sorry/axiom. -/
+- NativeGlobalQPilotVsPaperThetaPilotActual.lean:54: No reverse inequality and no fake inequality/sorry. -/
+- NativeOriginalInputDonorsActual.lean:36: No arbitrary SourceDefinition31Data, donor, equivalence, axiom or sorry is used.
+- NativeQNormActual.lean:19: the missing bound.  No arbitrary bound/axiom/sorry. -/
+- NativeQTateNormProof.lean:23: No arbitrary bound/axiom/sorry. -/
+- NativeQVPilotNormalizedLogVolumeActual.lean:20: is asserted.  No sorry, axiom, True, or PUnit is used.
+
+## true_punit
+
+- AdditiveFToFmodActual.lean:36: No arbitrary map, True/PUnit, axiom, or sorry is used.
+- AdjustedNormedSpaceActual.lean:34: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- APTComparisonFromSource.lean:27: compatibility. No toy/True/PUnit/sorry/axiom. WRITE-ONLY: no lake.
+- ArithmeticLineBundleActual.lean:42: No arbitrary real/carrier, `True`, `PUnit`, `sorry`, or axiom is used.
+- BadPlacePaperConstantsActual.lean:16: No sorry/axiom/True/PUnit. -/
+- BaseFieldComparisonActual.lean:26: used. No True/PUnit, empty type, axiom, or sorry is used.
+- BasePlaceAtIActual.lean:36: No arbitrary place/True/PUnit/axiom/sorry.  WRITE-ONLY; compilation queued.
+- BaseQFamilyActual.lean:24: object.  No toy/True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- BaseQLogVolumeActual.lean:15: field.  No Missing-only structure.  No toy/True/PUnit/axiom/sorry.
+- BaseQLogVolumeQGlobalLinkActual.lean:19: toy/True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- BaseTensorDataActual.lean:38: asserted.  No PUnit toy, arbitrary map, axiom, or sorry is used.
+- BaseTensorDataComplete.lean:13: * `baseTensorIndex = PUnit`, `baseTensorPlaceIndex`, `baseTensorPlaces =
+- BaseTensorDataComplete.lean:14: nativeC3Place`, `baseTensorTuple = PUnit.unit`;
+- BaseTensorDataComplete.lean:53: abbrev baseTensorIndex : Type := PUnit
+- BaseTensorDataComplete.lean:58: abbrev baseTensorPlaceIndex : baseTensorIndex -> Type := fun _ => PUnit
+- BaseTensorDataComplete.lean:67: fun _ => PUnit.unit
+- BaseTensorDataComplete.lean:79: (M := fun _ : PUnit => CommonPrimeCompletion (nativeC3Place X))
+- BaseTensorDataComplete.lean:86: (M := fun _ : PUnit => CommonPrimeCompletion (nativeC3Place X))
+- BaseTensorInsertionActual.lean:37: finitePadicTensorTprod (p := p) (fun _ : PUnit => M) (fun _ => x) ≠ 0 := by
+- BaseTensorInsertionActual.lean:40: (finitePadicTensorCoordinates (p := p) (fun _ : PUnit => M)) hzero
+- BaseTensorInsertionActual.lean:44: (fun F : FinitePadicTensorIndex (p := p) (fun _ : PUnit => M) → ℚ_[p] =>
+- BaseTensorInsertionActual.lean:45: F (fun _ : PUnit => k)) hcoord
+- BaseTensorInsertionActual.lean:49: abbrev baseTensorIndex : Type := PUnit
+- BaseTensorInsertionActual.lean:51: abbrev baseTensorPlaceIndex : baseTensorIndex -> Type := fun _ => PUnit
+- BaseTensorInsertionActual.lean:58: fun _ => PUnit.unit
+- BaseTensorInsertionActual.lean:67: (M := fun _ : PUnit => CommonPrimeCompletion (nativeC3Place X))
+- C3ActualThetaPacketWitnessConstruction.lean:46: No arbitrary theta packet, True, PUnit, axiom, or sorry is used.
+- C3DonorFieldsFromSource.lean:24: No toy data/True/PUnit/axiom/sorry. -/
+- C3GaussianThetaPacketActual.lean:24: No sorry, axiom, True, or PUnit is used. -/
+- C3LambdaOHullNontrivialActual.lean:27: No sorry, axiom, True, or PUnit. -/
+- C3LambdaONormalizedScalarActual.lean:14: No sorry, axiom, True, or PUnit. -/
+- C3LogShellTensorHolomorphicHullActual.lean:29: No True/PUnit, axiom, or sorry is used.
+- C3LogShellTensorPacketActual.lean:25: No arbitrary carrier, sorry, axiom, True, or PUnit is used. -/
+- C3PlaceTensorWitnessActual.lean:22: No True/PUnit/axiom/sorry and no inequality.  WRITE-ONLY; no local compile;
+- C3TensorIndexBadEquivConcreteActual.lean:27: No True/PUnit, empty type, axiom, or sorry is used.
+- C3TensorIndexBadSourceMapActual.lean:30: No True/PUnit, empty type, axiom, or sorry is used.
+- C3TensorPlaceLiteralIQIndexActual.lean:21: No arbitrary equivalence or fake embedding.  No empty type, no True/PUnit,
+- ClauseEToD7LocalGroupActual.lean:21: No toy/True/PUnit/axiom/sorry is used.
+- CompletionNormedFiniteActual.lean:38: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- CompletionNormedSpaceInequality.lean:37: No arbitrary instance/True/PUnit, axiom, or sorry is used.
+- CompletionValuedThetaHullMuLogActual.lean:21: No sorry, axiom, True, or PUnit. -/
+- ConcreteC3DonorCompletionActual.lean:19: types/Obstruction propositions, not fabricated donors.  No inequality/True/toy/
+- ConcreteC3RootTensorActual.lean:21: No PUnit/True, arbitrary data, axiom or sorry is used.
+- ConcreteCompletionImageToLiteralIQActual.lean:32: No empty type, no True/PUnit/axiom/sorry, no inequality.  WRITE-ONLY; no local
+- ConcreteHnormalActual.lean:20: derived from unnormalized Haar data.  No sorry, axiom, True, or PUnit is used. -/
+- ConcreteKummerActionOnLiteralIQActual.lean:27: No empty type, no True/PUnit/axiom/sorry, no inequality.  WRITE-ONLY; no local
+- ConcretePaperQPilotWitnessActual.lean:9: -- object's fields). No True/empty type/PUnit/toy. WRITE-ONLY.
+- ConcretePaperUnconditionalDataActual.lean:13: -- equalities / concreteSourceComparison); no True, empty type, PUnit or toy.
+- ConcretePaperUnconditionalDataUnconditionalActual.lean:11: -- kept as the exact input hcomp. No True/empty type/PUnit/toy.
+- ConcretePaperXiFInclusionActual.lean:25: The link identification is never True: it is the concrete comparison
+- ConcretePaperXiFInclusionActual.lean:30: No True/PUnit, empty type, axiom, or sorry is used.
+- ConcreteQMagnitudeSourceComparisonActual.lean:23: No inequality is asserted.  No sorry, axiom, True, or PUnit is used. -/
+- ConcreteQPilotLogIdentificationActual.lean:27: No inequality/True/toy/axiom/sorry. -/
+- ConcreteSignedHullActual.lean:17: No sorry, axiom, True, or PUnit is used. -/
+- ConcreteSourceComparisonActual.lean:28: True), link_implies_inclusion is the proved membership transfer;
+- ConcreteSourceComparisonActual.lean:35: explicit. No True/PUnit, axiom, or sorry is used.
+- ConcreteSourceComparisonNumericActual.lean:28: No fake inequality, True/PUnit, axiom, or sorry is used.
+- ConcreteSourceQIdentificationActual.lean:29: q candidate C3.q.  No inequality/True/toy/axiom/sorry. -/
+- ConcreteSourceQIdentificationActual.lean:87: /-- The obstruction is exactly the requested equality, not a True placeholder. -/
+- ConcreteThetaLinkActual.lean:25: No empty type, no True/PUnit, no toy.  No inequality.  WRITE-ONLY; no local
+- ConcreteThetaPacketIdentificationActual.lean:23: No empty type, no True/PUnit, no fake identification.  No inequality.
+- DirectSignedComparisonActual.lean:43: No toy data, PUnit, True, axiom, or sorry is used.
+- FlUnitsThetaPilotActionActual.lean:29: No empty type, True, PUnit, axiom, or sorry is used.
+- FmodTensorLandingActual.lean:66: (fun _ : PUnit => CommonPrimeCompletion (nativeFmodPlaceAtPrime X))
+- FmodTensorLandingActual.lean:82: (M := fun _ : PUnit =>
+- GlobalHullPaperXiFActual.lean:27: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalIQHullInterfaceActual.lean:26: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalIQHullThetaPilotActual.lean:26: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalKummerIndActionsActual.lean:24: No empty type, no True/PUnit/axiom/sorry.  WRITE-ONLY; no local compile; queued.
+- GlobalPositiveHullFromCorrectedActual.lean:30: True/PUnit, empty type, axiom, or sorry is used.
+- GlobalPositiveHullPaperXiFActual.lean:35: comparison.  No sorry, axiom, True, PUnit, or toy object is used.
+- GlobalPositiveThetaHullLogVolumeActual.lean:18: No PUnit/True, arbitrary data, axiom or sorry is used. -/
+- GlobalQElementActual.lean:33: No arbitrary element, unit substitution, True/PUnit, axiom, or sorry is used.
+- GlobalQPilotProcessionLogVolumeActual.lean:24: sorry, axiom, True, or PUnit is used. -/
+- GlobalQPilotVsSignedHullComparisonActual.lean:22: No sorry, axiom, True, or PUnit is used. -/
+- GlobalQVFamThetaHullScalarActual.lean:21: No single fixed-p block, no fake PUnit carrier, no inequality assumed.
+- GlobalQVFamThetaHullSumActual.lean:26: No sorry, axiom, True, or PUnit. -/
+- GlobalThetaHullVsQPilotComparisonActual.lean:33: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotHullLogVolumeActual.lean:20: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotIQEmbeddingFromPrimeStripActual.lean:22: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotIQKummerActual.lean:29: No empty type, no True/PUnit, no axiom/sorry.  WRITE-ONLY; no local compile;
+- GlobalThetaPilotIQValueTransportActual.lean:30: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotKummerActual.lean:29: No raw sum, no empty type, no True/PUnit, no axiom/sorry.  WRITE-ONLY; no local
+- GlobalThetaPilotLogKummerCompatibilityActual.lean:24: No PUnit/True, arbitrary data, axiom or sorry is used.
+- GlobalThetaPilotLogVolumeActual.lean:31: q_v/theta-values procession candidate only.  No sorry, axiom, True, or PUnit. -/
+- GlobalThetaPilotPossibleImageGeometryActual.lean:10: -- obstruction, not fabricated. No sum-of-abs surrogate, no True/PUnit/toy.
+- GlobalThetaPilotPossibleImagesActual.lean:28: No True/PUnit, empty type, axiom, or sorry is used.
+- HaarSignedAverageProof.lean:43: True/PUnit/axiom/sorry is used.  WRITE-ONLY; compilation is queued.
+- HaarUnitReferenceNormalizationActual.lean:31: No arbitrary scaling, inequality assumption, True/PUnit, axiom, or sorry is
+- Ind2TensorActionActual.lean:13: -- No trivial action, no inequality, no sorry/axiom/True/PUnit/toy.
+- Ind3UpperSemiActual.lean:14: -- itself is not fitted. No sorry/axiom/True/PUnit/toy. WRITE-ONLY: no lake/lean.
+- IndeterminaciesActual.lean:27: No PUnit/True/axiom/sorry/placeholder is used.
+- IPLAPTActual.lean:28: real conjunction of source factorization/two-path statements, not True.
+- IPLAPTDataActual.lean:39: No toy data, True, PUnit, axiom, or sorry is used.
+- KappaOrbitPairActual.lean:50: No identity pair, trivial action, True/PUnit, axiom, or sorry is used. The
+- KummerEvaluationArrowsActual2.lean:31: No identity-strip witness, no trivial actions, no True/PUnit, no axiom or
+- KummerEvaluationSquareActual.lean:16: -- No inequality is judged; no sorry/axiom/True/PUnit/toy.
+- KummerThetaPilotLabelActionConstructionActual.lean:10: -- carries actual sourceAction plus an exact compatibility Prop (not True).
+- LGPFrobenioidPresentationActual.lean:39: fun _ => True
+- LGPTensorActionActual.lean:12: -- No artificial product carrier; no inequality; no sorry/axiom/True/PUnit/toy.
+- LinkedKappaActual.lean:40: No identity/toy group, no True/PUnit, no axiom or sorry is used.
+- LiteralIQCarrierActual.lean:33: No PUnit, True, sorry, axiom, or fake literal carrier is used.
+- LiteralIQCarrierConcrete.lean:43: No arbitrary type, `True`, `PUnit`, `sorry`, or axiom is used.
+- LiteralIQCarrierConstructionActual.lean:38: No arbitrary carrier, sorry, axiom, True, or PUnit is used. -/
+- LiteralIQCarrierTypeActual.lean:47: No arbitrary type/carrier, `True`, `PUnit`, `sorry`, or axiom is used.
+- LiteralIQHolomorphicHullActual.lean:45: supplied subset, and its containment is proved. No True/PUnit, axiom, or sorry
+- LiteralIQIndexProfileActual.lean:26: No True/PUnit, axiom, or sorry is used.
+- LocalBThetaHullLogVolumeActual.lean:22: No True/PUnit, empty type, axiom, or sorry is used.
+- LocalHullHaarNormalizationActual.lean:24: No sorry, axiom, True, or PUnit. -/
+- LowerKappaDonorActual.lean:51: No identity pair, toy action, True/PUnit, axiom, or sorry is used.
+- MonoAnalyticValueTransportActual.lean:17: No PUnit/True, arbitrary data, axiom or sorry is used.
+- NativeAssemblyCompatActual.lean:19: These are actual source facts, not free compatibility props. No toy/True/
+- NativeAssemblyCompatActual.lean:20: PUnit/axiom/sorry. WRITE-ONLY: no lake.
+- NativeAssemblyCurveFieldsActual.lean:35: remaining explicit point-set data.  No arbitrary map, PUnit, True, axiom, or
+- NativeBadSetFiniteActual.lean:28: here and remain the exact missing fields from task-643.  No toy/True/PUnit/
+- NativeCoverPointDataActual.lean:22: No PUnit/True/axiom/sorry is used.
+- NativeCoverTotalSpaceActual.lean:27: No PUnit/True/axiom/sorry is used.
+- NativeCurveFieldsIntegration.lean:22: No PUnit/True/axiom/sorry is used.
+- NativeCurvePointFieldsActual.lean:23: No arbitrary type/map, PUnit, True, axiom, or sorry is used.
+- NativeCuspCountActual.lean:31: No arbitrary count/True/PUnit/axiom/sorry.  WRITE-ONLY; compilation queued.
+- NativeD7CuspActual.lean:30: toy/True/PUnit/axiom/sorry is used.
+
+## two_l_div
+
+- BadPlacePaperConstantsActual.lean:67: normalizedOrderCorrection T b / (2 * l.value : Real) := by
+- BadPlacePaperConstantsActual.lean:100: normalizedOrderCorrection T b / (2 * l.value : Real) := by
+- LocalPerBHullNormalizedLogActual.lean:49: qVFamilyLatticeCoefficient (l := l) T b / (2 * (l.value : Real))
+- LocalPerBHullNormalizedLogActual.lean:54: qVFamilyLatticeCoefficient (l := l) T b / (2 * (l.value : Real)) := rfl
+- LocalPerBHullNormalizedLogActual.lean:58: (2 * (l.value : Real)) * localCoeff (l := l) T b i := by
+- LocalPerBHullNormalizedLogActual.lean:60: field_simp [show (2 * (l.value : Real)) ≠ 0 by positivity]
+- QVFamNormalizedCoefficientActual.lean:75: ((qVFamily T b).order : Real) / (2 * l.value : Real)
+- QVFamNormalizedRootRelationActual.lean:54: qVFamNormalizedCoefficient T b / (2 * l.value : Real)
+- QVFamNormalizedRootRelationActual.lean:67: ((qVFamily T b).order : Real) / (2 * l.value : Real) := rfl
+- QVFamNormalizedRootRelationActual.lean:86: cRoot_eq_cNorm_div : cRoot = cNorm / (2 * l.value : Real)
+- QVFamNormalizedSupplyCoefficientActual.lean:83: qVFamSupplyNormCoefficient T b S / (2 * l.value : Real)
+- QVFamNormalizedSupplyCoefficientActual.lean:93: qVFamSupplyNormCoefficient T b S / (2 * l.value : Real) := rfl
+- QVFamNormalizedSupplyCoefficientActual.lean:98: qVFamSupplyQScalar T b S / (2 * l.value : Real) := by
+- QVFamNormalizedSupplyCoefficientActual.lean:117: qVFamSupplyNormCoefficient T b S / (2 * l.value : Real)
+- QVFamNormalizedSupplyCoefficientActual.lean:132: cRoot_eq_cNorm_div : cRoot = cNorm / (2 * l.value : Real)
+- QVFamNormalizedSupplyCoefficientActual.lean:133: thetaScalar_eq_qScalar_div : thetaScalar = qScalar / (2 * l.value : Real)
+- QVFamRootCoefficientActual.lean:93: (qVFamily T b).order / (2 * l.value)
+- QVFamRootFactorCorrectionActual.lean:57: ((qVFamily T b).order : Real) / (2 * l.value : Real)
+- QVFamRootFactorCorrectionActual.lean:96: (qVFamily T b).order / (2 * l.value)
+- QVPilotClassicalRootContainmentActual.lean:57: fun _ => ((qVFamily T b).order : Real) / (2 * l.value : Real)
+- QVPilotClassicalRootContainmentActual.lean:75: ((qVFamily T b).order : Real) / (2 * l.value : Real)
+- QVPilotThetaFinalInequalityActual.lean:52: nativeQVPilotLocalMagnitude T b / (2 * l.value : Real)
+- QVPilotThetaFinalInequalityActual.lean:66: nativeQVPilotLocalMagnitude T b / (2 * l.value : Real)
+- QVPilotThetaFinalInequalityActual.lean:82: qPilotClassicalNormalizedMagnitude T / (2 * l.value : Real) := by
+- QVPilotThetaFinalInequalityActual.lean:98: nativeQVPilotNormalizedLogMagnitude T / (2 * l.value : Real)
+- RootCoefficientCorrectedActual.lean:45: qVFamilyLatticeCoefficient (l := l) T b / (2 * (l.value : Real))
+- RootCoefficientCorrectedActual.lean:50: (2 * (l.value : Real)) * rootCoeffCorrected (l := l) T b := by
+- RootCoefficientCorrectedActual.lean:52: have htwo : (2 * (l.value : Real)) ≠ 0 := by positivity
+- RootCorrectedQPilotScalarActual.lean:57: nativeQVPilotLocalMagnitude T b / (2 * l.value : Real)
+- RootCorrectedQPilotScalarActual.lean:77: nativeQVPilotLocalMagnitude T b / (2 * l.value : Real) :=
+- RootCorrectedQPilotScalarActual.lean:94: nativeQVPilotNormalizedLogMagnitude T / (2 * l.value : Real) := by
+- RootCorrectedQPilotScalarActual.lean:102: nativeQVPilotLocalMagnitude T b) / (2 * l.value : Real) := by
+- RootCorrectedQPilotScalarActual.lean:135: (nativeQVPilotLocalMagnitude T b / (2 * l.value : Real)) := by
+- RootNormalizedContainmentActual.lean:58: fun i => rootNormCoefficient (l := l) T b i / (2 * (l.value : Real))
+- RootNormalizedContainmentActual.lean:67: have hden : (1 : Real) <= 2 * (l.value : Real) := by
+- RootNormalizedContainmentActual.lean:70: have hdenpos : 0 < 2 * (l.value : Real) := by positivity
+- RootNormalizedContainmentActual.lean:72: rootNormCoefficient (l := l) T b i / (2 * (l.value : Real)) <=
+- RootNormalizedThetaHullActual.lean:157: orderThetaHullFormulaLog T b / (2 * l.value : Real) := by
+- RootTensorBlockLGapActual.lean:60: ((qVFamily T b).order : Real) / (2 * (l.value : Real))
+- RootTensorBlockLGapActual.lean:68: -(((qVFamily T b).order : Real) / (2 * (l.value : Real))) *
+- RootTensorBlockLGapActual.lean:78: have hden : (0 : Real) < 2 * (l.value : Real) := by positivity
+- RootTensorBlockLGapActual.lean:79: have hcoeff : 0 < ((qVFamily T b).order : Real) / (2 * (l.value : Real)) :=
+- RootTensorBlockLGapActual.lean:81: have hneg : -(((qVFamily T b).order : Real) / (2 * (l.value : Real))) *
+- UnitReferenceNormalizationActual.lean:37: Choosing c.toReal = 1 / (2 * (mu unitReference).toReal) makes the scaled
+
+## paperThetaHull
+
+- CompletionValuedThetaHullMuLogActual.lean:52: abbrev paperThetaHull : Set (qVFamTensorBlock T b) :=
+- CompletionValuedThetaHullMuLogActual.lean:57: 0 < mu (paperThetaHull (l := l) T b) :=
+- CompletionValuedThetaHullMuLogActual.lean:62: mu (paperThetaHull (l := l) T b) < ⊤ :=
+- CompletionValuedThetaHullMuLogActual.lean:66: noncomputable def paperThetaHullNormalizedLog : Real :=
+- CompletionValuedThetaHullMuLogActual.lean:69: (paperThetaHull (l := l) T b)
+- CompletionValuedThetaHullMuLogActual.lean:73: paperThetaHullNormalizedLog (l := l) T b mu =
+- CompletionValuedThetaHullMuLogActual.lean:76: (paperThetaHull (l := l) T b) := rfl
+- CompletionValuedThetaHullMuLogActual.lean:81: hull_eq : hull = paperThetaHull (l := l) T b
+- CompletionValuedThetaHullMuLogActual.lean:92: hull := paperThetaHull (l := l) T b
+- CompletionValuedThetaHullMuLogActual.lean:94: hull_measure_pos := paperThetaHull_measure_pos (l := l) T b mu
+- CompletionValuedThetaHullMuLogActual.lean:95: hull_measure_lt_top := paperThetaHull_measure_lt_top (l := l) T b mu
+- CompletionValuedThetaHullMuLogActual.lean:96: normalizedLog := paperThetaHullNormalizedLog (l := l) T b mu
+- DirectScalarComparisonActual.lean:67: noncomputable def paperThetaHullLog : Real :=
+- DirectScalarComparisonActual.lean:76: noncomputable def paperThetaHullMagnitude : Real :=
+- DirectScalarComparisonActual.lean:85: paperThetaHullLog T = -paperThetaHullMagnitude T := by
+- DirectScalarComparisonActual.lean:97: paperQPilotSignedLog T ∈ hullLogVolumeRay (paperThetaHullLog T) := by
+- DirectScalarComparisonActual.lean:105: paperThetaHullMagnitude T ≤ paperQPilotMagnitude T := by
+- PaperBadPlaceTensorGeometryActual.lean:203: {x | ∀ b, x b ∈ paperThetaHull (l := l) T b}
+- PaperBadPlaceTensorGeometryActual.lean:212: paperThetaHullNormalizedLog (l := l) T b (μ b)
+- PaperBadPlaceTensorGeometryActual.lean:261: 0 < μ b (paperThetaHull (l := l) T b) :=
+- PaperBadPlaceTensorGeometryActual.lean:262: paperThetaHull_measure_pos (l := l) T b (μ b)
+- PaperBadPlaceTensorGeometryActual.lean:271: μ b (paperThetaHull (l := l) T b) < ⊤ :=
+- PaperBadPlaceTensorGeometryActual.lean:272: paperThetaHull_measure_lt_top (l := l) T b (μ b)
+- PaperBadPlaceTensorGeometryActual.lean:386: ∏ b : badC3TensorIndex T, μ b (paperThetaHull (l := l) T b)
+- PaperC3RootThetaHullActual.lean:65: paperRootThetaHull (G := G) :=
+- PaperC3TensorBlockActual.lean:119: noncomputable def paperThetaHull : Set (Block (G := G)) :=
+- PaperC3TensorBlockActual.lean:125: paperThetaHull (G := G) (l := l) := by
+- PaperC3TensorBlockActual.lean:136: paperThetaHull (G := G) (l := l) ⊆ H := by
+- PaperC3TensorBlockActual.lean:145: paperThetaHull (G := G) (l := l) =
+- PaperC3TensorBlockActual.lean:154: paperThetaHull (G := G) (l := l) ⊆
+- PaperC3TensorBlockActual.lean:156: apply paperThetaHull_subset_candidate (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:166: paperThetaHull (G := G) (l := l) ⊆ paperCanonicalHull (G := G) := by
+- PaperC3TensorBlockActual.lean:168: apply paperThetaHull_subset_scaledRegion_of_candidate (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:189: hull_eq : hull = paperThetaHull (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:200: hull := paperThetaHull (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:247: paperThetaHull (G := G) (l := l) := by
+- PaperC3TensorBlockActual.lean:271: image_subset_hull : imageSet ⊆ paperThetaHull (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:279: image_subset_hull := paperInd2ImageUnion_subset_paperThetaHull (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:287: (paperThetaHull (G := G) (l := l))
+- PaperC3TensorBlockActual.lean:364: paperThetaHull (G := G) (l := l) ⊆ paperUnitReference (G := G) :=
+- PaperC3TensorBlockActual.lean:365: paperThetaHull_subset_candidate (G := G) (l := l)
+- PaperC3TensorBlockActual.lean:435: paperThetaHull (G := G) (l := l) ⊆
+- PaperC3TensorBlockActual.lean:437: paperThetaHull_subset_scaledRegion_of_candidate (G := G) (l := l)
+- PaperC3ThetaUnitSourceActual.lean:97: paperThetaHull (G := G) (l := l) (thetaUnitFamily (G := G) (l := l) S)
+- PaperLambdaOHullActual.lean:75: paperThetaHull (G := G) (l := l) ⊆
+- PaperLambdaOHullActual.lean:87: exact paperThetaHull_subset_candidate (G := G) (l := l)
+

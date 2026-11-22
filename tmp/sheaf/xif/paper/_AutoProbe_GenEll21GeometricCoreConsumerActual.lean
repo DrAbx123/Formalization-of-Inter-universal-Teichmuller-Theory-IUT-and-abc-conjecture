@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll21GeometricCoreConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll21GeometricCoreConsumerActual.ProblemDCurveHypotheses
+#print axioms LeanFormal.IUT.XiFPaper.GenEll21GeometricCoreConsumerActual.ProblemDFunctionFieldWitnessInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll21GeometricCoreConsumerActual.ProblemDApplicabilityInput

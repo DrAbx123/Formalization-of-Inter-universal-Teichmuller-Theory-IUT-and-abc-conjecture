@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3136LGPBadToAllPlaceTransportsActual
+import tmp.sheaf.xif.paper.S3136LGPThetaExponentCompatActual
+import tmp.sheaf.xif.paper.S3136LGPThetaValueNegPowActual
+import tmp.sheaf.xif.paper.S3136LGPJvLocalTransportRangeActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadToAllPlaceTransportsActual.lgpBadFamilyIndex_agree
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadToAllPlaceTransportsActual.lgpBadFamilyFiber_agree
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaExponentCompatActual.lgpThetaDivisorExponent_factor
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaExponentCompatActual.lgpThetaDivisorExponent_pos'
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaExponentCompatActual.lgpThetaPilotPrimeDivisor_nonzero
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaValueNegPowActual.lgpThetaValue_neg_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvLocalTransportRangeActual.lgpRootZPowerHom_range_subset
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvLocalTransportRangeActual.qVAlgClosedUnit_mem_range

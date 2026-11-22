@@ -1,0 +1,14 @@
+/- Read-only probes for fresh UnitInvariance/KernelBridge/C3BaseQ (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110UnitInvarianceActual
+import tmp.sheaf.xif.paper.Mzk1Ind1KernelBridgeActual
+import tmp.sheaf.xif.paper.Mzk1C3BaseQIdentificationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_image_canonicalUnitReference_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_mem_integralClosure
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1KernelBridgeActual.kernelToAQuotient
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1KernelBridgeActual.range_kernelToAQuotient_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1KernelBridgeActual.kernelToAQuotient_ker_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1KernelBridgeActual.quotientKernelEquivRange
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1KernelBridgeActual.AQuotientKernelBridge.ofRange
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1C3BaseQIdentificationActual.qPilotC3SignedAggregation_of_aggregation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1C3BaseQIdentificationActual.c3BaseQRows_length

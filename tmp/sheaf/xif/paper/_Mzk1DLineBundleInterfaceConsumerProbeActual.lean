@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DLineBundleInterfaceConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DLineBundleInterfaceConsumerActual.dLineBundleInterfaceConsumer_finrank

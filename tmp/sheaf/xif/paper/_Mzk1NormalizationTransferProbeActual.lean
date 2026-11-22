@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24NormalizationTransferActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferActual.mzk1_normalization_transfer
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferActual.mzk1_normalization_transfer_shape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferActual.transfer_statementShape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferActual.normalizationTransferRows_length

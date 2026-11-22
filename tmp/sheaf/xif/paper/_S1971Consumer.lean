@@ -1,0 +1,19 @@
+import tmp.sheaf.xif.paper.S1971ActionStackificationActual
+
+noncomputable section
+namespace LeanFormal.IUT.XiFPaper.S1971Consumer
+
+open CategoryTheory
+open Iut
+open LeanFormal.IUT.XiFPaper.S1726OrbicurveFPrimeActual
+open LeanFormal.IUT.XiFPaper.S1971ActionStackificationActual
+
+#check S1971PointwiseQuotient
+#check S1971PointwiseQuotient_hom
+#check S1971PointwiseQuotient_fixed_nontrivial_aut
+#check S1971PrecompFunctor
+#check S1971FunctorialPointwiseColimit
+#check S1971QuotientStack
+#check S1964FirstMissing_ofStackQuotientWitness
+
+end LeanFormal.IUT.XiFPaper.S1971Consumer

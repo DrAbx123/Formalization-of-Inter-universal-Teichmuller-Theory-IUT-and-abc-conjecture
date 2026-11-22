@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRPunctureGreenConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRPunctureGreenConsumerActual.rrPunctureGreen_bundle

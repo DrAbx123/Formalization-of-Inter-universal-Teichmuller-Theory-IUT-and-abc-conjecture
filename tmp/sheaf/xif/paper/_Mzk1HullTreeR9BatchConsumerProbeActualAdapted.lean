@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullTreeR9BatchConsumerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullTreeR9BatchConsumerActualAdapted.treeR9Batch_rayEq

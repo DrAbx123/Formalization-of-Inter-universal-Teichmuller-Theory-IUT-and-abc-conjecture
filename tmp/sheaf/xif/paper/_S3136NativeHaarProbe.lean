@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3136NativeHaarFamilyActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136NativeHaarFamilyActual.lgpNativeHaarFamily_apply
+#print axioms LeanFormal.IUT.XiFPaper.S3136NativeHaarFamilyActual.lgpNativeHaarFamily_isAddHaar_apply
+#print axioms LeanFormal.IUT.XiFPaper.S3136NativeHaarFamilyActual.lgpNativeTensorBorelSpace
+#print axioms LeanFormal.IUT.XiFPaper.S3136NativeHaarFamilyActual.lgpNativeTensorMeasurableSpacePi

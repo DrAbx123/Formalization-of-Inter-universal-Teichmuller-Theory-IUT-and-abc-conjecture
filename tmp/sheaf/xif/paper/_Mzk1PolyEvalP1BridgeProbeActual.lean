@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1PolyEvalP1BridgeActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PolyEvalP1BridgeActual.polyEvalP1_eq_polyMapPoints
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PolyEvalP1BridgeActual.polyEvalP1_mem_specialSet_iff_polyMapPoints

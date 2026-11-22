@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3171IUTIVSection1StatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1StatementActual.S3171Theorem110Objects_length
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1StatementActual.S3171Theorem110Steps_length
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1StatementActual.S3171FinalDisplayInterface_length

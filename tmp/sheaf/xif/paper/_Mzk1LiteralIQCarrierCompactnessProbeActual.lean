@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1LiteralIQCarrierCompactnessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQCarrierCompactnessActual.literalIQ_oneCircU_compact
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQCarrierCompactnessActual.literalIQ_hull_logVolume_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQCarrierCompactnessActual.literalIQ_imageHull_measure_lt_top

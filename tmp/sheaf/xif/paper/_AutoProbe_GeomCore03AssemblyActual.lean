@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GeomCore03AssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCorePaperInput
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCoreOutputStatement
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCoreAssemblyStatement

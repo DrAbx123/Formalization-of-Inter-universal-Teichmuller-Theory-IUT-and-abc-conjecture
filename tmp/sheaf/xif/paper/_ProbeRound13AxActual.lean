@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1URThetaPureGeneratorActual
+import tmp.sheaf.xif.paper.Mzk1URThetaKHP5Actual
+
+#print axioms LeanFormal.IUT.NumberFieldFinitePlace.isUnit_pureGenerator
+#print axioms LeanFormal.IUT.NumberFieldFinitePlace.isOpen_smul_pureGenerator
+#print axioms LeanFormal.IUT.NumberFieldFinitePlace.measure_pos_smul_pureGenerator
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKHP5Actual.M_paper_le_M_paperCeil

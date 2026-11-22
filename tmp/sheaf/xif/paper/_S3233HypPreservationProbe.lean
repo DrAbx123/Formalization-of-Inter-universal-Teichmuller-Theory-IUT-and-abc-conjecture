@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22HypPreservationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.f0q_eq_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.g_eval
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.target_zero_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.target_infty_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.target_positivity
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationActual.target_beta_notin

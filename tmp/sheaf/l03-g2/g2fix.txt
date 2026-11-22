@@ -1,0 +1,8 @@
+tmp\sheaf\l03-g2\SourceG2Statement.lean:59:0: warning: Definition `SHEAF.L03.SourceG2Statement.preGaloisCategoryOfSourceG2` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:59:0: warning: Definition `preGaloisCategoryOfSourceG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:69:0: warning: Definition `SHEAF.L03.SourceG2Statement.galoisCategoryOfSourceG2` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:69:0: warning: Definition `galoisCategoryOfSourceG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

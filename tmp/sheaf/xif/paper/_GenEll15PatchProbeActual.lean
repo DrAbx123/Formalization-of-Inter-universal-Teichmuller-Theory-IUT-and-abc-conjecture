@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1Theorem25StatementActual
+import tmp.sheaf.xif.paper.GenEll05Theorem21Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05Theorem21Actual.theorem21_i_implies_ii
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05Theorem21Actual.paper_epsilon_absorption
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem25StatementActual.mzk1Thm25ReductionArchitecture_length
+#check LeanFormal.IUT.XiFPaper.Mzk1Theorem25StatementActual.Mzk1GeometricCoreStatement

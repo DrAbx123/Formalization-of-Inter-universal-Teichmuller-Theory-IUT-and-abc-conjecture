@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreRRCanonicalDegreeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRCanonicalDegreeActual.canonicalDegreeRows_length

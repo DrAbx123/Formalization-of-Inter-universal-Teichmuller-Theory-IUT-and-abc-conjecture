@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1G1FermatCurveSmoothActual
+import tmp.sheaf.xif.paper.Mzk1ULPacketBPerLabelBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartRing_smooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartRing_exists_standardSmooth_localized
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartR_span_eq_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.loc_isSmooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPacketBPerLabelBridgeActual.packetB_eq_perLabelBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPacketBPerLabelBridgeActual.avg_packetB_eq_processionAverage

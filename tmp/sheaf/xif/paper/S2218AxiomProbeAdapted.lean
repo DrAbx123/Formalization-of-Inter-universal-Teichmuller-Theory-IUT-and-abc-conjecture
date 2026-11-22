@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2218RangePairTransitiveActual
+open LeanFormal.IUT.XiFPaper.S2218RangePairTransitiveActual
+#print axioms S2218PairPerm_apply
+#print axioms S2218AffinePairTransitive_iff
+#print axioms S2218RangeAffinePairTransitiveRequired_iff

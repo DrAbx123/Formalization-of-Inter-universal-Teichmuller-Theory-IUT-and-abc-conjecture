@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2540AbstractPermBarActual
+import tmp.sheaf.xif.paper.S2595LResidueEquivActual
+open LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual
+open LeanFormal.IUT.XiFPaper.S2057DedekindFrobBridgeActual
+open LeanFormal.IUT.XiFPaper.S2595LResidueEquivActual
+#synth IsIntegralClosure LeanFormal.IUT.XiFPaper.S2594LP0PActual.T S (LeanFormal.IUT.XiFPaper.S1720SourceArithmeticActual.S2057FiveDivisionField)

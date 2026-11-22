@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII14FieldScalingActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII14FieldScalingActual.fieldScaling_log_measure_prime_smul
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII14FieldScalingActual.fieldScaling_log_measure_prime_smul_normalized
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII14FieldScalingActual.fieldScaling_log_measure_prime_smul_normalized_residue

@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1URPaperThetaR1FinalActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URPaperThetaR1FinalActual.neg_Mpaper_le_paperThetaSum

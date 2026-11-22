@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3136LGPKummerClassIndependenceActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassIndependenceActual.lgpGalois_cocycle_coboundary_relation
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassIndependenceActual.lgpKummerCocycle_root_independent
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassIndependenceActual.lgpRootRatio_mem_mu
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassIndependenceActual.LGPQVKummerClassResidualReducedGap

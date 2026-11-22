@@ -1,0 +1,48 @@
+import LeanFormal.IUT.Foundations.Geometry.TateFiniteParameterField
+
+#check IntermediateField.adjoin
+#check IntermediateField.mem_adjoin_simple_self
+#check IntermediateField.finiteDimensional_adjoin
+#check IntermediateField.adjoin_le_iff
+#check IntermediateField.inclusion
+#check IntermediateField.algebraMap_mem
+#check IsAlgebraic.isIntegral
+#check IntermediateField.adjoin.finiteDimensional
+#check map_zpow₀
+#check map_zpow
+#check Subtype.val_injective
+#check RingHom.injective
+#check IntermediateField.val
+#check IntermediateField.coe_mul
+#check IntermediateField.coe_one
+#check map_ne_zero
+
+#check IUT.TateFiniteParameterField.parameterField
+#check IUT.TateFiniteParameterField.parameterElement
+#check IUT.TateFiniteParameterField.baseParameter
+#check IUT.TateFiniteParameterField.parameterElement_coe
+#check IUT.TateFiniteParameterField.baseParameter_coe
+#check IUT.TateFiniteParameterField.finiteDimensional_parameterField
+#check IUT.TateFiniteParameterField.parameterField_le
+#check IUT.TateFiniteParameterField.parameterFieldInclusion
+#check IUT.TateFiniteParameterField.parameterFieldInclusion_algebraMap
+#check IUT.TateFiniteParameterField.parameterFieldInclusion_coe
+#check IUT.TateFiniteParameterField.baseParameter_ne_zero
+#check IUT.TateFiniteParameterField.parameterElement_ne_zero
+#check IUT.TateFiniteParameterField.parameterElement_no_poles
+#check IUT.TateFiniteParameterField.finiteParameterField_conditions
+
+#print axioms IUT.TateFiniteParameterField.parameterField
+#print axioms IUT.TateFiniteParameterField.parameterElement
+#print axioms IUT.TateFiniteParameterField.baseParameter
+#print axioms IUT.TateFiniteParameterField.parameterElement_coe
+#print axioms IUT.TateFiniteParameterField.baseParameter_coe
+#print axioms IUT.TateFiniteParameterField.finiteDimensional_parameterField
+#print axioms IUT.TateFiniteParameterField.parameterField_le
+#print axioms IUT.TateFiniteParameterField.parameterFieldInclusion
+#print axioms IUT.TateFiniteParameterField.parameterFieldInclusion_algebraMap
+#print axioms IUT.TateFiniteParameterField.parameterFieldInclusion_coe
+#print axioms IUT.TateFiniteParameterField.baseParameter_ne_zero
+#print axioms IUT.TateFiniteParameterField.parameterElement_ne_zero
+#print axioms IUT.TateFiniteParameterField.parameterElement_no_poles
+#print axioms IUT.TateFiniteParameterField.finiteParameterField_conditions

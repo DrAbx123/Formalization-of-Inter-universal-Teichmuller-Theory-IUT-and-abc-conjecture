@@ -1,0 +1,102 @@
+{
+  "task": "n8-c9-fixed-q-deep-comparison-20261024",
+  "owner": "current chat root; no subagents",
+  "date": "2026-10-24",
+  "git_head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "scope": "Natural-language feasibility research and exact donor/model calculations; not a source-qualified IUT proof",
+  "status": "bounded investigation completed; fixed-q coverage open; no candidate accepted as main proof route",
+  "artifacts": [
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FIXED-Q-DEEP-COMPARISON-20261024.md",
+      "sha256": "fe93128b5526e97236e42a45d741866e44bf420ae1c2680dc275a9acd58a6b51"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/fixed_q_comparison_certificates_20261024.py",
+      "sha256": "03f9eeee55c8b3b4af22813e88e686ec9da27afc294589cf08fc5d395b013971"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FIXED-Q-EXACT-CERTIFICATES-20261024.json",
+      "sha256": "2b07d8399786670dfbd9d21be044b0df24ced222216aacc73bea8393dcaa528f"
+    }
+  ],
+  "source_snapshots": [
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f"
+    },
+    {
+      "file": "tmp/pdfs/fixed-q-deep-comparison-20261024/manifest.json",
+      "sha256": "fa48d17bba6a741c3a9de7fef21dba736ae39ad0d1e4a055faa4c195255c0e06"
+    },
+    {
+      "file": "tmp/pdfs/fixed-q-deep-comparison-20261024/additional-manifest.json",
+      "sha256": "e9c6fbb9912503a0f7a11e5cc3d4a0717dee87c298d5f176b0dcc79cfbd2f64f"
+    }
+  ],
+  "external_web_only": [
+    {
+      "url": "https://arxiv.org/html/math/0212236",
+      "version": "v1",
+      "read": "Theorem2; section5; Theorem8; Lemma10 and proofs"
+    },
+    {
+      "url": "https://arxiv.org/html/1105.3876",
+      "version": "v4",
+      "read": "Lemma3.1; Proposition3.2; Corollaries3.4-3.5"
+    },
+    {
+      "url": "https://arxiv.org/html/1503.08127",
+      "version": "v3",
+      "read": "Theorems1.1-1.2; definitions and division polynomial recurrence"
+    },
+    {
+      "url": "https://arxiv.org/html/1701.00370v2",
+      "version": "v2",
+      "read": "Theorems1.1-1.4,3.2,4.7 assumptions"
+    },
+    {
+      "url": "https://math.stanford.edu/~conrad/papers/notes.pdf",
+      "version": "preliminary notes accessed 2026-10-24",
+      "read": "Example9.2.9 pages142-143"
+    }
+  ],
+  "computation": {
+    "command": "python -X utf8 -B tmp/sheaf/n8/closure/fixed_q_comparison_certificates_20261024.py",
+    "exit_code": 0,
+    "arithmetic": "exact rationals only; sign/equality checks do not use floating point",
+    "cases": [
+      "20 graph layers, 320 square terms, Kirchhoff/potential certificate reverified after saving",
+      "20 homothetic layers: exact zero jump",
+      "20 two-edge layers: 190 pair terms",
+      "C2 centralizer vs GL2 over F3 diagnostic",
+      "split Q3^4 hull: finite component witnesses"
+    ],
+    "source_qualified_input_tested": false,
+    "full_20_stage_pipeline_executed": false
+  },
+  "new_natural_language_results": [
+    "Finite witnesses determine bounded nonarchimedean product-ideal hull when a positive-volume base region is retained; global approximation needs uniform finite support",
+    "Compatible exact matrices at all finite-field layers preserving every required lattice construct a genuine Ism automorphism; finite truncation alone is insufficient",
+    "Arbitrary-layer network energy gap is an explicit nonnegative sum of squares; homothetic fixed-charge layers have zero gap",
+    "Reversible simultaneous transport preserves relative volume; canonical-metric reference corrections cannot be discarded",
+    "Bare rational determinant of Tate representation forgets q extension"
+  ],
+  "open_core": [
+    "Actual source branch with sufficient hull-volume increment",
+    "Identification of any source defect with a positive height jump",
+    "Effective complete source relation/lifting and global normalization linkage"
+  ],
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "target_accepted": false
+  }
+}

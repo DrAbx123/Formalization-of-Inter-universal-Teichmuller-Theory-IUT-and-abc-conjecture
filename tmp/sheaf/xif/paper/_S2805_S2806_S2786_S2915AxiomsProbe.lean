@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2805C3RegionHaarSummaryActual
+import tmp.sheaf.xif.paper.S2806C3RegionHaarSummaryConsumerActual
+import tmp.sheaf.xif.paper.S2786C3NormalizedLatticeSmulActual
+import tmp.sheaf.xif.paper.S2915C3NormalizedRegionLogConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2805C3RegionHaarSummaryActual.c3NormalizedRegion_haarLogVolume_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.S2806C3RegionHaarSummaryConsumerActual.C3RegionHaarSummary_one_le
+#print axioms LeanFormal.IUT.XiFPaper.S2806C3RegionHaarSummaryConsumerActual.C3RegionHaarSummary_logVolume_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.S2786C3NormalizedLatticeSmulActual.c3NormalizedTensorHaar_smul_lattice
+#print axioms LeanFormal.IUT.XiFPaper.S2915C3NormalizedRegionLogConsumerActual.C3NormalizedRegion_logVolume_summary_consumer

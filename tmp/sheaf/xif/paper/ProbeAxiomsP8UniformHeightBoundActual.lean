@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1P8UniformHeightBoundActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8UniformHeightBoundActual.P8UniformHeightBoundData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8UniformHeightBoundActual.p8UniformHeightBoundData_consumer
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8UniformHeightBoundActual.p8UniformHeightBound_iff_ABC

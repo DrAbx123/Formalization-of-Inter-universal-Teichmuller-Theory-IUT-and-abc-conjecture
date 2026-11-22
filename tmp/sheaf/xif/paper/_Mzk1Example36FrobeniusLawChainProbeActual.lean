@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Example36FrobeniusLawChainActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36FrobeniusLawChainActual.principalDivisor_frobenius_package

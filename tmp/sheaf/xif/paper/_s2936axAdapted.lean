@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2935C3NormalizedHheightConsumerActual
+import tmp.sheaf.xif.paper.S2936C3IUTIILogVolumeFinalSummaryActual
+#print axioms LeanFormal.IUT.XiFPaper.S2935C3NormalizedHheightConsumerActual.C3NormalizedHheight_consumer
+#print axioms LeanFormal.IUT.XiFPaper.S2936C3IUTIILogVolumeFinalSummaryActual.C3IUTIILogVolume_summary

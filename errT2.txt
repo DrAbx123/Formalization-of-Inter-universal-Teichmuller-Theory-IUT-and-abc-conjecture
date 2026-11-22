@@ -1,0 +1,9 @@
+'LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.badSumWeightBound_implies_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.correctedGap2Shape_implies_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.bridge_boundary_calibrated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

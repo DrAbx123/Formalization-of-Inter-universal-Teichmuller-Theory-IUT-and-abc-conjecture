@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2746C3NormalizedHaarActual
+#print axioms LeanFormal.IUT.XiFPaper.S2746C3NormalizedHaarActual.c3NormalizedTensorHaar_hge1
+#print axioms LeanFormal.IUT.XiFPaper.S2746C3NormalizedHaarActual.tensorLattice_subset_C3RegionAll

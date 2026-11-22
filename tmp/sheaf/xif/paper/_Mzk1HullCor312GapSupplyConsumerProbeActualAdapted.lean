@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullCor312GapSupplyConsumerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullCor312GapSupplyConsumerActualAdapted.cor312GapSupplyRows_length

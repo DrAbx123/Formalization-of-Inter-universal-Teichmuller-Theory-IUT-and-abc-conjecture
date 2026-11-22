@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.RestatedLemma24CVLawActual
+
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24CVLawActual.s3135_criticalValuesOverC_eq
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24CVLawActual.s3135_CVCompositionLawStatement_proved
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24CVLawActual.s3135_SpecialSetPreservationStatement_proved

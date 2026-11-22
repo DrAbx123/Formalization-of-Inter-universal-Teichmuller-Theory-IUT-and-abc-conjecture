@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2762C3ComparisonDataInterfaceActual
+#print axioms LeanFormal.IUT.XiFPaper.S2762C3ComparisonDataInterfaceActual.c3ComparisonRegionData

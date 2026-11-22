@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1HWConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HWConsumerActual.additiveBound_of_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HWConsumerActual.abcConjecture_of_additiveBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HWConsumerActual.additiveBound_exists_constant

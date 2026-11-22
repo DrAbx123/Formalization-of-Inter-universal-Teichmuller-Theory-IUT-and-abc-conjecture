@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma23MoebiusActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23MoebiusActual.s3135_mobius_separation

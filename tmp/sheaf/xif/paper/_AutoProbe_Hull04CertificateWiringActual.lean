@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull04CertificateWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull04CertificateWiringActual.hull04SignedCertificate
+#print axioms LeanFormal.IUT.XiFPaper.Hull04CertificateWiringActual.hull04SignedCertificate_comparison
+#print axioms LeanFormal.IUT.XiFPaper.Hull04CertificateWiringActual.hull04HullSlot_wired

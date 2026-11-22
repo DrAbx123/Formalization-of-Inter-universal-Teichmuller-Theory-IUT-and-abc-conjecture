@@ -1,0 +1,6 @@
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.NormalizedLogNormComparison
+import Mathlib.Tactic
+
+noncomputable section
+namespace LeanFormal.IUT.XiFPaper.Mzk1Ind1IntegersEquivZpActual
+end LeanFormal.IUT.XiFPaper.Mzk1Ind1IntegersEquivZpActual

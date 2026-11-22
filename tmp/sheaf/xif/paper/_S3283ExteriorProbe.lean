@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingExteriorActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingExteriorActual.belyiBetaAvoidingExteriorStatement_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingExteriorActual.belyiBetaAvoidingSmallStatement_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingExteriorActual.exists_belyi_betaAvoiding_three_of_gt_exterior

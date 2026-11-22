@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24CVLawProofActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24CVLawProofActual.cvCompositionLaw
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24CVLawProofActual.specialSetPreservation

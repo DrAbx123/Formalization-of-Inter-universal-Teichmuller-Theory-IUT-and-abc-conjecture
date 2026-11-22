@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull13TwoSidedBoundActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull13TwoSidedBoundActual.HullH7Ob9TwoSidedInputs
+#print axioms LeanFormal.IUT.XiFPaper.Hull13TwoSidedBoundActual.hull13_twoSided_bound
+#print axioms LeanFormal.IUT.XiFPaper.Hull13TwoSidedBoundActual.hull13_twoSided_upper_projection

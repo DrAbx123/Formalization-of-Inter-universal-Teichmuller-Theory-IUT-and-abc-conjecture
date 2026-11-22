@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3132ThetaHalfFinalCompositionActual
+import tmp.sheaf.xif.paper.S3132ThetaHalfConcreteFinalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfFinalCompositionActual.thetaHalfFinal_of_uniformComparison_and_normalization
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfFinalCompositionActual.thetaHalfFinal_of_index_and_fiber_and_normalization
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfConcreteFinalActual.thetaHalfFinalConcrete_of_modelTie
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfConcreteFinalActual.thetaHalfFinalConcrete_of_modelTie_index_fiber

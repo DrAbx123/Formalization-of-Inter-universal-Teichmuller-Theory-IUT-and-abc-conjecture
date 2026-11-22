@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S1835FiberRPrimeActual
+#check LeanFormal.IUT.XiFPaper.S1830G2G3RPrimeActual.S1830G3.exists_prod_algEquiv_of_surjective
+#check LeanFormal.IUT.XiFPaper.S1830G2G3RPrimeActual.S1830G3.epi_surjective_of_finiteEtale
+#check LeanFormal.IUT.XiFPaper.S1830G2G3RPrimeActual.S1830G3.monoInducesIsoOnDirectSummand_finiteEtaleAlg
+#check LeanFormal.IUT.XiFPaper.S1830G2G3RPrimeActual.S1779MonoMissing

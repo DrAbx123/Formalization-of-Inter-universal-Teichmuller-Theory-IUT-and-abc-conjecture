@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1R9PointMembershipConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1R9PointMembershipConsumerActual.hullLogVolumeRay_eq_downRay
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1R9PointMembershipConsumerActual.r9ConsumerRows_length

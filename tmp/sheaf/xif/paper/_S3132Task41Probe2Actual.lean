@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3132ThetaHalfDependencyChainActual
+import tmp.sheaf.xif.paper.S3132ThetaFactorValueActual
+import tmp.sheaf.xif.paper.S3132CanonicalVFormValueActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfDependencyChainActual.S3134LastSeamThetaHalf_iff_missingThetaHalf
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorValueActual.thetaNormalizationFactor_eq_log_unitReference_of_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorValueActual.c3NormalizedLogVolume_eq_log_sub_of_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132CanonicalVFormValueActual.S3134CanonicalRootedHC_eq_S3131CanonicalRootedHC

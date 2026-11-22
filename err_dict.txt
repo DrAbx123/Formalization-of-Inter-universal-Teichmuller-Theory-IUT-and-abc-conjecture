@@ -1,0 +1,7 @@
+'LeanFormal.IUT.XiFPaper.Mzk1AbcDictionaryActual.natRadical_eq_ufmRadical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1AbcDictionaryActual.isABCTriple_iff_lana' does not depend on any axioms
+'LeanFormal.IUT.XiFPaper.Mzk1AbcDictionaryActual.abcBound_constant_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

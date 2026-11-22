@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2573ResidueDataAssemblyActual
+#print axioms LeanFormal.IUT.XiFPaper.S2573ResidueDataAssemblyActual.S2573_twelveCycle
+#print axioms LeanFormal.IUT.XiFPaper.S2573ResidueDataAssemblyActual.S2573Target_of_minimal_and_transport

@@ -1,0 +1,27 @@
+import tmp.sheaf.xif.paper.S2040ActualThetaLink312
+
+noncomputable section
+set_option linter.unusedSectionVars false
+set_option linter.unusedVariables false
+set_option linter.checkUnivs false
+
+namespace LeanFormal.IUT.XiFPaper._S2040ConsumerAdapted
+
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLink312.link_implies_inclusion
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLink312.paper312_inequality
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLink312.qPilotLogVolume_eq_neg_abs
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.s2040ThetaLink312_of_firstMissing
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.s2040_inclusion_of_firstMissing
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.s2040_paper312_of_firstMissing
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040FirstMissing
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040HullNormalization
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040QPilotLogIdentification
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLinkDisplacement
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLinkDisplacement.thetaLink
+#check @LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLinkDisplacement.thetaLink_generator
+
+#print axioms LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLink312.link_implies_inclusion
+#print axioms LeanFormal.IUT.XiFPaper.S2040ActualThetaLink312.S2040ThetaLink312.paper312_inequality
+
+end LeanFormal.IUT.XiFPaper._S2040ConsumerAdapted
+end

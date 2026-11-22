@@ -1,0 +1,52 @@
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:30:4: error: Function expected at
+  ObjectProperty
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (TemperedCover diagram root)
+
+Hint: The identifier `ObjectProperty` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:31:60: error(lean.invalidField): Invalid field notation: Type of
+  object
+is not known; cannot resolve field `obj`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `Prefunctor.obj`
+  • `PresheafOfModules.obj`
+  • `CategoryTheory.Functor.obj`
+  • `CategoryTheory.StrictlyUnitaryLaxFunctorCore.obj`
+  • `CategoryTheory.StrictlyUnitaryPseudofunctorCore.obj`
+  • `CategoryTheory.Subfunctor.obj`
+  • `Lean.Json.obj`
+  • `CategoryTheory.Limits.DiagramOfCocones.obj`
+  • `CategoryTheory.Limits.DiagramOfCones.obj`
+  • `CategoryTheory.Limits.IsZero.obj`
+  • `CategoryTheory.ObjectProperty.FullSubcategory.obj`
+  • `CategoryTheory.PreGaloisCategory.PointedGaloisObject.obj`
+  • `CategoryTheory.Presieve.CoverByImageStructure.obj`
+  • `CategoryTheory.Pseudofunctor.DescentData.obj`
+  • `Lean.Json.Structured.obj`
+  • `Lean.Server.ReferencedObject.obj`
+  • `TopCat.Presheaf.SubmonoidPresheaf.obj`
+  • `CategoryTheory.Localization.Construction.LocQuiver.obj`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:33:7: error(lean.inferDefTypeFailed): Failed to infer type of definition `SourceConnectedTemperedCover`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:42:10: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  D.diagram
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:47:31: error: Invalid argument name `l` for function
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:48:4: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  D.diagram
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

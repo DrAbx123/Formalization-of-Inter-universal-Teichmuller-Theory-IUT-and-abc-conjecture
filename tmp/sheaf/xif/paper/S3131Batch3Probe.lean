@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteVendorWiringActual
+import tmp.sheaf.xif.paper.S3131PaperRouteHeightReductionActual
+import tmp.sheaf.xif.paper.S3131PaperRouteRegionReductionActual
+import tmp.sheaf.xif.paper.S3131GenEllShapeStatementsActual
+import tmp.sheaf.xif.paper.S3131PaperRouteProvableSeparationActual
+import tmp.sheaf.xif.paper.S3131PaperRouteVendorBridgeLinkActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteVendorWiringActual.comparisonDataOf_magnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteHeightReductionActual.heightComparisonFamily_of_undilated
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteRegionReductionActual.regionVolumeFamily_of_undilated
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllShapeStatementsActual.S3131GenEllVendorAnchors_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteProvableSeparationActual.S3131PaperRouteProvableNow_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteVendorBridgeLinkActual.abc_of_families_and_vendorPayload

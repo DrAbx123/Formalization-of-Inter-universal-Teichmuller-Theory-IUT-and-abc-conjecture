@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DZeroDatumClusterActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DZeroDatumClusterActual.dZeroDatumCluster_generic

@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3136RegionRelativeReconciliationActual
+import tmp.sheaf.xif.paper.S3136Gap2AdditiveThetaFormActual
+import tmp.sheaf.xif.paper.S3136AbcJointCObligationStatusActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136RegionRelativeReconciliationActual.lgpRegionVolumeBound_theta_form
+#print axioms LeanFormal.IUT.XiFPaper.S3136RegionRelativeReconciliationActual.LGPRegionVolumeObligation
+#print axioms LeanFormal.IUT.XiFPaper.S3136Gap2AdditiveThetaFormActual.lgpGap2Additive_obligation
+#print axioms LeanFormal.IUT.XiFPaper.S3136Gap2AdditiveThetaFormActual.lgpGap2Additive_theta
+#print axioms LeanFormal.IUT.XiFPaper.S3136AbcJointCObligationStatusActual.lgpJointCObligationStatus_length

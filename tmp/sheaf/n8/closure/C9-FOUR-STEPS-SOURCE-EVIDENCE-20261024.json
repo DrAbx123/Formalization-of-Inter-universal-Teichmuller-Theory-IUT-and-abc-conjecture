@@ -1,0 +1,114 @@
+{
+  "schema": "iut-natural-language-research-evidence/v1",
+  "task": "n8-c9-four-steps-source-attempt-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "consumer": "n8-c9-output-region-source-route P1/P6",
+  "scope": "Natural-language proof attempt for the four previously proposed steps; no Lean edits",
+  "status": "Fixed nonarchimedean Ind2 block and residue lifting proved in natural language; full native-q comparison remains open",
+  "artifacts": [
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FOUR-STEPS-SOURCE-ATTEMPT-20261024.md",
+      "sha256": "f3835796a4315ed5c8a0a0dce36a972fb42cbef8d1abe8e798b763644e8a8dc2"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/ism_scalar_certificates_20261024.py",
+      "sha256": "b219bcfa40988049dac7ab4d515a6511c152ce199edb9eba7b7d543ca4181c8f"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-ISM-SCALAR-CERTIFICATES-20261024.json",
+      "sha256": "df867acc7a30e4405c646b188a3d91d72d854b41d9c0e0de4592a669a675f899"
+    }
+  ],
+  "source_snapshots": [
+    {
+      "title": "Minamide-Tsujimura, Anabelian Geometry for Henselian Discrete Valuation Fields with Quasi-finite Residues",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~stsuji/AnabelianGeometryforHenselianDiscreteValuationFieldswithQuasi-finiteResidues.pdf",
+      "file": "tmp/pdfs/ism-scalar-20261024/Minamide-Tsujimura-Henselian-latest-20261024.pdf",
+      "sha256": "fbdec753e5b9f9f4fa30fa52b5a4d5b297902034bea248f418509bc831bd1ad4",
+      "pages": 77,
+      "metadata_date": "2026-06-06",
+      "accessed": "2026-10-24",
+      "positions": ["Proposition 6.4 p59", "Definition 7.3 p66", "Remark 7.3.1 and Theorem 7.4 p67"],
+      "text_file": "tmp/pdfs/ism-scalar-20261024/Minamide-Tsujimura-Henselian-latest-20261024.txt",
+      "text_sha256": "106410b6b76123f5e4018ad54e9cd0be57461bbefa9f562ea4c0e5c6de90d21c",
+      "claim": "For finite K/Q_p the exact source Ism group is Z_p units; original 2023 version already contains the classification"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "positions": ["Example 1.8(iv), p39, lines2187-2211"],
+      "claim": "Exact source definition of Ism"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "positions": ["Proposition 1.2(vi), pp32-33, lines1898-1949", "Theorem 3.11(i)(Ind2), p154, lines9261-9272", "Propositions 3.1(ii), 3.4, 3.5"],
+      "claim": "Actual log-module Ism orbit; independent actions on each direct summand of each tensor factor; native integral structure"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "positions": ["Proposition 1.2, pp10-11"],
+      "claim": "Larger lattice-automorphism upper bounds remain valid but are not realizable inner Ism actions"
+    }
+  ],
+  "standard_donors": [
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "positions": ["I Lemma1.3 and Theorem1.4, printed p22"],
+      "claim": "Every open finite-index subgroup of F^x is a norm subgroup of a finite abelian extension; unit norm identity",
+      "accessed": "2026-10-24"
+    },
+    {
+      "url": "https://kskedlaya.org/cft/sec_lubin-tate.html",
+      "positions": ["Corollary4.6.13", "Theorem4.6.16"],
+      "claim": "Actual Lubin-Tate realization and reciprocity for the finite norm probes",
+      "accessed": "2026-10-24"
+    }
+  ],
+  "proof_results": [
+    "Actual log lattice determined by a bounded finite quotient; no arbitrary p-adic zero oracle",
+    "Native block L=A(O_E), Lambda from source log shells, width N from Smith exponents",
+    "All source-tower scalar unit actions constructed explicitly",
+    "2d-1 actual cyclic norm probes force the exact scalar finite image modulo p^n",
+    "Every surviving finite scalar residue lifts on the entire source tower",
+    "Actual source tensor/direct-sum action multiplies by an O_E unit",
+    "Fixed nonarchimedean Ind2 final hull is unchanged; native fractional ideal region itself is unchanged",
+    "Degree-normalized determinant formula retains the reference correction",
+    "For a nonempty unit region in one fixed field, scalar multiplication followed by ordinary log has exact output log(U)+p^c Z_p and hull Hull(log U)+p^c O_K; this order is not asserted to model the full source branch"
+  ],
+  "exact_computation": {
+    "command": "python -X utf8 tmp/sheaf/n8/closure/ism_scalar_certificates_20261024.py",
+    "exit_code": 0,
+    "all_assertions_passed": true,
+    "norm_probe_field": "Q_3(i), i^2=-1",
+    "finite_unit_group_order": 648,
+    "character_pair_checks": 419904,
+    "Lubin_Tate_primitive_polynomial_degree": 648,
+    "probe_extension_degrees": [9, 9, 9],
+    "GL2_mod9_order": 3888,
+    "surviving_scalar_matrices": 6,
+    "lattice_field": "Q_3(pi), pi^2=3",
+    "lattice_width": 1,
+    "full_global_Theta_data_verified": false,
+    "general_class_field_theory_proved_by_script": false
+  },
+  "route_correction": {
+    "supersedes": "Search for unknown non-scalar Ism residues as a source of positive hull-volume gain",
+    "preserves": "Previous generic finite-observation and path-lifting results; other chat files and ownership",
+    "reason": "The exact source Ism classification excludes those non-scalar residues, and scalar tensor actions preserve the final holomorphic hull",
+    "remaining": ["Ind1 and global branch synchrony", "Actual successive log domains and Ind3 control", "Native q-pilot association through the full source composite"],
+    "next_action": "Locate Ind2 in the actual III Remark3.10.2/Proposition3.5 branch, remove only final linear Ind2 blocks, and prove the next surviving arrow transports the actual integral region, pilot mark and reference readout"
+  },
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "transitive_axioms": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "target_accepted": false
+  }
+}

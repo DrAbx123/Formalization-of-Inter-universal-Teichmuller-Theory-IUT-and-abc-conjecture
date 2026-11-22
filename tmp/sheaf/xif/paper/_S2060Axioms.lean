@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2060CompletionUnitsActual
+#print axioms LeanFormal.IUT.XiFPaper.S2060CompletionUnitsActual.s2060AlgClosureEquiv
+#print axioms LeanFormal.IUT.XiFPaper.S2060CompletionUnitsActual.s2060AlgClosureEquiv_norm
+#print axioms LeanFormal.IUT.XiFPaper.S2060CompletionUnitsActual.s2060CompletionIntegralUnitsEquiv
+#print axioms LeanFormal.IUT.XiFPaper.S2060CompletionUnitsActual.s2060CompletionIntegralUnitsEquiv_normCompatible
+#print axioms LeanFormal.IUT.XiFPaper.S2060CompletionUnitsActual.s2060PaperOUnitsMuAmbient

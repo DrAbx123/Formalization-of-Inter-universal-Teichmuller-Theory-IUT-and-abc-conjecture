@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GlobalThetaPilotLogVolumeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GlobalThetaPilotLogVolumeActual.baseQReal_pos
+#print axioms LeanFormal.IUT.XiFPaper.GlobalThetaPilotLogVolumeActual.baseQReal_lt_one
+#print axioms LeanFormal.IUT.XiFPaper.GlobalThetaPilotLogVolumeActual.thetaValueFromQ_pos

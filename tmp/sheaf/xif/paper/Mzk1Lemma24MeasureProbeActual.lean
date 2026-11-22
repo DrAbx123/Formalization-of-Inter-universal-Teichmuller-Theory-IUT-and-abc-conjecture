@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24MeasureActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24MeasureActual.s3135_mOfPoints_pointClosure_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24MeasureActual.s3135_dOfPoints_mono

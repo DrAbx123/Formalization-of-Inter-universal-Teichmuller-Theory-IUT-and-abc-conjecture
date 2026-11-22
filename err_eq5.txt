@@ -1,0 +1,120 @@
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:2: error: Tactic `rfl` failed: The left-hand side
+  (auxEquivRHS f g T).symm
+    ((algebraMap (T ⊗[R] S)
+        ↥(TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) f) ≟ₐ
+            TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) g)))
+      (1 ⊗ₜ[R] x))
+is not definitionally equal to the right-hand side
+  1 ⊗ₜ[R] (algebraMap S ↥(TensorProduct.map (AlgHom.id S S) f ≟ₐ TensorProduct.map (AlgHom.id S S) g)) x
+
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+x : S
+⊢ (auxEquivRHS f g T).symm
+      ((algebraMap (T ⊗[R] S)
+          ↥(TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) f) ≟ₐ
+              TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) g)))
+        (1 ⊗ₜ[R] x)) =
+    1 ⊗ₜ[R] (algebraMap S ↥(TensorProduct.map (AlgHom.id S S) f ≟ₐ TensorProduct.map (AlgHom.id S S) g)) x
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:8: error: typeclass instance problem is stuck
+  Module.Flat ?m.105 ?m.110
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, second, third, fourth, and fifth type arguments to `Module.Flat` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:224:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (auxEquivRHS ?f ?g ?T).symm ⟨1 ⊗ₜ[?T] (1 ⊗ₜ[?m.1127] ↑?x), ⋯⟩
+in the target expression
+  1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩ = eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+
+case hb
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+eLHS : T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)) ≃ₐ[T] T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) :=
+  auxEquivLHS f g T
+eRHS : T ⊗[R] ↥(map (AlgHom.id S S) f ≟ₐ map (AlgHom.id S S) g) ≃ₐ[T]
+  ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+      map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  auxEquivRHS f g T
+this : IsScalarTower R T (T ⊗[R] ↥(map (AlgHom.id R S) f ≟ₐ map (AlgHom.id R S) g))
+u : T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) →ₐ[T]
+  ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)
+x : ↥(f ≟ₐ g)
+⊢ 1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩ = eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+  has type
+    ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g))
+  but is expected to have type
+    ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+        map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g))
+  in the application
+    eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:228:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @Function.Bijective ?m.1173
+    ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+        map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g))
+    ?g
+in the target expression
+  @Function.Bijective (T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)))
+    (↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)))
+    (⇑(AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)) ∘ ⇑eLHS)
+
+case refine_1
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+eLHS : T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)) ≃ₐ[T] T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) :=
+  auxEquivLHS f g T
+eRHS : T ⊗[R] ↥(map (AlgHom.id S S) f ≟ₐ map (AlgHom.id S S) g) ≃ₐ[T]
+  ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+      map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  auxEquivRHS f g T
+this : IsScalarTower R T (T ⊗[R] ↥(map (AlgHom.id R S) f ≟ₐ map (AlgHom.id R S) g))
+u : T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) →ₐ[T]
+  ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)
+heq :
+  map (AlgHom.id T T) (AlgHom.tensorEqualizer R S f g) =
+    (↑eRHS.symm).comp ((AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)).comp ↑eLHS)
+H :
+  Function.Bijective
+    ⇑((↑eRHS.symm).comp
+        ((AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)).comp ↑eLHS))
+⊢ Function.Bijective (⇑(AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)) ∘ ⇑eLHS)

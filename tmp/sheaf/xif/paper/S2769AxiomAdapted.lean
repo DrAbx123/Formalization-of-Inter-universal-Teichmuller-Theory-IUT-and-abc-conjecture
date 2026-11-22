@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2769CardToBasisActual
+#print axioms LeanFormal.IUT.XiFPaper.S2769CardToBasisActual.S2769_finrank_eq_two
+#print axioms LeanFormal.IUT.XiFPaper.S2769CardToBasisActual.S2769_basis_of_card
+#print axioms LeanFormal.IUT.XiFPaper.S2769CardToBasisActual.S2769_S1982_finrank
+#print axioms LeanFormal.IUT.XiFPaper.S2769CardToBasisActual.S2769_S1982Basis

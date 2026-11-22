@@ -1,0 +1,183 @@
+/-
+Copyright (c) 2026 LeanFormal contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LeanFormal IUT/ABC contributors
+-/
+import tmp.sheaf.xif.paper.S2070CurveEtaleFundamentalCardActual
+import tmp.sheaf.xif.paper.S2074CurveFiberFintypeActual
+import tmp.sheaf.xif.paper.S2081CurveCardM2Actual
+import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Terminal
+import Mathlib.CategoryTheory.Functor.EpiMono
+import Mathlib.CategoryTheory.Functor.ReflectsIso.Basic
+
+/-!
+# S2088 -- the six `FiberFunctorCertificate` obligations for
+`curveGeometricFiberFunctorFintype`
+
+The target is the `Prop`-structure `FiberFunctorCertificate` frozen in S2070
+(`tmp/sheaf/xif/paper/S2070CurveEtaleFundamentalCardActual.lean`), whose six
+fields are the (G4)-(G6) obligations of a fiber functor for the geometric fiber
+functor of the once-punctured curve y^2 = x^3 - x:
+
+1. `preservesTerminalObjects`
+2. `preservesPullbacks`
+3. `preservesFiniteCoproducts`
+4. `preservesEpis`
+5. `preservesQuotientsByFiniteGroups`
+6. `reflectsIsos`
+
+The functor is `curveGeometricFiberFunctorFintype K hfin`, the `FintypeCat`-valued
+lift (S2070/S2074) of the Type-valued geometric fiber functor
+`curveGeometricFiberFunctor K Omega x`, whose value at a finite etale cover `Y` is
+the type of lifts of the geometric point `x : Spec Omega -> X` to `Y`; the
+finiteness input `hfin` is discharged unconditionally in S2074/S2081.
+
+## What this file proves
+
+* **Transfer layer.** Since `curveGeometricFiberFunctorFintype K hfin` is
+  `ObjectProperty.lift (fun T => Finite T) _ hfin` and `FintypeCat.incl` is fully
+  faithful, each of the six obligations for the `FintypeCat`-valued functor is
+  equivalent to the corresponding obligation for the *Type-valued* geometric
+  fiber functor.  This is proved generically for limits and colimits
+  (`preservesLimitsOfShape_of_comp_of_reflects`,
+  `preservesColimitsOfShape_of_comp_of_reflects`) and taken from Mathlib for
+  epimorphisms and isomorphisms.
+
+* **Item 1 (terminal objects): proved unconditionally.**
+  `certificate_preservesTerminalObjects`.
+
+* **Item 2 (pullbacks): proved unconditionally.**  `certificate_preservesPullbacks`.
+  The proof is the actual universal property: a compatible pair of lifts of `x`
+  to `X` and `Y` gives a lift to the scheme pullback `X x_Z Y`, uniquely.
+
+* **Items 3-6: exact first missing, isolated as named fields of
+  `RemainingTypeLevel`.**  Each is stated verbatim as the corresponding
+  certificate field for the Type-valued geometric fiber functor, and the
+  implication "remaining type-level statement => certificate field" is proved
+  (`certificate_preservesFiniteCoproducts`, `certificate_preservesEpis`,
+  `certificate_preservesQuotientsByFiniteGroups`, `certificate_reflectsIsos`,
+  `certificate_of_remaining`).  No inhabitant is asserted.
+
+## Honest boundary
+
+No `axiom`, no `sorry`, no `Nonempty` wrapper for the missing items.  The two
+proved items are proved unconditionally for the actual functor; the four
+remaining ones are *hypotheses* of the theorems that consume them.  See the
+final section for the precise mathematical content of each remaining gap.
+-/
+
+noncomputable section
+
+set_option linter.unusedSectionVars false
+set_option linter.unusedVariables false
+set_option linter.checkUnivs false
+set_option maxHeartbeats 1600000
+
+namespace LeanFormal.IUT.XiFPaper.S2088FiberFunctorCertificateActual
+
+open CategoryTheory AlgebraicGeometry CategoryTheory.Limits
+open LeanFormal.IUT.Foundations.Geometry
+open LeanFormal.IUT.XiFPaper.S2070CurveEtaleFundamentalCardActual
+open LeanFormal.IUT.IUTII.Frobenioid.Example36
+
+universe u
+
+/-! ## 1. Transfer along a fully faithful inclusion
+
+If `F ⋙ G` preserves a class of limits and `G` reflects them, then `F`
+preserves them.  Applied to `G = FintypeCat.incl` this reduces the
+`FintypeCat`-valued obligations to the `Type`-valued ones. -/
+
+section Transfer
+
+variable {C : Type*} [Category C] {D : Type*} [Category D] {E : Type*} [Category E]
+variable {J : Type*} [Category J]
+
+/-- Preservation of limits of shape `J` transfers from a composite along a
+reflecting functor. -/
+theorem preservesLimitsOfShape_of_comp_of_reflects (F : C ⥤ D) (G : D ⥤ E)
+    [ReflectsLimitsOfShape J G] [PreservesLimitsOfShape J (F ⋙ G)] :
+    PreservesLimitsOfShape J F where
+  preservesLimit := fun {K} =>
+    ⟨fun {c} hc => by
+      have h1 : IsLimit ((F ⋙ G).mapCone c) := isLimitOfPreserves (F ⋙ G) hc
+      have h2 : IsLimit (G.mapCone (F.mapCone c)) := h1
+      exact ⟨isLimitOfReflects G h2⟩⟩
+
+/-- Preservation of colimits of shape `J` transfers from a composite along a
+reflecting functor. -/
+theorem preservesColimitsOfShape_of_comp_of_reflects (F : C ⥤ D) (G : D ⥤ E)
+    [ReflectsColimitsOfShape J G] [PreservesColimitsOfShape J (F ⋙ G)] :
+    PreservesColimitsOfShape J F where
+  preservesColimit := fun {K} =>
+    ⟨fun {c} hc => by
+      have h1 : IsColimit ((F ⋙ G).mapCocone c) := isColimitOfPreserves (F ⋙ G) hc
+      have h2 : IsColimit (G.mapCocone (F.mapCocone c)) := h1
+      exact ⟨isColimitOfReflects G h2⟩⟩
+
+end Transfer
+
+/-! ## 2. The Type-valued geometric fiber functor: evaluation lemmas -/
+
+section Fiber
+
+variable {S : Scheme.{u}} {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ S}
+
+/-- The Type-valued geometric fiber functor acts on morphisms by postcomposition
+of lifts. -/
+theorem geometricFiberFunctor_map_apply {Y Z : FiniteEtaleCover S} (f : Y ⟶ Z)
+    (s : geometricFiberObject Omega x Y) :
+    (geometricFiberFunctor Omega x).map f s = geometricFiberMap f s := rfl
+
+/-- The underlying scheme morphism of the geometric fiber after a morphism of
+covers. -/
+theorem geometricFiberMap_val {Y Z : FiniteEtaleCover S} (f : Y ⟶ Z)
+    (s : geometricFiberObject Omega x Y) :
+    (geometricFiberMap f s).1 = s.1 ≫ Over.Hom.left f.1 := rfl
+
+/-! ## 3. Item 1: preservation of terminal objects -/
+
+/-- The geometric fiber over any terminal finite etale cover is a terminal object
+of `Type`: a terminal cover is isomorphic to the identity cover, whose fiber is
+the singleton of the geometric point itself. -/
+noncomputable def isTerminal_obj_of_isTerminal {T : FiniteEtaleCover S} (hT : IsTerminal T) :
+    IsTerminal ((geometricFiberFunctor Omega x).obj T) := by
+  have h0 : IsTerminal (terminalCover S) := finiteEtaleCover_terminalCover_isTerminal S
+  have e : T ≅ terminalCover S := hT.uniqueUpToIso h0
+  have h1 : IsTerminal ((geometricFiberFunctor Omega x).obj (terminalCover S)) := by
+    have hy : Unique ((geometricFiberFunctor Omega x).obj (terminalCover S)) := by
+      change Unique {s : Spec (CommRingCat.of Omega) ⟶ S // s ≫ 𝟙 S = x}
+      refine ⟨⟨⟨x, Category.comp_id x⟩⟩, ?_⟩
+      intro a
+      apply Subtype.ext
+      simpa using a.2
+    haveI hU : ∀ Y : Type u,
+        Unique (Y ⟶ (geometricFiberFunctor Omega x).obj (terminalCover S)) := by
+      intro Y
+      refine ⟨⟨TypeCat.ofHom (fun _ => default)⟩, ?_⟩
+      intro a
+      apply ConcreteCategory.hom_ext
+      intro y
+      exact Subsingleton.elim _ _
+    exact IsTerminal.ofUnique _
+  exact IsTerminal.ofIso h1 ((geometricFiberFunctor Omega x).mapIso e).symm
+
+/-- The geometric fiber functor preserves the limit of the empty diagram. -/
+theorem preservesLimit_empty :
+    PreservesLimit (Functor.empty.{0} (FiniteEtaleCover S))
+      (geometricFiberFunctor Omega x) := by
+  refine preservesLimit_of_preserves_limit_cone (t := asEmptyCone (terminalCover S))
+    (finiteEtaleCover_terminalCover_isTerminal S) ?_
+  exact (isLimitMapConeEmptyConeEquiv (geometricFiberFunctor Omega x) (terminalCover S)).symm
+    (isTerminal_obj_of_isTerminal (finiteEtaleCover_terminalCover_isTerminal S))
+
+/-- **Item 1 at the Type level.**  The geometric fiber functor preserves
+terminal objects. -/
+theorem preservesTerminalObjects_typeLevel :
+    PreservesLimitsOfShape (Discrete PEmpty.{1}) (geometricFiberFunctor (X := S) Omega x) := by
+  haveI : PreservesLimit (Functor.empty.{0} (FiniteEtaleCover S))
+      (geometricFiberFunctor Omega x) := preservesLimit_empty (Omega := Omega) (x := x)
+  exact preservesLimitsOfShape_pempty_of_preservesTerminal _
+
+end Fiber

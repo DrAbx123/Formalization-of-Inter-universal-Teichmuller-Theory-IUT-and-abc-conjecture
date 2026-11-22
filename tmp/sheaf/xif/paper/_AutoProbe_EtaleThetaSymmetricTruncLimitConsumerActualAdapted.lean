@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtaleThetaSymmetricTruncLimitConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitConsumerActual.etaleThetaSymmetricTrunc_coeff_const_of_ge
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitConsumerActual.etaleThetaSymmetricCoeffLimit_eq_trunc
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitConsumerActual.etaleThetaSymmetricCoeffLimit_eq_trunc_choose

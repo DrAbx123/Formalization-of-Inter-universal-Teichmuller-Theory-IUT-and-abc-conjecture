@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2589S2404IdentityReductionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2589S2404IdentityReductionActual.s2589_identity_iff_packet
+#print axioms LeanFormal.IUT.XiFPaper.S2589S2404IdentityReductionActual.s2589_identity_iff_badQ

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll01cHeightMulEstimatesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01cHeightMulEstimatesActual.s3135_hBox_mul_le_reuse
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01cHeightMulEstimatesActual.s3135_paperHeight_mul_le
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01cHeightMulEstimatesActual.s3135_hNon_mul_le_reuse

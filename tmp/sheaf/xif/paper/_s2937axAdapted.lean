@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2937C3HheightNormalizationBridgeConsumer
+#print axioms LeanFormal.IUT.XiFPaper.S2937C3HheightNormalizationBridgeConsumer.c3NormalizedHheightTarget_of_hheightTarget
+#print axioms LeanFormal.IUT.XiFPaper.S2937C3HheightNormalizationBridgeConsumer.hheightTarget_of_c3NormalizedHheightTarget

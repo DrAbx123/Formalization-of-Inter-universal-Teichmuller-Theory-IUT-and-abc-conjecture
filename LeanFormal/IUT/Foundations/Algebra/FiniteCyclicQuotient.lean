@@ -2,6 +2,7 @@
 
 import Mathlib.Data.ZMod.QuotientGroup
 import Mathlib.Tactic
+import LeanFormal.IUT.Audit.Status
 
 /-!
   Polymorphic finite cyclic quotients.
@@ -251,3 +252,17 @@ end FiniteCyclicQuotient
 end
 
 end LeanFormal
+
+namespace LeanFormal.IUT.Audit
+
+def finiteCyclicQuotient : Obligation :=
+  { id := "Foundations.Algebra.finite-cyclic-quotient"
+    source := "Standard finite cyclic quotients; Tate/Kummer packet prerequisites"
+    status := VerificationStatus.provedKernel
+    note :=
+      "A polymorphic finite cyclic quotient argument is provided for arbitrary " ++
+        "additive groups, together with the integer-kernel consequences used by " ++
+        "Tate/Kummer packets. This is an algebraic kernel; no source realization " ++
+        "is claimed. Name-level registration for existing dependsOn users." }
+
+end LeanFormal.IUT.Audit

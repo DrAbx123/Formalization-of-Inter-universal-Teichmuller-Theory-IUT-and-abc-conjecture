@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1720SourceArithmeticActual
+import tmp.sheaf.xif.paper.S1942PrePsiFiveActual
+import Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind
+open LeanFormal.IUT.XiFPaper.S1720SourceArithmeticActual
+open Polynomial
+#check Polynomial.Separable.map
+#check IsSplittingField
+#check Polynomial.SplittingField.isSplittingField
+#check Polynomial.IsSplittingField

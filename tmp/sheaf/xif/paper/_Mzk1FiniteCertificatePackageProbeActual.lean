@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1FiniteCertificatePackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1FiniteCertificatePackageActual.finiteCertificate_contract_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1FiniteCertificatePackageActual.finiteCertificate_contract_bounds

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2587CanonicalCoverIsoFromDataActual
+open LeanFormal.IUT.XiFPaper.S2587CanonicalCoverIsoFromDataActual
+#print axioms S2587CanonicalCoverIsoFromData

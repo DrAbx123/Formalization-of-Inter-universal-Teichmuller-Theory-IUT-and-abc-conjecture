@@ -1,0 +1,13 @@
+tmp\sheaf\n8\closure\SourceInputBinding.lean:69:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:72:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.place`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:74:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.frobenioid`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:69:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:80:8: warning: declaration uses `sorry`

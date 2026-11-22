@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1SchemeSideMapsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SchemeSideMapsActual.schemeSideMaps_sectionMap

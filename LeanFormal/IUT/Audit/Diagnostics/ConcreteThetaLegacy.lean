@@ -42,7 +42,6 @@ theorem thetaValue_pos {q : Real} (hq : 0 < q) (j : Int) :
 theorem log_thetaValue {q : Real} (hq : 0 < q) (j : Int) :
     Real.log (thetaValue q j) = (gaussExponent j).toNat * Real.log q := by
   rw [thetaValue, Real.log_pow]
-  exact (ne_of_gt hq)
 
 theorem square_label_preserves_value {q : Real} (j : Int) :
     thetaValue q (-j) = thetaValue q j :=

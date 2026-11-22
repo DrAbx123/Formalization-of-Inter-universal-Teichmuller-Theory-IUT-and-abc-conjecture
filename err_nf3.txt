@@ -1,0 +1,22 @@
+TemperedFundamentalGroups\SemistableReduction\NilpotentFlatness.lean:183:4: error: Type mismatch
+  rTensor_exact M ?m.514 hπ
+has type
+  Exact ⇑(LinearMap.rTensor M ?m.502) ⇑(LinearMap.rTensor M π)
+but is expected to have type
+  Exact ⇑(LinearMap.rTensor M K.subtype) ⇑(LinearMap.rTensor M π)
+TemperedFundamentalGroups\SemistableReduction\NilpotentFlatness.lean:489:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  SMul (A ⧸ I ^ n) (Q ⊗[A[X]] M)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+TemperedFundamentalGroups\SemistableReduction\NilpotentFlatness.lean:490:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  SMul (A ⧸ I ^ n) (Q ⊗[A[X]] M)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+TemperedFundamentalGroups\SemistableReduction\NilpotentFlatness.lean:498:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module (A ⧸ I ^ n) (Q ⊗[A[X]] M)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+TemperedFundamentalGroups\SemistableReduction\NilpotentFlatness.lean:500:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Module (A ⧸ I ^ n) (Q ⊗[A[X]] M)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

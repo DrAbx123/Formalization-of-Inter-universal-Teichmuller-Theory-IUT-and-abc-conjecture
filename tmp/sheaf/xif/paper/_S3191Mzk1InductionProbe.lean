@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22InductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionActual.partial_of_shape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionActual.comp_partial
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionActual.mzk1Lemma22_partial_induction

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.RepresentableCoverChosenCategoryActual
+import tmp.sheaf.xif.paper.S2727ScalingTargetsActual
+import tmp.sheaf.xif.paper.S2733ScalingActual
+#print axioms LeanFormal.IUT.XiFPaper.RepresentableCoverChosenCategoryActual.S3127Category
+#print axioms LeanFormal.IUT.XiFPaper.S2727ScalingTargetsActual.S2727HheightTargetScaled
+#print axioms LeanFormal.IUT.XiFPaper.S2727ScalingTargetsActual.S2727HvolTargetScaled
+#print axioms LeanFormal.IUT.XiFPaper.S2733ScalingActual.S2733_scalingHaar

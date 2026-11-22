@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.ExpEst02ElementaryEstimatesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.ExpEst02ElementaryEstimatesActual.ExpEstPNTUpperPaperInput
+#print axioms LeanFormal.IUT.XiFPaper.ExpEst02ElementaryEstimatesActual.ExpEstPrimeReciprocalSumPaperInput
+#print axioms LeanFormal.IUT.XiFPaper.ExpEst02ElementaryEstimatesActual.ExpEstChebyshevThetaPaperInput

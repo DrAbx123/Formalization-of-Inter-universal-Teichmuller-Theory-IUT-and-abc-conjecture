@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2619DetSurjectiveOfTwelveCycleActual
+#print axioms LeanFormal.IUT.XiFPaper.S2619DetSurjectiveOfTwelveCycleActual.S2619DetSurjective_of_twelveCycleInput

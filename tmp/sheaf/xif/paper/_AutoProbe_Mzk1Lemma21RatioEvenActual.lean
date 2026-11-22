@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioEvenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioEvenActual.belyi21R_pos_of_one_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioEvenActual.belyi21R_nonneg_on_unit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioEvenActual.belyi21R_pos_of_mem_unit

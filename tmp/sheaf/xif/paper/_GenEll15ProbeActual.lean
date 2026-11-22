@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll15GeometricCoreAssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15GeometricCoreAssemblyActual.genEll15_recast_of_data
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15GeometricCoreAssemblyActual.genEll15_recast_of_witness
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15GeometricCoreAssemblyActual.genEll15Rows_length

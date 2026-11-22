@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.Mzk1G1FermatCurveSmoothActual
+import tmp.sheaf.xif.paper.Mzk1P1ProperFinalActual
+import tmp.sheaf.xif.paper.Mzk1G1JHeightD3Actual
+import tmp.sheaf.xif.paper.Mzk1G1FermatCurveSmooth2Actual
+import tmp.sheaf.xif.paper.Mzk1G1FermatPiPreimageChartActual
+import tmp.sheaf.xif.paper.Mzk1G1FermatPiProperActual
+import tmp.sheaf.xif.paper.Mzk1G1OmegaLineBundleActual
+import tmp.sheaf.xif.paper.Mzk1G1OmegaRamificationLocalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothActual.chartSpec_smoothOfRelativeDimension
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ProperFinalActual.p1GluedToBase_isProper
+#print axioms LeanFormal.IUT.XiFPaper.G1JHeightD3Actual.jHeight_relation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmooth2Actual.preR2_jacobian
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatPiPreimageChartActual.overlapToChart0_opensRange
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatPiProperActual.fermatCurveToSpec_isProper_cond
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1OmegaLineBundleActual.canonicalLineBundle_data
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1OmegaRamificationLocalActual.boundary_zero_uniformizer_power

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2618RangeDetActual
+#print axioms LeanFormal.IUT.XiFPaper.S2617SignDetActual.S2617DetSurjective_of_twelveCycle
+#print axioms LeanFormal.IUT.XiFPaper.S2618RangeDetActual.S2618DetSurjective_of_range_cycle12

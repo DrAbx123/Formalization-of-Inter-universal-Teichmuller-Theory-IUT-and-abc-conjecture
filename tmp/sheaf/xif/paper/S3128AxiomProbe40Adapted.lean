@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128LocalQuotientMapActual
+open LeanFormal.IUT.XiFPaper.S3128LocalQuotientMapActual
+#print axioms S3128LocalQuotientMap_exists

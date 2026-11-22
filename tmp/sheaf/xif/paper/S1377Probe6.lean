@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1372XCoordinateFormulaActual
+#check AddGroup.zsmul_succ'
+#check AddMonoid.zsmul_succ'
+#check zsmul_succ'
+#check AddGroup.zsmul
+#check AddGroup.zsmul_succ
+#check zsmulRec
+#check nsmulBinRec_succ
+#check WeierstrassCurve.Affine.Point.instAddCommGroup

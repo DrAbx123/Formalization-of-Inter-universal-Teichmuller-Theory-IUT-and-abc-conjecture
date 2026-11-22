@@ -1,0 +1,10 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:77:25: error(lean.unknownIdentifier): Unknown constant `ENNReal.ofReal_ne_zero.mpr`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:83:23: error: Function expected at
+  zero_le
+but this term has type
+  0 ≤ ?m.239
+
+Note: Expected a function because this term is being applied to the argument
+  (ENNReal.ofReal (primeFactor T b))
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:122:16: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:127:10: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead

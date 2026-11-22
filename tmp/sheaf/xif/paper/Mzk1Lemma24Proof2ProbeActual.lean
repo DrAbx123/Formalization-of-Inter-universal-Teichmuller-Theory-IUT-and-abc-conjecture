@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24Proof2Actual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24Proof2Actual.s3135_lemma24_induction
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24Proof2Actual.s3135_lemma24_arithmetic_layer

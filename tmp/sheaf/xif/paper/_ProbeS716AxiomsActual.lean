@@ -1,0 +1,6 @@
+/- Axiom probe for S716PaperThetaHullLogSourceAuditActual (sophie). -/
+import tmp.sheaf.xif.paper.S716PaperThetaHullLogSourceAuditActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S716PaperThetaHullLogSourceAuditActual.paperPerBThetaHullLog_eq_rootNormHullLog
+#print axioms LeanFormal.IUT.XiFPaper.S716PaperThetaHullLogSourceAuditActual.paperPerBThetaHullLog_eq_ambientHullLog
+#print axioms LeanFormal.IUT.XiFPaper.S716PaperThetaHullLogSourceAuditActual.paperGlobalThetaHullLog_eq

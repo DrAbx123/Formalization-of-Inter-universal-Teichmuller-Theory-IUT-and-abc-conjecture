@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh11ThetaRealizationRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh11ThetaRealizationRowsActual.etTh11_thetaPowerKernel_mono
+#print axioms LeanFormal.IUT.XiFPaper.EtTh11ThetaRealizationRowsActual.etTh11_ellipticPowerKernel_mono
+#print axioms LeanFormal.IUT.XiFPaper.EtTh11ThetaRealizationRowsActual.etTh11_modLThetaProjection_surjective

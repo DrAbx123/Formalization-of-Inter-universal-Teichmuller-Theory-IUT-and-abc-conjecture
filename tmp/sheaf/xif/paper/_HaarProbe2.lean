@@ -1,0 +1,7 @@
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorTopology
+import Mathlib.MeasureTheory.Measure.Haar.Basic
+open MeasureTheory
+#check MeasureTheory.Measure.addHaarMeasure
+#check MeasureTheory.Measure.isAddHaarMeasure_addHaarMeasure
+#check MeasureTheory.Measure.addHaarMeasure_self
+#check isCompact_closedBall

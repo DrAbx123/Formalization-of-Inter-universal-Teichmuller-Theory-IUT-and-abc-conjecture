@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBelyiSmallActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.exists_belyi_betaAvoiding_card_le_two
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.exists_belyi_three_of_gt_of_odd
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.exists_belyi_three_of_lt_of_odd
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.belyiPolynomial_critIn01

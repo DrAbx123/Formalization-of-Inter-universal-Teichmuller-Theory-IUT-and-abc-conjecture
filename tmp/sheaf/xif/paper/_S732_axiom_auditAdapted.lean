@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S732NCGLogVolumeNoGo
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.cor312_scaling_iff
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.PaperLogVolume.logVol_hull
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.no_additive_of_scaling_and_translation
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.trace_functional_blind_to_roots
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.norm_mul_of_pow_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.S732NCGLogVolumeNoGo.no_locallyConstant_int_eq_neg_log

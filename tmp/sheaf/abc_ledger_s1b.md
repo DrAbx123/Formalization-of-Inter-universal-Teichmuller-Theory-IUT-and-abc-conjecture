@@ -1,0 +1,7 @@
+
+## 2026-11-10 20:25 — abc S1b status: class-B kept with exact blocker; S1a remains proved; assembly residue = S1b + S2 + S3
+
+- S1a PROVED (Mzk1Lemma24StepProviderActual, CITABLE 5 decls probe trio): s3135_criticalPoint_degree_drop — f0'(x)=0 ⇒ natDegree(minpoly x) ≤ natDegree(minpoly α0) − 1 (minpoly.dvd + derivative_eq_zero + natDegree_le_of_dvd + natDegree_derivative).
+- S1b (ValueDegreeDropStatement: [Q(f0(x)):Q] ≤ d0−1) EXACT BLOCKER: need (i) membership f0(x) ∈ ℚ⟮x⟯ (f0(x) = aeval x f0 is a polynomial image of x; no ready Mathlib lemma found: IntermediateField has no aeval-membership lemma; route via polynomial induction/closure over the intermediate field), (ii) IntermediateField.finrank_le_of_le_right (K := ℚ) for ℚ⟮f0(x)⟯ ≤ ℚ⟮x⟯ (FiniteDimensional ℚ ℚ⟮x⟯ instance from Integrality; note Qbar itself is not finite-dimensional so the lemma must be applied at the intermediate field level), (iii) IntermediateField.adjoin.finrank for both simple extensions to identify finrank with natDegree minpoly. These three API pieces are the only gap; statement remains class-B named (honest).
+- S2 (point-level measure decrease of S'=f0(S∪S0)) and S3 (transport composition via P1Morphism.comp + comp_* + normalization transfer) remain as before; consumers: Mzk1Lemma24AssemblyActual.mzk1Lemma24_assembly.
+- BaseCaseComplex abandoned (superseded by hull's BaseProvider); registry frozen 14041; no edits.

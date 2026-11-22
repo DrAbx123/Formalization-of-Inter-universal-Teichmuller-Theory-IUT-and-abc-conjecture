@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2372KummerFiniteActual
+#print axioms LeanFormal.IUT.XiFPaper.S2372KummerFiniteActual.S2372KummerQuotient_finite

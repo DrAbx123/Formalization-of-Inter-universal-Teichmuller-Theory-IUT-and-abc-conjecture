@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.PaperLambdaOHullHaarActual
+#check @LeanFormal.IUT.XiFPaper.PaperLambdaOHullHaarActual.paperLambdaOScaledRegion
+#check @LeanFormal.IUT.XiFPaper.PaperLambdaOHullHaarActual.paperLambdaOScaledRegion_measure_pos_lt_top

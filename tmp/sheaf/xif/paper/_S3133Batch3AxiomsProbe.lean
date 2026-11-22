@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.S3133QPilotOneColumnLogKummerActual
+import tmp.sheaf.xif.paper.S3133QPilotKummerLayerBridgeActual
+
+/-! Axioms probe for the third qpilot S3133 batch: actual 1-column log-Kummer
+correspondence attached to the q-pilot (1,0) strip and the candidate/Kummer-layer
+bridge.  No proofs, no sorry. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotOneColumnLogKummer_kummer
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotColumnKummerArrow_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotCandidate_timesMu_eq_kummerCodomainFiber
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotCandidate_timesMuAction_eq_actualTimesMuActionAt
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotIPLData_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotIPLData_qPilotStrip
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotOneColumnLogKummerActual.qPilotOneColumn_targetMagnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotCandidate_underlying_strip
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotCandidate_kummerCodomainFiber
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotCandidate_kummerCodomainAction
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotBridgeKummerArrow_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotCandidate_actualPart
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotBridge_normalized_readout
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotKummerLayerBridgeActual.qPilotBridge_normalized_magnitude_pos

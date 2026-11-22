@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreLineBundleZeroDatumJointActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleZeroDatumJointActual.ledgerRows
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleZeroDatumJointActual.ledgerRows_length

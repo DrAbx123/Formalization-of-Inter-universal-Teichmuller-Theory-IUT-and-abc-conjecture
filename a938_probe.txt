@@ -1,0 +1,10 @@
+'LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1_iff_qside_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1_allocation_of_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1OrderRows_length' does not depend on any axioms
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.no_natRootSystem_of_no_sqrt' depends on axioms: [propext]
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.completionFirstFieldObstruction_false_of_no_sqrt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.rows_length' does not depend on any axioms

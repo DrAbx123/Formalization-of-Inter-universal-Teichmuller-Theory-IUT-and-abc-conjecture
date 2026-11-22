@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1LiteralIQThirdTriangleActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQThirdTriangleActual.literalHull_lowerBound_transfer
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQThirdTriangleActual.literalIQ_thirdTriangle_package

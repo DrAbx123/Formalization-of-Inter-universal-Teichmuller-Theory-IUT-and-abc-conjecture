@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2726ComparisonRhoActual
+#check LeanFormal.IUT.XiFPaper.S2726ComparisonRhoActual.comparisonRho
+#check LeanFormal.IUT.XiFPaper.S2726C3TensorComparisonRegionRhoActual.S2726C3TensorComparisonRegionRho

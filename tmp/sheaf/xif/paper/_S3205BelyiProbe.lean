@@ -1,0 +1,6 @@
+import tmp.external.ported.tauceti_belyi_core.TauCeti.Algebra.Polynomial.Belyi
+
+#print axioms TauCeti.belyiPolynomial
+#print axioms TauCeti.X_mul_one_sub_X_mul_derivative_belyiPolynomial
+#print axioms TauCeti.rootSet_derivative_belyiPolynomial_subset
+#print axioms TauCeti.exists_polynomial_aeval_mem_criticalValues_subset

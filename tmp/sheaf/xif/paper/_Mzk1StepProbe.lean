@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StepConstructionActual
+
+-- Mzk1 Lemma 2.2 STEP construction probe (stage4-interface polynomial model).
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.card_image_lt_of_not_injOn
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.card_image_lt_of_collision
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22Step_card_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22StepOfData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22StepOfPoly
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22Step_exists
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22StepExists_packaged
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22Step_compose
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22StepObligations
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepConstructionActual.lemma22StepCorpusRefs

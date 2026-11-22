@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionBaseCaseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseCaseActual.Qbar
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseCaseActual.exists_rat_eq_of_degP_le_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBaseCaseActual.baseCaseProvider_proved

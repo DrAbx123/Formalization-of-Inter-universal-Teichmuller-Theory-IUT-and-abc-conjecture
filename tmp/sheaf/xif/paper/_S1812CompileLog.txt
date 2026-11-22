@@ -1,0 +1,141 @@
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812EvalProjectionMap (A : S1728Cover) :
+  S1755Eval (S1755BaseChange A).pullbackScheme S1726AffineOver (S1755BaseChange A).projectionMap.transformation =
+    S1733ModelOver A
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812EvalStrongTransOfHom {S T : SchemeOverField S1726K}
+  (g : S ⟶ T) : S1755Eval S T (S1742StrongTransOfHom g) = g
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOver (A B : S1728Cover) : Type
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812triangle_postcomp (A B : S1728Cover)
+  (g : S1733Model A ⟶ S1733Model B) :
+  (Over.Hom.left g ≫ Over.Hom.left (S1733ModelOver B)) ≫ Over.hom S1726AffineOver =
+    Over.Hom.left (S1733ModelOver A) ≫ Over.hom S1726AffineOver
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812overTriangle_of_slice (A B : S1728Cover)
+  (g : S1733Model A ⟶ S1733Model B)
+  (hg : Over.Hom.left g ≫ Over.Hom.left (S1733ModelOver B) = Over.Hom.left (S1733ModelOver A)) :
+  Over.Hom.left g ≫ Over.hom (S1733Model B) = Over.hom (S1733Model A)
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_triangle (A B : S1728Cover)
+  (f : S1728CoverMap A B) : S1755ModelHomOfCoverMap A B f ≫ S1733ModelOver B = S1733ModelOver A
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMapSlice (A B : S1728Cover)
+  (f : S1728CoverMap A B) : S1812ModelHomOver A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812StrongTransProj (A B : S1728Cover)
+  (g : S1733Model A ⟶ S1733Model B) (hg : g ≫ S1733ModelOver B = S1733ModelOver A) :
+  (S1742StrongTransOfHom g).vcomp (S1755BaseChange B).projectionMap.transformation ≅
+    (S1755BaseChange A).projectionMap.transformation
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomToCoverMap (A B : S1728Cover)
+  (g : S1812ModelHomOver A B) : S1728CoverMap A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812LiftIsoStrongTransOfHom (h : S1755SourceRetraction)
+  (A B : S1728Cover) (g : S1812ModelHomOver A B) :
+  S1755Lift A B (S1812ModelHomToCoverMap A B g) ≅ S1742StrongTransOfHom ↑g
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_toCoverMap (h : S1755SourceRetraction)
+  (A B : S1728Cover) (g : S1812ModelHomOver A B) : S1755ModelHomOfCoverMap A B (S1812ModelHomToCoverMap A B g) = ↑g
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ConeMorphism {A B : S1728Cover} {f g : S1728CoverMap A B}
+  (e : f.map ≅ g.map) : (S1755Square B).ConeMorphism (S1755Cone A B f) (S1755Cone A B g)
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812LiftIsoOfMapIso {A B : S1728Cover} {f g : S1728CoverMap A B}
+  (e : f.map ≅ g.map) : Nonempty (S1755Lift A B f ≅ S1755Lift A B g)
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_eq_of_coverMapRel {A B : S1728Cover}
+  {f g : S1728CoverMap A B} (h : S1728CoverMapRel f g) : S1755ModelHomOfCoverMap A B f = S1755ModelHomOfCoverMap A B g
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_eq_iff_coverMapRel {A B : S1728Cover}
+  (f g : S1728CoverMap A B) : S1755ModelHomOfCoverMap A B f = S1755ModelHomOfCoverMap A B g ↔ S1728CoverMapRel f g
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812CoverMapClass (A B : S1728Cover) : Type 1
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotExtraction (A B : S1728Cover) :
+  S1812CoverMapClass A B → S1812ModelHomOver A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotSliceEquiv (h : S1755SourceRetraction) (A B : S1728Cover) :
+  S1812CoverMapClass A B ≃ S1812ModelHomOver A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotExtraction_bijective (h : S1755SourceRetraction)
+  (A B : S1728Cover) : Function.Bijective (S1812QuotExtraction A B)
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812RawInjective (A B : S1728Cover) : Prop
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812RawInjective_iff_discrete :
+  (∀ (A B : S1728Cover), S1812RawInjective A B) ↔ S1766CoverMapDiscrete
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812LeftInverse_of_rawInjective (h : S1755SourceRetraction)
+  (hraw : ∀ (A B : S1728Cover), S1812RawInjective A B) (A B : S1728Cover) (f : S1728CoverMap A B) :
+  S1812ModelHomToCoverMap A B (S1812ModelHomOfCoverMapSlice A B f) = f
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceEquiv (h : S1755SourceRetraction)
+  (hraw : ∀ (A B : S1728Cover), S1812RawInjective A B) (A B : S1728Cover) : S1728CoverMap A B ≃ S1812ModelHomOver A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceBijective (A B : S1728Cover) : Prop
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceBijective_iff (h : S1755SourceRetraction)
+  (A B : S1728Cover) : S1812SliceBijective A B ↔ S1812RawInjective A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812CoverModelHomEquivDataOf (h : S1755SourceRetraction)
+  (htri : ∀ (A B : S1728Cover) (g : S1733Model A ⟶ S1733Model B), g ≫ S1733ModelOver B = S1733ModelOver A)
+  (hraw : ∀ (A B : S1728Cover), S1812RawInjective A B) (A B : S1728Cover) : S1755CoverModelHomEquivData A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomEquivMissing_implies_triangle
+  (h : S1755ModelHomEquivMissing) (A B : S1728Cover) (g : S1733Model A ⟶ S1733Model B) :
+  g ≫ S1733ModelOver B = S1733ModelOver A
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812RawInjective_of_modelHomEquiv (h : S1755ModelHomEquivMissing)
+  (A B : S1728Cover) : S1812RawInjective A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomEquivMissing_iff (h : S1755SourceRetraction) :
+  S1755ModelHomEquivMissing ↔
+    (∀ (A B : S1728Cover) (g : S1733Model A ⟶ S1733Model B), g ≫ S1733ModelOver B = S1733ModelOver A) ∧
+      ∀ (A B : S1728Cover), S1812RawInjective A B
+LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceBijective_of_rawInjective (h : S1755SourceRetraction)
+  (hraw : ∀ (A B : S1728Cover), S1812RawInjective A B) (A B : S1728Cover) : S1812SliceBijective A B
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812EvalProjectionMap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812EvalStrongTransOfHom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812triangle_postcomp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812overTriangle_of_slice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_triangle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomToCoverMap_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812StrongTransProj' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomToCoverMap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812LiftIsoStrongTransOfHom' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_toCoverMap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ConeMorphism' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812LiftIsoOfMapIso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_eq_of_coverMapRel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomOfCoverMap_eq_iff_coverMapRel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotExtraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotSliceEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812QuotExtraction_bijective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812RawInjective_iff_discrete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812SliceBijective_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812CoverModelHomEquivDataOf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomEquivMissing_implies_triangle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812RawInjective_of_modelHomEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1812InverseModelHomActual.S1812ModelHomEquivMissing_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

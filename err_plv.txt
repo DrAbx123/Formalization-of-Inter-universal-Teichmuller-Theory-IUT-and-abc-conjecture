@@ -1,0 +1,1 @@
+PadicLogVolume.lean:6:0: error: failed to read file 'D:\lean\.lake\packages\mathlib\.lake\build\lib\lean\Mathlib\LinearAlgebra\TensorProduct\Opposite.olean'

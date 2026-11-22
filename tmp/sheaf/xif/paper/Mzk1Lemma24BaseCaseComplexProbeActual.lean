@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24BaseCaseComplexActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BaseCaseComplexActual.s3135_base_case_shape_complex

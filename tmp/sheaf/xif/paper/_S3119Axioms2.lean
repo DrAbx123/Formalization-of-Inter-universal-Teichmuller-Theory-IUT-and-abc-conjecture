@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3119YDecompositionActual
+import tmp.sheaf.xif.paper.S3119FiltSubmoduleActual
+import tmp.sheaf.xif.paper.S3128QuotientSheafObjActual
+#print axioms LeanFormal.IUT.XiFPaper.S3119YDecompositionActual.S3119_basis_decomposition
+#print axioms LeanFormal.IUT.XiFPaper.S3119YDecompositionActual.S3119_basis_decomposition_unique
+#print axioms LeanFormal.IUT.XiFPaper.S3119FiltSubmoduleActual.S3119_filt_two_eq_span
+#print axioms LeanFormal.IUT.XiFPaper.S3119FiltSubmoduleActual.S3119_x0_poleOrder_two

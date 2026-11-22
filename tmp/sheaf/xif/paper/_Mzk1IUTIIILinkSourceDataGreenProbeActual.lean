@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1IUTIIILinkSourceDataGreenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIILinkSourceDataGreenActual.iutiiiLinkSourceDataGreen_cor312

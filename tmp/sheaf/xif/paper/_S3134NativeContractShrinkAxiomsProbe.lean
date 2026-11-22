@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3134NativeContractShrinkActual
+
+/-! Axioms probe for the task-16 native-contract missing shrink. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeBadPlaces_eq_bad
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeBadFinite
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeStableReduction
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeStableReduction_proved
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeTorsionImage
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeTorsionImage_proved
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeGeometricCusp
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeInitialThetaInputReduced
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134SameCContractBridge_ofReduced
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134NativeContractShrink_status
+#print axioms LeanFormal.IUT.XiFPaper.S3134NativeContractShrinkActual.S3134Step3115_mainlineQC_le_thetaPilot_viaSameCReduced

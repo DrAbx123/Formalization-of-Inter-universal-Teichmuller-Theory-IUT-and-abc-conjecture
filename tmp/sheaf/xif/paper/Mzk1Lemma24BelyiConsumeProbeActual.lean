@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24BelyiConsumeActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BelyiConsumeActual.s3135_belyiPolynomial_1_1_data
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BelyiConsumeActual.s3135_belyiPolynomial_criticalPoints_subset

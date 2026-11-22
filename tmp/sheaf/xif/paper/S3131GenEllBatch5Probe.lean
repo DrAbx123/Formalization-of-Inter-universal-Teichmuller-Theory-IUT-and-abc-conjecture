@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131GenEllPaperInputActual
+import tmp.sheaf.xif.paper.S3131GenEllCorpusCitationsActual
+import tmp.sheaf.xif.paper.S3131GenEllDependencyUpdateActual
+import tmp.sheaf.xif.paper.S3131QSideHypothesisActual
+import tmp.sheaf.xif.paper.S3131ThetaSideResidualBundleActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllPaperInputActual.GenEllEquivalenceStatement
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllCorpusCitationsActual.S3131GenEllCitations_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllDependencyUpdateActual.S3131GenEllDependencyUpdate_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131QSideHypothesisActual.magnitude_ofQSideHypothesis
+#print axioms LeanFormal.IUT.XiFPaper.S3131ThetaSideResidualBundleActual.S3131ThetaSideResidualBundle_length

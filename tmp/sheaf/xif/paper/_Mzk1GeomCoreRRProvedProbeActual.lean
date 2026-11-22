@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreRRProvedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRProvedActual.zero_divisor_exists_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRProvedActual.rrProvedRows_length

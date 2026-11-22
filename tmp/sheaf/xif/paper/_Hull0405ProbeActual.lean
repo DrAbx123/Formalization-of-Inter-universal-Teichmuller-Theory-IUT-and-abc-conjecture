@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Hull04CertificateWiringActual
+import tmp.sheaf.xif.paper.Hull05WeightedIdentityActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull04CertificateWiringActual.hull04SignedCertificate_comparison
+#print axioms LeanFormal.IUT.XiFPaper.Hull04CertificateWiringActual.hull04ComparisonPayload_corollary312
+#print axioms LeanFormal.IUT.XiFPaper.Hull05WeightedIdentityActual.hull05_concreteRow
+#print axioms LeanFormal.IUT.XiFPaper.Hull05WeightedIdentityActual.hull05InputRows_length

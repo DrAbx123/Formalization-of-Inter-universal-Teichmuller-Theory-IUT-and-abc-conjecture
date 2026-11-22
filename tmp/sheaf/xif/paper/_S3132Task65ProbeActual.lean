@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3132FiberBridgeFromRepoToolsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberBridgeFromRepoToolsActual.c3FiberRingEquivActualCompletion
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberBridgeFromRepoToolsActual.nonempty_fiberFamily_iff_nonempty_completionFamily
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberBridgeFromRepoToolsActual.missingFiberComparison_iff_completionComparison

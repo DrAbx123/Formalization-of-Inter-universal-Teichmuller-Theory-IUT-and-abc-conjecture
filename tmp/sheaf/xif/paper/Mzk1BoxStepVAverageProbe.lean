@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BoxStepVAverageActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxStepVAverageActual.stepV_weightedAverage_le_of_distinguished
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxStepVAverageActual.stepV_procession_le_of_distinguished

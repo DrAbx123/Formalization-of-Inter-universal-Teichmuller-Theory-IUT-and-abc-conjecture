@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.S3136LGPGlobalUnitsToLocalUnitsActual
+import tmp.sheaf.xif.paper.S3136LGPGlobalUnitsToBadPlaceUnitsActual
+import tmp.sheaf.xif.paper.S3136LGPThetaQuotientNegActual
+import tmp.sheaf.xif.paper.S3136LGPThetaQuotientQvActual
+import tmp.sheaf.xif.paper.S3136LGPBadFamilyLogPlaceActual
+import tmp.sheaf.xif.paper.S3136LGPTensorOLatticeBadFamilyActual
+import tmp.sheaf.xif.paper.S3136LGPThetaQuotientOneActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToLocalUnitsActual.lgpGlobalUnitsToLocalUnits
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToLocalUnitsActual.lgpC3Fiber_eq_completion
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToLocalUnitsActual.LGPGlobalUnitsLocalGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToBadPlaceUnitsActual.lgpGlobalUnitsToBadPlaceUnits
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToBadPlaceUnitsActual.lgpGlobalUnitsToBadPlaceAlgClosed
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPGlobalUnitsToBadPlaceUnitsActual.LGPBadPlaceUnitsGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaQuotientNegActual.lgpThetaValueQuotient_neg
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaQuotientQvActual.lgpThetaValueQuotient_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaQuotientQvActual.lgpRootQuotient_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadFamilyLogPlaceActual.lgpBadFamilyLogPlace_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPTensorOLatticeBadFamilyActual.lgpTensorOLatticeBadFamily_coe
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaQuotientOneActual.lgpThetaValueQuotient_signedOne_pow_twoL

@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S2056Psi5RootsActual
+open LeanFormal.IUT.XiFPaper.S2056Psi5RootsActual
+#check Finset.insert
+#check @Finset.insert
+#check Finset.cons
+#check Finset.mem_insert
+#check @Finset.card_pair
+#check S2056PairMap
+#check S1725AbsoluteGalois
+#check S1894MatrixRep_acts
+#check LeanFormal.IUT.XiFPaper.S1894D5LargeImageActual.S1894MatrixRep_acts
+#print S1894MatrixRep_acts

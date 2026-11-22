@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1798FiberFunctorSecondActual
+
+#check S1798FiberFunctor.bc_preservesFiniteProducts
+#check S1798FiberFunctor.preservesFiniteCoproducts
+#check S1798FiberFunctor.fiberFunctorWithMissing
+#print axioms S1798FiberFunctor.bc_preservesFiniteProducts

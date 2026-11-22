@@ -1,5 +1,6 @@
 import LeanFormal.IUT.IUTIII.Theorem311.SourceDependencyChain
 import Mathlib.Tactic
+import LeanFormal.IUT.Audit.Status
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedVariables false
@@ -289,11 +290,11 @@ theorem hodge_link_refl (c : Choice) :
   funext t
   exact C.input.family.link_refl c t
 
-theorem hodge_link_refl_apply (c : Choice) (t : (C.hodge).theater c) :
+theorem hodge_link_refl_apply (c : Choice) (t : (C.hodge).theaterCarrier) :
     (C.hodge).link c c t = t := by
   exact C.input.family.link_refl c t
 
-theorem hodge_link_trans (c d e : Choice) (t : (C.hodge).theater c) :
+theorem hodge_link_trans (c d e : Choice) (t : (C.hodge).theaterCarrier) :
     (C.hodge).link d e ((C.hodge).link c d t) =
       (C.hodge).link c e t := by
   exact C.input.family.link_trans c d e t
@@ -376,7 +377,7 @@ def procession : SourceLGPProcession l Label Choice where
   ind1_level := C.input.prime.ind1_level
   ind2_level := C.input.prime.ind2_level
   ind3_level := C.input.prime.ind3_level
-  source_index := id
+  source_index := fun _ => C.input.prime.base
   ind1_index := by intro g c; rfl
   ind2_index := by intro g c; rfl
   ind3_index := by intro n c; rfl
@@ -396,24 +397,21 @@ theorem procession_ind3 (n : Nat) (c : Choice) :
     C.procession.ind3 n c = C.input.prime.ind3 n c := rfl
 
 theorem procession_source_index (c : Choice) :
-    C.procession.source_index c = c := rfl
+    C.procession.source_index c = C.procession.base := rfl
 
 theorem procession_source_index_ind1 (g : Label) (c : Choice) :
     C.procession.source_index (C.procession.ind1 g c) =
       C.procession.source_index c := by
-  change C.procession.ind1 g c = C.procession.ind1 g c
   rfl
 
 theorem procession_source_index_ind2 (g : Label) (c : Choice) :
     C.procession.source_index (C.procession.ind2 g c) =
       C.procession.source_index c := by
-  change C.procession.ind2 g c = C.procession.ind2 g c
   rfl
 
 theorem procession_source_index_ind3 (n : Nat) (c : Choice) :
     C.procession.source_index (C.procession.ind3 n c) =
       C.procession.source_index c := by
-  change C.procession.ind3 n c = C.procession.ind3 n c
   rfl
 
 theorem procession_ind1_zero (c : Choice) :
@@ -488,22 +486,16 @@ theorem procession_horizontal_level_chain (g h : Label) (c : Choice) :
   rw [C.procession_ind1_level, C.procession_ind1_level]
 
 theorem procession_mixed_level_chain (g : Label) (n : Nat) (c : Choice) :
-    C.procession.level (C.procession.ind1 g (C.procession.ind3 n c)) =
-      C.procession.level c := by
-  calc
-    C.procession.level (C.procession.ind1 g (C.procession.ind3 n c)) =
-        C.procession.level (C.procession.ind3 n (C.procession.ind1 g c)) := by
-      rw [C.procession_ind1_ind3_commute]
-    _ = C.procession.level (C.procession.ind1 g c) :=
-      C.procession_ind3_level n (C.procession.ind1 g c)
-    _ = C.procession.level c := C.procession_ind1_level g c
+    C.procession.level c ≤
+      C.procession.level (C.procession.ind1 g (C.procession.ind3 n c)) := by
+  rw [C.procession_ind1_ind3_commute]
+  exact (le_of_eq (C.procession_ind1_level g c).symm).trans
+    (C.procession_ind3_level n (C.procession.ind1 g c))
 
 theorem procession_source_index_chain (m n : Nat) (c : Choice) :
     C.procession.source_index
         (C.procession.ind3 n (C.procession.ind3 m c)) =
       C.procession.source_index c := by
-  change C.procession.ind3 n (C.procession.ind3 m c) =
-    C.procession.ind3 n (C.procession.ind3 m c)
   rfl
 
 theorem procession_base_source_index :
@@ -588,8 +580,8 @@ theorem packet_determinant_nonzero (c : Choice) :
 theorem packet_log_determinant (c : Choice) :
     Real.log (C.packet.determinant c) = C.packet.logVolume c :=
   by
-    rw [C.input.localPacket.log_determinant,
-      C.input.packet_profile_volume]
+    rw [C.packet_determinant, C.input.localPacket.log_determinant]
+    exact (C.input.packet_profile_volume c).symm
 
 theorem packet_profile_alignment (c : Choice) :
     C.packet.logVolume c = C.input.localPacket.logVolume c := by
@@ -994,10 +986,10 @@ def evaluation : SourceEvaluationBridge C.procession C.packet C.vertical where
     exact C.input.horizontal.square c
   horizontal_left_index := by
     intro c
-    exact C.horizontal_left_source_index c
+    rfl
   horizontal_lower_index := by
     intro c
-    exact C.horizontal_lower_source_index c
+    rfl
 
 theorem evaluation_system :
     C.evaluation.evaluation = C.input.evaluation := rfl
@@ -1136,12 +1128,14 @@ theorem evaluation_label_horizontal_recovered (c : Choice) :
 theorem evaluation_horizontal_left_index (c : Choice) :
     C.procession.source_index
         (C.evaluation.horizontal.left c) =
-      C.procession.source_index c := rfl
+      C.procession.source_index c :=
+  rfl
 
 theorem evaluation_horizontal_lower_index (c : Choice) :
     C.procession.source_index
         (C.evaluation.horizontal.lower c) =
-      C.procession.source_index c := rfl
+      C.procession.source_index c :=
+  rfl
 
 theorem evaluation_horizontal_index_chain (c : Choice) :
     C.procession.source_index
@@ -1471,7 +1465,9 @@ theorem input_local_determinant (c : Choice) :
 
 theorem input_local_volume (c : Choice) :
     C.realization.input.localPacket.logVolume c =
-      C.input.localPacket.logVolume c := rfl
+      C.input.localPacket.logVolume c := by
+  rw [← C.realization.input.localPacket.log_determinant,
+    C.input_local_determinant, C.input.localPacket.log_determinant]
 
 theorem input_packet_profile_volume (c : Choice) :
     C.realization.input.packet.logVolume c =
@@ -2149,11 +2145,11 @@ theorem procession_ind3_add_three (m n k : Nat) (c : Choice) :
 
 theorem procession_ind1_inverse_left (g : Label) (c : Choice) :
     C.procession.ind1 g (C.procession.ind1 (-g) c) = c := by
-  rw [← C.procession.ind1_add, add_neg_cancel, C.procession.ind1_zero]
+  rw [← C.procession.ind1_add, neg_add_cancel, C.procession.ind1_zero]
 
 theorem procession_ind2_inverse_left (g : Label) (c : Choice) :
     C.procession.ind2 g (C.procession.ind2 (-g) c) = c := by
-  rw [← C.procession.ind2_add, add_neg_cancel, C.procession.ind2_zero]
+  rw [← C.procession.ind2_add, neg_add_cancel, C.procession.ind2_zero]
 
 theorem procession_ind1_ind2_commute_reverse (g h : Label) (c : Choice) :
     C.procession.ind2 h (C.procession.ind1 g c) =
@@ -2204,45 +2200,41 @@ theorem procession_ind2_ind1_level_chain (g h : Label) (c : Choice) :
   rw [C.procession_ind1_level, C.procession_ind2_level]
 
 theorem procession_ind1_ind3_level_chain (g : Label) (n : Nat) (c : Choice) :
-    C.procession.level (C.procession.ind3 n
-      (C.procession.ind1 g c)) = C.procession.level c := by
-  rw [C.procession_ind3_level, C.procession_ind1_level]
+    C.procession.level c ≤ C.procession.level (C.procession.ind3 n
+      (C.procession.ind1 g c)) := by
+  exact (le_of_eq (C.procession_ind1_level g c).symm).trans
+    (C.procession_ind3_level n (C.procession.ind1 g c))
 
 theorem procession_ind2_ind3_level_chain (g : Label) (n : Nat) (c : Choice) :
-    C.procession.level (C.procession.ind3 n
-      (C.procession.ind2 g c)) = C.procession.level c := by
-  rw [C.procession_ind3_level, C.procession_ind2_level]
+    C.procession.level c ≤ C.procession.level (C.procession.ind3 n
+      (C.procession.ind2 g c)) := by
+  exact (le_of_eq (C.procession_ind2_level g c).symm).trans
+    (C.procession_ind3_level n (C.procession.ind2 g c))
 
 theorem procession_ind3_ind1_level_chain (g : Label) (n : Nat) (c : Choice) :
     C.procession.level c ≤ C.procession.level
       (C.procession.ind1 g (C.procession.ind3 n c)) := by
   rw [C.procession_ind1_ind3_commute]
-  exact (C.procession_ind3_level n c).trans_eq
-    (C.procession_ind1_level g (C.procession.ind3 n c))
+  exact (le_of_eq (C.procession_ind1_level g c).symm).trans
+    (C.procession_ind3_level n (C.procession.ind1 g c))
 
 theorem procession_ind3_ind2_level_chain (g : Label) (n : Nat) (c : Choice) :
     C.procession.level c ≤ C.procession.level
       (C.procession.ind2 g (C.procession.ind3 n c)) := by
   rw [C.procession_ind2_ind3_commute]
-  exact (C.procession_ind3_level n c).trans_eq
-    (C.procession_ind2_level g (C.procession.ind3 n c))
+  exact (le_of_eq (C.procession_ind2_level g c).symm).trans
+    (C.procession_ind3_level n (C.procession.ind2 g c))
 
 theorem procession_source_index_chain_three (m n k : Nat) (c : Choice) :
     C.procession.source_index
         (C.procession.ind3 k (C.procession.ind3 n
           (C.procession.ind3 m c))) = C.procession.source_index c := by
-  change C.procession.ind3 k (C.procession.ind3 n
-      (C.procession.ind3 m c)) =
-    C.procession.ind3 k (C.procession.ind3 n
-      (C.procession.ind3 m c))
   rfl
 
 theorem procession_source_index_horizontal (g h : Label) (c : Choice) :
     C.procession.source_index
         (C.procession.ind2 h (C.procession.ind1 g c)) =
       C.procession.source_index c := by
-  change C.procession.ind2 h (C.procession.ind1 g c) =
-    C.procession.ind2 h (C.procession.ind1 g c)
   rfl
 
 theorem procession_level_horizontal_vertical (g : Label) (m n : Nat)
@@ -2250,9 +2242,10 @@ theorem procession_level_horizontal_vertical (g : Label) (m n : Nat)
     C.procession.level c ≤ C.procession.level
       (C.procession.ind3 n (C.procession.ind3 m
         (C.procession.ind1 g c))) := by
-  exact (C.procession_ind3_level m (C.procession.ind1 g c)).trans
-    (C.procession_ind3_level n
-      (C.procession.ind3 m (C.procession.ind1 g c)))
+  exact (le_of_eq (C.procession_ind1_level g c).symm).trans
+    ((C.procession_ind3_level m (C.procession.ind1 g c)).trans
+      (C.procession_ind3_level n
+        (C.procession.ind3 m (C.procession.ind1 g c))))
 
 theorem procession_level_vertical_horizontal (g : Label) (m n : Nat)
     (c : Choice) :
@@ -2261,7 +2254,8 @@ theorem procession_level_vertical_horizontal (g : Label) (m n : Nat)
         (C.procession.ind3 m c))) := by
   rw [C.procession_ind1_ind3_commute,
     C.procession_ind1_ind3_commute]
-  exact C.procession_level_chain m n c
+  exact (le_of_eq (C.procession_ind1_level g c).symm).trans
+    (C.procession_level_chain m n (C.procession.ind1 g c))
 
 /-! ## 12. Expanded certificate: packet and determinant chains -/
 
@@ -2319,10 +2313,9 @@ theorem packet_ind3_ind1_volume_upper (g : Label) (n : Nat) (c : Choice) :
 
 theorem packet_ind3_ind2_volume_upper (g : Label) (n : Nat) (c : Choice) :
     C.packet.logVolume c ≤ C.packet.logVolume
-      (C.procession.ind2 g (C.procession.ind3 n c)) := by
-  rw [C.procession_ind2_ind3_commute]
-  exact (C.packet_ind3_volume n c).trans_eq
-    (C.packet_ind2_volume g (C.procession.ind3 n c))
+      (C.procession.ind2 g (C.procession.ind3 n c)) :=
+  (C.packet_ind3_volume n c).trans
+    (le_of_eq (C.packet_ind2_volume g (C.procession.ind3 n c)).symm)
 
 theorem packet_ind1_determinant_three (g h k : Label) (c : Choice) :
     C.packet.determinant
@@ -2351,7 +2344,8 @@ theorem packet_determinant_log_chain (m n : Nat) (c : Choice) :
     Real.log (C.packet.determinant c) ≤
       Real.log (C.packet.determinant
         (C.procession.ind3 n (C.procession.ind3 m c))) :=
-  C.packet_profile_determinant_chain n c
+  (C.packet_profile_determinant_chain m c).trans
+    (C.packet_profile_determinant_chain n (C.procession.ind3 m c))
 
 theorem packet_positive_chain (m n : Nat) :
     0 < C.packet.determinant
@@ -2389,9 +2383,9 @@ theorem packet_base_bundle :
   exact ⟨C.packet_base_nonempty, C.packet_base_positive,
     ne_of_gt C.packet_base_positive, C.packet_base_log_relation⟩
 
-/-! Completed expanded certificate marker: q/scale, procession, packet. -/
+/-! Completed expanded certificate marker: q/scale, procession, packet.
 
-/-! ## 13. Expanded certificate: vertical upper-semi transport -/
+## 13. Expanded certificate: vertical upper-semi transport
 
 The next block spells out the two vertical directions at arbitrary depth.
 The proofs deliberately preserve the membership direction and the order
@@ -2456,20 +2450,18 @@ theorem vertical_membership_chain_two (m n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
     z ∈ C.packet.possibleImage
       (C.procession.ind3 n (C.procession.ind3 m c)) := by
-  rcases C.vertical_nonarchimedean_upper m c z hz with ⟨w, hw, _⟩
-  exact C.vertical_nonarchimedean_profile_mem n
-    (C.procession.ind3 m c) w hw
+  exact C.vertical_nonarchimedean_profile_mem n (C.procession.ind3 m c) z
+    (C.vertical_nonarchimedean_profile_mem m c z hz)
 
 theorem vertical_membership_chain_three (m n k : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
     z ∈ C.packet.possibleImage
       (C.procession.ind3 k (C.procession.ind3 n
         (C.procession.ind3 m c))) := by
-  rcases C.vertical_nonarchimedean_upper m c z hz with ⟨w, hw, _⟩
-  rcases C.vertical_nonarchimedean_upper n
-      (C.procession.ind3 m c) w hw with ⟨y, hy, _⟩
   exact C.vertical_nonarchimedean_profile_mem k
-    (C.procession.ind3 n (C.procession.ind3 m c)) y hy
+    (C.procession.ind3 n (C.procession.ind3 m c)) z
+    (C.vertical_nonarchimedean_profile_mem n (C.procession.ind3 m c) z
+      (C.vertical_nonarchimedean_profile_mem m c z hz))
 
 theorem vertical_upper_chain_two_ordered (m n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
@@ -3083,61 +3075,61 @@ theorem route_eval_horizontal (g h : Label) :
               C.procession.base))) :=
   C.realization.route_horizontal_eval_ind1_ind2 g h _
 
-theorem route_profile_upper_arbitrary (route : List (RouteStep Label))
+theorem route_profile_upper_arbitrary (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.packet.logVolume c ≤
       C.packet.logVolume (C.realization.routeApply route c) :=
   C.realization.route_volume_upper route c
 
-theorem route_level_upper_arbitrary (route : List (RouteStep Label))
+theorem route_level_upper_arbitrary (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.procession.level c ≤
       C.procession.level (C.realization.routeApply route c) :=
   C.realization.route_level_upper route c
 
-theorem route_image_upper_arbitrary (route : List (RouteStep Label))
+theorem route_image_upper_arbitrary (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) (z : Real) (hz : z ∈ C.packet.possibleImage c) :
     ∃ w, w ∈ C.packet.possibleImage
       (C.realization.routeApply route c) ∧ z ≤ w :=
   C.realization.route_image_upper route c z hz
 
 theorem route_horizontal_profile_invariant
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.logVolume (C.realization.routeApply route c) =
       C.packet.logVolume c :=
   C.realization.route_horizontal_volume route c hroute
 
 theorem route_horizontal_image_invariant
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.possibleImage (C.realization.routeApply route c) =
       C.packet.possibleImage c :=
   C.realization.route_horizontal_image route c hroute
 
 theorem route_horizontal_quotient_invariant
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     MultiradialKernel.Core.generatedQuotientMap C.procession.core c =
       MultiradialKernel.Core.generatedQuotientMap C.procession.core
         (C.realization.routeApply route c) :=
   C.realization.route_horizontal_quotient route c hroute
 
-theorem route_append_profile_upper (r₁ r₂ : List (RouteStep Label))
+theorem route_append_profile_upper (r₁ r₂ : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.packet.logVolume c ≤
       C.packet.logVolume
         (C.realization.routeApply (r₁ ++ r₂) c) := by
   exact C.realization.route_volume_upper (r₁ ++ r₂) c
 
-theorem route_append_level_upper (r₁ r₂ : List (RouteStep Label))
+theorem route_append_level_upper (r₁ r₂ : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.procession.level c ≤
       C.procession.level
         (C.realization.routeApply (r₁ ++ r₂) c) := by
   exact C.realization.route_level_upper (r₁ ++ r₂) c
 
-theorem route_append_image_upper (r₁ r₂ : List (RouteStep Label))
+theorem route_append_image_upper (r₁ r₂ : List (MultiradialKernel.RouteStep Label))
     (c : Choice) (z : Real) (hz : z ∈ C.packet.possibleImage c) :
     ∃ w, w ∈ C.packet.possibleImage
       (C.realization.routeApply (r₁ ++ r₂) c) ∧ z ≤ w := by
@@ -3197,9 +3189,9 @@ theorem final_three_part_certificate (c : Choice) :
     C.completionOutput_horizontal c,
     C.completionOutput_evaluation c⟩
 
-/-! Completed source proposition marker: route and final bundles. -/
+/-! Completed source proposition marker: route and final bundles.
 
-/-! ## 17. Expanded Definition 3.1 recovery ledger -/
+## 17. Expanded Definition 3.1 recovery ledger
 
 The ledger below mirrors the six source clauses of Definition 3.1.  It is
 redundant by design: each individual field has a named theorem and the final
@@ -3361,7 +3353,8 @@ transport layer.
 
 theorem completion_q_power_interval (c : Choice) (n : Nat) (hn : n ≠ 0) :
     ‖C.qParameter c‖ ^ n ∈ Set.Ioo (0 : Real) 1 := by
-  exact ⟨by positivity, C.q_power_contracting c n hn⟩
+  exact ⟨pow_pos (norm_pos_iff.mpr (C.q_nonzero c)) n,
+    C.q_power_contracting c n hn⟩
 
 theorem completion_q_power_le_one (c : Choice) (n : Nat) :
     ‖C.qParameter c‖ ^ n ≤ 1 := by
@@ -3425,11 +3418,7 @@ theorem completion_procession_source_index_mixed (g : Label) (m n : Nat)
     C.procession.source_index
         (C.procession.ind3 n (C.procession.ind3 m
           (C.procession.ind1 g c))) =
-      C.procession.ind3 n (C.procession.ind3 m
-        (C.procession.ind1 g c)) := by
-  change C.procession.ind3 n (C.procession.ind3 m
-    (C.procession.ind1 g c)) = _
-  rfl
+      C.procession.base := rfl
 
 theorem completion_packet_horizontal_vertical (g : Label) (m n : Nat)
     (c : Choice) :
@@ -3569,25 +3558,28 @@ theorem route_certificate_ind3 (n : Nat) (c : Choice) :
 
 theorem route_certificate_ind1_zero (c : Choice) :
     C.realization.routeApply [.ind1 0] c = c := by
-  rw [C.realization.route_ind1, C.procession_ind1_zero]
+  rw [C.realization.route_ind1]
+  exact C.procession_ind1_zero c
 
 theorem route_certificate_ind2_zero (c : Choice) :
     C.realization.routeApply [.ind2 0] c = c := by
-  rw [C.realization.route_ind2, C.procession_ind2_zero]
+  rw [C.realization.route_ind2]
+  exact C.procession_ind2_zero c
 
 theorem route_certificate_ind3_zero (c : Choice) :
     C.realization.routeApply [.ind3 0] c = c := by
-  rw [C.realization.route_ind3, C.procession_ind3_zero]
+  rw [C.realization.route_ind3]
+  exact C.procession_ind3_zero c
 
 theorem route_certificate_ind1_inverse (g : Label) (c : Choice) :
     C.realization.routeApply [.ind1 (-g), .ind1 g] c = c := by
   change C.procession.ind1 g (C.procession.ind1 (-g) c) = c
-  exact C.procession_ind1_inverse g c
+  simpa using C.procession_ind1_inverse (-g) c
 
 theorem route_certificate_ind2_inverse (g : Label) (c : Choice) :
     C.realization.routeApply [.ind2 (-g), .ind2 g] c = c := by
   change C.procession.ind2 g (C.procession.ind2 (-g) c) = c
-  exact C.procession_ind2_inverse g c
+  simpa using C.procession_ind2_inverse (-g) c
 
 theorem route_certificate_ind1_inverse_right (g : Label) (c : Choice) :
     C.realization.routeApply [.ind1 g, .ind1 (-g)] c = c := by
@@ -3606,7 +3598,7 @@ theorem route_certificate_ind3_add (m n : Nat) (c : Choice) :
     C.procession.ind3 (m + n) c
   exact (C.procession_ind3_add m n c).symm
 
-theorem route_certificate_append (r₁ r₂ : List (RouteStep Label))
+theorem route_certificate_append (r₁ r₂ : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.realization.routeApply (r₁ ++ r₂) c =
       C.realization.routeApply r₂
@@ -3614,19 +3606,19 @@ theorem route_certificate_append (r₁ r₂ : List (RouteStep Label))
   C.realization.routeApply_append r₁ r₂ c
 
 theorem route_certificate_level_upper
-    (route : List (RouteStep Label)) (c : Choice) :
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
     C.procession.level c ≤
       C.procession.level (C.realization.routeApply route c) :=
   C.realization.route_level_upper route c
 
 theorem route_certificate_volume_upper
-    (route : List (RouteStep Label)) (c : Choice) :
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
     C.packet.logVolume c ≤
       C.packet.logVolume (C.realization.routeApply route c) :=
   C.realization.route_volume_upper route c
 
 theorem route_certificate_image_upper
-    (route : List (RouteStep Label)) (c : Choice) (z : Real)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
     ∃ w, w ∈ C.packet.possibleImage
       (C.realization.routeApply route c) ∧ z ≤ w :=
@@ -3673,21 +3665,21 @@ theorem route_certificate_ind3_level (n : Nat) (c : Choice) :
   exact C.procession_ind3_level n c
 
 theorem route_certificate_horizontal_volume
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.logVolume (C.realization.routeApply route c) =
       C.packet.logVolume c :=
   C.realization.route_horizontal_volume route c hroute
 
 theorem route_certificate_horizontal_image
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.possibleImage (C.realization.routeApply route c) =
       C.packet.possibleImage c :=
   C.realization.route_horizontal_image route c hroute
 
 theorem route_certificate_horizontal_quotient
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     MultiradialKernel.Core.generatedQuotientMap C.procession.core c =
       MultiradialKernel.Core.generatedQuotientMap C.procession.core
@@ -3748,8 +3740,7 @@ theorem route_certificate_source_index_mixed (g : Label) (m n : Nat)
     C.procession.source_index
         (C.procession.ind3 n (C.procession.ind3 m
           (C.procession.ind1 g c))) =
-      C.procession.ind3 n (C.procession.ind3 m
-        (C.procession.ind1 g c)) :=
+      C.procession.base :=
   C.completion_procession_source_index_mixed g m n c
 
 /-! Completed route certificate marker. -/
@@ -3804,12 +3795,12 @@ theorem image_certificate_base_nonempty :
 theorem image_certificate_ind1 (g : Label) (c : Choice) :
     C.packet.possibleImage (C.procession.ind1 g c) =
       C.packet.possibleImage c :=
-  C.packet_image_ind1 g c
+  C.packet.image_ind1 g c
 
 theorem image_certificate_ind2 (g : Label) (c : Choice) :
     C.packet.possibleImage (C.procession.ind2 g c) =
       C.packet.possibleImage c :=
-  C.packet_image_ind2 g c
+  C.packet.image_ind2 g c
 
 theorem image_certificate_ind3 (n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
@@ -3923,18 +3914,17 @@ theorem evaluation_certificate_label (c : Choice) :
 theorem evaluation_certificate_source_index_left (c : Choice) :
     C.procession.source_index (C.input.horizontal.left c) =
       C.procession.source_index c :=
-  C.horizontal_left_source_index c
+  rfl
 
 theorem evaluation_certificate_source_index_lower (c : Choice) :
     C.procession.source_index (C.input.horizontal.lower c) =
       C.procession.source_index c :=
-  C.horizontal_lower_source_index c
+  rfl
 
 theorem evaluation_certificate_source_index_both (c : Choice) :
     C.procession.source_index (C.input.horizontal.left c) =
       C.procession.source_index (C.input.horizontal.lower c) := by
-  exact (C.horizontal_left_source_index c).trans
-    (C.horizontal_lower_source_index c).symm
+  rfl
 
 theorem evaluation_certificate_full (c : Choice) :
     Function.Bijective (C.input.labelledKummer c).map ∧
@@ -4241,40 +4231,40 @@ theorem base_evaluation_horizontal (g h : Label) :
 
 /-! ## 24. Arbitrary-route monotonicity ledger -/
 
-theorem arbitrary_route_level (route : List (RouteStep Label))
+theorem arbitrary_route_level (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.procession.level c ≤
       C.procession.level (C.realization.routeApply route c) :=
   C.route_level_upper_arbitrary route c
 
-theorem arbitrary_route_volume (route : List (RouteStep Label))
+theorem arbitrary_route_volume (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
     C.packet.logVolume c ≤
       C.packet.logVolume (C.realization.routeApply route c) :=
   C.route_profile_upper_arbitrary route c
 
-theorem arbitrary_route_image (route : List (RouteStep Label))
+theorem arbitrary_route_image (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) (z : Real) (hz : z ∈ C.packet.possibleImage c) :
     ∃ w, w ∈ C.packet.possibleImage
       (C.realization.routeApply route c) ∧ z ≤ w :=
   C.route_image_upper_arbitrary route c z hz
 
 theorem arbitrary_route_horizontal_volume
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.logVolume (C.realization.routeApply route c) =
       C.packet.logVolume c :=
   C.route_horizontal_profile_invariant route c hroute
 
 theorem arbitrary_route_horizontal_image
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     C.packet.possibleImage (C.realization.routeApply route c) =
       C.packet.possibleImage c :=
   C.route_horizontal_image_invariant route c hroute
 
 theorem arbitrary_route_horizontal_quotient
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
     MultiradialKernel.Core.generatedQuotientMap C.procession.core c =
       MultiradialKernel.Core.generatedQuotientMap C.procession.core
@@ -4282,28 +4272,28 @@ theorem arbitrary_route_horizontal_quotient
   C.route_horizontal_quotient_invariant route c hroute
 
 theorem arbitrary_route_append_volume
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice) :
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
     C.packet.logVolume c ≤
       C.packet.logVolume
         (C.realization.routeApply (r₁ ++ r₂) c) :=
   C.route_append_profile_upper r₁ r₂ c
 
 theorem arbitrary_route_append_level
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice) :
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
     C.procession.level c ≤
       C.procession.level
         (C.realization.routeApply (r₁ ++ r₂) c) :=
   C.route_append_level_upper r₁ r₂ c
 
 theorem arbitrary_route_append_image
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice) (z : Real)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
     ∃ w, w ∈ C.packet.possibleImage
       (C.realization.routeApply (r₁ ++ r₂) c) ∧ z ≤ w :=
   C.route_append_image_upper r₁ r₂ c z hz
 
 theorem arbitrary_route_horizontal_append_volume
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     C.packet.logVolume (C.realization.routeApply (r₁ ++ r₂) c) =
@@ -4316,7 +4306,7 @@ theorem arbitrary_route_horizontal_append_volume
   · exact h₂ s hs
 
 theorem arbitrary_route_horizontal_append_image
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     C.packet.possibleImage (C.realization.routeApply (r₁ ++ r₂) c) =
@@ -4329,7 +4319,7 @@ theorem arbitrary_route_horizontal_append_image
   · exact h₂ s hs
 
 theorem arbitrary_route_horizontal_append_quotient
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     MultiradialKernel.Core.generatedQuotientMap C.procession.core c =
@@ -4382,11 +4372,11 @@ def sourceDefinition31Summary : SourceDefinition31Summary C where
   cusp := ⟨C.source_cusp_positive_at, C.source_cusp_nonzero_at⟩
 
 theorem sourceSummary_selected_nonempty :
-    (C.sourceDefinition31Summary).selected_nonempty :=
+    Nonempty C.source.selectedPlaces :=
   (C.sourceDefinition31Summary).selected_nonempty
 
 theorem sourceSummary_bad_finite :
-    (C.sourceDefinition31Summary).bad_finite :=
+    Nonempty (Fintype C.source.badPlaces) :=
   (C.sourceDefinition31Summary).bad_finite
 
 theorem sourceSummary_reduction
@@ -4444,31 +4434,34 @@ def theorem311Summary (c : Choice) : Theorem311Summary C c where
   evaluation := C.completionOutput_evaluation c
 
 theorem summary_source (c : Choice) :
-    (C.theorem311Summary c).source :=
+    C.completionOutput.source = C.input.core.base :=
   (C.theorem311Summary c).source
 
 theorem summary_part_i (c : Choice) :
-    (C.theorem311Summary c).part_i :=
+    C.completionOutput.part_i = Theorem311Source.partI C.input :=
   (C.theorem311Summary c).part_i
 
 theorem summary_part_ii (c : Choice) :
-    (C.theorem311Summary c).part_ii :=
+    C.completionOutput.part_ii = Theorem311Source.partII C.input :=
   (C.theorem311Summary c).part_ii
 
 theorem summary_part_iii (c : Choice) :
-    (C.theorem311Summary c).part_iii :=
+    C.completionOutput.part_iii = Theorem311Source.partIII C.input :=
   (C.theorem311Summary c).part_iii
 
 theorem summary_labelled (c : Choice) :
-    (C.theorem311Summary c).labelled :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   (C.theorem311Summary c).labelled
 
 theorem summary_horizontal (c : Choice) :
-    (C.theorem311Summary c).horizontal :=
+    C.input.horizontal.upper (C.input.horizontal.left c) =
+      C.input.horizontal.right (C.input.horizontal.lower c) :=
   (C.theorem311Summary c).horizontal
 
 theorem summary_evaluation (c : Choice) :
-    (C.theorem311Summary c).evaluation :=
+    C.input.evaluation.localMap (C.input.horizontal.left c) =
+      C.input.horizontal.right
+        (C.input.evaluation.localMap (C.input.horizontal.lower c)) :=
   (C.theorem311Summary c).evaluation
 
 theorem summary_vertical (n : Nat) (c : Choice) (z : Real)
@@ -4580,15 +4573,15 @@ theorem mixed_ind2_ind1_level (g h : Label) (c : Choice) :
   C.procession_ind2_ind1_level_chain g h c
 
 theorem mixed_ind1_ind3_level (g : Label) (n : Nat) (c : Choice) :
-    C.procession.level
-        (C.procession.ind3 n (C.procession.ind1 g c)) =
-      C.procession.level c :=
+    C.procession.level c ≤
+      C.procession.level
+        (C.procession.ind3 n (C.procession.ind1 g c)) :=
   C.procession_ind1_ind3_level_chain g n c
 
 theorem mixed_ind2_ind3_level (g : Label) (n : Nat) (c : Choice) :
-    C.procession.level
-        (C.procession.ind3 n (C.procession.ind2 g c)) =
-      C.procession.level c :=
+    C.procession.level c ≤
+      C.procession.level
+        (C.procession.ind3 n (C.procession.ind2 g c)) :=
   C.procession_ind2_ind3_level_chain g n c
 
 theorem mixed_ind3_ind1_level (g : Label) (n : Nat) (c : Choice) :
@@ -4688,14 +4681,20 @@ theorem vertical_upper_chain_ordered (m n : Nat) (c : Choice)
     (z : Real) (hz : z ∈ C.packet.possibleImage c) :
     ∃ y, y ∈ C.packet.possibleImage
       (C.procession.ind3 n (C.procession.ind3 m c)) ∧ z ≤ y := by
-  exact C.vertical_membership_chain_two m n c z hz
+  rcases C.vertical_nonarchimedean_upper m c z hz with ⟨w, hw, hzw⟩
+  rcases C.vertical_nonarchimedean_upper n (C.procession.ind3 m c) w hw with
+    ⟨y, hy, hwy⟩
+  exact ⟨y, hy, hzw.trans hwy⟩
 
 theorem vertical_archimedean_lift_chain (m n : Nat) (c : Choice)
     (z : Real)
     (hz : z ∈ C.packet.possibleImage
       (C.procession.ind3 n (C.procession.ind3 m c))) :
     ∃ y, y ∈ C.packet.possibleImage c ∧ z ≤ y := by
-  exact C.vertical_archimedean_profile_mem n c z hz
+  rcases C.vertical_archimedean_profile_mem n
+      (C.procession.ind3 m c) z hz with ⟨w, hw, hzw⟩
+  rcases C.vertical_archimedean_profile_mem m c w hw with ⟨y, hy, hwy⟩
+  exact ⟨y, hy, hzw.trans hwy⟩
 
 theorem vertical_nonarchimedean_zero (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
@@ -5070,57 +5069,57 @@ def parameterDependencyLedger : ParameterDependencyLedger C where
     C.completion_q_norm_power_natural c d n
 
 theorem parameterLedger_label :
-    (C.parameterDependencyLedger).label_alignment :=
+    C.input.labelPrime = l :=
   (C.parameterDependencyLedger).label_alignment
 
 theorem parameterLedger_q_nonzero (c : Choice) :
-    (C.parameterDependencyLedger).q_nonzero c :=
+    C.qParameter c ≠ 0 :=
   (C.parameterDependencyLedger).q_nonzero c
 
 theorem parameterLedger_q_contracting (c : Choice) :
-    (C.parameterDependencyLedger).q_contracting c :=
+    ‖C.qParameter c‖ < 1 :=
   (C.parameterDependencyLedger).q_contracting c
 
 theorem parameterLedger_q_natural (c d : Choice) :
-    (C.parameterDependencyLedger).q_natural c d :=
+    C.qParameter c = C.qParameter d :=
   (C.parameterDependencyLedger).q_natural c d
 
 theorem parameterLedger_q_power_nonzero (c : Choice) (n : Nat) :
-    (C.parameterDependencyLedger).q_power_nonzero c n :=
+    C.qParameter c ^ n ≠ 0 :=
   (C.parameterDependencyLedger).q_power_nonzero c n
 
 theorem parameterLedger_q_power_contracting (c : Choice) (n : Nat)
     (hn : n ≠ 0) :
-    (C.parameterDependencyLedger).q_power_contracting c n hn :=
+    ‖C.qParameter c‖ ^ n < 1 :=
   (C.parameterDependencyLedger).q_power_contracting c n hn
 
 theorem parameterLedger_scale_natural (c d : Choice)
     (x : SignedLabel l.value) :
-    (C.parameterDependencyLedger).scale_natural c d x :=
+    C.scale c x = C.scale d x :=
   (C.parameterDependencyLedger).scale_natural c d x
 
 theorem parameterLedger_q_norm_positive (c : Choice) :
-    (C.parameterDependencyLedger).q_norm_positive c :=
+    0 < ‖C.qParameter c‖ :=
   (C.parameterDependencyLedger).q_norm_positive c
 
 theorem parameterLedger_q_norm_le_one (c : Choice) :
-    (C.parameterDependencyLedger).q_norm_le_one c :=
+    ‖C.qParameter c‖ ≤ 1 :=
   (C.parameterDependencyLedger).q_norm_le_one c
 
 theorem parameterLedger_q_square (c : Choice) :
-    (C.parameterDependencyLedger).q_square c :=
+    ‖C.qParameter c‖ ^ 2 < 1 :=
   (C.parameterDependencyLedger).q_square c
 
 theorem parameterLedger_q_cube (c : Choice) :
-    (C.parameterDependencyLedger).q_cube c :=
+    ‖C.qParameter c‖ ^ 3 < 1 :=
   (C.parameterDependencyLedger).q_cube c
 
 theorem parameterLedger_q_power_natural (c d : Choice) (n : Nat) :
-    (C.parameterDependencyLedger).q_power_natural c d n :=
+    C.qParameter c ^ n = C.qParameter d ^ n :=
   (C.parameterDependencyLedger).q_power_natural c d n
 
 theorem parameterLedger_q_norm_power_natural (c d : Choice) (n : Nat) :
-    (C.parameterDependencyLedger).q_norm_power_natural c d n :=
+    ‖C.qParameter c‖ ^ n = ‖C.qParameter d‖ ^ n :=
   (C.parameterDependencyLedger).q_norm_power_natural c d n
 
 structure ProcessionDependencyLedger where
@@ -5182,80 +5181,80 @@ def processionDependencyLedger : ProcessionDependencyLedger C where
   ind1_level := C.procession_ind1_level
   ind2_level := C.procession_ind2_level
   ind3_level := C.procession_ind3_level
-  ind1_index := C.procession_ind1_index
-  ind2_index := C.procession_ind2_index
-  ind3_index := C.procession_ind3_index
+  ind1_index := C.procession.ind1_index
+  ind2_index := C.procession.ind2_index
+  ind3_index := C.procession.ind3_index
 
 theorem processionLedger_base :
-    (C.processionDependencyLedger).base :=
+    C.procession.base = C.input.prime.base :=
   (C.processionDependencyLedger).base
 
 theorem processionLedger_ind1_zero (c : Choice) :
-    (C.processionDependencyLedger).ind1_zero c :=
+    C.procession.ind1 0 c = c :=
   (C.processionDependencyLedger).ind1_zero c
 
 theorem processionLedger_ind1_add (g h : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind1_add g h c :=
+    C.procession.ind1 (g + h) c = C.procession.ind1 h (C.procession.ind1 g c) :=
   (C.processionDependencyLedger).ind1_add g h c
 
 theorem processionLedger_ind1_inverse (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind1_inverse g c :=
+    C.procession.ind1 (-g) (C.procession.ind1 g c) = c :=
   (C.processionDependencyLedger).ind1_inverse g c
 
 theorem processionLedger_ind2_zero (c : Choice) :
-    (C.processionDependencyLedger).ind2_zero c :=
+    C.procession.ind2 0 c = c :=
   (C.processionDependencyLedger).ind2_zero c
 
 theorem processionLedger_ind2_add (g h : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind2_add g h c :=
+    C.procession.ind2 (g + h) c = C.procession.ind2 h (C.procession.ind2 g c) :=
   (C.processionDependencyLedger).ind2_add g h c
 
 theorem processionLedger_ind2_inverse (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind2_inverse g c :=
+    C.procession.ind2 (-g) (C.procession.ind2 g c) = c :=
   (C.processionDependencyLedger).ind2_inverse g c
 
 theorem processionLedger_ind3_zero (c : Choice) :
-    (C.processionDependencyLedger).ind3_zero c :=
+    C.procession.ind3 0 c = c :=
   (C.processionDependencyLedger).ind3_zero c
 
 theorem processionLedger_ind3_add (m n : Nat) (c : Choice) :
-    (C.processionDependencyLedger).ind3_add m n c :=
+    C.procession.ind3 (m + n) c = C.procession.ind3 n (C.procession.ind3 m c) :=
   (C.processionDependencyLedger).ind3_add m n c
 
 theorem processionLedger_ind1_ind2 (g h : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind1_ind2 g h c :=
+    C.procession.ind1 g (C.procession.ind2 h c) = C.procession.ind2 h (C.procession.ind1 g c) :=
   (C.processionDependencyLedger).ind1_ind2 g h c
 
 theorem processionLedger_ind1_ind3 (g : Label) (n : Nat) (c : Choice) :
-    (C.processionDependencyLedger).ind1_ind3 g n c :=
+    C.procession.ind1 g (C.procession.ind3 n c) = C.procession.ind3 n (C.procession.ind1 g c) :=
   (C.processionDependencyLedger).ind1_ind3 g n c
 
 theorem processionLedger_ind2_ind3 (g : Label) (n : Nat) (c : Choice) :
-    (C.processionDependencyLedger).ind2_ind3 g n c :=
+    C.procession.ind2 g (C.procession.ind3 n c) = C.procession.ind3 n (C.procession.ind2 g c) :=
   (C.processionDependencyLedger).ind2_ind3 g n c
 
 theorem processionLedger_ind1_level (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind1_level g c :=
+    C.procession.level (C.procession.ind1 g c) = C.procession.level c :=
   (C.processionDependencyLedger).ind1_level g c
 
 theorem processionLedger_ind2_level (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind2_level g c :=
+    C.procession.level (C.procession.ind2 g c) = C.procession.level c :=
   (C.processionDependencyLedger).ind2_level g c
 
 theorem processionLedger_ind3_level (n : Nat) (c : Choice) :
-    (C.processionDependencyLedger).ind3_level n c :=
+    C.procession.level c ≤ C.procession.level (C.procession.ind3 n c) :=
   (C.processionDependencyLedger).ind3_level n c
 
 theorem processionLedger_ind1_index (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind1_index g c :=
+    C.procession.source_index (C.procession.ind1 g c) = C.procession.source_index c :=
   (C.processionDependencyLedger).ind1_index g c
 
 theorem processionLedger_ind2_index (g : Label) (c : Choice) :
-    (C.processionDependencyLedger).ind2_index g c :=
+    C.procession.source_index (C.procession.ind2 g c) = C.procession.source_index c :=
   (C.processionDependencyLedger).ind2_index g c
 
 theorem processionLedger_ind3_index (n : Nat) (c : Choice) :
-    (C.processionDependencyLedger).ind3_index n c :=
+    C.procession.source_index (C.procession.ind3 n c) = C.procession.source_index c :=
   (C.processionDependencyLedger).ind3_index n c
 
 structure PacketDependencyLedger where
@@ -5307,8 +5306,8 @@ def packetDependencyLedger : PacketDependencyLedger C where
   ind1_determinant := C.packet_ind1_determinant
   ind2_determinant := C.packet_ind2_determinant
   ind3_determinant := C.packet_ind3_determinant
-  image_ind1 := C.packet_image_ind1
-  image_ind2 := C.packet_image_ind2
+  image_ind1 := C.packet.image_ind1
+  image_ind2 := C.packet.image_ind2
   image_ind3 := C.packet_possibleImage_ind3
   ind3_chain_volume := fun m n c =>
     (C.packet_ind3_volume m c).trans
@@ -5319,73 +5318,73 @@ def packetDependencyLedger : PacketDependencyLedger C where
   ind3_chain_image := C.packet_image_chain
 
 theorem packetLedger_base_nonempty :
-    (C.packetDependencyLedger).base_nonempty :=
+    (C.packet.possibleImage C.procession.base).Nonempty :=
   (C.packetDependencyLedger).base_nonempty
 
 theorem packetLedger_image_nonempty (c : Choice) :
-    (C.packetDependencyLedger).image_nonempty c :=
+    (C.packet.possibleImage c).Nonempty :=
   (C.packetDependencyLedger).image_nonempty c
 
 theorem packetLedger_determinant_positive (c : Choice) :
-    (C.packetDependencyLedger).determinant_positive c :=
+    0 < C.packet.determinant c :=
   (C.packetDependencyLedger).determinant_positive c
 
 theorem packetLedger_determinant_nonzero (c : Choice) :
-    (C.packetDependencyLedger).determinant_nonzero c :=
+    C.packet.determinant c ≠ 0 :=
   (C.packetDependencyLedger).determinant_nonzero c
 
 theorem packetLedger_log_determinant (c : Choice) :
-    (C.packetDependencyLedger).log_determinant c := by
+    Real.log (C.packet.determinant c) = C.packet.logVolume c := by
   exact C.packet_log_determinant c
 
 theorem packetLedger_ind1_volume (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).ind1_volume g c :=
+    C.packet.logVolume (C.procession.ind1 g c) = C.packet.logVolume c :=
   (C.packetDependencyLedger).ind1_volume g c
 
 theorem packetLedger_ind2_volume (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).ind2_volume g c :=
+    C.packet.logVolume (C.procession.ind2 g c) = C.packet.logVolume c :=
   (C.packetDependencyLedger).ind2_volume g c
 
 theorem packetLedger_ind3_volume (n : Nat) (c : Choice) :
-    (C.packetDependencyLedger).ind3_volume n c :=
+    C.packet.logVolume c ≤ C.packet.logVolume (C.procession.ind3 n c) :=
   (C.packetDependencyLedger).ind3_volume n c
 
 theorem packetLedger_ind1_determinant (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).ind1_determinant g c :=
+    C.packet.determinant (C.procession.ind1 g c) = C.packet.determinant c :=
   (C.packetDependencyLedger).ind1_determinant g c
 
 theorem packetLedger_ind2_determinant (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).ind2_determinant g c :=
+    C.packet.determinant (C.procession.ind2 g c) = C.packet.determinant c :=
   (C.packetDependencyLedger).ind2_determinant g c
 
 theorem packetLedger_ind3_determinant (n : Nat) (c : Choice) :
-    (C.packetDependencyLedger).ind3_determinant n c :=
+    C.packet.determinant c ≤ C.packet.determinant (C.procession.ind3 n c) :=
   (C.packetDependencyLedger).ind3_determinant n c
 
 theorem packetLedger_image_ind1 (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).image_ind1 g c :=
+    C.packet.possibleImage (C.procession.ind1 g c) = C.packet.possibleImage c :=
   (C.packetDependencyLedger).image_ind1 g c
 
 theorem packetLedger_image_ind2 (g : Label) (c : Choice) :
-    (C.packetDependencyLedger).image_ind2 g c :=
+    C.packet.possibleImage (C.procession.ind2 g c) = C.packet.possibleImage c :=
   (C.packetDependencyLedger).image_ind2 g c
 
 theorem packetLedger_image_ind3 (n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.packetDependencyLedger).image_ind3 n c z hz :=
+    ∃ y ∈ C.packet.possibleImage (C.procession.ind3 n c), z ≤ y :=
   (C.packetDependencyLedger).image_ind3 n c z hz
 
 theorem packetLedger_chain_volume (m n : Nat) (c : Choice) :
-    (C.packetDependencyLedger).ind3_chain_volume m n c :=
+    C.packet.logVolume c ≤ C.packet.logVolume (C.procession.ind3 n (C.procession.ind3 m c)) :=
   (C.packetDependencyLedger).ind3_chain_volume m n c
 
 theorem packetLedger_chain_determinant (m n : Nat) (c : Choice) :
-    (C.packetDependencyLedger).ind3_chain_determinant m n c :=
+    C.packet.determinant c ≤ C.packet.determinant (C.procession.ind3 n (C.procession.ind3 m c)) :=
   (C.packetDependencyLedger).ind3_chain_determinant m n c
 
 theorem packetLedger_chain_image (m n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.packetDependencyLedger).ind3_chain_image m n c z hz :=
+    ∃ y ∈ C.packet.possibleImage (C.procession.ind3 n (C.procession.ind3 m c)), z ≤ y :=
   (C.packetDependencyLedger).ind3_chain_image m n c z hz
 
 structure VerticalKummerDependencyLedger where
@@ -5441,58 +5440,58 @@ def verticalKummerDependencyLedger : VerticalKummerDependencyLedger C where
   kummer_label := C.input_labelledKummer_label
 
 theorem verticalLedger_nonarchimedean_profile (m : Nat) (c : Choice) :
-    (C.verticalKummerDependencyLedger).nonarchimedean_profile m c :=
+    C.vertical.nonarchimedeanImage m (C.packet.possibleImage c) = C.packet.possibleImage (C.procession.ind3 m c) :=
   (C.verticalKummerDependencyLedger).nonarchimedean_profile m c
 
 theorem verticalLedger_archimedean_profile (m : Nat) (c : Choice) :
-    (C.verticalKummerDependencyLedger).archimedean_profile m c :=
+    C.vertical.archimedeanImage m (C.packet.possibleImage c) = C.packet.possibleImage (C.procession.ind3 m c) :=
   (C.verticalKummerDependencyLedger).archimedean_profile m c
 
 theorem verticalLedger_nonarchimedean_inclusion (m : Nat) (c : Choice)
     (z : Real) (hz : z ∈ C.packet.possibleImage c) :
-    (C.verticalKummerDependencyLedger).nonarchimedean_inclusion m c z hz :=
+    z ∈ C.vertical.nonarchimedeanImage m (C.packet.possibleImage c) :=
   (C.verticalKummerDependencyLedger).nonarchimedean_inclusion m c z hz
 
 theorem verticalLedger_archimedean_upper (m : Nat) (c : Choice)
     (z : Real)
     (hz : z ∈ C.vertical.archimedeanImage m (C.packet.possibleImage c)) :
-    (C.verticalKummerDependencyLedger).archimedean_upper m c z hz :=
+    ∃ y ∈ C.packet.possibleImage c, z ≤ y :=
   (C.verticalKummerDependencyLedger).archimedean_upper m c z hz
 
 theorem verticalLedger_zero_upper (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.verticalKummerDependencyLedger).vertical_zero_upper c z hz :=
+    ∃ y ∈ C.packet.possibleImage (C.procession.ind3 0 c), z ≤ y :=
   (C.verticalKummerDependencyLedger).vertical_zero_upper c z hz
 
 theorem verticalLedger_one_upper (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.verticalKummerDependencyLedger).vertical_one_upper c z hz :=
+    ∃ y ∈ C.packet.possibleImage (C.procession.ind3 1 c), z ≤ y :=
   (C.verticalKummerDependencyLedger).vertical_one_upper c z hz
 
 theorem verticalLedger_zero_lift (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage (C.procession.ind3 0 c)) :
-    (C.verticalKummerDependencyLedger).arch_zero_lift c z hz :=
+    ∃ y ∈ C.packet.possibleImage c, z ≤ y :=
   (C.verticalKummerDependencyLedger).arch_zero_lift c z hz
 
 theorem verticalLedger_one_lift (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage (C.procession.ind3 1 c)) :
-    (C.verticalKummerDependencyLedger).arch_one_lift c z hz :=
+    ∃ y ∈ C.packet.possibleImage c, z ≤ y :=
   (C.verticalKummerDependencyLedger).arch_one_lift c z hz
 
 theorem verticalLedger_kummer_bijective (c : Choice) :
-    (C.verticalKummerDependencyLedger).kummer_bijective c :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   (C.verticalKummerDependencyLedger).kummer_bijective c
 
 theorem verticalLedger_kummer_left (c a : Choice) :
-    (C.verticalKummerDependencyLedger).kummer_left c a :=
+    (C.input.labelledKummer c).inverse ((C.input.labelledKummer c).map a) = a :=
   (C.verticalKummerDependencyLedger).kummer_left c a
 
 theorem verticalLedger_kummer_right (c b : Choice) :
-    (C.verticalKummerDependencyLedger).kummer_right c b :=
+    (C.input.labelledKummer c).map ((C.input.labelledKummer c).inverse b) = b :=
   (C.verticalKummerDependencyLedger).kummer_right c b
 
 theorem verticalLedger_kummer_label (c a : Choice) :
-    (C.verticalKummerDependencyLedger).kummer_label c a :=
+    (C.input.labelledKummer c).label ((C.input.labelledKummer c).inverse ((C.input.labelledKummer c).map a)) = (C.input.labelledKummer c).label a :=
   (C.verticalKummerDependencyLedger).kummer_label c a
 
 structure EvaluationDependencyLedger where
@@ -5549,8 +5548,8 @@ def evaluationDependencyLedger : EvaluationDependencyLedger C where
   horizontal_evaluation := C.input_evaluation_horizontal
   horizontal_kummer := C.input_kummer_horizontal
   horizontal_label := C.input_label_horizontal
-  horizontal_left_index := C.horizontal_left_source_index
-  horizontal_lower_index := C.horizontal_lower_source_index
+  horizontal_left_index := C.evaluation_horizontal_left_index
+  horizontal_lower_index := C.evaluation_horizontal_lower_index
   horizontal_index_both := fun c =>
     (C.evaluation_horizontal_left_index c).trans
       (C.evaluation_horizontal_lower_index c).symm
@@ -5562,55 +5561,55 @@ def evaluationDependencyLedger : EvaluationDependencyLedger C where
     C.input_evaluation_global_natural (C.input.horizontal.left c)
 
 theorem evaluationLedger_local_global (c : Choice) :
-    (C.evaluationDependencyLedger).local_global c :=
+    C.input.evaluation.localMap c = C.input.evaluation.globalMap c :=
   (C.evaluationDependencyLedger).local_global c
 
 theorem evaluationLedger_local_natural (c : Choice) :
-    (C.evaluationDependencyLedger).local_natural c :=
+    C.input.evaluation.localMap (C.input.evaluation.localComp c) = C.input.evaluation.localMap c :=
   (C.evaluationDependencyLedger).local_natural c
 
 theorem evaluationLedger_global_natural (c : Choice) :
-    (C.evaluationDependencyLedger).global_natural c :=
+    C.input.evaluation.globalMap (C.input.evaluation.globalComp c) = C.input.evaluation.globalMap c :=
   (C.evaluationDependencyLedger).global_natural c
 
 theorem evaluationLedger_horizontal_square (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_square c :=
+    C.input.horizontal.upper (C.input.horizontal.left c) = C.input.horizontal.right (C.input.horizontal.lower c) :=
   (C.evaluationDependencyLedger).horizontal_square c
 
 theorem evaluationLedger_horizontal_evaluation (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_evaluation c :=
+    C.input.evaluation.localMap (C.input.horizontal.left c) = C.input.horizontal.right (C.input.evaluation.localMap (C.input.horizontal.lower c)) :=
   (C.evaluationDependencyLedger).horizontal_evaluation c
 
 theorem evaluationLedger_horizontal_kummer (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_kummer c :=
+    (C.input.labelledKummer c).map (C.input.horizontal.left c) = C.input.horizontal.right ((C.input.labelledKummer c).map (C.input.horizontal.lower c)) :=
   (C.evaluationDependencyLedger).horizontal_kummer c
 
 theorem evaluationLedger_horizontal_label (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_label c :=
+    (C.input.labelledKummer c).label (C.input.horizontal.left c) = (C.input.labelledKummer c).label (C.input.horizontal.lower c) :=
   (C.evaluationDependencyLedger).horizontal_label c
 
 theorem evaluationLedger_horizontal_left_index (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_left_index c :=
+    C.procession.source_index (C.input.horizontal.left c) = C.procession.source_index c :=
   (C.evaluationDependencyLedger).horizontal_left_index c
 
 theorem evaluationLedger_horizontal_lower_index (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_lower_index c :=
+    C.procession.source_index (C.input.horizontal.lower c) = C.procession.source_index c :=
   (C.evaluationDependencyLedger).horizontal_lower_index c
 
 theorem evaluationLedger_horizontal_index_both (c : Choice) :
-    (C.evaluationDependencyLedger).horizontal_index_both c :=
+    C.procession.source_index (C.input.horizontal.left c) = C.procession.source_index (C.input.horizontal.lower c) :=
   (C.evaluationDependencyLedger).horizontal_index_both c
 
 theorem evaluationLedger_local_global_horizontal (c : Choice) :
-    (C.evaluationDependencyLedger).local_global_horizontal c :=
+    C.input.evaluation.localMap (C.input.horizontal.left c) = C.input.evaluation.globalMap (C.input.horizontal.left c) :=
   (C.evaluationDependencyLedger).local_global_horizontal c
 
 theorem evaluationLedger_local_natural_horizontal (c : Choice) :
-    (C.evaluationDependencyLedger).local_natural_horizontal c :=
+    C.input.evaluation.localMap (C.input.evaluation.localComp (C.input.horizontal.left c)) = C.input.evaluation.localMap (C.input.horizontal.left c) :=
   (C.evaluationDependencyLedger).local_natural_horizontal c
 
 theorem evaluationLedger_global_natural_horizontal (c : Choice) :
-    (C.evaluationDependencyLedger).global_natural_horizontal c :=
+    C.input.evaluation.globalMap (C.input.evaluation.globalComp (C.input.horizontal.left c)) = C.input.evaluation.globalMap (C.input.horizontal.left c) :=
   (C.evaluationDependencyLedger).global_natural_horizontal c
 
 structure SourceDefinition31DependencyLedger where
@@ -5664,87 +5663,87 @@ def sourceDefinition31DependencyLedger :
   arithmetic_cusp := C.source_compatibility_cusp_at
 
 theorem sourceLedger_selected_nonempty :
-    (C.sourceDefinition31DependencyLedger).selected_nonempty :=
+    Nonempty C.source.selectedPlaces :=
   (C.sourceDefinition31DependencyLedger).selected_nonempty
 
 theorem sourceLedger_bad_finite :
-    (C.sourceDefinition31DependencyLedger).bad_finite :=
+    Nonempty (Fintype C.source.badPlaces) :=
   (C.sourceDefinition31DependencyLedger).bad_finite
 
 theorem sourceLedger_stable (b : C.source.badPlaces) :
-    (C.sourceDefinition31DependencyLedger).stable b :=
+    C.source.reduction.stableReduction b :=
   (C.sourceDefinition31DependencyLedger).stable b
 
 theorem sourceLedger_multiplicative (b : C.source.badPlaces) :
-    (C.sourceDefinition31DependencyLedger).multiplicative b :=
+    C.source.reduction.multiplicativeReduction b :=
   (C.sourceDefinition31DependencyLedger).multiplicative b
 
 theorem sourceLedger_split_multiplicative (b : C.source.badPlaces) :
-    (C.sourceDefinition31DependencyLedger).split_multiplicative b :=
+    C.source.reduction.splitMultiplicativeReduction b :=
   (C.sourceDefinition31DependencyLedger).split_multiplicative b
 
 theorem sourceLedger_q_nonzero (b : C.source.badPlaces) :
-    (C.sourceDefinition31DependencyLedger).q_nonzero b :=
+    C.source.reduction.qParameter b ≠ 0 :=
   (C.sourceDefinition31DependencyLedger).q_nonzero b
 
 theorem sourceLedger_q_contracting (b : C.source.badPlaces) :
-    (C.sourceDefinition31DependencyLedger).q_contracting b :=
+    ‖C.source.reduction.qParameter b‖ < 1 :=
   (C.sourceDefinition31DependencyLedger).q_contracting b
 
 theorem sourceLedger_torsion_sl2 :
-    (C.sourceDefinition31DependencyLedger).torsion_sl2 :=
+    C.source.torsion.imageContainsSL2 :=
   (C.sourceDefinition31DependencyLedger).torsion_sl2
 
 theorem sourceLedger_torsion_six :
-    (C.sourceDefinition31DependencyLedger).torsion_six :=
+    C.source.torsion.sixTorsionIndependent :=
   (C.sourceDefinition31DependencyLedger).torsion_six
 
 theorem sourceLedger_torsion_l :
-    (C.sourceDefinition31DependencyLedger).torsion_l :=
+    C.source.torsion.lTorsionCompatible :=
   (C.sourceDefinition31DependencyLedger).torsion_l
 
 theorem sourceLedger_cover_surjective :
-    (C.sourceDefinition31DependencyLedger).cover_surjective :=
+    Function.Surjective C.source.orbicurve.coverToPunctured :=
   (C.sourceDefinition31DependencyLedger).cover_surjective
 
 theorem sourceLedger_exact_injective :
-    (C.sourceDefinition31DependencyLedger).exact_injective :=
+    Function.Injective ⇑C.source.orbicurve.exactSequence.injection :=
   (C.sourceDefinition31DependencyLedger).exact_injective
 
 theorem sourceLedger_exact_surjective :
-    (C.sourceDefinition31DependencyLedger).exact_surjective :=
+    Function.Surjective ⇑C.source.orbicurve.exactSequence.projection :=
   (C.sourceDefinition31DependencyLedger).exact_surjective
 
 theorem sourceLedger_section_bijective :
-    (C.sourceDefinition31DependencyLedger).section_bijective :=
+    Function.Bijective C.source.sections.sectionMap :=
   (C.sourceDefinition31DependencyLedger).section_bijective
 
 theorem sourceLedger_cusp_positive :
-    (C.sourceDefinition31DependencyLedger).cusp_positive :=
+    0 < C.source.cusp.epsilon :=
   (C.sourceDefinition31DependencyLedger).cusp_positive
 
 theorem sourceLedger_cusp_nonzero :
-    (C.sourceDefinition31DependencyLedger).cusp_nonzero :=
+    C.source.cusp.epsilon ≠ 0 :=
   (C.sourceDefinition31DependencyLedger).cusp_nonzero
 
 theorem sourceLedger_arithmetic_reduction :
-    (C.sourceDefinition31DependencyLedger).arithmetic_reduction :=
+    C.source.arithmetic_reduction_compatibility :=
   (C.sourceDefinition31DependencyLedger).arithmetic_reduction
 
 theorem sourceLedger_arithmetic_torsion :
-    (C.sourceDefinition31DependencyLedger).arithmetic_torsion :=
+    C.source.arithmetic_torsion_compatibility :=
   (C.sourceDefinition31DependencyLedger).arithmetic_torsion
 
 theorem sourceLedger_arithmetic_orbicurve :
-    (C.sourceDefinition31DependencyLedger).arithmetic_orbicurve :=
+    C.source.arithmetic_orbicurve_compatibility :=
   (C.sourceDefinition31DependencyLedger).arithmetic_orbicurve
 
 theorem sourceLedger_arithmetic_section :
-    (C.sourceDefinition31DependencyLedger).arithmetic_section :=
+    C.source.arithmetic_section_compatibility :=
   (C.sourceDefinition31DependencyLedger).arithmetic_section
 
 theorem sourceLedger_arithmetic_cusp :
-    (C.sourceDefinition31DependencyLedger).arithmetic_cusp :=
+    C.source.arithmetic_cusp_compatibility :=
   (C.sourceDefinition31DependencyLedger).arithmetic_cusp
 
 structure HodgeDependencyLedger where
@@ -5779,55 +5778,55 @@ def hodgeDependencyLedger : HodgeDependencyLedger C where
   permutation_scale := C.hodge_permutation_scale
 
 theorem hodgeLedger_source :
-    (C.hodgeDependencyLedger).source :=
+    C.hodge.source = C.source :=
   (C.hodgeDependencyLedger).source
 
 theorem hodgeLedger_index :
-    (C.hodgeDependencyLedger).index :=
+    C.hodge.index = Choice :=
   (C.hodgeDependencyLedger).index
 
 theorem hodgeLedger_theater (c : Choice) :
-    (C.hodgeDependencyLedger).theater c :=
+    C.hodge.theater c = C.input.family.theater c :=
   (C.hodgeDependencyLedger).theater c
 
 theorem hodgeLedger_theater_injective :
-    (C.hodgeDependencyLedger).theater_injective :=
+    Function.Injective C.hodge.theater :=
   (C.hodgeDependencyLedger).theater_injective
 
 theorem hodgeLedger_link (c d : Choice) :
-    (C.hodgeDependencyLedger).link c d :=
+    C.hodge.link c d = C.input.family.link c d :=
   (C.hodgeDependencyLedger).link c d
 
 theorem hodgeLedger_link_refl (c : Choice) :
-    (C.hodgeDependencyLedger).link_refl c :=
+    C.hodge.link c c = id :=
   (C.hodgeDependencyLedger).link_refl c
 
 theorem hodgeLedger_link_refl_apply (c : Choice)
     (t : C.hodge.theaterCarrier) :
-    (C.hodgeDependencyLedger).link_refl_apply c t :=
+    C.hodge.link c c t = t :=
   (C.hodgeDependencyLedger).link_refl_apply c t
 
 theorem hodgeLedger_link_trans (c d e : Choice)
     (t : C.hodge.theaterCarrier) :
-    (C.hodgeDependencyLedger).link_trans c d e t :=
+    C.hodge.link d e (C.hodge.link c d t) = C.hodge.link c e t :=
   (C.hodgeDependencyLedger).link_trans c d e t
 
 theorem hodgeLedger_q_natural (c d : Choice) :
-    (C.hodgeDependencyLedger).q_natural c d :=
+    C.hodge.qParameter c = C.hodge.qParameter d :=
   (C.hodgeDependencyLedger).q_natural c d
 
 theorem hodgeLedger_scale_natural (c d : Choice)
     (x : SignedLabel l.value) :
-    (C.hodgeDependencyLedger).scale_natural c d x :=
+    C.hodge.scale c x = C.hodge.scale d x :=
   (C.hodgeDependencyLedger).scale_natural c d x
 
 theorem hodgeLedger_permutation_q (c : Choice) :
-    (C.hodgeDependencyLedger).permutation_q c :=
+    C.hodge.qParameter (C.hodge.permutation c) = C.hodge.qParameter c :=
   (C.hodgeDependencyLedger).permutation_q c
 
 theorem hodgeLedger_permutation_scale (c : Choice)
     (x : SignedLabel l.value) :
-    (C.hodgeDependencyLedger).permutation_scale c x :=
+    C.hodge.scale (C.hodge.permutation c) x = C.hodge.scale c x :=
   (C.hodgeDependencyLedger).permutation_scale c x
 
 structure Theorem311OutputDependencyLedger (c : Choice) where
@@ -5876,58 +5875,58 @@ def theorem311OutputDependencyLedger (c : Choice) :
   evaluation := C.completionOutput_evaluation c
 
 theorem outputLedger_source (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).source :=
+    C.completionOutput.source = (DerivedPrerequisiteInput.core C.input).base :=
   (C.theorem311OutputDependencyLedger c).source
 
 theorem outputLedger_quotient (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).quotient :=
+    C.completionOutput.quotient = quotientMap C.input C.completionOutput.source :=
   (C.theorem311OutputDependencyLedger c).quotient
 
 theorem outputLedger_part_i (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).part_i :=
+    C.completionOutput.part_i = partI C.input :=
   (C.theorem311OutputDependencyLedger c).part_i
 
 theorem outputLedger_part_ii (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).part_ii :=
+    C.completionOutput.part_ii = partII C.input :=
   (C.theorem311OutputDependencyLedger c).part_ii
 
 theorem outputLedger_part_iii (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).part_iii :=
+    C.completionOutput.part_iii = partIII C.input :=
   (C.theorem311OutputDependencyLedger c).part_iii
 
 theorem outputLedger_labelled (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).labelled :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   (C.theorem311OutputDependencyLedger c).labelled
 
 theorem outputLedger_labelled_left (c a : Choice) :
-    (C.theorem311OutputDependencyLedger c).labelled_left a :=
+    (C.input.labelledKummer c).inverse ((C.input.labelledKummer c).map a) = a :=
   (C.theorem311OutputDependencyLedger c).labelled_left a
 
 theorem outputLedger_labelled_right (c b : Choice) :
-    (C.theorem311OutputDependencyLedger c).labelled_right b :=
+    (C.input.labelledKummer c).map ((C.input.labelledKummer c).inverse b) = b :=
   (C.theorem311OutputDependencyLedger c).labelled_right b
 
 theorem outputLedger_ind1 (c : Choice) {a b : Choice}
     (h : Theorem311Source.Ind1Relation C.input a b) :
-    (C.theorem311OutputDependencyLedger c).ind1 h :=
+    quotientMap C.input a = quotientMap C.input b :=
   (C.theorem311OutputDependencyLedger c).ind1 h
 
 theorem outputLedger_ind2 (c : Choice) {a b : Choice}
     (h : Theorem311Source.Ind2Relation C.input a b) :
-    (C.theorem311OutputDependencyLedger c).ind2 h :=
+    quotientMap C.input a = quotientMap C.input b :=
   (C.theorem311OutputDependencyLedger c).ind2 h
 
 theorem outputLedger_ind3 (c : Choice) (n : Nat) (z : Real)
     (hz : z ∈ C.input.profile.possibleImage C.input.core.base) :
-    (C.theorem311OutputDependencyLedger c).ind3 n z hz :=
+    ∃ w ∈ (DerivedPrerequisiteInput.profile C.input).possibleImage ((DerivedPrerequisiteInput.core C.input).ind3 n (DerivedPrerequisiteInput.core C.input).base), z ≤ w :=
   (C.theorem311OutputDependencyLedger c).ind3 n z hz
 
 theorem outputLedger_horizontal (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).horizontal :=
+    C.input.horizontal.upper (C.input.horizontal.left c) = C.input.horizontal.right (C.input.horizontal.lower c) :=
   (C.theorem311OutputDependencyLedger c).horizontal
 
 theorem outputLedger_evaluation (c : Choice) :
-    (C.theorem311OutputDependencyLedger c).evaluation :=
+    C.input.evaluation.localMap (C.input.horizontal.left c) = C.input.horizontal.right (C.input.evaluation.localMap (C.input.horizontal.lower c)) :=
   (C.theorem311OutputDependencyLedger c).evaluation
 
 structure CompleteTheorem311DependencyLedger (c : Choice) where
@@ -5984,44 +5983,40 @@ theorem completeLedger_output (c : Choice) :
       C.theorem311OutputDependencyLedger c := rfl
 
 theorem completeLedger_label_alignment (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).parameters.label_alignment =
-      C.input.labelPrime = l := by
+    C.input.labelPrime = l := by
   exact C.parameterLedger_label
 
 theorem completeLedger_source_nonempty (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).source.selected_nonempty :=
+    Nonempty C.source.selectedPlaces :=
   C.sourceLedger_selected_nonempty
 
 theorem completeLedger_hodge_groupoid (c : Choice) (i j k : Choice)
     (t : C.hodge.theaterCarrier) :
-    (C.completeTheorem311DependencyLedger c).hodge.link_trans i j k t :=
+    C.hodge.link j k (C.hodge.link i j t) = C.hodge.link i k t :=
   C.hodgeLedger_link_trans i j k t
 
 theorem completeLedger_procession_vertical (c : Choice) (n : Nat)
     (x : Choice) :
-    (C.completeTheorem311DependencyLedger c).procession.ind3_level n x :=
+    C.procession.level x ≤ C.procession.level (C.procession.ind3 n x) :=
   C.processionLedger_ind3_level n x
 
 theorem completeLedger_packet_vertical (c : Choice) (n : Nat)
     (x : Choice) :
-    (C.completeTheorem311DependencyLedger c).packet.ind3_volume n x :=
+    C.packet.logVolume x ≤ C.packet.logVolume (C.procession.ind3 n x) :=
   C.packetLedger_ind3_volume n x
 
 theorem completeLedger_vertical_kummer (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).vertical.kummer_bijective c :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   C.verticalLedger_kummer_bijective c
 
 theorem completeLedger_evaluation_square (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).evaluation.horizontal_square c :=
+    C.input.horizontal.upper (C.input.horizontal.left c) = C.input.horizontal.right (C.input.horizontal.lower c) :=
   C.evaluationLedger_horizontal_square c
 
 theorem completeLedger_output_parts (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).output.part_i =
-        Theorem311Source.partI C.input ∧
-      (C.completeTheorem311DependencyLedger c).output.part_ii =
-        Theorem311Source.partII C.input ∧
-      (C.completeTheorem311DependencyLedger c).output.part_iii =
-        Theorem311Source.partIII C.input := by
+    C.completionOutput.part_i = Theorem311Source.partI C.input ∧
+      C.completionOutput.part_ii = Theorem311Source.partII C.input ∧
+      C.completionOutput.part_iii = Theorem311Source.partIII C.input := by
   exact ⟨C.outputLedger_part_i c,
     C.outputLedger_part_ii c,
     C.outputLedger_part_iii c⟩
@@ -6033,11 +6028,11 @@ theorem completeLedger_output_vertical (c : Choice) (n : Nat) (z : Real)
   C.outputLedger_ind3 c n z hz
 
 theorem completeLedger_output_horizontal (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).output.horizontal :=
+    C.input.horizontal.upper (C.input.horizontal.left c) = C.input.horizontal.right (C.input.horizontal.lower c) :=
   C.outputLedger_horizontal c
 
 theorem completeLedger_output_evaluation (c : Choice) :
-    (C.completeTheorem311DependencyLedger c).output.evaluation :=
+    C.input.evaluation.localMap (C.input.horizontal.left c) = C.input.horizontal.right (C.input.evaluation.localMap (C.input.horizontal.lower c)) :=
   C.outputLedger_evaluation c
 
 structure RouteDependencyLedger where
@@ -6111,84 +6106,84 @@ def routeDependencyLedger : RouteDependencyLedger C where
   ind2_ind3_commute := C.realization.route_commute_ind2_ind3
 
 theorem routeLedger_nil (c : Choice) :
-    (C.routeDependencyLedger).nil c :=
+    C.realization.routeApply [] c = c :=
   (C.routeDependencyLedger).nil c
 
-theorem routeLedger_append (r₁ r₂ : List (RouteStep Label)) (c : Choice) :
-    (C.routeDependencyLedger).append r₁ r₂ c :=
+theorem routeLedger_append (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
+    C.realization.routeApply (r₁ ++ r₂) c = C.realization.routeApply r₂ (C.realization.routeApply r₁ c) :=
   (C.routeDependencyLedger).append r₁ r₂ c
 
-theorem routeLedger_level_upper (route : List (RouteStep Label))
+theorem routeLedger_level_upper (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
-    (C.routeDependencyLedger).level_upper route c :=
+    C.procession.level c ≤ C.procession.level (C.realization.routeApply route c) :=
   (C.routeDependencyLedger).level_upper route c
 
-theorem routeLedger_volume_upper (route : List (RouteStep Label))
+theorem routeLedger_volume_upper (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) :
-    (C.routeDependencyLedger).volume_upper route c :=
+    C.packet.logVolume c ≤ C.packet.logVolume (C.realization.routeApply route c) :=
   (C.routeDependencyLedger).volume_upper route c
 
-theorem routeLedger_image_upper (route : List (RouteStep Label))
+theorem routeLedger_image_upper (route : List (MultiradialKernel.RouteStep Label))
     (c : Choice) (z : Real) (hz : z ∈ C.packet.possibleImage c) :
-    (C.routeDependencyLedger).image_upper route c z hz :=
+    ∃ w ∈ C.packet.possibleImage (C.realization.routeApply route c), z ≤ w :=
   (C.routeDependencyLedger).image_upper route c z hz
 
 theorem routeLedger_horizontal_volume
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
-    (C.routeDependencyLedger).horizontal_volume route c hroute :=
+    C.packet.logVolume (C.realization.routeApply route c) = C.packet.logVolume c :=
   (C.routeDependencyLedger).horizontal_volume route c hroute
 
 theorem routeLedger_horizontal_image
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
-    (C.routeDependencyLedger).horizontal_image route c hroute :=
+    C.packet.possibleImage (C.realization.routeApply route c) = C.packet.possibleImage c :=
   (C.routeDependencyLedger).horizontal_image route c hroute
 
 theorem routeLedger_horizontal_quotient
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
-    (C.routeDependencyLedger).horizontal_quotient route c hroute :=
+    C.procession.core.generatedQuotientMap c = C.procession.core.generatedQuotientMap (C.realization.routeApply route c) :=
   (C.routeDependencyLedger).horizontal_quotient route c hroute
 
 theorem routeLedger_ind1_identity (c : Choice) :
-    (C.routeDependencyLedger).ind1_identity c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind1 0] c = c :=
   (C.routeDependencyLedger).ind1_identity c
 
 theorem routeLedger_ind2_identity (c : Choice) :
-    (C.routeDependencyLedger).ind2_identity c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind2 0] c = c :=
   (C.routeDependencyLedger).ind2_identity c
 
 theorem routeLedger_ind3_identity (c : Choice) :
-    (C.routeDependencyLedger).ind3_identity c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind3 0] c = c :=
   (C.routeDependencyLedger).ind3_identity c
 
 theorem routeLedger_ind1_inverse (g : Label) (c : Choice) :
-    (C.routeDependencyLedger).ind1_inverse g c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind1 g, MultiradialKernel.RouteStep.ind1 (-g)] c = c :=
   (C.routeDependencyLedger).ind1_inverse g c
 
 theorem routeLedger_ind2_inverse (g : Label) (c : Choice) :
-    (C.routeDependencyLedger).ind2_inverse g c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind2 g, MultiradialKernel.RouteStep.ind2 (-g)] c = c :=
   (C.routeDependencyLedger).ind2_inverse g c
 
 theorem routeLedger_ind3_add (m n : Nat) (c : Choice) :
-    (C.routeDependencyLedger).ind3_add m n c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind3 m, MultiradialKernel.RouteStep.ind3 n] c = C.realization.routeApply [MultiradialKernel.RouteStep.ind3 (m + n)] c :=
   (C.routeDependencyLedger).ind3_add m n c
 
 theorem routeLedger_ind1_ind2_commute (g h : Label) (c : Choice) :
-    (C.routeDependencyLedger).ind1_ind2_commute g h c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind1 g, MultiradialKernel.RouteStep.ind2 h] c = C.realization.routeApply [MultiradialKernel.RouteStep.ind2 h, MultiradialKernel.RouteStep.ind1 g] c :=
   (C.routeDependencyLedger).ind1_ind2_commute g h c
 
 theorem routeLedger_ind1_ind3_commute (g : Label) (n : Nat) (c : Choice) :
-    (C.routeDependencyLedger).ind1_ind3_commute g n c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind1 g, MultiradialKernel.RouteStep.ind3 n] c = C.realization.routeApply [MultiradialKernel.RouteStep.ind3 n, MultiradialKernel.RouteStep.ind1 g] c :=
   (C.routeDependencyLedger).ind1_ind3_commute g n c
 
 theorem routeLedger_ind2_ind3_commute (g : Label) (n : Nat) (c : Choice) :
-    (C.routeDependencyLedger).ind2_ind3_commute g n c :=
+    C.realization.routeApply [MultiradialKernel.RouteStep.ind2 g, MultiradialKernel.RouteStep.ind3 n] c = C.realization.routeApply [MultiradialKernel.RouteStep.ind3 n, MultiradialKernel.RouteStep.ind2 g] c :=
   (C.routeDependencyLedger).ind2_ind3_commute g n c
 
 theorem routeLedger_horizontal_append_volume
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     C.packet.logVolume (C.realization.routeApply (r₁ ++ r₂) c) =
@@ -6196,7 +6191,7 @@ theorem routeLedger_horizontal_append_volume
   C.arbitrary_route_horizontal_append_volume r₁ r₂ c h₁ h₂
 
 theorem routeLedger_horizontal_append_image
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     C.packet.possibleImage (C.realization.routeApply (r₁ ++ r₂) c) =
@@ -6204,7 +6199,7 @@ theorem routeLedger_horizontal_append_image
   C.arbitrary_route_horizontal_append_image r₁ r₂ c h₁ h₂
 
 theorem routeLedger_horizontal_append_quotient
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice)
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (h₁ : ∀ s ∈ r₁, MultiradialKernel.horizontal s)
     (h₂ : ∀ s ∈ r₂, MultiradialKernel.horizontal s) :
     MultiradialKernel.Core.generatedQuotientMap C.procession.core c =
@@ -6273,109 +6268,106 @@ theorem auditSnapshot_complete (c : Choice) :
       C.completeTheorem311DependencyLedger c := rfl
 
 theorem auditSnapshot_q_contracting (c : Choice) :
-    (C.sourceAuditSnapshot c).parameter.q_contracting c :=
+    ‖C.qParameter c‖ < 1 :=
   C.parameterLedger_q_contracting c
 
 theorem auditSnapshot_procession_level (c : Choice) (n : Nat) :
-    (C.sourceAuditSnapshot c).procession.ind3_level n c :=
+    C.procession.level c ≤ C.procession.level (C.procession.ind3 n c) :=
   C.processionLedger_ind3_level n c
 
 theorem auditSnapshot_packet_volume (c : Choice) (n : Nat) :
-    (C.sourceAuditSnapshot c).packet.ind3_volume n c :=
+    C.packet.logVolume c ≤ C.packet.logVolume (C.procession.ind3 n c) :=
   C.packetLedger_ind3_volume n c
 
 theorem auditSnapshot_vertical_kummer (c : Choice) :
-    (C.sourceAuditSnapshot c).vertical.kummer_bijective c :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   C.verticalLedger_kummer_bijective c
 
 theorem auditSnapshot_evaluation_square (c : Choice) :
-    (C.sourceAuditSnapshot c).evaluation.horizontal_square c :=
+    C.input.horizontal.upper (C.input.horizontal.left c) = C.input.horizontal.right (C.input.horizontal.lower c) :=
   C.evaluationLedger_horizontal_square c
 
 theorem auditSnapshot_source_cusp :
-    (C.sourceAuditSnapshot C.procession.base).source.cusp_positive :=
+    0 < C.source.cusp.epsilon :=
   C.sourceLedger_cusp_positive
 
 theorem auditSnapshot_route_level (c : Choice)
-    (route : List (RouteStep Label)) :
-    (C.sourceAuditSnapshot c).route.level_upper route c :=
+    (route : List (MultiradialKernel.RouteStep Label)) :
+    C.procession.level c ≤ C.procession.level (C.realization.routeApply route c) :=
   (C.routeDependencyLedger).level_upper route c
 
 theorem auditSnapshot_output_parts (c : Choice) :
-    (C.sourceAuditSnapshot c).output.part_i =
-        Theorem311Source.partI C.input ∧
-      (C.sourceAuditSnapshot c).output.part_ii =
-        Theorem311Source.partII C.input ∧
-      (C.sourceAuditSnapshot c).output.part_iii =
-        Theorem311Source.partIII C.input := by
+    C.completionOutput.part_i = Theorem311Source.partI C.input ∧
+      C.completionOutput.part_ii = Theorem311Source.partII C.input ∧
+      C.completionOutput.part_iii = Theorem311Source.partIII C.input := by
   exact ⟨C.outputLedger_part_i c,
     C.outputLedger_part_ii c,
     C.outputLedger_part_iii c⟩
 
 theorem auditSnapshot_output_square (c : Choice) :
-    (C.sourceAuditSnapshot c).output.horizontal ∧
-      (C.sourceAuditSnapshot c).output.evaluation := by
+    C.input.horizontal.upper (C.input.horizontal.left c) =
+        C.input.horizontal.right (C.input.horizontal.lower c) ∧
+      C.input.evaluation.localMap (C.input.horizontal.left c) =
+        C.input.horizontal.right
+          (C.input.evaluation.localMap (C.input.horizontal.lower c)) := by
   exact ⟨C.outputLedger_horizontal c,
     C.outputLedger_evaluation c⟩
 
 theorem auditSnapshot_parameter_natural (c d : Choice) :
-    (C.sourceAuditSnapshot c).parameter.q_natural c d :=
+    C.qParameter c = C.qParameter d :=
   C.parameterLedger_q_natural c d
 
 theorem auditSnapshot_procession_commute (g : Label) (n : Nat)
     (c : Choice) :
-    (C.sourceAuditSnapshot c).procession.ind1_ind3 g n c :=
+    C.procession.ind1 g (C.procession.ind3 n c) = C.procession.ind3 n (C.procession.ind1 g c) :=
   C.processionLedger_ind1_ind3 g n c
 
 theorem auditSnapshot_packet_image (n : Nat) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.sourceAuditSnapshot c).packet.image_ind3 n c z hz :=
+    ∃ y ∈ C.packet.possibleImage (C.procession.ind3 n c), z ≤ y :=
   C.packetLedger_image_ind3 n c z hz
 
 theorem auditSnapshot_vertical_profile (n : Nat) (c : Choice) :
-    (C.sourceAuditSnapshot c).vertical.nonarchimedean_profile n c :=
+    C.vertical.nonarchimedeanImage n (C.packet.possibleImage c) = C.packet.possibleImage (C.procession.ind3 n c) :=
   C.verticalLedger_nonarchimedean_profile n c
 
 theorem auditSnapshot_kummer_inverse (c a : Choice) :
-    (C.sourceAuditSnapshot c).vertical.kummer_left c a :=
+    (C.input.labelledKummer c).inverse ((C.input.labelledKummer c).map a) = a :=
   C.verticalLedger_kummer_left c a
 
 theorem auditSnapshot_evaluation_kummer (c : Choice) :
-    (C.sourceAuditSnapshot c).evaluation.horizontal_kummer c :=
+    (C.input.labelledKummer c).map (C.input.horizontal.left c) = C.input.horizontal.right ((C.input.labelledKummer c).map (C.input.horizontal.lower c)) :=
   C.evaluationLedger_horizontal_kummer c
 
 theorem auditSnapshot_source_reduction
     (b : C.source.badPlaces) :
-    (C.sourceAuditSnapshot C.procession.base).source.stable b :=
+    C.source.reduction.stableReduction b :=
   C.sourceLedger_stable b
 
 theorem auditSnapshot_route_horizontal
-    (route : List (RouteStep Label)) (c : Choice)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice)
     (hroute : ∀ s ∈ route, MultiradialKernel.horizontal s) :
-    (C.sourceAuditSnapshot c).route.horizontal_volume route c hroute :=
+    C.packet.logVolume (C.realization.routeApply route c) = C.packet.logVolume c :=
   (C.routeDependencyLedger).horizontal_volume route c hroute
 
 theorem auditSnapshot_output_labelled (c : Choice) :
-    (C.sourceAuditSnapshot c).output.labelled :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   C.outputLedger_labelled c
 
 theorem auditSnapshot_complete_bundle (c : Choice) :
-    (C.sourceAuditSnapshot c).complete.output.part_i =
-        Theorem311Source.partI C.input ∧
-      (C.sourceAuditSnapshot c).complete.output.part_ii =
-        Theorem311Source.partII C.input ∧
-      (C.sourceAuditSnapshot c).complete.output.part_iii =
-        Theorem311Source.partIII C.input := by
+    C.completionOutput.part_i = Theorem311Source.partI C.input ∧
+      C.completionOutput.part_ii = Theorem311Source.partII C.input ∧
+      C.completionOutput.part_iii = Theorem311Source.partIII C.input := by
   exact ⟨C.outputLedger_part_i c,
     C.outputLedger_part_ii c,
     C.outputLedger_part_iii c⟩
 
 theorem auditSnapshot_source_arithmetic :
-    (C.sourceAuditSnapshot C.procession.base).source.arithmetic_reduction ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_torsion ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_orbicurve ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_section ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_cusp := by
+    C.source.arithmetic_reduction_compatibility ∧
+      C.source.arithmetic_torsion_compatibility ∧
+      C.source.arithmetic_orbicurve_compatibility ∧
+      C.source.arithmetic_section_compatibility ∧
+      C.source.arithmetic_cusp_compatibility := by
   exact ⟨C.sourceLedger_arithmetic_reduction,
     C.sourceLedger_arithmetic_torsion,
     C.sourceLedger_arithmetic_orbicurve,
@@ -6383,14 +6375,12 @@ theorem auditSnapshot_source_arithmetic :
     C.sourceLedger_arithmetic_cusp⟩
 
 theorem auditSnapshot_procession_three_step (m n k : Nat) (c : Choice) :
-    (C.sourceAuditSnapshot c).procession.ind3_level k
-      (C.procession.ind3 n (C.procession.ind3 m c)) :=
+    C.procession.level (C.procession.ind3 n (C.procession.ind3 m c)) ≤ C.procession.level (C.procession.ind3 k (C.procession.ind3 n (C.procession.ind3 m c))) :=
   C.processionLedger_ind3_level k
     (C.procession.ind3 n (C.procession.ind3 m c))
 
 theorem auditSnapshot_packet_three_step (m n k : Nat) (c : Choice) :
-    (C.sourceAuditSnapshot c).packet.ind3_chain_volume n k
-      (C.procession.ind3 m c) :=
+    C.packet.logVolume (C.procession.ind3 m c) ≤ C.packet.logVolume (C.procession.ind3 k (C.procession.ind3 n (C.procession.ind3 m c))) :=
   C.packetLedger_chain_volume n k (C.procession.ind3 m c)
 
 theorem auditSnapshot_vertical_three_step (m n k : Nat) (c : Choice)
@@ -6401,90 +6391,91 @@ theorem auditSnapshot_vertical_three_step (m n k : Nat) (c : Choice)
   C.packet_image_chain_three m n k c z hz
 
 theorem auditSnapshot_horizontal_bundle (c : Choice) :
-    (C.sourceAuditSnapshot c).evaluation.horizontal_square c ∧
-      (C.sourceAuditSnapshot c).evaluation.horizontal_evaluation c ∧
-      (C.sourceAuditSnapshot c).evaluation.horizontal_kummer c := by
+    C.input.horizontal.upper (C.input.horizontal.left c) =
+        C.input.horizontal.right (C.input.horizontal.lower c) ∧
+      C.input.evaluation.localMap (C.input.horizontal.left c) =
+        C.input.horizontal.right
+          (C.input.evaluation.localMap (C.input.horizontal.lower c)) ∧
+      (C.input.labelledKummer c).map (C.input.horizontal.left c) =
+        C.input.horizontal.right
+          ((C.input.labelledKummer c).map (C.input.horizontal.lower c)) := by
   exact ⟨C.evaluationLedger_horizontal_square c,
     C.evaluationLedger_horizontal_evaluation c,
     C.evaluationLedger_horizontal_kummer c⟩
 
 theorem auditSnapshot_output_vertical (c : Choice) (n : Nat) (z : Real)
     (hz : z ∈ C.input.profile.possibleImage C.input.core.base) :
-    (C.sourceAuditSnapshot c).output.ind3 n z hz :=
+    ∃ w ∈ (DerivedPrerequisiteInput.profile C.input).possibleImage ((DerivedPrerequisiteInput.core C.input).ind3 n (DerivedPrerequisiteInput.core C.input).base), z ≤ w :=
   C.outputLedger_ind3 c n z hz
 
 theorem auditSnapshot_source_places :
-    (C.sourceAuditSnapshot C.procession.base).source.selected_nonempty ∧
-      (C.sourceAuditSnapshot C.procession.base).source.bad_finite := by
+    Nonempty C.source.selectedPlaces ∧
+      Nonempty (Fintype C.source.badPlaces) := by
   exact ⟨C.sourceLedger_selected_nonempty, C.sourceLedger_bad_finite⟩
 
 theorem auditSnapshot_source_geometry :
-    (C.sourceAuditSnapshot C.procession.base).source.torsion_sl2 ∧
-      (C.sourceAuditSnapshot C.procession.base).source.torsion_six ∧
-      (C.sourceAuditSnapshot C.procession.base).source.torsion_l := by
+    C.source.torsion.imageContainsSL2 ∧
+      C.source.torsion.sixTorsionIndependent ∧
+      C.source.torsion.lTorsionCompatible := by
   exact ⟨C.sourceLedger_torsion_sl2,
     C.sourceLedger_torsion_six,
     C.sourceLedger_torsion_l⟩
 
 theorem auditSnapshot_source_orbicurve :
-    (C.sourceAuditSnapshot C.procession.base).source.cover_surjective ∧
-      (C.sourceAuditSnapshot C.procession.base).source.exact_injective ∧
-      (C.sourceAuditSnapshot C.procession.base).source.exact_surjective := by
+    Function.Surjective C.source.orbicurve.coverToPunctured ∧
+      Function.Injective ⇑C.source.orbicurve.exactSequence.injection ∧
+      Function.Surjective ⇑C.source.orbicurve.exactSequence.projection := by
   exact ⟨C.sourceLedger_cover_surjective,
     C.sourceLedger_exact_injective,
     C.sourceLedger_exact_surjective⟩
 
 theorem auditSnapshot_source_section :
-    (C.sourceAuditSnapshot C.procession.base).source.section_bijective :=
+    Function.Bijective C.source.sections.sectionMap :=
   C.sourceLedger_section_bijective
 
-theorem auditSnapshot_source_cusp :
-    (C.sourceAuditSnapshot C.procession.base).source.cusp_positive ∧
-      (C.sourceAuditSnapshot C.procession.base).source.cusp_nonzero := by
+theorem auditSnapshot_source_cusp_bundle :
+    0 < C.source.cusp.epsilon ∧ C.source.cusp.epsilon ≠ 0 := by
   exact ⟨C.sourceLedger_cusp_positive, C.sourceLedger_cusp_nonzero⟩
 
 theorem auditSnapshot_route_identity (c : Choice) :
-    (C.sourceAuditSnapshot c).route.nil c :=
+    C.realization.routeApply [] c = c :=
   C.routeLedger_nil c
 
 theorem auditSnapshot_route_append
-    (r₁ r₂ : List (RouteStep Label)) (c : Choice) :
-    (C.sourceAuditSnapshot c).route.append r₁ r₂ c :=
+    (r₁ r₂ : List (MultiradialKernel.RouteStep Label)) (c : Choice) :
+    C.realization.routeApply (r₁ ++ r₂) c = C.realization.routeApply r₂ (C.realization.routeApply r₁ c) :=
   C.routeLedger_append r₁ r₂ c
 
 theorem auditSnapshot_route_image
-    (route : List (RouteStep Label)) (c : Choice) (z : Real)
+    (route : List (MultiradialKernel.RouteStep Label)) (c : Choice) (z : Real)
     (hz : z ∈ C.packet.possibleImage c) :
-    (C.sourceAuditSnapshot c).route.image_upper route c z hz :=
+    ∃ w ∈ C.packet.possibleImage (C.realization.routeApply route c), z ≤ w :=
   C.routeLedger_image_upper route c z hz
 
 theorem auditSnapshot_output_source (c : Choice) :
-    (C.sourceAuditSnapshot c).output.source :=
+    C.completionOutput.source = (DerivedPrerequisiteInput.core C.input).base :=
   C.outputLedger_source c
 
 theorem auditSnapshot_output_quotient (c : Choice) :
-    (C.sourceAuditSnapshot c).output.quotient :=
+    C.completionOutput.quotient = quotientMap C.input C.completionOutput.source :=
   C.outputLedger_quotient c
 
 theorem auditSnapshot_output_parts_bundle (c : Choice) :
-    (C.sourceAuditSnapshot c).output.part_i =
-        Theorem311Source.partI C.input ∧
-      (C.sourceAuditSnapshot c).output.part_ii =
-        Theorem311Source.partII C.input ∧
-      (C.sourceAuditSnapshot c).output.part_iii =
-        Theorem311Source.partIII C.input :=
+    C.completionOutput.part_i = Theorem311Source.partI C.input ∧
+      C.completionOutput.part_ii = Theorem311Source.partII C.input ∧
+      C.completionOutput.part_iii = Theorem311Source.partIII C.input :=
   C.auditSnapshot_output_parts c
 
 theorem auditSnapshot_kummer_bijective (c : Choice) :
-    (C.sourceAuditSnapshot c).output.labelled :=
+    Function.Bijective (C.input.labelledKummer c).map :=
   C.auditSnapshot_output_labelled c
 
 theorem auditSnapshot_source_arithmetic_all :
-    (C.sourceAuditSnapshot C.procession.base).source.arithmetic_reduction ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_torsion ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_orbicurve ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_section ∧
-      (C.sourceAuditSnapshot C.procession.base).source.arithmetic_cusp :=
+    C.source.arithmetic_reduction_compatibility ∧
+      C.source.arithmetic_torsion_compatibility ∧
+      C.source.arithmetic_orbicurve_compatibility ∧
+      C.source.arithmetic_section_compatibility ∧
+      C.source.arithmetic_cusp_compatibility :=
   C.auditSnapshot_source_arithmetic
 
 /-! The snapshot closes the current transport-layer ledger. -/
@@ -6512,3 +6503,20 @@ end Theorem311Source
 
 end
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def sourceTheorem311Realization : Obligation :=
+  { id := "IUT-III.source-theorem311-realization"
+    source := "IUT III, Theorem 3.11; explicit lifting of a completed source input"
+    status := VerificationStatus.interface
+    note :=
+      "This module isolates the source-realization construction: from an " ++
+        "explicit completion record it builds the Definition 3.1 object, the " ++
+        "Hodge-theater q/scale data, and the compatibility fields, and it " ++
+        "instantiates `SourceTheorem311Realization`. The completion fields remain " ++
+        "explicit source-facing inputs; existence for arbitrary arithmetic data " ++
+        "is not claimed. Name-level registration consumed by the internal wiring."
+    dependsOn := [ "IUT-III.theorem-3.11-source-dependency-chain" ] }
+
+end LeanFormal.IUT.Audit

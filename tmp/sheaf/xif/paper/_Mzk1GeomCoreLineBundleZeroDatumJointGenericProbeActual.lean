@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreLineBundleZeroDatumJointGenericActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleZeroDatumJointGenericActual.jointZD_zeroLocus

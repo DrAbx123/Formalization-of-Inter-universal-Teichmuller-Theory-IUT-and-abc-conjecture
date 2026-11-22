@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh08ThetaTransformationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08_thetaToElliptic_surjective
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08_thetaToElliptic_maps_powerKernel
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08_modLThetaProjection_surjective

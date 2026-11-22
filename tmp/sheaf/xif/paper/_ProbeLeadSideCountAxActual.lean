@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ULKSideCountActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULKSideCountActual.ksDCount_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULKSideCountActual.ksDCount_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULKSideCountActual.sum_weighted_ksDCount_le_logDifferentK

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128IsLocalizationAwayActual
+open LeanFormal.IUT.XiFPaper.S3128IsLocalizationAwayActual
+#print axioms S3128IsLocalizationAway_NfInv
+#print axioms S3128SpecFixedMap_isOpenImmersion

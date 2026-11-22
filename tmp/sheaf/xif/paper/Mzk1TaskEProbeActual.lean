@@ -1,0 +1,5 @@
+/- Watchdog re-probe: TaskE CompletionFieldQFiveEquiv -/
+import tmp.sheaf.xif.paper.Mzk1TaskECompletionFieldEquivActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TaskECompletionFieldEquivActual.CompletionFieldQFiveEquivRequired
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TaskECompletionFieldEquivActual.completionFieldQFiveEquivRequired_iff

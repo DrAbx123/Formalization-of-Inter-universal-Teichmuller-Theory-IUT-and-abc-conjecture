@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreChartBridgeLineBundleConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartBridgeLineBundleConsumerActual.ledgerRows
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartBridgeLineBundleConsumerActual.ledgerRows_length

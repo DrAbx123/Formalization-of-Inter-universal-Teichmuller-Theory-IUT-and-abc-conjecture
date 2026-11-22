@@ -1,0 +1,6 @@
+/- Read-only probes for Route A S45-free reduction (abc) -/
+import tmp.sheaf.xif.paper.Mzk1P0S45FreeFinalRouteAActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0S45FreeFinalRouteAActual.normRatioCorrectionSum_nonneg_of_ratio_ge_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0S45FreeFinalRouteAActual.paperNormalizedCorrection_nonpos_of_sum_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0S45FreeFinalRouteAActual.finalPaperNormalizedComparison_noS45_of_ratio_ge_one

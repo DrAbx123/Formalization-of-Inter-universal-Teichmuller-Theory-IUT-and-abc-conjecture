@@ -1,0 +1,3 @@
+import tmp.sheaf.n8.closure.SourceDegreeHullC3
+#print axioms LeanFormal.IUT.N8Closure.C8.sourceDegreeHullReadoutIdentification_c3
+#print axioms LeanFormal.IUT.N8Closure.C8.sourceDegreeResidual_iff_actualDegree_eq_BHull_c3

@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.GenEll06Section3StatementsActual
+import tmp.sheaf.xif.paper.GenEll07Section4StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section2StatementsActual
+import tmp.sheaf.xif.paper.Mzk1ProvabilityClassificationActual
+import tmp.sheaf.xif.paper.AbsTopIII02LocalVolumesActual
+import tmp.sheaf.xif.paper.AbsTopIII06WeightedVolumeBridgeActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06Section3StatementsActual.genEllSection3Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.genEllSection4Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII02LocalVolumesActual.absTopIIILocalVolumeStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.LGPWeightedVolumeBridge.le_theta
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.lgpWeightedVolumeCorrespondence_length

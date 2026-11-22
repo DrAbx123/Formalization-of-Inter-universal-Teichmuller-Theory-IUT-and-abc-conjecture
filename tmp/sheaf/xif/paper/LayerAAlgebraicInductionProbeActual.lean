@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.LayerAAlgebraicInductionActual
+#print axioms LeanFormal.IUT.XiFPaper.LayerAAlgebraicInductionActual.s3135_AlgebraicNestedInduction_iff

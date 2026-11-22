@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioActual.belyi21R_mul_ge_of_one_lt_sep
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioActual.shift_ratio_of_le
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioActual.belyi21R_ratio_shifted_of_one_lt_nonneg

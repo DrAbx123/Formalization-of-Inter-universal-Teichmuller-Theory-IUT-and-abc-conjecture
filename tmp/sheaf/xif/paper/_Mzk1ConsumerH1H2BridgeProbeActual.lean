@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerH1H2BridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerH1H2BridgeActual.dTheta_bridge_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerH1H2BridgeActual.h2_package_consumer

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2129RootNecessaryActual
+#check LeanFormal.IUT.XiFPaper.S2129RootNecessaryActual.root_forces_necessary
+#check LeanFormal.IUT.XiFPaper.S2129RootNecessaryActual.rootNecessary_iff_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S2129RootNecessaryActual.not_root_of_not_l_dvd

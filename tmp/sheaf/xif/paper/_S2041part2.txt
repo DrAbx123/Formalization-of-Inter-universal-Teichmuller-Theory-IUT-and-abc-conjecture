@@ -1,0 +1,263 @@
+
+/-! ## 7. The case Nat.card H = 24 -/
+
+/-- Two distinct subgroups of order 3 of a group of order 6 cannot exist. -/
+lemma eq_of_card_three_of_le_card_six {K P Q : Subgroup GL2} (hK : Nat.card K = 6)
+    (hP : P ≤ K) (hQ : Q ≤ K) (hP3 : Nat.card P = 3) (hQ3 : Nat.card Q = 3) : P = Q := by
+  by_contra hne
+  have hbot : P ⊓ Q = ⊥ := by
+    have hdvd : Nat.card (P ⊓ Q : Subgroup GL2) ∣ Nat.card P := Subgroup.card_dvd_of_le inf_le_left
+    rw [hP3] at hdvd
+    have hcases := (Nat.dvd_prime (by norm_num : Nat.Prime 3)).mp hdvd
+    rcases hcases with h1 | h3
+    · exact Subgroup.eq_bot_of_card_eq h1
+    · exfalso
+      have hPeq : (P ⊓ Q : Subgroup GL2) = P :=
+        Subgroup.eq_of_le_of_card_ge inf_le_left (by rw [h3, hP3])
+      have hle : P ≤ Q := hPeq ▸ inf_le_right
+      have hQeq : Q = P := Subgroup.eq_of_le_of_card_ge hle (by rw [hQ3, hP3])
+      exact hne hQeq.symm
+  let f : P × Q → K := fun x => ⟨(x.1 : GL2) * (x.2 : GL2), mul_mem (hP x.1.2) (hQ x.2.2)⟩
+  have hf : Function.Injective f := by
+    intro x y hxy
+    have hxy' : (x.1 : GL2) * (x.2 : GL2) = (y.1 : GL2) * (y.2 : GL2) := by
+      simpa [f] using congrArg (fun z : K => (z : GL2)) hxy
+    have hleft : ((y.1 : GL2)⁻¹ * (x.1 : GL2)) = (y.2 : GL2) * (x.2 : GL2)⁻¹ := by
+      calc (y.1 : GL2)⁻¹ * (x.1 : GL2)
+          = (y.1 : GL2)⁻¹ * ((x.1 : GL2) * (x.2 : GL2)) * (x.2 : GL2)⁻¹ := by group
+        _ = (y.1 : GL2)⁻¹ * ((y.1 : GL2) * (y.2 : GL2)) * (x.2 : GL2)⁻¹ := by rw [hxy']
+        _ = (y.2 : GL2) * (x.2 : GL2)⁻¹ := by group
+    have hmem : (y.1 : GL2)⁻¹ * (x.1 : GL2) ∈ P ⊓ Q := by
+      refine ⟨?_, ?_⟩
+      · exact mul_mem (inv_mem y.1.2) x.1.2
+      · rw [hleft]; exact mul_mem y.2.2 (inv_mem x.2.2)
+    rw [hbot] at hmem
+    have h1 : (y.1 : GL2)⁻¹ * (x.1 : GL2) = 1 := by simpa using hmem
+    have h2 : (y.2 : GL2) * (x.2 : GL2)⁻¹ = 1 := by rw [← hleft]; exact h1
+    have hx1 : x.1 = y.1 := by
+      apply Subtype.ext
+      have := congrArg (fun z => (y.1 : GL2) * z) h1
+      simpa [mul_assoc] using this
+    have hx2 : x.2 = y.2 := by
+      apply Subtype.ext
+      have := congrArg (fun z => z * (x.2 : GL2)) h2
+      simpa [mul_assoc] using this
+    exact Prod.ext hx1 hx2
+  have hle := Nat.card_le_card_of_injective f hf
+  rw [Nat.card_prod, hP3, hQ3, hK] at hle
+  norm_num at hle
+
+/-- Order 24 forces containment in a subgroup of order 48: the normalizer of the
+unique order-three subgroup of H ∩ SL_2(F_5). -/
+theorem exists_le_card_48_of_card_24 (H : Subgroup GL2) (hdet : DetSurjectiveOn H)
+    (h24 : Nat.card H = 24) :
+    ∃ K : Subgroup GL2, H ≤ K ∧ Nat.card K = 48 := by
+  let K : Subgroup GL2 := H ⊓ SL2sub
+  have hKcard : Nat.card K = 6 := by
+    have h := card_inf_SL2sub_mul_four H hdet
+    rw [h24] at h
+    omega
+  have h3 : 3 ∣ Nat.card K := by rw [hKcard]; norm_num
+  obtain ⟨p, hp⟩ := exists_prime_orderOf_dvd_card' 3 h3
+  let P : Subgroup GL2 := Subgroup.zpowers (p : GL2)
+  have hPcard : Nat.card P = 3 := by
+    rw [Nat.card_zpowers]
+    simpa using hp
+  have hPleK : P ≤ K := by
+    rw [Subgroup.zpowers_le]
+    exact p.2
+  have hconjK : ∀ h ∈ H, ∀ y ∈ K, (MulAut.conj h) y ∈ K := by
+    intro h hh y hy
+    have hyK : h * y * h⁻¹ ∈ K := by
+      refine ⟨H.mul_mem (H.mul_mem hh hy.1) (H.inv_mem hh), ?_⟩
+      have hy2 : (Matrix.GeneralLinearGroup.det (n := Fin 2) (R := K5)) y = 1 := hy.2
+      rw [map_mul, map_mul, map_inv, hy2]
+      group
+    rwa [MulAut.conj_apply]
+  have hnormal : H ≤ Subgroup.normalizer (P : Set GL2) := by
+    intro h hh
+    rw [Subgroup.mem_normalizer_iff_map_conj_eq]
+    set Q : Subgroup GL2 := P.map (MulAut.conj h).toMonoidHom with hQdef
+    have hQleK : Q ≤ K := by
+      intro x hx
+      rw [hQdef, Subgroup.mem_map] at hx
+      obtain ⟨y, hy, rfl⟩ := hx
+      exact hconjK h hh y (hPleK hy)
+    have hQcard : Nat.card Q = 3 := by
+      rw [hQdef, Subgroup.card_map_of_injective (f := (MulAut.conj h).toMonoidHom)
+        (MulAut.conj h).injective, hPcard]
+    have hQeq : Q = P := eq_of_card_three_of_le_card_six hKcard hQleK hPleK hQcard hPcard
+    rw [← hQdef]
+    exact hQeq
+  exact ⟨Subgroup.normalizer (P : Set GL2), hnormal,
+    normalizer_card_of_subgroup_three normalizerCard_proof P hPcard⟩
+
+/-! ## 8. The cases Nat.card H = 120 and 240 -/
+
+def subgroupOfEquiv (K D : Subgroup GL2) (h : K ≤ D) : K.subgroupOf D ≃ K where
+  toFun x := ⟨x.1.1, x.2⟩
+  invFun y := ⟨⟨y.1, h y.2⟩, y.2⟩
+  left_inv x := by apply Subtype.ext; rfl
+  right_inv y := by apply Subtype.ext; rfl
+
+lemma orderOf_trv1 : orderOf trv1 = 5 := by
+  have h5 : trv1 ^ 5 = 1 := by decide
+  have hdvd : orderOf trv1 ∣ 5 := orderOf_dvd_iff_pow_eq_one.mpr h5
+  have hne : trv1 ≠ 1 := by decide
+  have h1 : orderOf trv1 ≠ 1 := fun h => hne (orderOf_eq_one_iff.mp h)
+  rcases (Nat.dvd_prime (by norm_num : Nat.Prime 5)).mp hdvd with h | h
+  · exact absurd h h1
+  · exact h
+
+lemma orderOf_trv2 : orderOf trv2 = 5 := by
+  have h5 : trv2 ^ 5 = 1 := by decide
+  have hdvd : orderOf trv2 ∣ 5 := orderOf_dvd_iff_pow_eq_one.mpr h5
+  have hne : trv2 ≠ 1 := by decide
+  have h1 : orderOf trv2 ≠ 1 := fun h => hne (orderOf_eq_one_iff.mp h)
+  rcases (Nat.dvd_prime (by norm_num : Nat.Prime 5)).mp hdvd with h | h
+  · exact absurd h h1
+  · exact h
+
+/-- There is no subgroup of GL_2(F_5) of order 120 or 240 with surjective determinant:
+the intersection with SL_2(F_5) would have index 4 or 2, and the coset action of
+SL_2(F_5) kills the generating transvections because the symmetric groups on 4 and 2
+points have no element of order 5. -/
+theorem not_card_120_or_240 (H : Subgroup GL2) (hdet : DetSurjectiveOn H)
+    (hcard : Nat.card H = 120 ∨ Nat.card H = 240) : False := by
+  let K : Subgroup GL2 := H ⊓ SL2sub
+  have hKcard : Nat.card K = 30 ∨ Nat.card K = 60 := by
+    have h := card_inf_SL2sub_mul_four H hdet
+    rcases hcard with h120 | h240
+    · rw [h120] at h; omega
+    · rw [h240] at h; omega
+  let Ks : Subgroup SL2sub := K.subgroupOf SL2sub
+  have hKs : Nat.card Ks = Nat.card K := Nat.card_congr (subgroupOfEquiv K SL2sub inf_le_right)
+  have hidx : Ks.index = 2 ∨ Ks.index = 4 := by
+    have hmul := Subgroup.index_mul_card (H := Ks)
+    rw [hKs, card_SL2sub] at hmul
+    rcases hKcard with h | h <;> rw [h] at hmul <;> omega
+  have htrv1 : trv1 ∈ SL2sub := by
+    rw [← closure_trv_eq_SL2sub]
+    exact Subgroup.subset_closure (by simp)
+  have htrv2 : trv2 ∈ SL2sub := by
+    rw [← closure_trv_eq_SL2sub]
+    exact Subgroup.subset_closure (by simp)
+  let y1 : SL2sub := ⟨trv1, htrv1⟩
+  let y2 : SL2sub := ⟨trv2, htrv2⟩
+  have hgen : Subgroup.closure ({y1, y2} : Set SL2sub) = ⊤ := by
+    have hinj := Subgroup.map_injective (f := SL2sub.subtype) Subtype.coe_injective
+    apply hinj
+    rw [MonoidHom.map_closure, Subgroup.map_subtype_top]
+    have himg : SL2sub.subtype '' ({y1, y2} : Set SL2sub) = ({trv1, trv2} : Set GL2) := by
+      ext x
+      constructor
+      · rintro ⟨y, hy, rfl⟩
+        rcases hy with rfl | rfl
+        · simp [y1]
+        · simp [y2]
+      · intro hx
+        rcases hx with rfl | rfl
+        · exact ⟨y1, by simp, rfl⟩
+        · exact ⟨y2, by simp, rfl⟩
+    rw [himg, closure_trv_eq_SL2sub]
+  have hy1ord : orderOf y1 = 5 := by
+    rw [← Subgroup.orderOf_coe y1]
+    exact orderOf_trv1
+  have hy2ord : orderOf y2 = 5 := by
+    rw [← Subgroup.orderOf_coe y2]
+    exact orderOf_trv2
+  let φ : SL2sub →* Equiv.Perm (SL2sub ⧸ Ks) := MulAction.toPermHom SL2sub (SL2sub ⧸ Ks)
+  have hgcd : Nat.gcd 5 (Ks.index)! = 1 := by
+    rcases hidx with h | h
+    · rw [h]; norm_num
+    · rw [h]; norm_num
+  have hφ1 : φ y1 = 1 := by
+    have hdvd1 : orderOf (φ y1) ∣ orderOf y1 := orderOf_map_dvd φ y1
+    rw [hy1ord] at hdvd1
+    have hdvd2 : orderOf (φ y1) ∣ Nat.card (Equiv.Perm (SL2sub ⧸ Ks)) := orderOf_dvd_natCard _
+    rw [Nat.card_perm] at hdvd2
+    have hquot : Nat.card (SL2sub ⧸ Ks) = Ks.index := rfl
+    rw [hquot] at hdvd2
+    have hd : orderOf (φ y1) ∣ 1 := by
+      have := Nat.dvd_gcd hdvd1 hdvd2
+      rwa [hgcd] at this
+    exact orderOf_eq_one_iff.mp (Nat.dvd_one.mp hd)
+  have hφ2 : φ y2 = 1 := by
+    have hdvd1 : orderOf (φ y2) ∣ orderOf y2 := orderOf_map_dvd φ y2
+    rw [hy2ord] at hdvd1
+    have hdvd2 : orderOf (φ y2) ∣ Nat.card (Equiv.Perm (SL2sub ⧸ Ks)) := orderOf_dvd_natCard _
+    rw [Nat.card_perm] at hdvd2
+    have hquot : Nat.card (SL2sub ⧸ Ks) = Ks.index := rfl
+    rw [hquot] at hdvd2
+    have hd : orderOf (φ y2) ∣ 1 := by
+      have := Nat.dvd_gcd hdvd1 hdvd2
+      rwa [hgcd] at this
+    exact orderOf_eq_one_iff.mp (Nat.dvd_one.mp hd)
+  have hphi : φ = 1 := by
+    have hle : Subgroup.closure ({y1, y2} : Set SL2sub) ≤ φ.ker := by
+      rw [Subgroup.closure_le]
+      intro y hy
+      rcases hy with rfl | rfl
+      · exact MonoidHom.mem_ker.mpr hφ1
+      · exact MonoidHom.mem_ker.mpr hφ2
+    rw [hgen] at hle
+    apply MonoidHom.ext
+    intro x
+    exact MonoidHom.mem_ker.mp (hle (Subgroup.mem_top x))
+  have hstab : Ks = ⊤ := by
+    have hle : (⊤ : Subgroup SL2sub) ≤
+        MulAction.stabilizer SL2sub ((1 : SL2sub) : SL2sub ⧸ Ks) := by
+      intro g _
+      rw [MulAction.mem_stabilizer_iff]
+      have hg : φ g = 1 := by rw [hphi]; rfl
+      have hfix := congrArg (fun e : Equiv.Perm (SL2sub ⧸ Ks) => e ((1 : SL2sub) : SL2sub ⧸ Ks)) hg
+      simpa [φ, MulAction.toPermHom_apply, MulAction.toPerm_apply] using hfix
+    rw [← MulAction.stabilizer_quotient (G := SL2sub) Ks]
+    exact top_le_iff.mp hle
+  have hKstop : Nat.card Ks = 120 := by
+    rw [hstab, Subgroup.card_top, card_SL2sub]
+  rw [hKs] at hKstop
+  rcases hKcard with h | h <;> rw [h] at hKstop <;> norm_num at hKstop
+
+/-! ## 9. The Dickson transitive classification -/
+
+/-- **The Dickson transitive classification for GL_2(F_5).** -/
+theorem S2041DicksonTransitiveClassification : S2009DicksonTransitiveClassification := by
+  intro H hdet htrans hne
+  have h12 : 12 ∣ Nat.card H := twelve_dvd_card_of_pairTransitive H htrans
+  have hdiv : Nat.card H ∣ 480 := by
+    have := Subgroup.card_subgroup_dvd_card H
+    rwa [natCard_GL2] at this
+  have hne' : ¬ (Nat.card H = 12 ∨ Nat.card H = 60) := fun hc => not_card_12_or_60 H htrans hc
+  have hne12 : Nat.card H ≠ 12 := fun h => hne' (Or.inl h)
+  have hne60 : Nat.card H ≠ 60 := fun h => hne' (Or.inr h)
+  rcases order_cases (Nat.card H) h12 hdiv hne12 hne60 with h24 | h48 | h96 | h120 | h240 | h480
+  · obtain ⟨K, hHK, hK48⟩ := exists_le_card_48_of_card_24 H hdet h24
+    exact Or.inr ⟨K, hHK, hK48⟩
+  · exact Or.inr ⟨H, le_refl H, h48⟩
+  · exact Or.inl ⟨H, le_refl H, h96⟩
+  · exact absurd h120 (not_card_120_or_240 H hdet (Or.inl h120))
+  · exact absurd h240 (not_card_120_or_240 H hdet (Or.inr h240))
+  · exact absurd (Subgroup.eq_top_of_card_eq H (by rw [h480, natCard_GL2])) hne
+
+/-- With the classification, the D5 large-image criterion of S2009 is unconditional:
+any subgroup of GL_2(F_5) with surjective determinant, transitive action on the twelve
+pairs, and an element of cycle type (10,2) is the whole group. -/
+theorem S2041Subgroup_eq_top_of_dickson (H : Subgroup GL2)
+    (hdet : DetSurjectiveOn H) (htrans : PairTransitive H) (h102 : HasCycleType102 H) :
+    H = ⊤ :=
+  largeImage_of_dickson S2041DicksonTransitiveClassification H hdet htrans h102
+
+end LeanFormal.IUT.XiFPaper.S2009DicksonActual
+
+namespace LeanFormal.IUT.XiFPaper.S2041D5FullActual
+
+open LeanFormal.IUT.XiFPaper.S2009DicksonActual
+
+/-- The Dickson transitive classification for GL_2(F_5), now proved, under the S2041 name. -/
+abbrev S2041DicksonComponent : Prop := S2009DicksonTransitiveClassification
+
+theorem S2041DicksonComponent_proof : S2041DicksonComponent :=
+  S2041DicksonTransitiveClassification
+
+end LeanFormal.IUT.XiFPaper.S2041D5FullActual

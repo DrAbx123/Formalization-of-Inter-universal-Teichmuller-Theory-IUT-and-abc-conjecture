@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S1372XCoordinateFormulaActual
+#check SubNegMonoid.zsmul_succ'
+#check SubNegMonoid.zsmul_zero'
+#check SubNegMonoid.zsmul_neg'
+#check nsmul_eq_zsmul
+#check zsmul_natCast
+#check natCast_zsmul
+#check Int.natCast_zsmul
+#check zsmul_eq_nsmul
+#check nsmul_eq_mul

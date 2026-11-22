@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3132VFormScalingReductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132VFormScalingReductionActual.canonicalReadout_eq_weighted_scaling
+#print axioms LeanFormal.IUT.XiFPaper.S3132VFormScalingReductionActual.vformCanonical_of_reducedResidual

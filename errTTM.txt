@@ -1,0 +1,12 @@
+tmp\sheaf\xif\paper\Mzk1TripleThetaModelActual.lean:26:34: warning: Variable name `habc` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\xif\paper\Mzk1TripleThetaModelActual.lean:49:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```

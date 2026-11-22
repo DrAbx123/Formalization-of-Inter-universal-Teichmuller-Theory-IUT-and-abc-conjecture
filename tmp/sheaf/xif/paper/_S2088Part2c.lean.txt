@@ -1,0 +1,45 @@
+
+/-! ## 6. The remaining type-level statements, and the certificate -/
+
+section Remaining
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+/-- The type-level obligations of the geometric fiber functor which are isolated
+in this file.  Each field is stated for the *Type-valued* geometric fiber
+functor and corresponds verbatim to a FiberFunctorCertificate field of S2070;
+the transfer layer above turns it into the FintypeCat-valued field.  No
+inhabitant is asserted. -/
+structure RemainingTypeLevel (K : Type u) [Field K] (Omega : Type u) [Field Omega]
+    (x : Spec (CommRingCat.of Omega) ⟶ CurveBase K) : Prop where
+  /-- (G4) preservation of pullbacks. -/
+  preservesPullbacks : PreservesLimitsOfShape WalkingCospan (curveGeometricFiberFunctor K Omega x)
+  /-- (G5) preservation of finite coproducts. -/
+  preservesFiniteCoproducts : PreservesFiniteCoproducts (curveGeometricFiberFunctor K Omega x)
+  /-- (G5) preservation of epimorphisms. -/
+  preservesEpis : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x)
+  /-- (G5) preservation of quotients by finite groups. -/
+  preservesQuotientsByFiniteGroups : forall (A : Type u) [Group A] [Finite A],
+    PreservesColimitsOfShape (SingleObj A) (curveGeometricFiberFunctor K Omega x)
+  /-- (G6) reflection of isomorphisms. -/
+  reflectsIsos : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms
+
+/-- **The certificate from the remaining type-level statements.**  Item 1 is
+proved unconditionally; items 2-6 are exactly the fields of
+RemainingTypeLevel. -/
+theorem certificate_of_remaining
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : RemainingTypeLevel K Omega x) :
+    FiberFunctorCertificate (curveGeometricFiberFunctorFintype K hfin) where
+  preservesTerminalObjects := certificate_preservesTerminalObjects hfin
+  preservesPullbacks := certificate_preservesPullbacks hfin h.preservesPullbacks
+  preservesFiniteCoproducts :=
+    certificate_preservesFiniteCoproducts hfin h.preservesFiniteCoproducts
+  preservesEpis := certificate_preservesEpis hfin h.preservesEpis
+  preservesQuotientsByFiniteGroups := fun A _ _ =>
+    certificate_preservesQuotientsByFiniteGroups hfin
+      h.preservesQuotientsByFiniteGroups A
+  reflectsIsos := certificate_reflectsIsos hfin h.reflectsIsos
+
+end Remaining

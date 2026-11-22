@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3129CoverSchemeFiniteEtaleAttempt
+import tmp.sheaf.xif.paper.S3129RepresentableFiniteEtaleActual
+import tmp.sheaf.xif.paper.S3128OverCoproductLeftActual
+import tmp.sheaf.xif.paper.S3128BaseChangeHomFieldsActual
+#print axioms LeanFormal.IUT.XiFPaper.S3129CoverSchemeFiniteEtaleAttempt.S3129CoverSchemeFiniteEtale_of_arrowIso

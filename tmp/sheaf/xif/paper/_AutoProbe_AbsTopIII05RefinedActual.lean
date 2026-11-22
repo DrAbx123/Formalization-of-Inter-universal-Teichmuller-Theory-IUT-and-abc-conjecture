@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII05RefinedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05RefinedActual.Prop58iLocalFieldReconstruction
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05RefinedActual.Prop58iiLogShellReconstruction
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05RefinedActual.Cor55LogFrobeniusCompatibility

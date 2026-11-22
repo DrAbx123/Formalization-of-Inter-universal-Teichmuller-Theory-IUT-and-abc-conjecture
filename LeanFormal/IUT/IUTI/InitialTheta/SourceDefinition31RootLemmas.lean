@@ -5182,11 +5182,64 @@ def D11FaithfulConclusion (l : PrimeGeFive) : Prop :=
     ∃ S : SourceDefinition31Data.{u} l,
       SourceDefinition31Root.Definition31Recognition S
 
+/-! ## D0 kernel infrastructure witness
+
+The D0 layer is the standard dependent type, field, finite-dimensional, and
+Galois infrastructure. The witnesses below record that it is available in the
+kernel for every supplied arithmetic input, through the instance attributes of
+`InitialTheta/ArithmeticData.lean`: three `Field` definitions, three `Algebra`
+definitions, and the `NumberField`, scalar-tower, finite-dimensional, and
+Galois propositions. -/
+
+@[reducible] def d0_field_fmod {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Field A.Fmod :=
+  inferInstance
+
+@[reducible] def d0_field_f {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Field A.F :=
+  inferInstance
+
+@[reducible] def d0_field_k {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Field A.K :=
+  inferInstance
+
+@[reducible] def d0_algebra_fmod_f {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Algebra A.Fmod A.F :=
+  inferInstance
+
+@[reducible] def d0_algebra_f_k {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Algebra A.F A.K :=
+  inferInstance
+
+@[reducible] def d0_algebra_fmod_k {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) : Algebra A.Fmod A.K :=
+  inferInstance
+
+theorem d0_numberField_instances {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) :
+    NumberField A.Fmod ∧ NumberField A.F ∧ NumberField A.K :=
+  ⟨inferInstance, inferInstance, inferInstance⟩
+
+theorem d0_tower_instances {l : PrimeGeFive}
+    (A : InitialThetaArithmeticData.{u} l) :
+    IsScalarTower A.Fmod A.F A.K ∧
+      (FiniteDimensional A.Fmod A.F ∧ IsGalois A.Fmod A.F) ∧
+      (FiniteDimensional A.F A.K ∧ IsGalois A.F A.K) :=
+  ⟨inferInstance, ⟨inferInstance, inferInstance⟩,
+    ⟨inferInstance, inferInstance⟩⟩
+
 def d0_status : Obligation :=
   { id := "IUT-I.definition-3.1-D0"
     source := "Lean kernel, Std, Mathlib"
-    status := VerificationStatus.interface
-    note := "Standard dependent type, group, field, finite-dimensional, and norm infrastructure."
+    status := VerificationStatus.provedKernel
+    note :=
+      "Standard dependent type, group, field, finite-dimensional, and norm " ++
+        "infrastructure. Witnessed by `d0_field_fmod`, `d0_field_f`, " ++
+        "`d0_field_k`, `d0_algebra_fmod_f`, `d0_algebra_f_k`, " ++
+        "`d0_algebra_fmod_k`, `d0_numberField_instances`, and " ++
+        "`d0_tower_instances`: for every supplied arithmetic input, the " ++
+        "field, number-field, algebra, scalar-tower, finite-dimensional, " ++
+        "and Galois instances synthesize by `infer_instance`."
     dependsOn := [] }
 
 def d1_status : Obligation :=
@@ -5199,57 +5252,128 @@ def d1_status : Obligation :=
 def d2_status : Obligation :=
   { id := "IUT-I.definition-3.1-D2"
     source := "IUT I, Definition 3.1(a)"
-    status := VerificationStatus.interface
-    note := "Arithmetic tower and curve are projected; arbitrary-input existence is not inferred."
-    dependsOn := ["IUT-I.definition-3.1-D1"] }
+    status := VerificationStatus.sourceProjection
+    note :=
+      "Arithmetic tower and curve are projected; arbitrary-input existence " ++
+        "is not inferred. Discharge evidence " ++
+        "`IUT-I.definition-3.1-D2-arithmetic-root` (proved): " ++
+        "`SourceDefinition31D2Root` recovers the tower, curve, sqrt(-1), and " ++
+        "prime-to-l degree from a supplied input, with the carrier " ++
+        "instances synthesized by `infer_instance`."
+    dependsOn := ["IUT-I.definition-3.1-D1",
+      "IUT-I.definition-3.1-D2-arithmetic-root"] }
 
 def d3_status : Obligation :=
   { id := "IUT-I.definition-3.1-D3"
     source := "IUT I, Definition 3.1(a)"
-    status := VerificationStatus.pending
-    note := "Place partition construction from arithmetic input remains open."
-    dependsOn := ["IUT-I.definition-3.1-D2"] }
+    status := VerificationStatus.conditional
+    note :=
+      "Conditional assembly, not the closed gate: given the arithmetic " ++
+        "input, a source selection, and finiteness of the bad moduli index, " ++
+        "`SourceDefinition31PlacePartition.placeConstruction_of_selection` " ++
+        "produces the gate-body partition, and `partition_spec` records the " ++
+        "Clause (e) bijection, cover, disjointness, and restriction " ++
+        "compatibility plus the Clause (b) label compatibility. The open " ++
+        "inputs (source selection; finiteness of V^bad_mod from the curve's " ++
+        "bad-reduction locus) are recorded as " ++
+        "`IUT-I.definition-3.1-D3-arithmetic-bad-moduli-gap`. The " ++
+        "finiteness side over `A.F` is conditionally closed and " ++
+        "recorded as `IUT-I.definition-3.1-D3-bad-reduction-finiteness` " ++
+        "(`exists_finite_goodReduction_off`); the F-to-Fmod base-change " ++
+        "bridge with fibre-uniformity, oddness, and nonemptiness " ++
+        "remain source conditions."
+    dependsOn := ["IUT-I.definition-3.1-D2",
+      "IUT-I.definition-3.1-D3-place-partition",
+      "IUT-I.definition-3.1-D3-conditional-assembly"] }
 
 def d4_status : Obligation :=
   { id := "IUT-I.definition-3.1-D4"
     source := "IUT I, Definition 3.1(b)"
     status := VerificationStatus.pending
-    note := "Stable, multiplicative, split reduction and q-parameter construction remains open."
+    note :=
+      "Conditional supply interface: the reduction cards " ++
+        "(stable/multiplicative/split), the clause (c) coprimality cards, " ++
+        "and the bad-place Tate-uniformization identification card assemble " ++
+        "the reduction clause through `toSourceReductionClause`; named " ++
+        "intake `D4ReductionSupply` (`SourceDefinition31D4D9Supply.lean`). " ++
+        "Residuals: source selection and finite bad index (D3 umbrella), " ++
+        "the F-to-Fmod base-change bridge, and the boundary that the real " ++
+        "q-proxy is the Tate q-parameter. The gate " ++
+        "`D4ReductionConstruction` keeps its arbitrary-partition " ++
+        "quantifier, which accepts purely formal record inhabitants with no " ++
+        "curve link; it is not closed by any such inhabitant."
     dependsOn := ["IUT-I.definition-3.1-D3"] }
 
 def d5_status : Obligation :=
   { id := "IUT-I.definition-3.1-D5"
     source := "IUT I, Definition 3.1(c)"
     status := VerificationStatus.pending
-    note := "Torsion carrier, Galois representation, and large-image proof remains open."
+    note :=
+      "Conditional supply interface `D5TorsionSupply` bridges " ++
+        "`TorsionCarrierReduction.SourceTorsionDatum` (rank-two basis, " ++
+        "literal SL_2 containment, kernel-field identification) plus the " ++
+        "supplied six-torsion and l-compatibility conditions to " ++
+        "`SourceTorsionClause`; the image component is " ++
+        "`LargeImageContainsSL2`. The gate `D5TorsionConstruction` reduces " ++
+        "to supply nonemptiness. The deep cards stay open and unengaged: " ++
+        "`IUT-I.elliptic-l-torsion-large-image` and " ++
+        "`Foundations.Geometry.elliptic-l-torsion-rank-two`."
     dependsOn := ["IUT-I.definition-3.1-D4"] }
 
 def d6_status : Obligation :=
   { id := "IUT-I.definition-3.1-D6"
     source := "IUT I, Definition 3.1(d)"
     status := VerificationStatus.pending
-    note := "Orbicurve and local fundamental-group exact sequence construction remains open."
+    note :=
+      "Direction: conditional constructors for the orbicurve exact " ++
+        "sequence are compiled in `SourceClauseConstructors` " ++
+        "(`SourceOrbicurveGroupData.ofFundamentalGroup`, " ++
+        "`exactSequenceOfFundamentalGroup`); they take an actual orbicurve " ++
+        "with certified etale fundamental groups, which remains a source " ++
+        "input. The D6 intake is the boundary clause record itself."
     dependsOn := ["IUT-I.definition-3.1-D5"] }
 
 def d7_status : Obligation :=
   { id := "IUT-I.definition-3.1-D7"
     source := "IUT I, Definition 3.1(e)"
     status := VerificationStatus.pending
-    note := "Valuation and local-group sections with their place clauses remain open."
+    note :=
+      "D7 is split into D7a (place-section half) and D7b (local-group " ++
+        "half). D7a is now consumed, not merely cross-line: the layer " ++
+        "module `SourceDefinition31LocalValuationSections.lean` (SHA " ++
+        "27B21DBE80754128EBF0728234E16BFDF8B5FA01BFD7B1C85FB27C45A5BAA2B9) " ++
+        "is imported by `SourceDefinition31D4D9Supply.lean`; its " ++
+        "`exists_canonical` is wired as `D7aPlaceSectionConstruction` " ++
+        "(proved, unconditional); the 16-slot assembly " ++
+        "`d7SectionLayerBridge` and the reduction " ++
+        "`d7SectionConstruction_of_localGroupSupply` reduce this gate to " ++
+        "the D7b intake at the universe instance `v := u`. D7b " ++
+        "(`D7LocalGroupSectionSupply`: local-group carriers, pointwise " ++
+        "bijective section, place data) remains open, keyed to D6."
     dependsOn := ["IUT-I.definition-3.1-D6"] }
 
 def d8_status : Obligation :=
   { id := "IUT-I.definition-3.1-D8"
     source := "IUT I, Definition 3.1(f)"
     status := VerificationStatus.pending
-    note := "Cusp parameter and its source compatibility remain open."
+    note :=
+      "Cusp content: conditional boundary-origin constructors exist in " ++
+        "`SourceClauseConstructors` (`canonicalKQuotientData`, " ++
+        "`ofCanonicalKBoundaryOrigin`, `ofCanonicalBoundaryData`); the cusp " ++
+        "origin from the nonzero quotient element remains a source input; " ++
+        "epsilon and cusp scale are supplied, not manufactured."
     dependsOn := ["IUT-I.definition-3.1-D7"] }
 
 def d9_status : Obligation :=
   { id := "IUT-I.definition-3.1-D9"
     source := "IUT I, Definition 3.1(a)-(f)"
     status := VerificationStatus.pending
-    note := "Five arithmetic compatibility proofs remain open."
+    note :=
+      "Five arithmetic compatibility slots remain supplied (Prop, proof) " ++
+        "pairs; named intake `D9CompatibilitySupply` (pack/bundle/project), " ++
+        "and the gates `D9CompatibilityConstruction` / " ++
+        "`D10InitialThetaConstruction` reduce to nonemptiness of the D4-D9 " ++
+        "bundle `D4D9Supply`."
     dependsOn := ["IUT-I.definition-3.1-D8"] }
 
 def d10_status : Obligation :=

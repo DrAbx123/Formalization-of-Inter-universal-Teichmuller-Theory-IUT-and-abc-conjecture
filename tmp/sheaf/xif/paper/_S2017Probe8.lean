@@ -1,0 +1,12 @@
+import Mathlib.GroupTheory.Abelianization.Defs
+#check QuotientAddGroup.mk'
+#check QuotientAddGroup.lift
+#check QuotientAddGroup.lift_mk'
+#check QuotientAddGroup.mk'_apply
+#check QuotientAddGroup.induction_on
+#check QuotientAddGroup.induction_on'
+#check QuotientAddGroup.eq_iff_sub_mem
+#check AddSubgroup.closure_le
+#check DirectSum.toAddMonoid_of
+#check Additive.ofMul
+#check Additive.toMul

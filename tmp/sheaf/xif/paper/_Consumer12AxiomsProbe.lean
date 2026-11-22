@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2FreeQuotientExistsConsumer12Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2FreeQuotientExistsConsumer12Actual.S3127G2FreeQuotientExistsConsumer12_exists

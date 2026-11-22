@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreRRProvedBundleActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRProvedBundleActual.rr_zeroDivisor_bundle

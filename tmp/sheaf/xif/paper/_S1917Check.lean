@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1917AverageLeOneActual
+
+#check LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917_sourceAverage_le_one
+#check LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917_s1903ActualDeterminant_average_le_one
+#check LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917_literalSourceFields_false
+#check LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917S1903FirstMissing_iff
+#print axioms LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917_s1903ActualDeterminant_average_le_one
+#print axioms LeanFormal.IUT.XiFPaper.S1917AverageLeOneActual.s1917S1903FirstMissing_iff

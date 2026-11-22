@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3136LGPKummerCocycleConditionActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerCocycleConditionActual.lgpKummerCocycle_condition
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerCocycleConditionActual.lgpKummerCocycle_pow
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerCocycleConditionActual.lgpKummerCocycleValue_eq_candidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerCocycleConditionActual.LGPQVKummerClassResidualGap

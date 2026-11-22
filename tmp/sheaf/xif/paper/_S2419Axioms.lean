@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2419H1SurjLimitActual
+#print axioms LeanFormal.IUT.XiFPaper.S2419H1SurjLimitActual.S2419QuotTransition_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2419H1SurjLimitActual.S2419H1Transition_surjective

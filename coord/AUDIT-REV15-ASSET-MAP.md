@@ -82,3 +82,70 @@ Date: 2026-11-15 10:45 (Asia/Shanghai). Auditor: abc (teammate).
 - 审计：`AUDIT_LEDGER.md`；Task G wiring：`coord/AUDIT-HQ-HTHETA-WIRING.md`；
 - 路线：`coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md`；状态：`coord/GOAL-PROGRESS.md`；
 - 索引：`coord/LEAN-INDEX.md`；本轮**未编译 Lean**，statement_compiles/proof_body_checked/kernel_closed/target_accepted 均 NOT_RUN（除已有 DONE 资产的历史证据）。
+
+---
+
+## 5. Route correction 2026-11-15（Lead）
+
+- **one-way hθ/hq** 可直接用 `Mzk1HaarProductStrictMainlineActual.rp_strict_measure_resolved`：
+  `rpVolume T (rpRegion T) < rpVolume T (s1902Hull T)`（file:165；watchdog DONE 2026-11-11T02:50:29；olean 10:50 > src 10:48）；
+  经 `rpRequirement : XiEContainmentRequirement`（qRegion/thetaPossibleImages=rpRegion；hullRegion=s1902Hull；strict_measure 由 rpRegion_measure_lt_full）。
+- `ClosedBallMassFormula`（`Mzk1ProductFiberMultBridgeGapActual`）与 `ProductHaarToFiberMult` **只用于 exact product-Haar 等式**；one-way 主线不等待它们。
+- `BadPlaceBijection` generally false（已记录）；fiber 路线 = `QVBadPlaceFiber`（total map）/ injection。
+- 节点 07/08 映射相应更新：可复用 donor 增加 `rp_strict_measure_resolved`；ProductFiber* 的 DONE 标为 interface/gap（非 one-way 必需）。
+
+---
+
+## 6. Route decision 2026-11-15（Lead）：one-way 接受 node0609_rpRegion_volume_le_hull
+
+- **接受** `Mzk1Node0609OneWayConsumerActual.node0609_rpRegion_volume_le_hull`（DONE 03:34:30Z；olean 11:34:29 > src 11:33:20）：`rpVolume T (rpRegion T) ≤ rpVolume T (s1902Hull T)`，由 `node0609_rpRegion_volume_lt_hull`（= `rp_strict_measure_resolved`）取 `le_of_lt`；
+- **exact weighted-q equality 在 inequality path 上不要求**：`ProductHaarToFiberMult`/`MqFiber` 等式、`ClosedBallMassFormula` 降级为 exact/可选强化；ProductFiber（03:27:31）、QVWeighted（03:33:17）DONE 不再是 blocker；
+- 节点 07/08 可复用资产增加 `Mzk1Node0609OneWayConsumerActual`；下一步 = rpRegion/s1902Hull 与实际 packet 对象对齐 + hq fiber/index 接线。
+
+---
+
+## 7. CONFIRMED exact-missing inputs 2026-11-15（Lead）
+
+- horder / hcoef / hbase 三个输入已确认 exact missing（无 donor；horder 有 order>1 反例；hbase absence of donor）→ **无无条件证明路线**；
+- 最终目标只能 conditional（horder + hcoef/hmu0/hl/hc + hbase）；与 node06/09 归约（hmult→horder、hper→hcoef/hmu0/hl/hc）一致。
+
+---
+
+## 8. Final conditional chain 2026-11-15（Lead）
+
+- final_abcHeightBound_of_cards（Node09FinalABCBridge DONE 05:09:05）为最终条件端点；
+- exact inputs：horder/hcoef/hbase/cards family；cards 供给后经 frozen cor312ToABCBridge_heightBound 闭合，无 additional gap；
+- 仅 stale probes FAIL；无产品级 real red。
+
+---
+
+## 9. Round18 audit status 2026-11-15（Lead）
+
+- final conditional endpoints green（FinalConditional/ABCBridgeConditional/FinalABCBridge/CardsToFrontier/SingletonFinal/RegionMono/Gap2ToCards）；
+- paper-level 仅 frozen gap2 + hweightDictionary；residual horder/hcoef/hbase；no inhabitant/fake；
+- comparison (1) removed by RegionMono（singleton ⊆ normalizedComparisonRegion 定义性 + logVolume_mono）；
+- 05:40 后唯一 FAIL：QVFiberWeighted 05:41:49（rerun）。
+
+---
+
+## 10. CRITICAL hdeg+D inconsistency 2026-11-15（Lead）
+
+- hdeg + D 不一致（iqCarrierModel_sourceHaarData_not_nonempty_of_degreeFaithful:583-590）；
+- DegreeUpper vacuous（hdeg+D 不可满足）；hweightDictionary 无 actual evidence；
+- cards/final endpoints 非形式 vacuous但无 discharge path；hull obstructions sourceHullVolume_eq_top_of_degreeFaithful 等；
+- 不得以 degree-faithfulness 路线作 hweightDictionary/hdegreeBound 实际供给。
+
+---
+
+## 11. ROUTE RE-ANCHOR 2026-11-15（Lead，Round23）
+
+- mainline 重新锚定 N0–N11；cards/S3135 为 auxiliary（非 mainline）；
+- 后续只以 N0–N11 记录 mainline 进度；cards/S3135 DONE 记录保留但降级为辅助证据。
+
+---
+
+## 12. ROUTE CORRECTION 2026-11-15（Lead）
+
+- deviation：cards/S3135 + ad hoc N5 被当 mainline；
+- 正确路线：**P1–P8 / D1-H1-S1-G1**；
+- cards/S3135/adhoc N5 为 off-route/auxiliary；后续只按 P1–P8 / D1-H1-S1-G1 记录 mainline。

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3119NegInvolutionAttempt
+#print axioms LeanFormal.IUT.XiFPaper.S3119NegInvolutionAttempt.S3119NegEllipticInvolution
+#print axioms LeanFormal.IUT.XiFPaper.S3119NegInvolutionAttempt.S3119NegEllipticInvolution_squared

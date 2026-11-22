@@ -1,0 +1,6 @@
+/- Read-only probes for HullUnitZero conditional (scale_one) theorems (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110HullUnitZeroActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110HullUnitZeroActual.IQHullUnitRegion_eq_unitReference_of_scale_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110HullUnitZeroActual.arithmeticTupleHullUnitLogVolume_eq_zero_of_scale_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110HullUnitZeroActual.arithmeticTupleCanonicalHullHaarLog_eq_unitRegion_of_scale_one

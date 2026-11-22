@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2567F613IrreducibleActual
+#check LeanFormal.IUT.XiFPaper.S2567F613IrreducibleActual.F613_irreducible
+#check LeanFormal.IUT.XiFPaper.S2567F613IrreducibleActual.G_irreducible

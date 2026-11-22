@@ -1,0 +1,3 @@
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:53:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:60:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:65:18: warning: declaration uses `sorry`

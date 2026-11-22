@@ -1,0 +1,3 @@
+import LeanFormal.IUT.Foundations.NumberField.SourceQvClosed
+#check LeanFormal.IUT.SourceQvClosed.exists_sourceQv_at_finitePlace_closed
+#check LeanFormal.IUT.SourceQvClosed.SourceQv

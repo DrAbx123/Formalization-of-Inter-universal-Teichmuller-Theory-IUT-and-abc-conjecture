@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.IUTExternalPGCStatementsActual
+import tmp.sheaf.xif.paper.IUTExternalAbsAnbStatementsActual
+import tmp.sheaf.xif.paper.IUTExternalAbScStatementsActual
+import tmp.sheaf.xif.paper.IUTExternalNodNonStatementsActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalPGCStatementsActual.iutExternalStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalAbsAnbStatementsActual.iutExternalStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalAbScStatementsActual.iutExternalStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalNodNonStatementsActual.iutExternalStatements_length

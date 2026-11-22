@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2RawFacConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2RawFacConsumerActual.S3127G2NonemptyUniversalData_of_rawFac

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1PaperFrobeniusPictureStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFrobeniusPictureStatementActual.FrobeniusPictureArrow
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFrobeniusPictureStatementActual.GraphAutomorphism
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFrobeniusPictureStatementActual.OrientedGraphStructure

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Frd03ConcreteModelActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Frd03ConcreteModelActual.concreteModelFrobenioid
+#print axioms LeanFormal.IUT.XiFPaper.Frd03ConcreteModelActual.concreteModelFrobenioid_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.Frd03ConcreteModelActual.concreteModelFrobenioid_eq_boundary_model

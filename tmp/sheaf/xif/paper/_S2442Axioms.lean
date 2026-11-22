@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2442H2ComparisonActual2
+#print axioms LeanFormal.IUT.XiFPaper.S2442H2ComparisonActual2.h2Comparison_surjective_of_coeff_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2442H2ComparisonActual2.S2427ActualH2Comparison_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2442H2ComparisonActual2.S2427ActualRepresentativeLift

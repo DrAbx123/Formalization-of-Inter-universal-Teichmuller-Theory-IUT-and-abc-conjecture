@@ -1,0 +1,11 @@
+import Mathlib.CategoryTheory.FintypeCat
+import Mathlib.Data.Fintype.EquivFin
+open CategoryTheory
+#check Fintype.ofEquiv
+#check FintypeCat.of
+#check FintypeCat.fintype
+#check FintypeCat.homMk
+#check FintypeCat.hom_ext
+#check FintypeCat.comp_apply
+#check FintypeCat.id_apply
+#check Finite.of_fintype

@@ -1,0 +1,2 @@
+import tmp.sheaf.n8.closure.C6ContractSupplyOld
+#print axioms LeanFormal.IUT.N8Closure.C1Actual.nativeContractDatumExists_iff_c6ContractSupply

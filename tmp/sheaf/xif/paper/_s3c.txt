@@ -1,0 +1,18 @@
+/-- The 2-cell `Sigma ; Sigma -> 1`. -/
+noncomputable def S1932SqMod :
+    Pseudofunctor.StrongTrans.vcomp S1932Sigma S1932Sigma ⟶
+      Pseudofunctor.StrongTrans.id S1898Stack where
+  as := {
+    app U := NatTrans.toCatHom₂ (S1932SqNatTrans U)
+    naturality a b f := by
+      exact (S1932NatTransSubsingleton (Discrete.isDiscrete _) _ _).elim _ _ }
+
+/-- The reverse 2-cell `1 -> Sigma ; Sigma`. -/
+noncomputable def S1932SqModRev :
+    Pseudofunctor.StrongTrans.id S1898Stack ⟶
+      Pseudofunctor.StrongTrans.vcomp S1932Sigma S1932Sigma where
+  as := {
+    app U := NatTrans.toCatHom₂ (S1932SqNatTransRev U)
+    naturality a b f := by
+      exact (S1932NatTransSubsingleton (Discrete.isDiscrete _) _ _).elim _ _ }
+

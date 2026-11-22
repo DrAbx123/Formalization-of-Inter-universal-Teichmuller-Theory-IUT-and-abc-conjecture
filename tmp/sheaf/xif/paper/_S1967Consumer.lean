@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S1967OUnitsMuActual
+
+namespace LeanFormal.IUT.XiFPaper.S1967Consumer
+
+open LeanFormal.IUT.XiFPaper.S1967OUnitsMuActual
+
+#check sourceHaarActualValueMonoid_units_subsingleton
+#check OUnitsMu_subsingleton
+#check no_s1895_units_equiv_local
+#check no_local_to_sourceHaar_timesMuIso
+#check operationEvaluationIso_equiv_eq_upperEvaluation
+#print axioms no_s1895_units_equiv_local
+
+end LeanFormal.IUT.XiFPaper.S1967Consumer

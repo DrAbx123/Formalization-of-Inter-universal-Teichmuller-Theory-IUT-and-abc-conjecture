@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1IUTIIILinkActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIILinkActual.cor312Conclusion_of_IUTIIToStepXILink
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIILinkActual.q_positive_of_IUTIIToStepXILink
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIILinkActual.iutiiLinkRows_length

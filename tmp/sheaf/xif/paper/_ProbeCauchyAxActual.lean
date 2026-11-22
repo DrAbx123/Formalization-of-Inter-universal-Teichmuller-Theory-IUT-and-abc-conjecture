@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G1PsiCauchyBoundActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiCauchyBoundActual.nnnorm_multiset_prod_complex
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiCauchyBoundActual.prod_X_sub_C_eval
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiCauchyBoundActual.norm_eval_prod_bound

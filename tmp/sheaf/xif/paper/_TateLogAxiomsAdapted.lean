@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.TateThetaLogDerivAttempt
+#print axioms LeanFormal.IUT.XiFPaper.TateThetaLogDerivAttempt.thetaLogDeriv2_eq_coordinateSeries
+#print axioms LeanFormal.IUT.XiFPaper.TateThetaLogDerivAttempt.thetaLogDeriv3_eq_inversionOddYCoordinateSeries

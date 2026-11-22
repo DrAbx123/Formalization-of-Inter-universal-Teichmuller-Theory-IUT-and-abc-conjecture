@@ -1,0 +1,31 @@
+/-! ## 7. Axiom footprint -/
+
+#print axioms S1932NatTransSubsingleton
+#print axioms S1932StrongTransSubsingleton
+#print axioms S1932PolyEndo_comp
+#print axioms S1932CoordEndo_comp
+#print axioms S1932SchemeEndo_comp
+#print axioms S1932AffineEndo_comp
+#print axioms S1932SigmaSq_obj
+#print axioms S1932Sq_point
+#print axioms S1932SqNatTrans
+#print axioms S1932SqMod
+#print axioms S1932SigmaSqIso
+#print axioms S1932SignGroup_generator_ne
+#print axioms S1932SignGroup_mul_eq_one
+#print axioms S1932SigMap_id
+#print axioms S1932SigMap_mapComp
+#print axioms S1932Diagram
+#print axioms S1932Diagram_map_generator
+#print axioms S1932IdEquiv
+#print axioms S1932SignAction
+#print axioms S1932SignAction_inversion_eq
+#print axioms S1932SignAction_inversion_ne_id
+#print axioms S1932SignActionPackaging
+#print axioms S1932PaperCF_of_quotient
+#print axioms S1932FirstMissing_to_PaperCF
+#print axioms S1932PaperCF_gives_quotientData
+
+end LeanFormal.IUT.XiFPaper.S1932SignActionQuotientActual
+
+end

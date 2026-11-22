@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2669D9PrestackActual
+open LeanFormal.IUT.XiFPaper.S2669D9PrestackActual
+#print axioms S2669FiberIsPrestack
+#print axioms S2669FiberPresheafHom_isSheaf_Mo

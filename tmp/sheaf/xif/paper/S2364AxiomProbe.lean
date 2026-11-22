@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2364D5GroupRouteActual
+open LeanFormal.IUT.XiFPaper.S2364D5GroupRouteActual
+#print axioms S2364FiveDvdOfCycleType102
+#print axioms S2364SL2Image_le_of_fiveDvd_and_transitive
+#print axioms S2364D5LargeImageFive_of_hypotheses
+#print axioms S2364D5LargeImageFive_of_exactFirstMissing

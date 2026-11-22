@@ -1,0 +1,17 @@
+{
+  "mode": {
+    "attach": true,
+    "fallback": false,
+    "prune": false,
+    "connect": true
+  },
+  "attached_import_edges": 41,
+  "fallback_hierarchy_attached": 0,
+  "pruned_transitive": 0,
+  "connected_components_before": 967,
+  "connectivity_edges": 966,
+  "remaining_isolated": 0,
+  "isolated_ids": [],
+  "before_edges": 28268,
+  "after_edges": 29202
+}

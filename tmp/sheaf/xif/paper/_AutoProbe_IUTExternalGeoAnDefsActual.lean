@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternalGeoAnDefsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalGeoAnDefsActual.ConnectedAnabelioid
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalGeoAnDefsActual.IUTExternalGeoAnRow
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalGeoAnDefsActual.iutExternalGeoAnStatements

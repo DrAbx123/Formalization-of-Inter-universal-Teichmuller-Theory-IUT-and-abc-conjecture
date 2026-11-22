@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2692D4ConditionalContractActual
+#print axioms LeanFormal.IUT.XiFPaper.S2692D4ConditionalContractActual.S2692ConditionalContract.toContract

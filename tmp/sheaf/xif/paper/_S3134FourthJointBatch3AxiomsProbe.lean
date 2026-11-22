@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3134FourthJointClosedChainActual
+
+/-! Axioms probe for the S3134 fourth-joint batch 3. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134OneColumnPacketLogVolumeActual.S3134OneColumnPacketLogVolume_eq_gauss_sum
+#print axioms LeanFormal.IUT.XiFPaper.S3134OneColumnPacketLogVolumeActual.S3134OneColumnPacketLogVolume_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3134OneColumnPacketLogVolumeActual.S3134OneColumnAverageLogScale_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3134OneColumnPacketLogVolumeActual.S3134OneColumnReadout_sum_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3134OneColumnPacketLogVolumeActual.S3134OneColumnReadoutAverage_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointClosedChainActual.S3134FourthJointClosedChain
+#print axioms LeanFormal.IUT.XiFPaper.S3134FourthJointClosedChainActual.S3134FourthJointClosedChain_final

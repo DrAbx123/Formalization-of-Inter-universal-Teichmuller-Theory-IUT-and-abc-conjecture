@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2225H1FiniteQuotientActual
+#print axioms LeanFormal.IUT.XiFPaper.S2225H1FiniteQuotientActual.S2225QuotientH1_finite
+#print axioms LeanFormal.IUT.XiFPaper.S2225H1FiniteQuotientActual.S2225FiniteH1OfQuotient

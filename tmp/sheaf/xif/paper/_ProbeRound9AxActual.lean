@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1G1F4HeightFiniteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F4HeightFiniteActual.height_le_mul_add_const_of_finite_exception
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F4HeightFiniteActual.hE_le_mul_homega_add_const_of_finite_exception

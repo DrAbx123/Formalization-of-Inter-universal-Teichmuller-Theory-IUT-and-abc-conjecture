@@ -1,0 +1,9 @@
+import Mathlib
+open Polynomial
+#check @Polynomial.sylvester
+#check @Polynomial.resultant
+#check @Polynomial.discr
+#check @Polynomial.sylvester_eq
+#check @Polynomial.resultant_eq
+#check @Polynomial.discr_eq_resultant
+#check @Polynomial.resultant_dvd

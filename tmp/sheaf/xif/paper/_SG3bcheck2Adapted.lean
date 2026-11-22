@@ -1,0 +1,4 @@
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorIntegralRegion
+open LeanFormal.IUT
+#check LeanFormal.IUT.LocalFieldPadicTensor.finitePadicTensorTprod
+#check LeanFormal.IUT.LocalFieldPadicTensor.tensorIntegralRegion_eq_range

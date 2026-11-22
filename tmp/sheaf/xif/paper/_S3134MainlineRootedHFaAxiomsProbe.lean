@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3134MainlineRootedHFaActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134MainlineRooted_signedComparison
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134QThetaComparison_gap_comparison_ofMainlineRootedReadouts
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134Step3115_ray_ofMainlineRootedReadouts
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134Step3115_mainlineQC_le_thetaPilot_viaMainlineRooted
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134CanonicalRootedQC_le_HC
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134CanonicalRootedQC_eq_scalar_of_formulaGap
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134Step3115_canonicalQC_le_thetaPilot
+#print axioms LeanFormal.IUT.XiFPaper.S3134MainlineRootedHFaActual.S3134Step3115_canonicalQC_ray
+-- rebuilt against the final canonical-consuming S3134MainlineRootedHFaActual (task-35)

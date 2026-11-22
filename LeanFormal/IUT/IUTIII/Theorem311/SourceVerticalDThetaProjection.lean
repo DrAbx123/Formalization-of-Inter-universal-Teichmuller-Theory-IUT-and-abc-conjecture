@@ -72,6 +72,30 @@ namespace DThetaHodgeTheaterLink
 variable {l : PrimeGeFive} {V : Type uv}
 variable {S T U : DThetaHodgeTheater.{ua, uv, upi} l V}
 
+/-- Two projected D-theater links with the same underlying D-prime-strip
+    equivalence coincide; the remaining fields are propositional. -/
+@[ext] theorem ext {first second : DThetaHodgeTheaterLink S T}
+    (h : first.dPrimeStripEquiv = second.dPrimeStripEquiv) : first = second := by
+  cases first
+  cases second
+  simp only at h
+  congr
+
+namespace DPrimeStripEquiv
+
+/-- Two D-prime-strip equivalences with the same componentwise maps coincide;
+    the compatibility field is propositional. -/
+@[ext] theorem ext {V : Type uv} {D D' : DPrimeStrip.{upi, uv} V}
+    {first second : DPrimeStripEquiv D D'}
+    (hPi : first.isoPi = second.isoPi)
+    (hG : first.isoG = second.isoG) : first = second := by
+  cases first
+  cases second
+  simp only at hPi hG
+  congr
+
+end DPrimeStripEquiv
+
 def refl (S : DThetaHodgeTheater.{ua, uv, upi} l V) :
     DThetaHodgeTheaterLink S S where
   dPrimeStripEquiv := DPrimeStripEquiv.refl S.dPrimeStrip
@@ -161,13 +185,29 @@ theorem scale_trans
 
 theorem inverse_left (link : DThetaHodgeTheaterLink S T) :
     trans link (symm link) = refl S := by
-  cases link
-  rfl
+  cases link with
+  | mk e a q s =>
+    refine DThetaHodgeTheaterLink.ext ?_
+    change DPrimeStripEquiv.trans e (DPrimeStripEquiv.symm e) =
+      DPrimeStripEquiv.refl S.dPrimeStrip
+    apply DPrimeStripEquiv.ext
+    · funext v
+      exact MulEquiv.self_trans_symm (e.isoPi v)
+    · funext v
+      exact MulEquiv.self_trans_symm (e.isoG v)
 
 theorem inverse_right (link : DThetaHodgeTheaterLink S T) :
     trans (symm link) link = refl T := by
-  cases link
-  rfl
+  cases link with
+  | mk e a q s =>
+    refine DThetaHodgeTheaterLink.ext ?_
+    change DPrimeStripEquiv.trans (DPrimeStripEquiv.symm e) e =
+      DPrimeStripEquiv.refl T.dPrimeStrip
+    apply DPrimeStripEquiv.ext
+    · funext v
+      exact MulEquiv.symm_trans_self (e.isoPi v)
+    · funext v
+      exact MulEquiv.symm_trans_self (e.isoG v)
 
 end DThetaHodgeTheaterLink
 
@@ -270,25 +310,35 @@ theorem dThetaLinkAt_scale_eq (n m n' m' : Int)
 theorem dThetaLinkAt_refl (n m : Int) :
     I.dThetaLinkAt n m n m =
       DThetaHodgeTheaterLink.refl (I.dThetaTheaterAt n m) := by
-  have h := I.linkAt_refl n m
-  cases h
+  refine DThetaHodgeTheaterLink.ext ?_
+  change (I.linkAt n m n m).primeStripEquiv.toD =
+    DPrimeStripEquiv.refl ((I.dThetaTheaterAt n m).dPrimeStrip)
+  rw [I.linkAt_refl]
   rfl
 
 theorem dThetaLinkAt_symm (n m n' m' : Int) :
     DThetaHodgeTheaterLink.symm (I.dThetaLinkAt n m n' m') =
       I.dThetaLinkAt n' m' n m := by
-  have h := I.linkAt_symm n m n' m'
-  cases h
-  rfl
+  refine DThetaHodgeTheaterLink.ext ?_
+  change DPrimeStripEquiv.symm ((I.linkAt n m n' m').primeStripEquiv.toD) =
+    (I.linkAt n' m' n m).primeStripEquiv.toD
+  rw [FPrimeStripEquiv.toD_symm]
+  exact congrArg FPrimeStripEquiv.toD
+    (congrArg HodgeTheaterLink.primeStripEquiv (I.linkAt_symm n m n' m'))
 
 theorem dThetaLinkAt_trans (n m n' m' n'' m'' : Int) :
     DThetaHodgeTheaterLink.trans
         (I.dThetaLinkAt n m n' m')
         (I.dThetaLinkAt n' m' n'' m'') =
       I.dThetaLinkAt n m n'' m'' := by
-  have h := I.linkAt_trans n m n' m' n'' m''
-  cases h
-  rfl
+  refine DThetaHodgeTheaterLink.ext ?_
+  change DPrimeStripEquiv.trans
+      ((I.linkAt n m n' m').primeStripEquiv.toD)
+      ((I.linkAt n' m' n'' m'').primeStripEquiv.toD) =
+    (I.linkAt n m n'' m'').primeStripEquiv.toD
+  rw [FPrimeStripEquiv.toD_trans]
+  exact congrArg FPrimeStripEquiv.toD
+    (congrArg HodgeTheaterLink.primeStripEquiv (I.linkAt_trans n m n' m' n'' m''))
 
 theorem dThetaLinkAt_inverse (n m n' m' : Int) :
     DThetaHodgeTheaterLink.trans
@@ -379,7 +429,9 @@ structure DThetaVerticalLine (n : Int) where
   member : Int → DThetaHodgeTheater.{ua, uv, upi} l V
   member_source : ∀ m, member m = I.dThetaTheaterAt n m
   link : ∀ m m', DThetaHodgeTheaterLink (member m) (member m')
-  link_source : ∀ m m', link m m' = I.dThetaLinkAt n m n m'
+  link_source : ∀ m m',
+    link m m' = (member_source m).symm ▸ (member_source m').symm ▸
+      I.dThetaLinkAt n m n m'
   link_refl : ∀ m, link m m = DThetaHodgeTheaterLink.refl (member m)
   link_symm : ∀ m m',
     DThetaHodgeTheaterLink.symm (link m m') = link m' m
@@ -441,15 +493,15 @@ theorem dThetaVerticalLine_member_arithmetic (n m : Int) :
 
 theorem dThetaVerticalLine_member_q (n m : Int) :
     ((I.dThetaVerticalLine n).member m).thetaPacket.q =
-      (I.dThetaVerticalLine n).member 0 |>.thetaPacket.q := by
-  rw [I.dThetaVerticalLine_member, I.dThetaVerticalLine_member]
+      ((I.dThetaVerticalLine n).member 0).thetaPacket.q := by
+  rw [I.dThetaVerticalLine_member]
   exact I.dThetaTheaterAt_q_pair n m n 0
 
 theorem dThetaVerticalLine_member_scale (n m : Int)
     (j : SignedLabel l.value) :
     ((I.dThetaVerticalLine n).member m).thetaPacket.scale j =
-      (I.dThetaVerticalLine n).member 0 |>.thetaPacket.scale j := by
-  rw [I.dThetaVerticalLine_member, I.dThetaVerticalLine_member]
+      ((I.dThetaVerticalLine n).member 0).thetaPacket.scale j := by
+  rw [I.dThetaVerticalLine_member]
   exact I.dThetaTheaterAt_scale_pair n m n 0 j
 
 theorem dThetaVerticalLine_link_bijective_pi (n m m' : Int) (v : V) :
@@ -470,27 +522,29 @@ theorem dThetaVerticalLine_link_projection (n m m' : Int) (v : V)
         (((I.dThetaVerticalLine n).link m m').dPrimeStripEquiv.isoPi v x) =
       ((I.dThetaVerticalLine n).link m m').dPrimeStripEquiv.isoG v
         (((I.dThetaVerticalLine n).member m).dPrimeStrip.proj v x) := by
-  rw [I.dThetaVerticalLine_link, I.dThetaVerticalLine_member,
-    I.dThetaVerticalLine_member]
+  change (I.dThetaTheaterAt n m').dPrimeStrip.proj v
+      ((I.dThetaLinkAt n m n m').dPrimeStripEquiv.isoPi v x) =
+    (I.dThetaLinkAt n m n m').dPrimeStripEquiv.isoG v
+      ((I.dThetaTheaterAt n m).dPrimeStrip.proj v x)
   exact I.dThetaLinkAt_projection n m n m' v x
 
 theorem dThetaVerticalLine_link_arithmetic (n m m' : Int) :
     ((I.dThetaVerticalLine n).member m).arithmetic =
       ((I.dThetaVerticalLine n).member m').arithmetic := by
-  rw [I.dThetaVerticalLine_link]
+  rw [I.dThetaVerticalLine_member]
   exact I.dThetaLinkAt_arithmetic_eq n m n m'
 
 theorem dThetaVerticalLine_link_q (n m m' : Int) :
     ((I.dThetaVerticalLine n).member m).thetaPacket.q =
       ((I.dThetaVerticalLine n).member m').thetaPacket.q := by
-  rw [I.dThetaVerticalLine_link]
+  rw [I.dThetaVerticalLine_member]
   exact I.dThetaLinkAt_q_eq n m n m'
 
 theorem dThetaVerticalLine_link_scale (n m m' : Int)
     (j : SignedLabel l.value) :
     ((I.dThetaVerticalLine n).member m).thetaPacket.scale j =
       ((I.dThetaVerticalLine n).member m').thetaPacket.scale j := by
-  rw [I.dThetaVerticalLine_link]
+  rw [I.dThetaVerticalLine_member]
   exact I.dThetaLinkAt_scale_eq n m n m' j
 
 /-! ## 5. The source-visible full vertical isomorphism -/
@@ -539,18 +593,28 @@ theorem verticalFullIso_scale (n m : Int) (j : SignedLabel l.value) :
 
 theorem verticalFullIso_inverse (n m : Int) :
     DThetaHodgeTheaterLink.trans (I.verticalFullIso n m)
-        (I.dThetaVerticalLine n).link (m + 1) m =
+        ((I.dThetaVerticalLine n).link (m + 1) m) =
       DThetaHodgeTheaterLink.refl
-        ((I.dThetaVerticalLine n).member m) :=
-  (I.dThetaVerticalLine n).link m (m + 1) |>.inverse_left
+        ((I.dThetaVerticalLine n).member m) := by
+  change DThetaHodgeTheaterLink.trans
+      (I.dThetaLinkAt n m n (m + 1))
+      (I.dThetaLinkAt n (m + 1) n m) =
+    DThetaHodgeTheaterLink.refl (I.dThetaTheaterAt n m)
+  rw [← I.dThetaLinkAt_symm n m n (m + 1)]
+  exact DThetaHodgeTheaterLink.inverse_left (I.dThetaLinkAt n m n (m + 1))
 
 theorem verticalFullIso_inverse_right (n m : Int) :
     DThetaHodgeTheaterLink.trans
         ((I.dThetaVerticalLine n).link (m + 1) m)
         (I.verticalFullIso n m) =
       DThetaHodgeTheaterLink.refl
-        ((I.dThetaVerticalLine n).member (m + 1)) :=
-  (I.dThetaVerticalLine n).link m (m + 1) |>.inverse_right
+        ((I.dThetaVerticalLine n).member (m + 1)) := by
+  change DThetaHodgeTheaterLink.trans
+      (I.dThetaLinkAt n (m + 1) n m)
+      (I.dThetaLinkAt n m n (m + 1)) =
+    DThetaHodgeTheaterLink.refl (I.dThetaTheaterAt n (m + 1))
+  rw [← I.dThetaLinkAt_symm n m n (m + 1)]
+  exact DThetaHodgeTheaterLink.inverse_right (I.dThetaLinkAt n m n (m + 1))
 
 theorem verticalFullIso_two_step (n m : Int) :
     DThetaHodgeTheaterLink.trans (I.verticalFullIso n m)
@@ -583,7 +647,9 @@ structure DThetaVerticalStage (n : Int) (k : Nat) where
   theater : Fin (k + 1) → DThetaHodgeTheater.{ua, uv, upi} l V
   theater_eq : ∀ i, theater i = I.dThetaTheaterAt n (i.1 : Int)
   link : ∀ i j, DThetaHodgeTheaterLink (theater i) (theater j)
-  link_eq : ∀ i j, link i j = I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int)
+  link_eq : ∀ i j,
+    link i j = (theater_eq i).symm ▸ (theater_eq j).symm ▸
+      I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int)
 
 def dThetaVerticalStage (n : Int) (k : Nat) : I.DThetaVerticalStage n k where
   source := fun i => I.indexOf n (i.1 : Int)
@@ -625,8 +691,10 @@ theorem dThetaVerticalStage_link_symm (n : Int) (k : Nat)
     DThetaHodgeTheaterLink.symm
         ((I.dThetaVerticalStage n k).link i j) =
       (I.dThetaVerticalStage n k).link j i := by
-  rw [I.dThetaVerticalStage_link, I.dThetaLinkAt_symm]
-  rfl
+  change DThetaHodgeTheaterLink.symm
+      (I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int)) =
+    I.dThetaLinkAt n (j.1 : Int) n (i.1 : Int)
+  exact I.dThetaLinkAt_symm n (i.1 : Int) n (j.1 : Int)
 
 theorem dThetaVerticalStage_link_trans (n : Int) (k : Nat)
     (i j h : Fin (k + 1)) :
@@ -634,8 +702,11 @@ theorem dThetaVerticalStage_link_trans (n : Int) (k : Nat)
         ((I.dThetaVerticalStage n k).link i j)
         ((I.dThetaVerticalStage n k).link j h) =
       (I.dThetaVerticalStage n k).link i h := by
-  rw [I.dThetaVerticalStage_link, I.dThetaLinkAt_trans]
-  rfl
+  change DThetaHodgeTheaterLink.trans
+      (I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int))
+      (I.dThetaLinkAt n (j.1 : Int) n (h.1 : Int)) =
+    I.dThetaLinkAt n (i.1 : Int) n (h.1 : Int)
+  exact I.dThetaLinkAt_trans n (i.1 : Int) n (j.1 : Int) n (h.1 : Int)
 
 theorem dThetaVerticalStage_cardinality (n : Int) (k : Nat) :
     Fintype.card (Fin (k + 1)) = k + 1 := by
@@ -687,8 +758,10 @@ theorem dThetaVerticalStage_link_projection (n : Int) (k : Nat)
         (((I.dThetaVerticalStage n k).link i j).dPrimeStripEquiv.isoPi v x) =
       ((I.dThetaVerticalStage n k).link i j).dPrimeStripEquiv.isoG v
         (((I.dThetaVerticalStage n k).theater i).dPrimeStrip.proj v x) := by
-  rw [I.dThetaVerticalStage_link, I.dThetaVerticalStage_theater,
-    I.dThetaVerticalStage_theater]
+  change (I.dThetaTheaterAt n (j.1 : Int)).dPrimeStrip.proj v
+      ((I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int)).dPrimeStripEquiv.isoPi v x) =
+    (I.dThetaLinkAt n (i.1 : Int) n (j.1 : Int)).dPrimeStripEquiv.isoG v
+      ((I.dThetaTheaterAt n (i.1 : Int)).dPrimeStrip.proj v x)
   exact I.dThetaLinkAt_projection n (i.1 : Int) n (j.1 : Int) v x
 
 /-! ## 7. Stage inclusions and procession -/
@@ -788,8 +861,10 @@ theorem dThetaVerticalInclusion_component_projection (n : Int)
         (((I.dThetaVerticalInclusion n h).component i).dPrimeStripEquiv.isoPi v x) =
       ((I.dThetaVerticalInclusion n h).component i).dPrimeStripEquiv.isoG v
         (((I.dThetaVerticalStage n k).theater i).dPrimeStrip.proj v x) := by
-  rw [dThetaVerticalInclusion_component, dThetaVerticalStage_theater,
-    dThetaVerticalStage_theater]
+  change (I.dThetaTheaterAt n ((finStageMap h i).1 : Int)).dPrimeStrip.proj v
+      ((I.dThetaLinkAt n (i.1 : Int) n ((finStageMap h i).1 : Int)).dPrimeStripEquiv.isoPi v x) =
+    (I.dThetaLinkAt n (i.1 : Int) n ((finStageMap h i).1 : Int)).dPrimeStripEquiv.isoG v
+      ((I.dThetaTheaterAt n (i.1 : Int)).dPrimeStrip.proj v x)
   exact I.dThetaLinkAt_projection n (i.1 : Int) n
     ((finStageMap h i).1 : Int) v x
 
@@ -893,7 +968,7 @@ theorem dThetaVerticalInclusion_component_recovery (n : Int)
 
 theorem dThetaVerticalProcession_strip_recovery (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    ((I.dThetaVerticalProcession n).stage k).theater i |>.dPrimeStrip =
+    (((I.dThetaVerticalProcession n).stage k).theater i).dPrimeStrip =
       ((I.dColumnProcession n).stage k).strip i := by
   rfl
 
@@ -911,14 +986,14 @@ theorem dThetaVerticalProcession_inclusion_recovery (n : Int)
 
 theorem dThetaVerticalProcession_top_strip (n : Int)
     (i : Fin (lStar l.value + 1)) :
-    ((I.dThetaVerticalProcession n).stage (lStar l.value)).theater i |>.dPrimeStrip =
+    (((I.dThetaVerticalProcession n).stage (lStar l.value)).theater i).dPrimeStrip =
       I.dThetaShadowAt n (i.1 : Int) := by
   rfl
 
 theorem dThetaVerticalProcession_top_link (n : Int)
     (i j : Fin (lStar l.value + 1)) :
-    (((I.dThetaVerticalProcession n).stage (lStar l.value)).link i j)
-      .dPrimeStripEquiv = I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int) := by
+    (((I.dThetaVerticalProcession n).stage (lStar l.value)).link i j).dPrimeStripEquiv =
+      I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int) := by
   rfl
 
 /-! ## 9. Horizontal and vertical lattice squares -/
@@ -1065,7 +1140,8 @@ theorem permutationDThetaLink_natural (i j : I.family.index) :
         ((I.family.link i j).primeStripEquiv.toD) := by
   rw [FPrimeStripEquiv.toD_trans, FPrimeStripEquiv.toD_trans]
   exact congrArg FPrimeStripEquiv.toD
-    (I.family.permutation_naturality i j)
+    (congrArg HodgeTheaterLink.primeStripEquiv
+      (I.family.permutation_naturality i j))
 
 theorem permutationDThetaLink_natural_q (i j : I.family.index) :
     (I.family.theater (I.family.permutation i)).thetaPacket.q =
@@ -1093,18 +1169,23 @@ theorem permutationIndex_apply (p : SourceTheorem311Index) :
 theorem permutationIndex_injective :
     Function.Injective I.permutationIndex := by
   intro p q h
-  apply I.family.permutation.injective
-  apply I.index_equiv.injective
-  simpa [permutationIndex] using h
+  have h₁ : I.family.permutation (I.indexOf p.1 p.2) =
+      I.family.permutation (I.indexOf q.1 q.2) := by
+    simpa [permutationIndex] using congrArg I.index_equiv.symm h
+  have h₂ : I.indexOf p.1 p.2 = I.indexOf q.1 q.2 :=
+    I.family.permutation.injective h₁
+  exact I.indexOf_injective h₂
 
 theorem permutationIndex_bijective :
     Function.Bijective I.permutationIndex := by
-  refine ⟨I.permutationIndex_injective, ?_⟩
-  intro p
-  let i := I.family.permutation.symm (I.indexOf p.1 p.2)
-  refine ⟨I.index_equiv i, ?_⟩
-  apply I.index_equiv.injective
-  simp [permutationIndex, i]
+  have hfun : I.permutationIndex =
+      (I.index_equiv.symm.trans (I.family.permutation.trans I.index_equiv)) := by
+    funext p
+    unfold permutationIndex indexOf
+    rfl
+  rw [hfun]
+  exact (I.index_equiv.symm.trans
+    (I.family.permutation.trans I.index_equiv)).bijective
 
 theorem permutationIndex_source (p : SourceTheorem311Index) :
     I.indexOf (I.permutationIndex p).1 (I.permutationIndex p).2 =
@@ -1149,11 +1230,13 @@ structure DThetaProjectionLedger where
   horizontal : ∀ n m : Int,
     DThetaHodgeTheaterLink (theater n m) (theater (n + 1) m)
   horizontal_source : ∀ n m,
-    horizontal n m = I.horizontalDThetaLinkAt n m
+    horizontal n m = (theater_source n m).symm ▸
+      (theater_source (n + 1) m).symm ▸ I.horizontalDThetaLinkAt n m
   vertical_arrow : ∀ n m : Int,
     DThetaHodgeTheaterLink (theater n m) (theater n (m + 1))
   vertical_arrow_source : ∀ n m,
-    vertical_arrow n m = I.verticalDThetaLinkAt n m
+    vertical_arrow n m = (theater_source n m).symm ▸
+      (theater_source n (m + 1)).symm ▸ I.verticalDThetaLinkAt n m
 
 def dThetaProjectionLedger : I.DThetaProjectionLedger where
   theater := I.dThetaTheaterAt
@@ -1189,27 +1272,27 @@ def dThetaProjectionLedger : I.DThetaProjectionLedger where
       I.verticalDThetaLinkAt n m := rfl
 
 theorem dThetaProjectionLedger_theater_arithmetic (n m : Int) :
-    (I.dThetaProjectionLedger).theater n m |>.arithmetic =
+    ((I.dThetaProjectionLedger).theater n m).arithmetic =
       I.initial.arithmetic := by
   rw [dThetaProjectionLedger_theater]
   exact I.dThetaTheaterAt_source_arithmetic n m
 
 theorem dThetaProjectionLedger_vertical_bijective (n m : Int) (v : V) :
     Function.Bijective
-      (((I.dThetaProjectionLedger).vertical_arrow n m)
-        .dPrimeStripEquiv.isoPi v) := by
+      (((I.dThetaProjectionLedger).vertical_arrow n m).dPrimeStripEquiv.isoPi v) := by
   rw [dThetaProjectionLedger_vertical_arrow]
   exact (I.verticalDThetaLinkAt n m).dPrimeStrip_bijective v
 
 theorem dThetaProjectionLedger_vertical_projection (n m : Int) (v : V)
     (x : ((I.dThetaProjectionLedger).theater n m).dPrimeStrip.Pi v) :
     ((I.dThetaProjectionLedger).theater n (m + 1)).dPrimeStrip.proj v
-        (((I.dThetaProjectionLedger).vertical_arrow n m)
-          .dPrimeStripEquiv.isoPi v x) =
-      ((I.dThetaProjectionLedger).vertical_arrow n m)
-        .dPrimeStripEquiv.isoG v
+        (((I.dThetaProjectionLedger).vertical_arrow n m).dPrimeStripEquiv.isoPi v x) =
+      ((I.dThetaProjectionLedger).vertical_arrow n m).dPrimeStripEquiv.isoG v
         (((I.dThetaProjectionLedger).theater n m).dPrimeStrip.proj v x) := by
-  rw [dThetaProjectionLedger_theater, dThetaProjectionLedger_vertical_arrow]
+  change (I.dThetaTheaterAt n (m + 1)).dPrimeStrip.proj v
+      ((I.verticalDThetaLinkAt n m).dPrimeStripEquiv.isoPi v x) =
+    (I.verticalDThetaLinkAt n m).dPrimeStripEquiv.isoG v
+      ((I.dThetaTheaterAt n m).dPrimeStrip.proj v x)
   exact I.verticalDThetaLinkAt_projection n m v x
 
 theorem dThetaProjectionLedger_square (n m : Int) :
@@ -1229,15 +1312,17 @@ theorem dThetaProjectionLedger_square (n m : Int) :
 
 structure DThetaCoricityGate where
   theater : ∀ n m : Int, DThetaHodgeTheater.{ua, uv, upi} l V
+  theater_source : ∀ n m, theater n m = I.dThetaTheaterAt n m
   verticalIso : ∀ n m : Int,
     DThetaHodgeTheaterLink (theater n m) (theater n (m + 1))
   bridge : ∀ n m, DPrimeStripEquiv
     (theater n m).dPrimeStrip (I.dThetaTheaterAt n m).dPrimeStrip
-  bridge_source : ∀ n m, bridge n m = DPrimeStripEquiv.refl
-    (I.dThetaTheaterAt n m).dPrimeStrip
+  bridge_source : ∀ n m, bridge n m = (theater_source n m).symm ▸
+    DPrimeStripEquiv.refl (I.dThetaTheaterAt n m).dPrimeStrip
 
 def projectionCoricityGate : I.DThetaCoricityGate where
   theater := I.dThetaTheaterAt
+  theater_source := by intro n m; rfl
   verticalIso := I.verticalDThetaLinkAt
   bridge := fun n m => DPrimeStripEquiv.refl (I.dThetaTheaterAt n m).dPrimeStrip
   bridge_source := by intro n m; rfl
@@ -1255,8 +1340,7 @@ theorem projectionCoricityGate_bridge (n m : Int) :
 
 theorem projectionCoricityGate_vertical_bijective (n m : Int) (v : V) :
     Function.Bijective
-      (((I.projectionCoricityGate).verticalIso n m)
-        .dPrimeStripEquiv.isoPi v) := by
+      (((I.projectionCoricityGate).verticalIso n m).dPrimeStripEquiv.isoPi v) := by
   rw [projectionCoricityGate_verticalIso]
   exact (I.verticalDThetaLinkAt n m).dPrimeStrip_bijective v
 
@@ -1346,7 +1430,7 @@ theorem dTheta_source_root_bundle (n m : Int) :
     I.dThetaTheaterAt_theta_q n m, I.dThetaTheaterAt_source n m⟩
 
 theorem dTheta_vertical_root_bundle (n m : Int) :
-    (I.dThetaVerticalLine n).member m |>.arithmetic = I.initial.arithmetic ∧
+    ((I.dThetaVerticalLine n).member m).arithmetic = I.initial.arithmetic ∧
       ((I.dThetaVerticalLine n).member m).thetaPacket.q =
         ((I.dThetaVerticalLine n).member 0).thetaPacket.q ∧
       ((I.dThetaVerticalLine n).member m).dPrimeStrip =
@@ -1359,7 +1443,7 @@ theorem dTheta_top_stage_bundle (n : Int)
     (i : Fin (lStar l.value + 1)) :
     ((I.dThetaVerticalProcession n).stage (lStar l.value)).source i =
         I.indexOf n (i.1 : Int) ∧
-      ((I.dThetaVerticalProcession n).stage (lStar l.value)).theater i |>.dPrimeStrip =
+      (((I.dThetaVerticalProcession n).stage (lStar l.value)).theater i).dPrimeStrip =
         I.dThetaShadowAt n (i.1 : Int) := by
   exact ⟨I.dThetaVerticalProcession_stage_source n (lStar l.value) i,
     I.dThetaVerticalProcession_top_strip n i⟩
@@ -1423,21 +1507,20 @@ theorem dThetaLinkAt_geometric_iff (n m n' m' : Int) (v : V)
 theorem dThetaLinkAt_geometric_one_mem (n m : Int) (v : V) :
     (1 : (I.dThetaTheaterAt n m).dPrimeStrip.Pi v) ∈
       (I.dThetaTheaterAt n m).dPrimeStrip.geometric v := by
-  exact (I.dThetaTheaterAt n m).dPrimeStrip.geometric_carrier v 1 |>.mpr
-    (by simp)
+  exact ((I.dThetaTheaterAt n m).dPrimeStrip.geometric v).one_mem
 
 theorem dThetaLinkAt_geometric_mul_mem (n m : Int) (v : V)
     {x y : (I.dThetaTheaterAt n m).dPrimeStrip.Pi v}
     (hx : x ∈ (I.dThetaTheaterAt n m).dPrimeStrip.geometric v)
     (hy : y ∈ (I.dThetaTheaterAt n m).dPrimeStrip.geometric v) :
     x * y ∈ (I.dThetaTheaterAt n m).dPrimeStrip.geometric v := by
-  exact (I.dThetaTheaterAt n m).geometricAt_subgroup_mul v hx hy
+  exact ((I.dThetaTheaterAt n m).dPrimeStrip.geometric v).mul_mem hx hy
 
 theorem dThetaLinkAt_geometric_inv_mem (n m : Int) (v : V)
     {x : (I.dThetaTheaterAt n m).dPrimeStrip.Pi v}
     (hx : x ∈ (I.dThetaTheaterAt n m).dPrimeStrip.geometric v) :
     x⁻¹ ∈ (I.dThetaTheaterAt n m).dPrimeStrip.geometric v := by
-  exact (I.dThetaTheaterAt n m).geometricAt_subgroup_inv v hx
+  exact ((I.dThetaTheaterAt n m).dPrimeStrip.geometric v).inv_mem hx
 
 theorem dThetaLinkAt_f_totalDegree (n m n' m' : Int) (s : Finset V)
     (x : ∀ v, (I.primeStripAt n m).Mon v) :
@@ -1505,9 +1588,11 @@ theorem dThetaLinkAt_f_action_mul (n m n' m' : Int) (v : V)
 theorem dThetaLinkAt_degree_preserves_zero (n m n' m' : Int) (v : V) :
     (I.primeStripAt n' m').degree v 1 =
       (I.primeStripAt n m).degree v 1 := by
-  obtain ⟨x, hx⟩ := (I.primeStripAt n m).degree_surjective v
-  exact (I.dThetaLinkAt_f_degree n m n' m' v x).trans
-    (by simpa [hx])
+  have h₁ : (I.primeStripLinkAt n m n' m').isoMon v
+      (1 : (I.primeStripAt n m).Mon v) = 1 :=
+    map_one ((I.primeStripLinkAt n m n' m').isoMon v)
+  rw [← h₁]
+  exact (I.primeStripLinkAt n m n' m').compatDegree v 1
 
 theorem dThetaLinkAt_f_link_trans_action
     (n m n' m' n'' m'' : Int) (v : V)
@@ -1518,8 +1603,8 @@ theorem dThetaLinkAt_f_link_trans_action
       (I.primeStripLinkAt n' m' n'' m'').isoMon v
         ((I.primeStripLinkAt n m n' m').isoMon v
           ((I.primeStripAt n m).action v g x)) := by
-  rw [I.primeStripLinkAt_trans]
-  rfl
+  exact I.primeStripLinkAt_trans_isoMon n m n' m' n'' m'' v
+    ((I.primeStripAt n m).action v g x)
 
 theorem dThetaLinkAt_d_link_trans_pi
     (n m n' m' n'' m'' : Int) (v : V)
@@ -1527,8 +1612,7 @@ theorem dThetaLinkAt_d_link_trans_pi
     (I.dThetaLinkAt n m n'' m'').dPrimeStripEquiv.isoPi v x =
       (I.dThetaLinkAt n' m' n'' m'').dPrimeStripEquiv.isoPi v
         ((I.dThetaLinkAt n m n' m').dPrimeStripEquiv.isoPi v x) := by
-  rw [I.dThetaLinkAt_trans]
-  rfl
+  exact I.dPrimeStripLinkAt_trans_isoPi n m n' m' n'' m'' v x
 
 theorem dThetaLinkAt_d_link_trans_g
     (n m n' m' n'' m'' : Int) (v : V)
@@ -1536,8 +1620,7 @@ theorem dThetaLinkAt_d_link_trans_g
     (I.dThetaLinkAt n m n'' m'').dPrimeStripEquiv.isoG v x =
       (I.dThetaLinkAt n' m' n'' m'').dPrimeStripEquiv.isoG v
         ((I.dThetaLinkAt n m n' m').dPrimeStripEquiv.isoG v x) := by
-  rw [I.dThetaLinkAt_trans]
-  rfl
+  exact I.dPrimeStripLinkAt_trans_isoG n m n' m' n'' m'' v x
 
 theorem dThetaLinkAt_f_link_trans_degree
     (n m n' m' n'' m'' : Int) (v : V)
@@ -1546,7 +1629,7 @@ theorem dThetaLinkAt_f_link_trans_degree
         ((I.primeStripLinkAt n' m' n'' m'').isoMon v
           ((I.primeStripLinkAt n m n' m').isoMon v x)) =
       (I.primeStripAt n m).degree v x := by
-  rw [← I.primeStripLinkAt_trans]
+  rw [← I.primeStripLinkAt_trans_isoMon n m n' m' n'' m'' v x]
   exact I.link_degree_commutes n m n'' m'' v x
 
 theorem dTheta_vertical_line_f_degree (n m m' : Int) (v : V)
@@ -1564,7 +1647,7 @@ theorem dTheta_vertical_line_f_action (n m m' : Int) (v : V)
       (I.primeStripAt n m').action v
         ((I.dThetaLinkAt n m n m').dPrimeStripEquiv.isoPi v g)
         ((I.primeStripLinkAt n m n m').isoMon v x) := by
-  exact I.dThetaLinkAt_f_action n m n m' v g x
+  exact (I.dThetaLinkAt_f_action n m n m' v g x).symm
 
 theorem dTheta_vertical_line_geometric (n m m' : Int) (v : V)
     (x : (I.dThetaTheaterAt n m).dPrimeStrip.Pi v) :
@@ -1609,8 +1692,10 @@ structure DThetaFSourceTrace (n m n' m' : Int) where
   sourceF_eq : sourceF = I.primeStripAt n m
   targetF_eq : targetF = I.primeStripAt n' m'
   fLink : FPrimeStripEquiv sourceF targetF
-  fLink_eq : fLink = I.primeStripLinkAt n m n' m'
-  dLink_eq : fLink.toD = I.dThetaLinkAt n m n' m' |>.dPrimeStripEquiv
+  fLink_eq : fLink = targetF_eq.symm ▸ sourceF_eq.symm ▸
+    I.primeStripLinkAt n m n' m'
+  dLink_eq : fLink.toD = targetF_eq.symm ▸ sourceF_eq.symm ▸
+    (I.primeStripLinkAt n m n' m').toD
 
 def dThetaFSourceTrace (n m n' m' : Int) : I.DThetaFSourceTrace n m n' m' where
   sourceF := I.primeStripAt n m
@@ -1633,8 +1718,7 @@ def dThetaFSourceTrace (n m n' m' : Int) : I.DThetaFSourceTrace n m n' m' where
 
 theorem dThetaFSourceTrace_dLink (n m n' m' : Int) :
     (I.dThetaFSourceTrace n m n' m').fLink.toD =
-      (I.dThetaFSourceTrace n m n' m').dLink_eq ▸
-        (I.dThetaLinkAt n m n' m').dPrimeStripEquiv := by
+      (I.primeStripLinkAt n m n' m').toD := by
   rfl
 
 theorem dThetaFSourceTrace_action (n m n' m' : Int) (v : V)
@@ -1645,7 +1729,7 @@ theorem dThetaFSourceTrace_action (n m n' m' : Int) (v : V)
       (I.dThetaFSourceTrace n m n' m').targetF.action v
         ((I.dThetaFSourceTrace n m n' m').fLink.isoPi v g)
         ((I.dThetaFSourceTrace n m n' m').fLink.isoMon v x) := by
-  exact (I.link_action_commutes n m n' m' v g x).symm
+  exact I.link_action_commutes n m n' m' v g x
 
 theorem dThetaFSourceTrace_degree (n m n' m' : Int) (v : V)
     (x : (I.dThetaFSourceTrace n m n' m').sourceF.Mon v) :

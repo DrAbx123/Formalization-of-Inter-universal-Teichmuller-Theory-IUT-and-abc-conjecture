@@ -1,0 +1,5 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceClauseConstructors
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+#check LeanFormal.IUT.InitialThetaSource.SourceClauseC
+#check LeanFormal.IUT.InitialThetaSource.SourceClauseC.ofCanonicalRepresentation
+#check LeanFormal.IUT.InitialThetaSource.SourceClauseC.torsion_basis

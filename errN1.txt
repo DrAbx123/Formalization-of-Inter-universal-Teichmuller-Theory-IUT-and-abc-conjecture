@@ -1,0 +1,20 @@
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:44:15: error: Application type mismatch: The argument
+  Nat.ne_of_gt (Nat.pos_of_dvd_of_pos hdvd ?m.47)
+has type
+  p ≠ 0
+but is expected to have type
+  p ∣ a * b * c ∧ a * b * c ≠ 0
+in the application
+  ⟨hp, Nat.ne_of_gt (Nat.pos_of_dvd_of_pos hdvd ?m.47)⟩
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:44:60: error: failed to prove strict positivity, but it would be possible to prove nonnegativity if desired
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:47:13: error(lean.unknownIdentifier): Unknown constant `Nat.exists_eq_mul_left_of_ne_zero`
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:47:82: error: Tactic `rcases` failed: `x✝ : ?m.63` is not an inductive datatype
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.badSupport_eq_primeFactors' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.tripleWeight_eq_radical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.n1Rows_length' does not depend on any axioms

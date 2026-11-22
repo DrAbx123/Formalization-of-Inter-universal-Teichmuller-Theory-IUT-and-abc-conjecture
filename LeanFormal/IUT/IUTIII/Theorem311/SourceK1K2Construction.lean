@@ -686,6 +686,6 @@ def theorem311K2FrobenioidBoundary : Obligation :=
         "direction as explicit fields. No inverse law or source existence is " ++
         "inferred from the names of MOD/mod."
     dependsOn := [ "IUT-III.K1.vertical-log-kummer-boundary",
-      "IUT-III.source-theorem311-dependency-chain" ] }
+      "IUT-III.theorem-3.11-source-dependency-chain" ] }
 
 end LeanFormal.IUT.Audit

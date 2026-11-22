@@ -1,0 +1,3 @@
+import Mathlib.MeasureTheory.Measure.Typeclasses.Finite
+#check MeasureTheory.IsFiniteMeasureOnCompacts
+#check MeasureTheory.IsFiniteMeasureOnCompacts.lt_top_of_isCompact

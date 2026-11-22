@@ -1,0 +1,26 @@
+'LeanFormal.IUT.XiFPaper.Mzk1C0TargetsActual.ind2Term_eq_scaling_add_defect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0TargetsActual.ind2Term_frac_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0TargetsActual.archDefect_eq_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0TargetsActual.c0TargetRows_length' does not depend on any axioms
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.ind2Term_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.ind2Term_lt_logp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.ind2Term_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.ind2Term_pos_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.archDefect_model_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1C0Ind2ArchActual.c0Rows_length' does not depend on any axioms

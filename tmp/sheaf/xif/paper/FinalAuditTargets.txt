@@ -1,0 +1,16 @@
+# Final paper-level audit target declarations
+# One fully-qualified Lean declaration per line; blank and # lines ignored.
+LeanFormal.IUT.XiFPaper.Proof.paperXiF_of_thetaLink
+LeanFormal.IUT.XiFPaper.CompileGate.paperXiF_assembly_conditional
+LeanFormal.IUT.XiFPaper.paperXiF_conditional_status
+LeanFormal.IUT.XiFPaper.paperXiF_final_bound
+LeanFormal.IUT.XiFPaper.Proof.paperXiFResult_of_obligations
+LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.signedQPilotLogVolume_eq_paperQPilotLogVolume
+LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.signedQPilotLogVolume_eq_neg_abs_qParameter
+LeanFormal.IUT.N8Closure.PaperQPilotIdentificationActual.qPilotIdentificationActualOfCanonical
+LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.sourceOneColumnActual
+LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.paperQPilotObjectActualOfNumberField
+LeanFormal.IUT.N8Closure.PaperIQCarrierActual.image_subset_c6Hull_of_obligations
+LeanFormal.IUT.N8Closure.PaperIQCarrierActual.paperIQCarrierActualOfObligations
+LeanFormal.IUT.Theorem311Source.SHELandingActual.paperSHEMissing_actual
+LeanFormal.IUT.XiFPaper.paperIndActionsMissing_actual

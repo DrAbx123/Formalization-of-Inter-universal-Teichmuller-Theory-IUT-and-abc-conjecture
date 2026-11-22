@@ -1,0 +1,24 @@
+tmp/sheaf/xif/paper/S1999S1993BridgeActual.lean:147:4: warning: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+tmp/sheaf/xif/paper/S1999S1993BridgeActual.lean:148:76: warning: Try `simp at h'` instead of `simpa using h'`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999SplittingFieldH_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999S1687Field_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999Gal_S1687H' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999Gal_S1687H_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999_no_sqrt_neg_one_in_adjoin_s' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1999S1993BridgeActual.S1999KNoSqrtNegOne_of_quadraticSubfieldUnique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

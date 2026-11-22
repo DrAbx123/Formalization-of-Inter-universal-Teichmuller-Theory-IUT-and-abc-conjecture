@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Cor312ComparisonRegionV2AdditiveActual
+import tmp.sheaf.xif.paper.S2727AdditiveBridgeActual
+#print axioms LeanFormal.IUT.XiFPaper.Cor312ComparisonRegionV2AdditiveActual.abcConjecture_of_additiveV2
+#print axioms LeanFormal.IUT.XiFPaper.S2727AdditiveBridgeActual.S2727_abcConjecture

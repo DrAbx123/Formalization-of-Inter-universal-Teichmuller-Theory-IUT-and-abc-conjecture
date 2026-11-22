@@ -1,0 +1,8 @@
+E = EllipticCurve([0,-1,0,-142,701])
+print("cond", E.conductor())
+print("disc", E.discriminant())
+print("j", E.j_invariant())
+print("tors", E.torsion_order())
+print("isogmat", E.isogeny_class().matrix().list())
+print("surj5", E.galois_representation().is_surjective(5))
+print("degf5", E.division_polynomial(5).degree())

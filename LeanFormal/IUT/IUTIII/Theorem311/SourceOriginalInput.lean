@@ -1407,12 +1407,6 @@ theorem initial_exact_at_cover (x : I.initial.orbicurve.exactSequence.coverGroup
       ∃ y, I.initial.orbicurve.exactSequence.injection y = x :=
   I.initial.orbicurve.exactSequence.exact_at_cover_iff x
 
-theorem initial_section_right_inverse
-    (x : I.initial.orbicurve.exactSequence.baseGroup) :
-    I.initial.orbicurve.exactSequence.projection
-        (I.initial.orbicurve.exactSequence.sectionMap x) = x :=
-  I.initial.orbicurve.exactSequence.section_right_inverse_spec x
-
 theorem initial_section_bijective :
     Function.Bijective I.initial.sections.sectionMap :=
   I.initial.section_map_bijective

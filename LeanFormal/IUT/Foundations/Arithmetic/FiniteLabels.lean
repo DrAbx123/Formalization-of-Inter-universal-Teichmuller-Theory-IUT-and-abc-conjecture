@@ -5,6 +5,7 @@ import Mathlib.GroupTheory.OrderOfElement
 import Mathlib.GroupTheory.QuotientGroup.Basic
 import Mathlib.GroupTheory.Coset.Card
 import Init.Omega
+import LeanFormal.IUT.Audit.Status
 
 /-!
   Concrete finite label objects used in the source papers.
@@ -137,3 +138,18 @@ theorem card_LabCusp (hl5 : 5 ≤ l) :
 end MultiplicativeLabels
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def arithmeticFiniteLabels : Obligation :=
+  { id := "Foundations.Arithmetic.FiniteLabels"
+    source := "IUT I, Sections 4 and 6; finite label objects F_l"
+    status := VerificationStatus.provedKernel
+    note :=
+      "`F_l` is realized as `ZMod l` for primes `l >= 5`, with the elementary " ++
+        "cardinality, negation, and star-involution facts proved. This is an " ++
+        "algebraic kernel only; no Hodge theater, etale theta function, or source " ++
+        "realization is claimed. Name-level registration for existing dependsOn " ++
+        "users." }
+
+end LeanFormal.IUT.Audit

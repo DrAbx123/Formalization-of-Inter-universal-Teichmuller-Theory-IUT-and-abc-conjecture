@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1AbsTopIII05RefinedConcreteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.concreteD4_combinatorialData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.refinedDeepInputsConcrete_d2_functorial
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.refinedDeepInputsConcrete_d3_global
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.refinedDeepInputsConcrete_calibration
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.refinedConcreteRows_length

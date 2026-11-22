@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1841SourceRepresentabilityActual
+
+#check LeanFormal.IUT.XiFPaper.S1841SourceRepresentabilityActual.S1841FirstMissing
+#check LeanFormal.IUT.XiFPaper.S1841SourceRepresentabilityActual.S1841QuasiEquiv
+#check LeanFormal.IUT.XiFPaper.S1743CoverSliceActual.S1743Square
+#check LeanFormal.IUT.XiFPaper.S1756CoverSourceRepresentabilityActual.S1756Unit
+#check LeanFormal.IUT.XiFPaper.S1827CloseRetractionActual.S1827EssSurjOf
+#check LeanFormal.IUT.XiFPaper.S1827CloseRetractionActual.S1827ConeEssSurj

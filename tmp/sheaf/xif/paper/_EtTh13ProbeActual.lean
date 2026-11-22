@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh13ModLFactorizationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh13ModLFactorizationActual.etTh13_modLThetaFactor_comp
+#print axioms LeanFormal.IUT.XiFPaper.EtTh13ModLFactorizationActual.etTh13_modLEllipticFactor_comp
+#print axioms LeanFormal.IUT.XiFPaper.EtTh13ModLFactorizationActual.etTh13Rows_length

@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1736CoverGaloisCategoryActual
+open LeanFormal.IUT.XiFPaper.S1736CoverGaloisCategoryActual
+#check S1736PreGaloisCategory_iff_fields
+#check S1736HasTerminal_of_identity_finiteEtale
+#check S1736TargetUniverse.S1736TargetPackageOfInputs
+#check S1736TargetUniverse.S1736TargetPackageOfEtalePi
+#print axioms S1736HasTerminal_of_identity_finiteEtale
+#print axioms S1736TargetUniverse.S1736TargetPackageOfInputs

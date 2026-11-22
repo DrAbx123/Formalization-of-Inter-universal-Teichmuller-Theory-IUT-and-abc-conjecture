@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.Mzk1HTF3ConductorHeightActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiB1Actual
+import tmp.sheaf.xif.paper.Mzk1G1PsiM2CoreActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiFiberFiniteInfActual
+import tmp.sheaf.xif.paper.Mzk1G1UniversalFiniteGeneratorsActual
+import tmp.sheaf.xif.paper.Mzk1G1UniversalSeparationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HTF3ConductorHeightActual.truncatedConductorHeight_le_height_add_const
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiB1Actual.phi
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiB1Actual.boundaryPreimage_finite_of_each
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiM2CoreActual.muMeasure_lex_of_entry_dec
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiFiberFiniteInfActual.finite_primes_of_psiChartInf
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalFiniteGeneratorsActual.finite_boundedDegree_of_finite_generators
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalSeparationActual.le_norm_sub_of_le_norm_eval_derivative

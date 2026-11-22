@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Indet02BPSMultiradialUpToActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Indet02BPSMultiradialUpToActual.bpsToMultiradial
+#print axioms LeanFormal.IUT.XiFPaper.Indet02BPSMultiradialUpToActual.bpsToMultiradial_ind1
+#print axioms LeanFormal.IUT.XiFPaper.Indet02BPSMultiradialUpToActual.bpsToMultiradial_ind2

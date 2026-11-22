@@ -1,0 +1,15 @@
+tmp/sheaf/n8/closure/C9OverFPaperTarget.lean:63:5: warning: Variable name `D` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp/sheaf/n8/closure/C9OverFPaperTarget.lean:72:8: warning: Variable name `D` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp/sheaf/n8/closure/C9OverFPaperTarget.lean:72:29: warning: Variable name `L` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

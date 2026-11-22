@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Indet01FirstTriangleIndActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Indet01FirstTriangleIndActual.firstTriangleInd1
+#print axioms LeanFormal.IUT.XiFPaper.Indet01FirstTriangleIndActual.firstTriangleInd2
+#print axioms LeanFormal.IUT.XiFPaper.Indet01FirstTriangleIndActual.firstTriangleInd3

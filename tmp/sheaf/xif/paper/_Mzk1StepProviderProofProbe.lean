@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StepProviderProofActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepProviderProofActual.stepProvider_holds
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepProviderProofActual.mzk1Lemma22_induction_of_base
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepProviderProofActual.mzk1Lemma22_target_of_base

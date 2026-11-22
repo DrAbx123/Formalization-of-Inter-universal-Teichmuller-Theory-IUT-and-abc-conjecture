@@ -1,0 +1,1 @@
+{"type":"tool/ptc-dispatch-start","seq":542,"time":1793530585453,"data":{"rootCallId":"call_00_1qZ0cuqrhjxXwJnInpFR5668","parentCallId":"call_00_1qZ0cuqrhjxXwJnInpFR5668","subCallId":"call_00_1qZ0cuqrhjxXwJnInpFR5668:ptc:1","name":"grep","arguments":{"pattern":"S1942PrePsiFive","path":"D:\\lean\\tmp"}}}

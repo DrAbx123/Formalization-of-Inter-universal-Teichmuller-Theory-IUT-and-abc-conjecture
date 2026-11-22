@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2676RangeCycleType1249Actual
+open LeanFormal.IUT.XiFPaper.S2676RangeCycleType1249Actual
+#print axioms S2676_rangeCycleType102

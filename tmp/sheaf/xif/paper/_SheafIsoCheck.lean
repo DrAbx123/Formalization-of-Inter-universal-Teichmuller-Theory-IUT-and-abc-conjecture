@@ -1,0 +1,3 @@
+import Mathlib.CategoryTheory.Sites.SheafOfTypes
+#check Presieve.isSheaf_iso
+#check Presieve.isSheaf_comp_uliftFunctor_iff

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22RationalGateActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22BaseGoodActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22InductionProofActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22RationalGateActual.mzk1Lemma22_target_rational
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22RationalGateActual.mzk1Lemma22_inductionStatement_rational
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22BaseGoodActual.baseGood_exists
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionProofActual.mzk1Lemma22_induction_conditional

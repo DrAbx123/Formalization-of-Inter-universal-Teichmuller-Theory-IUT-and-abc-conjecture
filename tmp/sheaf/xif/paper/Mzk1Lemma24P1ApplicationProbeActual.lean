@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24P1ApplicationActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24P1ApplicationActual.s3135_p1Morphism_preserves_of_belyi

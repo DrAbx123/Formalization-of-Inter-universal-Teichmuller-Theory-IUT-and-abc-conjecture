@@ -1,0 +1,399 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import FormalSchemes.ChartSpfHomColimitTarget
+import FormalSchemes.SpfHomOfFamily
+import FormalSchemes.OpenImmersionIsoOfRangeEq
+
+/-!
+# EGA I, 10.6.10 at a cover that need not be affine, and the locality of the colimit property
+
+`FormalSchemes/SpfHomOfFamily.lean` proves that a compatible family
+`f n : Spec (R ⧸ Iⁿ⁺¹) ⟶ X` comes from a unique `Spf R ⟶ X` when `X` carries a cover by opens
+`U i` equipped with identifications `X|_{U i} ≅ Spec (B i)`. The affineness of the cover enters
+that proof at exactly one place, and `FormalSchemes/ChartSpfHomColimitTarget.lean` isolates it: the
+chart morphism `Spf R{1/r} ⟶ X` needs its chart to satisfy
+`FormalSpectrum.IsThickeningColimitTarget`, and nothing else in the chain looks at the chart at
+all.
+
+This file runs the gluing step at that hypothesis. The result is the statement the chain was
+always proving:
+
+```lean
+FormalSpectrum.isThickeningColimitTarget_of_cover :
+  (⨆ i, U i = ⊤) → (∀ i, X|_{U i} ≅ Y i) → (∀ i, IsThickeningColimitTarget (Y i)) →
+    IsThickeningColimitTarget X
+```
+
+**the colimit property of formal spectra is local on the target.** The affine-target theorem of
+umbrella 59 and the formal-affine-target theorem of issue 62m are the two ways of starting it, and
+`existsUnique_hom_thickeningMap_spfCover` — EGA I 10.6.10 with the target covered by *formal*
+affines, which is what issue 62m is for — is the second of them run through this file.
+
+## What is new and what is transported
+
+Nothing here is new mathematics. `chartHom_pullback_compat`, `spfHomOfFamily`,
+`thickeningMap_comp_spfHomOfFamily` and `existsUnique_hom_thickeningMap` are
+`SpfHomOfFamily.lean`'s, with `(B i, e i)` replaced by `(Y i, e i, hY i)` and the proofs unchanged;
+`iSup_chartOpen_eq_top` and `thickeningMap_comp_basicOpenChart` are *cited* from there rather than
+restated, because they never mentioned the cover of the target in the first place.
+
+The one thing that has to be proved rather than transported is that the two entry points agree,
+and that is `ColimitTarget.chartSpfHomAmbient_eq`, one file back.
+
+## Main results
+
+* `FormalSpectrum.ColimitTarget.existsUnique_hom_thickeningMap`: EGA I 10.6.10 at a cover by
+  targets of the colimit property.
+* `FormalSpectrum.isThickeningColimitTarget_of_cover`: the property is local on the target.
+* `FormalSpectrum.isThickeningColimitTarget_iff_forall_exists_mem`: **the same as an
+  equivalence** — with `FormalSpectrum.IsThickeningColimitTarget.restrict` supplying the converse,
+  a space has the property exactly when each point has one neighbourhood that does.
+* `FormalSpectrum.ColimitTarget.range_spfHomOfFamily_le`: **the image of the glued morphism lies
+  in the union of the target opens the chart data was supplied with**, with no use of any covering
+  hypothesis on the target — `hcov` covers the *source*.
+* `FormalSpectrum.existsUnique_hom_thickeningMap_spfCover`: EGA I 10.6.10 with the target covered
+  by **formal** affines — issue 62m. (`existsUnique_hom_thickeningMap_spf`, one file back, is the
+  *affine* formal target; this is the covered one.)
+* `FormalSpectrum.thickeningRestrictionEquivSpfCover`: the same, as a bijection.
+
+## Non-vacuity
+
+`Spf ℤ⟦X⟧` — whose underlying space is `Spec ℤ` — is covered by the two **formal** affine opens
+`D(2)` and `D(3)`, which are `Spf ℤ⟦X⟧{1/2}` and `Spf ℤ⟦X⟧{1/3}`. Neither is `⊤`, neither is `⊥`,
+the two coordinate rings are different, and neither open is the `Spec` of a ring. So the cover
+hypothesis of the theorems above is satisfied by a genuinely formal cover with more than one
+piece, and `existsUnique_hom_thickeningMap_spfCover` applies at it to a *quantified* family with no
+continuity input — which is what `existsUnique_hom_thickeningMap_spf_of_continuous`
+(`SpfTargetColimit.lean`) cannot do, its family being definitionally the restriction of a `Spf ψ`.
+
+What this witness does **not** exhibit is a target that is not itself formal-affine: `Spf ℤ⟦X⟧`
+satisfies `IsThickeningColimitTarget` directly, by `isThickeningColimitTarget_spf`. Producing a
+formal scheme that is provably not affine would need a glued formal model, which this tree does not
+have; the closest it has is `SpecTwoPatchNonAffine.lean`, whose patches are `Spec`s. The witness
+here therefore exercises the *cover* hypothesis non-degenerately without exercising
+non-affineness, and that limitation is recorded rather than papered over.
+
+## References
+
+* [Grothendieck, *Éléments de géométrie algébrique I*][EGA1], Ch. I, §10.6 (10.6.10).
+* [The Stacks Project, Tag 0AI2](https://stacks.math.columbia.edu/tag/0AI2)
+-/
+
+noncomputable section
+
+open CategoryTheory CategoryTheory.Limits AlgebraicGeometry TopologicalSpace
+
+universe u
+
+namespace FormalSpectrum.ColimitTarget
+
+variable {R : Type u} [CommRing R] [TopologicalSpace R] (I : Ideal R) [IsAdicRing I]
+variable {X : LocallyRingedSpace.{u}}
+variable (f : ∀ n : ℕ, Spec.locallyRingedSpaceObj (CommRingCat.of (R ⧸ I ^ (n + 1))) ⟶ X)
+    (hf : ∀ n : ℕ, Spec.locallyRingedSpaceMap (stepRingHom I n) ≫ f (n + 1) = f n)
+
+section Glue
+
+variable (hI : I.FG) {ι : Type u} (r : ι → R)
+    [∀ i, IsAdicRing (awayCompletionIdeal I (r i))]
+    (hcov : (⨆ i, basicOpen I (r i)) = ⊤)
+    (U : ι → Opens X.toTopCat)
+    (hr : ∀ i, basicOpen I (r i) ≤ (Opens.map (commonBase I f)).obj (U i))
+    (Y : ι → LocallyRingedSpace.{u})
+    (e : ∀ i, X.restrict (U i).isOpenEmbedding ≅ Y i)
+    (hY : ∀ i, IsThickeningColimitTarget (Y i))
+
+/-- The morphism attached to the chart `D(r i)`, abbreviated. -/
+def chartHom (i : ι) : locallyRingedSpaceObj (awayCompletionIdeal I (r i)) ⟶ X :=
+  chartSpfHomAmbient I f hf (U i) (r i) (hr i) hI (e i) (hY i)
+
+omit [TopologicalSpace R] [IsAdicRing I] in
+/-- **The chart morphisms agree on the pullbacks of the cover**, which is the hypothesis
+`FormalScheme.OpenCover.glueMorphisms` takes. `SpfHomOfFamily.lean`'s proof, unchanged: the
+overlap agreement is stated along the two legs and transported to the two pullback projections by
+the leg identifications of `BasicOpenChartOverlapLegs.lean`. -/
+theorem chartHom_pullback_compat (i j : ι) :
+    letI := isOpenImmersion_basicOpenChart I (r i) hI
+    letI := isOpenImmersion_basicOpenChart I (r j) hI
+    pullback.fst (basicOpenChart I (r i)) (basicOpenChart I (r j)) ≫
+        chartHom I f hf hI r U hr Y e hY i =
+      pullback.snd (basicOpenChart I (r i)) (basicOpenChart I (r j)) ≫
+        chartHom I f hf hI r U hr Y e hY j := by
+  letI := isOpenImmersion_basicOpenChart I (r i) hI
+  letI := isOpenImmersion_basicOpenChart I (r j) hI
+  rw [← basicOpenChartOverlapIso_inv_comp_furtherLeft I (r i) (r j) hI,
+    ← basicOpenChartOverlapIso_inv_comp_furtherRight I (r i) (r j) hI,
+    Category.assoc, Category.assoc, chartHom, chartHom,
+    chartSpfHomAmbient_overlap I f hf (U i) (r i) (hr i) hI (e i) (r j) (hY i) (U j) (hr j) (e j)
+      (hY j)]
+
+/-- **The morphism `Spf R ⟶ X` glued from the chart morphisms** (EGA I, 10.6.10). Cite
+`thickeningMap_comp_spfHomOfFamily` and `spfHomOfFamily_uniq` rather than unfolding this. -/
+def spfHomOfFamily : locallyRingedSpaceObj I ⟶ X :=
+  (basicOpenCover I r hI hcov).glueMorphisms (chartHom I f hf hI r U hr Y e hY)
+    (fun i j => chartHom_pullback_compat I f hf hI r U hr Y e hY i j)
+
+-- The cover of the thickening is given by `chartOpen`, stated about the *scheme*
+-- `Spec (CommRingCat.of _)`, while `thickeningMap` and the joint-epi lemma are stated about
+-- `Spec.locallyRingedSpaceObj (CommRingCat.of _)`. The two are `rfl` but not at `instances`
+-- transparency; the same accommodation `SpfHomOfFamily.lean` makes.
+set_option backward.isDefEq.respectTransparency false in
+/-- **The computation rule** (EGA I, 10.6.10): the glued morphism restricts on the `n`-th
+thickening to the `n`-th member of the family it was built from. `SpfHomOfFamily.lean`'s proof,
+with the two lemmas about the *source* — `iSup_chartOpen_eq_top` and
+`thickeningMap_comp_basicOpenChart` — cited from there rather than restated. -/
+theorem thickeningMap_comp_spfHomOfFamily (n : ℕ) :
+    thickeningMap I n ≫ spfHomOfFamily I f hf hI r hcov U hr Y e hY = f n := by
+  refine LocallyRingedSpace.hom_ext_of_iSup_eq_top
+    (Z := Spec.locallyRingedSpaceObj (CommRingCat.of (R ⧸ I ^ (n + 1))))
+    (fun i => chartOpen I (r i) n) (iSup_chartOpen_eq_top I r hcov n) fun i => ?_
+  refine (Iso.cancel_iso_inv_left (chartIsoLRS I (r i) hI n) _ _).mp ?_
+  rw [← thickeningMap_comp_basicOpenChart_assoc, ← basicOpenCover_cmap I r hI hcov i,
+    spfHomOfFamily, FormalScheme.OpenCover.map_glueMorphisms, chartHom,
+    thickeningMap_comp_chartSpfHomAmbient]
+
+/-- **…and it is the only morphism with those restrictions**, from `hom_ext_thickeningMap_lrs`. -/
+theorem spfHomOfFamily_uniq (g : locallyRingedSpaceObj I ⟶ X)
+    (hg : ∀ n : ℕ, thickeningMap I n ≫ g = f n) :
+    g = spfHomOfFamily I f hf hI r hcov U hr Y e hY :=
+  hom_ext_thickeningMap_lrs _ _ fun n =>
+    (hg n).trans (thickeningMap_comp_spfHomOfFamily I f hf hI r hcov U hr Y e hY n).symm
+
+/-- **The image of the glued morphism lies in the union of the target opens.** `hcov` is a
+hypothesis about the *source* — the `D(r i)` cover `|Spf R|` — and the `U i` are asked only to
+receive the image of the chart they are attached to (`hr`). Nothing asks them to cover `X`. Yet
+every point `spfHomOfFamily` reaches lies in one of them, because the glued morphism reaches
+exactly what the pieces reach (`FormalScheme.OpenCover.range_glueMorphisms`) and each piece stays
+inside its own `U i` (`ColimitTarget.range_chartSpfHomAmbient_le`).
+
+**This is the precise sense in which dropping `hU` does not weaken the chart datum where it
+matters.** `existsUnique_hom_thickeningMap` asks the `U i` to cover `X`; `spfHomOfFamily` does not,
+and the difference is invisible on the image of the morphism produced. Whatever the `U i` are known
+to be — `Spec`-shaped, `Spf`-shaped, or merely
+`FormalSpectrum.IsThickeningColimitTarget` — they are known to be that at every point the morphism
+hits. See `FormalSpectrum.hasAffineChartAt_of_spfChartFamily`
+(`FormalSchemes.SpfHomFamilyChart`) for the consequence. -/
+theorem range_spfHomOfFamily_le :
+    Set.range (spfHomOfFamily I f hf hI r hcov U hr Y e hY).base ⊆
+      ⋃ i, (U i : Set X.toTopCat) := by
+  -- `basicOpenCover`'s index type and pieces are `ι` and `Spf R{1/r i}` by `rfl` but not at
+  -- `instances` transparency, so `rw [spfHomOfFamily, FormalScheme.OpenCover.range_glueMorphisms]`
+  -- builds an ill-typed motive. Applying `range_glueMorphisms` as a *term*, with all three of its
+  -- arguments written out, avoids the rewrite entirely and needs no transparency option.
+  have hrg : Set.range (spfHomOfFamily I f hf hI r hcov U hr Y e hY).base =
+      ⋃ i, Set.range (chartHom I f hf hI r U hr Y e hY i).base :=
+    FormalScheme.OpenCover.range_glueMorphisms (basicOpenCover I r hI hcov)
+      (chartHom I f hf hI r U hr Y e hY)
+      (fun i j => chartHom_pullback_compat I f hf hI r U hr Y e hY i j)
+  rw [hrg]
+  exact Set.iUnion_mono fun i =>
+    range_chartSpfHomAmbient_le I f hf (U i) (r i) (hr i) hI (e i) (hY i)
+
+end Glue
+
+section Capstone
+
+variable (hI : I.FG) {ι : Type u} (U : ι → Opens X.toTopCat) (hU : ⨆ i, U i = ⊤)
+    (Y : ι → LocallyRingedSpace.{u})
+    (e : ∀ i, X.restrict (U i).isOpenEmbedding ≅ Y i)
+    (hY : ∀ i, IsThickeningColimitTarget (Y i))
+
+include hf hI hU e hY in
+/-- **`Spf R` is the colimit of its infinitesimal thickenings** (EGA I, 10.6.10), at a target
+covered by opens each identified with a space having the colimit property.
+
+At `Y i = Spec (B i)` this is `FormalSpectrum.existsUnique_hom_thickeningMap`, by
+`isThickeningColimitTarget_spec`; at `Y i = Spf (J i)` it is
+`existsUnique_hom_thickeningMap_spfCover`, by `isThickeningColimitTarget_spf`. The proof is the
+landed one: `exists_basicOpen_refinement` supplies one basic open `D(r x)` through each point of
+`|Spf R|`, chosen inside the pullback of some `U i`. -/
+theorem existsUnique_hom_thickeningMap :
+    ∃! g : locallyRingedSpaceObj I ⟶ X, ∀ n : ℕ, thickeningMap I n ≫ g = f n := by
+  obtain ⟨r, idx, hcov, hle⟩ := exists_basicOpen_refinement I f U hU
+  haveI hadic : ∀ x : FormalSpectrum I, IsAdicRing (awayCompletionIdeal I (r x)) := fun x =>
+    isAdicRing_awayCompletionIdeal I (r x) hI
+  refine ⟨spfHomOfFamily I f hf hI r hcov (fun x => U (idx x)) hle (fun x => Y (idx x))
+      (fun x => e (idx x)) (fun x => hY (idx x)), fun n => ?_, fun g hg => ?_⟩
+  · exact thickeningMap_comp_spfHomOfFamily I f hf hI r hcov _ hle _ _ _ n
+  · exact spfHomOfFamily_uniq I f hf hI r hcov _ hle _ _ _ g hg
+
+end Capstone
+
+end FormalSpectrum.ColimitTarget
+
+namespace FormalSpectrum
+
+variable {X : LocallyRingedSpace.{u}}
+
+/-- **The colimit property of formal spectra is local on the target.** If `X` is covered by opens
+each identified with a space that has it, then `X` has it.
+
+This is the statement the whole chart-and-glue chain of umbrella 59 was proving; until
+`IsThickeningColimitTarget` existed it could only be stated with `Spec (B i)` in place of `Y i`,
+which is `surjective_restrictToThickeningsLRS`. Iterating it is harmless but pointless — an open
+cover of a cover piece refines to an open cover of `X`. -/
+theorem isThickeningColimitTarget_of_cover {ι : Type u} (U : ι → Opens X.toTopCat)
+    (hU : ⨆ i, U i = ⊤) (Y : ι → LocallyRingedSpace.{u})
+    (e : ∀ i, X.restrict (U i).isOpenEmbedding ≅ Y i)
+    (hY : ∀ i, IsThickeningColimitTarget (Y i)) : IsThickeningColimitTarget X := by
+  intro S _ _ J _ hJ F
+  obtain ⟨g, hg, -⟩ := ColimitTarget.existsUnique_hom_thickeningMap J F.1 F.2 hJ U hU Y e hY
+  exact ⟨g, Subtype.ext (funext hg)⟩
+
+/-- **The colimit property is local on the target.** A locally ringed space is a target of the
+colimit property exactly when every point has *some* open neighbourhood whose restriction is one.
+
+Both halves are already stated: `isThickeningColimitTarget_of_cover` above assembles the property
+from a cover, and `FormalSpectrum.IsThickeningColimitTarget.restrict`
+(`FormalSchemes.ThickeningColimitTarget`) takes it down to an arbitrary open. What the equivalence
+adds is the direction a *reduction* needs — a cover is what a construction supplies, whereas a
+question about one point wants to be moved onto one open around that point, and until `restrict`
+existed that move was unavailable in either direction.
+
+The cover used in the backward direction is indexed by the points of `X` and its pieces are the
+restrictions themselves, so the identifications are `Iso.refl`: nothing is transported. -/
+theorem isThickeningColimitTarget_iff_forall_exists_mem :
+    IsThickeningColimitTarget X ↔ ∀ x : X, ∃ U : Opens X.toTopCat, x ∈ U ∧
+      IsThickeningColimitTarget (X.restrict U.isOpenEmbedding) := by
+  refine ⟨fun hX x => ⟨⊤, trivial, IsThickeningColimitTarget.restrict hX ⊤⟩, fun h => ?_⟩
+  choose U hU hcol using h
+  refine isThickeningColimitTarget_of_cover U ?_ (fun x => X.restrict (U x).isOpenEmbedding)
+    (fun x => Iso.refl _) hcol
+  refine Opens.ext (Set.eq_univ_of_forall fun x => ?_)
+  rw [Opens.coe_iSup]
+  exact Set.mem_iUnion.2 ⟨x, hU x⟩
+
+variable {R : Type u} [CommRing R] [TopologicalSpace R] (I : Ideal R) [IsAdicRing I]
+variable (f : ∀ n : ℕ, Spec.locallyRingedSpaceObj (CommRingCat.of (R ⧸ I ^ (n + 1))) ⟶ X)
+    (hf : ∀ n : ℕ, Spec.locallyRingedSpaceMap (stepRingHom I n) ≫ f (n + 1) = f n)
+    (hI : I.FG) {ι : Type u} (U : ι → Opens X.toTopCat) (hU : ⨆ i, U i = ⊤)
+    {C : ι → Type u} [∀ i, CommRing (C i)] [∀ i, TopologicalSpace (C i)]
+    (L : ∀ i, Ideal (C i)) [∀ i, IsAdicRing (L i)] (hL : ∀ i, (L i).FG)
+    (e : ∀ i, X.restrict (U i).isOpenEmbedding ≅ locallyRingedSpaceObj (L i))
+
+include hf hI hU hL e in
+/-- **EGA I, 10.6.10 with the target covered by formal affines** (issue 62m). A compatible family
+`Spec (R ⧸ Iⁿ⁺¹) ⟶ X` comes from a unique `Spf R ⟶ X`, for `X` a locally ringed space carrying a
+cover by opens `U i` each *equipped* with an identification `X|_{U i} ≅ Spf (L i)`.
+
+This is `existsUnique_hom_thickeningMap` with the `Spec`-shaped affineness datum replaced by a
+`Spf`-shaped one. The finite generation `hL` is what
+`surjective_restrictToThickeningsLRS_spf` needs of a formal-affine target; `hI` is what the
+refinement of the *source* needs, and both theorems need it. -/
+theorem existsUnique_hom_thickeningMap_spfCover :
+    ∃! g : locallyRingedSpaceObj I ⟶ X, ∀ n : ℕ, thickeningMap I n ≫ g = f n :=
+  ColimitTarget.existsUnique_hom_thickeningMap I f hf hI U hU _ e fun i =>
+    isThickeningColimitTarget_spf (L i) (hL i)
+
+include hf hI hU hL e in
+/-- **The same, as a bijection.** Restriction to the thickenings is a bijection from `Spf R ⟶ X`
+onto the compatible families, for a target covered by formal affines. Compare
+`thickeningRestrictionEquivLRS`, which is this at a `Spec`-shaped cover. -/
+def thickeningRestrictionEquivSpfCover :
+    (locallyRingedSpaceObj I ⟶ X) ≃ ThickeningFamilyLRS I X :=
+  thickeningRestrictionEquivOfColimitTarget I
+    (isThickeningColimitTarget_of_cover U hU _ e fun i =>
+      isThickeningColimitTarget_spf (L i) (hL i)) hI
+
+section Witness
+
+/-! ### Non-vacuity: a target with a genuinely formal cover
+
+See the module docstring for what this witness does and does not exclude. -/
+
+open Polynomial
+
+attribute [local instance] isAdicRing_formalLineIdeal
+attribute [local instance] isAdicRing_awayCompletionIdeal_formalLineElem
+
+/-- **The two-piece formal-affine cover of `Spf ℤ⟦X⟧`**: the basic opens `D(2)` and `D(3)`. They
+cover by `iSup_basicOpen_formalLineElem`, and neither is `⊥` or `⊤` — `D(3)` by
+`basicOpen_formalLine_three_ne_bot`/`_ne_top`, `D(2)` by `chartOpen_formalLine_ne_bot`/`_ne_top`
+read at level `0`, where `chartOpen` is the image of `D(2)` in the thickening. -/
+def formalLineFormalOpen (b : Bool) :
+    Opens (locallyRingedSpaceObj formalLineIdeal).toTopCat :=
+  basicOpen formalLineIdeal (formalLineElem b)
+
+/-- **Each piece of that cover is a formal affine**, namely `Spf ℤ⟦X⟧{1/2}` and `Spf ℤ⟦X⟧{1/3}`.
+The identification is `LocallyRingedSpace.IsOpenImmersion.isoRestrictOfRangeEq`
+(`FormalSchemes.OpenImmersionIsoOfRangeEq`) at the basic-open chart, an open immersion of range
+`D(r)` by `range_basicOpenChart_base`; all this site supplies is that range. Issue 1479 routed it
+there — before that this was a fourth hand-rolled call of
+`LocallyRingedSpace.IsOpenImmersion.isoOfRangeEq` against `ofRestrict`. -/
+def formalLineFormalChartIso (b : Bool) :
+    (locallyRingedSpaceObj formalLineIdeal).restrict (formalLineFormalOpen b).isOpenEmbedding ≅
+      locallyRingedSpaceObj (awayCompletionIdeal formalLineIdeal (formalLineElem b)) :=
+  letI := isOpenImmersion_basicOpenChart formalLineIdeal (formalLineElem b) (polyXIdeal_fg.map _)
+  LocallyRingedSpace.IsOpenImmersion.isoRestrictOfRangeEq
+    (basicOpenChart formalLineIdeal (formalLineElem b)) (formalLineFormalOpen b)
+    (by
+      rw [range_basicOpenChart_base formalLineIdeal (formalLineElem b) (polyXIdeal_fg.map _)]
+      rfl)
+
+/-- **Every piece of the cover has the colimit property**, by `isThickeningColimitTarget_spf`: the
+ideal of definition of `ℤ⟦X⟧{1/r}` is finitely generated because `polyXIdeal` is. -/
+theorem isThickeningColimitTarget_formalLineChart (b : Bool) :
+    IsThickeningColimitTarget
+      (locallyRingedSpaceObj (awayCompletionIdeal formalLineIdeal (formalLineElem b))) :=
+  isThickeningColimitTarget_spf _
+    (awayCompletionIdeal_fg formalLineIdeal (formalLineElem b)
+      (polyXIdeal_fg.map _))
+
+/-- **The witness of `FormalSpectrum.isThickeningColimitTarget_of_cover`**: `Spf ℤ⟦X⟧` has the
+colimit property *through a two-piece formal cover*, with no `Spec` anywhere in the hypotheses.
+
+It is an `example` and not a theorem, and the reason is worth stating, because this file used to
+carry it as a named theorem and claim more for it than is true.
+Its statement is **the same `Prop`** as `FormalSpectrum.isThickeningColimitTarget_formalLine`
+below — the two are proofs of one proposition, not two propositions — so no reading of them can say
+that "the two routes agree": by proof irrelevance there is nothing for two proofs of one `Prop` to
+agree or disagree about. Neither had a consumer, and issue 1739 kept the one with a name.
+
+What is genuinely exhibited here survives in full, because it is a property of the *elaboration*
+and not of the environment: the cover hypothesis of `isThickeningColimitTarget_of_cover` is
+satisfiable by a cover that is genuinely formal and genuinely has more than one piece. An `example`
+still checks that, and still breaks the build if it stops being true. -/
+example : IsThickeningColimitTarget (locallyRingedSpaceObj formalLineIdeal) :=
+  isThickeningColimitTarget_of_cover formalLineFormalOpen iSup_basicOpen_formalLineElem _
+    formalLineFormalChartIso isThickeningColimitTarget_formalLineChart
+
+/-- **`Spf ℤ⟦X⟧` has the colimit property**, directly: it is a formal affine, so
+`FormalSpectrum.isThickeningColimitTarget_spf` applies. The `example` above reaches the same
+proposition through the two-piece formal cover instead, which is the honest limit of that witness —
+this target was never in doubt, and what the cover route exhibits is that
+`FormalSpectrum.isThickeningColimitTarget_of_cover`'s hypotheses are meetable, not that this space
+has the property.
+
+The ideal of definition is not `⊥` (`formalLineIdeal_ne_bot`), so the tower of thickenings being
+quantified over is not the constant one. -/
+theorem isThickeningColimitTarget_formalLine :
+    IsThickeningColimitTarget (locallyRingedSpaceObj formalLineIdeal) :=
+  isThickeningColimitTarget_spf formalLineIdeal (polyXIdeal_fg.map _)
+
+/-- **EGA I, 10.6.10 at a formal cover, run end to end.** For *any* compatible family of morphisms
+out of the thickenings of `Spf ℤ⟦X⟧` into `Spf ℤ⟦X⟧`, there is a unique morphism it comes from.
+
+The family is quantified and carries no continuity witness, which is what
+`existsUnique_hom_thickeningMap_spf_of_continuous` cannot do: its family is definitionally the
+restriction of a `Spf ψ`. -/
+theorem existsUnique_hom_thickeningMap_formalLine_spfCover
+    (f : ∀ n : ℕ, Spec.locallyRingedSpaceObj
+        (CommRingCat.of (AdicCompletion polyXIdeal ℤ[X] ⧸ formalLineIdeal ^ (n + 1))) ⟶
+      locallyRingedSpaceObj formalLineIdeal)
+    (hf : ∀ n : ℕ, Spec.locallyRingedSpaceMap (stepRingHom formalLineIdeal n) ≫ f (n + 1) = f n) :
+    ∃! g : locallyRingedSpaceObj formalLineIdeal ⟶ locallyRingedSpaceObj formalLineIdeal,
+      ∀ n : ℕ, thickeningMap formalLineIdeal n ≫ g = f n :=
+  existsUnique_hom_thickeningMap_spfCover formalLineIdeal f hf (polyXIdeal_fg.map _)
+    formalLineFormalOpen iSup_basicOpen_formalLineElem _
+    (fun b => awayCompletionIdeal_fg formalLineIdeal (formalLineElem b)
+      (polyXIdeal_fg.map _))
+    formalLineFormalChartIso
+
+end Witness
+
+end FormalSpectrum
+
+end

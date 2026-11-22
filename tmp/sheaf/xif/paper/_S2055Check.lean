@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2055DicksonClassActual
+
+open LeanFormal.IUT.XiFPaper.S2055DicksonClassActual
+
+#check S2055DicksonTransitiveClassification
+#check S2055NormalizerCard
+#check S2055TransvectionGeneration
+#check S2055OrderFiveUnipotent
+#check S2055LargeImage_of_dickson
+#print axioms S2055DicksonTransitiveClassification

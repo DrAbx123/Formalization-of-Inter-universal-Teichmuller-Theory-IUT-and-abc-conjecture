@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RealActual
+import tmp.sheaf.xif.paper.GenEllThm38EffectiveBoundsActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RealActual.belyi21R_not_mem_image
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RealActual.belyi21R_lt_of_one_lt
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEll_23040_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEllEffectiveBoundShapes_length

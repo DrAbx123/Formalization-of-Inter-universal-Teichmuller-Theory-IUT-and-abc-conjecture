@@ -1,0 +1,3 @@
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.FiniteEtaleFixedPointsGeneral
+open LeanFormal.IUT.Foundations.AlgebraicGeometry.FiniteEtaleGroupQuotient
+#print axioms FiniteEtaleFixedPointsGeneral.fixedPointSubalgebra_finiteEtale

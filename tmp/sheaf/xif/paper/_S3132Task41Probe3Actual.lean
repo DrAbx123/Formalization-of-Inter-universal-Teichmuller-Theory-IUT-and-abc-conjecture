@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3132ThetaFactorDimensionActual
+import tmp.sheaf.xif.paper.S3132ThetaHalfResidualRegistryActual
+import tmp.sheaf.xif.paper.S3132GateThetaHalfConsumptionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorDimensionActual.thetaNormalizationFactor_eq_log_unitReference_of_fiber_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfResidualRegistryActual.canonicalThetaTarget_of_VForm_and_exactFactor
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaHalfResidualRegistryActual.thetaHalfRawResidual_iff_missingThetaHalf
+#print axioms LeanFormal.IUT.XiFPaper.S3132GateThetaHalfConsumptionActual.missingThetaHalf_of_lastSeamThetaMissing

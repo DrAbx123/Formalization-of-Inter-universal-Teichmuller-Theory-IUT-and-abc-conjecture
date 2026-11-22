@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1LiteralHullDetCompositionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralHullDetCompositionActual.literalHull_det_packet_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralHullDetCompositionActual.literalHull_det_laws_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralHullDetCompositionActual.sourceHull_det_normalization_package

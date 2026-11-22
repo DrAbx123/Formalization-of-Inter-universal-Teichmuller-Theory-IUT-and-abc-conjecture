@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBaseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.polyEvalP1_infty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.infty_mem_specialSet
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.not_mzk1Lemma24Target_infty

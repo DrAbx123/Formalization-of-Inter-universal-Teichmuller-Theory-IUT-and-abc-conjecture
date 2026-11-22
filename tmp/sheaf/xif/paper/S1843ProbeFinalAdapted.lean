@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S1843SourceAllPointsActual
+
+open LeanFormal.IUT.XiFPaper.S1843SourceAllPointsActual
+#check S1843FirstMissing_iff_pointSeparated
+#check S1843ConeEssSurj_iff_pointSeparated
+#check S1843RightCancelNotFromWitness
+#print axioms S1843FirstMissing_iff_pointSeparated

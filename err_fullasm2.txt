@@ -1,0 +1,90 @@
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:64:7: error: don't know how to synthesize implicit argument `source`
+  @cor312_full_contract l T inst✝⁵ ⋯ V G inst✝³ inst✝² intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip F k
+    inst✝¹ ⋯ l' (?m.35 F I landing) (?m.36 F I landing) (?m.37 F I landing) I ⋯
+context:
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝⁵ : Fintype (Bad (nativePlaceSelection T))
+inst✝⁴ : Nonempty (Bad (nativePlaceSelection T))
+V : Type u_1
+G : Type u_2
+inst✝³ : Group G
+inst✝² : TopologicalSpace G
+intermediateStrip : FPrimeStrip V
+gauStrip : FPrimeStrip V
+envStrip : FPrimeStrip V
+coricEnvStrip : FPrimeStrip V
+qPilotStrip : FPrimeStrip V
+F : SourceLinkFactorization G intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip
+k : Type
+inst✝¹ : Field k
+inst✝ : NumberField k
+l' : PrimeGeFive
+n : ℤ
+shift : finiteLabel l'
+source : ProcessionChoice l'
+I : OriginalInput l' (NumberField.FinitePlace k)
+landing : SourceLocalizationExpressible oneColumnStructure (ProcessionChoice l')
+⊢ ProcessionChoice l'
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:64:7: error: don't know how to synthesize implicit argument `shift`
+  @cor312_full_contract l T inst✝⁵ ⋯ V G inst✝³ inst✝² intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip F k
+    inst✝¹ ⋯ l' (?m.35 F I landing) (?m.36 F I landing) (?m.37 F I landing) I ⋯
+context:
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝⁵ : Fintype (Bad (nativePlaceSelection T))
+inst✝⁴ : Nonempty (Bad (nativePlaceSelection T))
+V : Type u_1
+G : Type u_2
+inst✝³ : Group G
+inst✝² : TopologicalSpace G
+intermediateStrip : FPrimeStrip V
+gauStrip : FPrimeStrip V
+envStrip : FPrimeStrip V
+coricEnvStrip : FPrimeStrip V
+qPilotStrip : FPrimeStrip V
+F : SourceLinkFactorization G intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip
+k : Type
+inst✝¹ : Field k
+inst✝ : NumberField k
+l' : PrimeGeFive
+n : ℤ
+shift : finiteLabel l'
+source : ProcessionChoice l'
+I : OriginalInput l' (NumberField.FinitePlace k)
+landing : SourceLocalizationExpressible oneColumnStructure (ProcessionChoice l')
+⊢ finiteLabel l'
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:64:7: error: don't know how to synthesize implicit argument `n`
+  @cor312_full_contract l T inst✝⁵ ⋯ V G inst✝³ inst✝² intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip F k
+    inst✝¹ ⋯ l' (?m.35 F I landing) (?m.36 F I landing) (?m.37 F I landing) I ⋯
+context:
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝⁵ : Fintype (Bad (nativePlaceSelection T))
+inst✝⁴ : Nonempty (Bad (nativePlaceSelection T))
+V : Type u_1
+G : Type u_2
+inst✝³ : Group G
+inst✝² : TopologicalSpace G
+intermediateStrip : FPrimeStrip V
+gauStrip : FPrimeStrip V
+envStrip : FPrimeStrip V
+coricEnvStrip : FPrimeStrip V
+qPilotStrip : FPrimeStrip V
+F : SourceLinkFactorization G intermediateStrip gauStrip envStrip coricEnvStrip qPilotStrip
+k : Type
+inst✝¹ : Field k
+inst✝ : NumberField k
+l' : PrimeGeFive
+n : ℤ
+shift : finiteLabel l'
+source : ProcessionChoice l'
+I : OriginalInput l' (NumberField.FinitePlace k)
+landing : SourceLocalizationExpressible oneColumnStructure (ProcessionChoice l')
+⊢ ℤ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be

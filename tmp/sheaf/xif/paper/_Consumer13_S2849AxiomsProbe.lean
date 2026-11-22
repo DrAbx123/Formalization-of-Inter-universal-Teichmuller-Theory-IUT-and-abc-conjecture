@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3127G2FreeQuotientExistsConsumer13Actual
+import tmp.sheaf.xif.paper.S2849C3ComparisonBundleScalingAllConsumer
+import tmp.sheaf.xif.paper.S2849C3RegionBoundedCompactConsumer
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2FreeQuotientExistsConsumer13Actual.S3127G2FreeQuotientExistsConsumer13_quotientObj_eq
+#print axioms LeanFormal.IUT.XiFPaper.S2849C3ComparisonBundleScalingAllConsumer.C3ComparisonBundle_scale_all
+#print axioms LeanFormal.IUT.XiFPaper.S2849C3RegionBoundedCompactConsumer.C3PerPlaceUpdateRegionAll_bounded_compact_closed

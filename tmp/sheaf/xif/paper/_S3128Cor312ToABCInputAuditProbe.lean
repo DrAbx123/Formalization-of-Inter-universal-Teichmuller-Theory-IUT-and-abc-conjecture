@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3128Cor312ToABCInputConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3128Cor312ToABCInputConsumerActual.S3128Cor312ToABCInput_heightBound
+#print axioms LeanFormal.IUT.XiFPaper.S3128Cor312ToABCInputConsumerActual.S3128Cor312ToABCInput_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.S3128Cor312ToABCInputConsumerActual.S3128Cor312ToABCInput_nonempty_iff_abcConjecture
+#print axioms LeanFormal.IUT.cor312ToABCBridgeInterface_nonempty_iff_abcConjecture

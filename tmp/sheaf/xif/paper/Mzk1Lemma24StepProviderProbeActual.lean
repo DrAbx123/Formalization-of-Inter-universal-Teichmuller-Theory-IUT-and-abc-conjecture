@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24StepProviderActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StepProviderActual.s3135_criticalPoint_degree_drop

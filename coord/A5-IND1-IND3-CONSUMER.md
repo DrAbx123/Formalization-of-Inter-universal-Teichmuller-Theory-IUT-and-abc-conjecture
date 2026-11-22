@@ -52,3 +52,7 @@ No old C3, no `IsEmpty`, no new axiom/sorry. The fixed-place inhabitant is a gen
 ## Final status (2026-11-14)
 
 CapsulePosition 21:44:15Z, Ind1Ind3Consumer 21:53:05Z, MultiradialConsumer 22:24:24Z. Final consumption map: [P7-MULTIRADIAL-CONSUMER-FINAL.md](P7-MULTIRADIAL-CONSUMER-FINAL.md). General-place Ind1 gap retained.
+
+## Consumer rule
+
+For nontrivial Ind1, pass the actual `e, φ` and use `SourceMultiradialInd1Ind3InterfaceFor` / `Ind1ShellTransportForRequired`. Bare `Ind1ShellTransportGap` is identity-only and is not a substitute.

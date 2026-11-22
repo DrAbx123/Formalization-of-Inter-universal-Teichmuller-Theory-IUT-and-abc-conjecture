@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24MainStatementActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24MainStatementActual.s3135_belyi_polynomial_of_finiteSet
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24MainStatementActual.s3135_mainReduction_shape_partial

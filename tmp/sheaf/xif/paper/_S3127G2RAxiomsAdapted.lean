@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2RActionActual
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2RActionActual.S3127FixesAlgebraMapOf
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2RActionActual.S3127FixesAlgebraMapOf_inverse

@@ -1,0 +1,2 @@
+import tmp.sheaf.n8.closure.SourceDegreeActualDegreeBridge
+#print axioms LeanFormal.IUT.N8Closure.C8.sourceDegreeResidual_iff_actualArithmeticDegree

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2748RationalAbsNormActual
+import tmp.sheaf.xif.paper.S2743SupportIdealAbsNormLowerActual
+import tmp.sheaf.xif.paper.S2748AbsNormGeRationalPrimeActual
+#print axioms LeanFormal.IUT.XiFPaper.S2748RationalAbsNormActual.S2748_absNorm_rationalFinitePlace
+#print axioms LeanFormal.IUT.XiFPaper.S2743SupportIdealAbsNormLowerActual.S2743_prod_support_le_supportIdeal_absNorm
+#print axioms LeanFormal.IUT.XiFPaper.S2748AbsNormGeRationalPrimeActual.S2748_absNorm_ge_rationalPrime

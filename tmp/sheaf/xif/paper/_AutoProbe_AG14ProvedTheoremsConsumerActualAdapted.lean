@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG14ProvedTheoremsConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG14ProvedTheoremsConsumerActual.ag14_serde_pairing_bijective
+#print axioms LeanFormal.IUT.XiFPaper.AG14ProvedTheoremsConsumerActual.ag14_weilDualityAdelic_of_isAlgClosed
+#print axioms LeanFormal.IUT.XiFPaper.AG14ProvedTheoremsConsumerActual.ag14_cechRiemannRoch_of_genusReached

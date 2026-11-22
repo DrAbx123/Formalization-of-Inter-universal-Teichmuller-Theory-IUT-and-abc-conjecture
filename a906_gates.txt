@@ -1,0 +1,21 @@
+'LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.e7_equiv_chain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.frey_dictionary_logq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.rt_delta_of_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1RouteCInternalActual.szpiro6_of_routeC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1RouteCInternalActual.freyDisc_eq' depends on axioms: [propext]
+'LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkChainAuditActual.chain_closed_needs_edges' does not depend on any axioms
+'LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkChainAuditActual.chainEdges_length' does not depend on any axioms
+'LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.abcConjecture_of_cRouteAssembly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.abcConjecture_of_routeC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

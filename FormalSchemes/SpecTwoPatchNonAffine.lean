@@ -1,0 +1,515 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import FormalSchemes.LocallyRingedSpaceRange
+import FormalSchemes.GlueDataImageInter
+import FormalSchemes.SpecTwoPatchScheme
+import FormalSchemes.TwoPatchWitness
+import Mathlib.AlgebraicGeometry.Morphisms.Separated
+
+/-!
+# The two-patch glued scheme is genuinely glued, and the doubled `Spec A` is not affine
+
+`FormalSchemes/CompletionTwoPatchToScheme.lean` builds `specTwoPatch a b θ`, the locally ringed
+space `Spec A ∪_{D(a) ≅ D(b)} Spec B`, and `FormalSchemes/SpecTwoPatchScheme.lean` promotes it to
+an `AlgebraicGeometry.Scheme` with a two-chart affine open cover. Both files' module docstrings
+stop short of calling the result a **non-affine** scheme, and say why: the only witness either of
+them instantiates is `A = B`, `a = b`, `θ = RingEquiv.refl`, the "doubled" `Spec A`, which for
+`A = k[t]`, `a = t` is the affine line with a doubled origin — genuinely non-affine and
+non-separated, but nothing there proves it. This file closes that gap.
+
+## The two steps
+
+**The charts meet exactly over the overlap, and the gluing is therefore proper.**
+`preimage_range_specTwoPatchι₁` computes the part of `Spec A` that lands in the `B`-chart: it is
+exactly the basic open `D(a)`, and the mirror `preimage_range_specTwoPatchι₀` says the same of
+`Spec B` and `D(b)`. `preimage_image_specTwoPatchι₁` and its mirror refine this to the image of a
+*named subset* of the other chart, which is the form the completion's support statement consumes.
+So a point of `Spec A` lying **outside** `D(a)` maps into the glued space outside the range of the
+`B`-chart (`specTwoPatchι₀_base_notMem_range_specTwoPatchι₁`), the two
+charts meet over `D(a) ≅ D(b)` and nowhere else, and — taking `A = B`, `a = b`, `θ = refl` — the
+two images of such a point are **two distinct points** of the glued scheme
+(`specTwoPatchSchemeι₀_base_ne_specTwoPatchSchemeι₁_base`). This is the doubled origin, and it is
+the first statement in this development that distinguishes the glued object from a single chart.
+
+The equalities are not proved here from anything about two patches. They are
+`AlgebraicGeometry.LocallyRingedSpace.GlueData.preimage_range_ι`
+(`FormalSchemes.GlueDataImageInter`) — Mathlib's `TopCat.GlueData.preimage_range` transported
+across the carrier comparison, and true of *any* glue datum — followed by the identification of
+this glue datum's overlap inclusion with `Spec` of the localization map,
+`range_specTwoPatchLRSGlueData_f_false_true`, and `AlgebraicGeometry.range_specAwayMap`. Both
+statements are available in either index order; the `B`-side mirrors carry the primed index
+distinctness `spidxNe'`.
+
+**The refinement that names a subset rather than the whole chart comes the same way.**
+`preimage_image_specTwoPatchι₁` computes `ι₀⁻¹(ι₁''U)` for an arbitrary `U ⊆ Spec B`, off
+`AlgebraicGeometry.LocallyRingedSpace.GlueData.preimage_image_ι`, and at `U = Set.univ` it is the
+equality above. That is the form a statement about a *closed* subset of a chart needs, and it is
+what `FormalSchemes/CompletionTwoPatchSupport.lean` now spends `hθ` on: the compatibility
+hypothesis moves the middle preimage and nothing else. It costs one extra step that the range form
+does not need — the `GlueData.ofGlueData'` `eqToHom` is invisible to a range but not to the image
+of a named subset — which is what `specTwoPatchLRSGlueData_t_comp_f_false_true` below and
+`AlgebraicGeometry.LocallyRingedSpace.image_preimage_eqToHom_comp_base`
+(`FormalSchemes.LocallyRingedSpaceRange`) are for.
+
+That does **not** make the equalities independent of the glue condition: Mathlib derives
+`TopCat.GlueData.preimage_range` from `TopCat.GlueData.image_inter`, whose `⊇` half is
+`CategoryTheory.GlueData.glue_condition_apply`. The content has moved rather than vanished, and
+what is gained here is independence from anything particular to two patches. This datum's
+`CategoryTheory.GlueData.glue_condition` field is opened in
+`FormalSchemes/CompletionTwoPatchToScheme.lean`, as `AlgebraicGeometry.specTwoPatch_glue`, and
+nowhere below it.
+
+**Hence not separated, hence not affine.** Write `specDouble a` for `specTwoPatchScheme a a
+(RingEquiv.refl _)`. The two charts `specTwoPatchSchemeι₀`, `specTwoPatchSchemeι₁` are then two
+morphisms `Spec A ⟶ specDouble a` *with the same source*, and `specTwoPatch_glue` at `θ = refl`
+says they agree after restriction along `Spec A_a ⟶ Spec A`. For `A` a domain and `a ≠ 0` that
+restriction is **dominant** (its range is `D(a)`, dense because the kernel of `A → A_a` is
+trivial), and `Spec A` is reduced. Mathlib's `AlgebraicGeometry.ext_of_isDominant` — two morphisms
+out of a reduced scheme into a **separated** scheme agreeing along a dominant map are equal — would
+therefore force the two charts to coincide, contradicting the doubled point. So `specDouble a` is
+not separated (`not_isSeparated_specDouble`), and since affine schemes are separated it is not
+affine (`not_isAffine_specDouble`).
+
+The concrete witness at the end of the file is `A = ℚ[X]`, `a = X`: **the affine line over `ℚ`
+with a doubled origin is a scheme that is not separated and not affine.**
+
+## Scope
+
+The non-affineness argument needs the two charts to have a **common source**, so it is stated for
+the doubled case `A = B`, `a = b`, `θ = refl` only. That is not a defect of the proof: for general
+`A`, `B`, `θ` there need be no morphism `Spec A ⟶ specTwoPatch a b θ` extending the `B`-chart, and
+the glued scheme can perfectly well be affine (take `a` a unit, so that `D(a) = Spec A` and the
+gluing is an isomorphism). The *first* half — that the charts meet only over the overlap — is
+proved at full generality in `A`, `B`, `θ`.
+
+Nothing here computes `Γ(specDouble a, 𝒪)`, and nothing here is needed to: the separatedness route
+avoids global sections entirely. The classical argument via `Γ` (sections glue to `A`, so an
+isomorphism with `Spec A` would have to identify the two doubled points) remains unformalised and
+is not required for the conclusion.
+
+## Main results
+
+* `AlgebraicGeometry.range_specTwoPatchLRSGlueData_f_false_true` and
+  `AlgebraicGeometry.range_specTwoPatchLRSGlueData_f_true_false`: the two overlap inclusions of the
+  two-patch glue datum have the same ranges as `Spec` of `A → A_a` and of `B → B_b`, i.e. `D(a)`
+  and `D(b)`.
+* `AlgebraicGeometry.specTwoPatchLRSGlueData_t_comp_f_false_true` and
+  `AlgebraicGeometry.specTwoPatchLRSGlueData_t_comp_f_true_false`: the transition-then-inclusion
+  `t i j ≫ f j i` is `Spec` of `θ` (resp. `θ.symm`) followed by the other chart's localization map,
+  behind the same `eqToHom` that prefixes `f i j` — which is what lets the two cancel.
+* `AlgebraicGeometry.preimage_range_specTwoPatchι₁` and
+  `AlgebraicGeometry.preimage_range_specTwoPatchι₀`: **the charts meet exactly over the overlap**,
+  as an equality — the part of `Spec A` landing in the `B`-chart is `D(a)`, and symmetrically.
+* `AlgebraicGeometry.preimage_image_specTwoPatchι₁` and
+  `AlgebraicGeometry.preimage_image_specTwoPatchι₀`: **the same for the image of a named subset**,
+  in the `PrimeSpectrum.comap` language its consumers speak. The `U = Set.univ` case is the pair
+  above; the general form is what `FormalSchemes/CompletionTwoPatchSupport.lean` runs on.
+* `AlgebraicGeometry.specTwoPatchι₀_base_notMem_range_specTwoPatchι₁` and
+  `AlgebraicGeometry.specTwoPatchι₁_base_notMem_range_specTwoPatchι₀`: hence **the charts meet only
+  over the overlap**, at the level of locally ringed spaces, for arbitrary `A`, `B`, `θ`, from
+  either side.
+* `AlgebraicGeometry.specTwoPatchSchemeι₀_base_notMem_range_specTwoPatchSchemeι₁`,
+  `AlgebraicGeometry.specTwoPatchSchemeι₁_base_notMem_range_specTwoPatchSchemeι₀` and
+  `..._base_ne_specTwoPatchSchemeι₁_base`: the same at the level of schemes, and **the doubled
+  point**.
+* `AlgebraicGeometry.specDouble`: `Spec A` doubled along `D(a)`.
+* `AlgebraicGeometry.not_isSeparated_specDouble`, `AlgebraicGeometry.not_isAffine_specDouble` and
+  their `¬ IsUnit a` corollaries: **the doubled `Spec A` is neither separated nor affine.**
+
+## References
+
+* [Grothendieck, *Éléments de géométrie algébrique I*][EGA1], Ch. I, §10.8.
+* [The Stacks Project, Tag 01KP](https://stacks.math.columbia.edu/tag/01KP) (the line with doubled
+  origin).
+-/
+
+noncomputable section
+
+open CategoryTheory TopologicalSpace Opposite
+
+universe u
+
+namespace AlgebraicGeometry
+
+section TwoCharts
+
+variable {A B : Type u} [CommRing A] [CommRing B] (a : A) (b : B)
+  (θ : Localization.Away a ≃+* Localization.Away b)
+
+/-- The two indices of the two-patch glue datum are distinct. -/
+private theorem spidxNe : ¬ @Eq (ULift.{u} Bool) ⟨false⟩ ⟨true⟩ := by simp
+
+/-- …and in the other order, for the `B`-side statements. -/
+private theorem spidxNe' : ¬ @Eq (ULift.{u} Bool) ⟨true⟩ ⟨false⟩ := by simp
+
+set_option backward.isDefEq.respectTransparency false in
+-- The glue datum is a `def`, so its index type does not reduce to `ULift Bool` at `instances`
+-- transparency and the rewrite below is otherwise rejected as ill-typed. `specTwoPatch_glue`
+-- (`FormalSchemes.CompletionTwoPatchToScheme`) needed the same option until issue 2064 rerouted it
+-- through `CategoryTheory.GlueData.ofGlueData'_f_comp_of`, now its `ι`-specialisation
+-- `CategoryTheory.GlueData.ofGlueData'_ι_comp`.
+/-- **The `A`-side overlap inclusion of the two-patch glue datum is the localization chart.**
+Its range on underlying spaces is that of `Spec` of `A → A_a`, namely the basic open `D(a)`; the
+`eqToHom` that `GlueData.ofGlueData'` inserts is invisible to the range. -/
+theorem range_specTwoPatchLRSGlueData_f_false_true :
+    Set.range ((specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨false⟩ ⟨true⟩).base =
+      Set.range (Spec.locallyRingedSpaceMap
+        (CommRingCat.ofHom (algebraMap A (Localization.Away a)))).base := by
+  have h : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨false⟩ ⟨true⟩ =
+      eqToHom (dif_neg spidxNe) ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap A (Localization.Away a))) :=
+    dif_neg spidxNe
+  rw [h, LocallyRingedSpace.range_eqToHom_comp_base]
+  rfl
+
+set_option backward.isDefEq.respectTransparency false in
+-- The transparency requirement is the same one `range_specTwoPatchLRSGlueData_f_false_true` needs,
+-- and for the same reason: the glue datum is a `def`, so its index type does not reduce to
+-- `ULift Bool` at `instances` transparency.
+/-- **The `B`-side overlap inclusion of the two-patch glue datum is the localization chart.**
+The mirror of `range_specTwoPatchLRSGlueData_f_false_true` with the two indices exchanged: the
+range of `f ⟨true⟩ ⟨false⟩` on underlying spaces is that of `Spec` of `B → B_b`, namely `D(b)`. -/
+theorem range_specTwoPatchLRSGlueData_f_true_false :
+    Set.range ((specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨true⟩ ⟨false⟩).base =
+      Set.range (Spec.locallyRingedSpaceMap
+        (CommRingCat.ofHom (algebraMap B (Localization.Away b)))).base := by
+  have h : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨true⟩ ⟨false⟩ =
+      eqToHom (dif_neg spidxNe') ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap B (Localization.Away b))) :=
+    dif_neg spidxNe'
+  rw [h, LocallyRingedSpace.range_eqToHom_comp_base]
+  rfl
+
+set_option backward.isDefEq.respectTransparency false in
+-- The same transparency requirement as `range_specTwoPatchLRSGlueData_f_false_true` above, and for
+-- the same reason: the glue datum is a `def`, so its index type does not reduce to `ULift Bool` at
+-- `instances` transparency and the two `dif_neg`s are otherwise rejected as ill-typed.
+/-- **The `A`-side transition-then-inclusion of the two-patch glue datum is `Spec θ.symm` followed
+by the `B`-side localization chart**, up to the `CategoryTheory.GlueData.ofGlueData'` `eqToHom`.
+
+The two inner `eqToHom`s that `GlueData.ofGlueData'` inserts — one closing `t ⟨false⟩ ⟨true⟩`, one
+opening `f ⟨true⟩ ⟨false⟩` — are mutually inverse and cancel, and what is left in front is exactly
+the `eqToHom` that also prefixes `f ⟨false⟩ ⟨true⟩`. That is what lets the two cancel against each
+other in `preimage_image_specTwoPatchι₁`, where they cannot be discarded one at a time. The
+arbitrary-index form is `AlgebraicGeometry.ChartedSchemeDatum.specLRSGlueData_t_comp_f`. -/
+theorem specTwoPatchLRSGlueData_t_comp_f_false_true :
+    (specTwoPatchLRSGlueData a b θ).toGlueData.t ⟨false⟩ ⟨true⟩ ≫
+        (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨true⟩ ⟨false⟩ =
+      eqToHom (dif_neg spidxNe) ≫ (specGlueIso a b θ).hom ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap B (Localization.Away b))) := by
+  have ht : (specTwoPatchLRSGlueData a b θ).toGlueData.t ⟨false⟩ ⟨true⟩ =
+      eqToHom (dif_neg spidxNe) ≫ (specGlueIso a b θ).hom ≫
+        eqToHom (dif_neg spidxNe').symm :=
+    dif_neg spidxNe
+  have hf : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨true⟩ ⟨false⟩ =
+      eqToHom (dif_neg spidxNe') ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap B (Localization.Away b))) :=
+    dif_neg spidxNe'
+  rw [ht, hf, Category.assoc, Category.assoc, eqToHom_trans_assoc, eqToHom_refl,
+    Category.id_comp]
+
+set_option backward.isDefEq.respectTransparency false in
+-- The transparency requirement is the same one `specTwoPatchLRSGlueData_t_comp_f_false_true` needs.
+/-- **The `B`-side transition-then-inclusion of the two-patch glue datum is `Spec θ` followed by the
+`A`-side localization chart**, up to the `CategoryTheory.GlueData.ofGlueData'` `eqToHom`. The mirror
+of `specTwoPatchLRSGlueData_t_comp_f_false_true` with the two indices exchanged; note that
+`specGlueIso`'s `Iso.inv` is `Spec` of `θ` itself, its `Iso.hom` being `Spec` of `θ.symm`. -/
+theorem specTwoPatchLRSGlueData_t_comp_f_true_false :
+    (specTwoPatchLRSGlueData a b θ).toGlueData.t ⟨true⟩ ⟨false⟩ ≫
+        (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨false⟩ ⟨true⟩ =
+      eqToHom (dif_neg spidxNe') ≫ (specGlueIso a b θ).inv ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap A (Localization.Away a))) := by
+  have ht : (specTwoPatchLRSGlueData a b θ).toGlueData.t ⟨true⟩ ⟨false⟩ =
+      eqToHom (dif_neg spidxNe') ≫ (specGlueIso a b θ).inv ≫
+        eqToHom (dif_neg spidxNe).symm :=
+    dif_neg spidxNe'
+  have hf : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨false⟩ ⟨true⟩ =
+      eqToHom (dif_neg spidxNe) ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap A (Localization.Away a))) :=
+    dif_neg spidxNe
+  rw [ht, hf, Category.assoc, Category.assoc, eqToHom_trans_assoc, eqToHom_refl,
+    Category.id_comp]
+
+/-- **The two charts of the glued object meet exactly over the overlap.** The part of `Spec A` that
+lands in the `B`-chart is precisely the basic open `D(a)`.
+
+Both containments come at once from
+`AlgebraicGeometry.LocallyRingedSpace.GlueData.preimage_range_ι`
+(`FormalSchemes.GlueDataImageInter`), which is Mathlib's `TopCat.GlueData.preimage_range`
+transported across the carrier comparison: for *any* glue datum, the preimage under one inclusion
+of the range of another is the range of the overlap inclusion. All that is left is to say which
+affine chart that overlap inclusion is, which is
+`range_specTwoPatchLRSGlueData_f_false_true` followed by `AlgebraicGeometry.range_specAwayMap`.
+
+Note the index order: `preimage_range_ι i j` computes `ι j ⁻¹' range (ι i)`, so the `A`-side
+statement instantiates it at `i = ⟨true⟩`, `j = ⟨false⟩`. -/
+theorem preimage_range_specTwoPatchι₁ :
+    ⇑(specTwoPatchι₀ a b θ).base ⁻¹' Set.range ⇑(specTwoPatchι₁ a b θ).base =
+      (PrimeSpectrum.basicOpen a : Set (PrimeSpectrum A)) :=
+  ((specTwoPatchLRSGlueData a b θ).preimage_range_ι ⟨true⟩ ⟨false⟩).trans
+    ((range_specTwoPatchLRSGlueData_f_false_true a b θ).trans (range_specAwayMap a))
+
+/-- **…and from the other side**: the part of `Spec B` that lands in the `A`-chart is precisely
+`D(b)`. The mirror of `preimage_range_specTwoPatchι₁` with the indices exchanged. -/
+theorem preimage_range_specTwoPatchι₀ :
+    ⇑(specTwoPatchι₁ a b θ).base ⁻¹' Set.range ⇑(specTwoPatchι₀ a b θ).base =
+      (PrimeSpectrum.basicOpen b : Set (PrimeSpectrum B)) :=
+  ((specTwoPatchLRSGlueData a b θ).preimage_range_ι ⟨false⟩ ⟨true⟩).trans
+    ((range_specTwoPatchLRSGlueData_f_true_false a b θ).trans (range_specAwayMap b))
+
+set_option backward.isDefEq.respectTransparency false in
+-- Same transparency requirement as `specTwoPatchLRSGlueData_t_comp_f_false_true` above.
+/-- **The part of `Spec A` that lands in a given subset `U` of the `B`-chart.** It is the image,
+under the localization chart `Spec A_a ⟶ Spec A`, of the part of the overlap that the
+`θ`-translate carries into `U`.
+
+This is `AlgebraicGeometry.LocallyRingedSpace.GlueData.preimage_image_ι`
+(`FormalSchemes.GlueDataImageInter`) — Mathlib's `TopCat.GlueData.preimage_image_eq_image`
+transported across the carrier comparison, and true of *any* glue datum — followed by the
+identification of this datum's `f` and `t`. At `U = Set.univ` it is
+`preimage_range_specTwoPatchι₁`; the general form is what a statement about a *closed subset* of
+the `B`-chart needs, and `FormalSchemes.CompletionTwoPatchSupport` spends `hθ` on exactly the
+middle preimage. The arbitrary-index form is
+`AlgebraicGeometry.ChartedSchemeDatum.preimage_image_specι`.
+
+Unlike `preimage_range_specTwoPatchι₁`, this one cannot discard the `GlueData.ofGlueData'`
+`eqToHom` with `LocallyRingedSpace.range_eqToHom_comp_base`: an isomorphism is invisible to a range
+but not to the image of a named subset. The two occurrences cancel against each other instead,
+which is what
+`specTwoPatchLRSGlueData_t_comp_f_false_true` and
+`LocallyRingedSpace.image_preimage_eqToHom_comp_base` are for.
+
+The right-hand side is stated in the `PrimeSpectrum.comap` language its consumers speak, so that
+they need no coe-bridging; the proof pays for that once, in its closing `rfl`. -/
+theorem preimage_image_specTwoPatchι₁ (U : Set (PrimeSpectrum B)) :
+    ⇑(specTwoPatchι₀ a b θ).base ⁻¹' (⇑(specTwoPatchι₁ a b θ).base '' U) =
+      PrimeSpectrum.comap (algebraMap A (Localization.Away a)) ''
+        (PrimeSpectrum.comap θ.symm.toRingHom ⁻¹'
+          (PrimeSpectrum.comap (algebraMap B (Localization.Away b)) ⁻¹' U)) := by
+  have hf : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨false⟩ ⟨true⟩ =
+      eqToHom (dif_neg spidxNe) ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap A (Localization.Away a))) :=
+    dif_neg spidxNe
+  refine ((specTwoPatchLRSGlueData a b θ).preimage_image_ι ⟨true⟩ ⟨false⟩ U).trans ?_
+  rw [specTwoPatchLRSGlueData_t_comp_f_false_true a b θ, hf,
+    LocallyRingedSpace.image_preimage_eqToHom_comp_base, LocallyRingedSpace.comp_base,
+    TopCat.coe_comp, Set.preimage_comp]
+  rfl
+
+set_option backward.isDefEq.respectTransparency false in
+-- Same transparency requirement as `preimage_image_specTwoPatchι₁` above.
+/-- **…and from the other side**: the part of `Spec B` that lands in a given subset `U` of the
+`A`-chart. The mirror of `preimage_image_specTwoPatchι₁` with the two indices exchanged, so the
+`θ`-translate runs the other way. -/
+theorem preimage_image_specTwoPatchι₀ (U : Set (PrimeSpectrum A)) :
+    ⇑(specTwoPatchι₁ a b θ).base ⁻¹' (⇑(specTwoPatchι₀ a b θ).base '' U) =
+      PrimeSpectrum.comap (algebraMap B (Localization.Away b)) ''
+        (PrimeSpectrum.comap θ.toRingHom ⁻¹'
+          (PrimeSpectrum.comap (algebraMap A (Localization.Away a)) ⁻¹' U)) := by
+  have hf : (specTwoPatchLRSGlueData a b θ).toGlueData.f ⟨true⟩ ⟨false⟩ =
+      eqToHom (dif_neg spidxNe') ≫
+        Spec.locallyRingedSpaceMap (CommRingCat.ofHom (algebraMap B (Localization.Away b))) :=
+    dif_neg spidxNe'
+  refine ((specTwoPatchLRSGlueData a b θ).preimage_image_ι ⟨false⟩ ⟨true⟩ U).trans ?_
+  rw [specTwoPatchLRSGlueData_t_comp_f_true_false a b θ, hf,
+    LocallyRingedSpace.image_preimage_eqToHom_comp_base, LocallyRingedSpace.comp_base,
+    TopCat.coe_comp, Set.preimage_comp]
+  rfl
+
+/-- **The two charts of the glued object meet only over the overlap.** A point of `Spec A` outside
+the range of `Spec A_a ⟶ Spec A` — that is, outside the basic open `D(a)` — maps into
+`specTwoPatch a b θ` outside the range of the `B`-chart. Together with
+`specTwoPatch_jointly_surjective` this pins down the gluing: it happens along `D(a) ≅ D(b)` and
+nowhere else.
+
+Read off `preimage_range_specTwoPatchι₁`: a point whose image meets the `B`-chart lies in the
+preimage, hence in `D(a)`. -/
+theorem specTwoPatchι₀_base_notMem_range_specTwoPatchι₁ (x : PrimeSpectrum A)
+    (hx : x ∉ Set.range (Spec.locallyRingedSpaceMap
+      (CommRingCat.ofHom (algebraMap A (Localization.Away a)))).base) :
+    (specTwoPatchι₀ a b θ).base x ∉ Set.range (specTwoPatchι₁ a b θ).base := fun hmem =>
+  hx ((range_specAwayMap a).ge ((preimage_range_specTwoPatchι₁ a b θ).subset hmem))
+
+/-- **…and from the other side**: a point of `Spec B` outside `D(b)` maps into
+`specTwoPatch a b θ` outside the range of the `A`-chart. The mirror of
+`specTwoPatchι₀_base_notMem_range_specTwoPatchι₁`, read off
+`preimage_range_specTwoPatchι₀`. -/
+theorem specTwoPatchι₁_base_notMem_range_specTwoPatchι₀ (x : PrimeSpectrum B)
+    (hx : x ∉ Set.range (Spec.locallyRingedSpaceMap
+      (CommRingCat.ofHom (algebraMap B (Localization.Away b)))).base) :
+    (specTwoPatchι₁ a b θ).base x ∉ Set.range (specTwoPatchι₀ a b θ).base := fun hmem =>
+  hx ((range_specAwayMap b).ge ((preimage_range_specTwoPatchι₀ a b θ).subset hmem))
+
+/-- The range of `Spec A_a ⟶ Spec A` is the basic open `D(a)`, so a prime containing `a` is not in
+it. -/
+theorem notMem_range_specAwayMap {x : PrimeSpectrum A} (hx : a ∈ x.asIdeal) :
+    x ∉ Set.range (Spec.locallyRingedSpaceMap
+      (CommRingCat.ofHom (algebraMap A (Localization.Away a)))).base := by
+  change x ∉ Set.range (PrimeSpectrum.comap (algebraMap A (Localization.Away a)))
+  rw [PrimeSpectrum.localization_away_comap_range (Localization.Away a) a]
+  simpa using hx
+
+/-- **The two charts of the glued scheme meet only over the overlap**, in the `Scheme` layer and
+phrased ring-theoretically: a prime of `A` containing `a` maps outside the range of the
+`B`-chart. -/
+theorem specTwoPatchSchemeι₀_base_notMem_range_specTwoPatchSchemeι₁ {x : PrimeSpectrum A}
+    (hx : a ∈ x.asIdeal) :
+    (specTwoPatchSchemeι₀ a b θ).base x ∉ Set.range (specTwoPatchSchemeι₁ a b θ).base :=
+  specTwoPatchι₀_base_notMem_range_specTwoPatchι₁ a b θ x (notMem_range_specAwayMap a hx)
+
+/-- **The two charts of the glued scheme meet only over the overlap**, from the other side: a prime
+of `B` containing `b` maps outside the range of the `A`-chart. The mirror of
+`specTwoPatchSchemeι₀_base_notMem_range_specTwoPatchSchemeι₁`; `notMem_range_specAwayMap` is
+symmetric in the data and applies unchanged at `b`. -/
+theorem specTwoPatchSchemeι₁_base_notMem_range_specTwoPatchSchemeι₀ {x : PrimeSpectrum B}
+    (hx : b ∈ x.asIdeal) :
+    (specTwoPatchSchemeι₁ a b θ).base x ∉ Set.range (specTwoPatchSchemeι₀ a b θ).base :=
+  specTwoPatchι₁_base_notMem_range_specTwoPatchι₀ a b θ x (notMem_range_specAwayMap b hx)
+
+/-- **Neither chart is surjective** once there is a prime of `A` containing `a`: the `B`-chart
+misses the image of such a prime. -/
+theorem not_surjective_specTwoPatchSchemeι₁_base {x : PrimeSpectrum A} (hx : a ∈ x.asIdeal) :
+    ¬ Function.Surjective (specTwoPatchSchemeι₁ a b θ).base := fun h =>
+  specTwoPatchSchemeι₀_base_notMem_range_specTwoPatchSchemeι₁ a b θ hx (h _)
+
+end TwoCharts
+
+section Double
+
+variable {A : Type u} [CommRing A] (a : A)
+
+/-- **`Spec A` doubled along the basic open `D(a)`**: the two-patch glued scheme with both charts
+equal to `Spec A`, glued along the identity of `A_a`. For `A = k[t]`, `a = t` this is the affine
+line with a doubled origin. -/
+abbrev specDouble : Scheme.{u} :=
+  specTwoPatchScheme a a (RingEquiv.refl (Localization.Away a))
+
+/-- **The doubled point.** A prime `x` of `A` containing `a` has two distinct images in
+`specDouble a`, one from each chart. -/
+theorem specTwoPatchSchemeι₀_base_ne_specTwoPatchSchemeι₁_base {x : PrimeSpectrum A}
+    (hx : a ∈ x.asIdeal) :
+    (specTwoPatchSchemeι₀ a a (RingEquiv.refl (Localization.Away a))).base x ≠
+      (specTwoPatchSchemeι₁ a a (RingEquiv.refl (Localization.Away a))).base x := fun h =>
+  specTwoPatchSchemeι₀_base_notMem_range_specTwoPatchSchemeι₁ a a _ hx ⟨x, h.symm⟩
+
+/-- At `θ = RingEquiv.refl` the gluing isomorphism of the overlap is the identity: it is `Spec` of
+`(RingEquiv.refl _).symm`, which is the identity ring homomorphism. -/
+theorem specGlueIso_refl_hom :
+    (specGlueIso a a (RingEquiv.refl (Localization.Away a))).hom = 𝟙 _ := by
+  change Spec.locallyRingedSpaceMap
+    (CommRingCat.ofHom (RingHom.id (Localization.Away a))) = 𝟙 _
+  rw [CommRingCat.ofHom_id]
+  exact Spec.locallyRingedSpaceMap_id _
+
+/-- **The two charts of `specDouble a` agree over `D(a)`**: this is `specTwoPatch_glue` at
+`θ = RingEquiv.refl`, where the gluing isomorphism disappears, transported to the `Scheme`
+layer. -/
+theorem specAwayMap_comp_specTwoPatchSchemeι₀ :
+    Spec.map (CommRingCat.ofHom (algebraMap A (Localization.Away a))) ≫
+        specTwoPatchSchemeι₀ a a (RingEquiv.refl (Localization.Away a)) =
+      Spec.map (CommRingCat.ofHom (algebraMap A (Localization.Away a))) ≫
+        specTwoPatchSchemeι₁ a a (RingEquiv.refl (Localization.Away a)) := by
+  have h := specTwoPatch_glue a a (RingEquiv.refl (Localization.Away a))
+  rw [specGlueIso_refl_hom a, Category.id_comp] at h
+  apply Scheme.Hom.ext'
+  change Spec.locallyRingedSpaceMap _ ≫
+      (specTwoPatchSchemeι₀ a a (RingEquiv.refl (Localization.Away a))).toLRSHom =
+    Spec.locallyRingedSpaceMap _ ≫
+      (specTwoPatchSchemeι₁ a a (RingEquiv.refl (Localization.Away a))).toLRSHom
+  rw [specTwoPatchSchemeι₀_toLRSHom, specTwoPatchSchemeι₁_toLRSHom]
+  exact h
+
+/-- **`Spec A_a ⟶ Spec A` is dominant** for `A` a domain and `a ≠ 0`: the kernel of `A → A_a` is
+trivial, hence contained in the nilradical, which is Mathlib's criterion for the range of `comap`
+to be dense. -/
+theorem isDominant_specAwayMap [IsDomain A] (ha : a ≠ 0) :
+    IsDominant (Spec.map (CommRingCat.ofHom (algebraMap A (Localization.Away a)))) := by
+  have hinj : Function.Injective (algebraMap A (Localization.Away a)) :=
+    IsLocalization.injective (Localization.Away a)
+      (powers_le_nonZeroDivisors_of_noZeroDivisors ha)
+  rw [isDominant_iff]
+  change DenseRange (PrimeSpectrum.comap (algebraMap A (Localization.Away a)))
+  rw [PrimeSpectrum.denseRange_comap_iff_ker_le_nilRadical,
+    (RingHom.injective_iff_ker_eq_bot _).mp hinj]
+  exact bot_le
+
+/-- **The two charts of `specDouble a` are different morphisms**, as soon as some prime of `A`
+contains `a`: they take that prime to the two halves of the doubled point. -/
+theorem specTwoPatchSchemeι₀_ne_specTwoPatchSchemeι₁ {x : PrimeSpectrum A} (hx : a ∈ x.asIdeal) :
+    specTwoPatchSchemeι₀ a a (RingEquiv.refl (Localization.Away a)) ≠
+      specTwoPatchSchemeι₁ a a (RingEquiv.refl (Localization.Away a)) := fun h =>
+  specTwoPatchSchemeι₀_base_ne_specTwoPatchSchemeι₁_base a hx (by rw [h])
+
+/-- **The doubled `Spec A` is not separated.** For `A` a domain, `a ≠ 0` and some prime containing
+`a`, the two charts `Spec A ⟶ specDouble a` agree along the dominant map `Spec A_a ⟶ Spec A` but
+are different; over a separated target `ext_of_isDominant` would force them to be equal. -/
+theorem not_isSeparated_specDouble [IsDomain A] (ha : a ≠ 0) {x : PrimeSpectrum A}
+    (hx : a ∈ x.asIdeal) : ¬ (specDouble a).IsSeparated := by
+  intro hsep
+  haveI := hsep
+  haveI := isDominant_specAwayMap a ha
+  exact specTwoPatchSchemeι₀_ne_specTwoPatchSchemeι₁ a hx
+    (ext_of_isDominant (Spec.map (CommRingCat.ofHom (algebraMap A (Localization.Away a))))
+      (specAwayMap_comp_specTwoPatchSchemeι₀ a))
+
+/-- **The doubled `Spec A` is not affine** — affine schemes are separated. This is the first
+non-affine scheme exhibited in this development, and the witness the scope notes of
+`FormalSchemes.CompletionTwoPatchToScheme` and `FormalSchemes.SpecTwoPatchScheme` were missing. -/
+theorem not_isAffine_specDouble [IsDomain A] (ha : a ≠ 0) {x : PrimeSpectrum A}
+    (hx : a ∈ x.asIdeal) : ¬ IsAffine (specDouble a) := by
+  intro haff
+  haveI := haff
+  exact not_isSeparated_specDouble a ha hx inferInstance
+
+/-- **The doubled `Spec A` is not separated**, in the form that needs no prime supplied: a non-zero
+non-unit of a domain lies in some maximal ideal. -/
+theorem not_isSeparated_specDouble_of_not_isUnit [IsDomain A] (ha : a ≠ 0) (ha' : ¬ IsUnit a) :
+    ¬ (specDouble a).IsSeparated := by
+  obtain ⟨m, hm, hle⟩ := Ideal.exists_le_maximal (Ideal.span {a})
+    ((Ideal.span_singleton_eq_top (x := a)).not.mpr ha')
+  exact not_isSeparated_specDouble (x := ⟨m, hm.isPrime⟩) a ha
+    (hle (Ideal.mem_span_singleton_self a))
+
+/-- **The doubled `Spec A` is not affine**, in the form that needs no prime supplied. -/
+theorem not_isAffine_specDouble_of_not_isUnit [IsDomain A] (ha : a ≠ 0) (ha' : ¬ IsUnit a) :
+    ¬ IsAffine (specDouble a) := by
+  intro haff
+  haveI := haff
+  exact not_isSeparated_specDouble_of_not_isUnit a ha ha' inferInstance
+
+end Double
+
+/-! ### A concrete non-affine scheme
+
+`specDouble (X : ℚ[X])` — the affine line over `ℚ` with the origin doubled, the standard first
+example of a non-affine (indeed non-separated) scheme. -/
+
+section AffineLineDoubledOrigin
+
+open Polynomial
+
+/-- **The two halves of the doubled origin really are two points** of the doubled affine line. The
+origin is `twoPatchWitnessOrigin` (`FormalSchemes/TwoPatchWitness.lean`), shared with the
+completion-side witnesses so that they are visibly the same point. -/
+example : (specTwoPatchSchemeι₀ (X : ℚ[X]) X (RingEquiv.refl (Localization.Away (X : ℚ[X])))).base
+      twoPatchWitnessOrigin ≠
+    (specTwoPatchSchemeι₁ (X : ℚ[X]) X (RingEquiv.refl (Localization.Away (X : ℚ[X])))).base
+      twoPatchWitnessOrigin :=
+  specTwoPatchSchemeι₀_base_ne_specTwoPatchSchemeι₁_base (X : ℚ[X])
+    X_mem_twoPatchWitnessOrigin
+
+/-- **The affine line with a doubled origin is not separated.** -/
+example : ¬ (specDouble (X : ℚ[X])).IsSeparated :=
+  not_isSeparated_specDouble_of_not_isUnit (X : ℚ[X]) X_ne_zero not_isUnit_X
+
+/-- **The affine line with a doubled origin is not affine**: a scheme in this development that is
+provably not the spectrum of a ring. -/
+example : ¬ IsAffine (specDouble (X : ℚ[X])) :=
+  not_isAffine_specDouble_of_not_isUnit (X : ℚ[X]) X_ne_zero not_isUnit_X
+
+end AffineLineDoubledOrigin
+
+end AlgebraicGeometry

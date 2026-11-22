@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1EtThRow6RealizationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRow6RealizationActual.EtThRow6RealizationCarrier
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRow6RealizationActual.etThRow6RealizationCarrier
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRow6RealizationActual.etThRow6RealizationCarrier_nonempty

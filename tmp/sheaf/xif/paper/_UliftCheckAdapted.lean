@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2668FiberCoherenceActual
+import tmp.sheaf.xif.paper.S2665TorsorSheafActual
+#check CategoryTheory.uliftFunctor
+#check CategoryTheory.isSheaf_comp_uliftFunctor_iff

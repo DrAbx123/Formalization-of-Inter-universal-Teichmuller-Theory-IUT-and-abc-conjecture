@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.AG_FLT_FiniteMapDataPromotionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_FiniteMapDataPromotionActual.promotion_FiniteMapData

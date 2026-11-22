@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3136IVThm110ConstantsActual
+import tmp.sheaf.xif.paper.S3136GenEllReductionShapeActual
+import tmp.sheaf.xif.paper.S3136Cor22BDChainInstanceActual
+import tmp.sheaf.xif.paper.S3136ThetaPilotDataShapeActual
+import tmp.sheaf.xif.paper.S3136PaperInputIndexActual
+import tmp.sheaf.xif.paper.S3136PaperInputStatementHooksActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136IVThm110ConstantsActual.lgpDStarMod_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3136IVThm110ConstantsActual.lgpEStarMod_le_lgpDStarMod
+#print axioms LeanFormal.IUT.XiFPaper.S3136GenEllReductionShapeActual.lgpGenEll_reduction
+#print axioms LeanFormal.IUT.XiFPaper.S3136Cor22BDChainInstanceActual.LGPCor22ChainData.composite
+#print axioms LeanFormal.IUT.XiFPaper.S3136ThetaPilotDataShapeActual.LGPThetaPilotData.corollary312
+#print axioms LeanFormal.IUT.XiFPaper.S3136PaperInputIndexActual.lgpPaperInputIndex_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136PaperInputStatementHooksActual.lgpTheoremA_of_compactlyBounded

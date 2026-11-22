@@ -1,0 +1,26 @@
+@AlgHom.tensorEqualizerEquiv : {R : Type u_1} →
+  (S : Type u_2) →
+    [inst : CommRing R] →
+      [inst_1 : CommRing S] →
+        [inst_2 : Algebra R S] →
+          (T : Type u_3) →
+            [inst_3 : CommRing T] →
+              [inst_4 : Algebra R T] →
+                [inst_5 : Algebra S T] →
+                  [inst_6 : IsScalarTower R S T] →
+                    {A : Type u_4} →
+                      {B : Type u_5} →
+                        [inst_7 : CommRing A] →
+                          [inst_8 : CommRing B] →
+                            [inst_9 : Algebra R A] →
+                              [inst_10 : Algebra R B] →
+                                (f g : A →ₐ[R] B) →
+                                  [Module.Flat R T] →
+                                    TensorProduct R T ↥(f.equalizer g) ≃ₐ[S]
+                                      ↥((Algebra.TensorProduct.map (AlgHom.id S T) f).equalizer
+                                          (Algebra.TensorProduct.map (AlgHom.id S T) g))
+@AlgHom.tensorEqualizerEquiv_apply : ∀ {R : Type u_1} (S : Type u_2) [inst : CommRing R] [inst_1 : CommRing S]
+  [inst_2 : Algebra R S] (T : Type u_3) [inst_3 : CommRing T] [inst_4 : Algebra R T] [inst_5 : Algebra S T]
+  [inst_6 : IsScalarTower R S T] {A : Type u_4} {B : Type u_5} [inst_7 : CommRing A] [inst_8 : CommRing B]
+  [inst_9 : Algebra R A] [inst_10 : Algebra R B] (f g : A →ₐ[R] B) [inst_11 : Module.Flat R T]
+  (x : TensorProduct R T ↥(f.equalizer g)), (AlgHom.tensorEqualizerEquiv S T f g) x = (AlgHom.tensorEqualizer S T f g) x

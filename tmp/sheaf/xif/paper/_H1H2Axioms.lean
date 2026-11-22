@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2440H1H2IntegrationActual
+#print axioms LeanFormal.IUT.XiFPaper.S2425H1SurjInternal.S2425H1Surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2426H1Lim1Actual.S2426MittagLeffler_of_finite
+#print axioms LeanFormal.IUT.XiFPaper.S2426H1Lim1Actual.S2426ActualMittagLeffler
+#print axioms LeanFormal.IUT.XiFPaper.S2426H1Lim1Actual.S2426Lim1_subsingleton_of_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2426H1Lim1Actual.S2426ActualH1Lim1_subsingleton
+#print axioms LeanFormal.IUT.XiFPaper.S2430H1FinalActual.S2430ActualS2145Instance
+#print axioms LeanFormal.IUT.XiFPaper.S2430H1FinalActual.S2430ActualMittagLeffler
+#print axioms LeanFormal.IUT.XiFPaper.S2430H1FinalActual.S2430ActualH1Lim1_subsingleton
+#print axioms LeanFormal.IUT.XiFPaper.S2427H2CompatCleanActual.S2427ActualH2Comparison_surjective_iff_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S2440H1H2IntegrationActual.S2440_required_iff

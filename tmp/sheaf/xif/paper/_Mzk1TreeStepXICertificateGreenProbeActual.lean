@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeStepXICertificateGreenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeStepXICertificateGreenActual.treeStepXICertificateGreen_bundle

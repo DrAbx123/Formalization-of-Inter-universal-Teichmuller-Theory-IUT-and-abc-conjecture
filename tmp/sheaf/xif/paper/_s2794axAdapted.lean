@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2794C3NormalizedUnitLatticeInvarianceActual
+#print axioms LeanFormal.IUT.XiFPaper.S2794C3NormalizedUnitLatticeInvarianceActual.c3NormalizedTensorHaar_unit_smul_lattice

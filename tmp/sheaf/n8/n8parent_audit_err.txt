@@ -1,0 +1,16 @@
+tmp\sheaf\n8\N8Parent.lean:35:32: error: invalid use of explicit universe parameters, `SourceTheorem311Realization` is a local variable
+tmp\sheaf\n8\N8Parent.lean:38:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:44:14: error: invalid use of explicit universe parameters, `SourceTheorem311Realization` is a local variable
+tmp\sheaf\n8\N8Parent.lean:49:14: error: Function expected at
+  N8ParentClosure
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `N8ParentClosure` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\N8Parent.lean:50:42: error(lean.unknownIdentifier): Unknown identifier `l`
+tmp\sheaf\n8\N8Parent.lean:50:55: error(lean.unknownIdentifier): Unknown identifier `Label`
+tmp\sheaf\n8\N8Parent.lean:50:73: error(lean.unknownIdentifier): Unknown identifier `Choice`
+tmp\sheaf\n8\N8Parent.lean:50:9: error: Tactic `rcases` failed: `x✝ : Sort u_2` is not an inductive datatype

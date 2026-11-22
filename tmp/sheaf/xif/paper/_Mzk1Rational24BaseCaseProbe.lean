@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Rational24BaseCaseBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.baseCaseProvider_discharged
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.ProblemCResidual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.paperScopeLemma24Statement_of_provedBaseCase
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.rational24_and_baseCase_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.rational24Target_finite_beta_available
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Rational24BaseCaseBridgeActual.rational24BaseCaseBridgeRows

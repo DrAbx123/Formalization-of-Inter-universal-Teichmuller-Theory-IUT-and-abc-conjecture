@@ -832,7 +832,7 @@ def concreteFiniteStepXIRoute : Obligation :=
         "certificate, not the source-facing arbitrary Hodge-theater construction."
     dependsOn :=
       [ "IUT-III.concrete-finite-theorem311-model",
-        "IUT-III.finite-theta-packet-bridge",
+        "IUT-III.StepXI.finite-theta-packet-bridge",
         "IUT-III.remark-3-9-5-weighted-determinant-normalization",
         "IUT-III.finite-certificate-to-contract" ] }
 

@@ -1,0 +1,5 @@
+import { appendFileSync } from 'node:fs';
+const ROOT='D:/lean';
+const add = ['','## 6. 关键路径依赖核对（A484 本轮）','','- 三个先前缺失的依赖根现已 green olean：Mzk1LiteralIQCarrierActual、GlobalIQHullInterfaceActual、Example36LocalGaloisInvariantMonoid（均 src+olean，后两者已在队列）。','- 因此以下日志错误为 stale（依赖先于自身编译成功，watchdog 下一轮应通过）：Mzk1FourTriangleSynthesisActual（缺 Mzk1LiteralIQCarrierActual.olean）、Mzk1IUTIVStage5NumericalActual（缺 Example36LocalGaloisInvariantMonoid.olean）、A482LiteralCarrierAxiomsActual（缺 GlobalIQHullInterfaceActual.olean）、A482LiteralIQHullInterfaceActual（缺 A482LiteralCarrierAxiomsActual.olean，同链）。','- 仍需 owner 修的真实代码错误（非依赖问题）：A483LiteralCarrierProductHaarActual（OriginalInput universe/命名参数错误，owner=abc）；Mzk1Section0*/Mzk1T0EquivalenceChain/Mzk1H5DetScalingLaws/Mzk1E5UndilatedABCBridge/Mzk1Example36CorrespondenceLaws 旧文件等（proof errors，owner 各自）。','- 我的行动: 无新增文件/队列条目（green 依存满足输入），继续按 rung 审计；若 owner 请求可协助修错误。',''];
+appendFileSync(ROOT+'/coord/A484-RUNG-QUEUE-AUDIT-shehdd.md', add.join('\n'));
+console.log('addendum 6 appended');

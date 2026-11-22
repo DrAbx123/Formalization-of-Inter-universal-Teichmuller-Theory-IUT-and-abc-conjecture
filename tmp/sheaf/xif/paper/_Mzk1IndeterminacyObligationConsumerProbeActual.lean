@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1IndeterminacyObligationConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IndeterminacyObligationConsumerActual.indeterminacy_bundle

@@ -1,0 +1,10 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+import LeanFormal.IUT.IUTI.InitialTheta.SourceInitialThetaData
+
+open LeanFormal.IUT.InitialThetaSource
+
+#print SourceInitialThetaData
+#print SourceInitialThetaTuple
+#check SourceFbarExtension.canonical
+#print SourcePlaceData
+#check SourceInitialThetaData.V_mod_bad_odd_residue_characteristic

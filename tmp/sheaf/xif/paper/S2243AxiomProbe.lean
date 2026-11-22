@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2243RangeCompatibilityActual
+open LeanFormal.IUT.XiFPaper.S2243RangeCompatibilityActual
+#print axioms S2243GLMap_eq_id
+#print axioms S2243TransferredRange_eq
+#print axioms S2243TransferredPairCompatibilityRequired_actual
+#print axioms S2243D5LargeImageFive_of_galois

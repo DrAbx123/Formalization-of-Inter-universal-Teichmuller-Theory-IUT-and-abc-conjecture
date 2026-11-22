@@ -137,3 +137,38 @@
 - §11 power formula 仍不能 official；
 - L side readout/comparison fresh GREEN，不受 donor red 影响；
 - 未改源。
+
+## 14. S45 是否已被树反驳？（2026-11-14）
+
+### 树里有什么
+- `BadPlaceCorrectionSignActual.SeparatedNormRatioRegime` 是 **structure**：
+  `b : Bad` + `gap_ne : paperNormalizedCoefficient b ≠ c_norm b`；
+- `separated_ratio_ne_one (R) : qVFamNormRatio T R.b ≠ 1` 是 **条件定理**（给定 R）；
+- 全树 **没有** `SeparatedNormRatioRegime` 的 inhabitant / `Nonempty` 构造；
+- `NonzeroCorrectionRegime` 同样无 inhabitant；
+- `S100QVFamNormInstanceGapActual.qVFamNormRatio_ne_one_of_coefficient_ne`：同样只是“系数不等 ⇒ ratio≠1”的条件形式；
+- `S118QVFamNormRatioValueActual`/`S121` 给 ratio 的精确 p-power/residue 表达式和 ratio=1 的等价条件，但 **没有实际值**。
+
+### 是否能反驳
+目前 **不能无条件反驳**：
+- 要反驳 ratio=1，需要实际 T/b 上 `paperNormalizedCoefficient ≠ c_norm`，树里没有这个实际 inhabitant；
+- `qVFamTensorRationalPrimeLogObstruction` 是**未证命题**，不是反例；
+- 因此 S45 在树中仍是 **open condition**，不是已知 false。
+
+### 若 donor power relation 成立，可条件性反驳
+文本级 donor 给出（若 official）：
+`‖x‖_norm = (‖x‖_def)^(1/d)`。
+且树中已可证 `qVFamDefaultNorm T b = ‖(qVFamily).q‖ < 1`（`qNorm_lt_one`）。
+若进一步有 `1 < d`（`relativeCompletionDegree >1`），则：
+`default<1`、`1/d<1` ⇒ `default^(1/d) > default`，
+故 ratio = normalized/default = default^(1/d−1) > 1，从而 ratio≠1。
+但：
+- donor 目前 **未 official**（spectral/final red）；
+- `1<d` 对实际 qVFamily place **未证**（只知 d>0）；
+- 因此这只是 **条件性 refutation scheme**，不能作为当前定理。
+
+### 结论
+- 树中 **没有** S45 的反例 inhabitant；
+- S45 既未被证明也未被反驳，是精确的 norm-instance/S45 source condition；
+- 若 donor 绿且实际 d>1，则 S45 会被反驳为 `ratio>1`；
+- 当前不能 fake 成 false，也不能 fake 成 true。

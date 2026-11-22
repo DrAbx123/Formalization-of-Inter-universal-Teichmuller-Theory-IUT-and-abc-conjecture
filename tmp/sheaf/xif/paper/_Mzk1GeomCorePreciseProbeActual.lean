@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeometricCorePreciseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePreciseActual.geometricCorePreciseRows_length

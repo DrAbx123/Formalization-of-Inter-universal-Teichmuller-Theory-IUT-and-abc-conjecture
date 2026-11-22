@@ -1,0 +1,235 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import FormalSchemes.AdicCompletionLimit
+import FormalSchemes.IdealsOfDefinition
+
+/-!
+# Cofinal ideals have isomorphic adic completions
+
+Two ideals `K`, `L` of a commutative ring `S` are *cofinal* if some power of each is contained in
+the other (`K ^ b ≤ L` and `L ^ a ≤ K`); equivalently, they induce the same adic topology. This
+file proves that cofinal ideals have canonically isomorphic adic completions:
+```
+AdicCompletion K S ≃+* AdicCompletion L S.
+```
+
+This is the commutative-algebra core of the fact that the affine formal scheme `Spf R` depends only
+on the topological ring `R`, not on the chosen ideal of definition (EGA I, §10.3, goal 1 of the
+structure-sheaf intertwining). The structure sheaf `O_{Spf R}` has, on a basic open `D(f)`, the
+ring of sections `AdicCompletion (I · R_f) R_f` (issues 26–30); when `I`, `J` are two ideals of
+definition of `R`, the ideals `I · R_f`, `J · R_f` are cofinal in `R_f`
+(`nonempty_cofinalRingEquiv_map`), so the two structure sheaves agree on basic opens as rings.
+
+## Main definitions and results
+
+* `AdicCompletion.cofinalHom hb`: the ring homomorphism
+  `AdicCompletion K S →+* AdicCompletion L S` induced by a containment `K ^ b ≤ L`, from
+  the universal property of the completion applied to the factor maps
+  `S ⧸ K ^ ((b + 1) * n) →+* S ⧸ L ^ n`.
+* `AdicCompletion.cofinalHom_of`: the comparison map fixes the structure map `AdicCompletion.of`.
+* `AdicCompletion.cofinalHom_congr`: the comparison map does not depend on the exponent
+  witnessing `K ^ b ≤ L`. Two containments at different exponents induce the same map, so a
+  comparison built from *chosen* witnesses is the one a caller with its own witnesses would build.
+* `AdicCompletion.cofinalRingEquiv hb ha`: the ring isomorphism
+  `AdicCompletion K S ≃+* AdicCompletion L S` for cofinal `K`, `L`.
+* `AdicCompletion.bijective_cofinalHom_map`: the comparison between the *extensions* of two
+  cofinal ideals of `R` along a ring homomorphism `φ : R →+* S` is bijective, stated at the
+  containments upstairs in `R` because that is the form the squares downstream are indexed by.
+* `AdicCompletion.nonempty_cofinalRingEquiv_map`: two ideals of definition `I`, `J` of a
+  topological ring `R` have, along any ring homomorphism `f : R →+* S`, isomorphic completions
+  `AdicCompletion (I.map f) S ≃+* AdicCompletion (J.map f) S`. This is the ring-of-sections
+  incarnation of `Spf`-independence.
+
+## References
+
+* [Grothendieck, *Éléments de géométrie algébrique I*][EGA1], §10.3.
+* [The Stacks Project, Tag 0AHZ](https://stacks.math.columbia.edu/tag/0AHZ).
+-/
+
+noncomputable section
+
+open Topology
+
+namespace AdicCompletion
+
+universe u
+
+variable {S : Type u} [CommRing S] {K L : Ideal S}
+
+/-- If `K ^ b ≤ L`, then `K ^ ((b + 1) * n) ≤ L ^ n`. The shift `b + 1` guarantees the exponent
+`(b + 1) * n` is at least `n`, which is convenient when composing the two directions of the
+cofinality isomorphism. -/
+theorem pow_mul_le_pow (hb : K ^ b ≤ L) (n : ℕ) : K ^ ((b + 1) * n) ≤ L ^ n := by
+  rw [pow_mul]
+  exact Ideal.pow_right_mono ((Ideal.pow_le_pow_right (Nat.le_succ b)).trans hb) n
+
+/-- The `n`-th component `AdicCompletion K S →+* S ⧸ L ^ n` of the cofinal comparison map: the
+factor map `S ⧸ K ^ ((b + 1) * n) →+* S ⧸ L ^ n` (well-defined by `pow_mul_le_pow`)
+precomposed with the evaluation `evalₐ K ((b + 1) * n)`. -/
+def cofinalLevel (hb : K ^ b ≤ L) (n : ℕ) : AdicCompletion K S →+* S ⧸ L ^ n :=
+  (Ideal.Quotient.factor (pow_mul_le_pow hb n)).comp (evalₐ K ((b + 1) * n) : _ →+* _)
+
+theorem cofinalLevel_apply (hb : K ^ b ≤ L) (n : ℕ) (x : AdicCompletion K S) :
+    cofinalLevel hb n x =
+      Ideal.Quotient.factor (pow_mul_le_pow hb n) (evalₐ K ((b + 1) * n) x) :=
+  rfl
+
+/-- The comparison components `cofinalLevel` are compatible with the factor maps of the `L`-adic
+tower: `factorPow L hle` after level `n` is level `m`. This is the cocone condition that lets them
+be assembled by the universal property of `AdicCompletion L S`. -/
+theorem factorPow_cofinalLevel (hb : K ^ b ≤ L) {m n : ℕ} (hle : m ≤ n)
+    (x : AdicCompletion K S) :
+    Ideal.Quotient.factorPow L hle (cofinalLevel hb n x) = cofinalLevel hb m x := by
+  rw [cofinalLevel_apply, cofinalLevel_apply,
+    show (Ideal.Quotient.factorPow L hle) =
+      Ideal.Quotient.factor (Ideal.pow_le_pow_right hle) from rfl,
+    Ideal.Quotient.factor_comp_apply,
+    ← factorPow_evalₐ K (Nat.mul_le_mul_left (b + 1) hle) x,
+    show (Ideal.Quotient.factorPow K (Nat.mul_le_mul_left (b + 1) hle)) =
+      Ideal.Quotient.factor (Ideal.pow_le_pow_right (Nat.mul_le_mul_left (b + 1) hle)) from rfl,
+    Ideal.Quotient.factor_comp_apply]
+
+theorem factorPow_comp_cofinalLevel (hb : K ^ b ≤ L) {m n : ℕ} (hle : m ≤ n) :
+    (Ideal.Quotient.factorPow L hle).comp (cofinalLevel hb n) = cofinalLevel hb m :=
+  RingHom.ext (factorPow_cofinalLevel hb hle)
+
+/-- The **cofinal comparison map** `AdicCompletion K S →+* AdicCompletion L S` induced by a
+containment `K ^ b ≤ L`, obtained from the universal property of the `L`-adic completion applied
+to the compatible family `cofinalLevel`. -/
+def cofinalHom (hb : K ^ b ≤ L) : AdicCompletion K S →+* AdicCompletion L S :=
+  AdicCompletion.liftRingHom L (cofinalLevel hb) (fun hle => factorPow_comp_cofinalLevel hb hle)
+
+@[simp]
+theorem evalₐ_cofinalHom (hb : K ^ b ≤ L) (n : ℕ) (x : AdicCompletion K S) :
+    evalₐ L n (cofinalHom hb x) = cofinalLevel hb n x :=
+  evalₐ_liftRingHom L _ _ n x
+
+/-- **The cofinal comparison map fixes the completion structure map.** If `K ^ b ≤ L`, the induced
+map `cofinalHom hb : AdicCompletion K S →+* AdicCompletion L S` sends `of K S x` to `of L S x`:
+level by level both sides are the residue `Ideal.Quotient.mk (L ^ n) x`.
+
+Stated here, beside `cofinalHom` itself, rather than in a downstream naturality file: it is the
+statement that `cofinalHom` is a map *under* `S`, which is what makes it an algebra map over any
+base of `S` (`FormalSchemes.CofinalCompletionAlg`). -/
+theorem cofinalHom_of (hb : K ^ b ≤ L) (x : S) :
+    cofinalHom hb (of K S x) = of L S x := by
+  refine AdicCompletion.ext_evalₐ fun n => ?_
+  rw [evalₐ_cofinalHom, cofinalLevel_apply, evalₐ_of, Ideal.Quotient.factor_mk, evalₐ_of]
+
+/-- **The cofinal comparison map does not depend on the exponent witnessing the containment.**
+Two containments `K ^ b ≤ L` and `K ^ b' ≤ L`, at possibly different exponents, induce the same
+map `AdicCompletion K S →+* AdicCompletion L S`.
+
+This is not automatic from the definition: `cofinalLevel hb n` is
+`Ideal.Quotient.factor (pow_mul_le_pow hb n)` after `evalₐ K ((b + 1) * n)`, a formula in which
+`b` occurs twice. What makes the two agree is that for `b ≤ b'` the evaluation at the smaller
+level factors through the larger one (`AdicCompletion.factorPow_evalₐ`), after which both sides
+are `Ideal.Quotient.factor` applied to the *same* element of `S ⧸ K ^ ((b' + 1) * n)` at two
+proofs of one containment `K ^ ((b' + 1) * n) ≤ L ^ n` — and a proof is not data. The general case
+is that one with `le_total`.
+
+It is what lets a comparison map built from *chosen* witnesses be identified with one built from
+a caller's own: `FormalSpectrum.atPrimeCofinalRingEquiv`
+(`FormalSchemes.StructureSheafStalkCofinalTarget`) takes its exponents from
+`Ideal.IsCofinal.exists_pow_le` by `Exists.choose_spec`, and through
+`AdicCompletion.cofinalRingEquiv_apply` this lemma says that map is `cofinalHom hb` for any `hb`
+the caller has. -/
+theorem cofinalHom_congr {b b' : ℕ} (hb : K ^ b ≤ L) (hb' : K ^ b' ≤ L) :
+    cofinalHom hb = cofinalHom hb' := by
+  have key : ∀ {c c' : ℕ} (hc : K ^ c ≤ L) (hc' : K ^ c' ≤ L), c ≤ c' →
+      ∀ (n : ℕ) (x : AdicCompletion K S), cofinalLevel hc n x = cofinalLevel hc' n x := by
+    intro c c' hc hc' hcc n x
+    have h : (c + 1) * n ≤ (c' + 1) * n := Nat.mul_le_mul_right n (Nat.succ_le_succ hcc)
+    rw [cofinalLevel_apply, cofinalLevel_apply, ← factorPow_evalₐ K h x,
+      show (Ideal.Quotient.factorPow K h) =
+        Ideal.Quotient.factor (Ideal.pow_le_pow_right h) from rfl,
+      Ideal.Quotient.factor_comp_apply]
+  refine RingHom.ext fun x => AdicCompletion.ext_evalₐ fun n => ?_
+  rw [evalₐ_cofinalHom, evalₐ_cofinalHom]
+  rcases le_total b b' with h | h
+  · exact key hb hb' h n x
+  · exact (key hb' hb h n x).symm
+
+/-- The two cofinal comparison maps for `K ^ b ≤ L` and `L ^ a ≤ K` are mutually inverse:
+composing them collapses, on each level, to an evaluation of the same completion via
+`factorPow_evalₐ`. -/
+theorem cofinalHom_comp_cofinalHom (hb : K ^ b ≤ L) (ha : L ^ a ≤ K) :
+    (cofinalHom ha).comp (cofinalHom hb) = RingHom.id (AdicCompletion K S) := by
+  refine RingHom.ext fun x => AdicCompletion.ext_evalₐ fun n => ?_
+  have hnE : n ≤ (b + 1) * ((a + 1) * n) :=
+    (Nat.le_mul_of_pos_left n (Nat.succ_pos a)).trans
+      (Nat.le_mul_of_pos_left ((a + 1) * n) (Nat.succ_pos b))
+  rw [RingHom.comp_apply, RingHom.id_apply, evalₐ_cofinalHom, cofinalLevel_apply,
+    evalₐ_cofinalHom, cofinalLevel_apply, Ideal.Quotient.factor_comp_apply,
+    ← factorPow_evalₐ K hnE x,
+    show Ideal.Quotient.factorPow K hnE
+        = Ideal.Quotient.factor (Ideal.pow_le_pow_right hnE) from rfl]
+
+/-- **Cofinal ideals have isomorphic adic completions.** If `K ^ b ≤ L` and `L ^ a ≤ K` (so `K`
+and `L` induce the same adic topology on `S`), the two adic completions are canonically
+isomorphic. -/
+def cofinalRingEquiv (hb : K ^ b ≤ L) (ha : L ^ a ≤ K) :
+    AdicCompletion K S ≃+* AdicCompletion L S :=
+  RingEquiv.ofRingHom (cofinalHom hb) (cofinalHom ha)
+    (cofinalHom_comp_cofinalHom ha hb) (cofinalHom_comp_cofinalHom hb ha)
+
+@[simp]
+theorem cofinalRingEquiv_apply (hb : K ^ b ≤ L) (ha : L ^ a ≤ K) (x : AdicCompletion K S) :
+    cofinalRingEquiv hb ha x = cofinalHom hb x :=
+  rfl
+
+@[simp]
+theorem cofinalRingEquiv_symm_apply (hb : K ^ b ≤ L) (ha : L ^ a ≤ K) (x : AdicCompletion L S) :
+    (cofinalRingEquiv hb ha).symm x = cofinalHom ha x :=
+  rfl
+
+/-- The existence form: cofinal ideals (some power of each inside the other) have isomorphic
+completions. -/
+theorem nonempty_cofinalRingEquiv (hKL : ∃ b, K ^ b ≤ L) (hLK : ∃ a, L ^ a ≤ K) :
+    Nonempty (AdicCompletion K S ≃+* AdicCompletion L S) :=
+  let ⟨_, hb⟩ := hKL
+  let ⟨_, ha⟩ := hLK
+  ⟨cofinalRingEquiv hb ha⟩
+
+section Extended
+
+variable {R : Type u} [CommRing R] {I J : Ideal R}
+
+/-- **A cofinal comparison map between two extended ideals is bijective.** For containments
+`I ^ b ≤ J` and `J ^ a ≤ I` in `R` and any `φ : R →+* S`, the comparison
+`AdicCompletion (I · S) S →+* AdicCompletion (J · S) S` at the extended containment
+`Ideal.pow_map_le_map hb φ` (`FormalSchemes.IdealsOfDefinition`) is bijective: it is the forward
+map of `AdicCompletion.cofinalRingEquiv`, whose inverse is the comparison at
+`Ideal.pow_map_le_map ha φ`.
+
+Stated at the containments upstairs in `R` rather than at their extensions because that is the form
+the cofinal comparison squares downstream are indexed by, and it is what makes the *same* map both
+a square's edge and an invertible one. It is not a witness-independence statement: it says nothing
+about two containments at different exponents — that is `AdicCompletion.cofinalHom_congr` above —
+and its one consumer, `FormalSchemes.CofinalStalkLimit`, needs only this. -/
+theorem bijective_cofinalHom_map (hb : I ^ b ≤ J) (ha : J ^ a ≤ I) (φ : R →+* S) :
+    Function.Bijective (cofinalHom (S := S) (Ideal.pow_map_le_map hb φ)) :=
+  (cofinalRingEquiv (Ideal.pow_map_le_map hb φ) (Ideal.pow_map_le_map ha φ)).bijective
+
+end Extended
+
+variable {R : Type u} [CommRing R] [TopologicalSpace R] {I J : Ideal R}
+
+/-- **Ring-of-sections incarnation of `Spf`-independence.** Two ideals of definition `I`, `J` of a
+topological ring `R` have, along any ring homomorphism `f : R →+* S`, isomorphic adic completions
+`AdicCompletion (I.map f) S ≃+* AdicCompletion (J.map f) S`.
+
+Applied to the localization map `f : R →+* R_f`, this says the two descriptions
+`AdicCompletion (I · R_f) R_f` and `AdicCompletion (J · R_f) R_f` of the sections of `O_{Spf R}`
+on the basic open `D(f)` agree: the structure sheaf does not depend on the chosen ideal of
+definition. -/
+theorem nonempty_cofinalRingEquiv_map (f : R →+* S) (hI : IsAdic I) (hJ : IsAdic J) :
+    Nonempty (AdicCompletion (I.map f) S ≃+* AdicCompletion (J.map f) S) := by
+  obtain ⟨a, ha⟩ := hI.exists_pow_le hJ
+  obtain ⟨b, hb⟩ := hJ.exists_pow_le hI
+  exact nonempty_cofinalRingEquiv ⟨b, Ideal.pow_map_le_map hb f⟩ ⟨a, Ideal.pow_map_le_map ha f⟩
+
+end AdicCompletion

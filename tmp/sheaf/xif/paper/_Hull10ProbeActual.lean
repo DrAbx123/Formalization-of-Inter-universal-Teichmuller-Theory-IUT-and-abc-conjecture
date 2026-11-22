@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull10H7Ob9ConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull10H7Ob9ConsumerActual.hull10_h7ob9_consumer
+#print axioms LeanFormal.IUT.XiFPaper.Hull10H7Ob9ConsumerActual.hull10_logLinkIterate_eq
+#print axioms LeanFormal.IUT.XiFPaper.Hull10H7Ob9ConsumerActual.hull10H7Ob9Rows_length

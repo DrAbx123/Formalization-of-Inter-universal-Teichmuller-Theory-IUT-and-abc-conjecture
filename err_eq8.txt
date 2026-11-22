@@ -1,0 +1,283 @@
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:130:2: error: Tactic `rfl` failed: The left-hand side
+  (((AlgHom.tensorEqualizerEquiv T T (TensorProduct.map (AlgHom.id R S) f) (TensorProduct.map (AlgHom.id R S) g)).trans
+            ((AlgHom.equalizerCongr (TensorProduct.assoc' R T T S A).symm (TensorProduct.assoc' R T T S B).symm ⋯
+                  ⋯).trans
+              (AlgHom.equalizerRestrictScalars T (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) f)
+                (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) g)))).trans
+        (AlgHom.equalizerCancelBaseChange S f g T).symm).symm
+    ((algebraMap (T ⊗[R] S)
+        ↥(TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) f) ≟ₐ
+            TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) g)))
+      (1 ⊗ₜ[R] x))
+is not definitionally equal to the right-hand side
+  1 ⊗ₜ[R] (algebraMap S ↥(TensorProduct.map (AlgHom.id S S) f ≟ₐ TensorProduct.map (AlgHom.id S S) g)) x
+
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+x : S
+⊢ (((AlgHom.tensorEqualizerEquiv T T (TensorProduct.map (AlgHom.id R S) f) (TensorProduct.map (AlgHom.id R S) g)).trans
+              ((AlgHom.equalizerCongr (TensorProduct.assoc' R T T S A).symm (TensorProduct.assoc' R T T S B).symm ⋯
+                    ⋯).trans
+                (AlgHom.equalizerRestrictScalars T (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) f)
+                  (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) g)))).trans
+          (AlgHom.equalizerCancelBaseChange S f g T).symm).symm
+      ((algebraMap (T ⊗[R] S)
+          ↥(TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) f) ≟ₐ
+              TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (TensorProduct.map (AlgHom.id T T) g)))
+        (1 ⊗ₜ[R] x)) =
+    1 ⊗ₜ[R] (algebraMap S ↥(TensorProduct.map (AlgHom.id S S) f ≟ₐ TensorProduct.map (AlgHom.id S S) g)) x
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:26: warning: This simp argument is unused:
+  AlgEquiv.trans_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.t̵r̵a̵n̵s_̵a̵p̵p̵l̵y,̵ ̵A̵l̵g̵E̵q̵u̵i̵v̵.̵s̵y̵mm_trans_apply, AlgHom.equalizerCancelBaseChange_algebraMap,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:48: warning: This simp argument is unused:
+  AlgEquiv.symm_trans_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgE̵q̵u̵i̵v̵.̵s̵y̵m̵m̵_̵t̵r̵a̵n̵s̵_̵a̵p̵p̵l̵y̵,̵ ̵A̵l̵g̵Hom.equalizerCancelBaseChange_algebraMap,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:75: warning: This simp argument is unused:
+  AlgHom.equalizerCancelBaseChange_algebraMap
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵a̵n̵c̵e̵l̵B̵a̵s̵e̵C̵h̵a̵n̵g̵e̵_̵a̵l̵g̵e̵b̵r̵a̵M̵a̵p̵,̵ ̵AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:120: warning: This simp argument is unused:
+  AlgHom.equalizerCongr_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_s̵y̵m̵m̵_̵apply,
+  ̲ A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵o̵n̵g̵r̵_̵a̵p̵p̵l̵y̵,̵  ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:154: warning: This simp argument is unused:
+  AlgHom.equalizerCongr_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲ A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵o̵n̵g̵r̵_̵a̵p̵p̵l̵y̵,̵  ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:183: warning: This simp argument is unused:
+  AlgHom.equalizerRestrictScalars_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_apply, A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵R̵e̵s̵t̵r̵i̵c̵t̵S̵c̵a̵l̵a̵r̵s̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:129:227: warning: This simp argument is unused:
+  AlgHom.tensorEqualizerEquiv_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_apply, A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵R̵e̵s̵t̵r̵i̵c̵t̵S̵c̵a̵l̵a̵r̵s̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵A̵l̵g̵H̵o̵m̵.̵t̵e̵n̵s̵o̵r̵E̵q̵u̵a̵l̵i̵z̵e̵r̵E̵q̵u̵i̵v̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵]̵A̲l̲g̲H̲o̲m̲.̲e̲q̲u̲a̲l̲i̲z̲e̲r̲R̲e̲s̲t̲r̲i̲c̲t̲S̲c̲a̲l̲a̲r̲s̲_̲s̲y̲m̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:137:2: error: Tactic `rfl` failed: The left-hand side
+  (((AlgHom.tensorEqualizerEquiv T T (TensorProduct.map (AlgHom.id R S) f) (TensorProduct.map (AlgHom.id R S) g)).trans
+            ((AlgHom.equalizerCongr (TensorProduct.assoc' R T T S A).symm (TensorProduct.assoc' R T T S B).symm ⋯
+                  ⋯).trans
+              (AlgHom.equalizerRestrictScalars T (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) f)
+                (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) g)))).trans
+        (AlgHom.equalizerCancelBaseChange S f g T).symm).symm
+    ⟨1 ⊗ₜ[T] (1 ⊗ₜ[R] ↑x), ⋯⟩
+is not definitionally equal to the right-hand side
+  1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩
+
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+x : ↥(f ≟ₐ g)
+⊢ (((AlgHom.tensorEqualizerEquiv T T (TensorProduct.map (AlgHom.id R S) f) (TensorProduct.map (AlgHom.id R S) g)).trans
+              ((AlgHom.equalizerCongr (TensorProduct.assoc' R T T S A).symm (TensorProduct.assoc' R T T S B).symm ⋯
+                    ⋯).trans
+                (AlgHom.equalizerRestrictScalars T (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) f)
+                  (TensorProduct.map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) g)))).trans
+          (AlgHom.equalizerCancelBaseChange S f g T).symm).symm
+      ⟨1 ⊗ₜ[T] (1 ⊗ₜ[R] ↑x), ⋯⟩ =
+    1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:26: warning: This simp argument is unused:
+  AlgEquiv.trans_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.t̵r̵a̵n̵s_̵a̵p̵p̵l̵y,̵ ̵A̵l̵g̵E̵q̵u̵i̵v̵.̵s̵y̵mm_trans_apply, AlgHom.equalizerCancelBaseChange_algebraMap,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:48: warning: This simp argument is unused:
+  AlgEquiv.symm_trans_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgE̵q̵u̵i̵v̵.̵s̵y̵m̵m̵_̵t̵r̵a̵n̵s̵_̵a̵p̵p̵l̵y̵,̵ ̵A̵l̵g̵Hom.equalizerCancelBaseChange_algebraMap,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:75: warning: This simp argument is unused:
+  AlgHom.equalizerCancelBaseChange_algebraMap
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵a̵n̵c̵e̵l̵B̵a̵s̵e̵C̵h̵a̵n̵g̵e̵_̵a̵l̵g̵e̵b̵r̵a̵M̵a̵p̵,̵ ̵AlgHom.equalizerCongr_symm_apply, AlgHom.equalizerCongr_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:120: warning: This simp argument is unused:
+  AlgHom.equalizerCongr_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_s̵y̵m̵m̵_̵apply,
+  ̲ A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵o̵n̵g̵r̵_̵a̵p̵p̵l̵y̵,̵  ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:154: warning: This simp argument is unused:
+  AlgHom.equalizerCongr_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲ A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵C̵o̵n̵g̵r̵_̵a̵p̵p̵l̵y̵,̵  ̲ ̲AlgHom.equalizerRestrictScalars_symm_apply, AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:183: warning: This simp argument is unused:
+  AlgHom.equalizerRestrictScalars_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_apply, A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵R̵e̵s̵t̵r̵i̵c̵t̵S̵c̵a̵l̵a̵r̵s̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵AlgHom.tensorEqualizerEquiv_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:136:227: warning: This simp argument is unused:
+  AlgHom.tensorEqualizerEquiv_symm_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [auxEquivRHS, AlgEquiv.trans_apply, AlgEquiv.symm_trans_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCancelBaseChange_algebraMap, AlgHom.equalizerCongr_symm_apply,
+  ̲  ̲ ̲ ̲AlgHom.equalizerCongr_apply, A̵l̵g̵H̵o̵m̵.̵e̵q̵u̵a̵l̵i̵z̵e̵r̵R̵e̵s̵t̵r̵i̵c̵t̵S̵c̵a̵l̵a̵r̵s̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵,̵ ̵A̵l̵g̵H̵o̵m̵.̵t̵e̵n̵s̵o̵r̵E̵q̵u̵a̵l̵i̵z̵e̵r̵E̵q̵u̵i̵v̵_̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵]̵A̲l̲g̲H̲o̲m̲.̲e̲q̲u̲a̲l̲i̲z̲e̲r̲R̲e̲s̲t̲r̲i̲c̲t̲S̲c̲a̲l̲a̲r̲s̲_̲s̲y̲m̲m̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:225:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (auxEquivRHS ?f ?g ?T).symm ⟨1 ⊗ₜ[?T] (1 ⊗ₜ[?m.1127] ↑?x), ⋯⟩
+in the target expression
+  1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩ = eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+
+case hb
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+eLHS : T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)) ≃ₐ[T] T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) :=
+  auxEquivLHS f g T
+eRHS : T ⊗[R] ↥(map (AlgHom.id S S) f ≟ₐ map (AlgHom.id S S) g) ≃ₐ[T]
+  ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+      map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  auxEquivRHS f g T
+this : IsScalarTower R T (T ⊗[R] ↥(map (AlgHom.id R S) f ≟ₐ map (AlgHom.id R S) g))
+u : T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) →ₐ[T]
+  ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)
+x : ↥(f ≟ₐ g)
+⊢ 1 ⊗ₜ[R] ⟨1 ⊗ₜ[R] ↑x, ⋯⟩ = eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+  has type
+    ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g))
+  but is expected to have type
+    ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+        map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g))
+  in the application
+    eRHS.symm ⟨1 ⊗ₜ[T] ↑⟨1 ⊗ₜ[R] ↑x, ⋯⟩, ⋯⟩
+Pi1\Mathlib\RingTheory\Flat\Equalizer.lean:229:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @Function.Bijective ?m.1173
+    ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+        map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g))
+    ?g
+in the target expression
+  @Function.Bijective (T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)))
+    (↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)))
+    (⇑(AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)) ∘ ⇑eLHS)
+
+case refine_1
+R S A B : Type u
+inst✝⁹ : CommRing R
+inst✝⁸ : CommRing S
+inst✝⁷ : CommRing A
+inst✝⁶ : CommRing B
+inst✝⁵ : Algebra R A
+inst✝⁴ : Algebra R S
+inst✝³ : Algebra R B
+f g : A →ₐ[R] B
+T : Type u
+inst✝² : CommRing T
+inst✝¹ : Algebra R T
+inst✝ : Module.Flat R T
+eLHS : T ⊗[R] (S ⊗[R] ↥(f ≟ₐ g)) ≃ₐ[T] T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) :=
+  auxEquivLHS f g T
+eRHS : T ⊗[R] ↥(map (AlgHom.id S S) f ≟ₐ map (AlgHom.id S S) g) ≃ₐ[T]
+  ↥(map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ
+      map (AlgHom.id (T ⊗[R] S) (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  auxEquivRHS f g T
+this : IsScalarTower R T (T ⊗[R] ↥(map (AlgHom.id R S) f ≟ₐ map (AlgHom.id R S) g))
+u : T ⊗[R] S ⊗[T] ↥(map (AlgHom.id T T) f ≟ₐ map (AlgHom.id T T) g) →ₐ[T]
+  ↥(map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) f) ≟ₐ map (AlgHom.id T (T ⊗[R] S)) (map (AlgHom.id T T) g)) :=
+  AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)
+heq :
+  map (AlgHom.id T T) (AlgHom.tensorEqualizer R S f g) =
+    (↑eRHS.symm).comp ((AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)).comp ↑eLHS)
+H :
+  Function.Bijective
+    ⇑((↑eRHS.symm).comp
+        ((AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)).comp ↑eLHS))
+⊢ Function.Bijective (⇑(AlgHom.tensorEqualizer T (T ⊗[R] S) (map (AlgHom.id T T) f) (map (AlgHom.id T T) g)) ∘ ⇑eLHS)

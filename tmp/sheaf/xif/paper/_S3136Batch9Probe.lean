@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3136LGPJvQSpanTopActual2
+import tmp.sheaf.xif.paper.S3136LGPRootUnconditionalActual
+import tmp.sheaf.xif.paper.S3136LGPKummerClassCandidateActual
+import tmp.sheaf.xif.paper.S3136LGPResidualManifestActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvQSpanTopActual2.lgpLocalFractionalIdealQSpan_eq_top'
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPRootUnconditionalActual.lgpThetaValueUncond_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPRootUnconditionalActual.qVAlgClosedUnit_mem_uncondSubgroup
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassCandidateActual.lgpAlgEquiv_smul_qV
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassCandidateActual.lgpQVRatio_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassCandidateActual.lgpQVKummerClassCandidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPKummerClassCandidateActual.LGPQVKummerClassGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPResidualManifestActual.lgpResidualManifest_length

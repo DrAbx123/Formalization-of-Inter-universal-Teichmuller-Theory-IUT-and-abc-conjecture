@@ -1,0 +1,12 @@
+import Mathlib.RingTheory.TotallySplit
+#check AlgEquiv.ofRingEquiv
+#check Ideal.quotientEquivAlgOfEq
+#check AlgEquiv.quotientBot
+#check AlgEquiv.piCongrRight
+#check Ideal.quotientKerAlgEquivOfSurjective
+#check Submodule.mem_iInf
+#check Ideal.mem_iInf
+#check RingHom.ker_isMaximal_of_surjective
+#check Ideal.isCoprime_of_isMaximal
+#check isReduced_of_injective
+#check Function.Injective.subsingleton

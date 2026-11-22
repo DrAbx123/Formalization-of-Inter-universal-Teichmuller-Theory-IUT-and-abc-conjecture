@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh08ThetaTransformationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08_thetaShift_quotient_eval
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08_modLThetaToElliptic_surjective
+#print axioms LeanFormal.IUT.XiFPaper.EtTh08ThetaTransformationActual.etTh08Rows_length

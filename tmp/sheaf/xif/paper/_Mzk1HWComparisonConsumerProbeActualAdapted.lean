@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HWComparisonConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HWComparisonConsumerActual.hwConsumer_iff

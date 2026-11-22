@@ -1,0 +1,250 @@
+import LeanFormal.IUT.IUTIII.Theorem311.SourcePacketDegreeLedger
+import Lean
+
+set_option pp.universes true
+set_option maxHeartbeats 0
+
+open Lean Elab Command Term Meta
+
+elab "ledger_endpoint_defeq " label:str " : " lhs:term " =?= " rhs:term : tactic => do
+  let left ← Lean.Elab.Tactic.elabTerm lhs none
+  let right ← Lean.Elab.Tactic.elabTerm rhs none
+  let same ← withTransparency .all <| isDefEq left right
+  if same then
+    throwError "Unexpected definitionally equal endpoints: {label.getString}"
+  logInfo m!"ENDPOINT_DEFEQ {label.getString}: false"
+
+namespace LeanFormal.IUT.Theorem311Source.OriginalInput
+noncomputable section
+universe ua uv upi umon ui
+variable {l : PrimeGeFive} {V : Type uv}
+
+example (I : OriginalInput.{ua, uv, upi, umon, ui} l V)
+    (a c n : Int) (k : Nat) (i : Fin (k + 1)) : True := by
+  ledger_endpoint_defeq "zero original endpoints" :
+    ((I.translatedColumnSourceLedger 0 n k).target.fStage.strip i) =?=
+    ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)
+  ledger_endpoint_defeq "addition original endpoints" :
+    ((I.translatedColumnSourceLedger c (n + a) k).target.fStage.strip i) =?=
+    ((I.translatedColumnSourceLedger (a + c) n k).target.fStage.strip i)
+  ledger_endpoint_defeq "inverse original endpoints" :
+    ((I.translatedColumnSourceLedger (-a) (n + a) k).target.fStage.strip i) =?=
+    ((I.translatedColumnSourceLedger 0 n k).target.fStage.strip i)
+  trivial
+
+end
+end LeanFormal.IUT.Theorem311Source.OriginalInput
+
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ThetaPacketLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_theater
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_packet
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_q_positive
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_positive
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_nonzero
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_neg
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_log_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_log_volume_neg
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_q_eq_initial
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_eq_initial
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_log_volume_eq_initial
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLedgerAt_scale_product_eq_initial
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ThetaPacketLinkLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_target
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_log_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_scale_product
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_symm
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_horizontal
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_vertical
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketLinkLedgerAt_translation
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ThetaPacketFamilyLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_packet
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_permutation_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_permutation_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.thetaPacketFamilyLedger_permutation_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.PrimeStripDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_fStrip
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_dStrip
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_toD
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_action_mul
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_action_one
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_degree_one
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_degree_mul
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_total_degree_mul
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_total_degree_one
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_degree_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_action_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripDegreeLedgerAt_total_degree_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.PrimeStripLinkDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_target
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_link
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_dLink
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_projection
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_total_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_symm
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.primeStripLinkDegreeLedgerAt_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ColumnPacketDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger_packet
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger_fd_stage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger_q_positive
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger_scale_positive
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnPacketDegreeLedger_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ColumnStageSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fStage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_dStage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_packet
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fd_stage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_source_injective
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_q_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_scale_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_log_volume_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_total_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_dLink_projection
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_symm
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_fLink_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_dLink_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_dLink_symm
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnStageSourceLedger_dLink_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.ColumnProcessionSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_stage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_injective
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_d_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.columnProcessionSourceLedger_inclusion_total_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_source_eq
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_target_eq
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_link
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_naturality
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.TranslatedColumnSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_zero
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_add
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_inverse
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_projection
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_component_bijective
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_total_degree_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_map
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_component
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_total_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.SpokeColumnSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_map
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_component
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_q
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_scale
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_log_volume
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_degree
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_projection
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_total_degree_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_identity
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_comp
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_component_bijective
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_h1
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_top_cardinality
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_f_d_stage
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_horizontal_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_spoke_natural
+#print axioms LeanFormal.IUT.Audit.theorem311SourcePacketDegreeLedger
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff_transport
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_eq_iff_transport
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_source_eq
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_source_eq
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_target_eq
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivBundle_target_eq
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_trans
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_link
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_link
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_refl
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_naturality
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.sourceLedgerEquivTransport_naturality
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.TranslatedColumnSourceLedger.component_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.TranslatedColumnSourceLedger.component_source
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.TranslatedColumnSourceLedger.component_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.TranslatedColumnSourceLedger.component_action
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.SpokeColumnSourceLedger.component_source
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.SpokeColumnSourceLedger.component_source
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.SpokeColumnSourceLedger.component_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.SpokeColumnSourceLedger.component_action
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.horizontal_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.horizontal_natural
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.spoke_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.spoke_natural
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.top_cardinality
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.H1H2PacketDegreeLedger.top_cardinality
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_zero
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_zero
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_add
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_add
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_inverse
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_inverse
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.translatedColumnSourceLedger_action
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_action
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_action
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_comp
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.spokeColumnSourceLedger_comp
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_horizontal_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_horizontal_natural
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_spoke_natural
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.h1H2PacketDegreeLedger_spoke_natural
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.fLinkAt_refl
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.fLinkAt_refl
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.fLinkAt_trans
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.fLinkAt_trans
+#check @LeanFormal.IUT.Theorem311Source.OriginalInput.stageSpoke_comp_component
+#print axioms LeanFormal.IUT.Theorem311Source.OriginalInput.stageSpoke_comp_component

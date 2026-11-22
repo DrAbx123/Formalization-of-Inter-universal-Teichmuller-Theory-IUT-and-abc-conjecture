@@ -1,0 +1,8 @@
+import tmp.sheaf.n8.closure.EtaLGPProcessionNondegenerate
+open LeanFormal.IUT
+open LeanFormal.IUT.Theorem311Source
+#check SourceTheorem311Completion
+#check SourceTheorem311Completion.procession
+#check SourceTheorem311Completion.input
+#check SourceTheorem311Completion.qParameter
+#check SourceTheorem311Completion.source

@@ -1,0 +1,6 @@
+'LeanFormal.IUT.XiFPaper.Mzk1StepXICor312FullAssemblyActual.cor312_full' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1StepXICor312FullAssemblyActual.cor312_full_contract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

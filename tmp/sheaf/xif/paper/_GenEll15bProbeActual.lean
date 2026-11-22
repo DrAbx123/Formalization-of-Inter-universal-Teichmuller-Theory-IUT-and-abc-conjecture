@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll15bRRConsumptionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15bRRConsumptionActual.genEll15b_serrePairing
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15bRRConsumptionActual.genEll15b_cechRiemannRoch
+#print axioms LeanFormal.IUT.XiFPaper.GenEll15bRRConsumptionActual.genEll15bRows_length

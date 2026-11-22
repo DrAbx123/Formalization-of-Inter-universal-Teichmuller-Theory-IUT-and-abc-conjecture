@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22CritValueActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CritValueActual.aeval_cast_eval
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CritValueActual.CritValueInImageStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CritValueActual.critValueRows_length

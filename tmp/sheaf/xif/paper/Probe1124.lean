@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S865RootHaarFactorNormPowActual
+open LeanFormal.IUT LeanFormal.IUT.XiFPaper.PaperRootCompletionTensorActual LeanFormal.IUT.XiFPaper.S284RootUniformizerFactorActual LeanFormal.IUT.XiFPaper.S295GeneralHaarFactorActual
+#check exists_unit_uniformizer_zpow
+#check @exists_unit_uniformizer_zpow
+#check rootUniformizerField

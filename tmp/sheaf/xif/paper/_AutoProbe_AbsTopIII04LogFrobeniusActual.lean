@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII04LogFrobeniusActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII04LogFrobeniusActual.absTopIII_logFrobenius_scale
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII04LogFrobeniusActual.absTopIII_logFrobenius_unit_landing
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII04LogFrobeniusActual.def31IVRows

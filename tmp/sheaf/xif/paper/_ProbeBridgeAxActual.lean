@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1HT82UnderIntGenQVActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiFiniteFiberActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HT82UnderIntGenQVActual.underIntGen_natAbs_eq_residueCharacteristic
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HT82UnderIntGenQVActual.underIntGen_natAbs_eq_qVFamTensorP
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiFiniteFiberActual.finite_preimage_singleton
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiFiniteFiberActual.finite_preimage_finset

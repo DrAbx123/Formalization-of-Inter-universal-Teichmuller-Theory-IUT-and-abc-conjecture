@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII05Section0ObjectsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.OrderwiseConnected
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.CountablyOrdered
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05Section0ObjectsActual.isoUnivInt

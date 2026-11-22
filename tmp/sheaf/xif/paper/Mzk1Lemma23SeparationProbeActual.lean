@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma23SeparationActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23SeparationActual.s3135_separation_rat
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23SeparationActual.s3135_separation_rat_value

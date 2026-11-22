@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII01LogShellActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII01LogShellActual.absTopIII_sourceLogShellStar_eq_logShellScale
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII01LogShellActual.absTopIII_logShell_zero_mem
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII01LogShellActual.absTopIII_logShell_add_mem

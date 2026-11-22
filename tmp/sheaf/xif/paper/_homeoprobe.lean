@@ -1,0 +1,9 @@
+import Mathlib
+#check LinearEquiv.isHomeomorph
+#check LinearEquiv.toHomeomorph
+#check IsHomeomorph
+#check Homeomorph.isCompact_preimage
+#check IsHomeomorph.isCompact_preimage
+#check IsHomeomorph.isOpen_preimage
+#check IsCompact.measure_lt_top
+#check IsOpen.measure_pos

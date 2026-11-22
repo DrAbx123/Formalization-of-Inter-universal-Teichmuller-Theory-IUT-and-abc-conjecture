@@ -1,0 +1,20 @@
+/- Fresh probes: WQuotient/ActualRamified/PDAssembly/Completion/UnitValuation (abc) -/
+import tmp.sheaf.xif.paper.Mzk1Ind1WQuotientLatticeActual
+import tmp.sheaf.xif.paper.Mzk1ActualRamifiedDataActual
+import tmp.sheaf.xif.paper.Mzk1IVThm110PrincipalDimAssemblyActual
+import tmp.sheaf.xif.paper.Mzk1CompletionTowerActual
+import tmp.sheaf.xif.paper.Mzk1IVThm110UnitValuationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1WQuotientLatticeActual.WQuotientLatticeIdentificationRequired
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.actualFn_spec
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.hdecompOf
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.chosenA
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.chosenC
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.chosenSpec
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.actualDataCore_hasCorrection
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.actualDataCore_hasRes
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualRamifiedDataActual.actualDataCore_hasLogIdx
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalDimAssemblyActual.principalDim_log_scaling_of_decomp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionTowerActual.commonPrimeTower_scalarTower
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionTowerActual.commonPrimeTower_moduleFinite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitValuationActual.zpUnit_valuation_eq_zero

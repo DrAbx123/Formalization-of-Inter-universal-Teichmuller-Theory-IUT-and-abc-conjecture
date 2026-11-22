@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2726ReductionFiveActual
+#print axioms LeanFormal.IUT.XiFPaper.S2726ReductionFiveActual.S2726_epsilonComparison
+#print axioms LeanFormal.IUT.XiFPaper.S2726ReductionFiveActual.S2726_bridge

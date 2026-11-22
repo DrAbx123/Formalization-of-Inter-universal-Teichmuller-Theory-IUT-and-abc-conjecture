@@ -1,0 +1,3 @@
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:61:42: error: Invalid argument name `l` for function
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:71:42: error: Invalid argument name `l` for function
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:72:44: error: Invalid argument name `l` for function

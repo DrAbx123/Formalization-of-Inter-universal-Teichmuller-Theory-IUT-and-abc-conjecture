@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3131ThetaBoundToHeightWeightReuseActual
+import tmp.sheaf.xif.paper.S3131IQCarrierModelInterfaceReuseActual
+import tmp.sheaf.xif.paper.S3131NormalizedVolumeComparisonPriorArtActual
+import tmp.sheaf.xif.paper.S3131VendorAcceptanceShapeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131ThetaBoundToHeightWeightReuseActual.v2Data_gives_normalizedVolumeComparison
+#print axioms LeanFormal.IUT.XiFPaper.S3131IQCarrierModelInterfaceReuseActual.S3131IQCarrierModelAssets_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131NormalizedVolumeComparisonPriorArtActual.S3131NormalizedVolumeComparisonPriorArt_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131VendorAcceptanceShapeActual.S3131VendorAcceptanceShape_length

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.H4HullThetaCertificateActual
+
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_iqHullRealVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_hull_logVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_exists_hull_eq_ofReal

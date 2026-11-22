@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1563ResidueNormBaseProofActual
+import Mathlib.RingTheory.Ideal.Operations
+#check Rat.IsIntegralClosure.intEquiv
+#check Rat.HeightOneSpectrum.natGenerator
+#check Rat.HeightOneSpectrum.span_natGenerator
+#check Ideal.quotientEquiv
+#check Ideal.absNorm
+#check Ideal.absNorm_apply
+#check Int.card_ideal_quot

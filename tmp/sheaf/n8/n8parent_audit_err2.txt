@@ -1,0 +1,2 @@
+tmp\sheaf\n8\N8Parent.lean:39:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:44:8: warning: declaration uses `sorry`

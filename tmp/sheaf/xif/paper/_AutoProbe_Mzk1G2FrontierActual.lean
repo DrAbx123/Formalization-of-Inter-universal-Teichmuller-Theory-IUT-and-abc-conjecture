@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G2FrontierActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2FrontierActual.bridgeInterface_of_frontierRoute
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2FrontierActual.abcConjecture_of_frontierRoute
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2FrontierActual.abcConjecture_of_frontier_direct

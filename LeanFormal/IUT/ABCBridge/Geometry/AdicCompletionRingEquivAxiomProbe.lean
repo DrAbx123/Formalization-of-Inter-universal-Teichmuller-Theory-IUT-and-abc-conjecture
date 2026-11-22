@@ -1,0 +1,9 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceAdicCompletionRingEquiv
+
+open LeanFormal.IUT.NumberFieldFinitePlace
+
+#print axioms isAdicComplete_maximalIdeal_adicCompletionIntegers
+#print axioms adicCompletionRingEquivAdicCompletionIntegers
+#print axioms adicCompletionRingEquivAdicCompletionIntegers_of
+#print axioms factorPow_adicCompletion_evalₐ
+#check @adicCompletionRingEquivAdicCompletionIntegers_of

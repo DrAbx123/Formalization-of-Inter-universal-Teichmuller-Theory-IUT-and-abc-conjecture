@@ -1,0 +1,2 @@
+import Mathlib.LinearAlgebra.PiTensorProduct.Basic
+#check PiTensorProduct.subsingletonEquiv

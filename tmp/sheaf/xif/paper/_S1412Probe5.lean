@@ -1,0 +1,8 @@
+import Mathlib.LinearAlgebra.Finsupp.LinearCombination
+import Mathlib.Tactic
+#check Finsupp.linearCombination
+#check Finsupp.linearCombination_apply
+#check Finsupp.linearCombination_single
+#check Finsupp.linearCombination_single_index
+#check Finsupp.linearCombination_apply_of_mem_supported
+#check Finsupp.linearCombination_apply_of_notMem

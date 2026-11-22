@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1P58iiBridgeRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiBridgeRowsActual.bridge_codomainKummerContained
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiBridgeRowsActual.bridge_logShell_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiBridgeRowsActual.bridge_kummerImages_mem

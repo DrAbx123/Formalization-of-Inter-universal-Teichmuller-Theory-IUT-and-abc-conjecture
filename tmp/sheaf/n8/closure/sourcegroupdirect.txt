@@ -1,0 +1,23 @@
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:33:10: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:34:2: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual.action1`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:37:2: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual.action2_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:33:10: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:36:2: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual.action2`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:35:2: warning: The namespace `EtaSourceGroupActual` is duplicated in the declaration `ABCBridge.N8.EtaSourceGroupActual.EtaSourceGroupActual.action1_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceGroupActual.lean:73:5: warning: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

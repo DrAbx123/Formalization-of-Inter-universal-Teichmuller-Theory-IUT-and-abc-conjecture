@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1R9HullRayLatticeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1R9HullRayLatticeActual.r9Ray_lattice_bundle

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S1041GlobalizedAssemblyActual
+#print axioms LeanFormal.IUT.XiFPaper.S1041GlobalizedAssemblyActual.s1041GlobalFinalCor312
+#check LeanFormal.IUT.XiFPaper.S1041GlobalizedAssemblyActual.s1041GlobalFinalCor312

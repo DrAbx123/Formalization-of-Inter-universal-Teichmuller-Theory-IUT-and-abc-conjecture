@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull12Ob9BoundTransferActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull12Ob9BoundTransferActual.hull12_upperBound_transfer
+#print axioms LeanFormal.IUT.XiFPaper.Hull12Ob9BoundTransferActual.hull12_upperBound_transfer_base
+#print axioms LeanFormal.IUT.XiFPaper.Hull12Ob9BoundTransferActual.hull12Rows

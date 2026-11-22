@@ -1,0 +1,8 @@
+import LeanFormal.IUT.IUTIII.Theorem311.SourceArithmeticHolomorphicLanding
+import LeanFormal.IUT.IUTIII.Theorem311.SourceKummerEvaluationArrows
+#check FPrimeStrip
+#check SourceProcessionBoundary.Input
+#check SourceKummerArrow
+#check sourceQPilotStrip
+#check SourceOneColumnArithmeticHolomorphicStructure
+#check SourceArithmeticVectorBundle

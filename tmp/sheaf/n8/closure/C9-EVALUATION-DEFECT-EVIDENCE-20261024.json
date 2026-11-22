@@ -1,0 +1,103 @@
+{
+  "task": "C9-EVALUATION-DEFECT-ATTACK-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "consumer": "Original fixed-native-q output coverage P6; source-allowed escape from maximal bad containers",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+    "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+  },
+  "script": {
+    "path": "tmp/sheaf/n8/closure/c9_evaluation_defect_20261024.py",
+    "sha256": "89a3224e8a02bea62bbcd43ffd68ec5dd08f8ec0aeba9b7d42cf6a7b1271eaae",
+    "command": "python tmp/sheaf/n8/closure/c9_evaluation_defect_20261024.py",
+    "exit_code": 0
+  },
+  "certificate": {
+    "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-CERTIFICATE-20261024.json",
+    "sha256": "01664da45d837c11f5eaa60bdf33cd2efd7f79948202ba14e9115c8ef3b8c6df",
+    "matrix_cases": 216,
+    "procession_coefficient_cases": 12,
+    "compressed_tensor_example_dimension": 1048576,
+    "all_assertions_passed": true,
+    "scope": "Actual local-field tensor lattices and exact algebra; no complete global initial Theta-data certificate"
+  },
+  "reused_records": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+      "sha256": "ec0bbb35abb1d28128a958ecbdaad27d600dfe81e1738af70ec28c0bb439e704",
+      "use": "Original target and the distinction between a global object and a calibrated global linear comparison"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-FOUR-STEPS-SOURCE-ATTEMPT-20261024.md",
+      "sha256": "f3835796a4315ed5c8a0a0dce36a972fb42cbef8d1abe8e798b763644e8a8dc2",
+      "use": "Actual fixed Ind2 scalar classification and determinant formula; not rebranded as new results"
+    }
+  ],
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "version": "December 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20II.pdf",
+      "loci": ["Corollary2.5", "Remark2.5.1(i)", "Corollary4.6(iv)-(v)", "Corollary4.8(iii)", "Remarks4.8.1-4.8.2", "Corollary4.10(ii)"]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "version": "May 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf",
+      "loci": ["Proposition1.2", "Remark3.1.1(ii)", "Propositions3.4-3.5", "Proposition3.7(v)", "Proposition3.9(i)-(iii)", "Remark3.9.5(vii)(Ob3)-(Ob4),(x)", "Remark3.9.7", "Remark3.10.2", "Theorem3.11(i)-(ii)", "Corollary3.12 statement and proof(x)-(xi)"]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "version": "April 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20IV.pdf",
+      "loci": ["Propositions1.1-1.2", "Propositions1.4-1.5", "Theorem1.10 proof(iv)-(viii)", "Remark1.10.7(ii)"],
+      "no_circular_use": "Only local outer-container inclusions and coefficients used; the final invocation of III Cor3.12 is not used to prove the target"
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Topics in Absolute Anabelian Geometry III.txt",
+      "sha256": "9926aea8b283c8c9e34750e1d3aa1618beb2650ecff5325d224c4fe627b44388",
+      "version": "November 2015",
+      "loci": ["Definition5.4(iii)"]
+    }
+  ],
+  "proved_in_natural_language": [
+    "Actual Gaussian seed ideals have weighted relative determinant coefficient ell(ell+1)/12; original reference and common tensor power do not remove j squared",
+    "Odd unramified integral-valuation blocks have O_E equal to the log-shell and zero gain under the entire lattice-automorphism outer group",
+    "For full lattices A,L, the union of Aut(L)-translates of A is exactly p^t L with t the minimum relative basis valuation",
+    "Arbitrary finite chains of independent full linear outer groups admit an exact scalar-content recurrence; source restrictions give an upper bound only",
+    "For K=Q_p(sqrt(p)), all r, the tensor-order conductor, log lattice, shell, Gaussian images and full-GL outer hulls have explicit formulas",
+    "Taking the O_E-hull too early can strictly enlarge a later outer orbit; a twenty-factor example has an extra 9 log p",
+    "In a uniform quadratic local procession, the complete computed outer container can lie strictly below the native-q local contribution"
+  ],
+  "scope_guards": [
+    "The full lattice automorphism group is an outer relaxation, not a new source realization",
+    "The whole log-shell is used as a source-derived upper container, not claimed to be filled by actual outputs",
+    "Premature hull is a valid looser upper estimate, but cannot be credited as an actual output gain",
+    "Uniform local tuples are additional hypotheses of local auxiliary statements, not new restrictions on the original global target",
+    "The twenty-factor example is a genuine local Tate/tensor configuration but is not certified as complete initial Theta-data",
+    "The scalar recurrence excludes nonlinear logs and source constraints not represented by its arrows",
+    "Comparison to Q at the numeric seed level does not construct the missing target-column calibrated q arrow"
+  ],
+  "open": [
+    "Source realization of the global fixed-native-q output family with original gluing and normalization",
+    "An actual global principal relation or source-authorized compensation for the computed deficits",
+    "Source escape from each maximal bad container in the original all-input quantifiers"
+  ],
+  "checks": {
+    "exact_python": "passed",
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "actual_IUT_refutation_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

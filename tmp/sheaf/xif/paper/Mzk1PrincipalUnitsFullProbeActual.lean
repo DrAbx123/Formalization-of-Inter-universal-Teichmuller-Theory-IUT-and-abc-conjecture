@@ -1,0 +1,9 @@
+/- Read-only probes for PrincipalUnitsResidue full (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110PrincipalUnitsResidueActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.norm_lt_one_iff_valuation_lt_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.integersToA
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.integersUnitsEquivUnitGroup
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.principalUnits_eq_comap_principalUnitGroup
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.quotientEquivResidueUnits
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110PrincipalUnitsResidueActual.card_quotient_eq_card_residueUnits

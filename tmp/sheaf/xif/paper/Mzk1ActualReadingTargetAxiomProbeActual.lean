@@ -1,0 +1,9 @@
+/- Copyright (c) 2026 LeanFormal contributors. All rights reserved. -/
+import tmp.sheaf.xif.paper.Mzk1ActualReadingTargetActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qVFamCoefficient_mul_log_le_baseQLogMagnitude
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qVFamDefaultNorm_le_qVFamNormalizedNorm
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.log_qVFamDefaultNorm_le_log_normalized
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qNorm_le_hRoot
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qPilotLogVolumeReading_le_thetaPilotHullLogVolumeReal_of_transport
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.paperCor312Readout_of_transport

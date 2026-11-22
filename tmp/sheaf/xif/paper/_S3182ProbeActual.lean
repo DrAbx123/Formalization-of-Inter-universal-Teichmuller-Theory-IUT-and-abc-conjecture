@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3182Cor312HullDetAssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3182Cor312HullDetAssemblyActual.cor312_hullDet_conditional
+#print axioms LeanFormal.IUT.XiFPaper.S3182Cor312HullDetAssemblyActual.cor312_fieldScaling_component
+#print axioms LeanFormal.IUT.XiFPaper.S3182Cor312HullDetAssemblyActual.cor312DeepStepRows_length

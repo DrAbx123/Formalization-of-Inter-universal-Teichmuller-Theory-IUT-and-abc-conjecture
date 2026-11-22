@@ -1,0 +1,3 @@
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.SourceQlThetaLineBundleFromCurve
+#check LeanFormal.IUT.Theorem311Source.SourceDefinition31Data
+#check LeanFormal.IUT.SourceDefinition31Data

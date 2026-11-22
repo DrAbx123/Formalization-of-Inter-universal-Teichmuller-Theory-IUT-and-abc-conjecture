@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128BasicOpenLocalizationUnitActual
+open LeanFormal.IUT.XiFPaper.S3128BasicOpenLocalizationUnitActual
+#print axioms S3128NfInv_image_isUnit

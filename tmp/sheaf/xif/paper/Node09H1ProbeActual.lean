@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.Node09H1aProductFormulaActual
+import tmp.sheaf.xif.paper.Node09H1bVolumeActual
+import tmp.sheaf.xif.paper.Node09H1bTensorVolumeActual
+import tmp.sheaf.xif.paper.Node09H1GenericDVRDecompositionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1aProductFormulaActual.submodule_eq_pi_coord
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bVolumeActual.vP5
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bVolumeActual.residueDegree_pos
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bTensorVolumeActual.h1b_signed_volume_eq_relativeHaarLog
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1GenericDVRDecompositionActual.ideal_eq_span_singleton
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1GenericDVRDecompositionActual.submodule_eq_pi_coord_generic

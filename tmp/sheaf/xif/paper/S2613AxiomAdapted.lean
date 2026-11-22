@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2613DetCyclotomicInterfaceActual
+#print axioms LeanFormal.IUT.XiFPaper.S2613DetCyclotomicInterfaceActual.S2613DetSurjective_of_compat

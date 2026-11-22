@@ -1,0 +1,409 @@
+{
+  "task": "n8-c9-hull-carrier-compatibility",
+  "date": "2026-10-26",
+  "stage": "sheaf-stage1",
+  "status": "arithmetic-transport-closed-source-gate-open",
+  "record": "tmp/sheaf/n8/closure/C9-CARRIER-ONE-SIDED-REUSE-20261026.md",
+  "scope": "Cross-date natural-language reuse of actual arithmetic carrier transport and the remaining source landing obligation.",
+  "search_scope": [
+    "logs/coordination/20261016-20261021 relevant carrier, hull, normalization and source records",
+    "tmp/sheaf/n8/closure/C9* records dated 20261024-20261026",
+    "LeanFormal/IUT/ABCBridge/Geometry arithmetic hull transport modules",
+    "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull transport modules",
+    "IUT III source text at Theorem 3.11, Remark 3.11.1 and Corollary 3.12 xi-c--xi-g",
+    "dag, coord, AUDIT_LEDGER",
+    "Final bounded source check: III Remark3.9.5 cQ3/cQ4/Ob3-9, Remark3.10.2/3.11.1, Cor3.12 xi-d-f; 10-24 local-global and marked-image correction chain; FrdI Def1.2 and FrdII Remark5.6.3"
+  ],
+  "reused_evidence": [
+    {
+      "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductHullTransport.lean",
+      "result": "A continuous topological ring equivalence transports the product unit region and the holomorphic hull in both directions."
+    },
+    {
+      "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductLogVolumeTransport.lean",
+      "result": "Haar scaling cancels in unit-relative normalized log-volume; the hull specialization preserves the same readout under the stated compactness/nondegeneracy conditions."
+    },
+    {
+      "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticTupleHullTransport.lean",
+      "result": "Actual finite-place tensor tuple decompositions have compact finite hulls and decomposition-independent unit-relative normalized log-volume."
+    },
+    {
+      "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticIQHullTransport.lean",
+      "result": "Actual arithmetic IQ hull transport is available for the finite-place packet objects in that module."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-IND1-GLOBAL-20261025.md",
+      "result": "The earlier symplectic target equations (11)-(14) are conditional and were withdrawn as an unconditional target proof; TC-A through TC-H and TC-S remain required."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-TC-EQUALITY-20261025.md",
+      "result": "The selected source subfamily supplies a lower bound only; equality or an upper bound for the full target hull is not implied."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-NORMALIZATION-DECISION-CORR2-20261025.md",
+      "result": "Reference normalization and conditional p=12301 numerical values were corrected; no global C or branch selection was constructed."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+      "result": "cQ3 collection objects do not imply a global effective linear comparison; actual local comparison ledger h-Q=S-kappa."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-MARKED-IMAGE-DESCENT-20261024.md",
+      "result": "User correction: keep the original fixed-C contradiction; kappa=0 and exact q attainment are stronger than needed, while actual S>=kappa or a source escape would suffice."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-CAN-A3-COMPATIBILITY-DERIVATION-20261025.md",
+      "result": "Not a proved donor: unit action/trivialization and unit-quotient claims in cQ3 Step3 are false; cQ4 translation model is not the source construction."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-REVIEW-COR312-LOOP-20261025.md",
+      "result": "Earlier rejection of replacing the actual formal-quotient loop and xi-f witness by source paraphrase."
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-REVIEW-PAPER-XIF-20261025.md",
+      "result": "xi-f inclusion quotation is not an independent derivation; determinant/reference and actual loop remain necessary source work."
+    }
+  ],
+  "natural_language_result": {
+    "proved": [
+      "For an actual finite Qp-algebra equivalence, integral regions and fractional-ideal hulls transport exactly.",
+      "Haar scaling cancels in the signed unit-relative log-volume.",
+      "If reference lattices differ, the only remaining correction is the exact finite relative-index log term; it cannot be chosen to fit a desired gap.",
+      "A source-certified subfamily lower bound, or a genuine signed epsilon approximation, is sufficient for Q <= h without exact q-output attainment."
+    ],
+    "open": [
+      "The actual final-evaluation output/rigidification family has not been landed in the finite arithmetic carrier.",
+      "The q-pilot readout has not been identified with the same determinant/procession normalization on that carrier.",
+      "No actual target-family witness or signed lower certificate has been constructed from the current Input-boundary wrapper and the reused IPL interfaces; no full-IUT independence result is asserted.",
+      "The current degree-faithful value-monoid hull is top-volume, so it cannot be used as the finite paper hull."
+    ]
+  },
+  "numeric_reuse": {
+    "b3_BI_surplus": "(12/41)*log(12301) = approximately 2.7563226845, conditional on the B=I branch and all source/reference compatibility conditions.",
+    "b273": "The same selected subfamily remains short by (38463/41)*log(12301) in the corrected conditional bookkeeping; it is not a counterexample.",
+    "status": "local-or-conditional-diagnostic-only",
+    "checked_rows": [
+      {
+        "b": 3,
+        "Q_over_log_p": "-3/41",
+        "L_A_over_log_p": "-411/41",
+        "L_B_over_log_p": "9/41",
+        "Q_minus_L_B": "-2.756322684546961467084551428530547327158",
+        "interpretation": "conditional-profile arithmetic only; not an actual allowed-output certificate"
+      },
+      {
+        "b": 273,
+        "Q_over_log_p": "-273/41",
+        "L_A_over_log_p": "-39156/41",
+        "L_B_over_log_p": "-38736/41",
+        "Q_minus_L_B": "8834.703284644148242372758466297536820373",
+        "interpretation": "conditional-profile arithmetic only; not an actual allowed-output certificate"
+      }
+    ],
+    "b_plus_41_deficit_increment_over_log_p": "285/2"
+  },
+  "validation": {
+    "statement_compiles": "targeted donor/diagnostic files exit 0; no new capsule statement compiled",
+    "proof_body_checked": "targeted donor/diagnostic files checked by lake env lean; no new source gate proof body",
+    "kernel_closed": "C1FiniteHullObstruction rechecked with standard axioms; donor transitive axioms not re-probed in this run",
+    "target_accepted": false,
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "document_json_paths": "passed",
+    "two_profile_table_exact_rationals": "passed; checks the recorded table only, does not certify source allowedness",
+    "narrow_lean_commands": {
+      "command": "lake env lean <file>",
+      "files": [
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductHullTransport.lean",
+        "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductLogVolumeTransport.lean",
+        "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticTupleHullTransport.lean",
+        "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticIQHullTransport.lean",
+        "tmp/sheaf/n8/closure/C1FiniteHullObstruction.lean"
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "axiom_probe": "C1FiniteHullObstruction output only propext, Classical.choice, Quot.sound",
+      "scope": "targeted compile only; no Project build or comparator"
+    },
+    "new_lean_validation": "passed for five targeted files",
+    "source_fingerprints": "refreshed_after_final_note_and_node_edits; checked_existing_compiled_donor_hashes_unchanged",
+    "independent_review": "not_run; natural-language self-review only"
+  },
+  "next_action": "Continue IND1-GLOBAL SD4/TC-A,B,E,F on the existing uniform-profile subfamily: determine whether B=I is realized by an actual procession/Kummer/evaluation branch for fixed C/gluing; exhibit its actual regions, local multipliers and reference lattices, then compute delta and the global S/kappa ledger including the archimedean terms. A cQ3 collection object alone is insufficient. For the original quantified comparison, derive S>=kappa from the source or construct a genuine escape; do not require exact q attainment or kappa=0 as necessary conditions.",
+  "source_versions": [
+    {
+      "file": "tmp/sheaf/n8/closure/C9-CARRIER-ONE-SIDED-REUSE-20261026.md",
+      "sha256": "8fe53a82059cbd583f7e287330847a046c44febdbfda00d0e30fe7ec9b30acbb",
+      "bytes": 25117
+    },
+    {
+      "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductHullTransport.lean",
+      "sha256": "21c1ac3313bdd3a7c3a12b7d2424e24e2f649cf0424c84544d86c7a7425d8db9",
+      "bytes": 3677
+    },
+    {
+      "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductLogVolumeTransport.lean",
+      "sha256": "92ad39ab314e665580893b579e29c1742ad5ddee0aca22d2bfebbab260343df1",
+      "bytes": 4289
+    },
+    {
+      "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldProductUnitRegionMaps.lean",
+      "sha256": "3335a4ee4789324e1c6c954cbe515e07cf490d7b5be415c4c622d64a4efb5de4",
+      "bytes": 3189
+    },
+    {
+      "file": "LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean",
+      "sha256": "1cf955141376e777bacf47cffbd4630b83751ce1549584abf29c7a9efa96a210",
+      "bytes": 3290
+    },
+    {
+      "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticTupleHullTransport.lean",
+      "sha256": "46370703af6ddb9c9d2f7222dea480a4554e3544939c01129bec590a0a53e762",
+      "bytes": 5204
+    },
+    {
+      "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticIQHullTransport.lean",
+      "sha256": "3adf5baabc07f7ddcfe0d9501fb8635138267b4f9ae34f270fdb7c64e96ed994",
+      "bytes": 5914
+    },
+    {
+      "file": "tmp/sheaf/n8/Group6Normalization.lean",
+      "sha256": "c64b6ff45093071e163962dc5175d33fe60100e497e2417532b6222b1965f931",
+      "bytes": 4404
+    },
+    {
+      "file": "logs/coordination/iq-carrier-alignment-20261016.md",
+      "sha256": "6c3c6b18d4bcdc2a09689221252a92b5a98b05245f87c5566332a530f6ebb5fb",
+      "bytes": 12776
+    },
+    {
+      "file": "logs/coordination/hull-determinant-log-volume-20261016.md",
+      "sha256": "e2734ad6b12a1f6a87b850db86054d4ad103b8e702fb0a51eac47c9bae3a7b84",
+      "bytes": 17344
+    },
+    {
+      "file": "logs/coordination/source-polyisomorphism-gap-20261017.md",
+      "sha256": "217a6ed77e6d6b85e30c7a87011f6f60cc0c77a36b86b50352edefe012d90a2a",
+      "bytes": 23179
+    },
+    {
+      "file": "logs/coordination/integral-log-shell-index-arithmetic-20261017.md",
+      "sha256": "a3a9b30ab068cf0824ec82a9600485879413a842405978498b8656875ec07065",
+      "bytes": 12907
+    },
+    {
+      "file": "logs/coordination/n8-distilled-06-hull-degree-comparison-20261018.md",
+      "sha256": "f123821536e0e2c4609bc409ec9a18278ebcace33dfd2399457578b5c3d9e153",
+      "bytes": 15738
+    },
+    {
+      "file": "logs/coordination/theta-link-evaluation-sync-20261020.md",
+      "sha256": "cb4e5a7cba7721254cfa6e585e9be13fbae0a7e370cf1c888d6d9aac6a1c0375",
+      "bytes": 4220
+    },
+    {
+      "file": "logs/coordination/l04-implementation-playbook-20261021.md",
+      "sha256": "1b4bcf4241b32ea2ee6be86f7016961b0c5f3ff3eabedc207f4a946ad6705344",
+      "bytes": 27866
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-CONTRADICTION-ATTACK-20261024.md",
+      "sha256": "bf2f92bc3e99497c1291e608cb9f6f499c4f36314a9eefb470ece529d80714ad",
+      "bytes": 16685
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-STRICT-DEFICIT-LOOP-20261024.md",
+      "sha256": "610aad551d02e5480b1c79460b75dc8ed040dd3fec93b8a64e0281e57d865a90",
+      "bytes": 17042
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-JH-OUTPUT-REGION-20261025.md",
+      "sha256": "21f18bdf5689c8e93e7ef9ed305cae00a1ab8169de2b76bcfecab39debadd75c",
+      "bytes": 18755
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-PROCESSION-ORBIT-20261025.md",
+      "sha256": "b7a45e8c28bbe42461476ec0b4eb2acf889a0202a9439dde78b3410e34e329a5",
+      "bytes": 20523
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FIXED-GLUING-SWAP-20261025.md",
+      "sha256": "f734bc7bd33d8aa605315ad7e16709908722186ac27eece0e5a5c10cb10b1b19",
+      "bytes": 22447
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-TAME-LOG-DOMAIN-20261025.md",
+      "sha256": "23b3514b94972de511f1b17e23ab3da832ed5bc63e89daca3875adeb07961f06",
+      "bytes": 28867
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-IND1-GLOBAL-20261025.md",
+      "sha256": "94785726ee890f6bc672861c570238f040636a6273a7722b2621949c48af9ab8",
+      "bytes": 26630
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-GLOBAL-ASSEMBLY-BINDING-20261025.md",
+      "sha256": "0888f47dc5d5dc21410f39ff7a81d4315e55fabd84e882bc3d17fdb27a25d9fa",
+      "bytes": 9600
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-TARGET-CONTAINER-NEW-20261025.md",
+      "sha256": "736fc896b961dede3363d3f20aa7d4330b059870b20b2608c80e059b3f24f862",
+      "bytes": 10261
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-ADJUDICATE-HAFULL-20261025.md",
+      "sha256": "10501f2a08491ba5289397658e903b7537e5ca0bf6b9ea72f23ecc9a271377bd",
+      "bytes": 6778
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-TC-EQUALITY-20261025.md",
+      "sha256": "08691bb7215ac6f93d740088f7ed7a033b5339535c039235c8581cb8cfe6550c",
+      "bytes": 6407
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-NL-MASTER-20261025.md",
+      "sha256": "1bbf30645690c4d7e106ea5ece1beecf8ae967befdec9367c8ae6b68eeff6765",
+      "bytes": 9574
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-NORMALIZATION-DECISION-CORR2-20261025.md",
+      "sha256": "ee3d8ef9aecb98733e7b350935aad40bc98dc6ca07e3f3cfcb5a0ef2e31de9c6",
+      "bytes": 6863
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-REVIEW-THREE-TRANSPORT-20261025.md",
+      "sha256": "af910e98d44aa365ebd0b7a8f2cb548ece58e9ade4828f71b63859a707b25544",
+      "bytes": 7426
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-HULL-CARRIER-HISTORY-PROOF-20261025.md",
+      "sha256": "10e382607eaa5f4ece71d148a76c65b44952e079c60cd020dd978803bb8c762d",
+      "bytes": 12056
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "bytes": 564969
+    },
+    {
+      "file": "tmp/LANA_report_202607.txt",
+      "sha256": "89d3d7acf548ad8d98841b3f8b2a085f1f35dc1a3f37006f302a4971320ea80a",
+      "bytes": 145052
+    },
+    {
+      "file": "dag/nodes/n8-c9-hull-carrier-compatibility.json",
+      "sha256": "36e6251145982372065d99773cd0a943d1cbd41ce541c25e44325af52a073dfe",
+      "bytes": 4990
+    },
+    {
+      "file": "dag/nodes/n8-c9-final-evaluation-capsule.json",
+      "sha256": "c051712a260acb1c2fbc58fc36146872356c27e9e23d7965a204a92a5facb9bd",
+      "bytes": 8616
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C1FiniteHullObstruction.lean",
+      "sha256": "7d25943dfdfc6796bbffe8fef6e8875d585b1f0e6eb51314804e349763e7e2fb",
+      "bytes": 1337
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+      "sha256": "ec0bbb35abb1d28128a958ecbdaad27d600dfe81e1738af70ec28c0bb439e704",
+      "bytes": 21045
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-MARKED-IMAGE-DESCENT-20261024.md",
+      "sha256": "5485c9195c32d75f1fc4560b63f7befa5d37e48223b6102de1678b0f4701b521",
+      "bytes": 9565
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-CAN-A3-COMPATIBILITY-DERIVATION-20261025.md",
+      "sha256": "6d2166f51cbf1665901a1fe086a0af6af7bbeb1a4def6b5e3f9161f65b74f4bf",
+      "bytes": 5042
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-REVIEW-COR312-LOOP-20261025.md",
+      "sha256": "40213f9b29011d9d0bc0b481f681ffb99dca67e6f6d8b05ee84e8bcfd7543c69",
+      "bytes": 12176
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-REVIEW-PAPER-XIF-20261025.md",
+      "sha256": "c82bdf855fec615eedc2fbe44f7933830a4b71716116e01f7e53c9312c108766",
+      "bytes": 11494
+    },
+    {
+      "file": "papers/motizuki_corpus/text/The Geometry of Frobenioids I.txt",
+      "sha256": "34d0cbd7a3e583d77745e43d0a2d6ebd37626f66983d4989727e6c4ec78f3fac",
+      "bytes": 330785
+    },
+    {
+      "file": "papers/motizuki_corpus/text/The Geometry of Frobenioids II.txt",
+      "sha256": "eb58a3367c201e41288ddb4f3da6ecd8688a604b4fbce5fcc1f28a0b04f838da",
+      "bytes": 190615
+    }
+  ],
+  "version_scope": "Content fingerprints of cited/reused files, not a claim that each was newly read in full or rebuilt. The primary note identifies inherited versus newly inspected evidence.",
+  "natural_language_gate_attempt_20261026": {
+    "record_section": "C9-CARRIER-ONE-SIDED-REUSE-20261026.md section 10",
+    "source_ranges_checked": {
+      "II_Definition_4_9_viii": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt, extracted lines around 10300-10320",
+      "III_Remark_2_4_2_v_vi": "tmp/sheaf/n8/closure/sources/IUT-III.txt, extracted lines 5034-5200",
+      "III_Remark_3_9_5_Ob1_Ob9_cQ3_cQ4": "tmp/sheaf/n8/closure/sources/IUT-III.txt, extracted lines 7527-8499",
+      "III_Remark_3_10_2": "tmp/sheaf/n8/closure/sources/IUT-III.txt, extracted lines 8917-9160",
+      "III_Remark_3_11_1_and_Corollary_3_12_xi_d_xi_f": "papers/motizuki_corpus/text/source_audit/IUTIII_Theorem311_Corollary312_pages.plain.txt, physical pages 181-185"
+    },
+    "result": "The paper's actual IQ/O carrier, hull, weighted determinant/reference and comparison Frobenioids are defined. Full-strip IPL transports the q-pilot isomorphism class. Neither this nor cQ3 collection data establishes that the fixed q mark is in the restricted further-rigidification output family; xi-f asserts that coverage separately.",
+    "reused_corrections": [
+      "C9-LOCAL-GLOBAL-DESCENT-ATTACK and C9-MARKED-IMAGE-DESCENT: a local-global collection is not an automatic global marked arrow; h-Q=S-kappa and S>=kappa is sufficient, kappa=0 is not necessary.",
+      "C9-REVIEW-COR312-LOOP and C9-REVIEW-PAPER-XIF: the closed-loop assertion and xi-f membership are separate source assertions, not consequences derived merely from cQ3/cQ4."
+    ],
+    "status": "paper_carrier_subproblem_natural_language_complete; full_fixed_q_hull_compatibility_open",
+    "independent_review": "not_run",
+    "lean_validation": "not_run"
+  },
+  "git_head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "working_tree": "Pre-existing modified and untracked files; HEAD alone does not identify these sources. Use the per-file SHA256 values.",
+  "cq3_followup": {
+    "result": "source_gate_still_open",
+    "source_ranges": {
+      "IUT_III_cQ3_cQ4": [
+        8404,
+        8499
+      ],
+      "IUT_III_closed_loop": [
+        8525,
+        8574
+      ],
+      "IUT_III_Rem3102": [
+        9067,
+        9147
+      ],
+      "IUT_III_IPL_evaluation": [
+        9683,
+        9739
+      ],
+      "IUT_III_xid_xif": [
+        10823,
+        10898
+      ],
+      "FrdII_Rem563": [
+        3371,
+        3378
+      ]
+    },
+    "reused_correction_chain": [
+      "C9-CONTRADICTION-ATTACK-20261024.md",
+      "C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024.md",
+      "C9-MARKED-IMAGE-DESCENT-20261024.md"
+    ],
+    "ledger": "For actual finite-support local linear comparison data in the same arithmetic realization, h-Q=S-kappa with S>=0; derive S>=kappa or an actual escape from the source. Do not add either as a free hypothesis.",
+    "specific_old_proof_error": "Line trivialization does not trivialize unit action: multiplication by 4 on the trivial Z_3 line remains multiplication by 4^M on the M-th tensor power. O^times-mu is not the quotient by principal units.",
+    "limits": "Local-global diagnostic examples are not IUT inputs; full-strip equivalences are not automatically internal degree-calibrated morphisms after the actual quotient operations. No claim of mathematical independence or undecidability.",
+    "lana": "Direct report 9.2 (9-1) and 10.3 compare actual same-side constructions before degree, modulo equal volume; no proved equivalence with the repository C1."
+  }
+}

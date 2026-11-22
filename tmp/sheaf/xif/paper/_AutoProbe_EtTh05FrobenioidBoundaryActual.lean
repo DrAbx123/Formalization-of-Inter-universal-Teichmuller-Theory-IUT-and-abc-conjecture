@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh05FrobenioidBoundaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh05FrobenioidBoundaryActual.etThFrobenioidBoundary
+#print axioms LeanFormal.IUT.XiFPaper.EtTh05FrobenioidBoundaryActual.etThFrobenioidBoundary_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.EtTh05FrobenioidBoundaryActual.etThFrobenioidModel

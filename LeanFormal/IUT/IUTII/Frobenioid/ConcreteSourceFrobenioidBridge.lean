@@ -785,4 +785,26 @@ def concreteSourceFrobenioidBridge : Obligation :=
         "IUT-I-II.source-finite-stage-model-evaluation",
         "IUT-II.MLF-integral-monoid-comparison" ] }
 
+def sourceFiniteStageModelFrobenioid : Obligation :=
+  { id := "IUT-I-II.source-finite-stage-model-frobenioid"
+    source := "IUT I-II; finite-stage model Frobenioid input"
+    status := VerificationStatus.interface
+    note :=
+      "Name-level registration of the finite-stage model Frobenioid " ++
+        "construction carried by the imported " ++
+        "`Iut.Foundations.SourceFiniteStageModelFrobenioid` module. This " ++
+        "entry adds no mathematics; it fixes the ledger name used by this " ++
+        "bridge." }
+
+def sourceFiniteStageModelEvaluation : Obligation :=
+  { id := "IUT-I-II.source-finite-stage-model-evaluation"
+    source := "IUT I-II; arithmetic evaluation of the finite-stage model Frobenioid"
+    status := VerificationStatus.interface
+    note :=
+      "Name-level registration of the finite-stage model evaluation carried " ++
+        "by the imported `Iut.Foundations.SourceFiniteStageModelEvaluation` " ++
+        "module, which builds on the model-Frobenioid input. Adds no " ++
+        "mathematics; fixes the ledger name used by this bridge."
+    dependsOn := [ "IUT-I-II.source-finite-stage-model-frobenioid" ] }
+
 end LeanFormal.IUT.Audit

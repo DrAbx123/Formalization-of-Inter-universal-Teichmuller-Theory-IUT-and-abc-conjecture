@@ -1,0 +1,15 @@
+/- Read-only probes for restored/new greens 21:09 (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110FloorNativeObstructionActual
+import tmp.sheaf.xif.paper.Mzk1ObjectLockDataActual
+import tmp.sheaf.xif.paper.Mzk1ActualReadingTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110FloorNativeObstructionActual.M_ge_one_of_floor_eq_native
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110FloorNativeObstructionActual.hullLog_eq_neg_M_of_floor_eq_native_of_one_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110FloorNativeObstructionActual.hullLog_eq_neg_M_iff_unitLog
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ObjectLockDataActual.mainline_lock_implies_extra_relation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ObjectLockDataActual.galoisPlaceMk_maximalIdeal
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ObjectLockDataActual.relativeFactorTowerData_of_completionTower
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qVFamDefaultNorm_le_qVFamNormalizedNorm
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.log_qVFamDefaultNorm_le_log_normalized
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.actualQPilotMagnitudeClassical_le_nativeGlobal_of_same_q
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ActualReadingTargetActual.qNorm_le_hRoot

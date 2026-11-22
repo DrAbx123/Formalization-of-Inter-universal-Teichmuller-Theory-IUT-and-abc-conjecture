@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullInequalityReductionChainActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullInequalityReductionChainActual.hull_eq_of_generator_nonpos

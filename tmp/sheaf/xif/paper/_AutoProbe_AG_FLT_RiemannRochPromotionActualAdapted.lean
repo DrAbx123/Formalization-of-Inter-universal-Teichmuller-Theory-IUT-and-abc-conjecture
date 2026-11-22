@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG_FLT_RiemannRochPromotionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_RiemannRochPromotionActual.promotion_RiemannInequality
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_RiemannRochPromotionActual.promotion_RiemannIndexFormula
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_RiemannRochPromotionActual.promotion_WeilDualityAdelic

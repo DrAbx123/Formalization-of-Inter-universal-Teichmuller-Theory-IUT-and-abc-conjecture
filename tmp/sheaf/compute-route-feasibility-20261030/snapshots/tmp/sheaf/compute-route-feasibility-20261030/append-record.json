@@ -1,0 +1,26 @@
+[
+  {
+    "path": "D:/lean/AUDIT_LEDGER.md",
+    "previous_bytes": 1625327,
+    "previous_sha256": "32c61eabaf583d49ace7a369c2982a5307defcc4525685c3eebe3a7ebc38bf73",
+    "appended_bytes": 2545,
+    "after_sha256": "47ea2251619a356f0fb866642005f0eae0fc810c43d5e28609fcf93b62709458",
+    "original_prefix_unchanged": true
+  },
+  {
+    "path": "D:/lean/coord/STATE.md",
+    "previous_bytes": 255339,
+    "previous_sha256": "85d45acad08bd839067ee258e0d9e5c8897cb47d23bb661150f31da1b27595c6",
+    "appended_bytes": 1099,
+    "after_sha256": "07a5eadefc215f51a40a92309f953b25d2be1ab38ddbacf1653cf20393bf1ee6",
+    "original_prefix_unchanged": true
+  },
+  {
+    "path": "D:/lean/coord/queue.md",
+    "previous_bytes": 68638,
+    "previous_sha256": "f8f7dafa5a99a963f3ab6c82cb6ee38660666874e323a3f90f1c6e246fc586a5",
+    "appended_bytes": 1123,
+    "after_sha256": "f700614c825b1f199a5ca747b79ea47f80fa406bc955bc6fe2eec87e82a3db41",
+    "original_prefix_unchanged": true
+  }
+]

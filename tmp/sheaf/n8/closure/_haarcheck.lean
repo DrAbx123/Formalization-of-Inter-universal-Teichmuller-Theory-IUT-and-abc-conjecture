@@ -1,0 +1,4 @@
+import Mathlib.MeasureTheory.Measure.Haar.Unique
+#check @measure_isAddHaarMeasure_eq_smul_of_isOpen
+#check @MeasureTheory.Measure.measure_isAddHaarMeasure_eq_smul_of_isOpen
+#check @Measure.measure_isAddHaarMeasure_eq_smul_of_isOpen

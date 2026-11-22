@@ -1,0 +1,35 @@
+import tmp.sheaf.xif.paper.S2905CoreWithHqW
+import tmp.sheaf.xif.paper.S2908CorrectedSActual
+import tmp.sheaf.xif.paper.S2927CorrectedCompletionDownstreamActual
+import tmp.sheaf.xif.paper.S2928CorrectedTConstructionActual
+import tmp.sheaf.xif.paper.S2934CorrectedTFromCompletionActual
+import tmp.sheaf.xif.paper.S2933PerTripleThetaCertificateActual
+import tmp.sheaf.xif.paper.S2936ThetaUpperConstantActual
+import tmp.sheaf.xif.paper.S2944ThetaLinkRealization
+import tmp.sheaf.xif.paper.S2958HalfIQHullCertificateActual
+import tmp.sheaf.xif.paper.S2935HeightLeProcessionActual
+import tmp.sheaf.xif.paper.S2941HeightUpperToProcessionAttempt
+import tmp.sheaf.xif.paper.S2945S2935Equivalence
+open LeanFormal.IUT.XiFPaper.S2905CoreWithHqW
+open LeanFormal.IUT.XiFPaper.S2908CorrectedSActual
+open LeanFormal.IUT.XiFPaper.S2927CorrectedCompletionDownstreamActual
+open LeanFormal.IUT.XiFPaper.S2928CorrectedTConstructionActual
+open LeanFormal.IUT.XiFPaper.S2934CorrectedTFromCompletionActual
+open LeanFormal.IUT.XiFPaper.S2933PerTripleThetaCertificateActual
+open LeanFormal.IUT.XiFPaper.S2936ThetaUpperConstantActual
+open LeanFormal.IUT.XiFPaper.S2944ThetaLinkRealization
+open LeanFormal.IUT.XiFPaper.S2958HalfIQHullCertificateActual
+open LeanFormal.IUT.XiFPaper.S2935HeightLeProcessionActual
+open LeanFormal.IUT.XiFPaper.S2941HeightUpperToProcessionAttempt
+open LeanFormal.IUT.XiFPaper.S2945S2935Equivalence
+#print axioms S2905Core
+#print axioms S2908CorrectedS
+#print axioms S2927Completion
+#print axioms S2928CorrectedT
+#print axioms S2934CorrectedT
+#print axioms S2933_thetaUpper_bound
+#print axioms S2936_thetaUpper_constant_bound
+#print axioms S2944ThetaLinkRealization
+#print axioms S2958HalfIQHullCertificate
+#print axioms S2935_height_le_procession_of_elementary
+#print axioms S2941_heightUpper_to_procession

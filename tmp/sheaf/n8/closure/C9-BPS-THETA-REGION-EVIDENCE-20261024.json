@@ -1,0 +1,101 @@
+{
+  "task": "N8-C9-BPS-THETA-REGION",
+  "date": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "owner": "current chat root; single researcher; self-review",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-BPS-THETA-REGION-NATURAL-RESEARCH-20261024.md",
+    "sha256": "7af6c82a3ce11e1385b15ab92f9cf7fbe5b06f4e39ccd236e01bb3135c32c5b7"
+  },
+  "source_snapshots": [
+    {
+      "name": "EtTh",
+      "version": "December 2008",
+      "pdf": "papers/motizuki_corpus/raw/The Etale Theta Function and its Frobenioid-theoretic Manifestations.pdf",
+      "pdf_sha256": "42c5d9180c69bc9fa6596ce1a11662494315954ed74301060bf1819f955a7406",
+      "text": "papers/motizuki_corpus/text/The Etale Theta Function and its Frobenioid-theoretic Manifestations.txt",
+      "text_sha256": "6ecd474fd2871f103953eb818f3e33d1ee7725116292141b989b70bb2a2a3cd3",
+      "scope": "Prop.1.4(i)-(iii); Cor.2.19(i)",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/The%20Etale%20Theta%20Function%20and%20its%20Frobenioid-theoretic%20Manifestations.pdf"
+    },
+    {
+      "name": "IUT II",
+      "version": "December 2020",
+      "pdf": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory II.pdf",
+      "pdf_sha256": "180bfa6aaddc4ae37af37acaad51f61e0a47b33b8255ad3169e28a970ae39b7c",
+      "text": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "text_sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "scope": "Prop.1.3-1.5; Cor.2.8; Prop.3.1,3.3,3.4; Cor.3.5-3.6",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20II.pdf"
+    },
+    {
+      "name": "IUT III",
+      "version": "May 2020",
+      "pdf": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "pdf_sha256": "9a7ee3c77b1c7717210c0613eb39b6844649d0040dc3d9e1be7d544f8f91a0b9",
+      "text": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "text_sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "scope": "Def.1.1; Prop.3.1,3.4,3.5,3.9; Def.3.8; selected passages of Remarks 3.9.5,3.9.7,3.10.2,3.11.1,3.11.2 and Th.3.11",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf"
+    },
+    {
+      "name": "IUT IV",
+      "pdf": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory IV.pdf",
+      "pdf_sha256": "5bf4b1e0a8c2686562a6859e5009d301335044cfb5efec5d3a9edf764e4af87f",
+      "text": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "text_sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "scope": "Th.1.10 proof (iv)-(vii), PDF pp.26-30; local text read; PDF retained as source version",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20IV.pdf"
+    },
+    {
+      "name": "Formalization of IUT",
+      "version": "April 2026",
+      "pdf": "papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf",
+      "pdf_sha256": "9a32b2485b5875574d7470256d3414b88ee6ac3ed8a39a82ea7332e25072ee9c",
+      "text": "papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt",
+      "text_sha256": "4d9d62353124e9739ca1da50a083eb3f13cb227076222132e67f96413a7fe3cf",
+      "scope": "Section 4, pp.9-11",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Formalization%20of%20IUT%20(2026-04).pdf"
+    },
+    {
+      "name": "LANA report",
+      "commit": "293bdd89463473ae13d40834d70fb4b7ba81da1f",
+      "blob_sha": "35a2507a5bc5bfc1835067dbdb6776e4bc4a3152",
+      "text": "tmp/pdfs/valuespaper-consistency-20261023/LANA-report-retrieved-20261023.tex",
+      "text_sha256": "3e613bee63efbfa7b17178566dd837d1cd92ed21491ec6e65d534b3521fc58bf",
+      "remote_check": "GitHub connector fetched lines 1853-2027 at fixed commit",
+      "scope": "BPS, log-shells, volume containers, general Kummer maps, theta-value-action construction, cyclotomic rigidity, eta algorithm, main goal; caveat at line 426",
+      "url": "https://github.com/katobungen/LANA_report_202607/blob/293bdd89463473ae13d40834d70fb4b7ba81da1f/LANA_report_202607.tex"
+    }
+  ],
+  "read_scope_note": "Targeted passages, not a full-paper or full-repository audit. Earlier source tables and donor reviews reused. No new Lean proof or compilation.",
+  "natural_language_results": [
+    "Classical theta special-value reindexing gives q^(-j^2/2), hence reciprocal-root Gaussian profile.",
+    "Kummer evaluation commutes with decomposition-group restriction by its cocycle construction.",
+    "Fixed-realization Gaussian multiplication yields a monoid action on rationalized tensor packets.",
+    "Nonzero scalar image of a compact open local region has positive finite Haar mass.",
+    "Distinguished-factor tensor determinant and local normalized log-volume shift formula."
+  ],
+  "source_theorems_not_reproved": [
+    "Tempered anabelian reconstruction",
+    "Cyclotomic rigidity and its base-field compatibility",
+    "Conjugate synchronization and actual Kummer monoid identifications",
+    "Full log-Kummer upper semi-compatibility and multiradial descent"
+  ],
+  "remaining_gaps": [
+    "Generate the global source-allowed integral regions through the full prime-strip square and all Ind/log branches.",
+    "Compare the actual independent q readout with the permitted algorithm family, without choosing S to force equality.",
+    "Global weighted normalization and hull/approximant control in the complete source configuration."
+  ],
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run",
+    "target_accepted": false
+  },
+  "no_lean_changes": true,
+  "next_action": "Trace actual integral regions and pilot/value bindings through III Remark 3.10.2 and Prop.3.5, defining allowed S independently of the desired q equality."
+}

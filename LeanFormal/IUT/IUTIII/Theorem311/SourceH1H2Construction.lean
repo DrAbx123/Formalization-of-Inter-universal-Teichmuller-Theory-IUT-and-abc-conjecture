@@ -1,6 +1,7 @@
 import LeanFormal.IUT.IUTIII.Theorem311.SourceOriginalInput
 import LeanFormal.IUT.IUTI.HodgeTheater.PrimeStripCore
 import Mathlib.Data.Fin.Basic
+import LeanFormal.IUT.Audit.Status
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedVariables false
@@ -3049,3 +3050,21 @@ end OriginalInput
 end Theorem311Source
 end
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def sourceH1H2Construction : Obligation :=
+  { id := "IUT-III.source-h1-h2-construction"
+    source := "IUT III, Theorem 3.11 opening paragraph and parts (i)--(ii)"
+    status := VerificationStatus.sourceProjection
+    note :=
+      "From the theorem's opening collection the module exposes the " ++
+        "D-prime-strips, the D-Theta arrows, the lattice translations, the finite " ++
+        "procession stages, and the spoke permutations as projections, source " ++
+        "links, or lattice transports already present in the input. It does not " ++
+        "claim that an arbitrary number field manufactures the opening " ++
+        "collection, and no finite test carrier is used. Name-level registration " ++
+        "consumed by the original-input arrows and the internal wiring."
+    dependsOn := [ "IUT-III.theorem-3.11-original-input-boundary" ] }
+
+end LeanFormal.IUT.Audit

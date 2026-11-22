@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S1801LiftEssSurjActual
+#check LeanFormal.IUT.XiFPaper.S1801LiftEssSurjActual.S1801NoGenericEssSurj
+#check LeanFormal.IUT.XiFPaper.S1801LiftEssSurjActual.S1801DegenerateNotIso
+#print axioms LeanFormal.IUT.XiFPaper.S1801LiftEssSurjActual.S1801NoGenericEssSurj

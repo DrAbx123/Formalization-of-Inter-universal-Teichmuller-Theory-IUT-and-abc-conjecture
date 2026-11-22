@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S1750FunctionFieldCoversActual
+
+open LeanFormal.IUT.XiFPaper.S1750FunctionFieldCoversActual
+open CategoryTheory
+
+#check S1750CoordinateRing
+#check S1750FunctionField
+#check S1750FunctionField_eq_fractionRing
+#check S1750FiniteEtaleCover
+#check S1750GenericFiber
+#check S1750GenericFiber_faithful
+#check S1750_finiteEtaleAlg_decomposition
+#check S1750FirstMissing
+#check S1750SecondMissing
+#check S1750CorrectedEquivalence
+#check S1750NaiveEquivalence
+#check S1750ConnectedCorrespondence
+#check S1750DisconnectedDecomposition_true

@@ -1,0 +1,1 @@
+{"type":"tool/ptc-dispatch-start","seq":169,"time":1793468000972,"data":{"rootCallId":"call_00_kHKf6nMkK9GrP2wvSTCY1634","parentCallId":"call_00_kHKf6nMkK9GrP2wvSTCY1634","subCallId":"call_00_kHKf6nMkK9GrP2wvSTCY1634:ptc:1","name":"grep","arguments":{"pattern":"S1764|S1796|fiber.*universe|universe.*fiber|ULift","path":"AUDIT_LEDGER.md"}}}

@@ -1521,3 +1521,43 @@ P0/P1 清单已有 C9-P0-P1-SOURCE-TABLE.md，直接复用。按 C9-STAGE1-SUPPL
 - N3: RelativeNormQProperties and §7.2 ValueGroup0.embedding unit lemma under construction; TensorUnitBall actual inhabitant being built from arithmeticTensorBlocksAlgEquiv.
 - N5: Mzk1QVRealifiedBridge DONE 11:59:12 (bypasses S2135); GlobalSumAggregation still needs C3BaseQElementIdentification + ClauseBBaseQSourceIdentity. S2135 is source input, not theorem.
 - Watchdog: no fake/sorry/extra axiom; accepted evidence only via dag/watchdog/watchdog.log.
+
+<!-- p7-g1-p6-p8-route-20261116 -->
+## 2026-11-16 — G1/P6/P8 producer 路线交接
+
+- [completed: research only] coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md；node p7-g1-p6-p8-closure-route-20261116；当前 chat 单线程，无 Lean 写入或构建。
+- [next, existing source/reading owners] U-R：选一个 actual packet，构造 q-root 主格与 theta 源 span，证明实际 source arrow 入已有 p6Phi，得到 q-reading=−Q/(2l)、theta-reading≤weighted packet volume。首选 J1 实际区域；备用 J2 determinant/index 或 J3 有限同余商。
+- [next, existing geometry owner] G-A：复用现有 affine Fermat 与两个 root-basis donors，补真正两图 overlap/gluing、π 和 finite/smooth/proper；G-B 用显式 Ω transition。无需先新建一般 closed-subscheme API。
+- [reuse, no duplicate task] PhiActionFamily/PhiActionSource、RootParameterWeight 代数、Section2 Prop1.6、StepV averages、P6/P8 final consumers。
+- [dependency direction] 独立 upper 与 P5 lower 先生产 hCor312，再调用 P6-final；G-C/G-K/H-T/L-H 合成实际 P8 producer。不得将 final display 或 scalar uniform convergence 当作自己的上游证明。
+- owner 与既有 accepted 状态不变；后续验证按 watchdog，本轮四项验收 NOT_RUN。
+
+<!-- p7-g1-p6-p8-route-refresh-20261117 -->
+## 2026-11-17 — G1/P6/P8 当前剩余包
+
+- [completed: research update only] 已原位刷新 coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md；旧正文和节点存 coord/archive-20261117/；证据截点 23:49:06 +08:00。
+- [supersedes route scheduling only] 上一条 2026-11-16 路线中的 G-A 两图/gluing/smooth/proper 等已完成指导不再派发；所有仍需实施的内容以新正文 R0–R7 为准，不恢复历史队列。
+- [next, existing owners] R0/R1：一个实际坏位的 ord/e、root 格、全纤维权重和同对象 θ lower；R2：实际 procession 映射及 hVh/hlogdK/hsQ 实例。先解决对象口径，后接 C4。
+- [next, existing geometry/height owners] R4 一般受保护点→实际 noncritical map；R5 SeparationInput 与 P1 距离；R6 实际多截面 divisor height，替换 Unit-indexed 高度代理；R7 实际 lift 的 tame/wild 分歧实例。
+- [dependency] R3a 源、R3b 选素数/遗漏量不依赖 D1；R1/R2 独立夹逼后才进入 R3c；R6+R7 才填 P8 actual witness。
+- 无新 owner 认领、无 Lean 写入或 watchdog 提交；本 chat 单线程研究交接，statement_compiles/proof_body_checked/kernel_closed/target_accepted 均 NOT_RUN。
+- [研究交接，沿用 R0/R1/R2 owner] [Θ 比较首包](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md)：在同一源追踪收缩位与旧 lift，以共同 j 校准 q，交回 j=1 的真实来源和 j=2 混合元组的最后槽外盒；不另建重叠任务。
+- [同一研究包，全纤维结果](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#torsion-fiber) 可在 hlogdK 复用指定坏位的驯 different；弱路线检验实际 Vélu 商的两条 Tate 尖点及全局正部。标签置换不作为固定行的 Ind，原 R2 上界仍需独立生产。
+- [原研究包续，沿用现有 owner](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#global-isogeny-trace)。下一项只追 III.3.11 实际固定行源箭头在各分解因子上的投影或模 p 像，并对同一参考核算其符号。全局迹空间、分支公式、含 2 的循环子群高度推导已在交接，无需重做。
+- [同一研究包的下一项](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#strength-and-determinant)。沿 III 1 列单位 log-Kummer 箭头和 0 列 Θ 行列式，在同一固定行核对迹商特殊坐标的剩余类、逆商方向及实际度量。两端同时乘相同辅助因子的接法已算过。
+- [原 III.3.12，同一研究包](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#original-iii312)。只追一个真实输出取带结构态射的行列式之后，未分歧好素数的普通单步修改是否在各位给出离散正整除子。§11.5 已算原 strip 方块、Kummer 共轭与加权步长；复用已有三箭头单位共轭构造。
+- [同包进展及当前入口 §12.8](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#first-log-witness)。好素数普通整态射已构造。沿 3 进第二行原 evaluation，跟踪 u 与 exp(3r⁴ log u) 两个 3⁶ 次开根扩张的固定子群及原允许选择，在实数读数以前取模极大理想四次幂的类。全局对照 §12.7 整态射在 3、去 3 判别式各素因子和无穷位的局部化。
+
+- [同包当前入口 §13](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#marked-unit-artin)。在 3 处从同一原 pilot 的分式理想经 evaluation 方块追踪实际区域到各因子模极大理想四次幂；单位图的非零类和模 81 次幂的运输已算出。独立分支在 2333 继续检验圆分层 Q/Q₄ 的中心扩张及高层相容性，再查原 procession 上的来源。前一条队列记录的 3⁶ 次开根测试由本节取代。
+- [同包当前入口 §14](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#native-ideal-galois)。接下来在 3 处惯性 7、非分歧次数 3 的驯底域上，将 Q₃/Q₄ 扩张用各等变线性形式推到 μ₃，再在已构造 Q/Q₃ 提升的一余圈自由度内消去其拉回。沿同一 IPL 跟踪 §14.4 的原理想源点。2333 的单一圆分塔已全层提升；前条所列的该塔 Q/Q₄ 工作已结束。
+  单独检验原曲线深度 63 的跨位路线时，在 293 的完整群上只需四维子空间 pO/pL 的轨道逃出八十八维的 m⁹/pL，再把对应整点沿同一 IPL 读到第 1 列；该例在 3 只用恒等参考。
+- [本包当前入口 §15](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#finite-workload)。优先在已缩短的 lgp 自然识别和 Kummer 上，追单位 1+293(1+ζ₅) 的一次幂类连同原中性参考，查跨列后在 U₁/U₉ 的像及两行乘法投影。恒等算术识别给赋值 0，所需两行总赋值至多 −110。报告消费的是原输出或在哪条箭头丢失了区域。在完整群分支只追能覆盖任意底域和幂零类的归纳或完整群证书。前条按单一野层继续试算的安排由此取代。
+- [本包当前入口 §16](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#finite-slot-certificate)。逐层群提升研究已停止。取商前的源读数已查明为恒定单点。二次域族的具体整序见证只需在第二行新增两个位置。原文层检查 \(d=3,\ell=5,\ p=3\) 的 \((好,坏,坏)\)，默认标记在最后的坏槽。换位 \((2,0)\) 后应在同一合格全局区域的目标列中取得投影绝对值至少 1 的成员，默认算术读数是 \(3^{-6/5}\)。保留拉回的源元组及标记来源。
+
+- [仅以整数 ABC 为终点时从 §17 入手](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#abc-only-reduction)。对原 Frey 曲线 c₆ 的三个线性因子分别统计不同奇素数。对合将原三元组送到另一个互素三元组，两次回到原点。研究目标是三个支集中最大的一个能否统一补足 2 log c 减 log rad(abc)，允许次于 log c 的损失。显式倍点分母、有限轨道和候选计数均已有证明。原 III.3.12 的固定输入另见 §16。
+
+- [整数 ABC 当前入口改为 §18.1](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#abc-route-decision)。既有 Legendre 连分数定理给每组重复素幂的完备例外清单，已独立交叉核对。结束 §17 的三个 Frey 因子换元搜索。后续新估计应直接交代合格渐近分数的下一商如何受全部素幂组共用的常数控制。可先用 §18.5 的素数指数幂族检验其算术内容。
+
+- [2026-11-19 暂停交接：§16 原 III.3.12](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#本轮暂停交接)。不要从论文开头重审。恢复后先读交接 §19.3/19.5，固定 \(p=3,\ell=5,d=3\)、目标 \((G,B,B)\)、\(\tau=(2,0)\)，在已有 `ThetaRegion` 点证据上追实际 evaluation carrier map，证明 \(E_\tau(1)\in U_{2,3}\) 或区域包含，再识别原文 readout。S3138 scalar profile、值层 hull 和静态 Ind1 区域不再作为来源桥替代物；四项形式验收均未运行。
+
+- 2026-11-20｜[LANA 合作建议，未发出、未派工](REPO-LANA-COMPARISON-20261120.md#review-contract)。可先提交一条 q 重数或相对 Haar 对照供审阅；原 III.3.12 仍从交接 §19.3 的 `(B,B,G) → (G,B,B)`、`τ=(2,0)` 检查实际求值与 `E_τ(1) ∈ U₂,₃`。不导入整仓，不把 LANA 的固定标签变体与全槽 literal 反向连用。

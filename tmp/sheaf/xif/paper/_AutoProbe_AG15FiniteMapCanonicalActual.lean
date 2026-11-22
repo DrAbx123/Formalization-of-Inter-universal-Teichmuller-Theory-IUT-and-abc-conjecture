@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.AG15FiniteMapCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG15FiniteMapCanonicalActual.ag15Reuse
+#print axioms LeanFormal.IUT.XiFPaper.AG15FiniteMapCanonicalActual.ag15GeomCorePointers

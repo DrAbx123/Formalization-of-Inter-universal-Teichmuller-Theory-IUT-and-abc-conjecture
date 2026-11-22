@@ -1,0 +1,109 @@
+{
+  "schema": "iut-sheaf-natural-research-evidence/v1",
+  "task": "n8-c9-finite-observation-theorems-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "user_scope": "Construct and prove auxiliary mathematics and exact finite reductions; no Lean work",
+  "artifacts": [
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FINITE-OBSERVATION-THEOREMS-20261024.md",
+      "sha256": "d1396a666ac97928cc667f4750aa15eaec9eb00252e21cfd62470762ed81a123"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/finite_observation_certificates_20261024.py",
+      "sha256": "f08aca59578885103f2a1ec279e1649bc03795b2067f6cdf128c091d9b913915"
+    },
+    {
+      "file": "tmp/sheaf/n8/closure/C9-FINITE-OBSERVATION-CERTIFICATES-20261024.json",
+      "sha256": "7d19bb24a657802a23616598fa3d349e8982a2026d926b105dc894a00bff3fea"
+    }
+  ],
+  "reused_evidence": {
+    "file": "tmp/sheaf/n8/closure/C9-FIXED-Q-DEEP-COMPARISON-20261024.md",
+    "sha256": "fe93128b5526e97236e42a45d741866e44bf420ae1c2680dc275a9acd58a6b51"
+  },
+  "primary_external_sources": [
+    {
+      "title": "Tracking p-adic precision",
+      "authors": "Caruso, Roe, Vaccon",
+      "version": "arXiv:1402.7142v1, 2014-02-28",
+      "url": "https://arxiv.org/html/1402.7142",
+      "read_sections": ["2.1", "2.2"],
+      "use": "Lattice precision and preservation of correlations; not a source bridge"
+    },
+    {
+      "title": "Making Abstract Interpretations Complete",
+      "authors": "Giacobazzi, Ranzato, Scozzari",
+      "version": "JACM 47(2), 2000, pp.361-416; DOI 10.1145/333979.333989",
+      "url": "https://www.sci.unich.it/~scozzari/paper/JACM00.pdf",
+      "read_sections": ["1.1", "1.2"],
+      "use": "Exact abstraction and fixed-point completeness; specialized lemmas proved in the record"
+    }
+  ],
+  "source_positions_reused": [
+    "IUT II p.39 Ism definition",
+    "IUT III Th.3.11(i)(Ind2), p.154",
+    "IUT III Remark3.9.5(i), p.127"
+  ],
+  "proved_auxiliary_results": [
+    {
+      "id": "A",
+      "claim": "Zp-span commutes exactly with linear images and branch unions; final holomorphic hull is preserved",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "B",
+      "claim": "A lattice orbit depends only on G modulo p^(s-r); saturation has at most length(p^r Lambda/L) strict increases",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "C",
+      "claim": "Source-certified inner actions and a valid finite outer group certify the exact final hull when their hulls agree",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "D",
+      "claim": "A finite linear compatibility diagram lifts exactly at output precision n using constraint precision n+max(Smith valuations)",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "E",
+      "claim": "Integral coordinate-tree elimination retains holonomy and all nonunit Smith factors",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "F",
+      "claim": "Principal-unit log and exp have exact finite quotient tables with explicit truncation bounds",
+      "status": "natural_language_proof"
+    },
+    {
+      "id": "G",
+      "claim": "Finite quotient path computation is exact with fibre-constant guards and uniformly liftable transitions",
+      "status": "natural_language_proof"
+    }
+  ],
+  "refuted_candidates": [
+    "Premature holomorphic hull before arbitrary linear operations",
+    "Universal effective finite plateau criterion for arbitrary compact constraint towers",
+    "Composition of quotient edges supported only by unrelated existential witnesses"
+  ],
+  "computation": {
+    "command": "python tmp/sheaf/n8/closure/finite_observation_certificates_20261024.py",
+    "exit_code": 0,
+    "sympy_version": "1.14.0",
+    "arithmetic": "exact integer/rational",
+    "all_assertions_passed": true,
+    "source_qualified_IUT_instances": false,
+    "scope": "Explicit model certificates for the proved reductions, not a P6 witness"
+  },
+  "remaining_source_gap": "Actual allowed residue lifts and coupled integral/log regions, followed by native global q comparison with original normalization",
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "target_accepted": false
+  }
+}

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.RootTensorThetaHullActual
+open MeasureTheory
+#check measure_isAddHaarMeasure_eq_smul_of_isOpen
+#check MeasureTheory.measure_isAddHaarMeasure_eq_smul_of_isOpen
+#check ContinuousLinearEquiv.isAddHaarMeasure_map

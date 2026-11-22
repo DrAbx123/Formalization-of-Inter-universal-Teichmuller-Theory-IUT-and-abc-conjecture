@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3136LGPPhiLayerActual
+import tmp.sheaf.xif.paper.S3136LGPLocalFractionalIdealCandidate
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiLayerActual.lgpConeToInts_of
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiLayerActual.lgpConeToInts_injective
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiLayerActual.lgpDivisorialAddMonoid
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiLayerActual.lgpDivisorMonoidOn
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalFractionalIdealCandidate.lgpThetaLabelWeight_one
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalFractionalIdealCandidate.lgpQVDivisorExponent_mem_candidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalFractionalIdealCandidate.lgpQVDivisorExponent_mem_qspan

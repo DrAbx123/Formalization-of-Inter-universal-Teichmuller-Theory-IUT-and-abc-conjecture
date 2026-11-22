@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2811C3LatticeHaarSummaryActual
+#print axioms LeanFormal.IUT.XiFPaper.S2811C3LatticeHaarSummaryActual.C3LatticeHaar_actual_finite_and_normalized_one

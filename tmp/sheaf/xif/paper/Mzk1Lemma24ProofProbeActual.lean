@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24ProofActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ProofActual.s3135_dOfDegrees_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ProofActual.s3135_lemma24Measure_wf

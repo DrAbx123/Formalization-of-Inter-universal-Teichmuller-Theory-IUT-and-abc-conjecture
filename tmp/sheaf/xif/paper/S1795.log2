@@ -1,0 +1,50 @@
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795RawIdentityObligation : S1764RawIdentityObligation
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795RawCompositionObligation : S1764RawCompositionObligation
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795RawFiberFunctor_obj_left
+  {A B : OrbicurveFiniteEtaleCover S1764Orbicurve} (f : OrbicurveFiniteEtaleCoverMap A B) (x : S1764Fiber A) :
+  CostructuredArrow.left ((S1764RawFiberFunctor f).obj x) =
+    (f.map.app { as := Opposite.op S1764BaseScheme }).toFunctor.obj (CostructuredArrow.left x)
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795HeqHomOfEq {B : OrbicurveFiniteEtaleCover S1764Orbicurve}
+  {X Y : S1764Fiber B} (h : X = Y) : CostructuredArrow.hom X ≍ CostructuredArrow.hom Y
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795StrictObjectMapAgreement : Prop
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795StrictHomAgreement : Prop
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795WellDefined_forces_strict_objmap
+  (h : S1764FiberMapWellDefinedObligation) {A B : OrbicurveFiniteEtaleCover S1764Orbicurve}
+  {f g : OrbicurveFiniteEtaleCoverMap A B} (hrel : S1728CoverMapRel f g) (x : S1764Fiber A) :
+  (f.map.app { as := Opposite.op S1764BaseScheme }).toFunctor.obj (CostructuredArrow.left x) =
+    (g.map.app { as := Opposite.op S1764BaseScheme }).toFunctor.obj (CostructuredArrow.left x)
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795FiberMapWellDefined_iff :
+  S1764FiberMapWellDefinedObligation ↔ S1795StrictObjectMapAgreement ∧ S1795StrictHomAgreement
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795ConcreteFiberFunctorMissing_iff :
+  S1764ConcreteFiberFunctorMissing ↔ S1764FiberFiniteObligation ∧ S1764FiberMapWellDefinedObligation
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795StrictFiberDataNonempty_iff :
+  Nonempty S1764StrictFiberData ↔ S1764FiberFiniteObligation ∧ S1764FiberMapWellDefinedObligation
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795FiberFunctorOfRemaining (hF : S1764FiberFiniteObligation)
+  (hW : S1764FiberMapWellDefinedObligation) : OrbicurveFiniteEtaleCover S1764Orbicurve ⥤ FintypeCat
+LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795FiberFunctorOfRemaining_obj (hF : S1764FiberFiniteObligation)
+  (hW : S1764FiberMapWellDefinedObligation) (cover : OrbicurveFiniteEtaleCover S1764Orbicurve) :
+  ((S1795FiberFunctorOfRemaining hF ⋯).obj cover).obj = S1764Fiber cover
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.geometricFiberMap_id_strict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.geometricFiberMap_comp_strict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795RawIdentityObligation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795RawCompositionObligation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795WellDefined_forces_strict_objmap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795FiberMapWellDefined_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795ConcreteFiberFunctorMissing_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S1795StrictFiberFunctorActual.S1795StrictFiberDataNonempty_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

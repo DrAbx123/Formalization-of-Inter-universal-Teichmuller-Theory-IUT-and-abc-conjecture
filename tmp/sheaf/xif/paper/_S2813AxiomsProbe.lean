@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2813C3NormalizedRegionUnitInvarianceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2813C3NormalizedRegionUnitInvarianceActual.c3NormalizedTensorHaar_unit_smul_region

@@ -3,6 +3,7 @@
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.Foundations.Geometry.EllipticTorsion
 import Mathlib.FieldTheory.IsAlgClosed.Basic
+import LeanFormal.IUT.Audit.Status
 
 /-!
   # Source-faithful transport of the `l`-torsion carrier
@@ -444,3 +445,19 @@ end InitialThetaSource
 end
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def initialThetaKFTorsionTransport : Obligation :=
+  { id := "IUT-I.initial-theta-k-f-torsion-transport"
+    source := "IUT I, Definition 3.1(c)/(f); K/F torsion transport"
+    status := VerificationStatus.provedKernel
+    note :=
+      "From `InitialThetaArithmeticData` this module constructs the `F`-algebra " ++
+        "equivalence of the two algebraic closures, the induced additive " ++
+        "equivalence on the nonsingular point groups, and the `ZMod l`-linear " ++
+        "equivalence on the torsion subgroups, with bijectivity proved. No " ++
+        "descent of torsion points to `K` is claimed. Name-level registration " ++
+        "for the arithmetic-prelude dependency." }
+
+end LeanFormal.IUT.Audit

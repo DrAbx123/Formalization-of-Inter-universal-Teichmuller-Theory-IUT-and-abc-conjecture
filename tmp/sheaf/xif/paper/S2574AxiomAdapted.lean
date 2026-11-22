@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2574LocalizedModelActual
+#print axioms LeanFormal.IUT.XiFPaper.S2574LocalizedModelActual.f_monic
+#print axioms LeanFormal.IUT.XiFPaper.S2574LocalizedModelActual.S2574Target_of_localized

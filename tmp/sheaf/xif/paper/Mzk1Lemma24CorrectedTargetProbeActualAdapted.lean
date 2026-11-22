@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24CorrectedTargetActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24CorrectedTargetActual.s3135_correctedTarget_components

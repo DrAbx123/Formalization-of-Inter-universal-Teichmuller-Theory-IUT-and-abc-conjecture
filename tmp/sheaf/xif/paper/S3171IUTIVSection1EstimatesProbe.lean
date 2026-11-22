@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3171IUTIVSection1EstimatesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1EstimatesActual.S3171Theorem110Estimates_length
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1EstimatesActual.S3171RemainingStepInputs_length

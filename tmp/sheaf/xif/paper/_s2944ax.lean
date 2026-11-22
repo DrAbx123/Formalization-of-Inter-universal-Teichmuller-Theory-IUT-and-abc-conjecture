@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2944C3ActualAllRegionVolumeActual
+import tmp.sheaf.xif.paper.S2945C3RegionChangeShiftActual
+#print axioms LeanFormal.IUT.XiFPaper.S2944C3ActualAllRegionVolumeActual.c3NormalizationShift_eq_neg_log_scalar
+#print axioms LeanFormal.IUT.XiFPaper.S2945C3RegionChangeShiftActual.c3NormalizationDelta_eq_shift_add_regionShift

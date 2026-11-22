@@ -1,0 +1,5 @@
+tmp\sheaf\xif\paper\Mzk1Cor312FullActual.lean:42:26: error: Invalid argument name `k` for function
+tmp\sheaf\xif\paper\Mzk1Cor312FullActual.lean:44:58: error(lean.unknownIdentifier): Unknown identifier `T`
+tmp\sheaf\xif\paper\Mzk1Cor312FullActual.lean:55:26: error: Invalid argument name `k` for function
+tmp\sheaf\xif\paper\Mzk1Cor312FullActual.lean:65:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.XiFPaper.Mzk1Cor312FullActual.cor312_full`
+tmp\sheaf\xif\paper\Mzk1Cor312FullActual.lean:66:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.XiFPaper.Mzk1Cor312FullActual.cor312_full_contract`

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G2EGapInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2EGapInputsActual.EpsilonGapInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2EGapInputsActual.epsilonComparison_of_gapInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G2EGapInputsActual.bridgeInterface_of_gapInputs

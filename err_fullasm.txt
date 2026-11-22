@@ -1,0 +1,15 @@
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:62:34: error: Application type mismatch: The argument
+  n
+has type
+  ℤ
+of sort `Type` but is expected to have type
+  SourceLocalizationExpressible oneColumnStructure (ProcessionChoice l')
+of sort `Prop` in the application
+  cor312_full_contract T F I n
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:63:40: error(lean.unknownIdentifier): Unknown identifier `T`
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:63:55: error(lean.unknownIdentifier): Unknown identifier `T`
+tmp\sheaf\xif\paper\Mzk1StepXICor312FullAssemblyActual.lean:51:0: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

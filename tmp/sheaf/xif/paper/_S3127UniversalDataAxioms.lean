@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3127G2UniversalDataActual
+open LeanFormal.IUT.XiFPaper.S3127G2UniversalDataActual
+#print axioms S3127QuotientUniversal_of_data
+#print axioms S3127G2UniversalData.ofUniversal
+#print axioms S3127QuotientUniversal_iff_nonempty_data
+#print axioms S3127G2UniversalData
+#print axioms S3127FreeQuotientTarget
+#print axioms S3127G2QuotientMap
+#print axioms S3127G2QuotientObj

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1StepXICor312FullAssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXICor312FullAssemblyActual.cor312_full
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXICor312FullAssemblyActual.cor312_full_contract

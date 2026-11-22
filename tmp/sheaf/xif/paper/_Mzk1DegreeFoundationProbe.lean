@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24DegreeFoundationActual
+open LeanFormal.IUT.XiFPaper.Mzk1Lemma24DegreeFoundationActual
+#check reducedDegreeOfPoint
+#check fieldOfDefinition_finrank
+#check maxReducedDegree
+#check criticalValueDegreeBound
+#check minpoly_criticalValueDegreeBound
+#check criticalValue_reducedDegree_lt
+#check criticalValue_reducedDegree_le
+#check valueDegreeDrop_reexport
+#check fieldDegreeDrop_reexport
+#check aeval_reducedDegree_le
+#print axioms fieldOfDefinition_finrank
+#print axioms minpoly_criticalValueDegreeBound
+#print axioms criticalValue_reducedDegree_le

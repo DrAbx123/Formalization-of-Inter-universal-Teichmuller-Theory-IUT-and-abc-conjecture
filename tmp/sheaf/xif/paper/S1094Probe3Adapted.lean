@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1089RatioActual
+import tmp.sheaf.xif.paper.S1091QPilotQ1UPositivityActual
+#print axioms LeanFormal.IUT.XiFPaper.S1089RatioActual.s1089Ratio_of_basePow
+#print axioms LeanFormal.IUT.XiFPaper.S1091QPilotQ1UPositivityActual.s1091QPilotQ1U_measure_pos
+#print axioms LeanFormal.IUT.XiFPaper.S1091QPilotQ1UPositivityActual.s1091QPilotQ1U_measure_lt_top
+#check LeanFormal.IUT.XiFPaper.S1091QPilotQ1UPositivityActual.s1091QPilotQ1U_measure_pos

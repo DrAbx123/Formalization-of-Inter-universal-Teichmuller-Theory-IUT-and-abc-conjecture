@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2784C3NormalizedRegionHaarLogZeroIffActual
+import tmp.sheaf.xif.paper.S2886C3ThetaQPilotScalingQPilotConsumer
+import tmp.sheaf.xif.paper.S2889C3ThetaQPilotScalingLatticeConsumer
+
+#print axioms LeanFormal.IUT.XiFPaper.S2784C3NormalizedRegionHaarLogZeroIffActual.c3NormalizedRegion_haarLog_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.S2886C3ThetaQPilotScalingQPilotConsumer.C3ThetaQPilot_scaling_and_qPilot_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.S2889C3ThetaQPilotScalingLatticeConsumer.C3ThetaQPilot_scaling_lattice_consumer

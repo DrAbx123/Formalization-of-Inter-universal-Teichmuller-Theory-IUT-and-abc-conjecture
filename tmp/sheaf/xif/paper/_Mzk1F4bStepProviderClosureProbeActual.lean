@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1F4bStepProviderClosureActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1F4bStepProviderClosureActual.stepProvider_of_f4b
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1F4bStepProviderClosureActual.f4b_stepProvider_package

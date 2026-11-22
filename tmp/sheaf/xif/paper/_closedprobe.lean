@@ -1,0 +1,9 @@
+import Mathlib
+open Real
+#check Real.log_le_iff_le_exp
+#check Real.log_le_iff_le_exp_iff
+#check isClosed_le
+#check isClosed_closedBall
+#check Metric.isClosed_closedBall
+#check Real.exp_pos
+#check Real.log_zero

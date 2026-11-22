@@ -1,0 +1,341 @@
+[
+  {
+    "file": "Absolute.lean",
+    "srcSha": "EFDADA947F99C53455F5747532E8298D68B130372656CA84A7C5DFFCC08DE2D7",
+    "dstSha": "86CD365989DD2C3E52FA79DD009885FA7753A851361C001DA66BD33FB3E71658",
+    "bytes": 18244,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Relative",
+      "import ContinuousKummerTheory.Hilbert90",
+      "import LocalClassFieldTheory.Reciprocity.OmegaLevel"
+    ],
+    "dstImports": [
+      "import Brauer.Relative",
+      "import ContinuousKummerTheory.Hilbert90",
+      "import Reciprocity.OmegaLevel"
+    ]
+  },
+  {
+    "file": "ArtinPairing.lean",
+    "srcSha": "0E5AA96408D5ABE26C144ED88C2D7F15040D2C52952A2D13D23AD4FECF5FC42C",
+    "dstSha": "AEE0978564F78E19B985FB6633A550EAA4A65CCBA8929585D1FCF75FF5A00BD6",
+    "bytes": 15512,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Duality"
+    ],
+    "dstImports": [
+      "import Brauer.Duality"
+    ]
+  },
+  {
+    "file": "ArtinTransfer.lean",
+    "srcSha": "84AA1D219492C8B9D050A999BA219455F29D2123581F12EA15C0D76B3ACE874A",
+    "dstSha": "F7D422B14286E8D399574C76446708903E51B39455017031B425408E84DA5162",
+    "bytes": 15117,
+    "importsChanged": 3,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ArtinPairing",
+      "import LocalClassFieldTheory.Brauer.CorBr",
+      "import LocalClassFieldTheory.Reciprocity.GaloisStructure"
+    ],
+    "dstImports": [
+      "import Brauer.ArtinPairing",
+      "import Brauer.CorBr",
+      "import Reciprocity.GaloisStructure"
+    ]
+  },
+  {
+    "file": "ContH2.lean",
+    "srcSha": "241EC43BCD96DECBDF0FC5D2201B0F260780AB8F565084D2420FF02CEFA70DC0",
+    "dstSha": "241EC43BCD96DECBDF0FC5D2201B0F260780AB8F565084D2420FF02CEFA70DC0",
+    "bytes": 15799,
+    "importsChanged": 0,
+    "srcImports": [
+      "import Mathlib"
+    ],
+    "dstImports": [
+      "import Mathlib"
+    ]
+  },
+  {
+    "file": "CorBr.lean",
+    "srcSha": "D8DC66827F58AF15957A27FCE56DDA131B94D74DB0E427DBE85075C1BE503CC8",
+    "dstSha": "CE14DF1F60B4C5C35671699D4905DA541D621FEE1B12091B89D16606D7AA9D5E",
+    "bytes": 5186,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Corestriction",
+      "import LocalClassFieldTheory.Brauer.Invariant"
+    ],
+    "dstImports": [
+      "import Brauer.Corestriction",
+      "import Brauer.Invariant"
+    ]
+  },
+  {
+    "file": "Corestriction.lean",
+    "srcSha": "29C4DB921530ADA18F26C06C1E357398062C53975E34DFD9D3A453689D64388D",
+    "dstSha": "312ACD855EB1CAD521313DA73FCD407E109B1B013A973BD45BD3509BBE5134FA",
+    "bytes": 12144,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.InfRes"
+    ],
+    "dstImports": [
+      "import Brauer.InfRes"
+    ]
+  },
+  {
+    "file": "Cyclic.lean",
+    "srcSha": "3B8DB16D3DFC9CDDE0466C3D3330033E0A8C0F0CC5C3D8DCC236CE9240E90598",
+    "dstSha": "A2BDA3064242DC534E963BB429AE9F8E0DB610B2270368BB6E803F3D1C91201C",
+    "bytes": 16398,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ContH2"
+    ],
+    "dstImports": [
+      "import Brauer.ContH2"
+    ]
+  },
+  {
+    "file": "Duality.lean",
+    "srcSha": "BDA2FBCE88033B7AE0BEBF565897DF5C0C5E71E05E2ECE69ED675C5B70EB11E9",
+    "dstSha": "DDE8887292C4CF761B2513AEA24977BBC51AF2944998D6DC5AE42306A4282946",
+    "bytes": 31408,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.KummerH2",
+      "import LocalClassFieldTheory.Reciprocity.ExistenceTheorem"
+    ],
+    "dstImports": [
+      "import Brauer.KummerH2",
+      "import Reciprocity.ExistenceTheorem"
+    ]
+  },
+  {
+    "file": "DualityH1.lean",
+    "srcSha": "D094660ED75787A61DB85A65FD8536DFBA8ADF87964F0E13140A87206B219A94",
+    "dstSha": "CAA4497E42BB01E912A24EA0F2213B05619CF4DD96F5630A9E07C39A00BD0CF0",
+    "bytes": 5883,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ArtinPairing",
+      "import ContinuousKummerTheory.Kummer.Equiv"
+    ],
+    "dstImports": [
+      "import Brauer.ArtinPairing",
+      "import ContinuousKummerTheory.Kummer.Equiv"
+    ]
+  },
+  {
+    "file": "FundamentalClass.lean",
+    "srcSha": "FE568179521BE45B2C8A6E1FE8BD3D9D4E37E4D53D07D7AC73B7CBF92945A743",
+    "dstSha": "79720A44FEEF7C7B435ACF47D3FA687C20B7B7AB8D5019BD77A4D740C03EFB5E",
+    "bytes": 6393,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ArtinPairing"
+    ],
+    "dstImports": [
+      "import Brauer.ArtinPairing"
+    ]
+  },
+  {
+    "file": "H2ZHat.lean",
+    "srcSha": "01870E20021C240F5B719F3887AD52E92353C8E9E91F457CF036DDBC1AEF8819",
+    "dstSha": "DC0937A3599F465B90CCC845278D636CCE5CB5C8F0AD894B11F11CF6BF615094",
+    "bytes": 6802,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.KummerCompat",
+      "import LocalClassFieldTheory.Galois.ZHat"
+    ],
+    "dstImports": [
+      "import Brauer.KummerCompat",
+      "import Galois.ZHat"
+    ]
+  },
+  {
+    "file": "InfRes.lean",
+    "srcSha": "D26B7E93BAB252BD790F97BD395DCFFDDA3156B022D55EFE024E5D3EE7D1347D",
+    "dstSha": "7434D583A609D6435A4B49C1FF632E533A99634C51AAED1B1FFD89992B3C9E09",
+    "bytes": 13868,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ContH2"
+    ],
+    "dstImports": [
+      "import Brauer.ContH2"
+    ]
+  },
+  {
+    "file": "Invariant.lean",
+    "srcSha": "CD5BECE0E503AD79D2011FB6BAAAC006ACEC123F6ABF74F93612EA00D82F28A5",
+    "dstSha": "8E179B4B7864544B42A227EB14271CF82106F632AC066B2B1E39FE06CE45C3BC",
+    "bytes": 11582,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Restriction",
+      "import LocalClassFieldTheory.Brauer.OrderBound"
+    ],
+    "dstImports": [
+      "import Brauer.Restriction",
+      "import Brauer.OrderBound"
+    ]
+  },
+  {
+    "file": "KummerCompat.lean",
+    "srcSha": "B5D5B5C426AFF6F70FCC4EB79052B49F4072F6D1F85130BD4ACE80CF5DE3CF35",
+    "dstSha": "1625F14DC1B8E00E8E1D0315B84C85D6CF3414E547BEC0DD1F00D245C341F7C9",
+    "bytes": 7030,
+    "importsChanged": 3,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.KummerH2",
+      "import LocalClassFieldTheory.Brauer.Duality",
+      "import LocalClassFieldTheory.Brauer.Restriction"
+    ],
+    "dstImports": [
+      "import Brauer.KummerH2",
+      "import Brauer.Duality",
+      "import Brauer.Restriction"
+    ]
+  },
+  {
+    "file": "KummerH2.lean",
+    "srcSha": "19183571CD70704F428D9E743B80132C13A62E4ABF8E84EAD8C64CFDDD808108",
+    "dstSha": "4C75857A1288DF8CD22487493AF4C84A59ED2D789CA0F1A5E8434219AA2686E0",
+    "bytes": 12266,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Invariant",
+      "import ContinuousKummerTheory.Kummer.Basic",
+      "import LocalClassFieldTheory.Brauer.InfRes"
+    ],
+    "dstImports": [
+      "import Brauer.Invariant",
+      "import ContinuousKummerTheory.Kummer.Basic",
+      "import Brauer.InfRes"
+    ]
+  },
+  {
+    "file": "LocalGalois.lean",
+    "srcSha": "DD806641AAB72805B41DCA0B791920AFFD975C920FEF233E961BFC23BC82119D",
+    "dstSha": "9FE32CC7597F3DC12CE1E62D8BDAC27663F9ACB74E08A9D6FD4245E5EB54AED9",
+    "bytes": 14313,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.PadicField.Galois",
+      "import Mathlib.GroupTheory.Perm.Cycle.Type"
+    ],
+    "dstImports": [
+      "import PadicField.Galois",
+      "import Mathlib.GroupTheory.Perm.Cycle.Type"
+    ]
+  },
+  {
+    "file": "MathlibBridge.lean",
+    "srcSha": "6DD6CCF927A48192C6C71C63CD394EC3B360BDF04591ED7912940572477FF111",
+    "dstSha": "A809EE90D215592218F5FCF9504880318866911EE0AECC86E7AB79FE8523949D",
+    "bytes": 3501,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.ContH2"
+    ],
+    "dstImports": [
+      "import Brauer.ContH2"
+    ]
+  },
+  {
+    "file": "OrderBound.lean",
+    "srcSha": "1347DDDD325DFA75BE9B8A328D4AAFCD7C110EF7A2EEA9FE63CC94933E356363",
+    "dstSha": "C0CCF44EC7A05C2C478A25F40EF37592A5A2D04F238A0417183248646AC7E5A1",
+    "bytes": 15842,
+    "importsChanged": 3,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Relative",
+      "import LocalClassFieldTheory.Brauer.InfRes",
+      "import LocalClassFieldTheory.Brauer.LocalGalois"
+    ],
+    "dstImports": [
+      "import Brauer.Relative",
+      "import Brauer.InfRes",
+      "import Brauer.LocalGalois"
+    ]
+  },
+  {
+    "file": "Relative.lean",
+    "srcSha": "8AFBE3BA0062CE712687174C4B410A9500B3AC9CDAA6C25F935B74387297FE4F",
+    "dstSha": "31E27620D05E5202A6B5632B7EAA17F53B7DC0D1428B62E6B972565E35A94C3D",
+    "bytes": 10711,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Cyclic",
+      "import LocalClassFieldTheory.Reciprocity.SecondInequality"
+    ],
+    "dstImports": [
+      "import Brauer.Cyclic",
+      "import Reciprocity.SecondInequality"
+    ]
+  },
+  {
+    "file": "Restriction.lean",
+    "srcSha": "FFA7470CDE0100B4E41ABDCEF1FFAAC2BB0AED61426C1C67A4C0B82A31B43F95",
+    "dstSha": "3815EBAFBCF2EE3D22C73323BF581D65CB41E101DBE8B7750283ABE9EBE6C2DB",
+    "bytes": 10662,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Unramified",
+      "import LocalClassFieldTheory.Reciprocity.BaseChange"
+    ],
+    "dstImports": [
+      "import Brauer.Unramified",
+      "import Reciprocity.BaseChange"
+    ]
+  },
+  {
+    "file": "TateNakayama.lean",
+    "srcSha": "AAF7390DBE018AA391429703AA3CA32032C37EA45F4801FE2CFD4E61D63B19A6",
+    "dstSha": "29DDAA4E548DBE3F2303C904217B0F343CE1813E8CF51B39F60BF80F75BBEFF4",
+    "bytes": 19922,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.FundamentalClass",
+      "import LocalClassFieldTheory.Reciprocity.NormCompat"
+    ],
+    "dstImports": [
+      "import Brauer.FundamentalClass",
+      "import Reciprocity.NormCompat"
+    ]
+  },
+  {
+    "file": "TateNakayamaDegrees.lean",
+    "srcSha": "9DAAFD09EA2AE4B4848723BF58B988690253820FEC3DC5AF1DC2CBEE6ECFEA2D",
+    "dstSha": "C85A27E28D31A107205A11D61A30B6A5B49B84168EFBAB984A390F3F23B8794C",
+    "bytes": 5522,
+    "importsChanged": 1,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.TateNakayama"
+    ],
+    "dstImports": [
+      "import Brauer.TateNakayama"
+    ]
+  },
+  {
+    "file": "Unramified.lean",
+    "srcSha": "ED85264EF1E01D077E9B4FCEAF1E1EFBF2A0C9B5567FFA40AF411F25B6A3CEC8",
+    "dstSha": "8E19AEF43CF1D434FF0465F53769BBE9E1F39F6C748134218C4AF356529F61E6",
+    "bytes": 8671,
+    "importsChanged": 2,
+    "srcImports": [
+      "import LocalClassFieldTheory.Brauer.Absolute",
+      "import LocalClassFieldTheory.Reciprocity.Artin"
+    ],
+    "dstImports": [
+      "import Brauer.Absolute",
+      "import Reciprocity.Artin"
+    ]
+  }
+]

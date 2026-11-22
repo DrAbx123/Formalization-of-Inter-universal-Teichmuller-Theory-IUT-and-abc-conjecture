@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2600C9ConcreteIdentityActual
+#print axioms LeanFormal.IUT.XiFPaper.S2600C9ConcreteIdentityActual.s2600_paperQPilot_eq_source

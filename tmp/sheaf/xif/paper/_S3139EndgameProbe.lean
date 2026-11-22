@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S3139VendorProcessionLogVolumeChainActual
+import tmp.sheaf.xif.paper.S3139VendorIndActionLawsActual
+import tmp.sheaf.xif.paper.S3139VendorStage1ComparisonBridgeActual
+import tmp.sheaf.xif.paper.S3139RouteCapsuleLabelResidualActual
+import tmp.sheaf.xif.paper.S3139RouteFinalCompositionHardenedActual
+import tmp.sheaf.xif.paper.S3139V2ConsumerIntegrationActual
+import tmp.sheaf.xif.paper.S3139RouteEndgameIdsActual
+
+-- S3139 endgame probe: vendor-adapted chain/laws/schema, capsule-label residual,
+-- final hardened route composition, V2 consumer integration, endgame ids.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorProcessionLogVolumeChainActual.sourceTensorPacketProductLogVolume_increment
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorIndActionLawsActual.sourceIndActionLaws
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorStage1ComparisonBridgeActual.sourceStage1ComparisonOfCor312Data
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteCapsuleLabelResidualActual.firstTriangleRouteComposition_with_capsuleLabel
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteFinalCompositionHardenedActual.firstTriangleRouteFinalComposition
+#print axioms LeanFormal.IUT.XiFPaper.S3139V2ConsumerIntegrationActual.SourceV2ComparisonRegionConsumer.membership_and_volume
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteEndgameIdsActual.routeEndgameIds

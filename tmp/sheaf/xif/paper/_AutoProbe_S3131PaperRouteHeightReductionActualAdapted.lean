@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteHeightReductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteHeightReductionActual.UndilatedHeightBound
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteHeightReductionActual.heightComparisonFamily_of_undilated

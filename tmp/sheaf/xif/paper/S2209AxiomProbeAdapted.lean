@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2209D5RangeProofActual
+open LeanFormal.IUT.XiFPaper.S2209D5RangeProofActual
+#print axioms S2209D5LargeImageFive_of_exactFirstMissing
+#print axioms S2209RangeCycleType_of_rangeTop
+#print axioms S2209RangePairTransitive_of_rangeTop
+#print axioms S2209D5LargeImageFive_of_rangeTop

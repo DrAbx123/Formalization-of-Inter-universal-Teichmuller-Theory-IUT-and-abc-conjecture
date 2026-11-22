@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DGeomCoreAllGreenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DGeomCoreAllGreenActual.dGeomCoreAllGreen_bundle

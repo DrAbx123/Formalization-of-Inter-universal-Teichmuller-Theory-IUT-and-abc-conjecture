@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3119StrongTransEqActual
+import tmp.sheaf.xif.paper.EtaleCoverQuotientCategoryActual
+#print axioms LeanFormal.IUT.XiFPaper.S3119StrongTransEqActual.S3119StrongTrans_eq_of_hom_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3119StrongTransEqActual.S3119StrongTrans_eq_of_hom_eq_target_proof

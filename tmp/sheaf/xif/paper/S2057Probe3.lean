@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1720SourceArithmeticActual
+import Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind
+open NumberField
+#check RingOfIntegers.exponent
+#check RingOfIntegers.monicFactorsMod
+#check NumberField.RingOfIntegers.exponent
+#check NumberField.RingOfIntegers.monicFactorsMod
+#check NumberField.Ideal.primesOverSpanEquivMonicFactorsMod
+#check RingOfIntegers.monicFactorsMod

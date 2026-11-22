@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1SPaperQPilotIdentificationsActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SPaperQPilotIdentificationsActual.sPaperQPilotObject
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SPaperQPilotIdentificationsActual.sPaperQPilotObject_qPilotLogVolume
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SPaperQPilotIdentificationsActual.sPaperQPilotObject_nonpos
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SPaperQPilotIdentificationsActual.sPaperRows_length

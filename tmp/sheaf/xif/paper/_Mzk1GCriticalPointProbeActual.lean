@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1GCriticalPointCasesActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GCriticalPointCasesActual.gPoly_critical_point_cases

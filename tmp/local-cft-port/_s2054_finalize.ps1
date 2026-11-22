@@ -1,0 +1,4 @@
+$p1='D:\lean\tmp\local-cft-port\_s2054_env.txt'; $p2='D:\lean\tmp\local-cft-port\_s2054_probeenv.ps1'
+foreach ($p in @($p1,$p2)) { if (Test-Path -LiteralPath $p) { Write-Output ('DELETING ' + (Resolve-Path -LiteralPath $p).Path); Remove-Item -LiteralPath $p -Force } }
+Get-FileHash 'D:\lean\.lake\build\lib\lean\ContinuousKummerTheory\Kummer\PAdic.olean' -Algorithm SHA256 | ForEach-Object { 'PADIC_OLEAN ' + $_.Hash + ' ' + (Get-Item $_.Path).Length + ' ' + (Get-Item $_.Path).LastWriteTime.ToString('s') }
+Get-Item 'D:\lean\coord\reports\S2054-ck-padic-port.md' | Select-Object Length,LastWriteTime | Format-List | Out-String

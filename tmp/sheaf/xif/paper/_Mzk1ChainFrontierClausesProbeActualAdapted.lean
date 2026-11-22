@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ChainFrontierClausesActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainFrontierClausesActualAdapted.chain_gapReduced_abc
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainFrontierClausesActualAdapted.chainFrontierRows_length

@@ -1,0 +1,130 @@
+{
+ "count": 31,
+ "bad": [],
+ "lists": [
+  [
+   "LeanFormal.IUT.XiFPaper.PaperSignedHullNormalizationActual.PaperSignedHullNormalizationObstruction",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.PaperSignedHullNormalizationActual.signedRealHaarIdentity_of_unitFactor_noUnit",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.PaperSignedHullNormalizationActual.signedHnormal_of_unitFactor_noUnit",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.PaperSignedHullNormalizationActual.paperSignedHullOfUnitFactor",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.PaperSignedHullNormalizationActual.paperSignedHullOfUnitFactor_procession",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.C3GaussianThetaPacketActual.actualGaussianThetaPacket",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.C3GaussianThetaPacketActual.actualGaussianC3",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.C3GaussianThetaPacketActual.actualGaussianSignedAverage",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.C3GaussianThetaPacketActual.gaussianC3_hnormal_of_normalization",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteHnormalActual.ConcreteHnormalEquality",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteHnormalActual.concreteHnormal_of_equality",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteHnormalActual.concreteHnormal_haar_form",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.NormalizedHaarHnormalActual.normalizedHaarMeasure",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.NormalizedHaarHnormalActual.normalizedHaarMeasure_concreteHnormalEquality",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.NormalizedHaarHnormalActual.normalizedHaarMeasure_signedHnormal",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperSignedHullActual.concretePaperSignedHull",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperSignedHullActual.concretePaperSignedHull_procession_eq",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperSignedHullActual.concretePaperSignedHull_hull_logVolume_eq",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperSignedHullActual.concretePaperSignedHull_signedHnormal",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteSignedHullUnconditionalActual.unconditionalPaperSignedHull",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteSignedHullUnconditionalActual.unconditionalPaperSignedHull_procession_eq",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteSignedHullUnconditionalActual.unconditionalPaperSignedHull_hull_logVolume_eq",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcreteSignedHullUnconditionalActual.unconditionalPaperSignedHull_signedHnormal",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataActual.concreteQPilotObject",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataActual.concreteHull",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataActual.concreteThetaLinkData",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataActual.concretePaperUnconditionalData",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataUnconditionalActual.unconditionalHull",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataUnconditionalActual.concreteQLogIdentification",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataUnconditionalActual.concreteQPilotLogVolume_eq_paper",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataUnconditionalActual.concretePaperUnconditionalDataUnconditional",
+   "propext, Classical.choice, Quot.sound"
+  ]
+ ]
+}

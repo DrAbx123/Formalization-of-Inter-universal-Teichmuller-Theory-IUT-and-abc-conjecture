@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128QuotientsByFiniteGroupsTargetActual
+open LeanFormal.IUT.XiFPaper.S3128QuotientsByFiniteGroupsTargetActual
+#print axioms S3128HasQuotientsByFiniteGroupsTarget
+#print axioms S3128MonoInducesIsoOnDirectSummandTarget

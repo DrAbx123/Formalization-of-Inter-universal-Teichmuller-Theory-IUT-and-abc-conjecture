@@ -1,0 +1,8 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FreyOddReduction
+import LeanFormal.IUT.ABCBridge.Geometry.FreySplitMultiplicativeReduction
+import LeanFormal.IUT.ABCBridge.Geometry.FreyTwoAdicMinimalReduction
+#print axioms LeanFormal.IUT.freyPadicIntegralModel_eq_int_map
+#print axioms LeanFormal.IUT.freyPadicCurve_discriminant
+#print axioms LeanFormal.IUT.freyResidue_prime_eq_zero
+#print axioms LeanFormal.IUT.freyMultiplicativeSplittingPolynomial_eq
+#print axioms LeanFormal.IUT.freyTwoAdicHalvingModel_discriminant

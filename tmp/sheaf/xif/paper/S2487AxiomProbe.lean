@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2487DedekindCertificateActual
+open LeanFormal.IUT.XiFPaper.S2487DedekindCertificateActual
+#print axioms S2487QuadraticIrreducible
+#print axioms S2487FirstMissing_of_dedekind

@@ -1,0 +1,33 @@
+tmp\sheaf\n8\closure\SourceInputBinding.lean:35:5: error: unknown namespace `LeanFormal.IUT.IUTII.Frobenioid.Example36PrimeStripComponentIdentification`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:44:41: error: Invalid argument name `F` for function
+tmp\sheaf\n8\closure\SourceInputBinding.lean:53:38: error: Invalid argument name `F` for function
+tmp\sheaf\n8\closure\SourceInputBinding.lean:61:10: error: Function expected at
+  SourcePlaceRealization
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourcePlaceRealization` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\closure\SourceInputBinding.lean:58:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:61:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.place`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:63:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.frobenioid`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:58:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:71:14: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceInputBinding` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

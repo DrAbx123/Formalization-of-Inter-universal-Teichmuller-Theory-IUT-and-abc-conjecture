@@ -100,3 +100,29 @@ Last formalization TODO: connect this external law to the concrete Haar normaliz
 - port 状态：**4/10 green**（DVDRing/Basic、Int/WithZero、Valuation/AbsoluteValue、Subring/SpanSingleton）；6 pending。
 - 真 API 缺口：`TauCetiPort/.../RingTheory/Valuation/Discrete/Order.lean:114` 需 `[IsCyclic (valueGroup v)]`（4.36 隐含实例，4.32 缺失）⇒ 按 Lead 决定**停止无限投入**，保留 class-B 外部 `PAdicHaarDetScaling` 支撑 det-Haar/#10，port 记为“部分移植 + 精确 API 缺口”。
 - det-Haar 继续走 class-B：MatrixSplit/DiagonalNorm 修复后接 `detHaar_map_of_factors`；内部 SNF 路线保留为交叉校验。
+
+### TauCeti port 最终判定（1–2 波时间盒后冻结，2026-11-14）
+
+- 4/10 green；其余阻塞在 CardQuotient 的 **4.36 广义定理**
+  Ideal.cardQuot_mul（无 Module.Free ℤ R）在 4.32 不可用：
+  4.32 版本强制 [IsDedekindDomain S] [Module.Free ℤ S]，
+  而局部域整数环 O[K] 不是有限自由 ℤ-模。
+- 这不是“补一个 instance”可修：需重证 DVR/Dedekind 情形下不依赖 Free ℤ 的理想商基数乘性，超出时间盒。
+- 决策：冻结 port；保留 class-B Mzk1PAdicHaarDetScalingExternalActual（已 green）
+  支撑 det-Haar/#10；TauCeti port 记录为“4/10 green + CardQuotient 广义定理缺口”。
+
+## StepVAssembly 供体与 Box (11) 精确引用（2026-11-14，qpilot）
+
+- Lean 供体：`LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceStepVAssembly.lean`
+  - `arithmeticTuple_stepV_normalizedLogVolume_le_paperBound`
+  - olean GREEN（1.84MB）
+- 新 Box 文件：`tmp/sheaf/xif/paper/Mzk1IutIVProp14iiiBoxFormalActual.lean`
+  - `prop14iii_box_formal`
+  - 输出：μ_log(S) ≤ (-ord_p(varpi) + Σ_i ord_p(δ_i) + 1) log p + Σ_{i∈I*}(3+log e_i)
+  - 不 import Iut/TFG；Iut 104 文件闭包已放弃
+- consumer：`Mzk1IutIVProp14iiiBoxConsumerActual.lean`
+  - `S1915BoxConsumer` 显式记录 S1915 hull 与 StepV tensor 的 carrier 桥
+  - `s1915_a0_le_box` 由 `prop14iii_box_formal` 得 S1915 a0 ≤ Box
+- 假设来源：Φ 为 Ind1/Ind2 保 `arithmeticTupleUnitLogLattice` 的线性自同构族；
+  varpi 为 distinguished factor 的非零元素；exceptional 为 e_i>p-2 的因子集。
+- 未完成：S1902Carrier 与 ArithmeticTensorTupleBlock 的**具体** carrier 等价（consumer bridge 目前是显式字段，不是已证等式）。

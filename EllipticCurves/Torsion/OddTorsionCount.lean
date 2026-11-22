@@ -1,0 +1,554 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import EllipticCurves.Torsion.PrimaryTowerAlgClosed
+import EllipticCurves.Torsion.XSupport
+
+/-!
+# `#E[n] = n²` at odd `n` is exactly separability of `preΨₙ`
+
+`EllipticCurves.Torsion.XSupport` proves `#E[n] ≤ n²`.  `EllipticCurves.Torsion.PrimaryTower` takes
+the matching equality `#E[p] = p²` as a hypothesis, and its gate list records that it does not
+follow from surjectivity of `[p]`.  This file settles what it *does* follow from, at an odd index
+over an algebraically closed field: **exactly the statement that `preΨₙ` has no repeated root**.
+
+⚠️ That is the route by which the equality was eventually proved: the separability side is
+discharged in `EllipticCurves.Torsion.WronskianSeparable` from the Wronskian identity, which
+`EllipticCurves.Torsion.OmegaChordSum` proves outright, giving `card_torsion_eq_sq_of_odd`.  The
+`iff` below is still the load-bearing step and is still stated as an `iff` — it is what says there
+is no cheaper road.
+
+## The correspondence
+
+At an odd `n` the `x`-coordinate is a `2`-to-`1` map from the nonzero `n`-torsion onto the roots of
+`preΨₙ`, with **no degenerate fibre**:
+
+* `ΨSqₙ = preΨₙ²` at odd `n` by Mathlib's definition (`ΨSq_ofNat`, whose `if Even n then Ψ₂Sq
+  else 1` factor is `1` on the odd branch),
+  and `ψₙ(x, y)² = ΨSqₙ(x)`, so `n • (x, y) = 0 ↔ preΨₙ(x) = 0`
+  (`nsmul_eq_zero_iff_eval_preΨ_eq_zero`), using the dictionary
+  `nsmul_eq_zero_iff_ψ_evalEval_eq_zero_of_isElliptic` at *every* point;
+* a root of `preΨₙ` is never a root of `Ψ₂Sq` (`eval_Ψ₂Sq_ne_zero_of_eval_preΨ_eq_zero`), so the two
+  points above it are distinct.  ⚠️ This is the only step that is not bookkeeping, and it is where
+  oddness is spent: such a point would be `2`-torsion, and at a `2`-torsion point `ψ` does not
+  vanish at an odd index (`ψ_odd_evalEval_ne_zero_of_ψ_two_evalEval_eq_zero`).
+
+`torsionOddEquiv` packages this as a bijection `E[n] ≃ Option ({x // preΨₙ(x) = 0} × Bool)`, in the
+style of `torsionTwoEquiv` (`EllipticCurves.Torsion.TwoTorsion`), and `card_torsion_odd` reads the
+count off it:
+
+```
+Nat.card (W.torsion n) = 2 * Nat.card {x // (W.preΨ n).eval x = 0} + 1 .
+```
+
+⚠️ That is an **equality**, not the inequality of `card_torsion_le_sq`, and the equality is the
+point: over an algebraically closed field the root count of the nonzero polynomial `preΨₙ` is its
+`natDegree = (n² − 1)/2` **iff** it has no repeated root, so
+
+> **`#E[n] = n²` ↔ `Separable (W.preΨ n)`** (`card_torsion_eq_sq_iff_separable_preΨ`)
+
+at every odd `n` with `char F ∤ 2n`.
+
+⚠️ The merged `WeierstrassCurve.Affine.card_torsion_le_sq` is **not** superseded: it carries neither
+`[IsAlgClosed F]` nor `[W.IsElliptic]`, and holds at every index rather than at odd ones.  It is
+used below only in a consistency check — the exact count of `card_torsion_odd` must not exceed it,
+and that is machine-checked rather than assumed.
+
+## ⚠️ What this does and does not settle
+
+* It settles that the remaining gate on the `p`-primary tower is, at an odd `p`, **a statement about
+  one univariate polynomial** and nothing more.  `nonempty_torsionPow_addEquiv_of_separable` is the
+  signature to read: over `F̄`, at an odd prime `p` with `char F ∤ 2p`, `E[pᵏ] ≅ (ℤ/pᵏℤ)²` is owed
+  `Separable (W.preΨ p)` and nothing else.
+* ⚠️ It does **not prove** `Separable (W.preΨ n)`, and asserts no route to it.  The classical
+  argument is separability of the isogeny `[n]`, via `[n]∗ω = nω ≠ 0` on the invariant differential
+  ([Silverman, *The Arithmetic of Elliptic Curves*][silverman2009], III.4.10 and III.5.3), and this
+  tree has no isogeny-degree layer.  Whether a division-polynomial-only route exists is
+  **unmeasured** here.
+* ⚠️ Because the statement is an `iff`, it also says there is no cheaper road: any proof of
+  `#E[p] = p²` at an odd `p` over `F̄` *is* a proof that `preΨ p` is separable.  It settles in
+  particular that surjectivity of `[p]` is not the missing input, on grounds that need no argument
+  about images and kernels: `WeierstrassCurve.Affine.nsmul_surjective_of_two_ne_zero` is a
+  **theorem** here at every `n ≠ 0` under `(2 : F) ≠ 0` alone, so if it supplied the gate the gate
+  would already be discharged.  ⚠️ That is a statement about what is *available*, not a proof that
+  no implication exists.
+* ⚠️ **Odd `n` only**, deliberately.  At even `n` the roots of `Ψ₂Sq` *are* roots of `ΨSqₙ`, their
+  fibres are singletons, and the count picks up the `+3` that `EllipticCurves.Torsion.XSupport`
+  describes; that is a second case with its own arithmetic and it is not what the `p`-primary tower
+  at `p ≥ 5` needs.  The `2`-primary tower is closed by hand elsewhere.
+
+## Main definitions
+
+* `WeierstrassCurve.Affine.torsionOddOfRoot` : the `n`-torsion point above a root of `preΨₙ`
+  selected by a `Bool`, with `none` sent to the point at infinity.
+* `WeierstrassCurve.Affine.torsionOddEquiv` : the bijection
+  `E[n] ≃ Option ({x // preΨₙ(x) = 0} × Bool)`.
+
+## Main statements
+
+* `WeierstrassCurve.Affine.card_root_subtype` : `#{x // p(x) = 0} = #p.roots.toFinset` at a nonzero
+  `p`.  ⚠️ **About `Polynomial` and nothing else**, public because
+  `EllipticCurves.Torsion.TriplingSeparable` counts roots the same way; its own docstring says why
+  the namespace is this one.
+* `WeierstrassCurve.Affine.eval_Ψ₂Sq_ne_zero_of_eval_preΨ_eq_zero` : at odd `n`, a root of `preΨₙ`
+  is not a root of `Ψ₂Sq`.
+* `WeierstrassCurve.Affine.nsmul_eq_zero_iff_eval_preΨ_eq_zero` : `n • (x, y) = 0 ↔ preΨₙ(x) = 0`.
+* `WeierstrassCurve.Affine.card_torsion_odd` : `#E[n] = 2 · #{roots of preΨₙ} + 1`.
+* **`WeierstrassCurve.Affine.card_torsion_eq_sq_iff_separable_preΨ`** : `#E[n] = n²` ↔
+  `Separable (W.preΨ n)`.
+* `WeierstrassCurve.Affine.card_torsion_pow_of_separable`,
+  `WeierstrassCurve.Affine.finite_torsion_pow_of_separable`,
+  **`WeierstrassCurve.Affine.nonempty_torsionPow_addEquiv_of_separable`** : the `p`-primary tower
+  with the gate substituted.
+* `WeierstrassCurve.Affine.separable_preΨ_three` and its `Ψ₃` form
+  `WeierstrassCurve.Affine.separable_Ψ₃_of_isAlgClosed` : the gate read *backwards* at `n = 3`
+  against the merged sharp count — this file's non-vacuity certificate.  ⚠️ A **round trip, not a
+  new statement**: `WeierstrassCurve.Affine.nodup_roots_Ψ₃`
+  (`EllipticCurves.Torsion.ThreeTorsionStructure`) is merged, and over `F̄` it *is* separability of
+  `Ψ₃`, one `Polynomial.nodup_roots_iff_of_splits` away.  See the theorem's own docstring.
+  ⚠️ **The second name carried the bare `separable_Ψ₃` until
+  `EllipticCurves.Torsion.ThreeDivisionField` proved the same conclusion with no `[IsAlgClosed F]`
+  and no `[DecidableEq F]` at all**, which is a
+  strictly stronger statement and takes the bare name; both live in `WeierstrassCurve.Affine`, so
+  the two could not coexist.  Nothing consumed the old name outside this file.
+
+## References
+
+* [J. H. Silverman, *The Arithmetic of Elliptic Curves*][silverman2009], III.4.10, III.5.3 and
+  III.6, Corollary 6.4.
+-/
+
+open Polynomial
+
+namespace WeierstrassCurve.Affine
+
+variable {F : Type*} [Field F] {W : Affine F}
+
+/-! ### `ΨSq` at an odd index is a square -/
+
+/-- **`ΨSqₙ = preΨₙ²` at odd `n`.**  Mathlib's `ΨSq_ofNat` carries the factor `Ψ₂Sq` only in the
+even branch, so at an odd index the `x`-support is cut out by `preΨₙ` alone. -/
+theorem ΨSq_natCast_eq_sq_of_odd {n : ℕ} (hn : Odd n) : W.ΨSq (n : ℤ) = W.preΨ (n : ℤ) ^ 2 := by
+  rw [ΨSq_ofNat, if_neg (Nat.not_even_iff_odd.mpr hn), mul_one, preΨ_ofNat]
+
+/-! ### A root of `preΨₙ` is not a root of `Ψ₂Sq`, at odd `n` -/
+
+/-- **At an odd index, a root of `preΨₙ` is not a root of `Ψ₂Sq`.**  ⚠️ **In every
+characteristic**: the `(2 : F) ≠ 0` this took until `#2253` was spent entirely on getting a point
+above `x`, and `exists_equation'` does that over `F̄` with no hypothesis on `2` at all.
+
+A common root carries a point `(x, y)` of `W` (`exists_equation'`) with `ψ₂(x, y) = 0` — a
+`2`-torsion point — and with `ψₙ(x, y)² = ΨSqₙ(x) = preΨₙ(x)² = 0`.  But `ψ` does not vanish at an
+odd index at a `2`-torsion point
+(`WeierstrassCurve.Affine.ψ_odd_evalEval_ne_zero_of_ψ_two_evalEval_eq_zero`).
+
+⚠️ This is the step that makes every `y`-fibre over the support a genuine *pair*, and so the step
+that turns the counting inequality of `EllipticCurves.Torsion.XSupport` into an equality. -/
+theorem eval_Ψ₂Sq_ne_zero_of_eval_preΨ_eq_zero [IsAlgClosed F] [W.IsElliptic]
+    {n : ℕ} (hn : Odd n) {x : F} (hx : (W.preΨ (n : ℤ)).eval x = 0) : W.Ψ₂Sq.eval x ≠ 0 := by
+  intro hΨ₂
+  obtain ⟨y, hxy⟩ := exists_equation' (W := W) x
+  have ht : (W.ψ 2).evalEval x y = 0 :=
+    pow_eq_zero_iff (n := 2) (by norm_num) |>.mp (by rw [ψ_sq_evalEval hxy 2, ΨSq_two, hΨ₂])
+  have hψn : (W.ψ (n : ℤ)).evalEval x y = 0 :=
+    pow_eq_zero_iff (n := 2) (by norm_num) |>.mp (by
+      rw [ψ_sq_evalEval hxy, ΨSq_natCast_eq_sq_of_odd hn, eval_pow, hx,
+        zero_pow (two_ne_zero (α := ℕ))])
+  obtain ⟨m, hm⟩ := hn
+  refine ψ_odd_evalEval_ne_zero_of_ψ_two_evalEval_eq_zero ht
+    (ψ_three_evalEval_ne_zero_of_ψ_two_evalEval_eq_zero hxy ht) m ?_
+  rw [show 2 * (m : ℤ) + 1 = ((n : ℕ) : ℤ) by rw [hm]; push_cast; ring]
+  exact hψn
+
+/-! ### Counting the roots of a polynomial over an algebraically closed field -/
+
+private lemma finite_root_subtype {p : F[X]} (hp : p ≠ 0) : Finite {x : F // p.eval x = 0} :=
+  Set.Finite.to_subtype (finite_setOf_isRoot hp)
+
+/-- **`#{x // p(x) = 0} = #p.roots.toFinset`** for a nonzero `p`, as a `Nat.card` of a subtype
+against a `Finset.card` of the root multiset's dedup.
+
+⚠️ **Nothing here is about elliptic curves**, and it is public only because a second consumer
+appeared outside this file: `EllipticCurves.Torsion.TriplingSeparable` counts the roots of the
+tripling polynomial the same way.  It was `private`, and a round that needed it restated it verbatim
+rather than exporting it; `#1255` is the precedent for exporting instead, recorded in
+`eval_Φ_three_ne_zero_of_root_ΨSq`'s own docstring
+(`EllipticCurves.Torsion.TriplingSurjective`).  ⚠️ **The namespace is `WeierstrassCurve.Affine` for
+want of a Mathlib
+mirror tree in this repository and for no better reason**; a statement about `Polynomial` alone
+belongs elsewhere and should move if one is ever added.
+
+⚠️ **This statement is also this tree's own negative control for `linter.unusedDecidableInType`,
+which is why it needs no `[DecidableEq F]` omitted where five later declarations in this file do**
+(`#2308`).  That linter keys on **the elaborated type**, exactly as its name and its own message —
+*does not use the following hypothesis in its type* — both say, and ⚠️ **a pretty-printed signature
+cannot settle that, because `#check` suppresses instance arguments**: under
+`set_option pp.explicit true` the `[DecidableEq F]` of `WeierstrassCurve.Affine.torsion` appears
+inside `Point.instAddCommGroup`, so it does reach the type of every `W.torsion n` statement, while
+the printed signature shows only a binder that nothing later mentions.  Measured in this tree, Lean
+`4.32.0`:
+
+* a `W.torsion n` statement is silent where a `Nat.card` subtype-of-`F` statement fires, on the
+  *same* `rfl` proof — so the statement and not the proof is the discriminator;
+* ⚠️ a subtype statement whose proof term does carry the instance **still fires**, so proof use is
+  not a second route to silence;
+* ⚠️⚠️ **but a statement concluding in a `Multiset.toFinset` cardinality is silent, because
+  `toFinset` binds `[DecidableEq F]` in its own type** — which is this one, and is why **five**
+  declarations below need `[DecidableEq F]` omitted: three on a bare `omit [DecidableEq F] in`
+  (`nonsingular_fibreY`, `separable_preΨ_three`, `separable_Ψ₃_of_isAlgClosed`) and ⚠️ **two inside
+  the combined `omit [DecidableEq F] [WeierstrassCurve.IsElliptic W] in`** (`equation_fibreY`,
+  `fibreY_injective`), where dropping that binder fires the same message with the same `(#4)`.  ⚠️
+  **This bullet read** *"are each needed and no fourth one is"* **and the sentence opening this
+  paragraph counted three the same way: both counted the bare omit SYNTAX and published it as the
+  set of DECLARATIONS**, which is the quantity this bullet exists to teach.  ⚠️⚠️ **And the two that
+  were missed are its sharpest rows**: `W.Equation x (W.fibreY x b)` and
+  `Function.Injective (W.fibreY x)` are neither `Polynomial` nor `W.torsion` statements but a third
+  shape, and `nonsingular_fibreY` above has the identical shape and the identical need;
+* whether the instance is bound on the declaration, as here, or inherited from a section `variable`
+  makes no difference to any of the above.
+
+⚠️ **So *about a polynomial rather than about `W.torsion n`* is a sufficient-in-practice proxy and
+not the criterion.  The criterion is whether the instance occurs in the elaborated type, and a
+`Finset`-valued conclusion satisfies it as surely as a `torsion` one.** -/
+theorem card_root_subtype [DecidableEq F] {p : F[X]} (hp : p ≠ 0) :
+    Nat.card {x : F // p.eval x = 0} = p.roots.toFinset.card := by
+  classical
+  have h : {x : F // p.eval x = 0} ≃ {x : F // x ∈ p.roots.toFinset} :=
+    Equiv.subtypeEquivRight fun x => by simp [Multiset.mem_toFinset, mem_roots hp, IsRoot.def]
+  rw [Nat.card_congr h, Nat.card_eq_finsetCard]
+
+/-! ### The dictionary in terms of `preΨ` -/
+
+section Count
+
+variable [DecidableEq F] [IsAlgClosed F] [W.IsElliptic]
+
+omit [IsAlgClosed F] in
+/-- **`n • (x, y) = 0 ↔ preΨₙ(x) = 0`** with `(2 : F) ≠ 0`, at an odd index and at every point
+of `W`.
+
+The dictionary `nsmul_eq_zero_iff_ψ_evalEval_eq_zero_of_isElliptic` gives `n • P = 0 ↔ ψₙ(P) = 0`;
+squaring moves that onto the `x`-axis, and at an odd index `ΨSqₙ` is the square of `preΨₙ`. -/
+theorem nsmul_eq_zero_iff_eval_preΨ_eq_zero (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) {x y : F}
+    (hns : W.Nonsingular x y) :
+    ((n • Point.some x y hns : W.Point) = 0) ↔ (W.preΨ (n : ℤ)).eval x = 0 := by
+  rw [nsmul_eq_zero_iff_ψ_evalEval_eq_zero_of_isElliptic h2 hns n]
+  have key := ψ_sq_evalEval hns.left (n : ℤ)
+  rw [ΨSq_natCast_eq_sq_of_odd hn, eval_pow] at key
+  constructor
+  · intro h
+    rw [h, zero_pow (two_ne_zero (α := ℕ))] at key
+    exact pow_eq_zero_iff (n := 2) (by norm_num) |>.mp key.symm
+  · intro h
+    rw [h, zero_pow (two_ne_zero (α := ℕ))] at key
+    exact pow_eq_zero_iff (n := 2) (by norm_num) |>.mp key
+
+/-! ### The two points above a root -/
+
+variable (W) in
+/-- The `y`-coordinate above `x` selected by a `Bool`: `true` picks the designated solution
+`someY x` of the Weierstrass equation, `false` its negation. -/
+noncomputable def fibreY (x : F) : Bool → F
+  | true => W.someY x
+  | false => W.negY x (W.someY x)
+
+omit [DecidableEq F] [WeierstrassCurve.IsElliptic W] in
+lemma equation_fibreY (x : F) (b : Bool) : W.Equation x (W.fibreY x b) := by
+  obtain ⟨y, hy⟩ := exists_equation' (W := W) x
+  cases b
+  · exact (W.equation_neg x (W.someY x)).mpr (W.equation_someY hy)
+  · exact W.equation_someY hy
+
+omit [DecidableEq F] in
+lemma nonsingular_fibreY (x : F) (b : Bool) :
+    W.Nonsingular x (W.fibreY x b) :=
+  equation_iff_nonsingular.mp (W.equation_fibreY x b)
+
+omit [DecidableEq F] [WeierstrassCurve.IsElliptic W] in
+/-- **The two points above a root of `preΨₙ` are distinct**, because the root is not a root of
+`Ψ₂Sq`: `someY x = negY x (someY x)` says exactly `ψ₂ = 2y + a₁x + a₃` vanishes there. -/
+lemma fibreY_injective {x : F} (hΨ : W.Ψ₂Sq.eval x ≠ 0) :
+    Function.Injective (W.fibreY x) := by
+  have hne : W.someY x ≠ W.negY x (W.someY x) := by
+    intro h
+    refine hΨ ?_
+    have hxy : W.Equation x (W.someY x) := by
+      obtain ⟨y, hy⟩ := exists_equation' (W := W) x
+      exact W.equation_someY hy
+    have ht : (W.ψ 2).evalEval x (W.someY x) = 0 := by
+      rw [ψ_two_evalEval]
+      simp only [negY] at h
+      linear_combination h
+    rw [← ΨSq_two, ← ψ_sq_evalEval hxy 2, ht]
+    ring
+  rintro (_ | _) (_ | _) h
+  · rfl
+  · simp only [fibreY] at h
+    exact absurd h.symm hne
+  · simp only [fibreY] at h
+    exact absurd h hne
+  · rfl
+
+/-! ### The bijection
+
+⚠️ **This section's `[IsAlgClosed F]` is load-bearing, and `omit`-and-build cannot establish that —
+on `torsionOddEquiv` that test returns a FALSE GREEN** (`#2308`).  `omit [IsAlgClosed F] in` placed
+before the `noncomputable def` compiles with no error and no warning at all; the same line before
+`torsionOddOfRoot_bijective` fails, with Lean quoting the hygienic variable name in backticks, and
+that failure is the sound half of the pair.  ⚠️⚠️ **And on the `def` the line is a TOTAL no-op
+rather than a name removal with an anonymous re-add**: with it and without it the output of
+`#check @torsionOddEquiv` is byte-for-byte identical, and so is a binder-name walk over the
+declaration's `ConstantInfo.type`, down to the hygienic suffixes.  **There was never a name to
+remove** — the `variable` line of this section is three *anonymous* instance binders — and the
+asymmetry a reader sees, `DecidableEq F` printed with a name beside an unnamed `IsAlgClosed F`, is
+already there in the unmodified file: the pretty printer names a binder only when the rest of the
+type mentions it.  ⚠️ **So the test that decides a binder claim is `#check` on the elaborated
+signature (`#2266`), and where that cannot separate *kept* from *re-added* the binder walk can.**
+Two notes for whoever repeats it: an `omit` goes **before** the doc comment, because after it Lean
+reports an unexpected-token parse error that is easy to mistake for a result; and a blank line
+between the two trips `linter.style.emptyLine`.  Measured at `22db66e`, Lean `4.32.0`.
+-/
+
+variable (W) in
+/-- **The `n`-torsion point above a root of `preΨₙ` selected by a `Bool`**, with `none` sent to the
+point at infinity.  At an odd index this exhausts `E[n]`
+(`WeierstrassCurve.Affine.torsionOddOfRoot_bijective`). -/
+noncomputable def torsionOddOfRoot (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) :
+    Option ({x : F // (W.preΨ (n : ℤ)).eval x = 0} × Bool) → W.torsion n
+  | none => 0
+  | some (x, b) =>
+      ⟨Point.some x.1 (W.fibreY x.1 b) (W.nonsingular_fibreY x.1 b),
+        mem_torsion_iff.mpr ((nsmul_eq_zero_iff_eval_preΨ_eq_zero h2 hn _).mpr x.2)⟩
+
+lemma torsionOddOfRoot_bijective (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) :
+    Function.Bijective (torsionOddOfRoot W h2 hn) := by
+  constructor
+  · rintro (_ | ⟨⟨x₁, hx₁⟩, b₁⟩) (_ | ⟨⟨x₂, hx₂⟩, b₂⟩) hab
+    · rfl
+    · exact absurd (congrArg Subtype.val hab).symm (Point.some_ne_zero _)
+    · exact absurd (congrArg Subtype.val hab) (Point.some_ne_zero _)
+    · have hv := congrArg Subtype.val hab
+      rw [torsionOddOfRoot, torsionOddOfRoot, Point.some.injEq] at hv
+      obtain ⟨rfl, hy⟩ := hv
+      have hb : b₁ = b₂ :=
+        fibreY_injective (eval_Ψ₂Sq_ne_zero_of_eval_preΨ_eq_zero hn hx₁) hy
+      subst hb
+      rfl
+  · rintro ⟨(_ | ⟨x, y, hns⟩), hP⟩
+    · exact ⟨none, rfl⟩
+    · have hx : (W.preΨ (n : ℤ)).eval x = 0 :=
+        (nsmul_eq_zero_iff_eval_preΨ_eq_zero h2 hn hns).mp (mem_torsion_iff.mp hP)
+      have hy : ∃ b : Bool, W.fibreY x b = y := by
+        rcases Y_eq_of_X_eq (W.equation_someY hns.left) hns.left rfl with h | h
+        · exact ⟨true, by simpa only [fibreY] using h⟩
+        · exact ⟨false, by simp only [fibreY, h, negY_negY]⟩
+      obtain ⟨b, hb⟩ := hy
+      refine ⟨some (⟨x, hx⟩, b), Subtype.ext ?_⟩
+      rw [torsionOddOfRoot]
+      exact (by rintro y' h' rfl; rfl :
+        ∀ (y' : F) (h' : W.Nonsingular x y'), W.fibreY x b = y' →
+          Point.some x (W.fibreY x b) (W.nonsingular_fibreY x b) = Point.some x y' h')
+        y hns hb
+
+/-- **`E[n]` is the point at infinity together with two points over each root of `preΨₙ`**, at an
+odd index over an algebraically closed field of characteristic `≠ 2`. -/
+noncomputable def torsionOddEquiv (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) :
+    W.torsion n ≃ Option ({x : F // (W.preΨ (n : ℤ)).eval x = 0} × Bool) :=
+  (Equiv.ofBijective _ (torsionOddOfRoot_bijective (W := W) h2 hn)).symm
+
+/-! ### The count -/
+
+/-- **`#E[n] = 2 · #{roots of preΨₙ} + 1`** with `(2 : F) ≠ 0`, at an odd index `n` with
+`(n : F) ≠ 0`.
+
+⚠️ An **equality**, unlike the `≤` of `EllipticCurves.Torsion.XSupport`: no `y`-fibre over the
+support degenerates, by `eval_Ψ₂Sq_ne_zero_of_eval_preΨ_eq_zero`. -/
+theorem card_torsion_odd (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) (hchar : (n : F) ≠ 0) :
+    Nat.card (W.torsion n) = 2 * Nat.card {x : F // (W.preΨ (n : ℤ)).eval x = 0} + 1 := by
+  haveI := finite_root_subtype (W.preΨ_ne_zero (R := F) (n := (n : ℤ)) (by push_cast; exact hchar))
+  rw [Nat.card_congr (torsionOddEquiv h2 hn), Finite.card_option, Nat.card_prod]
+  simp [Nat.card_eq_fintype_card, mul_comm]
+
+/-! ### The gate: `#E[n] = n²` is separability of `preΨₙ` -/
+
+private lemma two_mul_pred_sq_div_two_add_one {n : ℕ} (hn : Odd n) :
+    2 * ((n ^ 2 - 1) / 2) + 1 = n ^ 2 := by
+  obtain ⟨k, hk⟩ := hn
+  have hsq : n ^ 2 = 4 * k ^ 2 + 4 * k + 1 := by subst hk; ring
+  have hdiv : (n ^ 2 - 1) / 2 = 2 * k ^ 2 + 2 * k := by
+    rw [hsq]
+    omega
+  omega
+
+/-- **The gate, and it is an equivalence**: over an algebraically closed field of characteristic
+`≠ 2`, at an odd `n` with `char F ∤ n`,
+
+```
+#E[n] = n²   ↔   preΨₙ has no repeated root.
+```
+
+⚠️ Read both directions.  The `←` is what `EllipticCurves.Torsion.PrimaryTower`'s remaining gate
+asks for; the `→` says there is no cheaper substitute for it, because any proof of `#E[n] = n²`
+here *is* a proof that `preΨₙ` is separable.
+
+⚠️ `Separable` rather than `Squarefree`: `Polynomial.nodup_roots_iff_of_splits` is what makes this
+proof one line rather than a factorisation argument.  Over an algebraically closed field the two
+notions agree — that is standard and is **not** proved here, and nothing below needs it. -/
+theorem card_torsion_eq_sq_iff_separable_preΨ (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n)
+    (hchar : (n : F) ≠ 0) :
+    Nat.card (W.torsion n) = n ^ 2 ↔ (W.preΨ (n : ℤ)).Separable := by
+  classical
+  have hp : W.preΨ (n : ℤ) ≠ 0 := W.preΨ_ne_zero (R := F) (by push_cast; exact hchar)
+  have hsplits : (W.preΨ (n : ℤ)).Splits := IsAlgClosed.splits _
+  have hdeg : (W.preΨ (n : ℤ)).natDegree = (n ^ 2 - 1) / 2 := by
+    rw [W.natDegree_preΨ (R := F) (by push_cast; exact hchar)]
+    simp [Nat.not_even_iff_odd.mpr hn]
+  have hroots : Multiset.card (W.preΨ (n : ℤ)).roots = (n ^ 2 - 1) / 2 := by
+    rw [← hdeg]; exact splits_iff_card_roots.mp hsplits
+  rw [card_torsion_odd h2 hn hchar, card_root_subtype hp, ← two_mul_pred_sq_div_two_add_one hn,
+    ← hroots, ← nodup_roots_iff_of_splits hp hsplits]
+  exact ⟨fun h => Multiset.toFinset_card_eq_card_iff_nodup.mp (by omega),
+    fun h => by rw [Multiset.toFinset_card_of_nodup h]⟩
+
+/-- ⚠️ **A consistency check, not a new result.**  At an odd index the *exact* count of
+`card_torsion_odd` must not exceed the merged bound
+`WeierstrassCurve.Affine.card_torsion_le_sq`, and this is where that is machine-checked instead of
+assumed: a slip in the fibre count above would show up here.
+
+⚠️ One-directional on purpose.  The merged bound carries neither `[IsAlgClosed F]` nor
+`[W.IsElliptic]` and holds at every index, so nothing in this file supersedes it. -/
+example (h2 : (2 : F) ≠ 0) {n : ℕ} (hn : Odd n) (hchar : (n : F) ≠ 0) :
+    2 * Nat.card {x : F // (W.preΨ (n : ℤ)).eval x = 0} + 1 ≤ n ^ 2 := by
+  rw [← card_torsion_odd h2 hn hchar]
+  exact card_torsion_le_sq h2 hchar
+
+end Count
+
+/-! ### The `p`-primary tower with the gate substituted -/
+
+section Tower
+
+variable [DecidableEq F] [IsAlgClosed F] [W.IsElliptic]
+
+/-- **`#E[pᵏ] = (pᵏ)²` with `(2 : F) ≠ 0`, at an odd `p` with `(p : F) ≠ 0`, from separability of
+`preΨ p`.** -/
+theorem card_torsion_pow_of_separable (h2 : (2 : F) ≠ 0) {p : ℕ} (hp : Odd p)
+    (hchar : (p : F) ≠ 0) (hsep : (W.preΨ (p : ℤ)).Separable) (k : ℕ) :
+    Nat.card (W.torsion (p ^ k)) = (p ^ k) ^ 2 :=
+  card_torsion_pow_of_card h2 (by rintro rfl; simp at hp)
+    ((card_torsion_eq_sq_iff_separable_preΨ h2 hp hchar).mpr hsep) k
+
+/-- **`E[pᵏ]` is finite** with `(2 : F) ≠ 0`, at an odd `p` with `(p : F) ≠ 0`, from separability
+of `preΨ p`. -/
+theorem finite_torsion_pow_of_separable (h2 : (2 : F) ≠ 0) {p : ℕ} (hp : Odd p)
+    (hchar : (p : F) ≠ 0) (hsep : (W.preΨ (p : ℤ)).Separable) (k : ℕ) :
+    Finite (W.torsion (p ^ k)) :=
+  finite_torsion_pow_of_card h2 (by rintro rfl; simp at hp)
+    ((card_torsion_eq_sq_iff_separable_preΨ h2 hp hchar).mpr hsep) k
+
+/-- **The structure theorem for `E[pᵏ]` with `(2 : F) ≠ 0`, at an odd prime `p` with
+`(p : F) ≠ 0`, owed one separability statement.**
+
+⚠️ This is the signature the whole file exists to produce.  Compare
+`WeierstrassCurve.Affine.nonempty_torsionPow_addEquiv_of_card`, whose remaining hypothesis is
+`#E[p] = p²` — a statement about the curve.  Here it is `Separable (W.preΨ p)`, a statement about
+**one univariate polynomial**.
+
+⚠️ The exchange is not free, and this form does **not** subsume the one it is built on: it
+additionally asks `Odd p` and `(p : F) ≠ 0`, neither of which
+`nonempty_torsionPow_addEquiv_of_card` needs.  Inside that range the two hypotheses are equivalent
+(`card_torsion_eq_sq_iff_separable_preΨ`) so nothing is given away *there*; at `p = 2`, and in
+characteristic `p`, this form says nothing at all.
+
+⚠️ Not proved here, and no route asserted: `Separable (W.preΨ p)` itself.  See the module
+docstring. -/
+theorem nonempty_torsionPow_addEquiv_of_separable (h2 : (2 : F) ≠ 0) {p : ℕ} (hp : p.Prime)
+    (hodd : Odd p) (hchar : (p : F) ≠ 0) (hsep : (W.preΨ (p : ℤ)).Separable) (k : ℕ) :
+    Nonempty (W.torsion (p ^ k) ≃+ ZMod (p ^ k) × ZMod (p ^ k)) :=
+  nonempty_torsionPow_addEquiv_of_card h2 hp
+    ((card_torsion_eq_sq_iff_separable_preΨ h2 hodd hchar).mpr hsep) k
+
+end Tower
+
+/-! ### Non-vacuity: the gate read backwards at `p = 3` -/
+
+section Nonvacuity
+
+variable [DecidableEq F] [IsAlgClosed F] [W.IsElliptic]
+
+omit [DecidableEq F] in
+/-- **`preΨ 3` is separable**, over an algebraically closed field of characteristic `∉ {2, 3}`.
+
+⚠️ This is the gate of `card_torsion_eq_sq_iff_separable_preΨ` read **backwards** at `n = 3`,
+against the merged sharp count `WeierstrassCurve.Affine.card_torsion_three`.  Nothing in this file
+proves it directly, and it is the evidence that the equivalence is oriented correctly.
+
+⚠️ **It is a round trip, not a new statement, and must not be read as one.**
+`WeierstrassCurve.Affine.nodup_roots_Ψ₃` (`EllipticCurves.Torsion.ThreeTorsionStructure`) is merged
+and in this file's import closure; over an algebraically closed field it *is* separability of `Ψ₃`,
+one `Polynomial.nodup_roots_iff_of_splits` away — the same lemma
+`card_torsion_eq_sq_iff_separable_preΨ` runs on.  And `card_torsion_three` is proved *from*
+`nodup_roots_Ψ₃`, through `card_roots_Ψ₃_of_splits`.  ⚠️ **The `_of_splits` form is named because
+that is the SITE the proof reaches, and its algebraically closed sibling is not.**
+`card_torsion_three` is a one-line corollary of `card_torsion_three_of_splits`, whose proof
+consumes `card_roots_Ψ₃_of_splits`; `card_roots_Ψ₃` is the algebraically closed corollary of that
+same lemma and is reached by nothing here.  ⚠️ **This clause stopped being TRUE and stopped being
+READ at two different commits, and the gap between them is the whole of this row.**  It read
+*"through `card_roots_Ψ₃`"* from `d5af642` (2026-09-02, `#1498`, PR #574) until its repair; it was
+exact only until `08096d3` (2026-09-20, `#2104`, PR #785) re-routed the proof through the
+`_of_splits` layer, and `08096d3` touches no line of this file.  ⚠️ **Only the name of the hop
+moved: `nodup_roots_Ψ₃` is still in the closure**, so the round trip below is unaffected (checked
+with a transitive-constant walk, not read off the source).  So what this certifies is that the
+equivalence returns its own input, which is the whole of what a check at a settled index can
+certify — and it is *not* evidence that the general `Separable (W.preΨ n)` is any closer.
+
+⚠️ **The rule this row pays, stated so the next `_of_*` generalisation does not have to rediscover
+it**: a docstring sentence naming a declaration as the SITE a proof reaches goes false with no edit
+to either file the moment that proof is re-routed through a sibling, and a `_of_*` generalisation is
+exactly such a re-routing.  ⚠️ It is mechanically checkable and the check is not a grep: the name
+must be in the **transitive closure** of the proof the sentence describes, and this row was decided
+that way — `card_roots_Ψ₃_of_splits` is in `card_torsion_three`'s closure and `card_roots_Ψ₃` is
+not.  ⚠️ **The SIZE of that closure is deliberately not published here**: it spans the whole
+Mathlib import closure, so it moves on a pin bump (`#1439`) in a file the bump does not touch —
+this front's own defect one register over (`#2005`).  The two membership verdicts carry the whole
+argument and go stale only when the proof they describe does.  The seed for the rest of the
+population, its three flags and its counts are on `#2116`; they are not published here because this
+file is not where a tree-wide census belongs. -/
+theorem separable_preΨ_three (h2 : (2 : F) ≠ 0) (h3 : (3 : F) ≠ 0) :
+    (W.preΨ (3 : ℤ)).Separable := by
+  classical
+  exact (card_torsion_eq_sq_iff_separable_preΨ (n := 3) h2 (by decide) (by exact_mod_cast h3)).mp
+    (by rw [card_torsion_three h2 h3]; norm_num)
+
+omit [DecidableEq F] in
+/-- **`Ψ₃` is separable** over an algebraically closed field, the same statement as
+`separable_preΨ_three` under Mathlib's other name for `preΨ 3`.
+
+⚠️ **The conclusion needs neither the closure nor the `DecidableEq`, and the general form is
+`WeierstrassCurve.Affine.separable_Ψ₃` in `EllipticCurves.Torsion.ThreeDivisionField`** — proved
+there from `nodup_roots_Ψ₃` at a splitting field rather than from the count, so it is not a round
+trip and does not pass through `card_torsion_eq_sq_iff_separable_preΨ` at all.  This one keeps its
+`[IsAlgClosed F]` on purpose: what it certifies is that the equivalence above returns its own
+input, and reading it backwards is the whole point of the section. -/
+theorem separable_Ψ₃_of_isAlgClosed (h2 : (2 : F) ≠ 0) (h3 : (3 : F) ≠ 0) :
+    W.Ψ₃.Separable := by
+  have h : W.preΨ (3 : ℤ) = W.Ψ₃ := by simp [WeierstrassCurve.preΨ]
+  exact h ▸ separable_preΨ_three h2 h3
+
+/-- **At `p = 3` the tower of this file is the merged `nonempty_torsionThreePow_addEquiv`.**
+
+⚠️ The `rfl` is definitional proof irrelevance and proves nothing on its own; what is checked is
+that the equation **elaborates**, i.e. that the merged theorem and the separability form applied at
+`p = 3` have the *same statement*.  A form that had drifted from the one it generalises would fail
+here rather than pass quietly. -/
+example (h2 : (2 : F) ≠ 0) (h3 : (3 : F) ≠ 0) (k : ℕ) :
+    nonempty_torsionThreePow_addEquiv (W := W) h2 h3 k =
+      nonempty_torsionPow_addEquiv_of_separable h2 Nat.prime_three (by decide)
+        (by exact_mod_cast h3) (separable_preΨ_three h2 h3) k :=
+  rfl
+
+end Nonvacuity
+
+end WeierstrassCurve.Affine

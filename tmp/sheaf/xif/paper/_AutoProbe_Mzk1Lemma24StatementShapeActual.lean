@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24StatementShapeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StatementShapeActual.s3135_Lemma24StatementShape_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StatementShapeActual.s3135Mzk1StatementShapeStatus

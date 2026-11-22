@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2445D5LargeImageChainActual
+open LeanFormal.IUT.XiFPaper.S2445D5LargeImageChainActual
+#print axioms S2445PairTransitive_of_rangeTop
+#print axioms S2445ImageTail_of_pair_cycle
+#print axioms S2445D5LargeImageFive_of_groupRouteExact
+#print axioms S2445Consumers_of_exact

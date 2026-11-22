@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128FixedSubringAlgebraActual
+open LeanFormal.IUT.XiFPaper.S3128FixedSubringAlgebraActual
+#print axioms S3128FixedSubringAlgebra
+#print axioms S3128FixedSubringAlgebra_algebraMap

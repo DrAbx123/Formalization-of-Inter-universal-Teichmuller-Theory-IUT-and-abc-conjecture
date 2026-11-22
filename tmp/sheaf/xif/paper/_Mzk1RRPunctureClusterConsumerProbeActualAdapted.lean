@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRPunctureClusterConsumerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRPunctureClusterConsumerActualAdapted.rrPunctureClusterConsumer_bundle

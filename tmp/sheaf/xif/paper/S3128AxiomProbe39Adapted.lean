@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128LocalCoconeInvariantActual
+open LeanFormal.IUT.XiFPaper.S3128LocalCoconeInvariantActual
+#print axioms S3128LocalCoconeMap_invariant

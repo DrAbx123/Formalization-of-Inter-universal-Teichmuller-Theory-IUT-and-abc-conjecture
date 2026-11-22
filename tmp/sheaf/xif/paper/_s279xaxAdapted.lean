@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2796CoordinateLatticeSubsetAllRegionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2796CoordinateLatticeSubsetAllRegionActual.coordinateLattice_subset_regionAll
+import tmp.sheaf.xif.paper.S2797TensorLatticeSubsetAllRegionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2797TensorLatticeSubsetAllRegionActual.tensorLattice_subset_regionAll
+import tmp.sheaf.xif.paper.S2798TensorLatticeMeasureLeRegionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2798TensorLatticeMeasureLeRegionActual.tensorLattice_measure_le_regionAll

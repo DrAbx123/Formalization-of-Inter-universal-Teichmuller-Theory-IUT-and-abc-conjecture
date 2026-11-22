@@ -1,0 +1,9 @@
+import Mathlib
+open MeasureTheory
+#check distribHaarChar_eq_of_measure_smul_eq_mul
+#check isOpen_padicIntegerCoordinateLattice
+#check isCompact_padicIntegerCoordinateLattice
+#check MeasureTheory.Measure.IsOpenPosMeasure
+#check MeasureTheory.Measure.measure_pos
+#check MeasureTheory.IsCompact.measure_lt_top
+#check Measure.addHaar

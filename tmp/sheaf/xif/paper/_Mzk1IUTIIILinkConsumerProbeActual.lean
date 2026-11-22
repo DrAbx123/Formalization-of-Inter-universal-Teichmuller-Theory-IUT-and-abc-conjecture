@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1IUTIIILinkConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIILinkConsumerActual.linkConsumerRows_length

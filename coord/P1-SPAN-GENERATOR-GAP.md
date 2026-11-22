@@ -30,3 +30,21 @@
 ## 结论
 `SpanGeneratorValuationLemma` 目前保留为 **exact named input**（不冒充）；其 max-ideal 情形已降为
 `hspan`（= 桥 1+2），不是新的不可证内容缺口。
+
+## 桥 1 PROVED（2026-11-14 18:54:55Z）
+
+- **`Mzk1P1IdealMapCompletionIdealActual.idealMapMaximalBridge_proved` — DONE 18:54:55Z（106s）**：
+  `Ideal.map (O_K -> O_v) (underlyingPrime v).asIdeal = completionIdealOf v`。
+  证明链：`intValuation_exists_uniformizer` → `intValuation_lt_one_iff_mem` →
+  `valued_algebraMap_completionIntegers` + `valuation_of_algebraMap` →
+  `maximalIdeal_eq_span_uniformizer` → 双向包含
+  （正向 `Ideal.map_le_iff_le_comap`+`mem_completionIdeal_iff`+`algebraMap_completionIntegers`；
+  反向 `Ideal.mem_map_of_mem`）。
+
+### 桥 1 绿后剩余
+- **桥 2**：`localizedLine (I) v = span O_v (image of Ideal.map)`（现可直接尝试
+  `FractionalIdeal.extended` 的 `coe_extended_eq_span` / `localizedFractionalIdeal_coe_eq` 组合；
+  `P1LocalizedIsPrincipalNoGap`/`LocalizedFractionalIdealFix` 只提供 `IsPrincipal`，不含该 span 恒等）；
+  一旦桥 2 绿：max-ideal `localizedLine p = span{π}` = 桥 1 + FLT `maximalIdeal_eq_span_uniformizer`；
+- 然后 `Mzk1P1SpanGeneratorValuationMaxIdealActual` 的条件定理转无条件（max-ideal CountValuationBridge/R21Bridge）；
+- `IdealMapPower`（prime-power + 乘性）→ general I；B5Index 重接。

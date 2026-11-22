@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.GenEll06dSection3PowersActual
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06dSection3PowersActual.s3135_belyiAlpha_pow
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06dSection3PowersActual.s3135_belyiBeta_pow

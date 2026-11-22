@@ -1,0 +1,59 @@
+import tmp.sheaf.xif.paper.S2247BaseChangeSquareActual
+import tmp.sheaf.xif.paper.S1852CoherentCoverActual
+
+/-! # S2252: cone transport from the base-changed square to Q
+
+Step (1): a cone over S2247Square gives a cone over Q's weak square, using the
+same X-leg and the A-leg obtained by composing with s, together with the
+associator between the two y-legs.
+-/
+
+noncomputable section
+set_option linter.unusedSectionVars false
+set_option linter.unusedVariables false
+set_option linter.checkUnivs false
+set_option maxHeartbeats 2000000
+set_option backward.isDefEq.respectTransparency false
+
+namespace LeanFormal.IUT.XiFPaper.S2252ConeTransportActual
+
+open CategoryTheory
+open scoped Pseudofunctor.StrongTrans
+open Iut
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.S1726OrbicurveFPrimeActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual.S1728Paper
+open LeanFormal.IUT.XiFPaper.S1742TwoYonedaActual
+open LeanFormal.IUT.XiFPaper.S1852CoherentCoverActual
+open LeanFormal.IUT.XiFPaper.S2058D6FiniteEtaleActual
+open LeanFormal.IUT.XiFPaper.S2096StackMorphismActual
+open LeanFormal.IUT.XiFPaper.S2165BaseChangeWitnessActual
+open LeanFormal.IUT.XiFPaper.S2247BaseChangeSquareActual
+
+universe u
+
+variable {X Y : EtaleStackOverField S1726K} (m : X.Hom Y)
+variable {A T : SchemeOverField S1726K} (s : T ⟶ A)
+variable (vy : Pseudofunctor.StrongTrans
+  (schemeRepresentableEtalePseudofunctor S1726K A) Y.fiber)
+variable (Q : EtaleStackBaseChangePresentation m A vy)
+variable (hs : AlgebraicGeometry.IsFinite s.left)
+variable (hse : AlgebraicGeometry.Etale s.left)
+variable (hq : AlgebraicGeometry.IsFinite (S2165Snd (m := m) (s := s) (vy := vy) (Q := Q)).left)
+variable (hqe : AlgebraicGeometry.Etale (S2165Snd (m := m) (s := s) (vy := vy) (Q := Q)).left)
+
+/-- Step (1): cone over the base-changed square -> cone over Q's weak square. -/
+noncomputable def S2252ConeOverQ {W : EtaleStackPseudofunctor S1726K}
+    (c : (S2247Square (m := m) (s := s) (vy := vy) (Q := Q) hs hse hq hqe).Cone W) :
+    (S1852WeakSquare Q).Cone W where
+  toX := c.toX
+  toY := Pseudofunctor.StrongTrans.vcomp c.toY (S1742StrongTransOfHom s)
+  commutes := c.commutes.trans
+    (S2058AssociatorIso c.toY (S1742StrongTransOfHom s) vy).symm
+
+#check S2252ConeOverQ
+
+end LeanFormal.IUT.XiFPaper.S2252ConeTransportActual
+
+end

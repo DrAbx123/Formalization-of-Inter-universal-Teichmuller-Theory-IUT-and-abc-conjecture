@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3127FreeQuotientExistsOfFreeActionConsumerActual
+import tmp.sheaf.xif.paper.S3127G2UniversalDataOfHfacActual
+import tmp.sheaf.xif.paper.S3127G2RawLiftInterfaceActual
+import tmp.sheaf.xif.paper.S3127G2UniversalTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataOfHfacActual.S3127G2UniversalData_of_hfac
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2RawLiftInterfaceActual.S3127G2UniversalData_of_rawLiftData
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientExistsOfFreeActionActual.S3127FreeQuotientExists_ofFreeAction
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientExistsOfFreeActionConsumerActual.S3127FreeQuotientTargetOf_universal_of_hfac
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalTargetActual.S3127G2QuotientUniversalOf

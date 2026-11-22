@@ -1,0 +1,9 @@
+import Mathlib
+open CategoryTheory
+#check Bicategory.leftUnitor_naturality
+#check Bicategory.rightUnitor_naturality
+#check Bicategory.leftUnitor_conjugation
+#check Bicategory.triangle
+#check Bicategory.pentagon
+#check Bicategory.whiskerLeft_comp
+#check Bicategory.whiskerRight_comp

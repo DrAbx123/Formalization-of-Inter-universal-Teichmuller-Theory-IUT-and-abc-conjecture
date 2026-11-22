@@ -1,0 +1,6 @@
+import LeanFormal.IUT.ABCBridge.Bridge.Cor312ToABCBridgeInterface
+#check LeanFormal.IUT.Cor312ToABCBridgeInterface
+#check LeanFormal.IUT.cor312ToABCBridge_heightBound
+#check LeanFormal.IUT.cor312ToABCBridgeInterface_nonempty_iff_abcConjecture
+#print axioms LeanFormal.IUT.cor312ToABCBridge_heightBound
+#print axioms LeanFormal.IUT.cor312ToABCBridgeInterface_nonempty_iff_abcConjecture

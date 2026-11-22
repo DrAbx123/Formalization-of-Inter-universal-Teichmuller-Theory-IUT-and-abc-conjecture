@@ -1,0 +1,21 @@
+import LeanFormal.IUT.IUTIII.Theorem311.SourceProcessionCapsuleData
+import LeanFormal.IUT.IUTII.Kummer.SourceLogShellActualTensorSpan
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorProductDistribution
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorFieldDecomposition
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorLogShellRealization
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorLogShellTransport
+import LeanFormal.IUT.Foundations.LocalFields.IntegralLogShellLattice
+
+#check LeanFormal.IUT.Theorem311Source.SourceProcessionCapsule.Capsule
+#check LeanFormal.IUT.Theorem311Source.SourceProcessionCapsule.TensorPacket
+#check LeanFormal.IUT.Theorem311Source.SourceProcessionCapsule.tensorPacketEquiv
+#check LeanFormal.IUT.SourceLogShellActualIQTensor
+#check LeanFormal.IUT.sourceLogShellActualIntegralTensors_span_eq_top
+#check LeanFormal.IUT.LocalFieldPadicTensor.finitePadicTensorProductLinearEquiv
+#check LeanFormal.IUT.LocalFieldPadicTensor.exists_finiteNormedFieldProduct_piTensor
+#check LeanFormal.IUT.LocalFieldPadicTensor.exists_realized_tensorLogShell_hull
+#check LeanFormal.IUT.LocalFieldPadicTensor.tensorLogShellHull_decomposition_change
+#check LeanFormal.IUT.LocalFieldLogarithm.unitLogHom
+#check LeanFormal.IUT.LocalFieldLogarithm.integralLogShell
+#check LeanFormal.IUT.LocalFieldPadicTensor.rat_span_integralLogShell_eq_top
+#check LeanFormal.IUT.LocalFieldPadicTensor.tensorLogShellRegion

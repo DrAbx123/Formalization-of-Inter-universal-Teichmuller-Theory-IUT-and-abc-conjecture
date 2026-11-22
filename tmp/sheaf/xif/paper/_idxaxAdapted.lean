@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2726TensorIndexBridgeTarget
+#print axioms LeanFormal.IUT.XiFPaper.S2726TensorComparisonRegionRhoActual.S2726TensorIndexBridgeTarget

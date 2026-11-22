@@ -1,0 +1,24 @@
+tmp\sheaf\xif\paper\Mzk1FinalConditionalVacuityActual.lean:85:40: error: Application type mismatch: The argument
+  hdvd
+has type
+  qVFamTensorP T b0 ∣ P
+but is expected to have type
+  qVFamTensorP T b0 ∣ qVFamTensorP T b0
+in the application
+  (Nat.Prime.dvd_iff_eq hprime hne1).mp hdvd
+tmp\sheaf\xif\paper\Mzk1FinalConditionalVacuityActual.lean:88:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'LeanFormal.IUT.XiFPaper.Mzk1FinalConditionalVacuityActual.hfull_unsatisfiable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1FinalConditionalVacuityActual.final_conditional_ABC_retracted' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1FinalConditionalVacuityActual.vacuityRows_length' does not depend on any axioms

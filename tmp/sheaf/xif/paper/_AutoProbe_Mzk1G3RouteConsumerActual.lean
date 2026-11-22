@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G3RouteConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RouteConsumerActual.abcConjecture_of_gapReduced
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RouteConsumerActual.abcConjecture_of_gapReducedV2
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3RouteConsumerActual.abcConjecture_of_pointwiseWeakened

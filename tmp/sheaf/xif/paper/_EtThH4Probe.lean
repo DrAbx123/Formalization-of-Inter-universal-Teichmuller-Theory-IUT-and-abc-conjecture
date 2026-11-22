@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.EtTh07ConcreteBridgeActual
+import tmp.sheaf.xif.paper.H4HullThetaCertificateActual
+
+-- EtTh concrete bridge + H4 certificate probe.
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.etThConcreteBridgeLevel
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.etThConcreteBridge_sourceFrobenioid_eq_boundary
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ConcreteBridgeActual.etTh_sourceModel_eq_boundary_model
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_iqHullRealVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_hull_logVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_exists_hull_eq_ofReal
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_ofReal_le_theta_of_imageSet_lower
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_nonempty_iff
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4_cor312Conclusion
+#print axioms LeanFormal.IUT.XiFPaper.H4HullThetaCertificateActual.h4Status

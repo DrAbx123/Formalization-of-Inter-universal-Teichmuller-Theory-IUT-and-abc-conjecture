@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1T3FrontierFromComparisonActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3FrontierFromComparisonActual.frontierHeightClause_of_comparison
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3FrontierFromComparisonActual.frontierRegionClause_of_comparison
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3FrontierFromComparisonActual.abcConjecture_of_comparisonFamily

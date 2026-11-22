@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioSquaredActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioSquaredActual.belyi21R_ratio_factor
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioSquaredActual.belyi21R_ratio_ge_sq

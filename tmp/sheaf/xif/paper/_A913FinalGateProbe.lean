@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1OurFrameworkABCActual
+import tmp.sheaf.xif.paper.Mzk1E1DictionaryActual
+import tmp.sheaf.xif.paper.Mzk1Face5ProofActual
+import tmp.sheaf.xif.paper.Mzk1PaperToClassicalABCActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_ABCConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.assumptionInterfaceRows_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1DictionaryActual.scaledPaper312_iff_of_E1
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1DictionaryActual.E1Dictionary_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Face5ProofActual.face5_inequality_of_section
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Face5ProofActual.face5_inequality_from_perplace
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperToClassicalABCActual.paperGap_to_cor312Conclusion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperToClassicalABCActual.classicalABCShape_to_ABCConjecture

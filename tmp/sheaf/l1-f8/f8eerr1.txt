@@ -1,0 +1,8 @@
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:63:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:62:0: warning: Definition `sourceSliceFactorization` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:68:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:67:0: warning: Definition `sourceSliceFactorizationOfSignQuotient` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

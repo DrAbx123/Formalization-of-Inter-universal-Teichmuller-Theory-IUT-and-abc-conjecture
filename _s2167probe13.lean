@@ -1,0 +1,11 @@
+import Mathlib
+open Polynomial
+#check @Polynomial.irreducible_of_degree_two
+#check @Polynomial.irreducible_of_degree_le_three
+#check @Polynomial.irreducible_iff_roots_eq_zero_of_degree_le_three
+#check @Polynomial.irreducible_iff_roots_eq_zero_of_degree_two
+#check @Polynomial.irreducible_of_monic
+#check @Polynomial.irreducible_of_degree_two
+#check @normalizedFactors
+#check @UniqueFactorizationMonoid.normalizedFactors
+#check @Polynomial.normalizedFactors

@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S3133S3131WeightNormalizationActual
+import tmp.sheaf.xif.paper.S3133S3131PlaceIndexComparisonActual
+import tmp.sheaf.xif.paper.S3133S3131BadToC3TensorMapActual
+
+/-! Axioms probe for the M4/M1 component files.  No proofs, no sorry. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131WeightNormalizationActual.S3131WeightTerm_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131WeightNormalizationActual.S3131WeightSum_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131WeightNormalizationActual.S3131NormalizedWeightTotal
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131WeightNormalizationActual.S3131WeightSumOneHypothesis
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131PlaceIndexComparisonActual.qVFamTensorP_eq_base_val
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131PlaceIndexComparisonActual.S3131BadTensorPrimeMatch_of_basePlace
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131PlaceIndexComparisonActual.S3131BadTensorPrimeMatch_of_placeMatch
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131PlaceIndexComparisonActual.S3131BadTensorIndexEquivalence
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131BadToC3TensorMapActual.S3131BadToC3TensorMapData_primeMatch
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131BadToC3TensorMapActual.S3131BadToC3TensorMapData_indexEquivalence
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131BadToC3TensorMapActual.S3131BadToC3TensorMapDataData

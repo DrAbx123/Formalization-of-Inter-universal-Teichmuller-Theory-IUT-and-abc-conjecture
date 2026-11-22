@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII13PsiCnsAnchorActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII13PsiCnsAnchorActual.PsiCnsAnchorRow
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII13PsiCnsAnchorActual.psiCnsAnchorRows
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII13PsiCnsAnchorActual.psiCnsAnchorRows_length

@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1G1D1ProducerActual
+import tmp.sheaf.xif.paper.Mzk1ULPhiRealizationActual
+import tmp.sheaf.xif.paper.Mzk1ULPacketFamilyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.G1D1ProducerActual.d1_of_analyticInput
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPhiRealizationActual.ulPhiRealization_cover
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPhiRealizationActual.ulSourceArrowRealization_mem_p6Phi
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPacketFamilyActual.ulPossibleImages_subset_packetHull

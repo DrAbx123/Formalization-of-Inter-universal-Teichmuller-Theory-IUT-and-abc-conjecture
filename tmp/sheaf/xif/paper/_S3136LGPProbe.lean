@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3136LGPPhiInputSourceActual
+import tmp.sheaf.xif.paper.S3136LGPXMuDegreeActual
+import tmp.sheaf.xif.paper.S3136FrobenioidHostActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpThetaValueAlgClosed_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpTwoLthRoot_pow_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpThetaLabelWeight_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpThetaDivisorExponent_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpThetaPilotPrimeDivisor_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPPhiInputSourceActual.lgpXMuCarrierActual
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuDegreeActual.lgpThetaDivisorTotalExponent
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuDegreeActual.lgpThetaDivisorTotalExponent_single
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuDegreeActual.lgpThetaLabelWeight_eq_thetaPacket_log_scale
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidHostActual.S3136LGPPhiInputGap_eq

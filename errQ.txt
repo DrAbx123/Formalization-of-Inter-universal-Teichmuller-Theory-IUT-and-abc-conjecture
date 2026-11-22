@@ -1,0 +1,7 @@
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteActual.gap1_of_qPilotRoute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteActual.qPilotRadicalBound_implies_ABC' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteActual.qPilotRows_length' does not depend on any axioms

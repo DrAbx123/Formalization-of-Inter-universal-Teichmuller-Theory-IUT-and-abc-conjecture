@@ -1,0 +1,124 @@
+
+/-! ## 7. Consumer: the universe-corrected card for the once-punctured curve -/
+
+section Consumer
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+open LeanFormal.IUT.XiFPaper.S2081CurveCardM2Actual
+open LeanFormal.IUT.XiFPaper.S2073FiniteGroupQuotientActual
+open LeanFormal.IUT.XiFPaper.S2080CurveQuotientsTransportActual
+
+/-- **Consumer.**  S2081's s2081_cardV_of_M1_M3 needs exactly the fiber-functor
+certificate for curveGeometricFiberFunctorFintype; supplying the remaining
+type-level statements and S2080's affine quotient input (M1) yields the
+universe-corrected CurveEtaleFundamentalGroupCardV K. -/
+theorem curveEtaleFundamentalGroupCardV_realized_of_remaining
+    (hM1 : S2073AffineActionCoconeIsColimit (curveCoordinateRing K))
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : RemainingTypeLevel K Omega x)
+    (geomPi : ProfiniteGrp.{u + 1}) (geomConn : Prop) :
+    Nonempty (CurveEtaleFundamentalGroupCardV K) :=
+  s2081_cardV_of_M1_M3 K hM1 (certificate_of_remaining hfin h) geomPi geomConn
+
+end Consumer
+
+/-! ## 8. The exact state of the five isolated items
+
+### Item 2: preservesPullbacks
+
+Statement (verbatim, RemainingTypeLevel.preservesPullbacks):
+PreservesLimitsOfShape WalkingCospan (curveGeometricFiberFunctor K Omega x).
+
+Mathematical content: the geometric fiber of the scheme pullback of two finite
+etale covers is the pullback in Type of the two geometric fibers; a compatible
+pair of lifts of the geometric point x to the two covers extends uniquely to
+the scheme pullback.  The tree already contains the concrete pullback cover
+finiteEtaleCoverPullbackCover, its limit cone
+finiteEtaleCoverPullbackConeInCover and the limit proof
+finiteEtaleCoverPullbackIsLimitInCover (Example36CurveGaloisCategory.lean,
+section 2), and Mathlib has
+CategoryTheory.Limits.preservesLimit_of_preserves_limit_cone together with
+diagramIsoCospan (every WalkingCospan-diagram is a cospan).
+The remaining formal work is to show that the image cone is a limit cone in
+Type, by the scheme pullback universal property pullback.lift / lift_fst /
+lift_snd / hom_ext.  This item is therefore a formalization gap of this file,
+not a mathematical gap: no Mathlib object is missing.
+
+### Item 3: preservesFiniteCoproducts
+
+Statement: PreservesFiniteCoproducts (curveGeometricFiberFunctor K Omega x),
+i.e. for every n the functor preserves colimits indexed by Discrete (Fin n).
+It suffices to prove it for Fin 2 (binary coproducts) and Fin 0 (the initial
+object), cf. PreservesFiniteCoproducts.of_preserves_binary_and_initial.
+
+Mathematical content: a lift of the geometric point x to the binary scheme
+coproduct lands in exactly one summand.  This uses: Spec Omega is a one-point
+space, the underlying space of the binary coproduct is the disjoint union
+(Scheme.coprodMk, Scheme.isCompl_range_inl_inr, both in
+Mathlib/AlgebraicGeometry/Limits.lean), and the factorization of a scheme
+morphism through an open immersion whose range contains the image
+(AlgebraicGeometry.PresheafedSpace.IsOpenImmersion.lift, lift_fac).  All
+ingredients exist in Mathlib 4.32.2; what is missing is the gluing lemma "a
+morphism from a one-point scheme to a binary coproduct factors through a
+summand", and the resulting colimit computation in Type.
+
+### Item 4: preservesEpis
+
+Statement: Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x).
+Equivalently (epimorphisms in Type are surjections): every epimorphism
+f : Y ⟶ Z of finite etale covers is surjective on the geometric fiber, i.e.
+every lift of x to Z lifts to Y.
+
+The mathematical gap is the classification of epimorphisms in the scheme-side
+cover category: for finite etale covers of a connected base the epimorphisms are
+the surjective ones, but neither direction is formalized in Mathlib or in the
+tree.  (For the field-side category (CommAlgCat.FiniteEtale K)^op this is
+S1747.EpiSurjective / S1810EpiSurjectiveDedicatedActual; nothing of the kind
+exists scheme-side.)
+
+### Item 5: preservesQuotientsByFiniteGroups
+
+Statement: for every finite group A, the geometric fiber functor preserves
+colimits of shape SingleObj A.
+
+This is the fiber-level shadow of the missing PreGaloisCategory field G2
+(S2070's CurveQuotientsByFiniteGroups, S2072/S2080): the quotient of a finite
+etale cover by a finite group action, and its universal property, do not exist
+in Mathlib 4.32.2 nor in the tree.  Even the existence of the colimit
+(HasColimitsOfShape (SingleObj A) (FiniteEtaleCover X)) is missing;
+preservation cannot be stated before it.
+
+### Item 6: reflectsIsos
+
+Statement: (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms: a
+morphism f : Y ⟶ Z of finite etale covers whose induced map on geometric
+fibers is a bijection is an isomorphism.
+
+The gap is the scheme-theoretic statement "a finite etale morphism which is
+bijective on the fiber at one geometric point of a connected base is an
+isomorphism", which needs: the fiber cardinality of a finite etale morphism is
+locally constant, every connected component of a finite etale cover of the
+connected curve dominates the curve, and a finite etale morphism of degree one
+is an isomorphism.  None of these is in Mathlib 4.32.2.
+-/
+
+/-! ## 9. Axiom audit -/
+
+#print axioms preservesLimitsOfShape_of_comp_of_reflects
+#print axioms preservesColimitsOfShape_of_comp_of_reflects
+#print axioms isTerminal_obj_of_isTerminal
+#print axioms preservesLimit_empty
+#print axioms preservesTerminalObjects_typeLevel
+#print axioms curve_preservesTerminalObjects
+#print axioms certificate_preservesTerminalObjects
+#print axioms certificate_preservesPullbacks
+#print axioms certificate_preservesFiniteCoproducts
+#print axioms certificate_preservesEpis
+#print axioms certificate_preservesQuotientsByFiniteGroups
+#print axioms certificate_reflectsIsos
+#print axioms certificate_of_remaining
+#print axioms curveEtaleFundamentalGroupCardV_realized_of_remaining
+
+end LeanFormal.IUT.XiFPaper.S2088FiberFunctorCertificateActual

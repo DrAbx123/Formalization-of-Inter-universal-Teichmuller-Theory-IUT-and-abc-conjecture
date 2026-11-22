@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2196ActionContinuousProofActual
+#print axioms LeanFormal.IUT.XiFPaper.S2196ActionContinuousProofActual.S2196ActionContinuous
+#print axioms LeanFormal.IUT.XiFPaper.S2196ActionContinuousProofActual.S2196MuActionTower

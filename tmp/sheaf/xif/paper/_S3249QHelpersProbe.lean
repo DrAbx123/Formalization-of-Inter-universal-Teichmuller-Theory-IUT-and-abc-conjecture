@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StepInterfaceQActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22FullShapeHelpersActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepInterfaceQActual.step_interface_of_hypotheses_statement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critValues_comp_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critValues_comp_subset_union
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.baseGood_natDegree
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.baseGood_derivative

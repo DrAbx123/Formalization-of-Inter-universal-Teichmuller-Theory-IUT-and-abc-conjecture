@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.PaperLevelXiFTargetBridgeActual
+
+open LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetBridgeActual
+#print axioms actualPaperXiFTarget
+#print axioms globalQPilotLog_eq_neg_actualMagnitude
+#print axioms actualThetaHullLogRoot_eq_globalThetaHullLog
+#check actualPaperXiFTarget

@@ -1,0 +1,9 @@
+import Mathlib
+#check LinearMap.mul
+#check LinearMap.mul_apply
+#check LinearMap.mulLeft
+#check LinearMap.mulLeft_apply
+#check Algebra.lmul_apply_eq_mul
+#check Algebra.lmul_apply_eq_mulLeft
+#check Algebra.lmul_apply
+#check Algebra.lmul_def

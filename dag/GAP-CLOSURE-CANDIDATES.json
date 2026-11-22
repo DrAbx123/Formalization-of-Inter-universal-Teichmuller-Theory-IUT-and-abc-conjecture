@@ -1,0 +1,2220 @@
+{
+  "generated_at": "2026-11-10T20:16:28.622Z",
+  "groups": {
+    "R1_multiradial": {
+      "summary": {
+        "terms": [
+          "Multiradial",
+          "multiradial",
+          "FiniteMultiradial",
+          "ColumnCarrier",
+          "DTheta",
+          "H1H2"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 251
+      },
+      "decl_sample": [
+        {
+          "name": "sourceColumnCarrierIdentification",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/FiniteSourceColumnTrunkBridge.lean",
+          "kind": "def"
+        },
+        {
+          "name": "multiradialAlgorithm",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithm.lean",
+          "kind": "def"
+        },
+        {
+          "name": "multiradialAlgorithmGeneralRouteNormalForm",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmGeneralRouteNormalForm.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteMultiradialAlgorithmDischarge",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmReduction.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceMultiradialOutputDischarge",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmReduction.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "multiradialOutputReductionRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmReduction.lean",
+          "kind": "def"
+        },
+        {
+          "name": "multiradialAlgorithmReductionRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/MultiradialAlgorithmReduction.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceMultiradialColumnInsensitivityRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialColumnInsensitivity.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceMultiradialPresentationWiringRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialPresentationWiring.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceMultiradialPresentationWiringInd2KernelRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialPresentationWiring.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceMultiradialPresentationWiringAptComparisonRecord",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialPresentationWiring.lean",
+          "kind": "def"
+        },
+        {
+          "name": "DThetaShadow",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceDThetaConstruction.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "DThetaShadowFamily",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceDThetaConstruction.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "DThetaShadowLedger",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceDThetaConstruction.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "theorem311DThetaShadow",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceDThetaConstruction.lean",
+          "kind": "def"
+        },
+        {
+          "name": "concreteSourceMultiradialKernel",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceFiniteMultiradial.lean",
+          "kind": "def"
+        },
+        {
+          "name": "DThetaBridge",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2Construction.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "sourceH1H2Construction",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2Construction.lean",
+          "kind": "def"
+        },
+        {
+          "name": "H1H2SourceContract",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2OriginalArrows.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "DThetaRealizationGate",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2OriginalArrows.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "theorem311H1H2OriginalArrows",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceH1H2OriginalArrows.lean",
+          "kind": "def"
+        },
+        {
+          "name": "SourceH1H2Alignment",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceInternalWiring.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "SourceTheorem311MultiradialPresentation",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "SourceTheorem311MultiradialAlgorithm",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "sourceMultiradialTwoActionEquivalence",
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceMultiradialTwoActionEquivalence.lean",
+          "kind": "def"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/Audit/Diagnostics/LegacyContracts.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceClauseAssemblyUnitsReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31CarrierConsolidation.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31DualContractAlignment.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31NativeContractBridgeReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31SignQuotientSupplyReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceEtaleStackInstanceSupplyReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceGeometricCoreFieldUnitsReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterFamilySourceReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceHodgeTheaterHistoriesReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkArithmeticDisplacementReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkDisplacementReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceThetaLinkDivisorMonoidDisplacementReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/K1K2BoundaryReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Ind1AutomorphismTensorActionActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Ind2TensorActionActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/MultiradialProcessionActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1142IndPaperCarrierActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1145GlobalKummerTensorPacketIsoActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1146GeometricComparisonAuditActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1148MultiradialCarrierAuditActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S940Ind3ImageActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/n8/closure/C9XiFInterface.lean",
+          "olean": false
+        }
+      ]
+    },
+    "R2_descent": {
+      "summary": {
+        "terms": [
+          "Ind1",
+          "Ind2",
+          "Ind3",
+          "Indeterminacy",
+          "Descent",
+          "descent",
+          "Coricity",
+          "coricity"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 279
+      },
+      "decl_sample": [
+        {
+          "name": "Indeterminacy",
+          "file": "LeanFormal/IUT/Audit/Diagnostics/LegacyContracts.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "fixedPointSubalgebra_finiteEtale_of_splitDescent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/ConstantRankFixedPoints.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "abbrev"
+        },
+        {
+          "name": "ofChartLevelDescent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "def"
+        },
+        {
+          "name": "ofChartLevelDescent_action",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "ofChartLevelDescent_descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "ofChartLevelDescent_isColimit",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "isColimit_eq_descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "desc_eq_descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "desc_fac_eq_descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "desc_uniq_eq_descent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "GlobalDescentAssembly",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "ChartLevelDescent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "ChartLevelDescent.toAssembly",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "isColimitOfChartLevelDescent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "descentAssemblyResidual",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "descentAssemblyResidual_of_chartLevel",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "chartLevelDescent_ext",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "trivialChartLevelDescent",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "descentOfProjectionIso",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "descentOfProjectionIso_desc",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "descentOfProjectionIso_fac",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "chartLevelDescentOfUnique",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "chartLevelDescentEquivAssembly",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "def"
+        },
+        {
+          "name": "descentAssemblyResidual_of_chartLevel'",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/BoundedDegreeLegendreIsomorphisms.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceSourceAlgebraicClosure.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceStepVAssembly.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoAdicK1RowAnalysis.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FreyTwoTorsion.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/LegendreParameterIsomorphisms.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/LegendreProjectiveMap.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Audit/Diagnostics/LegacyContracts.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/Algebra/CyclicQuotient.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/AffineFixedPointDescNormalForm.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/ConstantRankFixedPoints.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleFixedPoints.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleGroupQuotient.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleQuotientGluedCover.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalFiniteEtaleQuotient.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientAssemblyConsumer.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientChartNaturality.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientConsumerAssembly.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentAssembly.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentConsumer.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientDescentFinal.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientGluingConsumer.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientPreglueCheck.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GlobalQuotientProviderDescent.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/SourcePsiIntegralModel.lean",
+          "olean": false
+        }
+      ]
+    },
+    "R3_literal_IQ": {
+      "summary": {
+        "terms": [
+          "GlobalIQ",
+          "globalIQ",
+          "LiteralIQ",
+          "literalIQ",
+          "IQCarrier",
+          "IQHull",
+          "Haar",
+          "Compact",
+          "compact"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 329
+      },
+      "decl_sample": [
+        {
+          "name": "isCompact_US",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/AutomorphicForm/QuaternionAlgebra/Basic.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "QuotientGroup.mk_image_finite_of_compact_of_open",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Concrete.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "Subgroup.FiniteIndex.of_compactSpace",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/AutomorphicForm/Stuff.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "Subgroup.IsFiniteRelIndex.of_isCompact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/AutomorphicForm/Stuff.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "compact_includeLeft_subgroup",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "ringHaarChar_D𝔸",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "ringHaarChar_D𝔸_real_surjective",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "isCentralSimple_infinite_addHaarScalarFactor_left_mul_eq_right_mul_aux",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "isCentralSimple_infinite_addHaarScalarFactor_left_mul_eq_right_mul",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "isCentralSimple_addHaarScalarFactor_left_mul_eq_right_mul",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "E_family_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "E_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "X_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "Y_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "C_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "ImAux_isCompact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "M_compact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "ringHaarChar_D𝔸_prodRight_units_aux",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "compact_quotient",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "_root_.NumberField.FiniteAdeleRing.DivisionAlgebra.units_cocompact",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/DivisionAlgebra/Finiteness.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "_root_.ContinuousMulEquiv.isHaarMeasure_comap",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/HaarMeasure/HaarChar/AddEquiv.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "mulEquivHaarChar_map_open",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/HaarMeasure/HaarChar/AddEquiv.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "mulEquivHaarChar_eq_mulEquivHaarChar_of_isOpenEmbedding",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/HaarMeasure/HaarChar/AddEquiv.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "mulEquivHaarChar_eq_mulEquivHaarChar_of_continuousMulEquiv",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/HaarMeasure/HaarChar/AddEquiv.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "mulEquivHaarChar_prodCongr",
+          "file": "external/flt-lean-recon-20261016/FLT/FLT/HaarMeasure/HaarChar/AddEquiv.lean",
+          "kind": "lemma"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierPointwisePremiseReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCGap2FiniteC3Supply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312CarrierRealizationSpec.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapSupplyLayer.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312GapDictionaryLayer.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseResidualSupply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCCards.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/AdicCompletionValuationUniqueness.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceArithmeticIQHull.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CanonicalNormalizedNormEqualityProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/ClosedBallCompactness.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/ClosedBallInstanceFromProperSpace.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/ClosedBallProperSpaceVerification.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CompletionProperSpaceConsumer.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/NormalizedGeneratorIdealEqualityProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/NormalizedLogNormComparisonFinalProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/NormalizedUniformizerNormProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/SourceIntegralUnitsQuotient.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/SourceQlEmbeddingShellQuotientComparison.lean",
+          "olean": false
+        }
+      ]
+    },
+    "R4_four_triangles": {
+      "summary": {
+        "terms": [
+          "FourTriangle",
+          "HDD",
+          "HullDeterminant",
+          "SHE",
+          "simultaneous",
+          "Simultaneous",
+          "APT",
+          "IPL",
+          "StepXIContract"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 224
+      },
+      "decl_sample": [
+        {
+          "name": "SourceAPTStatement",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+          "kind": "def"
+        },
+        {
+          "name": "SourceAPTSlotAssembly",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "sourceAPTTransportSupply",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/APT.lean",
+          "kind": "def"
+        },
+        {
+          "name": "QCMPComparisonSupply.toStepXIContract",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CardQCMPComparison.lean",
+          "kind": "def"
+        },
+        {
+          "name": "QCMPComparisonSupply.toStepXIContract_qSigned",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CardQCMPComparison.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "QCMPComparisonSupply.toStepXIContract_q_le_target",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CardQCMPComparison.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "QCMPComparisonSupply.toStepXIContract_target_le_theta",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CardQCMPComparison.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "cor312Conclusion_of_toStepXIContract",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CardQCMPComparison.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "FiniteAPTData",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "finiteAPTData",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteAPTData_shift",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteAPTData_bijective",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteAPTData_level",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteAPTData_comp",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteAPTData_inverse",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteAPTData_zero",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "FiniteIPLSquare",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "finiteIPLSquare",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteIPLSquare_commute",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteIPLSquare_volume_horizontal",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteIPLSquare_volume_vertical",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "finiteIPLSquare_comp_horizontal",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "FiniteSHESquare",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "finiteSHESquare",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteSHESquare_commute",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/AdicCompletionValuationUniqueness.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/BoundedDegreeLegendreIsomorphisms.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullCertificateActual.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/DVRPrincipalRefinementProof.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceDefinition31DualContractAlignment.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/PrimeStripUnitsActionFactorization.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/SourceKappaOrbitFactorizationProvider.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/SourceKappaOrbitUnitsActionSupply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/K1K2BoundaryReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellCompactCarrier.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/MonoAnalyticLogShellMixedPacket.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellAbsTopIIIBridge.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellActionCompatibility.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCarrier.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellCodomainClosure.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/PrincipalUnitExplicitExponentConsumer.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/SHEOutputActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ThetaLinkActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l03-g2/Universal.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l03-g2/UniversalBundled.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l1-f1/ConsumerModel.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l1-f8/F8aSourceDiagram.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l1-f8/F8bSourceYddot.lean",
+          "olean": false
+        }
+      ]
+    },
+    "fixed_beta": {
+      "summary": {
+        "terms": [
+          "fixedBeta",
+          "FixedBeta",
+          "Avoidance",
+          "avoidance"
+        ],
+        "decls": 53,
+        "files": 57,
+        "files_with_olean": 39
+      },
+      "decl_sample": [
+        {
+          "name": "Avoidance.avoid_exists_isPrincipal_degree_forall_support",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.commonUnit_fst",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.commonUnit_snd",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.affine_of_noncusp",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.nonaffine_of_cusp",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.componentLawFst",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.componentLawSnd",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.badTypology_nonnode",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.sectionKit",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.commonUnit_fixed",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.fixed_residual",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Avoidance.step_sndBranch",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_forall_exists_ord_sub_pos_residue_notMem_of_isModel_of_regularityLaw_of_orderLawFixed_of_ssPlaces.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "SupportAvoidance.redPair_mem_W_or_notMem_of_ord_pos_of_valOf_notMem",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_reduce_notMem_of_moving_of_disjoint_of_isModel.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "SupportAvoidance.forall_mem_filtered_notMem_ssJSet",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_reduce_notMem_of_moving_of_disjoint_of_isModel.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "SupportAvoidance.forall_T_of_tuple",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_PlaceSpecialization_exists_rep_reduce_notMem_of_moving_of_disjoint_of_isModel.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "Matrix.exists_bifiltered_unimodular_of_forall_block_avoidance",
+          "file": "tmp/external/flt-lean/Theorems/Thm_Matrix_exists_bifiltered_unimodular_of_forall_block_avoidance.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "HasCauchyPVAt.of_avoidance",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Cauchy/PrincipalValue/Basic.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "cauchyPVExistsAt_of_avoidance",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Cauchy/PrincipalValue/Basic.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "continuousAt_windingNumber_of_avoidance_of_le",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Winding/Continuity.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "continuousAt_windingNumber_of_avoidance",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Winding/Continuity.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "windingNumber_eq_integral_of_avoidance",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Winding/Number/Basic.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "IsNullHomologous.symm_of_avoidance",
+          "file": "tmp/external/ported/belyi_pair/TauCeti/Analysis/Contour/Winding/Number/Reverse.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "HasCauchyPVAt.of_avoidance",
+          "file": "tmp/external/ported/belyi_pair_scheme/TauCeti/Analysis/Contour/Cauchy/PrincipalValue/Basic.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "cauchyPVExistsAt_of_avoidance",
+          "file": "tmp/external/ported/belyi_pair_scheme/TauCeti/Analysis/Contour/Cauchy/PrincipalValue/Basic.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "continuousAt_windingNumber_of_avoidance_of_le",
+          "file": "tmp/external/ported/belyi_pair_scheme/TauCeti/Analysis/Contour/Winding/Continuity.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteGStableAffineRefinement.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/OrbitNonvanishingLemma.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/IUTExternal33GateV37Actual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/IUTExternal34GateV75Actual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBelyiRationalActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBelyiSmallActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1BetaAvoidingStepNoncanonicalActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma22CompositionActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma22HypPreservationCanonicalActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma24AssemblyActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma24BetaAvoidanceActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma24BetaAvoidanceProbeActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma24GrowthActual.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Lemma24MainStatementActual.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1F0StepTransportProvedActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1F4bStepProviderClosureActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingGeometricActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1NestedInductionBetaTrackingGeometricActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1RepoSearchEvidenceActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1RepoSearchEvidenceActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1ReuseBundleX54.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1Stage4GapRegistrationsActual.lean",
+          "olean": false
+        }
+      ]
+    },
+    "scheme_side": {
+      "summary": {
+        "terms": [
+          "schemeSide",
+          "SchemeSide",
+          "sectionMap",
+          "placePoint"
+        ],
+        "decls": 35,
+        "files": 98,
+        "files_with_olean": 65
+      },
+      "decl_sample": [
+        {
+          "name": "sectionMap_injective",
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sectionMap_surjective",
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "upperSemiFormalIntersectionMap_endpoint",
+          "file": "logs/upstream/promachina-iut-lean-581e2b89/Iut/Stage1/IUTStage1Experiments/Diagnostics.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "upperSemiFormalIntersectionMap_endpoint",
+          "file": "logs/upstream/promachina-iut-lean-c7c06e23/Iut/Stage1/IUTStage1Experiments/Diagnostics.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "upperSemiFormalIntersectionMap_endpoint",
+          "file": "logs/upstream/promachina-iut-lean-head/Iut/Stage1/IUTStage1Experiments/Diagnostics.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sectionMap",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_whittakerBlock_one_eq_lintegral_and_eq_smul_map_withDensity_haar.lean",
+          "kind": "def"
+        },
+        {
+          "name": "tendsto_sectionMap",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_whittakerBlock_one_eq_lintegral_and_eq_smul_map_withDensity_haar.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sectionMap_of_mem",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_whittakerBlock_one_eq_lintegral_and_eq_smul_map_withDensity_haar.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "measurable_fibreIntegral_sectionMap",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_LanglandsTunnell_CubicInduction_exists_whittakerBlock_one_eq_lintegral_and_eq_smul_map_withDensity_haar.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "placePoint",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_JZero_exists_hyperplaneSection_defect_le.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "placePoint",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_JZero_exists_hyperplaneSection_sum_log_secVal_ge.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "placePoint",
+          "file": "tmp/external/flt-lean/P2M/Sol/S_ModularCurve_JZero_exists_log_secVal_sub_le.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "upperSemiFormalIntersectionMap_endpoint",
+          "file": "tmp/external/promachina-iut-lean/Iut/Stage1/IUTStage1Experiments/Diagnostics.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "upperSemiFormalIntersectionMap_endpoint",
+          "file": "tmp/external/promachina-iut-lean-latest/Iut/Stage1/IUTStage1Experiments/Diagnostics.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sheafedSpace_sectionMap_ext",
+          "file": "tmp/external/tauceti-extract/TauCeti-main/TauCeti/AlgebraicGeometry/Curves/NodalGluing/RingedSpace.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sectionMap",
+          "file": "tmp/external/tauceti-extract/TauCeti-main/TauCeti/AlgebraicGeometry/Modules/Differentials/Stalk.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sectionMap_d",
+          "file": "tmp/external/tauceti-extract/TauCeti-main/TauCeti/AlgebraicGeometry/Modules/Differentials/Stalk.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "sectionMap_res",
+          "file": "tmp/external/tauceti-extract/TauCeti-main/TauCeti/AlgebraicGeometry/Modules/Differentials/Stalk.lean",
+          "kind": "lemma"
+        },
+        {
+          "name": "SchemeSideHasFiniteGroupQuotients",
+          "file": "tmp/sheaf/l03-g2/S2Transport.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sectionMap_right_inverse",
+          "file": "tmp/sheaf/n8/closure/NativeSourceOrbicurveActual.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "nativeSectionClause_sectionMap",
+          "file": "tmp/sheaf/n8/closure/NativeSourceSectionsCuspActual.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "S1320SectionClauseOfSupply_sectionMap",
+          "file": "tmp/sheaf/xif/paper/S1320SectionsCuspActual.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "S1636SectionClause_sectionMap",
+          "file": "tmp/sheaf/xif/paper/S1636SourceClausesActual.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "S1636SectionClause_sectionMap_bijective",
+          "file": "tmp/sheaf/xif/paper/S1636SourceClausesActual.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "S1727Layer_sectionMap_apply",
+          "file": "tmp/sheaf/xif/paper/S1727SectionsFPrimeActual.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/Definition31D0D11Aligned.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D3D4Root.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D4D9Supply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31D5D8Root.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31LocalValuationSections.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31RootLemmas.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceInitialThetaData.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceCompletionK1K2Wiring.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceOriginalInput.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTIII/Theorem311/SourceRealizationLifting.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/l03-g2/S2Transport.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/n8/closure/NativeD7Proof.lean",
+          "olean": true
+        },
+        {
+          "file": "tmp/sheaf/n8/closure/NativeOrbicurveCarriersActual.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "tmp/sheaf/source-compute-integration-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/SourceOriginalInput.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/CuspDecompositionSectionActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/CuspDecompositionSectionActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/ExactSequenceSplittingActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/ExactSequenceSplittingActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/LocalGroupBijectionActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/LocalGroupBijectionActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1DGeomCoreAllGreenConsumerActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1DGeomCoreAllGreenConsumerActualAdapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/Mzk1DLineBundleGreenConsumerActual.lean",
+          "olean": false
+        }
+      ]
+    },
+    "fiber_functor": {
+      "summary": {
+        "terms": [
+          "FiberFunctor",
+          "fiberFunctor",
+          "GaloisCategory",
+          "PreGaloisCategory"
+        ],
+        "decls": 401,
+        "files": 247,
+        "files_with_olean": 130
+      },
+      "decl_sample": [
+        {
+          "name": "fiberFunctorReflectsEpimorphisms",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "schemeRepresentableFiberFunctor",
+          "file": "Iut/Foundations/Orbicurve.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceSliceFiberFunctor",
+          "file": "Iut/Foundations/SourceAnabelioidSlice.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceGaloisCategory_isConnected_of_isTerminal",
+          "file": "Iut/Foundations/SourceConnectedAnabelioidSlice.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceGaloisCategory_equivalence_terminal_isConnected",
+          "file": "Iut/Foundations/SourceConnectedAnabelioidSlice.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "fiber_fiberFunctor",
+          "file": "Iut/Foundations/SourceConnectedFiniteEtaleConverse.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "continuousAction_preGaloisCategory",
+          "file": "Iut/Foundations/SourceContinuousAnabelioid.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "continuousAction_fiberFunctor",
+          "file": "Iut/Foundations/SourceContinuousAnabelioid.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "preGaloisCategory",
+          "file": "Iut/Foundations/SourceGluedAnabelioid.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "rootFiberFunctor",
+          "file": "Iut/Foundations/SourceGluedGalois.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "geometricFiberFunctor",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleCoverFiber.lean",
+          "kind": "def"
+        },
+        {
+          "name": "geometricFiberFunctor_map_id",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleCoverFiber.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "geometricFiberFunctor_map_comp",
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleCoverFiber.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "geometricFiberFunctor",
+          "file": "LeanFormal/IUT/Foundations/Geometry/CurveEtaleFundamentalGroup.lean",
+          "kind": "def"
+        },
+        {
+          "name": "puncturedEllipticOriginFiberFunctor",
+          "file": "LeanFormal/IUT/Foundations/Geometry/CurveEtaleFundamentalGroupExt.lean",
+          "kind": "abbrev"
+        },
+        {
+          "name": "splitTateFiberFunctor",
+          "file": "LeanFormal/IUT/Foundations/Geometry/SplitTateCurve.lean",
+          "kind": "abbrev"
+        },
+        {
+          "name": "sourceStackPointFiberFunctor",
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceEtaleStackInstanceSupplyReduction.lean",
+          "kind": "def"
+        },
+        {
+          "name": "terminalConstantFiberFunctor",
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31OrbicurveInstance.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteContinuousGaloisSetFiber_fiberFunctor",
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36ContinuousGaloisSets.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "CurvePreGaloisCategoryRemainingFields",
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveGaloisCategory.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "CurvePreGaloisCategoryRemainingFieldsRealized",
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveGaloisCategory.lean",
+          "kind": "def"
+        },
+        {
+          "name": "finiteGaloisSetFiber_fiberFunctor",
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36EtaleCoverFoundations.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "generalKGaloisCategoryCard",
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36FiniteEtaleFiber.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "fiberFunctorReflectsEpimorphisms",
+          "file": "logs/upstream/promachina-iut-lean-581e2b89/Iut/Foundations/GaloisImage.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "schemeRepresentableFiberFunctor",
+          "file": "logs/upstream/promachina-iut-lean-581e2b89/Iut/Foundations/Orbicurve.lean",
+          "kind": "def"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/FiniteEtaleCoverFiber.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/Geometry/CurveEtaleFundamentalGroup.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/Geometry/CurveEtaleFundamentalGroupExt.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/Geometry/SplitTateCurve.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/SourceAnabelioidBridge.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/HodgeTheater/SourceEtaleStackInstanceSupplyReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31OrbicurveInstance.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36ContinuousGaloisSets.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveEtaleCovers.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveGaloisCategory.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36CurveScheme.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36EtaleCoverFoundations.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36EtalePiOneKernelRealization.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36FiberAutomorphism.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36FiniteEtaleFiber.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/SourceCurveG2Quotients.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l03-g2/S2Axioms.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/l1-f2/PreGaloisFromG2.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/n8/closure/O1ConstructedStack.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1728Probe0.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1728Probe0Adapted.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1736Probe0.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1736Probe5.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1736Probe6.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/xif/paper/S1736Probe7.lean",
+          "olean": false
+        }
+      ]
+    },
+    "qpilot": {
+      "summary": {
+        "terms": [
+          "QPilot",
+          "qPilot",
+          "qpilot",
+          "ThetaPilot",
+          "thetaPilot"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 281
+      },
+      "decl_sample": [
+        {
+          "name": "arithmeticTupleThetaPilotGenerator",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "def"
+        },
+        {
+          "name": "arithmeticTupleThetaPilotRegion",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "def"
+        },
+        {
+          "name": "arithmeticTupleThetaPilotExponent_nonneg",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "arithmeticTupleThetaPilotGenerator_mem_singleFractionalLattice",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "arithmeticTupleThetaPilotRegion_le_singleCoordinateFractional",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "arithmeticTupleThetaPilotExactRadius",
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "SourceThetaPilotOnePlacePacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "abbrev"
+        },
+        {
+          "name": "sourceThetaPilotProductMap",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceThetaPilotProductMap_tprod",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceThetaPilotTensorIQPacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceThetaPilotIQPacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "def"
+        },
+        {
+          "name": "possibleImage_subset_sourceThetaPilotIQPacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceThetaPilotProductMap_image_subset_tensorIQPacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceThetaPilotProductMap_sourceLogShellTensorGenerator",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceLogShellTensorGenerator_mem_sourceThetaPilotIQPacket",
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "thetaPilotCarrierFintype",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean",
+          "kind": "instance"
+        },
+        {
+          "name": "sourceThetaPilotFiniteHull",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/CertificateHullWiring.lean",
+          "kind": "def"
+        },
+        {
+          "name": "sourceLocalLogDegree_thetaPilotPoint_gauss",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeneratorNonpositivity.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "possibleThetaPilotImageSet_eq_iUnion_singleton",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeometryGapCards.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "possibleThetaPilotImageSet_eq_biUnion_finset",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeometryGapCards.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "possibleThetaPilotImageSet_subset_iff_forall_mem",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealGeometryGapCards.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "sourceSignedThetaPilotFiniteHull",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CardHullRealSignedLogVolume.lean",
+          "kind": "def"
+        },
+        {
+          "name": "StepXIFiniteCertificate.toCor312ComparisonData_qPilotLogVolume",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/CertificateComparisonBridge.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "possibleThetaPilotImageSet_finite",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullVertexConvexityAssembly.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "thetaPilotPointValueCarrierWiring_of_realization",
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/IQHullValueCarrierWiring.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierPointwisePremiseReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCGap2FiniteC3Supply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312CarrierRealizationSpec.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapSupplyLayer.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312GapDictionaryLayer.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseMembershipWeakening.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312PointwiseResidualSupply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullInterface.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceIQHullLogShellRegion.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceStepVLambda.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceThetaPilotScaledRegion.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/P1CarrierDesignActual.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Frobenioid/Example36ThetaGeneratorFeasibility.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTII/Kummer/SourceThetaPilotIQContainment.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/IUTIII/Corollary312/ArithmeticQPilotBaseChange.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ThetaFunctionLineBundleActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ThetaLinkActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/n8/closure/C9QNormFactorUnconditional.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QPilotZeroLocusDivisorActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QVFamNormalizedCoefficientOrderAuditActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QVFamTensorCoefficientActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1073RootStackPaperThetaHullActual.lean",
+          "olean": false
+        },
+        {
+          "file": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1086PerBQ1URootHullActual.lean",
+          "olean": false
+        }
+      ]
+    },
+    "iut4_compare": {
+      "summary": {
+        "terms": [
+          "IUTIVSection2",
+          "Section2Uniform",
+          "Comparison",
+          "comparison",
+          "StepV",
+          "Estimates"
+        ],
+        "decls": 401,
+        "files": 401,
+        "files_with_olean": 280
+      },
+      "decl_sample": [
+        {
+          "name": "PullbackComparisonTarget",
+          "file": "Iut/Foundations/Frobenioid.lean",
+          "kind": "structure"
+        },
+        {
+          "name": "pullbackComparison",
+          "file": "Iut/Foundations/Frobenioid.lean",
+          "kind": "def"
+        },
+        {
+          "name": "complementComparisonActionHom",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "def"
+        },
+        {
+          "name": "complementComparisonActionHom_comp",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "complementComparison",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "def"
+        },
+        {
+          "name": "complementComparison_comp",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "complementComparison_unique",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "complementComparisonIso",
+          "file": "Iut/Foundations/GaloisComplement.lean",
+          "kind": "def"
+        },
+        {
+          "name": "imageComparisonPreimage",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "def"
+        },
+        {
+          "name": "imageComparisonPreimage_spec",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparisonLift",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "def"
+        },
+        {
+          "name": "imageComparisonLift_inclusion",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparisonActionHom",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "def"
+        },
+        {
+          "name": "imageComparisonActionHom_inclusion",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparisonActionHom_projection",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparison",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "def"
+        },
+        {
+          "name": "imageComparison_inclusion",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparison_projection",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "imageComparisonIso",
+          "file": "Iut/Foundations/GaloisImage.lean",
+          "kind": "def"
+        },
+        {
+          "name": "generatorSquareComparison",
+          "file": "Iut/Foundations/Orbicurve.lean",
+          "kind": "def"
+        },
+        {
+          "name": "comparisonBaseHom",
+          "file": "Iut/Foundations/SourceFrobenioidBasePullbackLift.lean",
+          "kind": "def"
+        },
+        {
+          "name": "comparisonHom",
+          "file": "Iut/Foundations/SourceFrobenioidBasePullbackLift.lean",
+          "kind": "def"
+        },
+        {
+          "name": "comparisonHom_spec",
+          "file": "Iut/Foundations/SourceFrobenioidBasePullbackLift.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "comparisonHom_base",
+          "file": "Iut/Foundations/SourceFrobenioidBasePullbackLift.lean",
+          "kind": "theorem"
+        },
+        {
+          "name": "comparisonHom_linear",
+          "file": "Iut/Foundations/SourceFrobenioidBasePullbackLift.lean",
+          "kind": "theorem"
+        }
+      ],
+      "file_sample": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/ABCHeightArithmeticWeightComparison.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantCoprimality.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantHeight.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantLocalHeight.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/ABCInvariantRadicalBridge.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Arithmetic/RationalPointDictionary.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCEllipticHeightCriterion.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierHeightWeightRefutation.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierPointwisePremiseReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierReductions.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontierSingletonReduction.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/ABCGap2FiniteC3Supply.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312CarrierRealizationSpec.lean",
+          "olean": true
+        },
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ComparisonGapReduction.lean",
+          "olean": true
+        }
+      ],
+      "files_no_olean": [
+        {
+          "file": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceHolomorphicDifferentBase.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/AffineChartOverlapCompatProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/AffineChartOverlapFixedPointComparison.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/AffineChartOverlapLocalizationCompatibility.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/AffineChartOverlapRefinement.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/BaseNormCompatibilityProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CanonicalCompletionNormedSpace.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CanonicalNormalizedNormEqualityProof.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CanonicalNormalizedUnitNormEqualityFinal.lean",
+          "olean": false
+        },
+        {
+          "file": "LeanFormal/IUT/Foundations/AlgebraicGeometry/CanonicalNormalizedUnitNormEqualityProof.lean",
+          "olean": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1ULWeightDictionaryActual
+import tmp.sheaf.xif.paper.Mzk1G1B3FrameHeightActual
+import tmp.sheaf.xif.paper.Mzk1ULTripodalDictionaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULWeightDictionaryActual.paperLambda_eq_ulDivisorWeight
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULWeightDictionaryActual.paperHpktWeight_sum_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B3FrameHeightActual.b3_frameHeight_omegaE_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULTripodalDictionaryActual.logDiff_eq

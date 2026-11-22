@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1815AffineQuotientColimitsActual
+
+#check LeanFormal.IUT.XiFPaper.S1815AffineQuotientColimitsActual.S1815AffineQuotientColimits
+
+example : LeanFormal.IUT.XiFPaper.S1792QuotientCoverActual.S1792AffineQuotientColimits :=
+  LeanFormal.IUT.XiFPaper.S1815AffineQuotientColimitsActual.S1815AffineQuotientColimits

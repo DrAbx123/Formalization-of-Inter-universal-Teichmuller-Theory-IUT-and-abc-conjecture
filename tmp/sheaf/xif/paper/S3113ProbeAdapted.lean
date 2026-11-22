@@ -1,0 +1,10 @@
+import tmp.sheaf.n8.closure.NativeC3
+import tmp.sheaf.n8.closure.NativeInput
+import tmp.sheaf.xif.paper.C3DonorFieldsFromSource
+open LeanFormal.IUT
+open LeanFormal.IUT.N8Closure.NativeInput
+open LeanFormal.IUT.N8Closure.NativeC3
+open LeanFormal.IUT.NumberFieldFinitePlace
+#check NumberFieldFinitePlace.comap_self
+#check NumberFieldFinitePlace.comap_comap
+#check NumberField.FinitePlace.comap_self

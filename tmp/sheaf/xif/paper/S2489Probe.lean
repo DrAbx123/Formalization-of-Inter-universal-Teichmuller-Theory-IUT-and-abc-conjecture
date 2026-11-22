@@ -1,0 +1,3 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+open LeanFormal.IUT.InitialThetaSource
+#print SourceSignQuotientData

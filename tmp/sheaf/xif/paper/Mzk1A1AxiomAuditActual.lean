@@ -1,0 +1,26 @@
+import tmp.sheaf.xif.paper.Mzk1A1DeltaExplicitActual
+import tmp.sheaf.xif.paper.Mzk1A1SignedReadoutActual
+import tmp.sheaf.xif.paper.Mzk1A1SignedReadoutProductActual
+import tmp.sheaf.xif.paper.Mzk1A1LatticeValuationIdentifyActual
+import tmp.sheaf.xif.paper.Mzk1A1QhatSaturationReadoutActual
+import tmp.sheaf.xif.paper.Mzk1A1ValuationInputsActual
+import tmp.sheaf.xif.paper.Mzk1A1InverseLatticeNormActual
+import tmp.sheaf.xif.paper.Mzk1A1LatticeInverseActual
+/-! Read-only axiom audit for the A1.6 chain (no new theorem). -/
+open LeanFormal.IUT.XiFPaper
+#print axioms Mzk1A1DeltaExplicitActual.a1SignedTerm_eq_log_radius_sub_delta
+#print axioms Mzk1A1DeltaExplicitActual.a1SignedTerm_le_log_radius
+#print axioms Mzk1A1SignedReadoutActual.signedRelativeReadout_eq_neg_log_index
+#print axioms Mzk1A1SignedReadoutProductActual.productQ_normalizedLog_eq_closedForm_sub_one_sub_totalDelta
+#print axioms Mzk1A1SignedReadoutProductActual.productQ_normalizedLog_le_closedForm_sub_one
+#print axioms Mzk1A1SignedReadoutProductActual.totalDelta_nonneg
+#print axioms Mzk1A1LatticeValuationIdentifyActual.inverseLambdaLattice_eq_inverseLattice
+#print axioms Mzk1A1LatticeValuationIdentifyActual.inverseLambdaLattice_eq_saturated_actual
+#print axioms Mzk1A1QhatSaturationReadoutActual.qVFamily_mem_saturatedLattice
+#print axioms Mzk1A1QhatSaturationReadoutActual.signedReadout_eq_log_radius_sub_delta
+#print axioms Mzk1A1ValuationInputsActual.qVFamily_mem_saturatedLattice_of_valuationData
+#print axioms Mzk1A1InverseLatticeNormActual.mem_lambdaLattice_iff
+#print axioms Mzk1A1InverseLatticeNormActual.mem_qhatLattice_iff
+#print axioms Mzk1A1InverseLatticeNormActual.inverseLambdaLattice_eq_normBall
+#print axioms Mzk1A1LatticeInverseActual.qhatLattice_subset_lambdaLattice
+#print axioms Mzk1A1LatticeInverseActual.qVFamily_mem_inverseLambdaLattice

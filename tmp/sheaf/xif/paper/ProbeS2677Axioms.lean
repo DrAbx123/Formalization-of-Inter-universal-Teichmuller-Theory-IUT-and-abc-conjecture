@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2677D7bLocalGroupsActual
+open LeanFormal.IUT.XiFPaper.S2677D7bLocalGroupsActual
+#print axioms S2677D7SectionConstruction
+#print axioms S2677D7bLocalGroupSectionConstruction

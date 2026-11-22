@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2328RestrictionMapActual
+open LeanFormal.IUT.XiFPaper.S2328RestrictionMapActual
+#print axioms S2328RestrictionData_of
+#print axioms S2328S2310Iso_of_restrictionData
+#print axioms S2328S2310Iso_of_exactFirstMissing

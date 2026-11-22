@@ -1,0 +1,5 @@
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicSubmoduleTensor
+open LeanFormal.IUT.LocalFieldPadicTensor
+#check isOpen_submoduleTensorSpan
+#check finite_padicFractionalLattice_of_nonneg
+#check submoduleTensorSpan

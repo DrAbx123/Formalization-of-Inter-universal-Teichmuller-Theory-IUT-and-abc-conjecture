@@ -1,0 +1,25 @@
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:61:9: error: Function expected at
+  SourceThetaProductDataObligation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  D
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:71:9: error: Function expected at
+  SourceThetaProductDataObligation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  D
+
+Hint: The identifier `SourceThetaProductDataObligation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8eSliceFactorization.lean:72:9: error: Function expected at
+  SourceSliceFactorizationObligation
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  D
+
+Hint: The identifier `SourceSliceFactorizationObligation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

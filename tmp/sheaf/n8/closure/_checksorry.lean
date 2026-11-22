@@ -1,0 +1,14 @@
+import tmp.sheaf.n8.closure.NativeC1
+import tmp.sheaf.n8.closure.NativeC3
+import tmp.sheaf.n8.closure.C5Native
+import tmp.sheaf.n8.closure.C7Native
+import tmp.sheaf.n8.closure.C9Native
+import tmp.sheaf.n8.closure.T11Native
+import tmp.sheaf.n8.closure.N8NativeClosure
+#check @LeanFormal.IUT.N8Closure.NativeC1.NativeStripFiberComparisonObligation
+#check @LeanFormal.IUT.N8Closure.NativeC3.NativeTensorLandingDonor
+#check @LeanFormal.IUT.N8Closure.C5Native.NativeAPTMissing
+#check @LeanFormal.IUT.N8Closure.C7Native.SourceUToIQDonor
+#check @LeanFormal.IUT.N8Closure.C9Native.MissingSourceQHullComparison
+#check @LeanFormal.IUT.N8Closure.T11Native.ThetaPacketIdentification
+#check @LeanFormal.IUT.N8Closure.NativeClosure.NativeOldC1BridgeExists

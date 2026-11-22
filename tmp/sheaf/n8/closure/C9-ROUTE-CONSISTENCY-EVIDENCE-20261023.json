@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-23",
+  "owner": "root current chat; no delegation",
+  "task": "C9 route consistency audit against primary sources and external technical discussions",
+  "route": {
+    "path": "tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-ROUTE-20261023.md",
+    "sha256": "216538c2d8df8a66d26a10692c5fd9e5d879ca5450b252f7756e009497d43c45"
+  },
+  "review": {
+    "path": "tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md",
+    "sha256": "f475cf0373d6f82a556ecaab7ca47dea48abda807bc818ceea74744268f64d4f"
+  },
+  "previous_route": {
+    "path": "tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-ROUTE-20261023.pre-consistency.md",
+    "sha256": "4d6256789c99648f9de14d8ef7c434e730e8014d006522b0f356356252c3136b"
+  },
+  "sources": [
+    {
+      "name": "mochizuki-formalization-202604",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Formalization%20of%20IUT%20(2026-04).pdf",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-consistency-20261023\\mochizuki-formalization-202604.pdf",
+      "sha256": "9a32b2485b5875574d7470256d3414b88ee6ac3ed8a39a82ea7332e25072ee9c",
+      "pages": 14,
+      "read_scope": "Body pp.1-11; especially section 4 pp.9-11"
+    },
+    {
+      "name": "scholze-stix-2018",
+      "url": "https://www.math.uni-bonn.de/people/scholze/WhyABCisStillaConjecture.pdf",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-consistency-20261023\\scholze-stix-2018.pdf",
+      "sha256": "4ec276246a2a92d2e211a0dae5afd073b5eae7e2b37e9bbabe3cb82c7e0b34a0",
+      "pages": 10,
+      "read_scope": "Full text, especially pp.7-10"
+    },
+    {
+      "name": "dupuy-hilado-2004.13228v2",
+      "url": "https://arxiv.org/pdf/2004.13228v2",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-consistency-20261023\\dupuy-hilado-2004.13228v2.pdf",
+      "sha256": "e6ba06b458ea633764093618c3312926ab585bb4f092e43416f2eff386bb0ce2",
+      "pages": 20,
+      "read_scope": "Introduction/scope pp.1-2; not whole text"
+    },
+    {
+      "name": "dupuy-hilado-2004.13228v1",
+      "url": "https://arxiv.org/pdf/2004.13228v1",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-consistency-20261023\\dupuy-hilado-2004.13228v1.pdf",
+      "sha256": "d2196b557d5c5d4afe2520db26df880585416c1218d939962b3a479d7ff341dc",
+      "pages": 35,
+      "read_scope": "Introduction and section 3.10 degree-volume calculation; not whole text"
+    },
+    {
+      "name": "LANA interim report revision 1.0.1",
+      "url": "https://github.com/katobungen/LANA_report_202607/blob/293bdd89463473ae13d40834d70fb4b7ba81da1f/LANA_report_202607.tex",
+      "commit": "293bdd89463473ae13d40834d70fb4b7ba81da1f",
+      "commit_date": "2026-07-20T05:27:20Z",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-consistency-20261023\\LANA-report-retrieved-20261023.tex",
+      "sha256": "3e613bee63efbfa7b17178566dd837d1cd92ed21491ec6e65d534b3521fc58bf",
+      "read_scope": "Introduction/status; multiradial/log-Kummer/3.11-to-3.12 passages; eta algorithm and comparison; examination of Scholze-Stix. Not full manuscript."
+    }
+  ],
+  "existing_sources_manifest": "tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-EVIDENCE-20261023.json",
+  "other_workflow_snapshots": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-TARGET-V3.md",
+      "sha256": "d52faad43bd79ed609004eb27739eed41b45cd7ed1ae2d55a6de06d2984130f0",
+      "status": "read; not modified; corrections queued for integration"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-P0-P1-SOURCE-TABLE.md",
+      "sha256": "7ed7f08509201b21c82025edf1dae67de650f5190b09ebcc77d4b01e4bec1e7c",
+      "status": "read; not modified; corrections queued for integration"
+    }
+  ],
+  "visual_checks": [
+    "mochizuki-formalization-202604-p10.png",
+    "mochizuki-formalization-202604-p11.png",
+    "scholze-stix-2018-p10.png",
+    "dupuy-hilado-2004.13228v1-p16.png"
+  ],
+  "visual_directory": "tmp/pdfs/valuespaper-consistency-20261023",
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run",
+    "target_accepted": false
+  },
+  "next_action": "Define the two actual source readout composites, their source-allowed choice space, and their comparison at the actual q-pilot; do not replace this by upper-bound transfer or repeat inventory."
+}

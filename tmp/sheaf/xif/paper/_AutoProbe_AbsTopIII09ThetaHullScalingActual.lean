@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.AbsTopIII09ThetaHullScalingActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII09ThetaHullScalingActual.absTopIII_thetaHull_log_measure_prime_smul
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII09ThetaHullScalingActual.absTopIII_thetaPilotHullLogVolumeReal_eq_actualRegion

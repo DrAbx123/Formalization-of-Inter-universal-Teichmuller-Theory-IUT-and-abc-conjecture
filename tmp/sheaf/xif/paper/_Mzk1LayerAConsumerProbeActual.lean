@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1LayerAConsumerActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerActual.paperScope_of_algebraicNestedInduction
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerActual.finiteGaloisDescentClaim_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerActual.algebraicNestedInduction_iff_paperScope

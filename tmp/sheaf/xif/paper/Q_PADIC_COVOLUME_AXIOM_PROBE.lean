@@ -1,0 +1,14 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceIntegralTensorCovolume
+import LeanFormal.IUT.Foundations.MeasureTheory.CompactOpenAddSubgroupIndex
+
+open LeanFormal.IUT.NumberFieldFinitePlace
+open LeanFormal.IUT.CompactOpenAddSubgroup
+
+#check relative_log_measure_eq_log_indices
+#print axioms relative_log_measure_eq_log_indices
+#check arithmeticTupleLogTensorUnitLogVolume_eq_relativeHaarLog
+#print axioms arithmeticTupleLogTensorUnitLogVolume_eq_relativeHaarLog
+#check arithmeticTupleLogTensorUnitLogVolume_le_hull
+#print axioms arithmeticTupleLogTensorUnitLogVolume_le_hull
+#check arithmeticTupleLogTensorUnitLogVolume_eq_fieldLogVolume
+#print axioms arithmeticTupleLogTensorUnitLogVolume_eq_fieldLogVolume

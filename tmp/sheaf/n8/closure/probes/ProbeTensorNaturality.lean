@@ -1,0 +1,3 @@
+import tmp.sheaf.n8.closure.EtaTensorAutomorphismActual3
+#print axioms LeanFormal.IUT.N8Closure.EtaTensorAutomorphismActual3.tau_graphAction_obligation
+#print axioms LeanFormal.IUT.N8Closure.EtaTensorAutomorphismActual3.tensorAutomorphismTarget_actual

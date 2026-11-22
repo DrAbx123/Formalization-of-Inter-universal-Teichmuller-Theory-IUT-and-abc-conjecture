@@ -1,0 +1,5 @@
+import Mathlib
+#check Nat.mul_div_right
+#check Nat.mul_div_left
+#check Nat.mul_div_cancel
+#check Nat.mul_div_cancel_left

@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBelyiRationalActual
+
+open LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual
+
+#print axioms belyi_no_two_preimages_one
+#print axioms belyi_eval_one_imp_real
+#print axioms belyi_eval_one_imp
+#print axioms belyi_eval_mem_zero_one_of_interior
+#print axioms exists_betaAvoiding_card_le_two
+#print axioms exists_betaAvoiding_of_step
+#print axioms tauCetiStep_not_betaAvoiding
+#print axioms example_solvable_two_step
+#print axioms eval_belyi_two_mul

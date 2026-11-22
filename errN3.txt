@@ -1,0 +1,10 @@
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:44:24: error: failed to prove nonzeroness, but it would be possible to prove nonnegativity if desired
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.badSupport_eq_primeFactors' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.tripleWeight_eq_radical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.n1Rows_length' does not depend on any axioms

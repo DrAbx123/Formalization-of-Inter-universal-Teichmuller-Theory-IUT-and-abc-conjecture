@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull05WeightedIdentityActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull05WeightedIdentityActual.hull05_weightedIdentity_of_scaling
+#print axioms LeanFormal.IUT.XiFPaper.Hull05WeightedIdentityActual.hull05_concreteRow
+#print axioms LeanFormal.IUT.XiFPaper.Hull05WeightedIdentityActual.hull05InputRows

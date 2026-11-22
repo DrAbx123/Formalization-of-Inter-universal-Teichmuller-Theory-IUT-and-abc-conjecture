@@ -1,0 +1,9 @@
+import Mathlib
+#check PositiveCompacts
+#check PositiveCompacts.mk
+#check PositiveCompacts.interior_nonempty
+#check PositiveCompacts.isCompact
+#check haarMeasure_self
+#check haarMeasure
+#check MeasureTheory.Measure.haarMeasure
+#check MeasureTheory.Measure.IsAddHaarMeasure

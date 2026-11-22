@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG01CurveFoundationsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG01CurveFoundationsActual.S3133CurveOver
+#print axioms LeanFormal.IUT.XiFPaper.AG01CurveFoundationsActual.S3133CurveOver_isProper
+#print axioms LeanFormal.IUT.XiFPaper.AG01CurveFoundationsActual.S3133CurveOver_isSmooth

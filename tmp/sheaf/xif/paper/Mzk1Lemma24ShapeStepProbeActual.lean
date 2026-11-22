@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24ShapeStepActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ShapeStepActual.s3135_f0_step_shape

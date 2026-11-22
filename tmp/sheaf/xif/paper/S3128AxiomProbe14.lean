@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3128LocalAffineQuotientActual
+open LeanFormal.IUT.XiFPaper.S3128LocalAffineQuotientActual
+#print axioms S3128FixedSubringMap
+#print axioms S3128FixedSubringMap_subtype
+#print axioms S3128SpecFixedMap
+#print axioms S3128SpecQuotientMap_natural

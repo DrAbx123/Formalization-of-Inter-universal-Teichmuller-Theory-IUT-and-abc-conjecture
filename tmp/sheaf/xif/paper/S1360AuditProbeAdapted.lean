@@ -1,0 +1,26 @@
+import tmp.sheaf.xif.paper.S1360D9OrbicurveSlotActual
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31D4D9Supply
+
+open LeanFormal.IUT
+open LeanFormal.IUT.InitialThetaSource
+open LeanFormal.IUT.Theorem311Source
+open LeanFormal.IUT.XiFPaper.S1280SourceDefinition31Actual
+open LeanFormal.IUT.XiFPaper.S1360D9OrbicurveSlotActual
+
+#check @s1360SourceSignQuotientGeometricCore_signature_typing
+#check @s1360SourceCompletionSignQuotient_signature_typing
+#check @s1360SourceSignQuotientData_signature_typing
+#check SourceSignQuotientGeometricCore
+#check SourceCompletionSignQuotient
+#check SourceSignQuotientData
+#check SourceDefinition31Data
+#check Definition31D4D9Supply.D9CompatibilitySupply
+#check Definition31D4D9Supply.D4D9Supply
+#check SourceOrbicurveScalarExtension.signature_genus_preserved
+#check S1360KCoreBaseChange
+#check S1360KCoreIdentification
+#check S1360PaperOrbicurveSlotAtK
+#print axioms s1360SourceSignQuotientGeometricCore_signature_typing
+#print axioms s1360SourceCompletionSignQuotient_signature_typing
+#print axioms s1360SourceSignQuotientData_signature_typing

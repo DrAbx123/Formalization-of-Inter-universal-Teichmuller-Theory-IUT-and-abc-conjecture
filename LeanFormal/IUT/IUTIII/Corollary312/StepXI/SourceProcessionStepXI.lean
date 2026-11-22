@@ -389,6 +389,172 @@ theorem sourceStepXIBoundary_output (route : List (RouteStep Label))
       (sourceStepXIBoundary input route link).assembly.arithmetic.output :=
   (sourceStepXIBoundary input route link).assembly.wall_input_agrees
 
+
+/-! ## V2 pinned comparison form (downdrill 2026-10-16; V1 declarations retained)
+
+The V1 link records the two real comparison fields `q_le_target` and
+`target_le_theta` separately.  The corpus comparison of IUT III, Corollary
+3.12, Step (xi) is two-term: (xi-d) defines `-|log(Theta)|` as the log-volume
+of the holomorphic hull `1,circ U`, and (xi-f) derives the inclusion
+`-|log(q)| in R^{<= -|log(Theta)|}`, i.e. `-|log(q)| <= -|log(Theta)|`.  The
+middle element `targetSigned` is the repo's hull anchor; in the corpus-faithful
+pinned form the middle element coincides with the upper end.
+
+`ArithmeticLinkV2` pins `target = theta`; under the pinning the second
+comparison is definitional (`le_rfl`) and the single remaining arithmetic
+input is the (xi-f) inclusion `q <= target`.  `SourceStepXIBoundaryV2` is the
+matching assembled boundary.  No source-facing existence is manufactured. -/
+
+/-- Pinned form of the Step-XI arithmetic link: the middle element coincides
+with the upper end, recording the corpus identification (xi-d) of
+`-|log(Theta)|` with the holomorphic-hull log-volume.  The link is equivalent
+to the V1 surface plus the pinning equation (`ArithmeticLinkV2.ofTargetEqTheta`,
+`ArithmeticLinkV2.toArithmeticLink`). -/
+structure ArithmeticLinkV2 (route : List (RouteStep Label)) where
+  arithmetic : StepXIInput input.carrier
+    (routeWall input route).routeOutput.algorithmInput
+  arithmetic_source : arithmetic.output = (routeWall input route).wall.theorem311
+  target_eq_theta : arithmetic.targetSigned = arithmetic.thetaSigned
+
+namespace ArithmeticLinkV2
+
+def toArithmeticLink (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    ArithmeticLink input route :=
+  arithmeticLink input route link.arithmetic link.arithmetic_source
+
+def ofTargetEqTheta (route : List (RouteStep Label))
+    (link : ArithmeticLink input route)
+    (h : link.arithmetic.targetSigned = link.arithmetic.thetaSigned) :
+    ArithmeticLinkV2 input route where
+  arithmetic := link.arithmetic
+  arithmetic_source := link.arithmetic_source
+  target_eq_theta := h
+
+end ArithmeticLinkV2
+
+@[simp] theorem ArithmeticLinkV2.toArithmeticLink_arithmetic
+    (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    (ArithmeticLinkV2.toArithmeticLink input route link).arithmetic =
+      link.arithmetic := rfl
+
+/-- Hull-pinned constructor of the V2 link: one named real inclusion
+`q ≤ hullValue` (the (xi-f) content), with `target = theta = hullValue`;
+`target_le_theta` is `le_rfl`. -/
+def arithmeticLinkV2OfHullInclusion (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    ArithmeticLinkV2 input route where
+  arithmetic := stepXIInput input.carrier
+    (routeWall input route).routeOutput.algorithmInput
+    qSigned hullValue hullValue hq ipl she apt
+    ipl_evidence she_evidence apt_evidence q_le_hull le_rfl
+  arithmetic_source := rfl
+  target_eq_theta := rfl
+
+@[simp] theorem arithmeticLinkV2OfHullInclusion_qSigned
+    (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+      ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.qSigned =
+      qSigned := rfl
+
+@[simp] theorem arithmeticLinkV2OfHullInclusion_targetSigned
+    (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+      ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.targetSigned =
+      hullValue := rfl
+
+@[simp] theorem arithmeticLinkV2OfHullInclusion_thetaSigned
+    (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+      ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.thetaSigned =
+      hullValue := rfl
+
+/-- Under the pinning the second comparison is definitional: the middle
+element and the upper end are the same term. -/
+theorem arithmeticLinkV2OfHullInclusion_target_eq_theta
+    (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+      ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.targetSigned =
+      (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+        ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.thetaSigned :=
+  rfl
+
+/-- The single remaining arithmetic input of the pinned link is exactly the
+(xi-f) inclusion `q ≤ target`. -/
+theorem arithmeticLinkV2OfHullInclusion_singleInclusion
+    (route : List (RouteStep Label))
+    (qSigned hullValue : Real) (hq : qSigned < 0) (q_le_hull : qSigned ≤ hullValue)
+    (ipl she apt : Prop) (ipl_evidence : ipl) (she_evidence : she)
+    (apt_evidence : apt) :
+    (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+      ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.qSigned ≤
+      (arithmeticLinkV2OfHullInclusion input route qSigned hullValue hq q_le_hull
+        ipl she apt ipl_evidence she_evidence apt_evidence).arithmetic.targetSigned :=
+  q_le_hull
+
+/-- The V2 assembled source-procession boundary, mirroring
+`SourceStepXIBoundary` with the pinned link. -/
+structure SourceStepXIBoundaryV2 (route : List (RouteStep Label)) where
+  wall : Wall input route
+  normalized : NormalizedWall input route
+  link : ArithmeticLinkV2 input route
+  assembly : SourceStepXIAssembly input.carrier
+    (routeWall input route).routeOutput.algorithmInput
+  assembly_wall_eq : assembly.wall = (routeWall input route).wall
+  assembly_link_eq : assembly.arithmetic = link.arithmetic
+
+def sourceStepXIBoundaryV2 (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    SourceStepXIBoundaryV2 input route where
+  wall := routeWall input route
+  normalized := normalizedWall input route
+  link := link
+  assembly := assembly input route
+    (ArithmeticLinkV2.toArithmeticLink input route link)
+  assembly_wall_eq := rfl
+  assembly_link_eq := rfl
+
+theorem sourceStepXIBoundaryV2_wall (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    (sourceStepXIBoundaryV2 input route link).wall = routeWall input route := rfl
+
+theorem sourceStepXIBoundaryV2_normalized (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    (sourceStepXIBoundaryV2 input route link).normalized =
+      normalizedWall input route := rfl
+
+theorem sourceStepXIBoundaryV2_link (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    (sourceStepXIBoundaryV2 input route link).link = link := rfl
+
+theorem sourceStepXIBoundaryV2_contract (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    Cor312Conclusion
+      (sourceStepXIBoundaryV2 input route link).assembly.arithmetic.toContract :=
+  assembly_contract input route
+    (ArithmeticLinkV2.toArithmeticLink input route link)
+
+theorem sourceStepXIBoundaryV2_output (route : List (RouteStep Label))
+    (link : ArithmeticLinkV2 input route) :
+    (sourceStepXIBoundaryV2 input route link).assembly.wall.theorem311 =
+      (sourceStepXIBoundaryV2 input route link).assembly.arithmetic.output :=
+  (sourceStepXIBoundaryV2 input route link).assembly.wall_input_agrees
+
 end SourceProcessionStepXI
 
 end
@@ -405,7 +571,13 @@ def sourceProcessionStepXI : Obligation :=
       "The source procession boundary now supplies a fully proved D-stage wall, " ++
         "route normalization, and Step-XI assembly. IPL/SHE/APT and the two real " ++
         "comparison inequalities remain explicit arithmetic link fields; no " ++
-        "source-facing existence is manufactured."
+        "source-facing existence is manufactured. Downdrill 2026-10-16: the V2 " ++
+        "pinned mirror (ArithmeticLinkV2 / SourceStepXIBoundaryV2) matches the " ++
+        "corpus two-term comparison of Steps (xi-d)/(xi-f), where -|log(Theta)| " ++
+        "is by definition the log-volume of the holomorphic hull; with target = " ++
+        "theta pinned, the two comparison fields reduce to the single named " ++
+        "inclusion q <= target (the second is definitional, le_rfl); the V1 " ++
+        "fields remain for compatibility."
     dependsOn :=
       [ "IUT-III.source-procession-boundary",
         "IUT-III.parametric-StepXI-assembly" ] }

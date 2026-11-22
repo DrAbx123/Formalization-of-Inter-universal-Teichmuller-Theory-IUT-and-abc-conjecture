@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DZeroDatumGenericGreenConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DZeroDatumGenericGreenConsumerActual.dZeroDatumGenericGreen_bundle

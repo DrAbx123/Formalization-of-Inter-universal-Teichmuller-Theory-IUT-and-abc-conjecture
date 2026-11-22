@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII05ReconstructionInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05ReconstructionInputsActual.DeepInputKind
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05ReconstructionInputsActual.DeepInput
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII05ReconstructionInputsActual.absTopIIIDeepInputs

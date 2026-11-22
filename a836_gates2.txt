@@ -1,0 +1,9 @@
+'LeanFormal.IUT.SourceStepXIComparisonForm.stepXIContract_exists_of_singleComparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.SourceStepXIComparisonForm.singleComparison_of_stepXIContract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.NumberFieldFinitePlace.arithmeticTupleSignedCor312Conclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

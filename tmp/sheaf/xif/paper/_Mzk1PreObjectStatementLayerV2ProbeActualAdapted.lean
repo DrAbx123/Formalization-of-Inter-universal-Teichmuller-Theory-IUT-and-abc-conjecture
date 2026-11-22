@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1PreObjectStatementLayerV2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PreObjectStatementLayerV2ActualAdapted.cor312UnconditionalTargetOfStatements

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StatementShapeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StatementShapeActual.Mzk1Lemma22FullShape
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StatementShapeActual.fullShape_to_partial
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StatementShapeActual.fullShape_preserves
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StatementShapeActual.mzk1Lemma22FullShapeRows_length

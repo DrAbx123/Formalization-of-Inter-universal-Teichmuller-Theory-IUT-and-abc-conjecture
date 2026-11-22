@@ -1,0 +1,5 @@
+import LeanFormal.IUT.IUTIII.Theorem311.ConcreteFiniteModel
+#check LeanFormal.IUT.ConcreteFiniteTheorem311.FiniteOutput
+#check LeanFormal.IUT.ConcreteFiniteTheorem311.ProcessionChoice
+#check LeanFormal.IUT.ConcreteFiniteTheorem311.finiteLabel
+#check LeanFormal.IUT.ConcreteFiniteTheorem311.finiteOutput

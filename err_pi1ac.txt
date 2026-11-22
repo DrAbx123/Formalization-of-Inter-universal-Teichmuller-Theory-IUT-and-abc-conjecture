@@ -1,0 +1,456 @@
+Pi1\FundamentalGroup\AffineColimits.lean:39:93: error: unsolved goals
+case h₀
+C : Type u_1
+inst✝¹ : Category.{u_2, u_1} C
+inst✝ : HasPullbacks C
+X : C
+A : Over X
+⊢ (pullback.lift (𝟙 A.left) A.hom ⋯ ≫
+        pullback.lift (pullback.fst (A.hom ≫ 𝟙 X) (𝟙 X)) (pullback.snd (A.hom ≫ 𝟙 X) (𝟙 X)) ⋯ ≫
+          pullback.lift (pullback.fst A.hom (𝟙 X) ≫ 𝟙 ((𝟭 (Over X) ⋙ 𝟭 (Over X)).obj A).left) (pullback.snd A.hom (𝟙 X))
+            ⋯) ≫
+      pullback.fst A.hom (𝟙 X) =
+    pullback.lift (𝟙 A.left) A.hom ⋯ ≫ pullback.fst A.hom (𝟙 X)
+
+case h₁
+C : Type u_1
+inst✝¹ : Category.{u_2, u_1} C
+inst✝ : HasPullbacks C
+X : C
+A : Over X
+⊢ (pullback.lift (𝟙 A.left) A.hom ⋯ ≫
+        pullback.lift (pullback.fst (A.hom ≫ 𝟙 X) (𝟙 X)) (pullback.snd (A.hom ≫ 𝟙 X) (𝟙 X)) ⋯ ≫
+          pullback.lift (pullback.fst A.hom (𝟙 X) ≫ 𝟙 ((𝟭 (Over X) ⋙ 𝟭 (Over X)).obj A).left) (pullback.snd A.hom (𝟙 X))
+            ⋯) ≫
+      pullback.snd A.hom (𝟙 X) =
+    pullback.lift (𝟙 A.left) A.hom ⋯ ≫ pullback.snd A.hom (𝟙 X)
+Pi1\FundamentalGroup\AffineColimits.lean:48:7: error: unsolved goals
+C : Type u_1
+inst✝⁴ : Category.{?u.4, u_1} C
+P Q : MorphismProperty C
+inst✝³ : Q.IsMultiplicative
+inst✝² : P.IsStableUnderBaseChange
+inst✝¹ : Q.IsStableUnderBaseChange
+inst✝ : HasPullbacks C
+X : C
+A : P.Over Q X
+⊢ pullback.fst (Over.hom A.toComma) (𝟙 X) ≫ A.hom = pullback.snd A.hom (𝟙 X)
+Pi1\FundamentalGroup\AffineColimits.lean:45:2: error: could not synthesize default value for parameter 'naturality' using tactics
+Pi1\FundamentalGroup\AffineColimits.lean:45:2: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  C : Type u_1
+  inst✝⁴ : Category.{?u.4, u_1} C
+  P Q : MorphismProperty C
+  inst✝³ : Q.IsMultiplicative
+  inst✝² : P.IsStableUnderBaseChange
+  inst✝¹ : Q.IsStableUnderBaseChange
+  inst✝ : HasPullbacks C
+  X : C
+  ⊢ ∀ {X_1 Y : P.Over Q X} (f : X_1 ⟶ Y),
+      (pullback P Q (𝟙 X)).map f ≫ (Over.isoMk (Comma.leftIso (CategoryTheory.Over.pullbackId.app Y.toComma)) ⋯).hom =
+        (Over.isoMk (Comma.leftIso (CategoryTheory.Over.pullbackId.app X_1.toComma)) ⋯).hom ≫ (𝟭 (P.Over Q X)).map f
+Remaining goals after safe rules:
+  C : Type u_1
+  inst : Category.{?u.4, u_1} C
+  P Q : MorphismProperty C
+  inst_1 : Q.IsMultiplicative
+  inst_2 : P.IsStableUnderBaseChange
+  inst_3 : Q.IsStableUnderBaseChange
+  inst_4 : HasPullbacks C
+  X : C
+  X_1 Y : P.Over Q X
+  f : X_1 ⟶ Y
+  ⊢ (pullback P Q (𝟙 X)).map f ≫ (Over.isoMk (Comma.leftIso (CategoryTheory.Over.pullbackId.app Y.toComma)) ⋯).hom =
+      (Over.isoMk (Comma.leftIso (CategoryTheory.Over.pullbackId.app X_1.toComma)) ⋯).hom ≫ f
+Pi1\FundamentalGroup\AffineColimits.lean:43:4: error: (kernel) declaration has metavariables 'CategoryTheory.MorphismProperty.Over.pullbackId'
+Pi1\FundamentalGroup\AffineColimits.lean:42:2: error: (kernel) declaration type mismatch, 'CategoryTheory.MorphismProperty.Over.pullbackId_hom_app_left' has type
+  ∀ {C : Type u_1} [inst : Category.{u_2, u_1} C] (P Q : MorphismProperty C) [Q.IsMultiplicative]
+    [P.IsStableUnderBaseChange] [Q.IsStableUnderBaseChange] [HasPullbacks C] (X : C) (X_1 : P.Over Q X),
+    Over.Hom.left (CategoryTheory.Over.pullbackId.hom.app X_1.toComma) =
+      pullback.fst (Over.hom X_1.toComma) (CategoryStruct.id X)
+but it is expected to have type
+  failed to pretty print expression (use 'set_option pp.rawOnError true' for raw representation)
+Pi1\FundamentalGroup\AffineColimits.lean:42:2: error: (kernel) declaration type mismatch, 'CategoryTheory.MorphismProperty.Over.pullbackId_inv_app_left' has type
+  ∀ {C : Type u_1} [inst : Category.{u_2, u_1} C] (P Q : MorphismProperty C) [Q.IsMultiplicative]
+    [P.IsStableUnderBaseChange] [Q.IsStableUnderBaseChange] [HasPullbacks C] (X : C) (X_1 : P.Over Q X),
+    Over.Hom.left (CategoryTheory.Over.pullbackId.inv.app X_1.toComma) =
+      pullback.lift (CategoryStruct.id (Over.left X_1.toComma)) (Over.hom X_1.toComma)
+        (@Over.pullbackId_inv_app_left._proof_1 C inst X X_1.toComma)
+but it is expected to have type
+  failed to pretty print expression (use 'set_option pp.rawOnError true' for raw representation)
+Pi1\FundamentalGroup\AffineColimits.lean:48:16: warning: This simp argument is unused:
+  pullback.condition
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵p̵u̵l̵l̵b̵a̵c̵k̵.̵c̵o̵n̵d̵i̵t̵i̵o̵n̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:53:80: error: unsolved goals
+C : Type u_1
+inst✝⁴ : Category.{u_2, u_1} C
+P Q : MorphismProperty C
+inst✝³ : Q.IsMultiplicative
+inst✝² : P.IsStableUnderBaseChange
+inst✝¹ : Q.IsStableUnderBaseChange
+inst✝ : HasPullbacks C
+X Y : C
+f : X ⟶ Y
+A : P.Over Q Y
+⊢ 𝟙 (Limits.pullback A.hom f) ≫ pullback.snd A.hom f = pullback.snd A.hom f
+Pi1\FundamentalGroup\AffineColimits.lean:76:40: error: `simp` made no progress
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    e.inv
+  has type
+    @Quiver.Hom C inst✝⁴.toQuiver Y X
+  but is expected to have type
+    @Quiver.Hom C inst✝⁴.toQuiver Y ((Functor.fromPUnit X).obj A.right)
+  in the application
+    @Limits.pullback C inst✝⁴ ((𝟭 C).obj A.left) Y ((Functor.fromPUnit X).obj A.right) A.hom e.inv
+Pi1\FundamentalGroup\AffineColimits.lean:78:40: error: `simp` made no progress
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    e.inv
+  has type
+    @Quiver.Hom C inst✝⁴.toQuiver Y X
+  but is expected to have type
+    @Quiver.Hom C inst✝⁴.toQuiver Y ((Functor.fromPUnit X).obj A.right)
+  in the application
+    @Limits.pullback C inst✝⁴ ((𝟭 C).obj A.left) Y ((Functor.fromPUnit X).obj A.right) A.hom e.inv
+Pi1\FundamentalGroup\AffineColimits.lean:70:31: warning: This simp argument is unused:
+  pullback_obj_left
+
+Hint: Omit it from the simp argument list.
+  simp only [Functor.id_obj, p̵u̵l̵l̵b̵a̵c̵k̵_̵o̵b̵j̵_̵l̵e̵f̵t̵,̵ ̵Functor.comp_obj, Iso.trans_hom, Iso.symm_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵NatTrans.comp_app,
+  ̲  ̲ ̲ ̲ ̲ ̲Functor.map_comp, Category.assoc, Comma.comp_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵CategoryTheory.Comma.comp_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullback_obj_hom, pullback_map_left, pullbackId_inv_app_left,
+  ̵  ̵ ̵ ̵ ̵ ̵pullbackComp_hom_app_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullbackComp_inv_app_left, pullbackId_hom_app_left, Comma.id_hom,
+        CategoryTheory.Comma.id_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:70:50: warning: This simp argument is unused:
+  Functor.comp_obj
+
+Hint: Omit it from the simp argument list.
+  simp only [Functor.id_obj, pullback_obj_left, F̵u̵n̵c̵t̵o̵r̵.̵c̵o̵m̵p̵_̵o̵b̵j̵,̵ ̵Iso.trans_hom, Iso.symm_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵NatTrans.comp_app,
+  ̲  ̲ ̲ ̲ ̲ ̲Functor.map_comp, Category.assoc, Comma.comp_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵CategoryTheory.Comma.comp_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullback_obj_hom, pullback_map_left, pullbackId_inv_app_left,
+  ̵  ̵ ̵ ̵ ̵ ̵pullbackComp_hom_app_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullbackComp_inv_app_left, pullbackId_hom_app_left, Comma.id_hom,
+        CategoryTheory.Comma.id_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:71:25: warning: This simp argument is unused:
+  Functor.map_comp
+
+Hint: Omit it from the simp argument list.
+  simp only [Functor.id_obj, pullback_obj_left, Functor.comp_obj, Iso.trans_hom, Iso.symm_hom,
+        NatTrans.comp_app, F̵u̵n̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵m̵p̵,̵ ̵Category.assoc, Comma.comp_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵CategoryTheory.Comma.comp_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullback_obj_hom, pullback_map_left, pullbackId_inv_app_left,
+  ̵  ̵ ̵ ̵ ̵ ̵pullbackComp_hom_app_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullbackComp_inv_app_left, pullbackId_hom_app_left, Comma.id_hom,
+        CategoryTheory.Comma.id_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:71:43: warning: This simp argument is unused:
+  Category.assoc
+
+Hint: Omit it from the simp argument list.
+  simp only [Functor.id_obj, pullback_obj_left, Functor.comp_obj, Iso.trans_hom, Iso.symm_hom,
+        NatTrans.comp_app, Functor.map_comp, Ca̵t̵e̵g̵or̵y̵.̵a̵s̵s̵o̵c̵,̵ ̵C̵o̵mma.comp_hom,
+  ̵  ̵ ̵ ̵ ̵ ̵CategoryTheory.Comma.comp_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullback_obj_hom, pullback_map_left, pullbackId_inv_app_left,
+  ̵  ̵ ̵ ̵ ̵ ̵pullbackComp_hom_app_left,
+  ̲  ̲ ̲ ̲ ̲ ̲pullbackComp_inv_app_left, pullbackId_hom_app_left, Comma.id_hom,
+        CategoryTheory.Comma.id_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:72:38: warning: This simp argument is unused:
+  pullback_obj_hom
+
+Hint: Omit it from the simp argument list.
+  simp only [Functor.id_obj, pullback_obj_left, Functor.comp_obj, Iso.trans_hom, Iso.symm_hom,
+        NatTrans.comp_app, Functor.map_comp, Category.assoc, Comma.comp_hom,
+        CategoryTheory.Comma.comp_left, pullback_o̵b̵j̵_̵h̵o̵m,̵ ̵p̵u̵l̵l̵b̵ac̵k̵_̵m̵a̵p_left, pullbackId_inv_app_left,
+        pullbackComp_hom_app_left, pullbackComp_inv_app_left, pullbackId_hom_app_left, Comma.id_hom,
+        CategoryTheory.Comma.id_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Pi1\FundamentalGroup\AffineColimits.lean:91:17: error: could not synthesize default value for field 'w' of 'CategoryTheory.Limits.ConeMorphism' using tactics
+Pi1\FundamentalGroup\AffineColimits.lean:91:17: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  C : Type u_1
+  D : Type u_2
+  inst✝¹ : Category.{?u.5, u_1} C
+  inst✝ : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f✝ : ι → C
+  c d : Cone (Discrete.functor f✝ ⋙ F)
+  f : c ⟶ d
+  ⊢ ∀ (j : Discrete ι),
+      f.hom ≫ (Fan.mk d.pt fun i => d.π.app { as := i }).π.app j = (Fan.mk c.pt fun i => c.π.app { as := i }).π.app j
+Remaining goals after safe rules:
+  C : Type u_1
+  D : Type u_2
+  inst : Category.{?u.5, u_1} C
+  inst_1 : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f_1 : ι → C
+  c d : Cone (Discrete.functor f_1 ⋙ F)
+  f : c ⟶ d
+  as : ι
+  ⊢ f.hom ≫ d.π.app { as := as } = c.π.app { as := as }
+Pi1\FundamentalGroup\AffineColimits.lean:98:19: error: could not synthesize default value for field 'w' of 'CategoryTheory.Limits.ConeMorphism' using tactics
+Pi1\FundamentalGroup\AffineColimits.lean:98:19: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  C : Type u_1
+  D : Type u_2
+  inst✝¹ : Category.{?u.5, u_1} C
+  inst✝ : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f✝ : ι → C
+  X✝ Y✝ : Cone (Discrete.functor f✝ ⋙ F)
+  f : X✝ ⟶ Y✝
+  ⊢ ∀ (j : Discrete ι),
+      f.hom ≫ (Fan.mk Y✝.pt fun i => Y✝.π.app { as := i }).π.app j =
+        (Fan.mk X✝.pt fun i => X✝.π.app { as := i }).π.app j
+Remaining goals after safe rules:
+  C : Type u_1
+  D : Type u_2
+  inst : Category.{?u.5, u_1} C
+  inst_1 : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f_1 : ι → C
+  X Y : Cone (Discrete.functor f_1 ⋙ F)
+  f : X ⟶ Y
+  as : ι
+  ⊢ f.hom ≫ Y.π.app { as := as } = X.π.app { as := as }
+Pi1\FundamentalGroup\AffineColimits.lean:105:19: error: could not synthesize default value for field 'w' of 'CategoryTheory.Limits.ConeMorphism' using tactics
+Pi1\FundamentalGroup\AffineColimits.lean:105:19: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  C : Type u_1
+  D : Type u_2
+  inst✝¹ : Category.{?u.5, u_1} C
+  inst✝ : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f✝ : ι → C
+  X✝ Y✝ : Fan fun i => F.obj (f✝ i)
+  f : X✝ ⟶ Y✝
+  ⊢ ∀ (j : Discrete ι),
+      f.hom ≫ { pt := Y✝.pt, π := Discrete.natTrans Y✝.π.app }.π.app j =
+        { pt := X✝.pt, π := Discrete.natTrans X✝.π.app }.π.app j
+Remaining goals after safe rules:
+  C : Type u_1
+  D : Type u_2
+  inst : Category.{?u.5, u_1} C
+  inst_1 : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f_1 : ι → C
+  X Y : Fan fun i => F.obj (f_1 i)
+  f : X ⟶ Y
+  as : ι
+  ⊢ f.hom ≫ Y.π.app { as := as } = X.π.app { as := as }
+Pi1\FundamentalGroup\AffineColimits.lean:95:62: error: could not synthesize default value for field 'functor_unitIso_comp' of 'CategoryTheory.Equivalence' using tactics
+Pi1\FundamentalGroup\AffineColimits.lean:95:62: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  C : Type u_1
+  D : Type u_2
+  inst✝¹ : Category.{?u.5, u_1} C
+  inst✝ : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f : ι → C
+  ⊢ ∀ (X : Cone (Discrete.functor f ⋙ F)),
+      { obj := fun c => Fan.mk c.pt fun i => c.π.app { as := i }, map := fun {X Y} f_1 => { hom := f_1.hom, w := ⋯ },
+                map_id := ⋯, map_comp := ⋯ }.map
+            ((eqToIso ⋯).hom.app X) ≫
+          (eqToIso ⋯).hom.app
+            ({ obj := fun c => Fan.mk c.pt fun i => c.π.app { as := i },
+                  map := fun {X Y} f_1 => { hom := f_1.hom, w := ⋯ }, map_id := ⋯, map_comp := ⋯ }.obj
+              X) =
+        𝟙
+          ({ obj := fun c => Fan.mk c.pt fun i => c.π.app { as := i },
+                map := fun {X Y} f_1 => { hom := f_1.hom, w := ⋯ }, map_id := ⋯, map_comp := ⋯ }.obj
+            X)
+Remaining goals after safe rules:
+  C : Type u_1
+  D : Type u_2
+  inst : Category.{?u.5, u_1} C
+  inst_1 : Category.{?u.8, u_2} D
+  F : C ⥤ D
+  ι : Type u_3
+  f : ι → C
+  X : Cone (Discrete.functor f ⋙ F)
+  ⊢ { hom := (eqToHom ⋯).hom, w := ⋯ } ≫ eqToHom ⋯ = 𝟙 (Fan.mk X.pt fun i => X.π.app { as := i })
+Pi1\FundamentalGroup\AffineColimits.lean:93:4: error: (kernel) declaration has metavariables 'CategoryTheory.Limits.coneEquivFan'
+Pi1\FundamentalGroup\AffineColimits.lean:151:26: error: unsolved goals
+P : MorphismProperty Scheme
+inst✝⁸ : P.IsStableUnderBaseChange
+inst✝⁷ : P.IsMultiplicative
+S : Scheme
+J : Type t
+inst✝⁶ : Category.{u_2, t} J
+D : J ⥤ P.Over ⊤ S
+𝒰 : S.OpenCover
+inst✝⁵ : Small.{u, w} 𝒰.I₀
+inst✝⁴ : Category.{u_1, w} 𝒰.I₀
+inst✝³ : Quiver.IsThin 𝒰.I₀
+inst✝² : LocallyDirected 𝒰
+d : ColimitGluingData D 𝒰
+inst✝¹ :
+  ∀ (i j : 𝒰.I₀) (hij : i ⟶ j), PreservesColimitsOfShape J (MorphismProperty.Over.pullback P ⊤ (Cover.trans 𝒰 hij))
+inst✝ : IsZariskiLocalAtTarget P
+i : 𝒰.I₀
+⊢ ⋯.isoPullback.inv ≫ colimit.ι d.relativeGluingData.functor i =
+    pullback.fst (MorphismProperty.Over.mk ⊤ d.relativeGluingData.toBase ⋯).hom (𝒰.f i)
+Pi1\FundamentalGroup\AffineColimits.lean:160:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @Eq (?m.154 ⟶ d.relativeGluingData.cover.X i) ?m.176 ?m.177
+in the target expression
+  @Eq (((D ⋙ MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).obj j).left ⟶ (d.cocone i).pt.left)
+    (((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).ι.app j ≫ (d.pullbackGluedIso i).hom).left
+    ((d.cocone i).ι.app j).left
+
+P Q : MorphismProperty Scheme
+inst✝¹⁰ : Q.IsMultiplicative
+inst✝⁹ : P.IsStableUnderBaseChange
+inst✝⁸ : Q.IsStableUnderBaseChange
+inst✝⁷ : P.IsMultiplicative
+S : Scheme
+J : Type t
+inst✝⁶ : Category.{?u.23, t} J
+D : J ⥤ P.Over ⊤ S
+𝒰 : S.OpenCover
+inst✝⁵ : Small.{u, w} 𝒰.I₀
+inst✝⁴ : Category.{?u.41, w} 𝒰.I₀
+inst✝³ : Quiver.IsThin 𝒰.I₀
+inst✝² : LocallyDirected 𝒰
+d : ColimitGluingData D 𝒰
+inst✝¹ :
+  ∀ (i j : 𝒰.I₀) (hij : i ⟶ j), PreservesColimitsOfShape J (MorphismProperty.Over.pullback P ⊤ (Cover.trans 𝒰 hij))
+inst✝ : IsZariskiLocalAtTarget P
+i : 𝒰.I₀
+j : J
+⊢ (((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).ι.app j ≫ (d.pullbackGluedIso i).hom).left =
+    ((d.cocone i).ι.app j).left
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).ι.app j
+  has type
+    @Quiver.Hom (P.Over ⊤ (𝒰.X i))
+      (MorphismProperty.Comma.instCategory (𝟭 Scheme) (Functor.fromPUnit (𝒰.X i)) P ⊤ ⊤).toQuiver
+      ((D ⋙ MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).obj j)
+      (((Functor.const J).obj ((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).pt).obj j)
+  but is expected to have type
+    @Quiver.Hom (P.Over ⊤ (𝒰.X i))
+      (MorphismProperty.Comma.instCategory (𝟭 Scheme) (Functor.fromPUnit (𝒰.X i)) P ⊤ ⊤).toQuiver
+      ((D ⋙ MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).obj j)
+      ((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).pt
+  in the application
+    CategoryStruct.comp (((MorphismProperty.Over.pullback P ⊤ (𝒰.f i)).mapCocone d.gluedCocone).ι.app j)
+Pi1\FundamentalGroup\AffineColimits.lean:233:6: error: `dsimp` made no progress
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    S.presheaf
+  has type
+    TopCat.Presheaf CommRingCat ↑S.toPresheafedSpace
+  but is expected to have type
+    (TopologicalSpace.Opens ↥S)ᵒᵖ ⥤ CommRingCat
+  in the application
+    S.presheaf.obj
+Pi1\FundamentalGroup\AffineColimits.lean:252:2: error: Invalid simp lemma AlgebraicGeometry.Affine.Γ_obj_hom_.
+The given definition is not a constructor application:
+  (Over.Γ S).1 ((MorphismProperty.Over.forget @IsAffineHom ⊤ S).op.obj X)
+Pi1\FundamentalGroup\AffineColimits.lean:283:45: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  IsAffineHom X.hom
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Pi1\FundamentalGroup\AffineColimits.lean:318:0: error: Not a definitional equality: the left-hand side
+  Γ S
+is not definitionally equal to the right-hand side
+  (toAffine S ⋙ Over.AffineΓ S).leftOp
+Pi1\FundamentalGroup\AffineColimits.lean:318:59: error: Type mismatch
+  rfl
+has type
+  ?m.15 = ?m.15
+but is expected to have type
+  Γ S = (toAffine S ⋙ Over.AffineΓ S).leftOp
+Pi1\FundamentalGroup\AffineColimits.lean:321:2: error: (kernel) declaration type mismatch, '_private.Pi1.FundamentalGroup.AffineColimits.0.AlgebraicGeometry.Affine.instIsEquivalenceOppositeUnderCommRingCatObjOpensCarrierCarrierPresheafOpOpensTopΓ._proof_1' has type
+  ∀ (S : Scheme) [inst : IsAffine S], (Functor.comp (@toAffine S inst) (@Over.AffineΓ S inst)).leftOp.IsEquivalence
+but it is expected to have type
+  ∀ (S : Scheme) [IsAffine S], Functor.IsEquivalence (@Γ S)
+Pi1\FundamentalGroup\AffineColimits.lean:333:14: error: Application type mismatch: The argument
+  ΓpullbackIsoPushout (unop X).hom f
+has type
+  Γ(Limits.pullback (unop X).hom f, ⊤) ≅ pushout (Scheme.Hom.appTop (unop X).hom) (Scheme.Hom.appTop f)
+but is expected to have type
+  ((Γ T).obj (op ((pullback f).obj (unop X)))).right ≅
+    (Under.mk (pushout.inr ((Γ S).obj X).hom (Scheme.Hom.app f ⊤))).right
+in the application
+  @Under.isoMk CommRingCat CommRingCat.instCategory Γ(T, ⊤) ((Γ T).obj (op ((pullback f).obj (unop X))))
+    (Under.mk (pushout.inr ((Γ S).obj X).hom (Scheme.Hom.app f ⊤))) (ΓpullbackIsoPushout (unop X).hom f)
+Pi1\FundamentalGroup\AffineColimits.lean:333:52: error: unsolved goals
+S : Scheme
+inst✝¹ : IsAffine S
+T : Scheme
+f : T ⟶ S
+inst✝ : IsAffine T
+X : (Affine S)ᵒᵖ
+⊢ ((Γ T).obj (op ((pullback f).obj (unop X)))).hom ≫ (sorry ()).hom = pushout.inr ((Γ S).obj X).hom (Scheme.Hom.app f ⊤)
+Pi1\FundamentalGroup\AffineColimits.lean:340:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.82 = ?m.83
+in the target expression
+  Under.Hom.right ((Γ T).map ((pullback f).op.map g)) ≫ Under.Hom.right (pullbackIsoPushout f Y).hom =
+    Under.Hom.right (pullbackIsoPushout f X).hom ≫
+      Under.Hom.right ((Under.pushout (Scheme.Hom.app f ⊤)).map ((Γ S).map g))
+
+S : Scheme
+inst✝¹ : IsAffine S
+T : Scheme
+f : T ⟶ S
+inst✝ : IsAffine T
+X Y : (Affine S)ᵒᵖ
+g : X ⟶ Y
+⊢ Under.Hom.right ((Γ T).map ((pullback f).op.map g)) ≫ Under.Hom.right (pullbackIsoPushout f Y).hom =
+    Under.Hom.right (pullbackIsoPushout f X).hom ≫
+      Under.Hom.right ((Under.pushout (Scheme.Hom.app f ⊤)).map ((Γ S).map g))
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    T.presheaf
+  has type
+    TopCat.Presheaf CommRingCat ↑T.toPresheafedSpace
+  but is expected to have type
+    (TopologicalSpace.Opens ↥T)ᵒᵖ ⥤ CommRingCat
+  in the application
+    T.presheaf.obj
+Pi1\FundamentalGroup\AffineColimits.lean:335:4: error: (kernel) declaration has metavariables 'AlgebraicGeometry.Affine.pullbackΓIso'
+Pi1\FundamentalGroup\AffineColimits.lean:378:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  PreservesLimitsOfShape Jᵒᵖ (Γ S ⋙ Under.pushout (Scheme.Hom.app f ⊤))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Pi1\FundamentalGroup\AffineColimits.lean:440:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  PreservesColimitsOfShape J
+    (MorphismProperty.Over.pullback @IsAffineHom ⊤ V.ι ⋙ MorphismProperty.Over.pullback @IsAffineHom ⊤ e.hom)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

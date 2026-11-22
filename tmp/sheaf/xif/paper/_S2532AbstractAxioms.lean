@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2532LocalizedAbstractActual
+#print axioms LeanFormal.IUT.XiFPaper.S2532LocalizedAbstractActual.filter_ne_one_add_replicate_count_one

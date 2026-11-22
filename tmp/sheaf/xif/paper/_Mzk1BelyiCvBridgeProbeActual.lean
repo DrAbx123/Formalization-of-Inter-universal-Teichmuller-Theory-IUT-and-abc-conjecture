@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BelyiCvBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiCvBridgeActual.belyiPolynomial_critIn01
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiCvBridgeActual.gPoly_eq_belyi21_comp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiCvBridgeActual.belyiCvBridgeRows_length

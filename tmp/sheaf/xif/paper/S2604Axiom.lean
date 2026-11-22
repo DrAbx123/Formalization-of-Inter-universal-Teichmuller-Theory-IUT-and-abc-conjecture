@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2604C9D5D7D8MinimalActual
+#print axioms LeanFormal.IUT.XiFPaper.S2604C9D5D7D8MinimalActual.S2604D5Data_iff_serre
+#print axioms LeanFormal.IUT.XiFPaper.S2604C9D5D7D8MinimalActual.S2604D7Data_nonempty_iff

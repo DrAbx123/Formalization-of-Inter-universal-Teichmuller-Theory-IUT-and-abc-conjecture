@@ -1,0 +1,63 @@
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:42:10: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:51:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.kummer_mem`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:42:10: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:54:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.eval_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:72:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_arch_surjection`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:65:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_nonarch`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:57:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.region_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:49:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.kummer_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:63:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind2_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:59:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind1`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:71:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_nonarch_inclusion`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:70:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_arch_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:53:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.eval`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:45:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.bpsShell`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:56:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.region`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:62:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind2`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:46:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.bpsShell_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:48:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.kummer`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:68:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_arch`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:60:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind1_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaSourceActionConcrete.lean:67:2: warning: The namespace `EtaSourceActionConcrete` is duplicated in the declaration `ABCBridge.N8.EtaSourceActionConcrete.EtaSourceActionConcrete.ind3_nonarch_eq`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`

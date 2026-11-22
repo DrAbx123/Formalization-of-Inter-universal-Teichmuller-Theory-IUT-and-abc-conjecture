@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceCriticalInTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceCriticalInTargetActual.gChoiceCriticalInTarget_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceCriticalInTargetActual.gChoice_unramifiedShape_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceCriticalInTargetActual.gChoiceData_complete

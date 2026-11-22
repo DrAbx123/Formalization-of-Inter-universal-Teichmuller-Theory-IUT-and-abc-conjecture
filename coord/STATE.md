@@ -4806,3 +4806,43 @@ CITABLE 10) -> Thm2.5 unconditional.  No new long tasks before pause; all files 
 - N3: RelativeNormQProperties and §7.2 ValueGroup0.embedding unit lemma under construction; TensorUnitBall actual inhabitant being built from arithmeticTensorBlocksAlgEquiv.
 - N5: Mzk1QVRealifiedBridge DONE 11:59:12 (bypasses S2135); GlobalSumAggregation still needs C3BaseQElementIdentification + ClauseBBaseQSourceIdentity. S2135 is source input, not theorem.
 - Watchdog: no fake/sorry/extra axiom; accepted evidence only via dag/watchdog/watchdog.log.
+
+<!-- p7-g1-p6-p8-route-20261116 -->
+## 2026-11-16 — G1/P6/P8 非循环收口路线（研究交接）
+
+- 新唯一后继正文：coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md；node p7-g1-p6-p8-closure-route-20261116。仅取代旧路线的 G1/P6/P8 剩余 producer 部分，accepted 节点／owner 不变。
+- 已核源码：subscheme/gluing/finite⇒proper API 已在；PhiActionFamily/PhiActionSource 的一般保格族与非空性、RootParameterWeight 的 ord 公式已有；Section2:409 的准确 Prop 1.6 prime bound 已在。无重证任务。
+- P6 必须 U-L 独立解析上界 + U-R 实际读数运输 + P5 lower → U-C(hCor312) → final display。P6DisplayChain/P6DisplayFromSandwich 包装不能反向生产 hCor312。
+- G1 用两个实际 affine charts 粘合、微分 transition、原文 T→0 的 noncritical 构造；P8 用固定有限 map family 的紧致正最小值，随后做真实 height/different 运输。scalar x²/(m+2) uniform convergence 不担当高度 producer。
+- 下一步（现有 owner）：做一个 actual packet 的 root 主格、source arrow 入 p6Phi、reference/weight 对齐，交付 q=−Q/(2l) 与 theta≤weighted packet volume。直接区域受阻时切换文内 determinant 或有限商构造。
+- 本轮无 Lean 改动、无编译、无新 agent；statement_compiles/proof_body_checked/kernel_closed/target_accepted 全 NOT_RUN。新路线不构成 ABC inhabitant 的验收证据。
+
+<!-- p7-g1-p6-p8-route-refresh-20261117 -->
+## 2026-11-17 23:49 — G1/P6/P8 剩余路线刷新
+
+- 当前正文仍为 coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md，已整篇重写为 R0–R7 八包；版本与既有 watchdog 状态见 coord/P7-G1-P6-P8-ROUTE-EVIDENCE-20261117.json。旧路线及旧节点已归档，2026-11-16 条目中的实施顺序不再作为活动任务。
+- 已完成的 smooth/proper、两图 function field、graphIso、局部整数环单生成、D3、C3→C4 标量骨架等实施指导退出正文；没有重新分派这些工作。
+- 本次实际定义修正：c_norm 不默认等于整数 order；高度总和与 normalized D/N 要统一；F4 的 Unit-indexed logHeight 恒零，不能担当 divisor height；union hull 未识别为 procession average；一般 RR 需 section-dependent cover，GK 需 projective-valued map。
+- P6 仍须真实同对象 lower/upper，先独立产生 CTheta/C4，再用 final display。逐 λ 源构造与素数/遗漏量估计独立于 D1；F4 推荐多截面 local Weil function；高度运输尽量在同一数域 L 内完成。
+- 下一步：R0/R1 一个真实坏位的 spectral-order、root 主格及完整纤维权重图；R2 同步锁定实际 procession 源映射。当前 owner 不变。
+- 本轮只更新研究文档，无编译、Lean 修改或子代理；四项 Lean 验收均 NOT_RUN。源码快照不等于传递闭包验收。
+- 2026-11-18｜[Θ 来源与比较交接](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md)：原 III、IV 算术 C4、可吸收误差分开验收；先做真实坏位与两个标签。未改活动路线、Lean 或 owner，四项形式验收 NOT_RUN。
+- 2026-11-18｜[实际扭点纤维与整格](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#torsion-fiber)补上全坏位族的自然语言推导。实际分支保留 ℓ/(ℓ+1) 的 q 权，标签轨道给满秩根格；真实驯 different 与根生成序的指数分别算出。固定标签的 III 来源与独立高度上界仍开放。未作形式验收。
+- 2026-11-18｜[同一行的迹转移与高度估计](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#global-isogeny-trace)。全局迹核在每个极点保留横向分支；原 Step V 行的相对缩放有精确模 p 公式；完整 CyclicBoundHyp 有含 2 的自然语言证明。III 的具体源见证和原二次上界仍开放。四项形式验收 NOT_RUN。
+- 2026-11-18｜[强度与行列式商线](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#strength-and-determinant)。全行标量搬运耗尽高度主项；迹商精确给出有限补偿，并有基域射影实现及固定输入误差界。III 双列来源和相同度量仍开放。独立的大像例外定理有自然语言证明。四项形式验收 NOT_RUN。 一般本原正整数三元组的 Frey 应用见同节，包含 IV 指定辅助数域上的大像。
+- 2026-11-18｜[原 III.3.12 自然语言推导](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#original-iii312)。局部 q 根塔、原包中精确 q 次数的比较盒、固定覆盖的分支代价及单好素数标定公式已推导。原第一幂输出的带度量识别和整族有限性的独立实现仍开放。四项形式验收 NOT_RUN。
+- 2026-11-18｜[III.3.12 第一幂单位张量与全局比较线](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#first-log-witness)。全塔单位格给出固定 G 的算术 Ind2 标量刚性。3 进第二行的候选可在两个指定的六层开根扩张读到模极大理想四次幂；无界深度曲线族的全局整态射已有公式。原允许像的带标记 evaluation 与全量词不等式仍开放。单线程自然语言，四项形式验收 NOT_RUN。
+
+- 2026-11-18｜[III.3.12 的实际单位运输及第二行](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#marked-unit-artin)。局部互反与转移给出一般算术群箭头的全塔单位实现。指定曲线在 3 的第二行，标记把深度 2 单位的对数送回实际单位对数；模 3 的维数 12 与 9 给三槽同时达到 q 的赋值门槛。2333 的中性元剪切已在最大 pro-p 塔、若干混合商及圆分层第一个带关系商上实现。3 处原 pilot 区域成员关系、2333 处全群及 procession 提升和全局不等式仍开放。单线程自然语言，四项形式验收 NOT_RUN。
+- 2026-11-19｜[原标记理想的精确半径与 Galois 运输 §14](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#native-ideal-galois)。在 3 处构造带原标记的实际源张量和整个最大 pro-3 群上的作用。深度 3、33 的原两行在该商上达到当地 q，深度 33 的余量为 21 log(3)/20。2333 的圆分分支已延至全部 pro-p 层；3 处任意驯底域上的首个非交换野商也有相容提升。完整局部群、同一 IPL 的第 1 列输出及一般数据的全局补偿仍开放。单线程自然语言，四项形式验收 NOT_RUN。
+  同节 §14.7 已算通跨位的一例：原曲线深度 63，在 3 取恒等，293 的中性张量在所构造的商上独自付足全局差额。另用中国剩余定理在任意指定深度构造了具有同一性质的一族曲线。
+- 2026-11-19｜[原 III.3.12 验证工作量及停止条件 §15](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#finite-workload)。原六箭头 IPL 在相容代表上缩至 lgp 的两条箭头，一次指数 293 的 Kummer 已足以读普通单位。深度 63 的原下界实验只需在 293 核对同一 IPL 的两个乘法投影及其来源，停止门槛为两行赋值之和至多 −110。已有匹配作用统一提升至所有驯底域、任意幂指数的类二野商。指定原族的全部大中性位数值收益为三十次代数的去小素判别式对数除以 12。全群、原区域求值、全量词下界及所有标记迭代的有限性仍开放。自然语言及有限算术核对，四项形式验收 NOT_RUN。
+- 2026-11-19｜[III.3.12 的全槽区域、确定的计算量与原来源核对 §16](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#finite-slot-certificate)。项目已有单位 log 格、标记根及元组换位，给出恒等作用下的精确见证余量。按素数的标记权重至多一半时，具体全槽模型达到系数 1。一个半稳定二次数域族的余量为 \(d\log(3)/80\)，适用所有 \(d=3+30t\)。扩大的格自同构模型对每个有效输入可判定。S3138 取商前已是恒定单点读数，无法区分好槽与坏槽。原跨列区域成员、全数据下界及有限性仍开放。单线程自然语言研究，四项形式验收 NOT_RUN。
+
+- 2026-11-19｜[只求标准整数 ABC 的构造与工作量 §17](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#abc-only-reduction)。已有域塔可独立支付浅极点，具体固定槽平均的负部为次于 ℓh 的量就足以接 ABC。有理数路线将每个原三元组缩至三个点，任选一个达到所需估计即可。三个附加素数支集就是仓库原 Frey 曲线 c₆ 的三个因子，相关三元组构成对合。归约、精确分母和有限筛计数已给自然语言证明，统一支集下界仍开放。四项形式验收均未运行。
+
+- 2026-11-19｜[整数 ABC 的连分数路线与立项验收 §18](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#abc-route-decision)。确定三项的重复素数幂后，一次欧几里得算法列全全部高度的 \(c>\operatorname{rad}(abc)\) 输入，候选数至多 \(2\lceil\log_2D\rceil+2\)。正系数同余给变化的素数与幂次上的 \(K=1\) 实例族。完整 ABC 剩下的要求是所有组的下一部分商与 \(P c^{\varepsilon/(1+\varepsilon)}\) 之比一致有界。§17 的二次换元搜索结束。自然语言研究，四项形式验收均未运行。
+
+- 2026-11-19｜[§16 暂停交接](R0-R7-THETA-COMPARISON-HANDOFF-20261118.md#本轮暂停交接)。固定 \(p=3,\ell=5,d=3\) 的模型侧全槽计算已写清；仓库 Lean 供体确认 scalar profile 不能恢复标记投影，值层 xi-f 链不等于 paper xi-f，且值层 hull 有无界/top 反例。原文剩余首缺口是实际 III.3.10.2 evaluation 到允许输出 carrier/区域的来源映射；下一次固定 \((G,B,B)\)、\(\tau=(2,0)\) 检查 \(E_\tau(1)\in U_{2,3}\) 或区域包含。四项验收 NOT_RUN；用户已要求暂停。
+
+- 2026-11-20｜[本仓与 LANA 的比较及联络入口](REPO-LANA-COMPARISON-20261120.md)。LANA main 固定为 `553076af459e7a401bfee63a4607814d1c854477`。两仓 `Iut/` 共有的 694 个 `.lean` 路径统一换行后全部相同；本地 q 重数、张量整格/Haar、旧 C3 根系障碍与原允许输出的缺口分列。固定例仅开放第二行恰等于 q，两行均开放才多 `3 log(3)/80`。研究比较文档，未更改 Lean 或推进原目标的四项验收。

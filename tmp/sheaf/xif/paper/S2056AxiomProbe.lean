@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S2041D5LargeImageFirstMilestoneActual
+open LeanFormal.IUT.XiFPaper.S2041D5LargeImageFirstMilestoneActual
+open LeanFormal.IUT.XiFPaper.S2056Psi5RootsPairsActual
+#print axioms s2041DicksonAndGroupComponents_actual
+#print axioms s2041ExactFirstMissingChain_actual
+#print axioms s2041RangeTop_of_rangeHypotheses
+#print axioms s2041Target_of_rangeHypotheses
+#print axioms S2056Psi5_natDegree
+#print axioms S2056Psi5_separable

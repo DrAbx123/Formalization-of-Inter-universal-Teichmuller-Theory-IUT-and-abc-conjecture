@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2444LocalArtinTorsionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2444LocalArtinTorsionActual.S2444CanonicalTorsionComparison
+#print axioms LeanFormal.IUT.XiFPaper.S2444LocalArtinTorsionActual.S2444LocalArtinTorsionMap

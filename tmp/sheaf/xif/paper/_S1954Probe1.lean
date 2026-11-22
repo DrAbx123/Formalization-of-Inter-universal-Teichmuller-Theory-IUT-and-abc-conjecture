@@ -1,0 +1,32 @@
+import Mathlib.Analysis.SpecialFunctions.Complex.Log
+import Mathlib.Analysis.SpecialFunctions.Exponential
+import Mathlib.Analysis.Convex.Segment
+import Mathlib.Analysis.Normed.Module.Convex
+import Mathlib.Topology.MetricSpace.ProperSpace
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+
+open Complex
+
+#check @Complex.exp_eq_one_iff
+#check @Complex.exp_two_pi_mul_I
+#check @Complex.exp_zero
+#check @Complex.exp_ne_zero
+#check @Complex.exp_log
+#check @Complex.log
+#check @Complex.log_re
+#check @Complex.log_im
+#check @Complex.norm_log
+#check @Complex.arg
+#check @Complex.arg_le_pi
+#check @Complex.neg_pi_lt_arg
+#check @Complex.cos_arg
+#check @Complex.sin_arg
+#check @Complex.norm_eq_one_iff
+#check @Complex.exp_mul_I
+#check @Complex.norm_exp
+#check @Complex.exp_int_mul_two_pi_mul_I
+#check @Real.exp_eq_one_iff
+#check @Real.exp_injective
+#check @Real.pi_pos
+#check @Real.pi_gt_one
+#check @Real.one_le_pi

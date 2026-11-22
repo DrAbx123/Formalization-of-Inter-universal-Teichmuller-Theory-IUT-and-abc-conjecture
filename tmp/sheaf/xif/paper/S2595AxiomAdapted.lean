@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2595LResidueEquivActual
+#print axioms LeanFormal.IUT.XiFPaper.S2595LResidueEquivActual.S2595LResidueEquiv

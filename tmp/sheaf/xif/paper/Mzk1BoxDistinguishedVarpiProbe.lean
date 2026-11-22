@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1BoxDistinguishedVarpiActual
+#check LeanFormal.IUT.XiFPaper.Mzk1BoxDistinguishedVarpiActual.packetHull_with_theta_varpi
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxDistinguishedVarpiActual.packetHull_with_theta_varpi
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxReadoutLocalActual.packetHull_normalizedLogVolume_le_box

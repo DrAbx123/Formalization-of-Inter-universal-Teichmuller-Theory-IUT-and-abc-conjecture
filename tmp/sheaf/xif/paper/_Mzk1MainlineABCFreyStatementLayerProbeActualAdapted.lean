@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1MainlineABCFreyStatementLayerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MainlineABCFreyStatementLayerActualAdapted.mainlineABCFreyRows_length

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24GaloisUnionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24GaloisUnionActual.s3135_self_mem_conjugateSet
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24GaloisUnionActual.s3135_conjugateSet_stable

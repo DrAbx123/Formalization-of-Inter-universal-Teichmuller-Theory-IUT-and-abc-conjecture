@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3135RegionRelativeObligationActual
+import tmp.sheaf.xif.paper.S3135HeightVolumeReuseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135RegionRelativeObligationActual.s3135_imageVolume_le_hullVolume
+#print axioms LeanFormal.IUT.XiFPaper.S3135HeightVolumeReuseActual.s3135_heightWeightBound_of_normalizedVolumeComparison

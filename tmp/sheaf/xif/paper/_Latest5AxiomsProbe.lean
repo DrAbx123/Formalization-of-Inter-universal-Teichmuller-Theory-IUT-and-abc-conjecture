@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3127G2GammaInvariantInterfaceActual
+import tmp.sheaf.xif.paper.S3127G2QFullTargetUnitPairActual
+import tmp.sheaf.xif.paper.S3123UnitNatExplicitActual
+import tmp.sheaf.xif.paper.S2913C3ComparisonRegionVolumeHvolEqConsumer
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2GammaInvariantInterfaceActual.S3127G2GammaActionBridge
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2GammaInvariantInterfaceActual.gammaAlgHomOfFullHom_invariant
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QFullTargetUnitPairActual.S3127G2QFullTargetUnitPair_exact
+#print axioms LeanFormal.IUT.XiFPaper.S3123UnitNatExplicitActual.S3123UnitNatExplicit
+#print axioms LeanFormal.IUT.XiFPaper.S2913C3ComparisonRegionVolumeHvolEqConsumer.C3ComparisonRegionVolume_eq_normalizedHvolVolume
+#print axioms LeanFormal.IUT.XiFPaper.S2913C3ComparisonRegionVolumeHvolEqConsumer.C3NormalizedThetaVolume_eq_normalizedHvolVolume

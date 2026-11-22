@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3128PullbackCoproductActual
+import Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts
+open CategoryTheory CategoryTheory.Limits
+#check HasColimit.mk
+#check hasBinaryCoproducts_of_hasColimit_pair
+#check HasFiniteCoproducts.of_hasBinaryCoproducts

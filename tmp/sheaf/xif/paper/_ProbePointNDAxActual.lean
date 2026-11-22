@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ULPointConductorActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPointConductorActual.pointND_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPointConductorActual.pointField_finiteDimensional

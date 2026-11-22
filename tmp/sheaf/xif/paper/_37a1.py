@@ -1,0 +1,5 @@
+E=EllipticCurve([0,0,1,-1,0])
+print("37a1",E.conductor(),E.discriminant(),E.j_invariant(),E.torsion_order(),E.has_cm())
+print("local37",E.local_data(37))
+rho=E.galois_representation()
+print("surj5",rho.is_surjective(5),"type5",rho.image_type(5),"reducible",rho.reducible_primes())

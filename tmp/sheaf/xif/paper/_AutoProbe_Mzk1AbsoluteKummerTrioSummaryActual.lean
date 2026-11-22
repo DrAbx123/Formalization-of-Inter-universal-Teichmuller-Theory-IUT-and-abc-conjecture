@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1AbsoluteKummerTrioSummaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsoluteKummerTrioSummaryActual.absoluteKummerTrioRows
+#print axioms LeanFormal.IUT.XiFPaper.AbsoluteKummerTrioSummaryActual.absoluteKummerTrioRows_length

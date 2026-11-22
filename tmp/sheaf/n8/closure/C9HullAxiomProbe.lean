@@ -1,0 +1,3 @@
+import tmp.sheaf.n8.closure.SourceHolomorphicHull
+#print axioms ABCBridge.N8.C7Actual.sourceHolomorphicHullData_nonempty_iff_obligations
+#print axioms ABCBridge.N8.C7Actual.not_sourceHolomorphicHullData_nonempty_emptyHull

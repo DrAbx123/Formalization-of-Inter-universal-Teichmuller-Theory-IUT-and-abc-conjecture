@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1Example36EtThCorrespondenceActual
+
+/-! Axioms probe: Example36 <-> EtTh correspondence (asset-first). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36EtThCorrespondenceActual.etthExample36_qExpansion_eq_kernel
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36EtThCorrespondenceActual.etthExample36_concrete_q_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36EtThCorrespondenceActual.etthExample36_thetaGeneratorCard_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36EtThCorrespondenceActual.example36EtThCorrespondence_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36EtThCorrespondenceActual.example36EtThCorrespondenceRows_length

@@ -1,0 +1,10 @@
+tmp/sheaf/n8/closure/EtaAnabFromSourceAction.lean:48:5: warning: Variable name `A` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp/sheaf/n8/closure/EtaAnabFromSourceAction.lean:48:44: warning: Variable name `a` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

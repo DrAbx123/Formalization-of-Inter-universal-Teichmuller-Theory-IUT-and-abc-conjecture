@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.ConcreteThetaLinkActual
+
+#print axioms LeanFormal.IUT.XiFPaper.ConcreteThetaLinkActual.ConcreteThetaLinkKummerEvidence
+#print axioms LeanFormal.IUT.XiFPaper.ConcreteThetaLinkActual.concreteThetaLinkKummerEvidence_strip
+#print axioms LeanFormal.IUT.XiFPaper.ConcreteThetaLinkActual.concreteThetaLinkKummerEvidence_thetaPacket

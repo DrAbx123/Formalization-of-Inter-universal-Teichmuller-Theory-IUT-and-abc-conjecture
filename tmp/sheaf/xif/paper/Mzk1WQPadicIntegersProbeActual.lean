@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1WQPadicIntegersBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1WQPadicIntegersBridgeActual.padicNrm_self
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1WQPadicIntegersBridgeActual.padicIntegersEquivMainline

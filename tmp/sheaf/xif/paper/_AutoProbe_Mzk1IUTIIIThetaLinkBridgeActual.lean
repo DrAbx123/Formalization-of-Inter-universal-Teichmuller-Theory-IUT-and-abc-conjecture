@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1IUTIIIThetaLinkBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIIThetaLinkBridgeActual.IUTIIIThetaLinkCarrier
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIIThetaLinkBridgeActual.iutiiiThetaLinkCarrier
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIIIThetaLinkBridgeActual.iutiiiThetaLinkCarrier_nonempty

@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.Mzk1Cor312ToABCConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.Cor312ToABCNamedPaperInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.ProblemE6NamedAssets
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.cor312ToABCBridgeInterface_of_namedInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.abcConjecture_of_namedInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.abcLogConjecture_of_namedInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.heightBound_of_namedInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.namedPaperInputRows
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312ToABCConsumerActual.namedInputs_construct_bridge

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2298QE5OrderActual
+open LeanFormal.IUT.XiFPaper.S2298QE5OrderActual
+#print axioms S2298ImageCard_eq_480_of_hypotheses
+#print axioms S2298ImageCard_dvd_96_or_48_of_dickson
+#print axioms S2298QE5Degree_eq_480_of_hypotheses

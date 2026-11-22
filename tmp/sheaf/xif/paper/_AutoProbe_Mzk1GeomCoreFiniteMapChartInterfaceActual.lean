@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreFiniteMapChartInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFiniteMapChartInterfaceActual.FiniteMapChartData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFiniteMapChartInterfaceActual.FiniteMapChartData.toFiniteMapData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFiniteMapChartInterfaceActual.FiniteMapChartData.coe_U_eq_compl

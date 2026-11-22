@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2384H1ComparisonActual
+#print axioms LeanFormal.IUT.XiFPaper.S2384H1ComparisonActual.S2384ExternalH1_finite
+#print axioms LeanFormal.IUT.XiFPaper.S2384H1ComparisonActual.S2384FiniteH1OfComparison

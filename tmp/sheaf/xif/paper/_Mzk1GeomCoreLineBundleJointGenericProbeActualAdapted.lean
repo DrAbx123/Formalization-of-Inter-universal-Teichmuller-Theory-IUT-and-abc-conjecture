@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreLineBundleJointGenericActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreLineBundleJointGenericActual.jointGeneric_degree

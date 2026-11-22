@@ -1,0 +1,162 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:60:16: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:76:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?c • ?μ) ?s
+in the target expression
+  haarLogVolume (s1902HaarScale T • rootExtensionProductHaar T)
+      (badInvScale T (eN a b c) '' s1902UnitRegion T ∪ {badInvScale T (eN a b c) (point a b c)}) =
+    haarLogVolume (s1902HaarScale T • rootExtensionProductHaar T) (badInvScale T (eN a b c) '' s1902UnitRegion T)
+
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝¹ : Fintype (Bad (nativePlaceSelection T))
+inst✝ : Nonempty (Bad (nativePlaceSelection T))
+point : ℕ → ℕ → ℕ → S1902Carrier T
+eN : ℕ → ℕ → ℕ → Bad (nativePlaceSelection T) → ℕ
+hc0 : s1902HaarScale T ≠ 0
+hcT : s1902HaarScale T < ∞
+hnull : ∀ (x : S1902Carrier T), (rootExtensionProductHaar T) {x} = 0
+a b c : ℕ
+hB : (rootExtensionProductHaar T) {badInvScale T (eN a b c) (point a b c)} = 0
+hμeq :
+  (rootExtensionProductHaar T)
+      (badInvScale T (eN a b c) '' s1902UnitRegion T ∪ {badInvScale T (eN a b c) (point a b c)}) =
+    (rootExtensionProductHaar T) (badInvScale T (eN a b c) '' s1902UnitRegion T)
+⊢ haarLogVolume (s1902HaarScale T • rootExtensionProductHaar T)
+      (badInvScale T (eN a b c) '' s1902UnitRegion T ∪ {badInvScale T (eN a b c) (point a b c)}) =
+    haarLogVolume (s1902HaarScale T • rootExtensionProductHaar T) (badInvScale T (eN a b c) '' s1902UnitRegion T)
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:88:33: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:90:12: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:86:26: error: Function expected at
+  IsABCTriple
+but this term has type
+  ?m.7
+
+Note: Expected a function because this term is being applied to the argument
+  a
+
+Hint: The identifier `IsABCTriple` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:101:33: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:103:14: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:121:14: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:123:14: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:130:30: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:143:85: error: Application type mismatch: The argument
+  b
+has type
+  Bad (nativePlaceSelection T)
+but is expected to have type
+  ℕ
+in the application
+  eN a b
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:142:28: error: Function expected at
+  IsABCTriple
+but this term has type
+  ?m.7
+
+Note: Expected a function because this term is being applied to the argument
+  a
+
+Hint: The identifier `IsABCTriple` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:146:19: error: Function expected at
+  IsABCTriple
+but this term has type
+  ?m.7
+
+Note: Expected a function because this term is being applied to the argument
+  a
+
+Hint: The identifier `IsABCTriple` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:147:25: error: Function expected at
+  abcRationalPoint
+but this term has type
+  ?m.8
+
+Note: Expected a function because this term is being applied to the argument
+  a
+
+Hint: The identifier `abcRationalPoint` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1CorrectedGap1UnconditionalActual.lean:149:87: error: unsolved goals
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝¹ : Fintype (Bad (nativePlaceSelection T))
+inst✝ : Nonempty (Bad (nativePlaceSelection T))
+x✝¹ : Sort u_1
+IsABCTriple : x✝¹
+x✝ : Sort u_2
+abcRationalPoint : x✝
+point : ℕ → ℕ → ℕ → S1902Carrier T
+eN : ℕ → ℕ → ℕ → Bad (nativePlaceSelection T) → ℕ
+hc0 : s1902HaarScale T ≠ 0
+hcT : s1902HaarScale T < ∞
+hnull : ∀ (x : S1902Carrier T), (rootExtensionProductHaar T) {x} = 0
+hd : ∀ (b : Bad (nativePlaceSelection T)), 1 ≤ ↑(Module.finrank ℚ_[qVFamTensorP T b] ↥(rootNormedExtension T b))
+hfull : ∀ (a b c : ℕ) (a_1 : sorry), a + b + c + 1 = ∏ b, qVFamTensorP T b ^ eN a sorry c b
+hunit : 0 ≤ (s1902LogVolume T (s1902UnitRegion T)).toReal
+ε : ℝ
+hε : 0 < ε
+a b c : ℕ
+habc : sorry
+hlogv :
+  (s1902LogVolume T (badInvScale T (eN a b c) '' (s1902UnitRegion T ∪ {point a b c}))).toReal =
+    (s1902LogVolume T (s1902UnitRegion T)).toReal +
+      ∑ b,
+        ↑(eN a sorry c b) *
+          (↑(Module.finrank ℚ_[qVFamTensorP T b] ↥(rootNormedExtension T b)) * Real.log ↑(qVFamTensorP T b))
+⊢ Height.logHeight₁ ?m.93 ≤
+    (1 + ε) * (s1902LogVolume T (badInvScale T (eN a b c) '' (s1902UnitRegion T ∪ {point a b c}))).toReal

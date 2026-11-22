@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2594LP0PActual
+import tmp.sheaf.xif.paper.S2361SmulActual
+#check IsLocalization.Away
+#check IsLocalization.exists_mk'_eq
+#check IsLocalization.mk'_eq
+#check IsLocalization.algEquiv
+#check IsLocalization.map
+#check IsLocalization.lift
+#check IsLocalization.lift_comp
+#check IsLocalization.ringEquivOfRingEquiv

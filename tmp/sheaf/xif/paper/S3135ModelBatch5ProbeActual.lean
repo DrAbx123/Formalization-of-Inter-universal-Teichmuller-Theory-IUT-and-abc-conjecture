@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3135ModelBatchManifestActual
+import tmp.sheaf.xif.paper.S3135F4BothByConstructionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135F4BothByConstructionActual.s3135_actualF4_of_realifiedIdent_and_processionDatum

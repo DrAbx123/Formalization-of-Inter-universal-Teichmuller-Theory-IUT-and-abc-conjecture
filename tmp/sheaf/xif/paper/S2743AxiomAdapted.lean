@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2739FinsetSupportActual
+import tmp.sheaf.xif.paper.S2743ConditionalHweightvolActual
+#print axioms LeanFormal.IUT.XiFPaper.S2739FinsetSupportActual.support_covered
+#print axioms LeanFormal.IUT.XiFPaper.S2739FinsetSupportActual.supportIdeal_absNorm
+#print axioms LeanFormal.IUT.XiFPaper.S2743ConditionalHweightvolActual.S2743ConditionalHweightvol

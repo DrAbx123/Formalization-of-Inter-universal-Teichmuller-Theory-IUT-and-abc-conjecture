@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1CVCompositionFActual
+open LeanFormal.IUT.XiFPaper.Mzk1CVCompositionFActual
+#check cvCompositionLawF_proved
+#check stepTransport_of_goal_proved
+#print axioms cvCompositionLawF_proved
+#print axioms stepTransport_of_goal_proved

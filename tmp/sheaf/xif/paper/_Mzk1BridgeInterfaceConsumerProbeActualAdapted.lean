@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BridgeInterfaceConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BridgeInterfaceConsumerActual.bridgeInterfaceConsumer_abc

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3136LGPToolReuseRootActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPToolReuseRootActual.lgpAlgClosedRootSystem
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPToolReuseRootActual.lgpAlgClosedTwoLthRoot_pow
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPToolReuseRootActual.lgpAlgClosedTwoLthRoot_brauer
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPToolReuseRootActual.lgpAlgClosedTwoLthRoot_ratio_mem_mu

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1EtThKernelLatticeLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThKernelLatticeLawsActual.etTh11_thetaPowerKernel_mono_trans
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThKernelLatticeLawsActual.etTh11_ellipticPowerKernel_mono_trans
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThKernelLatticeLawsActual.etTh11_thetaKernel_le_ellipticComap

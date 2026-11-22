@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Section0SaturationLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0SaturationLawsActual.isSaturated_empty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0SaturationLawsActual.isSaturated_univ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0SaturationLawsActual.isSaturated_compl

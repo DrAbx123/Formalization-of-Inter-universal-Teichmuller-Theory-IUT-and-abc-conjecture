@@ -1,0 +1,37 @@
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:48:10: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  I
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:69:6: error: Type mismatch
+  ↑integralLogShell
+has type
+  Set (CommonPrimeCompletion place)
+but is expected to have type
+  Set (localShell p place).K
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:76:6: error: Type mismatch
+  ⇑Multiplicative.toAdd '' Set.range ⇑unitLogHom
+has type
+  Set (CommonPrimeCompletion place)
+but is expected to have type
+  Set (localShell p place).K
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:88:10: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceInputBinding` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:89:14: error: Function expected at
+  SourceLogKummerData
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceLogKummerData` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1825GaloisOnSmallCategoryActual
+open CategoryTheory
+open LeanFormal.IUT.XiFPaper.S1809SmallCarrierCategoryActual
+open LeanFormal.IUT.XiFPaper.S1825GaloisOnSmallCategoryActual
+#check S1809CoverCategory01
+#check S1809CoverCategory01_hom
+#synth Category S1728Cover
+#check S1825AffineEquiv

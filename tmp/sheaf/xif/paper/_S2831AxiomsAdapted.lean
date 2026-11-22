@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S2831E37InfinityNotOverlapActual
+import tmp.sheaf.xif.paper.S2832ChartZPointAtInfinityNoGoActual
+import tmp.sheaf.xif.paper.S2846A6ClauseBFAssembly
+import tmp.sheaf.xif.paper.S2846A6ClauseCDEAssembly
+open LeanFormal.IUT.XiFPaper.S2831E37InfinityNotOverlapActual
+open LeanFormal.IUT.XiFPaper.S2832ChartZPointAtInfinityNoGoActual
+open LeanFormal.IUT.XiFPaper.S2846A6ClauseBFAssembly
+open LeanFormal.IUT.XiFPaper.S2846A6ClauseCDEAssembly
+#print axioms S2831_infinityPoint_not_mem_overlap_range
+#print axioms S2832_no_chartZ_map_to_pointAtInfinity
+#print axioms S2846A6ClauseAssembly
+#print axioms S2846A6C

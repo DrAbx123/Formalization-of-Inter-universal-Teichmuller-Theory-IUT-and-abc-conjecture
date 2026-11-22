@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1BadParamProofActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BadParamProofActual.badParamSet_finite_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BadParamProofActual.exists_good_param_of_ne_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BadParamProofActual.not_badParamSet_finite

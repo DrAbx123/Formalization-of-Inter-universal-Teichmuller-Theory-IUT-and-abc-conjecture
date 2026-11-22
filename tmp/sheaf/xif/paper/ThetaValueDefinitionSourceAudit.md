@@ -1,0 +1,143 @@
+# Source definition of the theta values and the `2.5 log q_v` issue
+
+Scope: IUT source-text audit and current-tree comparison only. No Lean objects
+or fake replacements are introduced.
+
+## 1. The source definition
+
+IUT I, Example 3.2, (iv) (iut1.txt:3774-3785), defines
+
+    q_v = q_v^{1/2l}
+
+to be a `2l`-th root of the q-parameter `q_v` of the elliptic curve `E_v`
+over `K_v`. The text writes `q_v` (i.e., the same notation later used for the
+theta values) for this root:
+
+* "the value of `Θ_v` at `√−q_v` is equal to
+  `q_v := q_v^{1/2l}`" (iut1.txt:3778-3785);
+* the root is determined only up to a `μ_{2l}`-multiple.
+
+IUT I (iut1.txt:6018-6030) then states that at an evaluation point with label
+`j ∈ |F_l|`, the theta function value is in the `μ_{2l}`-orbit of
+
+    { q_v^{j^2} }_{j ≡ j}.
+
+Thus the source theta values are
+
+    theta_v(j) = q_v^{j^2},     q_v = (q-parameter)^{1/2l},
+
+not the reciprocal `q_v^{-j^2}`. The only "reciprocal" in the source
+(iut1.txt:601-606) is the reciprocal of the **l-th root of the
+Frobenioid-theoretic theta function** used to construct the second
+`F^⊩`-prime-strip `F^⊩_{tht}`; it is not the definition of the theta values.
+
+IUT III, Definition 3.8, (i) (iut3.txt:6731-6769) defines:
+
+* the Θ-pilot object as determined by generators of the LGP-monoids, i.e. by
+  the theta values `{q_v^{j^2}}` (iut3.txt:899-907);
+* the q-pilot object as determined by the `q_v` themselves
+  (iut3.txt:6756-6769).
+
+In particular, the theta value at `j = 1` is `q_v^{1} = q_v`, i.e. the
+q-pilot object itself is one of the possible theta-pilot images.
+
+## 2. Why `2.5 log q_v` is not the paper Θ-pilot log-volume
+
+For `q_v < 1`, `log q_v < 0` and every `q_v^{j^2}` is also `< 1`. A
+weighted average of the logarithms of the theta values is therefore more
+negative than `log q_v` itself if the weights are the usual `j^2` weights
+and the average contains labels with `j^2 > 1`. For `l = 5` the project's
+normalization gives the coefficient `2.5`, so the weighted theta average is
+
+    2.5 · log q_v,
+
+which is more negative than the q-pilot scalar `log q_v`.
+
+This is not a contradiction with IUT III, Corollary 3.12, because the paper's
+`−|log Θ|` is **not** the weighted average of the theta log-values. It is the
+procession-normalized mono-analytic **log-volume of the holomorphic hull of the
+union of possible images** of the Θ-pilot object (iut3.txt:1206-1215,
+10499-10535). The hull contains the actual q-pilot image (the `j = 1` theta
+value `q_v`), and may be substantially larger than the individual theta-value
+points. A weighted average of pointwise log-values is only an average of
+values; it is not the log-volume of the hull and is not ordered in the same way
+as a measure of a containing set.
+
+In particular, the paper inequality
+
+    −|log Θ| ≥ −|log q|
+
+(iut3.txt:1227-1229, 10527-10529) means that the finite signed hull log-volume
+is less negative (closer to zero) than the q-pilot scalar: the hull has to be
+at least the q-pilot region in the normalized μ_log scale. Replacing the hull
+by a weighted theta average drops the geometric hull and can only make the
+scalar more negative; it cannot prove the paper inequality.
+
+## 3. What is wrong with the current project object
+
+The current project chain is:
+
+    baseQ T b            = nativeBaseQFamily T b
+                          = badPlaceQCandidate (nativePlaceSelection T) b
+    thetaValueFromQ b j = (‖(baseQ T b).q‖) ^ (gaussExponent j).toNat
+
+(see `BaseQFamilyActual.lean`, `BaseQLogVolumeActual.lean`,
+`GlobalThetaPilotLogVolumeActual.lean`).
+
+Two source-matching problems are independent of any reciprocal question:
+
+1. **No `2l`-th root.** In the source, `q_v` in `q_v^{j^2}` is the
+   `2l`-th root of the q-parameter, not the q-parameter itself
+   (iut1.txt:3774-3785). The current `baseQ` is a
+   `FinitePlaceQCandidate`; it is not proved to be a `2l`-th root of an
+   actual elliptic-curve q-parameter.
+2. **No identification with the actual q-parameter.** `badPlaceQCandidate`
+   is defined in `SourcePlacePartitionReduction.lean` by
+   `Classical.choice` of `finitePlaceQCandidate_nonempty`; it carries only
+   the valuation condition `v(q) < 1`. It is not identified with the actual
+   q-parameter of `E_F` at `v`, nor with a chosen `2l`-th root of it.
+   Thus `thetaValueFromQ` is a q-candidate expression, not the source theta
+   value.
+
+Consequently the `2.5` coefficient has no paper meaning yet: it comes from
+`gaussExponentSum / card(SignedLabel)` applied to an arbitrary q-candidate,
+not from the source theta values. Even if one replaced `baseQ` by the actual
+q-parameter (without the root), the source exponent `j^2` would be off by the
+root normalization; and even if the root were supplied, the weighted average
+still would not be the paper hull log-volume.
+
+## 4. Does one need a reciprocal or a different q?
+
+No reciprocal is indicated by the source for the theta values:
+
+* source theta values: `q_v^{j^2}` with `q_v = (q-parameter)^{1/2l}`;
+* source q-pilot: generated by the same `q_v`;
+* the reciprocal appears only for the theta **function** `Θ_v` in the
+  construction of the second F-prime-strip, not as `q_v^{-j^2}`.
+
+What is needed instead is:
+
+1. the actual q-parameter family from the elliptic curve, or a construction
+   proving the current q-candidate is that family;
+2. an actual choice of the `2l`-th root `q_v` (with its `μ_{2l}`
+   ambiguity recorded, not silently fixed);
+3. theta values `q_v^{j^2}` from that root;
+4. the actual possible-image union and its **holomorphic hull log-volume**,
+   not a weighted average of theta log-values;
+5. the unit/integral normalization of `μ_log` (reference mass 0, scaling by
+   `p` adding `−log p`) and the signed convention
+   `−|log Θ| < 0` in the finite case.
+
+If a scalar representation is used, the correct scalar is the finite signed
+hull log-volume `−|log Θ|`, and the comparison is
+`−|log(q)| ≤ −|log(Θ)|` (equivalently `|log Θ| ≤ |log q|`), not a
+comparison of weighted theta averages.
+
+## 5. Status
+
+The current project's `thetaValueFromQ` should not be used as the source theta
+value for the final xi-f comparison. The `2.5 log q_v` phenomenon is a symptom
+of using a weighted theta average in place of the paper's holomorphic hull
+log-volume, compounded by the missing `2l`-th root and the missing
+identification of the arbitrary q-candidate with the actual elliptic-curve
+q-parameter. No reciprocal replacement is justified by the source.

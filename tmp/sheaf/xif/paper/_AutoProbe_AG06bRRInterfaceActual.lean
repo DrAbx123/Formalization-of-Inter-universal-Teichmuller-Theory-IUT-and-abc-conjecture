@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG06bRRInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG06bRRInterfaceActual.ag_rr_functionFieldRiemannRoch_of_duality
+#print axioms LeanFormal.IUT.XiFPaper.AG06bRRInterfaceActual.ag_rr_weilDuality_of_index_adelic
+#print axioms LeanFormal.IUT.XiFPaper.AG06bRRInterfaceActual.agRRPromotionRows

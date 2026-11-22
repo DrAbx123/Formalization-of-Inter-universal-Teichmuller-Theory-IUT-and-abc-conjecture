@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerAMPLProcessionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerAMPLProcessionActual.ampl_supply_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerAMPLProcessionActual.wall_package

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1P1ValuativeUniquenessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ValuativeUniquenessActual.chartMorphismInf_zero_ne_chartMorphism0_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ValuativeUniquenessActual.lift_eq_chartMorphism0_of_closedPoint_mem

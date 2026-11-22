@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.Mzk1G1UniversalUltrametricActual
+import tmp.sheaf.xif.paper.Mzk1G1UniversalMonogenicLocalActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiFiberTemplateActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiFiberFiniteC2Actual
+import tmp.sheaf.xif.paper.Mzk1ULTripodalDictionaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalUltrametricActual.norm_sum_eq_of_unique_max
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalMonogenicLocalActual.differentIdeal_eq_span_derivative
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiFiberTemplateActual.finite_primes_of_coord
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiFiberFiniteC2Actual.finite_primes_of_hPolyLam
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULTripodalDictionaryActual.tripodalDictionaryOfConductor

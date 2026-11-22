@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeIQHullClusterActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeIQHullClusterActual.treeIQHullCluster_bundle

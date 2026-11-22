@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.C3LambdaONormalizedScalarActual
+#print axioms LeanFormal.IUT.XiFPaper.C3LambdaONormalizedScalarActual.oldC3LambdaOHullScalar_zero_of_zero
+#print axioms LeanFormal.IUT.XiFPaper.C3LambdaONormalizedScalarActual.oldC3LambdaOHullScalar_zero_of_top
+#print axioms LeanFormal.IUT.XiFPaper.C3LambdaONormalizedScalarActual.C3LambdaONormalizationData
+#print axioms LeanFormal.IUT.XiFPaper.C3LambdaONormalizedScalarActual.c3LambdaONormalizedLogScalar_eq
+#print axioms LeanFormal.IUT.XiFPaper.C3LambdaONormalizedScalarActual.c3LambdaONormalizedLogScalar_ne_zero

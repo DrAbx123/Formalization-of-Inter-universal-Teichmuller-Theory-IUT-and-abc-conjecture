@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BoxR2RowPacketWiringActual
+import tmp.sheaf.xif.paper.Mzk1BoxR2PaperThetaLeHAssemblyActual
+set_option maxHeartbeats 8000000
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxR2RowPacketWiringActual.rowPackets_weightedAverage_le_H
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxR2PaperThetaLeHAssemblyActual.paperThetaWeighted_le_H

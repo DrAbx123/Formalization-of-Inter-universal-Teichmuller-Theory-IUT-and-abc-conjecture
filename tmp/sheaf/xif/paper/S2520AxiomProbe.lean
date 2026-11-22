@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2520RootCycleTransferActual
+open LeanFormal.IUT.XiFPaper.S2520RootCycleTransferActual
+#print axioms S2520RootCycleTransferRequired
+#print axioms S2520S2132ToFirstMissingRequired
+#print axioms S2520S2480FirstMissing_of_S2132

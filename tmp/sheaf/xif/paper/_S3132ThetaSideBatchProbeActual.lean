@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3132ThetaSideHaarIntegrationActual
+import tmp.sheaf.xif.paper.S3132ThetaSideDataResidualSpecActual
+import tmp.sheaf.xif.paper.S3132ThetaSideCanonicalSubsingletonActual
+import tmp.sheaf.xif.paper.S3132ThetaSideCanonicalConditionalActual
+import tmp.sheaf.xif.paper.S3132ThetaSideMilestoneRecordActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideHaarIntegrationActual.thetaSideResidual_iff_identity
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideDataResidualSpecActual.thetaSideNativeData_of_residual_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideCanonicalSubsingletonActual.canonicalRootedHC_of_subsingleton
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideCanonicalConditionalActual.thetaSideCanonicalReadout_conditional

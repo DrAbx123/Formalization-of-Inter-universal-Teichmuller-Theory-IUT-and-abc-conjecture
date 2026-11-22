@@ -1,0 +1,6 @@
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:52:5: warning: Variable name `place` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\n8\closure\SourceLogKummerRealization.lean:87:8: warning: declaration uses `sorry`

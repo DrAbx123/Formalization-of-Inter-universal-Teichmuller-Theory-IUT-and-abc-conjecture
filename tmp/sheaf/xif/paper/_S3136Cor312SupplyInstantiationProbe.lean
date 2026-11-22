@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3136PriorArtCor312SuppliesActual
+import tmp.sheaf.xif.paper.S3136SourceUnitRegionInstantiationAttemptActual
+import tmp.sheaf.xif.paper.S3136CardAMPLSupplyReuseActual
+import tmp.sheaf.xif.paper.S3136WeightedAveragePriorArtReuseActual
+import tmp.sheaf.xif.paper.S3136RegionReviewInstantiationDataActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136PriorArtCor312SuppliesActual.lgPPriorArtCor312Supplies_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136SourceUnitRegionInstantiationAttemptActual.lgpSourceHaarActualData_hunitRoundTrip
+#print axioms LeanFormal.IUT.XiFPaper.S3136CardAMPLSupplyReuseActual.lgpCardAMPL_realVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.S3136WeightedAveragePriorArtReuseActual.lgpProcessionAverage_le
+#print axioms LeanFormal.IUT.XiFPaper.S3136RegionReviewInstantiationDataActual.lgpReviewInstantiation_length

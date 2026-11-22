@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceUnramifiedActual
+import tmp.sheaf.xif.paper.Mzk1GChoiceUnramifiedCanonicalActual
+import tmp.sheaf.xif.paper.Mzk1GChoiceAvoidCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedActual.gChoice_unramified
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceUnramifiedCanonicalActual.gChoice_unramified_of_criticalInTarget
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoice_avoids
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoice_card_lt

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2851A6D6GeometryActual
+open LeanFormal.IUT.XiFPaper.S2851A6D6GeometryActual
+#print axioms S2851HyperbolicOrbicurve
+#print axioms S2851SourceOncePuncturedGeometry

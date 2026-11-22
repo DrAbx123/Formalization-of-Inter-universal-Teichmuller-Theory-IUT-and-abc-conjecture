@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22FullShapeHelpersActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critValues_comp_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.baseGood_properties
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critIn01_of_criticalValues_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critIn01_belyiPolynomial

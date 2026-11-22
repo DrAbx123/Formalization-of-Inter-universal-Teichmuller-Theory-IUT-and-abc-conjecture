@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2453PadicDemushkinReduction
+#print axioms LeanFormal.IUT.XiFPaper.S2453PadicDemushkinReduction.S2453PadicFG_of_twoGenerators

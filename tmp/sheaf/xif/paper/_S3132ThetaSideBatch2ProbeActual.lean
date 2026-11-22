@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3132SourceAdaptedPilotComparisonActual
+import tmp.sheaf.xif.paper.S3132SourceAdaptedCorollary312DataActual
+import tmp.sheaf.xif.paper.S3132ThetaSideReadoutComparisonDataActual
+import tmp.sheaf.xif.paper.S3132IVGenEllShadowAdapterActual
+import tmp.sheaf.xif.paper.S3132ThetaSideSurveyRecordActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132SourceAdaptedPilotComparisonActual.adaptedCorollary312_of_signed_le
+#print axioms LeanFormal.IUT.XiFPaper.S3132SourceAdaptedCorollary312DataActual.AdaptedCorollary312ComparisonData.corollary312
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideReadoutComparisonDataActual.comparisonDataOfMagnitudes_thetaPilot_value
+#print axioms LeanFormal.IUT.XiFPaper.S3132IVGenEllShadowAdapterActual.AdaptedIVGenEllShadow.exists_lowerBound

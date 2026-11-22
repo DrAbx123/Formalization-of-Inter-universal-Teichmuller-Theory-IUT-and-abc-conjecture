@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3136LGPXMuUnitActual
+import tmp.sheaf.xif.paper.S3136ModSideInputActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuUnitActual.rootClass_wellDefined
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuUnitActual.lgpXMuUnitCandidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuUnitActual.lgpXMuUnitCandidate_rootClass
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuUnitActual.lgpXMuUnitCandidate_unitGroup
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPXMuUnitActual.LGPXMuUnitIdentificationGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSideInputActual.divisorialNatIsoReflComponent
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSideInputActual.globalDivisorNatIsoReflComponent
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSideInputActual.lgpDivisorNatIsoReflComponent
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSideInputActual.modSideDivisorNatIsoComponent
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSideInputActual.FrobenioidCarrierFunctorGap

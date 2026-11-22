@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DetTensorInvolutionLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DetTensorInvolutionLawsActual.matrixLogDet_inv_posDef

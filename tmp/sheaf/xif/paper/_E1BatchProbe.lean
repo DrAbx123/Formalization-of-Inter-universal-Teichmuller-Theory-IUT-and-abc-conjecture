@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21ImageActual
+import tmp.sheaf.xif.paper.GenEllThm38ConstantsActual
+import tmp.sheaf.xif.paper.IUTExternalSemiAnDefsActual
+import tmp.sheaf.xif.paper.IUTExternalGeoAnDefsActual
+import tmp.sheaf.xif.paper.IUTExternalConfigDefsActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21ImageActual.belyi21R_not_mem_image
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38ConstantsActual.d0_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38ConstantsActual.cor43_coefficient_eq
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalSemiAnDefsActual.iutExternalSemiAnStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalGeoAnDefsActual.iutExternalGeoAnStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalConfigDefsActual.iutExternalConfigStatements_length

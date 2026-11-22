@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2587LocalizedResidueDataActual
+#print axioms LeanFormal.IUT.XiFPaper.S2587LocalizedResidueDataActual.fbar_natDegree
+#print axioms LeanFormal.IUT.XiFPaper.S2587LocalizedResidueDataActual.S2587Target_of_witness_irreducible

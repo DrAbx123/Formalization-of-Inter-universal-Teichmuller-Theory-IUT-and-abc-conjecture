@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreRRBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRBridgeActual.zeroDivisorDatum_nonempty_of_RR
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRBridgeActual.rrBridgeRows_length

@@ -1,0 +1,16 @@
+tmp\sheaf\xif\paper\Mzk1N1CanonicalActual.lean:42:9: error: Function expected at
+  Nat.mem_primeFactors
+but this term has type
+  ?m.27 ∈ Nat.primeFactors ?m.26 ↔ Nat.Prime ?m.27 ∧ ?m.27 ∣ ?m.26 ∧ ?m.26 ≠ 0
+
+Note: Expected a function because this term is being applied to the argument
+  (show a * b * c ≠ 0 by positivity)
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.badSupport_eq_primeFactors' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.tripleWeight_eq_radical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1N1CanonicalActual.n1Rows_length' does not depend on any axioms

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2702PaperConditionalActual
+#print axioms LeanFormal.IUT.XiFPaper.S2702PaperConditionalActual.S2702PaperConditionalData
+#print axioms LeanFormal.IUT.XiFPaper.S2702PaperConditionalActual.S2702PaperConditional_qPilot_le

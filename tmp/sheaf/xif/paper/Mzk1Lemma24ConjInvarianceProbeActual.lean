@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24ConjInvarianceActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ConjInvarianceActual.s3135_minpoly_eq_of_mem_conjugateSet
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24ConjInvarianceActual.s3135_image_pointClosure_eq

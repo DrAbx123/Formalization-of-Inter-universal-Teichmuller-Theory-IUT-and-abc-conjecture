@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1OurFrameworkABCActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_ABCConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_E1
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_E1_allocation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_E1_of_qSide_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_E4
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.ourFramework_E2
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkABCActual.assumptionInterfaceRows_length

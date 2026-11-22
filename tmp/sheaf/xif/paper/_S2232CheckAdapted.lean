@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2232Layer1PrimeAlignmentActual
+
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.S2232Layer1PrimeAlignmentActual
+
+#check S2232PaperArithmeticConditions
+#check s2232_paperArithmeticConditions_iff_package
+#check s2232_concretePrimePlace
+#check s2232_source_constraints_do_not_force_strip
+#print axioms s2232_paperArithmeticConditions_iff_package

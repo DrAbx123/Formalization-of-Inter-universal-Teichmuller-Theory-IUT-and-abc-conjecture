@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S3136CarrierBridgeAttemptActual
+import tmp.sheaf.xif.paper.S3136ThetaConstantIdentificationAttemptActual
+import tmp.sheaf.xif.paper.S3136SplitPointStatementShapesActual
+import tmp.sheaf.xif.paper.S3136WeightedAverageLabelMappingActual
+import tmp.sheaf.xif.paper.S3136PriorArtManifestUpdateActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136CarrierBridgeAttemptActual.LGPVolumeCarrierBridge.logVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.S3136CarrierBridgeAttemptActual.lgpCarrierBridgeMissing_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ThetaConstantIdentificationAttemptActual.lgpCardAMPLSupplyModelTheta_realVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.S3136SplitPointStatementShapesActual.lgpSplitPointShapeCitations_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136WeightedAverageLabelMappingActual.lgpStepVCollectionBound_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3136PriorArtManifestUpdateActual.lgpPriorArtManifest_length

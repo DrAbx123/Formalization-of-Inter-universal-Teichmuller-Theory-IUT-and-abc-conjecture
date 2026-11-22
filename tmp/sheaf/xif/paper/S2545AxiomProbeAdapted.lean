@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2545D5ArithmeticMissingActual
+open LeanFormal.IUT.XiFPaper.S2545D5ArithmeticMissingActual
+#print axioms S2545Pair_of_exact
+#print axioms S2545D5LargeImageFive_of_arithmetic

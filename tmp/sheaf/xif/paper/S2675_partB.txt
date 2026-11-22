@@ -1,0 +1,95 @@
+
+/-! ## 2. Separability and the orbit-size theorem at 1249 -/
+
+theorem S2675_separable_psiZ :
+    (Polynomial.C (415 : ZMod 1249) * (S2550F2 * S2550F10)).Separable := by
+  classical
+  rw [PerfectField.separable_iff_squarefree]
+  have hc_ne : (415 : ZMod 1249) ≠ 0 := by decide
+  have hcC : (Polynomial.C (415 : ZMod 1249) : (ZMod 1249)[X]) ≠ 0 :=
+    Polynomial.C_ne_zero.mpr hc_ne
+  have hg2 : S2550F2 ≠ 0 := S2671F2_monic.ne_zero
+  have hg10 : S2550F10 ≠ 0 := S2671F10_monic.ne_zero
+  have hprod : S2550F2 * S2550F10 ≠ 0 := mul_ne_zero hg2 hg10
+  have hmain : Polynomial.C (415 : ZMod 1249) * (S2550F2 * S2550F10) ≠ 0 :=
+    mul_ne_zero hcC hprod
+  rw [UniqueFactorizationMonoid.squarefree_iff_nodup_normalizedFactors hmain]
+  have hnf : UniqueFactorizationMonoid.normalizedFactors
+      (Polynomial.C (415 : ZMod 1249) * (S2550F2 * S2550F10)) =
+      (S2550F2 ::ₘ S2550F10 ::ₘ 0 : Multiset (ZMod 1249)[X]) := by
+    rw [UniqueFactorizationMonoid.normalizedFactors_mul hcC hprod,
+      UniqueFactorizationMonoid.normalizedFactors_of_isUnit
+        (isUnit_C.mpr (isUnit_iff_ne_zero.mpr hc_ne)),
+      Multiset.zero_add,
+      UniqueFactorizationMonoid.normalizedFactors_mul hg2 hg10,
+      UniqueFactorizationMonoid.normalizedFactors_irreducible S2671F2_irreducible,
+      UniqueFactorizationMonoid.normalizedFactors_irreducible S2671F10_irreducible,
+      Monic.normalize_eq_self S2671F2_monic, Monic.normalize_eq_self S2671F10_monic]
+    simp
+  rw [hnf]
+  have hne : S2550F2 ≠ S2550F10 := by
+    intro h
+    have h2 : (2 : ℕ) = 10 := by
+      rw [← S2671F2_degree, ← S2671F10_degree, h]
+    norm_num at h2
+  simp [Multiset.nodup_cons, hne]
+
+theorem S2675_hsep : (fbar f10' p1249R).Separable := by
+  refine (Polynomial.separable_map residueEquivR1249.toRingHom).mp ?_
+  rw [S2674_fbar_map_eq, ← S2550Psi5Mod1249_eq, S2550Product]
+  exact Polynomial.Separable.unit_mul
+    (isUnit_C.mpr (u_isUnit.map (residueEquivR1249.toRingHom.comp
+      (Ideal.Quotient.mk p1249R)).toMonoidHom))
+    S2675_separable_psiZ
+
+theorem S2675_f10'_natDegree_ne_zero : f10'.natDegree ≠ 0 := by
+  rw [f10'_natDegree]
+  norm_num
+
+theorem S2675_f10'_hsepK : (f10'.map (algebraMap R10 K)).Separable := by
+  rw [show f10'.map (algebraMap R10 K) =
+      Polynomial.C ((5 : K)⁻¹) * S2057Psi5F from f10'_map_scalar]
+  exact Polynomial.Separable.unit_mul (isUnit_C.mpr (isUnit_iff_ne_zero.mpr (by norm_num)))
+    S2057Psi5F_separable
+
+/-- The localized orbit-size theorem at 1249: for every prime P of T10 over
+p1249R there is an arithmetic Frobenius at P whose orbit-size multiset on the
+roots of f10' is {2, 10}. -/
+theorem S2675_localized_orbitSize_1249 (P : Ideal T10) [hP : P.IsPrime]
+    [hPover : P.LiesOver p1249R] :
+    ∃ sigma : Gal(L10/K), IsArithFrobAt R10 sigma P ∧
+      S2217DedekindFrobTheoremActual.orbitSizeMultiset
+        (S2532LocalizedDefinitionsActual.rootPermR R10 K L10 f10'
+          S2598bHsepSplitActual.S2598b_hsplit sigma) = ({2, 10} : Multiset ℕ) := by
+  classical
+  haveI : P.IsMaximal := Ideal.IsMaximal.of_liesOver_isMaximal (p := p1249R) (P := P)
+  haveI : Fintype (T10 ⧸ P) := S2675_fintype_quot P
+  haveI hInv : Algebra.IsInvariant R10 T10 Gal(L10/K) :=
+    Algebra.isInvariant_of_isGalois R10 K L10 T10
+  obtain ⟨sigma, H⟩ := IsArithFrobAt.exists_of_isInvariant (S := T10) R10 (Gal(L10/K)) P
+  refine ⟨sigma, H, ?_⟩
+  rw [S2673LocalizedOrbitSizeActual.S2673_localized_orbitSizeMultiset_eq_factorDegrees
+    (f := f10') (p := p1249R) (P := P)
+    S2598bHsepSplitActual.S2598b_hmonic S2675_hsep
+    S2598bHsepSplitActual.S2598b_hsplit S2675_f10'_natDegree_ne_zero
+    S2675_f10'_hsepK sigma H,
+    S2674LocalizedOrbitSize1249Actual.S2674_factorDegrees_fbar]
+
+/-- Existence form: there is a prime of T10 over p1249R and an arithmetic
+Frobenius at it with orbit-size multiset {2, 10}. -/
+theorem S2675_exists_localized_orbitSize_1249 :
+    ∃ (P : Ideal T10) (sigma : Gal(L10/K)),
+      P.IsPrime ∧ P.LiesOver p1249R ∧ IsArithFrobAt R10 sigma P ∧
+      S2217DedekindFrobTheoremActual.orbitSizeMultiset
+        (S2532LocalizedDefinitionsActual.rootPermR R10 K L10 f10'
+          S2598bHsepSplitActual.S2598b_hsplit sigma) = ({2, 10} : Multiset ℕ) := by
+  obtain ⟨P, hPmax, hPover⟩ :=
+    Ideal.exists_maximal_ideal_liesOver_of_isIntegral (R := R10) (S := T10) p1249R
+  haveI : P.IsMaximal := hPmax
+  haveI : P.IsPrime := hPmax.isPrime
+  haveI : P.LiesOver p1249R := hPover
+  obtain ⟨sigma, H, hcyc⟩ := S2675_localized_orbitSize_1249 P
+  exact ⟨P, sigma, hPmax.isPrime, hPover, H, hcyc⟩
+
+end LeanFormal.IUT.XiFPaper.S2675LocalizedOrbit1249Actual
+end

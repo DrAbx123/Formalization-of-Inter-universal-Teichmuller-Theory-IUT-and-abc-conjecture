@@ -1,0 +1,29 @@
+import Mathlib.GroupTheory.Perm.Cycle.Type
+import Mathlib.GroupTheory.Perm.Cycle.Factors
+import Mathlib.FieldTheory.Finite.Extension
+import Mathlib.NumberTheory.NumberField.Ideal.KummerDedekind
+import Mathlib.RingTheory.Radical.Basic
+open Polynomial NumberField
+namespace Probe2217
+noncomputable section
+#check @minpoly.irreducible
+#check @Polynomial.mem_normalizedFactors_iff
+#check @UniqueFactorizationMonoid.normalizedFactors_nodup
+#check @Squarefree.isRadical
+#check @Polynomial.Separable.squarefree
+#check @PerfectField.separable_of_irreducible
+#check @Polynomial.Splits.of_dvd
+#check @Polynomial.card_rootSet_eq_natDegree
+#check @Polynomial.Splits.natDegree_eq_card_roots
+#check @Polynomial.splits_iff_card_roots
+#check @minpoly.dvd
+#check @minpoly.eq_of_irreducible
+#check @minpoly.monic
+#check @minpoly.aeval
+#check @Polynomial.Monic.ne_zero
+#check @Fintype.card_congr
+#check @Equiv.subtypeEquiv
+#check @Equiv.ofBijective
+#check @Polynomial.mem_rootSet'
+end
+end Probe2217

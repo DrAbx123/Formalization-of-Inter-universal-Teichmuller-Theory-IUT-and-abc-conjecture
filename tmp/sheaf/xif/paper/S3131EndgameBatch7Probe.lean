@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3131EndgameDependencyLedgerActual
+import tmp.sheaf.xif.paper.S3131EndgameClassABListsActual
+import tmp.sheaf.xif.paper.S3131VFormReclassificationActual
+import tmp.sheaf.xif.paper.S3131Stage4ClassABFoldActual
+import tmp.sheaf.xif.paper.S3131RouteInvarianceImplementedActual
+import tmp.sheaf.xif.paper.S3131ModelRouteReopenNotePreparedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131EndgameDependencyLedgerActual.endgame_conditional
+#print axioms LeanFormal.IUT.XiFPaper.S3131EndgameDependencyLedgerActual.S3131EndgameNodes_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131EndgameClassABListsActual.S3131ClassANodes_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131EndgameClassABListsActual.S3131ClassBNodes_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131VFormReclassificationActual.S3131VFormReclassification_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage4ClassABFoldActual.S3131Stage4ClassABFold_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteInvarianceImplementedActual.S3131RouteInvarianceImplemented_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131ModelRouteReopenNotePreparedActual.S3131ModelRouteReopenScope_length

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull11H6Mzk1UpgradeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull11H6Mzk1UpgradeActual.HullH6UpgradeInputs
+#print axioms LeanFormal.IUT.XiFPaper.Hull11H6Mzk1UpgradeActual.hull11_h6_upgrade
+#print axioms LeanFormal.IUT.XiFPaper.Hull11H6Mzk1UpgradeActual.hull11_thm25_wiring_projection

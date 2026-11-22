@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1SkeletonBookkeepingLemmas2Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SkeletonBookkeepingLemmas2Actual.RemainingGapLabel.index_lt_ten

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S1906RankTwoTorsionActual
+#check LeanFormal.IUT.XiFPaper.S1906RankTwoTorsionActual.S1906RankTwoBasisGap_iff_natCard
+#check LeanFormal.IUT.XiFPaper.S1906RankTwoTorsionActual.S1906ExactFirstMissing_iff_basisGap
+#check LeanFormal.IUT.XiFPaper.S1906RankTwoTorsionActual.S1906FiniteFreeRankTwo_of_basisGap
+#check LeanFormal.IUT.XiFPaper.S1906RankTwoTorsionActual.S1906BasisGap_of_xCoordinateFormula_zeroCriterion_genericSeparable

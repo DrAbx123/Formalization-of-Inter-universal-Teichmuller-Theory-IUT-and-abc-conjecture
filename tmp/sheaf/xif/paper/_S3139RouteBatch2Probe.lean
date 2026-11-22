@@ -1,0 +1,24 @@
+import tmp.sheaf.xif.paper.S3139ComparisonRegionV2NeutralActual
+import tmp.sheaf.xif.paper.S3139RouteResidualQpilotNamedActual
+import tmp.sheaf.xif.paper.S3139RouteResidualMainlineM0NamedActual
+import tmp.sheaf.xif.paper.S3139VendorLabelAveragedLogVolumeActual
+import tmp.sheaf.xif.paper.S3139VendorSurveyPart2Actual
+import tmp.sheaf.xif.paper.S3139RouteIntegrationChecklistUpdatedActual
+import tmp.sheaf.xif.paper.S3139RouteComparisonInvarianceActual
+import tmp.sheaf.xif.paper.S3139RouteComparisonInvarianceConsumerActual
+import tmp.sheaf.xif.paper.S3139VendorProcessionNormalizedLogVolumeActual
+import tmp.sheaf.xif.paper.S3139RouteRegistryIdsActual
+
+-- S3139 batch2 probe: V2 neutral region, named route residuals, vendor-adapted log-volumes,
+-- comparison-invariance residual wiring, route registry data.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139ComparisonRegionV2NeutralActual.SourceV2ComparisonRegion.mem_transfer
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteResidualQpilotNamedActual.firstTriangleRouteComposition_of_qpilotM1
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteResidualMainlineM0NamedActual.firstTriangleRouteComposition_of_mainlineM0
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorLabelAveragedLogVolumeActual.sourceLabelAveragedLogVolumeOf
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorLabelAveragedLogVolumeActual.sourceWeightedLabelAveragedLogVolumeOf
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteComparisonInvarianceActual.SourceRouteComparisonInvariance.volume_image
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteComparisonInvarianceActual.sourceRouteComparisonInvariance_region_volume
+#print axioms LeanFormal.IUT.XiFPaper.S3139RouteComparisonInvarianceConsumerActual.sourceV2ComparisonRegion_volume_neutral
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorProcessionNormalizedLogVolumeActual.sourceProcessionNormalizedLogVolumeOf
+#print axioms LeanFormal.IUT.XiFPaper.S3139VendorProcessionNormalizedLogVolumeActual.sourceProcessionScaledLogVolumeOf

@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.Mzk1URThetaKLowerActual
+import tmp.sheaf.xif.paper.Mzk1G1F8PiActual
+import tmp.sheaf.xif.paper.Mzk1G1F7TameMonogenicActual
+import tmp.sheaf.xif.paper.Mzk1ULSideWeightBridgeActual
+import tmp.sheaf.xif.paper.Mzk1ULKSideCountBridgeActual
+import tmp.sheaf.xif.paper.Mzk1URThetaKSideActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKLowerActual.urCeilRegion_logVolume
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKLowerActual.urLabelOneRegion_logVolume
+#print axioms LeanFormal.IUT.XiFPaper.F8PiActual.f8_first_equality_chart0
+#print axioms LeanFormal.IUT.XiFPaper.F8PiActual.pi_chart0_coordinate
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F7TameMonogenicActual.differentIdeal_eq_span_derivative_of_conductor_eq_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F7TameMonogenicActual.differentExponent_eq_count_derivative_of_conductor_eq_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULSideWeightBridgeActual.badPlaceSet_subset_differentPlaces
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULSideWeightBridgeActual.ksD_eq_paperOrder_mul_ksLogP
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULKSideCountBridgeActual.sum_normDegreeWeight_mul_ksDCount_le
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKSideActual.ksThetaHullLogRoot_le_ucWeightedHpkt

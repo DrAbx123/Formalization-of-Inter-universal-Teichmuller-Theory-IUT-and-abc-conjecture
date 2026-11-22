@@ -1,0 +1,51 @@
+{
+  "source": "D:\\lean\\tmp\\xif_parallel_results.log",
+  "encoding": "utf-8-sig",
+  "note": "Historical log only; no current-version rebuild; entries may precede source edits.",
+  "entries": {
+    "GeneralNormalizedNormBySpectralUniqueness": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "GeneralNormalizedNormFinal": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "GeneralNormalizedNormConsumer": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S829PaperNormValuationSpectralActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1116ERootStackDVRInstanceActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1124EUnitFactorActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1139EUniformizerRemainderActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1142IndPaperCarrierActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1145GlobalKummerTensorPacketIsoActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S1148MultiradialCarrierAuditActual": {
+      "last_events": [],
+      "last_errors": []
+    },
+    "S865RootHaarFactorNormPowActual": {
+      "last_events": [],
+      "last_errors": []
+    }
+  }
+}

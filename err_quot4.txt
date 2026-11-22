@@ -1,0 +1,7 @@
+TateCurvesTheta\TateCurve\Quotient.lean:88:42: error: unsolved goals
+K : Type u_1
+inst✝ : NormedField K
+t : TateParameter K
+u : Kˣ
+hq : t.q ∈ t.qpowers
+⊢ u ^ (-1) * t.q ^ (-1) * u = t.q ^ (-1)

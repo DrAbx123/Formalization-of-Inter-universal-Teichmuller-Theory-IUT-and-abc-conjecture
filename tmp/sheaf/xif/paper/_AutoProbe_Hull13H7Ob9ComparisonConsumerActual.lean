@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Hull13H7Ob9ComparisonConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull13H7Ob9ComparisonConsumerActual.HullH7Ob9ComparisonInputs
+#print axioms LeanFormal.IUT.XiFPaper.Hull13H7Ob9ComparisonConsumerActual.hull13_h7ob9_comparison
+#print axioms LeanFormal.IUT.XiFPaper.Hull13H7Ob9ComparisonConsumerActual.hull13Rows

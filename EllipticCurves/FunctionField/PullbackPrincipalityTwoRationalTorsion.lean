@@ -1,0 +1,868 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import EllipticCurves.Fixtures
+import EllipticCurves.FunctionField.MulByTwoGalois
+import EllipticCurves.FunctionField.PlaceInertiaGeneral
+import EllipticCurves.FunctionField.PullbackPrincipalityTwo
+
+/-!
+# `[2]∗((S) − (O))` is principal with `(2 : F) ≠ 0`, given rational `2`-torsion and a halving
+
+`EllipticCurves.FunctionField.PullbackPrincipalityTwo` discharges `hprin` at `n = 2` — the `#418`
+hypothesis of `exists_gS_two` — over an **algebraically closed** base field.  This file replaces
+that instance by the two hypotheses it was ever used for:
+
+* `hcard : Nat.card (W.torsion 2) = 4`, i.e. `E[2] ⊆ E(F)`;
+* `hP : 2 • P = S` for the `2`-torsion point `S` in question.
+
+⚠️ **`(2 : F) ≠ 0` is assumed as well**, and it is not a third rationality fact: it is the
+explicit binder `h2` that `mulByTwoEndo`, `comapProjPointTwo`, `ramificationIdxTwo`,
+`residueDegreeTwo` and `pullbackDivisorTwo` all take as an argument, so every statement below that
+names the `[2]∗` layer carries it.  It is load-bearing rather than vestigial — `mulByTwoEndo h2`
+occurs in the headline's own *statement*, so no proof change can drop it.  The headline
+`exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card` and its consumer form `exists_gS_two_of_card`
+are therefore available over `ℚ` — which has characteristic `0` — and the last section exhibits
+both on a named rational curve.
+
+⚠️ **The title above names all three hypotheses and no longer says *"over an arbitrary field"*, and
+that is a column limit and not a retraction** (`#1733`).  Appending *"with `(2 : F) ≠ 0`"* to the
+old title in place, rather than replacing the phrase, makes the heading **117** columns by Python
+`len()`; the title above is **93**.  `README.md` `### Scope of the rules above` rules that a heading
+is one source line and that a reach clause which does not fit inside the shortened title is dropped
+and stated in the prose below rather than wrapped.  It is stated below: this file needs **no
+algebraic closure**, which is the whole difference from `PullbackPrincipalityTwo`, and
+`## Main statements` says the same of the fibre lemmas.
+
+⚠️ **Nothing is retired by that change, because the old title was *partial* and not false.**  It
+named `hcard` and `hP` and omitted `h2` — the proper non-empty subset `README.md`
+`### Reach clauses` convicts — while its *"over an arbitrary field"* was true as far as it went.
+The ten headlines below took the completion instead, in the wording
+`exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card` already carried — ten at `0083238`, and
+**eleven** here, since the `#1773` sweep gives that same wording to
+`affinePart_pullbackDivisorTwo_single_sub_single_of_card` as well.
+
+⚠️ **That sentence used to read** *"Nothing else about `F` is assumed."* (`dcc912e`, `#1339`,
+PR #508), and it was false on the day the file landed rather than made false later.  It **closes**
+a list about `F`, and `(2 : F) ≠ 0` is a hypothesis about `F`; `README.md` `### Reach clauses`'
+*"was the old clause false or merely partial"* test therefore returns **false**, so
+`### Retired claims` binds and the wording is quoted rather than completed in place (`#1719`).
+
+⚠️ **The ten headlines `#1733` completed at `0083238` took the `h2` half of a two-item hypothesis
+list, and the half they did not take left this file's headlines in two OPPOSITE registers**
+(`#1773`).  Read one at a time against the elaborated telescope at `d559108`, the **17**
+declarations here that bind `hcard : Nat.card (W.torsion 2) = 4` split **9 / 2 / 2 / 4**: **nine**
+named `(2 : F) ≠ 0` and omitted `hcard` — eight of those omitted the halving `hP` too — while
+**two**, `fixedFieldTwo_eq_mulByTwoFieldRange_of_card` and
+`isSeparable_mulByTwoFieldRange_of_card`, named `hcard` and omitted `(2 : F) ≠ 0`.  ⚠️ **So each
+half of one hypothesis list was the omitted half somewhere in this same file**, and both directions
+are the proper non-empty subset `### Reach clauses` convicts: a reader of the nine took *"over an
+arbitrary field with `(2 : F) ≠ 0`"* for the whole hypothesis and read the file as having removed
+the closure for nothing, which is the opposite of what it does.  The remaining **two** named
+neither and were on the compliant *"or it names none"* branch; the **four** already complete are
+`card_torsionTwoMul_of_card`, `finite_torsionTwoMul_of_card`, `finrank_fixedFieldTwo_of_card` —
+each binding `hcard` alone — and the reference headline itself.
+
+⚠️ **All thirteen are completed together and none is cleared**, because `### Gate-discharge claims`
+makes a register a per-file object and `README.md` rules an insertion **branch-neutral**, so the two
+*"names none"* rows take the clause without anything turning on which branch they were on.  The
+wording is this file's own: *"at a rational `E[2]`"*, which three headlines here already carried
+verbatim, and the reference headline's *"a halving point `P`"* shortened to *"a halving `P`"* at
+the **nine** headlines given it here, since `P` is already the point.  ⚠️ **`hsep` is still not
+named anywhere**, on the exemption declared under *"Where the separability comes from"* below — it
+is discharged from `hcard` and is not a third hypothesis — and the **two** positivity lemmas,
+`one_le_ramificationIdxTwo_mul_residueDegreeTwo` and
+`card_fibre_comapProjPointTwo_le_four_of_isSeparable` bind no rationality hypothesis at all and are
+untouched.
+
+## ⚠️ What this does *not* do
+
+**It does not discharge `#962`**, and must not be reported as doing so.  `#962` asks for `hprin`
+over a field where `E[2]` is *not* rational and `S` has *no* rational halving; reaching that from
+here still needs, exactly as `#962`'s ledger says, Mathlib's **finite** Hilbert 90 applied to
+`Gal(L/F)` for `L` the field generated by the missing coordinates, plus the descent statement
+`L(W⁄L)^{Gal(L/F)} = F(W)` (`#692`'s divisor/descent half), plus separability of `L/F` in
+characteristic `p`.  None of those is here.
+
+⚠️ **All three have since landed and the assembly with them** (`#2029`,
+`EllipticCurves.FunctionField.PullbackPrincipalityTwoGeneral`), so the paragraph above is a
+description of what this file leaves open and no longer of what the tree does: the descent is
+`FunctionFieldGaloisDescent` (`#692`, PR #757), the separability is
+`EllipticCurves.Torsion.HalvingExtension` and `EllipticCurves.Torsion.HalvingGaloisTower`, and
+Hilbert 90 is applied in `EllipticCurves.FunctionField.DivisorGaloisDescentNsmul`.  ⚠️ **The
+parenthetical above read *"`#692`'s **open** divisor/descent half"*** and that word is what went
+false.  ⚠️ **`#962` is still not discharged**, because `n = 3` is untouched, and the headline of
+this paragraph therefore stands as written: **this file** does not discharge it, and neither does
+the `n = 2` row alone.
+
+⚠️ **That reason is narrowed** (`#2215`): the `n = 3` **middle** rung — this file's own mirror, at a
+rational `E[3]` and a tripling — is
+`EllipticCurves.FunctionField.PullbackPrincipalityThreeRationalTorsion`, so *"`n = 3` is untouched"*
+is no longer true of the ledger as a whole.  ⚠️ **The conclusion is unchanged and the word that
+matters is *discharged***: `#962`'s `n = 3` row asks for `hprin` with no rationality hypothesis, the
+tripling tower that would buy those hypotheses over a Galois extension does not exist in this tree,
+and so neither `n` is closed by a middle rung alone.
+
+What *is* settled is the step that ledger lists as unstarted: **the chain below `hprin` contains no
+use of `[IsAlgClosed F]` beyond those two rationality facts.**  `#962`'s first audit conjectured
+this and its own self-correction refuted the conjecture, because
+`sum_ramificationIdxTwo_eq_four` (`PlaceRamificationInertia`) collapses `∑ e_p · f_p` to `∑ e_p` by
+*"every place is rational"*, which is equivalent to the closure.  PR #437's uncollapsed identity is
+what makes the counting work without it, and the argument is the one that correction sketched.
+
+## The counting argument, which is the mathematical content
+
+Over the fibre of `[2]∗` above a rational point `S`:
+
+* the four points `P ⊕ R`, `R ∈ E[2]`, are distinct (`projPointOfPoint_add_injective_two` with
+  `hcard`), lie in the fibre (`comapProjPointTwo_add_torsion_two`), and each has `f_p = 1` because
+  it is rational — `residueDegreeTwo_projPointOfPoint`, which needs no hypothesis on `F`;
+* `e_p ≥ 1` everywhere (`ramificationIdxTwo_pos`) and `f_p ≥ 1` everywhere
+  (`residueDegreeComap_pos` and its `[2]∗` instantiation `residueDegreeTwo_pos` below);
+* `∑_{p ↦ q} e_p · f_p = 4` (`sum_ramificationIdxTwo_mul_residueDegreeTwo_of_isSeparable`).
+
+Four terms of a four-term bound already exhaust it, so every `e_p` is `1` and the fibre is exactly
+the coset.  ⚠️ **The second bullet is not decoration.**  Without `f_p ≥ 1` a fifth place could sit
+in the fibre contributing `0` to the sum, and both the unramifiedness and the fibre description
+would fail; `residueDegreeComap_pos` is the one genuinely new lemma in this file and it is what
+closes that hole.
+
+⚠️ Positivity of `f_p` holds at *every* place, not only inside a fibre, and the proof is the
+**unconditional** tower formula `f^{proj}_{φ⁻¹p} · f_p = f^{proj}_p` against `degProjPt_pos` rather
+than ramification theory.  That is why the two positivity lemmas and
+`one_le_ramificationIdxTwo_mul_residueDegreeTwo` carry neither `hsep` nor a fibre-membership
+hypothesis, while `card_fibre_comapProjPointTwo_le_four_of_isSeparable` still carries `hsep` — the
+separability belongs to the *identity* the summands are compared against, not to the bound on a
+summand.
+
+## Where the separability comes from
+
+`sum_ramificationIdxTwo_mul_residueDegreeTwo_of_isSeparable` carries
+`Algebra.IsSeparable ([2]∗F(W)) F(W)` as a hypothesis.  It is **not** a third hypothesis of the
+headline: `MulByTwoGalois`'s Artin sandwich uses `[IsAlgClosed F]` in exactly one place — the count
+`card_torsionTwoMul` — so at `hcard` the whole package goes through.  That is
+`isSeparable_mulByTwoEndoFieldRange_of_card` below, and the headline discharges it internally.
+
+⚠️ The characteristic-zero route `isSeparable_mulByTwoEndoFieldRange`
+(`EllipticCurves.FunctionField.PlaceBelowIntegralClosure`) would also serve over `ℚ`, and is *not*
+used: it would put `[CharZero F]` into statements that do not need it.  `hcard` is the weaker
+hypothesis and it is already present.
+
+## ⚠️ `Nat.card (W.torsion 2)` is indexed by a `DecidableEq F` instance
+
+`torsion` is defined with `[DecidableEq F]` (`EllipticCurves.Torsion.Defs`), while
+`TorsionTwoMul W` (`EllipticCurves.FunctionField.TranslationAction`) bakes in the classical one.
+The statements here follow `MulByTwoFibreAffine` and `PullbackPrincipalityTwo` and take the
+**binder**, which is the right choice for a *producer* — every statement below takes `hcard` as
+input, so a caller supplies it at whatever instance it holds.  The single `convert` that bridges the
+two lives inside `card_torsionTwoMul_of_card` and nowhere else.
+
+## Main statements
+
+* `WeierstrassCurve.Affine.residueDegreeComap_pos` — `f_p > 0` at every place, for an arbitrary
+  `φ`, over an arbitrary field; and `…CoordinateRing.residueDegreeTwo_pos`, its `[2]∗`
+  instantiation.  Both are the tower formula `residueDegreeProj_mul_residueDegreeComap` against
+  `degProjPt_pos`, and neither needs separability, module-finiteness or a fibre.
+* `…CoordinateRing.isSeparable_mulByTwoEndoFieldRange_of_card` — the Galois package at `hcard`,
+  over a field with `(2 : F) ≠ 0`.
+* `…CoordinateRing.ramificationIdxTwo_eq_one_of_card`,
+  `…CoordinateRing.fibre_comapProjPointTwo_eq_range_of_card` — the fibre over a rational point,
+  described without an algebraic closure.
+* **`WeierstrassCurve.Affine.exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card`** — `hprin` at
+  `n = 2`, over an arbitrary field with `(2 : F) ≠ 0`, at a nonsingular `2`-torsion point `S` with
+  `hcard` and a halving `hP`, for a nonzero `f` whose divisor is `2·(S)`.
+* **`WeierstrassCurve.Affine.exists_gS_two_of_card`** — rung 5 at `n = 2`, over an arbitrary field
+  with `(2 : F) ≠ 0`, on `hcard` and `hP` at the same `S`; it produces the `f` itself.
+
+`Recovery` derives the merged `exists_nsmul_divisor_eq_divisor_mulByTwoEndo` and
+`exists_gS_two_of_isAlgClosed` from these, by supplying `card_torsion_two` and
+`exists_nsmul_two_eq`.  `Nonvacuity` instantiates the headline over `ℚ` on
+`y² = x³ + 5x² + 4x`, with both hypotheses proved.
+
+## References
+
+* [J. H. Silverman, *The Arithmetic of Elliptic Curves*][silverman2009], III.8.
+-/
+
+open Module IsLocalRing IsDedekindDomain IsDedekindDomain.HeightOneSpectrum
+
+namespace WeierstrassCurve.Affine
+
+/-! ### Positivity of the relative residue degree -/
+
+section Positivity
+
+variable {F : Type*} [Field F] {W : Affine F} [IsDedekindDomain W.CoordinateRing] [W.IsElliptic]
+  {φ : W.FunctionField →+* W.FunctionField}
+  (hφF : ∀ c : F, φ (algebraMap F W.FunctionField c) = algebraMap F W.FunctionField c)
+  (hφint : ∀ z : W.FunctionField, φ.IsIntegralElem z)
+
+include hφF hφint in
+/-- **The relative residue degree of `φ` is positive at every place**, over an arbitrary field.
+
+⚠️ This is a theorem and not a convention.  `residueDegreeComap` unfolds to a `Module.finrank`,
+which is `0` on an infinite-dimensional module, so nothing here is positive by definition; and it is
+the lemma that lets a count inside a fibre conclude anything from a term being zero.  The merged
+`[IsAlgClosed F]` route never needed it, because there every `f_p` is `1` outright
+(`residueDegreeProj_eq_one`); over an arbitrary field the `f_p` are unknown and only their
+positivity is available.
+
+**The proof does not touch ramification theory at all.**
+`residueDegreeProj_mul_residueDegreeComap` (`EllipticCurves.FunctionField.PlaceResidueComap`) is the
+*unconditional* tower formula `f^{proj}_{φ⁻¹p} · f_p = f^{proj}_p`, and `degProjPt_pos` says every
+closed point of the projective curve has positive degree; were `f_p` zero the product — hence
+`f^{proj}_p` — would be zero with it.
+
+⚠️ This replaces a route through Mathlib's `Ideal.inertiaDeg_pos` (via PR #437's
+`ideal_inertiaDeg_eq_residueDegreeComap` and a `LiesOver`/`Module.Finite`/`IsPrime` preamble), which
+carried `[Module.Finite ↥φ.fieldRange W.FunctionField]`,
+`[Algebra.IsSeparable ↥φ.fieldRange W.FunctionField]` and a fibre-membership hypothesis
+`comapProjPoint hφF hφint p = q`.  All three are gone; the one thing bought back is
+`[W.IsElliptic]`, which `degProjPt_eq_residueDegreeProj` needs and which every consumer in this
+tree already has.
+
+The transferable rule: **when you need positivity of one factor in a tower, the tower formula
+together with positivity of the total is usually shorter than the ramification-theoretic lemma for
+that factor — and it drops every hypothesis the ramification route needs.** -/
+theorem residueDegreeComap_pos (p : ProjPoint W) : 0 < residueDegreeComap hφF hφint p := by
+  have h := residueDegreeProj_mul_residueDegreeComap hφF hφint p
+  have hp : 0 < residueDegreeProj W p := by
+    rw [← degProjPt_eq_residueDegreeProj]; exact degProjPt_pos p
+  rcases Nat.eq_zero_or_pos (residueDegreeComap hφF hφint p) with h0 | h0
+  · rw [h0, Nat.mul_zero] at h; omega
+  · exact h0
+
+end Positivity
+
+variable {F : Type*} [Field F] {W : Affine F} [IsDedekindDomain W.CoordinateRing]
+  [DecidableEq F] [W.IsElliptic]
+
+namespace CoordinateRing
+
+/-! ### The Galois package at a rational `E[2]`
+
+`MulByTwoGalois` proves `Fixed(E[2]) = [2]∗F(W)` — hence separability — over `F̄`, and uses the
+closure only to know `|E[2]| = 4`.  These are the same four statements with that count taken as a
+hypothesis. -/
+
+omit [IsDedekindDomain W.CoordinateRing] [W.IsElliptic] in
+/-- **`|E[2]| = 4` in the multiplicative packaging**, from the count rather than from the closure.
+This is `card_torsionTwoMul` (`EllipticCurves.FunctionField.TranslationAction`) with `hcard` in
+place of `[IsAlgClosed F]`.
+
+⚠️ The `convert` is the whole `DecidableEq` bridge of this file: `TorsionTwoMul W` bakes in
+`Classical.propDecidable` while `hcard` is stated at the ambient binder, and the two are
+propositionally but not syntactically equal.  It is discharged by `Subsingleton.elim`. -/
+theorem card_torsionTwoMul_of_card (hcard : Nat.card (W.torsion 2) = 4) :
+    Nat.card (TorsionTwoMul W) = 4 :=
+  (Nat.card_congr Multiplicative.toAdd).trans (by convert hcard)
+
+omit [IsDedekindDomain W.CoordinateRing] [W.IsElliptic] in
+/-- `E[2]` is finite once it has four elements. -/
+theorem finite_torsionTwoMul_of_card (hcard : Nat.card (W.torsion 2) = 4) :
+    Finite (TorsionTwoMul W) :=
+  Nat.finite_of_card_ne_zero (by rw [card_torsionTwoMul_of_card hcard]; omega)
+
+omit [IsDedekindDomain W.CoordinateRing] in
+open Classical in
+/-- **Artin's theorem for the translation action**, at a rational `E[2]`: `[F(W) : Fixed(E[2])] =
+4`. `finrank_fixedFieldTwo` with `hcard` in place of `[IsAlgClosed F]`; the proof is unchanged. -/
+theorem finrank_fixedFieldTwo_of_card (hcard : Nat.card (W.torsion 2) = 4) :
+    finrank ↥(fixedFieldTwo W) W.FunctionField = 4 := by
+  haveI := finite_torsionTwoMul_of_card hcard
+  haveI : Fintype (TorsionTwoMul W) := Fintype.ofFinite _
+  have h : finrank ↥(FixedPoints.subfield (TorsionTwoMul W) W.FunctionField) W.FunctionField
+      = 4 := by
+    rw [FixedPoints.finrank_eq_card (TorsionTwoMul W) W.FunctionField, ← Nat.card_eq_fintype_card,
+      card_torsionTwoMul_of_card hcard]
+  exact h
+
+omit [IsDedekindDomain W.CoordinateRing] in
+open Classical in
+/-- **`Fixed(E[2]) = [2]∗F(W)` at a rational `E[2]`, with `(2 : F) ≠ 0`.**  The sandwich of
+`fixedFieldTwo_eq_mulByTwoFieldRange`: both outer degrees are `4`, the inner inclusion is `#758`'s,
+and `IntermediateField.eq_of_le_of_finrank_eq'` closes it.  `finrank_mulByTwoFieldRange` (`#682`)
+never needed a closure. -/
+theorem fixedFieldTwo_eq_mulByTwoFieldRange_of_card (h2 : (2 : F) ≠ 0)
+    (hcard : Nat.card (W.torsion 2) = 4) :
+    (mulByTwoEndoAlgHom (W := W) h2).fieldRange = fixedFieldTwo W := by
+  have hdeg : finrank ↥(mulByTwoEndoAlgHom (W := W) h2).fieldRange W.FunctionField = 4 :=
+    finrank_mulByTwoFieldRange h2
+  haveI : FiniteDimensional ↥(mulByTwoEndoAlgHom (W := W) h2).fieldRange W.FunctionField :=
+    Module.finite_of_finrank_pos (by rw [hdeg]; norm_num)
+  refine IntermediateField.eq_of_le_of_finrank_eq' ?_
+    (by rw [hdeg, finrank_fixedFieldTwo_of_card hcard])
+  rintro _ ⟨f, rfl⟩
+  exact mulByTwoEndo_mem_fixedPoints h2 f
+
+omit [IsDedekindDomain W.CoordinateRing] in
+open Classical in
+/-- **`F(W) / [2]∗F(W)` is separable at a rational `E[2]`, with `(2 : F) ≠ 0`**, in the
+`IntermediateField` presentation. -/
+theorem isSeparable_mulByTwoFieldRange_of_card (h2 : (2 : F) ≠ 0)
+    (hcard : Nat.card (W.torsion 2) = 4) :
+    Algebra.IsSeparable ↥(mulByTwoEndoAlgHom (W := W) h2).fieldRange W.FunctionField := by
+  haveI := finite_torsionTwoMul_of_card hcard
+  haveI : Algebra.IsSeparable ↥(fixedFieldTwo W) W.FunctionField := inferInstanceAs
+    (Algebra.IsSeparable ↥(FixedPoints.subfield (TorsionTwoMul W) W.FunctionField) W.FunctionField)
+  rw [fixedFieldTwo_eq_mulByTwoFieldRange_of_card h2 hcard]
+  infer_instance
+
+omit [IsDedekindDomain W.CoordinateRing] in
+open Classical in
+/-- **Separability in the `Subfield` presentation**, which is the one the fibre count consumes,
+at a rational `E[2]` and with `(2 : F) ≠ 0`.  Carried across `mulByTwoFieldRangeEquivSubfield`,
+the identity on elements. -/
+theorem isSeparable_mulByTwoEndoFieldRange_of_card (h2 : (2 : F) ≠ 0)
+    (hcard : Nat.card (W.torsion 2) = 4) :
+    Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField := by
+  haveI := isSeparable_mulByTwoFieldRange_of_card h2 hcard
+  exact Algebra.IsSeparable.of_equiv_equiv (mulByTwoFieldRangeEquivSubfield h2)
+    (RingEquiv.refl W.FunctionField) (by ext a; rfl)
+
+/-! ### The fibre over a rational point, without an algebraic closure -/
+
+omit [DecidableEq F] in
+/-- **`f_p > 0` for `[2]∗`, at every place of the projective curve** — the instantiation of
+`residueDegreeComap_pos`.
+
+⚠️ No separability, no module-finiteness and no fibre-membership hypothesis: this holds at *every*
+`p : ProjPoint W`, not only at the places lying over a named `q`. -/
+theorem residueDegreeTwo_pos (h2 : (2 : F) ≠ 0) (p : ProjPoint W) : 0 < residueDegreeTwo h2 p :=
+  residueDegreeComap_pos (mulByTwoEndo_algebraMap_base h2) (mulByTwoEndo_isIntegralElem h2) p
+
+omit [DecidableEq F] in
+/-- Every summand of the fundamental identity is at least `1`, which is what turns a sum of `4` into
+a bound on the number of places.  Both factors are positive: `e_p` by `ramificationIdxTwo_pos` and
+`f_p` by the previous lemma.
+
+⚠️ Like the two positivity lemmas it rests on, this is a statement about an *arbitrary* place: it
+needs neither separability nor membership of a fibre.  Only the identity `∑ e_p · f_p = 4` those
+summands are compared against does, which is why `hsep` survives on the next lemma and not here. -/
+theorem one_le_ramificationIdxTwo_mul_residueDegreeTwo (h2 : (2 : F) ≠ 0) (p : ProjPoint W) :
+    1 ≤ (ramificationIdxTwo h2 p).toNat * residueDegreeTwo h2 p := by
+  have he : 0 < (ramificationIdxTwo h2 p).toNat := by
+    have := ramificationIdxTwo_pos h2 p; omega
+  have hf := residueDegreeTwo_pos h2 p
+  exact Nat.one_le_iff_ne_zero.2 (Nat.mul_ne_zero (by omega) (by omega))
+
+omit [DecidableEq F] in
+/-- **At most four places lie above any place of `[2]∗F(W)`**, over an arbitrary field with
+`(2 : F) ≠ 0`.
+
+`card_fibre_comapProjPointTwo_le_four` (`PlaceRamificationInertia`) is this bound over `F̄`, where
+it comes from the collapsed `∑ e_p = 4`.  Here it comes from the uncollapsed `∑ e_p · f_p = 4`,
+whose summands are bounded below by `1` for the two independent reasons above. -/
+theorem card_fibre_comapProjPointTwo_le_four_of_isSeparable (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (q : ProjPoint W) :
+    (finite_comapProjPointTwo_preimage_singleton h2 q).toFinset.card ≤ 4 := by
+  rw [Finset.card_eq_sum_ones,
+    ← sum_ramificationIdxTwo_mul_residueDegreeTwo_of_isSeparable h2 hsep q]
+  exact Finset.sum_le_sum fun p _ => one_le_ramificationIdxTwo_mul_residueDegreeTwo h2 p
+
+/-- **The fibre of `[2]` over a rational point has exactly four elements**, over an arbitrary
+field with `(2 : F) ≠ 0`, at a rational `E[2]` and a halving `P`.
+
+`≤ 4` is the previous lemma; `≥ 4` is the coset `{ P ⊕ R : R ∈ E[2] }`, four distinct elements of
+the fibre by `hcard` and `projPointOfPoint_add_injective_two`.
+
+This is `card_fibre_comapProjPointTwo_projPointOfPoint` (`MulByTwoFibreAffine`) with `hcard` and
+`hP` replacing `card_torsion_two` and `exists_nsmul_two_eq`. -/
+theorem card_fibre_comapProjPointTwo_projPointOfPoint_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    (finite_comapProjPointTwo_preimage_singleton h2 (projPointOfPoint W S)).toFinset.card = 4 := by
+  classical
+  haveI := W.finite_torsion_two (F := F) h2
+  haveI := Fintype.ofFinite (W.torsion 2)
+  refine le_antisymm (card_fibre_comapProjPointTwo_le_four_of_isSeparable h2 hsep _) ?_
+  have hc : Fintype.card (W.torsion 2) = 4 := by rw [← Nat.card_eq_fintype_card, hcard]
+  rw [← hc, ← Finset.card_univ]
+  exact Finset.card_le_card_of_injOn (fun R => projPointOfPoint W (P + R))
+    (fun R _ => (Set.Finite.mem_toFinset _).2 (comapProjPointTwo_add_torsion_two h2 hP R))
+    (Set.injOn_of_injective (projPointOfPoint_add_injective_two P))
+
+/-- **The fibre of `[2]` over a rational point *is* the coset `{ P ⊕ R : R ∈ E[2] }`**, over an
+arbitrary field with `(2 : F) ≠ 0`, at a rational `E[2]` and a halving `P`.  Four distinct elements
+inside a four-element set; no further geometry, exactly as in
+`fibre_comapProjPointTwo_eq_range`. -/
+theorem fibre_comapProjPointTwo_eq_range_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    comapProjPointTwo h2 ⁻¹' {projPointOfPoint W S}
+      = Set.range fun R : W.torsion 2 => projPointOfPoint W (P + R) := by
+  classical
+  haveI := W.finite_torsion_two h2
+  haveI := Fintype.ofFinite (W.torsion 2)
+  have hfin := finite_comapProjPointTwo_preimage_singleton h2 (projPointOfPoint W S)
+  have hsub : (Set.range fun R : W.torsion 2 => projPointOfPoint W (P + R))
+      ⊆ comapProjPointTwo h2 ⁻¹' {projPointOfPoint W S} := by
+    rintro p ⟨R, rfl⟩
+    exact comapProjPointTwo_add_torsion_two h2 hP R
+  refine (Set.eq_of_subset_of_ncard_le hsub ?_ hfin).symm
+  have h1 : (comapProjPointTwo h2 ⁻¹' {projPointOfPoint W S}).ncard = 4 := by
+    rw [Set.ncard_eq_toFinset_card _ hfin]
+    exact card_fibre_comapProjPointTwo_projPointOfPoint_of_card h2 hsep hcard hP
+  have h2' : (Set.range fun R : W.torsion 2 => projPointOfPoint W (P + R)).ncard = 4 := by
+    rw [← Nat.card_coe_set_eq, Nat.card_range_of_injective (projPointOfPoint_add_injective_two P),
+      hcard]
+  omega
+
+/-- **`[2]` is unramified over a rational point**, over an arbitrary field with `(2 : F) ≠ 0`, at
+a rational `E[2]` and a halving `P`.
+
+Four terms of the fibre sum are already `≥ 1` each and the sum is `4`, so the term at `p` is `1`;
+being a product of two positive naturals it forces `e_p = 1`.
+
+⚠️ Compare `ramificationIdxTwo_eq_one_of_comapProjPointTwo_eq_projPointOfPoint`, which reads the
+same conclusion off the *collapsed* identity and is `F̄`-only for that reason.  The extra hypotheses
+here are exactly the two rationality facts; `hsep` is not a third, see the module docstring. -/
+theorem ramificationIdxTwo_eq_one_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {p : ProjPoint W} {S P : W.Point} (hP : 2 • P = S)
+    (hp : comapProjPointTwo h2 p = projPointOfPoint W S) :
+    ramificationIdxTwo h2 p = 1 := by
+  classical
+  have hfin := finite_comapProjPointTwo_preimage_singleton h2 (projPointOfPoint W S)
+  set s := hfin.toFinset with hs
+  have hmem : p ∈ s := (Set.Finite.mem_toFinset hfin).2 hp
+  have hcards : s.card = 4 :=
+    card_fibre_comapProjPointTwo_projPointOfPoint_of_card h2 hsep hcard hP
+  have hsum : ∑ r ∈ s, (ramificationIdxTwo h2 r).toNat * residueDegreeTwo h2 r = 4 :=
+    sum_ramificationIdxTwo_mul_residueDegreeTwo_of_isSeparable h2 hsep _
+  have hsplit : (ramificationIdxTwo h2 p).toNat * residueDegreeTwo h2 p
+      + ∑ r ∈ s.erase p, (ramificationIdxTwo h2 r).toNat * residueDegreeTwo h2 r = 4 := by
+    rw [Finset.add_sum_erase _
+      (fun r => (ramificationIdxTwo h2 r).toNat * residueDegreeTwo h2 r) hmem]
+    exact hsum
+  have hlow : (s.erase p).card
+      ≤ ∑ r ∈ s.erase p, (ramificationIdxTwo h2 r).toNat * residueDegreeTwo h2 r := by
+    simpa using Finset.card_nsmul_le_sum (s.erase p)
+      (fun r => (ramificationIdxTwo h2 r).toNat * residueDegreeTwo h2 r) 1
+      (fun r _ => one_le_ramificationIdxTwo_mul_residueDegreeTwo h2 r)
+  have hec : (s.erase p).card = 3 := by rw [Finset.card_erase_of_mem hmem, hcards]
+  have hprod : 1 ≤ (ramificationIdxTwo h2 p).toNat * residueDegreeTwo h2 p :=
+    one_le_ramificationIdxTwo_mul_residueDegreeTwo h2 p
+  set k := (ramificationIdxTwo h2 p).toNat * residueDegreeTwo h2 p with hk
+  have hone : k = 1 := by omega
+  have hE : (ramificationIdxTwo h2 p).toNat = 1 :=
+    Nat.eq_one_of_mul_eq_one_right (hk.symm.trans hone)
+  have hepos := ramificationIdxTwo_pos h2 p
+  omega
+
+/-! ### The fibre description of `[2]∗` -/
+
+/-- **`[2]∗(S) = ∑_{p ↦ S} (p)`, every coefficient `1`**, over an arbitrary field with
+`(2 : F) ≠ 0`, at a rational `E[2]` and a halving `P`: the previous lemma read into the definition
+of `pullbackDivisorTwo`. -/
+theorem pullbackDivisorTwo_single_projPointOfPoint_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    pullbackDivisorTwo h2 (Finsupp.single (projPointOfPoint W S) (1 : ℤ))
+      = ∑ p ∈ (finite_comapProjPointTwo_preimage_singleton h2
+          (projPointOfPoint W S)).toFinset, Finsupp.single p (1 : ℤ) := by
+  classical
+  ext q
+  have hrhs : (∑ p ∈ (finite_comapProjPointTwo_preimage_singleton h2
+        (projPointOfPoint W S)).toFinset, Finsupp.single p (1 : ℤ)) q
+      = if comapProjPointTwo h2 q = projPointOfPoint W S then 1 else 0 := by
+    rw [Finset.sum_apply', Finset.sum_congr rfl fun p _ => Finsupp.single_apply,
+      Finset.sum_ite_eq' _ q fun _ => (1 : ℤ)]
+    simp only [Set.Finite.mem_toFinset, Set.mem_preimage, Set.mem_singleton_iff]
+  rw [pullbackDivisorTwo_apply, hrhs]
+  by_cases hq : comapProjPointTwo h2 q = projPointOfPoint W S
+  · rw [hq, Finsupp.single_eq_same, mul_one,
+      ramificationIdxTwo_eq_one_of_card h2 hsep hcard hP hq, if_pos rfl]
+  · rw [Finsupp.single_apply, if_neg fun hc => hq hc.symm, mul_zero, if_neg hq]
+
+/-- **`[2]∗(S) = ∑_{R ∈ E[2]} (P ⊕ R)`** for any `P` with `2 • P = S`, over an arbitrary field
+with `(2 : F) ≠ 0` and at a rational `E[2]`.  `#774`'s formula in the shape `#418` consumes it,
+with the closure removed.
+
+The `[Fintype (W.torsion 2)]` is carried in the statement for the reason `#763` gives: the sum
+cannot be written without it, and `Fintype.ofFinite` in a statement is a noncomputable leak. -/
+theorem pullbackDivisorTwo_single_eq_sum_torsion_of_card [Fintype (W.torsion 2)]
+    (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    pullbackDivisorTwo h2 (Finsupp.single (projPointOfPoint W S) (1 : ℤ))
+      = ∑ R : W.torsion 2, Finsupp.single (projPointOfPoint W (P + R)) (1 : ℤ) := by
+  classical
+  ext q
+  rw [pullbackDivisorTwo_apply, Finset.sum_apply',
+    Finset.sum_congr rfl fun R _ => Finsupp.single_apply]
+  by_cases hq : comapProjPointTwo h2 q = projPointOfPoint W S
+  · obtain ⟨R₀, hR₀⟩ : q ∈ Set.range fun R : W.torsion 2 => projPointOfPoint W (P + R) := by
+      rw [← fibre_comapProjPointTwo_eq_range_of_card h2 hsep hcard hP]; exact hq
+    rw [hq, Finsupp.single_eq_same, mul_one,
+      ramificationIdxTwo_eq_one_of_card h2 hsep hcard hP hq,
+      Finset.sum_eq_single R₀ (fun R _ hRne => if_neg fun hc =>
+        hRne (projPointOfPoint_add_injective_two P (hc.trans hR₀.symm)))
+      (fun hc => absurd (Finset.mem_univ R₀) hc), if_pos hR₀]
+  · rw [Finsupp.single_apply, if_neg fun hc => hq hc.symm, mul_zero, Finset.sum_eq_zero]
+    intro R _
+    refine if_neg fun hc => hq ?_
+    rw [← hc]
+    exact comapProjPointTwo_add_torsion_two h2 hP R
+
+end CoordinateRing
+
+/-! ### Principality of `[2]∗((S) − (O))` -/
+
+open CoordinateRing
+
+/-- **`[2]∗((S) − (O)) = ∑_{R ∈ E[2]} ((P ⊕ R) − (R))`**, over an arbitrary field with
+`(2 : F) ≠ 0`, at a rational `E[2]` and a halving `P`.  The `(O)` half is the same theorem at
+`S = O` with `P = O`, since `projPointOfPoint W 0` is `none` by `rfl`. -/
+theorem pullbackDivisorTwo_single_sub_single_eq_sum_torsion_of_card [Fintype (W.torsion 2)]
+    (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    pullbackDivisorTwo h2 (Finsupp.single (projPointOfPoint W S) (1 : ℤ)
+        - Finsupp.single (none : ProjPoint W) (1 : ℤ))
+      = ∑ R : W.torsion 2, (Finsupp.single (projPointOfPoint W (P + R)) (1 : ℤ)
+          - Finsupp.single (projPointOfPoint W (R : W.Point)) (1 : ℤ)) := by
+  have hO : (none : ProjPoint W) = projPointOfPoint W 0 := rfl
+  rw [map_sub, pullbackDivisorTwo_single_eq_sum_torsion_of_card h2 hsep hcard hP, hO,
+    pullbackDivisorTwo_single_eq_sum_torsion_of_card h2 hsep hcard (smul_zero 2),
+    ← Finset.sum_sub_distrib]
+  exact Finset.sum_congr rfl fun R _ => by rw [zero_add]
+
+/-- The same formula on the affine chart, where `hprin` lives,
+over an arbitrary field with `(2 : F) ≠ 0`, at a rational `E[2]` and a halving `P`; each `(O)`
+drops out. -/
+theorem affinePart_pullbackDivisorTwo_single_sub_single_of_card [Fintype (W.torsion 2)]
+    (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) :
+    affinePart W (pullbackDivisorTwo h2 (Finsupp.single (projPointOfPoint W S) (1 : ℤ)
+        - Finsupp.single (none : ProjPoint W) (1 : ℤ)))
+      = ∑ R : W.torsion 2, (pointDivisorAff W (P + R) - pointDivisorAff W (R : W.Point)) := by
+  rw [pullbackDivisorTwo_single_sub_single_eq_sum_torsion_of_card h2 hsep hcard hP, map_sum]
+  exact Finset.sum_congr rfl fun R _ => map_sub _ _ _
+
+/-- **The class-group computation**, over an arbitrary field with `(2 : F) ≠ 0`, at a rational
+`E[2]`, a halving `P` and a `2`-torsion `S`:
+
+```
+∑_R toClass (P ⊕ R) − ∑_R toClass R = 4 • toClass P = toClass (4 • P) = toClass (2 • S) = 0.
+```
+
+The count of summands is `hcard` here rather than `card_torsion_two`; nothing else changes, and in
+particular no step divides a divisor by `2`. -/
+theorem classOfDivisor_affinePart_pullbackDivisorTwo_eq_one_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) (hS : 2 • S = 0) :
+    classOfDivisor W.FunctionField (affinePart W (pullbackDivisorTwo h2
+        (Finsupp.single (projPointOfPoint W S) (1 : ℤ)
+          - Finsupp.single (none : ProjPoint W) (1 : ℤ)))) = 1 := by
+  classical
+  haveI := W.finite_torsion_two h2
+  haveI : Fintype (W.torsion 2) := Fintype.ofFinite _
+  have hP4 : (4 : ℕ) • P = 0 := by
+    rw [show (4 : ℕ) = 2 * 2 from rfl, mul_smul, hP, hS]
+  have hterm : ∀ R ∈ (Finset.univ : Finset (W.torsion 2)),
+      classOfDivisor W.FunctionField (pointDivisorAff W (P + R) - pointDivisorAff W (R : W.Point))
+        = Additive.toMul (Point.toClass P) := by
+    intro R _
+    rw [classOfDivisor_sub, classOfDivisor_pointDivisorAff, classOfDivisor_pointDivisorAff,
+      map_add, toMul_add, mul_div_cancel_right]
+  have hc : Fintype.card (W.torsion 2) = 4 := by
+    rw [← Nat.card_eq_fintype_card, hcard]
+  rw [affinePart_pullbackDivisorTwo_single_sub_single_of_card h2 hsep hcard hP, classOfDivisor_sum,
+    Finset.prod_congr rfl hterm, Finset.prod_const, Finset.card_univ, hc, ← toMul_nsmul,
+    ← map_nsmul, hP4, Point.toClass_zero]
+  rfl
+
+/-- **`[2]∗((S) − (O))` is principal on the affine chart**, over an arbitrary field with
+`(2 : F) ≠ 0`, at a rational `E[2]`, a halving `P` and a `2`-torsion `S`: the vanishing class above
+turned back into a generator by `#726`'s criterion, which never needed a closure. -/
+theorem exists_divisor_eq_affinePart_pullbackDivisorTwo_of_card (h2 : (2 : F) ≠ 0)
+    (hsep : Algebra.IsSeparable ↥(mulByTwoEndo (W := W) h2).fieldRange W.FunctionField)
+    (hcard : Nat.card (W.torsion 2) = 4) {S P : W.Point} (hP : 2 • P = S) (hS : 2 • S = 0) :
+    ∃ g : W.FunctionField, g ≠ 0 ∧ divisor W g = affinePart W (pullbackDivisorTwo h2
+      (Finsupp.single (projPointOfPoint W S) (1 : ℤ)
+        - Finsupp.single (none : ProjPoint W) (1 : ℤ))) :=
+  (exists_divisor_eq_iff_classOfDivisor_eq_one _).2
+    (classOfDivisor_affinePart_pullbackDivisorTwo_eq_one_of_card h2 hsep hcard hP hS)
+
+/-- **`hprin` at `n = 2` over an arbitrary field with `(2 : F) ≠ 0`**, in the shape
+`exists_gS_two` consumes it: for a nonsingular `2`-torsion point `S` on a curve whose `2`-torsion
+is rational and which has a halving point `P` with `[2]P = S`, the pullback `[2]∗((S) − (O))` is
+twice a principal divisor.
+
+⚠️ `hsep` is discharged internally from `hcard`; what is left is `h2`, `hcard`, `hP`, the
+nonsingularity and `2`-torsion of `S`, and a nonzero `f` whose divisor is `2·(S)`.  ⚠️ This is
+**not** `#962` — see the module docstring for what still stands between this and `hprin` over a
+field where those two facts fail.
+
+⚠️ **That clause used to read** *"the hypotheses are `hcard` and `hP` and nothing else about
+`F`"* (`dcc912e`, `#1339`, PR #508).  It closes its list and `h2 : (2 : F) ≠ 0` is a hypothesis
+about `F`, so it was false rather than partial; PR #684 (`#1664`) completed the headline above from
+exactly that reading — a headline whose reach clause is contradicted lower in its own docstring —
+and left this clause standing, which is why the docstring said two things about one signature
+until `#1719`. -/
+theorem exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card (h2 : (2 : F) ≠ 0)
+    (hcard : Nat.card (W.torsion 2) = 4) {x y : F}
+    (h : W.Nonsingular x y) (hS : Point.some x y h ∈ W.torsion 2)
+    {P : W.Point} (hP : 2 • P = Point.some x y h)
+    {f : W.FunctionField} (hf : f ≠ 0)
+    (hfdiv : divisor W f = Finsupp.single (pointClosedPoint h.left) (2 : ℤ)) :
+    ∃ g₀ : W.FunctionField, g₀ ≠ 0 ∧ 2 • divisor W g₀ = divisor W (mulByTwoEndo h2 f) := by
+  classical
+  have hsep := isSeparable_mulByTwoEndoFieldRange_of_card h2 hcard
+  obtain ⟨g, hg, hgdiv⟩ :=
+    exists_divisor_eq_affinePart_pullbackDivisorTwo_of_card h2 hsep hcard hP
+      (mem_torsion_iff.mp hS)
+  refine ⟨g, hg, ?_⟩
+  obtain ⟨f₀, hf₀, hproj₀⟩ := divisorProj_eq_single_sub_single_of_torsion h hS
+  have hd₀ : divisor W f₀ = Finsupp.single (pointClosedPoint h.left) (2 : ℤ) := by
+    ext v
+    have hv := congrArg (fun D => D (some v)) hproj₀
+    simpa [Finsupp.single_apply] using hv
+  have hfe : divisor W f = divisor W f₀ := hfdiv.trans hd₀.symm
+  have hprojf : divisorProj W f = divisorProj W f₀ :=
+    divisorProj_eq_iff.2 ⟨hfe, ordInfty_eq_of_divisor_eq hf hf₀ hfe⟩
+  have hkey : divisorProj W (mulByTwoEndo h2 f)
+      = (2 : ℤ) • pullbackDivisorTwo h2
+          (Finsupp.single (projPointOfPoint W (Point.some x y h)) (1 : ℤ)
+            - Finsupp.single (none : ProjPoint W) (1 : ℤ)) := by
+    rw [divisorProj_mulByTwoEndo h2 hf, hprojf, hproj₀, ← pullbackDivisorTwo_zsmul]
+    congr 1
+    rw [smul_sub, Finsupp.smul_single, Finsupp.smul_single, smul_eq_mul, mul_one,
+      projPointOfPoint_some]
+    norm_num
+  have hdiv2 : divisor W (mulByTwoEndo h2 f) = (2 : ℤ) • affinePart W (pullbackDivisorTwo h2
+      (Finsupp.single (projPointOfPoint W (Point.some x y h)) (1 : ℤ)
+        - Finsupp.single (none : ProjPoint W) (1 : ℤ))) := by
+    rw [← affinePart_divisorProj, hkey, map_zsmul]
+  rw [hdiv2, hgdiv, two_nsmul, two_zsmul]
+
+/-- **Rung 5 of the Weil pairing at `n = 2`, over an arbitrary field with `(2 : F) ≠ 0`**, at a
+nonsingular `2`-torsion point `S`, a rational `E[2]` and a halving `P`.
+`exists_gS_two` with its `hprin` discharged from `hcard` and `hP`: there are a principal `f_S` with
+`div f_S = 2·(S)` and a nonzero `g_S` with `u · g_S ^ 2 = [2]∗ f_S` for a unit `u` of `F[W]`.
+
+`exists_gS_two_of_isAlgClosed` (`PullbackPrincipalityTwo`) is this statement over `F̄`, where both
+hypotheses are theorems; the `Recovery` section below derives it from this one. -/
+theorem exists_gS_two_of_card (h2 : (2 : F) ≠ 0) (hcard : Nat.card (W.torsion 2) = 4) {x y : F}
+    (h : W.Nonsingular x y) (hS : Point.some x y h ∈ W.torsion 2)
+    {P : W.Point} (hP : 2 • P = Point.some x y h) :
+    ∃ f : W.FunctionField, f ≠ 0 ∧
+      divisor W f = Finsupp.single (pointClosedPoint h.left) (2 : ℤ) ∧
+      ∃ gS : W.FunctionField, gS ≠ 0 ∧
+        ∃ u : W.CoordinateRingˣ, (u : W.CoordinateRing) • gS ^ 2 = mulByTwoEndo h2 f :=
+  exists_gS_two h2 h hS fun _ hf hfdiv =>
+    exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card h2 hcard h hS hP hf hfdiv
+
+/-! ### Recovery of the merged algebraically closed statements
+
+`#907`'s rule.  Over `F̄` both hypotheses are theorems — `card_torsion_two` and
+`exists_nsmul_two_eq` — so the merged headlines come straight back out.  Both are `private`: a
+public copy would duplicate a merged name. -/
+
+section Recovery
+
+variable [IsAlgClosed F]
+
+/-- `exists_nsmul_divisor_eq_divisor_mulByTwoEndo`
+(`EllipticCurves.FunctionField.PullbackPrincipalityTwo`), recovered. -/
+private theorem exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_general (h2 : (2 : F) ≠ 0)
+    {x y : F} (h : W.Nonsingular x y) (hS : Point.some x y h ∈ W.torsion 2)
+    {f : W.FunctionField} (hf : f ≠ 0)
+    (hfdiv : divisor W f = Finsupp.single (pointClosedPoint h.left) (2 : ℤ)) :
+    ∃ g₀ : W.FunctionField, g₀ ≠ 0 ∧ 2 • divisor W g₀ = divisor W (mulByTwoEndo h2 f) :=
+  let ⟨_, hP⟩ := exists_nsmul_two_eq (Point.some x y h)
+  exists_nsmul_divisor_eq_divisor_mulByTwoEndo_of_card h2 (card_torsion_two h2) h hS hP hf hfdiv
+
+/-- `exists_gS_two_of_isAlgClosed`
+(`EllipticCurves.FunctionField.PullbackPrincipalityTwo`), recovered. -/
+private theorem exists_gS_two_of_isAlgClosed_of_general (h2 : (2 : F) ≠ 0) {x y : F}
+    (h : W.Nonsingular x y) (hS : Point.some x y h ∈ W.torsion 2) :
+    ∃ f : W.FunctionField, f ≠ 0 ∧
+      divisor W f = Finsupp.single (pointClosedPoint h.left) (2 : ℤ) ∧
+      ∃ gS : W.FunctionField, gS ≠ 0 ∧
+        ∃ u : W.CoordinateRingˣ, (u : W.CoordinateRing) • gS ^ 2 = mulByTwoEndo h2 f :=
+  let ⟨_, hP⟩ := exists_nsmul_two_eq (Point.some x y h)
+  exists_gS_two_of_card h2 (card_torsion_two h2) h hS hP
+
+end Recovery
+
+/-! ### Non-vacuity over `ℚ`
+
+⚠️ **The certificate has to be over a field that is not algebraically closed**, or it certifies the
+merged `exists_gS_two_of_isAlgClosed` instead of anything here (`#916`).  Both hypotheses are
+proved, so `exampleRungFive` below has **no hypothesis at all**: it is rung 5 of the Weil pairing at
+`n = 2`, on a named curve, over `ℚ`.
+
+⚠️ **The curve is forced and the arithmetic is the content.**  It must have `E[2] ⊆ E(ℚ)` *and* a
+rational halving of a `2`-torsion point — i.e. rational `4`-torsion above rational full `2`-torsion.
+`y² = x³ + 5x² + 4x = x(x+1)(x+4)` has both, and **each of the two facts is one identity between
+explicit polynomials**:
+
+* `Ψ₂Sq = 4X³ + 20X² + 16X = 4 · X · (X + 1) · (X + 4)` splits over `ℚ`, so
+  `card_torsion_two_of_splits` (`EllipticCurves.Torsion.TwoTorsion`) gives `hcard`, and
+  `E[2] = {O, (0,0), (−1,0), (−4,0)}`;
+* `Φ₂ = X⁴ − b₄X² − 2b₆X − b₈ = X⁴ − 8X² + 16 = (X² − 4)²` vanishes at `x = 2`, while `x(T) = 0`
+  makes the right-hand side `0 · Ψ₂Sq.eval 2` on the nose; the point `(2, 6)` sits above that root
+  (`36 = 8 + 20 + 8`).  So `exists_nsmul_eq_some_of_root_of_mem_torsion_two`
+  (`EllipticCurves.Torsion.DoublingSurjective`) gives `hP`, with its diagonal guard attached.
+
+⚠️ **Why this route rather than exhibiting the four points and doubling `(2, 6)` by hand.**  Both
+facts are true of `E(ℚ)` and both were once proved that way here — the lower bound by an injection
+`Fin 4 → E[2]` and a sixteen-way `fin_cases`, the halving by unfolding
+`addX`/`addY`/`negAddY`/`negY`/`slope`.  The route above is not merely shorter.  A `Splits` witness
+and a root of `Φ₂ − x₀·Ψ₂Sq` are statements about **two explicit polynomials over the base field**,
+so they are exactly the data that survives base change to a splitting field, which is the form
+`#962`'s descent will need; an injection out of `Fin 4` and an application of the affine addition
+formula are statements about `E(ℚ)` and transport to nothing.
+
+⚠️ **The halving is now anonymous, and that is what forced the diagonal guard this block never
+had.**  The root produces *some* `P` above it, not the named `(2, 6)`, so `P ≠ T` can no longer be
+read off coordinates — and it never was here, since nothing in this block ever stated it.
+`exampleExistsHalving` carries it as a second conjunct, and it is not proved here at all: it is
+`ne_of_nsmul_two_eq` (`EllipticCurves.Torsion.DoublingSurjective`), which derives `P ≠ T` from
+`2 • T = 0` and `T ≠ 0` for **every** halving of a `2`-torsion point on **every** curve.
+
+The recipe that finds such a curve, rather than the anecdote that this one works: for
+`y² = x(x − e₂)(x − e₃)` over `ℚ`, the `2`-torsion point `(e₁, 0)` is `2`-divisible exactly when
+`e₁ − e₂` and `e₁ − e₃` are **both rational squares**, and then `x(P) = e₁ + √((e₁−e₂)(e₁−e₃))`.
+Here `(e₁, e₂, e₃) = (0, −1, −4)` gives `1` and `4`, and the halving sits at `x = 0 + 2 = 2`.
+⚠️ That lets the next author *test* a candidate curve in one line instead of discovering the failure
+at the last lemma — which is what has happened every time the default curve was tried.
+
+⚠️ **`y² = x³ − x` — this subtree's default curve — does not work here**, and the reason is the one
+that has now defeated four separate pieces of work on this board.  It *does* have full rational
+`2`-torsion, but `E(ℚ) = (ℤ/2)²`, so no rational point halves anything; the same fact appeared as
+*"no two distinct multiples"* (`#1325`), *"no point of order `3`"* (`#1328`), *"no point of order
+`4`"* (PR #504, recorded in `WeilPairingAlternatingAssemblyN`'s `ℚ` block), and *"no rational
+halving"* here.  Change curve rather than weakening the certificate.
+
+⚠️ No `open Classical in` anywhere in this block, and it is not an oversight: `ℚ` carries
+`instDecidableEqRat`, which wins on instance priority whatever is open, so writing it would be a
+no-op.  Every statement above takes `[DecidableEq F]` as a binder, so the whole block elaborates at
+that one instance and costs no `convert`. -/
+
+section Nonvacuity
+
+/-! The certificate curve `y² = x³ + 5x² + 4x` is the shared
+`EllipticCurves.Fixture.y2EqX3Add5X2Add4X`, whose single `[CharZero F]` instance also supplies
+`IsElliptic` here. -/
+
+open EllipticCurves.Fixture
+
+private lemma exampleTwo : (2 : ℚ) ≠ 0 := by norm_num
+
+/-- `T = (0, 0)`, the `2`-torsion point cut out by `x = 0`. -/
+private lemma exampleNsT : (y2EqX3Add5X2Add4X ℚ).Nonsingular 0 0 :=
+  (y2EqX3Add5X2Add4X ℚ).equation_iff_nonsingular.mp (by
+    norm_num [y2EqX3Add5X2Add4X, WeierstrassCurve.Affine.equation_iff])
+
+/-- `(2, 6)`, the point of `E(ℚ)` sitting above the root `x = 2` of `Φ₂ − x(T)·Ψ₂Sq`:
+`36 = 8 + 20 + 8`.  ⚠️ It is no longer named in any statement — it enters only as the `Equation`
+witness `exampleNsP.left`, the **third** argument of
+`exists_nsmul_eq_some_of_root_of_mem_torsion_two`, which is what takes it above the root. -/
+private lemma exampleNsP : (y2EqX3Add5X2Add4X ℚ).Nonsingular 2 6 :=
+  (y2EqX3Add5X2Add4X ℚ).equation_iff_nonsingular.mp (by
+    norm_num [y2EqX3Add5X2Add4X, WeierstrassCurve.Affine.equation_iff])
+
+private lemma exampleTorT : Point.some (0 : ℚ) 0 exampleNsT ∈ (y2EqX3Add5X2Add4X ℚ).torsion 2 :=
+  (mem_torsion_two_some_iff exampleNsT).mpr (by norm_num [y2EqX3Add5X2Add4X])
+
+open Polynomial in
+/-- The `2`-torsion cubic of the example curve, factored: `4X³ + 20X² + 16X = 4·X·(X+1)·(X+4)`.
+
+⚠️ `norm_num only` has to run **before** the `simp only`: the coefficients arrive as
+`C (0 ^ 2 + 4 * 5)`, and `map_ofNat` cannot fire until its argument is a literal.  One combined
+`simp only` silently leaves `C 16`/`C 20` behind and `ring` then fails. -/
+private lemma Ψ₂Sq_exampleCurve :
+    (y2EqX3Add5X2Add4X ℚ).Ψ₂Sq = C 4 * X * (X + C 1) * (X + C 4) := by
+  simp only [WeierstrassCurve.Ψ₂Sq, WeierstrassCurve.b₂, WeierstrassCurve.b₄,
+    WeierstrassCurve.b₆, y2EqX3Add5X2Add4X]
+  norm_num only
+  simp only [map_ofNat, map_one, Polynomial.C_0]
+  ring
+
+open Polynomial in
+/-- **The splitting hypothesis, discharged over `ℚ`**: a constant times three monic linear factors.
+
+⚠️ Closed by the explicit term rather than by `simp`, even though `Splits.C`, `Splits.X`,
+`Splits.mul` and `Splits.X_add_C` are all `@[simp]`.  `simp` normalises `X + C 1` to `X + 1` first
+and can then no longer match `Splits.X_add_C`, leaving the goal open. -/
+private lemma splits_Ψ₂Sq_exampleCurve : (y2EqX3Add5X2Add4X ℚ).Ψ₂Sq.Splits := by
+  rw [Ψ₂Sq_exampleCurve]
+  exact (((Splits.C 4).mul Splits.X).mul (Splits.X_add_C 1)).mul (Splits.X_add_C 4)
+
+/-- **`#E[2] = 4` over `ℚ` for this curve**, which is `hcard`.  The whole content is the
+factorisation of one cubic: `card_torsion_two_of_splits` (`EllipticCurves.Torsion.TwoTorsion`) buys
+from `Ψ₂Sq.Splits` exactly the lower bound that an algebraic closure buys in `card_torsion_two`.
+
+⚠️ `Splits` alone would not be enough: `4(X − r)³` splits too, and the three roots are **distinct**
+only because `Cubic.discr ≠ 0`, i.e. because of `[(y2EqX3Add5X2Add4X ℚ).IsElliptic]`, which
+`card_roots_Ψ₂Sq_of_splits` binds and applies inside that lemma.
+
+⚠️ The statement is unchanged from the enumeration route it replaces — `card_torsion_two_le` for
+`≤ 4` together with an explicit injection `Fin 4 → E[2]` for `≥ 4`, which cost three more
+`Nonsingular` obligations, three more `mem_torsion` obligations and a sixteen-way `fin_cases`.
+Only the proof moved. -/
+private lemma exampleCard : Nat.card ((y2EqX3Add5X2Add4X ℚ).torsion 2) = 4 :=
+  card_torsion_two_of_splits exampleTwo splits_Ψ₂Sq_exampleCurve
+
+/-- **The root that does the work**: `Φ₂(2) = 0 = x(T) · Ψ₂Sq(2)`, since `Φ₂ = (X² − 4)²` here.
+
+⚠️ Routed through `Φ_two_eval` — `Φ₂(x) = x · Ψ₂Sq(x) − Ψ₃(x)`, giving `2 · 144 − 288 = 0` — rather
+than by unfolding `(y2EqX3Add5X2Add4X ℚ).Φ 2`, whose definition is a recursion. -/
+private lemma eval_Φ_two_exampleCurve :
+    ((y2EqX3Add5X2Add4X ℚ).Φ 2).eval 2 = (0 : ℚ) * (y2EqX3Add5X2Add4X ℚ).Ψ₂Sq.eval 2 := by
+  rw [Φ_two_eval]
+  simp only [WeierstrassCurve.Ψ₂Sq, WeierstrassCurve.Ψ₃, WeierstrassCurve.b₂, WeierstrassCurve.b₄,
+    WeierstrassCurve.b₆, WeierstrassCurve.b₈, y2EqX3Add5X2Add4X]
+  norm_num
+
+/-- **`T = (0, 0)` is twice a rational point, and that point is not `T`** — the `hP` of
+`exists_gS_two_of_card`, derived from `eval_Φ_two_exampleCurve` rather than exhibited.
+
+⚠️ The `≠ T` guard lives **inside** the existential deliberately.  As a standalone lemma beside an
+`∃ P, 2 • P = T` it would be applied nowhere and the build could not see it go stale; here the `P`
+the certificate is instantiated at is bound from a witness satisfying **both** conjuncts, so
+off-diagonality is carried by construction even though `exampleRungFive` binds the second component
+to `_`.  ⚠️ That second component must not be "cleaned up" as unused.
+
+⚠️ **Both conjuncts come from one general theorem** at `n = 2` —
+`exists_nsmul_eq_some_of_root_of_mem_torsion_two`, in
+`EllipticCurves.Torsion.DoublingSurjective` — rather than from a halving lemma plus a guard lemma
+restated in this file.  `[2]P = T` with `T ∈ E[2]` in fact gives `[n]P = T` at every `n ≡ 2 (mod 4)`
+there; `2 % 4 = 2` is what selects this index, and `by norm_num` is what discharges it. -/
+private lemma exampleExistsHalving :
+    ∃ P : (y2EqX3Add5X2Add4X ℚ).Point,
+      (2 : ℕ) • P = Point.some (0 : ℚ) 0 exampleNsT ∧ P ≠ Point.some (0 : ℚ) 0 exampleNsT :=
+  exists_nsmul_eq_some_of_root_of_mem_torsion_two exampleNsT exampleTorT exampleNsP.left
+    eval_Φ_two_exampleCurve (by norm_num)
+
+/-- **Rung 5 of the Weil pairing at `n = 2` over `ℚ`, with no hypothesis whatsoever.**
+
+⚠️ Compare the merged `exists_gS_two`, which carries `hprin` (`#418`), and
+`exists_gS_two_of_isAlgClosed`, which discharges it only over `F̄`.  This statement is over `ℚ`, and
+its hypothesis list is empty: `hcard` is `exampleCard` and the halving is `exampleExistsHalving`,
+both proved, and both now from a polynomial identity rather than from an enumeration of points.  It
+is the first `hprin` certificate on this board over a field that is not algebraically closed.
+
+⚠️ It is **not** evidence for `#962`, which asks for the same conclusion on a curve whose
+`2`-torsion is *not* rational.  What it certifies is that the hypotheses of `exists_gS_two_of_card`
+are simultaneously satisfiable away from `F̄`. -/
+private theorem exampleRungFive :
+    ∃ f : (y2EqX3Add5X2Add4X ℚ).FunctionField, f ≠ 0 ∧
+      divisor (y2EqX3Add5X2Add4X ℚ) f
+          = Finsupp.single (pointClosedPoint exampleNsT.left) (2 : ℤ) ∧
+        ∃ gS : (y2EqX3Add5X2Add4X ℚ).FunctionField, gS ≠ 0 ∧
+          ∃ u : (y2EqX3Add5X2Add4X ℚ).CoordinateRingˣ,
+            (u : (y2EqX3Add5X2Add4X ℚ).CoordinateRing) • gS ^ 2 = mulByTwoEndo exampleTwo f :=
+  let ⟨P, hP, _⟩ := exampleExistsHalving
+  exists_gS_two_of_card exampleTwo exampleCard exampleNsT exampleTorT (P := P) hP
+
+end Nonvacuity
+
+end WeierstrassCurve.Affine

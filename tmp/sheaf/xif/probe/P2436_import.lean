@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S1550TatePointComparisonFromClosureActual
+#check @LeanFormal.IUT.XiFPaper.S1550TatePointComparisonFromClosureActual.pointTransport

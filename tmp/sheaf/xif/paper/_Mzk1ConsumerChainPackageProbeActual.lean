@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerChainPackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerChainPackageActual.hull_volume_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerChainPackageActual.thetaPilot_iq_package

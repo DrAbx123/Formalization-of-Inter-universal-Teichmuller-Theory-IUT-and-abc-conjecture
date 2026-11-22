@@ -1,0 +1,18 @@
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:29:0: warning: Definition `LeanFormal.IUT.Foundations.AlgebraicGeometry.L1F2PreGaloisFromG2.curvePreGaloisCategoryOfG2` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:40:40: warning: Variable name `X` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:40:42: warning: Variable name `Y` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:29:0: warning: Definition `curvePreGaloisCategoryOfG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:43:0: warning: Definition `LeanFormal.IUT.Foundations.AlgebraicGeometry.L1F2PreGaloisFromG2.curvePreGaloisCategoryOfRemainingFields` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l1-f2\PreGaloisFromG2.lean:43:0: warning: Definition `curvePreGaloisCategoryOfRemainingFields` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1HullFinitenessChainActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullFinitenessChainActual.imageSet_logVolume_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullFinitenessChainActual.hull_logVolume_le_unitRegion

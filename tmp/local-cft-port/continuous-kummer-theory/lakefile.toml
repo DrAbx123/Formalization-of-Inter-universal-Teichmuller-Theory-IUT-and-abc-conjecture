@@ -1,0 +1,23 @@
+name = "continuous-kummer-theory"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["ContinuousKummerTheory"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+# Ported to host project D:\lean (Lean v4.32.2 / Mathlib 905b9581).
+# Compiled inside D:\lean with:
+#   lake env lean -R <this dir> -o <this dir>/<Module>.olean <Module>.lean
+# so module names stay ContinuousKummerTheory.*; see
+# coord/reports/S2050-kummer-port.md
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.2"
+
+[[lean_lib]]
+name = "ContinuousKummerTheory"

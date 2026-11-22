@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2186PairBijectiveActual
+open LeanFormal.IUT.XiFPaper.S2186PairBijectiveActual
+#print axioms S2186PairInv_pairMap
+#print axioms S2186PairMap_bijective
+#print axioms S2186BasisCompatiblePairEquivRequired_actual

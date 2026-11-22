@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2221AffinePairTransitivityActual
+open LeanFormal.IUT.XiFPaper.S2221AffinePairTransitivityActual
+#print axioms S2221ActualRangePairTransitiveRequired_iff
+#print axioms S2221RangePairTransitive_of_actual
+#print axioms S2221D5LargeImageFive_of_actual

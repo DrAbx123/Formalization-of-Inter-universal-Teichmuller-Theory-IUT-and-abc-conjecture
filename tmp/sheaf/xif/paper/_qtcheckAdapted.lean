@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.QVFamTensorCoefficientActual
+#check LeanFormal.IUT.XiFPaper.QVFamTensorCoefficientActual.qVFamTensorCoefficient
+#print LeanFormal.IUT.XiFPaper.QVFamTensorCoefficientActual.qVFamTensorCoefficient

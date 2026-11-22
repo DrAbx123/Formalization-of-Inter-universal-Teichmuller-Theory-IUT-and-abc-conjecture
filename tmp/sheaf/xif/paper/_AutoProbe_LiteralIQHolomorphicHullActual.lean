@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.LiteralIQHolomorphicHullActual
+
+#print axioms LeanFormal.IUT.XiFPaper.LiteralIQHolomorphicHullActual.HullAmbient
+#print axioms LeanFormal.IUT.XiFPaper.LiteralIQHolomorphicHullActual.hullUnitRegion
+#print axioms LeanFormal.IUT.XiFPaper.LiteralIQHolomorphicHullActual.hullNonzeroScalings

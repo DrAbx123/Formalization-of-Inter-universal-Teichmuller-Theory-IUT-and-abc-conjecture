@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.Mzk1Thm25P1CompositeConsumerDesignActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.specialSetC
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.CPointCriticalValuesIn01
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.MoebiusData.mapPoints
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.P1CompositeRealConsumerTarget
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.P1CompositeConsumerInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.P1CompositeConsumerStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.mzk1P1CompositeDesignRows
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.hullInterfaceNeeds
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerDesignActual.availableMoebiusAssets

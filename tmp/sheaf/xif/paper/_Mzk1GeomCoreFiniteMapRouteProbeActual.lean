@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreFiniteMapRouteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFiniteMapRouteActual.recast_of_route
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFiniteMapRouteActual.finiteMapRouteRows_length

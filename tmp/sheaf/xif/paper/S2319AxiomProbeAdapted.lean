@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2319KernelQuotIsoActual
+open LeanFormal.IUT.XiFPaper.S2319KernelQuotIsoActual
+#print axioms S2319RootQuotientEquiv
+#print axioms S2319GalIsoMatrixQuotRequired_iff_kernelQuot
+#print axioms S2319S2310Iso_of_galIsoMatrixQuot

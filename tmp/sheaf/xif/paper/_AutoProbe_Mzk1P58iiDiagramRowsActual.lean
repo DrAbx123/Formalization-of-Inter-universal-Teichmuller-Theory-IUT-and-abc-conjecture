@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1P58iiDiagramRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiDiagramRowsActual.nonDiagramModel_invariantImage
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiDiagramRowsActual.nonDiagramModel_unitImage
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P58iiDiagramRowsActual.nonDiagramModel_logShell

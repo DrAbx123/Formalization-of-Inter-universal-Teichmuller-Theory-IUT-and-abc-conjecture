@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131IUTIVTheoremAInputActual
+import tmp.sheaf.xif.paper.S3131IUTIVTheorem110InputActual
+import tmp.sheaf.xif.paper.S3131IUTIVCor22Cor23InputActual
+import tmp.sheaf.xif.paper.S3131IUTIVChainToABCActual
+import tmp.sheaf.xif.paper.S3131GenEllInputDetailedActual
+import tmp.sheaf.xif.paper.S3131Mzk1StatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131IUTIVChainToABCActual.abc_of_chain_shape
+#print axioms LeanFormal.IUT.XiFPaper.S3131IUTIVCor22Cor23InputActual.S3131IUTIVCitationRows_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131GenEllInputDetailedActual.S3131GenEllDetailedCitations_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131Mzk1StatementActual.S3131Mzk1CitationRow_length

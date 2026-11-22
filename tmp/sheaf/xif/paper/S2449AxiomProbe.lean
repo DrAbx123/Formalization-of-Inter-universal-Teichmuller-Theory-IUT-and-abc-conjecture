@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2449D5FinalStatusActual
+open LeanFormal.IUT.XiFPaper.S2449D5FinalStatusActual
+#print axioms S2449D5LargeImageFive_of_exact
+#print axioms S2449OriginalS2445Exact_refuted
+#print axioms S2449CorrectedDegree_eq_240
+#print axioms S2449PairTransitive_of_twelveCycle

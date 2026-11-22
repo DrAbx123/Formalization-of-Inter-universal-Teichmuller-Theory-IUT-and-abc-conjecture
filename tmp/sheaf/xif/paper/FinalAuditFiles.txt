@@ -1,0 +1,11 @@
+# Audited target source files (one path per line).
+# Extend when a paper target moves.
+tmp/sheaf/xif/paper/PaperXiFCompileGate.lean
+tmp/sheaf/xif/paper/PaperXiFInclusion.lean
+tmp/sheaf/xif/paper/PaperQPilotObject.lean
+tmp/sheaf/xif/PaperQPilotObject.lean
+tmp/sheaf/xif/PaperQPilotLogVolume.lean
+tmp/sheaf/xif/PaperSignedHull.lean
+tmp/sheaf/xif/PaperXiFUnconditional.lean
+tmp/sheaf/n8/closure/PaperAssemblyActualFinal.lean
+tmp/sheaf/xif/paper/SignedXiFAssembly.lean

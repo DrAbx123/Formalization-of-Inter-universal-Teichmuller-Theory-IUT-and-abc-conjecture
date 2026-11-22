@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S3076MapCompNatUnconditionalV3
+#print axioms LeanFormal.IUT.XiFPaper.S3076MapCompNatUnconditionalV3.S3076MapCompNatUnconditionalV3

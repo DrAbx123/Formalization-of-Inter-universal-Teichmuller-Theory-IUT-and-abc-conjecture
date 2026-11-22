@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2447WildTameInertiaAPI
+#print axioms LeanFormal.IUT.XiFPaper.S2447WildTameInertiaAPI.S2447TameInertiaProcyclicRequired
+#print axioms LeanFormal.IUT.XiFPaper.S2447WildTameInertiaAPI.S2447WildInertiaFGRequired

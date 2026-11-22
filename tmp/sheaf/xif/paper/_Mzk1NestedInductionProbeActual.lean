@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.measure_stepSet_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.nested_induction_terminates
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.paperScopeLemma24Statement_of_providers

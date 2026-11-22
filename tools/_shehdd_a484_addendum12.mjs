@@ -1,0 +1,5 @@
+import { appendFileSync } from 'node:fs';
+const ROOT='D:/lean';
+const add=['','## 12. fresh 迭代（A484 第五轮）','','- 我的 green 资产增至 **20 个**（其中关键 rung 组装: ShehddFourTriangleAssemblyActual、ShehddQPilotRungAssemblyActual、ShehddIUT4CompareAssemblyActual、ShehddCVCompositionLawProvedActual、ShehddF4bStepProviderClosureActual、ShehddIndRouteCommuteChainActual、ShehddInd2LinkChainActual、ShehddHeightVolumeChainActual 等）。','- queue 中 Shehdd 文件=0（与 A484 归档一致，我的资产全部按 green 直接复用）。','- priority green=38/44；仍缺 6: Section0PrePath/E5Undilated/Section0OppositeV2（owner proof 修复）、A482LiteralCarrierAxiomsActual（等 A483 旧文件）、A483LiteralCarrierProductHaarActual（owner=abc）、A482LiteralIQHullInterfaceActual（链式）。','- fresh 日志中其他失败（Mzk1PrimeStripsConsumer/Mzk1Gaussian*/S3131R2*/Mzk1ThetaPilotPreciseInterface/Mzk1K1K2RayVolumePackages 等）为各自 owner 新文件，依赖缺失/unknown identifier 属 owner 迭代范畴；Mzk1ShehddInterfacesActual（02:45 旧接口文件、非 priority/queue）建议归档，不再使用。','- 本轮无新增文件/队列条目；仅前一轮 A483b 单行 import（已 green）。',''];
+appendFileSync(ROOT+'/coord/A484-RUNG-QUEUE-AUDIT-shehdd.md', add.join('\n'));
+console.log('addendum 12 appended');

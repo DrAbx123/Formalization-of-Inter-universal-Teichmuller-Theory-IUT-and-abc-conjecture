@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22CompositionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CompositionActual.PreservesSet_comp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CompositionActual.AvoidsPoint_comp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22CompositionActual.UnramifiedOver_comp

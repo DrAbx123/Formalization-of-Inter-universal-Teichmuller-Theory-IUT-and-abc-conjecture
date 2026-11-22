@@ -1,0 +1,4 @@
+import Mathlib.CategoryTheory.Adjunction.Limits
+open CategoryTheory
+#check @CategoryTheory.Adjunction.hasLimitsOfShape_of_equivalence
+#check @CategoryTheory.Adjunction.hasColimitsOfShape_of_equivalence

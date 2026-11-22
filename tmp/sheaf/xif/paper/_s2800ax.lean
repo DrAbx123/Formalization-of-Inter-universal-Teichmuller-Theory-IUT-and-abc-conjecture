@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2800RegionAllBoundedActual
+#print axioms LeanFormal.IUT.XiFPaper.S2800RegionAllBoundedActual.regionAll_bounded

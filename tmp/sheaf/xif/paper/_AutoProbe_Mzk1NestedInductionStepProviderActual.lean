@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionStepProviderActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionStepProviderActual.F
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionStepProviderActual.f0Map
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionStepProviderActual.f0Map_comp

@@ -1,0 +1,9 @@
+import Mathlib
+#check HEq
+#check heq_iff_eq
+#check congrFun
+#check congr_fun
+#check DFunLike.congr_fun
+#check HEq.trans
+#check HEq.symm
+#check eq_of_heq

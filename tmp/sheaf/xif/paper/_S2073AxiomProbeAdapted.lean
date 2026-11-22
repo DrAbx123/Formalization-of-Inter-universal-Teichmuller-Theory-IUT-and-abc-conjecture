@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2073FiniteGroupQuotientActual
+#print axioms LeanFormal.IUT.XiFPaper.S2073FiniteGroupQuotientActual.S2073AffineActionCoconeIsColimit
+#print axioms LeanFormal.IUT.XiFPaper.S2073FiniteGroupQuotientActual.S2073curveHasQuotients_of_affine

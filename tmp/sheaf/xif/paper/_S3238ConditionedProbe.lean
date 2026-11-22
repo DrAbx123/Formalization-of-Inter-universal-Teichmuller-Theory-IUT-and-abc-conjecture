@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22ConditionedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22ConditionedActual.hyp_preservation_full
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22ConditionedActual.hyp_preservation_of_hypotheses

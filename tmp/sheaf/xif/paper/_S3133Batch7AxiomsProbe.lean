@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3133S3131NormalizedReadoutAdapterActual
+
+/-! Axioms probe for the normalized-readout adapters (mainline M5a'/M5b', lattice R1). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3131WeightSum_mul_normalizedWeight
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3131PaperRegionalQ_eq_weightSum_mul_normalized
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3131PaperRegionalHull_eq_weightSum_mul_normalized
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3131PaperRegionalQNormalized_eq_of_perB
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3131PaperRegionalHullNormalized_eq_of_perB
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.rawReadoutEqualities_of_normalizedModelMap
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.rawReadoutEqualities_sameC
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131NormalizedReadoutAdapterActual.S3133SameCQThetaReadoutBridgeNormalized

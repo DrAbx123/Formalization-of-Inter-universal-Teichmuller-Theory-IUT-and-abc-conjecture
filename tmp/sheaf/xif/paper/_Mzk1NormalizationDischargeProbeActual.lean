@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24NormalizationDischargeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationDischargeActual.s3135_normalization_two_hypotheses_discharged
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationDischargeActual.normalizationDischargeRows_length

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2436S1493PointTransportActual
+
+#check @LeanFormal.IUT.XiFPaper.S2436S1493PointTransportActual.S2436_three_sideK_points
+#check @LeanFormal.IUT.XiFPaper.S2436S1493PointTransportActual.S2436_three_sideF_points
+#check @LeanFormal.IUT.XiFPaper.S2436S1493PointTransportActual.S2436SideKPoint_two_nsmul
+#check @LeanFormal.IUT.XiFPaper.S2436S1493PointTransportActual.S2436AffinePoint_two_nsmul
+#check @LeanFormal.IUT.XiFPaper.S2436S1493PointTransportActual.S2436_S2412_three_points

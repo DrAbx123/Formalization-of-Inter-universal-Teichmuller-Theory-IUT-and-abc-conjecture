@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeStepXIBundleActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeStepXIBundleActual.stepXI_contract_bundle

@@ -1,0 +1,3 @@
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotGlobalNormalization
+#check @LeanFormal.IUT.ArithmeticQPilotGlobalNormalization.selectedLowerSignedLog
+#check @LeanFormal.IUT.NumberField.FinitePlace

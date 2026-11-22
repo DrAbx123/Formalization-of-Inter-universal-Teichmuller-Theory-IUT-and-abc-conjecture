@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3133S3131GaussianModelMapMinimalActual
+import tmp.sheaf.xif.paper.S3133GlobalPrimeWeightActual
+
+/-! Axioms probe for the minimal Gaussian residual + R1 interface + prime weight positivity. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3133M2_clauseB_q_parameter
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3133M2_QCSource_qV_eq_clauseB
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3133GaussianQParameterMatch_of_atBase
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3133GaussianModelMapResidualMinimal_m0
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3133GaussianModelMapResidualMinimal_m3
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelMapMinimalActual.S3137R1_interface
+#print axioms LeanFormal.IUT.XiFPaper.S3133GlobalPrimeWeightActual.globalPrimeWeight_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3133GlobalPrimeWeightActual.globalPrimeWeight_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3133GlobalPrimeWeightActual.globalRealifiedPrimePowerHom_degree_faithful_unconditional

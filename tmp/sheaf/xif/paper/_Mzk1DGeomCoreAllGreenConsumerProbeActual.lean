@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DGeomCoreAllGreenConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DGeomCoreAllGreenConsumerActual.dGeomCoreAllGreenConsumer_fibre

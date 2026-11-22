@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24F0BoundActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24F0BoundActual.s3135_f0_coeff_bound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24F0BoundActual.s3135_norm_symSum_le_self_pow

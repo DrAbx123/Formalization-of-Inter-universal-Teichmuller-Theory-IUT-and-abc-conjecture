@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2982A6SourceDataActual
+open LeanFormal.IUT.XiFPaper.S2982A6SourceDataActual
+#print axioms S2982_underlying_id
+#print axioms S2982_underlying_ne_id_iff_iff_reflects
+#print axioms S2982_unique_of
+#print axioms S2982_classification_alt

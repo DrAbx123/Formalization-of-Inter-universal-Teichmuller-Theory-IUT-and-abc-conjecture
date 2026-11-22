@@ -1,0 +1,4 @@
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+open IntermediateField
+#check IntermediateField.subset_adjoin
+#check IntermediateField.mem_adjoin_iff

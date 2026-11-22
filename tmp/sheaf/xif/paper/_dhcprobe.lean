@@ -1,0 +1,9 @@
+import Mathlib
+open MeasureTheory
+#check distribHaarChar
+#check distribHaarChar_ne_zero
+#check distribHaarChar_pos
+#check distribHaarChar_eq_one
+#check ENNReal.toReal_ofReal
+#check ENNReal.toReal_mul
+#check Real.log_mul

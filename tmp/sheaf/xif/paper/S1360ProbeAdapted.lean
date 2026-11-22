@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1319OrbicurveClauseActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.S1319OrbicurveClauseActual
+#check S1319NonterminalFiber
+#check S1319OrbifoldPiData
+#check HyperbolicOrbicurve
+#check Iut.HyperbolicOrbicurve
+#check OrbicurveSignature.oncePuncturedElliptic
+#check Iut.OrbicurveFundamentalGroupData

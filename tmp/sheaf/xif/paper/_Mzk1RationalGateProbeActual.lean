@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22RationalGateActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22RationalGateActual.baseProvider_holds
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22RationalGateActual.mzk1Lemma22_inductionStatement_rational
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22RationalGateActual.mzk1Lemma22_target_rational

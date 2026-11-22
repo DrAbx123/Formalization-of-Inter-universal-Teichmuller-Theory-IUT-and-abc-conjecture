@@ -1,0 +1,10 @@
+import Mathlib.AlgebraicGeometry.Sites.Etale
+import Mathlib.CategoryTheory.Sites.SubcanonicalOver
+open CategoryTheory
+open LeanFormal.IUT
+#check CategoryTheory.Over.coproduct
+#check CategoryTheory.Over.hasCoproducts
+#check CategoryTheory.Over.instHasCoproducts
+#check CategoryTheory.Coproduct
+#check CategoryTheory.Limits.coprod
+#check LeanFormal.IUT.SchemeOverField

@@ -1,0 +1,185 @@
+{
+  "task": "N8-C9-SOURCE-ROUTE",
+  "date": "2026-10-23",
+  "owner": "root current chat; no subagents",
+  "head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "scope": "read-only Lean source research; documentation updates only",
+  "sources": [
+    {
+      "key": "iutiii",
+      "path": "D:\\lean\\papers\\motizuki_corpus\\raw\\Inter-universal Teichmuller Theory III.pdf",
+      "pages": 199,
+      "sha256": "9a7ee3c77b1c7717210c0613eb39b6844649d0040dc3d9e1be7d544f8f91a0b9",
+      "version": "May 2020"
+    },
+    {
+      "key": "ess",
+      "path": "D:\\lean\\papers\\motizuki_corpus\\raw\\Essential Logical Structure of Inter-universal Teichmuller Theory.pdf",
+      "pages": 167,
+      "sha256": "c0e63b629aa174aa065e93d08defe3e5d0837c8778aab527383798baf8ca6e32",
+      "creation": "D:20240319055559+09'00'"
+    },
+    {
+      "key": "alien",
+      "path": "D:\\lean\\papers\\motizuki_corpus\\raw\\Alien Copies, Gaussians, and Inter-universal Teichmuller Theory.pdf",
+      "pages": 170,
+      "sha256": "b2510b7276ab08f9f758e283200a4fc87205d2439d6d9b75afe8df6ccb182d1e",
+      "creation": "D:20201223132154+09'00'"
+    },
+    {
+      "key": "rpt2018",
+      "path": "D:\\lean\\papers\\motizuki_corpus\\raw\\Rpt2018.pdf",
+      "pages": 45,
+      "sha256": "582e3f60e9461c127617844d92440dd60720ee9291da3a693270bcf195221882",
+      "creation": "D:20190202002721+09'00'"
+    },
+    {
+      "key": "rpt2024",
+      "path": "D:\\lean\\papers\\motizuki_corpus\\raw\\Report on a certain series of preprints (2024-03).pdf",
+      "pages": 12,
+      "sha256": "f6636e2c6b48745be95eaab5435416c88445ff963afc27ebe2470fe9c80db9f7",
+      "creation": "D:20240331065521+09'00'"
+    },
+    {
+      "key": "may",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-stage1-sources-20261023\\Cmt2018-05.pdf",
+      "pages": 8,
+      "sha256": "d71c38308322bdb403b11c6f450f8f67797600c5c9ac7c28505c8d1c43c1f53b",
+      "creation": "D:20180918053059+09'00'"
+    },
+    {
+      "key": "aug",
+      "path": "D:\\lean\\tmp\\pdfs\\valuespaper-stage1-sources-20261023\\Cmt2018-08.pdf",
+      "pages": 5,
+      "sha256": "2fbd8deb2ca54c728191970bd5a06b81fe12bb68e656a8c684ad6bda86d83e6d",
+      "creation": "D:20180921033426+09'00'"
+    }
+  ],
+  "files": [
+    {
+      "path": "coord/N8-TARGET-INPUT-DECISION-20261023.md",
+      "sha256": "3a8d9e3202aaf02dcb2f3342f94b2c21c1d455f840ee7aae69f7c1846c59de27"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean",
+      "sha256": "5037acd60154afb01aa2046b1e91dcaccd30be9c36a226ea9569dbf04bed1faf"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Theorem311/SourceEWeightedLogVolumeData.lean",
+      "sha256": "8cee0b2d38c17dc5c72f7be3158c98a84824a628a6dab2e7c5ff10104c620f59"
+    },
+    {
+      "path": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceNormalizedUnitScalingLogVolume.lean",
+      "sha256": "45c4a881fa8724a44029bdf9213e9886016d44ca7cd0efd62947f232d21e7c6b"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldIntegralHull.lean",
+      "sha256": "d6639e7ebe4043ecbd7a3ddf1b636e9fe18edb73473fb39bfdf5e133cb12b9c8"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTII/Frobenioid/LocalFractionalIdealUnitQuotient.lean",
+      "sha256": "459ddad57e8559df182620a03122d2e3caf112a532fe3ad0969ed0c77d91de22"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTII/Frobenioid/FinitePlaceFractionalIdealUnitQuotient.lean",
+      "sha256": "39c91947c01d0a2e00d0801059fdd301d1d328a58cfe451061665fc10b296759"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceKummerEvaluationSquareExtension.lean",
+      "sha256": "85b18361ff1146e020dfde420059fec47480ed2320d7e70924d8356293b51206"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSHETransportObligations.lean",
+      "sha256": "d7c21e86edb6d87395cd392b8a7fcc4ef796e48d189465f6c57d7590cd021d82"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/HullDeterminantLogVolumeReduction.lean",
+      "sha256": "34f2777c31c8c7dfc8d7a82bf8578f3571741e02b37be620237a1b50c4c9e854"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/ArithmeticQPilotBaseChange.lean",
+      "sha256": "34858e2f1356975d0845a053683ef225e8435efdfb917b3b170dabe670df7998"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/ArithmeticQPilotGlobalNormalization.lean",
+      "sha256": "68e6e0b2baf608977e17397bc55262de1169e78fb8f4555249ce376298ef0efe"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/LocalFieldPacketNormalizedVolume.lean",
+      "sha256": "be1b25913ab287fe7420a20a8642b8013f315476e8c8d34b0c6ecb78082269bd"
+    },
+    {
+      "path": "tmp/sheaf/n8/Group6Normalization.lean",
+      "sha256": "c64b6ff45093071e163962dc5175d33fe60100e497e2417532b6222b1965f931"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C6ActualIdentification.lean",
+      "sha256": "64350809c1566090a7dc8040e9429d8f0fd8398baa5c6dca57fa862a1cbfa28e"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-OUTPUT-REGION-STAGE1.md",
+      "sha256": "92e2e6e51359b6c363595a68c876cfc97dce8c2dd9f0958eb989b48c1a9ae36c"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9ValuesPaper.lean",
+      "sha256": "2f181e34cc24499db3dbdaea580dc049d3d0c6b6d71cf5568bdf6d6301f04c97"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9Paper.lean",
+      "sha256": "481213d714798d880dd72d0440eb57c4de8f9fc612a05f5963f29f14806cc045"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/SourceWitnessedOutput.lean",
+      "sha256": "97311e15c7b38fe539135c24fbf791c1d8731cf0483f661cbaa19ccf64ef786a"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C6ActualIQData.lean",
+      "sha256": "8f76571f273c0ab49be4b462eb9cfa3927ee09e2050836585f93bc2cafdb0c45"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-STAGE1-SUPPLEMENT-ROUTE-20261023.md",
+      "sha256": "216538c2d8df8a66d26a10692c5fd9e5d879ca5450b252f7756e009497d43c45"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/SourceImageHull.lean",
+      "sha256": "8fb1ab1651e38a4628adc5d1211c30f37375b8572522c3bfc5a56180ed1a8d59"
+    }
+  ],
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "independent_review": "not_run",
+    "target_accepted": false
+  },
+  "version_note": "C9ValuesPaper and C9Paper changed concurrently after original audit; this manifest records later observed versions. Original audit hashes remain in VALUESPAPER-SEMANTICS-REVIEW. New relevant definitions were read; no Lean compile/review of all consumers.",
+  "route_revisions": [
+    {
+      "date": "2026-10-23",
+      "previous_sha256": "afa4bdac6e2736212b485439baa6565745790301d57f10531d6a3580c005763a",
+      "sha256": "4d6256789c99648f9de14d8ef7c434e730e8014d006522b0f356356252c3136b",
+      "scope": "User requested decisive research choices; explicit execution decisions and full conditional P4/P7 plus upper-bound-transfer equivalence proof added."
+    },
+    {
+      "date": "2026-10-23",
+      "previous_sha256": "4d6256789c99648f9de14d8ef7c434e730e8014d006522b0f356356252c3136b",
+      "sha256": "216538c2d8df8a66d26a10692c5fd9e5d879ca5450b252f7756e009497d43c45",
+      "scope": "Consistency audit: finite support of local log rather than reference-region equality; framed readouts; distinguish Ind invariance/bounds; componentwise regions and coherent choices; approximant containment; replace tautological transfer endpoint by actual double-construction comparison.",
+      "record": "tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md",
+      "evidence": "tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-EVIDENCE-20261023.json"
+    }
+  ],
+  "additional_reads": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-TARGET-V3.md",
+      "sha256": "d52faad43bd79ed609004eb27739eed41b45cd7ed1ae2d55a6de06d2984130f0",
+      "scope": "Reuse existing inventory; no edits to other-owner documents"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-P0-P1-SOURCE-TABLE.md",
+      "sha256": "7ed7f08509201b21c82025edf1dae67de650f5190b09ebcc77d4b01e4bec1e7c",
+      "scope": "Reuse existing inventory; no edits to other-owner documents"
+    }
+  ]
+}

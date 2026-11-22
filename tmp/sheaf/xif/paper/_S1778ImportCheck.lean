@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S1778Category01ViaAlgebrasActual
+open CategoryTheory
+open LeanFormal.IUT.XiFPaper.S1778Category01ViaAlgebrasActual
+#check S1778CoverCategoryOfEquivalence
+#check S1778CoverCategoryEquivalenceActual
+#check S1778PreGaloisCategoryOfRoute
+#check S1778GaloisCategoryOfRoute
+#check S1778EssentiallySmallOfRoute
+#check S1778TargetFieldsOfRoute
+#check S1778AffineEquivalenceMissing
+#check S1778TargetFieldsOfAffineEquivalenceMissing

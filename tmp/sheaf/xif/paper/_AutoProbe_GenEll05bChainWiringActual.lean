@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.GenEll05bChainWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05bChainWiringActual.GenEll05bWiringMap
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05bChainWiringActual.GenEll05bWiringMap_length

@@ -1,0 +1,10 @@
+import Mathlib
+open Polynomial
+#check @Polynomial.roots_eq_zero_iff
+#check @Polynomial.eq_zero_of_natDegree_lt
+#check @Polynomial.roots_eq_zero_iff_of_natDegree_le
+#check @Polynomial.mem_roots
+#check @Polynomial.IsRoot
+#check @Polynomial.roots_eq_zero_iff
+#check @Polynomial.roots_eq_zero_iff_of_natDegree_le
+#check @Polynomial.irreducible_iff_roots_eq_zero_of_degree_le_three

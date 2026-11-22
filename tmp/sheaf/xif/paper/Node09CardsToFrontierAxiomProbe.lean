@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Node09CardsToFrontierActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Node09CardsToFrontierActual.frontier_of_cards
+#print axioms LeanFormal.IUT.XiFPaper.Node09CardsToFrontierActual.abcConjecture_of_cards

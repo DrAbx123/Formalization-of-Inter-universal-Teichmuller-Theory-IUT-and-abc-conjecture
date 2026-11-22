@@ -1,0 +1,4 @@
+import LeanFormal.IUT.IUTII.Frobenioid.Example36PrimeStripComponentIdentification
+set_option pp.universes true
+#check numberFieldPrimeStrip
+#check FPrimeStrip

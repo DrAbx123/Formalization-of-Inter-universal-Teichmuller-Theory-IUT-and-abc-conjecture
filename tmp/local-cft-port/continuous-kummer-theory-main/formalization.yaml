@@ -1,0 +1,208 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for this formalization,
+# following https://github.com/mathlib-initiative/formalization.yaml
+
+version: "v0.4"
+
+project:
+  name: "continuous-kummer-theory"
+  description: >-
+    Lean 4 / Mathlib formalization of continuous Kummer theory for a field K with a chosen
+    separable (or Galois) closure Ω: continuous H¹ as continuous crossed homomorphisms modulo
+    principal ones, Hilbert 90 for infinite Galois extensions, the natural isomorphism
+    Kˣ/(Kˣ)ⁿ ≃ H¹_cont(Gal(Ω/K), μ_n), its inverse-limit form H¹_cont(G_K, Ẑ(1)) ≃ lim Kˣ/(Kˣ)ⁿ
+    (the profinite completion of Kˣ, as topological groups, when char K = 0 and all Kˣ/(Kˣ)ⁿ are
+    finite, which is proved for p-adic fields), compatibility with restriction and with
+    corestriction/norm, comparison with Mathlib's continuousCohomology in degree 1, and Kummer
+    classes of functions versus Kummer classes of their values via decomposition groups.
+  authors:
+    - "Claude (Anthropic)"
+    - "LANA Project"
+  responsible_maintainers:
+    - "Christian Merten"
+  license: "Apache-2.0"
+
+sources:
+  - title: "Galois Cohomology"
+    authors: ["Jean-Pierre Serre"]
+    type: "book"
+    note: "H¹ of profinite groups via continuous cocycles (Chapter I); Kummer theory."
+  - title: "Cohomology of Number Fields"
+    authors: ["Jürgen Neukirch", "Alexander Schmidt", "Kay Wingberg"]
+    type: "book"
+    note: "Restriction and corestriction (Chapter I); Kummer theory and Ẑ(1)."
+  - title: "Étale Cohomology"
+    authors: ["James S. Milne"]
+    type: "book"
+    note: "General reference for Kummer theory; not followed in detail."
+
+related_formalizations:
+  - id: "https://github.com/lana-agents/local-class-field-theory"
+    relationship: "other"
+    note: "Planned consumer; does not require this repository."
+  - id: "https://github.com/lana-agents/tate-curves-theta"
+    relationship: "other"
+    note: "Lists this repository as a future dependency; does not require it."
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11S25", "12G05"]
+
+status:
+  scope: >-
+    All targets formalised without sorry: continuous Hilbert 90 for arbitrary Galois extensions;
+    the Kummer isomorphism Kˣ/(Kˣ)ⁿ ≃ H¹_cont(Gal(Ω/K), μ_n); restriction, and corestriction = norm
+    for finite subextensions (cor independent of coset representatives; cor ∘ res = [L:K]); the
+    inverse-limit form H¹_cont(G_K, Ẑ(1)) ≃ lim Kˣ/(Kˣ)ⁿ, a homeomorphism for the natural
+    topologies, identified with Mathlib's profinite completion of Kˣ when char K = 0 and all
+    Kˣ/(Kˣ)ⁿ are finite; finiteness of Kˣ/(Kˣ)ⁿ for fraction fields of complete DVRs with finite
+    residue field of characteristic-zero fraction field, hence for Mathlib's
+    IsNonarchimedeanLocalField of characteristic zero and for ℚ_p; ContH1 ≅ Mathlib's
+    continuousCohomology 1 (as groups; k-linear homeomorphism onto Z¹/B¹); Kummer classes of
+    values of functions, and the comparison ι^* κ_F(f) = π^* κ_K(f(x)) along decomposition groups
+    (and along sections s_x of π).
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "KummerTheory.isMulCoboundary₁_of_eventually_eq_one"
+      file: "ContinuousKummerTheory/Hilbert90.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerEquiv"
+      file: "ContinuousKummerTheory/Kummer/Equiv.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerEquivSepClosure"
+      file: "ContinuousKummerTheory/Kummer/Equiv.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.restriction_kummer"
+      file: "ContinuousKummerTheory/Kummer/Restriction.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.corestriction_kummer"
+      file: "ContinuousKummerTheory/Kummer/Corestriction.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.corestriction_restriction"
+      file: "ContinuousKummerTheory/Kummer/CorRes.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.h1ZHatOneEquiv"
+      file: "ContinuousKummerTheory/Kummer/ZHat.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerZHatEquiv"
+      file: "ContinuousKummerTheory/Kummer/ZHat.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerZHatEquivProfiniteCompletion"
+      file: "ContinuousKummerTheory/Kummer/ProfiniteCompletion.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.restriction_kummerValue"
+      file: "ContinuousKummerTheory/Kummer/Values.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.corestriction_kummerValue"
+      file: "ContinuousKummerTheory/Kummer/Values.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.finiteKummerQuotients_of_isDiscreteValuationRing"
+      file: "ContinuousKummerTheory/Kummer/PAdic.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.exists_pow_eq_one_add"
+      file: "ContinuousKummerTheory/Kummer/PAdic.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.padicKummerZHatEquiv"
+      file: "ContinuousKummerTheory/Kummer/PAdic.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "ContH1.continuousCohomologyOneEquiv"
+      file: "ContinuousKummerTheory/ContH1/Comparison.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "ContH1.cor_mk_eq_mk_corFunWith"
+      file: "ContinuousKummerTheory/ContH1/CorestrictionIndep.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerZHatContinuousEquiv"
+      file: "ContinuousKummerTheory/Kummer/Topology.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.kummerZHatContinuousEquivProfiniteCompletion"
+      file: "ContinuousKummerTheory/Kummer/Topology.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.map_kummer_eq_map_kummer"
+      file: "ContinuousKummerTheory/Kummer/Specialization.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.map_section_kummer_eq_kummerValue"
+      file: "ContinuousKummerTheory/Kummer/Specialization.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+    - declaration: "KummerTheory.Decomposition.decomposition_kummerValue"
+      file: "ContinuousKummerTheory/Kummer/Decomposition.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        orchestra for running the agents, taxis for project management, and Claude (Claude Code) as the
+        coding agent; Lean/Lake builds with `lake build --wfail`.
+      prompting_notes: >-
+        Human input consisted of high-level task descriptions and scope decisions.
+  notes: >-
+    Agents were run with orchestra; project management (issues, status) was done in taxis;
+    Claude was the coding agent.
+
+fidelity:
+  divergences: >-
+    H¹_cont is modelled as continuous crossed homomorphisms modulo principal ones (ContH1); it is
+    identified with Mathlib's homogeneous-cochain continuousCohomology in degree 1 only as an
+    additive group isomorphism (ContH1 has no k-module structure). μ_n is the discrete type
+    KummerTheory.Mu n Ω. Ẑ(1) and (Kˣ)^∧ are inverse limits over the n invertible in K ordered by
+    divisibility (prime-to-p part in characteristic p > 0). The discrete topology on Kˣ/(Kˣ)ⁿ is
+    a scoped instance. "Finite extension of ℚ_p" is expressed via Mathlib's
+    IsNonarchimedeanLocalField (or a complete DVR with finite residue field); Mathlib does not
+    itself equip a bare finite-dimensional ℚ_p-algebra with that structure. Points of functions
+    are K-algebra maps R →ₐ[K] L; the function-vs-value comparison is formulated with
+    decomposition groups / sections of π : D → G_K, not with étale fundamental groups of schemes.
+
+review:
+  status: "agent-reviewed"
+  reviewers: ["Claude (Anthropic)"]
+  notes: >-
+    The formalization has only been reviewed by Claude; it has not been reviewed by a human.
+    Statements were checked against Serre and Neukirch–Schmidt–Wingberg by the agent only.
+
+acknowledgements: "Built on Mathlib (Apache-2.0)."

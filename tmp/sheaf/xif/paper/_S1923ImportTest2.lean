@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S1923XCoordinateFormulaActual
+#check LeanFormal.IUT.XiFPaper.S1923XCoordinateFormulaActual.S1923XCoordinateFormula_of_intermediate
+#check LeanFormal.IUT.XiFPaper.S1923XCoordinateFormulaActual.S1923UniversalXCoordinateFormula
+#print axioms LeanFormal.IUT.XiFPaper.S1923XCoordinateFormulaActual.S1923UniversalXCoordinateFormula

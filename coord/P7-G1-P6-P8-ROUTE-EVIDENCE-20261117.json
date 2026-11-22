@@ -1,0 +1,969 @@
+{
+  "schema": "iut-route-source-evidence/v1",
+  "as_of_utc": "2026-11-17T15:49:06Z",
+  "as_of_local": "2026-11-17T23:49:06+08:00",
+  "git_head": "a997af4b1cb2339d1e7403ef0781a16f809f4476",
+  "report": "coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md",
+  "scope": "Targeted review of current declarations, actual definitions, implementation excerpts, selected local original-paper passages and existing watchdog records; not a whole-repository or full-transitive-kernel audit.",
+  "source_changed_during_final_review": [],
+  "historical_report": {
+    "path": "coord/archive-20261117/P7-G1-P6-P8-CLOSURE-ROUTE-before-refresh.md",
+    "sha256": "adace21606a04e441d031217b7dcfb355b8fe08b9e326f11e1d8674748cf1461"
+  },
+  "pruned_guidance": [
+    {
+      "id": "fermat_smooth_proper",
+      "donors": [
+        "Mzk1G1FermatCurveSmoothFinalActual",
+        "Mzk1G1FermatPiProperActual"
+      ],
+      "scope": "Actual smooth/proper endpoints. General geometric-connectedness instantiation is still scoped in R4 where needed."
+    },
+    {
+      "id": "two_chart_function_fields",
+      "donors": [
+        "Mzk1G1A3FunctionFieldFinalActual",
+        "Mzk1G1A3FunctionFieldInfActual"
+      ],
+      "scope": "Actual chart function-field identifications; no renewed plan to build those."
+    },
+    {
+      "id": "polynomial_graph_iso",
+      "donors": [
+        "Mzk1G1B1GraphIsoModelActual"
+      ],
+      "scope": "graphIso_holds already implemented with success evidence; general protected-value M2 production remains."
+    },
+    {
+      "id": "local_integer_monogenic",
+      "donors": [
+        "Mzk1G1UniversalMonogenicIntegersActual",
+        "Mzk1G1UniversalIFNormedActual"
+      ],
+      "scope": "Reuse actual generators/instances; SeparationInput still unproduced."
+    },
+    {
+      "id": "d3_uniform_height_comparison",
+      "donors": [
+        "Mzk1G1JHeightUniformActual"
+      ],
+      "scope": "Reuse inequality after explicit normalization; does not identify q-height."
+    },
+    {
+      "id": "scalar_c3_c4",
+      "donors": [
+        "Mzk1P6C3C4Actual"
+      ],
+      "scope": "Reuse scalar implication; its arithmetic hypotheses remain."
+    },
+    {
+      "id": "f4_functionfield_map",
+      "donors": [
+        "Mzk1HTF4FunctionFieldActual"
+      ],
+      "scope": "Map already present; actual section divisor and metric heights still required."
+    },
+    {
+      "id": "f8_f9_final_algebra",
+      "donors": [
+        "Mzk1HT87F7F8F9InterfaceActual"
+      ],
+      "scope": "Consumers are not remaining mathematical producers."
+    }
+  ],
+  "new_or_materially_updated_findings": [
+    {
+      "id": "spectral_vs_integer_order",
+      "section": "2.1",
+      "finding": "c_norm is defined by normalized norm. New thetaMWeight algebra is not a proof of the correct arithmetic normalization."
+    },
+    {
+      "id": "height_normalization",
+      "section": "2.2",
+      "finding": "Mathlib number-field logHeight is an unnormalized place sum while discOver/truncConductor are normalized; consumers require coherent conversion."
+    },
+    {
+      "id": "singleton_projective_height",
+      "section": "2.3 / 8.4",
+      "finding": "F4 hDivP is Height.logHeight of a Unit-indexed tuple; Mathlib logHeight_eq_zero_of_subsingleton applies. Use actual local Weil functions and a multi-section construction."
+    },
+    {
+      "id": "ceiling_direction",
+      "section": "3",
+      "finding": "The existing lower bound is -Sceil<=theta; ceil>=root does not establish the needed Sceil<=M. Three distinct routes are provided."
+    },
+    {
+      "id": "union_vs_average",
+      "section": "4",
+      "finding": "Current nonzero-label union hull is not identified with a procession average; hHpkt in terminal is reflexive expansion, not theta transport."
+    },
+    {
+      "id": "packet_selected_place",
+      "section": "4.1",
+      "finding": "PacketActualInstance upper-bound conclusion uses urActualB T rather than arbitrary parameter b."
+    },
+    {
+      "id": "primorial_vs_support",
+      "section": "4.4",
+      "finding": "An upper bound for actual bad-prime product does not upper-bound the whole primorial through max bad prime. Grouping by p yields sum_{b|p,bad} w_b<=1 and a direct weighted prime-support bound; replace the extra total-weight times primorial bound in the intermediate consumer."
+    },
+    {
+      "id": "certificate_equality",
+      "section": "4.5",
+      "finding": "S2953 additionally asks for equality of CTheta with theta/M. The weaker existing consumer avoids this unnecessary equality."
+    },
+    {
+      "id": "protected_points_cover",
+      "section": "6",
+      "finding": "Fixed rational T/full affine chart RRData does not realize general protected points. Section-dependent open cover and rational map recursion are needed."
+    },
+    {
+      "id": "projective_distance",
+      "section": "7.2",
+      "finding": "Nonconstant actual map with poles cannot be supplied as a global continuous affine-coordinate function; use P1-valued maps and scale-invariant boundary distance."
+    },
+    {
+      "id": "uniform_different_bound",
+      "section": "7.1",
+      "finding": "m<=d does not imply m*v_p(m)<=d*v_p(d); use a finite maximum or a monotone coarse bound."
+    },
+    {
+      "id": "same_field_height_route",
+      "section": "8.1",
+      "finding": "Apply normalized D1 on point field L and use arithmetic extension comparison in R3, pruning unnecessary general geometric different-transport tasks."
+    }
+  ],
+  "files": [
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULOrdTowerActual.lean",
+      "exists": true,
+      "sha256": "96e1f541929468a7b153169d8d71421147d11e6af38388b2c9112d2042e662e8",
+      "bytes": 4382,
+      "modified_utc": "2026-11-17T10:49:59.6677887Z",
+      "latest_watchdog_event": "2026-11-17T10:51:48.776Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULOrdTowerActual.lean (44s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULFiberSumActual.lean",
+      "exists": true,
+      "sha256": "5fa107729ad59ceeabfebbf3a64e0f11c284e598c1b36eed4551bf3da3a3a196",
+      "bytes": 2553,
+      "modified_utc": "2026-11-17T11:20:25.6072606Z",
+      "latest_watchdog_event": "2026-11-17T11:23:10.844Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULFiberSumActual.lean (63s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULThetaMWeightActual.lean",
+      "exists": true,
+      "sha256": "5318ecff4b3357b7e33aa21e67b93ad86a52be8ddf2c3db5b828181f779c0444",
+      "bytes": 2923,
+      "modified_utc": "2026-11-17T00:44:03.7467093Z",
+      "latest_watchdog_event": "2026-11-17T00:48:22.106Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULThetaMWeightActual.lean (110s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKLambdaMScaledActual.lean",
+      "exists": true,
+      "sha256": "33f35a9a065fb92358636f0811828ccab5d00c130f9f84272264104c5540f5d2",
+      "bytes": 3093,
+      "modified_utc": "2026-11-17T12:34:17.9578739Z",
+      "latest_watchdog_event": "2026-11-17T15:40:38.590Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1URThetaKLambdaMScaledActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794918857957.8738,
+        "failed_at": 1794930038590
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1QHeightActual.lean",
+      "exists": true,
+      "sha256": "36baa942957e4ba6919441d3d8ac4f75665a3a7d2de2dfdad009751caa8eea7c",
+      "bytes": 6281,
+      "modified_utc": "2026-11-16T13:17:03.8496562Z",
+      "latest_watchdog_event": "2026-11-16T13:18:10.908Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1QHeightActual.lean (33s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1LocalHeightCriterionActual.lean",
+      "exists": true,
+      "sha256": "d44dfd7c87706d670dc84cb073d5464af5ad7a81d7350fbf4dece6273a98f734",
+      "bytes": 4119,
+      "modified_utc": "2026-11-15T23:55:30.7867589Z",
+      "latest_watchdog_event": "2026-11-15T23:56:59.759Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1LocalHeightCriterionActual.lean (34s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4ActualInstanceActual.lean",
+      "exists": true,
+      "sha256": "dcf71e28b1ebc61eb5af608deba4fd0de93370f82ac0d04502ba620a55d888a1",
+      "bytes": 5332,
+      "modified_utc": "2026-11-17T13:55:28.9058736Z",
+      "latest_watchdog_event": "2026-11-17T15:39:22.470Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1HTF4ActualInstanceActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794923728905.8735,
+        "failed_at": 1794929962470
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4DivisorHeightActual.lean",
+      "exists": true,
+      "sha256": "55c39c7e0b51079e2c820dfcb6d19068a81d746dc8b97cbfa2efd32d99c03f4d",
+      "bytes": 3604,
+      "modified_utc": "2026-11-17T14:13:34.4769421Z",
+      "latest_watchdog_event": "2026-11-17T14:14:50.666Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4DivisorHeightActual.lean (53s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKLambdaSqueezeActual.lean",
+      "exists": true,
+      "sha256": "e009d322b991fc8785e4f30c85a4fef04108813f83121905183817aea3faeba4",
+      "bytes": 3172,
+      "modified_utc": "2026-11-17T12:34:17.9548147Z",
+      "latest_watchdog_event": "2026-11-17T15:48:10.481Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1URThetaKLambdaSqueezeActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794918857954.8147,
+        "failed_at": 1794930490481
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKHP5J1SameQActual.lean",
+      "exists": true,
+      "sha256": "7da7fc3eab39f78b4b5cb6cdf010669d18b454740a0f92b480c5f8d66d840da2",
+      "bytes": 9947,
+      "modified_utc": "2026-11-17T12:34:17.9539506Z",
+      "latest_watchdog_event": "2026-11-17T12:51:27.482Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1URThetaKHP5J1SameQActual.lean (147s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKC3UpperTerminalActual.lean",
+      "exists": true,
+      "sha256": "3c28e6c9b41be29c661a77bc058dd61ec6d17ca3b509b29f4c6bd239331689aa",
+      "bytes": 10640,
+      "modified_utc": "2026-11-17T15:03:35.2120388Z",
+      "latest_watchdog_event": "2026-11-17T15:42:40.317Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1URThetaKC3UpperTerminalActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794927815212.0388,
+        "failed_at": 1794930160317
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URPacketActualInstanceActual.lean",
+      "exists": true,
+      "sha256": "a10459585dcdf9fe044a1e10a31a2c873769d1af9249becd164b3df30dd78330",
+      "bytes": 16713,
+      "modified_utc": "2026-11-17T14:31:04.1028797Z",
+      "latest_watchdog_event": "2026-11-17T15:48:25.919Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1URPacketActualInstanceActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794925864102.8796,
+        "failed_at": 1794930505919
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULStepVIIILambdaActual.lean",
+      "exists": true,
+      "sha256": "9d07b438b156ae882cf8398f45db3270a6315130b3f1a3c6c6400a841945d47d",
+      "bytes": 7458,
+      "modified_utc": "2026-11-17T12:34:12.3093674Z",
+      "latest_watchdog_event": "2026-11-17T12:48:49.192Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULStepVIIILambdaActual.lean (83s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F2ThetaFieldsActual.lean",
+      "exists": true,
+      "sha256": "b6bb533826ff773cd99e0d0412bda7b510f4201a80618f41f6a813ea533f1551",
+      "bytes": 3721,
+      "modified_utc": "2026-11-17T15:10:23.7946973Z",
+      "latest_watchdog_event": "2026-11-17T15:12:18.943Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F2ThetaFieldsActual.lean (90s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF3ConductorHeightActual.lean",
+      "exists": true,
+      "sha256": "b7bd6eab3506521b3f62025de322d9e8d8a28b5875c878ac0dc4adeb7cf19834",
+      "bytes": 2865,
+      "modified_utc": "2026-11-16T22:02:55.2914402Z",
+      "latest_watchdog_event": "2026-11-16T22:04:16.567Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF3ConductorHeightActual.lean (45s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKSideActual.lean",
+      "exists": true,
+      "sha256": "99870be8b7a672658d27a1a80bb20bc28cd1b253f863e024837290865a9d42a7",
+      "bytes": 12701,
+      "modified_utc": "2026-11-16T23:33:08.0416521Z",
+      "latest_watchdog_event": "2026-11-16T23:45:55.189Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1URThetaKSideActual.lean (86s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKHP5J1BridgeActual.lean",
+      "exists": true,
+      "sha256": "90c3da8c693498b8e707587bf1902397578778639ccb5afbccc04798c8e953d6",
+      "bytes": 14284,
+      "modified_utc": "2026-11-17T15:02:46.3245034Z",
+      "latest_watchdog_event": "2026-11-17T15:40:47.315Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1URThetaKHP5J1BridgeActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794927766324.5034,
+        "failed_at": 1794930047315
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1URThetaKHP5Actual.lean",
+      "exists": true,
+      "sha256": "df0fe93152480faf429b2d61b8c5b3b1a1bce05c07486c14cfdad136fb396046",
+      "bytes": 4108,
+      "modified_utc": "2026-11-16T23:38:29.1061777Z",
+      "latest_watchdog_event": "2026-11-16T23:45:55.866Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1URThetaKHP5Actual.lean (86s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1B1GraphIsoModelActual.lean",
+      "exists": true,
+      "sha256": "c4c898c804768d6ab68553e16e00b0d4581647b028ecefa2d5cdf685ef4e5ffb",
+      "bytes": 22467,
+      "modified_utc": "2026-11-17T13:20:23.9668183Z",
+      "latest_watchdog_event": "2026-11-17T13:21:22.519Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1B1GraphIsoModelActual.lean (51s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1B1SmoothCriterionSubmActual.lean",
+      "exists": true,
+      "sha256": "68d153bceda253ea7cbc7dbe431c10c5870980caadd529fb9e9551df89efd740",
+      "bytes": 19762,
+      "modified_utc": "2026-11-17T12:34:16.1178510Z",
+      "latest_watchdog_event": "2026-11-17T12:35:42.047Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1B1SmoothCriterionSubmActual.lean (49s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatCurveSmoothFinalActual.lean",
+      "exists": true,
+      "sha256": "ed5fb264deedb81fb07a9778ef8d9d9189e187adf9358d78b3de8261f3610a86",
+      "bytes": 5890,
+      "modified_utc": "2026-11-16T17:38:39.0828890Z",
+      "latest_watchdog_event": "2026-11-16T17:40:31.572Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1FermatCurveSmoothFinalActual.lean (34s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatPiProperActual.lean",
+      "exists": true,
+      "sha256": "7240514eb437caf3e97aab1c44c3d025c07f159d5f6603b190f82b0dca97fea5",
+      "bytes": 5762,
+      "modified_utc": "2026-11-16T17:18:49.0199272Z",
+      "latest_watchdog_event": "2026-11-16T17:19:19.025Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1FermatPiProperActual.lean (27s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1A3FunctionFieldFinalActual.lean",
+      "exists": true,
+      "sha256": "71e1bd620e09b7434f2357b70a713b550e5ca5ac1b90b4e783e575d9d27219ea",
+      "bytes": 4156,
+      "modified_utc": "2026-11-17T12:08:47.7236607Z",
+      "latest_watchdog_event": "2026-11-17T12:09:24.778Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1A3FunctionFieldFinalActual.lean (26s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1A3FunctionFieldInfActual.lean",
+      "exists": true,
+      "sha256": "54a411f6ca87225207348101d58da085181ce58bceafa76eda14aa9315930712",
+      "bytes": 4145,
+      "modified_utc": "2026-11-17T13:17:17.3624775Z",
+      "latest_watchdog_event": "2026-11-17T13:19:41.089Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1A3FunctionFieldInfActual.lean (45s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F2AGWiringActual.lean",
+      "exists": true,
+      "sha256": "50ceb144ff80191aa9ac82455c2e7fe7a5d8e38a34f7ecb2bdd87dc9b9d94e00",
+      "bytes": 4233,
+      "modified_utc": "2026-11-17T13:36:19.0530684Z",
+      "latest_watchdog_event": "2026-11-17T13:38:22.046Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F2AGWiringActual.lean (57s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1PsiGeneralRRDataActual.lean",
+      "exists": true,
+      "sha256": "d068624e3d426834f6496eab5a3bee773741d89577aef1ff649918a55bb4b14c",
+      "bytes": 3707,
+      "modified_utc": "2026-11-17T05:15:33.4299671Z",
+      "latest_watchdog_event": "2026-11-17T05:17:05.211Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1PsiGeneralRRDataActual.lean (43s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1PsiGeneralRRInstanceActual.lean",
+      "exists": true,
+      "sha256": "8c6b9210197c46d8825d79cdfcdfad47f1af8e950d6a146ce7fdca282adfcb31",
+      "bytes": 3909,
+      "modified_utc": "2026-11-17T10:16:45.3523180Z",
+      "latest_watchdog_event": "2026-11-17T10:19:23.149Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1PsiGeneralRRInstanceActual.lean (75s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1PsiM2AnalyticActual.lean",
+      "exists": true,
+      "sha256": "97e0f08ee2c9ccc1e9cd3524ea0ace07785c18909dca783abaad171845aeeabc",
+      "bytes": 3845,
+      "modified_utc": "2026-11-16T22:25:51.3809173Z",
+      "latest_watchdog_event": "2026-11-16T22:26:58.734Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1PsiM2AnalyticActual.lean (55s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1PsiB1Actual.lean",
+      "exists": true,
+      "sha256": "fca76c3df648f1288676517eebafa83ff56df22aea15b070da3b26933fea380a",
+      "bytes": 6828,
+      "modified_utc": "2026-11-16T22:15:40.0685706Z",
+      "latest_watchdog_event": "2026-11-16T22:16:30.356Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1PsiB1Actual.lean (35s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1B1FinalHAvoidActual.lean",
+      "exists": true,
+      "sha256": "b1eeb06439bc3c1b7189dfd5d4c3f491cefc82c45e39f9724f9775b703515aa3",
+      "bytes": 2118,
+      "modified_utc": "2026-11-17T10:26:17.0902037Z",
+      "latest_watchdog_event": "2026-11-17T10:39:04.087Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1B1FinalHAvoidActual.lean (80s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalLocalFieldExistsFinalActual.lean",
+      "exists": true,
+      "sha256": "a31d53abda982a96732cedc3b2ed76fd6196963044f728085b0d69d01fa3ae86",
+      "bytes": 1335,
+      "modified_utc": "2026-11-17T00:03:43.9352929Z",
+      "latest_watchdog_event": "2026-11-17T00:05:48.006Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1UniversalLocalFieldExistsFinalActual.lean (50s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalResidueRootGenerationActual.lean",
+      "exists": true,
+      "sha256": "c71eae9300034895d4423e8cf77fb68659917aa0cfd89919b0d07d777c535b89",
+      "bytes": 6043,
+      "modified_utc": "2026-11-17T04:01:07.0930555Z",
+      "latest_watchdog_event": "2026-11-17T04:02:21.555Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1UniversalResidueRootGenerationActual.lean (51s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalIFNormedActual.lean",
+      "exists": true,
+      "sha256": "77c49e2e17ea0c138d0ef67303d40eccc074faa5c68a785a2b985240c0091ce7",
+      "bytes": 1570,
+      "modified_utc": "2026-11-17T00:43:23.5233128Z",
+      "latest_watchdog_event": "2026-11-17T00:44:24.959Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1UniversalIFNormedActual.lean (51s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalMonogenicIntegersActual.lean",
+      "exists": true,
+      "sha256": "8f03a651b6bafeee5253bf66cdb1ba7fb1e6251fe6af4e6302a746d037333882",
+      "bytes": 23384,
+      "modified_utc": "2026-11-17T01:06:17.0805581Z",
+      "latest_watchdog_event": "2026-11-17T01:07:52.677Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1UniversalMonogenicIntegersActual.lean (52s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalDifferentBoundDirectActual.lean",
+      "exists": true,
+      "sha256": "37a036d88cfb7c84608504b8dde288c445d74597609a10ec082696a40001edfa",
+      "bytes": 5859,
+      "modified_utc": "2026-11-17T14:20:43.9767452Z",
+      "latest_watchdog_event": "2026-11-17T15:39:23.068Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1G1UniversalDifferentBoundDirectActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794925243976.745,
+        "failed_at": 1794929963068
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalDifferentSelfActual.lean",
+      "exists": true,
+      "sha256": "1053e7983bb341987a35f9a9a68e919a36edd2bc2e529c10b6475614afa45021",
+      "bytes": 1629,
+      "modified_utc": "2026-11-16T23:47:48.6095644Z",
+      "latest_watchdog_event": "2026-11-17T15:46:20.355Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1G1UniversalDifferentSelfActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794872868609.5645,
+        "failed_at": 1794930380355
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalDeltaBoundFinalActual.lean",
+      "exists": true,
+      "sha256": "7395a274685cad40139e90d79179d28786c0b4df7c4beec6821398566251e528",
+      "bytes": 1705,
+      "modified_utc": "2026-11-16T23:39:25.2274673Z",
+      "latest_watchdog_event": "2026-11-17T15:38:10.817Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1G1UniversalDeltaBoundFinalActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794872365227.4673,
+        "failed_at": 1794929890817
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1UniversalSeparationToUFLEActual.lean",
+      "exists": true,
+      "sha256": "d4bc31970488427a31054fc713b23d0390ffce6c5c115afc922b953ef7a3dd45",
+      "bytes": 1820,
+      "modified_utc": "2026-11-17T04:01:07.1175628Z",
+      "latest_watchdog_event": "2026-11-17T04:14:31.363Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1UniversalSeparationToUFLEActual.lean (45s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1GKDeltaAssemblyActual.lean",
+      "exists": true,
+      "sha256": "8c3d1a7226d4c91e078bf815c75ffafd2593203266ec0398379ccbb3bb86391c",
+      "bytes": 4715,
+      "modified_utc": "2026-11-17T13:22:41.2487567Z",
+      "latest_watchdog_event": "2026-11-17T13:24:45.920Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1GKDeltaAssemblyActual.lean (53s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1GKDeltaCoverActual.lean",
+      "exists": true,
+      "sha256": "0ea2acca84e8d244b817aa7535b9da53229359a191330c38170218a1b29ed0ea",
+      "bytes": 3918,
+      "modified_utc": "2026-11-17T14:28:18.0268418Z",
+      "latest_watchdog_event": "2026-11-17T14:30:11.349Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1GKDeltaCoverActual.lean (49s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1GKProjectiveCompactActual.lean",
+      "exists": true,
+      "sha256": "8424f172fe78dfb58cc03d21d867b1c46184d83d29b2156ecfaff48cd5e818e5",
+      "bytes": 4646,
+      "modified_utc": "2026-11-17T04:15:39.6070272Z",
+      "latest_watchdog_event": "2026-11-17T04:18:05.040Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1GKProjectiveCompactActual.lean (39s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1GKProductActual.lean",
+      "exists": true,
+      "sha256": "5496dead580b1c87330612ef9b226907c14a81e1470718cfb38fddd3e343a430",
+      "bytes": 2055,
+      "modified_utc": "2026-11-17T10:00:48.5017171Z",
+      "latest_watchdog_event": "2026-11-17T10:03:26.670Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1GKProductActual.lean (39s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1DisjointFamilyActual.lean",
+      "exists": true,
+      "sha256": "ce9ab11d4df7ef2ee92184772e4a79e2fde7eccb0958608f74fd2162a58bc7b5",
+      "bytes": 14255,
+      "modified_utc": "2026-11-16T13:12:02.7848190Z",
+      "latest_watchdog_event": "2026-11-16T13:13:09.995Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1DisjointFamilyActual.lean (32s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1JHeightUniformActual.lean",
+      "exists": true,
+      "sha256": "30bfd0ac5bddc44a58db16a6ad3496a9bad238601a61a4bcf67f138aa886e67d",
+      "bytes": 46308,
+      "modified_utc": "2026-11-16T19:47:20.9799113Z",
+      "latest_watchdog_event": "2026-11-16T19:48:04.477Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1JHeightUniformActual.lean (36s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1D1ProducerActual.lean",
+      "exists": true,
+      "sha256": "e0dda628ca8fa3fcf8d3673cb82661d7d2229e77e891b419ce574dc234c1692f",
+      "bytes": 13369,
+      "modified_utc": "2026-11-16T21:09:19.8296936Z",
+      "latest_watchdog_event": "2026-11-16T21:11:19.148Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1D1ProducerActual.lean (57s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1D1LettersActual.lean",
+      "exists": true,
+      "sha256": "b4a3cfaebca7d06e26bcdc626f1e5b2a15cfbce529de2a5815e9b5f7b46b5766",
+      "bytes": 3155,
+      "modified_utc": "2026-11-17T04:15:07.9927864Z",
+      "latest_watchdog_event": "2026-11-17T04:16:07.082Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1D1LettersActual.lean (48s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F1HeightTransportActual.lean",
+      "exists": true,
+      "sha256": "21ae0a5d414294d31ac4eeb312a83ca19ca241462683d0d9486b05cc460e62b3",
+      "bytes": 2053,
+      "modified_utc": "2026-11-16T20:15:10.3351066Z",
+      "latest_watchdog_event": "2026-11-16T20:16:24.989Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F1HeightTransportActual.lean (29s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1HlogKAssemblyActual.lean",
+      "exists": true,
+      "sha256": "d4d4dae055285f63892eb0717aa652ff0a4773ceb1bc704bd28a90cb7f87470b",
+      "bytes": 4063,
+      "modified_utc": "2026-11-16T23:05:40.4630253Z",
+      "latest_watchdog_event": "2026-11-16T23:08:51.831Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1HlogKAssemblyActual.lean (109s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULHlogKLambdaNumericActual.lean",
+      "exists": true,
+      "sha256": "600825266e177000d385d4bb713ce3dc11632f4d6f1ccf8aed163bdcfe96e33b",
+      "bytes": 2717,
+      "modified_utc": "2026-11-17T14:11:52.4678578Z",
+      "latest_watchdog_event": "2026-11-17T15:42:31.364Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1ULHlogKLambdaNumericActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794924712467.858,
+        "failed_at": 1794930151364
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULHbadFtpdActual.lean",
+      "exists": true,
+      "sha256": "f8d0a2ec057d7ec9a9f31cd784f0a4e4d1d4aebc2e650c0f34e7924cffc1bbdc",
+      "bytes": 3545,
+      "modified_utc": "2026-11-17T13:58:15.7581304Z",
+      "latest_watchdog_event": "2026-11-17T15:40:18.208Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1ULHbadFtpdActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794923895758.1304,
+        "failed_at": 1794930018208
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULHbadLocalSupportActual.lean",
+      "exists": true,
+      "sha256": "e3ae06969eaadd1959b0a0dfe10c9c85f7753e04bd300d0601cf4f3cf1a2f49d",
+      "bytes": 4128,
+      "modified_utc": "2026-11-17T14:32:21.9780092Z",
+      "latest_watchdog_event": "2026-11-17T14:35:02.246Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULHbadLocalSupportActual.lean (81s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULSArFtpdIdentityActual.lean",
+      "exists": true,
+      "sha256": "d0240ea8940825da86123190292546e09565549029c8262be81a01d52d9053bf",
+      "bytes": 3780,
+      "modified_utc": "2026-11-17T14:05:40.9680407Z",
+      "latest_watchdog_event": "2026-11-17T14:07:37.841Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULSArFtpdIdentityActual.lean (96s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULD2SecondFormActual.lean",
+      "exists": true,
+      "sha256": "10ecae10cebfe1a6922ea929188c5f0f4133123a774185e3dbaa8c7b1ab9ca53",
+      "bytes": 2553,
+      "modified_utc": "2026-11-16T23:55:03.7707985Z",
+      "latest_watchdog_event": "2026-11-16T23:57:07.186Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULD2SecondFormActual.lean (53s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULD4InputsActual.lean",
+      "exists": true,
+      "sha256": "ee67f4ecb82c6fd909df90fd9ebdb776f29b9b5778a1f5cc79615912467b4535",
+      "bytes": 3249,
+      "modified_utc": "2026-11-17T13:58:50.9411704Z",
+      "latest_watchdog_event": "2026-11-17T14:00:21.046Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULD4InputsActual.lean (82s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULKPlaceAlignmentActual.lean",
+      "exists": true,
+      "sha256": "3ce76ba8031742b004859a9ae2f6a644f9ea5dcc393fe306462f2c1346f59a89",
+      "bytes": 2798,
+      "modified_utc": "2026-11-17T00:14:34.3730507Z",
+      "latest_watchdog_event": "2026-11-17T00:20:11.706Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULKPlaceAlignmentActual.lean (95s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1ULQSelectedActual.lean",
+      "exists": true,
+      "sha256": "0ba8cf939a35ba3fd0e79ce1c6be37c3f8a60191b4a6c8945517886bc7d7c367",
+      "bytes": 4983,
+      "modified_utc": "2026-11-17T10:49:59.8848809Z",
+      "latest_watchdog_event": "2026-11-17T10:54:40.686Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1ULQSelectedActual.lean (89s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F2ThetaKConstructionActual.lean",
+      "exists": true,
+      "sha256": "f00edac31ab98e7666a95c4c0b13f0a47daefc9d9ee9e6269355ffbbea6f62bc",
+      "bytes": 3865,
+      "modified_utc": "2026-11-17T15:11:46.8465800Z",
+      "latest_watchdog_event": "2026-11-17T15:38:42.816Z FAIL EXIT=1 tmp/sheaf/xif/paper/Mzk1G1F2ThetaKConstructionActual.lean",
+      "watchdog_failure_state": {
+        "failed_exit": 1,
+        "failed_mtime": 1794928306846.58,
+        "failed_at": 1794929922816
+      }
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4HeightDivisorLinkActual.lean",
+      "exists": true,
+      "sha256": "c11f9fc453ad55e3a2aae4ae78288fccb2436c029f04e3134cfa177f45aea9a7",
+      "bytes": 1920,
+      "modified_utc": "2026-11-17T15:09:13.3853281Z",
+      "latest_watchdog_event": "2026-11-17T15:10:03.584Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4HeightDivisorLinkActual.lean (41s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4SchemeMultiplicityActual.lean",
+      "exists": true,
+      "sha256": "9987024cdbc9bec0134f3922f0f2ef9e6f30e53c66f6d008b0e803977efe6590",
+      "bytes": 3276,
+      "modified_utc": "2026-11-17T14:16:02.1327465Z",
+      "latest_watchdog_event": "2026-11-17T14:17:08.075Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4SchemeMultiplicityActual.lean (46s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4FunctionFieldActual.lean",
+      "exists": true,
+      "sha256": "38b660ec63c41bc3c17fcdf19b1fa3ab7218dc14281d4d37466c0d154bcedd2f",
+      "bytes": 3098,
+      "modified_utc": "2026-11-17T14:58:28.4375018Z",
+      "latest_watchdog_event": "2026-11-17T15:00:11.364Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4FunctionFieldActual.lean (53s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4GaloisClosureActual.lean",
+      "exists": true,
+      "sha256": "88315bc313bed28384b998b0937c8dba008070a122c0b079a08e1694a54731f6",
+      "bytes": 1933,
+      "modified_utc": "2026-11-17T15:15:36.9861311Z",
+      "latest_watchdog_event": "2026-11-17T15:16:40.156Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4GaloisClosureActual.lean (46s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HTF4DivisorInstanceActual.lean",
+      "exists": true,
+      "sha256": "a1fc7a66a8290fc271586cedd5324f75f94611e8a29a7a2413192dbca8dfa732",
+      "bytes": 3971,
+      "modified_utc": "2026-11-17T13:19:01.1293303Z",
+      "latest_watchdog_event": "2026-11-17T13:21:23.664Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HTF4DivisorInstanceActual.lean (52s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1HT87F7F8F9InterfaceActual.lean",
+      "exists": true,
+      "sha256": "d41025444dea407cbb46346180b2137da958eeab757fad2b3ca7bcf30c988035",
+      "bytes": 7127,
+      "modified_utc": "2026-11-16T18:10:19.5182037Z",
+      "latest_watchdog_event": "2026-11-16T18:11:24.153Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1HT87F7F8F9InterfaceActual.lean (32s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F7LiftActual.lean",
+      "exists": true,
+      "sha256": "6eb409421303b82744b7b6ab253b11991550dae104f36308d34f1f0675a28cd3",
+      "bytes": 3893,
+      "modified_utc": "2026-11-17T14:20:44.0277450Z",
+      "latest_watchdog_event": "2026-11-17T14:22:04.744Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F7LiftActual.lean (43s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F7PNotDvdActual.lean",
+      "exists": true,
+      "sha256": "5fc056359d3c1baa13c057380089166fb35e6a117098516d5363ef82c8daf2bb",
+      "bytes": 4414,
+      "modified_utc": "2026-11-16T21:16:11.9424187Z",
+      "latest_watchdog_event": "2026-11-16T21:17:21.179Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F7PNotDvdActual.lean (45s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F7DifferentExponentBoundsActual.lean",
+      "exists": true,
+      "sha256": "e722475b4428a996b4f8643635b07a8cf727d4e74d3f212a8399cb23e2e64491",
+      "bytes": 5756,
+      "modified_utc": "2026-11-16T21:01:02.9847629Z",
+      "latest_watchdog_event": "2026-11-16T21:04:12.354Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F7DifferentExponentBoundsActual.lean (41s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1F7PvdnAdapterActual.lean",
+      "exists": true,
+      "sha256": "cbb20fdb5f57459a4aa11486e71056d0dc69aa817d368712143d376979de218e",
+      "bytes": 3434,
+      "modified_utc": "2026-11-16T21:12:44.3697452Z",
+      "latest_watchdog_event": "2026-11-16T21:14:12.370Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1G1F7PvdnAdapterActual.lean (46s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1F7DiscTameBoundActual.lean",
+      "exists": true,
+      "sha256": "5ab42a30e551fcff1e1049dd6b17edfb3815df4d40ac6eba00d0f759ccf66de8",
+      "bytes": 5054,
+      "modified_utc": "2026-11-16T12:42:35.1149018Z",
+      "latest_watchdog_event": "2026-11-16T12:43:18.129Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1F7DiscTameBoundActual.lean (38s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6C3C4Actual.lean",
+      "exists": true,
+      "sha256": "48356eefa312d358fea12e6e367af61b57443e40d884a27186ddf12fc4ff8851",
+      "bytes": 1183,
+      "modified_utc": "2026-11-17T10:54:09.2648573Z",
+      "latest_watchdog_event": "2026-11-17T10:55:42.529Z DONE EXIT=0 tmp/sheaf/xif/paper/Mzk1P6C3C4Actual.lean (40s)",
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/QVFamNormalizedGeneratorSupplyActual.lean",
+      "exists": true,
+      "sha256": "2d3a994beb6331dcd314042da1503c99a0c265577bc055f2d4dbac18a1af2af3",
+      "bytes": 7762,
+      "modified_utc": "2026-10-28T17:47:03.7612859Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S826CNormOrderRamificationActual.lean",
+      "exists": true,
+      "sha256": "16d025e61104c9177985bc735160e45fa026272646e46be3f322158549688032",
+      "bytes": 5514,
+      "modified_utc": "2026-10-29T18:37:59.7704122Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S2953CThetaFromCertificateActual.lean",
+      "exists": true,
+      "sha256": "a3b7c6ae4a4db70a390485fc3bc8a272a95dd4e6177237ffa7c473ff5b61650b",
+      "bytes": 2598,
+      "modified_utc": "2026-11-07T09:29:05.8908917Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S2715CThetaPaperScaleActual.lean",
+      "exists": true,
+      "sha256": "396c9727df63d86024a93921e79e8d3208ff3ec196dd265cea204b62cdbc196a",
+      "bytes": 4665,
+      "modified_utc": "2026-11-06T16:00:19.9729880Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/NumberTheory/Height/Basic.lean",
+      "exists": true,
+      "sha256": "cdd1431330a2e7487453ade3c5c6ac2410a20bd1287072fc21e90c4a6f7a4c2b",
+      "bytes": 39042,
+      "modified_utc": "2026-07-30T15:50:55.5479264Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/NumberTheory/Height/NumberField.lean",
+      "exists": true,
+      "sha256": "ec848c3874e7cc9269ac1d4bb593cd2d28e080b201ba5d7e9096e46ac855a131",
+      "bytes": 26735,
+      "modified_utc": "2026-07-30T15:50:55.5529268Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Noncritical Belyi Maps.txt",
+      "exists": true,
+      "sha256": "2391ea9aca1c07fbee70853fedc273a0c0e618097627065dd55670538111d777",
+      "bytes": 17908,
+      "modified_utc": "2026-08-01T21:26:36.2041409Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "exists": true,
+      "sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "bytes": 245009,
+      "modified_utc": "2026-08-01T21:26:30.1341523Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "coord/KURT-H-PARAM-AUDIT.md",
+      "exists": true,
+      "sha256": "c20be11f01e2bbdbeeb3a22c653109da374d0ec23d3a2b38688e88e5eb4cb750",
+      "bytes": 15427,
+      "modified_utc": "2026-11-17T15:09:14.6725023Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "coord/P8-DEPENDENCY-AUDIT.md",
+      "exists": true,
+      "sha256": "25809f6ebaf9050825b5f8eba3a5d1cbde7d3f95c4c035026aebffbeb1867a8d",
+      "bytes": 17854,
+      "modified_utc": "2026-11-17T12:23:50.6803456Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "coord/B1-GC-GENERAL-PSI.md",
+      "exists": true,
+      "sha256": "73a50ad681e4268182b93763b7065af64f27c89980f5c7696ab5a951be4c1322",
+      "bytes": 5406,
+      "modified_utc": "2026-11-17T05:42:48.7794395Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "coord/LEAN-INDEX.md",
+      "exists": true,
+      "sha256": "e53b937ba2e9cd150e2ad95c89a43842cd103934da6d9d2f60f20dc90460b969",
+      "bytes": 18490,
+      "modified_utc": "2026-11-15T12:03:10.5263733Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/_INDEX/README.md",
+      "exists": true,
+      "sha256": "b80f1c6652d4bb78798260ac6a4eeb699fd66eba8ad6fd8ce0ed30e635676bce",
+      "bytes": 1368,
+      "modified_utc": "2026-11-15T01:39:56.7875841Z",
+      "latest_watchdog_event": null,
+      "watchdog_failure_state": null
+    }
+  ],
+  "verification": {
+    "statement_compiles": "NOT_RUN",
+    "proof_body_checked": "NOT_RUN",
+    "kernel_closed": "NOT_RUN",
+    "target_accepted": "NOT_RUN",
+    "lean_commands_run": [],
+    "lean_files_modified": [],
+    "subagents_spawned": 0,
+    "note": "Existing watchdog events only; DONE for a conditional theorem does not supply its hypotheses; recent FAIL states are retained. No proof closure inferred from this roadmap."
+  },
+  "artifact_checks": {
+    "passed": true,
+    "check_scope": "Document and source-snapshot consistency only; not Lean or mathematical verification",
+    "report_sha256": "633dc7ff34d6bd28309ed3bda7c406dcd1a8d8d663207bdc5119d13959535bd1",
+    "report_lines": 646,
+    "report_bytes": 48101,
+    "prior_report_bytes": 56208,
+    "source_paths_checked": 82,
+    "source_hashes_unchanged_since_snapshot": true,
+    "math_display_pairs": 35,
+    "duplicate_equation_tags": false,
+    "replacement_characters": 0,
+    "shared_log_marker_counts": {
+      "state": 1,
+      "queue": 1,
+      "audit_ledger": 1
+    },
+    "proof_dependency_graph_acyclic": true,
+    "statement_dependency_graph_acyclic": true,
+    "proof_topological_order": [
+      "R0",
+      "R1",
+      "R2",
+      "R3a",
+      "R3b",
+      "P6_actual",
+      "R3c",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "P8_actual"
+    ],
+    "lean_validation_run": false
+  }
+}

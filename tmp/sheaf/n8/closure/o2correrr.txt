@@ -1,0 +1,3 @@
+tmp/sheaf/n8/closure/O2CorrectedVolumeIndex.lean:44:4: warning: The namespace `O2CorrectedVolumeIndex` is duplicated in the declaration `ABCBridge.N8.O2CorrectedVolumeIndex.O2CorrectedVolumeIndex`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`

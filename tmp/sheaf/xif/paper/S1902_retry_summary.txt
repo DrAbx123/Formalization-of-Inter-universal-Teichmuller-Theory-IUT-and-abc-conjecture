@@ -1,0 +1,2 @@
+ATTEMPT 1 EXIT 1 LOG tmp/sheaf/xif/paper/S1902_retry_1.log
+STOP non-read error

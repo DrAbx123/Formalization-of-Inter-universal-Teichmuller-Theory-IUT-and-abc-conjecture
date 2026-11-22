@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBelyiRationalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual.CritIn01
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual.critIn01_iff_criticalValues
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiRationalActual.aeval_zero_of_eval_zero_mem

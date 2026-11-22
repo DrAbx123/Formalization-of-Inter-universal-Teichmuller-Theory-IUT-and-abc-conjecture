@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3140ThetaNormalizationLegActual
+import tmp.sheaf.xif.paper.S3140NormalizedRootResidualActual
+import tmp.sheaf.xif.paper.S3140GateReportActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3140ThetaNormalizationLegActual.S3140LastSeamThetaMissing_iff_rawHaar
+#print axioms LeanFormal.IUT.XiFPaper.S3140ThetaNormalizationLegActual.S3140MissingCanonicalRootedThetaReadout_of_factor_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3140ThetaNormalizationLegActual.S3140MissingThetaHalfReadout_of_factor_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3140ThetaNormalizationLegActual.S3140FourthTriangleResidual_of_normalization
+#print axioms LeanFormal.IUT.XiFPaper.S3140NormalizedRootResidualActual.S3140NormalizedTwoLthRootSupply_iff

@@ -1,0 +1,107 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      ".lake/packages/mathlib",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "905b95818eb32af7874a58b427f50c1711a5e96c\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "-i",
+      "Farkas|farkas",
+      ".lake/packages/mathlib/Mathlib/Analysis",
+      ".lake/packages/mathlib/Mathlib/LinearAlgebra",
+      ".lake/packages/mathlib/Mathlib/Tactic"
+    ],
+    "exit_code": 0,
+    "stdout": ".lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\README.md:14:* Farkas' lemma, Hahn-Banach separation, hyperplane separation, double dual of a proper cone\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\InnerDual.lean:28:  [Farkas lemma](https://en.wikipedia.org/wiki/Farkas%27_lemma#Geometric_interpretation).\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\InnerDual.lean:92:/-! ### Farkas' lemma and double dual of a cone in a Hilbert space -/\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\InnerDual.lean:94:/-- Geometric interpretation of **Farkas' lemma**. Also stronger version of the\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\InnerDual.lean:113:/-- Relative geometric interpretation of **Farkas' lemma**. Also stronger version of the\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:14:# The topological dual of a cone and Farkas' lemma\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:25:We prove Farkas' lemma, which says that a proper cone `C` in a locally convex topological real\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:33:* `ProperCone.hyperplane_separation`, `ProperCone.hyperplane_separation_point`: Farkas lemma.\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:39:* https://en.wikipedia.org/wiki/Farkas%27_lemma#Geometric_interpretation\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:116:/-- Geometric interpretation of **Farkas' lemma**. Also stronger version of the\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Dual.lean:130:/-- Geometric interpretation of **Farkas' lemma**. Also stronger version of the\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Basic.lean:20:cone. We then prove Farkas' lemma for conic programs following the proof in the reference below.\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Basic.lean:21:Farkas' lemma is equivalent to strong duality. So, once we have the definitions of conic and\n.lake/packages/mathlib/Mathlib/Analysis\\Convex\\Cone\\Basic.lean:36:- Prove regular and strong duality for cone programs using Farkas' lemma (see reference).\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "-i",
+      "sturm|valence|order.*bound",
+      ".lake/packages/mathlib/Mathlib/NumberTheory/ModularForms"
+    ],
+    "exit_code": 0,
+    "stdout": ".lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:14:# Dimension formula and Sturm bound for level 1 modular forms\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:16:This file proves the dimension formula and the Sturm bound for the space of modular forms\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:26:* `ModularForm.sturm_bound_levelOne`: a modular form `f : ModularForm 𝒮ℒ k` whose q-expansion\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:28:* `ModularForm.sturm_bound_levelOne_nat`: convenience version for `k : ℕ`.\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:61:/-- The linear equivalence between cusp forms of weight `k` and modular forms of weight `k - 12`,\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:284:/-- **Sturm bound for level-1 modular forms (natural weight).** If a modular form `f` of weight\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:286:theorem sturm_bound_levelOne_nat {k : ℕ} {f : ModularForm 𝒮ℒ (k : ℤ)}\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:302:/-- **Sturm bound for level-1 modular forms.** If a modular form `f` of weight `k` for `SL(2, ℤ)`\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:304:Corollary of the natural-weight version `sturm_bound_levelOne_nat`. -/\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:305:theorem sturm_bound_levelOne {k : ℤ} {f : ModularForm 𝒮ℒ k}\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\LevelOne\\DimensionFormula.lean:310:    exact sturm_bound_levelOne_nat (mod_cast h)\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\EisensteinSeries\\Defs.lean:21:  instead of `ℤ × ℤ` we can state all of the required equivalences using matrices and vectors, which\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\EisensteinSeries\\Defs.lean:66:/-- For level `N = 1`, the gamma sets are all equivalent; this is the equivalence. -/\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\EisensteinSeries\\Defs.lean:123:/-- The equivalence between `gammaSet 1 r 0` and `gammaSet 1 1 0` for non-zero `r`. -/\n.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms\\EisensteinSeries\\Defs.lean:131:/-- The equivalence between `(Fin 2 → ℤ)` and `Σ n : ℕ, gammaSet 1 n 0)` . -/\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "grobner",
+      ".lake/packages/mathlib/Mathlib/Tactic/Grobner.lean"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "rg: .lake/packages/mathlib/Mathlib/Tactic/Grobner.lean: IO error for operation on .lake/packages/mathlib/Mathlib/Tactic/Grobner.lean: 系统找不到指定的文件。 (os error 2)\n"
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "^((protected )?(theorem|lemma|def))|noncomputable def",
+      ".lake/packages/mathlib/Mathlib/RingTheory/PowerSeries/Order.lean"
+    ],
+    "exit_code": 0,
+    "stdout": "47:theorem exists_coeff_ne_zero_iff_ne_zero : (∃ n : ℕ, coeff n φ ≠ 0) ↔ φ ≠ 0 := by\n53:def order (φ : R⟦X⟧) : ℕ∞ :=\n60:theorem order_zero : order (0 : R⟦X⟧) = ⊤ :=\n63:theorem order_finite_iff_ne_zero : (order φ < ⊤) ↔ φ ≠ 0 := by\n69:theorem order_eq_top {φ : R⟦X⟧} : φ.order = ⊤ ↔ φ = 0 := by\n72:theorem coe_toNat_order {φ : R⟦X⟧} (hf : φ ≠ 0) : φ.order.toNat = φ.order := by\n77:theorem coeff_order (h : φ ≠ 0) : coeff φ.order.toNat φ ≠ 0 := by\n85:theorem order_le (n : ℕ) (h : coeff n φ ≠ 0) : order φ ≤ n := by\n93:theorem coeff_of_lt_order (n : ℕ) (h : ↑n < order φ) : coeff n φ = 0 := by\n97:theorem coeff_of_lt_order_toNat (n : ℕ) (h : n < φ.order.toNat) : coeff n φ = 0 := by\n105:theorem nat_le_order (φ : R⟦X⟧) (n : ℕ) (h : ∀ i < n, coeff i φ = 0) : ↑n ≤ order φ := by\n114:theorem le_order (φ : R⟦X⟧) (n : ℕ∞) (h : ∀ i : ℕ, ↑i < n → coeff i φ = 0) :\n124:theorem order_eq_nat {φ : R⟦X⟧} {n : ℕ} :\n133:theorem order_eq {φ : R⟦X⟧} {n : ℕ∞} :\n139:theorem order_eq_order {φ : R⟦X⟧} : φ.order = MvPowerSeries.order φ := by\n151:theorem min_order_le_order_add (φ ψ : R⟦X⟧) : min (order φ) (order ψ) ≤ order (φ + ψ) := by\n172:theorem order_add_of_order_ne (φ ψ : R⟦X⟧) (h : order φ ≠ order ψ) :\n179:theorem le_order_map {S : Type*} [Semiring S] (f : R →+* S) :\n183:theorem le_order_smul {a : R} :\n189:theorem le_order_mul (φ ψ : R⟦X⟧) : order φ + order ψ ≤ order (φ * ψ) := by\n202:theorem le_order_pow (φ : R⟦X⟧) (n : ℕ) : n • order φ ≤ order (φ ^ n) := by\n207:theorem le_order_prod {R : Type*} [CommSemiring R] {ι : Type*} (φ : ι → R⟦X⟧) (s : Finset ι) :\n215:theorem one_le_order_iff_constCoeff_eq_zero :\n227:theorem order_ne_zero_iff_constCoeff_eq_zero {φ : R⟦X⟧} :\n231:theorem le_order_pow_of_constantCoeff_eq_zero (n : ℕ) (hf : φ.constantCoeff = 0) :\n237:theorem order_monomial (n : ℕ) (a : R) [Decidable (a = 0)] :\n250:theorem order_monomial_of_ne_zero (n : ℕ) (a : R) (h : a ≠ 0) : order (monomial n a) = n := by\n256:theorem coeff_mul_of_lt_order {φ ψ : R⟦X⟧} {n : ℕ} (h : ↑n < ψ.order) :\n267:theorem coeff_mul_one_sub_of_lt_order {R : Type*} [Ring R] {φ ψ : R⟦X⟧} (n : ℕ)\n271:theorem coeff_mul_prod_one_sub_of_lt_order {R ι : Type*} [CommRing R] (k : ℕ) (s : Finset ι)\n284:theorem order_neg {R : Type*} [Ring R] (φ : PowerSeries R) : (-φ).order = φ.order := by\n291:def divXPowOrder (f : R⟦X⟧) : R⟦X⟧ :=\n295:lemma coeff_divXPowOrder {f : R⟦X⟧} {n : ℕ} :\n300:lemma divXPowOrder_zero :\n305:lemma constantCoeff_divXPowOrder {f : R⟦X⟧} :\n309:lemma constantCoeff_divXPowOrder_eq_zero_iff {f : R⟦X⟧} :\n315:theorem X_pow_order_mul_divXPowOrder {f : R⟦X⟧} :\n324:theorem X_pow_order_dvd : X ^ φ.order.toNat ∣ φ := by\n327:theorem order_eq_emultiplicity_X {R : Type*} [Semiring R] (φ : R⟦X⟧) :\n360:theorem order_one : order (1 : R⟦X⟧) = 0 := by\n364:theorem order_zero_of_unit {f : R⟦X⟧} : IsUnit f → f.order = 0 := by\n372:theorem order_X : order (X : R⟦X⟧) = 1 := by\n377:theorem order_X_pow (n : ℕ) : order ((X : R⟦X⟧) ^ n) = n := by\n383:theorem divXPowOrder_X :\n388:theorem divXPowOrder_one : divXPowOrder 1 = (1 : R⟦X⟧) := by\n400:theorem order_mul (φ ψ : R⟦X⟧) : order (φ * ψ) = order φ + order ψ := by\n416:theorem divXPowOrder_mul {f g : R⟦X⟧} :\n436:def orderHom : R⟦X⟧ →* Multiplicative ℕ∞ where\n442:lemma coe_orderHom : (orderHom : R⟦X⟧ → ℕ∞) = order := rfl\n444:theorem order_pow (φ : R⟦X⟧) (n : ℕ) : order (φ ^ n) = n • order φ :=\n447:theorem order_prod {R : Type*} [CommSemiring R] [NoZeroDivisors R] [Nontrivial R] {ι : Type*}\n452:def divXPowOrderHom : R⟦X⟧ →* R⟦X⟧ where\n458:lemma coe_divXPowOrderHom : (divXPowOrderHom : R⟦X⟧ → R⟦X⟧) = divXPowOrder := rfl\n460:theorem divXPowOrder_pow (φ : R⟦X⟧) (n : ℕ) : divXPowOrder (φ ^ n) = (divXPowOrder φ) ^ n :=\n463:theorem divXPowOrder_prod {R : Type*} [CommSemiring R] [NoZeroDivisors R] [Nontrivial R] {ι : Type*}\n474:theorem order_toSubring : (p.toSubring T hp).order = p.order := by\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "(?i)telescop|holonomic|zeilberg|gosper",
+      ".lake/packages/mathlib/Mathlib/Combinatorics",
+      ".lake/packages/mathlib/Mathlib/Algebra/BigOperators",
+      ".lake/packages/mathlib/Mathlib/NumberTheory"
+    ],
+    "exit_code": 0,
+    "stdout": ".lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Fin.lean:779:/-- This is a classic \"telescoping sum\" lemma. It says:\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:73:definition using a telescoping sum argument. -/\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:74:private def gosperCatalan (n j : ℕ) : ℚ :=\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:77:private theorem gosper_trick {n i : ℕ} (h : i ≤ n) :\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:78:    gosperCatalan (n + 1) (i + 1) - gosperCatalan (n + 1) i =\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:89:  simp only [gosperCatalan]\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:96:private theorem gosper_catalan_sub_eq_central_binom_div (n : ℕ) : gosperCatalan (n + 1) (n + 1) -\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:97:    gosperCatalan (n + 1) 0 = Nat.centralBinom (n + 1) / (n + 2) := by\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:98:  simp only [gosperCatalan, tsub_self, Nat.centralBinom_zero, Nat.cast_one, mul_one, Nat.cast_add,\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:118:    · trans (∑ i : Fin d.succ, (gosperCatalan (d + 1) (i + 1) - gosperCatalan (d + 1) i))\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:120:        rw [gosper_trick i.is_le, mul_div]\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:121:      · rw [← sum_range fun i => gosperCatalan (d + 1) (i + 1) - gosperCatalan (d + 1) i,\n.lake/packages/mathlib/Mathlib/Combinatorics\\Enumerative\\Catalan\\Basic.lean:123:        rw [gosper_catalan_sub_eq_central_binom_div d]\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Intervals.lean:254:/-- Telescopic product over `Fin`. -/\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Intervals.lean:255:@[to_additive /-- Telescopic sum over `Fin`. -/]\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Intervals.lean:264:/-- Telescopic product over `Fin`. -/\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Intervals.lean:265:@[to_additive /-- Telescopic sum over `Fin`. -/]\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\List\\Basic.lean:331:/-- Cancellation of a telescoping product. -/\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\List\\Basic.lean:332:@[to_additive /-- Cancellation of a telescoping sum. -/]\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\List\\Basic.lean:352:/-- Cancellation of a telescoping product. -/\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\List\\Basic.lean:353:@[to_additive /-- Cancellation of a telescoping sum. -/]\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Transform.lean:46:   by adding and subtracting telescoping terms:\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Summable.lean:21:telescoping series `∑_{m,n} (1/(mz + n) - 1/(mz + n + 1))`:\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Summable.lean:34:1. For fixed `m ≠ 0`, the inner sum over `n` telescopes to zero (each term cancels with its\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Summable.lean:195:private lemma telescope_aux (z : ℂ) (m : ℤ) (b : ℕ) :\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Summable.lean:204:  simp_rw [hasSum_symmetricIco_int_iff, telescope_aux z m]\n.lake/packages/mathlib/Mathlib/NumberTheory\\ModularForms\\EisensteinSeries\\E2\\Summable.lean:274:  simp only [telescope_aux, aux_tsum_identity_1] at this\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\Finset\\Basic.lean:892:/-- A telescoping product along `{0, ..., n - 1}` of a commutative-group-valued function reduces to\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\Finset\\Basic.lean:894:@[to_additive /-- A telescoping sum along `{0, ..., n - 1}` of a function valued in a commutative\n.lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Group\\Finset\\Basic.lean:933:/-- A telescoping sum along `{0, ..., n-1}` of an `ℕ`-valued function reduces to the difference of\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "(?i)sum_range_sub|sum_Ico_sub|sum.*sub.*shift",
+      ".lake/packages/mathlib/Mathlib/Algebra/BigOperators"
+    ],
+    "exit_code": 0,
+    "stdout": ".lake/packages/mathlib/Mathlib/Algebra/BigOperators\\Module.lean:34:    rw [← sum_Ico_sub_bot _ hmn, ← sum_Ico_succ_sub_top _ (Nat.le_sub_one_of_lt hmn),\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "(?i)map_add_eq_max|add_eq_min|add_eq_max|sum_eq",
+      ".lake/packages/mathlib/Mathlib/RingTheory/Valuation"
+    ],
+    "exit_code": 0,
+    "stdout": ".lake/packages/mathlib/Mathlib/RingTheory/Valuation\\Basic.lean:314:theorem map_sum_eq_of_lt {ι : Type*} [DecidableEq ι] {s : Finset ι} {f : ι → R} {j : ι}\n.lake/packages/mathlib/Mathlib/RingTheory/Valuation\\Basic.lean:319:  rw [Finset.sum_eq_add_sum_sdiff_singleton_of_mem hj]\n.lake/packages/mathlib/Mathlib/RingTheory/Valuation\\IsTrivialOn.lean:49:  apply Valuation.map_sum_eq_of_lt _ (by simp)\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S1377OmegaFormulaActual
+#check LeanFormal.IUT.XiFPaper.S1377OmegaFormulaActual.S1377Rel3AtPoint
+#check LeanFormal.IUT.XiFPaper.S1377OmegaFormulaActual.S1377Rel3AtPoint_of_ellipticNet
+#check S1377Rel3AtPoint_of_ellipticNet

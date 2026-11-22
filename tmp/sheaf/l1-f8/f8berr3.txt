@@ -1,0 +1,40 @@
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:38:60: error(lean.invalidField): Invalid field `FullSubcategory`: The environment does not contain `Function.FullSubcategory`, so it is not possible to project the field `FullSubcategory` from an expression
+  fun object => AssociatedQuotient.IsGeometricallyConnected object.obj
+of type
+  TemperedCover diagram root → Prop
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:44:10: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagram xF)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:50:4: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagram xF)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:57:4: error: Function expected at
+  SourceYddotObligation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  xF
+
+Hint: The identifier `SourceYddotObligation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\l1-f8\F8bSourceYddot.lean:63:4: error: Function expected at
+  SourceConnectedTemperedCover
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (sourceDiagramOfSignQuotient R)
+
+Hint: The identifier `SourceConnectedTemperedCover` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

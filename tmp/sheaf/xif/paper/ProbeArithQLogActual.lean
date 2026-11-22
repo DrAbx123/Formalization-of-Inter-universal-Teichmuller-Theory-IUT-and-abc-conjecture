@@ -1,0 +1,3 @@
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotLogVolume
+#check LeanFormal.IUT.ArithmeticQPilotLogVolume.localLogMagnitude
+#check LeanFormal.IUT.ArithmeticQPilotLogVolume.qNorm_lt_one

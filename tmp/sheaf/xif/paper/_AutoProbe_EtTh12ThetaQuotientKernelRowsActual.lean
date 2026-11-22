@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh12ThetaQuotientKernelRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh12ThetaQuotientKernelRowsActual.etTh12_thetaToElliptic_eq_map
+#print axioms LeanFormal.IUT.XiFPaper.EtTh12ThetaQuotientKernelRowsActual.etTh12_thetaToElliptic_mk'
+#print axioms LeanFormal.IUT.XiFPaper.EtTh12ThetaQuotientKernelRowsActual.etTh12_thetaCenter_eq_ker

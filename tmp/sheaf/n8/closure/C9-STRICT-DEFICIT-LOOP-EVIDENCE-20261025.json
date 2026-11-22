@@ -1,0 +1,115 @@
+{
+  "task": "C9-STRICT-DEFICIT-LOOP-20261024",
+  "started": "2026-10-24",
+  "completed": "2026-10-25",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "status": "Non-cancelling marked readout and actual global kernel-discriminant number proved; selected-place finite-power evaluation relation proved; original strict-deficit contradiction open",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-STRICT-DEFICIT-LOOP-20261024.md",
+    "sha256": "610aad551d02e5480b1c79460b75dc8ed040dd3fec93b8a64e0281e57d865a90"
+  },
+  "user_direction": [
+    "Stop re-reading the same papers for the same task",
+    "Construct a quantity that cannot cancel and is provably nonzero",
+    "Keep the original fixed-C strict-deficit contradiction target"
+  ],
+  "locked_target": "For arbitrary original admissible complete C, fixed native q, gluing, target column and normalization, exclude a uniform strict deficit for the complete source output family",
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory I.txt",
+      "sha256": "5510ad77280fa8d14d2e24cc596f05a8faf7a02838a35cc0bb5c25231a666051",
+      "loci": [
+        "Def3.1(c)-(f)"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/The Etale Theta Function and its Frobenioid-theoretic Manifestations.txt",
+      "sha256": "6ecd474fd2871f103953eb818f3e33d1ee7725116292141b989b70bb2a2a3cd3",
+      "loci": [
+        "cover construction before Def2.1",
+        "Def2.5(i)"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0509485",
+      "version": "arXiv:math/0509485v1",
+      "authors": "Baker, Ih, Rumely",
+      "loci": [
+        "section3.1 equations21-23",
+        "Proposition3.1"
+      ],
+      "accessed": "2026-10-25",
+      "local_content_hash": "not_downloaded; primary PDF read with web tool"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1208.5519",
+      "version": "arXiv:1208.5519v4",
+      "authors": "Tim and Vladimir Dokchitser",
+      "loci": [
+        "Appendix A TheoremA.1"
+      ],
+      "accessed": "2026-10-25",
+      "local_content_hash": "not_downloaded; primary PDF read with web tool"
+    }
+  ],
+  "reused_records": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+      "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-MARKED-IMAGE-DESCENT-20261024.md",
+      "sha256": "5485c9195c32d75f1fc4560b63f7befa5d37e48223b6102de1678b0f4701b521"
+    }
+  ],
+  "natural_language_results": [
+    "The actual selected local cover is E(q^ell)->E(q), not the unrelated transverse subgroup of E(q)[ell]",
+    "Kernel-height means -L/12 and L/(12ell) have masses 1/(ell+1) and ell/(ell+1) under full conjugate-place averaging",
+    "The marked moment <r,a>=L/12 and energy <a,a>=L^2/(144ell) are strictly positive",
+    "Simultaneous Galois transport preserves the paired readout for every finite depth; independent/frozen-marker averaging can erase it",
+    "J_H=disc(f_H)^6/Delta(E^sharp)^(m(m-1)) is a coordinate-independent nonzero element of the actual source K",
+    "At selected bad places J_H=u q^(m(m-1)) with u an actual unit; at other local types its q valuation is -m(m-1)/ell",
+    "For N=2ell m(m-1), actual Gaussian g_j satisfies g_j^N=u^(-j^2) J_H^(j^2)",
+    "The marked logarithmic moment of J_H equals m(m-1)L, with positive summands"
+  ],
+  "exact_computation": {
+    "script": {
+      "path": "tmp/sheaf/n8/closure/c9_strict_deficit_marked_height_20261025.py",
+      "sha256": "d5a9947a454a340169652650c0f6f854488c2bc5d849c7eb83c5a880325ea387"
+    },
+    "certificate": {
+      "path": "tmp/sheaf/n8/closure/C9-STRICT-DEFICIT-MARKED-HEIGHT-CERTIFICATE-20261025.json",
+      "sha256": "b74033284e04363eee057fc123b5e0d09e30cf7f39cd93c09494f45e7125c6b0"
+    },
+    "command": "python tmp/sheaf/n8/closure/c9_strict_deficit_marked_height_20261025.py",
+    "exit_code": 0,
+    "all_assertions_passed": true,
+    "primes": 12,
+    "sl2_matrices": 280920,
+    "gram_entries": 8808,
+    "transport_steps": 240,
+    "additional": "Integer-coefficient Tate x expansions, 24 finite-field kernel-discriminant checks, exact evaluation-to-J exponents",
+    "scope": "Finite checks supplement general proofs; no complete IUT output family was computed"
+  },
+  "remaining_gaps": [
+    "No source-qualified complete output hull lower bound or escape witness",
+    "No closed-loop zero/nonpositive identity for the marked, place-dependent readout under the original strict-deficit assumption",
+    "Actual integral-region stability under the explicit unit factors is not automatic",
+    "Original reference determinant, target-column log shift and boundary contributions are not yet compared",
+    "The raw selected K-divisor is not automatically the original Fmod-normalized native-q arithmetic object"
+  ],
+  "next_action": "Substitute the explicit finite-power identity into the original Gaussian integral regions and compute their actual weighted relative determinant, retaining unit domains, j^2, Ob3 reference, target log shift, marked correspondence and boundary divisor",
+  "checks": {
+    "natural_language_proof": "root self-review only",
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "project_build": "not_run",
+    "comparator": "not_run",
+    "independent_review": "not_run",
+    "actual_source_contradiction_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

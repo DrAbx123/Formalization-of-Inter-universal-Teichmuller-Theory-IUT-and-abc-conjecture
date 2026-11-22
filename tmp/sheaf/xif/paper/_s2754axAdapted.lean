@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2754C3RegionAllHaarFiniteActual
+#print axioms LeanFormal.IUT.XiFPaper.S2754C3RegionAllHaarFiniteActual.C3PerPlaceUpdateRegionAll_haar_finite

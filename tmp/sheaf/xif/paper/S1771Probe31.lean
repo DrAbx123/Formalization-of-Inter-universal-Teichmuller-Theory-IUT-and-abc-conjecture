@@ -1,0 +1,10 @@
+import Mathlib.Algebra.Algebra.Equiv
+#check AlgEquiv.apply_symm_apply
+#check AlgEquiv.symm_apply_apply
+#check AlgEquiv.symm_apply_eq
+#check AlgEquiv.eq_symm_apply
+#check AlgEquiv.toAlgHom_apply
+#check AlgHom.fst_prod
+#check AlgHom.snd_prod
+#check AlgHom.prod_apply
+#check AlgHom.fst_apply

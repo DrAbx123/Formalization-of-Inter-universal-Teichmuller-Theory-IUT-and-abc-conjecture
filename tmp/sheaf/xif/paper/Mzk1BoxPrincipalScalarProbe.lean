@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1BoxPrincipalScalarActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BoxPrincipalScalarActual.principal_region_normalized_scalar

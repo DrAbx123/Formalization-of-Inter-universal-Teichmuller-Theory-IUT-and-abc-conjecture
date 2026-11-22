@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh01OddThetaSeriesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh01OddThetaSeriesActual.etTh_oddThetaSign_eq_pow
+#print axioms LeanFormal.IUT.XiFPaper.EtTh01OddThetaSeriesActual.etTh_norm_oddThetaSign
+#print axioms LeanFormal.IUT.XiFPaper.EtTh01OddThetaSeriesActual.etTh_oddThetaSign_add

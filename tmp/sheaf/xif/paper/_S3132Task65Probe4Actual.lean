@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3132CompletionMapSurjectiveActual
+import tmp.sheaf.xif.paper.S3132ConcreteC3PlaceTieActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132CompletionMapSurjectiveActual.completionMap_surjective_of_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132CompletionMapSurjectiveActual.packet_completionMap_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S3132CompletionMapSurjectiveActual.concreteGaussianFiberRingEquiv_unconditional

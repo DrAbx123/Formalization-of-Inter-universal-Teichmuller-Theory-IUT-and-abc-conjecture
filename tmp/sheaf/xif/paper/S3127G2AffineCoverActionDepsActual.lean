@@ -1,0 +1,16 @@
+import tmp.sheaf.xif.paper.S3127G2eSchemeGammaAutAlgebraMapConsumer
+import tmp.sheaf.xif.paper.S3127G2eSchemeGammaAutTransSwapConsumer
+import tmp.sheaf.xif.paper.S3127G2GammaAutMulApplyActual
+noncomputable section
+open LeanFormal.IUT.XiFPaper.S3127G2eSchemeGammaAutAlgebraMapConsumer
+open LeanFormal.IUT.XiFPaper.S3127G2eSchemeGammaAutTransSwapConsumer
+open LeanFormal.IUT.XiFPaper.S3127G2GammaAutMulApplyActual
+namespace LeanFormal.IUT.XiFPaper.S3127G2AffineCoverActionDepsActual
+
+-- Manifest of actual eScheme/GammaAut dependencies for AffineCoverAction and ActionCoverNatural.
+#check S3127G2eSchemeGammaAut_hom_comp
+#check S3127G2eSchemeGammaAut_trans_swap
+#check S3127G2GammaAut_mul_apply
+
+end LeanFormal.IUT.XiFPaper.S3127G2AffineCoverActionDepsActual
+end

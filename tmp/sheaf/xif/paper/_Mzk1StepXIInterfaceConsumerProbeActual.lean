@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIInterfaceConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIInterfaceConsumerActual.stepXIInterfaceConsumer_bundle

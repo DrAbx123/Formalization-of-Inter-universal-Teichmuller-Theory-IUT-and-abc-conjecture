@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1E1OrderActual
+import tmp.sheaf.xif.paper.Mzk1CompletionNoRootActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1_iff_qside_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1_allocation_of_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1OrderActual.e1OrderRows_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.no_natRootSystem_of_no_sqrt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.completionFirstFieldObstruction_false_of_no_sqrt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionNoRootActual.rows_length

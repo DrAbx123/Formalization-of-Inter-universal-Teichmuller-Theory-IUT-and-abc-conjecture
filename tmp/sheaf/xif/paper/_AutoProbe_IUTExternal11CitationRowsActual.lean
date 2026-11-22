@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternal11CitationRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal11CitationRowsActual.IUTExternalCitationRows
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal11CitationRowsActual.IUTExternalCitationRows_length
+#print axioms LeanFormal.IUT.Audit.IUTExternalCitationRowsRecord

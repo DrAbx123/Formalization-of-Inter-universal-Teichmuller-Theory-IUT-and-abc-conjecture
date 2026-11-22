@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131RegionRelativeInstantiationAttemptActual
+import tmp.sheaf.xif.paper.S3131CardAMPLHullFinitenessActual
+import tmp.sheaf.xif.paper.S3131ModelRegionVolumeReuseActual
+import tmp.sheaf.xif.paper.S3131HeightVolumeDictionaryAttemptActual
+import tmp.sheaf.xif.paper.S3131CoordinationReportActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131RegionRelativeInstantiationAttemptActual.regionRelative_of_subset_hull
+#print axioms LeanFormal.IUT.XiFPaper.S3131CardAMPLHullFinitenessActual.hull_logVolume_ne_top_of_supply
+#print axioms LeanFormal.IUT.XiFPaper.S3131ModelRegionVolumeReuseActual.S3131ModelRegionVolumeReuse_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131HeightVolumeDictionaryAttemptActual.S3131HeightVolumePieces_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoordinationReportActual.S3131CoordinationReport_length

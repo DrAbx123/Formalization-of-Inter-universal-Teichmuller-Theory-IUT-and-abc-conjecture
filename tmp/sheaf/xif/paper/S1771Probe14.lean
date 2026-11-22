@@ -1,0 +1,11 @@
+import Mathlib.RingTheory.Etale.Finite
+import Mathlib.RingTheory.Etale.Pi
+import Mathlib.Algebra.Algebra.Prod
+#check Algebra.Etale.of_equiv
+#check Algebra.FormallyEtale.pi_iff
+#check AlgEquiv.piFinTwo
+#check AlgEquiv.piCongrRight
+#check AlgEquiv.piCongrLeft
+#check AlgEquiv.funUnique
+#check AlgHom.pi
+#check AlgEquiv.finTwoArrow

@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-11-12T17:02:58.466Z",
+  "policy": "SHEAF sec3: candidates are NOT dependencies (import/file-name/suffix/term are not proof)",
+  "candidates": [
+    {
+      "from": "olean:Oka/Algebra/Category/Grp/Sheaf/LocallySurjective",
+      "to": "olean:Oka/Algebra/Category/Grp/EpiMono",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Basic",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Generators",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Criterion",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Basic",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Free",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Stability",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Locality",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Basic",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Presentation",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Locality",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Stability",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Coherent/Basic",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Generators",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/PushforwardContinuous",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/LocallySurjective",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Colimits",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/AlgebraicGeometry/Modules/Sheaf",
+      "to": "olean:Oka/Algebra/Category/ModuleCat/Sheaf/Quasicoherent",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Oka/AlgebraicGeometry/Modules/Tilde",
+      "to": "olean:Oka/AlgebraicGeometry/Modules/Sheaf",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Mathlib/CategoryTheory/Galois/FiberAutMapInjective",
+      "to": "olean:Pi1/Mathlib/CategoryTheory/Galois/FiberAutMap",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/BaseChange",
+      "to": "olean:Pi1/Orbicurve/CoreCriterion",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/CoreCriterion",
+      "to": "olean:Pi1/Orbicurve/Iso",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Descent",
+      "to": "olean:Pi1/Orbicurve/Lefschetz",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Elliptic",
+      "to": "olean:Pi1/Orbicurve/IntegralClosure",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/EllipticSubfield",
+      "to": "olean:Pi1/Orbicurve/BaseChange",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Embed",
+      "to": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/EtaleInertia",
+      "to": "olean:Pi1/Orbicurve/ValuationInertia",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/HemiTY",
+      "to": "olean:Pi1/Orbicurve/BaseChange",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/IntegralClosure",
+      "to": "olean:Pi1/Orbicurve/Core",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Iso",
+      "to": "olean:Pi1/Orbicurve/Pullback",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Lefschetz",
+      "to": "olean:Pi1/Orbicurve/EllipticSubfield",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/LefschetzMain",
+      "to": "olean:Pi1/Orbicurve/Descent",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Morphisms",
+      "to": "olean:Pi1/Orbicurve/Core",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Pullback",
+      "to": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/Subfield",
+      "to": "olean:Pi1/Orbicurve/Morphisms",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "to": "olean:Pi1/Orbicurve/Subfield",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/SubfieldRamified",
+      "to": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbicurve/ValuationInertia",
+      "to": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/Comparison",
+      "to": "olean:Pi1/Orbifold/Induced",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/Etale",
+      "to": "olean:Pi1/Orbifold/FibreAut",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/EtaleMathlib",
+      "to": "olean:Pi1/Orbifold/EtaleProfinite",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/EtaleOfAlgebra",
+      "to": "olean:Pi1/Orbifold/Etale",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/EtaleProfinite",
+      "to": "olean:Pi1/Orbifold/Etale",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/GaloisAction",
+      "to": "olean:Pi1/Orbifold/GaloisData",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/GaloisData",
+      "to": "olean:Pi1/Orbicurve/SubfieldGalois",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/Orbifold/Induced",
+      "to": "olean:Pi1/Orbifold/GaloisAction",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/RingTheory/FiniteEtale/Basic",
+      "to": "olean:Pi1/Mathlib/RingTheory/RingHom/Finite",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/RingTheory/FiniteEtale/Descent",
+      "to": "olean:Pi1/RingTheory/FiniteEtale/Basic",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    },
+    {
+      "from": "olean:Pi1/RingTheory/FiniteEtale/Equalizer",
+      "to": "olean:Pi1/RingTheory/FiniteEtale/Descent",
+      "source": "file-import",
+      "evidence": "observed_source",
+      "note": "SHEAF sec3: project import alone is NOT a dependency proof - candidate only"
+    }
+  ]
+}

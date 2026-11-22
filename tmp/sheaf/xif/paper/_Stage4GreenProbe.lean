@@ -1,0 +1,41 @@
+import tmp.sheaf.xif.paper.GenEll06Section3StatementsActual
+import tmp.sheaf.xif.paper.GenEll07Section4StatementsActual
+import tmp.sheaf.xif.paper.GenEllThm38HeightBoundsActual
+import tmp.sheaf.xif.paper.GenEllThm38EffectiveBoundsActual
+import tmp.sheaf.xif.paper.Mzk1Section1StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section2StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section3StatementsActual
+import tmp.sheaf.xif.paper.Mzk1ProvabilityClassificationActual
+import tmp.sheaf.xif.paper.Mzk1Lemma21Actual
+import tmp.sheaf.xif.paper.Mzk1Lemma21RealActual
+import tmp.sheaf.xif.paper.Mzk1Lemma23Actual
+import tmp.sheaf.xif.paper.Mzk1Theorem25StatementActual
+import tmp.sheaf.xif.paper.Mzk1Cor31Cor32Actual
+import tmp.sheaf.xif.paper.Mzk1GeometricCorePortedReuseActual
+import tmp.sheaf.xif.paper.AbsTopIII02LocalVolumesActual
+import tmp.sheaf.xif.paper.AbsTopIII06WeightedVolumeBridgeActual
+import tmp.sheaf.xif.paper.AbsTopIII07NormalizedLocalVolumeActual
+import tmp.sheaf.xif.paper.AbsTopIII08PvAdicScalingActual
+import tmp.sheaf.xif.paper.AbsTopIII09ThetaHullScalingActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06Section3StatementsActual.genEllSection3Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.genEllSection4Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.genEllThm38_23040_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38EffectiveBoundsActual.genEll_23040_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section1StatementsActual.mzk1_def11_reuse
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section2StatementsActual.mzk1Section2Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section3StatementsActual.mzk1Section3Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ProvabilityClassificationActual.mzk1Classification_length_check
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21Actual.belyi21_derivative
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21Actual.belyi21_derivative_root
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RealActual.belyi21R_lt_of_one_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23Actual.dist_alpha_lam_ge
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem25StatementActual.mzk1Thm25ReductionArchitecture_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor31Cor32Actual.mzk1CorStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.mzk1GeometricCorePortedAssets_length
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII02LocalVolumesActual.absTopIIILocalVolumeStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII06WeightedVolumeBridgeActual.LGPWeightedVolumeBridge.le_theta
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.normalizedHaar_unitBall
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_log_measure_prime_smul_integralLogShell
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII09ThetaHullScalingActual.absTopIII_thetaHull_log_measure_prime_smul

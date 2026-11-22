@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ThetaPilotPacketInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ThetaPilotPacketInterfaceActual.onePlaceLogShellFamily
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ThetaPilotPacketInterfaceActual.onePlacePacket
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ThetaPilotPacketInterfaceActual.productComparison

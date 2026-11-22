@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S2072HasQuotientsActual
+
+open LeanFormal.IUT.XiFPaper.S2072HasQuotientsActual
+#print axioms cocone_singleObj_inv
+#print axioms affineHasColimitsOfShape_of_packaging
+#print axioms curveHasQuotientsOfPackaging
+#print axioms curvePreGaloisRemainingFieldsOfPackaging
+#print axioms schemeHasQuotientsOfPackaging
+#print axioms curveQuotientsOf_trivialActions
+#print axioms ABCBridge.AffineBaseFiniteEtaleQuotients.quotientCoverOfDiagram
+#print axioms ABCBridge.AffineBaseFiniteEtaleQuotients.quotientProjectionOfDiagram_invariant
+#print axioms FiniteEtaleFixedPointsGeneral.fixedPointSubalgebra_finiteEtale

@@ -2,6 +2,7 @@
 
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.Foundations.NumberField.Places
+import LeanFormal.IUT.Audit.Status
 
 /-!
   # The selected-place part of the source boundary
@@ -377,3 +378,21 @@ end InitialThetaSource
 end
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def initialThetaPlaceSelection : Obligation :=
+  { id := "IUT-I.initial-theta-place-selection"
+    source := "IUT I, place notation and Definition 3.1(b); selected-place boundary"
+    status := VerificationStatus.interface
+    note :=
+      "`SourcePlaceSelection` packages the remaining source condition, a selected " ++
+        "bad-place set with its arithmetic fields, while the restriction section " ++
+        "and its compatibility are derived from the canonical construction in the " ++
+        "foundations. The record does not assert that a chosen bad place has bad " ++
+        "reduction or that its residue characteristic is coprime to `l`. " ++
+        "Name-level registration used by the clause constructors and the " ++
+        "sign-quotient record."
+    dependsOn := [ "Foundations.NumberField.places" ] }
+
+end LeanFormal.IUT.Audit

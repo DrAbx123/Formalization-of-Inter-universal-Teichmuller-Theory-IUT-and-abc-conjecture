@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.ConcretePaperUnconditionalDataUnconditionalActual
+#print axioms LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataUnconditionalActual.concretePaperUnconditionalDataUnconditional
+#print axioms LeanFormal.IUT.XiFPaper.ConcretePaperUnconditionalDataActual.concretePaperUnconditionalData

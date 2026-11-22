@@ -1,0 +1,51 @@
+tmp\sheaf\n8\N8Parent.lean:46:32: error: Function expected at
+  ThetaPilotCarrier
+but this term has type
+  ?m.29
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `ThetaPilotCarrier` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\N8Parent.lean:58:15: error: Application type mismatch: The argument
+  CardIPLExchangeShape
+has type
+  (L : LinkSpan core1 core2) → CardIPLTransportSupply L → Prop
+but is expected to have type
+  Sort (max (max (max u v) (?u.95 + 1)) (?u.96 + 1))
+in the application
+  Nonempty CardIPLExchangeShape
+tmp\sheaf\n8\N8Parent.lean:70:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:77:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:86:41: error: Function expected at
+  ThetaPilotCarrier
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `ThetaPilotCarrier` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\N8Parent.lean:92:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:104:15: error: Application type mismatch: The argument
+  CardIPLExchangeShape
+has type
+  (L : LinkSpan core1 core2) → CardIPLTransportSupply L → Prop
+but is expected to have type
+  Sort (max (max (max u v) (?u.30 + 1)) (?u.31 + 1))
+in the application
+  Nonempty CardIPLExchangeShape
+tmp\sheaf\n8\N8Parent.lean:110:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:116:14: error: Function expected at
+  N8ParentClosure
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `N8ParentClosure` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\N8Parent.lean:117:42: error(lean.unknownIdentifier): Unknown identifier `l`
+tmp\sheaf\n8\N8Parent.lean:117:55: error(lean.unknownIdentifier): Unknown identifier `Label`
+tmp\sheaf\n8\N8Parent.lean:117:73: error(lean.unknownIdentifier): Unknown identifier `Choice`
+tmp\sheaf\n8\N8Parent.lean:117:9: error: Tactic `rcases` failed: `x✝ : Sort u_2` is not an inductive datatype

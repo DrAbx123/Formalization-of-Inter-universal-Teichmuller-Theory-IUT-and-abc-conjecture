@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2603LiftTLInjectiveActual
+#print axioms LeanFormal.IUT.XiFPaper.S2603LiftTLInjectiveActual.liftTL_injective

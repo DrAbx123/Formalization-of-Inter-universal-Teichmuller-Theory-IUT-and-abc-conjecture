@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2736hTensorCharPKFinalActual
+#print axioms LeanFormal.IUT.XiFPaper.S2736hTensorCharPKFinalActual.tensor_char_pK

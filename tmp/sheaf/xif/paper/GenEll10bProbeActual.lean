@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.GenEll10bH6Mzk1WiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10bH6Mzk1WiringActual.h6_genEll_transfer_of_mzk1
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10bH6Mzk1WiringActual.mzk1_thm25_of_core
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10bH6Mzk1WiringActual.h6_mzk1_interface
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10bH6Mzk1WiringActual.h6Mzk1WiringRows_length

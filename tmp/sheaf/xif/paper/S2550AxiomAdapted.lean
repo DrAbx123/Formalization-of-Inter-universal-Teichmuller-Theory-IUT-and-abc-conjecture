@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2550Mod13IrreducibleActual
+#print axioms LeanFormal.IUT.XiFPaper.S2550Mod13IrreducibleActual.F13_eq_map
+#print axioms LeanFormal.IUT.XiFPaper.S2550Mod13IrreducibleActual.F13_natDegree

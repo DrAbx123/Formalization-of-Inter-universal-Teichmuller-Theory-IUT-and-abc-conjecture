@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24UnionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24UnionActual.s3135_dOfPoints_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24UnionActual.s3135_subset_pointClosure

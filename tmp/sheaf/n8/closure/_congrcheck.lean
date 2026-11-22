@@ -1,0 +1,9 @@
+import Mathlib
+#check PiTensorProduct.congr_tprod
+#check PiTensorProduct.congr_apply
+#check PiTensorProduct.congr_tprod_apply
+#check PiTensorProduct.tmulEquivDep_symm_apply
+#check TensorProduct.congr_symm
+#check TensorProduct.congr_tmul
+#check LinearMap.mulLeft_apply
+#check PiTensorProduct.subsingletonEquiv_apply_tprod

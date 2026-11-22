@@ -1,0 +1,25 @@
+import tmp.sheaf.xif.paper.TauCetiPort.TauCeti.MeasureTheory.Group.LocalFieldScaling
+import Mathlib.Tactic
+/-! Re-export of the ported TauCeti p-adic Haar scaling law -/
+noncomputable section
+open Set ValuativeRel
+open scoped ENNReal Pointwise
+namespace LeanFormal.IUT.XiFPaper.Mzk1TauCetiHaarScalingBridgeActual
+/-- Ported TauCeti scaling law: re-export with stable name. -/
+theorem tauCeti_addHaar_image_mulVec
+    {K : Type*} [Field K] [ValuativeRel K]
+    {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (μ : Measure (ι -> K)) [μ.IsAddHaarMeasure] [μ.Regular]
+    {A : Matrix ι ι (𝒪[K])} {ϖ : 𝒪[K]} (hϖ : Irreducible ϖ) {k : Nat}
+    (hk : Associated A.det (ϖ ^ k)) (s : Set (ι -> K)) :
+    μ ((A.map (algebraMap (𝒪[K]) K)).mulVec '' s) =
+      1 / (Nat.card 𝓀[K] : ℝ≥0∞) ^ k * μ s :=
+  TauCeti.MeasureTheory.Measure.addHaar_image_mulVec μ hϖ hk s
+/-- The re-exported theorem is the ported TauCeti law. -/
+def tauCetiHaarScalingSource : List String :=
+  [ "TauCetiPort/TauCeti/MeasureTheory/Group/LocalFieldScaling.lean",
+    "TauCeti.MeasureTheory.Measure.addHaar_image_mulVec" ]
+theorem tauCetiHaarScalingSource_length : tauCetiHaarScalingSource.length = 2 := rfl
+#check tauCeti_addHaar_image_mulVec
+end LeanFormal.IUT.XiFPaper.Mzk1TauCetiHaarScalingBridgeActual
+end

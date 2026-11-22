@@ -40,3 +40,23 @@ imports：
 - Final2 的 GREEN 依赖链已破（B5 red），不可当作当前可复现证明；
 - SignFinal 独立且定理实际；
 - 未改源。
+
+## 时间戳确认（2026-11-14，本地 CST = UTC+8）
+
+- `Mzk1B5AssemblyNoHproductAttemptActual.lean` source mtime：**11:19:24 CST**；
+- `Mzk1P1PlaceVolumeFinal2Actual.olean`：**11:18:57 CST**（早于 B5 source 改动）；
+- `Mzk1B5AssemblyNoHproductAttemptActual.olean`：仍是 **2026-11-13 23:21 CST** 的旧物；
+- watchdog B5 最后记录：**11:18:36 CST FAIL**（也早于 source 11:19:24）。
+
+因此：B5 在 Final2 编译之后又被修改，且旧 olean 一直是 11-13 23:21；Final2 当前 **不可复现**。
+未改任何源。
+
+## 更正（2026-11-14 11:40 CST）：B5 已绿，Final2 已重新编并可复现
+
+- `Mzk1B5AssemblyNoHproductAttemptActual`：
+  source mtime **11:23:30**；olean **11:26:33**；watchdog **11:26:34 DONE EXIT=0**；
+- `Mzk1P1PlaceVolumeFinal2Actual`：
+  source mtime **11:27:33**（晚于 B5 新 olean）；olean **11:29:42**；watchdog **11:29:42 DONE EXIT=0**。
+
+因此先前“Final2 不可复现”已被后续官方编译解决：B5 先绿，Final2 在其新 olean 上重编绿。
+未改源。

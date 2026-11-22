@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteABCBridgeActual
+import tmp.sheaf.xif.paper.S3131PaperRouteDependencyDataActual
+import tmp.sheaf.xif.paper.S3131PaperRouteResidualLedgerActual
+import tmp.sheaf.xif.paper.S3131PaperRouteStatusDataActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteABCBridgeActual.paperRouteABC_of_families
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteDependencyDataActual.S3131PaperRouteDependencyMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteResidualLedgerActual.S3131PaperRouteResiduals_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteStatusDataActual.S3131PaperRouteFieldStatus_length

@@ -74,3 +74,21 @@ Either:
 2. keep `Ind1ShellTransportGap` as the precise interface and connect the A6/A1 comparison consumer conditionally on it.
 
 Doc owner: stepxi. Date: 2026-11-14.
+
+## Definition-level check of the general Ind1 gap (2026-11-14 T06:30Z)
+
+Checked the definitions: `Ind1ShellTransport`/`capsulePositionEquiv` take an arbitrary `e : Capsule j ≃ Capsule j` and `φ : ∀ i, Va i ≃ Va (e i)`; the place family `places` is an arbitrary source argument. There is no definitional or `simp` equality `places (e i) (φ i v) = places i v` for general `e, φ`. Therefore no canonical completion equivalence follows from the definitions; only the identity permutation has a definitional inhabitant.
+
+Added the exact specified-permutation interface:
+- `Ind1ShellTransportFor places e φ` with `shellEquiv`;
+- `Ind1ShellTransportForRequired places e φ := Nonempty (Ind1ShellTransportFor places e φ)`;
+- `ind1ShellTransportFor_refl` (identity only).
+
+The bare `Ind1ShellTransportGap` is trivially inhabited by identity and is not sufficient for a nontrivial procession automorphism; consumers should use `Ind1ShellTransportForRequired` with the actual `e, φ`. This is the one explicit source input still needed for general-place Ind1.
+
+## Consumer rule (must read)
+
+For a real procession automorphism, consumers MUST pass the actual label/place permutation `e, φ` and use `SourceMultiradialInd1Ind3InterfaceFor places e φ` / `SourceMultiradialInd1Ind3InterfaceForRequired places e φ` (or the A5 `Ind1ShellTransportForRequired`). The bare `Ind1ShellTransportGap` is only the identity-level existence statement and must NOT be used as a substitute for nontrivial Ind1.
+
+Construction from an actual transport:`sourceMultiradialInd1Ind3InterfaceFor_of_transport places e φ h`.
+

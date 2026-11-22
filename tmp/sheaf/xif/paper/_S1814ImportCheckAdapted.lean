@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1814OrbicurveCoversAffineActual
+
+open LeanFormal.IUT.XiFPaper.S1814OrbicurveCoversAffineActual
+#check S1814_target_iff_firstMissing
+#check S1814SliceEquiv
+#print axioms S1814_target_iff_firstMissing

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GlobalQPilotNormalizedLogVolumeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GlobalQPilotNormalizedLogVolumeActual.qPilotFLAverageLogMagnitude_eq
+#print axioms LeanFormal.IUT.XiFPaper.GlobalQPilotNormalizedLogVolumeActual.qPilotLocalNormalizedLogMagnitude_eq
+#print axioms LeanFormal.IUT.XiFPaper.GlobalQPilotNormalizedLogVolumeActual.paperQPilotNormalizedLogMagnitude_eq

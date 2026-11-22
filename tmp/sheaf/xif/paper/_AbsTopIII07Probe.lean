@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.AbsTopIII07NormalizedLocalVolumeActual
+import tmp.sheaf.xif.paper.Mzk1Lemma23Actual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.normalizedHaar_unitBall
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.normalizedHaar_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23Actual.dist_alpha_lam_ge

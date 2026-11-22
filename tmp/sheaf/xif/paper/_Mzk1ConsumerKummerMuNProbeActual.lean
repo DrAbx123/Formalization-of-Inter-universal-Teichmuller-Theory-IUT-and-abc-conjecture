@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerKummerMuNActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerKummerMuNActual.kummer_lift_injective_and_iso
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerKummerMuNActual.muN_quotient_structure

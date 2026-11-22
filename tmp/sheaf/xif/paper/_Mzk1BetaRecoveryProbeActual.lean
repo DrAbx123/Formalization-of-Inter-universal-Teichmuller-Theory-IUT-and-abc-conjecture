@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BelyiMaximizerActual
+import tmp.sheaf.xif.paper.Mzk1BadParamFiniteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiMaximizerActual.belyiPolynomial_eval_div_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BadParamFiniteActual.badParamFiniteRows_length

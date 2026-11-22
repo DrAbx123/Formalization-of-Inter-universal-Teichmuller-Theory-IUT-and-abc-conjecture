@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioQuarterActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioQuarterActual.pow_le_self_of_unit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioQuarterActual.belyi22_f0_quarter

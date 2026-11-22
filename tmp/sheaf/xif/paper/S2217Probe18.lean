@@ -1,0 +1,20 @@
+import tmp.sheaf.xif.paper.S2167DedekindFrobCycleActual
+import Mathlib.FieldTheory.Finite.Basic
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+open Polynomial NumberField
+#check @Module.natCard_eq_pow_finrank
+#check @IntermediateField.adjoin.finrank
+#check @IntermediateField.mem_adjoin_simple_self
+#check @IntermediateField.adjoin_simple_eq_top
+#check @IntermediateField.adjoin.finiteDimensional
+#check @FiniteField.pow_card
+#check @minpoly.eq_of_irreducible
+#check @minpoly.dvd
+#check @Polynomial.X_pow_card_pow_sub_X_natDegree_eq
+#check @Irreducible.natDegree_dvd_of_dvd_X_pow_card_pow_sub_X
+#check @Polynomial.aeval_X
+#check @Polynomial.aeval_sub
+#check @Polynomial.aeval_pow
+#check @RingHom.injective
+#check @AlgHom.injective
+#check @FiniteField.coe_frobeniusAlgHom

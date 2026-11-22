@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-11-10T20:05:23.365Z",
+  "targets": 1209,
+  "closure": 1213,
+  "proved": 1213,
+  "gap": 0,
+  "conditional": 0,
+  "other": 0,
+  "sorry_modules_in_closure": 0,
+  "sorry_occurrences_in_closure": 0,
+  "modules_with_axiom_declarations": 0,
+  "gap_files": [],
+  "bad_sample": []
+}

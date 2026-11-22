@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2310GaloisIsoActual
+open LeanFormal.IUT.XiFPaper.S2310GaloisIsoActual
+#print axioms S2310RootAction
+#print axioms S2310RootAction_injective
+#print axioms S2310Degree_eq_imageOrder_of_iso
+#print axioms S2310Degree_eq_480_of_iso_and_hypotheses

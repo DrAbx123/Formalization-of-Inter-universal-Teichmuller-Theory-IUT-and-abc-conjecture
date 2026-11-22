@@ -1,0 +1,6 @@
+
+## 2026-11-10 22:25 — aibi scope flag verified by mainline (A311); scope-split doc filed; no closure claims
+
+- Mainline verified against paper text: [Mzk1] Lemma 2.4 is ALGEBRAIC-input (S subset P1(Qbar), beta in Qbar minus S, f in Qbar(x), S_phi subset P1(Qbar), field-of-definition clause); rational-only restated targets do NOT close paper 2.4; m/d measure trivial on rational points confirmed. DO NOT claim rational-only = paper 2.4 complete.
+- Filed tmp/sheaf/xif/paper/SCOPE-2.4-RESTATEMENT.md with mainline option (i) scope split: Layer R (rational-input component, current restated target + BetaAvoidingBelyiBaseInput class-B + hull proof attempt) and Layer A (algebraic-input paper layer: descent (D) via Mzk1Lemma24DescentActual finite-Galois PROVED + AlgebraicClosureFixedFieldPaperInput class-B; 2.3 separation; 2.2 Qbar target missing; measure machinery + S1a/S1b/S2/S2-i become meaningful). CV vocabulary shared (specialSet/criticalValuesOverC/CVCompositionLawStatement PROVED/SpecialSetPreservationStatement PROVED/s3135_CVCompat_proved).
+- Honesty constraints recorded: no 'paper 2.4 complete' claims under rational-only scope; named deps stay named; vocabulary change P1(Q) to P1(Qbar) requires Lead/mainline/stepxi/lattice coordination. Binding HOLD; gate NOT PASSED; registry frozen 14041.

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1G1FermatKbarIntegralActual
+import tmp.sheaf.xif.paper.Mzk1G1FermatKbarSpecActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatKbarIntegralActual.kbar_integral
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatKbarIntegralActual.isIntegral_piece
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatKbarIntegralActual.kbarPoint_exists
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatKbarSpecActual.kbarCover_iSup_eq_top

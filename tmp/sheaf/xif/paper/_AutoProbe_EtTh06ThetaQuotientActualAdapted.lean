@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh06ThetaQuotientActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaQuotientActual.EtThThetaQuotientLayer
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaQuotientActual.etThThetaQuotientLayer
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaQuotientActual.etThThetaQuotientReuse

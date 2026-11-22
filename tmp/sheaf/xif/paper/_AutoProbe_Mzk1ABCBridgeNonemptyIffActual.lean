@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ABCBridgeNonemptyIffActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCBridgeNonemptyIffActual.mainline_cor312Interface_nonempty_iff_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCBridgeNonemptyIffActual.mainline_abcConjecture_of_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCBridgeNonemptyIffActual.mainline_nonempty_of_abcConjecture

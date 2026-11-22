@@ -1,0 +1,5 @@
+import LeanFormal.IUT.Foundations.LocalFields.AlgebraicUnitLogarithm
+open LeanFormal.IUT.LocalFieldLogarithm
+#check algebraicUnitLog
+#check algebraicUnitLog_one
+#check algebraicUnitLog_mul

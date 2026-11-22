@@ -1,0 +1,1 @@
+import tmp.sheaf.xif.paper.S3121GeometricCorePartial`n#print axioms LeanFormal.IUT.XiFPaper.S3121GeometricCorePartial.S3121GeometricCorePartial`n

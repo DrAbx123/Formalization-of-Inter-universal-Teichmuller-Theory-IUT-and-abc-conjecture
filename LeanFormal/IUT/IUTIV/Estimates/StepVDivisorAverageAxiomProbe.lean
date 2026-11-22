@@ -1,0 +1,6 @@
+import LeanFormal.IUT.IUTIV.Estimates.StepVDivisorAverage
+
+open LeanFormal.IUT.IUTIV.StepVDivisorAverage
+
+#print axioms weight_finite_eq_inertiaDeg_mul_log
+#print axioms eDegreeUnnormalized_eq_weightedAverage

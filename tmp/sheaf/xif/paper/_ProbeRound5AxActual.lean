@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1ULBadFPrimeSetActual
+import tmp.sheaf.xif.paper.Mzk1SchemeIntegralConnectedActual
+import tmp.sheaf.xif.paper.Mzk1SchemePullbackIsoSourceActual
+import tmp.sheaf.xif.paper.Mzk1SchemePreimagePullbackIsoActual
+import tmp.sheaf.xif.paper.Mzk1G1F8SecondActual
+import tmp.sheaf.xif.paper.Mzk1G1D1ProducerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULBadFPrimeSetActual.zero_le_logConductorFActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SchemeIntegralConnectedActual.connectedSpace_of_isIntegral
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1SchemeIntegralConnectedActual.preconnectedSpace_of_isIntegral
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F8SecondActual.f8_second_equality_frame
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F8SecondActual.omegaYECechUnit_eq_pullback
+#print axioms LeanFormal.IUT.XiFPaper.G1D1ProducerActual.d1_of_analyticInput

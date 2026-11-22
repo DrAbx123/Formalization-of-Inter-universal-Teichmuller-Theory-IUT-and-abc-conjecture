@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S3123UnitCompExplicitActual
+#print axioms LeanFormal.IUT.XiFPaper.S3123UnitCompExplicitActual.S3123UnitCompExplicit

@@ -1,0 +1,22 @@
+import tmp.sheaf.xif.paper.S3133QPilotIdealFamilyObjectActual
+import tmp.sheaf.xif.paper.S3133QPilotReadoutActual
+import tmp.sheaf.xif.paper.S3133QPilotPaperMissingActual
+import tmp.sheaf.xif.paper.S3133QPilotFTimesMuCandidateActual
+
+/-! Axioms probe for the first qpilot S3133 batch: prints the axioms of the main
+actual q-pilot constructions.  No proofs, no sorry. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotIdealFamilyObjectActual.qPilotIdealFamily_neg_eq_effectiveToExplicit
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotIdealFamilyObjectActual.qPilotIdealFamilyDivisorClass_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotIdealFamilyObjectActual.qPilotLineBundleObject_divisorClass
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotIdealFamilyObjectActual.qPilotLineBundleObject_logVolume_link
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotReadoutActual.qPilotSignedReadoutAt_eq_log_qNorm
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotReadoutActual.qPilotSignedReadoutAt_eq_neg_localLogMagnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotReadoutActual.qPilotLogMagnitudeAt_eq_multiplicity_mul_log
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotReadoutActual.qPilotWeightedGlobalReadout_one
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotReadoutActual.qPilotNormalizedGlobalReadout_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotFTimesMuCandidateActual.qPilotFTimesMuPrimeStripAt10Actual_toFPrimeStrip
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotFTimesMuCandidateActual.qPilotFTimesMuPrimeStripAt10Actual_timesMu
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotFTimesMuCandidateActual.qPilotFTimesMuPrimeStripAt10Actual_action_quotientMap
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotFTimesMuCandidateActual.qPilotFTimesMuPrimeStripAt10Actual_degree_quotientMap
+#print axioms LeanFormal.IUT.XiFPaper.S3133QPilotPaperMissingActual.qPilotLogVolume_actual_formula

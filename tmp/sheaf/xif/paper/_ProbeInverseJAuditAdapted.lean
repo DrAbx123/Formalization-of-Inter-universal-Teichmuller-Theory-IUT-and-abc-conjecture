@@ -1,0 +1,19 @@
+import LeanFormal.IUT.IUTII.Frobenioid.Example36TateInverseJCanonical
+import LeanFormal.IUT.Foundations.NumberField.SourceQvClosed
+import LeanFormal.IUT.Foundations.NumberField.SourceTateParameterAlignment
+import LeanFormal.IUT.Foundations.PAdicAnalytic.TateInverseJNo1728
+import LeanFormal.IUT.Foundations.PAdicAnalytic.TateQSeriesAnalytic
+
+open LeanFormal.IUT.IUTII.Frobenioid.Example36.TateInverseJ
+open LeanFormal.IUT.SourceQvClosed
+open LeanFormal.IUT.SourceTateParameterAlignment
+open LeanFormal.IUT.PAdicAnalytic.General
+open LeanFormal.IUT.PAdicAnalytic
+
+#print axioms exists_canonicalQSeriesJ_eq_split_j
+#print axioms exists_canonicalQSeriesJ_eq_split_j_full
+#print axioms five_not_qSeriesInverseJParameter
+#print axioms exists_sourceQv_at_finitePlace_closed
+#print axioms exists_alignedSourceTateParameter
+#print axioms exists_tateHK_eq_and_tateJK_eq_inv_no1728
+#print axioms exists_analytic_qTate_localInverse

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreFoundationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFoundationActual.zero_divisor_exists
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFoundationActual.SchemeLayer.genEll15GeometricCoreStatement_of_restated
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreFoundationActual.Rows.problemDRows_length

@@ -1,0 +1,82 @@
+tmp\sheaf\l03-g2\UniversalBundled.lean:41:0: warning: automatically included section variable(s) unused in theorem `SHEAF.L03.UniversalBundled.pi_invariant`:
+  [Finite G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tmp\sheaf\l03-g2\UniversalBundled.lean:62:0: warning: automatically included section variable(s) unused in theorem `SHEAF.L03.UniversalBundled.targetAffine_invariant`:
+  [Finite G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tmp\sheaf\l03-g2\UniversalBundled.lean:104:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  affineQuotientProjection A ≫ u
+in the target expression
+  e.hom ≫ affineQuotientProjection A ≫ u ≫ eB.inv = coverLeft f
+
+case refine_1
+R : Type u
+inst✝⁷ : CommRing R
+G : Type u
+inst✝⁶ : Group G
+inst✝⁵ : Finite G
+X : FiniteEtaleCover (Spec (CommRingCat.of R))
+A : Type u
+inst✝⁴ : CommRing A
+inst✝³ : Algebra R A
+inst✝² : MulSemiringAction G A
+inst✝¹ : SMulCommClass G R A
+e : X.carrier ≅ Spec (CommRingCat.of A)
+Z : FiniteEtaleCover (Spec (CommRingCat.of R))
+act : G →* Aut X
+hact : ActionCompatible e act
+B : Type u
+inst✝ : CommRing B
+eB : Z.carrier ≅ Spec (CommRingCat.of B)
+f : X ⟶ Z
+hf : ∀ (g : G), actLeft act g ≫ coverLeft f = coverLeft f
+target : Spec (CommRingCat.of A) ⟶ Spec (CommRingCat.of B) := targetAffine e eB f
+htarget : ∀ (g : G), specAction g ≫ target = target
+u : affineQuotientScheme A ⟶ Spec (CommRingCat.of B)
+hu : affineQuotientProjection A ≫ u = target
+huniq :
+  ∀ (y : affineQuotientScheme A ⟶ Spec (CommRingCat.of B)), (fun u => affineQuotientProjection A ≫ u = target) y → y = u
+⊢ e.hom ≫ affineQuotientProjection A ≫ u ≫ eB.inv = coverLeft f
+tmp\sheaf\l03-g2\UniversalBundled.lean:116:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  v ≫ eB.hom
+in the target expression
+  v = u ≫ eB.inv
+
+case refine_2
+R : Type u
+inst✝⁷ : CommRing R
+G : Type u
+inst✝⁶ : Group G
+inst✝⁵ : Finite G
+X : FiniteEtaleCover (Spec (CommRingCat.of R))
+A : Type u
+inst✝⁴ : CommRing A
+inst✝³ : Algebra R A
+inst✝² : MulSemiringAction G A
+inst✝¹ : SMulCommClass G R A
+e : X.carrier ≅ Spec (CommRingCat.of A)
+Z : FiniteEtaleCover (Spec (CommRingCat.of R))
+act : G →* Aut X
+hact : ActionCompatible e act
+B : Type u
+inst✝ : CommRing B
+eB : Z.carrier ≅ Spec (CommRingCat.of B)
+f : X ⟶ Z
+hf : ∀ (g : G), actLeft act g ≫ coverLeft f = coverLeft f
+target : Spec (CommRingCat.of A) ⟶ Spec (CommRingCat.of B) := targetAffine e eB f
+htarget : ∀ (g : G), specAction g ≫ target = target
+u : affineQuotientScheme A ⟶ Spec (CommRingCat.of B)
+hu : affineQuotientProjection A ≫ u = target
+huniq :
+  ∀ (y : affineQuotientScheme A ⟶ Spec (CommRingCat.of B)), (fun u => affineQuotientProjection A ≫ u = target) y → y = u
+v : Spec (CommRingCat.of ↥(FixedPoints.subalgebra R A G)) ⟶ Z.carrier
+hv : (e.hom ≫ affineQuotientProjection A) ≫ v = coverLeft f
+hv' : affineQuotientProjection A ≫ v ≫ eB.hom = target
+hvu : v ≫ eB.hom = u
+⊢ v = u ≫ eB.inv

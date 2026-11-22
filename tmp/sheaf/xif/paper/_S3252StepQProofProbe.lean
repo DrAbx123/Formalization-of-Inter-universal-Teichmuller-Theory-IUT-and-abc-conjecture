@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StepInterfaceQProofActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepInterfaceQProofActual.step_interface_of_hypotheses_proof

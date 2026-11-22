@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24NormalizationIntegrationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationIntegrationActual.normalizedStatementShape_of_b
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationIntegrationActual.mzk1_normalization_integration
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationIntegrationActual.normalizationIntegrationRows_length

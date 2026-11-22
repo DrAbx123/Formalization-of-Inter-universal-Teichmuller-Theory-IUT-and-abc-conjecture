@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S1997LTorsRootStackActual
+
+open LeanFormal.IUT.XiFPaper.S1997LTorsRootStackActual
+
+#check S1997RootPrestack
+#check S1997RootPrestack_hasPointAutOfOrder
+#check S1997RootStackification
+#check S1997RootStackificationMissing
+#check S1997RootEffectiveDescent
+#check S1997RootStackification_stackyOrbicurve
+#check S1997RootStackification_stackyOrbicurve_not_representable
+#check S1994StackyOrbicurveMissing_of_rootStackification
+
+#print axioms S1997RootPrestack_hasPointAutOfOrder
+#print axioms S1997RootStackification_stackyOrbicurve
+#print axioms S1997RootStackification_stackyOrbicurve_not_representable
+#print axioms S1994StackyOrbicurveMissing_of_rootStackification

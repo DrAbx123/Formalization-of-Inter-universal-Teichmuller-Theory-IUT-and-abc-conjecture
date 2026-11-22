@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S2167DedekindFrobCycleActual
+#check @Polynomial.Splits.exists_eval_eq_zero
+#check @Polynomial.Splits.of_dvd
+#check @List.ofFn
+#check @List.length_ofFn
+#check @List.getElem_ofFn
+#check @List.formPerm
+#check @List.support_formPerm_of_nodup
+#check @List.formPerm_apply_getElem
+#check @List.formPerm_apply_getLast
+#check @List.formPerm_apply_getElem_zero
+#check @List.Nodup
+#check @List.formPerm_isCycle
+#check @List.Pairwise
+#check @List.prod
+#check @Polynomial.exists_root
+#check @Polynomial.Splits.exists_root

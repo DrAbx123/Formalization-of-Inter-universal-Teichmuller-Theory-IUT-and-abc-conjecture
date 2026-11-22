@@ -1,0 +1,6 @@
+import Mathlib.MeasureTheory.Measure.Haar.Unique
+open MeasureTheory
+#check measure_isHaarMeasure_eq_smul_of_isOpen
+#check MeasureTheory.measure_isHaarMeasure_eq_smul_of_isOpen
+#check MeasureTheory.Measure.measure_isAddHaarMeasure_eq_smul_of_isOpen
+#check addHaarScalarFactor

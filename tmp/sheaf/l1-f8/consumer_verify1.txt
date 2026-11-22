@@ -1,0 +1,26 @@
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:25:10: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:35:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.data`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:31:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.Yddot`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:25:10: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:33:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.model`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:27:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.diagram`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:37:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.factorization`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:29:2: warning: The namespace `ThetaLinkSourceCoverConsumer` is duplicated in the declaration `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.ThetaLinkSourceCoverConsumer.root`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\l1-f8\ThetaLinkSourceCoverConsumer.lean:39:0: error: type of theorem `SHEAF.L1F8.ThetaLinkSourceCoverConsumer.thetaLinkSourceCoverConsumer_equivalence` is not a proposition
+  (consumer : ThetaLinkSourceCoverConsumer) → BaseCover consumer.model ≌ ThetaCoverSubcategory consumer.data

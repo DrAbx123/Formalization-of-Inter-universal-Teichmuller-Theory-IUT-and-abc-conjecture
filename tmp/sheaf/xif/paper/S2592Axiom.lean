@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2592GenericLocalizedResidueIsoActual
+#print axioms LeanFormal.IUT.XiFPaper.S2592GenericLocalizedResidueIsoActual.localizedResidueEquiv

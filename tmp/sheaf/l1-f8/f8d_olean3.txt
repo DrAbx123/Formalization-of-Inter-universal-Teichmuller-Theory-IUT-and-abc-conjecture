@@ -1,0 +1,1 @@
+lean-serial.ps1: 无法处理参数，因为参数名称 'o' 存在歧义。可能的匹配项包括: -OutVariable -OutBuffer。

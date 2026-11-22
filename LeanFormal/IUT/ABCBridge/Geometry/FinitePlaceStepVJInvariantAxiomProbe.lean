@@ -1,0 +1,5 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceStepVJInvariant
+
+open LeanFormal.IUT.NumberFieldFinitePlace
+
+#print axioms arithmeticTuple_stepV_hull_le_paperBound_of_jInvariant

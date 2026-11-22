@@ -3,6 +3,7 @@ import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Int.Interval
 import Mathlib.Tactic.Ring
 import LeanFormal.IUT.Foundations.Arithmetic.FiniteLabels
+import LeanFormal.IUT.Audit.Status
 
 /-!
   The elementary Gaussian/theta kernel.
@@ -129,3 +130,18 @@ end SignedLabel
 end SignedLabels
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def thetaGaussianKernel : Obligation :=
+  { id := "Foundations.Theta.GaussianKernel"
+    source := "IUT II, theta-value discussion; elementary Gaussian kernel"
+    status := VerificationStatus.provedKernel
+    note :=
+      "The Gaussian exponent `j * j` and the real theta value are defined for " ++
+        "signed labels, with proved negation and signed-label transport lemmas. " ++
+        "The etale theta function, its geometric origin, and the Hodge-Arakelov " ++
+        "comparison are not assumed here. Name-level registration for existing " ++
+        "dependsOn users." }
+
+end LeanFormal.IUT.Audit

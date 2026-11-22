@@ -1,0 +1,54 @@
+S2767 — 196a1 at l=5 Sage extraction output
+Date: 2026-11-07
+Sage: 10.9 (WSL Ubuntu-24.04, /opt/miniconda/envs/sage/bin/sage)
+Status: reference data only; NOT Lean actual.
+
+Curve
+  E: y^2 = x^3 - x^2 - 142x + 701
+  [a1,a2,a3,a4,a6] = [0,-1,0,-142,701]
+  conductor = 196 = 2^2 * 7^2
+  discriminant = 784 = 2^4 * 7^2
+  j = 406749952
+  torsion_order = 1
+  isogeny matrix (list) = [1,3,3,1]
+  is_surjective(5) = True
+  image_type(5) = 'The image is all of GL_2(F_5).'
+
+Sage global extraction (lead):
+  script: /tmp/extract196c.py
+  status at 2026-11-07 02:37: running (pid 1162)
+  /tmp/K196_5.sobj and /tmp/B196_5.sobj not yet present;
+  /tmp/local_matrices.jsonl complete with 14 lines.
+
+/local_matrices.jsonl
+{"p": 3, "k": 4, "card": 75, "M": [[3, 4], [0, 1]]}
+{"p": 17, "k": 4, "card": 83475, "M": [[3, 4], [0, 4]]}
+{"p": 43, "k": 4, "card": 3417600, "M": [[2, 1], [0, 4]]}
+{"p": 67, "k": 4, "card": 20152875, "M": [[1, 4], [0, 2]]}
+{"p": 71, "k": 4, "card": 25401600, "M": [[1, 3], [1, 4]]}
+{"p": 73, "k": 4, "card": 28387875, "M": [[4, 3], [0, 2]]}
+{"p": 89, "k": 2, "card": 7875, "M": [[4, 3], [0, 1]]}
+{"p": 89, "k": 4, "card": 62755875, "M": [[4, 4], [0, 1]]}
+{"p": 101, "k": 4, "card": 104080275, "M": [[1, 3], [1, 4]]}
+{"p": 103, "k": 4, "card": 112564875, "M": [[3, 2], [0, 1]]}
+{"p": 113, "k": 4, "card": 163036800, "M": [[4, 1], [0, 2]]}
+{"p": 127, "k": 4, "card": 260140800, "M": [[2, 2], [0, 1]]}
+{"p": 139, "k": 2, "card": 19200, "M": [[1, 2], [0, 4]]}
+{"p": 139, "k": 4, "card": 373324800, "M": [[2, 4], [3, 3]]}
+
+Group verification (Sage 10.9 over GF(5), plus exact integer arithmetic audited):
+  - all 14 matrices invertible (det != 0 mod 5)
+  - Sage GL(2,5).subgroup(all 14).order() = 480 = #GL_2(F_5)
+  - determinant values cover {1,2,3,4}
+  - after normalizing each matrix to determinant 1 (right-multiply by diag(1,det^-1)),
+    Sage SL(2,5).subgroup(normalized 14).order() = 120 = #SL_2(F_5)
+  Therefore the matrices generate all of GL_2(F_5), which contains SL_2(F_5).
+
+Precise remaining gap:
+  - /tmp/K196_5.sobj (division field degree 480) not yet written;
+  - /tmp/B196_5.sobj (E[5] basis) not yet written.
+  The matrices above are Frobenius data extracted by lead's script,
+  but without K/basis checkpoints they are not yet independently
+  reproducible in Lean.
+
+No Lean actual claim is made here.

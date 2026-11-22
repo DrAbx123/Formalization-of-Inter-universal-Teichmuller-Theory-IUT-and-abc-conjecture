@@ -1,0 +1,24 @@
+import tmp.sheaf.xif.paper.AG00bStep0RecordActual
+import tmp.sheaf.xif.paper.AG02FunctionFieldActual
+import tmp.sheaf.xif.paper.AG02bPrincipalDivisorActual
+import tmp.sheaf.xif.paper.AG03DivisorsSectionsActual
+import tmp.sheaf.xif.paper.AG03bSectionsBasicActual
+import tmp.sheaf.xif.paper.AG05IdsActual
+
+-- AG infrastructure probe (Mathlib FunctionField/OrderOfVanishing reuse).
+
+#print axioms LeanFormal.IUT.XiFPaper.AG02FunctionFieldActual.agOrderOfVanishing_mul
+#print axioms LeanFormal.IUT.XiFPaper.AG02FunctionFieldActual.agOrderOfVanishing_zero
+#print axioms LeanFormal.IUT.XiFPaper.AG02FunctionFieldActual.agOrderOfVanishing_germ_of_isUnit
+#print axioms LeanFormal.IUT.XiFPaper.AG02FunctionFieldActual.agFunctionField_isFractionRing_of_isAffineOpen
+#print axioms LeanFormal.IUT.XiFPaper.AG02FunctionFieldActual.agGermToFunctionField_injective
+#print axioms LeanFormal.IUT.XiFPaper.AG02bPrincipalDivisorActual.principalDivisor_zero
+#print axioms LeanFormal.IUT.XiFPaper.AG02bPrincipalDivisorActual.principalDivisor_mul
+#print axioms LeanFormal.IUT.XiFPaper.AG02bPrincipalDivisorActual.principalDivisor_coeff
+#print axioms LeanFormal.IUT.XiFPaper.AG03DivisorsSectionsActual.mem_divisorSections_iff
+#print axioms LeanFormal.IUT.XiFPaper.AG03DivisorsSectionsActual.zero_mem_divisorSections
+#print axioms LeanFormal.IUT.XiFPaper.AG03DivisorsSectionsActual.smul_mem_divisorSections
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.divisorSections_restrict
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.divisorSections_mono_coeff
+#print axioms LeanFormal.IUT.XiFPaper.AG03bSectionsBasicActual.unit_germ_mem_divisorSections_zero
+#print axioms LeanFormal.IUT.XiFPaper.AG05IdsActual.agIds

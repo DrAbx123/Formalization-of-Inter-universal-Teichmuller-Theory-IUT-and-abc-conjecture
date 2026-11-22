@@ -1,0 +1,2 @@
+import tmp.sheaf.n8.closure.C1P6DonorsFromContract
+#print axioms LeanFormal.IUT.N8Closure.C1Actual.nativeOldBindingDonorsExist_of_contract

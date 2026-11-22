@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2726PerPlaceUpdateRegionActual
+import tmp.sheaf.xif.paper.S2726C3PerPlaceUpdateRegionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2726PerPlaceUpdateRegionActual.defaultTensorIndex
+#print axioms LeanFormal.IUT.XiFPaper.S2726PerPlaceUpdateRegionActual.S2726PerPlaceUpdateRegion
+#print axioms LeanFormal.IUT.XiFPaper.S2726PerPlaceUpdateRegionActual.S2726PerPlaceRegionDefault
+#print axioms LeanFormal.IUT.XiFPaper.S2726C3PerPlaceUpdateRegionActual.S2726C3PerPlaceUpdateRho
+#print axioms LeanFormal.IUT.XiFPaper.S2726C3PerPlaceUpdateRegionActual.S2726C3PerPlaceUpdateRegion

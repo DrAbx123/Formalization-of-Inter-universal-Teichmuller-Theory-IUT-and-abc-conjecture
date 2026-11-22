@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2229RangeTransitivityActual
+open LeanFormal.IUT.XiFPaper.S2229RangeTransitivityActual
+#print axioms S2229GaloisPairTransitive_iff
+#print axioms S2229RangePairTransitive_of_transferred
+#print axioms S2229D5LargeImageFive_of_transferred

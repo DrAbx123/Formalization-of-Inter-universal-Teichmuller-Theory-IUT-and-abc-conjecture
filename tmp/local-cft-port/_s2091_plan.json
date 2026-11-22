@@ -1,0 +1,390 @@
+{
+ "order": [
+  "LocalClassFieldTheory.Brauer.ContH2",
+  "LocalClassFieldTheory.Brauer.Cyclic",
+  "LocalClassFieldTheory.PadicField.Norm",
+  "LocalClassFieldTheory.PadicField.Integers",
+  "LocalClassFieldTheory.PadicField.Uniformizer",
+  "LocalClassFieldTheory.PadicField.Extension",
+  "LocalClassFieldTheory.PadicField.Ramification",
+  "LocalClassFieldTheory.PadicField.FieldNorm",
+  "LocalClassFieldTheory.ClassFieldAxiom.Coordinates",
+  "LocalClassFieldTheory.PadicField.Complete",
+  "LocalClassFieldTheory.ClassFieldAxiom.Approximation",
+  "LocalClassFieldTheory.ClassFieldAxiom.Lattice",
+  "LocalClassFieldTheory.ClassFieldAxiom.Units",
+  "LocalClassFieldTheory.ClassFieldAxiom.Vanishing",
+  "LocalClassFieldTheory.Herbrand.Basic",
+  "LocalClassFieldTheory.Herbrand.Exact",
+  "LocalClassFieldTheory.Herbrand.Examples",
+  "LocalClassFieldTheory.ClassFieldAxiom.HerbrandUnits",
+  "LocalClassFieldTheory.ClassFieldAxiom.Hilbert90",
+  "LocalClassFieldTheory.ClassFieldAxiom.Axiom",
+  "LocalClassFieldTheory.PadicField.Tower",
+  "LocalClassFieldTheory.PadicField.Teichmuller",
+  "LocalClassFieldTheory.PadicField.Unramified",
+  "LocalClassFieldTheory.PadicField.Galois",
+  "LocalClassFieldTheory.Reciprocity.SecondInequality",
+  "LocalClassFieldTheory.Brauer.Relative",
+  "ContinuousKummerTheory.Hilbert90",
+  "LocalClassFieldTheory.PadicField.UnramifiedExistence",
+  "LocalClassFieldTheory.Reciprocity.Standard",
+  "LocalClassFieldTheory.Reciprocity.UnitIndex",
+  "LocalClassFieldTheory.Reciprocity.UnitMap",
+  "LocalClassFieldTheory.Reciprocity.LevelMap",
+  "LocalClassFieldTheory.Galois.CosetNorm",
+  "LocalClassFieldTheory.Reciprocity.Neukirch",
+  "LocalClassFieldTheory.Reciprocity.CyclicLevel",
+  "LocalClassFieldTheory.Reciprocity.Tools",
+  "LocalClassFieldTheory.Reciprocity.LevelFrob",
+  "LocalClassFieldTheory.PadicField.MaxUnramified",
+  "LocalClassFieldTheory.Reciprocity.OmegaLevel",
+  "LocalClassFieldTheory.Brauer.Absolute",
+  "LocalClassFieldTheory.Reciprocity.LevelNeukirch",
+  "LocalClassFieldTheory.Reciprocity.Embedding",
+  "LocalClassFieldTheory.Reciprocity.CyclicRec",
+  "LocalClassFieldTheory.Reciprocity.Abelian",
+  "LocalClassFieldTheory.PadicField.AbsoluteInertia",
+  "LocalClassFieldTheory.Reciprocity.Artin",
+  "LocalClassFieldTheory.Brauer.Unramified",
+  "LocalClassFieldTheory.Reciprocity.FrobLiftPow",
+  "LocalClassFieldTheory.Reciprocity.BaseChange",
+  "LocalClassFieldTheory.Brauer.Restriction",
+  "LocalClassFieldTheory.Brauer.InfRes",
+  "LocalClassFieldTheory.Brauer.LocalGalois",
+  "LocalClassFieldTheory.Brauer.OrderBound",
+  "LocalClassFieldTheory.Brauer.Invariant",
+  "ContinuousKummerTheory.ContH1.Basic",
+  "ContinuousKummerTheory.Kummer.Basic",
+  "LocalClassFieldTheory.Brauer.KummerH2",
+  "LocalClassFieldTheory.Reciprocity.NormCompat",
+  "LocalClassFieldTheory.Reciprocity.Conjugation",
+  "LocalClassFieldTheory.Reciprocity.NormLimitation",
+  "LocalClassFieldTheory.PadicField.Powers",
+  "LocalClassFieldTheory.Reciprocity.ArtinContinuous",
+  "LocalClassFieldTheory.Reciprocity.Existence",
+  "ContinuousKummerTheory.Kummer.Equiv",
+  "ContinuousKummerTheory.Kummer.Limit",
+  "ContinuousKummerTheory.Kummer.ZHat",
+  "ContinuousKummerTheory.Kummer.ProfiniteCompletion",
+  "ContinuousKummerTheory.Kummer.PAdic",
+  "LocalClassFieldTheory.Reciprocity.Kummer",
+  "LocalClassFieldTheory.Reciprocity.ExistenceTheorem",
+  "LocalClassFieldTheory.Brauer.Duality",
+  "LocalClassFieldTheory.Brauer.KummerCompat",
+  "LocalClassFieldTheory.Galois.ZHat",
+  "LocalClassFieldTheory.Brauer.H2ZHat"
+ ],
+ "deps": {
+  "LocalClassFieldTheory.Brauer.ContH2": [],
+  "LocalClassFieldTheory.Brauer.Cyclic": [
+   "LocalClassFieldTheory.Brauer.ContH2"
+  ],
+  "LocalClassFieldTheory.PadicField.Norm": [],
+  "LocalClassFieldTheory.PadicField.Integers": [
+   "LocalClassFieldTheory.PadicField.Norm"
+  ],
+  "LocalClassFieldTheory.PadicField.Uniformizer": [
+   "LocalClassFieldTheory.PadicField.Integers"
+  ],
+  "LocalClassFieldTheory.PadicField.Extension": [
+   "LocalClassFieldTheory.PadicField.Uniformizer"
+  ],
+  "LocalClassFieldTheory.PadicField.Ramification": [
+   "LocalClassFieldTheory.PadicField.Extension"
+  ],
+  "LocalClassFieldTheory.PadicField.FieldNorm": [
+   "LocalClassFieldTheory.PadicField.Ramification"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Coordinates": [
+   "LocalClassFieldTheory.PadicField.FieldNorm"
+  ],
+  "LocalClassFieldTheory.PadicField.Complete": [
+   "LocalClassFieldTheory.PadicField.Uniformizer"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Approximation": [
+   "LocalClassFieldTheory.PadicField.Complete"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Lattice": [
+   "LocalClassFieldTheory.ClassFieldAxiom.Coordinates",
+   "LocalClassFieldTheory.ClassFieldAxiom.Approximation"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Units": [
+   "LocalClassFieldTheory.ClassFieldAxiom.Lattice"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Vanishing": [
+   "LocalClassFieldTheory.ClassFieldAxiom.Units"
+  ],
+  "LocalClassFieldTheory.Herbrand.Basic": [],
+  "LocalClassFieldTheory.Herbrand.Exact": [
+   "LocalClassFieldTheory.Herbrand.Basic"
+  ],
+  "LocalClassFieldTheory.Herbrand.Examples": [
+   "LocalClassFieldTheory.Herbrand.Basic"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.HerbrandUnits": [
+   "LocalClassFieldTheory.ClassFieldAxiom.Vanishing",
+   "LocalClassFieldTheory.Herbrand.Exact",
+   "LocalClassFieldTheory.Herbrand.Examples"
+  ],
+  "LocalClassFieldTheory.ClassFieldAxiom.Hilbert90": [],
+  "LocalClassFieldTheory.ClassFieldAxiom.Axiom": [
+   "LocalClassFieldTheory.ClassFieldAxiom.HerbrandUnits",
+   "LocalClassFieldTheory.ClassFieldAxiom.Hilbert90"
+  ],
+  "LocalClassFieldTheory.PadicField.Tower": [
+   "LocalClassFieldTheory.PadicField.FieldNorm"
+  ],
+  "LocalClassFieldTheory.PadicField.Teichmuller": [],
+  "LocalClassFieldTheory.PadicField.Unramified": [
+   "LocalClassFieldTheory.PadicField.Tower",
+   "LocalClassFieldTheory.PadicField.Complete",
+   "LocalClassFieldTheory.PadicField.Teichmuller"
+  ],
+  "LocalClassFieldTheory.PadicField.Galois": [
+   "LocalClassFieldTheory.PadicField.Unramified"
+  ],
+  "LocalClassFieldTheory.Reciprocity.SecondInequality": [
+   "LocalClassFieldTheory.ClassFieldAxiom.Axiom",
+   "LocalClassFieldTheory.PadicField.Galois"
+  ],
+  "LocalClassFieldTheory.Brauer.Relative": [
+   "LocalClassFieldTheory.Brauer.Cyclic",
+   "LocalClassFieldTheory.Reciprocity.SecondInequality"
+  ],
+  "ContinuousKummerTheory.Hilbert90": [],
+  "LocalClassFieldTheory.PadicField.UnramifiedExistence": [
+   "LocalClassFieldTheory.PadicField.Galois"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Standard": [
+   "LocalClassFieldTheory.Reciprocity.SecondInequality",
+   "LocalClassFieldTheory.PadicField.UnramifiedExistence"
+  ],
+  "LocalClassFieldTheory.Reciprocity.UnitIndex": [
+   "LocalClassFieldTheory.Reciprocity.Standard"
+  ],
+  "LocalClassFieldTheory.Reciprocity.UnitMap": [
+   "LocalClassFieldTheory.Reciprocity.UnitIndex"
+  ],
+  "LocalClassFieldTheory.Reciprocity.LevelMap": [
+   "LocalClassFieldTheory.Reciprocity.UnitMap"
+  ],
+  "LocalClassFieldTheory.Galois.CosetNorm": [],
+  "LocalClassFieldTheory.Reciprocity.Neukirch": [
+   "LocalClassFieldTheory.Reciprocity.LevelMap",
+   "LocalClassFieldTheory.Galois.CosetNorm"
+  ],
+  "LocalClassFieldTheory.Reciprocity.CyclicLevel": [
+   "LocalClassFieldTheory.Reciprocity.Neukirch"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Tools": [
+   "LocalClassFieldTheory.Reciprocity.CyclicLevel"
+  ],
+  "LocalClassFieldTheory.Reciprocity.LevelFrob": [
+   "LocalClassFieldTheory.Reciprocity.Tools"
+  ],
+  "LocalClassFieldTheory.PadicField.MaxUnramified": [
+   "LocalClassFieldTheory.PadicField.UnramifiedExistence"
+  ],
+  "LocalClassFieldTheory.Reciprocity.OmegaLevel": [
+   "LocalClassFieldTheory.Reciprocity.LevelFrob",
+   "LocalClassFieldTheory.PadicField.MaxUnramified"
+  ],
+  "LocalClassFieldTheory.Brauer.Absolute": [
+   "LocalClassFieldTheory.Brauer.Relative",
+   "ContinuousKummerTheory.Hilbert90",
+   "LocalClassFieldTheory.Reciprocity.OmegaLevel"
+  ],
+  "LocalClassFieldTheory.Reciprocity.LevelNeukirch": [
+   "LocalClassFieldTheory.Reciprocity.OmegaLevel"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Embedding": [
+   "LocalClassFieldTheory.Reciprocity.LevelNeukirch"
+  ],
+  "LocalClassFieldTheory.Reciprocity.CyclicRec": [
+   "LocalClassFieldTheory.Reciprocity.Embedding"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Abelian": [
+   "LocalClassFieldTheory.Reciprocity.CyclicRec"
+  ],
+  "LocalClassFieldTheory.PadicField.AbsoluteInertia": [
+   "LocalClassFieldTheory.PadicField.MaxUnramified"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Artin": [
+   "LocalClassFieldTheory.Reciprocity.Abelian",
+   "LocalClassFieldTheory.PadicField.AbsoluteInertia"
+  ],
+  "LocalClassFieldTheory.Brauer.Unramified": [
+   "LocalClassFieldTheory.Brauer.Absolute",
+   "LocalClassFieldTheory.Reciprocity.Artin"
+  ],
+  "LocalClassFieldTheory.Reciprocity.FrobLiftPow": [
+   "LocalClassFieldTheory.Reciprocity.CyclicRec"
+  ],
+  "LocalClassFieldTheory.Reciprocity.BaseChange": [
+   "LocalClassFieldTheory.Reciprocity.FrobLiftPow",
+   "LocalClassFieldTheory.Reciprocity.Artin"
+  ],
+  "LocalClassFieldTheory.Brauer.Restriction": [
+   "LocalClassFieldTheory.Brauer.Unramified",
+   "LocalClassFieldTheory.Reciprocity.BaseChange"
+  ],
+  "LocalClassFieldTheory.Brauer.InfRes": [
+   "LocalClassFieldTheory.Brauer.ContH2"
+  ],
+  "LocalClassFieldTheory.Brauer.LocalGalois": [
+   "LocalClassFieldTheory.PadicField.Galois"
+  ],
+  "LocalClassFieldTheory.Brauer.OrderBound": [
+   "LocalClassFieldTheory.Brauer.Relative",
+   "LocalClassFieldTheory.Brauer.InfRes",
+   "LocalClassFieldTheory.Brauer.LocalGalois"
+  ],
+  "LocalClassFieldTheory.Brauer.Invariant": [
+   "LocalClassFieldTheory.Brauer.Restriction",
+   "LocalClassFieldTheory.Brauer.OrderBound"
+  ],
+  "ContinuousKummerTheory.ContH1.Basic": [],
+  "ContinuousKummerTheory.Kummer.Basic": [
+   "ContinuousKummerTheory.ContH1.Basic",
+   "ContinuousKummerTheory.Hilbert90"
+  ],
+  "LocalClassFieldTheory.Brauer.KummerH2": [
+   "LocalClassFieldTheory.Brauer.Invariant",
+   "ContinuousKummerTheory.Kummer.Basic",
+   "LocalClassFieldTheory.Brauer.InfRes"
+  ],
+  "LocalClassFieldTheory.Reciprocity.NormCompat": [
+   "LocalClassFieldTheory.Reciprocity.BaseChange"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Conjugation": [
+   "LocalClassFieldTheory.Reciprocity.NormCompat"
+  ],
+  "LocalClassFieldTheory.Reciprocity.NormLimitation": [
+   "LocalClassFieldTheory.Reciprocity.Conjugation"
+  ],
+  "LocalClassFieldTheory.PadicField.Powers": [
+   "LocalClassFieldTheory.PadicField.Complete"
+  ],
+  "LocalClassFieldTheory.Reciprocity.ArtinContinuous": [
+   "LocalClassFieldTheory.Reciprocity.Artin",
+   "LocalClassFieldTheory.PadicField.Powers"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Existence": [
+   "LocalClassFieldTheory.Reciprocity.ArtinContinuous"
+  ],
+  "ContinuousKummerTheory.Kummer.Equiv": [
+   "ContinuousKummerTheory.Kummer.Basic"
+  ],
+  "ContinuousKummerTheory.Kummer.Limit": [
+   "ContinuousKummerTheory.Kummer.Equiv"
+  ],
+  "ContinuousKummerTheory.Kummer.ZHat": [
+   "ContinuousKummerTheory.Kummer.Limit"
+  ],
+  "ContinuousKummerTheory.Kummer.ProfiniteCompletion": [
+   "ContinuousKummerTheory.Kummer.ZHat"
+  ],
+  "ContinuousKummerTheory.Kummer.PAdic": [
+   "ContinuousKummerTheory.Kummer.ProfiniteCompletion"
+  ],
+  "LocalClassFieldTheory.Reciprocity.Kummer": [
+   "LocalClassFieldTheory.Reciprocity.Existence",
+   "ContinuousKummerTheory.Kummer.PAdic"
+  ],
+  "LocalClassFieldTheory.Reciprocity.ExistenceTheorem": [
+   "LocalClassFieldTheory.Reciprocity.NormLimitation",
+   "LocalClassFieldTheory.Reciprocity.Kummer"
+  ],
+  "LocalClassFieldTheory.Brauer.Duality": [
+   "LocalClassFieldTheory.Brauer.KummerH2",
+   "LocalClassFieldTheory.Reciprocity.ExistenceTheorem"
+  ],
+  "LocalClassFieldTheory.Brauer.KummerCompat": [
+   "LocalClassFieldTheory.Brauer.KummerH2",
+   "LocalClassFieldTheory.Brauer.Duality",
+   "LocalClassFieldTheory.Brauer.Restriction"
+  ],
+  "LocalClassFieldTheory.Galois.ZHat": [],
+  "LocalClassFieldTheory.Brauer.H2ZHat": [
+   "LocalClassFieldTheory.Brauer.KummerCompat",
+   "LocalClassFieldTheory.Galois.ZHat"
+  ]
+ },
+ "fileOf": {
+  "LocalClassFieldTheory.Brauer.H2ZHat": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\H2ZHat.lean",
+  "LocalClassFieldTheory.Galois.ZHat": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Galois\\ZHat.lean",
+  "LocalClassFieldTheory.Brauer.KummerCompat": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\KummerCompat.lean",
+  "LocalClassFieldTheory.Brauer.Restriction": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Restriction.lean",
+  "LocalClassFieldTheory.Reciprocity.BaseChange": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\BaseChange.lean",
+  "LocalClassFieldTheory.Reciprocity.Artin": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Artin.lean",
+  "LocalClassFieldTheory.PadicField.AbsoluteInertia": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\AbsoluteInertia.lean",
+  "LocalClassFieldTheory.PadicField.MaxUnramified": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\MaxUnramified.lean",
+  "LocalClassFieldTheory.PadicField.UnramifiedExistence": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\UnramifiedExistence.lean",
+  "LocalClassFieldTheory.PadicField.Galois": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Galois.lean",
+  "LocalClassFieldTheory.PadicField.Unramified": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Unramified.lean",
+  "LocalClassFieldTheory.PadicField.Teichmuller": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Teichmuller.lean",
+  "LocalClassFieldTheory.PadicField.Complete": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Complete.lean",
+  "LocalClassFieldTheory.PadicField.Uniformizer": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Uniformizer.lean",
+  "LocalClassFieldTheory.PadicField.Integers": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Integers.lean",
+  "LocalClassFieldTheory.PadicField.Norm": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Norm.lean",
+  "LocalClassFieldTheory.PadicField.Tower": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Tower.lean",
+  "LocalClassFieldTheory.PadicField.FieldNorm": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\FieldNorm.lean",
+  "LocalClassFieldTheory.PadicField.Ramification": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Ramification.lean",
+  "LocalClassFieldTheory.PadicField.Extension": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Extension.lean",
+  "LocalClassFieldTheory.Reciprocity.Abelian": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Abelian.lean",
+  "LocalClassFieldTheory.Reciprocity.CyclicRec": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\CyclicRec.lean",
+  "LocalClassFieldTheory.Reciprocity.Embedding": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Embedding.lean",
+  "LocalClassFieldTheory.Reciprocity.LevelNeukirch": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\LevelNeukirch.lean",
+  "LocalClassFieldTheory.Reciprocity.OmegaLevel": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\OmegaLevel.lean",
+  "LocalClassFieldTheory.Reciprocity.LevelFrob": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\LevelFrob.lean",
+  "LocalClassFieldTheory.Reciprocity.Tools": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Tools.lean",
+  "LocalClassFieldTheory.Reciprocity.CyclicLevel": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\CyclicLevel.lean",
+  "LocalClassFieldTheory.Reciprocity.Neukirch": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Neukirch.lean",
+  "LocalClassFieldTheory.Galois.CosetNorm": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Galois\\CosetNorm.lean",
+  "LocalClassFieldTheory.Reciprocity.LevelMap": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\LevelMap.lean",
+  "LocalClassFieldTheory.Reciprocity.UnitMap": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\UnitMap.lean",
+  "LocalClassFieldTheory.Reciprocity.UnitIndex": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\UnitIndex.lean",
+  "LocalClassFieldTheory.Reciprocity.Standard": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Standard.lean",
+  "LocalClassFieldTheory.Reciprocity.SecondInequality": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\SecondInequality.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Axiom": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Axiom.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Hilbert90": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Hilbert90.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.HerbrandUnits": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\HerbrandUnits.lean",
+  "LocalClassFieldTheory.Herbrand.Examples": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Herbrand\\Examples.lean",
+  "LocalClassFieldTheory.Herbrand.Basic": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Herbrand\\Basic.lean",
+  "LocalClassFieldTheory.Herbrand.Exact": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Herbrand\\Exact.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Vanishing": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Vanishing.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Units": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Units.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Lattice": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Lattice.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Approximation": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Approximation.lean",
+  "LocalClassFieldTheory.ClassFieldAxiom.Coordinates": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\ClassFieldAxiom\\Coordinates.lean",
+  "LocalClassFieldTheory.Reciprocity.FrobLiftPow": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\FrobLiftPow.lean",
+  "LocalClassFieldTheory.Brauer.Unramified": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Unramified.lean",
+  "LocalClassFieldTheory.Brauer.Absolute": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Absolute.lean",
+  "ContinuousKummerTheory.Hilbert90": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Hilbert90.lean",
+  "LocalClassFieldTheory.Brauer.Relative": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Relative.lean",
+  "LocalClassFieldTheory.Brauer.Cyclic": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Cyclic.lean",
+  "LocalClassFieldTheory.Brauer.ContH2": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\ContH2.lean",
+  "LocalClassFieldTheory.Brauer.Duality": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Duality.lean",
+  "LocalClassFieldTheory.Reciprocity.ExistenceTheorem": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\ExistenceTheorem.lean",
+  "LocalClassFieldTheory.Reciprocity.Kummer": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Kummer.lean",
+  "ContinuousKummerTheory.Kummer.PAdic": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\PAdic.lean",
+  "ContinuousKummerTheory.Kummer.ProfiniteCompletion": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\ProfiniteCompletion.lean",
+  "ContinuousKummerTheory.Kummer.ZHat": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\ZHat.lean",
+  "ContinuousKummerTheory.Kummer.Limit": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\Limit.lean",
+  "ContinuousKummerTheory.Kummer.Equiv": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\Equiv.lean",
+  "ContinuousKummerTheory.Kummer.Basic": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\Kummer\\Basic.lean",
+  "ContinuousKummerTheory.ContH1.Basic": "D:\\lean\\tmp\\local-cft-port\\continuous-kummer-theory-main\\ContinuousKummerTheory\\ContH1\\Basic.lean",
+  "LocalClassFieldTheory.Reciprocity.Existence": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Existence.lean",
+  "LocalClassFieldTheory.Reciprocity.ArtinContinuous": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\ArtinContinuous.lean",
+  "LocalClassFieldTheory.PadicField.Powers": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\PadicField\\Powers.lean",
+  "LocalClassFieldTheory.Reciprocity.NormLimitation": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\NormLimitation.lean",
+  "LocalClassFieldTheory.Reciprocity.Conjugation": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\Conjugation.lean",
+  "LocalClassFieldTheory.Reciprocity.NormCompat": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Reciprocity\\NormCompat.lean",
+  "LocalClassFieldTheory.Brauer.KummerH2": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\KummerH2.lean",
+  "LocalClassFieldTheory.Brauer.InfRes": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\InfRes.lean",
+  "LocalClassFieldTheory.Brauer.Invariant": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\Invariant.lean",
+  "LocalClassFieldTheory.Brauer.OrderBound": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\OrderBound.lean",
+  "LocalClassFieldTheory.Brauer.LocalGalois": "D:\\lean\\tmp\\local-cft-port\\local-class-field-theory-main\\LocalClassFieldTheory\\Brauer\\LocalGalois.lean"
+ }
+}

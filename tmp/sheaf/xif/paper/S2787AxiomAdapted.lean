@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2787ClauseB37Actual
+#print axioms LeanFormal.IUT.XiFPaper.S2787ClauseB37Actual.E37a1CurveQ_discriminant
+#print axioms LeanFormal.IUT.XiFPaper.S2787ClauseB37Actual.S2787ClauseB_of_data

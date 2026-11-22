@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullTreeH5H7ConsumerBatchActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullTreeH5H7ConsumerBatchActualAdapted.treeH5H7Batch_frozen

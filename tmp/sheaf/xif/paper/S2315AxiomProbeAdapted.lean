@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2315GaloisImageIsoActual
+open LeanFormal.IUT.XiFPaper.S2315GaloisImageIsoActual
+#print axioms S2315RootKernel_eq_bot
+#print axioms S2315RootQuotEquiv
+#print axioms S2315MatrixQuotEquiv
+#print axioms S2315RootImageIsoMatrixRange_of_kernelQuot

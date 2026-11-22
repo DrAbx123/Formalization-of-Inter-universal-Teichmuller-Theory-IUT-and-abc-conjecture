@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Cor312NamedInputsStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312NamedInputsStatementActual.cor312NamedInputsRows_length

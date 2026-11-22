@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Hull13BothSidedBaseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Hull13BothSidedBaseActual.hull13_baseTwoSided
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Hull13BothSidedBaseActual.bothSidedBaseRows_length

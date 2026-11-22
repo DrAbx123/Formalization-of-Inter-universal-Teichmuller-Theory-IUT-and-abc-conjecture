@@ -1,0 +1,10 @@
+import Mathlib
+open Module
+#check LinearMap.toMatrix_apply
+#check LinearMap.toMatrix
+#check Basis.repr
+#check Basis.det
+#check LinearMap.det_toMatrix
+#check Basis.sum_repr
+#check Finsupp.single_eq_same
+#check Module.Basis.ext

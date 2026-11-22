@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ABCLogConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCLogConsumerActual.abcLogConjecture_of_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCLogConsumerActual.abcConjecture_of_abcLogConjecture
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ABCLogConsumerActual.abcLogRows

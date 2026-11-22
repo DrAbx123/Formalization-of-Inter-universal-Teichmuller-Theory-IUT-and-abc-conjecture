@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3136LGPLocalMonoidActual
+import tmp.sheaf.xif.paper.S3136FrobenioidIsoLayerActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalMonoidActual.lgpThetaValue_mem_unitLayer
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalMonoidActual.lgpRoot_mem_unitLayer
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalMonoidActual.lgpLocalMonoidCandidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalMonoidActual.lgpLocalMonoidCandidate_valueCone
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalMonoidActual.lgpLocalMonoidCandidate_unitLayer
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidIsoLayerActual.baseDivisorLayerIsoOf
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidIsoLayerActual.globalBaseDivisorLayerIso
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidIsoLayerActual.lgpBaseDivisorLayerIso
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidIsoLayerActual.lgpRealifiedDegree
+#print axioms LeanFormal.IUT.XiFPaper.S3136FrobenioidIsoLayerActual.lgpRealifiedDegree_of

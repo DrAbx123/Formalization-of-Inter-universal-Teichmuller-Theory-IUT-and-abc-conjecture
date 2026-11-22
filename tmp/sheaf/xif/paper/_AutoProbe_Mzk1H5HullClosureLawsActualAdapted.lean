@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1H5HullClosureLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H5HullClosureLawsActual.hull09_possibleThetaPilotImage_subset_hull
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H5HullClosureLawsActual.hull09_hull_one_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H5HullClosureLawsActual.hull09_hull_mul_mem

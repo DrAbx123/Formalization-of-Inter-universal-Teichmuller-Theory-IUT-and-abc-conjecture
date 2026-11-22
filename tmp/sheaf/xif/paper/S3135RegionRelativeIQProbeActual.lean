@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3135RegionRelativeIQActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135RegionRelativeIQActual.s3135_regionRelative_iqCarrier

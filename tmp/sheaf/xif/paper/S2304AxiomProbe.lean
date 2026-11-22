@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2304GaloisGroupIsoActual
+open LeanFormal.IUT.XiFPaper.S2304GaloisGroupIsoActual
+#print axioms S2304Gal_card_eq_finrank
+#print axioms S2304Degree_eq_imageOrder_of_iso

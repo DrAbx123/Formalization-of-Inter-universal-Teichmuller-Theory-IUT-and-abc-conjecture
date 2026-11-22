@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ChainInferredReuseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainInferredReuseActual.chain_thetaIQ_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainInferredReuseActual.chainInferredRows_length

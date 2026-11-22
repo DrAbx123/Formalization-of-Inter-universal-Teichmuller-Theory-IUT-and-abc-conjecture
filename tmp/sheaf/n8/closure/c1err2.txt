@@ -1,0 +1,27 @@
+tmp\sheaf\n8\closure\SourceInputBinding.lean:52:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Mul (Multiplicative (placeLocalField (placeEquiv v)))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tmp\sheaf\n8\closure\SourceInputBinding.lean:63:15: error: Failed to infer universe levels in type of field `frobenioid`
+  Iut.FrobenioidPresentation.{?u.13}
+tmp\sheaf\n8\closure\SourceInputBinding.lean:58:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:61:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.place`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:63:2: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding.frobenioid`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:58:10: warning: The namespace `SourceInputBinding` is duplicated in the declaration `LeanFormal.IUT.N8Closure.SourceInputBinding.SourceInputBinding`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp\sheaf\n8\closure\SourceInputBinding.lean:71:14: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceInputBinding` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

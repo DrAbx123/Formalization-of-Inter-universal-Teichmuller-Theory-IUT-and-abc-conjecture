@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3131WeightedReadoutToolActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131WeightedReadoutTool.weighted_sum_le_of_pointwise
+#print axioms LeanFormal.IUT.XiFPaper.S3131WeightedReadoutTool.weighted_sum_neg_le_of_pointwise
+#print axioms LeanFormal.IUT.XiFPaper.S3131WeightedReadoutTool.weighted_sum_const_of_sum_one

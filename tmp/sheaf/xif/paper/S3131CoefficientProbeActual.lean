@@ -1,0 +1,24 @@
+import tmp.sheaf.xif.paper.S3131CoefficientReductionActual
+import tmp.sheaf.xif.paper.S3131HullCarrierWiringActual
+import tmp.sheaf.xif.paper.S3131Stage2ModelMapActual
+
+/-! # S3131 task-13/task-20 axioms probe
+
+Every listed declaration must depend only on
+[propext, Classical.choice, Quot.sound].
+-/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131CoefficientComparison_iff_ramification
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131CoefficientComparison_false_of_ramification_gt
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131PaperRootCoefficient_eq_ramification_mul_rootHalf
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131NormalizedCoefficientGap_iff_ramification_mul_log
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131NormalizedCoefficientGap_false_of
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131PaperFaithfulRootedComparison
+#print axioms LeanFormal.IUT.XiFPaper.S3131CoefficientReductionActual.S3131PaperFaithfulRegionalRootedComparison
+#print axioms LeanFormal.IUT.XiFPaper.S3131HullCarrierWiringActual.S3131WiredTarget_iff
+#print axioms LeanFormal.IUT.XiFPaper.S3131HullCarrierWiringActual.S3131WiredTarget_of_image_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3131HullCarrierWiringActual.S3131BatchAOnSourceCarrier_HC_finite
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage2ModelMapActual.S3131PaperRegionalQ_eq_of_modelMap
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage2ModelMapActual.S3131PaperRegionalHull_eq_of_modelMap
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage2ModelMapActual.latticeSameCBridge_of_modelMap
+#print axioms LeanFormal.IUT.XiFPaper.S3131Stage2ModelMapActual.nativeToC3Identification_of_modelMap

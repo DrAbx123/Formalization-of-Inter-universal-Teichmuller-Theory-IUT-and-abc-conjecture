@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1H7Ob9BundleStubConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H7Ob9BundleStubConsumerActual.h7ob9Stub_cor

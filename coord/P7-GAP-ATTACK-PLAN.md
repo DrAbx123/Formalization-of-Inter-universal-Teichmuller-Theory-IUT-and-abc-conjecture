@@ -1760,3 +1760,117 @@ A8 下一包：选一个已有实际 `(b,label)` 块，接入源 capsule 的真�
 - **`p2QNativeReading_defaultNorm`**（无条件，按定义）：`localLogMagnitude(qVFamily) = -Real.log(qVFamDefaultNorm)`；
 - **`P2QHatNormInstanceAgreement` 状态更正**：该命题比较 `‖c0QHat‖` 与 `qVFamNormalizedNorm`，**不是** ratio=1 的等价物；探针显示 `c0QHat` 用 normalized instance、`qVFamDefaultNorm` 用 adic instance，属于 norm-instance coherence；不得把它与 source 条件混同；
 - donor `Mzk1P0QHatNormExponentActual`：已按 Lead 指令 **revert 两处改动**（hq' 证法、ring 行；option 行亦去除），标为 obsolete/不可消费，不再作为 olean 依赖；其 hq' 陈述在 adic 侧不成立（除非 ratio=1）。
+### A2 最终状态（2026-11-13，abc）
+
+- default/adic 读数：**无条件**（`p2QNativeReading_defaultNorm`、`p2QReadoutBridge_defaultNorm`）；
+- standard agreement：**等价** `qVFamNormalizedNorm = qVFamDefaultNorm ↔ qVFamNormRatio = 1`（已知 source 条件）；
+- `P2QHatNormInstanceAgreement`（`‖c0QHat‖ = qVFamNormalizedNorm`）：**独立 norm-instance coherence，未证**；
+- #1 读数对照：#1 `qhatLogReadout = log‖c0QHat‖`（normalized）vs `qPilotLogVolumeReading = -|log‖q‖|`（adic）；差 `log(qVFamNormRatio)`，一致 iff ratio=1（已知条件）。
+### 权重语义更正（2026-11-13，Lead）
+- `nativeBadLocalWeight = 1/[K_w:F_v] = 1/(e·f)`（**1/(e·f)，不是 1/f**）；
+- `s1915LocalDegree = [L_b:Q_p]`，`n_b=[L_b:K_w]`；基域 F_v=Q_p 时 `d_b = n_b·e·f`，故 `weight = n_b/d_b`；
+- 先前 “1/f” 与 “d_b·weight=n_b·e_b” 表述作废；`Σ log ratio` 符号结论不变。
+
+<!-- p7-reading-first-attack-20261114 -->
+## 2026-11-14 — 五项剩余缺口：reading 单向运输与 IV 吸收
+
+完整数学交接：[P7-READING-FIRST-ATTACK-20261114.md](D:/lean/coord/P7-READING-FIRST-ATTACK-20261114.md)。单线程、仅本地论文与相关源码；未改 Lean、未编译、未派发新任务。节点 p7-reading-first-attack-20261114。
+
+1. **reading 主线改用同源单向比较。** 当前 paper sums 有 STheta=SQ/(2l)，不能凭此等同实际 hull。复用实际 root-hull 包含；已有 normRatio>=1 给 signed q_default<=signed q_normalized，因此不必追求 G3 等式或 S45=1。局部先证明同一个 q witness、合法 theta 分支和实际子格进入原 hull，再按原权重汇总。新的 G2/G3 wrapper 已有，不重做。
+2. **Thm 1.10 的独立 logQ/slack 输入可剪掉。** 原文 L1255–1292 明确从其 15-torsion 条件与 IUT I 3.1(c) 推 l!=5，所以 actual 范围 l>=7、dmod>=1。从 hCor312 的 Q/6<=M+2Q/l^2 移项，得到 Q<=6l^2 M/(l^2-12)，再按报告 §4 的逐系数计算推出当前消费者所需 Q<=4*d*l*X+5*l^2*Y。无需另证 l=5 算术估计；现有 Mzk1IVThm110LogQActual 已开始承接，勿重复派工。actual display terms/hCor312 仍开放。
+3. **B/unitMass/sign 不再强填。** degree 用真实塔 m*dL=n*dF；有体积关系即可，不强求 Nat B。raw log=dimension*normalized log+reference log mass，不能丢常数/维数，也不能从 Measure.addHaar 推单位质量=1。报告 §3 给出明确余体积预算及符号核对；当前 raw target 的原文参照语义仍须验收。
+4. **Ind1 新的构造缩减。** 对实际 F^x/mu，单位商恰为所有 r^n 倍的交（r 与 p 互素）。实际等变 isoMon 先取 Galois 不动点下降到 F^x，再模挠，再限制到该内在子群，产生真实 beta；不能先对代数闭包模挠再取不动点。一般 D-only 箭头仍须实际 realization/覆盖，不用 sigma=1 代替。
+5. **#C 修 A/B 配对，而不只修 B 指数。** 实际同余群是 1+p^s O，正确商环 O/(p^s)=O/m^(eK*s)；旧 A 的 O/(p^s)^e 对错了层。报告 §6 给 reduction-kernel-surjectivity 的完整 A 证明、Mathlib cardQuot_pow_of_prime + 局部环非单位计数的 B 证明，以及直接 U_n/U_(n+1)=k 的备选，可把商环接口从 #C 证明依赖剪掉。
+
+本次仅自然语言数学证明与路线交接。四项验收均 NOT_RUN；不宣称 3.12、IV 1.10 或一般 Ind1 已无条件闭合。下一实际动作：在同一个原 packet 上交出 q 同源读数、实际 theta 子格包含和完整 Haar/degree 校准。
+
+<!-- ind1-dprime-realization-routes-20261114 -->
+## 2026-11-14 — 一般 D⊢ / DPrimeStrip 箭头的 realization 与全覆盖
+
+详细交接：[IND1-DPRIME-REALIZATION-ROUTES-20261114.md](D:/lean/coord/IND1-DPRIME-REALIZATION-ROUTES-20261114.md)。节点 `ind1-dprime-realization-routes-20261114`；单线程，未改 Lean、未编译、未新派工。
+
+1. **纠正供体状态。** `tmp/local-cft-port/Reciprocity/ArtinInertia.lean` 已有实际 `PadicField.unitsInertiaEquiv`；`GaloisStructure.lean` 已有 `galAbEquiv`，`ArtinTransfer.lean` 已有 `artin_transfer`，项目 S2027/S2098 已接入部分 carrier。不要再把整个 local CFT 安排为新增任务。真实新节点是一般箭头的惯性保持、source realization 和全有限层自然性。
+2. **单位层主线。** 从实际 tame quotient `T ⋊ Zhat` 证明 P 是最大闭正规 pro-p 子群、T 是最大闭正规阿贝尔子群，故一般连续 Galois 同构保持 I；再由 `beta = rho_target⁻¹ ∘ alpha_ab|I ∘ rho_source` 构造真实单位作用。报告 §4 给群论证明、tame 有限层构造及剩余责任；不新增 `hBeta` 或 `inertiaPreserved` 假设。
+3. **完整乘法层主线。** prime-to-p torsion 恢复 q；tame Frobenius 作用忠实恢复标准 quotient Frobenius；Artin 像识别为整数 valuation 的逆像，构造每个有限层 `L^× ≃ L'^×`；已有 transfer 与 conjugation 粘合成 `Fbar^× ≃ Fbar'^×`，再证明 degree/action 相容。无须恢复域加法或要求箭头来自域同构。
+4. **覆盖主线。** 复用 `fPrimeStripVerticalCore` 及 `fdPrimeStripVerticalCore_*_toD`，把一般 component 写成已有 transition 与基点 stabilizer 的合成；对全部 stabilizer 使用上述构造。`PrcAutomorphism.ofPerm` 只覆盖指定运输，不可用其定义冒充全部 D⊢ 箭头覆盖。realization 的选择差消费已有 `TimesMuIsm.sourceDifference / orbitOf_eq`，保留全 open-subgroup 条件。
+5. **修正 extraction 的 ambient。** 当前 `Mzk1Ind1GaloisFixedRouteActual.candidateIntegralLayer` 在整个代数闭包模挠群取无限 r 可除部分会得到整个群。应复用 `TimesMuKummer.invariantImage rho H`，在这个固定域像内部取交，再包含回 ambient；实际单位层在固定域像内，不能要求它包含全部固定域乘法群。
+
+阶段为研究交接；四项验收 NOT_RUN。仍需证明 tame finite-layer arithmetic、actual source adapter 与全部 procession/capsule 覆盖；不能把这些称为已闭合。建议 source owner 优先做 §4 的 inertia → unitsInertiaEquiv → beta，局部单位消费者先落地，再扩展完整 isoMon。
+
+<!-- p7-tower-mass-sign-routes-20261114 -->
+## 2026-11-14 — Tower / unitMass / theta sign 的实际消缺建议
+
+完整交接：[P7-TOWER-MASS-SIGN-ROUTES-20261114.md](D:/lean/coord/P7-TOWER-MASS-SIGN-ROUTES-20261114.md)。节点 `p7-tower-mass-sign-routes-20261114`。单线程、未改 Lean、未编译、未新派工。
+
+1. **修正 true tower 的基域实例。** `rootBaseQpDegree=d₁=[F_u:Qp]`，`localCompletionDegree=n₀=[K_w:(Fmod)_v]`。令 d₀=[(Fmod)_v:Qp]、c=[F_u:(Fmod)_v]、t=[K_w:F_u]，则 d₁=c*d₀、n₀=t*c。根域嵌入后正确式为 `m*dL=t*d₁=n₀*d₀`；当前 `m*dL=n₀*d₁` 漏了 c。RelativeFactor 的 B 应为 t；legacy `dL=B*n₀` 要求 B=d₀/m，不应硬设 Nat。
+2. **completion 塔有可构造路径。** 原输入 F/Fmod Galois，Mathlib `exists_smul_eq_of_isGaloisGroup` 可把独立 native F-place 搬到当前 K-place 下方，再延拓到 completion；相对次数整除不必等待根下降。原文指定 section 可直接复用 S1444。实际 q 的 choice transport 可由 field_of_moduli 的同一个 j₀ 及 inverse-j 在开单位盘的唯一性证明；只需体积时，先证 `log|q|=-log|j₀|`。
+3. **根域进入 K 的核心证明。** 原 torsion23 + l-kernel field 给 E[2l] 在 K 有理；在同一个实际等变 Tate 商中，`gα/α=q^k`，范数给 k=0，从而 α∈K_w。再限制共同代数闭包的嵌入到 adjoin 得 L_b→K_w，m 取实际 finrank。完整代数闭包 torsion 比较/局部有理性运输仍需落地，不把 root-existence 当输入。
+4. **unitMass 改走相对 Haar。** 复用 `NormalizedHaarTransport.relative_log_mass_image_eq`，把区域和参考格成对运输；actual tensor 先用其真实 field-product 分解。参考格 C 与代码 unit ball U 的差为 `κ=log[C:C∩U]−log[U:C∩U]`，可算实际 basis/index。跨根域扩张用理想扩张：`V_K=m V_L`，从而 `(1/n₀)V_K=(d₀/dL)V_L`。不把低维嵌入的像当满维区域，不要求两独立 unitMass 相等。
+5. **signed 主线保留同向关系。** IUT III Cor.3.12 原文允许其记号 `−|log Θ|` 非负；不是 Lean `-abs`。当前两个 signed readings 之间没有由原文自动得到的负号。用真实 degree/κ/权重构造 signed 中间读数，再由源合法子格包含进入原 hull；magnitude 只在已知负值分支翻转双方及不等号。
+6. **应用体积公式前先核实 region。** 当前 `tensorIntegralRegion` 是纯张量像；已有 `tensorLogShellLattice` / `submoduleTensorSpan` 才是紧开满格。实际 theta scalar/action 到原 holomorphic hull 的连接仍须证明，不能用纯张量零测度与 `Real.log 0=0` 假收口。目标若引用错的区域定义，应作原文语义修订及重新验收，本 chat 未改定义。
+
+备选：在共同有限扩张 E 中计算 principal-region 按维数体积，再取 `K∩λO_E`；指数为 ceil(v_E(λ)/e)，取整损失显式累计。最后按 `log μ(H)=D*s(H;C)+κ(C,U)+log μ(U)` 回到原 raw target，不假设单位质量≥1。四项验收 NOT_RUN；这是一份构造交接，原目标仍未闭合。
+
+<!-- p7-global-q-hull-construction-20261115 -->
+## 2026-11-15 — R1 / hq / hθ：全局 q、行列式与积分环 hull 路线
+
+完整交接：[P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md](D:/lean/coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md)。本次按大审计索引定位、定点核对决定性源码和原文；单线程，不编译，不改 Lean，不新派工。
+
+**审计需要纠正的地方：**
+
+- “全局 q 只有 scalar”遗漏了 S3133 的 actual realified divisor、degree/log-volume，以及 Bad 参数化的 weighted/normalized readout。其源是同一 T 的 clause-B qVFamily。完整 Q_C 附带 prime-alignment；q-only product 不需要提前收下这个条件。
+- 不用 BaseQFamily 的任意 DVR candidate 冒充曲线 q；NativeQVPilotNormalizedLogVolumeActual 已明确改用 clause-B qVFamily。
+- tensor 的真实 field-product 分解已在 tensorCore_fieldProduct；product Haar 分解、relative Haar transport 已有。
+- **LocalFieldIntegralHullSpan.integralSpan_eq_hull 已有**：紧致非退化 S 的积分环 span 等于 holomorphic hull；更弱的 integralSpan_subset_hull 无须 S 紧致即可给下界。非 product 的纯张量像并不阻断 hull 计算。
+- 相对范数公式已在 tmp/local-cft-port/PadicField/FieldNorm.lean：nrm_norm 与 v_norm。后者的指数是剩余次数；缺的是 actual completion/norm/valuation 的运输。
+- actualFn 只是剩余次数；hq 的全局和应保留 actual q order。现有 paperNormalizedThetaSum=paperNormalizedQPilotSum/(2l)，直接比较只是根系数缩放，不等于真实 j²/procession/hull 比较。
+
+**三条可执行路线：**
+
+1. **已有除子 + 有限乘积实现。** 直接取 qTuple=(qVFamily b).q、J=∏q_b O_b、C=∏O_b；局部 quotient index 给 log μ(q_b O_b)/μ(O_b)=−n_b f_b log p_b，product Haar 求和。实际有理权重以共同分母 N 和重复次数 N*w_b 实现。无需数域中的全局 principal q，也无需所有 Bad 同一个 p。需下推基域时用 Norm 的除子推送：模块绝对值保持，不能把 Norm(q) 另称原曲线 Tate 参数。
+2. **determinant line + 有理除子。** 只消费 volume 的分支用 D_q/(2l)，或在真实根域 L/F 中证 (1/[L:F])*log μ(αO_L)/μ(O_L)=log|q|mod/(2l)。完整 tensor 格的基矩阵给 (1/D)logvol(⊗Λ_i)=Σ(1/d_i)logvol(Λ_i)。绕过 tensor≃预选 root-product，保留实际 degree、reference κ 和 raw unit mass。
+3. **有限实际像 → 积分环饱和 → hull 下界。** 在 tensor 自己的域乘积中选有限合法 possible-image 向量 G；Γ=O·G⊂actual hull。各坐标取 rτ=min vτ(gτ)，则 Γ=∏πτ^rτ Oτ，体积由 −Σ fτ rτ log p 算出。允许在同一 hull 的不同合法像之间取坐标见证；不跨不同 procession 行偷换独立性。也可计算饱和增益 log[OΛ:Λ]。最终要从实际 root/theta/source 矩阵和现有局部估计证明加权赋值预算 ≤ 实际 q 大小，不能把预算再收为 hbound 输入。
+
+旧单点 C3 reading 不会因上述全局构造自动变成全局 reading。若其定义确实错误地承载全局目标，需公开登记语义修复并重验受影响消费者；本 chat 未改定义。full kernel/target 闭合未声称。
+
+下一步：给同一源数据的一组实际 packets 列出有限合法生成元的 factor-coordinate 赋值表，利用现有 integralSpan/hull 和 procession 权重计算下界；q 侧同步接已有 S3133。研究节点 p7-global-q-hull-construction-20261115；四项验收均 NOT_RUN。
+
+<!-- p7-global-q-hull-ag-to-abc-20261115 -->
+### 同日补充：A–G 全清单与实际数据到 abc 的完整候选路线
+
+详见同一报告 §10–16，已扩展到基础对象及最终 abc 量词。A/B-q 合并为全局读数节点；B-theta/C/F 合并为 actual tensor/hull/volume 链；D/E 为有具体供体和方法的运输；A2、合格初始数据及全局高度控制独立处理。
+
+- **A2 实际构造**：从真实穿孔椭圆曲线 U 与反演 [-1] 出发，构造商栈 [U/C2]；torsor+equivariant map 的描述逐字段给 descend/factor/2-cell descent/ext。有限 étale 纤维函子的 automorphism group 给真实 profinite groups，商栈 torsor 给 group inclusion，所有对象一起 base change。
+- **A2 语义修正**：当前 partial constructor 使用退化 point stack；不能按“15 组完成”当作真实曲线已完成。当前 unique 字段对所有 inv²=id 断言唯一，代入 id 会强迫选定 involution=id。具体路线是消费 canonical [-1] action，或将中间唯一性陈述修正为保持原点的非恒等 involution，并用 End(E) 中 (σ−1)(σ+1)=0 与 isogeny 非零复合证明。须公开重审消费者，本 chat 不改代码。
+- **WQuotient 显式构造**：已有 Gaussian 5-place completion degree=1 与 Integers=valuedInteger。对齐 K≃Q5 后，以 [u]↦log(u^4)/20、z↦[exp(5z)] 构造 O_K×/tors≃Multiplicative Z5；无需 Teichmuller section。仅需 prime-to-5 可除性的消费者可在 log 格内直接除以 r^n。
+- **Fmod/completion**：沿实际 RingEquiv 运输 prime/valuation/q；valueGroup 用 σ 满射证明 ambient 值域相同；w(σx−σy)=w'(x−y) 直接给 uniform continuity，再由稠密性接 completion。
+- **真实源估计的进一步攻法**：实际 source vectors 的 full minors 生成 determinant ideal。寻找 z_q=Σ c_I det(M_I)、c_I 为整数的恒等式，给 ideal inclusion 和 signed 体积比较；清分母的损失显式进入 different/exceptional 项。候选工具为 factor 支撑分离、Cauchy–Binet、tensor basis 和逐系数证明的 theta 关系。
+- **到 abc 的全链**：actual Frey/Legendre curve 与 j/Δ/height → 实际有限扩张与 Tate q → Cor2.2 prime avoidance 选 l → isogeny-height 小高度分支 + transvections/SL2 → section/cusp/A2 → 同源 global q 与 actual hull → 原 reading 3.12 → 真实 IV Box → 显式 ε 吸收 → 实际 noncritical Belyi/height/conductor 图移除局部紧致限制 → 最终 ABC。
+- **绕开过强收口**：直接构造带任意 ε 的 height/region estimates，不先证明 UndilatedRegionBound。主 radical 系数保持 1；所有常数在 abc 三元组之前选择。报告给 sqrt(h)log(h) 误差的显式阈值和 (1+η)^2≤1+ε 的最终组合。
+
+本次仍只交付思路与自然语言证明；四项验收 NOT_RUN；无 Lean 改动、无编译、无新线程/派工。
+
+<!-- p7-global-q-roadmap-deduplicated-20261115 -->
+### 同日整合修订：唯一活动路线正文
+
+按用户要求，将 [P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md](P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md) 重写为一份查重后的路线图。此前本计划内“报告 §10–16”等编号是历史版本；当前以该报告 §1–15 为准。
+
+- 推荐主线：D1 不动点/degree-zero 源单位层 → H1 actual tensor 自身的积分环饱和 → S1 isogeny-height 合格初始数据 → G1 Fermat 覆盖、实际 noncritical Belyi 与紧性全局化。最终消费已有 Frey j-height/ABC criterion。
+- 对不确定节点分别给三种不同机制：Ind1 源端（不动点／Kummer／reciprocity）；θ-hull（坐标饱和／行列式证书／有限 Fourier）；大像（isogeny 高度／Frobenius 证书／模曲线）；全局化（投影与 polynomial 构造／RR-jets／扩展 2-adic 和 archimedean packets）。确定部分不凑三路。
+- 新查重：一般同余单位商与截断计数已有 Mzk1CongruenceUnitsEquivGeneralActual、Mzk1TruncatedUnitsPrimaryActual、Mzk1IutIVCongruenceCardActual 的 actual producer；Γ 为 p 群也已有。Section2 已有 Chebyshev 双侧最终界。删除这些重复证明任务，保留实际参数/读数连接。
+- 几何复用补充：finite étale 轨道函数环与 quotient gluing、Frey-height、Tate point-map reduction、polynomial Belyification、ε/ABC 终点均复用；S2020 限于固定 l=5，S2835 是条件搬运，未当作一般实际大像。
+- 关键更正：有限秩 ℤp 单位商的抽象加法同态由 pⁿ 邻域基自动连续；剩源作用。全局化先消去 boundary，不能用保持 {0,1,∞} 的有限 maps 假装把所有趋 cusp 的点送入固定 K_V；纳入 IV Remark2.3.1(v) 的高度系数勘误。GenEll05 点依赖的常数包装不作 uniform 收口。
+
+节点与 owner 不变；正文含每路构造步骤、首个验证产物、实际消费者及完整到任意 ε 的依赖。研究交付；未改 Lean、未编译，四项验收 NOT_RUN。
+
+
+<!-- p7-g1-p6-p8-route-20261116 -->
+### 2026-11-16：G1／P6／P8 无新增假设的 producer 路线
+
+新正文：[P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md](P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md)。它接续 accepted P1/P4/P5/P7/H1a/H1b 与 P6/P8 consumers，不重审或改写这些状态。
+
+查重修正：当前 Mathlib 已有实际 IdealSheafData.subscheme、closed immersion、gluing 与 finite⇒proper；G1 需填 Fermat 实例。Section2.lean:409 已有 Prop 1.6 的 4/3 prime-count bound；Mzk1P6PhiActionFamilyActual/PhiActionSourceActual 和 RootParameterWeightActual 已有一般族与赋值代数，不再派重证明。新 ChartRingActual2 是两个单根因子，须 tensor/迭代添根得到完整 affine chart。
+
+非循环 P6 路线：source arrow 入已有 p6Phi、真实根与 degree 权重绑定、P5→实际 region 字典 → 独立 Hθ upper → 与 −Q/(2l)≤Hθ 夹逼生产 hCor312 → final display。路线不消费 S2953 的多余 CTheta 等号，也不把 p6IVR 的平均表达式直接叫实际 theta 体积。
+
+G1/P8：两图真实 Y_n/π → 显式 Ω≃O(n−3) → 原文将 protected points 送到普通值 0，再做代数点降阶及 finite-beta fold → 有限个边界互不交的 noncritical maps → 固定局部紧集 → 高度／different／conductor 运输 → 任意 ε 的 Frey criterion。完整构造和量词见新正文；四项验收 NOT_RUN。

@@ -1,0 +1,9 @@
+import Mathlib
+#check @IsIntegral.of_le
+#check @IsIntegral.tower_top
+#check @isIntegral_of_isIntegral_algebra
+#check @IsIntegral.map
+#check @IsIntegrallyClosed
+#check @IsIntegrallyClosed.isIntegral_iff
+#check @IsIntegrallyClosed.algebraMap_eq_of_integral
+#check @IsFractionRing

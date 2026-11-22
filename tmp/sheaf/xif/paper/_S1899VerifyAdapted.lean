@@ -1,0 +1,23 @@
+import tmp.sheaf.xif.paper.S1899CoherentStrongApexActual
+
+noncomputable section
+namespace S1899Verify
+
+open LeanFormal.IUT.XiFPaper.S1899CoherentStrongApexActual
+
+#check S1899Presentations_iff_twoPullbackApex
+#check S1899HasPullbacks_of_essSurj
+#check S1899HasPullbacks_of_twoPullbackApex
+#check S1899HasFiniteCoproducts
+#check S1899IdentityLegPullbackApex
+#check S1899ApexPresentationLoadBearing
+#check S1899FirstMissing_consumers
+#check S1899CoherentPullbackApex_of_twoPullback
+#check S1899HasPullbacks_of_coherentLimitCone
+
+#print axioms S1899HasPullbacks_of_essSurj
+#print axioms S1899HasFiniteCoproducts
+#print axioms S1899CoherentPullbackApex_of_twoPullback
+#print axioms S1899HasPullbacks_of_coherentLimitCone
+
+end S1899Verify

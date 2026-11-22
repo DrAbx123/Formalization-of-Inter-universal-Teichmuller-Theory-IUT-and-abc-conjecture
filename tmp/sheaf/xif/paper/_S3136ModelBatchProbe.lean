@@ -1,0 +1,22 @@
+import tmp.sheaf.xif.paper.S3136ModelThetaPacketActual
+import tmp.sheaf.xif.paper.S3136ModelSourceClauseActual
+import tmp.sheaf.xif.paper.S3136ModelClauseWitnessAdapterActual
+import tmp.sheaf.xif.paper.S3136ModelThetaPacketLawsActual
+import tmp.sheaf.xif.paper.S3136ModelNativeDataWithHaarActual
+import tmp.sheaf.xif.paper.S3136ModelThetaTensorVolumeFiniteActual
+import tmp.sheaf.xif.paper.S3136ModelSourceClauseInventoryActual
+import tmp.sheaf.xif.paper.S3136RegionVolumeEstimateReviewActual
+import tmp.sheaf.xif.paper.S3136VendorCor312SchemaAdaptedActual
+import tmp.sheaf.xif.paper.S3136VendorSurveyReportActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelThetaPacketActual.lgpModelThetaPacket_q
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelSourceClauseActual.lgpModelNativeData_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelClauseWitnessAdapterActual.lgpConcreteClauseData_toNativeData_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelThetaPacketLawsActual.lgpModelThetaPacket_log_scale
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelNativeDataWithHaarActual.lgpModelNativeDataWithHaar_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelThetaTensorVolumeFiniteActual.lgpNativeHaarFamily_measure_lt_top_of_isCompact
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelSourceClauseInventoryActual.lgpSource31Inventory_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136RegionVolumeEstimateReviewActual.lgpRegionVolumeEstimateReview_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136VendorCor312SchemaAdaptedActual.LGPModelCor312ComparisonData.corollary312
+#print axioms LeanFormal.IUT.XiFPaper.S3136VendorSurveyReportActual.lgpTreasureSurvey_length

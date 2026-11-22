@@ -1,0 +1,46 @@
+✖ [3645/3645] Building LeanFormal.IUT.IUTII.Theta.ThetaLinkSourceCover (16s)
+error: build failed
+trace: .> LEAN_PATH=D:\lean\.lake\packages\Cli\.lake\build\lib\lean;D:\lean\.lake\packages\batteries\.lake\build\lib\lean;D:\lean\.lake\packages\Qq\.lake\build\lib\lean;D:\lean\.lake\packages\aesop\.lake\build\lib\lean;D:\lean\.lake\packages\proofwidgets\.lake\build\lib\lean;D:\lean\.lake\packages\importGraph\.lake\build\lib\lean;D:\lean\.lake\packages\LeanSearchClient\.lake\build\lib\lean;D:\lean\.lake\packages\plausible\.lake\build\lib\lean;D:\lean\.lake\packages\mathlib\.lake\build\lib\lean;D:\lean\.lake\build\lib\lean c:\Users\Administrator\.elan\toolchains\leanprover--lean4---v4.32.2\bin\lean.exe D:\lean\LeanFormal\IUT\IUTII\Theta\ThetaLinkSourceCover.lean -o D:\lean\.lake\build\lib\lean\LeanFormal\IUT\IUTII\Theta\ThetaLinkSourceCover.olean -i D:\lean\.lake\build\lib\lean\LeanFormal\IUT\IUTII\Theta\ThetaLinkSourceCover.ilean -c D:\lean\.lake\build\ir\LeanFormal\IUT\IUTII\Theta\ThetaLinkSourceCover.c --setup D:\lean\.lake\build\ir\LeanFormal\IUT\IUTII\Theta\ThetaLinkSourceCover.setup.json --json
+error: LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean:295:2: unsolved goals
+case refine_2
+diagram : SourceSemiGraphOfAnabelioids
+root : diagram.base.Vertex
+Yddot : ConnectedTemperedCover diagram root
+model : BaseFieldCoverModel diagram root
+data : ThetaProductData diagram root Yddot model
+A B C : BaseCover model
+f : A ⟶ B
+g : B ⟶ C
+⊢ (data.snd A ≫ f.hom) ≫ g.hom = data.snd A ≫ (f ≫ g).hom
+error: LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean:413:42: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?f ≫ 𝟙 ?m.36
+in the target expression
+  (asIso (Over.hom object)).hom ≫ (Over.mk (𝟙 Yddot)).hom = Over.hom object
+
+diagram✝ diagram : SourceSemiGraphOfAnabelioids
+root : diagram.base.Vertex
+Yddot : ConnectedTemperedCover diagram root
+object : YddotSlice diagram root Yddot
+h : IsIso (Over.hom object)
+⊢ (asIso (Over.hom object)).hom ≫ (Over.mk (𝟙 Yddot)).hom = Over.hom object
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    Over.hom object
+  has type
+    @Quiver.Hom (ConnectedTemperedCover diagram root)
+      (ObjectProperty.FullSubcategory.category (connectedTemperedObjectProperty diagram root)).toQuiver
+      (Over.left object) Yddot
+  but is expected to have type
+    @Quiver.Hom (ConnectedTemperedCover diagram root)
+      (ObjectProperty.FullSubcategory.category (connectedTemperedObjectProperty diagram root)).toQuiver
+      (Over.left object) (Over.mk (𝟙 Yddot)).left
+  in the application
+    @asIso (ConnectedTemperedCover diagram root)
+      (ObjectProperty.FullSubcategory.category (connectedTemperedObjectProperty diagram root)) (Over.left object)
+      (Over.mk (𝟙 Yddot)).left (Over.hom object)
+error: LeanFormal/IUT/IUTII/Theta/ThetaLinkSourceCover.lean:407:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'asIso', which is 'noncomputable'
+error: Lean exited with code 1
+Some required targets logged failures:
+- LeanFormal.IUT.IUTII.Theta.ThetaLinkSourceCover

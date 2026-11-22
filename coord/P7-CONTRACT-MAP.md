@@ -249,3 +249,28 @@ qThetaPilotLogVolumeComparison C3 P
 - theta raw Haar vs paper V：**PARTIAL**（B5① 无条件、B5③ arch 已证、generator 已闭）；
 - 其余 5 行仍为真 GAP（comparison / IQ literal / multiradial / contract linkage / hull UB）。
 主 `missing7ToGap` 保留 historical/vacuous 语义，evidence 表为当前有效状态。
+
+## §8 CONTRACT linkage 精确状态（2026-11-14）
+
+用户决定：R21Uncond 绿后优先 #8 CONTRACT linkage（3.12 signed assembly 需要它）。
+
+**当前事实**：
+- `Mzk1StepXIContractLinkageActual.ContractFieldsLinked := ∀ L ∈ linkage, L.evidence.isSome`，
+  `linkage` 三项（holomorphicHull/determinantNormalization/logVolumeComparison）均为
+  `⟨..., none, "not linked"⟩`，且 `linkage_not_linked : ¬ ContractFieldsLinked` 已 PROVED
+  ——这是「主表 historical/vacuous」的一部分，不能直接改成 some 来"伪装"完成。
+- `Mzk1Cor312S3137AssemblyActual.contractOfS3137Comparison` 里 `StepXIContract` 的
+  `ipl/she/apt := True` 是**空真**证据；`target_le_theta := h` 只消费 comparison hypothesis。
+- `Mzk1HolomorphicHullLogVolumeReconciliationActual` 的 12 行矩阵明确：
+  holomorphicHull = interface-only；determinantNormalization = interface-only（matrixLogDet/packetDet GREEN，
+  Ob3-3 source identification NOT proved）；logVolumeComparison = PENDING。
+- 因此 #8 的**真实内容缺口**是：为三个 WallObligation 提供**非空真证据对象**
+  （holomorphicHull 需 paper carrier IQ 实现；determinantNormalization 需 Ob3-3 source identification；
+  logVolumeComparison 需 qTheta comparison 本身），而不是改 evidence 字符串。
+
+**下一步（用户优先级）**：
+1. 等 `Mzk1P1MaxIdealR21UncondActual` 重编（donor 调用已改）；
+2. 定义 `ContractFieldsLinkedActual`（三个字段为真实 Prop + 证明），用现有 green 接口
+   （HullDeterminantLogVolumeReduction 的 det 恒等式 / S3137 读数）能填多少填多少，
+   comparison 字段保留 `qThetaPilotLogVolumeComparison` 显式 hypothesis；
+3. 不把 `ipl/she/apt := True` 当证据；也不改 `ContractFieldsLinked` 主表。

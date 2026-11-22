@@ -1,0 +1,9 @@
+import Mathlib
+open Polynomial
+#check @Polynomial.SplittingField.adjoin_rootSet
+#check @Polynomial.SplittingField.adjoin_rootSet_eq_top
+#check @Polynomial.SplittingField.rootSet
+#check @IntermediateField.adjoin
+#check @IntermediateField.mem_adjoin_iff
+#check @IntermediateField.adjoin_simple_eq_bot_iff
+#check @IsFractionRing.of_algEquiv

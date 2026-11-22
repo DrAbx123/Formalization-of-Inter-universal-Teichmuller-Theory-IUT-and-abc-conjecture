@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128AffineCoequalizerActual
+open LeanFormal.IUT.XiFPaper.S3128AffineCoequalizerActual
+#print axioms S3128AffineCoequalizerTarget_holds
+#print axioms S3128AffineCoconeTarget_holds

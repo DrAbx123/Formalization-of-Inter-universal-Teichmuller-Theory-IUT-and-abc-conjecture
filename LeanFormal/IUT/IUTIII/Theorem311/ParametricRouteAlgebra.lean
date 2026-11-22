@@ -1,5 +1,6 @@
 import LeanFormal.IUT.IUTIII.Theorem311.ParametricDStage
 import Mathlib.Tactic
+import LeanFormal.IUT.Audit.Status
 
 namespace LeanFormal.IUT
 
@@ -328,3 +329,18 @@ end ParametricRouteAlgebra
 end
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def parametricRouteAlgebra : Obligation :=
+  { id := "IUT-III.parametric-route-algebra"
+    source := "IUT III, Theorem 3.11; parametric route algebra over a supplied carrier"
+    status := VerificationStatus.provedKernel
+    note :=
+      "Over an arbitrary supplied carrier the module proves horizontal-route " ++
+        "generation, quotient invariance, and route-budget certificates with the " ++
+        "target-level law, the vertical budget, and its nonnegativity. No source " ++
+        "Hodge-theater existence is claimed. Name-level registration consumed by " ++
+        "`IUT-III.concrete-route-normal-form`." }
+
+end LeanFormal.IUT.Audit

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24NormalizationTransferVariantActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferVariantActual.mzk1_normalization_transfer_goal_of_membership
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferVariantActual.mzk1_normalization_transfer_goal_image
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24NormalizationTransferVariantActual.normalizationTransferVariantRows_length

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1DetTensorCommutationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DetTensorCommutationActual.matrixLogDet_kronecker_comm_posDef
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DetTensorCommutationActual.matrixLogDet_transpose_posDef

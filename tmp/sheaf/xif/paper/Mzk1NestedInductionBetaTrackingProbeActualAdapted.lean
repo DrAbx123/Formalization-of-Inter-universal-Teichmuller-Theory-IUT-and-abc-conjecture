@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionBetaTrackingActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBetaTrackingActualAdapted.paperScopeLemma24Statement_of_betaTrackingProviders
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionBetaTrackingActualAdapted.betaTrackingRows_length

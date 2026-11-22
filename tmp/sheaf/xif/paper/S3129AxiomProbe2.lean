@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3129CoverSchemeFiniteEtaleAttempt
+open LeanFormal.IUT.XiFPaper.S3129CoverSchemeFiniteEtaleActual
+#print axioms S3129CoverStackFiniteEtale
+#print axioms S3129CoverSchemeFiniteEtale

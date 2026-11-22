@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3131RouteComparisonInvarianceActual
+import tmp.sheaf.xif.paper.S3131RouteRegionConsumptionMapActual
+import tmp.sheaf.xif.paper.S3131RouteFirstTriangleWiringActual
+import tmp.sheaf.xif.paper.S3131RoutePayloadLGPWiringActual
+import tmp.sheaf.xif.paper.S3131RouteDependencyMapV2Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteComparisonInvarianceActual.heightComparisonFamily_image
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteComparisonInvarianceActual.regionVolumeFamily_image
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteRegionConsumptionMapActual.S3131RouteRegionConsumptionMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteFirstTriangleWiringActual.S3131RouteFirstTriangleWiring_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131RoutePayloadLGPWiringActual.abc_of_families_and_LGPPayload
+#print axioms LeanFormal.IUT.XiFPaper.S3131RouteDependencyMapV2Actual.S3131RouteDependencyMapV2_length

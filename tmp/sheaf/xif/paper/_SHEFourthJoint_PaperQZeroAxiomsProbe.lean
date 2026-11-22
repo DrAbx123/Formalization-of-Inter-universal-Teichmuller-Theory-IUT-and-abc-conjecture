@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3128Stage1FourthJointSHECompositionActual
+import tmp.sheaf.xif.paper.S3128Stage1FourthJointSHEDataActual
+import tmp.sheaf.xif.paper.PaperQZeroLimitConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointSHECompositionActual.S3128Stage1FourthJointSHECompositionPremise
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointSHECompositionActual.S3128Stage1FourthJointSHEReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1FourthJointSHEDataActual.S3128Stage1FourthJointSHEData_ofFourthJoint
+#print axioms LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual.paperQZeroLimitData_support_mem_iff
+#print axioms LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual.paperQZeroLimitData_coeff_ne_zero

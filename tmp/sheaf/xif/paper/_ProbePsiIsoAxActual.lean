@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1G1PsiIsoActual
+import tmp.sheaf.xif.paper.Mzk1G1FermatPiProperActual
+import tmp.sheaf.xif.paper.Mzk1G1FermatCurveSmoothFinalActual
+import tmp.sheaf.xif.paper.Mzk1ULStepVIIIActual
+import tmp.sheaf.xif.paper.Mzk1ULPaperLettersActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiIsoActual.inter_eq_composite_range
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiIsoActual.preimage_qPiece_range
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiIsoActual.isPullback_square
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatPiProperActual.fermatCurveToSpec_isProper_final
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1FermatCurveSmoothFinalActual.fermatCurveToSpec_smoothOfRelativeDimension
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULStepVIIIActual.hstepVIII_of_paperLetters
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ULPaperLettersActual.zero_le_SAr_tripodal

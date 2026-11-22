@@ -1,0 +1,67 @@
+tmp\sheaf\n8\N8Parent.lean:56:4: error: Failed to infer universe levels in type of field `iplSheAptCompatibility`
+  ∀ {Label' : Type u} {Choice' : Type v} [inst : AddGroup Label'] {core1 core2 : Core Label' Choice'}
+    (L : LinkSpan.{u, v, ?u.83} core1 core2) (E : CardIPLTransportSupply.{u, v, ?u.88, ?u.83} L),
+    Nonempty (CardIPLExchangeShape.{u, v, ?u.83, ?u.88} L E)
+tmp\sheaf\n8\N8Parent.lean:58:7: error: Failed to infer universe levels in type of binder `E`
+  CardIPLTransportSupply.{u, v, ?u.88, ?u.83} L
+tmp\sheaf\n8\N8Parent.lean:57:43: error: Failed to infer universe levels in type of binder `L`
+  LinkSpan.{u, v, ?u.83} core1 core2
+tmp\sheaf\n8\N8Parent.lean:41:4: error: Failed to infer universe levels in type of field `k1k2Realization`
+  ∀ (D : SourceLogShellDatum.{?u.57}) {Y : Type u} (f : SourceLogShellDatum.Units.{?u.57} D → Y),
+    (Exists.{max (u + 1) (?u.57 + 1)}
+        fun
+          (fbar :
+            (Subtype.{?u.57 + 1} fun (x : Multiplicative.{?u.57} (SourceLogShellDatum.K.{?u.57} D)) =>
+                Membership.mem.{?u.57, ?u.57} (MonoidHom.range.{?u.57, ?u.57} (SourceLogShellDatum.logMap.{?u.57} D))
+                  x) →
+              Y) =>
+        ∀ (u : SourceLogShellDatum.Units.{?u.57} D),
+          fbar
+              (Subtype.mk.{?u.57 + 1}
+                (DFunLike.coe.{?u.57 + 1, ?u.57 + 1, ?u.57 + 1} (SourceLogShellDatum.logMap.{?u.57} D) u) ⋯) =
+            f u) ↔
+      ∀ (u t : SourceLogShellDatum.Units.{?u.57} D),
+        Membership.mem.{?u.57, ?u.57} (MonoidHom.ker.{?u.57, ?u.57} (SourceLogShellDatum.logMap.{?u.57} D)) t →
+          f (HMul.hMul.{?u.57, ?u.57, ?u.57} t u) = f u
+tmp\sheaf\n8\N8Parent.lean:44:12: error: Failed to infer universe levels in type of binder `t`
+  SourceLogShellDatum.Units.{?u.57} D
+tmp\sheaf\n8\N8Parent.lean:44:10: error: Failed to infer universe levels in type of binder `u`
+  SourceLogShellDatum.Units.{?u.57} D
+tmp\sheaf\n8\N8Parent.lean:43:10: error: Failed to infer universe levels in type of binder `u`
+  SourceLogShellDatum.Units.{?u.57} D
+tmp\sheaf\n8\N8Parent.lean:42:9: error: Failed to infer universe levels in type of binder `fbar`
+  (Subtype.{?u.57 + 1} fun (x : Multiplicative.{?u.57} (SourceLogShellDatum.K.{?u.57} D)) =>
+      Membership.mem.{?u.57, ?u.57} (MonoidHom.range.{?u.57, ?u.57} (SourceLogShellDatum.logMap.{?u.57} D)) x) →
+    Y
+tmp\sheaf\n8\N8Parent.lean:41:46: error: Failed to infer universe levels in type of binder `f`
+  SourceLogShellDatum.Units.{?u.57} D → Y
+tmp\sheaf\n8\N8Parent.lean:41:7: error: Failed to infer universe levels in type of binder `D`
+  SourceLogShellDatum.{?u.57}
+tmp\sheaf\n8\N8Parent.lean:37:21: error: Failed to infer universe levels in type of field `sourceCompletion`
+  Nonempty.{max (max (?u.19 + 2) (v + 1)) (u + 2)} (SourceTheorem311Completion.{u, v, ?u.19} l Label Choice)
+tmp\sheaf\n8\N8Parent.lean:71:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:78:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:87:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:93:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:105:15: error: Application type mismatch: The argument
+  CardIPLExchangeShape
+has type
+  (L : LinkSpan core1 core2) → CardIPLTransportSupply L → Prop
+but is expected to have type
+  Sort (max (max (max u v) (?u.30 + 1)) (?u.31 + 1))
+in the application
+  Nonempty CardIPLExchangeShape
+tmp\sheaf\n8\N8Parent.lean:111:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:117:14: error: Function expected at
+  N8ParentClosure
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `N8ParentClosure` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\n8\N8Parent.lean:118:42: error(lean.unknownIdentifier): Unknown identifier `l`
+tmp\sheaf\n8\N8Parent.lean:118:55: error(lean.unknownIdentifier): Unknown identifier `Label`
+tmp\sheaf\n8\N8Parent.lean:118:73: error(lean.unknownIdentifier): Unknown identifier `Choice`
+tmp\sheaf\n8\N8Parent.lean:118:9: error: Tactic `rcases` failed: `x✝ : Sort u_2` is not an inductive datatype

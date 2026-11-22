@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3132ThetaFactorZeroConditionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorZeroConditionActual.thetaNormalizationFactor_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorZeroConditionActual.thetaNormalizationFactor_eq_zero_iff_of_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaFactorZeroConditionActual.missingCanonicalRootedThetaReadout_of_finrank_one_unitReference

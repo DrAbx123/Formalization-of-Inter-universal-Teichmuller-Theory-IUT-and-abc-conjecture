@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2939C3HheightDataInterfaceActual
+#print axioms LeanFormal.IUT.XiFPaper.S2939C3HheightDataInterfaceActual.C3HheightData.toHheightTarget
+#print axioms LeanFormal.IUT.XiFPaper.S2939C3HheightDataInterfaceActual.C3HheightAllEpsData.toHheightTarget

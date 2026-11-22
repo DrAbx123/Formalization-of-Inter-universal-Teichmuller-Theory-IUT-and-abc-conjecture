@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRCanonicalDegreeGreenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRCanonicalDegreeGreenActual.rrCanonicalDegreeGreen_hdual

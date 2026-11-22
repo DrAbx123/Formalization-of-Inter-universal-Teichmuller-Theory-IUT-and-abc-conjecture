@@ -1,0 +1,37 @@
+import tmp.sheaf.xif.paper.S1312D7LocalGroupActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312ComapKEqSelf
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312FiniteLiftKEqSelf
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312CompletionRationalPrimeConcreteGaussianFivePlace
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadEqConcrete
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadAtOwnPrime
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadPlaceAtPrime_eq_ownPrime
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedFiniteAtOwnPrime
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadPlaceAtPrime_spec
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadPlaceAtPrime_injective
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedBadPlace_val
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedBadPlace_mem_bad
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedBadPlaceAtPrime_eq_finite
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadToSelected
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadToSelected_spec
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadPlaceIndex
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadLocalField
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadLocalField_eq_completion
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadArithmeticGalois_eq
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadArithmeticAnabelioid_group
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadLocalUnitsGroup
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312ConcreteLocalCurve
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312ConcreteLocalCurve_eq
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312BadLocalCurve_eq_concrete
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312PlaceBridgeActual_arithmeticGalois_eq
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312PlaceBridgeActual_arithmeticAnabelioid_group
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D6Requirement
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D6ActualCurve
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D6ActualCurve_eq
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D6FirstMissingField
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D7Layer
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedBadPlaceD7
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D7bRequirement
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D7bFirstField
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312D7bFirstField_needed
+#print axioms LeanFormal.IUT.XiFPaper.S1312D7LocalGroupActual.S1312SelectedBadPlaceD7_val

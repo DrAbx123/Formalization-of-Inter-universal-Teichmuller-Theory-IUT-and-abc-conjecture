@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2UniversalDataConditionalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataConditionalActual.S3127G2UniversalDataConditional_exists

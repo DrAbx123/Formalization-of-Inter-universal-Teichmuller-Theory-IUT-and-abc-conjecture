@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Consumer24AdapterActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Consumer24AdapterActual.h24BaseConcrete
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Consumer24AdapterActual.h24BaseConcrete_of_BetaAvoidingBelyiBase
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Consumer24AdapterActual.p1CompositeConsumerInputs_of_conditional24

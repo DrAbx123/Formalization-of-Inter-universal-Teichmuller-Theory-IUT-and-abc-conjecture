@@ -24,7 +24,9 @@ structure SameSpaceData where
   [ord : Preorder Ω]
   vol : Ω → ℝ
   vol_mono : Monotone vol
-  thetaPilot qPilot hull : Ω
+  thetaPilot : Ω
+  qPilot : Ω
+  hull : Ω
   hull_contains_theta : thetaPilot ≤ hull
   q_is_theta : qPilot = thetaPilot
 
@@ -61,14 +63,19 @@ theorem strict_collapse
 /-! ## Receiver-side common-container route -/
 
 structure ReceiverBound where
-  q hull cTheta : ℝ
+  q : ℝ
+  hull : ℝ
+  cTheta : ℝ
   q_negative : q < 0
   q_in_hull : q ≤ hull
   hull_upper_bound : hull ≤ cTheta * (-q)
 
 theorem receiver_bound_implies_cTheta_ge_neg_one (D : ReceiverBound) :
     -1 ≤ D.cTheta := by
-  nlinarith [D.q_in_hull, D.hull_upper_bound]
+  by_contra h
+  push_neg at h
+  have hq : 0 < -D.q := neg_pos.mpr D.q_negative
+  nlinarith [D.q_in_hull, D.hull_upper_bound, mul_lt_mul_of_pos_right h hq]
 
 /-!
   A concrete slack witness.  It satisfies the useful receiver-side inequality

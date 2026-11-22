@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3132ThetaSideSharpResidualActual
+import tmp.sheaf.xif.paper.S3132ThetaSideSubsingletonComparisonActual
+import tmp.sheaf.xif.paper.S3132ThetaSideCompositionLedgerActual
+import tmp.sheaf.xif.paper.S3132ThetaSideAuditRecordActual
+import tmp.sheaf.xif.paper.S3132ThetaSideDependencyMapActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideSharpResidualActual.thetaSideSharpResidual_canonicalReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideSubsingletonComparisonActual.clauseThetaValue_of_subsingleton
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideCompositionLedgerActual.composition_thetaSide

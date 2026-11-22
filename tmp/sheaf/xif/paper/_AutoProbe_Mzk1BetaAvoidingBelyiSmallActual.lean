@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBelyiSmallActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.BelyiBetaAvoidingSmallStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.eval_belyi11
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBelyiSmallActual.eval_belyi12

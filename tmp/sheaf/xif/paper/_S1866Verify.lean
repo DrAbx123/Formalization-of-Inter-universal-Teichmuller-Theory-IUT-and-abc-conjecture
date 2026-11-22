@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S1866ApexCoherenceActual
+
+open LeanFormal.IUT.XiFPaper.S1866ApexCoherenceActual
+
+#check S1866PullbackApexFirstMissing_iff
+#check S1866CoproductApexFirstMissing_iff
+#check S1866Coherence_not_iso_invariant
+#check S1866TwoPullbackApexAllStrong_false
+#check S1866HasPullbacks
+#check S1866HasPullbacks01
+#check S1866HasInitial01
+#check S1866HasBinaryCoproducts01
+#check S1866HasFiniteCoproducts
+#check S1866HasFiniteCoproducts01

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2804C3NormalizedLatticeSmulLogVolumeZeroActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2804C3NormalizedLatticeSmulLogVolumeZeroActual.C3BlockChar_ne_zero

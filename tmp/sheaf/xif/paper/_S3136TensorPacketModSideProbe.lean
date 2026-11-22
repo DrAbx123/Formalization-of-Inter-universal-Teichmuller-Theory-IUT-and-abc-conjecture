@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S3136LGPLocalTensorPacketActual
+import tmp.sheaf.xif.paper.S3136ModSidePhiInputActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalTensorPacketActual.lgpBadLocalPacketRegion_compact
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalTensorPacketActual.lgpBadLocalPacketCandidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalTensorPacketActual.lgpBadLocalPacket_place_agree
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalTensorPacketActual.lgpLocalPacketDimension_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPLocalTensorPacketActual.LGPLocalPacketIdentificationGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSidePhiInputActual.modSidePhiActual
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSidePhiInputActual.modSideInputActual
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSidePhiInputActual.modSideComponentActual
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModSidePhiInputActual.modSideComponentActual_coverage

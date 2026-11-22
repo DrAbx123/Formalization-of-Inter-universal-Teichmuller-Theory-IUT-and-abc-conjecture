@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3134CanonicalQFormulaGapActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134CanonicalQFormulaGapActual.S3134CanonicalQFormulaGap_scalar
+#print axioms LeanFormal.IUT.XiFPaper.S3134CanonicalQFormulaGapActual.S3134CanonicalComparison_independent_ofFormulaGap

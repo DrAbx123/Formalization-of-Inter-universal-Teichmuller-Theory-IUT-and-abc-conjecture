@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128PullbackCoproductActual
+open LeanFormal.IUT.XiFPaper.S3128PullbackCoproductActual
+#print axioms S3128PullbackFiniteEtaleGap_proof
+#print axioms S3128PullbackCover

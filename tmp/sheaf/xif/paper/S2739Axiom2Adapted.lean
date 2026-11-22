@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2739FinsetSupportActual
+#print axioms LeanFormal.IUT.XiFPaper.S2739FinsetSupportActual.support_covered
+#print axioms LeanFormal.IUT.XiFPaper.S2739FinsetSupportActual.supportIdeal_absNorm
+#print axioms LeanFormal.IUT.XiFPaper.S2739FinsetSupportActual.supportPlace_comap

@@ -1,0 +1,9 @@
+import Mathlib
+open Equiv
+#check Perm.sign
+#check Equiv.Perm.sign
+#check Int.dvd_sub_of_emod_eq
+#check Int.dvd_sub_of_emod_eq'
+#check dvd_sub_of_emod_eq
+#check add_two_le_iff_lt_of_even_sub
+#check Int.add_two_le_iff_lt_of_even_sub

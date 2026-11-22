@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG10CanonicalDivisorGenusActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG10CanonicalDivisorGenusActual.ag10CanonicalDivisor_apply
+#print axioms LeanFormal.IUT.XiFPaper.AG10CanonicalDivisorGenusActual.ag10_ell_canonicalDivisor_eq_genus
+#print axioms LeanFormal.IUT.XiFPaper.AG10CanonicalDivisorGenusActual.ag10_degree_canonicalDivisor_eq

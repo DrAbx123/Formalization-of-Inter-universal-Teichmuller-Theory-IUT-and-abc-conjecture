@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingBaseActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.not_betaAvoidingBelyiBaseInput
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.betaAvoidingBelyiBaseInputCorrected_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingBaseActual.Mzk1Lemma24Target_finite_beta

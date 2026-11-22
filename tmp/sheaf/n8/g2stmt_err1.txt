@@ -1,0 +1,13 @@
+tmp\sheaf\n8\group2-Statement.lean:57:81: error: unsolved goals
+D : SourceLogShellDatum
+Y : Type u
+f : D.Units → Y
+h : ∀ (u t : D.Units), t ∈ D.logMap.ker → f (t * u) = f u
+pick : ↥D.logMap.range → D.Units := fun y => Classical.choose ⋯
+pick_spec : ∀ (y : ↥D.logMap.range), D.logMap (pick y) = ↑y
+fbar : ↥D.logMap.range → Y := fun y => f (pick y)
+u : D.Units
+hmem : D.logMap u ∈ D.logMap.range
+hker : (pick ⟨D.logMap u, hmem⟩)⁻¹ * u ∈ D.logMap.ker
+hh : f ((pick ⟨D.logMap u, hmem⟩)⁻¹ * u * pick ⟨D.logMap u, hmem⟩) = f (pick ⟨D.logMap u, hmem⟩)
+⊢ pick ⟨D.logMap u, hmem⟩ ^ (-1) * u * pick ⟨D.logMap u, hmem⟩ = u

@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24WiringActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24WiringActual.s3135_belyi_canonical_data

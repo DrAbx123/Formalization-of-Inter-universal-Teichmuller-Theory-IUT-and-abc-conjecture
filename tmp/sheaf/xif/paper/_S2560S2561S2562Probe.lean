@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S2560S2514LiftUniqueActual
+import tmp.sheaf.xif.paper.S2561S2512LiftUniqueActual
+import tmp.sheaf.xif.paper.S2562CorrectedEssSurjLiftUniqueActual
+open LeanFormal.IUT.XiFPaper.S2560S2514LiftUniqueActual
+open LeanFormal.IUT.XiFPaper.S2561S2512LiftUniqueActual
+open LeanFormal.IUT.XiFPaper.S2562CorrectedEssSurjLiftUniqueActual
+#check S2560S2514LiftUnique
+#check S2561S2512LiftUnique
+#check S2561S2517HasLiftUnique
+#check S2562CorrectedEssSurj
+#check S2562EssSurjOnRepresentable
+#check S2562TriangleFromLiftUnique_proof
+#print axioms S2560S2514LiftUnique
+#print axioms S2561S2512LiftUnique
+#print axioms S2561S2517HasLiftUnique
+#print axioms S2562TriangleFromLiftUnique_proof
+#print axioms S2562CorrectedEssSurj

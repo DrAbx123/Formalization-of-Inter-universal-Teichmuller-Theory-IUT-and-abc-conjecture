@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternal12AssetsMapActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal12AssetsMapActual.IUTExternalAssetMap
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal12AssetsMapActual.IUTExternalAssetMap_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal12AssetsMapActual.IUTExternalCloneAssets

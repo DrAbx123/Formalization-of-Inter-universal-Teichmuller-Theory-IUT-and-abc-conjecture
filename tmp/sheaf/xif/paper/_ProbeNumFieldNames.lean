@@ -1,0 +1,13 @@
+import Mathlib.NumberTheory.NumberField.CanonicalEmbedding.ConvexBody
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Mathlib.Algebra.Module.ZLattice.Covolume
+open MeasureTheory
+#check NumberField.mixedSpace
+#check NumberField.mixedEmbedding.idealLattice
+#check NumberField.mixedEmbedding.fractionalIdealLatticeBasis
+#check NumberField.mixedEmbedding.latticeBasis
+#check NumberField.mixedEmbedding.volume_fundamentalDomain_fractionalIdealLatticeBasis
+#check NumberField.mixedEmbedding.covolume_idealLattice
+#check NumberField.nrComplexPlaces
+#check nrComplexPlaces
+#check NumberField.discr

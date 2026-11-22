@@ -1,0 +1,12 @@
+import Mathlib.AlgebraicGeometry.Limits
+import Mathlib.CategoryTheory.Action.Basic
+open CategoryTheory
+#check not_nonempty_iff
+#check Classical.not_nonempty_iff
+#check IsInitial
+#check AlgebraicGeometry.isInitialOfIsEmpty
+#check AlgebraicGeometry.Scheme.isInitialOfIsEmpty
+#check SignGroup
+#check LeanFormal.IUT.SignGroup
+#check Subsingleton
+#check Unique

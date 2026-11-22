@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.AG_FLT_SerrePairingPromotionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_SerrePairingPromotionActual.promotion_ResidueTheorem
+#print axioms LeanFormal.IUT.XiFPaper.AG_FLT_SerrePairingPromotionActual.promotion_serrePairing_apply_mk

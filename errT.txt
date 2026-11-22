@@ -1,0 +1,68 @@
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:48:5: error: unknown namespace `LeanFormal.IUT.XiFPaper.Mzk1LanaBridgeAuditActual`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:53:14: error: invalid use of explicit universe parameters, `SourceNativeInitialData` is a local variable
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:66:2: warning: 'refine abcConjecture_iff_abcArithmeticWeightHeightBound.mpr ?_' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:67:2: warning: 'intro ε hε' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:68:2: warning: 'obtain ⟨D, hD⟩ := hbad ε hε' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:69:2: warning: 'refine ⟨D, ?_⟩' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:70:2: warning: 'intro aN bN cN habc' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:71:2: warning: 'have harith := log_height_le_badSum_of_fullSupport T eN hd aN bN cN habc (hfull aN bN cN habc)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:73:2: warning: 'have hD' := hD aN bN cN habc' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:74:2: warning: 'have hheight : Height.logHeight₁ (abcRationalPoint aN cN) = Real.log (cN : ℝ) :=
+  abcRationalPoint_logHeight₁ habc' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:76:2: warning: 'rw [hheight]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:77:2: warning: 'linarith' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:66:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:67:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:68:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:69:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:70:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:71:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:73:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:74:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:76:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:77:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:115:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.badSumWeightBound_implies_ABC`
+tmp\sheaf\xif\paper\Mzk1Gap2ArithmeticTightnessActual.lean:116:14: error(lean.unknownIdentifier): Unknown constant `LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.correctedGap2Shape_implies_ABC`
+'LeanFormal.IUT.XiFPaper.Mzk1Gap2ArithmeticTightnessActual.bridge_boundary_calibrated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

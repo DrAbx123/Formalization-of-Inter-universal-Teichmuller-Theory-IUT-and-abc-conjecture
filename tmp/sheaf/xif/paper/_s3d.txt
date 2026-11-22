@@ -1,0 +1,7 @@
+/-- **The square of the actual elliptic involution is the identity.** -/
+noncomputable def S1932SigmaSqIso :
+    Pseudofunctor.StrongTrans.vcomp S1932Sigma S1932Sigma ≅
+      Pseudofunctor.StrongTrans.id S1898Stack :=
+  Iso.mk S1932SqMod S1932SqModRev
+    (S1932StrongTransSubsingleton _ _).elim _ _
+    (S1932StrongTransSubsingleton _ _).elim _ _

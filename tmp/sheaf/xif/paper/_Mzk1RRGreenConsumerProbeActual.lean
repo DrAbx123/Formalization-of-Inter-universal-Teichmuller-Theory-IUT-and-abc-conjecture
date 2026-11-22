@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRGreenConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRGreenConsumerActual.rrGreen_canonical_bound

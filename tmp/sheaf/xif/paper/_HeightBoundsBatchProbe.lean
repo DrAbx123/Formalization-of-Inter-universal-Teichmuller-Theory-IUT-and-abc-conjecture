@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.GenEllThm38HeightBoundsActual
+import tmp.sheaf.xif.paper.Mzk1GeometricCorePortedReuseActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.genEllThm38_23040_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.genEllThm38HeightAssets_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.mzk1GeometricCorePortedAssets_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.mzk1GeometricCoreAdaptationPlan_length

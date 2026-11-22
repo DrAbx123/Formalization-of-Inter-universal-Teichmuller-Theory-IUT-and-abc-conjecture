@@ -1,0 +1,748 @@
+# The étale theta function and mono-theta environments (`Iut/EtaleTheta/`)
+
+Work package P16 of the wall roadmap: the algebraic and Kummer-theoretic content of
+
+> S. Mochizuki, *The étale theta function and its Frobenioid-theoretic manifestations*,
+> Publ. RIMS 45 (2009), §§1–2 (cited **[EtTh]**),
+
+as far as it is reachable with the tempered and Kummer-theoretic machinery available to this
+repository, and its link to the theta values used in `Iut/Wall`.
+
+**Status of the dependency.** No module of `Iut/EtaleTheta/` is imported by the comparator
+challenge (`Comparator/Challenge.lean`) or by `Iut/Concrete/*`. Every theorem uses only `propext`,
+`Classical.choice` and `Quot.sound`.
+
+## Inputs
+
+* `tate-curves-theta` (pinned at `d1fba94`, which adds `TateCurvesTheta/Kummer/*`): the Tate
+  parameter `TateParameter K`, the theta series `θ(u) = ∑ q^{n(n+1)/2} uⁿ`, its functional
+  equations, its zero divisor `-qᶻ`, the odd theta function `thetaOdd u = u·θ(-u²)`, the Kummer
+  classes of theta values (`Kummer/ThetaValues.lean`) and the comparison of the Kummer class of
+  the germ of `θ` with the class of its value on decomposition groups
+  (`Kummer/ThetaGerm.lean`, `decomposition_kummer_thetaGerm`).
+* `continuous-kummer-theory` (`98b67df`, a dependency of `tate-curves-theta`): continuous
+  `H¹`, the Kummer map `kummer n K Ω : Kˣ →* H¹_cont(Gal(Ω/K), μ_n)` and its `Ẑ(1)` form.
+* `tempered-fundamental-groups` (pinned `33b1c27`): the tempered fundamental group of an affine
+  orbifold over integral models, André's identification and the non-degeneracy of the tempered
+  group of IUT's Tate orbicurves. It provides the `ℤ`-covering `Y → X` of the Tate curve as a
+  tempered covering (`TateObject.X₀`: the unrolled `2`-gon of the special fibre of a model of
+  the Tate curve) with its deck group `ℤ` (`TateObject.deck`, simply transitive on the fibre)
+  and the character `Π^tp_X → ℤ` (`TateObject.character`, nontrivial by Theorem B); this is
+  used from step 2 on (`TemperedCovering.lean`). It does **not** provide `Ÿ → Y`, the theta
+  quotient `Π^Θ`, or Kummer classes in `H¹(Π^tp, Ẑ(1))`; see the scope decisions.
+
+## Milestones
+
+### (1) The theta covering and the theta function `Θ̈` (`Theta.lean`)
+
+The coverings `Ÿ → Y → X` of [EtTh], §1, are recorded through their effect on the
+multiplicative coordinate (scope decision S1): `Y` is the `ℤ`-covering of the Tate curve
+`X = Kˣ/qᶻ` with coordinate `U`, `Ÿ → Y` is `Ü ↦ Ü² = U`, the generator of `Gal(Y/X) ≅ ℤ` acts
+on `Ü` by `Ü ↦ s·Ü` with `s² = q` (the `ℤ`-action on `Ÿ` of [EtTh], Prop. 1.4(ii)), and
+`Gal(Ÿ/Y) = {±1}`.
+
+* `etaleTheta t U = U·θ(-U²)` (`= TateParameter.thetaOdd`), [EtTh], Prop. 1.4:
+  `hasSum_etaleTheta`: `Θ̈(Ü) = ∑ₙ (-1)ⁿ q^{n(n+1)/2} Ü^{2n+1}`, which is [EtTh]'s
+  `q^{-1/8} ∑ (-1)ⁿ q^{(n+1/2)²/2} Ü^{2n+1}` (the exponents agree:
+  `(n+1/2)²/2 - 1/8 = n(n+1)/2`).
+* Prop. 1.4(ii): `etaleTheta_inv` (`Θ̈(Ü⁻¹) = -Θ̈(Ü)`), `etaleTheta_neg` (`Θ̈(-Ü) = -Θ̈(Ü)`),
+  `etaleTheta_zpow_sqrt_mul` (`Θ̈(s^a·Ü) = (-1)^a·s^{-a²}·Ü^{-2a}·Θ̈(Ü)`, i.e.
+  `Θ̈(q^{a/2}Ü) = (-1)^a q^{-a²/2} Ü^{-2a} Θ̈(Ü)`).
+* Prop. 1.4(i), zero part: `etaleTheta_eq_zero_iff` (zeros exactly at `Ü² ∈ qᶻ`, the cusps of
+  `Ÿ`).
+* The automorphy factor `thetaFactor s a Ü = (-1)^a s^{-a²} Ü^{-2a}` is a `1`-cocycle of `ℤ`
+  acting through `s^ℤ` (`thetaFactor_add`), the algebraic shadow of the extension
+  `1 → Δ_Θ → Π^Θ → Π^ell → 1`.
+
+### (2) The étale theta class (`KummerClass.lean`)
+
+Scope decision S2: the class `η^Θ ∈ H¹(Π^tp_Ÿ, Δ_Θ)` lives in the cohomology of a tempered
+group that is not available as a Galois group of a field extension in this repository. What is
+formalized is its image on points and on germs:
+
+* `kummer_etaleTheta_zpow_sqrt_mul`: **[EtTh], Prop. 1.5(iii) on points.** In
+  `H¹_cont(Gal(Ω/K), μ_n)`, `κ(Θ̈(s^a Ü)) = κ(-1)^a·κ(s)^{-a²}·κ(Ü)^{-2a}·κ(Θ̈(Ü))`, i.e.
+  `η ↦ η - 2a·log(Ü) - (a²/2)·log(q)` (plus the sign class), for every `n`; also in `Ẑ(1)` form.
+* `kummer_etaleTheta_inv`, `kummer_etaleTheta_neg`: the inversion automorphism.
+* `kummer_smul_etaleTheta`: scalar multiples `c·Θ̈` change the class by `κ(c)` — the
+  `O^×`-indeterminacy of Prop. 1.3.
+* `decomposition_kummer_etaleThetaGerm`: [EtTh], Prop. 1.4(iii), in the germ model of
+  `tate-curves-theta`: the Kummer class of the germ of the regular function `Θ̈·Ü⁻¹ = θ(-U)` on
+  `Y` (the function used in the proof of Prop. 1.5) at a non-cuspidal point `Ü₀` restricts, on a
+  decomposition group, to the Kummer class of `Θ̈(Ü₀)·Ü₀⁻¹`.
+
+### (3) Theta values at the torsion points (`ThetaValues.lean`)
+
+* `etaleTheta_sqrtNeg_zpow`: with `i² = -1`, `s² = q`:
+  `Θ̈(i·s^j) = s^{-j²}·Θ̈(i)`, the Gaussian `q^{-j²/2}` of [EtTh], Prop. 1.4(ii) and
+  IUT I, Example 3.2(iv); `thetaRatio t s j = s^j θ(q^j)/θ(1)` is the `i`-free form
+  (`etaleTheta_ratio`) and `thetaRatio_eq : thetaRatio t s j = s^{-j²}`.
+* `etaleTheta_halfPeriod`: the same Gaussian through `tate-curves-theta`'s
+  `theta_sqrt_zpow` at the points `√q^{2j-1}`.
+* **IUT's normalization.** `Θ_v := Θ̈(i)/Θ̈(U)` (reciprocal of `Θ̈` normalized to `1` at `√-1`):
+  `thetaV_value : Θ_v(i·s^j) = s^{j²}`, and for `r^ℓ = s` (`r^{2ℓ} = q`):
+  `pow_eq_thetaV_iff`: the `ℓ`-th roots of `Θ_v(i·s^j)` are exactly `ζ·r^{j²}`, `ζ ∈ μ_ℓ`
+  (IUT II, Remark 2.5.1: “the `μ_{2ℓ}`-orbit of `q_v^{j²}`”, `q_v = q^{1/2ℓ}`).
+* `kummer_thetaRatio`: `κ(Θ̈(i s^j)/Θ̈(i)) = κ(s)^{-j²}`.
+* **Rigidity of scalar multiples, algebraic core** ([EtTh], Thm. 1.10, Cor. 2.8, Def. 1.9):
+  `normalized_iff`: the scalar multiples `c·Θ̈` whose value at `√-1` is a root of unity of
+  order dividing `m` are exactly `c ∈ μ_m·Θ̈(i)⁻¹`; the normalized theta values at the labels
+  `j` are then determined up to `μ_m` (`normalized_value`).
+
+### (4) Mono-theta environments and rigidity (`Heisenberg.lean`, `MonoTheta.lean`,
+`DiscreteRigidity.lean`)
+
+* `Heisenberg.lean` — **the theta group.** The theta quotient `(Δ^tp_X)^Θ` is a central
+  extension `1 → Δ_Θ → Δ^Θ → Δ^ell → 1` with `Δ^ell ≅ Ẑ(1) × ℤ`; its model is the Heisenberg
+  group `ThetaGroup M l = M × M × ℤ` (`(c,a,b)·(c',a',b') = (c+c'+l·b·a', a+a', b+b')`, `M` the
+  cyclotome, `l` the degree of the `l·ℤ`-covering of [EtTh], §2):
+  `commutator_eq` (the commutator pairing `[(a,b),(a',b')] = l(b a' - b' a)`),
+  `mem_center_iff` (center `= Δ_Θ` for torsion-free `M`, `l ≠ 0`),
+  `commutator_eq_theta` (**[EtTh], Prop. 2.12(i)**: `[Δ^Θ, Δ^Θ] = l·Δ_Θ`),
+  `cyclotomicRigidity` (**algebraic core of [EtTh], Cor. 2.19(i)**: an automorphism inducing
+  `α` on the `ell`-cyclotome and `ε = ±1` on the `ℤ`-part acts on `Δ_Θ` by `ε·α`; the
+  identification of the two cyclotomes `a ↦ [a, t]` is intrinsic).
+* `MonoTheta.lean` — **sections of the cyclotomic envelope** `Π[μ] = μ ⋊ Π`
+  ([EtTh], Def. 2.10, 2.13): `sectionOf` (homomorphic sections `↔` `1`-cocycles, `isHom_iff`,
+  `eq_sectionOf`), the algebraic (tautological) section `sectionOf_one`, `conj_sectionOf_iff`
+  (`μ`-conjugate sections `↔` cohomologous cocycles), `range_conj_iff` and
+  `thetaClassSubgroups_eq_iff` (datum (c) of a model mono-theta environment, the `μ`-conjugacy
+  class of the image of the theta section, determines and is determined by the cohomology class
+  of the cocycle), `sectionOf_mul_inr_inv` (the difference of the theta and algebraic sections
+  recovers the cocycle — the "isomorphism of cyclotomes" of Cor. 2.19(i)); the structure
+  `MonoThetaEnv` (Def. 2.13(ii): a topological group, a subgroup of automorphisms containing the
+  inner ones, and a set of subgroups) with isomorphisms `MonoThetaEnv.Iso` forming a groupoid.
+* `DiscreteRigidity.lean` — **[EtTh], Prop. 2.15 (discrete rigidity)**, completely: the
+  category `T` of `ℤ`-torsors `T_M` with translations by `Mℤ`, `E`-systems, (i)
+  `Aut(T_M) = Mℤ`, (ii) any two `E`-systems on `T_1` are isomorphic, (iii) the invariant
+  `j^S_∞` (as a compatible family of residues) is surjective and an isomorphism invariant mod
+  `ℤ`, (iv) non-isomorphic `E`-systems on `T_M` exist (for `E = {(n+1)!}`; `j_∞ = ∑ (k+1)!` is
+  not an integer, `jF_not_integer`).
+
+### (5) Link to the wall (`Wall.lean`)
+
+* `Iut.EtaleTheta.qroot_pow_ell_mul_thetaRatio`: for `D : InitialThetaData` and a bad place `v`
+  of `K`, with `s = q_v^ℓ` (`sqrtQ`; `q_v = D.qroot v`, `q_v^{2ℓ} = q`), `(q_v^{j²})^ℓ` is the
+  value `Θ_v(i·s^j) = (Θ̈(i s^j)/Θ̈(i))⁻¹ = (s^j θ(q^j)/θ(1))⁻¹` of IUT's normalized theta
+  function; `pow_eq_thetaRatio_inv_iff`: its `ℓ`-th roots are exactly the `μ_ℓ`-multiples of
+  `q_v^{j²}` (`lgpValue`). `scaleEltAt_eq`: the element placed by the wall's LGP map
+  (`InitialThetaData.scaleEltAt`, used by `Iut.Wall.lgpElt`; the degrees of
+  `Iut.Arakelov.thetaBundle` are those of the same `q_v^{j²}`) is `lgpValue D v (i + 1)`. So the
+  LGP theta values of the wall are `ℓ`-th roots of the theta values of (3).
+
+## Step 2 of the wall roadmap: the tempered theta covering and cyclotomic rigidity
+
+Targets: the tempered coverings `Ÿ → Y → X` of the Tate curve as tempered objects, the étale
+theta class in `H¹(Π^tp_Ÿ, Δ_Θ)`, temp-slimness and the theta quotient, full cyclotomic
+rigidity ([EtTh], Cor. 2.19(i)) and discrete rigidity of systems (Cor. 2.19(ii)), and the
+tempered Frobenioid as an actual construction. Plan with lemma-level milestones, and status:
+
+### (6) The `ℤ`-covering `Y → X` (`TemperedCovering.lean`) — done
+
+Input: `TateObject.X₀ T` of `tempered-fundamental-groups` for Tate data `T` over a level
+`(R, 1)` (`A` trivial).
+
+* (6a) `TateObject.piY T V hV := ker(TateObject.character)` — **`Π^tp_Y`**; `isOpen_piY`,
+  `piY_normal`.
+* (6b) `mem_piY_iff`: `Π^tp_Y` is the **stabilizer of the base point of the fibre of `Y`**
+  (from the simply transitive deck action; the defining property of the tempered group of a
+  covering).
+* (6c) `deck_injective`: `ℤ` acts faithfully on `Y`.
+* (6d) `quotKerEquivInt` (a nontrivial character `G → ℤ` has `G / ker ≅ ℤ`, via
+  `subgroupEquivInt`), `TateObject.piYQuotEquivInt`: **`Π^tp_X / Π^tp_Y ≅ ℤ`** when the
+  character is nontrivial.
+* (6e) `TateObject.exists_character_ne_one'` (good Tate data, Theorem B with
+  `zariskiConnected` discharged) and, for IUT's orbicurves `E ∖ (E[ℓ] + M)` with a good Tate
+  presentation over a complete DVR of mixed characteristic with perfect residue field,
+  `TateOrbicurve.exists_character_ne_one`, `TateOrbicurve.piYQuotEquivInt`: **unconditionally
+  `Π^tp_X / Π^tp_Y ≅ ℤ`**.
+
+### (7) Cyclotomic envelope, temp-slimness, theta quotient (`CyclotomicEnvelope.lean`) — done
+(formal parts)
+
+* (7a) `TempSlim` (temp-slim topological groups), `TempSlim.center_eq_bot`.
+* (7b) The envelope `Π[μ] = μ ⋊ Π` ([EtTh], Def. 2.10) with the product topology
+  (`Envelope.instTopologicalSpace`, scoped), `Envelope.homeomorphProd`.
+* (7c) **[EtTh], Prop. 2.11(ii)**: `Envelope.mem_range_inl_iff` (for `Π` temp-slim, `μ`
+  discrete, open kernel of the action: `μ` = union of the centralizers of open subgroups);
+  `apply_mem_range_inl_iff`, `map_range_inl`, `rightEquiv`, `rightEquiv_rightHom`: isomorphisms
+  of envelopes respect `μ` and induce isomorphisms `Π_α ≅ Π_β` compatible with the surjections.
+* (7d) **[EtTh], Prop. 2.11(i)**: `Envelope.center_eq_range_inl`.
+* (7e) **[EtTh], Prop. 2.12(ii) from (i)**: `commutator_prod_inf`,
+  `ThetaGroup.commutator_envelope_inf` (with `ThetaGroup.commutator_eq_theta` = Prop. 2.12(i)).
+* (7f) **For the actual `Π^tp_Y`** (`TempSlimPiY.lean`): `TateObject.tempSlim_piY`
+  (`VerticialTempSlim → TempSlim Π^tp_Y`, from `tempered-fundamental-groups`'
+  `tempSlim_ker_character`, [Mzk14] Example 3.10); `mem_range_inl_iff_piY` (Prop. 2.11(ii))
+  and `apply_mem_range_inl_iff_piY` (Cor. 2.19(i), first step) for `Π^tp_Y[μ]` (`μ` finite), with
+  `FISlim Π^tp_Y` as the only hypothesis (finite-index route, MR15 section below).
+
+### (8) Cyclotomic rigidity, abelian model (`CyclotomicRigidity.lean`) — deleted
+
+The abelian environments `Env` and their algorithm were superseded by the nonabelian algorithm of
+`Env/CycRigidity.lean` (MR15), which LogLink uses since 2026-10-26; the file was deleted on
+2026-10-26 (MR14 run 7) together with its last consumer, the model theta class (11).
+
+### (9) Discrete rigidity of systems (`RigidSystems.lean`) — done (formal part)
+
+* (9a) `exists_compatible_seq` (König's lemma for sequences of finite sets).
+* (9b) `exists_untwist`: `lim¹ = 1` for towers of groups with compatible surjections onto a
+  fixed group with finite kernels ("the `R¹ lim` of `{Hom(ℤ/2, ℤ/N)}` vanishes").
+* (9c) `Tower`, `Tower.System`, **`Tower.discreteRigidity`** ([EtTh], Cor. 2.19(ii) from
+  Cor. 2.18(iv)): a projective system levelwise isomorphic to the models is isomorphic to the
+  model system; `Tower.discreteRigidity_of_surjective`. Prop. 2.15 (`DiscreteRigidity.lean`)
+  shows that finite kernels are needed (`exists_not_iso` for the bi-theta-type systems).
+
+### (10) Tempered Frobenioids (`Iut/Frobenioid/TemperedBase.lean`, `Tempered.lean`) — done
+(combinatorial monoids)
+
+* (10a) `OrbitObj Π` = `B^temp(Π)⁰`, connected and totally epimorphic; FSM-morphisms bijective.
+* (10b) `TemperedFrobenioidData Π` on `B^temp(Π)⁰` (replacing the earlier interface with a
+  realization functor into `TempObj` and assumed connectedness/total epimorphicity);
+  `isFrobenioid`.
+* (10c) `thetaData χ hval hs` (`Frobenioid/Tempered/EllTheta.lean`; MR18: `Φ₀` =
+  `PrimeDiv.divMonoid` on the elliptic prime set `ℤ ⊕ Cusps` with `ℚ`-coefficients, `B₀` = the
+  fixed log-meromorphic functions on `𝔾_m^an` under the deck action, kernel `O_K^×`),
+  `thetaData_isFrobenioid`; `bTheta = Θ̈ ∈ B₀(Y)` with divisor `-j²/2`, `1` at the cusps;
+  `pb_deck_bTheta` (Prop. 1.4(ii) in `B₀`), `div_pb_deck_bTheta` (divisor form).
+* (10d) `tateThetaData T V hV hval hs` for `Π^tp_X = temperedPi1` of the Tate curve and
+  `χ = TateObject.character`; `tateThetaData_isFrobenioid`; `tateY` (its subgroup is `Π^tp_Y`
+  of (6a)).
+
+### (11) The étale theta class on `Π^tp_Ÿ` (`ThetaTempered.lean`, `ThetaTemperedClass.lean`, `ThetaTemperedPoint.lean`, `ThetaTemperedCusp.lean`) — done modulo C1
+
+The model cocycle on a discrete group (`ThetaClass.lean`, shell #30) was deleted on 2026-10-26
+(MR14 run 7). The class is now built from the tempered fundamental group itself:
+
+* (11a) `ThetaTempered.lean`: for a change of level `L ≤ L'` (`fieldData`, trivial groups), the
+  map of orbifolds `levelOrbMap`, and the comparison maps commute with it:
+  `etalePi1Map_toEtalePi1`, `etaleToPi_etalePi1Map`, `tempToPi_temperedPi1Map`
+  (`tempToPi D ∘ temperedPi1Map = piRes ∘ tempToPi D'`); hence `map_toTempMu_level` and
+  **`map_kummerMapTempered_level`**: the tempered Kummer classes of
+  `tempered-fundamental-groups` (`kummerMapTempered`) are natural in the level.
+* (11b) `ThetaTemperedClass.lean`, generic part (Galois data `fieldData L_X` of a curve `X` with
+  Tate data `T` of `tempered-fundamental-groups`, levels `L j ⊇ L_X` étale over `X`, units `η j`):
+  **`Π^tp_Ÿ := Π^tp_Y ∩ Π^tp_{Ÿ'_2}`** (`piYddotX`, `Π^tp_Y = TateObject.piY T`); under **C1**
+  (`LevelsDominated`: `Π^tp_Ÿ ≤ Π^tp_{Ÿ'_{N_j}}` for all `j`, a named hypothesis, debt of
+  `MR14-plan.md`) the maps `toLevel j : Π^tp_Ÿ → Π^tp_{Ÿ'_{N_j}}`, the restrictions `classAt η j n`
+  of the tempered Kummer classes `κ^tp_n(η_j)`, and **`thetaClassTemp η n ∈ H¹(Π^tp_Ÿ, μ_n)`**;
+  it does not depend on the level (`classAt_eq_of_res`, **`thetaClassTemp_eq`**: any `j` with
+  `n ∣ N_j`, from `ThetaTransitions`) and the classes are compatible in `n`
+  (`transition_kummerMap`, **`transTemp_thetaClassTemp`**), i.e. they form an element of
+  `lim_n H¹(Π^tp_Ÿ, μ_n)` (`Δ_Θ ⊗ ℤ/n ≅ μ_n`, [EtTh] Prop. 1.3); `ThetaClassCompatible`,
+  `thetaClassCompatible`.
+* (11c) Concrete part: `X = E_q ∖ {O}` with coordinates `xX`, `yX` (`yX_equation`) and the Tate
+  data **`tateDataX`** of `E_q` (`π = s`, `s² = q`); **`exists_thetaClassTemp`**: the levels and
+  units of `exists_etaleThetaSystem` (points: `EtaleThetaAtPoint`, transitions), étale and finite
+  over `X` (`etale_fieldData`), and their compatible system of classes on `Π^tp_Ÿ` for
+  `tateDataX`, for every valuation subring `V ⊆ Ω` over the unit ball of `K`.
+  `piYddotX` is the [EtTh] `Π^tp_Ÿ` (`Ÿ = Y_2`, `[Π^tp_Y : Π^tp_Ÿ] = 2`, `Π^tp_Ẍ/Π^tp_Ÿ ≅ ℤ`):
+  argued in `MR14-plan.md` ("D13 check", ET l.962–981, 1727–1766), not a Lean proof.
+* (11d) `ThetaTemperedPoint.lean` ([EtTh] Prop. 1.4(iii) at points, tempered, under C1):
+  `galoisToTempered` (naturality `temperedPi1Map_galoisToTempered` and `exists_le_comap_eq` now
+  in `tempered-fundamental-groups`, `Tempered/CuspInertia.lean`) lands in `Π^tp_Ÿ` for Galois elements
+  fixing `L 0`; **`classAt_galois`** (the class on Galois elements is `σ ↦ σα/α`, `α^n = η_j`);
+  places and base points inside them (`mem_place_iff`,
+  `exists_kummer_close`); **`classAt_place`** (`ClassAtPoint`: at a place where `η_j` has residue
+  `b ∈ k^×`, the class on the decomposition group is the Kummer cocycle of `b`); concrete
+  **`exists_thetaClassTemp_points`**: at every Tate point `u`, the Kummer cocycle of `Θ̈(u^{N_j})`.
+
+* (11e) Cusps of the levels ([EtTh] Prop. 1.4(i), 1.3 at finite level; `MR14-plan.md` run 10):
+  `ThetaCuspMain.lean` **`thetaLevel_cusp_orders`**: on `E_Q` (`Q = s^N`, `N` even) the theta
+  level function `f_N` has order `1` at the cusps `±s^a` (`0 < a < N`) and `1 - N` at `O`, `-1`
+  (so `≡ 1 mod N` at every cusp of `Ÿ'_N`), and the poles of `R = φ^*x_q` are exactly the `2N`
+  points of `cuspSet` — given `R ≠ 0` and that `f` is a unit where `R` is regular (both to be
+  supplied on the étale side, plan step B). Ingredients: `ThetaCuspOrder.lean` (Tate's theorem
+  with degree bounds, closed points of Tate points), `ThetaCuspPoints.lean` (`cuspSet`),
+  `ThetaCuspLevelFn.lean`, `ThetaCuspIsogeny.lean` (translation invariance of `R`),
+  `ThetaTranslate.lean` (values of translations), generic `CurveDivisorAux.lean`,
+  `CuspCount.lean`. `ThetaCuspInertia.lean`: `κ_n(v)` on cusp inertia is the tame character
+  when `ord ≡ 1 mod n` (ckt `evalTriv_kummerMap`).
+  `ThetaCuspTame.lean` (step B, étale): **`exists_etaleThetaSystem`** (moved here from
+  `ThetaClassSystem.lean` in run 11) now also gives `CuspTameAt` (conclusion-only Prop def): at every cusp place `W` (`τ ∉ W`) of every level and `n ∣ N_j`, `κ_n(η_j)` on `I_W ∩ H` is
+  the Kummer character of a uniformiser of `W ∩ L_j` (the tame character mod `n`). Via
+  `ι : K(E_Q) → Ω` (`pullbackT`, `ι f = η_j`, `ι R = τ`), `exists_placeOf_comap`,
+  `cuspTameAt_level`.
+* (11f) `ThetaTemperedCusp.lean` ([EtTh] Prop. 1.4(i) at the cusp, tempered, under C1; MR14 run 12):
+  for a base point `V ≤ W` the inertia group `I_W` of `tempered-fundamental-groups`
+  (`inertiaGroup`, `inertiaToTempered`) lands in `Π^tp_Ÿ` for elements fixing `L 0`
+  (`inertiaToTempered_mem_piYddotX`, `toLevel_inertiaToTempered`); **`classAt_inertia`**:
+  `classAt η j n` on these elements is `κ_n(η_j)` on `I_W ∩ H_j`; **`classAt_cuspTame`**
+  (`ClassAtCusp`, conclusion-only Prop def: the Kummer character of a uniformiser), also through
+  ckt's `inertiaZHatEquiv : I_W ∩ H_j ≃ₜ* Ẑ(1)` (`ClassAtCusp.exists_inertiaZHatEquiv`); concrete
+  **`exists_thetaClassTemp_cusps`**: at every place `W` over the cusp (`τ ∉ W`), every base point
+  `V ≤ W` and `n ∣ N_j`.
+* (11g) `ThetaDelta.lean` (G5a/G5b; MR14 run 13): `deltaH D = H ∩ Gal(Ω/k̄(t))` (`mem_deltaH_iff`),
+  `deltaPi D = Ker(Π_U ↠ G_k)`, its theta quotient `deltaTheta D`, **`thetaSubD D` = `Δ_Θ`** (image
+  of `[Δ_U, Δ_U]`, central), `inertiaH_le_deltaH` (`I_W ∩ H ≤ Δ`), `inertiaToTheta`. **Debt G5c + G5d**
+  (owner PI1TOP/MR13): `CuspInertiaWeil D` (with `WeilTameAt`), a `Prop` def used only as a named
+  hypothesis: `e : Δ_Θ ≃* Ẑ(1)` with cusp inertia `↠ Δ_Θ` and `e` = tame character
+  (`CuspInertiaWeil.exists_tame`, `.injective`).
+* (11h) `ThetaProp13.lean` (**[EtTh] Prop. 1.3 on `Δ_Θ`**, tempered, under C1 and `CuspInertiaWeil`;
+  the former debt `InertiaFixesLevel (L 0)` (`Ÿ'_2 → X` unramified over the cusp) is proved since
+  MR14 run 16: `MulByTwoInertia.lean`, `fix_mulByNField_two` (Hensel-type lemma for the duplication
+  relation `Φ₂(a) = τΨ₂Sq(a)`), `levelData_two_eq_pb` (`L 0 ≤ L_2`), `inertiaFixesLevel_of_le_mulByNField_two`):
+  `ambientKernel_le_level`, `inertia_fixes_level` (C1 ⇒ the cusp inertia of `Ÿ` fixes every
+  level), **`classAt_deltaTheta`**, `classAt_cusp_surjective`, concrete
+  **`exists_thetaClassTemp_deltaTheta`**: `thetaClassTemp η n` on `I_x ↠ Δ_Θ` is `proj_n ∘ e`, and
+  onto `μ_n`. Not done: the class comes from `(Π^tp_Y)^Θ` (MR15's `hη13`).
+* (11i) `ThetaKerTheta.lean` (**[EtTh] Prop. 1.3, "the class comes from `(Π^tp_Y)^Θ`", reduced to
+  a Heisenberg condition**, MR14 run 14): `thetaKernelTemp` (`Kθ = Ker(Δ^tp_X ↠ Δ_X^Θ)`),
+  `thetaKernel_fixes` (field automorphisms: if the commutators of `Δ` fix `B` (F1) and
+  `σ(η) ∈ k̄·B^n·η` for `σ ∈ Δ` (F2), then `[[Δ, Δ], Δ]` fixes `η^{1/n}`),
+  `ambientKernel_le_ambientKernel_level`, **`classAt_eq_one_of_thetaKernel`** (generic levels:
+  under C1, (F1), (F2) at the level `j`, the theta class is `1` on `Π^tp_Ÿ ∩ Kθ`; the form of
+  MR15's `hη13`). (F1), (F2) for the theta system: (11j).
+* (11j) **(F1), (F2) for the theta system and the concrete `hη13`** (MR14 run 15):
+  `MulByNTorsion.lean` (**`commutator_fix_mulByNField`**: if `σ, ρ` fix `L_X` and everything
+  algebraic over `K`, then `⁅σ, ρ⁆` fixes `L_m`; the point `P` with `m·P = (τ, y_X)` moves by
+  `m`-torsion, whose coordinates are algebraic, so `σ ↦ σP − P` is a homomorphism);
+  `ThetaLevelEmbed.lean` (**`eq_cand_of_eq`**, `eq_baseAut_of_eq`: every `K`-algebra map
+  `K(E_Q) → L` fixing `R = φ^*x_q` is `ι ∘ t_w` or `ι ∘ t_w ∘ [-1]^*` for one of the `2N` kernel
+  points `w = ±s^a`, by an elementary root count (`exists_finset_of_eq`, even/odd parts of `R`)
+  against the `4N` distinct candidates; with `R_y = φ^*y_q`, `transT_Ry_eq`, `negT_Ry_eq`);
+  `ThetaTransFactor.lean` (**`exists_transFactor`**: `H_w(u) = u^{-2ak}Θ̈_{q^N}(u^N)^k /
+  Θ̈_{q^N}(w u^N)^k ∈ K(E_q)` by Tate's theorem); `ThetaLevelHeisenberg.lean`
+  (`thetaLevel_cuspElt_mul`, **`pullbackT_transT_level`**: `j(t_w^* f_N) = c_w H_w^n F_N`,
+  **`translation_level`**: `σ(η) = c·h^n·η` with `c ∈ K`, `h ∈ L_{2N}` for every
+  `σ ∈ Gal(Ω/L_X)`; `exists_etaleThetaSystem` moved here, with this as a new conjunct);
+  concrete **`exists_thetaClassTemp_thetaKernel`** (`ThetaKerTheta.lean`): for the theta system,
+  under C1 only, `classAt η j n` is `1` on `Π^tp_Ÿ ∩ Kθ`, which is MR15's `hη13` (obligation 8).
+  **`exists_thetaClassTemp_prop13`** (MR15 run 4, decision D25): all conclusions for ONE theta
+  system (Prop. 1.3 on `Kθ` under C1; cusp inertia onto `μ_n`;
+  Prop. 1.3 on `Δ_Θ` under `CuspInertiaWeil`).
+* (11k) **MR15 obligation 13 inputs (MR14 run 17)**: `ThetaLevelTranslation.lean` ([EtTh]
+  Prop. 1.5(iii) mod `l` at the level: **`exists_transFactorLevel`** (the `l`-th root
+  `H = U^{-2b}(Θ̈_{q^N}(U)/Θ̈_{q^N}(wU))^{N/l}` of the translation factor is in `K(E_Q)`, `a = lb`),
+  **`transT_level_pow`** (`t_w f = d^l H^l f`); the translation homomorphism **`transHom`**
+  (`σ ∘ ι = ι ∘ t_w`, `σ ↦ w ∈ K^×/Q^ℤ`), `transHom_eq_one_of`, `dvd_of_mk_cuspElt_eq`;
+  at the levels `level_stable`, `transHom_level_eq_one`, **`transHom_level_pow`**;
+  `exists_etaleThetaSystem` moved here, with the homomorphisms `w_j` as a new last conjunct);
+  `ThetaLevelHeisenberg.lean` (`exists_levelEmb`); `TemperedLevelGalois.lean` (tempered Galois
+  correspondence **`mem_range_muL_iff`**, `mem_range_muL_iff_forall`, **`normal_range_muL`**,
+  **`normal_piYddotX`**: `Π^tp_Ÿ ⊴ Π^tp_X`; `piY_not_le_range_muL`).
+* (11l) **MR15 obligation 13b (index), 13c(i) tempered (MR14 run 18)**: `ThetaLevelTranslation.lean`
+  `exp_eq_of_mk_cuspElt_eq`, `dvd_of_mk_cuspElt_eq_mul`, `dvd_of_mk_cuspElt_sq`, `level_pow_of_dvd`,
+  **`transHom_level_pow_mul`** (`w σ = (w ρ)^l·w τ`, `(w τ)² = 1`, `2l ∣ N` ⇒ `σ η = (d·y)^l·η`), `MovesByPow`,
+  new conjunct of `exists_etaleThetaSystem`; `TemperedLevelTrans.lean` (new): debt Z
+  **`PiYIndexTwoAt`** (`[Π^tp_Y : Π^tp_Y ∩ Π^tp_{L_j}] ≤ 2`), `mul_self_mem_of_indexTwo`,
+  **`piYddotX_index`** (`e² ∈ Π^tp_Ÿ`, `Π^tp_Y = Π^tp_Ÿ ∪ Π^tp_Ÿ e`), **`of_mem_piXdd`** (lifts of
+  `γ ∈ Π^tp_X̿` move `η_j` by `l`-th powers, from Z and `χ(g₁) = 1`); `exists_thetaClassTemp_prop13`
+  (`ThetaKerTheta.lean`) gains the conjuncts `σ(L_j) ⊆ L_j` and this tempered 13c(i).
+* (11m) **Reductions of the debts C1, Z_0, 13a (TFGD run 1)**: `TemperedDomination.lean` (new):
+  `piY_le_range_of_hom` ((Z_M) `Π^tp_Y ≤ Π^tp_{R'}` from an object over `X₀` and `Spec R'`, injective on
+  fibres over `X₀`), `range_muL_antitone`, `inf_range_muL_le`, `indexTwo_of_quadratic`,
+  **`piYIndexTwoAt_zero_of_quadratic`** (Z_0 from (Z_2) and `L 0` quadratic over `L_mid`),
+  **`levelsDominated_of`** (C1 from (Z_M) and `L j ≤ L 0 ⊔ L' j`), `exists_eq_ofAdd_one_of_isCoprime`
+  (13a from two coprime values of `χ`). No new hypotheses; the geometric input left is (Z_M)
+  (`TFGD-plan.md`).
+* (11n) **Debt Z_0 restated as (Z_2) (TFGD run 2, lead decision D-T1)**: `TemperedLevelTwo.lean`
+  (new): the level `levelTwo t h2 h12 = K(E_{q²})` (image in the source of `[2]` of the fixed
+  field of the translation by the Tate point `u = −1`, `E_q/⟨−1⟩ ≅ E_{q²}`), étale over `L_X`, with
+  `L_{[2]} = L_2(α)`, `σ α = ±α` (`exists_quadratic_levelTwoField`); the named geometric input
+  **`ZTwo`** (`Π^tp_Y ≤ Π^tp_{L_2}`) and **`piYIndexTwoAt_zero_of_zTwo`** ((Z_2) ⇒ Z_0 for every
+  system with `L 0 ≤ L_{[2]}`). `exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs` and
+  MR15's `exists_thetaEnvU_rigidity_cX` now take `ZTwo` instead of `PiYIndexTwoAt … 0`.
+* (11o) **Debt 13a discharged (TFGD run 2, lead decision D-T2)**: `TemperedCovering.lean` gains
+  `normChar`/`charGen` and **`TateObject.charN`** (the normalised character `χ/n` of `Y → X`, image
+  of `χ` = `nℤ`; same kernel `Π^tp_Y`); `piXdd = χ̂⁻¹(lℤ)` and the 13a/13c(i) statements
+  (`of_mem_piXdd`, `exists_cX_of_*`, `exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs`) use
+  `χ̂`. `TemperedLevelTwo.lean`: Theorem B for `tateDataX` (`exists_character_ne_one_tateDataX`)
+  and `exists_charN_eq_one_tateDataX`; `exists_thetaEnvU_rigidity_cX` no longer assumes `g₁`
+  (new hypotheses: perfect residue field, residue characteristic `p`).
+* (11p) **Debt C1 restated as (Z_{N_j}) (TFGD run 3, lead decision D-T5)**: `ThetaLevelQuot.lean`
+  (new): the level coordinates `levelCoords j` of `Ÿ'_{N_j}` (unique by their Tate values,
+  `eq_levelCoords`), the level **`levelQN j = K(E_{q^{N_j}})`** (image under `ι = φ ∘ j` of the
+  fixed field of the translation by `U = −1` on `K(E_Q)`, `Q = s^{N_j}`; étale over `L_X`), the
+  generic `mem_sup_adjoin_fixed` and **`adjoin_levelCoords_le`** (`L_j ≤ M ⊔ levelQN j` when
+  `φ_2(x) ∈ M`). `exists_etaleThetaSystem` gains the conjunct `L j ≤ L 0 ⊔ levelQN j`.
+  `TemperedLevelTwo.lean`: the named geometric input **`ZM j`** (`Π^tp_Y ≤ Π^tp_{K(E_{q^{N_j}})}`)
+  and **`levelsDominated_of_zM`**; `exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs`,
+  `exists_thetaEnvU_rigidity` and `exists_thetaEnvU_rigidity_cX` gain the conjunct
+  `(∀ j, ZM j V hV) → LevelsDominated V hV …` (C1 for their system from (Z_{N_j})).
+* (11q) **`ZTwo` unified into `ZM 0` (TFGD run 4, lead decision D-T7)**: the separate level
+  `levelTwo`/`levelTwoField` and the input `ZTwo` are deleted; `ThetaLevelQuot.lean` gains the
+  generic `exists_quadratic_of_involution`, `exists_iota_xy(_of)` (`φ_2(x), φ_2(y) ∈ ι(K(E_Q))`) and
+  **`exists_quadratic_levelQN`** (`L_{[2]}` is fixed by the subgroup of `Π_{levelQN j}` fixing some
+  `α` with `σα = ±α`); `TemperedLevelTwo.lean`: **`piYIndexTwoAt_zero_of_zM`** (Z_0 from any
+  `ZM j`). The consumers (`exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs`,
+  `exists_thetaEnvU_rigidity_cX`) take `ZM 0` in place of `ZTwo`: the only geometric inputs left
+  for Z_0 and C1 are the `ZM j`.
+* (11r) **(Z_2) = `ZM 0` proved (TFGD runs 4–6)**: `TemperedFourGonInput.lean` (new): Vélu for
+  `E_{q²} → E_q` as splitting of the Tate series (`velu_X`, `velu_Y`), the translation relations by
+  the `2`-torsion point (`addT_rels`), the norms of the coefficients, **`exists_fourGonInput`**
+  (`x₁, y₁, x₂, y₂ ∈ K[E_{q²}]` with the `ℙ⁴`-model relations and the deck-swap fibre property)
+  and **`zM_zero`** (with tfg's `FourGon.exists_object`, the `4`-gon model of `E_{q²}` over the
+  Tate `2`-gon, and `piY_le_range_of_hom`). The `ZM 0` hypotheses of
+  `exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs`, `exists_thetaEnvU_rigidity_cX` are
+  removed (Z_0 is discharged); C1 still takes `∀ j, ZM j`.
+* (11s) **(Z_{N_j}) = `ZM j` for every `j`, C1 unconditional (TFGD run 8)**:
+  `TemperedNGonInput.lean` (new): Vélu for `E_{q^N} → E_q` as splitting of the Tate series mod `N`
+  (`veluN_X`, `veluN_Y`), the block functions `x_k, y_k` (`k ∈ ℤ/N`) on `E_{s^N}` and their
+  translations, the pair relations for translation by `P(q^d)` (`addD_rels`, A-type `R1, R2/δ, R3`
+  and B-type `B1, B2, B_YY`), the cyclic quadrics `Γ_d` (`gam_rel`, from
+  `TemperedGammaConst.lean`: `Γ_d` takes one value on Tate points, by the theta-family engine), the
+  norms of all coefficients (`TemperedCoeffNorms.lean`, `K_d` bounds), integrality of the blocks
+  (`TemperedBlockIntegral.lean`, valuations), the fibre property via Galois automorphisms
+  (`TemperedLevelAut.lean`, `fibreN`), **`exists_NGonInput`** and **`zM_succ`** (tfg's
+  `NGon.exists_object`, the `2N`-gon model). **`zM`**: `ZM j` for all `j`. The `∀ j, ZM j`
+  hypotheses of the C1 conjuncts of `exists_thetaClassTemp_prop13`, `exists_thetaRep_inputs`,
+  `exists_thetaEnvU_rigidity(_cX)` are removed: `LevelsDominated` holds for the system.
+  TFGD run 9: these statements (and `exists_thetaClassTemp_thetaKernel`, `exists_thetaEnv_rigidity`)
+  carry C1 as a binder `hC1 : ∀ V hV, LevelsDominated …` of the existential; the inner
+  `∀ hC1 : LevelsDominated …` premises are gone (classes taken at `hC1 V hV`).
+
+### (12), (13) The arithmetic abelian model, automorphisms of the mod `N` models — deleted
+
+`ArithEnv.lean` ([EtTh] Prop. 2.14(i) in the abelian arithmetic model), `ModelAut.lean` and
+`ModelTower.lean` (Cor. 2.18(iv) and Cor. 2.19(ii) for the abelian mod `N` models) were deleted
+on 2026-10-26 (MR15 run 3); they are superseded by the nonabelian versions in `Env/`
+(`prop214Set_eq_padic`, `Env/AutKernel.lean`, `Env/Tower.lean`, see the MR15 section).
+
+### (15) The double covering `Ÿ → Y` (`TemperedDouble.lean`) — done (under S1')
+
+* In `tempered-fundamental-groups` (`Andre/TateObjectDouble.lean`, pinned at `a2415c1`): the object
+  `Ÿ` with deck group `ℤ × ℤ/2` acting simply transitively on its fibre, the character
+  `Π^tp_X → ℤ × ℤ/2`, `χ_Y = pr₁ ∘ χ_Ÿ`.
+* Here: `piYddot` (**`Π^tp_Ÿ`**, `mem_piYddot_iff`: the stabilizer of the base point of `Ÿ`;
+  open, normal in `Π^tp_X`), `piYddot_le_piY` (`Π^tp_Ÿ ⊆ Π^tp_Y`), `relIndex_piYddot_le_two`
+  (`[Π^tp_Y : Π^tp_Ÿ] ≤ 2`), `relIndex_piYddot_eq_two` (`= 2` if some element of the decomposition
+  group of the valuation of the geometric point moves `√(x − e)`).
+
+### (14) Tempered Frobenioid refinements (`Iut/Frobenioid/TateTheta.lean`) — done (partial)
+
+* The former `unitThetaData` (`B₀ = U × {theta-monomial divisors}`, `U` arbitrary) is replaced
+  by `thetaData` of (10c), whose divisor map has kernel exactly `O_K^×` ([EtTh], Def. 3.3,
+  Prop. 3.4(ii): `BAn.radDiv_eq_zero_iff`).
+* `tateY_H`, `mem_tateY_H_iff`: the object `Y` of the tempered Frobenioid of the Tate curve has
+  subgroup `Π^tp_Y` (6a), the stabilizer of the base point of the fibre of `X₀`.
+* Not done: separating the components of `Y_H ×_X Y` (needs verticial subgroups, not provided by
+  `tempered-fundamental-groups`) and the cusps.
+
+### (16) MR14: theta cohomology and the theta quotient (`ThetaCohomology.lean`, `ThetaQuotient.lean`)
+
+Group-theoretic layer of [EtTh] §1 for **arbitrary** topological groups (not models), MR14 tasks A1–A3
+(`~/iut-scratch/multiradial/MR14-plan.md`):
+
+* Prop. 1.5(i),(ii): for `DΘ ≤ D ≤ G` with `D` acting trivially on `M`, restriction
+  `ContH1.resTriv` to `Hom(S, M)` (equivariant: `resTriv_conj`), `F1 = ker res_{DΘ}`,
+  `F2 = ker res_D` = image of inflation from `G ⧸ D` (`ker_resTriv_eq_range_inflation`),
+  `F1 → Hom(D/DΘ, M)` with kernel `F2` (`thetaGraded`, `ker_thetaGraded`).
+* Inner automorphisms act trivially on `H¹` (`map_conj_eq_id`); transport along `G ≃ₜ* G'`
+  (`pushIso`, `resTriv_pushIso`, `pushIso_pushIso`).
+* Thm. 1.6(iii), uniqueness step: classes with the same restriction to `DΘ` that are fixed by an
+  inversion `ι` modulo `F2` differ by `F2` (`div_mem_F2_of_inv`, `noInvariantHom_of_inv`); the
+  theta-class set `thetaClassSet` is an `F2`-coset (`mul_mem_thetaClassSet`) and is carried to the
+  theta-class set by every compatible isomorphism (`pushIso_mem_thetaClassSet`).
+* The theta quotient `Δ^Θ = Δ/[[Δ,Δ],Δ]` (`thetaQuot`, class `2`), the commutator pairing
+  `∧²Δ^ell → Δ_Θ` (`thetaPairing`: biadditive, alternating, natural), and `[G, G] = ⟨⁅a, b⁆⟩`
+  for two generators (`commutator_eq_zpowers`).
+
+* Thm. 1.6(iii), last step (`ThetaRigidity.lean`): restriction along a section `σ : G ⧸ D → G`
+  (a cusp decomposition group) is a left inverse of inflation (`resSection_inflation`); the
+  `F2`-indeterminacy is reduced to any subgroup `U` containing the difference of the evaluations
+  (`div_mem_inflation_map_of_resSection`), and a theta class is determined by its evaluation
+  (`eq_of_mem_thetaClassSet_of_resSection_eq`).
+* Route R-alg, task G2a (`ThetaLevel.lean`): the theta level functions
+  `f_N = Θ̈_q / Θ̈_{q^N}^N` are `q^{N/2}`-periodic (`thetaLevel_sqrt_pow_mul`), invertible off the
+  cusps, compatible in `N` (`thetaLevel_mul`), and `κ_n(f_N(Ü)) = κ_n(Θ̈(Ü))` for `n ∣ N`
+  (`kummer_thetaLevel`).
+
+* Route R-alg, task G2b (`TateElliptic.lean`): **Tate's theorem for theta functions** — every
+  weight-`k` family with the multiplier of `θ(-u)^k` has values `(P(X) + Y·Q(X))·θ(-u)^k`
+  (`exists_poly_of_isWeightFamily`), via the dimension count of tate-curves-theta
+  (`finrank_weightSpace`) and the independence of `Xⁱ, XⁱY` as functions
+  (`poly_eq_zero_of_eval`, `infinite_range_X`).
+* Route R-alg, task G2c (`ThetaLevelRational.lean`): for even `N`, `f_N` is a rational function
+  `(P₁(X_Q) + Y_Q Q₁(X_Q))/(P₂(X_Q) + Y_Q Q₂(X_Q))` on `E_Q`, `Q = q^{N/2}` (`thetaLevel_eq_div`).
+* Route R-alg, task G1 (ψ-route; `TateFunctionField.lean`, `ThetaPullback.lean`,
+  `ThetaIsogeny.lean`): evaluation of `K[E_q]` at Tate points and elements of `K(E_q)` with
+  prescribed values (`evalTate`, `HasTateValue`, `eq_of_hasTateValue`,
+  `exists_hasTateValue_of_weight`); pulling theta families back along `u ↦ u^m`
+  (`isWeightFamily_pull`, `isWeightFamily_pullIter`); the isogeny `φ(Ü) = Ü²` in Tate coordinates
+  (`exists_poly_isogenyX`, `exists_poly_isogenyY`); and the function field of the level
+  `Ÿ'_N` as `ψ^* K(E_Q) = K(x_Q∘ψ, y_Q∘ψ) ⊆ K(E_q)` (`ψ(u) = u^N`, `φ ∘ ψ = [2N]`), containing
+  `F_N = f_N∘ψ` and `[2N]^* x_q, [2N]^* y_q` (`exists_pullTheta`, `exists_levelField`).
+* G1, identification with `curves-jacobian`'s `[m]^*` (`TateMulByN.lean`; needs `‖2‖ = 1`, i.e.
+  odd residue characteristic as for `V^bad_mod` in IUT I, Def. 3.1(b), for the Tate group law):
+  `[m]^* a` has value `a(u^m)` at the Tate point of `u` (`hasTateValue_mulByNHom`), so cj's
+  `[2N]^*` lands in `ψ^* K(E_Q)` (`exists_levelField_mulByN`).
+* G1, the level in `Ω = K(Ē)^alg` (`MulByNGalois.lean`, any elliptic curve in characteristic `0`):
+  the source of `[m]` embedded over `embE` (`mulByNEmb`), its image `L_m` with coordinate ring
+  `K[E][1/ψ_m]` (`coverEquivCoordRing`), `coordRing L_X → coordRing L_m` étale
+  (`etale_mulByNField`), hence every level `L_X ≤ L' ≤ L_m` étale over `X`
+  (`etale_of_le_mulByNField`, via `pi1`'s `etale_iff_inertia`); `ThetaLevelGalois.lean`:
+  **`Ÿ'_N` is étale over `X` and carries `F_N`** (`exists_thetaLevel_etale`).
+* G1 step 3 groundwork (`ThetaDivision.lean`): block division of pulled-back theta functions
+  (`exists_theta_pull_div`: `θ_{T₁}(-u^m) = θ_{T₂}(-u)·C(u)`), Tate's theorem with degree bounds
+  (`exists_poly_of_isWeightFamily_deg`), and **the division polynomial in theta functions**
+  (`exists_ΨSq_theta`: `u^{-(m²-m)}θ(-u^m)² = α·ΨSq_m(X(u))·θ(-u)^{2m²}`, `m` even), the input
+  for `F_N` being a unit on `Ÿ'_N`.
+* G1 step 3 (`ThetaLevelUnit.lean`): **`F_N` is a unit on `Ÿ'_N`** (`exists_thetaLevel_unit`):
+  `u^{-(3N²-N)}θ_{q^N}(-u^{2N})^Nθ_q(-u^{2N})` and `u^{-(4N³-N²-N)}θ_q(-u^{2N})^{N+1}C(u)^N`
+  are theta families of weight `8N²`, `8N³` (`exists_invLevelFam`, `exists_levelFam`), equal to
+  `α F_N⁻¹ ΨSq_{2N}θ^{8N²}` and `α^N F_N ΨSq_{2N}^N θ^{8N³}`; so `F_N^{±1} ∈ K[E][1/ψ_{2N}]`.
+* G4, étale level (`ThetaLevelKummer.lean`): the Galois model `fieldData L'` of `Ÿ'_N`, the unit
+  `η = F_N`, places of `Ω` over Tate points with residues = values (`exists_place_tate`,
+  `residue_toΩ_eq`, `rational_of_center`), and **[EtTh] Prop. 1.4(iii) at points, étale
+  version** (`exists_etaleThetaClass`): along the section of the rational point over `u`,
+  `s^* κ_n(η) = κ_n(Θ̈(u^N))` for `n ∣ N`.
+* **Compatibility in `N` (projective system), étale level** (MR14 run 5). `MulByNGalois.lean`:
+  `[m]^*` on `K(E)` (`pb`, `elliptic-curves`' `mulByNEndoAlgHom`) with `pb_mul : [a·b]^* =
+  [a]^* ∘ [b]^*`, and the embeddings `mulByNEmb E m` are now chosen **compatibly in `m`**
+  (`mulByNEmb_comp_pb_mul : mulByNEmb (r·m) ∘ [r]^* = mulByNEmb m`), read off one tower
+  `chainEmb` of embeddings of the sources of `[(k+1)!]`. `ThetaQuotIsogeny.lean`: the cyclic
+  isogeny `E_{Q^M} → E_Q`, `v ↦ v`, in Tate coordinates (`exists_poly_quotX`,
+  `exists_poly_quotY`). `ThetaLevelSystem.lean`: values of `[m]^*` (`hasTateValue_pb`), the level
+  data with values at all `u` with `u^{2N} ∉ q^ℤ` (`exists_levelData`), the transition
+  `Ÿ'_{NM} → Ÿ'_N` (`levelData_transition`: `[M]^*` maps the generators of `Ÿ'_N` into the
+  function field of `Ÿ'_{NM}` and `F_{NM} = [M]^*F_N · G^N`, from `thetaLevel_mul`), nested levels
+  (`levelField_mono`), and the naturality of `continuous-kummer-theory`'s Kummer map under a
+  change of level (`resPi`, `resPi_kummerMap`). `ThetaClassSystem.lean` (ingredients) and
+  `ThetaCuspTame.lean` (statement): **`exists_etaleThetaSystem`** — levels `L'_j`
+  (`N_j = 2(j+1)`), étale over `X`, with units
+  `η_j`, the point statement at every level, and for `N_{j'} = N_j·M`, `M` even:
+  `L'_j ≤ L'_{j'}` and `res κ_n(η_j) = κ_n(η_{j'})` for `n ∣ N_j` (`LevelTransition`).
+* [EtTh] Prop. 1.5(iii), inversion part, function fields (`ThetaLevelInversion.lean`): values of
+  `[-1]^* = negYAlgEquiv` (`hasTateValue_negY`), `f_N(Ü⁻¹) = -f_N(Ü)` (`thetaLevel_inv`), and
+  `levelData_inv`: `[-1]^*` preserves `K(x_Q∘ψ, y_Q∘ψ)` and sends `F_N` to `-F_N`.
+* **[EtTh] Prop. 1.5(iii), inversion part, cohomological form** (MR14 run 6).
+  `MulByNInversion.lean`: `[-1]^*` commutes with `[m]^*` (`negE_comp_pb`, through the generic
+  point), and **`exists_negAut`**: an automorphism `σ ∈ Gal(Ω/K(τ))` with
+  `σ ∘ φ_m = φ_m ∘ [-1]^*` (`AlgHom.liftNormal` of `negLift : L_m → Ω`). `KummerConj.lean`: for
+  `σ` normalising `H` and `H_L`, conjugation preserves the inertia elements and `⟨⟨S⟩⟩`
+  (`conj_mem_S`, `conj_mem_ambientKernel`), induces `conjPi` on `Π_U` and `conjH1` on
+  `H¹(Π_U, μ_n)` (`c ↦ σ·c(σ⁻¹ · σ)`), and **`conjH1_kummerMap`**: `conjH1 σ (κ_n(u)) = κ_n(σu)`;
+  `InversionAt`, `inversionAt_of`. `exists_etaleThetaSystem` now also gives, at every level, a
+  lift `σ_j` of `[-1]^*` with `conjH1 σ_j (κ_n(η_j)) = κ_n(-1)·κ_n(η_j)` for all `n`.
+
+## Scope decisions
+
+Decisions S1–S3 were made for P16; S1'–S5 for step 2 refine them.
+
+* **S1 (coverings as coordinate data).** The tempered covering `Ÿ → Y → X` and its special fibre
+  (an infinite chain of `ℙ¹`s labelled by `ℤ`) are not constructed as objects of
+  `tempered-fundamental-groups`; the covering is recorded by the action of its deck groups on the
+  coordinate `Ü` of the analytic uniformization `Kˣ → Kˣ/qᶻ` (`tate-curves-theta`). The divisor
+  `D_N` and the line bundles `L_N` of §1 are not formalized.
+* **S2 (classes on points and germs).** The étale theta class is formalized through its
+  restrictions to points (Kummer classes of values) and germs (`thetaGerm`), not as a class in
+  `H¹(Π^tp_Ÿ, Δ_Θ)`.
+* **S3 (group theory of the environments).** The mono-theta environment of [EtTh], Def. 2.13 is
+  defined for an abstract topological group; the model environment is built from an abstract
+  cocycle on an abstract group (`Π^tp_Ÿ` is not available). Theorems about the abstract
+  environment (cohomology-class invariance, the groupoid) are proved; the identification of the
+  model group with `Π^tp_Y[μ_N]` is not.
+
+* **S1' (tempered coverings).** `Y → X` is the tempered object `TateObject.X₀` of
+  `tempered-fundamental-groups` and `Π^tp_Y` is its stabilizer (6). `Ÿ → Y` is constructed (15)
+  as `Y ×_X X'` for the Kummer presentation `X' = Spec R[t]/(t² − (x − e))` of the `2`-isogeny
+  covering `E_{√q} → E_q` (`e` the `x`-coordinate of the `2`-torsion point `√q`), which is finite
+  étale over `Spec R` only if `x − e` is a unit, i.e. if `Spec R` avoids the `2`-torsion point
+  `(e, ·)` (e.g. `E ∖ E[2]`); `X = E ∖ {0}` itself would need the coordinate ring of the isogenous
+  curve. The model environments use `(Δ_Ÿ)^Θ = Δ_Θ × 2·(Δ_Y)^ell` directly.
+* **S2' (the étale theta class).** *Update 2026-10-26 (MR14 run 7): the class now exists as the
+  compatible system `thetaClassTemp` of (11), Kummer classes of the units `η_j = F_{N_j}` on the
+  finite levels `Ÿ'_{N_j}`, under the hypothesis C1; the original note follows.* The class
+  `η^Θ ∈ H¹(Π^tp_Ÿ, Δ_Θ)` stays research-level here, for a precise reason: `Θ̈` is not a function on any finite level — it lives on the
+  rigid-analytic (formal) covering `Ÿ`, while the coverings of `tempered-fundamental-groups`
+  are levels (finite étale `R`-algebras) with projective models and covering spaces of their
+  special fibres, without a structure sheaf on infinite coverings; so neither `Θ̈` nor its
+  `N`-th root coverings `Ÿ_N` (equivalently the line bundles `L_N` and theta trivializations
+  `τ_N` of [EtTh], Lemma 1.2) are available as tempered objects, and no decomposition groups
+  of points of tempered coverings are available to restrict to. What is formalized: the
+  point/germ restrictions (P16, S2), the restriction of the class to `Δ_Θ` as the reduction
+  `red` of the model environment (8d, deleted with (8)), and its divisor (10c).
+* **S3' (environments).** Cyclotomic rigidity is proved for environments on the abelian
+  geometric theta quotient `(Δ^tp_Y)^Θ[μ_N]` (8, deleted; now `Env/`): there the algorithm needs no slimness (the
+  cyclotome is the torsion subgroup). For `Π^tp_Y[μ_N]` itself the kernel `μ_N` is recovered by
+  Prop. 2.11(ii), formalized for any temp-slim group (7c).
+* **S4 (temp-slimness).** Temp-slimness of `Π^tp_X`, `Π^tp_Y` ([Mzk14], Example 3.10) is not
+  proved: it rests on the anabelian geometry of tempered groups of hyperbolic curves (the
+  verticial subgroups and their commensurable terminality, profinite slimness of `Δ`, and
+  center-freeness of `G_K`). `tempered-fundamental-groups` proves the tree-tower part
+  (commensurable terminality of verticial subgroups when edge stabilizers have infinite index,
+  Blueprint §12) but neither the comparison of verticial subgroups with fundamental groups of
+  components nor estrangement for any curve. All statements needing it take `TempSlim` as a
+  hypothesis. **Update:** `tempered-fundamental-groups` now proves the argument of [Mzk14],
+  Example 3.10 (`TempSlim.of_commensurator_eq`, `tempSlim_temperedPi1`), so for `Π^tp_X`,
+  `Π^tp_Y`, `Π^tp_Ÿ` the remaining input is **`VerticialTempSlim`**: some verticial subgroup of
+  André's tower satisfies `HI` (the specialization theorem M2, Blueprint §12.8) and is temp-slim
+  (slimness of the decomposition group of a component: comparison with the profinite `π₁` of
+  the component, slimness of `G_K` and of profinite surface groups). See (7f).
+* **S5 (tempered Frobenioid monoids).** See `Iut/Frobenioid/README.md`: the base category is
+  genuine; the monoids are the combinatorial theta divisors.
+
+## Research-level, not formalized
+
+* **Cyclotomic rigidity** ([EtTh], Cor. 2.19(i)) for `Π^tp_Y[μ_N]` itself (beyond the
+  theta-quotient environments of (8)): the first step of the algorithm reconstructs the theta
+  quotient `Π^tp_Y ↠ (Π^tp_Y)^Θ` and `Π^tp_Ÿ` from `Π^tp_X` ([EtTh], Cor. 2.18(i), via
+  Props. 1.8, 2.4 and [Mzk2], Lemma 1.3.8), i.e. tempered anabelian results (the dual graph and
+  the theta quotient are group-theoretic) that are not available; and it needs temp-slimness
+  (S4) and `Π^tp_Ÿ` (S1'). Given those, the remaining steps are (7c) and (8).
+* **Discrete rigidity for mono-theta environments** (Cor. 2.19(ii)) for the actual
+  environments: (9c) reduces it to Cor. 2.18(iv) (`Aut^μ(M_N) ↠ Aut(Π_X)` with kernel
+  `Hom(ℤ/2, ℤ/N)`), which needs Cor. 2.18(iii) (`Π_X = Aut(Π_Y) ×_{Out} Im(D)`, temp-slimness)
+  and the cyclotomic rigidity above. For the abelian models of the geometric theta quotient the
+  analogue of Cor. 2.18(iv) and the resulting Cor. 2.19(ii) are proved in (13).
+* **Rigidity of scalar multiples** (Thm. 1.10, Cor. 2.19(iii)): the standard-type classes are
+  characterized group-theoretically by their restrictions to the decomposition groups of the
+  torsion points labelled `0`. Needs the tempered anabelian rigidity Thm. 1.6 (`Π^tp_X`
+  determines the `ℤ`-covering and its labels) and the restriction maps to decomposition groups in
+  `H¹(Π^tp)`.
+* Tempered anabelian rigidity of the étale theta function (Thm. 1.6), the theta trivializations
+  `τ_N` and their compatibility (Lemma 1.2), and the Frobenioid-theoretic manifestations
+  (§§3–5).
+
+## (MR15) Mono-theta environments from an abstract theta setting (`Env/`)
+
+Layer A of the MR15 plan (`~/iut-scratch/multiradial/MR15-plan.md`): [EtTh] §2 for an
+**abstract theta setting** given as explicit data — a topological group `PX` (`Π^tp_X̲`) with an
+augmentation `aug : PX →* G` (`G_K`), a discrete cyclotome `μ` (`μ_N`) with `ψ : G →* MulAut μ`,
+subgroups `PYdd ≤ PY ≤ PX` (`Π^tp_Ÿ̲ ⊆ Π^tp_Y̲`), a cocycle `η` on `PYdd` (`η̈^Θ̲ mod N`) and a group
+`Kum` of Kummer cocycles `G → μ`. Every property of the genuine objects enters as a separately
+named theorem hypothesis (no `Prop`-field structures); the list is the Layer-B obligation list of
+the MR15 plan.
+
+* `Env/Envelope.lean` — [EtTh] Def. 2.10 literally (`fibreEnvelope = Π ×_G (μ ⋊ G)`,
+  `fibreEquiv : ≃ₜ* μ ⋊ Π`, tautological section), `Δ[μ] ≅ Δ × μ` and **Prop. 2.11(i)**
+  (`mem_center_geom_iff`), the envelope is a topological group (`Envelope.isTopologicalGroup`),
+  and the **finite-index form of Prop. 2.11(ii)** (`FISlim`, `mem_range_inl_iff_finiteIndex`,
+  `rightEquivFI`: every group isomorphism of envelopes respects `μ` and induces `Π ≅ Π'`) — the
+  route of MR13 decision D4 (`TempSlim.centralizer_eq_bot_of_denseRange` in tfg).
+* `Env/Model.lean` — **Def. 2.13**: Kummer twists, `DX`/`DY` (preimage of `D_Y̲ ⊆ Out`, generated
+  by `K^×` and `Gal(Y̲/X̲)`, closed under composition via the triviality of the inner action on
+  `H¹(G, μ)`, `conj_mul_twist`), theta and algebraic sections, datum (c) = cohomology class of `η`
+  (`thetaSubgroups_eq_iff`), the **model mono-theta environment** `modelEnv : MonoThetaEnv`, and
+  isomorphisms between models: cohomologous cocycles (`modelEnv_eq_of_cohomologous`), `O_K^×`-
+  multiples (`kummerIso`).
+* `Env/Shift.lean` — **Prop. 2.14(ii)**: shifting automorphisms `α_δ` (identity on `Π_Y` and on
+  `μ`, map `s^Θ` to `t^Θ = s^Θ + δ`, normalise `D_Y`), `shiftIso : modelEnv η ≅ modelEnv (η·δ⁻¹)`
+  over the identity of `Π_Y` (Cor. 2.18(ii) uniqueness). Layer-B hypotheses: the extension `δY` of
+  `δ` to `PY` (Prop. 1.5(ii),(iii)) and `ShiftConj` (`Gal(Y̲/X̲)` maps `Ü²` to a `K^×`-multiple).
+* `Env/Prop214.lean` — **Prop. 2.14(i)** for the abstract setting as an exact description
+  (`prop214Set_eq`: the set is the tautological image of the commutators `[a, b]`, `a ∈ Δ_X`,
+  `b ∈ Δ_Y`), with the center-freeness of `G_K` **proved** from `PAdicGalois.isSlimGroup`
+  (`gK_center_free`, `prop214Set_eq_padic`).
+* `Env/Transport.lean` — the formal half of **Cor. 2.18(i)** ("functorial group-theoretic
+  algorithm"): transporting a reference subgroup along isomorphisms is independent of the choice
+  and functorial exactly when the reference subgroup is preserved by all automorphisms
+  (`IsCharacteristicT`, `transportSub_indep`, `transportSub_map_of_char`); Cor. 2.18(i) thus
+  reduces to characteristic-subgroup statements (Prop. 2.4 etc., Layer B).
+* `Env/PiX.lean` — **Cor. 2.18(iii)**: `Π_X(M) = Aut(Π_Y) ×_{Out(Π_Y)} Im(D)` for an abstract
+  environment and a `D`-stable normal subgroup `N` (`piX`), functorial under isomorphisms of
+  environments (`piX_map`); for the model, `piXModelEquiv : PX ≃* Π_X(modelEnv)` (`a` acting on
+  `Π_Y` by conjugation; Kummer twists act trivially), given that `PY` has trivial centralizer in
+  `PX` (temp-slimness, Layer B).
+* `Env/CycRigidity.lean` — **Cor. 2.19(i)** (cyclotomic rigidity) for the nonabelian
+  environments: the intrinsic algorithm on any `MonoThetaEnv` with the Cor. 2.18(i) input subgroups
+  (`MonoThetaEnv.mu`, `kerTheta`, `thetaSplit`, `algSet`, `taut`, `IsCyc`), its functoriality
+  (`MonoThetaEnv.Iso.isCyc_iff`), its value on the model (`isCyc_model`: the natural isomorphism
+  `l·Δ_Θ ⊗ ℤ/N ≅ μ_N` given by `-η`), `cyclotomicRigidity_env` and `cyclotomicRigidity_envAut`
+  (no `(ℤ/N)^×`-indeterminacy). Layer-B hypotheses: `hη13` (Prop. 1.3), `hL` (Prop. 2.12(i)-type),
+  `FISlim PY`, the Cor. 2.18(i) inputs.
+* `Env/Inputs.lean` — environments with the inputs of the Cor. 2.19(i) algorithm
+  (`MonoThetaEnv.Inputs`, `Inputs.IsCyc`), isomorphisms respecting them (`Iso.Respects`,
+  `respects_refl`, `Respects.trans/symm`), functoriality (`Iso.isCyc_inputs_iff`,
+  `isCyc_inputs_symm`), the model's inputs `Env.modelInputs` and `Env.isCyc_of_respects_padic`;
+  consumed by `LogLink/Thm311Rest.lean` (`MonoThetaKummer`, IUT III Thm. 3.11(iii)(c)).
+* `Env/Reduction.lean` — **Def. 2.13(ii), reduction mod `N'`** of an abstract environment, built
+  intrinsically: `fiPow` (the `k`-th powers of the cyclotome recovered by Prop. 2.11(ii)) is
+  preserved by every group isomorphism, `MonoThetaEnv.reduce M k = (M.G ⧸ fiPow, image of D,
+  images of the theta subgroups)`, `reduceIso`; the **groupoid of mono-theta environments**
+  (`MonoThetaEnv.instCategory`) and the **reduction functor** `reduceFunctor k`.
+* `Env/AutKernel.lean` — **Cor. 2.18(iv), the kernel half**: every automorphism of `Π_Y[μ]`
+  preserves `μ` (`apply_mem_range_inlY_iff`, `FISlim PY`, `μ` finite); the action
+  `autPY : Aut(modelEnv) →* Aut(Π_Y)`; **`finite_ker_autPY`** (finite kernel when
+  `[Π_Y̲ : Π_Ÿ̲] < ∞`); **`ker_autPY_eq_conj_shift`** (a kernel element acting trivially on `μ` is
+  `inn(ζ) ∘ α_δ` with `δ` a cocycle on `Π_Y̲` trivial on `Π_Ÿ̲`), `ker_autPY_inlY_eq` (kernel
+  elements *do* act trivially on `μ`, by Cor. 2.19(i), when `-η` maps `L` onto `μ`), and
+  `cocycle_trivialOn_coset/_sq/_fixed` (such `δ` are `Hom(Π_Y̲/Π_Ÿ̲, μ)`, `c² = 1` for `t`
+  geometric).
+* `Env/Tower.lean` — **Cor. 2.19(ii)** (discrete rigidity): levelwise theta settings with
+  reductions `μ_{n+1} ↠ μ_n`; `fiPow_envY`, the reduction `redY : Π_Y[μ_{n+1}] ↠ Π_Y[μ_n]`,
+  **`betaIso`** (reduction of the level-`n+1` model = level-`n` model: the natural projective
+  system), `envTower` (a `RigidSystems.Tower`), `autPY_comp_autRes`, and
+  **`discreteRigidity_env`**: every projective system of environments levelwise isomorphic to
+  the models is isomorphic to the model system. The finite kernels are proved; the surjectivity
+  half of Cor. 2.18(iv) enters as `hlift` (Layer B: Cor. 2.18(ii) functorial algorithm).
+* `Env/Lift.lean` — **functoriality of the model environment** in isomorphisms of theta data
+  (`mapX`, `kumMap`, `map_DY`, `image_thetaSubgroups_mapY`, **`mapIso`**, lying over `φ` on
+  `Π_Y`), and the lifting statement behind the surjectivity half of Cor. 2.18(iv):
+  **`exists_aut_autPY_eq`** / `restrictPY_mem_range` — an automorphism of the theta data that
+  preserves `Π_Y`, `Π_Ÿ`, the Kummer cocycles and the class of `η` up to a Kummer class and an
+  admissible shift is induced by an automorphism of the model environment. This reduces `hlift`
+  of `discreteRigidity_env` to the Layer-B facts Cor. 2.18(i) and Cor. 2.19(iii)/Thm. 1.10.
+* `Env/Padic.lean` — Cor. 2.19(i) and the kernel statement over `G = G_K` without the
+  center-freeness hypothesis (`cyclotomicRigidity_env_padic`, `cyclotomicRigidity_envAut_padic`,
+  `ker_autPY_inlY_eq_padic`).
+* `Env/BiTheta.lean` — **Def. 2.13(iii)**: `BiThetaEnv`, `BiThetaEnv.Iso`, the model
+  `modelBiEnv` (datum (d) = `algSubgroups`), `algSubgroups_eq_thetaSubgroups_one`,
+  `modelBiEnv_eq_of_cohomologous`, `image_algSubgroups_shift` (a shift moves datum (d) to the
+  class of `-δ`) and `shiftBiIso` (shifts by cocycles that are coboundaries on `Π_Ÿ̲` are
+  bi-theta isomorphisms).
+* `TempSlimPiY.lean` (shell #29, lead decision 2026-10-26): the consumers of Prop. 2.11(ii) for
+  `Π^tp_Y` (`mem_range_inl_iff_piY`, `apply_mem_range_inl_iff_piY`) now take `FISlim Π^tp_Y`
+  (finite `μ`) instead of `VerticialTempSlim`; discharge path `TempSlim.centralizer_eq_bot_of_
+  denseRange` (tfg, MR13 D4) + `Π^tp_Y ↪ Π̂_Y` (M2-GEA) + slimness of `Π̂_Y` (MR2).
+* `Env/ThetaSystem.lean` (MR15 run 4, **Layer B**) — the abstract setting instantiated with the
+  genuine tempered objects for `X = E_q ∖ {O}` (`Δ_Θ`, i.e. without the `l`-torsion level `X̲`):
+  `PX = Π^tp_X`, `augT : Π^tp_X → G_k`, `psiMu` (cyclotomic character `G_k → Aut μ_n(Ω)`, open
+  kernel), `PY = Π^tp_Y`, `PYdd = Π^tp_Ŷ`, `thetaL` (`Π^tp_Ÿ ∩` preimage of `Δ_Θ`), `thetaK`
+  (`Π^tp_Ÿ ∩ Kθ`), `contCocycles` (Kummer cocycles), `repCocycle`, **`thetaEnv`** (model environment
+  of a class on `Π^tp_Ÿ`); **`cyclotomicRigidity_thetaEnv`**, `ker_autPY_inlY_eq_thetaEnv`
+  (generic levels) and **`exists_thetaEnv_rigidity`** (Tate curve): Cor. 2.19(i) and the
+  `μ_n`-part of Cor. 2.18(iv) for the theta class, with `hη13` (obligation 8) and `hηL`
+  (obligation 11) discharged by MR14's Prop. 1.3; remaining named hypotheses: C1, `FISlim Π^tp_Y`,
+  `G_k` center-free, Prop. 2.12(i)-type generation, `CuspInertiaWeil` (`Π^tp_Y ↠ G_k` discharged in run 7 at
+  rational base points, `surj_augT_of_ratPoint`).
+* `Env/ThetaTower.lean` (MR15 run 4, **Layer B**) — [EtTh] **Cor. 2.19(ii)** for the theta environments: levels
+  `levelN n = (n+1)!`, reductions `Mu.transition`; tower data discharged: `transition_psiMu` (hred),
+  `transition_surjective` (hs), `ker_transition` (hker), **`contCocycles_eq_map`** (hKumRed: continuous cocycles
+  `G_k → μ_m` lift to `μ_n`, via `kummer_surjective`, `h1Transition_kummer`, `exists_lift_cocycle`), **`compatRep`**
+  / `compatRep_red` (hηred: compatible representatives of a compatible system of classes), `finiteIndex_piYddotX`
+  (`[Π^tp_Y : Π^tp_Ÿ] < ∞`), `transTemp_thetaClassTemp_levelN`; `thetaTower`, `thetaTower_model` (level `n` model =
+  `thetaEnv` of `x n`), **`discreteRigidity_thetaEnv`** (remaining named hypotheses: `FISlim Π^tp_Y`, `hlift`).
+  Run 5: `toKbarCocycle`, **`exists_kummer_of_mem_contCocycles`** / **`exists_mem_contCocycles_kummer`** (`contCocycles` =
+  the Kummer cocycles of `k^×`, via ckt `kummer_surjective`).
+* `Env/ThetaLTors.lean` (MR15 run 5, **Layer B item 9**) — the `l`-torsion curves of [EtTh] Prop. 2.2 / Def. 2.5(i) and
+  the `l`-th root of the theta class: `cocycleKer` (kernel of a cocycle), **`piXdd`** (`Π^tp_X̿ = χ⁻¹(lℤ)`, `χ` the
+  `ℤ`-character of `Y → X`), **`piXu`** (`Π^tp_X̲` = kernel of a splitting cocycle `cX : Π^tp_X̿ → μ_l`), `piYU`, `piYddU`
+  (`Π^tp_Y̲`, `Π^tp_Ÿ̲` inside `Π^tp_X̲`), `thetaLU` (`Π|_{l·Δ_Θ}`), `thetaKU`; **`rootCocycle`** / **`rootClass`**
+  (`η̈^Θ̲ mod N ∈ H¹(Π^tp_Ÿ̲, μ_N)`), **`rootClass_pow`** (`(η̈^Θ̲)^l = η̈^Θ|_Ÿ̲`); `thetaEnvU`,
+  **`cyclotomicRigidity_thetaEnvU`** (Cor. 2.19(i) for `X̲`, `l·Δ_Θ`), `ker_autPY_inlY_eq_thetaEnvU`, `thetaTowerU`,
+  `finiteIndex_piYddU`, **`discreteRigidity_thetaEnvU`** (Cor. 2.19(ii) for `X̲`); `rootReps` (compatible
+  representatives mod `l·N_n`); `fiSlim_piYU`, `surj_piYU` (`FISlim`/`↠ G_k` for `Y̲` from those for `Y`); Tate
+  curve: **`exists_thetaRep_inputs`** (`hr13`, `hrL` for every representative of the theta class). Debt: the
+  existence of `cX` extending the mod-`l` theta cocycle (Prop. 2.2(ii) + [EtTh] l.2938–2945, MR15 obligation 13).
+  Run 6: docstring caveat (`hcXr` does not determine `cX` in the `lℤ`-direction; [EtTh]'s `cX` is the projection to
+  `Δ̲_Θ` along the splitting of `D̲_x`); **`EnvUConclusions`** / **`envUConclusions_of`** (generic "inputs ⇒
+  conclusions" for `X̲`: `l`-th root, Cor. 2.19(i), `μ`-part of Cor. 2.18(iv)) and the concrete
+  **`exists_thetaEnvU_rigidity`** (one theta system of the Tate curve, all conclusions for `X̲` in one existential).
+  **`exists_cX_of_invariant`** (obligation 13 reduced to the `μ_2 × lℤ`-invariance of `θ mod l` on `Π^tp_Ÿ` and the
+  structure `Π^tp_Ÿ ⊴ Π^tp_X̿`, `[Π^tp_Y : Π^tp_Ÿ] = 2`, `χ(g) = l`), via
+* `Env/CocycleExtend.lean` (MR15 run 6) — pure group theory: **`exists_cocycle_extend`** (a cocycle on `H ⊴ G` whose
+  conjugates by an involution direction `e` and a `ℤ`-direction `g` are cohomologous to it extends to `G`, coefficients
+  of odd exponent; via homomorphic sections of `M ⋊ G`, `exists_ext_two`, `exists_hom_extend_int`), `divChar`.
+* `Env/CuspBasePoint.lean` (MR15 run 7, **obligation 5**) — the cusp of `E_q` is a `K`-rational point of `X`: for a
+  place `W ⊇ K` of `Ω` with `τ ∉ W`, `W ∩ K(E)` is the place at infinity (`comap_embE_eq_ordInfty`, elliptic-curves
+  `eq_ordInftyValuationSubring`), residues there lie in `K` (`hrat_cusp`, `exists_const_ordInfty_sub_pos`), so
+  **`cuspRatPoint`** is a `RatPoint` of `DX`; **`exists_basePoint_cusp`** (such `W` and base points `V ≤ W` over any
+  `O` exist; tfg `exists_comap_eq`, `exists_le_comap_eq`). With `surj_augT_of_ratPoint` (`Env/ThetaSystem.lean`;
+  tfg `Kummer.exists_mem_ker_character_piToGk_eq`, `O` a complete DVR) the hypothesis `hsurj` (`Π^tp_Y ↠ G_k`) is
+  gone from `exists_thetaEnv_rigidity` (Cor. 2.19(i) now asks `V ≤ x.A` for a `RatPoint` `x`; Cor. 2.18(iv) gets it
+  from its place over the cusp) and from `exists_thetaEnvU_rigidity` (`EnvUConclusions` now: both conclusions under
+  `P`, `Π^tp_Y̲ ↠ G_k` by `surj_piYU`).
+* `Env/ThetaConjModL.lean`, `Env/ThetaConjTemp.lean` (MR15 run 7, **obligation 13c(iii)**, reductions) — étale:
+  `contH1_pow_eq_one`, `kummerMap_pow_eq_one`, **`conjH1_kummerMap_of_pow`** (`σ(η) = z^l·η` ⇒ `κ_l(η)` is
+  `conjH1 σ`-invariant); tempered: `conjSub`, **`conjH1Sub`** (conjugation on `H¹` of a normalised subgroup),
+  `exists_coboundary_of_conjH1Sub`, `exists_hce_of_invariant` and **`exists_cX_of_classInvariant`** (obligation 13
+  from 13a, 13b and the class-level invariance of `θ mod l` under conjugation by `e` and `g`).
+* `Env/ThetaConjLevel.lean` (MR15 run 8, **obligation 13c(iii)**, done) — `piRes_level_injective` (`Π_{L'} → Π_X`
+  injective for an étale level), **`conjH1Sub_resLevel`** (tempered conjugation of restricted level classes = étale
+  `conjH1` by a lift `σ`), **`conjH1Sub_classAt_of_pow`** (invariance of `κ^tp_l(η_j)|_{Π^tp_Ÿ}` when `σ(η_j) = z^l η_j`),
+  **`exists_cX_of_moves`** (obligation 13 from MR14's tempered translation formula, debt Z and `g₁`, both cases
+  `[Π^tp_Y : Π^tp_Ÿ] ∈ {1, 2}`; with `exists_cX_of_invariant_ker` (`Env/ThetaLTors.lean`) and
+  `exists_cocycle_extend_ker` (`Env/CocycleExtend.lean`) for the index-1 case), and the concrete
+  **`exists_thetaEnvU_rigidity_cX`** (`exists_thetaEnvU_rigidity` with `∃ cX` produced, under C1, debt Z at `j = 0`
+  and 13a). `exists_thetaRep_inputs` now also carries MR14's stability and translation conjuncts.

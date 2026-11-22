@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII02LocalVolumesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII02LocalVolumesActual.AbsTopIIIStatementRow
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII02LocalVolumesActual.absTopIIILocalVolumeStatements
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII02LocalVolumesActual.absTopIIILocalVolumeStatements_length

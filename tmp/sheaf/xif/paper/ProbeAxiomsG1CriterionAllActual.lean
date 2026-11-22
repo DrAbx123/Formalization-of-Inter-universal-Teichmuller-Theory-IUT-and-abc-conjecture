@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1G1CriterionAllActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.criterionOfFreyHeight
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.criterionAll_of_freyHeight
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1Actual.criterionAll_of_uniformEpsilon_and_freyHeight

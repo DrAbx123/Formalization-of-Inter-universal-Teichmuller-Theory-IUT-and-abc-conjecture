@@ -1,0 +1,2 @@
+import Mathlib
+#check @Polynomial.natDegree_pos_of_not_isUnit_of_dvd_monic

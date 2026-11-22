@@ -1,0 +1,1 @@
+{"type":"tool/ptc-dispatch-start","seq":109,"time":1793466780457,"data":{"rootCallId":"call_00_S3OUlyMlHlRwhaVrsjB05072","parentCallId":"call_00_S3OUlyMlHlRwhaVrsjB05072","subCallId":"call_00_S3OUlyMlHlRwhaVrsjB05072:ptc:1","name":"grep","arguments":{"pattern":"S178[0-4]|S1756","path":"AUDIT_LEDGER.md"}}}

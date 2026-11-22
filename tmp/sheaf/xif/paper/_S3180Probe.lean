@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.S3180ConditionalAssemblyActual
+import tmp.sheaf.xif.paper.S3180Mzk1IdsActual
+
+-- S3180 audited revision v2 probe.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.qPilotSignedReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.thetaHullSignedReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.qPilotSignedReadout_le_thetaHullSignedReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.toContract
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.cor312_conditional
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.abcConjecture_conditional
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.iutMainTheorem_conditional
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.cor312AssemblyFieldSources
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.documentationOnlyRemainingAssumptions
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.s3180TheoremDeps
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.s3180HonestyAuditFix
+#print axioms LeanFormal.IUT.XiFPaper.S3180Mzk1IdsActual.s3180Mzk1Ids
+
+
+-- S3182 hull/det consumer
+#print axioms LeanFormal.IUT.XiFPaper.S3180ConditionalAssemblyActual.conditionalAssembly_with_hullDet

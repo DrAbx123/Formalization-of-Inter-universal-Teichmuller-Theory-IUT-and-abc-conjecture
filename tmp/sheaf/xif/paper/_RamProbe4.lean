@@ -1,0 +1,3 @@
+import Mathlib.NumberTheory.RamificationInertia.Ramification
+#check Ideal.IsDedekindDomain.ramificationIdx'_ne_zero_of_liesOver
+#check IsDedekindDomain.ramificationIdx'_ne_zero_of_liesOver

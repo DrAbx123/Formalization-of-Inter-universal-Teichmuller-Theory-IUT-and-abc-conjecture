@@ -1,0 +1,22 @@
+import Mathlib.GroupTheory.Perm.Cycle.Type
+import Mathlib.GroupTheory.Perm.Cycle.Factors
+open Equiv
+namespace Probe2217
+#check @Equiv.Perm.disjoint_iff_disjoint_support
+#check @Equiv.Perm.Disjoint.disjoint_support
+#check @Equiv.Perm.disjoint_iff
+#check @Equiv.Perm.Disjoint
+#check @Fintype.exists_ne_of_one_lt_card
+#check @Fintype.one_lt_card
+#check @Fintype.one_lt_card_iff
+#check @Fintype.one_lt_card_iff_nontrivial
+#check @Set.nontrivial_iff_exists_ne
+#check @Set.Nontrivial
+#check @Set.BijOn
+#check @Set.BijOn.mapsTo
+#check @Set.BijOn.injOn
+#check @Set.BijOn.surjOn
+#check @Set.bijOn_iff
+example {α : Type*} [Fintype α] [DecidableEq α] (σ τ : Equiv.Perm α) (h : Disjoint σ.support τ.support) : Disjoint σ τ := by
+  rwa [Equiv.Perm.disjoint_iff_disjoint_support]
+end Probe2217

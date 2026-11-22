@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3127G2AffineCoverMapRLinearActual
+
+open LeanFormal.IUT.XiFPaper.S3127G2AffineCoverMapRLinearActual
+
+#print axioms affineCoverMapOfAlgHom_surjective
+#check affineCoverMapOfAlgHom_surjective

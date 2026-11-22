@@ -1,0 +1,4 @@
+tmp\sheaf\l1-f2\SchemeG2Statement.lean:32:8: warning: declaration uses `sorry`
+tmp\sheaf\l1-f2\SchemeG2Statement.lean:39:0: warning: Definition `curveAffinePreGaloisRemainingFields_of_schemeG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

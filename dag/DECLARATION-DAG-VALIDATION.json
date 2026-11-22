@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-11-10T20:02:59.188Z",
+  "file": "dag/declaration-dag.json",
+  "source": "0424b3f5545bd6fa628b30b5b54e3b37a60373f10d9b62849b8a9c3fb2bb9a88",
+  "nodes": 10303,
+  "edges": 23150,
+  "proof_edges": 0,
+  "statement_edges": 23150,
+  "merge_conflicts": 0,
+  "by_status": {
+    "PROVED": 10269,
+    "GAP": 34
+  },
+  "by_kind": {
+    "theorem": 8154,
+    "def": 2149
+  },
+  "acyclicity": {
+    "proof": {
+      "seen": 10303,
+      "total": 10303,
+      "cyclic": false,
+      "label": "proof+interface"
+    },
+    "statement": {
+      "seen": 10303,
+      "total": 10303,
+      "cyclic": false,
+      "label": "statement"
+    }
+  },
+  "info": [],
+  "problems": [],
+  "validation": {
+    "ok": true
+  }
+}

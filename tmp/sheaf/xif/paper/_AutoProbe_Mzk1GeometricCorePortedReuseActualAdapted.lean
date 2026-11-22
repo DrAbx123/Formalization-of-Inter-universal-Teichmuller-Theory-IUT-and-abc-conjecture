@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeometricCorePortedReuseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.Mzk1PortedAssetRow
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.mzk1GeometricCorePortedAssets
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCorePortedReuseActual.mzk1GeometricCorePortedAssets_length

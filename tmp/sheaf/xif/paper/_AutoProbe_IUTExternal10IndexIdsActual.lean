@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternal10IndexIdsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal10IndexIdsActual.IUTExternalIds
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal10IndexIdsActual.IUTExternalIds_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal10IndexIdsActual.IUTExternalFileAliases

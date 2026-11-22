@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S1269UniformizerFactorActual
+
+#check @LeanFormal.IUT.XiFPaper.S1269UniformizerFactorActual.s1269UniformizerFactor
+#check @LeanFormal.IUT.XiFPaper.S1269UniformizerFactorActual.s1269UniformizerFactorGap
+#check @LeanFormal.IUT.XiFPaper.S1207EUniformizerActual.S1207UniformizerFactor
+#print axioms LeanFormal.IUT.XiFPaper.S1269UniformizerFactorActual.s1269UniformizerFactor
+#print axioms LeanFormal.IUT.XiFPaper.S1269UniformizerFactorActual.s1269UniformizerFactorGap

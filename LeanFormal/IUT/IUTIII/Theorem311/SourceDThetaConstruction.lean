@@ -34,8 +34,6 @@ universe ua uv upi umon ui
 namespace Theorem311Source
 namespace OriginalInput
 
-open OriginalInputArrows
-
 variable {l : PrimeGeFive} {V : Type uv}
 variable (I : OriginalInput.{ua, uv, upi, umon, ui} l V)
 
@@ -43,12 +41,13 @@ variable (I : OriginalInput.{ua, uv, upi, umon, ui} l V)
 
 structure DThetaShadow where
   index : Type ui
-  dStrip : index -> DPrimeStrip.{upi, uv} V
+  dStrip : I.family.index -> DPrimeStrip.{upi, uv} V
   dStrip_source : forall i, dStrip i =
     (I.family.theater i).primeStrip.toD
   dLink : forall i j, DPrimeStripEquiv (dStrip i) (dStrip j)
   dLink_source : forall i j,
-    dLink i j = (I.family.link i j).primeStripEquiv.toD
+    dLink i j = (dStrip_source i).symm ▸ (dStrip_source j).symm ▸
+      (I.family.link i j).primeStripEquiv.toD
 
 def dThetaShadow : I.DThetaShadow where
   index := I.family.index
@@ -248,7 +247,7 @@ structure DPrimeStripVerticalCore where
     DPrimeStripEquiv (core n) (I.dThetaShadowAt n m)
   core_source : forall n, core n = I.dThetaShadowAt n 0
   member_zero : forall n,
-    toMember n 0 = DPrimeStripEquiv.refl (core n)
+    toMember n 0 = (core_source n).symm ▸ DPrimeStripEquiv.refl (I.dThetaShadowAt n 0)
   vertical_link : forall n m m',
     DPrimeStripEquiv (I.dThetaShadowAt n m) (I.dThetaShadowAt n m')
   vertical_link_source : forall n m m',
@@ -258,7 +257,8 @@ structure DPrimeStripVerticalCore where
         (toMember n m') = vertical_link n m m'
   core_link : forall n n', DPrimeStripEquiv (core n) (core n')
   core_link_source : forall n n',
-    core_link n n' = I.dThetaShadowLinkAt n 0 n' 0
+    core_link n n' = (core_source n).symm ▸ (core_source n').symm ▸
+      I.dThetaShadowLinkAt n 0 n' 0
   core_naturality : forall n n' m m',
     DPrimeStripEquiv.trans (core_link n n') (toMember n' m') =
       DPrimeStripEquiv.trans (toMember n m)
@@ -393,16 +393,15 @@ theorem dPrimeStripVerticalCore_vertical_link_projection
 theorem dPrimeStripVerticalCore_core_link_refl (n : Int) :
     (I.dPrimeStripVerticalCore).core_link n n =
       DPrimeStripEquiv.refl ((I.dPrimeStripVerticalCore).core n) := by
-  rw [dPrimeStripVerticalCore_core_link_source,
-    dThetaShadowLinkAt_refl]
+  simp only [dPrimeStripVerticalCore_core_link, dThetaShadowLinkAt_refl,
+    dPrimeStripVerticalCore_core]
 
 theorem dPrimeStripVerticalCore_core_link_symm
     (n n' : Int) :
     DPrimeStripEquiv.symm ((I.dPrimeStripVerticalCore).core_link n n') =
       (I.dPrimeStripVerticalCore).core_link n' n := by
-  rw [dPrimeStripVerticalCore_core_link_source,
-    dPrimeStripVerticalCore_core_link_source,
-    dThetaShadowLinkAt_symm]
+  rw [dPrimeStripVerticalCore_core_link]
+  exact I.dThetaShadowLinkAt_symm n 0 n' 0
 
 theorem dPrimeStripVerticalCore_core_link_trans
     (n n' n'' : Int) :
@@ -410,10 +409,8 @@ theorem dPrimeStripVerticalCore_core_link_trans
         ((I.dPrimeStripVerticalCore).core_link n n')
         ((I.dPrimeStripVerticalCore).core_link n' n'') =
       (I.dPrimeStripVerticalCore).core_link n n'' := by
-  rw [dPrimeStripVerticalCore_core_link_source,
-    dPrimeStripVerticalCore_core_link_source,
-    dPrimeStripVerticalCore_core_link_source,
-    dThetaShadowLinkAt_trans]
+  rw [dPrimeStripVerticalCore_core_link]
+  exact I.dThetaShadowLinkAt_trans n 0 n' 0 n'' 0
 
 /-! ## 4b. The source-constructed vertical F-prime-strip core
 
@@ -431,7 +428,7 @@ structure FPrimeStripVerticalCore where
     FPrimeStripEquiv (core n) (I.fPrimeStripAt n m)
   core_source : forall n, core n = I.fPrimeStripAt n 0
   member_zero : forall n,
-    toMember n 0 = FPrimeStripEquiv.refl (core n)
+    toMember n 0 = (core_source n).symm ▸ FPrimeStripEquiv.refl (I.fPrimeStripAt n 0)
   vertical_link : forall n m m',
     FPrimeStripEquiv (I.fPrimeStripAt n m) (I.fPrimeStripAt n m')
   vertical_link_source : forall n m m',
@@ -441,7 +438,8 @@ structure FPrimeStripVerticalCore where
         (toMember n m') = vertical_link n m m'
   core_link : forall n n', FPrimeStripEquiv (core n) (core n')
   core_link_source : forall n n',
-    core_link n n' = I.fLinkAt n 0 n' 0
+    core_link n n' = (core_source n).symm ▸ (core_source n').symm ▸
+      I.fLinkAt n 0 n' 0
   core_naturality : forall n n' m m',
     FPrimeStripEquiv.trans (core_link n n') (toMember n' m') =
       FPrimeStripEquiv.trans (toMember n m)
@@ -585,7 +583,7 @@ theorem fPrimeStripVerticalCore_vertical_link_action
     ((I.fPrimeStripVerticalCore).vertical_link n m m').isoMon v
         ((I.fPrimeStripAt n m).action v g x) =
       (I.fPrimeStripAt n m').action v
-        ((I.fPrimeStripVerticalCore).vertical_link n m m').isoPi v g
+        (((I.fPrimeStripVerticalCore).vertical_link n m m').isoPi v g)
         (((I.fPrimeStripVerticalCore).vertical_link n m m').isoMon v x) := by
   rw [fPrimeStripVerticalCore_vertical_link_source]
   exact I.fLinkAt_action n m n m' v g x
@@ -614,14 +612,15 @@ theorem fPrimeStripVerticalCore_vertical_link_total_degree
 theorem fPrimeStripVerticalCore_core_link_refl (n : Int) :
     (I.fPrimeStripVerticalCore).core_link n n =
       FPrimeStripEquiv.refl ((I.fPrimeStripVerticalCore).core n) := by
-  rw [fPrimeStripVerticalCore_core_link_source, I.fLinkAt_refl]
+  simp only [fPrimeStripVerticalCore_core_link, I.fLinkAt_refl,
+    fPrimeStripVerticalCore_core]
 
 theorem fPrimeStripVerticalCore_core_link_symm
     (n n' : Int) :
     FPrimeStripEquiv.symm ((I.fPrimeStripVerticalCore).core_link n n') =
       (I.fPrimeStripVerticalCore).core_link n' n := by
-  rw [fPrimeStripVerticalCore_core_link_source,
-    fPrimeStripVerticalCore_core_link_source, I.fLinkAt_symm]
+  rw [fPrimeStripVerticalCore_core_link]
+  exact I.fLinkAt_symm n 0 n' 0
 
 theorem fPrimeStripVerticalCore_core_link_trans
     (n n' n'' : Int) :
@@ -629,9 +628,8 @@ theorem fPrimeStripVerticalCore_core_link_trans
         ((I.fPrimeStripVerticalCore).core_link n n')
         ((I.fPrimeStripVerticalCore).core_link n' n'') =
       (I.fPrimeStripVerticalCore).core_link n n'' := by
-  rw [fPrimeStripVerticalCore_core_link_source,
-    fPrimeStripVerticalCore_core_link_source,
-    fPrimeStripVerticalCore_core_link_source, I.fLinkAt_trans]
+  rw [fPrimeStripVerticalCore_core_link]
+  exact I.fLinkAt_trans n 0 n' 0 n'' 0
 
 /-! ## 4c. Coupling the F and D vertical cores
 
@@ -644,11 +642,11 @@ structure FDPrimeStripVerticalCore where
   dCore : I.DPrimeStripVerticalCore
   core_toD : forall n, (fCore.core n).toD = dCore.core n
   member_toD : forall n m,
-    (fCore.toMember n m).toD = dCore.toMember n m
+    HEq ((fCore.toMember n m).toD) (dCore.toMember n m)
   vertical_link_toD : forall n m m',
     (fCore.vertical_link n m m').toD = dCore.vertical_link n m m'
   core_link_toD : forall n n',
-    (fCore.core_link n n').toD = dCore.core_link n n'
+    HEq ((fCore.core_link n n').toD) (dCore.core_link n n')
 
 def fdPrimeStripVerticalCore : I.FDPrimeStripVerticalCore where
   fCore := I.fPrimeStripVerticalCore
@@ -658,13 +656,13 @@ def fdPrimeStripVerticalCore : I.FDPrimeStripVerticalCore where
     rfl
   member_toD := by
     intro n m
-    rfl
+    exact HEq.rfl
   vertical_link_toD := by
     intro n m m'
     rfl
   core_link_toD := by
     intro n n'
-    rfl
+    exact HEq.rfl
 
 @[simp] theorem fdPrimeStripVerticalCore_fCore :
     (I.fdPrimeStripVerticalCore).fCore = I.fPrimeStripVerticalCore := rfl
@@ -680,7 +678,7 @@ theorem fdPrimeStripVerticalCore_core_toD (n : Int) :
 theorem fdPrimeStripVerticalCore_member_toD (n m : Int) :
     ((I.fdPrimeStripVerticalCore).fCore.toMember n m).toD =
       (I.fdPrimeStripVerticalCore).dCore.toMember n m :=
-  (I.fdPrimeStripVerticalCore).member_toD n m
+  eq_of_heq ((I.fdPrimeStripVerticalCore).member_toD n m)
 
 theorem fdPrimeStripVerticalCore_vertical_link_toD (n m m' : Int) :
     ((I.fdPrimeStripVerticalCore).fCore.vertical_link n m m').toD =
@@ -690,17 +688,17 @@ theorem fdPrimeStripVerticalCore_vertical_link_toD (n m m' : Int) :
 theorem fdPrimeStripVerticalCore_core_link_toD (n n' : Int) :
     ((I.fdPrimeStripVerticalCore).fCore.core_link n n').toD =
       (I.fdPrimeStripVerticalCore).dCore.core_link n n' :=
-  (I.fdPrimeStripVerticalCore).core_link_toD n n'
+  eq_of_heq ((I.fdPrimeStripVerticalCore).core_link_toD n n')
 
 theorem fdPrimeStripVerticalCore_member_projection
     (n m : Int) (v : V)
     (x : ((I.fdPrimeStripVerticalCore).fCore.core n).toD.Pi v) :
-    (I.fdPrimeStripVerticalCore).dCore.toMember n m |>.isoPi v x =
-      (I.fdPrimeStripVerticalCore).fCore.toMember n m |>.isoPi v x := rfl
+    ((I.fdPrimeStripVerticalCore).dCore.toMember n m |>.isoPi v x) =
+      ((I.fdPrimeStripVerticalCore).fCore.toMember n m |>.isoPi v x) := rfl
 
 theorem fdPrimeStripVerticalCore_link_projection
     (n m m' : Int) (v : V)
-    (x : ((I.fdPrimeStripVerticalCore).fCore.vertical_link n m m').toD.Pi v) :
+    (x : (I.dThetaShadowAt n m).Pi v) :
     x = x := rfl
 
 /-! The last theorem is intentionally a typed identity: a D-link has no value
@@ -725,7 +723,8 @@ structure DThetaShadowFamily where
   link_at : forall p q,
     DPrimeStripEquiv (strip_at p) (strip_at q)
   link_at_eq : forall p q,
-    link_at p q = shadow.dLink (coordinate p) (coordinate q)
+    link_at p q = (strip_at_eq p).symm ▸ (strip_at_eq q).symm ▸
+      shadow.dLink (coordinate p) (coordinate q)
 
 def dThetaShadowFamily : I.DThetaShadowFamily where
   shadow := I.dThetaShadow
@@ -807,7 +806,8 @@ structure DColumnStage (n : Int) (k : Nat) where
   strip_eq : forall i, strip i = I.dThetaShadowAt n (i.1 : Int)
   link : forall i j, DPrimeStripEquiv (strip i) (strip j)
   link_eq : forall i j,
-    link i j = I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int)
+    link i j = (strip_eq i).symm ▸ (strip_eq j).symm ▸
+      I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int)
 
 def dColumnStage (n : Int) (k : Nat) : I.DColumnStage n k where
   source := fun i => I.indexOf n (i.1 : Int)
@@ -1061,8 +1061,8 @@ theorem dColumnProcessionAsExisting_natural (n : Int) {k r : Nat}
 
 structure DThetaShadowLedger where
   h1 : I.DThetaShadowFamily
-  column : Int -> I.DColumnProcession
-  top_cardinality : forall n,
+  column : (n : Int) -> I.DColumnProcession n
+  top_cardinality : (n : Int) ->
     Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1
   top_source_injective : forall n,
     Function.Injective ((column n).stage (lStar l.value)).source
@@ -1071,7 +1071,8 @@ structure DThetaShadowLedger where
       I.dThetaShadowAt n (i.1 : Int)
   top_link : forall n (i j : Fin (lStar l.value + 1)),
     ((column n).stage (lStar l.value)).link i j =
-      I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int)
+      (top_strip n i).symm ▸ (top_strip n j).symm ▸
+        I.dThetaShadowLinkAt n (i.1 : Int) n (j.1 : Int)
 
 def dThetaShadowLedger : I.DThetaShadowLedger where
   h1 := I.dThetaShadowFamily
@@ -1091,12 +1092,12 @@ def dThetaShadowLedger : I.DThetaShadowLedger where
 
 theorem dThetaShadowLedger_cardinality (n : Int) :
     Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1 :=
-  (I.dThetaShadowLedger).top_cardinality n
+  Fintype.card_fin _
 
 theorem dThetaShadowLedger_source_injective (n : Int) :
     Function.Injective
       (((I.dThetaShadowLedger).column n).stage (lStar l.value)).source :=
-  (I.dThetaShadowLedger).top_source_injective n
+  (dThetaShadowLedger I).top_source_injective n
 
 theorem dThetaShadowLedger_top_strip (n : Int)
     (i : Fin (lStar l.value + 1)) :
@@ -1120,7 +1121,8 @@ structure VerticalCoricityGate where
   source_dTheater : forall i,
     dTheater i = (I.dThetaShadow).dStrip i
   link_source : forall i j,
-    verticalLink i j = (I.dThetaShadow).dLink i j
+    verticalLink i j = (source_dTheater i).symm ▸ (source_dTheater j).symm ▸
+      (I.dThetaShadow).dLink i j
 
 def verticalCoricityGate_of_shadow (G : I.VerticalCoricityGate) :
     I.DThetaRealizationGate where
@@ -1129,17 +1131,19 @@ def verticalCoricityGate_of_shadow (G : I.VerticalCoricityGate) :
 
 theorem verticalCoricityGate_of_shadow_bridge (G : I.VerticalCoricityGate)
     (i : I.family.index) :
-    (verticalCoricityGate_of_shadow G).bridge i = G.bridge i := rfl
+    (verticalCoricityGate_of_shadow I G).bridge i = G.bridge i := rfl
 
 theorem verticalCoricityGate_shadow_recovery (G : I.VerticalCoricityGate)
     (i : I.family.index) :
-    (verticalCoricityGate_of_shadow G).dTheater i =
+    (verticalCoricityGate_of_shadow I G).dTheater i =
       (I.dThetaShadow).dStrip i :=
   G.source_dTheater i
 
 theorem verticalCoricityGate_link_recovery (G : I.VerticalCoricityGate)
     (i j : I.family.index) :
-    G.verticalLink i j = (I.dThetaShadow).dLink i j :=
+    G.verticalLink i j =
+      (G.source_dTheater i).symm ▸ (G.source_dTheater j).symm ▸
+        (I.dThetaShadow).dLink i j :=
   G.link_source i j
 
 /-! The following exact shadow gate is constructible, but it is intentionally
@@ -1260,18 +1264,18 @@ namespace LeanFormal.IUT.Audit
 def theorem311DThetaShadow : Obligation :=
   { id := "IUT-III.theorem-3.11-d-theta-shadow"
     source := "IUT III, Theorem 3.11 opening paragraph; Theorem 1.5(i); IUT I Prop. 6.9(ii)"
-     status := VerificationStatus.interface
-     note :=
-       "Constructs the D-prime-strip shadow, a fixed-horizontal-coordinate " ++
-         "vertical D-prime-strip core, D-links, fixed-column finite processions, " ++
-         "inclusions, and spoke transport directly from the given OriginalInput " ++
-         "family. The core is source-faithful at the D-prime-strip level. Theorem " ++
-         "1.5(i) still requires the paper's full vertical coricity output: " ++
-         "arithmetic holomorphic/mono-analytic log-shell data and its full " ++
-         "D-Theta-Hodge-theater poly-isomorphisms; no shadow identity is promoted " ++
-         "to that theorem."
-     dependsOn := ["IUT-III.theorem-3.11-H1-H2-original-input-arrows",
-       "IUT-I-II.prime-strip-core",
-       "IUT-III.theorem-3.11-source-packet-degree-ledger"] }
+    status := VerificationStatus.interface
+    note :=
+      "Constructs the D-prime-strip shadow, a fixed-horizontal-coordinate " ++
+        "vertical D-prime-strip core, D-links, fixed-column finite processions, " ++
+        "inclusions, and spoke transport directly from the given OriginalInput " ++
+        "family. The core is source-faithful at the D-prime-strip level. Theorem " ++
+        "1.5(i) still requires the paper's full vertical coricity output: " ++
+        "arithmetic holomorphic/mono-analytic log-shell data and its full " ++
+        "D-Theta-Hodge-theater poly-isomorphisms; no shadow identity is promoted " ++
+        "to that theorem."
+    dependsOn := ["IUT-III.theorem-3.11-H1-H2-original-input-arrows",
+      "IUT-I-II.prime-strip-core",
+      "IUT-III.theorem-3.11-source-packet-degree-ledger"] }
 
 end LeanFormal.IUT.Audit

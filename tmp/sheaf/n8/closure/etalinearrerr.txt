@@ -1,0 +1,15 @@
+tmp/sheaf/n8/closure/EtaAnabLinearMapActual.lean:46:10: warning: The namespace `EtaAnabLinearMapActual` is duplicated in the declaration `ABCBridge.N8.EtaAnabLinearMapActual.EtaAnabLinearMapActual`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaAnabLinearMapActual.lean:48:2: warning: The namespace `EtaAnabLinearMapActual` is duplicated in the declaration `ABCBridge.N8.EtaAnabLinearMapActual.EtaAnabLinearMapActual.map_one`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaAnabLinearMapActual.lean:46:10: warning: The namespace `EtaAnabLinearMapActual` is duplicated in the declaration `ABCBridge.N8.EtaAnabLinearMapActual.EtaAnabLinearMapActual.mk`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaAnabLinearMapActual.lean:49:2: warning: The namespace `EtaAnabLinearMapActual` is duplicated in the declaration `ABCBridge.N8.EtaAnabLinearMapActual.EtaAnabLinearMapActual.nonconstant`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+tmp/sheaf/n8/closure/EtaAnabLinearMapActual.lean:47:2: warning: The namespace `EtaAnabLinearMapActual` is duplicated in the declaration `ABCBridge.N8.EtaAnabLinearMapActual.EtaAnabLinearMapActual.map`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`

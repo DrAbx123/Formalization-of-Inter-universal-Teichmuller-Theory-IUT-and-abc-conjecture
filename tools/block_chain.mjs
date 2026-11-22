@@ -1,0 +1,8 @@
+import { readFileSync, existsSync } from 'node:fs';
+const ROOT='D:/lean';
+const targets=process.argv.slice(2);
+const hasOlean=(p)=>existsSync(ROOT+'/.lake/build/lib/lean/'+p.replace(/\.lean$/,'')+'.olean');
+const cache=new Map();
+const deps=(p)=>{ if(cache.has(p))return cache.get(p); let t=''; try{t=readFileSync(ROOT+'/'+p,'utf8');}catch{cache.set(p,[]);return [];} const imps=[...t.matchAll(/^\s*(?:public\s+|private\s+|protected\s+)?import\s+([A-Za-z0-9_.]+)/gm)].map(m=>m[1]); const out=[]; for(const im of imps){ if(/^(Mathlib|Lean|Init|Std|Batteries|Aesop|Qq|ProofWidgets|Plausible)/.test(im)) continue; const rel=im.replaceAll('.','/')+'.lean'; if(existsSync(ROOT+'/'+rel)) out.push(rel); } cache.set(p,out); return out; };
+const leaves=(p,seen,acc)=>{ for(const d of deps(p)){ if(seen.has(d))continue; seen.add(d); if(!hasOlean(d)){ const sub=deps(d); if(sub.length===0) acc.add(d); leaves(d,seen,acc); } } return acc; };
+for(const t of targets){ const seen=new Set(); const acc=new Set(); leaves(t,seen,acc); const ls=[...acc]; const drift=ls.filter(x=>x.includes('TemperedFundamentalGroups/')||x.includes('Pi1/')); const other=ls.filter(x=>!x.includes('TemperedFundamentalGroups/')&&!x.includes('Pi1/')); console.log('TARGET '+t+' missing-leaves='+ls.length+' drift='+drift.length+' other='+other.length); for(const d of drift.slice(0,6)) console.log('  DRIFT '+d); for(const o of other.slice(0,6)) console.log('  MISSING '+o); }

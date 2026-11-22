@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3171UniformHeightConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.uniformHeightComparison_of_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.undilatedHeightBound_of_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.heightComparisonFamily_of_valuation_bound

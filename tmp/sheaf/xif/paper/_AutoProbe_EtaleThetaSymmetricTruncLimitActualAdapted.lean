@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtaleThetaSymmetricTruncLimitActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.etaleThetaSymmetricTrunc_succ
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.thetaPairTerm_support
+#print axioms LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual.etaleThetaSymmetricTrunc_diff_support

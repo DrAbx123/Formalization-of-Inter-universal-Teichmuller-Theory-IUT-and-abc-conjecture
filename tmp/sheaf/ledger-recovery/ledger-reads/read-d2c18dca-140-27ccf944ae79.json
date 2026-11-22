@@ -1,0 +1,1 @@
+{"type":"tool/ptc-dispatch-start","seq":269,"time":1793467528371,"data":{"rootCallId":"call_00_nJzEFtdqhbT1C0e8hcXZ9664","parentCallId":"call_00_nJzEFtdqhbT1C0e8hcXZ9664","subCallId":"call_00_nJzEFtdqhbT1C0e8hcXZ9664:ptc:1","name":"grep","arguments":{"pattern":"S1763|S1792|quotient cover|QuotientCover","path":"D:\\lean\\AUDIT_LEDGER.md"}}}

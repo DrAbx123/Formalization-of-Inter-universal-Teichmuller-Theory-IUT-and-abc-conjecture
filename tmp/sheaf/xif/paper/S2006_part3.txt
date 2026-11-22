@@ -1,0 +1,162 @@
+
+/-! ## 3. Field-level assembly -/
+
+/-- A unit of the algebraic closure fixed by an open subgroup is an actual unit
+of the fixed field, with the same underlying field element. -/
+theorem fixedField_unit_of_fixed (U : OpenSubgroup (LocalAbsoluteGalois p))
+    (w : (AlgebraicClosure ℚ_[p])ˣ)
+    (hw : ∀ σ : LocalAbsoluteGalois p, σ ∈ U → localGaloisUnitsAction p σ w = w) :
+    ∃ wL : (LocalIntegralUnitKummerInjectivity.FixedField p U)ˣ,
+      ((wL : LocalIntegralUnitKummerInjectivity.FixedField p U) :
+        AlgebraicClosure ℚ_[p]) = (w : AlgebraicClosure ℚ_[p]) := by
+  classical
+  have hmem : (w : AlgebraicClosure ℚ_[p]) ∈
+      LocalIntegralUnitKummerInjectivity.FixedField p U := by
+    change (w : AlgebraicClosure ℚ_[p]) ∈ IntermediateField.fixedField U.toSubgroup
+    rw [IntermediateField.mem_fixedField_iff]
+    intro σ hσ
+    exact congrArg Units.val (hw σ hσ)
+  refine ⟨Units.mk0 ⟨(w : AlgebraicClosure ℚ_[p]), hmem⟩ (by
+    intro h
+    exact w.ne_zero (congrArg Subtype.val h)), ?_⟩
+  rfl
+
+/-- The image in the algebraic closure of a fixed groupification element is
+fixed by the same open subgroup. -/
+theorem groupificationEquiv_fixed
+    (Q : LocalGroupification p) (U : OpenSubgroup (LocalAbsoluteGalois p))
+    (hQ : ∀ g : U,
+      (monoAnalytic p).groupificationAction p (g : LocalAbsoluteGalois p) Q = Q) :
+    ∀ σ : LocalAbsoluteGalois p, σ ∈ U →
+      localGaloisUnitsAction p σ
+        (LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Q) =
+      LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Q := by
+  intro σ hσ
+  have h := (monoAnalytic p).groupificationEquivAlgebraicClosureUnits_action p
+    ((⟨σ, hσ⟩ : U) : LocalAbsoluteGalois p) Q
+  rw [hQ ⟨σ, hσ⟩, LocalMLFModelTMPair.monoAnalytic_augmentation_apply] at h
+  exact h.symm
+
+/-! ## 4. The main theorem: the Kummer kernel lies in the units -/
+
+/-- **The exact first missing statement of S2000 is proved.**  Every element of
+the actual Grothendieck group Qbar_p^times with trivial Kummer germ is already a
+unit of the nonzero integral monoid. -/
+theorem PsiCnsKummerKernelInUnits_holds :
+    PsiCnsKummerKernelInUnits p := by
+  classical
+  intro x hx
+  let f := Localization.monoidOf (⊤ : Submonoid (Otri p))
+  let s := f.sec x
+  have hxsplit : x * Algebra.GrothendieckGroup.of (s.2 : Otri p) =
+      Algebra.GrothendieckGroup.of (s.1 : Otri p) := by
+    have h := f.sec_spec x
+    have h' : x * (Localization.monoidOf (⊤ : Submonoid (Otri p))).toMonoidHom
+          (s.2 : Otri p) =
+        (Localization.monoidOf (⊤ : Submonoid (Otri p))).toMonoidHom (s.1 : Otri p) := h
+    simpa only [Algebra.GrothendieckGroup.of] using h'
+  have hclass : PsiCnsKummer p (s.1 : Otri p) = PsiCnsKummer p (s.2 : Otri p) := by
+    have hquot : PsiCnsKummer p (s.1 : Otri p) / PsiCnsKummer p (s.2 : Otri p) = 1 := by
+      have h := hx
+      rw [PsiCnsKummerGroupification, Algebra.GrothendieckGroup.lift_apply] at h
+      exact h
+    exact div_eq_one.mp hquot
+  obtain ⟨U, _hUa, _hUb, hroots⟩ :=
+    exists_fixed_ratio_root p (s.1 : Otri p) (s.2 : Otri p) hclass
+  obtain ⟨Q1, hQ1fix, hQ1val⟩ := hroots 1 one_pos
+  let ζ : (AlgebraicClosure ℚ_[p])ˣ :=
+    LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Q1
+  have hζfix : ∀ σ : LocalAbsoluteGalois p, σ ∈ U →
+      localGaloisUnitsAction p σ ζ = ζ :=
+    groupificationEquiv_fixed p Q1 U hQ1fix
+  obtain ⟨valueL, hvalueL⟩ := fixedField_unit_of_fixed p U ζ hζfix
+  have hrootsL : LocalFieldKummerRigidity.HasAllPositiveRoots valueL := by
+    intro n hn
+    obtain ⟨Qn, hQnfix, hQnval⟩ := hroots n hn
+    let ξ : (AlgebraicClosure ℚ_[p])ˣ :=
+      LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Qn
+    have hξfix : ∀ σ : LocalAbsoluteGalois p, σ ∈ U →
+        localGaloisUnitsAction p σ ξ = ξ :=
+      groupificationEquiv_fixed p Qn U hQnfix
+    obtain ⟨rootL, hrootL⟩ := fixedField_unit_of_fixed p U ξ hξfix
+    have hpow : ξ ^ n = ζ := by
+      have hQ : Qn ^ n = Q1 := by
+        rw [hQnval, ← hQ1val, pow_one]
+      calc ξ ^ n =
+            LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p (Qn ^ n) := by
+            rw [map_pow]
+        _ = LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Q1 := by
+            rw [hQ]
+        _ = ζ := rfl
+    refine ⟨rootL, ?_⟩
+    apply Units.ext
+    rw [Units.val_pow_eq_pow_val]
+    apply Subtype.ext
+    push_cast
+    rw [hrootL, hvalueL]
+    exact congrArg Units.val hpow
+  have hvalue_one : valueL = 1 :=
+    fixedField_eq_one_of_roots p U valueL hrootsL
+  have hζ : ζ = 1 := by
+    apply Units.ext
+    have hcongr := congrArg
+      (fun u : (LocalIntegralUnitKummerInjectivity.FixedField p U)ˣ =>
+        ((u : LocalIntegralUnitKummerInjectivity.FixedField p U) :
+          AlgebraicClosure ℚ_[p])) hvalue_one
+    have hcongr' : ((valueL : LocalIntegralUnitKummerInjectivity.FixedField p U) :
+        AlgebraicClosure ℚ_[p]) = 1 := by
+      simpa using hcongr
+    exact hvalueL.symm.trans hcongr'
+  have hQ1 : Q1 = 1 := by
+    apply (LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p).injective
+    show LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p Q1 =
+      LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p 1
+    rw [map_one]
+    exact hζ
+  have hdiv : Algebra.GrothendieckGroup.of (s.2 : Otri p) /
+      Algebra.GrothendieckGroup.of (s.1 : Otri p) = 1 := by
+    rw [← hQ1val, hQ1, one_pow]
+  have hof : Algebra.GrothendieckGroup.of (s.2 : Otri p) =
+      Algebra.GrothendieckGroup.of (s.1 : Otri p) :=
+    div_eq_one.mp hdiv
+  have hs : (s.2 : Otri p) = (s.1 : Otri p) := by
+    have h := congrArg (LocalIntegralMonoid.groupificationEquivAlgebraicClosureUnits p) hof
+    have h' : LocalIntegralMonoid.toAlgebraicClosureUnits p (s.2 : Otri p) =
+        LocalIntegralMonoid.toAlgebraicClosureUnits p (s.1 : Otri p) := by
+      rw [← LocalIntegralMonoid.groupificationToAlgebraicClosureUnits_of,
+        ← LocalIntegralMonoid.groupificationToAlgebraicClosureUnits_of]
+      exact h
+    have h2 := congrArg Units.val h'
+    apply Subtype.ext
+    apply Subtype.ext
+    exact h2
+  have hx1 : x = 1 := by
+    have h' : x * Algebra.GrothendieckGroup.of (s.2 : Otri p) =
+        Algebra.GrothendieckGroup.of (s.2 : Otri p) := by
+      rw [hxsplit, hs]
+    exact mul_right_cancel (b := Algebra.GrothendieckGroup.of (s.2 : Otri p)) (by
+      rw [one_mul]
+      exact h')
+  exact ⟨1, by rw [map_one]; exact hx1.symm⟩
+
+/-- **Full injectivity of the actual Kummer map on O^tri.** -/
+theorem PsiCnsKummer_injective : Function.Injective (PsiCnsKummer p) :=
+  PsiCnsKummer_injective_of_kernelInUnits p (PsiCnsKummerKernelInUnits_holds p)
+
+/-- **The actual Kummer image is multiplicatively identified with the actual
+nonzero integral monoid O^tri.** -/
+theorem PsiCnsKummerImage_equiv :
+    Nonempty (PsiCnsKummerImage p ≃* PsiCnsModel p) :=
+  PsiCnsKummerImage_equiv_of_kernelInUnits p (PsiCnsKummerKernelInUnits_holds p)
+
+/-! ## 5. Axiom probes -/
+
+#print axioms fixedFieldIsNonarchimedeanLocalField
+#print axioms fixedField_eq_one_of_roots
+#print axioms exists_fixed_ratio_root
+#print axioms fixedField_unit_of_fixed
+#print axioms PsiCnsKummerKernelInUnits_holds
+#print axioms PsiCnsKummer_injective
+#print axioms PsiCnsKummerImage_equiv
+
+end LeanFormal.IUT.XiFPaper.S2006KummerKernelActual

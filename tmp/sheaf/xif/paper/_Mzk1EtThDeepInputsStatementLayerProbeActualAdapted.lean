@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1EtThDeepInputsStatementLayerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThDeepInputsStatementLayerActualAdapted.etthDeepRows_length

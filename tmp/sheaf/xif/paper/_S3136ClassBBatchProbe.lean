@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S3136IVClassBHypothesisMapActual
+import tmp.sheaf.xif.paper.S3136GenEllStatementDetailsActual
+import tmp.sheaf.xif.paper.S3136BDClassChainToolActual
+import tmp.sheaf.xif.paper.S3136ClassARegionVolumeBoundToolActual
+import tmp.sheaf.xif.paper.S3136Source31SlotWiringActual
+import tmp.sheaf.xif.paper.S3136Source31AssemblyConditionalActual
+import tmp.sheaf.xif.paper.S3136ModelThetaLogVolumeSumActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136IVClassBHypothesisMapActual.lgpIVClassBHypothesisMap_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136GenEllStatementDetailsActual.lgpGenEllStatementDetails_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136BDClassChainToolActual.isBDLe_trans
+#print axioms LeanFormal.IUT.XiFPaper.S3136BDClassChainToolActual.isBDEq_trans
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassARegionVolumeBoundToolActual.lgpNativeHaarFamily_mono
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassARegionVolumeBoundToolActual.LGPRegionVolumeBound.volume_le
+#print axioms LeanFormal.IUT.XiFPaper.S3136Source31SlotWiringActual.lgpSource31Wiring_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136Source31AssemblyConditionalActual.lgpSource31Data_native_arithmetic
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelThetaLogVolumeSumActual.lgpModelThetaPacket_logVolume_eq_sum_weighted

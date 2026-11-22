@@ -1,0 +1,10 @@
+import tmp.sheaf.n8.closure.EtaTensorBlockDetActual
+import Mathlib
+#check PiTensorProduct.tprod_mul_tprod
+#check PiTensorProduct.ext
+#check PiTensorProduct.lift.tprod
+#check TensorProduct.congr_tmul
+#check TensorProduct.map_tmul
+#check PiTensorProduct.reindex_tprod
+#check PiTensorProduct.tmulEquivDep_apply
+#check PiTensorProduct.subsingletonEquiv

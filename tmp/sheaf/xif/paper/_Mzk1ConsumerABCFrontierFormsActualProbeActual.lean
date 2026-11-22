@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerABCFrontierFormsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerABCFrontierFormsActual.gapReduced_logConjecture

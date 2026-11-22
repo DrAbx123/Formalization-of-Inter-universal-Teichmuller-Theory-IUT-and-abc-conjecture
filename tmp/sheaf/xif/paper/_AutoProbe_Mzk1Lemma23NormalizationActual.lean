@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma23NormalizationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23NormalizationActual.normMap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23NormalizationActual.s3135_dist_beta_lam
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma23NormalizationActual.s3135_alpha_ne_lam

@@ -66,7 +66,22 @@ def initialThetaDataConstruction : Obligation :=
 def hodgeTheaterHistories : Obligation :=
   { id := "IUT-I.hodge-theater-histories"
     source := "IUT I, Sections 4-5"
-    status := VerificationStatus.pending
-    note := "Construct distinct histories and their links; do not use an unconstrained record." }
+    status := VerificationStatus.interface
+    note :=
+      "Construct distinct histories and their links; do not use an " ++
+        "unconstrained record. Reduced as " ++
+        "`IUT-I.hodge-theater-histories-reduction` (file " ++
+        "`IUTI/HodgeTheater/SourceHodgeTheaterHistoriesReduction.lean`): " ++
+        "window histories over a supplied Z-indexed chain of distinct " ++
+        "theaters with consecutive Theta-links are constructed as " ++
+        "dependent chains (History.lean `HodgeTheaterHistory`) with " ++
+        "terminal and length laws, q/scale transport, position separation, " ++
+        "distinct histories by length and terminal, the history-level " ++
+        "rigidity (no adjacent swap, no unit shift), and a concrete " ++
+        "two-member witness. The existence of the chain from arbitrary " ++
+        "initial Theta-data remains card C1."
+    dependsOn :=
+      [ "IUT-I.hodge-theater-histories-reduction",
+        "IUT-I.hodge-theater-history-composition" ] }
 
 end LeanFormal.IUT.Audit

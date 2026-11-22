@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2586RabinCriterionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2586RabinCriterionActual.rabin_criterion
+#print axioms LeanFormal.IUT.XiFPaper.S2586RabinCriterionActual.exists_small_irreducible_factor

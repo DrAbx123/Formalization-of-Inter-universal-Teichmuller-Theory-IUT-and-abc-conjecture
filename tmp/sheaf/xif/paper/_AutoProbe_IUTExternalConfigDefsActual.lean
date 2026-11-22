@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternalConfigDefsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalConfigDefsActual.ConfigurationSpace
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalConfigDefsActual.UnlabelledConfigurationSpace
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalConfigDefsActual.CombinatorialReconstructionStatement

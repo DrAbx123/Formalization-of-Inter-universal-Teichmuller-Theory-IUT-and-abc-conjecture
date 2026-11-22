@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S2217DedekindFrobTheoremActual
+import tmp.sheaf.xif.paper.S2056Psi5RootsActual
+open LeanFormal.IUT.XiFPaper.S2167DedekindFrobCycleActual
+open LeanFormal.IUT.XiFPaper.S2056Psi5RootsActual
+#check Equiv.Perm.sum_cycleType
+#check Equiv.Perm.card_fixedPoints
+#check Equiv.Perm.cycleType
+#check Multiset.sum_replicate
+#check Multiset.eq_of_le_of_card_le
+#check Fintype.card_ofFinset
+#check S2056Root_card
+#check Nat.card_eq_fintype_card
+#check Equiv.Perm.cycleType_eq
+#check Equiv.Perm.mem_cycleType
+#check Equiv.Perm.one_lt_of_mem_cycleType
+#check Multiset.filter_eq_self
+#check Multiset.filter_eq_nil

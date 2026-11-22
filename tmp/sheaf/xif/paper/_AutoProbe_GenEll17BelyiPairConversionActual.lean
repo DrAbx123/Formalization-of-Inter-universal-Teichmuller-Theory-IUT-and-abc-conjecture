@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll17BelyiPairConversionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll17BelyiPairConversionActual.GenEll17FiniteMapBridge
+#print axioms LeanFormal.IUT.XiFPaper.GenEll17BelyiPairConversionActual.genEll17_recast_of_bridge
+#print axioms LeanFormal.IUT.XiFPaper.GenEll17BelyiPairConversionActual.genEll17_belyi_polynomial

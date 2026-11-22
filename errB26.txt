@@ -1,0 +1,24 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogArithmeticActual.lean:103:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ x ∈ ?m.174, -?f x
+in the target expression
+  -∑ b, ↑(e b) * Real.log (primeFactor T b) = -∑ b, ↑(e b) * Real.log (primeFactor T b)
+
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝ : Fintype (Bad (nativePlaceSelection T))
+e : Bad (nativePlaceSelection T) → ℕ
+hterm :
+  ∀ (b : Bad (nativePlaceSelection T)), (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹.toReal = (primeFactor T b ^ e b)⁻¹
+hprodlog : Real.log (∏ b, primeFactor T b ^ e b) = ∑ b, ↑(e b) * Real.log (primeFactor T b)
+⊢ -∑ b, ↑(e b) * Real.log (primeFactor T b) = -∑ b, ↑(e b) * Real.log (primeFactor T b)
+'LeanFormal.IUT.XiFPaper.Mzk1CorrectedRegionLogArithmeticActual.s1902_log_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CorrectedRegionLogArithmeticActual.log_inv_prod_primeFactor' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CorrectedRegionLogArithmeticActual.log_inv_prod_eq_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

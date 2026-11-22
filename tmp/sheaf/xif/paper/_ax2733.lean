@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2733ScalingActual
+import tmp.sheaf.xif.paper.S2727ScalingTargetsActual
+#print axioms LeanFormal.IUT.XiFPaper.S2733ScalingActual.S2733_scalingLog
+#print axioms LeanFormal.IUT.XiFPaper.S2727ScalingTargetsActual.S2727ScaledRegionVolume_eq_scalingRatio_mul_unit

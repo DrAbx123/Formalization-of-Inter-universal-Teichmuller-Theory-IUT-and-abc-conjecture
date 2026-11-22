@@ -1,0 +1,110 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import tmp.sheaf.lana_latest.Iut.Cor312.ThetaData.Basic
+import tmp.sheaf.lana_latest.Iut.Cor312.ContainerHull
+import tmp.sheaf.lana_latest.Iut.Cor312.LogVolume
+/-!
+# The right-hand side of the Corollary 3.12 variant (taxis #35)
+
+The **theta-pilot side** `−|log(Θ)|` of the project-owner-specified variant of IUT III,
+Corollary 3.12 (taxis #33), composing the ingredient interfaces in the order of
+IUT III, Corollary 3.12 itself:
+
+1. **initial Θ-data** (taxis #38) supplies the prime `ℓ`, the `ℓ`-torsion field `K`
+   and its places;
+2. **Tate `q`-parameters** (taxis #37) enter through the Θ-data (they are consumed by
+   the left-hand side, taxis #34; the right-hand side shares the same Θ-data);
+3. the **large volume container** (taxis #43) is instantiated over the valuation section
+   `V ≅ V_mod` (IUT I, Definition 3.1(e)): its rational-place map is defined on `V_mod`, the
+   places of `F_mod`, so that the direct summands of the packet at `v_ℚ` are indexed by the
+   tuples of places of `V` over `v_ℚ` (IUT III, Propositions 3.1, 3.2, Theorem 3.11 (Ind2),
+   Remark 3.1.1(ii)), with the standard procession of length `ℓ* = (ℓ−1)/2`;
+4. a **theta-pilot region** — an admissible region of the container for each capsule,
+   representing the union of the images of the theta-pilot under the indeterminacies
+   `(Ind1)`, `(Ind2)`, `(Ind3)` of IUT III, Theorem 3.11 — enters as *data*: the
+   multiradial algorithm that produces it is out of scope for this repository
+   (taxis #43), so the region is an explicit input. It is not required to lie in the
+   log-shells: the container of IUT IV, proof of Theorem 1.10, Step (v), for the images
+   under the automorphisms of Proposition 1.2 is larger than the log-shell at wildly
+   ramified primes;
+5. the **holomorphic hull** (taxis #45) is applied capsule-wise;
+6. the **procession-normalized log-volume** (taxis #44) of the hull is the value.
+
+The composed order — container → indeterminacy-closed region → holomorphic hull →
+procession-normalized log-volume — is the order of IUT III, Corollary 3.12
+(`−|log(Θ)|` is the procession-normalized log-volume of the holomorphic hull of the
+union of theta-pilot images). The ingredient list is not treated as a proof, and
+nothing here asserts that the project variant is literally identical to the printed
+IUT formulation.
+
+## Compatibility fields
+
+The container is tied to the Θ-data by explicit compatibility fields: the procession
+is the standard one of length `ℓ*`, and the place map of the container matches the
+places of `V_mod ≅ V` (by residue characteristic at finite places, and sending infinite places
+to the archimedean rational place). Each is a visible assumption, never silently
+assumed.
+-/
+
+namespace Iut
+
+universe u v
+
+open NumberField
+
+
+/-- The **right-hand-side input data** of the Corollary 3.12 variant (taxis #35): a
+large volume container over the valuation section `V ≅ V_mod` with the standard
+procession of length `ℓ* = (ℓ−1)/2`, log-volume data, a holomorphic hull system, and
+the theta-pilot region (with indeterminacies) as explicit data. See the module
+docstring for the composition order and the honesty boundary. -/
+structure RHSData (D : InitialThetaData.{u}) : Type (max u (v + 1)) where
+  /-- The large volume container (taxis #43), indexed by the places of `V ≅ V_mod`
+  (IUT I, Definition 3.1(e); IUT III, Remark 3.1.1(ii)). -/
+  container : LargeVolumeContainerData.{0, u, v} ℕ (ModPlace D.F D.E)
+  /-- The procession is the standard one with `ℓ* = (ℓ − 1)/2` capsules
+  (IUT III, Propositions 3.1–3.3). -/
+  proc_standard : container.proc = Procession.standard ((D.ℓ - 1) / 2)
+  /-- Compatibility at finite places: the container's rational-place map matches the
+  residue characteristic. -/
+  toRational_finite : ∀ w : FinitePlace ↥(fieldOfModuli D.F D.E),
+    (container.toRational (Place.finite w)).residueChar = residueChar w
+  /-- Compatibility at infinite places: infinite places lie over the archimedean
+  rational place. -/
+  toRational_infinite : ∀ w : InfinitePlace ↥(fieldOfModuli D.F D.E),
+    container.toRational (Place.infinite w) = RationalPlace.infinite
+  /-- The log-volume data on the container (taxis #44). -/
+  vol : LogVolumeData container
+  /-- The holomorphic hull system on the container (taxis #45). -/
+  hull : ContainerHullSystem container
+  /-- The **theta-pilot region**: for each capsule of the procession, the admissible
+  region representing the union of the images of the theta-pilot object under the
+  indeterminacies `(Ind1)`–`(Ind3)` (IUT III, Theorem 3.11 / Corollary 3.12). Data:
+  the multiradial algorithm producing it is out of scope (taxis #43). -/
+  thetaPilot : ∀ i, container.AdmissibleRegion i
+  /-- The theta-pilot regions are admissible for the hull system (relative
+  compactness and the finite-log-volume hypotheses live in the hull system's
+  admissible class; explicit, per taxis #45). -/
+  thetaPilot_hullAdmissible : ∀ i, hull.IsAdmissible (thetaPilot i)
+
+namespace RHSData
+
+variable {D : InitialThetaData.{u}} (R : RHSData.{u, v} D)
+
+/-- The holomorphic hull of the theta-pilot region, capsule-wise (taxis #45). -/
+noncomputable def thetaHull : ∀ i, R.container.AdmissibleRegion i :=
+  R.hull.hullFamily R.thetaPilot
+
+/-- **The right-hand side of the Corollary 3.12 variant** (taxis #35): the
+procession-normalized log-volume of the holomorphic hull of the theta-pilot region —
+the quantity `−|log(Θ)|` of IUT III, Corollary 3.12, in the interface of this
+repository. A real number, in the ordered ambient type shared with the left-hand side
+(taxis #34). No disputed equality or inequality is asserted. -/
+noncomputable def rhs : ℝ := R.vol.processionVol R.thetaHull
+
+end RHSData
+
+end Iut

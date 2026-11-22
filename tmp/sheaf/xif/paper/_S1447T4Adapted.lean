@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.SourceXiFConstruction
+import tmp.sheaf.xif.paper.S1136SourceComparisonViaGluingActual
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.SourceQSideComparison
+#check LeanFormal.IUT.Theorem311Source.OriginalInput.sourceQSideNormalizedValue
+#check LeanFormal.IUT.XiFPaper.S1136SourceComparisonViaGluingActual.s1136Comparison

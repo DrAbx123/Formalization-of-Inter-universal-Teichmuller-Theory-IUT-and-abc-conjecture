@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S1956IsoCommaStackActual
+
+noncomputable section
+open CategoryTheory
+open LeanFormal.IUT.XiFPaper.S1956IsoCommaStackActual
+
+#check S1956IsoCommaStack
+#check S1956IsoCommaStack_iff_prestack_effectivity
+#check S1956HComparisonNaturalityAll
+#check S1956IsoCommaStack_to_S1891
+#check S1956IsoCommaStack_core
+#check S1956IsoCommaStack_gives_stack_field
+
+#print axioms S1956IsoCommaStack_iff_prestack_effectivity
+#print axioms S1956FstHomPresheaf
+#print axioms S1956SndHomPresheaf
+#print axioms S1956IsoCommaStack_to_S1891
+#print axioms S1956IsoCommaStack_gives_stack_field

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3222Lemma24StatementShapeAuditActual
+
+#print axioms LeanFormal.IUT.Audit.S3222Lemma24StatementShapeAudit_length

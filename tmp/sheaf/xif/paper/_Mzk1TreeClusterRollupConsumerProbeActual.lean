@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeClusterRollupConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeClusterRollupConsumerActual.treeClusterRollupConsumer_bundle

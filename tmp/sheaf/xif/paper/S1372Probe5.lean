@@ -1,0 +1,17 @@
+import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
+open Polynomial
+#check WeierstrassCurve.Affine.addX_eq_addX_negY_sub
+#check WeierstrassCurve.Affine.addX_eq_subX_sub
+#check WeierstrassCurve.Affine.addY_sub_negY_addY
+#check WeierstrassCurve.Affine.negAddY
+#check WeierstrassCurve.Affine.addY
+#check WeierstrassCurve.Affine.Point.add_of_X_ne
+#check WeierstrassCurve.Affine.Point.add_of_Y_ne
+#check WeierstrassCurve.Affine.Point.neg_some
+#check WeierstrassCurve.Affine.Point.nonsingular_add
+#check WeierstrassCurve.Affine.slope_of_Y_ne
+#check WeierstrassCurve.Affine.slope_of_Y_ne'
+#check WeierstrassCurve.Affine.Point.add_self_of_Y_ne
+#check WeierstrassCurve.Affine.Point.some.inj
+#check WeierstrassCurve.Affine.Point.add_some
+#check WeierstrassCurve.Affine.Point.add_of_X_ne'

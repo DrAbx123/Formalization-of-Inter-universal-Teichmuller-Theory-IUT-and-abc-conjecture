@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.RestatedLemma24InterfaceActual
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InterfaceActual.specialSet
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InterfaceActual.Mzk1Lemma24Target
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InterfaceActual.CVCompositionLawStatement
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InterfaceActual.Mzk1Lemma24CorrectedStatement

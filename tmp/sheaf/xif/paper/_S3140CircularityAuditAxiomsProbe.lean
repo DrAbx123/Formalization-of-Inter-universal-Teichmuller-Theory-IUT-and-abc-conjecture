@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3140CircularityAuditActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135FinalAssemblyGateActual.s3135_finalAssemblyGate
+#print axioms LeanFormal.IUT.XiFPaper.S3135FinalAssemblyGateV3Actual.s3135_finalAssemblyGateV3
+#print axioms LeanFormal.IUT.XiFPaper.S3135FinalAssemblyGateActual.s3135_finalAssemblyGate_tight
+#print axioms LeanFormal.IUT.XiFPaper.S3135TightnessActual.s3135_pointWeightCard_iff_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.S3135TightnessActual.s3135_pointWeightCard_of_abcConjecture
+#print axioms LeanFormal.IUT.XiFPaper.S3135FinalResidualActual.s3135_abcConjecture_of_minimalResiduals
+#print axioms LeanFormal.IUT.XiFPaper.S3135EndToEndV2Actual.s3135_abcConjecture_of_endToEndInputsV2
+#print axioms LeanFormal.IUT.Audit.S3140CircularityAudit
+#print axioms LeanFormal.IUT.Audit.S3140GateHypothesisStrengthRecord

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2924C3LatticeUnitImageLogVolumeConsumerActual
+import tmp.sheaf.xif.paper.S3128Stage1HDDReadoutSpecActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2924C3LatticeUnitImageLogVolumeConsumerActual.C3Lattice_unit_image_measure_one
+#print axioms LeanFormal.IUT.XiFPaper.S2924C3LatticeUnitImageLogVolumeConsumerActual.C3Lattice_unit_image_logVolume_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3128Stage1HDDReadoutSpecActual.S3128Stage1HDDReadoutSpec_ofSource

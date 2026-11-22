@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GlobalPositiveThetaHullLogVolumeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GlobalPositiveThetaHullLogVolumeActual.thetaPositiveLogVolumeAt
+#print axioms LeanFormal.IUT.XiFPaper.GlobalPositiveThetaHullLogVolumeActual.thetaPositiveLogVolumeAt_eq
+#print axioms LeanFormal.IUT.XiFPaper.GlobalPositiveThetaHullLogVolumeActual.thetaPositivePoint_mem_hull

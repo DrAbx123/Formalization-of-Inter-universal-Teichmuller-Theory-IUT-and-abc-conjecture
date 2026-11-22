@@ -1,0 +1,5 @@
+import LeanFormal.IUT.Foundations.NumberField.FinitePlaces
+open LeanFormal.IUT
+#check IsDedekindDomain.HeightOneSpectrum.valuedAdicCompletion_eq_valuation'
+#check IsDedekindDomain.HeightOneSpectrum.algebraMap_adicCompletion
+#check IsDedekindDomain.HeightOneSpectrum.algebraMap_adicCompletionIntegers_apply

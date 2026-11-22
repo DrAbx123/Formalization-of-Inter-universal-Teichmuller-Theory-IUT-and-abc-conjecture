@@ -1,0 +1,53 @@
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:50:6: error(lean.unknownIdentifier): Unknown identifier `haarLogVolume_of_lt_top`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:48:81: error: unsolved goals
+l : PrimeGeFive
+T : SourceNativeInitialThetaData l
+inst✝ : Fintype (Bad (nativePlaceSelection T))
+S : Set (S1902Carrier T)
+hfin : (s1902NormalizedHaar T) S < ∞
+hpos : 1 ≤ ((s1902NormalizedHaar T) S).toReal
+⊢ (NumberFieldFinitePlace.haarLogVolume (s1902NormalizedHaar T) S).toReal = Real.log ((s1902NormalizedHaar T) S).toReal
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:68:8: error(lean.unknownIdentifier): Unknown constant `ENNReal.prod_lt_top.ne`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:69:8: error: No goals to be solved
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:89:44: error(lean.unknownIdentifier): Unknown identifier `b`
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:96:33: error(lean.invalidField): Invalid field `ne`: The environment does not contain `Function.ne`, so it is not possible to project the field `ne` from an expression
+  hPT
+of type
+  inverseFactorProduct T e = ∞ → False
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:105:29: error: Application type mismatch: The argument
+  hcT
+has type
+  s1902HaarScale T ≠ ∞
+but is expected to have type
+  s1902HaarScale T < ∞
+in the application
+  ENNReal.mul_lt_top hcT
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:110:29: error: Application type mismatch: The argument
+  hcT
+has type
+  s1902HaarScale T ≠ ∞
+but is expected to have type
+  s1902HaarScale T < ∞
+in the application
+  ENNReal.mul_lt_top hcT
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:112:64: error(lean.invalidField): Invalid field `ne'`: The environment does not contain `Function.ne'`, so it is not possible to project the field `ne'` from an expression
+  hμ0
+of type
+  (rootExtensionProductHaar T) (s1902UnitRegion T) = 0 → False
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:127:23: error: Function expected at
+  zero_le
+but this term has type
+  0 ≤ ?m.312
+
+Note: Expected a function because this term is being applied to the argument
+  _
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:132:10: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:132:28: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+tmp\sheaf\xif\paper\Mzk1CorrectedRegionLogLawProvedActual.lean:132:4: error: Type mismatch
+  mul_le_mul_left' (mul_le_mul_left' hPge ?m.382) ?m.383
+has type
+  ?m.383 * (?m.382 * 1) ≤ ?m.383 * (?m.382 * inverseFactorProduct T e)
+but is expected to have type
+  s1902HaarScale T * (rootExtensionProductHaar T) (s1902UnitRegion T) ≤
+    s1902HaarScale T *
+      ((∏ b, (ENNReal.ofReal (primeFactor T b) ^ e b)⁻¹) * (rootExtensionProductHaar T) (s1902UnitRegion T))

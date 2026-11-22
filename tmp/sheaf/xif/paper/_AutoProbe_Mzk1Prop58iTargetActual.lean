@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Prop58iTargetActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iTargetActual.prop58iReconstructionTarget
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iTargetActual.prop58iReconstructionTarget_iff_bridge
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iTargetActual.calibration_reconstructionTarget

@@ -1,0 +1,14 @@
+import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
+const ROOT='D:/lean';
+const p=ROOT+'/coord/target-chain.shehdd.json';
+const j=JSON.parse(readFileSync(p,'utf8'));
+const dropId='packet-log-volume-laws';
+j.nodes=j.nodes.filter(n=>n.id!==dropId);
+j.edges=j.edges.filter(e=>e.from!==dropId);
+writeFileSync(p, JSON.stringify(j,null,2));
+const f=ROOT+'/tmp/sheaf/xif/paper/ShehddPacketLogVolumeLawsActual.lean';
+if(existsSync(f)) unlinkSync(f);
+const extra=ROOT+'/dag/watchdog/extra-targets.txt';
+const lines=readFileSync(extra,'utf8').split('\n').filter(l=>!l.includes('ShehddPacketLogVolumeLawsActual'));
+writeFileSync(extra, lines.join('\n'));
+console.log('pruned duplicate node/file; nodes='+j.nodes.length+' edges='+j.edges.length);

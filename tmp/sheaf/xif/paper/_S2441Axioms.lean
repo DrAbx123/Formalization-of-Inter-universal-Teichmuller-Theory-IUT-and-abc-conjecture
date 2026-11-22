@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2441H2RepresentativeActual
+#print axioms LeanFormal.IUT.XiFPaper.S2441H2RepresentativeActual.S2441CocycleOfCompatibleLevelRep_spec
+#print axioms LeanFormal.IUT.XiFPaper.S2441H2RepresentativeActual.S2441LiftOfCompatibleLevelRep
+#print axioms LeanFormal.IUT.XiFPaper.S2441H2RepresentativeActual.S2441ActualRepresentativeLiftRequired_of_compatible

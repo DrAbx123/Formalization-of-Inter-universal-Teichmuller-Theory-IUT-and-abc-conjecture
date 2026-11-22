@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3134QHalfValueIdentificationActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134QHalfValueIdentificationActual.S3134LastSeamQHalf_of_qParameterIdentification
+#print axioms LeanFormal.IUT.XiFPaper.S3134QHalfValueIdentificationActual.S3134LastSeamQMissing_of_qParameterIdentification
+#print axioms LeanFormal.IUT.XiFPaper.S3134QHalfValueIdentificationActual.S3134QParameter_log_ne_zero_of_contracting
+#print axioms LeanFormal.IUT.XiFPaper.S3134QHalfValueIdentificationActual.S3134QParameter_abs_log_pos_of_contracting

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2452ResidueFrobeniusActual
+#print axioms LeanFormal.IUT.XiFPaper.S2450ResidueIsAlgClosedActual.S2450_residue_isAlgClosed
+#print axioms LeanFormal.IUT.XiFPaper.S2451ResidueCharPActual.S2451_residue_charP
+#print axioms LeanFormal.IUT.XiFPaper.S2452ResidueFrobeniusActual.S2452FrobeniusAut
+#print axioms LeanFormal.IUT.XiFPaper.S2452ResidueFrobeniusActual.S2452FrobeniusData

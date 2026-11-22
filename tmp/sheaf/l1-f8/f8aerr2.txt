@@ -1,0 +1,3 @@
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:36:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:41:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:46:18: warning: declaration uses `sorry`

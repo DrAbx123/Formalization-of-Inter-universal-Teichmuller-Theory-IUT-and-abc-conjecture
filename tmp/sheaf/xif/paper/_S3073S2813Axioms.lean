@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3073PullbackTotalBridge
+import tmp.sheaf.xif.paper.S2798StableEverywhere37Actual
+import tmp.sheaf.xif.paper.S2797ClauseA37ConditionalActual
+import tmp.sheaf.xif.paper.S2813ClauseA37ReadyActual
+#print axioms LeanFormal.IUT.XiFPaper.S3073PullbackTotalBridge.S3073PullbackTotal_eq_obj_total
+#print axioms LeanFormal.IUT.XiFPaper.S3073PullbackTotalBridge.obj_total_eq_S3073PullbackTotal
+#print axioms LeanFormal.IUT.XiFPaper.S2798StableEverywhere37Actual.S2798_hasStableReductionEverywhere
+#print axioms LeanFormal.IUT.XiFPaper.S2797ClauseA37ConditionalActual.S2797FieldOfModuli
+#print axioms LeanFormal.IUT.XiFPaper.S2797ClauseA37ConditionalActual.S2797ClauseA
+#print axioms LeanFormal.IUT.XiFPaper.S2813ClauseA37ReadyActual.S2813ClauseA

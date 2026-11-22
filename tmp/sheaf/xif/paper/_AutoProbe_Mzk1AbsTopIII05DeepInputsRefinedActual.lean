@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1AbsTopIII05DeepInputsRefinedActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05DeepInputsRefinedActual.refinedAnchor
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05DeepInputsRefinedActual.refinedAnchors
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05DeepInputsRefinedActual.absTopIIIDeepInputs_kinds_eq_refined

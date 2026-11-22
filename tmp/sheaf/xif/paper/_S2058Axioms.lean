@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2058ClosureRingEquivActual
+#print axioms LeanFormal.IUT.XiFPaper.S2058ClosureRingEquivActual.S2058ClosureRingEquiv

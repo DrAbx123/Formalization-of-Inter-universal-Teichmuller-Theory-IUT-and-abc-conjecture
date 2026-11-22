@@ -1,0 +1,18 @@
+import tmp.sheaf.s1984.S1984KSideObjectAudit
+
+open LeanFormal.IUT.XiFPaper.S1984KSideObjectAudit
+
+#print axioms sourceSignQuotient_xK_is_core
+#print axioms sourceSignQuotient_cK_is_core
+#print axioms sourceSignQuotient_xK_not_core_label
+#print axioms sourceSignQuotient_cK_not_core_label
+#print axioms sourceSignQuotient_cK_not_XK_core_label
+#print axioms sourceClauseD_lTorsionCover_eq_quotient
+#print axioms sourceClauseD_lTorsionCover_not_paper_XK_cover
+#print axioms sourceClauseD_lTorsionCover_not_paper_CK_cover
+#print axioms s1881_coverMap_type
+#print axioms s1881_no_paper_XK_cover_target
+#print axioms s1881_no_paper_CK_cover_target
+#print axioms s1360_coverMap_target_not_XK_core
+#print axioms S1984PaperKCore.ofSource_coreQuotient_eq_lTorsionCover
+#print axioms S1984PaperKChain_nonempty_iff

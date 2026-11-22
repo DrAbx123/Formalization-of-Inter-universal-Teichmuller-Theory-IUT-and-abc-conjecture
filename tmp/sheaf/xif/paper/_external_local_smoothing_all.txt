@@ -1,0 +1,3334 @@
+Local smoothing for the Euclidean wave equation
+OpenAI
+October 25, 2026
+Abstract
+We prove Sogge’s local smoothing conjecture for the Euclidean wave equation in every spatial
+dimension at least two. We deduce the Bochner–Riesz conjecture, maximal estimates for these
+means, and sharp bounds for Stein’s square function. We obtain Fourier restriction estimates
+for the sphere, the compact paraboloid, and the truncated cone throughout the interior of the
+conjectured range, as well as local smoothing for the Schrödinger equation. We also prove the
+Kakeya and Nikodym maximal conjectures; in particular, every Euclidean Kakeya set has full
+Hausdorff dimension.
+1 Introduction
+We prove Sogge’s local smoothing conjecture for the Euclidean wave equation in every spatial
+dimension n≥ 2. A wave arriving from a thin spherical shell may have a much largerLp norm at
+the instant when its rays come to a focus than it had initially. Sogge asked how many derivatives
+of the initial data are needed to control the norm averaged over a time interval [72, Section 4,
+Equation (4.5)].
+WriteU(T ) = e−iT|D| for the half-wave propagator, with|D| =
+√
+−∆. Put I = [1, 2], J =
+(1−∆) 1/2, and
+s+(p) = max
+{
+0,n−1
+2 − n
+p
+}
+.
+Theorem 1.1(Euclidean local smoothing).Forn≥2,2≤p<∞andε>0,
+∥U(T)f∥ Lp(Rn×I)≤C n,p,ε∥Js+(p)+εf∥Lp(Rn).(1.1)
+Atp= 2one can takeε= 0.
+At a fixed nonzero time the sharp Sobolev order is(n− 1)(1/2− 1/p)[ 54, 65, 68]. Thus for
+p≥p c = 2n/(n− 1), averaging in time gains every amount less than1/p over the fixed-time estimate.
+For2 <p<p c, arbitrarily small positive regularity suffices. A focusing wave shows thats+(p)is
+the smallest possible threshold (Proposition 8.1). We state the wave estimates for complex Schwartz
+data; density gives the indicated extensions, and conjugation gives the other sign of the half wave.
+UnqualifiedL p norms of the data are spatial norms.
+1
+Contents
+Sections 2–7 prove Theorem 1.1; Sections 9–12 give its applications.
+1 Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+1.1 Consequences for Fourier analysis and geometry . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2 Development of the local smoothing problem . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 An estimate on one frequency annulus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.4 A conserved current and two circles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2 A conserved current for a superposition of waves. . . . . . . . . . . . . . . . . . . . . . .6
+2.1 The symbol determines the Gaussian . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.2 Two auxiliary flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+2.3 Coordinates adapted to the wave . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.4 The time component on a frequency cap . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3 The determinant and integration by parts. . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+3.1 The Hessian in real and complex coordinates . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.2 The Moore cofactor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.3 Column divergence and the boundary term . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+4 The determinant energy and its boundary flux. . . . . . . . . . . . . . . . . . . . . . . . .14
+4.1 The geometry of the fibers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+4.2 The Dirichlet potential . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.3 Cancelling the full determinant . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.4 Size of the energy on a fiber . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+5 Estimating the energy on a fixed fiber. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .18
+6 Propagation across a thin cylinder. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .21
+7 Passage to Euclidean space and Sobolev estimates. . . . . . . . . . . . . . . . . . . . . .24
+7.1 Removing the period . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+7.2 Interpolation and summation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+8 Two obstructions to endpoint smoothing. . . . . . . . . . . . . . . . . . . . . . . . . . . .26
+9 Spherical extension and Kakeya tubes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .27
+9.1 Global extension from the sphere and the truncated cone . . . . . . . . . . . . . . . . . . . 28
+9.2 From caps to tubes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+9.3 The maximal estimate and Hausdorff dimension . . . . . . . . . . . . . . . . . . . . . . . . 30
+9.4 Two consequences for other families of segments . . . . . . . . . . . . . . . . . . . . . . . . 31
+10 Bochner–Riesz means. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .32
+11 Stein’s square function. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .33
+12 The paraboloid and Schrödinger evolution. . . . . . . . . . . . . . . . . . . . . . . . . . .36
+A The Dirichlet problem on a periodic fiber. . . . . . . . . . . . . . . . . . . . . . . . . . . .38
+B The sharp logarithm with angular regularity. . . . . . . . . . . . . . . . . . . . . . . . . .41
+B.1 Observation on a ball . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+B.2 The polar kernel and the two endpoint norms . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+B.3 Summation over the spatial and angular frequencies . . . . . . . . . . . . . . . . . . . . . . 44
+C Disjoint packets and the weak spacetime norm. . . . . . . . . . . . . . . . . . . . . . . . .46
+D A linear Dirichlet problem for the planar wave. . . . . . . . . . . . . . . . . . . . . . . .48
+E Curved characteristic sheets of symmetric systems. . . . . . . . . . . . . . . . . . . . . .49
+E.1 Eigenvectors and the spatial fiber . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+E.2 The current and its Gaussian multiplier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+E.3 The fixed cap estimate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+E.4 A lower bound on a single patch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .54
+2
+1.1 Consequences for Fourier analysis and geometry
+Bochner–Riesz means and Stein’s square function.The Bochner–Riesz means Bα
+R =
+(1−|D|2/R2)α
++ are uniformly bounded onLp for1 ≤p≤∞ and everyα>max{ 0,n| 1/p−1/2|−1/2},
+as conjectured. For2≤p<∞ the same orders give a strongLp bound for the supremum over all
+radii (Theorem 10.1). Stein’s square function measures their variation with radius [73]. Keeping this
+variation inside a square integral gives its conjectured bounds for2≤p<∞ and α> 1/2 +s+(p)
+(Theorem 11.1). The connection with the wave is that averaging in time against an oscillatory
+weight selects a thin shell in frequency. Sogge used this observation to pass from local smoothing to
+summability of Fourier integrals [72, Equations (4.5)–(4.6)]; for the reductions at fixed and variable
+radii see [8, Propositions 39 and 40].
+Fourier restriction and Schrödinger waves.Give an incoming spherical wave an amplitude
+that varies with direction. Near the focus, rescaling recovers the Fourier extension of this amplitude
+from the sphere. We obtain the full interior range of global Fourier extension estimatesLa→L b:
+for1<a≤∞,b<∞, it is given by
+b> 2n
+n−1 , b> n+ 1
+n−1 a′, 1
+a + 1
+a′ = 1.
+Slicing gives the same bounds for the truncated cone inRn+1 (Corollary 9.3). Rescaling a small cap
+gives the compact paraboloid estimate(12.1) and local smoothing for Schrödinger waves inn− 1
+spatial dimensions, with the exact Sobolev order above their critical exponent (Corollary 12.1).
+Kakeya and Nikodym sets.Random signs on disjoint frequency caps turn the square of the
+extension into a bound for overlaps of tubes. This proves the Kakeya maximal conjecture: the
+operator that takesf to the largest average of|f| on a unitδ-tube in each direction has norm
+Oε(δ−ε)from Ln(Rn)to Ln(Sn−1)for every ε> 0. In particular, every subset ofRn containing a
+unit line segment in each direction has Hausdorff dimensionn (Corollary 9.1). A projective change
+of variables gives the corresponding Nikodym maximal estimate for tubes through a given point
+(see (9.7)).
+1.2 Development of the local smoothing problem
+The question grew out of Bourgain’s theorem on maximal averages over circles [12]. At high
+frequency the Fourier transform of a circle of radiusT has two leading terms, with phasesT|ξ| and
+−T|ξ|. This explains why a spacetime estimate for waves can help bound the supremum of circular
+averages over radii. Sogge used this connection to prove a positive smoothing gain for everyp>2
+in two space dimensions [72, Theorem 4.1]. Mockenhaupt, Seeger and Sogge gave a proof of the
+circular maximal theorem using angular square functions [55], and developed local smoothing for
+Fourier integral operators under a curvature condition on the associated family of cones [56].
+A persistent difficulty is to put waves moving in different directions back together. Wolff
+decomposed a neighborhood of the cone into thin angular sectors and controlled their sum by
+induction on scales. This gave every gain below1/p for p> 74in the plane [80]; Łaba and Wolff
+extended the argument to higher dimensions [49]. Bourgain and Demeter’s cone decoupling theorem
+gives this gain forp≥ 2(n + 1)/(n− 1)in every dimension [14, Theorem 1.2]. A different argument
+using radial Fourier multipliers attained the exact gain1/p, with no additional Sobolev loss, for
+n≥ 4and p> 2(n− 1)/(n− 3)[ 37, Theorem 1.2]. In the plane, Guth, Wang and Zhang reached the
+critical exponentp = 4by controlling theL4 norm of a wave by the spacetime square function of its
+angular pieces [35, Theorems 1.1 and 1.2]. For the canonical sectors of a truncated cone, Cushman,
+3
+Demeter and Wu give the sharp power1/4of the logarithm in this square function inequality [20,
+Theorem 1.4]. To obtain a bound in terms of∥f∥ 4, one must also estimate the square function from
+the initial data.
+In higher dimensions the distinction between a partial gain atpc and a full gain abovepc
+is substantial. At n = p = 3, Gao, Liu, Miao and Xi obtained every gain below2/9by broad
+Fourier restriction estimates, compared with the conjectured1/3[ 29, Corollary 1.3]. Gan, He, Li
+and Wu proved the full gain up to an arbitrarily small loss forp≥ 10/3in R3 and on compact
+Riemannian three-manifolds [28, Theorem 1.3]; see also Wang’s study of wave packet density [78].
+Interpolating thep = 10/3estimate with the L2 identity gives every gain below1/4at p = 3.
+Some three-dimensional metrics requirep≥ 10/3for gains arbitrarily close to1/p [53], whereas the
+Euclidean exponent is3.
+1.3 An estimate on one frequency annulus
+The proof is built around a single estimate atp = pc. It quantifies the growth with frequency
+that the arbitrarily small Sobolev loss in Theorem 1.1 allows. Our Fourier convention isˆf(ξ) =∫
+Rne−iX·ξf(X) dX, soU(T)has phaseX·ξ−T|ξ|and inverse Fourier factor(2π) −n.
+Theorem 1.2(Critical annular estimate).Let n≥ 2, p =pc, andφ∈C ∞
+c (Rn\{ 0}). ForN≥ 2
+setP N =φ(D/N). Then
+∥U(T)PNf∥Lp(Rn×I)≤C n,φ[log(2 +N)] 2/p∥f∥Lp(Rn).(1.2)
+Interpolation and summation over annuli yield Theorem 1.1 (Section 7). For unrestricted
+data on a full annulus the optimal logarithmic power in(1.2) lies between1/pc and2 /pc. The
+lower bound comes from the focusing example: every dyadic distance from the focus between one
+wavelength and unit distance contributes comparable mass to thepc-th power of the spacetime
+norm (Proposition 8.1). With any positive angular regularity, the power1/pc suffices; Appendix B
+proves a sharper result with a logarithmic angular weight. For unrestricted data the lower bound
+persists even for the weak spacetime norm (Proposition 8.2).
+1.4 A conserved current and two circles
+Consider a finite sum of plane waves with|ξ|≍N whose directions lie in one small cap. We need to
+take a squareaftersumming these waves: summing the squares would discard the interference that
+produces a focus. An imaginary translation along a light ray filters the sum by direction. Translation
+by−iℓ(1,ω ), with|ω| = 1and ℓ> 0, multiplies a mode of frequencyξ by exp[−ℓ|ξ||ω−ξ/|ξ|| 2/2].
+Its Gaussian width in direction is therefore of order(Nℓ)−1/2 forNℓ≫ 1. The symmetric first-order
+wave system provides these light rays as its quadratic fluxes. The sum of two such fluxes gives the
+imaginary displacement. Two flows built from the continued wave then give a positive semidefinite
+tensor. Each of its real columns has zero divergence, and its time component still detects the original
+wave on the chosen cap (Section 2).
+Here is the estimate that the construction must deliver. Seth =N−1, leta =Kh for a fixed
+large K, and writep =pc. In addition to the physical timeT, the construction has two auxiliary
+time coordinatesτ∈R 2. WriteH(T,s )for the circular mean at|τ| =s of the nonnegative energy
+F(T,τ )constructed below. For h small and nonzero cap data on a fixed spatial torus normalized by
+∥f∥ 2 = 1, we prove
+∫2
+1
+∥U(T)f∥ p
+p dT≲a −2
+∫2
+1
+H(T,2a) dT
+≲[log(2/h)] 2a−2H(0,4a)≲[log(2/h)] 2∥f∥p
+p.
+4
+The first and last inequalities compare the energy with the wave. The middle one uses only a scalar
+differential inequality.
+To obtain the energy, fix(T,τ )and let the remaining real and auxiliary spatial variables range
+over a bounded fiber with periodic real directions. Writeµ >0for the time component of the
+regularized current. There is a complex scalarΦconstant along the current. Withλ> 0large, take
+on each fiber the solution with positive definite spatial HessianHfib(λ|Φ|2 +u)of
+detH fib(λ|Φ|2 +u) =λµ, u| ∂ = 0.
+Here Hfib is ann-by-n quaternionic Hermitian Hessian; its determinant on positive matrices is the
+product of the eigenvalues. The background costs nothing in the conservation law: since the current
+is tangent to the levels ofΦ, its pairing withH(|Φ|2)vanishes. In the spatial determinant, however,
+it supplies one direction of curvature. The Hessian ofλ|Φ|2 has just one nonzero eigenvalue, of
+size λ. AddingαI to this background changes its determinant to(β +α)αn−1, whereβ≍λ . Thus
+densityµ≥m on a small ball forces the depth ofu at its center to be at least a constant times the
+squared radius timesm1/(n−1), in the range of the construction. The integral
+∫
+(−u)µ detects the
+powerm n/(n−1). Sinceµrecovers a square of the wave, the resulting exponent is2n/(n−1).
+A correction to
+∫
+(−u)µ makes the full determinant cancel when one differentiates the energy
+in( T,τ ), while leaving the corrected energy comparable to that integral. The correction uses the
+integral of the spatial determinant along the segment of potentials fromλ|Φ|2 to λ|Φ|2 +u, as in
+the classical Aubin–Mabuchi energy [5, 52]. The two integrations by parts use conservation of the
+wave current and of the Hessian cofactor (Sections 3 and 4). The cofactor contributes no boundary
+term: its normal–normal coefficient vanishes. Only the wave flux through the side of the fiber can
+give a positive contribution to the Laplacian of the energy. A comparison function made from a
+spatial average of the squared wave boundsF on the initial circle and the normal derivative ofu at
+the side of the fiber. On the part of the boundary that carries wave flux, the Gaussian decay is
+stronger than the cost of recovering the wave in the interior. The resulting scalar inequality is
+∆T,τF≤Cs −2e−cs/hF,2a≤s=|τ|≤3(Section 5).
+It remains to compare the circles. The scalar inequality carries a lower bound at the observed
+times1 ≤T≤ 2from |τ| = 2a to|τ| = 1. At that fixed radius the mean inequality carries it
+to initial time; a second annulus comparison then takes it back to|τ| = 4a. A radial harmonic
+function in the plane is affine in the logarithm of its radius. Each passage thus loses an inverse
+logarithm. Both losses can occur for a scalar supersolution even with zero potential (Remark 6.2).
+Taking apth root and summing a fixed number of caps gives the claimed logarithmic bound on the
+torus. Section 7 removes the spatial period to prove Theorem 1.2, then sums the frequencies for the
+Sobolev estimate.
+Related constructions.The bilinear flux of a symmetric hyperbolic system is classical [25].
+Analytic continuation in an imaginary spacetime direction has also been used to study waves [42]. For
+positive-energy Klein–Gordon waves, Kaiser found a vector conserved in physical spacetime at each
+fixed imaginary displacement. Integration over displacements gives a current with nonnegative time
+density [41, Section 4.5, Equations (36)–(40)]. Here the continued wave gives a positive symmetric
+tensor whose columns have zero divergence in the combined physical and auxiliary variables.
+Serre’s compensated integrability estimates pair a positive divergence-free tensor with the Hessian
+of a real Monge–Ampère potential to bound a power of its determinant [69, Section 5.1]. The
+usual stress tensor of a wave need not be positive inn≥ 2spatial dimensions [70, Section 4.1].
+Our lifted tensor is positive semidefinite, but before averaging it is a sum of four real squares and
+5
+its determinant vanishes. We use its regularized time component as the prescribed density in a
+quaternionic determinant equation on each spatial fiber (Section 4).
+The main proof ends in Section 7; Appendix A supplies the Dirichlet theorem used in the
+construction. Sections 9–12 give the applications. Appendix D replaces the determinant equation by
+a linear Dirichlet problem on a disk in two dimensions. Appendix E extends the current construction
+to a simple extremal eigenvalue of a real symmetricn-by-n pencil inn spatial variables whose
+transverse Hessian is definite, and gives an example with an irreducible cubic characteristic cone.
+2 A conserved current for a superposition of waves
+We use the flux of a symmetric first-order system twice. It selects an imaginary displacement that
+gives each mode a Gaussian weight; applied to the continued wave, it gives a positive conserved
+tensor. The modes are summed before taking the square, so their interference remains in the time
+component of the tensor. We shall apply the construction on a fixed spatial torus: an annulus then
+contains only finitely many modes, and integration by parts has no boundary in the real spatial
+variables. Section 7 transfers the estimate toRn.
+2.1 The symbol determines the Gaussian
+Choose an orthonormal frameX= (x,b)∈R d×R, whered=n−1, and put
+t= (T+b)/
+√
+2, s 0 = (b−T)/
+√
+2.
+In these null coordinates the wave operator is2∂t∂s0 + ∆x. At a fixed frequencyκ> 0in s0 this is
+the free Schrödinger operator2iκ∂t + ∆x in the transverse variables. A mode with physical phase
+X·ξ−T|ξ|andξ b +|ξ|>0takes the form
+uκ,v =c κ,v exp
+(
+iκ
+(
+s0 +v·x− 1
+2|v|2t
+))
+, κ= ξb +|ξ|√
+2 , v= ξx
+κ.(2.1)
+Hereidenotes the ordinary Fourier imaginary unit. Throughout the constructionuw =∑
+κ,vuκ,v is
+a finite sum withκ>0and complex coefficients.
+WriteEab for the elementaryn×n matrix with its nonzero entry in position(a,b ), indexing the
+states from0tod. For the real spacetime coordinatesX= (t,x,s 0)take the symmetric matrices
+Ct = 2E00, C xj =E 0j +Ej0, C s0 =−
+d∑
+j=1
+Ejj,P=
+∑
+µ
+Cµ∂Xµ.
+Indeed, P(∂s0ψ,∇xψ)t has first entry(2∂t∂s0 + ∆x)ψ and all other entries zero. At the covector
+p=κ(−|v| 2/2,v,1)of (2.1), the symbolC(p) = ∑
+µpµCµ satisfies
+−C(p) =κ
+(
+|v|2 −vt
+−v I d
+)
+,−w tC(p)w=κ|w ′−vw 0|2.(2.2)
+In particular the kernel is spanned by E(v) = (1 ,v )t. This gives a vector solution fsys =∑
+κ,vκd/2E(v)uκ,v ofPf sys = 0.
+To see the Gaussian in physical coordinates, translate(T,X )by −iρ(1,ω )with ρ> 0and |ω| = 1.
+A mode of frequencyξacquires the factor
+eρ(ξ·ω−|ξ|) =e−ρ|ξ||ˆξ−ω| 2/2, ˆξ=ξ/|ξ|.
+6
+For|ξ|≍N and ρN≫ 1, its angular width is(ρN)−1/2. The system itself supplies these light rays.
+For a real statew = (w0,w′)its flux q(w)µ =wtCµw/2is( w2
+0,w 0w′,−|w′|2/2)in null coordinates.
+In physical coordinates this givesq(w)T =|q(w)X| = (w2
+0 +|w′|2/2)/
+√
+2; at the polarizationE(v)
+the ray isq(E(v)) = (|ξ|,ξ)/κ. Take the sum of the fluxes of two real states,
+qµ =q(w 1)µ +q(w 2)µ = 1
+2
+2∑
+ℓ=1
+wt
+ℓCµwℓ, w 1,w 2∈R n.(2.3)
+AtX−iqthe weight ise p·q. Pairing corresponding entries of the states, write
+z=w 1 +kw 2 = (R,ζ)∈C k×Cd
+k,C k ={a+kb:a,b∈R},k 2 =−1.
+Thusqµ =z∗Cµz/2, with∗ the complex conjugate transpose. Adding the two real squares in(2.2)
+gives
+ep·q = exp
+(
+−κ
+2|ζ−vR| 2
+)
+.(2.4)
+This explains the normalization infsys: the square ofκd/2ep·q integrates toπd inζfor everyR.
+2.2 Two auxiliary flows
+Recall the bilinear conservation identity for symmetric systems, as in Friedrichs[25]. For constant
+real symmetric matricesCµ, the flux of statesa,b is jµ(a,b ) =atCµb. Its divergence for two fields
+is( Pa)tb +atPb. The derivative ofqµ in the directionδwℓ is exactlyjµ(wℓ,δwℓ). This derivative
+gives the physical component of the following vector fields.
+Lemma 2.1.Let P =∑
+µCµ∂Xµ have constant real symmetric coefficients. For a holomorphic
+solutionPf sys = 0and the real displacement(2.3), put, wherever defined,
+G= fsys(X−iq), V ℓa =
+∑
+µ
+(Cµwℓ)a∂Xµ, D ℓa =∂ wℓa + iVℓa,Z ℓ =
+∑
+a
+GaDℓa.
+In the real coordinates(X,w1,w 2), the tensor
+B= Re
+2∑
+ℓ=1
+Zℓ⊗Zℓ (2.5)
+is symmetric and positive semidefinite, and each of its columns has zero divergence.
+Proof. The fieldsDℓa are the complex vector fields associated with the tube coordinatesX− iq as
+in [6, Section 1]. Each annihilates every component ofX− iq, henceDℓaG = 0. Conjugation gives
+∂wℓaG= iV ℓaG. EachDℓa has zero divergence, so
+divZℓ = 2i
+∑
+a
+VℓaGa = 2iw t
+ℓPG= 0.
+For the ordinary flat connection, the identityDℓaG = 0leaves only the derivatives of the coefficients
+of Dmb when computing the acceleration:
+∇ZℓZm =−iδ ℓm
+∑
+µ
+(GtCµG)∂Xµ.
+The vector in the sum is real by symmetry of the matrices. The product rule fordiv(Zℓ⊗Zℓ)now
+gives zero after taking real parts. Finally, ifZℓ =Aℓ + iBℓ with real fields, its contribution to(2.5)
+isA ℓ⊗Aℓ +Bℓ⊗Bℓ.
+This cancellation also identifies the physical current in the lifted variables: the imaginary part
+of the last differentiation identity atm =ℓ gives[Aℓ,Bℓ] =∑
+µ(GtCµG)∂Xµ. For the estimate we
+use the four real squares in the conserved tensorB. We must express them in coordinates attached
+to spacetime.
+7
+2.3 Coordinates adapted to the wave
+We want one auxiliary pair for each of then + 1real spacetime coordinates. In the target, write each
+triple asXµ +ωµi, withωµ∈C k. The quaternions H have unitsi, j, ksatisfyingi 2 =j 2 =k 2 =−1
+andij=k,ki=j. Thus the target triples lie in D = spanR(1, i, j). We identify the Fourier complex
+plane with Ci. Every quaternion is uniquelyα +kβ with α,β∈C i; these two planes are orthogonal
+for the real scalar product⟨u,v⟩ = Re(uv). We use columns with scalars acting on the right;∗ on a
+matrix denotes quaternionic conjugate transpose.
+The representation we seek forB is the following. For a quaternionic Hermitian matrixA on
+spacetime indices, set
+AR
+µα,νβ = Re(eαAµνeβ),(e 0,e 1,e 2) = (1,i,j).(2.6)
+If A =χχ∗, this real tensor is the Gram matrix of the rowseαχµ. In other words the three rows
+over eachµhave the formQ,−iQ,−jQ.
+In source coordinates, write the four squares of(2.5) as a Gram matrix by settingQI =ZI
+1 +kZI
+2
+for each coordinateI. Orthogonality ofCi andk Ci givesBIJ = Re(QIQJ). WithMµa = (Cµz)a,
+the rows in the real spacetime and state directions are
+QXµ =
+∑
+a
+MµaiGa,(Q w1a,Qw2a) = (Ga,kGa).
+We now choose the target auxiliary coordinates to give the desired rows−iQXµ,− jQXµ. For a
+holomorphic coordinateωµ(z)let Lµa =∂zaωµ. Multiplication byc =c1 +kc2 on an auxiliary pair
+has real rows(c1,−c 2), (c2,c 1), so it sends(Ga, kGa)to( ¯cGa, k¯cGa). Consequently the new pair
+overµ starts with∑
+aLµaGa. TakingL =M gives exactly−iQXµ, since−ic i= ¯cfor c∈C k. Its
+partner isk(−iQ Xµ) =−jQ Xµ.
+The holomorphic flux map.The derivative Lµa = (Cµz)a integrates to the quadraticztCµz/2,
+by symmetry. Thus the Hermitian squarez∗Cµz/2weights the modes, while the bilinear square
+transforms their Gram rows. There aren complex state coordinates andn+ 1spacetime coordinates.
+Introduce a passiveη∈C k, in whose two real directions the flows have zero component. For any
+constant real symmetric system of Lemma 2.1 with these dimensions and any fixedc∈Rn+1, set
+Θ : (z,η)↦−→ω, ωµ = 1
+2ztCµz+c µη.
+The map fixes the real spacetime coordinates. On a local inverse chart its real volume Jacobian is
+J=|det C[M,c]| 2, whereMµa = (Cµz)a. Push the tensor forward as a density:
+~B◦Θ =J −1DΘBDΘ t.(2.7)
+The two differentials transform the Gram rows as above, andJ−1 converts source volume to target
+volume. Hence
+~B= ( ~χ~χ∗)R, ~χµ◦Θ =J −1/2∑
+a
+MµaiGa.(2.8)
+As a function ofω, the passive coordinate satisfies(∂ωη)M = 0: varying z at fixedη gives the
+columns ofM. Thus(∂ ωη)~χ= 0.
+To verify conservation, test theKth column against the gradient of a real smooth functionφ
+compactly supported in the target chart. Changing variables in(2.7), the integral for the weak
+divergence becomes−∑
+I,L
+∫
+BIL(∂LΘK)∂I(φ◦ Θ). Integration by parts in source coordinates gives
+J(div ~B)K◦Θ =
+∑
+L
+(∂LΘK)(divB)L +
+∑
+I,L
+BIL∂I∂LΘK.
+8
+The first sum vanishes by Lemma 2.1. In the second sum the two diagonal state blocks ofB are
+both( Re(GaGb))ab, and the mixed state block is zero. Each real component of the holomorphic map
+satisfies ∂w1aw1bΘK +∂w2aw2bΘK = 0. The remaining coordinates enterΘaffinely, so the second
+sum vanishes as well.
+The wave in these coordinates.For the wave matrices, addη in thes0 coordinate. In the null
+frame the holomorphic flux map becomes
+Θ : (R,ζ,η)↦−→(Y,P,S1) = (R2,Rζ,η−ζ·ζ/2).(2.9)
+If(τ,P,Z )denotethetargetauxiliarycoordinatesinthephysicalframe( T,x,b ), thenY = (τ+Z)/
+√
+2
+andS1 = (Z−τ )/
+√
+2. Inverting(2.9) onY̸ = 0gives R =
+√
+Y on a local branch andζ =P/R. The
+useful single-valued coordinates are the ratio of the transverse states toR and the passive variable:
+W= P
+Y = ζ
+R,Φ =S 1 + P·P
+2Y =η, y=|Y|.(2.10)
+All dots between complex vectors here are bilinear;|·| denotes the Euclidean norm. The complex
+Jacobian determinant ofΘis2R d+1, so its real volume Jacobian is
+J= 4|R| 2d+2.(2.11)
+Under the derivativeMin the state directions a polarization vectorE(v)maps to
+ME(v) = (2R,ζ+Rv,−ζ·v) t = 2RVv, V v =
+(
+1,(v+W)/2,−W·v/2
+)t.(2.12)
+In particularΦis constant in each such direction because it pulls back to the passive variable.
+Explicitly, putℓ(w) = (−w·w/ 2,w, 1); thusκℓ(v)is the real phase covector. One checksℓ(w)Vv =
+−(w−W )· (w−v )/2. The column lies in the kernels of bothℓ(v)and ∂Φ =ℓ(W ). Differentiating
+W=P/Ygives the second identity in
+(∂Φ)V v = 0,(∂W)V v = v−W
+2Y .(2.13)
+These are complex differentials in(Y,P,S 1). The current stays on a level set ofΦ, while each mode
+changesWin proportion to its angular mismatchv−W.
+Fore =Y/y put ιe(α + iβ) =α +eiβ. This is an isometric embedding of the Fourier complex
+numbers intoH:ic= ¯ciforc∈C k, so(ei) 2 =−1. Define the positive weight
+mκ,v = (κ/y)d/2 exp
+(
+−κy
+2|W−v| 2
+)
+.
+The factory−d/2 comes from the change of volume.
+Proposition 2.2(The wave current).For any finite superposition(2.1), set
+χ=
+∑
+κ,v
+Vvιe(uκ,v)mκ,v, A 0 =χχ∗.(2.14)
+On Y̸ = 0the matrix A0 is smooth and positive semidefinite,(∂Φ)A0 = 0, and each column of
+(A0)R has zero real divergence. These conclusions hold also after the orthogonal change from null to
+physical coordinates. In particular,
+Vv
+T = (1 +W·v/2)/
+√
+2, A 0
+TT =|χ T|2.
+9
+Proof.We identify the column in (2.8) on one inverse chart. By (2.4) and (2.12), the contribution
+of a single mode to~χequals
+Vvgiuκ,vmκ,v, g=R/|R|.
+Indeed|ζ−vR| 2 =y|W−v| 2 and2|R|/
+√
+J =y−d/2. Multiply every row on the right by the same
+unit quaternion(gi)−1; this preserves their Gram matrix. Conjugation byg takesito g2i= ei.
+Sinceicommutes with the Fourier amplitudes, the resulting column is precisely(2.14), withVv on
+the left. The formula involvesY itself, hence is smooth and independent of the square root used in
+its derivation. Positivity follows from its outer product and tangency from(2.13). The change back
+to physical coordinates acts by the same real orthogonal matrix on each of the three coordinate
+slots, so it preserves the column divergence and the row–column pairing. FinallyT = (t−s 0)/
+√
+2
+gives the stated expression forVv
+T.
+For a singleκ and realW, the exponential inmκ,v is a Gaussian window in transverse frequency
+κv, centered atκW. SinceVv
+t = 1, the null componentA0
+tt is the squared modulus of the scalar wave
+observed through this window: up to normalization, its Husimi density [39]; see [45, Section 2.3].
+For the full wave, (2.14) sums the amplitudes overκbefore taking the square.
+2.4 The time component on a frequency cap
+At a fixed auxiliary point writeVv
+T =b 0 +kb 1, so that
+b0 = 1 + Re(W)·v/2√
+2 , b 1 = Imk(W)·v
+2
+√
+2 .
+Here Imk(α +kβ) =β. LetS ℓ be the ordinary scalar spatial multiplier which sends each mode in
+(2.1) tobℓmκ,vuκ,v at this auxiliary point. By (2.14),
+χT =ι e(S0uw) +kι e(S1uw), A 0
+TT =|S 0uw|2 +|S 1uw|2.(2.15)
+Indeed the two terms lie in the conjugates of the orthogonal planesCi andk Ci by a square rootg
+of e in Ck. AtW = 0the second multiplier vanishes:2A0
+TT is exactly the squared modulus of the
+wave with weight(κ/y)d/2 exp(−κy|v|2/2)on each mode.
+For the estimates takeuw = e−iT|D|f on the fixed spatial torusRn/(100Zn). We choose the
+axis b along the center of a frequency cap, leaving the torus itself fixed. For0< h≤ 1suppose
+ˆf is supported inc0/h≤|ξ|≤C 0/h,|v|≤γ , with fixed0 <c 0 <C 0 and a small apertureγ >0
+independent ofh. The identity|ξ| =κ(1 +|v|2/2)/
+√
+2 givesκ≍h −1. Aty≍h and|W|,|v|≤ 1/10,
+the Gaussian andb0 are bounded below, sohdS0 has a symbol bounded above and below on the
+cap. For largery/h the cost of inverting it depends on the mismatch|W−v| . There areO(h−n)
+frequencies in the annulus, uniformly in the frame; thus∑
+κ,v|cκ,v|≲h −n/2∥f∥ 2 by Cauchy–Schwarz
+and Parseval. The formulas in null coordinates may be used on the covering space: the resulting
+current is periodic in the original real spatial variables. We normalize nonzero cap data by∥f∥ 2 = 1
+in the energy estimates that follow.
+3 The determinant and integration by parts
+The wave current in Proposition 2.2 is positive and has divergence-free real columns. We shall
+pair it with a Hessian. The essential pairing is the ordinary real contractionA :H(v) =AR :D2v:
+each spacetime index still has its three real coordinates. The choice of Hessian has two further
+consequences. The squared modulus of a holomorphic function contributes at most one quaternionic
+direction. Inn spatial variables, if its nonzero eigenvalue isβ, addingϵI gives determinant(β+ϵ)ϵn−1.
+10
+This is where the denominator inpc = 2n/(n− 1)enters. The cofactor of the Hessian also has
+divergence-free columns; this allows us to integrate the determinant equation by parts, including at
+the boundary.
+3.1 The Hessian in real and complex coordinates
+Use the triplesza =xa +Pai∈D of Section 2, withPa∈C k. We allow a fourth real coordinate
+as well: Appendix A uses it to rotate the normal at the boundary. Thus for each ofm coordinate
+indices letza =∑k−1
+α=0eαzaα, wherek = 3or4,( e0,e 1,e 2,e 3) = (1, i, j, k), and thezaα are real. For
+a realC 2 functionuput∂ aα =∂/∂z aα and define
+Ga(u) =
+∑
+α
+eα∂aαu, H ab(u) =
+∑
+α,β
+eα¯eβ∂aα∂bβu.(3.1)
+ThusG(u)is the ordinary gradient written as a quaternionic column. The symbols∇,∆and ∂n
+denote the Euclidean gradient, Laplacian and outward normal derivative.
+Lemma 3.1(Hessian calculus).In either number of slots,H(u)is Hermitian and trH (u) = ∆u.
+The linear map from the real Hessian toH(u)sends ξξ t to gg∗, wherega =∑
+αeαξaα. It sends
+nonnegative real forms to nonnegative quaternionic forms. The product rule is
+H(uv) =uH(v) +vH(u) +G(u)G(v) ∗ +G(v)G(u)∗.(3.2)
+In four slotsH is covariant under quaternionic unitary changes of coordinates, and in three slots
+under real orthogonal changes of the coordinate index applied in all slots.
+Ifudepends only onP∈C m
+k , then
+Ga(u) = 2(∂ ¯Pau)i, H ab(u) = 4∂ ¯Pa∂Pbu.(3.3)
+In particular, a holomorphic mapF= (F 1,...,F l)with complex JacobianJ νa =∂ PaFν satisfies
+H
+(∑
+ν
+|Fν|2
+)
+= 4J∗J.(3.4)
+For every smooth real functionρofF,G(ρ◦F)belongs to the quaternionic image ofJ ∗.
+Proof. Interchanging the real derivatives gives Hermitian symmetry. In a diagonal entry the terms
+with α̸ = β cancel in pairs; the remaining terms have coefficient one. Formula(3.1) applied to
+ξξ t gives gg∗, and sums of these rank-one forms give every nonnegative real form. The same
+formula and the ordinary product rule give(3.2). In four slots the real transpose of a quaternionic
+unitary U acts on the encoded covector asU∗. Thus the Hessian rule for a real rank-one form gives
+H(u◦U ) =U∗(H(u)◦U )U; linearity extends this to every real Hessian. Real orthogonal matrices
+on the coordinate index also preserve the three-slot subspace, giving the stated covariance there.
+ForPa = pa +kqa we have2∂ ¯Pa = ∂pa +k∂qa. Sinceki=j, this gives the gradient in (3.3).
+The four terms inHab have coefficients1,− k, k, 1in the order(papb,paqb,qapb,qaqb), which gives
+its Hessian formula. The complex chain rule now gives(3.4) and G(ρ◦F ) = 2J∗(∂ ¯Fνρ)ν i, with the
+derivatives ofρevaluated atF.
+3.2 The Moore cofactor
+For Hermitian quaternionic matrices use the real inner productA :B = Re tr(AB). The real part
+of the trace is cyclic; in particularA : (vv∗) =v∗Av. Write detA for the Moore determinant, the
+11
+product of them real eigenvalues counted with quaternionic multiplicity. These conventions agree
+with [2, Section 1.1, especially Theorems 1.1.8–1.1.9]. The next identities apply also to the full
+Hessian in the energy argument, whose spatial block is positive definite but whose time entry need
+not have a sign.
+Lemma 3.2(Matrix identities).The Moore determinant is a homogeneous polynomial of degreem.
+Its cofactorC(A)is the Hermitian matrix defined by
+C(A) :B= d
+dt det(A+tB)
+⏐⏐⏐⏐
+t=0
+.(3.5)
+It is polynomial of degreem−1, and
+C(A) = (detA)A−1 (A>0).(3.6)
+If A≥ 0, thenC(A)≥ 0; if alsoA is singular,C(A)kills the image of A. On positive definite
+matriceslog detis concave and increasing in the matrix order.
+For a unit vectorv∈H m let A|v⊥ denote the compression of the form to its quaternionic
+orthogonal complement. For every HermitianAand realt,
+v∗C(A)v= det(A| v⊥),det(A+tvv ∗) = detA+tv ∗C(A)v.(3.7)
+The determinant on the zero-dimensional space is one. Finally, for a HermitianM =
+(ℓ c∗
+c D
+)
+with
+D>0, putσ=ℓ−c ∗D−1cand letv 0 be the first coordinate vector. Then
+detM= (detD)σ, M−σv 0v∗
+0≥0.(3.8)
+Proof. A Hermitian matrix has a quaternionic orthonormal eigenbasis: maximizev∗Av on the unit
+sphere and repeat on the orthogonal complement. By Newton’s identities its determinant is a
+polynomial in the power sumsRe tr(Aj),1 ≤j≤m . This gives(3.5) with the stated degrees. In
+the real representation onR4m each eigenvalue occurs four times. Thus forA >0, log detA is
+one fourth of the real log determinant. Differentiation proves(3.6), monotonicity and concavity.
+On a diagonal matrix each cofactor eigenvalue is the product of the otherm− 1eigenvalues, first
+for positive matrices by(3.6), then for all diagonal matrices by polynomiality. Unitary invariance
+proves the claims for singularA.
+Completing the square shows that the form ofM−σv 0v∗
+0 at(b,w )is( w +D−1cb)∗D(w +D−1cb).
+Forσ >0the real Schur determinant formula gives(detM )4 = (detD )4σ4; take the positive fourth
+root. Both sides ofdetM = (detD )σ are polynomials inℓ, so the identity holds for everyσ. In
+a basis withv first, addingtvv∗ changes onlyℓ. For positiveA the change in its determinant is
+therefore exactlytdet (A|v⊥). Differentiation in t gives the first formula in(3.7); polynomiality
+extends both to every HermitianA. Form= 1they hold directly.
+3.3 Column divergence and the boundary term
+Inkslots the real tensor (2.6) of a Hermitian fieldA(z)has coefficients
+AR
+aα,bβ = Re(¯eαAabeβ).(3.9)
+This symmetric real matrix represents the Hermitian form on the encoded real vectors:(∇v)tAR∇u =
+Re(G(v)∗AG(u)). Likewise A :H(u) = AR :D2u, where the pairing on the right is the ordinary
+real matrix inner product. Consequently, whenever the real columns have zero divergence,
+A:H(u) = div(A R∇u).(3.10)
+12
+One sufficient condition is the quaternionic row identity
+∑
+a,α
+¯eα∂aαAab = 0 (1≤b≤m) :(3.11)
+multiply on the right byeβ and take real parts. Also, ifAG(w) = 0for a real scalar functionw,
+then wA preserves either form of column conservation already satisfied byA. Indeed the extra row
+in the product rule isG(w)∗A= 0.
+Alesker showed that the real tensor representing the Moore cofactor of a positive definite
+quaternionic Hessian has divergence-free columns. This puts the linearized Monge–Ampère operator
+in divergence form [4, Lemma 4.6]. The following polynomial proof also covers the three slots used
+by the wave current and allows an indefinite or singular Hessian.
+Lemma 3.3(Cofactor divergence).For k = 3or4and a smooth real u, the Hessian cofactor
+satisfies ∑
+a,α
+¯eα∂aαC(H(u))ab = 0 (1≤b≤m).(3.12)
+Proof. Form = 1the cofactor is one. Otherwise putj0 =m− 1. Polarize the cofactor: for Hermitian
+inputs M1,...,M j0, denote the coefficient oft1···t j0 in C(∑
+jtjMj)by Q(M1,...,M j0). This is
+multilinear, and on the diagonal equalsj0!C(M 1).
+TakeMj =gjg∗
+j. Fortj > 0,∑
+jtjgjg∗
+j is singular: its image is the quaternionic span of thej0
+columns. Its cofactor therefore kills eachgj, by Lemma 3.2. This polynomial identity int holds
+coefficient by coefficient. ThusQ =Q(g1g∗
+1,...,g j0g∗
+j0)kills every gj, andg∗
+jQ = 0as well sinceQ
+is Hermitian.
+Test the polarized identity onuj(z) = exp(ξj·z )with arbitrary real covectors ξj, using the
+Euclidean dot product. Set( gj)a = ∑
+αeα(ξj)aα. The Hessian symbol in Lemma 3.1 gives
+Q(H(u1),...,H (uj0)) = exp((∑
+jξj)·z )Q. After cancellation of this exponential, its row divergence
+is(∑
+jgj)∗Q = 0. To pass to arbitrary smooth inputs, observe that the row divergence is a multilinear
+differential expression with constant coefficients: its value on these exponential functions, divided
+by their product, is the polynomial whose coefficients multiply the corresponding derivatives of the
+inputs. That polynomial vanishes for all covectors, so all coefficients vanish. Taking every input
+equal touproves (3.12).
+Here is the boundary convention used for both the current and the cofactor. On a smooth
+domainΩ = {r< 0} assume∇r̸ = 0on ∂Ω. Writen= ∇r/|∇r| for the real outward unit normal
+and ν =G(r)/|∇r| for the same vector in quaternionic coordinates. By(3.10), Green’s identity for
+a field with divergence-free real columns is
+∫
+Ω
+(
+vA:H(u)−uA:H(v)
+)
+=
+∫
+∂Ω
+Re(vν∗AG(u)−uν ∗AG(v)) dS.(3.13)
+Volume and surface measure are Euclidean. The same formula holds in periodic coordinates, with
+test functions of compact support in any unbounded directions.
+If u vanishes on∂Ω, thenG(u) =ν∂ nu there. Alsou =ρr for a smoothρ near the boundary:
+use r as one local coordinate and integrate the derivative ofu in that coordinate. The cross terms
+of (3.2) then vanish on compression, giving
+H(u)|ν⊥ =ρH(r)| ν⊥ on∂Ω.(3.14)
+In four slots this calculation gives the invariance of the quaternionic Levi form under a change of
+defining function [3]. Functions independent of the fourth slot give the same formula in three slots.
+In particular the normal flux coefficientν∗C(H(u))ν depends only on this compressed form, by
+(3.7). This is why the determinant boundary term can be evaluated without knowing the second
+derivative ofuin the real normal direction.
+13
+4 The determinant energy and its boundary flux
+The time component of the wave current is a sum of squares. After regularization it gives the
+density for a spatial Dirichlet potential: a lower bound on the density throughout a ball forces a
+definite depth at its center. To compare that depth at different times, we need a scalar energy on
+the three real coordinatesz = (T,τ )∈R×C k whose Laplacian is bounded above by the wave flux
+through the side of the spatial fiber.
+Keep the annular wave on the torus from Section 2, normalized by∥f∥ 2 = 1. Putw0 = 1/10
+and assume its sector|v|≤γ has γ <w0/4. Writes =|τ| and a =Kh, whereK≥ 1is fixed and h
+is small enough that4a≤1. All the constructions of this section take place ona<s<4.
+4.1 The geometry of the fibers
+At fixedz, letX run over the spatial torus and let the imaginary spatial variables(P,Z )∈C d
+k×C k
+vary in the domain
+Ωz :r= |W| 2
+w2
+0
++ 100|Q|2−1<0, Q= Φ/a.(4.1)
+The shape of the fiber reflects two properties of the current from Proposition 2.2: it is tangent to
+the level sets ofΦ, and its Gaussian is centered atW =v for a mode of slopev. Only theW part of
+the wall normal can therefore carry wave flux. In(W,Q )the fibers are all the same ellipsoid. The
+definitionsY= (τ+Z)/
+√
+2,W=P/YandΦ = (Z−τ)/
+√
+2 +P·P/(2Y)give the inverse map
+Y=
+√
+2τ+aQ
+1 +W·W/2 , P=WY, Z=
+√
+2Y−τ.(4.2)
+The denominator is bounded away from zero on|W|≤w 0, and|aQ|≤s/ 10, so y =|Y|≍s .
+Both the chart and its inverse are holomorphic on neighborhoods of these closed fibers and depend
+smoothly onτ. On the total domainΩ ={(z,X,P,Z ) :a<s< 4, (X,P,Z )∈ Ωz} we useH,G for
+the full Hessian and gradient from Lemma 3.1. Their spatial parts at fixedz are Hfib,G fib. Fiber
+integrals use ordinary volumedζ= dXdPdZin the original coordinates.
+Lemma 4.1(Fiber geometry).The spatial Hessian Hfib(r)is positive definite. The full H(r)
+is positive semidefinite with a one-dimensional quaternionic kernel contained in bothG(r)⊥ and
+kerH(|Φ| 2). On the closed fibers, uniformly fora<s<4,
+Hfib(r)≥cs −2I, G fib(r)Gfib(r)∗≤H fib(r),(4.3)
+dPdZ≍a 2s2d dWdQ,detH fib(r)≍a −2s−2d.(4.4)
+The spatialHfib(|Φ|2)has rank one with nonzero eigenvalue comparable to one. Also|G(|W| 2)|≲s −1.
+Proof. Set F = (W/w0, 10Q)and let J be its complex Jacobian in(τ,P,Z ), with spatial submatrix
+Jfib. Sincer=|F| 2−1, Lemma 3.1 gives
+H(r) = 4J∗J, G(r) = 2J ∗Fi.
+At fixedτ the spatial JacobianJfib is invertible. In the full space we can varyτ while keeping(W,Q )
+fixed; the resulting direction spanskerJ over Ck and its quaternionic span is the null line ofH(r).
+This line is orthogonal toG(r), which belongs to the image ofJ∗, and lies inkerH (|Φ|2)because
+the last row ofJ is proportional to∂Φ. By (4.2), derivatives of(P,Z )in W are O(s)and those in
+QareO(a). Thus∥J −1
+fib∥≲s; together with|F|≤1this proves (4.3).
+14
+The complex Jacobian determinant of(4.2) in( W,Q )is
+√
+2aY d/(1 +W·W/ 2): taking the
+exterior product of the differentials ofP =WY withd Y leaves justYd times the product of the
+differentials ofW withd Y. Squaring the absolute value gives the volume formula. The determinant
+of4 J∗
+fibJfib is4 n|det CJfib|2, giving the second bound in(4.4). Finally the spatial derivatives ofΦ
+are bounded and∂ZΦ = (1−W·W/ 2)/
+√
+2 is bounded away from zero. All first derivatives of
+W=P/YareO(s −1).
+4.2 The Dirichlet potential
+The time density can vanish. We first smooth the wave current inX and cut it off in the passive
+coordinate Q. To make its time density strictly positive, we then add a conserved current whose
+image is the null line ofH(r); it has zero flux through the wall. Forℓ> 0let Jℓ be the periodization
+on the spatial torus of the probability kernelcnℓ−n(1 +|X/ℓ|2)−n−2. Choose a smooth0≤g≤ 1
+onC k, equal to one on|Q|≤1/100and zero on|Q|≥1/20. Define
+Aw =g(Q)(J h∗X A0), A=A w +h 50nC(H(r)), µ=A TT.(4.5)
+Convolution takes place only in the real spatial variable. Since∂Φis independent ofX, the averaged
+current still annihilates the image ofH(|Φ|2)and hence G(g(Q)). The product rule for divergence
+therefore preserves conservation under the cutoff. By Lemmas 3.2 and 3.3, the regularizing cofactor
+is positive semidefinite and divergence free. Its image iskerH (r), perpendicular toG(r), and its
+TTentry isdetH fib(r)>0. Thus
+A≥0, µ>0, A:H(|Φ| 2) = 0.(4.6)
+Put B0 = λ|Φ|2, B = H(B0), Bfib = Hfib(B0), withλ = h−30n. By (4.6), the full background
+satisfies A :B = 0. Its spatial blockBfib has one nonzero eigenvalueβ≍λ . The factorh50n keeps
+the added density below the wave estimates of Section 5; we takeλlarge enough that
+µ1/d≤λ(4.7)
+for all sufficiently smallh. To see this, each Gaussian amplitude factor inχ has size at most
+(κ/y)d/2 ≲h−d. The columnsVv are bounded and∑|cκ,v|≲h −n/2 by the cap estimate in Section 2,
+so∥A 0∥≲h −n−2d. The regularizer adds onlyO(h50na−2s−2d)toµby (4.4).
+On each spatial fiber there is a unique smooth realusatisfying
+Du =H fib(B0 +u)>0,detD u =λµ, u| ∂Ωz = 0.(4.8)
+Indeed, the spatial defining Hessian is positive definite, andBfib≥ 0has zero determinant since
+n≥ 2. Together withµ >0these are the hypotheses of Theorem A.1. The chart(4.2) and the
+parameter assertion of that theorem give smooth dependence onz up to the lateral boundary;
+its barriers (A.2) give u≤ 0. To see how the equation measures depth, addαI to the spatial
+background. Then det(Bfib +αI) = (β +α)αd; thus for0<α≤λ a densityλµ corresponds to an
+isotropic comparison quadratic of curvatureα≍µ 1/d. Section 5 will use such quadratics on balls.
+4.3 Cancelling the full determinant
+The quantity that measures the depth of the potential against its density isX0(z) =
+∫
+Ωz(−u)µ dζ.
+Since the real columns ofA have zero divergence, Green’s formula for∆zX0 has interior term
+−
+∫
+ΩzA :H(u) dζ. In a related estimate for real positive tensors, Serre uses the determinant of a
+15
+Schur complement to isolate a diagonal entry of a second tensor [71, Proposition 2.2]. Here only the
+spatial block ofH(B0 +u)is known to be positive. Separate off its scalar Schur complement:
+H(B0 +u) =
+(
+ℓ c ∗
+c D u
+)
+=σ 0eTe∗
+T + Σ, σ 0 =ℓ−c ∗D−1
+u c,Σ =
+(
+c∗D−1
+u c c ∗
+c D u
+)
+≥0.(4.9)
+Here eT is the time coordinate vector. Completing the square givesΣ≥ 0. In the contraction
+with A the background termA : B vanishes by (4.6); in the determinant, detDu = λµ gives
+detH(B 0 +u) =λµσ 0. Thus
+A:H(u) =A: Σ +µσ 0 =A: Σ +λ −1 detH(B 0 +u).(4.10)
+The full determinant has no prescribed sign. We look for a second fiber integral whose Laplacian
+cancels this term. WriteDv =Hfib(B0 +v). Along the segmentB0 +θu, the cofactor of the full
+Hessian hasTT entry detDθu, and its contraction withH(u)differentiates the full determinant in
+θ. This suggests integrating the spatial determinant along the segment. For a smooth realv onΩ z
+withD v >0and zero boundary values, set
+Ez(v) = 1
+λ
+∫
+Ωz
+v
+∫1
+0
+detDθv dθdζ,J z(v) =E z(v)−
+∫
+Ωz
+vµdζ.(4.11)
+The segment integral is the quaternionic counterpart of the Aubin–Mabuchi energy: Mabuchi’s
+functional L integrates the variation of a Kähler potential against its complex Monge–Ampère
+measure [52, (2.2.1)]. Here the determinant is a polynomial, so the integrand is smooth up to the
+singular endpointD 0 =B fib. DefineF(z) =J z(u) =E z(u) +X 0(z).
+Proposition 4.2(Energy balance).The energy F is smooth ona <|τ|< 4. Let ρ denote the
+boundary value ofu/r, which extends smoothly from the interior. In the three variablesz = (T,τ )
+one has
+∆zF(z) +
+∫
+Ωz
+A: Σ dζ=
+∫
+ρG(r)∗AwG(r)δ(r) dζ.(4.12)
+The normal seen by the current is that of the moving wall in the total space, soG(r)is thefull
+gradient. The integration is on one fiber:δ(r) dζ = dSfib/|∇fibr|, where the spatial gradient is
+nonzero by the ellipsoid chart. SinceA: Σ≥0, the boundary integral bounds∆zFfrom above.
+Proof. Denote the boundary integral in(4.12) byB(z). The two identities whose sum gives the
+balance are
+∆zX0 =B(z)−
+∫
+Ωz
+A: Σ dζ−λ −1
+∫
+Ωz
+detH(B 0 +u) dζ,
+∆z[Ez(u)] =λ−1
+∫
+Ωz
+detH(B 0 +u) dζ.
+For a fixed complex product domain, Åhag et al.[1, Theorem 3.1] identified the Laplacian of the
+slice energy, up to normalization, with the integral of the full Monge–Ampère measure over the
+fiber. Here the fiber moves, so the second identity requires a boundary calculation. Both follow
+by testing with a smoothη =η(z)compactly supported in the parameter domain. The only entry
+of H(η)is HTT (η) = ∆zη. For any Hermitian matrix fieldM with divergence-free real columns,
+Green’s formula (3.13) on thetotaldomain gives
+∫
+Ω
+uMTT ∆zη=
+∫
+Ω
+ηM:H(u)−
+∫
+∂latΩ
+η(ν∗Mν)∂ nudS.(4.13)
+16
+Here ∂latΩis the side r = 0, and volume onΩisd z dζ. The term containingu∇η vanishes because
+u = 0on the lateral boundary; there are no end terms because of the support ofη. The unit
+outward normaln= ∇r/|∇r| on the total domain has quaternionic columnν =G(r)/|∇r|. Sincer
+is a smooth defining function,u =rρ near the boundary withρ smooth andρ≥ 0on r = 0. In
+particular∂ nu=ρ|∇r|.
+ForX0, takeM =A in (4.13) and change sign sinceX0 integrates(−u)µ. The interior term
+follows from(4.10). On the wall the regularizerC(H(r))has image perpendicular toν, so onlyAw
+contributes. Substituting∂ nu=ρ|∇r|anddS=|∇r|δ(r) dzdζgivesB(z).
+ForEz(u), takeM =C(H(B0 +θu)), whose columns are conserved by Lemma 3.3. Here the
+entire normal coefficient vanishes. Indeed (3.14) gives, onr= 0,
+H(B0 +θu)|ν⊥ = (B+θρH(r))| ν⊥.
+The null line ofH(r)belongs to both ν⊥ and kerB by Lemma 4.1; the restricted form is therefore
+singular. The cofactor restriction formula in Lemma 3.2 yieldsν∗Mν = 0, independently of the
+sign of the full Hessian. The same formula in theeT direction givesMTT = detDθu. Now integrate
+(4.13) in θ and divide byλ. On the left we obtain
+∫
+Ez(u)∆zη dz; on the right, integration of
+M :H(u) = ∂θ detH (B0 +θu)gives the full determinant atθ = 1, since detB = 0. This proves
+the second identity and hence the balance in distributions. The chart (4.2) makes the volume and
+surface integrals smooth inz, so it also holds pointwise.
+4.4 Size of the energy on a fiber
+Fix z. The segment integral in (4.11) is a primitive of the spatial determinant: for a smooth
+variationwwith zero boundary values, one has
+dJz(v)[w] =
+∫
+Ωz
+w(λ−1 detDv−µ) dζ,
+d2Jz(v)[w,w] =−λ −1
+∫
+Ωz
+Gfib(w)∗C(Dv)Gfib(w) dζ.
+For the first identity, differentiating under the integral in(4.11) produces a termθvC(Dθv) :Hfib(w).
+By cofactor divergence one may interchangev and w in its fiber integral; both vanish on the
+boundary. The integrand inθ is thenw∂θ(θdetD θv). Differentiating once more and integrating
+by parts gives the second formula. It is strictly negative for every nonzerow, sinceC(Dv) > 0.
+Thus the Dirichlet solution is the unique maximizer on this convex class. This is the smooth
+determinant variational principle with a rank-one background. For zero background, Wan proved
+the first variation and the corresponding variational characterization in quaternionic finite energy
+classes [76, Section 4].
+Sinceu≤ 0and Dθu = (1−θ )Bfib +θDu≥ 0, the correctionEz(u)is nonpositive. At a solution
+the linear term inF uses the determinant atB0 +u. ThusλF has the form of Aubin’sJ-functional
+[5, p. 145], withB0 +u as reference potential andB0 as argument in the relative formula [10,
+Section 2.1]. The rank-one background lets us calculate how much ofX0 remains inF =X0 +Ez(u).
+Lemma 4.3(Energy comparison).On every spatial fiber,
+F= n−1
+n+ 1X0 + 1
+λn(n+ 1)
+∫
+Ωz
+Gfib(u)∗C(Du)Gfib(u) dζ.(4.14)
+In particular, n−1
+n+1X0≤F≤ n
+n+1X0.
+17
+Proof.BecauseB fib has rank one, the determinant along the segment has just two terms:
+detDθu =θ n detDu + (1−θ)θ n−1C(Du) :B fib.
+WriteI =
+∫
+Ωz(−u)C(Du) :Bfib dζ≥ 0. Integrating inθ givesF =nX0/(n + 1)−I/ [λn(n + 1)], in
+particular the upper bound. AlsoC(Du) :D u =ndetD u, so
+nλX0−I=
+∫
+Ωz
+(−u)C(Du) :H fib(u) dζ=
+∫
+Ωz
+Gfib(u)∗C(Du)Gfib(u) dζ.
+This last integration by parts usesu = 0at the boundary. Substitution proves(4.14) and its lower
+bound.
+5 Estimating the energy on a fixed fiber
+On a fiber at fixed(T,τ ), the only positive contribution to the energy balance comes from the wave
+current crossing the spatial wallr = 0. The Gaussian is small where the current reaches the wall;
+comparison with a spatial average of the wave bounds the other factor, the boundary value ofu/r.
+This gives an upper bound for the flux in terms of the wave norm. To bound it by the energy itself,
+we must recover that same norm from the interior. There we invert the Gaussian and compareu
+with a quadratic on each ball of radiush.
+Proposition 5.1.Fix an annulus c1≤h|ξ|≤c 2, with0 < c1 < c2. There are constantsγ >0,
+K≥ 1, andc,C > 0, depending only onn and the annulus, with the following property. Leta =Kh,
+0< h <1/(4K), and letf be a trigonometric polynomial on the fixed torus, with∥f∥ 2 = 1and
+frequencies in this annulus and in|v|≤γ in some orthonormal frame. WritegT =e−iT|D|f and let
+F(T,τ)be its energy from Section 4. Then
+F(0,τ)≤Ca 2∥f∥pc
+pc (|τ|= 4a),(5.1)
+F(T,τ)≥ca 2∥gT∥pc
+pc (|τ|= 2a),(5.2)
+∆zF(T,τ)≤V(s)F(T,τ), V(s) =Cs −2e−cs/h (2a≤s=|τ|≤3).(5.3)
+The last two inequalities hold for allT∈R.
+Proof. Writed =n− 1, q =n/d =pc/2, andσ =s/h. Throughout the proof2a≤s≤ 3. On the
+fiber
+r=|W| 2/w2
+0 + 100|Q|2−1<0, w 0 = 1/10, Q= Φ/a,
+we use two regions. Onr = 0the cutoff in the current vanishes unless|Q|≤ 1/20, which forces
+|W|≥ (
+√
+3/2)w0. Near the center, where|W|≤γ and|Q|≤ 1/400, the Gaussian multiplier can be
+inverted. Figure 1 shows the separation between these regions. It lets us compare two exponentials
+with different constants in their exponents. For now take0<γ <w 0/8. We estimate uniformly in
+s, allowing the prefactor in the interior lower bound to depend onγ.
+A spatial average for the upper bound.For a dimensional constantD≥ 1, to be fixed below,
+set
+P∗(X) =
+(
+(JDs∗|gT|2)(X)
+)1/d, M= 2n+ 4.
+Here and below convolution is in the real spatial variablesX. Recall thatJℓ is the periodization of
+Cnℓ−n(1 +|X/ℓ|2)−M/2, of integral one. Differentiating this positive kernel term by term and then
+taking thedth root gives
+|∇j
+XP∗|≤C(Ds) −jP∗ (j= 1,2),
+∫
+Pd+1
+∗ dX≤∥g T∥pc
+pc.(5.4)
+18
+(a) The fiber wall
+|W|
+|Q|=|Φ|/a
+0 w0
+1/20
+1/10
+r<0 r= 0
+flux wall(b)
+(b) The recovery patch
+|W|
+|Q|
+0 γ 2γ
+1/400
+1/100
+Gaussian inversion
+g(Q) = 1
+centers
+Figure 1: The fixed fiber in modulus coordinates. The wave flux throughr = 0is supported on
+the heavy arc, where|Q|≤ 1/20and hence|W|≥
+√
+3w 0/2. This separation gives Gaussian decay
+e−cs/h even for|v|≤w 0/3. In the enlargement (b), onceKγ is large, the radius-h balls about the
+marked centers project into the dashed patch. There|W−v|≤ 4γ on the enlarged cap|v|≤ 2γ,
+so Gaussian inversion costs at mosteCγ 2s/h. The apertureγ is fixed independently ofh; its size
+relative tow 0 is schematic.
+The integral bound is Young’s inequality with exponentq. The positive kernel givesP∗> 0since
+∥gT∥2 = 1.
+We next bound the wave currentAw and its regularized densityµ. By Proposition 2.2, each
+scalar part of the wave polarization is a multiplier ongT with symbol a bounded smooth factor
+times
+(κ/y)d/2 exp(−Ψ),Ψ = 1
+2κy|W−v| 2, y=|Y|≍s.
+Multiply the symbol by a fixed smooth annular cutoff equal to one on the data and supported in
+|v|<w 0/3. In the variableη =hξ its derivatives through orderM are bounded byC(hs)−d/2σm
+for some fixed m. Indeed hκ and v have uniformly bounded derivatives on this cutoff,hκ is
+bounded away from zero there, and each derivative ofΨcosts at mostCσ. Onr = 0where g(Q)is
+nonzero,|W−v| has a fixed positive lower bound, so the same estimate gainse−c0σ for somec0> 0
+independent ofγ.
+If B bounds these derivatives of a compactly supported symbol, applying(1− ∆η)n+2 in its
+inverse Fourier transform bounds its absolute kernel byCBh−n(1 +|X/h|2)−M/2. Periodization
+gives the majorantCBJh on the torus, also for a rotated lattice. Thus the squared modulus of the
+multiplier output is bounded byCB 2Jh∗|gT|2. There is one more convolution withJh in Aw. We
+haveJh∗Jh≤CJ h: in the Euclidean convolution, either|Y| or|X−Y| is at least|X|/2, and the
+inequality persists after periodization. MoreoverJh≤ (Ds/h)nJDs. Using( hs)−d =s−2dσd and
+increasingmwhen necessary, we obtain
+∥Aw∥≤Cs −2dσmPd
+∗ (r≤0),
+∥Aw∥≤Cs −2dσme−c0σPd
+∗ (r= 0).(5.5)
+Here∥Aw∥ is the matrix operator norm. Only the first bound is needed forµ. Its extra term is
+h50n detH fib(r)≤Ch 50na−2s−2d by Lemma 4.1. The nearest lattice term in the positive kernel
+gives infXJDs(X)≥c DhM−n, since the torus has fixed diameter andh≤s≤ 3. Consequently
+Pd
+∗≥c DhM−n∥gT∥2
+2 =c DhM−n, which absorbsh50na−2. In particular
+µ≤Cs −2dσmPd
+∗ (r≤0).(5.6)
+19
+A comparison function that vanishes on the wall.PutR =Hfib(r). Two features of the
+defining function from Lemma 4.1 will be used together:R≥cs −2I and Gfib(r)Gfib(r)∗≤CR . It
+follows that
+Hfib(rP∗)≥(1−C/D)P ∗R.(5.7)
+In fact, the product rule of Lemma 3.1 givesP∗R, rHfib(P∗), and two terms pairing the gradients
+of r and P∗. For any quaternionic vector e the two gradient pairings withe have moduli at
+most C(e∗Re)1/2 and CD−1P∗(e∗Re)1/2, respectively. This estimates the mixed terms. The term
+involvingH fib(P∗)has relative costCD −2 by (5.4) and|r|≤1.
+Sincer< 0, an upper bound onu/r calls for a comparison function belowu, with determinant at
+leastλµ. FixD sotherightsideof (5.7)isatleast P∗R/2. ThebackgroundHessian Bfib =λHfib(|Φ|2)
+has rank one and its positive eigenvalue is comparable toλ=h−30n. Hence forv∗ =C 1σm1rP∗,
+det
+(
+Bfib +H fib(v∗)
+)
+≥cλ(C 1σm1P∗s−2)d≥λµ
+by (5.6) with m1,C 1 large enough. The potentialsv∗ and u have the same zero boundary data;
+Dirichlet comparison (Theorem A.1) yieldsv∗≤u≤ 0. Division by r < 0and passage to the
+boundary give
+0≤u/r≤C 1σm1P∗ (r≤0).(5.8)
+By Lemma 4.3,F ≤
+∫
+(−u)µ on the fiber. Its imaginary volume element is comparable to
+a2s2ddWdQby Lemma 4.1. Combining (5.4), (5.6) and (5.8) gives
+F(T,τ)≤Ca 2σm∥gT∥pc
+pc.(5.9)
+For the flux we need thefullgradient ofr. The tangency in Proposition 2.2 givesAwG(|Φ|2) = 0;
+the remaining part,G(|W| 2/w2
+0), has sizeO(s−1)since W =P/Y andy≍s . ThusG(r)∗AwG(r)≤
+Cs−2∥Aw∥. The Jacobian estimate also gives
+∫
+δ(r)dPdZ≤Ca 2s2d by coarea on the fixed ellipsoid
+in( W,Q ). Applying the wall bound in(5.5) and (5.8) to the flux integral in Proposition 4.2, we
+conclude that
+∆zF(T,τ)≤C(a/s) 2σme−c0σ∥gT∥pc
+pc.(5.10)
+Recovering the wave in the interior.Consider a center(X,P,Z )with|W|≤γ and|Q|≤ 1/400.
+The ball of radiush in the3n real spatial coordinates about this center lies in|W|≤ 2γ,|Q|≤ 1/100,
+providedKγ and K are sufficiently large:W =P/Y changes by at mostCh/s andΦby at most
+Chthere. The cutoff inA w is one throughout the ball.
+The first scalar multiplierS0 of the time component in(2.15) has symbolb0(κ/y)d/2e−Ψ with
+b0 = (1 + Re(W )·v/ 2)/
+√
+2 bounded away from zero. The other scalar component is orthogonal, so
+|S0gT|2≤A 0
+TT . InvertS 0 on the frequencies ofgT by multiplying its reciprocal symbol by a smooth
+annular cutoff equal to one on the data and supported in|v|≤ 2γ. On its supportΨ≤Cγ 2σ. The
+derivatives of the reciprocal symbol inη=hξthrough orderMare bounded by
+Binv =C γ(hs)d/2σmeCγ 2σ.
+Here the derivatives of the cutoff enter only the prefactorCγ; the constant in the exponential is
+independent ofγ. The kernel estimate above yields|gT (X)|2≤CB 2
+inv(Jh∗A 0
+TT )(X)for each choice
+of the imaginary coordinates in the ball. SinceJh(X′−Y )and Jh(X−Y )are comparable for
+|X′−X|≤h, the density atevery pointin the ball is at least
+mX =c γ(hs)−dσ−me−C2γ2σ|gT (X)|2.(5.11)
+20
+For the interior lower bound on−u we need a comparison functionaboveu. Letl be Euclidean
+distance from the center. The quadraticvb =ϵm1/d
+X (l2−h 2)vanishes on the boundary of the ball
+and has fiber Hessian6ϵm1/d
+X I (three real slots per spatial coordinate). FormX > 0, its determinant
+after addingB fib is at most
+C
+(
+(ϵm1/d
+X )n +λ(ϵm 1/d
+X )d)
+≤λm X
+with a fixed smallϵ: the density ceiling(4.7) and (5.11) give m1/d
+X ≤µ 1/d≤λ . Now u≤ 0 = vb
+on the ball boundary and the determinant ofBfib +Hfib(u)is λµ≥λm X. The local comparison
+principle from the proof of Theorem A.1 givesu≤v b in the ball. At the center the depth is therefore
+at leastϵh2m1/d
+X . Multiplication byµ≥m X gives(−u)µ≥ϵh 2m1+1/d
+X , also whenmX = 0. Here
+1 + 1/d=qandm X contains|g T (X)|2, giving the required power2q=p c of the wave.
+The imaginary volume of the center region is comparable toa2s2dγ2d. Integrate the center
+inequality there and inX, use the lower bound forF in Lemma 4.3, and recall thath2s2d(hs)−dq =
+σn−2. Enlarging the fixed powermand absorbingγ 2d into the prefactor gives
+F(T,τ)≥c γa2σ−me−C3γ2σ∥gT∥pc
+pc.(5.12)
+Choose γ so small thatC3γ2 < c0/2, then fixK to meet the ball inclusions and to ensure that
+h< 1/(4K)lies in the range of(4.7). Dividing the flux bound(5.10) by the interior lower bound
+(5.12) gives
+∆zF
+F ≤C γs−2σ2me−(c0−C3γ2)σ.
+The exponential absorbs the fixed power ofσ, proving(5.3). On the two circles in theτ plane the
+scaled radii4a/h = 4K and2 a/h = 2K are fixed. The energy upper bound(5.9) at the first circle
+gives (5.1) for the initial data; the lower bound(5.12) at the second gives(5.2) for the wave at time
+T.
+6 Propagation across a thin cylinder
+The energy in Proposition 5.1 controls the wave on the circle|τ| = 2a,1 ≤T≤ 2, and is controlled
+by the data at|τ| = 4a, T = 0. To compare these two sets, we first carry the energy out to|τ| = 1,
+where a fixed neighborhood connects the two time intervals. We then carry it back towards the
+inner wall. Each passage costs one logarithm, as Figure 2 illustrates. The radial harmonic functions
+used for comparison are the probabilities that planar Brownian motion leaves an annulus through
+one circle or the other [57, Theorem 3.18]. We use the maximum principle to retain this comparison
+in the presence of a potential.
+Lemma 6.1.Let0 <b< 1/4and D = log(3/b). Suppose a continuous potentialV : [b, 3]→ [0,∞ )
+satisfies ∫3
+b
+slog(s/b)V(s)ds≤M,sup
+1/2≤s≤3/2
+V(s)≤M.(6.1)
+LetE≥ 0be smooth on RT×{τ∈R 2 :b≤|τ|≤ 3}, with∆T,τE≤V (|τ|)E in the interior. Its
+circular mean
+H(T,s) = 1
+2π
+∫2π
+0
+E
+(
+T,s(cosθ,sinθ)
+)
+dθ
+satisfies, forb≤r≤1,
+H(0,r)≥c(M) log(r/b)
+D2
+∫2
+1
+H(T,b)dT.(6.2)
+In particular the factor atr= 2bis a constant timesD−2.
+21
+(a) Outward comparison
+3/4≤s≤5/4
+0 1 2 3b
+1
+3s
+Tobserved wave
+factor ats= 1: log 3
+log(3/b)
+(b) Inward comparison
+−1 0 1b
+2b
+1s
+T
+uniform lower bound
+H(0,2b)
+factor ats= 2b: log 2
+log(1/b)
+Figure 2: The two comparisons, with radiis =|τ| drawn schematically. The boundary mass on
+1≤T≤ 2bounds the mass in the shaded band from below. The mean inequality on a fixed annulus
+supplies a lower bound on the entire upper wall in (b). The two displayed fractions are values of
+the normalized radial harmonic functions. The comparison solutions with potential dominate fixed
+multiples of these values, giving the factor[log(3/b)]−2 at the dot. In the wave estimate,b = 2Kh:
+Hcontrols the wave norm on the marked segment and is controlled by the initial data at the dot.
+Proof. Averaging over rotations preserves the differential inequality, soH(T,|τ| )is again a super-
+solution of(−∆T,τ +V )H≥ 0. We first estimate the radial solutions that will be used for both
+passages. ForS= 1or3and a fixedκ>0, consider
+u′′ +s−1u′ = (V+κ 2)u, b<s<S,
+with endpoint values0, 1in either order. We claim thatu is bounded below by a constant times
+the function affine inlogs with the same values. Indeed,x = log(s/b)changes the equation into
+uxx =P (x)u on[0 ,A ], whereA = log(S/b)and P (x) =s2(V (s) +κ2). Letψ solve this equation
+withψ(0) = 0,ψ ′(0) = 1. Thenψ(x)≥x, and integrating twice gives
+ψ(x)
+x = 1 +
+∫x
+0
+z(x−z)
+x P(z)ψ(z)
+z dz.
+Sincez(x−z)/x≤min (z,A−z ), Gronwall’s inequality givesψ(A)/A≤exp (
+∫A
+0 min(z,A−z )P (z)dz).
+The contribution ofV to this integral is at mostM by (6.1); that ofκ2 is at mostκ2S2∫∞
+0 te−2tdt,
+using t = A−z . Thus ψ(x)/ψ(A)≥cx/A . The integral bound is unchanged underx↦→A−x,
+giving the other ordering of the boundary values.
+For the outward passage integrate againstsin(πT/ 3)on[0 , 3]. This cutoff is positive on the ob-
+served times and its second derivative is a multiple of itself. Writingm(s) =
+∫3
+0 sin(πT/ 3)H(T,s )dT,
+two integrations by parts give
+∫3
+0
+sin(πT/3)∂ 2
+TH(T,s)dT=−(π/3) 2m(s) + (π/3)
+(
+H(0,s) +H(3,s)
+)
+.
+It follows thatm′′ +s−1m′≤ (V +π2/9)m. Sincem(3)≥ 0, the maximum principle and the radial
+estimate withS= 3givem(s)≥cm(b) log(3/s)/D. In particular,
+∫3
+0
+∫
+3/4≤|τ|≤5/4
+H(T,|τ|)dτdT≥cm(b)/D.(6.3)
+On the fixed region−2 < T <4,1 /2 <|τ|< 3/2, we have∆H≤MH . The compact weak
+Harnack inequality there givesH(T, 1)≥c (M)m(b)/D for|T|≤ 1. To see the comparison directly,
+add a real variablev: the function H(T,|τ| ) cos(
+√
+M+ 1v )is nonnegative and superharmonic
+22
+on a fixed slab aboutv = 0. The mean inequality on the four-dimensional ball of radius2ρ at
+(x, 0), integrated over|v|<ρ , gives on the three-dimensional ball of radiusρ about x = (T,τ )the
+bound H(x)≥cρ−3∫
+Bρ(x)H for one small radiusρ throughout a neighborhood of the compact
+connected band[−1, 3]×{ 3/4≤|τ|≤ 5/4}; hereH(x) = H(T,|τ| ). Cover the band by finitely
+many balls of radiusρ/4. If two such ballsB,B′ overlap, thenB′⊂B ρ(x)for every x∈B , so
+infBH≥cρ −3∫
+B′H. A finite chain gives the stated lower bound from (6.3).
+For the return passage take the radial solution withS = 1, κ = π/2, u(b) = 0and u(1) = 1.
+On|T|< 1, b<|τ|< 1, the functionc(M)m(b)D−1 cos(πT/ 2)u(|τ|)solves( −∆T,τ +V )w = 0. It
+vanishes on|T| = 1and |τ| =b, and the preceding lower bound puts it belowH on|τ| = 1. The
+maximum principle and the radial estimate foru(r)therefore give
+H(0,r)≥ c(M)m(b)
+D
+log(r/b)
+log(1/b) (b≤r≤1).
+This proves (6.2), sincesin(πT/3)is bounded below on[1,2].
+Remark6.2.The dependence on r and b in Lemma 6.1 is sharp for scalar supersolutions, even
+when V = 0. Start with(1−cosT )p(s), wherep(s) = log(3/s)/D is the radial harmonic function
+with boundary values1, 0. To cancel the positive part of its Laplacian without changing those
+boundary values, put g(s) = s2(1 + log(3/s))/(4D). The radial harmonic interpolant L(s) =
+p(s)g(b)+(1−p(s))g(3)lies aboveg, since∆τg =p≥ 0. ThusE(T,s ) = (1−cosT )p(s)+L(s)−g(s)
+is bounded and nonnegative, with∆T,τE = (cosT− 1)p≤ 0. Its trace ats =b is1 −cosT , and
+sincegis increasing we have
+E(0,r)≤(1−p(r))g(3) = 9
+4
+log(r/b)
+D2 .
+A fixed positiver would cost one logarithm. The data controlr = 2b, where a sharper estimate
+requires more information about the wave energy.
+Proposition 6.3.On the spatial torus Tn = Rn/(100Z)n, letf have Fourier support inc0/h≤
+|ξ|≤C 0/h,0<h≤1, and in one cap of the fixed aperture from Proposition 5.1. Then
+(∫2
+1
+∥U(T)f∥ pc
+Lpc(Tn)dT
+)1/pc
+≤C[log(2/h)] 2/pc∥f∥Lpc(Tn).(6.4)
+The constant is uniform inhand in the direction of the cap.
+Proof. Forf̸ = 0, first normalize∥f∥L2(Tn) = 1. Fix the constantK in Proposition 5.1, puta =Kh
+and b = 2a, and takeh small enough thatb < 1/4. Apply Lemma 6.1 to the energy of that
+proposition withV(s) =Cs −2e−cs/h. Its first bound in (6.1) follows from
+∫3
+b
+slog(s/b)V(s)ds≤C
+∫∞
+1
+logt
+t e−2cKtdt,
+and V is uniformly bounded when1/2≤s≤ 3/2. The two energy bounds in Proposition 5.1 are
+uniform on their respective circles, so its circular mean satisfies
+H(0,2b)≤C Ka2∥f∥pc
+pc, H(T,b)≥c Ka2∥U(T)f∥ pc
+pc.
+Take r = 2b in (6.2), substitute both bounds, cancel a2, and take pc-th roots. Since D =
+log(3/(2Kh)) ≲log (2/h)and K is fixed, this gives(6.4). Homogeneity removes the normalization
+after this comparison. For the remainingh the torus frequencies lie in a fixed ball, where the
+estimate follows by a finite Fourier sum.
+23
+7 Passage to Euclidean space and Sobolev estimates
+The aperture in Proposition 6.3 is fixed. A finite partition of the sphere therefore gives the critical
+estimate on the whole annulus without increasing its logarithmic power. We first remove the spatial
+period and then account for the cost of summing annuli.
+7.1 Removing the period
+Proof of Theorem 1.2.Write h = N−1 and Ph = φ(hD), with φ supported in a fixed compact
+annulus. Choose a smooth finite partitionφ =∑
+νφν subordinate to the admissible caps. The
+Euclidean kernel ofφν(hD)is h−n ˇφν(·/h), and periodization does not increase itsL1 norm. Apply
+Proposition 6.3 toφν(hD)fon the same torus for everyν, and sum. This gives
+∥U(T)Phf∥Lpc(I×Tn) ≲[log(2/h)] 2/pc∥f∥Lpc(Tn),0<h≤1.(7.1)
+The Euclidean convolution kernel ofU(T)Ph is
+Kh(T,X) = (2πh)−n
+∫
+ei(X·η−T|η|)/hφ(η) dη.
+ForT∈I and|X|≥ 3the gradient of the phase before division byh has length at least|X|− 2≥
+|X|/3. Integration by parts in the gradient direction gainsh/|X| each time: the amplitude is
+supported away from zero and all phase derivatives of order at least two are bounded there. Using
+at leastM+nintegrations gives
+|Kh(T,X)|≤C MhM(1 +|X|)−M, T∈I,|X|≥3.(7.2)
+Tile Rn by unit cubesQ, and write10Q for the concentric cube of side ten. OnQ the contribution
+of f 1(10Q)c is bounded pointwise byCMhM((1 +|·| )−M∗|f| )(X), since|X−Y|≥ 9/2for X∈Q
+and Y /∈10Q. This single function bounds the far contributions on every cube. ForM > n, its
+Lpc(I×R n)norm isO(h M)∥f∥pc by Young’s inequality.
+Translate the center ofQ to the origin and periodizefQ =f 110Q on the torus of side100. Its
+torus norm is∥f∥Lpc(10Q). The periodic wave kernel is the periodization ofKh. OnQ, its nonzero
+translates see only argumentsX−Y + 100k with Y∈ 10Q and k∈Z n\{ 0}. Since|Xj−Yj|≤ 5.5,
+these arguments have length at least94.5|k|. Summing (7.2) overk bounds the difference between
+the two outputs there byCMhM∥fQ∥1. As10Qhas fixed volume, (7.1) now gives
+∥U(T)PhfQ∥Lpc(I×Q) ≲[log(2/h)] 2/pc∥f∥Lpc(10Q).
+Take thepc-th powers and sum overQ. The cubes10Q have bounded overlap. Combining this sum
+with the far contributions gives the asserted Euclidean estimate, sincelog(2/h)≍log (2 +N)for
+N≥2.
+7.2 Interpolation and summation
+Plancherel bounds the norm ofU(T )Ph from L2
+X to L2
+T,X by∥φ∥∞, since|I| = 1. At p =∞ its
+norm isO(h−d/2). To see this, partition the annulus intoO(h−d/2)caps of aperture c
+√
+h with
+bounded overlap. In coordinatesη = (
+√
+hz,ρ )about the axis of a cap, its cutoff is supported in a
+fixed compact set withρ bounded below and has uniformly bounded derivatives. Such cutoffs are
+obtained by dividing rescaled angular bumps by their sum; the overlapping centers have bounded
+offsets in these coordinates. Removing the linear phaseTρ/hleaves
+T
+h
+(√
+ρ2 +h|z| 2−ρ
+)
+= T|z| 2
+√
+ρ2 +h|z| 2 +ρ .
+24
+The expression on the right has uniformly bounded derivatives on the support. Integration by parts
+thus bounds theL1 norm of each rescaled kernel by a constant. The affine change of frequencies
+and the spatial translation from the linear phase preserve that norm. Summing over the caps gives
+the claimed bound.
+Set s+(p) = max{0,d/ 2−n/p} and β(p) = min{d(1− 2/p), 2/p}. Interpolating Theorem 1.2
+with the two bounds above gives
+∥U(T)Phf∥Lp(I×Rn) ≲ph−s+(p)[log(2/h)]β(p)∥f∥Lp(Rn),2≤p≤∞.(7.3)
+Indeed, abovepc the power ofh−1 is(d/2)(1−pc/p) =d/2−n/p. We use Riesz–Thorin interpolation
+here and the spatial Littlewood–Paley and Mihlin theorems below; see [32, Chapters 1 and 6].
+Proof of Theorem 1.1.The gain of an arbitraryε> 0now allows an absolute sum over dyadic annuli.
+Indeed, setg =Js+(p)+εf. At frequency2j,j≥ 1, (7.3) bounds the output byC2−jε(1 +j)β(p)∥g∥p:
+a smooth enlargement of the annulus times2j(s+(p)+ε)J−s+(p)−ε has uniformly integrable kernel.
+The coefficients are summable. On the remaining low frequencies the cutoff timese−iT|ξ| obeys
+uniform Mihlin bounds forT∈I. Atp= 2use Plancherel without any loss.
+The same summation can be made more precise if one wants an estimate at the exact power
+s+(p).
+Corollary 7.1(Logarithmic Sobolev estimate).Let2 < p <∞, δp = 1/2− 1/p, andB∗(p) =
+β(p) +δp. WriteJ= (1−∆) 1/2,ℓ 1(r) = log(2 +r)andℓ 2(r) = log(2 +ℓ 1(r)). Then
+∥U(T)f∥ Lp(I×Rn) ≲p,B,C∥Js+(p)ℓ1(J)Bℓ2(J)Cf∥Lp(Rn) (7.4)
+whenever B >B∗(p)and C∈R , orB =B∗(p)and C >δp. Atp =pc, B∗(pc) = 1/2 + 1/pc and
+δpc = 1/(2n). Atp= 2no logarithmic factor is needed.
+Proof of Corollary 7.1.LetPj be the projections of a smooth dyadic partition of the high frequencies,
+|ξ|≍ 2j, j≥ 1, and ~Pj an enlarged cutoff equal to one on the support of the symbol ofPj. Write
+s=s +(p)andg=J sℓ1(J)Bℓ2(J)Cf. On thej-th annulus put
+Aj = 2js(1 +j)B[log(2 +j)]C ~PjJ−sℓ1(J)−Bℓ2(J)−C.
+If aj is the symbol ofAj, then the functionsaj(2jη)have common compact annular support and
+uniformly bounded derivatives. Bounded overlap of the original annuli therefore gives uniform
+Mihlin bounds for all signed sums of theAj. Randomizing these signs and using Khintchine’s
+inequality gives, forp≥2,
+(∑
+j
+∥Ajg∥p
+p
+)1/p
+≤
+‖‖‖
+(∑
+j
+|Ajg|2
+)1/2‖‖‖
+p
+≲p∥g∥p.
+The wavesuj(T ) =U(T )Pjf retain their spatial frequency supports. The reverse Littlewood–
+Paley inequality at eachT, followed by the triangle inequality inLp/2(I×R n), gives
+‖‖‖
+∑
+j
+uj
+‖‖‖
+Lp
+T,X
+≲p
+(∑
+j
+∥uj∥2
+Lp
+T,X
+)1/2
+.
+By (7.3), thej-th norm on the right is at mostCwj∥Ajg∥p, wherewj = (1 +j)β(p)−B[log(2 +j)]−C.
+With1 /r =δp, Hölder’s inequality bounds this sequence inℓ2 by∥w∥ℓr(∑
+j∥Ajg∥p
+p)1/p. The weight
+25
+belongs toℓr when B >B∗(p). AtB =B∗(p)it belongs to ℓr precisely when∑
+j≥2j−1(logj )−Cr <
+∞, that is,C >δp.
+For the remaining low-frequency cutoffχ0, the symbole−iT|ξ|χ0(ξ)obeys the Mihlin derivative
+bounds uniformly inT∈I away fromξ = 0. The same holds after multiplication by the inverse of
+the Sobolev and logarithmic weights, which are smooth and positive near zero. This proves(7.4),
+first for finite frequency sums and then by density. Atp= 2use conservation of theL2 norm.
+The condition onB andC records the cost of this frequency summation. It need not be optimal
+for the wave operator: forn≥ 4and p> 2 + 4/(n− 3), Heo, Nazarov and Seeger proved(7.4) with
+B=C= 0[37, Theorem 1.2].
+8 Two obstructions to endpoint smoothing
+A spherical wave that focuses at one time determines the necessary Sobolev order. At the critical
+exponent the wave spends comparableLpc mass on every dyadic scale between wavelength and unit
+distance from the focus. We use the radial test of Beltran, Roos, Rutar and Seeger [9, Section 3],
+keeping the contributions from all these scales.
+Proposition 8.1(Radial focusing).Let n≥ 2, d =n− 1, andI = [1, 2]. For every sufficiently
+largeN there is a nonzero radial Schwartz functionfN, with supp ˆfN⊂{ 5N/4<|ξ|< 7N/4}, such
+that
+∥U(t)fN∥Lp(Rn×I)
+∥fN∥Lp(Rn)
+≳n,p
+
+
+
+1,2≤p<p c,
+(logN) 1/pc, p=p c,
+Nd/2−n/p, p c<p<∞.
+(8.1)
+Proof. Fixt0 = 3/2, take a nonzero nonnegativeψ∈C ∞
+c ((5/4, 7/4)), and setˆfN(ξ) =eit0|ξ|ψ(|ξ|/N).
+Plancherel gives∥fN∥2≍N n/2. To bound fN pointwise, writeξ = Nσω in its inverse Fourier
+transform. If|x|<t 0/2, thent0 +x·ω≥t 0/2and integration by parts inσ givesOm(Nn−m)for
+every integerm≥ 0. If|x|≥t 0/2, the Fourier transform of surface measure on the unit sphere is
+O((1 +Nσ|x|)−d/2). Thus∥f N∥∞ ≲N (n+1)/2, and
+∥fN∥p≤∥f N∥2/p
+2 ∥fN∥1−2/p
+∞ ≲N (n+1)/2−1/p (2≤p<∞).(8.2)
+The wave att =t0 +u has phasex·ξ−u|ξ| . Putr =|x| and F (v) =
+∫
+σd/2ψ(σ)eivσ dσ. The
+two stationary points on the sphere give, uniformly forNr≥1,
+U(t 0 +u)fN(x) =c nN (n+1)/2r−d/2
+[
+e−iπd/4F
+(
+N(r−u)
+)
++eiπd/4F
+(
+−N(r+u)
+)
++O
+(
+(Nr)−1)]
+,(8.3)
+where cn> 0. Indeed the leading terms of the angular integral have phases±Nσr and amplitudes
+(2π)d/2(Nσr )−d/2e∓iπd/4; the remainder isO((Nσr )−d/2−1)[ 74, Chapter VIII]. SinceF (0)> 0and
+Fis Schwartz, there are fixedη >0small andAlarge such that on the outgoing shell
+A/N≤u≤1/4,|r−u|≤η/N,
+the first term in brackets is bounded below in modulus and dominates the other term and the error.
+The shell has spatial volume≍N−1ud. Consequently (8.2) gives
+∥U(t)fN∥p
+Lp(Rn×I)
+∥fN∥p
+p
+≳
+∫1/4
+A/N
+ud−dp/2 du.
+The exponent ofu is−1precisely for p =pc; evaluating the integral gives all three cases of(8.1).
+26
+On this annulusJs = (1− ∆)s/2 has operator normOs(Ns)on the data, for every real s:
+after dilation and division byNs, a slightly enlarged smooth annular cutoff gives a multiplier with
+uniformly integrable kernel. The same argument applies to[log(2 +J)]β, with boundOβ((logN )β).
+Thus a Sobolev estimate requiress≥max{ 0,d/ 2−n/p}, and atpc a logarithmic estimate requires
+β≥ 1/pc. The functions fN are radial, so the same lower power applies to Theorem B.1 with
+angular derivatives on the input.
+For general data, a second example concentrates a fixed amount ofL2 mass on a spacetime set
+of small measure. Even the weak spacetime norm detects this concentration.
+Proposition 8.2(Weak spacetime obstruction).For2 < p≤p c and every sufficiently largeN,
+there is a nonzero Schwartz functiongN withsupp ˆgN⊂{5N/4<|ξ|<7N/4}such that
+∥U(t)gN∥Lp,∞(Rn×I)
+∥gN∥Lp(Rn)
+≳n,p (logN) d(1/2−1/p).(8.4)
+The exponent in(8.4) equals1 /pc at pc and is positive for every2 < p < pc. In particular
+Sobolev order zero fails throughout2<p≤p c. Both lower bounds apply toPN in Theorem 1.2
+wheneverφ(η) = 1for5 /4≤|η|≤ 7/4. If the strong critical upper bound held with power1/pc
+for all data, interpolation with theL2 energy bound would give exactly the exponent in(8.4) for
+2<p<p c. Appendix C proves Proposition 8.2 by transporting disjoint packets into overlapping
+tubes.
+9 Spherical extension and Kakeya tubes
+Writed = n− 1, p = pc = 2n/d, andL(R) = log(2 +R). We keep the logarithmic powerA in
+the wave estimate as a parameter. To see what happens to it in restriction, we take an incoming
+spherical wave whose amplitude varies with direction. Near its focus the radial oscillation cancels,
+leaving the extension of that amplitude from the unit sphere.
+For g on Sn−1 write Eg(X) =
+∫
+Sn−1eiX·ωg(ω) dσ(ω). Let Kδf(ω)be the supremum of the
+averages of|f|over unit tubes of radiusδparallel toω.
+Corollary 9.1(Spherical extension and Kakeya).Forn≥2,R≥2,z∈R n, and0<δ≤1,
+∥Eg∥Lpc(B(z,R))≤C n[log(2 +R)] 2/pc∥g∥Lpc(Sn−1),
+∥Kδf∥Ln(Sn−1)≤C n[log(2/δ)]4/pc∥f∥Ln(Rn).
+Every subset ofRn containing a unit line segment in each direction has Hausdorff dimensionn.
+A wave estimate with logarithmic powerA gives the same power for spherical extension and
+power2 A for the Kakeya maximal operator. The radial example after the proof shows that the
+latter power must be at least1− 1/n. Thus an unrestricted wave estimate with power1/pc would
+give the sharp Kakeya maximal logarithm.
+In the plane, Hörmander’s estimate gives the sharp logarithmic power1/4for local circle
+extension: take the output exponentq = 4 + 1/logR in [38, Corollary 1.3] and apply Hölder’s
+inequality on the observation ball and on the circle. Constant density forces this power by stationary
+phase. The planar directional Kakeya maximal bound has sharp power1/2[ 13, Equation (1.5)]; see
+also Córdoba’s theorem for rectangles [19]. Davies proved full Hausdorff dimension in the plane
+[21], and Wang and Zahl proved it in three dimensions [77, Theorem 1.1]; see also [36]. A separate
+three-dimensional maximal estimate withδ−ε loss and a four-dimensional Hausdorff dimension
+theorem appear in [63, Theorem 1.1] and [62, Theorem 1.1], respectively. Here the implication from
+a wave estimate to a fixed logarithmic maximal estimate works in every dimension.
+27
+Lemma 9.2.Suppose (1.2) holds withL(N)A for someA≥ 0, for a smooth radial cutoffχ(|ξ|/N)
+with χ supported in(1/2, 2)and equal to one near1. For R≥ 2, z∈R n, andg∈L p(Sn−1), the
+spherical extensionEg(X) =
+∫
+Sn−1eiX·ωg(ω) dσ(ω)satisfies
+∥Eg∥Lp(B(z,R)) ≲L(R) A∥g∥Lp(Sn−1).(9.1)
+Proof. Choose a nonnegative nonzeroψ∈C ∞
+c ((1, 2)). Modulation in time selects a frequency shell
+of width of order one:
+MNf=
+∫
+ψ(T)e iNTU(T)χ(|D|/N)fdT,∥M Nf∥p ≲L(N) A∥f∥p
+by Hölder inT. For1/2≤|Z|≤3its convolution kernel is
+KN(Z) =c nNd/2|Z|−d/2eiN|Z|ψ(|Z|) +O(N d/2−1), c n̸= 0.(9.2)
+Indeed, the radial multiplier isχ(ρ/N)ˆψ(ρ−N ). In polar coordinates the angular integral at
+u=ρ|Z|is
+∫
+Sn−1
+eiuω1 dσ(ω) =u−d/2(c+eiu +c−e−iu) +O(u−d/2−1), c +c−̸= 0,
+by stationary phase at the two poles. After radial integration the remainder isO(Nd/2−1). In the
+leading terms one can replaceχ(ρ/N)ρd/2 byNd/2 with the same error: the prefactor, extended
+by zero, has derivativeO(Nd/2−1)and
+∫
+|sˆψ(s)| ds<∞ . Fourier inversion givesψ(±|Z|); only the
+positive argument contributes.
+We linearize the distance phase at the focus, as in Hörmander’s passage from oscillatory integrals
+to extension [38, §3, (3.8)–(3.9)]; compare Tao’s deduction of local restriction from Bochner–Riesz
+estimates [75, proof of Theorem 1.1]. TakefN(rω) =e−iNrψ(r)g(ω), so that∥fN∥p =Cψ∥g∥p. For
+|X|≤RandN≥4R,
+N|rω−X/N|=Nr−X·ω+O(R 2/N) (r∈suppψ).
+Substitute this expansion in(9.2) and integrate inr,ω. The amplitude changes byO(R/N), and
+the radial phases cancel:
+N−d/2MNfN(X/N) =c′Eg(−X) +O
+(
+(1 +R 2)N−1∥g∥1
+)
+, c ′ =c n
+∫
+rd/2ψ(r)2 dr̸= 0.
+Choose N = (4 +R)3+n/p. The error hasLp(B(0,R ))norm at most C∥g∥p. On the left the change
+of variables costsNn/p−d/2 = 1, andL(N) ≲nL(R). This proves(9.1) at z = 0. Replacingg(ω)by
+eiz·ωg(ω)gives every center.
+9.1 Global extension from the sphere and the truncated cone
+Lemma 9.2 gives global estimates at strictly larger output exponents. For this step any fixed power
+of the logarithm suffices; the tube argument in the next subsection will retain that power. Write
+E for extension fromSn−1. For the truncated coneΣ = {(ρω,ρ ) : 1 ≤ρ≤ 2, ω∈S n−1}, let
+EΣG(x,t) =
+∫
+Σei(x·ξ+tτ)G(ξ,τ) dΣ(ξ,τ), with induced surface measure.
+Corollary 9.3(Global Fourier extension).Let1<a≤∞andb<∞. If
+b>p c, b> n+ 1
+n−1 a′,
+28
+then
+∥Eg∥Lb(Rn) ≲n,a,b∥g∥La(Sn−1),(9.3)
+∥EΣG∥Lb(Rn+1) ≲n,a,b∥G∥La(Σ).(9.4)
+These are strong estimates, including whena =∞. For b =∞ both estimates hold for every
+1≤a≤∞.
+The two strict inequalities give the interior of the conjectured range for these compact surfaces
+[61, Conjecture 1.1(i)]. The three-dimensional sphere estimate in [64, §§9.1–9.2] gives this range for
+S2 and, by randomizing caps, anL3 Kakeya maximal bound with lossδ−ε.
+Proof. The local spherical estimate in Lemma 9.2, withA = 2/pc by Theorem 1.2, costsOε(Rε)for
+everyε >0. By duality it bounds restriction of functions supported inB(0,R )from Lp′
+c(Rn)to
+Lp′
+c(Sn−1)with that loss. Since1 <p′
+c< 2, Tao’s epsilon-removal theorem [75, Theorem 1.2] gives
+global diagonal restriction at every1<u<p ′
+c. Dualizing givesE:L s→L s for everyp c<s<∞.
+If a≥b , takes =b and use the finite measure of the sphere. Ifa<b , puts = 1 +b/a′; then
+pc<s<b , sincepc = 1 + (n + 1)/(n− 1). InterpolatingE :L1→L∞ with E :Ls→L s at θ =s/b
+gives (9.3):θ/s= 1/band1−θ+θ/s= 1/a.
+For the cone use Nicola’s slicing argument [61, Theorem 1.2(a)(i)]. WriteGρ(ω) = G(ρω,ρ ).
+SincedΣ =
+√
+2ρn−1 dρdσ,
+EΣG(x,t) =
+√
+2
+∫2
+1
+eitρρn−1E(Gρ)(ρx) dρ.
+Hausdorff–Young int, Minkowski’s inequality (b≥b′), and spatial dilation give
+∥EΣG∥Lb
+x,t
+≲
+(∫2
+1
+[ρn−1−n/b∥E(Gρ)∥Lbx]b′
+dρ
+)1/b′
+≲
+‖‖‖∥Gρ∥La(Sn−1)
+‖‖‖
+Lb′
+ρ ([1,2])
+.
+Hölder’s inequality gives(9.4) because b>a ′ implies a>b ′. Forb =∞ the defining integrals are
+bounded by theL1 norms on the two compact surfaces.
+9.2 From caps to tubes
+Let Tδ(ω,x )be the open δ-neighborhood ofx + [−1/2, 1/2]ω. Its volume is comparable toδd for
+0 < δ≤ 1. Thus Kδf(ω)is the supremum overx of|Tδ(ω,x )|−1∫
+Tδ(ω,x)|f|. These averages are
+continuous in the center and direction forf∈L n, by continuity of translations and rotations of the
+tube indicator inLn/(n−1); in particular the supremum is measurable.
+A cap of radiusδ produces a wave of roughly constant modulus on a tube of lengthδ−2 and
+radius δ−1. The restriction argument of Beckner, Carbery, Semmes and Soria [7] and Bourgain [13]
+puts independent signs on disjoint caps. The expected squared modulus of the sum is then the sum
+of the squared moduli. This accounts for the factor of two in the logarithmic exponent.
+Lemma 9.4.Assume (9.1) and setq =p/2 =n/(n− 1). Let0 <δ≤ 1/2, let theωj beδ-separated
+onS n−1, and choosexj∈R n arbitrarily. Then forTj =T 2δ(ωj,xj)anda j≥0,
+‖‖‖
+∑
+j
+aj1Tj
+‖‖‖
+Lq(Rn)
+≲L(1/δ) 2A
+(
+δd∑
+j
+aq
+j
+)1/q
+.(9.5)
+29
+Proof. Take the disjoint capsCj ={|ω−ω j|< cδ} for a small fixedc > 0, and puthj(ω) =
+e−iδ−2xj·ω1Cj(ω). ForY∈T j, writeY−x j =tωj +v with|t|≤ 1/2,|v|< 2δ. Sinceωj· (ω−ω j) =
+−|ω−ω j|2/2, the phase inEhj(δ−2Y )differs from its value atωj by at mostc2/4 + 2c. Thus
+|Ehj(δ−2Y)|≳σ(C j)≍δ d onT j.
+Group the centers by the unit lattice cubesQ, withJQ ={j :xj∈Q} (use half-open cubes).
+The tubes in this group lie in the concentric cube5Q, so their dilates all lie in a ball of radius
+Cnδ−2. For independent random signs εj set gε = ∑
+j∈JQεja1/2
+j hj. Disjointness of the caps
+gives∥gε∥p
+p ≲δ d∑
+j∈JQaq
+j. At each point Jensen’s inequality givesE|Egε|p≥ (∑
+j∈JQaj|Ehj|2)q.
+Integrate onδ−2(5Q), change variables back toY, and apply (9.1) on the enclosing ball:
+δdp−2n
+∫
+5Q
+(∑
+j∈JQ
+aj1Tj
+)q
+≲L(1/δ) Apδd ∑
+j∈JQ
+aq
+j.
+The prefactor is one becausedp = 2n. The cubes5Q have bounded overlap, so theq-th power of
+the norm on the left of(9.5) is bounded by a constant times the sum of these integrals. Taking the
+q-th root givesAp/q= 2A.
+9.3 The maximal estimate and Hausdorff dimension
+Proof of Corollary 9.1.Theorem 1.2 givesA = 2/p in Lemma 9.2. We keepA in the next steps to
+record the dependence on the wave estimate. For0<δ≤ 1/2choose a maximal δ-separated set
+{ωj}. If|ω−ω j|≤δ, thenT δ(ω,x)⊂T 2δ(ωj,x). Hence
+∥Kδf∥Ln(Sn−1) ≲
+(
+δd∑
+j
+K2δf(ωj)n
+)1/n
+.
+To bound this discrete norm, test byaj≥0withδ d∑
+jaq
+j = 1. Foranychoice of the centers,
+δd∑
+j
+aj
+|Tj|
+∫
+Tj
+|f|≲
+∫
+|f|
+∑
+j
+aj1Tj ≲L(1/δ) 2A∥f∥n
+by Lemma 9.4 and Hölder. Taking suprema over the centers and then the weights proves the
+maximal estimate. Forδ∈[1/2,1]it follows from Hölder on each tube.
+Suppose F contains a unit segment in every direction. Its openδ-neighborhood Fδ contains the
+entire tube around each such segment. Consequently
+|Fδ|≳L(1/δ) −2An =L(1/δ)−2(n−1) (A= 2/p).(9.6)
+For bounded sets this already gives full lower and upper Minkowski dimension. To obtain Hausdorff
+dimension we have to allow balls of different sizes in the same cover. In fact the logarithmic rate
+gives infinite Hausdorff measure for every gauge
+hγ(r) =r n[log(1/r)]2An[log log(1/r)]γ, γ >n−1 (rsmall).
+Since hγ(2r) ≲h γ(r), it suffices to use ball covers. Consider an open ball cover{Bj} of F with
+radii rj≤e−2m
+. Group the radii byJk ={j : 2k≤log (1/rj)< 2k+1} as in the planar argument
+of Keich [44, Claim 3.2]. Putδk =e−2k+1
+, Gk =⋃
+j∈Jk 2Bj and vk =∑
+j∈Jkrn
+j. On a segment in
+direction ω, the length covered by groupk is at mostCKδk 1Gk(ω). Indeed, at each covered point
+the transverse disk of radiusδk lies in a doubled ball, and disks at different points give disjoint cross
+30
+sections of the tube. Summing lengths therefore gives1≲∑
+k≥mKδk 1Gk(ω)in every direction. The
+maximal estimate and Hölder inkyield
+1≲
+∑
+k≥m
+22Akv1/n
+k ≲
+(∑
+j
+hγ(rj)
+)1/n(∑
+k≥m
+k−γ/(n−1)
+)(n−1)/n
+.
+The last factor tends to zero. Thus the Hausdorff measure for this gauge is infinite, andhγ(r) =o(rs)
+for everys<n gives dimHF =n. In the plane the same calculation with the classicalL2 maximal
+power1/2cited above gives infinite Hausdorff measure forr2 log(1/r)[log log(1/r)]γ wheneverγ >1.
+The same covering argument works if a segment in each of a positive measure set of directions meets
+Fin length at least a fixedλ>0.
+The radial testfδ(X) =|X|−11{2δ<|X|<1/2} shows the scale of a possible improvement. ItsLn
+norm is comparable to[log(1/δ)]1/n for smallδ, but the average on a tube centered at the origin
+in any direction is at leastc
+∫1/4
+4δ t−1 dt. Hence the maximal logarithm must have power at least
+1− 1/n = 2/p. A wave estimate with the sharp powerA = 1/p for arbitrary data would attain
+this bound and give|Fδ|≳L (1/δ)−(n−1). There are compact Kakeya sets satisfying the opposite
+inequality, by Fernández-Delgado and de la Salle [24, Theorem 1.3].
+9.4 Two consequences for other families of segments
+For the Nikodym maximal functionNδf(x), take the supremum of the same tube averages over all
+unit segmentsthroughx. The estimate just proved gives
+∥Nδf∥Ln(Rn) ≲L(1/δ) 2A∥f∥Ln(Rn).(9.7)
+We give the projective argument to keep track of the logarithm; compare Tao [75, Theorem 4.10]
+and Gao–Liu–Xi [30, §2.2]. First consider only theρ-neighborhoods of the segments{x +uω : 1/2≤
+u≤ 1}, and denote the supremum of their averages byDρf(x). By finitely many rotations we can
+restrict to|ωn|≥c n. Placex = (x′,t 0)in a unit cubeQ centered at zero and fixt0. Forρ small, on
+each such tubecn/4≤|s−t 0|≤2and|y ′|≤C n. On either sign ofs−t 0, the map
+(y′,s)↦−→(Y′,Yn) =
+(
+y′/(s−t 0),1/(s−t 0)
+)
+and its inverse are uniformly Lipschitz there. It sends the liney′ =x′ + (s−t 0)v to Y′ =v +Ynx′,
+so the direction(x′, 1)/|(x′, 1)| is independent ofv. The image tube is covered by a bounded
+number of unit tubes of widthCnρ in that direction. For each sign, transportf restricted to
+5Q∩{c n/4≤± (s−t 0)≤ 2} by this map and extend by zero; this is a single input for allx′ in the
+slice. ItsLn norm is at mostC∥f∥Ln(5Q) by the Jacobian bounds. The map fromx′ to directions
+has area Jacobian bounded below. Applying the Kakeya estimate in each slice, integrating int0,
+then translating and summing over cubes, gives∥Dρf∥n ≲L (1/ρ)2A∥f∥n. Forρ bounded below the
+same estimate follows by averaging over a fixed ball aboutx.
+Return to an arbitrary segment throughx. Separate the part withinO(δ)of x, then divide
+each of the two rays into distancess/2≤u≤s for dyadic δ≤s≤ 1. Relative to the full
+tube volume, the innermost ball has weightO(δ), and a piece at distances has weightO(s). By
+dilation the latter’s maximal average has the norm ofDδ/s. Thus the operator norm is bounded
+byCδ +C
+∑
+s
+sL(s/δ)2A ≲L (1/δ)2A, proving(9.7). The transverse disk proof above now applies
+to any Borel set meeting a suitable unit segment through each point of a positive measure set in
+length at leastλ> 0. Such a set has Hausdorff dimensionn. The Nikodym maximal estimate and
+this dimension conclusion hold locally on a manifold of constant sectional curvature for geodesic
+31
+segments of fixed short length in a compact subset of a straightening chart: there lengths, tube
+widths and volumes are comparable before and after straightening [30, Proposition 2.3].
+For a different application, fixn≥ 3and a reald×d matrixB. Consider compact sets containing
+for everyy∈[−1,1] d one curve
+{(w(y) + (tId +t 2B)y,t) :|t|≤τ B},
+where τB > 0is fixed sufficiently small andw(y)belongs to the fixed sufficiently large compact
+ball of [59, Equation (1.16)]. Nadjimzadah’s lifting theorem [59, Theorem 1.3] now applies, since
+Corollary 9.1 gives full Kakeya dimension inn + rank(B2)dimensions. The minimum Hausdorff
+dimension in this curve family is attained and is
+n−rankB+ rank(B 2) =n−dim(imB∩kerB);
+the last equality is rank–nullity forBon its image.
+10 Bochner–Riesz means
+The Bochner–Riesz meanBα
+rf has Fourier multiplier(1−|ξ| 2/r2)α
++; writeBα
+∗f = supr>0|Bα
+rf|.
+Local smoothing controls these means because a smooth cutoff to a shell of relative widthδ can
+be written as an average of waves for times of orderδ−1. Sogge observed the implication for a
+single radius [72, Equations (4.5)–(4.6)]; Beltran, Hickman and Sogge give both the fixed-radius and
+maximal reductions [8, Propositions 39 and 40]. In the rangep≥ 2, almost everywhere convergence
+at the strict orders below was proved by Carbery, Rubio de Francia and Vega [17].
+Theorem 10.1(Bochner–Riesz means).Let n≥ 2,1 ≤p≤∞ , and putδ(p) = max{0,n| 1/p−
+1/2|−1/2}. Ifα>δ(p), then
+sup
+r>0
+∥Bα
+rf∥Lp(Rn)≤C n,p,α∥f∥Lp(Rn).(10.1)
+In this rangeBα
+rf→finL p asr→∞ifp<∞. If2≤p<∞andα>s +(p), then
+∥Bα
+∗f∥Lp(Rn)≤C n,p,α∥f∥Lp(Rn),(10.2)
+andB α
+rf→falmost everywhere asr→∞.
+Here and in the square function estimate of Section 11, the strict inequality on the order of the
+means leaves room for a small Sobolev loss. We rescale Theorem 1.1 to a unit frequency annulus
+and a long time interval. For2≤p<∞ , σ >s+(p) = max{0, (n− 1)/2−n/p}, andˆg supported in
+a fixed annulusc≤|ξ|≤C,
+∥U(t)g∥Lp(Rn×{R≤|t|≤2R}) ≲c,C,n,p,σ R1/p+σ∥g∥p, R≥1.(10.3)
+Indeed g(R· )has frequencies of orderR and U(t)[g(R· )](x) = (U(Rt)g)(Rx). Changing variables
+in space and time contributesR(n+1)/p, while the input norm contributesR−n/p and the Sobolev
+multiplier on that annulus costsO(Rσ). Conjugation gives the estimate for negative times. For
+|t|≤1the unit annular wave multiplier has a uniformly integrable kernel.
+Lemma 10.2(Maximal estimate for a thin shell).For0<δ≤1/8andψ∈C ∞
+c ((1/2,2)), set
+Aδ,rf=ψ
+(
+(1−|D|/r)/δ
+)
+f.
+For2≤p<∞andσ >s +(p), ‖‖‖‖sup
+r>0
+|Aδ,rf|
+‖‖‖‖
+p
+≲δ−σ∥f∥p.
+The constant is uniform forψin bounded subsets ofC∞
+c ((1/2,2)).
+32
+Proof. For1 ≤r≤ 2the shell lies in1/2≤|ξ|≤ 2. Choose a smooth annular symbolχ equal to
+one there, and writeQk =χ(2−kD). Forg=Q 0f, Fourier inversion gives
+Aδ,rf(x) = δr
+2π
+∫
+R
+eitrˆψ(δrt)U(t)g(x) dt.
+Taking the supremum overr∈ [1, 2]bounds this byCMδ
+∫
+(1 +δ|t|)−M|U(t)g(x)| dt. On a dyadic
+intervalR≤|t|≤ 2R, Hölder’s inequality in time and(10.3) bound theLp
+x norm of this contribution
+by
+CMδ(1 +δR)−MR1−1/pR1/p+σ∥g∥p.
+ForM >1 +σ its sum over dyadicR≥ 1is O(δ−σ∥g∥p), by splitting atR =δ−1. The interval
+|t|≤1contributesO(δ∥g∥ p).
+Forr = 2ks,1 ≤s≤ 2, setgk(y) = (Qkf)(2−ky). Then Aδ,rf(2−ky) = Aδ,sgk(y). The factor
+2−kn/p in the output norm cancels the factor2kn/p in∥gk∥p. Thus theLp norm of the supremum in
+this octave is at mostCδ−σ∥Qkf∥p. The supremum over all octaves is bounded by their pointwise
+ℓp norm. Sincep≥2, Littlewood–Paley theory gives
+
+∑
+k∈Z
+∥Qkf∥p
+p
+
+
+1/p
+≤
+‖‖‖‖‖‖‖
+
+∑
+k∈Z
+|Qkf| 2
+
+
+1/2‖‖‖‖‖‖‖
+p
+≲∥f∥ p.
+Proof of Theorem 10.1.Take2 ≤p <∞ and chooses+(p) < σ < α. To decompose(1 −ρ 2)α
++,
+choose η∈C ∞
+c ((1/2, 2))with ∑
+j∈Zη(2jv) = 1for v >0, and apply the partition tov = 1−ρ on
+0≤ρ<1. Forδ= 2 −j≤1/8the corresponding term is
+δαψδ((1−ρ)/δ), ψ δ(u) =η(u)u α(2−δu) α.
+These profiles have uniform smooth seminorms. The remainder is a smooth radial multiplier of
+compact support: it vanishes nearρ = 1and equals(1 −ρ 2)α near zero. The supremum of its
+dilations is bounded pointwise by a constant times the Hardy–Littlewood maximal function, since
+its kernel has a radial decreasing integrable majorant. Lemma 10.2 bounds the other terms in(10.2)
+by the convergent sumC∑
+j≥3 2−j(α−σ)∥f∥p.
+For2 ≤p <∞ , δ(p) = s+(p), so the maximal estimate implies(10.1). Each fixedBα
+r is self-
+adjoint on Schwartz functions, andδ(p) =δ(p′); duality proves(10.1) for1 <p< 2. Atp = 1,∞ the
+hypothesis isα>(n−1)/2. The unit-radius kernel is a constant multiple of|x|−n/2−αJn/2+α(|x|),
+by radial Fourier inversion. It is bounded at zero and decays asO(|x|−(n+1)/2−α)at infinity. Its
+dilatesr nK(rx)therefore have a commonL 1 norm.
+For Schwartz functions of compact Fourier support the multipliers converge to one in all
+derivatives on the support asr→∞ ; hence the means converge in the Schwartz topology. Density
+and (10.1) give norm convergence forp<∞ . To see pointwise convergence in the maximal range,
+choose such functionsfj with ∑
+j∥f−f j∥p <∞ . By (10.2), ∑
+jBα
+∗ (fj+1−f j)is finite almost
+everywhere. At every such pointr↦→Bα
+rfj(x)converges uniformly on r > 0to a continuous
+representative of the means, agreeing with theLp extension for each fixedr. Its supremum is
+measurable by continuity, and Fatou’s lemma extends(10.2) to f. Since fj(x)→f (x)almost
+everywhere, uniform approximation inrgives the asserted almost everywhere limit.
+11 Stein’s square function
+Stein introduced a square function to study the convergence of Bochner–Riesz means [73, §18,
+(18.1)]. For the Euclidean meansBα
+r, with multiplier(1−|ξ| 2/r2)α
++, it measures the change with
+33
+radius:
+Gαf(x) =
+(∫∞
+0
+|r∂rBα
+rf(x)| 2 dr
+r
+)1/2
+.
+Carbery proved the sharp bounds in the plane [16, pp. 409–416]. In dimensionsn≥ 3, Lee, Rogers
+and Seeger proved them forp≥ 2 + 4/n [50, Theorem 1.1]. Gan, Jing and Wu reachedp≥ 13/4in
+dimension three [26, Theorem 1.1], and Gan, Oh and Wu further enlarged the range in dimensions
+n≥4[27, Theorem 1.1]. Here the wave estimate (10.3) gives the full range2≤p<∞.
+Theorem 11.1.Letn≥2and2≤p<∞. If
+α>max
+{
+1
+2, n
+(
+1
+2− 1
+p
+)}
+,
+then∥G αf∥p≤C n,p,α∥f∥p forf∈S(R n), andGα extends toLp(Rn).
+The threshold can be read off from one shell. At distanceδ from|ξ| = s, differentiating the
+mean gives a factorδα−1. The square norm ins gives backδ1/2, while the wave estimate at times
+of orderδ−1 costs δ−s+(p)−ε. The resulting powers sum ifα >1/2 +s+(p). We first make this
+calculation on1 ≤s≤ 2. We then combine the dyadic intervals of radii inside the square norm,
+before taking the spatialLp norm.
+Lemma 11.2(One interval of radii).Let2 <p<∞ , ε> 0, σ =s+(p) +ε, andH =L2([1, 2], ds).
+Fix A∈C ∞
+c (R× (0,∞ ))and φ∈C ∞
+c (R). For0 < δ≤ 1, let Tδf(x,s )be the spatial Fourier
+multiplier
+A(s,|ξ|)φ
+(
+(s−|ξ|)/δ
+)
+applied tof. Then
+∥Tδf∥Lp
+x(H) ≲δ 1/2−σ∥f∥p,∥T δf∥L2x(H) ≲δ 1/2∥f∥ 2,
+with constants independent ofδ.
+Proof. Temporarily omitA, allows∈R , and denote the resulting operator byVδ. Forg supported
+in a fixed compact annulus in frequency, Plancherel insgives, at eachx,
+∥Vδg(x,·)∥ 2 = (2π)−1/2δ∥ˆφ(δt)U(t)g(x)∥L2
+t
+.
+OnR≤|t|≤2R,R≥1, Hölder intand the rescaled wave estimate (10.3) give
+∥U(t)g∥Lp
+xL2
+t
+≲R 1/2−1/pR1/p+σ∥g∥p.
+On|t|≤ 1the annular wave kernels have uniformly boundedL1 norms. Forb> 1/2 +σ, summing
+overR= 1,2,4,...now gives
+∥Vδg∥Lp
+xL2s(R) ≲δ
+(
+1 +
+∑
+R
+R1/2+σ(1 +δR)−b
+)
+∥g∥p ≲δ 1/2−σ∥g∥p.
+To restoreA, Fourier invert it ins. The multipliersˆA1(η,|D| ), where the hat denotes transformation
+in the first argument, are supported in a fixed annulus and haveLp operator normsOb((1+|η|)−b)for
+everyb> 0, by smoothness and compact support. IntegratingeisηVδ(ˆA1(η,|D| )f)in η with measure
+dη/(2π)proves the first bound. For the second, spatial Plancherel suffices: at each frequency the
+multiplier is bounded and is supported on ans-interval of lengthO(δ).
+34
+To combine the intervals of radii, we use Seeger’s method for passing from bounds on individual
+frequency annuli to a multiplier estimate [67, Theorem 1]. Jones, Seeger and Wright stated a square
+function version for dilates of annular multipliers [40, p. 6737]; Guo, Roos and Yung proved it [34,
+Proposition 4.2 and §7]. Here we allow a different input at each scale and assume decay of the
+Hilbert-valued kernel and its first derivative. On each test cube onlyO(1 + log(1/δ))scales need
+the Lp bound. Hölder over those scales gives the logarithmic power1/2− 1/p, which the strict
+inequality in Theorem 11.1 absorbs.
+Lemma 11.3(Combining dilates).Let H be a Hilbert space,2<p<∞ ,0 <δ≤ 1, andN =n + 3.
+SupposeK:R n→His continuously differentiable and
+∥K(x)∥H +∥∇K(x)∥ Hn≤C∗δ−N(1 +|x|)−N.
+WriteS(k)f = 2nkK(2k·)∗f , and letBq bound the norm ofK∗ fromLq to Lq(H), q = 2,p. For
+every finite sequence of Schwartz functionsfk,
+‖‖‖‖‖‖
+(∑
+k
+∥S(k)fk∥2
+H
+)1/2‖‖‖‖‖‖
+p
+≲n,p
+(
+B2 +C∗δ+ [1 + log(1/δ)] 1/2−1/pBp
+)
+‖‖‖‖‖‖
+(∑
+k
+|fk|2
+)1/2‖‖‖‖‖‖
+p
+.
+Proof. Put bk =∥S(k)fk∥H, h = (∑
+kb2
+k)1/2, andW = (∑
+k|fk|2)1/2. Let M denote the Hardy–
+Littlewood maximal operator over cubes andL =⌈(N + 2) log2(2/δ)⌉. On a dyadic cube Q
+of side2−j and centery, the terms withk≤j−L are nearly constant. We compareh with
+cQ = (∑
+k≤j−Lbk(y)2)1/2. Forx,z∈Qandk≤j−L, the derivative bound gives
+∥S(k)fk(x)−S (k)fk(y)∥H ≲C∗δ−N2k−jMW(z).
+Indeed2 k|x−z|≲ 1, and convolution with2nk(1 + 2k|·| )−N is bounded by a constant timesM.
+Summing the squares and taking their square root costs at mostCC∗δMW(z).
+Fork≥j+L, splitf k on5Qand its complement. The local terms satisfy
+1
+|Q|
+∫
+Q
+∑
+k≥j+L
+∥S(k)(fk15Q)(x)∥2
+H dx≲B 2
+2M(W 2)(z), z∈Q,
+because dilation preserves theL2 operator norm. For the terms outside5Q, summing the kernel
+bound on successive doubled cubes gives, forx,z∈Q,
+∥S(k)(fk1(5Q)c)(x)∥H ≲C∗δ−N2−(N−n)(k−j)MW(z).
+Their square sum again has square root at mostCC∗δMW(z).
+There remain fewer than2L indices. Hölder in this finite set bounds
+(
+|Q|−1∫
+Q
+∑
+|k−j|<Lb2
+k
+)1/2
+by(2L)1/2−1/pF (z), whereF = (∑
+k[M(b2
+k)]p/2)1/p. Sincep/2> 1, the scalar maximal theorem and
+the scale invariance ofBp give
+∥F∥p
+p ≲
+∑
+k
+∥bk∥p
+p≤B p
+p
+∑
+k
+∥fk∥p
+p≤B p
+p∥W∥p
+p.
+By the triangle inequality for the square norm and Cauchy–Schwarz onQ, the mean of|h−c Q| is
+thus at most a constant timesC∗δMW (z) +B2M(W 2)(z)1/2 +L1/2−1/pF (z). Replacing cQ by the
+mean hQ costs at most a factor of two. The dyadic sharp function inequality [74, Chapter IV, §3.6,
+Corollary 1] and the maximal theorem onLp and Lp/2 now prove the assertion. The hypothesis
+of that inequality at a smaller exponent holds:∥h∥2
+2 =∑
+k∥S(k)fk∥2
+L2(H)≤B 2
+2
+∑
+k∥fk∥2
+2<∞ , and
+2<p.
+35
+Proof of Theorem 11.1.Forp= 2, spatial Plancherel andu=|ξ| 2/r2 give the identity
+∥Gαf∥ 2
+2 = 2α2
+∫1
+0
+u(1−u) 2α−2 du∥f∥ 2
+2 = α
+2α−1 ∥f∥ 2
+2.
+Suppose p > 2. Choose ε > 0so that σ = s+(p) +ε < α−1/2, possible since1/2 +s+(p) =
+max{1/2,n (1/2− 1/p)}. Writer = 2ks,1 ≤s≤ 2, andρ = 2−k|ξ|. On this intervaldr/r = ds/s
+is comparable tods. The differentiated multiplier equals
+m(s,ρ) = 2αρ 2s−2α(s+ρ) α−1(s−ρ) α−11{ρ<s},
+where the last power is taken only forρ < s. Near the boundary ρ = s, split s−ρ > 0into
+dyadic intervals of sizeδ = 2−j, j≥ 0. Each piece isδα−1A(s,ρ )φ((s−ρ )/δ): the factors preceding
+(s−ρ )α−1 times a smooth boundary cutoff give a fixed amplitudeA supported away fromρ = 0;
+the power on a unit shell is absorbed inφ∈C∞
+c ((1/2,2)).
+For fixedδ, Lemma 11.2 bounds the one-interval norms ofTδ. Its kernel and first spatial
+derivatives satisfy the hypothesis of Lemma 11.3 withC∗ independent ofδ: N integrations by parts
+in frequency cost at mostδ−N on a fixed compact annulus, uniformly ins. Write T (k)
+δ for the
+spatial dilation obtained by replacing|ξ| by2−k|ξ| in the symbol ofTδ, withs∈ [1, 2]unchanged.
+Choose smooth annular projectionsPk, dilates of one fixed multiplier, which equal one on this
+spatial frequency support. Lemma 11.3 applied toPkf and the Littlewood–Paley inequality bound
+this shell, on all dyadic radius intervals together, by
+Cδα−1
+(
+δ1/2 +δ+ [1 + log(1/δ)] 1/2−1/pδ1/2−σ
+)
+∥f∥p.
+The sum overjconverges becauseα−1/2−σ >0.
+The multiplier left away from the boundary is smooth, supported inρ≤ 2, and vanishes to order
+two at zero. Split it into annuliρ≍ 2ℓ,ℓ≤ 2. After extracting22ℓ and rescaling to the unit annulus,
+the multipliers have uniformly bounded derivatives. Their kernels satisfy Lemma 11.3 atδ = 1with
+uniform constants (also forB2,Bp, by the integrable kernel bound). For eachℓ their dilates now
+have frequency scale2k+ℓ; the same Littlewood–Paley estimate applies, and∑
+ℓ≤2 22ℓ<∞.
+These estimates apply first to finite sets of k and finite shell sums. For Schwartz f the
+multipliers converge in the Fourier integral for each fixedr, by the local integrability of the boundary
+power. Fatou’s lemma and then monotone convergence give the full estimate. The linear map
+f↦→(r∂rBα
+rf)r>0 therefore extends by density toLp
+x(L2( dr/r)), giving the asserted extension of
+its pointwise norm.
+12 The paraboloid and Schrödinger evolution
+We return to the spherical extension estimate of Lemma 9.2, withn =d + 1. A small cap onSd
+approaches the paraboloid under parabolic rescaling [38, §3, (3.10)–(3.12)]. The Fresnel formula
+then writes a Schrödinger wave ind spatial dimensions as extension from that paraboloid. At
+pc = 2(d + 1)/d both changes of variables preserve the logarithmic power. We use the relation
+between paraboloid restriction and Schrödinger evolution developed by Rogers [66] and Lee, Rogers
+and Seeger [51].
+WriteB d for the unit ball inRd and define extension from the compact paraboloid patch by
+Eg(x,t) =
+∫
+Bd
+ei(x·v+t|v| 2)g(v) dv.
+36
+Corollary 12.1(Paraboloid extension and Schrödinger local smoothing).Let d≥ 1and pc =
+2(d+ 1)/d. If1<a≤∞,p c<b<∞andb>(d+ 2)a ′/d, then
+∥Eg∥Lb(Rd+1) ≲d,a,b∥g∥La(Bd).(12.1)
+LetI⊂Rbe a compact interval. ForN≥2and Schwartzfwithsupp ˆf⊂B(0,N)⊂R d,
+∥eit∆f∥Lpc(Rd×I) ≲d,I [log(2 +N)] 2/pc∥f∥pc.(12.2)
+Forp c<p<∞andp≤r≤∞, arbitrary Schwartz data satisfy
+∥eit∆f∥Lp(Rd;Lr(I)) ≲d,p,r,I∥f∥Bsp,p(Rd) ≲d,p,s∥(1−∆) s/2f∥p, s=d(1−2/p)−2/r.(12.3)
+HereBs
+p,p is the inhomogeneous Besov space. Takingr =p gives the exact spacetime Sobolev order
+d−2(d+ 1)/p; takingr=∞gives the corresponding maximal estimate.
+Proof. We first transfer Lemma 9.2 toE, writing A for the logarithmic power in that lemma.
+By Theorem 1.2 we may takeA = 2/pc. Parametrize a spherical cap by(δv,
+√
+1−δ 2|v|2)and
+evaluate its extension at(x/δ,− 2t/δ2). After removing a scalar phase, the new graph isqδ(v) =
+2(1−
+√
+1−δ 2|v|2)/δ2. Choose the cap density to beg(v)
+√
+1−δ 2|v|2, so surface measure times
+density isδdg(v) dv. The image ofB(0,R )in physical space lies inB(0,CR/δ 2). Thus the extension
+operator forqδ has localLpc→L pc norm at most
+Cδ−d+(d+2)/pc+d/pc[log(2 +R/δ 2)]A.
+The power ofδ is zero. Sinceqδ(v) =|v|2 +O(δ2), the error in replacing its extension byEg on
+B(0,R )is at mostCRδ 2∥g∥1 pointwise. Takingδ = (2R)−(d+2) makes itsLpc norm O(∥g∥pc)and
+keepslog(2 +R/δ 2)≲ d log(2 +R). Modulation ofgtranslates the observation ball, so
+∥Eg∥Lpc(B(z,R)) ≲d,A [log(2 +R)]A∥g∥pc (z∈R d+1, R≥1).(12.4)
+To obtain(12.1), first note that the loss in(12.4) is Oε(Rε)for every ε> 0, also on a slightly
+larger parameter ball by dilation. A smooth density supported on the larger patch and equal todv on
+Bd has Fourier decayO((1 +|(x,t )|)−d/2)by stationary phase. Apply Tao’s epsilon-removal theorem
+[75, Theorem 1.2] in the compact hypersurface form of [46, Theorem 5.3], with both restriction
+exponents equal top′
+c∈ (1, 2). Duality and zero extension fromBd giveE :Lpc(Bd)→L s(Rd+1)
+for everys>p c. SinceBd has finite measure,E :Ls→L s as well. Interpolation withE :L1→L∞
+now gives (12.1) as in the proof of Corollary 9.3, withn=d+ 1.
+For the critical estimate writep = pc, S(t) = eit∆ and I0 = [1/2, 1]. We give the finite-scale
+comparison directly from the Fresnel kernel; compare [51, Lemma 2.2]. Letχ∈C ∞
+c (B(0, 2))equal
+one onB(0, 1), sof = PNf for PN = χ(D/N). Tile Rd by cubesQ of sideN. For t∈I 0 and
+|z|≥ 8N, integration by parts bounds the kernel ofS(t)PN byCMNd(1+N|z| )−M: in the frequency
+variable η = ξ/N the phase gradientNz− 2tN 2η has length at leastN|z|/ 2on the support of
+χ. Thus on each Q the contribution from outside the concentric cube30Q is bounded by the
+convolution of this majorant with|f|. The same convolution works on every cube and hasLp norm
+O(∥f∥p)by Young’s inequality forM >d.
+TranslateQ to be centered at zero and seth =f 130Q. This truncation may introduce higher
+frequencies, so the near contribution isS(t)PNh =PNS(t)h. The equality holds onL2; atx the
+last expression integratesS(t)h(x−w/N )against ˇχ(w) dw. Chooseλ = 16
+√
+dN , sog(v) =h(λv)is
+supported in the unit ball. Sinceh∈L 1∩L 2, its Fresnel integral converges absolutely. Substitution
+ofy=λvgives
+|S(t)h(z)|= (4πt) −d/2λd
+⏐⏐⏐⏐⏐Eg
+(
+−λz
+2t,λ2
+4t
+)⏐⏐⏐⏐⏐.
+37
+Forz =x−w/N , x∈Q and t∈I 0, the arguments ofEg lie in a ball of radiusCd(N 2 +|w|). The
+change of variables from(x,t )to those arguments is one-to-one, with absolute Jacobian comparable
+toλ d+2. Since∥g∥ p =λ−d/p∥h∥p, (12.4) gives
+∥S(t)h(x−w/N)∥ Lp(Q×I0) ≲λ d−(2d+2)/p[log(2 +N 2 +|w|)] A∥h∥p.
+The power ofλ is zero. Integrating against|ˇχ(w)| dw and using its rapid decay bounds the near
+contribution byC[log(2 +N)]A∥f∥Lp(30Q). Sum thepth powers overQ, using the bounded overlap
+of30 Q, and add the far contribution. This proves(12.2) on I0 with powerA. On[a/2,a ]parabolic
+scaling gives an extraa1/p and replacesN by max(2,√aN ). Sum the pth powers over dyadic
+intervals in a bounded time range and use conjugation for negative times.
+For the mixed norms in(12.3), choosepc<a<p and takeb =a in (12.1). The diagonal case
+of [51, Corollary 1.2] takes such anLa→L a extension bound to the first inequality in(12.3) for
+everyp≤r≤∞ . The second follows from spatial Littlewood–Paley theory and∥·∥ ℓp≤∥·∥ ℓ2 for
+p>2.
+In d = 1this argument gives( log(2 +N))1/2 at pc = 4. The sharp annular power onI0 is1 /4
+[51, Theorem 1.4 and §4.1]. It is also the sharp power for a frequency ball: modulation moves
+[−N,N]into[N,3N]and, at each time, only translates the output and multiplies it by a phase.
+A The Dirichlet problem on a periodic fiber
+The balance law in Section 4 uses a Dirichlet potential smooth up to a boundary that moves with
+the time variables. Section 5 bounds this potential by comparing determinants on the whole fiber
+and on small balls inside it. We prove the required existence, comparison, and smooth dependence
+here; the quantitative bounds in the wavelengthh come from the comparison functions in Section 5.
+Alesker proved smooth Dirichlet solvability on quaternionic balls [3, Theorem 1.4]; Zhu proved it on
+bounded domains in quaternionic space in the presence of a smooth subsolution [81, Theorem 1.1].
+Our fibers have periodic real directions and only three real coordinates per variable. Adjoining a
+fourth, periodic coordinate gives the local rotations needed to estimate mixed derivatives at the
+boundary.
+LetΛ ⊂R m be a full lattice, V⊂R 2m a bounded domain with smooth boundary, and
+Ω = (Rm/Λ)×V . The periodic variables occupy the real slots and the coordinates ofV occupy the
+i,jslots of the HessianHfrom Lemma 3.1.
+Theorem A.1(Periodic Dirichlet problem).Let m≥ 1. Supposer∈C ∞(V )is a defining function,
+negative inV, withdr̸= 0on∂VandH(r)>0on Ω. LetB 0,g∈C ∞(Ω)be real and suppose
+H(B0)≥0, g >detH(B 0)on Ω.
+There is a unique smooth solution, up to the boundary, of
+detH(B 0 +u) =g, H(B 0 +u)>0, u| ∂Ω = 0.(A.1)
+There are constantsb≥b ′>0such that
+br≤u≤b ′r.(A.2)
+For smooth finite-dimensional families of such data and domains, these constants can be chosen
+locally uniformly. The solutions depend smoothly on the parameters up to the boundary, after any
+smooth local identification of the domains with a fixed domain.
+38
+Proof. Work on ~Ω = Ω× (R/Z)m, with the new coordinates in thekslots. Extend the data
+constantly in these coordinates. Until the last paragraph,G,H are the full quaternionic gradient
+and Hessian, which agree with the physical operators on the extended data. WriteH(D2v) =H(v)
+and encode a real covectorξ∈R 4m as the quaternionic columnˆξ in the slot basis. Lemma 3.1 gives
+H(ξξ t) = ˆξˆξ∗ andtrH(v) = ∆v.
+Comparison and continuity.Join the known solution u = r to the given density bygt =
+(1−t ) detH (B0 +r) +tg,0 ≤t≤ 1. At a solutionψ =B0 +u putQ =H(ψ)and S = trQ−1. The
+derivative of the log determinant is
+Lw=Q −1 :H(w), σ L(ξ) = ˆξ∗Q−1ˆξ.
+ThusL is a uniformly elliptic real operator at each fixed smooth solution withQ> 0on the closure.
+For two potentialsψ1,ψ 2 withQ i =H(ψ i)>0, the corresponding difference formula is
+log detQ1−log detQ 2 =
+(∫1
+0
+(
+(1−θ)Q 2 +θQ 1
+)−1 dθ
+)
+:H(ψ 1−ψ 2).
+When the Hessians are positive on the closure, the averaged operator is uniformly elliptic. If
+detQ 1≥detQ 2 on the domain andψ1≤ψ 2 on its boundary, the maximum principle therefore gives
+ψ1≤ψ 2 throughout. This also gives uniqueness. The linear Dirichlet operatorL :Ck+2,α
+0 →C k,α is
+an isomorphism (k≥ 0,0 <α< 1; the subscript denotes zero boundary trace). Indeed the local
+Schauder estimates and Dirichlet theory [31, Theorems 6.14 and 6.19] apply in a finite cover of the
+flat quotient. In the continuity method from∆toL, r is a common strict barrier sinceH(r)≥cI ;
+the maximum principle therefore supplies theC0 estimate. The starting Dirichlet Laplacian is
+invertible on the compact manifold with boundary. The implicit function theorem gives openness;
+the estimates below give closedness. Their constants may depend on the fiber and its data, but are
+uniform int.
+Both endpoints of the path have determinant strictly abovedetH (B0)at every point. The gap
+is uniform by compactness. Hence we may choose0<b′<1<bso that
+detH(B 0 +b′r)<g t<detH(B 0 +br)
+everywhere, usingH(r)≥cI for the second inequality. Comparison gives(A.2). Sinceu vanishes
+on the boundary,u =αr in a collar with smooth quotientα at each smooth solution; division in
+the barriers givesb′≤α≤b . In particular∇u =α∇r on the boundary. We also haveLr≥cS and
+S≥mg −1/m
+t ≥c 0>0. For any constant real unit vectore, differentiation and concavity give
+Lψe = (loggt)e, Lψ ee≥(logg t)ee.(A.3)
+The maximum principle applied to±ψe +Cr bounds the full gradient. Applied toψee +Cr, it
+reduces an upper bound for the real Hessian to the boundary.
+Second derivatives at the boundary.Center a flat chart at a boundary point, letν be the
+outward unit normal, and identify vectors with their quaternionic columns in this chart. For real
+tangent vectorsv,w,D2u(v,w ) =αD2r(v,w )at the center. For the mixed derivatives we adapt the
+tangential differentiation argument of Caffarelli, Nirenberg and Spruck for the real Monge–Ampère
+equation [15, Section 2, (2.11)–(2.14)]. Fix a real tangent unit vectore. We construct a local
+quaternionic rigid motionX = (e +Ax)·∇ for whichXr vanishes to second order along the
+boundary at the center. Let
+v= PtanD2re
+|∇r| , A=vν ∗−νv∗−ν(ν∗v)ν∗,
+39
+where Ptan is the real orthogonal tangent projection. SinceRe(ν∗v) = 0, we haveA∗ =−A and
+Aν=v. NowXr(0) = 0and for every tangentw,
+∂w(Xr)(0) =D 2r(w,e)−|∇r|w·Aν= 0.
+Thus|Xu| =|αXr|≤C|x| 2 on the boundary near the center. The flow ofX acts by quaternionic
+unitary rotations and translations. Differentiating the covariance of H under this flow gives
+L(Xψ) =Xlogg t: the commutator from conjugatingQ has zero pairing withQ−1. This identity
+uses only the flat chart. Subtracting the knownXB0 gives|L(Xu)|≤CS.
+In a chart ball of fixed small radius, setw =C1|x|2−C 2r. First chooseC1 so thatw≥|Xu| on
+the true boundary by the quadratic bound, and on the spherical boundary by the gradient bound.
+Then chooseC2 so thatL(w±Xu )≤ 0, usingH(|x|2) = 8I and Lr≥cS . The maximum principle
+gives|Xu|≤w in the intersection. Both functions vanish at the center, so the inward derivative
+bounds|∂νXu|. This is|D2u(ν,e )|: the additional term∇u·Aν vanishes since∇u is normal. The
+constants are uniform over the compact boundary.
+For the remaining derivative, the product rule at the boundary reads
+H(u) =αH(r) +G(α)G(r) ∗ +G(r)G(α)∗, G(r) =|∇r|ν.
+Compression to thequaternionicorthogonal complement of ν annihilates both cross terms. On that
+complementQ is therefore bounded below byb′H(r)|ν⊥≥cI . The rank-one rule shows that in a
+quaternionic orthonormal basis beginning withν,
+Q=
+(
+ψνν +c 1 z∗
+z D
+)
+.
+Here c1,z,D depend only on the real second derivatives already bounded. Form >1the Schur
+formula in Lemma 3.2 givesψνν =gt/detD +z∗D−1z−c 1, which is bounded sinceD≥cI . For
+m = 1the scalar identity Q = gt suffices. Equation (A.3) now givesD2ψ≤CI throughout the
+domain. Since∆ψ = trQ> 0, every real Hessian eigenvalue is at least−(4m− 1)C. This is the full
+C2 bound.
+Real elliptic regularity.The C2 bound and detQ = gt ≥c 0 > 0put all eigenvalues of
+Q in a fixed interval[c,C ]⊂ (0,∞ ). Thus all real HessiansD2ψ lie in the compact convex set
+K ={M :|M|≤C 1, cI≤H (M)≤CI} . OnH(M)> 0the smooth functionF (M) = log detH(M)
+is concave. ForM∈Kand every real covectorξ,
+DF(M)[ξξ t] = ˆξ∗H(M)−1ˆξ∈[C −1|ξ|2,c−1|ξ|2].
+These are real uniform ellipticity and concavity on the range of the solution Hessians, the hypotheses
+(i)′, (ii)′ of the interior and boundary estimates [31, Theorems 17.14 and17.26′]. To putF on the
+full real matrix space as in that theorem, multiply it by a smooth cutoff supported in{H(M)> 0}
+and equal to one on a neighborhood ofK. The equationF (D2ψ)−logg t = 0then has uniformly
+smooth coefficients and boundary dataB0. The cited local boundary estimates (see also Krylov
+[48]) and the interior Evans–Krylov estimate [22, 47] apply in a finite cover of the flat quotient,
+giving a uniformC2,α bound for someα>0.
+For a limit of solvable parameters, a subsequence converges inC2,β,0 <β <α. Positivity and
+the equation pass to the limit. Schauder bootstrapping gives smoothness up to the boundary: in
+flattened coordinates differentiate tangentially with the given Dirichlet data, and recover the pure
+normal derivative from the equation by uniform ellipticity. Thus the path is closed and reachesg.
+Uniqueness on ~Ω makes the solution invariant under translations in every added periodic
+coordinate. It descends toΩ; any physical solution lifts, so uniqueness descends as well. The
+40
+same lift gives comparison on subdomains, in particular on the balls in the three-slot fibers used in
+Section 5. For moving domains pull the lifted equation back to a fixed domain. Its coefficients and
+boundary data depend smoothly on the parameters, and its linearization is conjugate to the Dirichlet
+isomorphism above. The implicit function theorem in eachCk+2,α
+0 gives smooth dependence up to
+the boundary. The strict inequalities used to chooseb,b′ persist locally in the parameters.
+B The sharp logarithm with angular regularity
+Write p = pc, d = n− 1, α = d/2, I = [1, 2], and L(v) = log(2 +v), so that αp = n. Let
+Λω = (1− ∆Sn−1)1/2 act on the angular variable on each sphere about the origin. The joint weak
+spacetime norm is∥u∥p,∞ = supλ>0λ|{|u|>λ}| 1/p.
+Theorem B.1(The angular endpoint).Letn≥2,p=p c, andB >1/2 + 1/p. Then
+∥U(T)f∥ Lp(Rn×I)≤C n,B
+(
+∥L(J)1/pf∥p +∥L(Λω)Bf∥p
+)
+,
+∥U(T)f∥ Lp,∞(Rn×I)≤C n,B∥L(Λω)Bf∥p.
+In each inequality the angular norm on the right can be replaced by∥Λσ
+ωf∥p for anyσ >0, with a
+constant depending onσ.
+For radial data the angular operator acts as a scalar, so Proposition 8.1 makes the frequency
+power1/p in the strong estimate sharp. To prove the theorem we first separate spatial frequency
+and angular degree on a single annulus. LetΠN =χ(|D|/N)with χ∈C ∞
+c ((0,∞ )). We useA = 2/p
+for the power in Theorem 1.2; the argument applies with any positive exponentA for which that
+bound holds. An angular polynomial of degree at mostM is a function whose restriction to almost
+every sphere about the origin is a sum of spherical harmonics of degrees at mostM.
+Proposition B.2(Bounded angular degree on a frequency annulus).ForN≥ 2and an angular
+polynomialf∈L p(Rn)of degree at mostM,
+∥U(t)ΠNf∥Lp(I×Rn) ≲[L(N) 1/p +L(M) A]∥f∥p,(B.1)
+∥U(t)ΠNf∥Lp,∞(I×Rn) ≲L(M) A∥f∥p.
+The constants are independent ofMandN.
+The two terms in the strong estimate come from different output radii in physical space. When
+M is sufficiently small relative toN, we split the output at radius(2 +M)K/N for a fixedK. The
+first lemma below shows that the logarithm on the inner ball counts its radius in wavelengths, here
+(2 +M)K, so the cost of observation isO(L(M)A). On its exterior the input from a small ball
+about the origin contributes a decaying error in the strong norm. For the remaining input, angular
+stationary phase atx = rθ, r≤ 4, gives profilesr−αG(t±r,θ )with ∥G∥Lp( dvdθ) ≲∥f∥ p, where
+v =t±r . Each dyadic interval ofr contributes equally to thepth power of the radial factor, since
+rd−αp =r−1. Its weakLp norm, with the same polar measurerd dr, is bounded independently of
+the number of intervals.
+For radial data, Müller and Seeger reduced the wave kernel to four one-dimensional kernels
+concentrated at t±r±s = 0, with s the input radius [58, Lemma 2.1]. Colzani, Cominardi
+and Stempak obtained the corresponding weak endpoint for the radial cosine propagator [18,
+Theorem 2.1]. We recover these four kernels outside the indicated ball with constants uniform in
+the angular degree.
+41
+B.1 Observation on a ball
+Lemma B.3.ForN≥2,0<r≤1and everyx 0∈R n,
+∥U(t)ΠNf∥Lp(I×B(x 0,r)) ≲min{1,(Nr) n/p}L(Nr) A∥f∥p.
+Proof. Translate tox0 = 0and rescale to frequency one. WithT =N,R =Nr, we must bound the
+norm on[T, 2T ]×B (0,R )by T 1/p min(1,Rn/p)L(R)A∥f∥p. For the kernel ofU(t)Π1, writev =|z|
+and⟨v⟩= (1 +v 2)1/2. Spherical stationary phase gives, for everyDandv≥1,
+K(t,z) =v −αk(t−v) +O D
+(
+v−α−1⟨t−v⟩ −D +v−α⟨t+v⟩ −D)
+.(B.2)
+Herek is the Fourier transform of a constant timesραχ(ρ)on the positive axis. After removal of the
+phases e±ivρ the spherical amplitudes are symbols invρ; radial integration by parts gives the stated
+decay. Forv <1the entire kernel isOD(⟨t⟩−D). In particular, at any fixedx, Young’s inequality in
+time on the input radiiT/2≤s=|y−x|≤3Tgives
+∥U(t)Π 1f(x)∥Lp([T,2T]) ≲T 1/p∥f∥p.
+Indeed the convolution acts onsα∫
+Sd|f(x +sω)| dω, whosepth power integrates to at mostCT∥f∥ p
+p
+on these radii, sinceαp =d + 1. At the remaining radii the kernel isOD((T +s)−D). Integration
+overxproves the assertion forR≤2.
+Suppose2 < R≤T and put S = 100R3+n/p. If T≤ 10S, the scaled global estimate of
+Theorem 1.2 suffices sinceL(T ) ≲L (R). ForT >10S, the input that reaches the observation ball
+at timeQ occupies a shell of radiusQ and thicknessO(R), up to rapidly decaying tails. We will
+compare its wave with one from a shell at radiusS, where the global bound costs onlyL(R)A. For
+this comparison takeQ≥Sand write the shell input as
+fQ(sω) =s−αh(s−Q,ω), h(u,ω) = 0 (|u|>5R).
+Its contribution att=Q+b,|x|,|b|≤R, is approximated by
+Th(b,x) =
+∫
+k(b−u+x·ω)h(u,ω) dudω.
+This expression is independent ofQ. In fact|sω−x| =s−x·ω +O(R2/Q)and( s/|sω−x| )α =
+1 +O(R/Q). Inserting these into(B.2), with the polar Jacobiansd, bounds the difference kernel
+against h byCD(R2/Q)⟨b−u +x·ω⟩ −D. Young’s inequality inb, followed by integration inω and
+x, gives
+∥U(Q+b)Π 1fQ−Th∥ Lp({|b|,|x|≤R}) ≲(R 2+n/p/Q)∥h∥Lp( dudω).
+We may therefore estimate the profile at the smaller radiusQ =S. Sinced−αp =−1, this input
+has norm
+∥fS∥p
+p =
+∫|h(u,ω)|p
+S+u dudω≍S −1∥h∥p
+p.
+The factorS1/p in the scaled wave estimate cancels. Applying Theorem 1.2 on[S/2,S ]and[ S, 2S]
+and usingL(S)≲L(R)now gives∥Th∥ Lp({|b|,|x|≤R}) ≲L(R) A∥h∥p.
+Divide[ T, 2T ]into intervals of length betweenR/2and R, centered atQi. On intervali take
+hi(u,ω ) = (Qi +u)αf((Qi +u)ω)1|u|≤5R. The input shells have bounded overlap, so∑
+i∥hi∥p
+p ≲
+T∥f∥p
+p. Applying the profile estimate and summing gives the desired bound for these shells. For
+T/2≤s≤ 3T,|s−Q i|> 5R, the remaining kernel is bounded byCDs−α1|t−s|>3R⟨t−s⟩ −D: the
+output displacement is at mostR. Young’s inequality int as above bounds this contribution by
+CDRn/p+1−DT 1/p∥f∥p. The radii outside[T/2,3T]again give rapid decay inT+s.
+42
+B.2 The polar kernel and the two endpoint norms
+At an output pointrθ, angular stationary phase samples each input sphere at directionsθ and−θ.
+An angular average controls the remainders. To bound all three terms by a single radial profile, for
+gonR n define the even function ofv∈R
+hg(v,θ) =|v| d/p
+(
+|g(|v|θ)|+|g(−|v|θ)|+
+∫
+Sd
+|g(|v|ω)|dω
+)
+, G g(v,θ) =M Rhg(v,θ),
+whereMR is the Hardy–Littlewood maximal operator inv. The weight|v|d/p incorporates the polar
+Jacobian, so∥Gg∥Lp( dvdθ) ≲∥g∥ p.
+Lemma B.4.There is an integerK, independent ofM,N , with the following property. Supposeg
+has angular degree at mostM, is supported ons =|y|≥s 0, andNmin (r,s 0)≥ (2 +M)K. Then
+fort∈I,
+|U(t)ΠNg(rθ)|≲
+∑
+±
+Gg(t±r,θ)
+{
+r−α, r≤4,
+r−d/p, r>4. (B.3)
+For arbitraryg∈L p(Rn), the part supported in|y|<N η−1, whereη=α/(2n), satisfies
+∥U(t)ΠN(1|y|<Nη−1g)∥Lp(I×Rn) ≲N −δ∥g∥p, δ= (α/2)(1−2/p)>0.(B.4)
+Proof.WriteS zF(θ) =
+∫
+Sdeizθ·ωF(ω) dω. In polar coordinates the angular operator at radiir,sis
+cnsd
+∫
+e−itρχ(ρ/N)ρdSrρS−sρ dρ.
+For each sign ofz, use rotation-invariant cutoffs to separate the two stationary points. The expansion
+takes the form
+SzF=|z| −α ∑
+σ=±1
+eiσ|z|(cσPσF+E σ,zF),
+where for either fixed sign of z the two Pσ are the identity and the antipodal reflection, in
+the corresponding order. Fix an integer D > 2 +α. Then Eσ,zF and its firstD logarithmic
+derivatives in|z| are bounded pointwise byCD|z|−1∥F∥CmD. To see this, use coordinates at the
+pole in which1∓θ·ω =|w|2/2. After removing the leading oscillation, the normalized integral
+has the formIλ(a) = λd/2∫
+e±iλ|w|2/2a(w) dw, where λ =|z|. Integration by parts in w gives
+λ∂λIλ(a) = − 1
+2Iλ(w·∇a ). Each differentiated amplitude vanishes at the pole, so its leading
+stationary phase term is zero. The stationary phase remainder isO(λ−1)for each of the finitely
+many amplitudes, with the stated derivative bound; off the pole one integrates by parts in angle [74,
+Chapter VIII, §2].
+On degrees at mostM,∥F∥ 2 ≲ (2 +M)d/2∥F∥ 1 by the constant diagonal of the spherical
+projection kernel. Sobolev embedding and the spectrum of−∆Sd thus bound∥F∥CmD ≲ (2 +
+M)cD∥F∥ 1. ChooseK >cD for the fixedD above. For|z|≳ (2 +M)K each normalized remainder
+maps this band fromL1 to L∞ with uniform norm. It preserves the band by rotation invariance.
+Consequently the composition of the two normalized factors, including the needed radial derivatives,
+is bounded atθbyC(|F(θ)|+|F(−θ)|+∥F∥ 1).
+Now integrate by parts inρ/N in each of the four phases. The scalar kernels against the last
+angular majorant are bounded byCDr−αsαN⟨N (t±r±s )⟩−D. The input weight left aftersd/p is
+s1/p. Forr≤ 4it is bounded byC⟨t±r±s⟩ 1/p; forr> 4insert the additional factorr1/p on the
+right. Absorb this polynomial into the decay. For eachv =t±r , the integrals with phasesv−s
+and v +s are bounded by one convolution onR, sincehg is even ins. Its kernel is majorized by
+CDN⟨N·⟩−D+1/p, so the convolution is bounded byCGg(v,θ). This proves (B.3).
+43
+Finally (B.2) and scaling give∥U(t)ΠN∥1→∞ ≲N α+1 for t∈I , while theL2 norm is bounded.
+Forv =g1|y|<b, interpolate∥U(t)ΠNv∥2 and∥U(t)ΠNv∥∞, then use Hölder on the input ball. This
+gives∥U(t)Π Nv∥p ≲(N α+1bn)1−2/p∥g∥p. Takingb=N η−1 gives (B.4).
+Proof of Proposition B.2.PutH = (2 +M)K. IfH >Nη, thenL(N) ≲L (M)and the unrestricted
+annular estimate gives both conclusions. SupposeH≤N η. On the output ballr≤H/N , Lemma B.3
+gives the strong boundCL(H)A∥f∥p ≲L (M)A∥f∥p. On its complement we may discard the input
+from s < Nη−1 with the strong error(B.4). For the remaining inputg, bothNr and Ns are at
+leastH, as required in Lemma B.4.
+Consider one profile in(B.3). Changing variables from( t,r )to( v,r ) = (t±r,r )preserves
+measure. At fixedv,θ, writeG =Gg(v,θ ). ForN−1≤r≤ 4the strong norm and the distribution
+function are controlled by the two radial integrals
+∫4
+N−1
+(r−αG)prd dr=G p log(4N),
+∫
+{r>0:r −αG>λ}
+rd dr= Gp
+nλp (λ>0).(B.5)
+Integrating inv,θ gives the factorO(L(N)1/p)for the strong norm and a constant for the joint weak
+norm. Forr> 4the pth power ofr−d/p cancels the polar Jacobian. At eacht the remaining integral
+of|Gg(t±r,θ )|p in r,θ is at most∥Gg∥p
+p; this part has a strong bound uniform inN. Combining
+the two regions proves the proposition.
+ForA = 2/p and M≤exp (
+√
+L(N)), the strong estimate therefore costs onlyL(N)1/p. For
+cutoffs equal to one on[5/4, 7/4], the radial data of Proposition 8.1 force this power already at
+angular degree zero.
+B.3 Summation over the spatial and angular frequencies
+Choose a smooth radial Littlewood–Paley decomposition fj at frequencies Nj = 2 j, and let
+uj =U(t)fj. Insert a fixed enlarged annular multiplierΠNj equal to one on the support ofˆfj. The
+bounded frequency part satisfies a uniform fixed-timeLp estimate by the Mikhlin theorem. On the
+other bands,(B.4) allows us to restrict the input tos≥N η−1
+j , with a total strong errorO(∥f∥p)
+even when summed inj.
+We group angular degrees according to the size of their logarithm. Use smooth angular low
+pass operators Sm at degree Mm = 2 2m
+, m≥ 0, and their differencesQm = Sm−S m−1 with
+S−1 = 0. Take a fixed smooth cutoff on degrees, equal to one up toMm and zero beyond2Mm.
+These operators commute with all radial Fourier multipliers by rotation invariance. Their kernels
+satisfy|Sm(θ,ω )|≲ D Md
+m(1 +Mm dist(θ,ω ))−D by smooth spherical localization [60, Theorem 3.5
+and Corollaries 3.6, 5.3]; on the circle this is ordinary smooth Fourier summation. In particular
+|Smg|≲M Sdg, uniformly inm. For everyB >0,
+∥Qmf∥p ≲B 2−mB∥L(Λω)Bf∥p.(B.6)
+Indeed, as a function of the harmonic degreeν on the support ofQm,L((1 +ν(ν +d− 1))1/2)≍ 2m.
+The normalized symbol2mBQm(ν)L((1 +ν(ν +d− 1))1/2)−B and all its logarithmic derivatives in
+ν are uniformly bounded. The smooth multiplier theorem on the sphere [11, Theorem 4.9(1)] gives
+(B.6) on each angular slice.
+To pay the spatial logarithm only once, at fixedr and Nj we group all angular bands on which
+stationary phase is uniform into one low pass. PutHm = (2 + 2Mm)K, and select the largestm with
+Hm≤min(N η
+j,Njr).(B.7)
+44
+Call this indexm(j,r ), with value−1when there is no suchm. For aj =1 s≥Nη−1
+j
+fj, the exact
+decomposition of the retained wave at(t,rθ)is
+U(t)ΠNjaj =U(t)Π NjSm(j,r)aj +
+∑
+m>m(j,r)
+U(t)ΠNjQmaj.
+For a given outputr, the indexm(j,r )is fixed on every input sphere. If it is nonnegative, Lemma B.4
+applies to the first term. Its positive majorant may useMSdfj in place ofSm(j,r)fj, eliminating the
+dependence of the profile on the chosen cutoff. The vector-valued maximal inequality, on the sphere
+and on the line [33, Theorem 1.2], gives for arbitrary nonnegative coefficientscj
+‖‖(cjGMSdfj)j
+‖‖
+Lp( dvdθ;ℓ 2) ≲∥(c jfj)j∥Lp(Rn;ℓ2).
+The reflection and angular integral inhg are bounded onLp(Sd;ℓ 2)by Minkowski’s inequality.
+It remains to integrate these profiles alongv = t±r , now taking the square function inj.
+WriteGj = GMSdfj(v,θ ). On the selected regionr≥N −1
+j , so forr≤ 4we may bound r−α by
+C(r+N −1
+j )−α. At fixedv,θ, Minkowski’s inequality inLp/2(rd dr)gives
+‖‖‖‖‖‖‖
+
+∑
+j
+(r+N −1
+j )−2α|Gj|2
+
+
+1/2‖‖‖‖‖‖‖
+Lp((0,4),rd dr)
+≲
+
+∑
+j
+(1 +j) 2/p|Gj|2
+
+
+1/2
+.(B.8)
+Indeed thepth power of thejth radial factor integrates toO(1 +j)by αp =n. Integrate inv,θ
+and apply the maximal inequality above withcj = (1 +j)1/p. The smooth spatial Littlewood–Paley
+theorem then bounds the strong square function byC∥L(J)1/pf∥p. For the weak norm keep the
+common factorr−α and use the distribution formula in(B.5) with G =∥(Gj)∥ℓ2. The maximal
+inequality withcj = 1gives C∥f∥p. Forr> 4the common factor isr−d/p; the same integration at
+fixedtas in the single annulus gives a strong bound ofC∥f∥p there.
+It remains to estimate the unselected angular frequencies in strongLp. Fixm and denote by
+vj the waveU(t)ΠNj applied toQmfj1s≥Nη−1
+j
+; writebj =∥Qmfj∥p. When Hm > Nη
+j , the entire
+vj is unselected. There areO(1 + logHm)such j and Theorem 1.2 bounds each byCL(Hm)Abj.
+The pointwise inequality∥w∥ℓ2≤ (#j)1/2−1/p∥w∥ℓp shows that their strong square function costs
+CL(Hm)A+1/2−1/p∥(bj)∥ℓp.
+For the remainingj, the unselected output lies inr<R j =Hm/Nj. LetD =⌈log2(2Hm)⌉ and
+consider the disjoint shellsRk+1 <r≤R k, withRk =Hm2−k. On shellk only j≤k contribute.
+Fork−D≤j≤k the same finite-sequence inequality costs(1 +D)1/2−1/p. After taking pth
+powers and summing overk, eachvj is integrated only on its ballr≤R j, where Lemma B.3 gives
+CL(Hm)Abj. Forj < k−D the shell lies within one wavelength:NjRk =Hm2j−k≤ 2−(k−j−D).
+The volume factor in the same lemma on the smaller ballr≤R k givesC2−(k−j−D)n/pbj. Sum these
+latter bounds first inj by the triangle inequality and then inℓp(k)by discrete Young’s inequality.
+Thus the unselectedmth angular band has total strong square-function norm at most
+CL(Hm)A+1/2−1/p∥(bj)∥ℓp ≲2 m(A+1/2−1/p)∥Qmf∥p.
+In the last step we usedp> 2and the spatial square-function bound forQmf. By (B.6), summing
+inmcostsC B∥L(Λω)Bf∥p wheneverB >A+ 1/2−1/p.
+These estimates control the square function of the originaluj: the unselected pieces have a
+strong bound, and the selected pieces have both bounds. The splitting depends onr, so the pieces
+need not be annular separately. We recover the sum only after reassemblinguj: the spatial synthesis
+45
+operator( wj)↦→∑
+j ΠNjwj is bounded fromLq(I×R n;ℓ2)to Lq(I×R n)for1 <q <∞ by spatial
+Littlewood–Paley duality and Fubini [32, Theorem 6.1.2 and Remark 6.1.3]. Real interpolation gives
+the same assertion for joint weakLp. The argument first gives uniform bounds for finite frequency
+sums and then the stated bounds by approximation. The same angular multiplier theorem applies
+to L(Λω)−B and L(Λω)BΛ−ε
+ω for everyε> 0: the first absorbs∥f∥p into the stated weak norm, and
+the second gives the assertion with a positive angular derivative. This proves Theorem B.1.
+C Disjoint packets and the weak spacetime norm
+We prove Proposition 8.2. The geometry is the one used in Fefferman’s ball multiplier example [23];
+Wolff explains its relation to local smoothing in the discussion of (39) in [79]. For the quantitative
+compression factor(log(1/δ))−(n−1) with disjoint translates of unit tubes, see also Fernández-Delgado
+and de la Salle [24, Theorem 1.4]. We give the short construction needed here. The tubes are
+disjoint on one longitudinal interval. On a second interval, their union is small and the sum of their
+individual volumes stays bounded below. A modulated packet travels from the first part of its tube
+to the second.
+An arrangement of tubes.Write x = (X,Y )∈R×R d,d =n− 1. Letk =⌊ 1
+4 log2N⌋,δ = 2−k,
+and putα = 1/(4
+√
+d), w =αδ/16. For0 ≤j < 2k, writejδ =∑k
+ℓ=1εℓ(j)2−ℓ in binary. Use the
+digits to choose the intercept of a line of slopesj =αjδ:
+aℓ = 1−ℓ/k, L j(X) =α
+k∑
+ℓ=1
+εℓ(j)2−ℓ(X−a ℓ).
+The ℓth binary increment changes the slope without moving the line atX =aℓ. Near this point
+its displacement is small. AtX≤−1/2these lines are separated. Indeed, when one passes fromj
+to j + 1, one digit, saym, changes from zero to one, and the later digits change from one to zero.
+Hence
+Lj+1(X)−L j(X) =αδ(X−a m) +α
+∑
+ℓ>m
+2−ℓ(aℓ−am)≤−αδ/2.
+The intervals of radiuswaround theL j(X)are therefore disjoint.
+For X in J = [1/4, 1/2], let BX be the union of intervals of radiusw/2around the same
+Lj(X). To see why this union is small, freeze the firstm =⌊k(1−X )⌋ digits. Forℓ>m we have
+0≤X−a ℓ≤ (ℓ−m )/k. The tail of each line therefore ranges over an interval of length at most
+α∑
+ℓ>m 2−ℓ(ℓ−m)/k≤2α2 −m/k. There are2m choices for the frozen digits, andm≤3k/4, so
+|BX|≤2α/k+ 2 mw≲α/k.
+Taking an independent choice in each transverse coordinate producesδ−d lines, indexed byν =
+(j1,...,j d). WriteLν = (Lj1,...,L jd)ands ν = (sj1,...,s jd). The output cores
+Sν ={(X,Y) :X∈J,|Y i−Lji(X)|≤w/2,1≤i≤d}
+all lie inE={(X,Y) :X∈J, Y∈(B X)d}. We have proved
+|E|≲ nk−d,
+∑
+ν
+|Sν|=δ −d|J|wd≍n 1.(C.1)
+46
+Transport at frequencyN.Choose0 ≤χ,θ≤ 1smooth, with χ supported in(−2,− 1/2)and
+equal to one on[−3/2,−3/4], andθsupported in(−1,1)and equal to one on[−1/2,1/2]. Define
+bν(X,Y) =χ(X)
+d∏
+i=1
+θ
+(
+(Yi−Lji(X))/w
+)
+, v ν = (1,sν)(1 +|sν|2)−1/2.
+The bν have disjoint supports and their total support volume isOn(δ−dwd) =On(1). Setλ = 3N/2,
+fν(x) =e iλvν·xbν(x), and letQN =β(|D|/N), whereβ∈C ∞
+c ((5/4,7/4))is one on a neighborhood
+of3/2. We claim that, uniformly inν,xand1≤t≤2,
+U(t)QNfν(x) =e iλ(vν·x−t)bν(x−tv ν) +On(N−1w−2).(C.2)
+To verify this, writeξ =λvν +η. On|η|≤cN the cutoff is one and|ξ| =λ +vν·η +O(|η|2/N).
+The absolute Fourier transform of the bump is
+wd|ˆχ(η1 +sν·η′)|
+d∏
+i=1
+|ˆθ(wη′
+i)|, η= (η 1,η′).
+The change of variables in these arguments and|sν|≤ 1/4give
+∫
+|η|2|ˆbν(η)| dη≲ nw−2. Thus the
+integrated phase error isOn(N−1w−2); the absolute integral over|η|>cN is On(N−2w−2). This
+proves (C.2). Its error tends to zero sincew≍nδandN≥δ −4.
+Take I0 = [3/2, 7/4]. Translation by tvν preserves each transverse differenceYi−L ji(X).
+Moreover, forX∈J and t∈I 0, we have−3/2≤X−t (vν)1≤− 3/4, since4/
+√
+17≤ (vν)1≤ 1.
+Thusb ν(x−tv ν) = 1onS ν×I 0 and|U(t)Q Nfν|≥1/2there for largeN.
+Choosing the signs.For independent random signs ϵν put f =∑
+νϵνfν. The disjoint initial
+supports give∥f∥ p ≲n,p 1for every choice of signs. Independence and (C.1) give
+E
+∫
+E×I0
+|U(t)QNf(x)| 2 dxdt=
+∑
+ν
+∫
+E×I0
+|U(t)QNfν(x)|2 dxdt≥ 1
+4|I0|
+∑
+ν
+|Sν|≳ n 1.
+Fix signs attaining this lower bound and setgN = QNf. Its Fourier support is as stated, and
+∥gN∥p ≲n,p 1by the uniformL1 kernel bound forQN. Forp> 2and a measurable setH of finite
+measure, integration of the decreasing rearrangement gives
+∫
+H
+|u|2≤ p
+p−2 |H|1−2/p∥u∥2
+Lp,∞.
+TakingH =E×I 0 and using|E|≲ n k−d now gives∥U(t)gN∥Lp,∞ ≳n,p kd(1/2−1/p). Ask≍logN ,
+this proves Proposition 8.2. In fact the inputs have boundedL2 and L∞ norms separately, so
+interpolation also gives a bounded LorentzLp,1 input norm.
+These packets also test the angular weight in Theorem B.1. Atp =pc a weak bound with only
+[log(2 + Λω)]B on the input requiresB≥ 1/p. Indeed, before the radial projection the input is
+supported in a fixed ball and is a sum of disjoint packets. Its first and second spatial derivatives are
+bounded byCN and CN 2, respectively, sincew−1 ≲nN 1/4. The spherical Laplacian is a sum of
+squares of infinitesimal rotationsxi∂j−xj∂i. It follows that∥(1 + Λ2
+ω/N2)gN∥p ≲ 1, since the radial
+projection commutes with rotations. ForB≥ 0the spherical multiplier[ log(2 + Λω)]B/(1 + Λ2
+ω/N2)
+has normOB((log(2 +N))B)by the multiplier bound used in(B.6); forB <0the logarithmic
+weight itself is bounded. The preceding lower bound forcesB≥ 1/p. Theorem B.1 gives sufficiency
+forB >1/2 + 1/p.
+47
+D A linear Dirichlet problem for the planar wave
+When n = 2, the coefficient of a rank-one background in the spatial determinant is linear in the
+unknown Hessian. We can therefore prove thepc = 4case of Theorem 1.2 with a linear auxiliary
+Dirichlet problem on a disk. We give the reduction, including the boundary estimate needed to
+apply Lemma 6.1.
+The disk equation.Fix nonzero periodic data in a single cap as in Proposition 5.1. Retain
+z= (T,τ),s=|τ|,a=Kh, andQ= Φ/a. Fora<s<4replace the ellipsoid by the product
+Ωpl
+z :r W =|W| 2/w2
+0−1<0,|Q|<1/10.
+The real variableX still runs over the fixed torus. At fixedτ, (4.2) gives a holomorphic chart from
+this product to the imaginary spatial variables(P,Z ). Use the wave partA =Aw =g(Q)(Jh∗XA0)
+of (4.5), withg = 1on |Q|≤ 1/100and g = 0on |Q|≥ 1/20, and putµ =ATT . We need only the
+nonnegativity of this density; no regularizing cofactor is needed.
+Put B =H(|Φ|2), letBfib be its spatial block, and writeLBu =C(Bfib) :Hfib(u). With the row
+c = (∂P Φ,∂ZΦ)and the column e = (c2,−c 1)t, we haveBfib = 4c∗c and C(Bfib) = 4ee∗. Define
+J= det C∂(W,Φ)/∂(P,Z) = (1 +W 2/2)/(
+√
+2Y). Then
+LBu= 4
+2∑
+i,j=1
+Re(ei¯ej)∂XiXju+ 4|J| 2∆Wu,|J|≍s −1.(D.1)
+Indeed, the mixed derivatives betweenX and( P,Z )in the Hessian take values inCki, orthogonal
+to the entries ofee∗ in Ck. The remaining imaginary block is the complex Hessian of Lemma 3.1;
+under the holomorphic chart it pairs with the vector(∂We,ce ) = (J, 0). The Jacobian bound
+follows from (4.2).
+SolveLBu =µ with u = 0on |W| =w0. At each fixed(z, Φ)and real spatial Fourier frequency
+kthis means solving
+4|J| 2∆Wˆu−4|k·e| 2ˆu= ˆµ(|W|<w 0), ˆu||W|=w 0 = 0.
+Here∆ W is the ordinary planar Laplacian. After division by4|J| 2 the operator is the Dirichlet
+Laplacian minus a smooth nonnegative potential. It is invertible also atk = 0. The Dirichlet
+isomorphism on Hölder spaces and the implicit function theorem give smooth dependence on the
+parameters. There are only finitely many frequencies inµ. Solving before multiplication byg(Q)
+shows thatu = g(Q)~u with ~u smooth and real. Thusu vanishes near theQ wall, including the
+corners. Also u≤ 0: for everyϵ >0, LB(u +ϵrW ) = µ + 16ϵ|J| 2/w2
+0 > 0, ruling out a positive
+interior maximum in(X,W). Now letϵ↓0.
+The energy.For the full three-by-three HessianH =H(u), letDB(H) =B :C(H), the coefficient
+ofλ in det(λB+H). It is quadratic inH. Its derivativeM inH is a mixed cofactor, hence divergence
+free by Lemma 3.3. Homogeneity givesM : H = 2DB(H); differentiation in theTT entry gives
+MTT = C(Bfib) : Hfib(u) = µ. On the W wall, the fullH(rW )has image the quaternionic line
+spanned by its normalν =G(rW )/|∇rW|. Sinceu = 0there, writing u = (u/rW )rW and restricting
+the product rule toν⊥ givesH|ν⊥ = 0. The coefficient ofλ in det((λB +H)|ν⊥)is therefore zero,
+soν ∗Mν= 0by Lemma 3.2. Now set
+X0(z) =
+∫
+Ωpl
+z
+(−u)µdζ,F pl(z) = 1
+2X0(z),dζ= dXdPdZ.
+48
+Green’s formula(4.13) forM gives∆ zX0 =−2
+∫
+DB(H) dζ; theQ wall contributes nothing because
+uvanishes in a neighborhood of it.
+To apply the same formula toA, we claim thatA :H≥D B(H). The current is supported on
+the quaternionic planeE = kerB by Proposition 2.2. Putβ = trB, βf = trB fib. In E take the
+orthonormal basis consisting of the normalized projection of the time vectoreT and the spatial vector
+(0,e/|e| ). In this basis writeα =A|E, b =H|E, indexing rows from zero. Before normalization the
+projection ofeT has squared lengthβf/β. Henceα00βf/β =ATT =µ =βfb11 by the disk equation.
+The rank-one determinant identity givesDB(H) =βdetb . Substitutingα00 =βb11 and completing
+the square gives
+A:H−D B(H) =β|b 01 +α 01/β|2 + det(α)/β≥0.
+Green’s formula forAnow bounds∆ zX0 by 1
+2∆zX0 plus the outward wave flux. Consequently
+Fpl≥0,∆ zFpl≤
+∫
+|Q|<1/10
+δ(rW )(u/rW )G(rW )∗AG(rW ) dζ.(D.2)
+Comparison on the product fiber.Write σ =s/h, gT =e−iT|D|f, andP∗ =JDs∗|gT|2 for D
+sufficiently large. The multiplier proof of(5.5) applies throughout the product:y≍s there and
+|W| =w0 on theW wall. It gives∥A∥≲s −2σmP∗, with the additional factore−c0σ on that wall.
+By (D.1) and (5.4),
+LB(rWP∗) = 16|J| 2P∗/w2
+0 +rWLBP∗≥(c−CD −2)s−2P∗.
+The two variables separate, so no mixed gradient term occurs. For fixed largeC1,m 1 this gives
+LB(C1σm1rWP∗)> µ. The comparison function andu both vanish on theW wall. Comparison
+on each fixed Q slice yields0 ≤u/r W ≤C 1σm1P∗ up to that wall. The original volume is
+dP dZ =a2|J|−2 dW dQ, while
+∫
+δ(rW ) dW =πw2
+0 and the full|G(rW )|≲s −1. Integrating the
+energy and (D.2), using
+∫
+P 2
+∗ dX≤∥g T∥4
+4, gives
+Fpl ≲a 2σm∥gT∥4
+4,∆ zFpl ≲(a/s) 2σme−c0σ∥gT∥4
+4.
+For the lower bound use the centers|W|≤γ ,|Q|≤ 1/400of Section 5. The inverse multiplier in
+the proof of(5.11) bounds the wave density itself below bymX there, on the entire physical spatial
+ball of radiush about each center; taked = 1in that formula. For the distancel to its center,
+Hfib(l2) = 6I, soLB(l2) = 24|e|2≤C . FormX > 0, subtractϵmX(l2−h 2)from u, withϵ small.
+The difference has strictly positiveLB on the whole ball and is nonpositive on its boundary, so it
+cannot have a positive interior maximum. This gives(−u)µ≥ϵh 2m2
+X at the center, also trivially
+form X = 0. Its integral gives
+Fpl ≳γ a2σ−me−Cγ 2σ∥gT∥4
+4,
+since the imaginary center region has volume comparable toa2s2γ2 and h2s2(hs)−2 = 1. Taking
+γ small and thenK large gives all three inequalities of Proposition 5.1 forFpl. Lemma 6.1 and
+Section 7 now give the planarO((log(2/h))1/2)estimate.
+E Curved characteristic sheets of symmetric systems
+In the proof of Theorem 1.2, the wave symbol supplies both a polarization for each plane wave and
+a Gaussian centered at that polarization. A curved sheet of the largest eigenvalue of a symmetric
+matrix pencil supplies the same two objects. We construct them on one angular patch and check
+the two places where the phase enters the fiber estimate: Gaussian decay on the wall and recovery
+of the wave near the center.
+49
+Theorem E.1.Let C1,...,C n be real symmetricn×n matrices,n≥ 2, and putC(ξ) =∑n
+j=1ξjCj
+and ϕ(ξ) =λmax(C(ξ)). Suppose that on an open coneΓ⊂R n\{ 0} this eigenvalue is simple and
+D2ϕ(ξ)is positive definite onξ⊥. For everyb∈C ∞
+c (Γ),0 <h≤ 1and Schwartz function f on Rn,
+∥e−iTϕ(D)b(hD)f∥Lpc(Rn×[1,2])≤C b[log(2/h)]2/pc∥f∥Lpc(Rn), p c = 2n
+n−1 .(E.1)
+The constant may depend on the pencil. The same assertion holds for a simple smallest eigenvalue
+with negative definite transverse Hessian.
+Example E.2(A cubic characteristic sheet).In three spatial dimensions take the pencil
+C(x,y,z) =
+
+
+z x y
+x−z0
+y0−2z
+
+.
+At(0, 0, 1)the top eigenvalue is1, and its transverse Hessian isdiag(1, 2/3)by (E.2) below. Thus
+(E.1) gives anL3 bound on a neighborhood of this ray. The sheet is not a piece of a quadric. Indeed
+its characteristic polynomial is
+(t−z)(t+z)(t+ 2z)−x 2(t+ 2z)−y 2(t+z).
+If this homogeneous cubic factored overC, it would have a linear divisor. Since it is monic int, this
+entails a roott =αx +βy +δz. Atz = 0the polynomial is t(t2−x 2−y 2). Since x2 +y2 is not
+the square of a linear form,α =β = 0; the coefficients ofx2z and y2z would then requireδ =−2
+and δ =−1, respectively. Irreducibility rules out even a local quadratic equation for the sheet: the
+resultant with that equation intwould vanish on an open set in(x,y,z), and hence identically.
+E.1 Eigenvectors and the spatial fiber
+Fix a unit directionω∈ Γ. Take the unit top eigenvector ofC(ω)as the first state coordinatee0.
+The other state coordinates form its orthogonal complement of dimensiond=n−1. The isolated
+eigenprojection is smooth nearω by its resolvent formula [43, Chapter II]. Applying it toe0 and
+normalizing the first component to one gives a real eigenvectorE(ξ) = (1,v (ξ))t, homogeneous of
+degree zero. PutS(ξ) =ϕ(ξ)I−C (ξ)and denote its lowerd×d block byS⊥(ξ). On a sufficiently
+small conic neighborhood,
+S(ξ)E(ξ) = 0, c|ξ|I≤S ⊥(ξ)≤C|ξ|I.
+Here and below constants are uniform on each chosen compact angular chart.
+WriteLw for the orthogonal projection ofC(w)e0 on e⊥
+0 . Differentiating the unit eigenvector
+equation alongω +σw shows that the derivative of the eigenvector atσ = 0is S⊥(ω)−1Lw in e⊥
+0 ;
+differentiating the eigenvalue derivativeϕ′
+w =e tC(w)etherefore gives
+D2ϕ(ω)[w,w] = 2(Lw) tS⊥(ω)−1Lw.(E.2)
+ConsequentlyL :ω⊥→e⊥
+0 is an isomorphism. So isDv(ω) =S⊥(ω)−1L on ω⊥: the polarizationv
+is a local angular coordinate. This is where the equality of the state and spatial dimensions is used.
+ForW∈C d
+k near zero, lete(W) = (1,W) t and set
+Bj(W) = e(W) tCje(W)
+1 +W·W .
+50
+The products here are bilinear. On real eigenvectors this map is the group velocity:B(v(ξ)) =∇ϕ(ξ).
+Its differential at zero is2Lt, with imageω⊥. Thus for a fixed smallw0> 0the projection ofB onto
+ω⊥ is a holomorphic coordinate map on a neighborhood of|W|≤w 0, and the matrices[dB(W ),ω ]
+and their inverses are bounded there.
+We use one further complex coordinateΦin the normal directionω. For the imaginary timeτ
+and spatial coordinatesP∈C n
+k define the fiber chart by
+P=τB(W) + Φω, R 2 = 2τ
+1 +W·W , y=|R| 2≍s=|τ|.(E.3)
+Inverting the projection ofP/τ ontoω⊥ recoversW;Φthen follows from the component alongω.
+At a real polarizationW =v(ξ)the Rayleigh quotientξ·B (W )is stationary. Since ξ·B (W ) =ϕ(ξ)
+there, differentiating (E.3) gives the characteristic conormal
+dΦ = ξ·dP−ϕ(ξ)dτ
+ξ·ω (W=v(ξ)).
+Let a =Kh, Q = Φ/a, and take the spatial fiber over(T,τ )to be the torus of Section 4 in the
+real variables, times
+r=|W| 2/w2
+0 + 100|Q|2−1<0
+in the imaginary variables. Fora<s<4, differentiation of (E.3) gives
+|dW|≲s −1,|dΦ|≲1,dP≍a 2s2d dWdQ.(E.4)
+The derivative bounds include the time variables: solvedP−Bdτ =τdBdW +ωd Φ. At fixed
+τ the complex Jacobian matrix in(W,Q )is[ τdB,aω ], which also proves the volume formula. In
+particular∂ωΦ = 1in the spatial variables. IfF = (W/w0, 10Q), Lemma 3.1 givesH(r) = 4(dF )∗dF.
+Its spatial block is ≳s −2I and has determinant≍a −2s−2d. Since |F| ≤ 1, it also satisfies
+Gfib(r)Gfib(r)∗ ≤H fib(r). The full Hessian has rank n. Its quaternionic null line belongs to
+kerd Φ∩G (r)⊥, sincedΦis a multiple of the last row ofdF and G(r) = 2(dF )∗F i. The spatial
+Hessian of|Φ|2 has rank one, with nonzero eigenvalue comparable to one. These are the geometric
+and boundary properties needed for the determinant energy.
+E.2 The current and its Gaussian multiplier
+Take a finite periodic Fourier sumgT = e−iTϕ(D)f in the annulus|ξ|≍h −1 in the chosen chart,
+with|v(ξ)|≤γ , whereγ <w0/10is fixed below. Write its individual terms asuξ. The entire vector
+wave∑
+ξ|ξ|d/2E(ξ)uξ solves the symmetric system with matricesC0 =I, Cj =Cj. To apply the
+flux construction of Section 2, write its paired auxiliary states asw =w1 +kw2 =Re(W ). The
+holomorphic flux map is
+Θ(w,Φ) =
+(
+1
+2wtCµw
+)n
+µ=0
++ (0,ω)Φ.
+Its output is exactly( τ,P )in (E.3). Writing Mµa = ( Cµw)a, its real Jacobian is J =
+|det [M, (0,ω )]|2 = |R|2nj(W )with j(W ) ≍ 1: each of the first n columns has a factor R,
+and the remaining matrix is invertible by (E.3).
+Let Gsys be the conjugate of the vector wave evaluated at(T,X )− iqR, whereqµ
+R =w∗Cµw/2.
+Pushing the tensor of Lemma 2.1 forward as a density by(2.7), the general row formula(2.8) gives
+χµ =J−1/2∑
+a
+Mµai(Gsys)a, A 0 =χχ∗.(E.5)
+51
+The change of variables preserves column divergence: its Hessian term pairs the two equal diagonal
+state blocks with(∂w1aw1b +∂w2aw2b)Θµ = 0, and the mixed state block vanishes. SinceΦis the
+passive coordinate,dΦM = 0and hence dΦχ = 0. The choice of rootR affects only the sign ofχ,
+soA 0 is single valued.
+The attenuation of each plane wave is determined byS(ξ)E(ξ) = 0:
+exp(−w∗S(ξ)w/2) =e −Ψ,Ψ = y
+2h(W−v(η)) ∗S⊥(η)(W−v(η)), η=hξ.(E.6)
+For each row norm at fixed imaginary coordinates we may remove the common left unitR/|R| in
+(E.5). The remaining volume factor is|R|/
+√
+J =j(W )−1/2y−d/2. With respect to the orthogonal
+planes Ci andk Ci, each row is then a pair of scalar multipliers ongT, up to conjugation and
+multiplication byi. Their real symbols are the two components inCk of
+j(W)−1/2e(W) tCµE(η)|η| d/2(hy)−d/2e−Ψ.(E.7)
+For the time row the coefficient isj(W )−1/2(1 +W·v (η)), whose real part is bounded below. Thus
+A0
+TT ≥| S0gT|2, whereS 0 is the multiplier with symbol the real part of(E.7) for µ = 0. It can be
+inverted on the cap.
+E.3 The fixed cap estimate
+Normalize∥f∥ 2 = 1. Writeσ =s/h, p =pc, q =p/2 =n/d. With the kernelsJℓ and cutoffg(Q)of
+(4.5) put
+Aw =g(Q)(J h∗X A0), A=A w +h 50nC(H(r)), µ=A TT, B 0 =λ|Φ| 2, λ=h −30n.
+SinceΦis independent of X, the averaged current still annihilatesG(g(Q)), so the cutoff preserves
+conservation. The positive semidefinite cofactor is conserved, takes values inkerH (r)⊂kerd Φ, and
+has TT entry detH fib(r)> 0. ThusA :H(B0) = 0and µ >0. The spatial backgroundHfib(B0)
+has a single nonzero eigenvalue≍λ . Theorem A.1 gives the solutionu≤ 0of (4.8), smooth in
+(T,τ ). The null line ofH(r)lies in G(r)⊥∩kerH (B0), so both normal cofactor terms vanish as in
+Proposition 4.2. That balance and Lemma 4.3 give, for the energyF=Jz(u)of (4.11),
+F≍
+∫
+r<0
+(−u)µdXdP,∆ T,τF≤
+∫
+(u/r)G(r)∗AwG(r)δ(r) dXdP.(E.8)
+We check the two Gaussian estimates used in the proof of Proposition 5.1, throughout2a≤s≤ 3.
+First multiply each row symbol(E.7) by a smooth cutoff equal to one on the data, supported in
+a fixed enlarged annulus and in|v|< w 0/3inside the chart. Since |∂α
+η Ψ|≲ α σ, the derivatives
+of these symbols through order2n + 4are bounded by C(hs)−d/2σm for somem. On the active
+wallr = 0, g(Q)̸= 0, we have|W|≥
+√
+3w 0/2. The lower boundS⊥(η)≥cI gives the additional
+factor e−c0σ with c0 > 0independent of γ. The kernel estimate leading to(5.5) now gives, for
+P∗ = (JDs∗|gT|2)1/d and fixed largeD,
+µ≲s −2dσmPd
+∗ (r≤0),∥A w∥≲s −2dσme−c0σPd
+∗ (r= 0).(E.9)
+The cofactor addsO(h50na−2s−2d)to µ; the nearest lattice translate givesPd
+∗ ≳h n+4 since∥gT∥2 = 1.
+For the inverse estimate take a center with|W|≤γ ,|Q|≤ 1/400. By (E.4), its spatial ball of
+radius h lies in|W|≤ 2γ,|Q|≤ 1/100, whereg = 1, forK large relative to1/γ. At each imaginary
+point of this ball invertS0 using a smooth cutoff equal to one on the data, supported in the same
+enlarged annulus and in|v|≤ 2γ. On its supportΨ ≤C 1γ2σ, so the reciprocal with cutoff has
+52
+derivatives through order2n + 4bounded by Cγ(hs)d/2σmeC1γ2σ with C1 independent ofγ. Kernel
+domination byJh andA 0
+TT ≥|S 0gT|2 give, as in (5.11),
+µ≥m X =c γ(hs)−dσ−me−2C1γ2σ|gT (X)|2
+on the whole ball: moving the real coordinate by at mosthchangesJh only by a bounded factor.
+The two comparison functions of Section 5 now apply. By(5.7), Hfib(rP∗)≥P∗Hfib(r)/2. Since
+Hfib(r) ≳s−2I and the background has rank one, comparison withCσm′
+rP∗ gives0 ≤u/r≲σ m′
+P∗
+by (E.9). On the ball the quadratic functionϵm1/d
+X (ℓ2−h 2), whereℓ is distance from the center,
+gives(−u)µ≳h 2mq
+X at the center. This comparison usesm1/d
+X ≤λ : theO(h−n)Fourier coefficients
+sum in modulus toO(h−n/2)by Parseval, and(E.7) is O(h−d). Together with the cofactor bound
+this givesµ 1/d≤λfor smallh.
+Tangency removesG(|Q|2)from the flux; the remaining part ofG(r)is O(s−1)by (E.4). The
+same Jacobian estimate gives imaginary volumeO(a2s2d)for both the fiber and its wall with weight
+δ(r), and volume≍γ a2s2d for the centers. Using
+∫
+Pd+1
+∗ dX≤∥g T∥p
+p and h2s2d(hs)−dq =σn−2 in
+(E.8), we get
+cγa2σ−me−2qC1γ2σ∥gT∥p
+p≤F≤Ca 2σm∥gT∥p
+p,(E.10)
+∆T,τF≤Ca 2s−2σme−c0σ∥gT∥p
+p.(E.11)
+Choose γ so that2qC1γ2 < c0/2, then fixK. Division gives∆F≤Cs −2e−cs/hF. At T = 0the
+upper bound ons = 4a uses g0 =f; on1≤T≤ 2the lower bound ons = 2a controls∥gT∥p
+p. The
+values ofσ on these circles are fixed. As in the proof of Proposition 6.3, Lemma 6.1 withb = 2a
+andr= 4agives ∫2
+1
+∥gT∥p
+p dT≲[log(2/h)] 2∥f∥p
+p.
+Homogeneity removes the normalization.
+Finitely many such caps cover the directions insuppb; their smooth annular cutoffs have
+uniformly integrable kernels. To remove the period, chooseM≥ 1larger than supsuppb|∇ϕ| and
+apply the torus estimate on the same lattice toC/M and bM(η) = b(η/M). By homogeneity
+|∇(ϕ/M)|≤ 1on suppbM. For|X|≥ 3the kernel phase has gradientX− (T/M )∇ϕ(η)of size
+≳|X| , which gives the decay(7.2). The cube argument of Section 7 gives the Euclidean estimate
+for(C/M,b M). ForfM(X) =f(MX)one has
+e−iTϕ(D)/MbM(hD)fM(X) =
+(
+e−iTϕ(D)b(hD)f
+)
+(MX).
+Both norms gain the same factorM−n/p, proving(E.1) for smallh. Smooth multiplier estimates
+cover the remaining compact range. Applying the result to−C with cutoff ¯b and conjugating with
+f(X)↦→f(−X)gives the smallest-eigenvalue assertion.
+E.4 A lower bound on a single patch
+For every nonzerob in Theorem E.1, the logarithmic power in(E.1) must be at least1/pc. Here is
+the local version of the focusing test in Proposition 8.1. Rotate a neighborhood whereb̸ = 0into the
+coordinatesη=ρ(α,1),ρ>0, and writeϕ(η) =ρφ(α). The matrixD 2φis positive definite there,
+since the Hessian ofϕ has only the radial kernel. Takeh =N−1 and ˆfN(ξ) =e(3/2)iϕ(ξ)(ψ/b)(ξ/N),
+where ψ is a nonnegative smooth bump supported in this neighborhood and strictly positive on
+a smaller closed product patch. At the initial time, stationary phase inα gives∥fN∥∞ ≲N n−d/2
+uniformly inX, and Plancherel gives∥fN∥2 ≲N n/2. Thus∥fN∥p ≲N (n+1)/2−1/p forp≥2.
+53
+At time3/2 +δ, setX ′ =δ∇φ(α)andX n =δ(φ(α)−α·∇φ(α)) +z/N. Forαin the smaller
+patch and|z|≤c , this set has volume≍δ d/N. Its angular stationary point isα. ForNδ large,
+stationary phase now gives output of modulus at leastcNn−d/2δ−d/2: up to a nonzero smooth factor
+and constant phase the leading radial integral is
+∫
+eiρzρd/2ψ(ρ(α, 1)) dρ, uniformly nonzero for small
+c. The angular remainder is smaller byO((Nδ )−1)[ 74, Chapter VIII]. Thepth power of the ratio
+of the output and input norms thus dominates
+∫1/4
+C/Nδd−dp/2 dδ. Forp =pc this is comparable to
+logN.
+References
+[1] Per Åhag, Urban Cegrell, Sławomir Kołodziej, H. H. Phâ.m, and Ahmed Zeriahi. Partial
+pluricomplex energy and integrability exponents of plurisubharmonic functions.Advances in
+Mathematics, 222(6):2036–2058, 2009. doi: 10.1016/j.aim.2009.07.002.
+[2] Semyon Alesker. Non-commutative linear algebra and plurisubharmonic functions of quater-
+nionic variables.Bulletin des Sciences Mathématiques, 127(1):1–35, 2003. doi: 10.1016/
+S0007-4497(02)00004-0.
+[3] Semyon Alesker. Quaternionic Monge–Ampère equations.Journal of Geometric Analysis, 13
+(2):205–238, 2003. doi: 10.1007/BF02930695.
+[4] Semyon Alesker. Solvability of the quaternionic Monge–Ampère equation on compact manifolds
+with a flat hyperKähler metric.Advances in Mathematics, 241:192–219, 2013. doi: 10.1016/j.
+aim.2013.03.021.
+[5] Thierry Aubin. Réduction du cas positif de l’équation de Monge–Ampère sur les variétés
+kählériennes compactes à la démonstration d’une inégalité.Journal of Functional Analysis, 57
+(2):143–153, 1984. doi: 10.1016/0022-1236(84)90093-4.
+[6] M. S. Baouendi and F. Trèves. A microlocal version of Bochner’s tube theorem.Indiana
+University Mathematics Journal, 31(6):885–895, 1982. doi: 10.1512/iumj.1982.31.31060.
+[7] William Beckner, Anthony Carbery, Stephen Semmes, and Fernando Soria. A note on restriction
+of the Fourier transform to spheres.Bulletin of the London Mathematical Society, 21(4):394–398,
+1989. doi: 10.1112/blms/21.4.394.
+[8] David Beltran, Jonathan Hickman, and Christopher D. Sogge. Sharp local smoothing estimates
+for Fourier integral operators. In Paolo Ciatti and Alessio Martini, editors,Geometric Aspects
+of Harmonic Analysis, volume 45 ofSpringer INdAM Series, pages 29–105. Springer, Cham,
+2021. doi: 10.1007/978-3-030-72058-2_2.
+[9] David Beltran, Joris Roos, Alex Rutar, and Andreas Seeger. A fractal local smoothing problem
+for the wave equation.Bulletin of the London Mathematical Society, 57(12):3667–3690, 2025.
+doi: 10.1112/blms.70214.
+[10] Robert J. Berman, Sébastien Boucksom, Vincent Guedj, and Ahmed Zeriahi. A variational
+approach to complex Monge–Ampère equations.Publications Mathématiques de l’IHÉS, 117:
+179–245, 2013. doi: 10.1007/s10240-012-0046-6.
+[11] Aline Bonami and Jean-Louis Clerc. Sommes de Cesàro et multiplicateurs des développements
+en harmoniques sphériques.Transactions of the American Mathematical Society, 183:223–263,
+1973. doi: 10.1090/S0002-9947-1973-0338697-5.
+54
+[12] Jean Bourgain. Averages in the plane over convex curves and maximal operators.Journal
+d’Analyse Mathématique, 47:69–85, 1986. doi: 10.1007/BF02792533.
+[13] Jean Bourgain. Besicovitch type maximal operators and applications to Fourier analysis.
+Geometric and Functional Analysis, 1(2):147–187, 1991. doi: 10.1007/BF01896376.
+[14] Jean Bourgain and Ciprian Demeter. The proof of theℓ2 decoupling conjecture.Annals of
+Mathematics, 182(1):351–389, 2015. doi: 10.4007/annals.2015.182.1.9.
+[15] Luis Caffarelli, Louis Nirenberg, and Joel Spruck. The Dirichlet problem for nonlinear second-
+order elliptic equations. I. Monge–Ampère equation.Communications on Pure and Applied
+Mathematics, 37(3):369–402, 1984. doi: 10.1002/cpa.3160370306.
+[16] Anthony Carbery. The boundedness of the maximal Bochner–Riesz operator onL4(R2).Duke
+Mathematical Journal, 50(2):409–416, 1983. doi: 10.1215/S0012-7094-83-05018-4.
+[17] Anthony Carbery, José L. Rubio de Francia, and Luis Vega. Almost everywhere summability
+of Fourier integrals.Journal of the London Mathematical Society, 38(3):513–524, 1988. doi:
+10.1112/jlms/s2-38.3.513.
+[18] Leonardo Colzani, Alice Cominardi, and Krzysztof Stempak. Radial solutions to the wave equa-
+tion.Annali di Matematica Pura ed Applicata, 181(1):25–54, 2002. doi: 10.1007/s102310100025.
+[19] Antonio Córdoba. The Kakeya maximal function and the spherical summation multipliers.
+American Journal of Mathematics, 99(1):1–22, 1977. doi: 10.2307/2374006.
+[20] Adam Cushman, Ciprian Demeter, and Shukun Wu. Diameter-free reverse inequalities and
+superorthogonality. Preprint, arXiv:2609.13105, 2026. URLhttps://arxiv.org/abs/2609.
+13105.
+[21] Roy O. Davies. Some remarks on the Kakeya problem.Proceedings of the Cambridge Philo-
+sophical Society, 69(3):417–421, 1971. doi: 10.1017/S0305004100046867.
+[22] Lawrence C. Evans. Classical solutions of fully nonlinear, convex, second-order elliptic equations.
+Communications on Pure and Applied Mathematics, 35(3):333–363, 1982. doi: 10.1002/cpa.
+3160350303.
+[23] Charles Fefferman. The multiplier problem for the ball.Annals of Mathematics, 94(2):330–336,
+1971. doi: 10.2307/1970864.
+[24] Rafael J. Fernández-Delgado and Mikael de la Salle. A construction of Kakeya sets in arbitrary
+dimension. Preprint, arXiv:2607.14824v3, 2026.
+[25] Kurt O. Friedrichs. Symmetric hyperbolic linear differential equations.Communications on
+Pure and Applied Mathematics, 7(2):345–392, 1954. doi: 10.1002/cpa.3160070206.
+[26] Shengwen Gan, Yifan Jing, and Shukun Wu. New bounds for Stein’s square function in
+R3. InRecent Developments in Harmonic Analysis and its Applications, volume 792 of
+Contemporary Mathematics, pages 19–65. American Mathematical Society, Providence, RI,
+2024. doi: 10.1090/conm/792/15893.
+[27] Shengwen Gan, Changkeun Oh, and Shukun Wu. New bounds for Stein’s square functions in
+higher dimensions.Advances in Mathematics, 475:110342, 2025. doi: 10.1016/j.aim.2025.110342.
+55
+[28] Shengwen Gan, Danqing He, Xiaochun Li, and Shukun Wu. On local smoothing estimates
+for wave equations. Preprint, arXiv:2502.05973v2, 2026. URLhttps://arxiv.org/abs/2502.
+05973v2. Revised January 4, 2026.
+[29] Chuanwei Gao, Bochen Liu, Changxing Miao, and Yakun Xi. Improved local smoothing
+estimate for the wave equation in higher dimensions.Journal of Functional Analysis, 284(9):
+109879, 2023. doi: 10.1016/j.jfa.2023.109879.
+[30] Chuanwei Gao, Diankun Liu, and Yakun Xi. Curved Kakeya sets and Nikodym problems on
+manifolds.Peking Mathematical Journal, 2026. doi: 10.1007/s42543-025-00114-1. Published
+online February 2, 2026.
+[31] David Gilbarg and Neil S. Trudinger.Elliptic Partial Differential Equations of Second Order.
+Classics in Mathematics. Springer, Berlin, second edition, 2001. doi: 10.1007/978-3-642-61798-0.
+Reprint of the revised second edition; originally published in Grundlehren der mathematischen
+Wissenschaften, vol. 224.
+[32] Loukas Grafakos.Classical Fourier Analysis, volume 249 ofGraduate Texts in Mathematics.
+Springer, third edition, 2014. doi: 10.1007/978-1-4939-1194-3.
+[33] Loukas Grafakos, Liguang Liu, and Dachun Yang. Vector-valued singular integrals and maximal
+functions on spaces of homogeneous type.Mathematica Scandinavica, 104(2):296–310, 2009.
+doi: 10.7146/math.scand.a-15099.
+[34] Shaoming Guo, Joris Roos, and Po-Lam Yung. Sharp variation-norm estimates for oscillatory
+integrals related to Carleson’s theorem.Analysis & PDE, 13(5):1457–1500, 2020. doi: 10.2140/
+apde.2020.13.1457.
+[35] Larry Guth, Hong Wang, and Ruixiang Zhang. A sharp square function estimate for the cone
+inR 3.Annals of Mathematics, 192(2):551–581, 2020. doi: 10.4007/annals.2020.192.2.6.
+[36] Larry Guth, Hong Wang, and Joshua Zahl. A streamlined proof of the Kakeya set conjecture
+inR 3. Preprint, arXiv:2601.14411v2, 2026. Version 2, October 11, 2026.
+[37] Yaryong Heo, Fëdor Nazarov, and Andreas Seeger. Radial Fourier multipliers in high dimensions.
+Acta Mathematica, 206(1):55–92, 2011. doi: 10.1007/s11511-011-0059-x.
+[38] Lars Hörmander. Oscillatory integrals and multipliers onFLp.Arkiv för Matematik, 11:1–11,
+1973. doi: 10.1007/BF02388505.
+[39] Kôdi Husimi. Some formal properties of the density matrix.Proceedings of the Physico-
+Mathematical Society of Japan, Third Series, 22(4):264–314, 1940. doi: 10.11429/ppmsj1919.22.
+4_264.
+[40] Roger L. Jones, Andreas Seeger, and James Wright. Strong variational and jump inequalities
+in harmonic analysis.Transactions of the American Mathematical Society, 360(12):6711–6742,
+2008. doi: 10.1090/S0002-9947-08-04538-8.
+[41] Gerald Kaiser.Quantum Physics, Relativity, and Complex Spacetime: Towards a New Synthesis,
+volume 163 ofNorth-Holland Mathematics Studies. North-Holland, Amsterdam, 1990. URL
+https://arxiv.org/abs/0910.0352.
+56
+[42] Gerald Kaiser and Raymond F. Streater. Windowed Radon transforms, analytic signals, and
+the wave equation. In Charles K. Chui, editor,Wavelets: A Tutorial in Theory and Applications,
+volume 2 ofWavelet Analysis and Its Applications, pages 399–441. Academic Press, Boston,
+1992. URLhttps://arxiv.org/abs/math-ph/0108010.
+[43] Tosio Kato.Perturbation Theory for Linear Operators. Classics in Mathematics. Springer,
+Berlin, second edition, 1995. doi: 10.1007/978-3-642-66282-9.
+[44] Uri Keich. On Lp bounds for Kakeya maximal functions and the Minkowski dimension
+in R2.Bulletin of the London Mathematical Society, 31(2):213–221, 1999. doi: 10.1112/
+S0024609398005372.
+[45] Johannes Keller, Caroline Lasser, and Tomoki Ohsawa. A new phase space density for
+quantum expectations.SIAM Journal on Mathematical Analysis, 48(1):513–537, 2016. doi:
+10.1137/15M1028388.
+[46] Jongchon Kim. Some remarks on Fourier restriction estimates. Preprint, arXiv:1702.01231,
+2017.
+[47] Nikolai V. Krylov. Boundedly nonhomogeneous elliptic and parabolic equations.Mathematics
+of the USSR-Izvestiya, 20(3):459–492, 1983. doi: 10.1070/IM1983v020n03ABEH001360. Russian
+original: Izv. Akad. Nauk SSSR Ser. Mat. 46 (1982), no. 3, 487–523.
+[48] Nikolai V. Krylov. Boundedly nonhomogeneous elliptic and parabolic equations in
+a domain.Mathematics of the USSR-Izvestiya, 22(1):67–97, 1984. doi: 10.1070/
+IM1984v022n01ABEH001434. Russian original: Izv. Akad. Nauk SSSR Ser. Mat. 47 (1983), no.
+1, 75–108.
+[49] Izabella Łaba and Thomas Wolff. A local smoothing estimate in higher dimensions.Journal
+d’Analyse Mathématique, 88:149–171, 2002. doi: 10.1007/BF02786576.
+[50] Sanghyuk Lee, Keith M. Rogers, and Andreas Seeger. Improved bounds for Stein’s square
+functions.Proceedings of the London Mathematical Society, 104(6):1198–1234, 2012. doi:
+10.1112/plms/pdr067.
+[51] Sanghyuk Lee, Keith M. Rogers, and Andreas Seeger. On space-time estimates for the
+Schrödinger operator.Journal de Mathématiques Pures et Appliquées, 99(1):62–85, 2013. doi:
+10.1016/j.matpur.2012.06.003.
+[52] Toshiki Mabuchi.K-energy maps integrating Futaki invariants.Tohoku Mathematical Journal,
+38(4):575–593, 1986. doi: 10.2748/tmj/1178228410.
+[53] William P. Minicozzi, II and Christopher D. Sogge. Negative results for Nikodym maximal
+functions and related oscillatory integrals in curved space.Mathematical Research Letters, 4
+(2–3):221–237, 1997. doi: 10.4310/MRL.1997.v4.n2.a5.
+[54] Akihiko Miyachi. On some estimates for the wave equation inLp and Hp.Journal of the
+Faculty of Science, University of Tokyo, Section IA, Mathematics, 27(2):331–354, 1980.
+[55] Gerd Mockenhaupt, Andreas Seeger, and Christopher D. Sogge. Wave front sets, local smoothing
+and Bourgain’s circular maximal theorem.Annals of Mathematics, 136(1):207–218, 1992. doi:
+10.2307/2946549.
+57
+[56] Gerd Mockenhaupt, Andreas Seeger, and Christopher D. Sogge. Local smoothing of Fourier
+integral operators and Carleson–Sjölin estimates.Journal of the American Mathematical Society,
+6(1):65–130, 1993. doi: 10.1090/S0894-0347-1993-1168960-6.
+[57] Peter Mörters and Yuval Peres.Brownian Motion, volume 30 ofCambridge Series in Statistical
+and Probabilistic Mathematics. Cambridge University Press, Cambridge, 2010. doi: 10.1017/
+CBO9780511750489.
+[58] Detlef Müller and Andreas Seeger. Inequalities for spherically symmetric solutions of the wave
+equation.Mathematische Zeitschrift, 218:417–426, 1995. doi: 10.1007/BF02571912.
+[59] Arian Nadjimzadah. Lifting curved Kakeya sets to linear Kakeya sets. Preprint,
+arXiv:2609.06299v2, 2026. Revised October 20, 2026.
+[60] F. J. Narcowich, P. Petrushev, and J. D. Ward. Localized tight frames on spheres.SIAM
+Journal on Mathematical Analysis, 38(2):574–594, 2006. doi: 10.1137/040614359.
+[61] Fabio Nicola. Slicing surfaces and the Fourier restriction conjecture.Proceedings of the
+Edinburgh Mathematical Society, 52(2):515–527, 2009. doi: 10.1017/S0013091507000995.
+[62] OpenAI. Every Four-Dimensional Kakeya Set Has Full Hausdorff Dimension. OpenAI Math Re-
+lease preprint OAI:Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-
+24-2026, 2026.
+[63] OpenAI. The Kakeya maximal conjecture in three dimensions. OpenAI Math Release preprint
+OAI:The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026, 2026.
+[64] OpenAI. Elliptic capacity propagation and Fourier restriction to the sphere. OpenAI
+Math Release preprint OAI:Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-
+September-24-2026, 2026.
+[65] Juan C. Peral.Lp estimates for the wave equation.Journal of Functional Analysis, 36(1):
+114–145, 1980. doi: 10.1016/0022-1236(80)90110-X.
+[66] Keith M. Rogers. A local smoothing estimate for the Schrödinger equation.Advances in
+Mathematics, 219(6):2105–2122, 2008. doi: 10.1016/j.aim.2008.08.008.
+[67] Andreas Seeger. Some inequalities for singular convolution operators inLp-spaces.Trans-
+actions of the American Mathematical Society, 308(1):259–272, 1988. doi: 10.1090/
+S0002-9947-1988-0955772-3.
+[68] Andreas Seeger, Christopher D. Sogge, and Elias M. Stein. Regularity properties of Fourier
+integral operators.Annals of Mathematics, 134(2):231–251, 1991. doi: 10.2307/2944346.
+[69] Denis Serre. Divergence-free positive symmetric tensors and fluid dynamics.Annales de
+l’Institut Henri Poincaré C, Analyse non linéaire, 35(5):1209–1234, 2018. doi: 10.1016/j.anihpc.
+2017.11.002.
+[70] Denis Serre. Compensated integrability. Applications to the Vlasov–Poisson equation and other
+models in mathematical physics.Journal de Mathématiques Pures et Appliquées, 127:67–88,
+2019. doi: 10.1016/j.matpur.2018.06.025.
+[71] Denis Serre. Mixed determinants, compensated integrability, and new a priori estimates in gas
+dynamics.Quarterly of Applied Mathematics, 81(2):281–295, 2023. doi: 10.1090/qam/1640.
+58
+[72] Christopher D. Sogge. Propagation of singularities and maximal functions in the plane.
+Inventiones Mathematicae, 104(2):349–376, 1991. doi: 10.1007/BF01245080.
+[73] Elias M. Stein. Localization and summability of multiple Fourier series.Acta Mathematica,
+100:93–147, 1958. doi: 10.1007/BF02559603.
+[74] Elias M. Stein.Harmonic Analysis: Real-Variable Methods, Orthogonality, and Oscillatory
+Integrals, volume 43 ofPrinceton Mathematical Series. Princeton University Press, Princeton,
+NJ, 1993. doi: 10.1515/9781400883929. With the assistance of Timothy S. Murphy.
+[75] Terence Tao. The Bochner–Riesz conjecture implies the restriction conjecture.Duke Mathe-
+matical Journal, 96(2):363–375, 1999. doi: 10.1215/S0012-7094-99-09610-2.
+[76] Dongrui Wan. A variational approach to the quaternionic Monge–Ampère equation.Annali di
+Matematica Pura ed Applicata, 199(6):2125–2150, 2020. doi: 10.1007/s10231-020-00960-z.
+[77] Hong Wang and Joshua Zahl. Volume estimates for unions of convex sets, and the Kakeya set
+conjecture in three dimensions. Preprint, arXiv:2502.17655, 2025.
+[78] Xiangyu Wang. Wave packet density in local smoothing: refinements and limitations. Preprint,
+arXiv:2609.34675v4, 2026. URL https://arxiv.org/abs/2609.34675v4. Revised October
+16, 2026.
+[79] Thomas Wolff. Recent work connected with the Kakeya problem. In Hugo Rossi, editor,
+Prospects in Mathematics (Princeton, NJ, 1996), pages 129–162. American Mathematical
+Society, Providence, RI, 1999.
+[80] Thomas Wolff. Local smoothing type estimates onLp for largep.Geometric and Functional
+Analysis, 10(5):1237–1288, 2000. doi: 10.1007/PL00001652.
+[81] Jingyong Zhu. Dirichlet problem of quaternionic Monge–Ampère equations.Israel Journal of
+Mathematics, 214(2):597–619, 2016. doi: 10.1007/s11856-016-1329-2.
+59

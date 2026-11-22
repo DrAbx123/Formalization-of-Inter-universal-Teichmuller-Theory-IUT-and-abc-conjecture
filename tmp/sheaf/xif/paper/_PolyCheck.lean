@@ -1,0 +1,6 @@
+import Mathlib
+open Polynomial
+#check Polynomial.modByMonic_add_div
+#check Polynomial.natDegree_divByMonic
+#check Polynomial.modByMonic_eq_zero_iff_dvd
+#check Polynomial.exists_monic_irreducible_factor

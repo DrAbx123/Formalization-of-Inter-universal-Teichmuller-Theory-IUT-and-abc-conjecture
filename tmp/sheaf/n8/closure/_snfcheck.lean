@@ -1,0 +1,9 @@
+import Mathlib
+open Matrix
+#check IsUnit.unit
+#check IsUnit.unit_spec
+#check Matrix.det_diagonal
+#check Matrix.det_mul
+#check IsUnit.det
+#check PadicInt.norm_unit
+#check Padic.norm_p

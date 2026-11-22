@@ -1,0 +1,33 @@
+TemperedFundamentalGroups\SemistableReduction\FormalPatchLevel.lean:173:74: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?r • ?x
+in the target expression
+  (Ideal.Quotient.mk (JNf f J N)) ((algebraMap (Hat f) (Nf f N)) s * α p) =
+    s • (Ideal.Quotient.mkₐ R (JNf f J N)) ((lift f J hJ α₀) p)
+
+case tmul
+R : Type u
+inst✝⁸ : CommRing R
+f : R
+J : Ideal R
+n : ℕ
+hJ : J ^ n = ⊥
+P : Type u
+inst✝⁷ : CommRing P
+inst✝⁶ : Algebra R P
+inst✝⁵ : Algebra.FormallyEtale R P
+N : Type u
+inst✝⁴ : CommRing N
+inst✝³ : Algebra R N
+inst✝² : Algebra (Hat f) N
+inst✝¹ : IsScalarTower R (Hat f) N
+inst✝ : Module.Flat (Hat f) (Nf f N)
+α₀ : P →ₐ[R] Nf f N ⧸ JNf f J N
+hsurj : Function.Surjective ⇑(betaMod f J α₀)
+hinj : ∀ (x : Hat f ⊗[R] P), (betaMod f J α₀) x = 0 → x ∈ Ideal.map (algebraMap R (Hat f)) J • ⊤
+α : P →ₐ[R] Nf f N := lift f J hJ α₀
+β : Hat f ⊗[R] P →ₗ[Hat f] Nf f N := LinearMap.liftBaseChange (Hat f) α.toLinearMap
+hJS : Ideal.map (algebraMap R (Hat f)) J ^ n = ⊥
+s : Hat f
+p : P
+⊢ (Ideal.Quotient.mk (JNf f J N)) ((algebraMap (Hat f) (Nf f N)) s * α p) =
+    s • (Ideal.Quotient.mkₐ R (JNf f J N)) ((lift f J hJ α₀) p)

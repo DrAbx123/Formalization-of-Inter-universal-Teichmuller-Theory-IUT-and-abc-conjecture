@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1G3GapReducedV2ToGapActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3GapReducedV2ToGapActual.gapReduced_of_gapReducedV2
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3GapReducedV2ToGapActual.abcConjecture_of_gapReducedV2_via_gap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G3GapReducedV2ToGapActual.g3GapRouteRows

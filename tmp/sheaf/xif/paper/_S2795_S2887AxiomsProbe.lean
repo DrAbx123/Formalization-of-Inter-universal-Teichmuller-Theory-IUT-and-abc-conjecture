@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2795C3NormalizedUnitLatticeLogVolumeActual
+import tmp.sheaf.xif.paper.S2887C3LatticeRegionScalingConsumer
+
+#print axioms LeanFormal.IUT.XiFPaper.S2795C3NormalizedUnitLatticeLogVolumeActual.c3NormalizedTensorHaar_unit_smul_lattice_logVolume
+#print axioms LeanFormal.IUT.XiFPaper.S2887C3LatticeRegionScalingConsumer.C3LatticeRegion_scaling_consumer

@@ -1,0 +1,9 @@
+import Mathlib.CategoryTheory.Category.Cat
+open CategoryTheory
+#check CategoryTheory.Cat.Hom₂.comp_app
+#check CategoryTheory.Cat.Hom₂.id_app
+#check CategoryTheory.Cat.Hom.toNatTrans_comp
+#check CategoryTheory.Cat.Hom.toNatTrans_id
+#check CategoryTheory.whiskerRight_toNatTrans
+#check CategoryTheory.whiskerLeft_toNatTrans
+#check CategoryTheory.Cat.Hom₂.eqToHom_toNatTrans

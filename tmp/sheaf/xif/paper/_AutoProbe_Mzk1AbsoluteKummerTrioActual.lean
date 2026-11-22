@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1AbsoluteKummerTrioActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsoluteKummerTrioActual.kummerMapTrio
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsoluteKummerTrioActual.kummerKernelTrio
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsoluteKummerTrioActual.kummerLocallyConstantTrio

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEllThm38HeightBoundsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.GenEllHeightAssetRow
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.genEllThm38HeightAssets
+#print axioms LeanFormal.IUT.XiFPaper.GenEllThm38HeightBoundsActual.genEllThm38HeightAssets_length

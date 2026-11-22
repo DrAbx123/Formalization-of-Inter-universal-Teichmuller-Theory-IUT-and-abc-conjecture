@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.Mzk1CritValueInImageProofActual
+
+open LeanFormal.IUT.XiFPaper.Mzk1CritValueInImageProofActual
+
+#print axioms critValueInImageStatement_proved
+#print axioms critValueInImage
+#print axioms gPoly_critValue_eq_zero_or_inv
+#print axioms belyiNormGPoly_critValue_zero_or_one
+#print axioms s3135_critValueInImage_counterexample
+#print axioms s3135_critValueInImage_refuted
+
+#check @critValueInImageStatement_proved
+#check @s3135_critValueInImage_refuted

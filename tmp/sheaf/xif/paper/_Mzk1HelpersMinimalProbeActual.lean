@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22StepInterfaceQActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22FullShapeHelpersActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.critValues_comp_subset
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.cvCompositionLaw
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.specialSetPreservation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22FullShapeHelpersActual.fullShapeHelperRows_length
+#check LeanFormal.IUT.XiFPaper.Mzk1Lemma22StepInterfaceQActual.Mzk1Lemma22StepInterfaceQ

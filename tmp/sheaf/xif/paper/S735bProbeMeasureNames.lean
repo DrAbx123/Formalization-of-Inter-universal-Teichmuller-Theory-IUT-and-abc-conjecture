@@ -1,0 +1,13 @@
+import Mathlib.MeasureTheory.Group.Action
+import Mathlib.GroupTheory.GroupAction.Defs
+import Mathlib.GroupTheory.GroupAction.Transitive
+namespace ProbeR5
+#check @MeasureTheory.Measure.measure_smul
+#check @measure_smul
+#check @MeasureTheory.Measure.measure_preimage_smul
+#check @MeasureTheory.Measure.measurePreserving_smul
+#check @MulAction.IsPretransitive
+#check @IsPretransitive
+#check @IsCancelSMul
+#check @QuotientGroup.mk
+end ProbeR5

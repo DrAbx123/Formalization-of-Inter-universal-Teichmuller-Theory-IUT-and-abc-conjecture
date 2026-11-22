@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1P8GlobalFreyCriterionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8GlobalFreyCriterionActual.p8_finalCriterion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8GlobalFreyCriterionActual.p8_abc_of_uniformHeightBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8GlobalFreyCriterionActual.p8_abc_of_actualData

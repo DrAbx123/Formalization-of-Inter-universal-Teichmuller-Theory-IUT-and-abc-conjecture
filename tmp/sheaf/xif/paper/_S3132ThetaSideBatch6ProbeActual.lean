@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3132ThetaSideCertificateSignedShapeActual
+import tmp.sheaf.xif.paper.S3132ThetaSideHullSlotWiringActual
+import tmp.sheaf.xif.paper.S3132ThetaSideQSideSlotWiringActual
+import tmp.sheaf.xif.paper.S3132ThetaSideComparisonRegionBundleV2Actual
+import tmp.sheaf.xif.paper.S3132ThetaSideRemainingHypothesesRecordActual
+import tmp.sheaf.xif.paper.S3132RootedCoefficientCorrectionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideCertificateSignedShapeActual.adaptedSignedCertificate_comparison
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideHullSlotWiringActual.thetaSideHullBoundSlot_ofReal_le
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideQSideSlotWiringActual.thetaSideQSideSlot_corollary312
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideComparisonRegionBundleV2Actual.ThetaSideBundleV2.corollary312
+#print axioms LeanFormal.IUT.XiFPaper.S3132RootedCoefficientCorrectionActual.paperRootCoefficientFamily_eq_e_mul_rootHalf

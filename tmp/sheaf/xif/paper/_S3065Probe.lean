@@ -1,0 +1,9 @@
+import Mathlib.RingTheory.Localization.Away.Basic
+import Mathlib.RingTheory.Ideal.Maximal
+import Mathlib.AlgebraicGeometry.AffineScheme
+open PrimeSpectrum
+#check PrimeSpectrum.localization_away_comap_range
+#check PrimeSpectrum.mem_basicOpen
+#check Ideal.IsMaximal.eq_of_le
+#check PrimeSpectrum.ext
+#check PrimeSpectrum.ext_iff

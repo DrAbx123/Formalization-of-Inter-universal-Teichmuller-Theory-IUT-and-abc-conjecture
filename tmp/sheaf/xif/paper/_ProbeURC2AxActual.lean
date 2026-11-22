@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1URThetaKSideActual
+import tmp.sheaf.xif.paper.Mzk1URQAllParamActual
+import tmp.sheaf.xif.paper.Mzk1URThetaKPacketActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKSideActual.ksThetaHullLogRoot_le_ucWeightedHpkt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URQAllParamActual.qPilotMagnitudePaper_le_univ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKPacketActual.ksThetaPossibleImages_subset_packetHull

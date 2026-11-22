@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Theorem311PreObjectStatementLayerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem311PreObjectStatementLayerActualAdapted.multiradial_output_object
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem311PreObjectStatementLayerActualAdapted.theorem311PreObjectRows_length

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2203D5RangeActual
+open LeanFormal.IUT.XiFPaper.S2203D5RangeActual
+#print axioms S2203D5LargeImageFive_of_rangeHypotheses
+#print axioms S2203D5LargeImageFive_of_exactFirstMissing

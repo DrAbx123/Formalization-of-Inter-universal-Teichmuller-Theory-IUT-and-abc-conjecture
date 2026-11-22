@@ -1,0 +1,27 @@
+import tmp.sheaf.xif.paper.S3171IUTIVSection1DisplayActual
+import tmp.sheaf.xif.paper.S3171IUTIVSection1InputsActual
+import tmp.sheaf.xif.paper.S3171UniformHeightConsumerActual
+import tmp.sheaf.xif.paper.S3171FLTAssetSupportActual
+import tmp.sheaf.xif.paper.S3171SkeletonAlignActual
+import tmp.sheaf.xif.paper.S3171Step0RecordActual
+import tmp.sheaf.xif.paper.S3171IdsActual
+import tmp.sheaf.xif.paper.GenEll14P3WiringActual
+import tmp.sheaf.xif.paper.AG04FiniteDivisorActual
+import tmp.sheaf.xif.paper.AG04bResidueFieldActual
+import tmp.sheaf.xif.paper.Indet05RouteMultiradialClassActual
+
+-- S3171 IV section1 + layer-2 batch probe.
+
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1DisplayActual.thm110_final_display
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1DisplayActual.paperRouteResidualData_of_undilated
+#print axioms LeanFormal.IUT.XiFPaper.S3171IUTIVSection1DisplayActual.abcConjecture_of_undilated
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.uniformHeightComparison_of_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.undilatedHeightBound_of_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3171UniformHeightConsumerActual.heightComparisonFamily_of_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.GenEll14P3WiringActual.genEllP3ConsumerBundle_cor23
+#print axioms LeanFormal.IUT.XiFPaper.AG04FiniteDivisorActual.weilDivisorFiniteDegree_add
+#print axioms LeanFormal.IUT.XiFPaper.AG04FiniteDivisorActual.divisorSections_toWeilDivisor_eq
+#print axioms LeanFormal.IUT.XiFPaper.AG04bResidueFieldActual.agSectionResidue_apply
+#print axioms LeanFormal.IUT.XiFPaper.Indet05RouteMultiradialClassActual.routeMultiradial_ind1
+#print axioms LeanFormal.IUT.XiFPaper.Indet05RouteMultiradialClassActual.routeMultiradial_ind3_possibleImage_upper
+#print axioms LeanFormal.IUT.XiFPaper.S3171IdsActual.s3171Ids

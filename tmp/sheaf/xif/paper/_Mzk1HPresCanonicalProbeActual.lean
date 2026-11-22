@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22HypPreservationCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationCanonicalActual.canonical_hypotheses_preserved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationCanonicalActual.canonical_card_collapse
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationCanonicalActual.canonicalHypPreservationRows_length

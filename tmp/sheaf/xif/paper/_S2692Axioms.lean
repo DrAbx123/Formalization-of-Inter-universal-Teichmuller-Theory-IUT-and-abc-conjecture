@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2692WeierstrassPointDataReductionActual
+#print axioms LeanFormal.IUT.XiFPaper.S2692WeierstrassPointDataReductionActual.S2692_pointData_iff_equation

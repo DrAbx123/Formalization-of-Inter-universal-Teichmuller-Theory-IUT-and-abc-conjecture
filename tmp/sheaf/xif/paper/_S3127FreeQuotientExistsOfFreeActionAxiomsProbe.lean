@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127FreeQuotientExistsOfFreeActionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientExistsOfFreeActionActual.S3127FreeQuotientExists_ofFreeAction

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceCriticalInTargetActual
+import tmp.sheaf.xif.paper.Mzk1Lemma24BetaAvoidanceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceCriticalInTargetActual.gChoiceCriticalInTarget_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceCriticalInTargetActual.gChoice_unramifiedShape_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BetaAvoidanceActual.s3135_beta_avoidance
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BetaAvoidanceActual.s3135_poly_value_bound

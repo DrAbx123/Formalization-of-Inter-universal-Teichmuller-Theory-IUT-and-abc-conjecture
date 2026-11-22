@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1LiteralIQHullFinitenessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQHullFinitenessActual.literalGlobalIQHull_measure_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQHullFinitenessActual.literalGlobalIQHull_logVolume_lt_top
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LiteralIQHullFinitenessActual.sourceIQHull_finiteness_package

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh09ThetaShiftCorollariesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh09ThetaShiftCorollariesActual.etTh09_shift_one
+#print axioms LeanFormal.IUT.XiFPaper.EtTh09ThetaShiftCorollariesActual.etTh09_shift_one_quotient
+#print axioms LeanFormal.IUT.XiFPaper.EtTh09ThetaShiftCorollariesActual.etTh09Rows_length

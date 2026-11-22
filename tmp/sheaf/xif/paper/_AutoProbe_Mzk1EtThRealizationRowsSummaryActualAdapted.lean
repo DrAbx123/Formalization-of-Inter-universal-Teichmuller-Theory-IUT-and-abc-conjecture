@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1EtThRealizationRowsSummaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRealizationRowsSummaryActual.EtThRealizationRowStatus
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRealizationRowsSummaryActual.etthRealizationRowStatus
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1EtThRealizationRowsSummaryActual.etthRealizationRowStatus_length

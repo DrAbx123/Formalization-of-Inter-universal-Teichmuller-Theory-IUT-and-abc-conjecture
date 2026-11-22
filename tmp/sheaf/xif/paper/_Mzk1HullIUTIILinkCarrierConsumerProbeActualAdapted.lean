@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullIUTIILinkCarrierConsumerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullIUTIILinkCarrierConsumerActualAdapted.iutiiLogShellLink_cor312

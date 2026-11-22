@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3132ThetaSideSlotsNonvacuousActual
+import tmp.sheaf.xif.paper.S3132ThetaSideBundleWithDataActual
+import tmp.sheaf.xif.paper.AbsTopIII13PsiCnsAnchorActual
+import tmp.sheaf.xif.paper.EtTh04QPilotDataActual
+import tmp.sheaf.xif.paper.EtTh06ThetaGroupObjectActual
+import tmp.sheaf.xif.paper.EtTh07ThetaFunctionValuesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideSlotsNonvacuousActual.thetaSideQSideComparisonDataNonvacuous_theta
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideBundleWithDataActual.ThetaSideBundleWithData.comparisonData_corollary312
+#print axioms LeanFormal.IUT.XiFPaper.EtTh06ThetaGroupObjectActual.etTh_thetaToElliptic_mk
+#print axioms LeanFormal.IUT.XiFPaper.EtTh07ThetaFunctionValuesActual.etTh_oddThetaTerm_neg_one

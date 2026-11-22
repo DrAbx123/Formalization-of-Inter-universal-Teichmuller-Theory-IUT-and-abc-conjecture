@@ -1,0 +1,31 @@
+import tmp.sheaf.xif.paper.S3127G2TargetActual
+import tmp.sheaf.xif.paper.S3127G2CoverIsoActual
+import tmp.sheaf.xif.paper.S3127G2QuotientMapActual
+import tmp.sheaf.xif.paper.S3127G2QuotientObjActual
+import tmp.sheaf.xif.paper.S3127G2QFullUnitActual
+import tmp.sheaf.xif.paper.S3127G2RActionActual
+noncomputable section
+open CategoryTheory AlgebraicGeometry
+open LeanFormal.IUT
+open Iut
+open LeanFormal.IUT.XiFPaper.S1419D6NonterminalStackActual
+open LeanFormal.IUT.XiFPaper.S3127KLinearFullActual
+open LeanFormal.IUT.XiFPaper.S3127FreeQuotientActual
+open LeanFormal.IUT.XiFPaper.S3127G2TargetActual
+open LeanFormal.IUT.XiFPaper.S3127G2CoverIsoActual
+open LeanFormal.IUT.XiFPaper.S3127G2QuotientMapActualFull
+open LeanFormal.IUT.XiFPaper.S3127G2QuotientObjActual
+open LeanFormal.IUT.XiFPaper.S3127G2QFullUnitActual
+open LeanFormal.IUT.XiFPaper.S3127G2RActionActual
+open LeanFormal.IUT.IUTII.Frobenioid.Example36.EtaleCoverFoundations
+namespace LeanFormal.IUT.XiFPaper.S3127RawFacProbe
+#check S3127G2CoverIsoA
+#check S3127G2RawCoverA
+#check S3127G2AffineCoverA
+#check S3127G2QuotientObj
+#check S3127G2QFull
+#check S3127G2QuotientMap
+#check S3127FreeQuotientTarget.quotientObj
+#check S3127FreeQuotientTarget.quotientMap
+end LeanFormal.IUT.XiFPaper.S3127RawFacProbe
+end

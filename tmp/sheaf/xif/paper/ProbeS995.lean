@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S995FiniteCarrierCor312ConclusionActual
+open LeanFormal.IUT.XiFPaper.S995FiniteCarrierCor312ConclusionActual
+#print axioms s995FiniteCarrierCor312Conclusion
+#print s995FiniteCarrierCor312Conclusion

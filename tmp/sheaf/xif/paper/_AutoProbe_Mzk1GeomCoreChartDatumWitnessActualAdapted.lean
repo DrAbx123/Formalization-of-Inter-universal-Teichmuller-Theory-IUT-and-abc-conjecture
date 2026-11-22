@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreChartDatumWitnessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartDatumWitnessActual.chartDatum_fibre
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartDatumWitnessActual.chartDatum_restatedWitness
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartDatumWitnessActual.chartDatum_recast

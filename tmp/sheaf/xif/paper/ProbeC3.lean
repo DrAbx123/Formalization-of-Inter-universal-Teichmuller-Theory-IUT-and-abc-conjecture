@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.C3LogShellTensorPacketActual
+#check @LeanFormal.IUT.XiFPaper.C3LogShellTensorPacketActual.C3LogShellTensorBlock

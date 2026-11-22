@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRCanonicalDegreeCluster2Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRCanonicalDegreeCluster2Actual.rrCanonicalDegreeCluster2_hdual

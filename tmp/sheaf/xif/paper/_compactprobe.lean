@@ -1,0 +1,10 @@
+import Mathlib
+#check isCompact_univ_pi
+#check isCompact_pi
+#check Metric.isCompact_closedBall
+#check isCompact_closedBall
+#check isCompact_iff_isClosed_bounded
+#check Metric.isCompact_iff_isClosed_bounded
+#check Set.pi
+#check Set.mem_pi
+#check isCompact_univ_pi

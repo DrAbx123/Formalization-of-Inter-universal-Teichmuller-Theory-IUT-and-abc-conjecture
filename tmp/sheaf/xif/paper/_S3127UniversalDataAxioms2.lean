@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3127G2UniversalDataActual
+import tmp.sheaf.xif.paper.S3127G2QuotientMapRawActual
+import tmp.sheaf.xif.paper.S3127G2TargetActual
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataActual.S3127QuotientUniversal_of_data
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataActual.S3127G2UniversalData.ofUniversal
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2UniversalDataActual.S3127QuotientUniversal_iff_nonempty_data
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2TargetActual.S3127G2QFull
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2TargetActual.S3127FreeQuotientTargetOf
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QuotientMapRawActual.S3127G2QuotientMapRaw
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QuotientMapActualFull.S3127G2QuotientMap
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QuotientObjActual.S3127G2QuotientObj
+#print axioms LeanFormal.IUT.XiFPaper.S3127GammaRAlgebraActual.gammaAlgebraOf
+#print axioms LeanFormal.IUT.XiFPaper.S3127GammaCompActual.gammaMulSemiringAction
+#print axioms LeanFormal.IUT.XiFPaper.S3127GammaRAlgebraActual.gammaEtaleOf
+#print axioms LeanFormal.IUT.XiFPaper.S3127GammaRAlgebraActual.gammaFiniteOf

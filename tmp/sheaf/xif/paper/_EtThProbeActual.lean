@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.EtTh00Stage0LedgerActual
+import tmp.sheaf.xif.paper.EtTh01OddThetaSeriesActual
+import tmp.sheaf.xif.paper.EtTh02ShiftLawActual
+import tmp.sheaf.xif.paper.EtTh03EtaleThetaGroupActual
+import tmp.sheaf.xif.paper.EtTh04QPilotDataActual
+import tmp.sheaf.xif.paper.EtTh05PaperInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh01OddThetaSeriesActual.etTh_norm_oddThetaSign
+#print axioms LeanFormal.IUT.XiFPaper.EtTh01OddThetaSeriesActual.etTh_oddThetaSign_add
+#print axioms LeanFormal.IUT.XiFPaper.EtTh03EtaleThetaGroupActual.etTh_thetaCommutatorKernel_normal
+#print axioms LeanFormal.IUT.XiFPaper.EtTh03EtaleThetaGroupActual.etTh_integralTateReduction_surjective

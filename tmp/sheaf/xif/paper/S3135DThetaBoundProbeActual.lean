@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3135IUTIVThetaBoundToComparisonActual
+
+/-! Axiom probe for the S3135 IUT IV Theorem 1.10 -> section 2 reductions. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135IUTIVThetaBoundToComparisonActual.iutivCor312LowerBound_signBridge
+#print axioms LeanFormal.IUT.XiFPaper.S3135IUTIVThetaBoundToComparisonActual.qPilotLogVolume_le_of_nonneg_magnitude
+#print axioms LeanFormal.IUT.XiFPaper.S3135IUTIVThetaBoundToComparisonActual.s3135_display_of_cor312_thetaComputation
+#print axioms LeanFormal.IUT.XiFPaper.S3135IUTIVThetaBoundToComparisonActual.s3135_heightBound_of_display
+#print axioms LeanFormal.IUT.XiFPaper.S3135IUTIVThetaBoundToComparisonActual.s3135_ABCHeightWeightAdditiveBoundV2_of_paperInputs

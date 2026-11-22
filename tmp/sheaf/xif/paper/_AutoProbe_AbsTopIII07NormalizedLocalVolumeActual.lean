@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII07NormalizedLocalVolumeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.unitBall
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.unitBall_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07NormalizedLocalVolumeActual.unitBall_isOpen

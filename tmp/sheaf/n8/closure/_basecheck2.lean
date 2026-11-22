@@ -1,0 +1,5 @@
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotBaseChange
+#check LeanFormal.IUT.ArithmeticQPilotLogVolume.localLogMagnitude_eq_order_mul_log
+#check LeanFormal.IUT.ArithmeticQPilotBaseChange.localLogMagnitude_eq_order_mul_log
+#check LeanFormal.IUT.ArithmeticQPilotBaseChange.localLogMagnitude
+#check LeanFormal.IUT.ArithmeticQPilotLogVolume.localLogMagnitude

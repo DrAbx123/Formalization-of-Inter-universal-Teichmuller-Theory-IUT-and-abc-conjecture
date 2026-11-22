@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.Mzk1Consumer24AdapterUnconditionalActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22ProofActual
+import tmp.sheaf.xif.paper.Mzk1Lemma24AssemblyActual
+import tmp.sheaf.xif.paper.Mzk1BelyiProducerImpliesABCACtual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Consumer24AdapterUnconditionalActual.finiteBetaCorrectedBase_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Consumer24AdapterUnconditionalActual.h24BaseConcrete_finite_proved
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22ProofActual.belyi22_min_attained
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24AssemblyActual.mzk1Lemma24_assembly
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiProducerImpliesABCACtual.belyiProducer_implies_ABC

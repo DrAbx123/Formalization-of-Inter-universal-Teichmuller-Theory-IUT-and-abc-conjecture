@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreBridgeLegacyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeLegacyActual.fibreOverZeroEq_of_bridge
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeLegacyActual.restatedWitness_of_bridge
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeLegacyActual.bridgeLegacyRows_length

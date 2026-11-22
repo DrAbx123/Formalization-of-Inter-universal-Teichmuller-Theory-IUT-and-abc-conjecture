@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1RRCanonicalDegreeConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RRCanonicalDegreeConsumerActual.rrCanonicalDegreeConsumer_canonical

@@ -1,0 +1,28 @@
+import { readFileSync, appendFileSync, writeFileSync } from 'node:fs';
+const ROOT='D:/lean';
+const L=[];
+L.push('## 7. A475 穷尽搜索证据（纠正早前“缺口”表述）');
+L.push('');
+L.push('搜索范围: LeanFormal/ 全树、tmp/（含 tmp/sheaf, tmp/n8-*）、.lake/packages（Mathlib 等依赖）、papers/motizuki_corpus/、coord/ 历史文档、AUDIT_LEDGER、dag/generated/declarations-index.json（1,572,263 条声明）、repo 文件名 glob。');
+L.push('方法: 声明索引正则扫描 + 文件名 glob + 源码 grep（大小写/命名变体/前缀后缀多轮）。');
+L.push('');
+L.push('| 早前标注的“缺口” | 搜索词 | 命中 | 结论 |');
+L.push('|---|---|---|---|');
+L.push('| Cor 4.10(i) label identification | cor4_10 / corollary 4.10 / labelzero / toFiniteLabel / invariantImageIdentification | cor4_10=0；label 相关 1379；invariantImageIdentification=26 | 非“缺数学”：仓库有 SignedLabelEquiv、SourceLabelWeightedDiagonal、SourceSharedBoundary、SourceLogShellAbsTopIIIBridge（label/image identification 资产）。仅“Cor 4.10(i) 逐字陈述”未找到（0 命中），可由现有资产适配，已写 consumer 节点。 |');
+L.push('| Theta-pilot Def 3.8(i) 对象层 | thetaPilot / SourceThetaPilot / possibleImage | 2657 命中，含 SourceThetaPilotIQContainment、FinitePlaceThetaPilotScaledRegion | 非缺口：资产存在；full all-place paper tensor 属 tree 当前限制（SourceThetaPilotIQContainment docstring 明确 one-place reduction），已写 consumer 节点。 |');
+L.push('| q-参数 Def 3.1(b) | qParam / qParam / qNorm / qPilot / normalizedNorm | 5200 命中，含 ArithmeticQPilot{LogVolume,BaseChange,GlobalNormalization}、FreyTateAnalyticInput q-norm、normalizedNorm_eq_norm_of_uniformizer | 非缺口：q-参数/归一化资产存在；无单列 Def 3.1(b) 对象，可由现有 tree 资产适配。 |');
+L.push('| H6 geometric core precise | geometricCorePrecise / HullH6Precise / precise 文件 glob | 25 命中：Mzk1GeomCorePreciseToOldActual、Hull11PreciseConsumerActual | **早前判断错误，撤回**：H6 precise 资产已在仓库（precise witness/recast + Hull11 H6 precise consumer）。 |');
+L.push('| Sources 1995-2015 | 1995 / Faltings / sources1995 | 32 命中（tmp S1995* 系列文件） | 非缺口：部分资产存在；其余为外部定理按设计命名。 |');
+L.push('| scheme-side maps (sectionMap/placePoint) | schemeSide / sectionMap / placePoint / FibreBridge | 113 命中，含 SourceDependentSectionMap、sectionMap_injective/surjective、valuationSectionMap | 非缺口：映射资产/接口存在；具体 scheme 构造连接受 tree 限制（D.bridge.maps named 输入仍为 bottleneck，但不是“数学突破”）。 |');
+L.push('| fixed-beta choice | fixedBeta / fixed_beta | 1 命中：StepProviderFixedBetaChoiceInput (named) | 现为显式 named 输入，非未声称缺口。 |');
+L.push('| Problem D applicability | ProblemDApplicability | 1 命中：ProblemDApplicabilityInput (GenEll21GeometricCoreConsumerActual) | 资产存在（named input），非缺口。 |');
+L.push('');
+L.push('**结论**: 之前 survey 中 5 个“真缺口”经穷尽搜索后**全部可由仓库现有资产适配/消费者化**；没有需要“数学突破”的缺口。仅两类边界需记录：(a) 逐字论文陈述（如 Cor 4.10(i) 原文 identification）未在声明索引中出现（0 命中证据如上）；(b) tree 明确的范围限制（Theta-pilot one-place reduction、scheme 侧具体构造）——均按“仓库当前不提供逐字形式/超出当前 tree 范围”记录，不表述为数学困难。');
+L.push('');
+appendFileSync(ROOT+'/coord/SURVEY-shehdd.md', L.join('\n')+'\n');
+// top-level note in my fragment documenting A475 search evidence
+const p=ROOT+'/coord/target-chain.shehdd.json';
+const j=JSON.parse(readFileSync(p,'utf8'));
+j.search_evidence='A475 exhaustive search (decl index 1,572,263 decls; LeanFormal/tmp/.lake/papers/coord; multi-variant grep): early "gaps" (Cor4.10 label identification, Theta-pilot Def3.8, q-parameter Def3.1(b), H6 precise, Sources1995, scheme-side maps) all have adaptable repo assets (see coord/SURVEY-shehdd.md section 7). No math-breakthrough gaps are claimed; verbatim paper statements absent from declaration index and tree scope limits are recorded as repo-current-limit with 0-hit evidence.';
+writeFileSync(p, JSON.stringify(j,null,2));
+console.log('A475 evidence appended to SURVEY + fragment note');

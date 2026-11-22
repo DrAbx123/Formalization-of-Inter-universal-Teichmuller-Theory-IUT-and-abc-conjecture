@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3128IsLocalizationAwayActual
+import tmp.sheaf.xif.paper.S3119PhiDegreeActual
+#print axioms LeanFormal.IUT.XiFPaper.S3128IsLocalizationAwayActual.S3128IsLocalizationAway_NfInv
+#print axioms LeanFormal.IUT.XiFPaper.S3128IsLocalizationAwayActual.S3128SpecFixedMap_isOpenImmersion
+#print axioms LeanFormal.IUT.XiFPaper.S3119PhiDegreeActual.S3119PhiP_degree_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3119PhiDegreeActual.S3119PhiQ_degree_bound

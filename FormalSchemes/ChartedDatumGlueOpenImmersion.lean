@@ -1,0 +1,124 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import FormalSchemes.ChartedDatumGlueMorphisms
+import FormalSchemes.GeneralFibreProductBothOverlapRange
+import FormalSchemes.GlueMorphismsOpenImmersion
+
+/-!
+# When a charted datum's glued morphism is an open immersion
+
+`AlgebraicGeometry.AffineChartedFibreDatumX.glueChartMorphisms`
+(`FormalSchemes.ChartedDatumGlueMorphisms`, issue 860) glues a family of chart morphisms
+`k i : Spf (A i) ⟶ Y` into a morphism `xGlued ⟶ Y`. This file transports the open-immersion
+criterion of `FormalSchemes.GlueMorphismsOpenImmersion` from the raw glue datum down to the charted
+datum, where the overlap objects are named `Spf (A i{1/g_ij})` rather than
+`toLocallyRingedSpaceGlueData.V (i, j)`.
+
+## What the transport costs
+
+Exactly one thing: `CategoryTheory.GlueData.ofGlueData'` pads the diagonal of a `GlueData'`, so the
+glue datum's overlap immersion `f i j` is not `basicOpenChart (I·A_i) (g i j)` on the nose but that
+morphism preceded by an `eqToHom` — and on the diagonal it is an `eqToHom` alone. An `eqToHom` is an
+isomorphism, so neither changes a range (`LocallyRingedSpace.range_eqToHom_comp_base`), and
+`range_xGlueData_f_comp_of_ne` below records the resulting range identity off the diagonal. **The
+diagonal needs no such identity**: `FormalScheme.GlueData.isOpenImmersion_glueMorphisms` asks its
+containment only for `i ≠ j`, so the diagonal case is discharged without rewriting a range at all.
+The `dite` conditions live at `D.J` while the glue datum indexes by
+`D.xFormalGlueData.toLocallyRingedSpaceGlueData.J`, so the disequality has to be re-typed as
+`¬ @Eq D.J i j` before `dif_neg` fires.
+`AlgebraicGeometry.AffineChartedFibreDatumX.glueChartMorphisms` used to perform the same step for
+the same reason; since issue 2048 it does not, because its overlap obligation is discharged by
+`CategoryTheory.GlueData.ofGlueData'_f_comp` (`FormalSchemes.GlueMorphisms`), which is stated at
+the `CategoryTheory.GlueData'` and so never meets the mismatch. **No such general statement covers
+the range identity below**, which is about `f` rather than about the overlap condition, so the
+re-typing is still done here by hand.
+
+The hypothesis a consumer must supply is therefore stated in the datum's own spelling, and only for
+`i ≠ j`: on the diagonal nothing is asked of the consumer at all.
+
+## Main results
+
+* `AlgebraicGeometry.AffineChartedFibreDatumX.range_xGlueData_f_comp_of_ne`: the range identity
+  above.
+* `AlgebraicGeometry.AffineChartedFibreDatumX.range_glueChartMorphisms`: the range of the glued
+  morphism is the union of the ranges of the chart morphisms.
+* `AlgebraicGeometry.AffineChartedFibreDatumX.isOpenImmersion_glueChartMorphisms`: **the criterion**
+  — chart morphisms that are open immersions and meet only along `D(g_ij)` glue to an open
+  immersion.
+
+## References
+
+* [Grothendieck, *Éléments de géométrie algébrique I*][EGA1], Ch. I, §10.6, §10.15.
+-/
+
+noncomputable section
+
+open CategoryTheory AlgebraicGeometry FormalSpectrum Topology
+
+universe u
+
+namespace AlgebraicGeometry
+
+namespace AffineChartedFibreDatumX
+
+variable {R : Type u} [CommRing R] {I : Ideal R} {hI : I.FG}
+variable {B : Type u} [CommRing B] [Algebra R B]
+variable (D : AffineChartedFibreDatumX R I hI B) {Y : LocallyRingedSpace.{u}}
+
+/-! ### The glue datum's overlap immersion, in the datum's own spelling -/
+
+/-- Off the diagonal, the glue datum's overlap immersion is `basicOpenChart (I·A_i) (g i j)`
+preceded by an `eqToHom`, so composing with any `kk` leaves the range unchanged. -/
+theorem range_xGlueData_f_comp_of_ne (i j : D.J) (hij : i ≠ j)
+    (kk : letI := D.commRing; letI := D.algebra;
+      locallyRingedSpaceObj (I.map (algebraMap R (D.A i))) ⟶ Y) :
+    letI := D.commRing; letI := D.algebra
+    Set.range (D.xFormalGlueData.toLocallyRingedSpaceGlueData.toGlueData.f i j ≫ kk).base =
+      Set.range (basicOpenChart (I.map (algebraMap R (D.A i))) (D.g i j) ≫ kk).base := by
+  letI := D.commRing
+  letI := D.algebra
+  have hij' : ¬ @Eq D.J i j := hij
+  simp only [xFormalGlueData, xLrsGlueData, xGlueData', CategoryTheory.GlueData.ofGlueData',
+    CategoryTheory.GlueData'.f', dif_neg hij', Category.assoc]
+  exact LocallyRingedSpace.range_eqToHom_comp_base _ _
+
+/-! ### The glued morphism -/
+
+variable (k : letI := D.commRing; letI := D.algebra; letI := D.topology; letI := D.isAdic;
+    ∀ i : D.J, locallyRingedSpaceObj (I.map (algebraMap R (D.A i))) ⟶ Y)
+  (hk : letI := D.commRing; letI := D.algebra; letI := D.topology; letI := D.isAdic;
+    ∀ (i j : D.J) (h : i ≠ j),
+      basicOpenChart (I.map (algebraMap R (D.A i))) (D.g i j) ≫ k i =
+        awayCompletionTransition (D.g i j) (D.g j i) (D.τ i j h) ≫
+          basicOpenChart (I.map (algebraMap R (D.A j))) (D.g j i) ≫ k j)
+
+/-- **The range of the glued morphism is the union of the ranges of the chart morphisms.** -/
+theorem range_glueChartMorphisms :
+    Set.range (D.glueChartMorphisms k hk).base = ⋃ i, Set.range (k i).base :=
+  D.xFormalGlueData.range_glueMorphisms k _
+
+/-- **A family of chart morphisms that are open immersions and meet only along the double overlaps
+glues to an open immersion.** The hypothesis `hmeet` is required only off the diagonal, which is
+also all that `FormalScheme.GlueData.isOpenImmersion_glueMorphisms` asks for: the diagonal case of
+that criterion is never invoked, so nothing has to be known about it. -/
+theorem isOpenImmersion_glueChartMorphisms
+    (hoi : letI := D.commRing; letI := D.algebra;
+      ∀ i, LocallyRingedSpace.IsOpenImmersion (k i))
+    (hmeet : letI := D.commRing; letI := D.algebra;
+      ∀ (i j : D.J), i ≠ j → Set.range (k i).base ∩ Set.range (k j).base ⊆
+        Set.range (basicOpenChart (I.map (algebraMap R (D.A i))) (D.g i j) ≫ k i).base) :
+    LocallyRingedSpace.IsOpenImmersion (D.glueChartMorphisms k hk) := by
+  letI := D.commRing
+  letI := D.algebra
+  refine D.xFormalGlueData.isOpenImmersion_glueMorphisms k _ hoi fun i j hij => ?_
+  rw [D.range_xGlueData_f_comp_of_ne i j hij (k i)]
+  exact hmeet i j hij
+
+end AffineChartedFibreDatumX
+
+end AlgebraicGeometry
+
+end

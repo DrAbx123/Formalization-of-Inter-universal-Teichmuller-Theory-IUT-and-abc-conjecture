@@ -1,0 +1,16 @@
+import tmp.sheaf.xif.paper.S3136OldCarrierBridgeExistsActual
+import tmp.sheaf.xif.paper.S3136OldSplitPointUnitRegionWiringActual
+import tmp.sheaf.xif.paper.S3136OldAttemptHonestyAuditActual
+import tmp.sheaf.xif.paper.S3136SplitPointPriorArtExactActual
+import tmp.sheaf.xif.paper.S3136ElementaryEstimatesReuseActual
+import tmp.sheaf.xif.paper.S3136VendorHodgeSHEPriorArtActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136OldCarrierBridgeExistsActual.lgpNativeIQInterface_exists
+#print axioms LeanFormal.IUT.XiFPaper.S3136OldSplitPointUnitRegionWiringActual.lgpOldHunitD
+#print axioms LeanFormal.IUT.XiFPaper.S3136OldSplitPointUnitRegionWiringActual.lgpOldSplit
+#print axioms LeanFormal.IUT.XiFPaper.S3136OldSplitPointUnitRegionWiringActual.lgpOldHpointDegenerate
+#print axioms LeanFormal.IUT.XiFPaper.S3136OldAttemptHonestyAuditActual.lgpOldAttemptAudit_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136SplitPointPriorArtExactActual.lgpGap2Inputs_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ElementaryEstimatesReuseActual.lgpE1_arithmeticMean
+#print axioms LeanFormal.IUT.XiFPaper.S3136VendorHodgeSHEPriorArtActual.lgPVendorComparisonRows_length

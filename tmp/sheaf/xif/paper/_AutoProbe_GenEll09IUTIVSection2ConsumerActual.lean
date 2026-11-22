@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll09IUTIVSection2ConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll09IUTIVSection2ConsumerActual.section2_card_id
+#print axioms LeanFormal.IUT.XiFPaper.GenEll09IUTIVSection2ConsumerActual.theorem21_equiv_of_paperInput
+#print axioms LeanFormal.IUT.XiFPaper.GenEll09IUTIVSection2ConsumerActual.iutIVSection2_cor23_bdClass

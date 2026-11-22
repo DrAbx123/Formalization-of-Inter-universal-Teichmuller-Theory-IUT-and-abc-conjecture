@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll11RouteInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll11RouteInterfaceActual.GenEllRouteInterface
+#print axioms LeanFormal.IUT.XiFPaper.GenEll11RouteInterfaceActual.genEllRouteInterface
+#print axioms LeanFormal.IUT.XiFPaper.GenEll11RouteInterfaceActual.genEllRouteInterface_h6

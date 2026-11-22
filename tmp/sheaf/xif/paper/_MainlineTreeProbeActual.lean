@@ -1,0 +1,12 @@
+import LeanFormal.IUT.IUTIII.Theorem311.SourceK1K2CardReduction
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.CardHullRealR9PointMembershipAudit
+import LeanFormal.IUT.IUTIII.Theorem311.SourcePacketDegreeLedger
+import LeanFormal.IUT.IUTII.Frobenioid.Example36SourceModelBackendBalance
+import LeanFormal.IUT.IUTI.HodgeTheater.SourceDefinition31DualContractAlignment
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.LogShellFrobeniusPower
+#print axioms LeanFormal.IUT.K1K2Realization.labelledKummerIdentity_inverse
+#print axioms LeanFormal.IUT.mem_iUnion_downRay_iff_exists_le
+#print axioms LeanFormal.IUT.Theorem311Source.thetaPacketLedgerAt_source
+#print axioms LeanFormal.IUT.IUTII.Frobenioid.Example36.SourceModelBackendBalance.effectiveFinite_eq_zero_of_not_mem
+#print axioms LeanFormal.IUT.sourceDefinition31Arithmetic_spec
+#print axioms ABCBridge.LogShellFrobeniusPower.localUnitFrobenius_iterate

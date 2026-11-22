@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.IUTExternal30PrerequisiteCompletionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal30PrerequisiteCompletionActual.IUTExternalLayerCompletion
+#print axioms LeanFormal.IUT.Audit.IUTExternalPrerequisiteGateRecord

@@ -1,0 +1,6 @@
+import LeanFormal.IUT.IUTII.Kummer.AbsoluteKummerInjection
+import LeanFormal.IUT.IUTII.Kummer.AbsoluteKummerContinuity
+import LeanFormal.IUT.IUTII.Kummer.AbsoluteKummerQuotient
+#print axioms LeanFormal.IUT.AbsoluteKummerInjection.absoluteKummerMap_eq_one_iff
+#print axioms LeanFormal.IUT.AbsoluteKummerContinuity.continuous_absoluteKummerMap
+#print axioms LeanFormal.IUT.AbsoluteKummerQuotient.absoluteKummerMapQuotient_injective

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1687Torsion23RealizationActual
+#print axioms LeanFormal.IUT.XiFPaper.S1687Torsion23RealizationActual.S1687Y_alpha_psiSq_base
+#print axioms LeanFormal.IUT.XiFPaper.S1687Torsion23RealizationActual.S1687Y_alpha_nonsingular
+#print axioms LeanFormal.IUT.XiFPaper.S1687Torsion23RealizationActual.S1687Y_alpha_psiSq
+#print axioms LeanFormal.IUT.XiFPaper.S1687Torsion23RealizationActual.S1687Y_alpha_psi3
+#print axioms LeanFormal.IUT.XiFPaper.S1687Torsion23RealizationActual.S1687_ΨSq_eval_baseChange

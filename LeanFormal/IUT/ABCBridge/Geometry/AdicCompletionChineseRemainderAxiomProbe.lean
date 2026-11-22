@@ -1,0 +1,9 @@
+import LeanFormal.IUT.ABCBridge.Geometry.AdicCompletionChineseRemainder
+
+open LeanFormal.IUT.AdicCompletionChineseRemainder
+
+#print axioms adicCompletionPiEquiv
+#print axioms adicCompletionPiEquiv_of
+#print axioms adicCompletionFactorsEquiv
+#print axioms adicCompletionEquivPiAdicCompletionIntegers
+#print axioms adicCompletionEquivPiAdicCompletionIntegers_of

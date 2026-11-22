@@ -1,0 +1,3 @@
+import Mathlib.CategoryTheory.SingleObj
+import Mathlib.CategoryTheory.EssentiallySmall
+#print CategoryTheory.SmallCategory

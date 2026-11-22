@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.RestatedLemma22InterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Mzk1Lemma22Target
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Good
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Mzk1Lemma22Target_iff_exists_Good
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Mzk1Lemma22InductionStatement
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.target_of_induction
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Mzk1Lemma22CVCompat
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.Mzk1Lemma22TargetImpliesFullShape
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.restatedLemma22Rows
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.restatedLemma22Scope
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.polyEvalP1AC
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma22InterfaceActual.AlgebraicNestedInductionInput

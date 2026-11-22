@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2166AffinePairCorrespondenceActual
+open LeanFormal.IUT.XiFPaper.S2166AffinePairCorrespondenceActual
+#print axioms S2166AffinePairEquiv_exists
+#print axioms S2166ProjAffineEquiv
+#print axioms S2166Basis

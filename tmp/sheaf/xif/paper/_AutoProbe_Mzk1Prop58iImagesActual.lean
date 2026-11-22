@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Prop58iImagesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iImagesActual.preLogShell_eq_image_invariants
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iImagesActual.unitLayer_eq_image_units
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Prop58iImagesActual.logShell_eq_pStar_invScaled_preLogShell

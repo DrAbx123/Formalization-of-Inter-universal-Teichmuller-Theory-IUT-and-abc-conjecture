@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2236GaloisPairTransitiveActual
+open LeanFormal.IUT.XiFPaper.S2236GaloisPairTransitiveActual
+#print axioms S2236TransferredRangeTransitive_of_galois
+#print axioms S2236RangePairTransitive_of_exact
+#print axioms S2236D5LargeImageFive_of_exact

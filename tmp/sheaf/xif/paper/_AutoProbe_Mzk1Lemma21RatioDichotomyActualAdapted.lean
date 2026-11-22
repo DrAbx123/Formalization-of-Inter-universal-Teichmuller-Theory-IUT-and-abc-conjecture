@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma21RatioDichotomyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioDichotomyActual.ratio_ge_of_f0_le_falpha
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioDichotomyActual.ratio_ge_of_falpha_le_f0
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma21RatioDichotomyActual.ratio_ge_dichotomy

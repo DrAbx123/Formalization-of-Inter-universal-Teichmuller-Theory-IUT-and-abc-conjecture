@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3128HDDPremiseActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3128HDDPremiseActual.S3128Stage1HDD_frozenSpec
+#print axioms LeanFormal.IUT.XiFPaper.S3128HDDPremiseActual.S3128Stage1HDD_integralSpan_eq_hull

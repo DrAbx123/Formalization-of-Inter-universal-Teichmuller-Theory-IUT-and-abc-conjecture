@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIContractConstructionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIContractConstructionActual.stepXIContractRows_length

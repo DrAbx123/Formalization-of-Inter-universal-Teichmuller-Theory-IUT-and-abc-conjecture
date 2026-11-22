@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.AbsTopIII01LogShellActual
+import tmp.sheaf.xif.paper.AbsTopIII03Cor510Actual
+import tmp.sheaf.xif.paper.AbsTopIII04LogFrobeniusActual
+import tmp.sheaf.xif.paper.AbsTopIII05ReconstructionInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII01LogShellActual.absTopIII_logShell_add_mem
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII01LogShellActual.absTopIII_invariant_unitLog_mem_logShell
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII03Cor510Actual.cor510_logShell_finite
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII03Cor510Actual.cor510_logVolume_unit
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII04LogFrobeniusActual.absTopIII_logFrobenius_unit_landing

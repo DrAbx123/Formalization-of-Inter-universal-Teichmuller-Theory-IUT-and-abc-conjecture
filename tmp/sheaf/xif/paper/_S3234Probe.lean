@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24StepProviderActual
+import tmp.sheaf.xif.paper.Mzk1Lemma22HypPreservationCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24StepProviderActual.FieldDegreeDropStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationCanonicalActual.canonical_hypotheses_preserved_of_separation
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22HypPreservationCanonicalActual.canonical_card_collapse

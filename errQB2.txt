@@ -1,0 +1,20 @@
+tmp\sheaf\xif\paper\Mzk1QPilotRouteBridgeActual.lean:132:4: error: Type mismatch
+  log_height_le_badSum_of_fullSupport T eN hd a b c habc (hfull a b c habc)
+has type
+  Real.log ↑c ≤
+    ∑ bBad,
+      ↑(eN a b c bBad) *
+        (↑(Module.finrank ℚ_[qVFamTensorP T bBad] ↥(rootNormedExtension T bBad)) * Real.log ↑(qVFamTensorP T bBad))
+but is expected to have type
+  Height.logHeight₁ (abcRationalPoint a c) ≤
+    ∑ bBad,
+      ↑(eN a b c bBad) *
+        (↑(Module.finrank ℚ_[qVFamTensorP T bBad] ↥(rootNormedExtension T bBad)) * Real.log ↑(qVFamTensorP T bBad))
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteBridgeActual.correctedQPilot_bound_iff_natRadicalWeightBound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteBridgeActual.gap1_of_qPilotRouteOn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1QPilotRouteBridgeActual.bridgeRows_length' does not depend on any axioms

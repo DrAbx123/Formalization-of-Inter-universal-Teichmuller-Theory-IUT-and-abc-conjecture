@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.Mzk1G1P8ProducerAssemblyActual
+import tmp.sheaf.xif.paper.Mzk1G1UniversalResiduePolysActual
+
+#print axioms LeanFormal.IUT.XiFPaper.P8ProducerAssemblyActual.routeF9_all_of_assembly
+#print axioms LeanFormal.IUT.XiFPaper.P8ProducerAssemblyActual.freyJProductCriterion_of_routeF9
+#print axioms LeanFormal.IUT.XiFPaper.P8ProducerAssemblyActual.p8UniformHeightBound_of_assembly
+#print axioms LeanFormal.IUT.XiFPaper.P8ProducerAssemblyActual.abcConjecture_of_assembly
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalResiduePolysActual.residueMonicPoly_finite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1UniversalResiduePolysActual.residueMonicPoly_monic

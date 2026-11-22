@@ -1,0 +1,6 @@
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.ConcreteFiniteRouteColumns
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotGlobalNormalization
+#check LeanFormal.IUT.ArithmeticQPilotGlobalNormalization.absoluteDegreeNormalizedLowerSignedLog
+#check LeanFormal.IUT.ConcreteFiniteStepXI.finiteIPLProposition
+#check LeanFormal.IUT.finiteIPLProposition
+#check LeanFormal.IUT.IUTIII.Corollary312.StepXI.ConcreteFiniteRouteColumns

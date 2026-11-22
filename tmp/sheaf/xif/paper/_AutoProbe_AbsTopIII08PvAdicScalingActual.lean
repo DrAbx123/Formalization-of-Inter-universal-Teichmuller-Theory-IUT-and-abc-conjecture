@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII08PvAdicScalingActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_log_measure_prime_smul_integralLogShell
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_localLogVolume_prime_smul_integralLogShell
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_localLogVolume_prime_smul_finrank_one

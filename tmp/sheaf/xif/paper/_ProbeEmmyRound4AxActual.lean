@@ -1,0 +1,19 @@
+import tmp.sheaf.xif.paper.Mzk1G1B1GraphIsoActual
+import tmp.sheaf.xif.paper.Mzk1G1B1SmoothCriterionSubmActual
+import tmp.sheaf.xif.paper.Mzk1G1B1HPolySmoothLocusActual
+
+/-! emmy round-4 axiom audit: GraphIso P1/P3 + SmoothCriterion ring core (P2 pending). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1GraphIsoActual.away_algEquiv_quotient
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1GraphIsoActual.isLocalization_away_quotient
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1GraphIsoActual.graphIso_lambda_side
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1GraphIsoActual.away_algEquiv_quotient_of_chartT
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1GraphIsoActual.isLocalization_away_quotient_of_chartT
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothModel_deriv_isUnit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothModel_jacobian_isUnit
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothModel_isStandardSmoothOfRelativeDimension
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothModel_smooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothModel_formallySmooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.isSmoothAt_of_formallySmooth
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1SmoothCriterionSubmActual.smoothAt_of_derivative_notMem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1B1HPolySmoothLocusActual.hbridge_of_derivative_eq_zero

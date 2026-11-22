@@ -1,0 +1,10 @@
+import Mathlib.RingTheory.HahnSeries.Basic
+import Mathlib.RingTheory.HahnSeries.Summable
+open HahnSeries
+#check HahnSeries
+#check HahnSeries.single
+#check HahnSeries.C
+#check HahnSeries.coeff
+#check HahnSeries.ofFinsupp
+#check HahnSeries.coeff_single
+#check HahnSeries.coeff_C

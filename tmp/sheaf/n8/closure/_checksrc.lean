@@ -1,0 +1,3 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+#check LeanFormal.IUT.InitialThetaSource.SourceNativeInitialThetaData
+#check LeanFormal.IUT.SourceHodgeTheaterFamily

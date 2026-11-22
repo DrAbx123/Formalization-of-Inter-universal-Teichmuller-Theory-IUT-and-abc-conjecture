@@ -1,0 +1,4 @@
+import LeanFormal.IUT.Foundations.Geometry.ReductionBaseChange
+#check hasSplitMultiplicativeReductionAt_baseChange
+#check PuncturedEllipticCurve.hasSplitMultiplicativeReductionAt_baseChange
+#check LeanFormal.IUT.hasSplitMultiplicativeReductionAt_baseChange

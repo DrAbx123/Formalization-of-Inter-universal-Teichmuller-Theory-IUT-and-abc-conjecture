@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2204ActualH1InstanceActual
+#print axioms LeanFormal.IUT.XiFPaper.S2204ActualH1InstanceActual.S2204ToS2145Instance

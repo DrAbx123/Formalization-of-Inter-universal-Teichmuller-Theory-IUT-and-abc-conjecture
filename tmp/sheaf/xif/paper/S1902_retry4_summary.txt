@@ -1,0 +1,2 @@
+ATTEMPT 1 EXIT 1 LOG tmp/sheaf/xif/paper/S1902_retry4_1.log
+ATTEMPT 2 EXIT 0 LOG tmp/sheaf/xif/paper/S1902_retry4_2.log

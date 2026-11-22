@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2592GenericLocalizedResidueIsoActual
+import tmp.sheaf.xif.paper.S2057DedekindFrobBridgeActual
+import tmp.sheaf.xif.paper.S2565ConcreteIntegralClosureCActual
+open LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual
+open LeanFormal.IUT.XiFPaper.S2057DedekindFrobBridgeActual
+#synth Algebra.IsIntegral C (NumberField.RingOfIntegers S2057FiveDivisionField)
+#check Ideal.exists_maximal_ideal_liesOver_of_isIntegral

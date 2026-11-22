@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S3119InfinityValuationActual
+import tmp.sheaf.xif.paper.S3128OfHObjectActual
+import tmp.sheaf.xif.paper.S3128OfHMapActual
+#print axioms LeanFormal.IUT.XiFPaper.S3119InfinityValuationActual.S3119InfinityOrd_add
+#print axioms LeanFormal.IUT.XiFPaper.S3119InfinityValuationActual.S3119InfinityOrdAddTarget_proof
+#print axioms LeanFormal.IUT.XiFPaper.S3119InfinityValuationActual.S3119InfinityAddValuation

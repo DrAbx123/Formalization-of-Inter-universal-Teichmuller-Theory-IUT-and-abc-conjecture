@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Hull11PreciseConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Hull11PreciseConsumerActual.hull11_h6_upgrade_precise
+#print axioms LeanFormal.IUT.XiFPaper.Hull11PreciseConsumerActual.hull11_precise_witness_nonempty

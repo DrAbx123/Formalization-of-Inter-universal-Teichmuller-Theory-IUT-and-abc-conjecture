@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2817ClauseDFActual
+#print axioms LeanFormal.IUT.XiFPaper.S2817ClauseDFActual.S2817ClauseDScaffold_ofSourceClauseD
+#print axioms LeanFormal.IUT.XiFPaper.S2817ClauseDFActual.S2817ClauseDScaffold_ofPaper
+#print axioms LeanFormal.IUT.XiFPaper.S2817ClauseDFActual.S2817ClauseFScaffold_ofBoundaryUnit

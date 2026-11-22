@@ -1,0 +1,5 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary
+#check SourceDefinition31Data
+#check LeanFormal.IUT.InitialThetaSource.SourceDefinition31Data
+#check SourceReductionClause
+#check LeanFormal.IUT.InitialThetaSource.SourceReductionClause

@@ -1,0 +1,78 @@
+{
+  "schema": "iut-natural-language-research-evidence/v1",
+  "task": "n8-c9-contradiction-containers-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "consumer": "n8-c9-output-region-source-route P1/P6",
+  "user_direction": "Prefer contradiction, potentially using deep source-allowed computation; assess whether a few branches really suffice",
+  "record": "tmp/sheaf/n8/closure/C9-CONTRADICTION-CONTAINERS-20261024.md",
+  "record_sha256": "6a0f21aa14f7044150edcab9bd753716b1e4858bcfec8a92cb9c262fbf701e9d",
+  "status": "Countercontainer reduction proved in natural language; actual source escape construction and full fixed-q comparison open",
+  "source_snapshots": [
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf",
+      "positions": ["Corollary3.12 pp173-174", "proof(xi-a)-(xi-f) pp181-184"],
+      "findings": ["Target is hull of the union of possible images", "Comparison requires fixed input q and the actual allowed enlargement/readout"]
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "pdf_file": "papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf",
+      "pdf_sha256": "c0e63b629aa174aa065e93d08defe3e5d0837c8778aab527383798baf8ca6e32",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf",
+      "version": "March2024, 167pages",
+      "positions": ["Section3.10 Stp4-8, pp150-154", "FxGl/Englf pp155-156"],
+      "findings": ["Multiple outputs and final hull enlargement are intentional", "Stp7 explicitly discusses composite input/output labels", "Dropping those labels early may manufacture false contradictions"]
+    }
+  ],
+  "reused_results": [
+    "C9-FIXED-Q-DEEP-COMPARISON-20261024.md section3 finite hull witnesses",
+    "C9-FINITE-OBSERVATION-THEOREMS-20261024.md guarded exact paths and source lifting requirements",
+    "C9-FOUR-STEPS-SOURCE-ATTEMPT-20261024.md exact fixed Ind2 classification and pruning"
+  ],
+  "new_natural_language_proofs": [
+    "Finite maximal bad product containers suffice for contradiction, if each has a genuine source-output escape witness",
+    "Outward log-radius grids preserve a strict counterexample at sufficiently fine mesh under uniform finite-support and boundedness conditions",
+    "One branch can be too small even when the hull of a few branches is sufficient",
+    "Decreasing log-volume drift does not contradict a common finite upper bound or positive volume at each finite step",
+    "Refutation cannot enlarge the output family with unrealizable witnesses; the overapproximation must contain actual counterexample configurations"
+  ],
+  "source_attempt": {
+    "checked": "Stp7 composite labels, shift synchronization and target log-volume calibration",
+    "result": "These facts alone give no positive deficit increment or equality between native q and algorithm output",
+    "weak_model_diagnostic": "All rows Q_m=-1 and output endpoints theta_m=-2 satisfy mere synchronization and separate bounds",
+    "full_IUT_counterexample_claimed": false
+  },
+  "method_donors": [
+    {
+      "url": "https://leodemoura.github.io/files/cav06.pdf",
+      "title": "Dutertre-de Moura, A Fast Linear-Arithmetic Solver for DPLL(T), CAV2006",
+      "scope": "Candidate linear/strict inequality and conflict explanation machinery only"
+    },
+    {
+      "url": "https://www.mit.edu/~parrilo/pubs/files/SDPrelax_abstract.html",
+      "title": "Parrilo, Semidefinite programming relaxations for semialgebraic problems",
+      "scope": "Author abstract inspected; possible certificate machinery only after a valid finite polynomial encoding"
+    }
+  ],
+  "route_changes": [
+    "Do not require one primitive branch to have sufficient volume",
+    "Do not require a sufficient witness family to represent every output branch",
+    "Prioritize a generic bad-container contradiction over additional isolated numerical examples",
+    "Permit deep composition only with actual source labels, guards and common input/gluing witnesses"
+  ],
+  "next_action": "For arbitrary source C and a symbolic maximal bad container B, inspect Stp7 and III Remark3.9.5(ix)/Ob9 to construct a genuine escape output or a calibrated source incompatibility; do not assume the q-output equality",
+  "checks": {
+    "new_numeric_IUT_certificate": "not_produced",
+    "new_toy_multilayer_computation": "not_run",
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "target_accepted": false
+  }
+}

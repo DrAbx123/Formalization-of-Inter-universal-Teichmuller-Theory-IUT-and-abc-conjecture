@@ -1,0 +1,116 @@
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:25:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:26:7: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.4
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceInputBinding` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:27:7: error: Function expected at
+  SourceLogKummerData
+but this term has type
+  ?m.7
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceLogKummerData` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:28:31: error: Invalid argument name `I` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:31:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `OriginalInput` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:32:27: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:32:63: error: Invalid argument name `I` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:33:2: error(lean.unknownIdentifier): Unknown identifier `sourcePilotRegionLToCore`
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:36:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `OriginalInput` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:37:27: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:38:2: error(lean.unknownIdentifier): Unknown identifier `localSignedLog`
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:41:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `OriginalInput` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:42:27: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:43:2: error(lean.unknownIdentifier): Unknown identifier `localSignedLog_neg`
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:46:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:47:27: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:52:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:53:36: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:58:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `OriginalInput` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:59:34: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:60:42: error: Invalid argument name `l` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:65:9: error: Function expected at
+  OriginalInput
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l
+
+Hint: The identifier `OriginalInput` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:66:10: error: Function expected at
+  SourceInputBinding
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceInputBinding` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:66:38: error: Function expected at
+  SourceLogKummerData
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  I
+
+Hint: The identifier `SourceLogKummerData` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:67:34: error: Invalid argument name `I` for function
+tmp\sheaf\xif\paper\Mzk1QPilotLineLActual.lean:68:32: error: Invalid argument name `l` for function

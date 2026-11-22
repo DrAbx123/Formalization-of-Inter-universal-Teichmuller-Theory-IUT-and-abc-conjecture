@@ -1,0 +1,10 @@
+import Mathlib
+#check Padic.norm_le_one_iff
+#check Padic.norm_eq_one_iff
+#check Padic.norm_lt_one_iff
+#check norm_zpow
+#check norm_mul
+#check Padic.norm_eq_zpow_neg_valuation
+#check Padic.norm_p
+#check Units.mk0
+#check Padic.valuation

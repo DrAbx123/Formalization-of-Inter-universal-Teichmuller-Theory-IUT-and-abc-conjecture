@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S3135ScalingActualModelActual
+import tmp.sheaf.xif.paper.S3135LogShellFaithfulnessExpansionActual
+import tmp.sheaf.xif.paper.S3135EndToEndAssemblyActual
+
+/-! Axiom probes for task-17: card (2) on the concrete actual model, card (1)
+expansion/refutation, and the end-to-end conditional assembly. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3135ScalingActualModelActual.sourceHaarActual_scalingLogDegreeZero
+#print axioms LeanFormal.IUT.XiFPaper.S3135ScalingActualModelActual.sourceHaarActual_normalization_family
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellFaithfulnessExpansionActual.s3135_faithful_add
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellFaithfulnessExpansionActual.s3135_faithful_nsmul_log_q
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellFaithfulnessExpansionActual.s3135_valueGroupSplitting_iff_faithfulness
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellFaithfulnessExpansionActual.sourceHaarActual_valueGroupFaithfulness_false
+#print axioms LeanFormal.IUT.XiFPaper.S3135LogShellFaithfulnessExpansionActual.sourceHaarActual_pointFaithfulness_false
+#print axioms LeanFormal.IUT.XiFPaper.S3135EndToEndAssemblyActual.s3135_abcConjecture_of_actualCarrierInputs
+#print axioms LeanFormal.IUT.XiFPaper.S3135EndToEndAssemblyActual.s3135_abcConjecture_of_section2DisplayFamily
+#print axioms LeanFormal.IUT.XiFPaper.S3135EndToEndAssemblyActual.s3135_shehddSignedLeg

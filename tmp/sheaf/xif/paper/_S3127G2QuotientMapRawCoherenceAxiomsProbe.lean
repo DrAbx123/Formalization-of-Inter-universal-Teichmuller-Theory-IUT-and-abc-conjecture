@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2QuotientMapRawCoherenceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QuotientMapRawCoherenceActual.S3127FullForget_map_quotientMap

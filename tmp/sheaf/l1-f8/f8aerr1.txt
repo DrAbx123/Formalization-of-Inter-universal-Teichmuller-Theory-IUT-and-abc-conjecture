@@ -1,0 +1,5 @@
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:36:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:41:18: warning: declaration uses `sorry`
+tmp\sheaf\l1-f8\F8aSourceDiagram.lean:45:0: error: type of theorem `SHEAF.L1F8.F8aSourceDiagram.sourceDiagramObligation` is not a proposition
+  {l : PrimeGeFive} →
+    {A : InitialThetaArithmeticData l} → (xF : Iut.HyperbolicOrbicurve A.F) → SourceDiagramObligation xF

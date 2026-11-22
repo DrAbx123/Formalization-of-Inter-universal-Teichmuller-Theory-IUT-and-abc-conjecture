@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingStepNoncanonicalActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingStepNoncanonicalActual.betaAvoidingStep_pow_core
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingStepNoncanonicalActual.betaAvoidingStep_obstruction_instance

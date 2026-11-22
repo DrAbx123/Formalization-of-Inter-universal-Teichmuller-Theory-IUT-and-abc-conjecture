@@ -1,0 +1,124 @@
+import tmp.sheaf.xif.paper.S2000CohomologicalPsiCnsActual
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.Analysis.Normed.Algebra.Basic
+import Mathlib.Topology.Algebra.Module.FiniteDimension
+import Mathlib.Topology.Algebra.Valued.NormedValued
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.Analysis.Normed.Group.Ultra
+import Mathlib.Algebra.Group.TypeTags.Basic
+
+/-!
+# S2006: the Kummer kernel of the actual Psi_cns lies in the integral units
+
+Layer: O (original Theta-link / q-pilot).  Consumer: the S2000 package
+(tmp/sheaf/xif/paper/S2000CohomologicalPsiCnsActual.lean) and, through it, the
+S1973 PsiCns model.
+
+## Result
+
+"PsiCnsKummerKernelInUnits p" is proved for the actual local field: every
+element of the Grothendieck group Qbar_p^times whose Kummer class in
+"PsiCnsCohomology p = lim_J H^1(J, PsiCnsCyclotome p)" is trivial is already a
+unit of the nonzero integral monoid O^tri, i.e. lies in O_C^times.
+
+## Proof
+
+1.  Fixed field as a local field.  For an open subgroup U of
+    G_v = Gal(Qbar_p/Q_p) the fixed field
+    "LocalIntegralUnitKummerInjectivity.FixedField p U" is a finite extension of
+    Q_p, hence an actual nonarchimedean local field.  The norm is the
+    restriction of the p-adic spectral norm on the algebraic closure
+    (Mathlib's PadicAlgCl normed field structure); local compactness comes from
+    finite dimensionality over the complete locally compact Q_p, and the
+    valuative topology / discreteness come from the norm valuation.
+2.  Fixed roots from equality of Kummer classes.  If the Kummer classes of two
+    nonzero integral elements a, b agree, then on a common open subgroup U the
+    two canonical root-ratio cocycles differ by an explicit integral-unit
+    coboundary.  Adjusting the compatible roots by the cochain produces, for
+    every n > 0, a genuine element of Qbar_p^times fixed by U whose n-th power
+    is b / a (see "exists_fixed_ratio_root").
+3.  Kummer rigidity in the finite fixed field.  The element b / a is therefore
+    infinitely divisible in the local field L fixed by U, and its n-th roots lie
+    in L.  The local-field Kummer rigidity
+    ("LocalFieldKummerRigidity.fieldUnit_eq_one_of_roots", proved for actual
+    nonarchimedean local fields) then yields b / a = 1.
+4.  Consequently x = of a / of b = 1 is the image of the unit 1.
+
+No sorry, axiom, True/PUnit slot, empty type, arbitrary inhabitant, or
+assumption-only gate is used.
+-/
+
+set_option maxHeartbeats 1600000
+set_option synthInstance.maxHeartbeats 800000
+set_option linter.unusedSectionVars false
+set_option linter.unusedVariables false
+set_option linter.unusedSimpArgs false
+
+noncomputable section
+open LeanFormal.IUT
+open LeanFormal.IUT.LocalMLFModelTMPair
+open Iut
+open LeanFormal.IUT.XiFPaper.S2000CohomologicalPsiCnsActual
+open scoped NNReal
+
+namespace LeanFormal.IUT.XiFPaper.S2006KummerKernelActual
+
+variable (p : Nat) [Fact (Nat.Prime p)]
+
+/-! ## 1. The fixed field is an actual nonarchimedean local field -/
+
+variable (U : OpenSubgroup (LocalAbsoluteGalois p))
+
+noncomputable instance fixedFieldFiniteDimensional : FiniteDimensional ℚ_[p]
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  LocalIntegralUnitKummerInjectivity.fixedField_finiteDimensional p U
+
+noncomputable instance fixedFieldCompleteSpace : CompleteSpace
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  FiniteDimensional.complete ℚ_[p] _
+
+noncomputable instance fixedFieldLocallyCompact : LocallyCompactSpace
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  LocallyCompactSpace.of_finiteDimensional_of_complete ℚ_[p] _
+
+noncomputable instance fixedFieldValuativeRel : ValuativeRel
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  ValuativeRel.ofValuation
+    (NormedField.valuation (K := LocalIntegralUnitKummerInjectivity.FixedField p U) :
+      Valuation (LocalIntegralUnitKummerInjectivity.FixedField p U) NNReal)
+
+noncomputable instance fixedFieldValuationCompatible :
+    (NormedField.valuation (K := LocalIntegralUnitKummerInjectivity.FixedField p U) :
+      Valuation (LocalIntegralUnitKummerInjectivity.FixedField p U) NNReal).Compatible :=
+  Valuation.Compatible.ofValuation _
+
+noncomputable instance fixedFieldIsValuativeTopology : IsValuativeTopology
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  IsValuativeTopology.of_mem_nhds_zero_iff_vle
+    (NormedField.valuation (K := LocalIntegralUnitKummerInjectivity.FixedField p U) :
+      Valuation (LocalIntegralUnitKummerInjectivity.FixedField p U) NNReal) (by
+    intro s
+    exact @Valued.is_topological_valuation
+      (LocalIntegralUnitKummerInjectivity.FixedField p U) inferInstance NNReal inferInstance
+      (NormedField.toValued (K := LocalIntegralUnitKummerInjectivity.FixedField p U)) s)
+
+noncomputable instance fixedFieldValuativeNontrivial :
+    ValuativeRel.IsNontrivial (LocalIntegralUnitKummerInjectivity.FixedField p U) :=
+  (ValuativeRel.isNontrivial_iff_isNontrivial
+    (NormedField.valuation (K := LocalIntegralUnitKummerInjectivity.FixedField p U))).mpr
+    inferInstance
+
+noncomputable instance fixedFieldIsNonarchimedeanLocalField :
+    IsNonarchimedeanLocalField
+      (LocalIntegralUnitKummerInjectivity.FixedField p U) where
+  toIsValuativeTopology := inferInstance
+  toLocallyCompactSpace := inferInstance
+  toIsNontrivial := inferInstance
+
+theorem fixedField_eq_one_of_roots
+    (value : (LocalIntegralUnitKummerInjectivity.FixedField p U)ˣ)
+    (roots : LocalFieldKummerRigidity.HasAllPositiveRoots value) :
+    value = 1 :=
+  LocalFieldKummerRigidity.fieldUnit_eq_one_of_roots
+    (LocalIntegralUnitKummerInjectivity.FixedField p U) value roots

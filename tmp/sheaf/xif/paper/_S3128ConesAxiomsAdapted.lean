@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3128SpecActionActual
+import tmp.sheaf.xif.paper.S3128AffineCoequalizerActual
+import tmp.sheaf.xif.paper.S3128CoproductConeActual
+import tmp.sheaf.xif.paper.S3128InitialConeActual
+#print axioms LeanFormal.IUT.XiFPaper.S3128SpecActionActual.S3128_toCommRingCatIso_mul
+#print axioms LeanFormal.IUT.XiFPaper.S3128AffineCoequalizerActual.S3128AffineCoequalizerTarget_holds
+#print axioms LeanFormal.IUT.XiFPaper.S3128CoproductConeActual.S3128CoproductInl_desc
+#print axioms LeanFormal.IUT.XiFPaper.S3128InitialConeActual.S3128InitialHom_unique

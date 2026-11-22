@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2588FbarIrreducibleActual
+#print axioms LeanFormal.IUT.XiFPaper.S2588FbarIrreducibleActual.S2587FbarIrreducibleRequired_holds

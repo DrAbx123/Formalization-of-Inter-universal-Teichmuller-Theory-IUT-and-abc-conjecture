@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll06eSection3ConsequencesActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06eSection3ConsequencesActual.s3135_belyiAlpha_pow_self
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06eSection3ConsequencesActual.s3135_belyiBeta_pow_self
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06eSection3ConsequencesActual.s3135_belyiGenerators_l_torsion

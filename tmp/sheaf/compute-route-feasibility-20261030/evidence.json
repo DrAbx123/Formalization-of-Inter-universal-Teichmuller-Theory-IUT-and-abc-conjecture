@@ -1,0 +1,275 @@
+{
+  "schema": "iut-exploration-evidence/v1",
+  "task": "compute-route-feasibility-20261030",
+  "captured_at_utc": "2026-10-30T09:38:09.168416+00:00",
+  "head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "mathlib_head": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "version_rule": "Exact source bytes and snapshots control; a dirty workspace is not identified by HEAD alone.",
+  "scope": "Single-agent feasibility survey using primary research, targeted mathlib reads and existing failed-route evidence. No solver or proof execution.",
+  "report": {
+    "path": "D:/lean/coord/reports/compute-route-feasibility-20261030.md",
+    "sha256": "56b1c93f314f94525be84921202722c058989d20b23e25f0b4fcc6a4cfc3ad58"
+  },
+  "node": {
+    "path": "D:/lean/dag/nodes/compute-route-feasibility-20261030.json",
+    "sha256": "d769be3b9e5cc73fa916107e8b244b408a94660f3446f8f61b21f2fd51a9161d"
+  },
+  "source_files": [
+    {
+      "path": "D:/lean/.lake/packages/mathlib/lean-toolchain",
+      "sha256": "ad754bf869b81954d95894d3b1324f5ec031819b8e9c8a4cdd4a485b271f0793",
+      "bytes": 26,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/lean-toolchain"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Algebra/Ring/SumsOfSquares.lean",
+      "sha256": "91dec5fb2debb0679e7406d095c058a35ffbf60ed8161aa5f9890c207e5948fd",
+      "bytes": 8669,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Algebra/Ring/SumsOfSquares.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Analysis/Convex/Cone/Dual.lean",
+      "sha256": "86c9f017860fb4a2c6168448d05e6cecd0d38373af342b24a24b057c71f90bdc",
+      "bytes": 6747,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Analysis/Convex/Cone/Dual.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Combinatorics/Enumerative/Catalan/Basic.lean",
+      "sha256": "a7d579231ffd044ac6cc54348c6b81198ec74b0c0985b4090e2d593701db5cb7",
+      "bytes": 5358,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Combinatorics/Enumerative/Catalan/Basic.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/JacobiTheta/OneVariable.lean",
+      "sha256": "dcca1cfcf40d14c027c8403335b67d4b8d195cbb501e855fd306820f5ad825b8",
+      "bytes": 6899,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/JacobiTheta/OneVariable.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+      "sha256": "be868d18c821a1600fdb12cea936dcb8c0be00d4157b4bac1c73cc23c5a9a685",
+      "bytes": 16074,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+      "sha256": "6f4bfbbcb10935443008b61035936b034aab7865d52c3daf91f712acdbe4cb88",
+      "bytes": 37371,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/QExpansion.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+      "sha256": "41d6f59e0ac2a53824bc9d0d6a914b9e7fde7080b0fc7dc576cb5b7464be28f0",
+      "bytes": 10650,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/RingTheory/MvPolynomial/Groebner.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/RingTheory/PowerSeries/Order.lean",
+      "sha256": "00245c54d4961619051c386dfaec997b6e84c159be43d354fc6bacd9c3d99b88",
+      "bytes": 18517,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/RingTheory/PowerSeries/Order.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/RingTheory/Valuation/Basic.lean",
+      "sha256": "78374d4e3c81f52aceca0fdad60662aba7c038800ec3d1b880178697b86a5810",
+      "bytes": 52997,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/RingTheory/Valuation/Basic.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Tactic/Linarith/Frontend.lean",
+      "sha256": "32cbb56a863214d25e360ec3ca7cc53d9cf8a4e557b8e666fed663615def628f",
+      "bytes": 29204,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Tactic/Linarith/Frontend.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Tactic/LinearCombination.lean",
+      "sha256": "6f2798157e1533574e1f0ac66781fed4a012d8b0769876b561bc8b3dc9634500",
+      "bytes": 14934,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Tactic/LinearCombination.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Tactic/Polyrith.lean",
+      "sha256": "203f4afa8b768c66ba4fcfccf6952f130ec8f4fbd864f7c55b3e5efece891bd8",
+      "bytes": 2206,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/Mathlib/Tactic/Polyrith.lean"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/MathlibTest/Tactic/Grind/Grobner.lean",
+      "sha256": "3ff4c982f591730c275dcf1acb4f4631a974ee8a7e0e2627fbe425a8fbd4e2a7",
+      "bytes": 4555,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/.lake/packages/mathlib/MathlibTest/Tactic/Grind/Grobner.lean"
+    },
+    {
+      "path": "D:/lean/coord/reports/gap-exploration-20261030.md",
+      "sha256": "e339f0d3db19ae2b3dcae6f42f7641602e0457e1cef90d2e8922259f92acf744",
+      "bytes": 34671,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/coord/reports/gap-exploration-20261030.md"
+    },
+    {
+      "path": "D:/lean/coord/reports/supplement-gap-priorities-20261030.md",
+      "sha256": "13090c11200bcf76f5032ebc1e707d9e9e2c29f15aee77b00012943018874ee6",
+      "bytes": 13903,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/coord/reports/supplement-gap-priorities-20261030.md"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean",
+      "sha256": "cc7d5775ee072b9c0cde34d7cb0ff43b760e729ad17738fd4b5f24cf70959560",
+      "bytes": 13550,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/LeanFormal/IUT/IUTIII/Theorem311/Output/SourceMultiradialIplLinkWiring.lean"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf",
+      "sha256": "c0e63b629aa174aa065e93d08defe3e5d0837c8778aab527383798baf8ca6e32",
+      "bytes": 1021306,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf",
+      "sha256": "9a32b2485b5875574d7470256d3414b88ee6ac3ed8a39a82ea7332e25072ee9c",
+      "bytes": 347480,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "bytes": 484319,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt",
+      "sha256": "4d9d62353124e9739ca1da50a083eb3f13cb227076222132e67f96413a7fe3cf",
+      "bytes": 29923,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/append-record.json",
+      "sha256": "6214c4c5ea1835d56235e84c23757a28606af904884a670fd2f5ca6e59654271",
+      "bytes": 996,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/compute-route-feasibility-20261030/append-record.json"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/literature.json",
+      "sha256": "74e95a8cf0862e5b1c303935e871b47f17bb27f3ae5e5ba54a7961bf54f327a6",
+      "bytes": 5157,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/compute-route-feasibility-20261030/literature.json"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/local-searches.json",
+      "sha256": "d05bd5b5a0945c395434d6e295d3d5f486567ca83a0d1c3382d554847cd3f90b",
+      "bytes": 16495,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/compute-route-feasibility-20261030/local-searches.json"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/TASK.md",
+      "sha256": "eb4fd8a3872b70f77e643448f0cdca905fa1ed89b30169b3a741e9bb7eebed75",
+      "bytes": 1678,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/compute-route-feasibility-20261030/TASK.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-FINALEVALUATIONQMARK-DEPENDENCY-AUDIT-20261026.md",
+      "sha256": "401adff5cd367f210aa5b0128edbb72db3b446be5a4320313143164d3203a4d1",
+      "bytes": 7233,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/n8/closure/C9-FINALEVALUATIONQMARK-DEPENDENCY-AUDIT-20261026.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md",
+      "sha256": "f475cf0373d6f82a556ecaab7ca47dea48abda807bc818ceea74744268f64d4f",
+      "bytes": 10925,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/n8/closure/C9-ROUTE-CONSISTENCY-REVIEW-20261023.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md",
+      "sha256": "2ffd043e680061eb4bb80429643c8c873d7f242026ad2e71ea5a3bcc94f1de42",
+      "bytes": 18758,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/PaperProcessionNormalization.lean",
+      "sha256": "7c5c209f68e7e529e63b229a68a5c04a9bf4a700fde619c3f7a7bf955e26573a",
+      "bytes": 5965,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/PaperProcessionNormalization.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+      "sha256": "dc35543c0d0b71dd5369a201d4fc124d67983b7c272de7c01c9711869929ad1c",
+      "bytes": 3940,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/PaperXiFCompileGate.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/ProcessionNormalizedLogVolumeActual.lean",
+      "sha256": "6f20f62d920b65cd0c2069fb7d49ca9389dbc3b70ead45af07cd979b78c2df0e",
+      "bytes": 5972,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ProcessionNormalizedLogVolumeActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean",
+      "sha256": "ee06ce2e9389998320bf130d5e6f9af1b5a8c90929d6712174b857b5ac3bc4ad",
+      "bytes": 2298,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/SHEOutputActual.lean",
+      "sha256": "4efbcbd7ea040a4ea814d1fa706c3e7ed99b6c7b5cbf181614d871713f282788",
+      "bytes": 11030,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/SHEOutputActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/ThetaFunctionLineBundleActual.lean",
+      "sha256": "d91bfbc509216e0e238e9e87d300e530b8dd50ce575c6f4f160bea8f381fb418",
+      "bytes": 7237,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ThetaFunctionLineBundleActual.lean"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/ThetaLinkActual.lean",
+      "sha256": "108b89f05ad1abc4058ce6043b3377002680ab05069bec62a4c30714050a9142",
+      "bytes": 17206,
+      "snapshot": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/snapshots/tmp/sheaf/xif/paper/ThetaLinkActual.lean"
+    }
+  ],
+  "prior_reports": [
+    {
+      "task": "gap-exploration-20261030",
+      "report_bytes_unchanged": true
+    },
+    {
+      "task": "supplement-gap-priorities-20261030",
+      "report_bytes_unchanged": true
+    }
+  ],
+  "overlapping_source_changes_since_priority_review": [],
+  "literature": {
+    "path": "D:/lean/tmp/sheaf/compute-route-feasibility-20261030/literature.json",
+    "count": 11,
+    "scope": "See per-source read_scope; not a claim to have fully read every paper."
+  },
+  "environment_discovery_only": {
+    "python_modules": {
+      "sympy": true,
+      "scipy": true,
+      "z3": false,
+      "cvxpy": false,
+      "sageall": false
+    },
+    "executables": {
+      "lean": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WinGet\\Links\\lean.EXE",
+      "lake": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WinGet\\Links\\lake.EXE",
+      "z3": null,
+      "sage": null,
+      "maple": null
+    }
+  },
+  "statement_compiles": "not_run",
+  "proof_body_checked": "not_run",
+  "kernel_closed": "not_run",
+  "target_accepted": false,
+  "not_run": [
+    "solver",
+    "proof search",
+    "training",
+    "Lean",
+    "Project build",
+    "comparator",
+    "axiom probe",
+    "independent review"
+  ]
+}

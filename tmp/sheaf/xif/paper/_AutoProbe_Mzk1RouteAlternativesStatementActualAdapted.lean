@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1RouteAlternativesStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RouteAlternativesStatementActual.RouteAlternative
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RouteAlternativesStatementActual.RouteAlternative.index
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RouteAlternativesStatementActual.RouteAlternative.index_lt_six

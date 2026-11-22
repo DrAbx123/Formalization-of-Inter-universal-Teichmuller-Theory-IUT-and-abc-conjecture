@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2480CycleTypeRepairActual
+open LeanFormal.IUT.XiFPaper.S2480CycleTypeRepairActual
+#print axioms S2480Target_iff_exists_sigma
+#print axioms S2480FirstMissing_iff_target
+#print axioms S2480D5LargeImageFive_of_firstMissing_and_pair

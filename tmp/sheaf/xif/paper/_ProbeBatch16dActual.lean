@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1P1ValuativeUniquenessActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiCoverActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ValuativeUniquenessActual.p1GluedToBase_valuativeCriterion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiCoverActual.qPiece_isOpenImmersion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiCoverActual.mem_range_localization_iff

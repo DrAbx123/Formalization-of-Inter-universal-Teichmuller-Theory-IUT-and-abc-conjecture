@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1T3GapPackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3GapPackageActual.frontierHeightClause_of_heightRegionGap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3GapPackageActual.frontierRegionClause_of_regionWeightGap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T3GapPackageActual.abcConjecture_of_gapPackage

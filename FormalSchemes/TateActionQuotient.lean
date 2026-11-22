@@ -1,0 +1,59 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import FormalSchemes.ActionQuotient
+import FormalSchemes.TateAction
+
+/-!
+# Action-invariance of the Tate-chain structural morphism
+
+The general categorical quotient interface `CategoryTheory.IsActionQuotient` (issue 224) is
+instantiated here against the merged `q^ℤ`-period action on the Tate chain (issue 135). The one
+concrete input it needs from the eventual quotient construction is recorded now: the structural
+morphism `T ⟶ Spf R` is invariant under the action, hence descends to any quotient `T / q^ℤ`.
+
+## Main result
+
+* `AlgebraicGeometry.tateChainStructMap_isActionInvariant`: the structural morphism
+  `tateChainStructMap : T ⟶ Spf R` is `IsActionInvariant` under `tatePeriodAction`.
+
+This is exactly `tateShiftAut_zpow_comp_structMap` (every power of the shift automorphism commutes
+with the structural morphism) repackaged through the general-purpose `IsActionInvariant` predicate,
+confirming the interface is non-vacuous and matches the merged Tate infrastructure. When the
+quotient is constructed (issue 223 for the concrete two-chart model, or the general construction
+here) as an `IsActionQuotient`, its `desc` applied to this invariant morphism produces the
+structural morphism `𝔈_q ⟶ Spf R`.
+
+Note that `𝔈_q = tateCurveModel` is the quotient of the *inversion-glued* chain `T_inv` by the
+**square** `σ²` of the shift, not by `σ` — it has period `q²`. See the period note in
+`FormalSchemes.TateCurveModel`, and `FormalSchemes.TateQuotientMap` for the presentation itself.
+This file is about the swap-glued chain `T`, which issue 606 supersedes.
+
+## References
+
+* [Bosch, *Lectures on Formal and Rigid Geometry*, LNM 2105], §9.
+* [Grothendieck, *Éléments de géométrie algébrique I*][EGA1], Ch. I, §10.6.
+-/
+
+universe u
+
+open CategoryTheory
+
+namespace AlgebraicGeometry
+
+variable (R : Type u) [CommRing R] (I : Ideal R) (q : R)
+variable [TopologicalSpace R] [IsAdicRing I] [IsNoetherianRing R] (hq : q ∈ I) (hI : I.FG)
+
+/-- **The Tate-chain structural morphism is action-invariant.** The morphism
+`tateChainStructMap : T ⟶ Spf R` is invariant under the `q^ℤ`-period action
+`tatePeriodAction : ℤ → Aut T`: every power `σⁿ` of the shift automorphism commutes with it
+(`tateShiftAut_zpow_comp_structMap`). Consequently it descends through any quotient `T / q^ℤ`. -/
+theorem tateChainStructMap_isActionInvariant :
+    IsActionInvariant (tatePeriodAction R I q hq hI) (tateChainStructMap R I q hq hI) := by
+  intro g
+  rw [tatePeriodAction_apply]
+  exact tateShiftAut_zpow_comp_structMap R I q hq hI g.toAdd
+
+end AlgebraicGeometry

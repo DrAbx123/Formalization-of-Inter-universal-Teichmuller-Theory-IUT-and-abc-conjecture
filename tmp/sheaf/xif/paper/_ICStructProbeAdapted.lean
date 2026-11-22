@@ -1,0 +1,6 @@
+import Mathlib
+#print IsIntegralClosure
+#check @IsIntegralClosure.isIntegral_iff
+#check @IsIntegralClosure.algebraMap_injective
+#check @IsIntegral.exec_multiple_integral_of_isLocalization
+#check @IsIntegral.exists_multiple_integral_of_isLocalization

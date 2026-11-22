@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DChartClusterConsumer2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DChartClusterConsumer2ActualAdapted.dChartClusterConsumer2_chart

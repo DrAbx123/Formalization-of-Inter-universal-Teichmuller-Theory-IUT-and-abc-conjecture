@@ -1,0 +1,9 @@
+import Mathlib
+#check Isometry.isHomeomorph
+#check Isometry.isEmbedding
+#check Isometry.continuous
+#check isometry_iff_norm
+#check isometry_iff_dist
+#check NormedAddCommGroup.induced
+#check Isometry.isCompact_preimage
+#check Homeomorph.isOpen_preimage

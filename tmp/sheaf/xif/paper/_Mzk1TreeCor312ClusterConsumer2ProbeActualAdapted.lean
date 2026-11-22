@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeCor312ClusterConsumer2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeCor312ClusterConsumer2ActualAdapted.treeCor312ClusterConsumer2_allRoutes

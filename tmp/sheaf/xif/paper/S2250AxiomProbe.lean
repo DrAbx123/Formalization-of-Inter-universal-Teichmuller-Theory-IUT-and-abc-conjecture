@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2250GaloisPairTransitiveProofActual
+open LeanFormal.IUT.XiFPaper.S2250GaloisPairTransitiveProofActual
+#print axioms S2250GaloisPairTransitiveRequired_iff_range
+#print axioms S2250D5LargeImageFive_of_exact

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2LiftGeneralFacConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2LiftGeneralFacConsumerActual.S3127G2LiftGeneralFacConsumer

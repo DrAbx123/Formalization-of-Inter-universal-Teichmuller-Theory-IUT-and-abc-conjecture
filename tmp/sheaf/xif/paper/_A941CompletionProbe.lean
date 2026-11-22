@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1CompletionUnconditionalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.no_natRootSystem_of_valExp_pos
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.completionFirstFieldObstruction_empty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.actualCompletionRootBlock_empty
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.oldSourcePilotWithActualCore_empty

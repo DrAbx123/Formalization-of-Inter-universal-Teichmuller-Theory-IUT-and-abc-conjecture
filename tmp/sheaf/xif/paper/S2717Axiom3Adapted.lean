@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2717Cor312FullTargetActual
+#print axioms LeanFormal.IUT.XiFPaper.S2717Cor312FullTargetActual.S2717_full_of_hupper
+#print axioms LeanFormal.IUT.XiFPaper.S2717Cor312FullTargetActual.S2717_full_iff_hupper
+#check @LeanFormal.IUT.XiFPaper.S2717Cor312FullTargetActual.S2717UpperGap

@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.Mzk1G1JHeightUniformActual
+import tmp.sheaf.xif.paper.Mzk1HT82PaperWeightDiffActual
+import tmp.sheaf.xif.paper.Mzk1URThetaKCarrierActual
+import tmp.sheaf.xif.paper.Mzk1ULKSideLettersActual
+import tmp.sheaf.xif.paper.Mzk1G1PsiM2ProducerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.G1JHeightUniformActual.jHeight_relation_deg
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HT82PaperWeightDiffActual.paperWeightedDeltaSum_subset_le_logDifferentK
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaKCarrierActual.urP6Phi_id_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiM2ProducerActual.mzk1Lemma24Target_of_finite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1PsiM2ProducerActual.mzk1Lemma24Target_of_zero

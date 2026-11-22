@@ -976,10 +976,9 @@ theorem columnProcessionSourceLedger_inclusion_action (n : Int)
         ((((I.columnProcessionSourceLedger n).stage k).fStage.strip i).action v g x) =
       (((I.columnProcessionSourceLedger n).stage r).fStage.strip
         ((I.columnProcessionSourceLedger n).inclusion_map h i)).action v
-        ((I.columnProcessionSourceLedger n).inclusion_component h i).isoPi v g
-        ((I.columnProcessionSourceLedger n).inclusion_component h i).isoMon v x :=
-  ((I.columnProcessionSourceLedger n).stage k).fLink_action i
-    ((I.columnProcessionSourceLedger n).inclusion_map h i) v g x
+        (((I.columnProcessionSourceLedger n).inclusion_component h i).isoPi v g)
+        (((I.columnProcessionSourceLedger n).inclusion_component h i).isoMon v x) :=
+  ((I.columnProcessionSourceLedger n).inclusion_component h i).compatAction v g x
 
 theorem columnProcessionSourceLedger_inclusion_degree (n : Int)
     {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V)
@@ -988,8 +987,7 @@ theorem columnProcessionSourceLedger_inclusion_degree (n : Int)
       ((I.columnProcessionSourceLedger n).inclusion_map h i)).degree v
         (((I.columnProcessionSourceLedger n).inclusion_component h i).isoMon v x) =
       (((I.columnProcessionSourceLedger n).stage k).fStage.strip i).degree v x :=
-  ((I.columnProcessionSourceLedger n).stage k).fLink_degree i
-    ((I.columnProcessionSourceLedger n).inclusion_map h i) v x
+  ((I.columnProcessionSourceLedger n).inclusion_component h i).compatDegree v x
 
 theorem columnProcessionSourceLedger_inclusion_d_natural (n : Int)
     {k r : Nat} (h : k ≤ r) (i j : Fin (k + 1)) :
@@ -1015,63 +1013,119 @@ theorem columnProcessionSourceLedger_inclusion_total_degree (n : Int)
   intro v hv
   exact ((I.columnProcessionSourceLedger n).inclusion_component h i).compatDegree v (x v)
 
-/-! ## 9.2 Translation groupoid laws -/
+/-! ## 8. Translation and spoke transport of packet/degree ledgers -/
 
-theorem translatedColumnSourceLedger_zero (n : Int) (k : Nat) (i : Fin (k + 1)) :
-    (I.translatedColumnSourceLedger 0 n k).component i =
-      FPrimeStripEquiv.refl
-        ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i) := by
-  change I.fLinkAt n (i.1 : Int) (n + 0) (i.1 : Int) = _
-  simpa using I.fLinkAt_refl n (i.1 : Int)
+universe uLedgerIndex
 
-theorem translatedColumnSourceLedger_add (a c n : Int) (k : Nat)
-    (i : Fin (k + 1)) :
-    FPrimeStripEquiv.trans
-        ((I.translatedColumnSourceLedger a n k).component i)
-        ((I.translatedColumnSourceLedger c (n + a) k).component i) =
-      (I.translatedColumnSourceLedger (a + c) n k).component i := by
-  change FPrimeStripEquiv.trans
-      (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
-      (I.fLinkAt (n + a) (i.1 : Int) (n + a + c) (i.1 : Int)) =
-    I.fLinkAt n (i.1 : Int) (n + (a + c)) (i.1 : Int)
-  rw [I.fLinkAt_trans]
-  congr 2 <;> omega
+/-- An equivalence together with both of its prime-strip endpoints. -/
+def sourceLedgerEquivBundle (F G : FPrimeStrip.{umon, uv, upi} V)
+    (e : FPrimeStripEquiv F G) :
+    Sigma fun X : FPrimeStrip.{umon, uv, upi} V =>
+      Sigma fun Y : FPrimeStrip.{umon, uv, upi} V => FPrimeStripEquiv X Y :=
+  ⟨F, G, e⟩
 
-theorem translatedColumnSourceLedger_inverse (a n : Int) (k : Nat)
-    (i : Fin (k + 1)) :
-    FPrimeStripEquiv.trans
-        ((I.translatedColumnSourceLedger a n k).component i)
-        ((I.translatedColumnSourceLedger (-a) (n + a) k).component i) =
-      (I.translatedColumnSourceLedger 0 n k).component i := by
-  rw [I.translatedColumnSourceLedger_add]
-  have ha : a + (-a) = (0 : Int) := by omega
-  rw [ha]
+/-- Equality elimination in both prime-strip endpoints. -/
+def sourceLedgerEquivTransport
+    {F F' G G' : FPrimeStrip.{umon, uv, upi} V}
+    (sourceIdentity : F = F') (targetIdentity : G = G')
+    (e : FPrimeStripEquiv F G) : FPrimeStripEquiv F' G' :=
+  sourceIdentity ▸ targetIdentity ▸ e
+
+theorem sourceLedgerEquivBundle_eq_iff
+    {F F' G G' : FPrimeStrip.{umon, uv, upi} V}
+    (e : FPrimeStripEquiv F G) (e' : FPrimeStripEquiv F' G') :
+    sourceLedgerEquivBundle F G e = sourceLedgerEquivBundle F' G' e' ↔
+      ∃ p : F = F', ∃ q : G = G', sourceLedgerEquivTransport p q e = e' := by
+  constructor
+  · intro equality
+    cases equality
+    exact ⟨rfl, rfl, rfl⟩
+  · rintro ⟨sourceIdentity, targetIdentity, equality⟩
+    cases sourceIdentity
+    cases targetIdentity
+    change e = e' at equality
+    cases equality
+    rfl
+
+theorem sourceLedgerEquivBundle_eq_iff_transport
+    {F F' G G' : FPrimeStrip.{umon, uv, upi} V}
+    (sourceIdentity : F = F') (targetIdentity : G = G')
+    (e : FPrimeStripEquiv F G) (e' : FPrimeStripEquiv F' G') :
+    sourceLedgerEquivBundle F G e = sourceLedgerEquivBundle F' G' e' ↔
+      sourceLedgerEquivTransport sourceIdentity targetIdentity e = e' := by
+  constructor
+  · intro equality
+    obtain ⟨p, q, transported⟩ := (sourceLedgerEquivBundle_eq_iff e e').mp equality
+    exact transported
+  · intro transported
+    exact (sourceLedgerEquivBundle_eq_iff e e').mpr
+      ⟨sourceIdentity, targetIdentity, transported⟩
+
+theorem sourceLedgerEquivBundle_source_eq
+    {F F' G G' : FPrimeStrip.{umon, uv, upi} V}
+    {e : FPrimeStripEquiv F G} {e' : FPrimeStripEquiv F' G'}
+    (equality : sourceLedgerEquivBundle F G e = sourceLedgerEquivBundle F' G' e') :
+    F = F' := congrArg (fun bundle => bundle.1) equality
+
+theorem sourceLedgerEquivBundle_target_eq
+    {F F' G G' : FPrimeStrip.{umon, uv, upi} V}
+    {e : FPrimeStripEquiv F G} {e' : FPrimeStripEquiv F' G'}
+    (equality : sourceLedgerEquivBundle F G e = sourceLedgerEquivBundle F' G' e') :
+    G = G' := congrArg (fun bundle => bundle.2.1) equality
+
+theorem sourceLedgerEquivTransport_trans
+    {F F' G G' H H' : FPrimeStrip.{umon, uv, upi} V}
+    (sourceIdentity : F = F') (middleIdentity : G = G') (targetIdentity : H = H')
+    (e : FPrimeStripEquiv F G) (f : FPrimeStripEquiv G H) :
+    sourceLedgerEquivTransport sourceIdentity targetIdentity (FPrimeStripEquiv.trans e f) =
+      FPrimeStripEquiv.trans (sourceLedgerEquivTransport sourceIdentity middleIdentity e)
+        (sourceLedgerEquivTransport middleIdentity targetIdentity f) := by
+  cases sourceIdentity
+  cases middleIdentity
+  cases targetIdentity
   rfl
 
-theorem translatedColumnSourceLedger_projection (a n : Int) (k : Nat)
-    (i : Fin (k + 1)) (v : V)
-    (x : ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).toD.Pi v) :
-    ((I.translatedColumnSourceLedger a n k).target.fStage.strip i).proj v
-        (((I.translatedColumnSourceLedger a n k).component i).isoPi v x) =
-      ((I.translatedColumnSourceLedger a n k).component i).isoG v
-        (((I.translatedColumnSourceLedger a n k).base.fStage.strip i).proj v x) :=
-  ((I.translatedColumnSourceLedger a n k).component i).compatProj_apply v x
+theorem sourceLedgerEquivTransport_link
+    {J : Type uLedgerIndex} (strip : J → FPrimeStrip.{umon, uv, upi} V)
+    (link : ∀ i j, FPrimeStripEquiv (strip i) (strip j))
+    {i i' j j' : J} (sourceIdentity : i = i') (targetIdentity : j = j') :
+    sourceLedgerEquivTransport (congrArg strip sourceIdentity)
+      (congrArg strip targetIdentity) (link i j) = link i' j' := by
+  cases sourceIdentity
+  cases targetIdentity
+  rfl
 
-theorem translatedColumnSourceLedger_component_bijective
-    (a n : Int) (k : Nat) (i : Fin (k + 1)) (v : V) :
-    Function.Bijective
-      (((I.translatedColumnSourceLedger a n k).component i).isoMon v) := by
-  exact ((I.translatedColumnSourceLedger a n k).component i).isoMon v |>.bijective
+theorem sourceLedgerEquivTransport_refl
+    {F F' : FPrimeStrip.{umon, uv, upi} V} (sourceIdentity : F = F') :
+    sourceLedgerEquivTransport sourceIdentity sourceIdentity (FPrimeStripEquiv.refl F) =
+      FPrimeStripEquiv.refl F' := by
+  cases sourceIdentity
+  rfl
 
-theorem translatedColumnSourceLedger_total_degree_transport
-    (a n : Int) (k : Nat) (i : Fin (k + 1)) (s : Finset V)
-    (x : ∀ v, ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).Mon v) :
-    ((I.translatedColumnSourceLedger a n k).target.fStage.strip i).totalDegree s
-        (fun v => ((I.translatedColumnSourceLedger a n k).component i).isoMon v (x v)) =
-      ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).totalDegree s x :=
-  (I.translatedColumnSourceLedger a n k).component_total_degree i s x
-
-/-! ## 8. Translation and spoke transport of packet/degree ledgers -/
+theorem sourceLedgerEquivTransport_naturality
+    {J : Type uLedgerIndex} (sourceStrip targetStrip : J → FPrimeStrip.{umon, uv, upi} V)
+    (sourceLink : ∀ i j, FPrimeStripEquiv (sourceStrip i) (sourceStrip j))
+    (targetLink : ∀ i j, FPrimeStripEquiv (targetStrip i) (targetStrip j))
+    (map : J → J) (map_identity : ∀ i, map i = i)
+    (component : ∀ i, FPrimeStripEquiv (sourceStrip i) (targetStrip (map i)))
+    (naturality : ∀ i j, FPrimeStripEquiv.trans (sourceLink i j) (component j) =
+      FPrimeStripEquiv.trans (component i) (targetLink (map i) (map j)))
+    (i j : J) :
+    FPrimeStripEquiv.trans (sourceLink i j)
+        (sourceLedgerEquivTransport rfl (congrArg targetStrip (map_identity j)) (component j)) =
+      FPrimeStripEquiv.trans
+        (sourceLedgerEquivTransport rfl (congrArg targetStrip (map_identity i)) (component i))
+        (targetLink i j) := by
+  calc
+    _ = sourceLedgerEquivTransport rfl (congrArg targetStrip (map_identity j))
+        (FPrimeStripEquiv.trans (sourceLink i j) (component j)) :=
+      (sourceLedgerEquivTransport_trans rfl rfl _ _ _).symm
+    _ = sourceLedgerEquivTransport rfl (congrArg targetStrip (map_identity j))
+        (FPrimeStripEquiv.trans (component i) (targetLink (map i) (map j))) :=
+      congrArg _ (naturality i j)
+    _ = _ := by
+      rw [sourceLedgerEquivTransport_trans rfl (congrArg targetStrip (map_identity i)),
+        sourceLedgerEquivTransport_link targetStrip targetLink (map_identity i) (map_identity j)]
 
 structure TranslatedColumnSourceLedger (a n : Int) (k : Nat) where
   base : I.ColumnStageSourceLedger n k
@@ -1086,9 +1140,13 @@ structure TranslatedColumnSourceLedger (a n : Int) (k : Nat) where
   component : ∀ i,
     FPrimeStripEquiv (base.fStage.strip i) (target.fStage.strip (map i))
   component_source : ∀ i,
-    component i = I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int)
+    sourceLedgerEquivBundle (base.fStage.strip i) (target.fStage.strip (map i))
+        (component i) =
+      sourceLedgerEquivBundle (I.fPrimeStripAt n (i.1 : Int))
+        (I.fPrimeStripAt (n + a) (i.1 : Int))
+        (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
   component_action : ∀ i v g x,
-    (component i).isoMon v (base.fStage.strip i).action v g x =
+    (component i).isoMon v ((base.fStage.strip i).action v g x) =
       (target.fStage.strip (map i)).action v ((component i).isoPi v g)
         ((component i).isoMon v x)
   component_degree : ∀ i v x,
@@ -1135,6 +1193,95 @@ def translatedColumnSourceLedger (a n : Int) (k : Nat) :
     intro i j
     exact I.h2HorizontalFPolyIso n a k |>.naturality i j
 
+/-! ## 9.2 Translation groupoid laws -/
+
+theorem translatedColumnSourceLedger_zero (n : Int) (k : Nat) (i : Fin (k + 1)) :
+    sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger 0 n k).target.fStage.strip
+          ((I.translatedColumnSourceLedger 0 n k).map i))
+        ((I.translatedColumnSourceLedger 0 n k).component i) =
+      sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)
+        (FPrimeStripEquiv.refl
+          ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)) := by
+  change sourceLedgerEquivBundle _ _ (I.fLinkAt n (i.1 : Int) (n + 0) (i.1 : Int)) = _
+  calc
+    _ = sourceLedgerEquivBundle (I.fPrimeStripAt n (i.1 : Int))
+        (I.fPrimeStripAt n (i.1 : Int)) (I.fLinkAt n (i.1 : Int) n (i.1 : Int)) :=
+      congrArg (fun endpoint => sourceLedgerEquivBundle (I.fPrimeStripAt n (i.1 : Int))
+        (I.fPrimeStripAt endpoint (i.1 : Int)) (I.fLinkAt n (i.1 : Int) endpoint (i.1 : Int)))
+        (show n + 0 = n by omega)
+    _ = _ := congrArg (sourceLedgerEquivBundle _ _) (I.fLinkAt_refl n (i.1 : Int))
+
+theorem translatedColumnSourceLedger_add (a c n : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger a n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger c (n + a) k).target.fStage.strip
+          ((I.translatedColumnSourceLedger c (n + a) k).map i))
+        (FPrimeStripEquiv.trans
+          ((I.translatedColumnSourceLedger a n k).component i)
+          ((I.translatedColumnSourceLedger c (n + a) k).component i)) =
+      sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger (a + c) n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger (a + c) n k).target.fStage.strip
+          ((I.translatedColumnSourceLedger (a + c) n k).map i))
+        ((I.translatedColumnSourceLedger (a + c) n k).component i) := by
+  change sourceLedgerEquivBundle _ _ (FPrimeStripEquiv.trans
+      (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+      (I.fLinkAt (n + a) (i.1 : Int) (n + a + c) (i.1 : Int))) =
+    sourceLedgerEquivBundle _ _ (I.fLinkAt n (i.1 : Int) (n + (a + c)) (i.1 : Int))
+  rw [I.fLinkAt_trans]
+  exact congrArg (fun endpoint => sourceLedgerEquivBundle (I.fPrimeStripAt n (i.1 : Int))
+    (I.fPrimeStripAt endpoint (i.1 : Int)) (I.fLinkAt n (i.1 : Int) endpoint (i.1 : Int)))
+    (show n + a + c = n + (a + c) by omega)
+
+theorem translatedColumnSourceLedger_inverse (a n : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger a n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger (-a) (n + a) k).target.fStage.strip
+          ((I.translatedColumnSourceLedger (-a) (n + a) k).map i))
+        (FPrimeStripEquiv.trans
+          ((I.translatedColumnSourceLedger a n k).component i)
+          ((I.translatedColumnSourceLedger (-a) (n + a) k).component i)) =
+      sourceLedgerEquivBundle
+        ((I.translatedColumnSourceLedger 0 n k).base.fStage.strip i)
+        ((I.translatedColumnSourceLedger 0 n k).target.fStage.strip
+          ((I.translatedColumnSourceLedger 0 n k).map i))
+        ((I.translatedColumnSourceLedger 0 n k).component i) := by
+  have translationComposition := I.translatedColumnSourceLedger_add a (-a) n k i
+  exact translationComposition.trans (congrArg
+    (fun displacement => sourceLedgerEquivBundle (I.fPrimeStripAt n (i.1 : Int))
+      (I.fPrimeStripAt (n + displacement) (i.1 : Int))
+      (I.fLinkAt n (i.1 : Int) (n + displacement) (i.1 : Int)))
+    (show a + -a = (0 : Int) by omega))
+
+theorem translatedColumnSourceLedger_projection (a n : Int) (k : Nat)
+    (i : Fin (k + 1)) (v : V)
+    (x : ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).toD.Pi v) :
+    ((I.translatedColumnSourceLedger a n k).target.fStage.strip i).proj v
+        (((I.translatedColumnSourceLedger a n k).component i).isoPi v x) =
+      ((I.translatedColumnSourceLedger a n k).component i).isoG v
+        (((I.translatedColumnSourceLedger a n k).base.fStage.strip i).proj v x) :=
+  ((I.translatedColumnSourceLedger a n k).component i).compatProj_apply v x
+
+theorem translatedColumnSourceLedger_component_bijective
+    (a n : Int) (k : Nat) (i : Fin (k + 1)) (v : V) :
+    Function.Bijective
+      (((I.translatedColumnSourceLedger a n k).component i).isoMon v) := by
+  exact ((I.translatedColumnSourceLedger a n k).component i).isoMon v |>.bijective
+
+theorem translatedColumnSourceLedger_total_degree_transport
+    (a n : Int) (k : Nat) (i : Fin (k + 1)) (s : Finset V)
+    (x : ∀ v, ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).Mon v) :
+    ((I.translatedColumnSourceLedger a n k).target.fStage.strip i).totalDegree s
+        (fun v => ((I.translatedColumnSourceLedger a n k).component i).isoMon v (x v)) =
+      ((I.translatedColumnSourceLedger a n k).base.fStage.strip i).totalDegree s x :=
+  (I.translatedColumnSourceLedger a n k).component_total_degree i s x
+
 @[simp] theorem translatedColumnSourceLedger_map (a n : Int) (k : Nat)
     (i : Fin (k + 1)) :
     (I.translatedColumnSourceLedger a n k).map i = i := rfl
@@ -1169,8 +1316,8 @@ theorem translatedColumnSourceLedger_action (a n : Int) (k : Nat)
     ((I.translatedColumnSourceLedger a n k).component i).isoMon v
         (((I.translatedColumnSourceLedger a n k).base.fStage.strip i).action v g x) =
       ((I.translatedColumnSourceLedger a n k).target.fStage.strip i).action v
-        ((I.translatedColumnSourceLedger a n k).component i).isoPi v g
-        ((I.translatedColumnSourceLedger a n k).component i).isoMon v x :=
+        (((I.translatedColumnSourceLedger a n k).component i).isoPi v g)
+        (((I.translatedColumnSourceLedger a n k).component i).isoMon v x) :=
   (I.translatedColumnSourceLedger a n k).component_action i v g x
 
 theorem translatedColumnSourceLedger_degree (a n : Int) (k : Nat)
@@ -1220,10 +1367,15 @@ structure SpokeColumnSourceLedger (P : H2SpokePermutation I)
       ((I.spokeCapsule P source.fStage).strip i)
       (target.fStage.strip (map i))
   component_source : ∀ i,
-    component i = P.fSpokeLink (source.source i)
+    sourceLedgerEquivBundle ((I.spokeCapsule P source.fStage).strip i)
+        (target.fStage.strip (map i)) (component i) =
+      sourceLedgerEquivBundle
+        (I.family.theater (P.permutation (source.source i))).primeStrip
+        (I.family.theater (source.source i)).primeStrip
+        (P.fSpokeLink (source.source i))
   component_action : ∀ i v g x,
     (component i).isoMon v
-        ((I.spokeCapsule P source.fStage).strip i).action v g x =
+        (((I.spokeCapsule P source.fStage).strip i).action v g x) =
       (target.fStage.strip (map i)).action v
         ((component i).isoPi v g) ((component i).isoMon v x)
   component_degree : ∀ i v x,
@@ -1304,8 +1456,8 @@ theorem spokeColumnSourceLedger_action (P : H2SpokePermutation I)
           (I.spokeColumnSourceLedger P n k).source.fStage |>.strip i).action v g x) =
       ((I.spokeColumnSourceLedger P n k).target.fStage.strip
         ((I.spokeColumnSourceLedger P n k).map i)).action v
-        ((I.spokeColumnSourceLedger P n k).component i).isoPi v g
-        ((I.spokeColumnSourceLedger P n k).component i).isoMon v x :=
+        (((I.spokeColumnSourceLedger P n k).component i).isoPi v g)
+        (((I.spokeColumnSourceLedger P n k).component i).isoMon v x) :=
   (I.spokeColumnSourceLedger P n k).component_action i v g x
 
 theorem spokeColumnSourceLedger_degree (P : H2SpokePermutation I)
@@ -1359,10 +1511,10 @@ theorem spokeColumnSourceLedger_comp
     (P Q : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
     FPrimeStripEquiv.trans
-        ((I.spokeColumnSourceLedger Q n k).component i)
+        ((I.stageSpokePolyIso Q (I.spokeCapsule P (I.columnFStage n k))).component i)
         ((I.spokeColumnSourceLedger P n k).component i) =
       (I.spokeColumnSourceLedger (P.comp Q) n k).component i := by
-  exact I.stageSpoke_comp_component Q P (I.columnFStage n k) i
+  exact I.stageSpoke_comp_component P Q (I.columnFStage n k) i
 
 theorem spokeColumnSourceLedger_component_bijective
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
@@ -1379,23 +1531,32 @@ structure H1H2PacketDegreeLedger (P : H2SpokePermutation I) where
   h2_procession : ∀ n, I.ColumnProcessionSourceLedger n
   translation : ∀ a n k, I.TranslatedColumnSourceLedger a n k
   spoke : ∀ n k, I.SpokeColumnSourceLedger P n k
-  top_cardinality : ∀ n,
+  top_cardinality : ∀ n : Int,
     Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1
   f_d_stage : ∀ n k,
     ((h2_column n k).fStage).toD = (h2_column n k).dStage
   horizontal_natural : ∀ a n k i j,
-    FPrimeStripEquiv.trans
-        ((translation a n k).base.fStage.link i j)
-        ((translation a n k).component j) =
+    let T := translation a n k
+    let endpointIdentity := fun r =>
+      congrArg (fun t => T.target.fStage.strip t) (T.map_identity r)
+    FPrimeStripEquiv.trans (T.base.fStage.link i j)
+        (sourceLedgerEquivTransport rfl (endpointIdentity j) (T.component j)) =
       FPrimeStripEquiv.trans
-        ((translation a n k).component i)
-        ((translation a n k).target.fStage.link i j)
-  spoke_natural : ∀ n k i j,
-    FPrimeStripEquiv.trans
-        (I.spokeCapsule P (h2_column n k).fStage |>.link i j)
-        ((spoke n k).component j) =
-      FPrimeStripEquiv.trans ((spoke n k).component i)
-        ((h2_column n k).fStage.link i j)
+        (sourceLedgerEquivTransport rfl (endpointIdentity i) (T.component i))
+        (T.target.fStage.link i j)
+  spoke_natural : ∀ n k,
+    let C := h2_column n k
+    let S := spoke n k
+    ∃ sourceIdentity : ∀ r,
+        (I.spokeCapsule P S.source.fStage).strip r =
+          (I.spokeCapsule P C.fStage).strip r,
+    ∃ targetIdentity : ∀ r, S.target.fStage.strip (S.map r) = C.fStage.strip r,
+    ∀ i j,
+      FPrimeStripEquiv.trans (I.spokeCapsule P C.fStage |>.link i j)
+          (sourceLedgerEquivTransport (sourceIdentity j) (targetIdentity j) (S.component j)) =
+        FPrimeStripEquiv.trans
+          (sourceLedgerEquivTransport (sourceIdentity i) (targetIdentity i) (S.component i))
+          (C.fStage.link i j)
 
 def h1H2PacketDegreeLedger (P : H2SpokePermutation I) :
     I.H1H2PacketDegreeLedger P where
@@ -1408,9 +1569,13 @@ def h1H2PacketDegreeLedger (P : H2SpokePermutation I) :
   f_d_stage := by intro n k; rfl
   horizontal_natural := by
     intro a n k i j
-    exact I.translatedColumnSourceLedger_natural a n k i j
+    exact sourceLedgerEquivTransport_naturality _ _ _ _ _
+      (I.translatedColumnSourceLedger a n k).map_identity _
+      (I.translatedColumnSourceLedger a n k).naturality i j
   spoke_natural := by
-    intro n k i j
+    intro n k
+    refine ⟨(fun _ => rfl), (fun _ => rfl), ?_⟩
+    intro i j
     exact I.spokeColumnSourceLedger_natural P n k i j
 
 @[simp] theorem h1H2PacketDegreeLedger_h1 (P : H2SpokePermutation I) :
@@ -1431,12 +1596,12 @@ theorem h1H2PacketDegreeLedger_horizontal_natural
     (P : H2SpokePermutation I) (a n : Int) (k : Nat)
     (i j : Fin (k + 1)) :
     FPrimeStripEquiv.trans
-        ((I.h1H2PacketDegreeLedger P).translation a n k).base.fStage.link i j
-        ((I.h1H2PacketDegreeLedger P).translation a n k).component j =
+        (((I.h1H2PacketDegreeLedger P).translation a n k).base.fStage.link i j)
+        (((I.h1H2PacketDegreeLedger P).translation a n k).component j) =
       FPrimeStripEquiv.trans
-        ((I.h1H2PacketDegreeLedger P).translation a n k).component i
-        ((I.h1H2PacketDegreeLedger P).translation a n k).target.fStage.link i j :=
-  (I.h1H2PacketDegreeLedger P).horizontal_natural a n k i j
+        (((I.h1H2PacketDegreeLedger P).translation a n k).component i)
+        (((I.h1H2PacketDegreeLedger P).translation a n k).target.fStage.link i j) :=
+  I.translatedColumnSourceLedger_natural a n k i j
 
 theorem h1H2PacketDegreeLedger_spoke_natural
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
@@ -1444,11 +1609,11 @@ theorem h1H2PacketDegreeLedger_spoke_natural
     FPrimeStripEquiv.trans
         (I.spokeCapsule P ((I.h1H2PacketDegreeLedger P).h2_column n k).fStage
           |>.link i j)
-        ((I.h1H2PacketDegreeLedger P).spoke n k).component j =
+        (((I.h1H2PacketDegreeLedger P).spoke n k).component j) =
       FPrimeStripEquiv.trans
-        ((I.h1H2PacketDegreeLedger P).spoke n k).component i
+        (((I.h1H2PacketDegreeLedger P).spoke n k).component i)
         (((I.h1H2PacketDegreeLedger P).h2_column n k).fStage.link i j) :=
-  (I.h1H2PacketDegreeLedger P).spoke_natural n k i j
+  I.spokeColumnSourceLedger_natural P n k i j
 
 end OriginalInput
 end Theorem311Source
@@ -1467,9 +1632,9 @@ def theorem311SourcePacketDegreeLedger : Obligation :=
       "From OriginalInput, every lattice theater supplies a concrete finite " ++
       "theta packet, positive scales, q/log-volume formulas, F/D prime-strip " ++
         "actions and degrees, and total-degree transport. The source-facing " ++
-        "ledger is still under dependent-type repair and has no successful " ++
-        "current-HEAD compilation evidence; it must not be treated as a closed " ++
-        "Proposition 3.2/3.4 proof. The vertical-coricit D-theater, log-Kummer " ++
+        "ledger compiles after explicit endpoint transport and spoke-composition " ++
+        "corrections. This verifies its stated local interfaces, not a paper-faithful " ++
+        "Proposition 3.2/3.4, Theorem 3.11, or ABC proof. The vertical-coricit D-theater, log-Kummer " ++
         "shell, LGP monoid, and Frobenioid remain separate gates."
     dependsOn := ["IUT-III.theorem-3.11-H1-H2-original-input-arrows",
       "IUT-I-II.prime-strip-degree-kernel",

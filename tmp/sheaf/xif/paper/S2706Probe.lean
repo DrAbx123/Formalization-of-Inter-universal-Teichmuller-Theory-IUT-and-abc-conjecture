@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2704S2696SourceDataActual
+import tmp.sheaf.xif.paper.S2681HcompMinimalInputActual
+#print axioms LeanFormal.IUT.XiFPaper.S2704S2696SourceDataActual.two_log5_lt_sourceBadQAbsLog
+#print axioms LeanFormal.IUT.XiFPaper.S2704S2696SourceDataActual.hcompBadQData_of_halign
+#check LeanFormal.IUT.XiFPaper.S2704S2696SourceDataActual.two_log5_lt_sourceBadQAbsLog
+#check LeanFormal.IUT.XiFPaper.S2704S2696SourceDataActual.hcompBadQData_of_halign
+#check LeanFormal.IUT.XiFPaper.S2681HcompMinimalInputActual.hcomp_of_agreement_badQ
+#check LeanFormal.IUT.XiFPaper.S2681HcompMinimalInputActual.hcomp_iff_badQData_five
+#check LeanFormal.IUT.XiFPaper.S2681HcompMinimalInputActual.HcompSourceQAgreement
+end

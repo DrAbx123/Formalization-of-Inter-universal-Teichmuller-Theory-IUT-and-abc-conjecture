@@ -1,0 +1,26 @@
+{
+  "checked_on": "2026-10-30",
+  "scope": "Primary research and local implementation evidence; method-to-IUT transfer is the report author's proposal, not a result of these papers.",
+  "sources": [
+    {"title": "Olympiad-level formal mathematical reasoning with reinforcement learning", "url": "https://www.nature.com/articles/s41586-025-09833-y", "date": "online 2025-11-12; Nature volume 651, 2026", "read_scope": "Abstract, search/TTRL discussion and manual formalization passages", "supports": "AI-guided formal proof search and problem-specific adaptation", "does_not_support": "Automatic faithful IUT formalization or available local AlphaProof training infrastructure"},
+    {"title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models", "url": "https://arxiv.org/abs/2306.15626", "date": "2023", "read_scope": "Abstract and publication metadata", "supports": "Retrieval of mathematical premises and Lean interaction", "does_not_support": "A ready source-level IUT bridge"},
+    {"title": "Proof of George Andrews's and David Robbins's q-TSPP conjecture", "url": "https://arxiv.org/html/1002.4384v2", "date": "PNAS 2011; arXiv v2 2012", "read_scope": "Metadata and determinant/certificate/recurrence passages in sections 2-4", "supports": "Large symbolic certificate computations predating modern LLMs", "does_not_support": "IUT readouts are q-holonomic or have the same finite reduction"},
+    {"title": "Reduction-Based Creative Telescoping for Definite Summation of D-finite Functions", "url": "https://arxiv.org/html/2307.07216v2", "date": "preprint 2023; journal 2024", "read_scope": "Abstract and introduction, certificate identity and finite-dimension conditions", "supports": "Algorithmic telescopers and certificates for a specified function class", "does_not_support": "Arbitrary hull or indeterminacy operations preserve that class"},
+    {"title": "Positivity certificates for linear recurrences", "url": "https://arxiv.org/abs/2306.05930", "date": "preprint 2023; SODA 2024", "read_scope": "Abstract and exact class restrictions", "supports": "Invariant-cone positivity certificates for the stated Poincare-type recurrence class", "does_not_support": "Deciding positivity for arbitrary recurrences"},
+    {"title": "Counterexample-guided Abstraction Refinement", "url": "https://www.cs.cmu.edu/~emc/papers/Conference%20Papers/Counterexample-guided%20Abstraction%20Refinement.pdf", "date": "CAV 2000", "read_scope": "Abstract and introduction", "supports": "Conservative abstraction, spurious-counterexample analysis and refinement", "does_not_support": "Finite abstract counterexamples instantiate a qualifying IUT datum"},
+    {"title": "An Interpolating Theorem Prover", "url": "https://mcmil.net/pubs/TACAS04.pdf", "date": "TACAS 2004-related author PDF; displayed manuscript date 2005-01-03", "read_scope": "Abstract, introduction and interpolation setup", "supports": "Extracting shared-language intermediate assertions from proof refutations in the specified theories", "does_not_support": "Producing missing source facts without an entailment proof"},
+    {"title": "egg: Fast and Extensible Equality Saturation", "url": "https://arxiv.org/abs/2004.03082", "date": "2020 preprint; POPL 2021", "read_scope": "Abstract and metadata", "supports": "Efficient representations of many equivalent expressions and rewrite search", "does_not_support": "Correctness of arbitrary source-label identifications or a local installed proof integration"},
+    {"title": "Verifying nonlinear real formulas via sums of squares", "url": "https://www.cl.cam.ac.uk/~jrh13/papers/sos.pdf", "date": "author-hosted paper", "read_scope": "Abstract and sections 1-3", "supports": "External SOS discovery with foundational certificate verification and limits of bare SOS forms", "does_not_support": "Local automatic SDP availability or completeness at a chosen bounded certificate degree"},
+    {"title": "Formalization of IUT", "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Formalization%20of%20IUT%20(2026-04).pdf", "date": "April 2026", "read_scope": "Previously inspected sections 2 and 4; diagram on p.10 visually checked", "supports": "User-confirmed dsc/HDD/SHE and 3.11.5 supplementary route"},
+    {"title": "Essential Logical Structure of Inter-universal Teichmuller Theory", "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf", "date": "March 2024", "read_scope": "Section 3.10 Stp1-8 and fixed-gluing discussion; p.155 visually checked previously", "supports": "Full 1-column and fixed-gluing source obligations; Stp5 global-volume condition"}
+  ],
+  "not_used_as_evidence": [
+    "Third-party social-media or encyclopedia claims of recent AI mathematical breakthroughs",
+    "A q-TSPP supplementary website fetch timed out; the accessible author paper was used instead"
+  ],
+  "local_version": {
+    "workspace_head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+    "mathlib_head": "905b95818eb32af7874a58b427f50c1711a5e96c",
+    "rule": "Actual file hashes in evidence.json supersede HEAD as the description of read source bytes."
+  }
+}

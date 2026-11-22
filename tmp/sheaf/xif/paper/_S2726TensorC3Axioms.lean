@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2726TensorComparisonRegionRhoActual
+import tmp.sheaf.xif.paper.S2726C3TensorComparisonRegionRhoActual
+#print axioms LeanFormal.IUT.XiFPaper.S2726TensorComparisonRegionRhoActual.S2726TensorComparisonRegionRhoUpper
+#print axioms LeanFormal.IUT.XiFPaper.S2726TensorComparisonRegionRhoActual.S2726TensorComparisonRegionRho
+#print axioms LeanFormal.IUT.XiFPaper.S2726C3TensorComparisonRegionRhoActual.S2726C3TensorComparisonRegionRho

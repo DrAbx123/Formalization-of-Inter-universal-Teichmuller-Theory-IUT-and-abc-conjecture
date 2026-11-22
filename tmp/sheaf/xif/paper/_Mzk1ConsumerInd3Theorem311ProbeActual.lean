@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerInd3Theorem311Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerInd3Theorem311Actual.ind3_upperSemi_and_sharp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerInd3Theorem311Actual.theorem311_layers_recovered

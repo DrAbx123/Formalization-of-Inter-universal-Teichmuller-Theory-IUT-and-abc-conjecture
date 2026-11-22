@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1765SliceFunctorFromActionActual
+
+#check LeanFormal.IUT.XiFPaper.S1765SliceFunctorFromActionActual.S1765FunctorOfFirstMissing
+#check LeanFormal.IUT.XiFPaper.S1765SliceFunctorFromActionActual.S1765Map_injective
+#check LeanFormal.IUT.XiFPaper.S1765SliceFunctorFromActionActual.S1765Map_id_iff_firstMissing
+#print axioms LeanFormal.IUT.XiFPaper.S1765SliceFunctorFromActionActual.S1765Map_injective

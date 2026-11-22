@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync, appendFileSync, openSync, closeSync, unlinkSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync, appendFileSync, openSync, closeSync, unlinkSync, readdirSync } from 'node:fs';
 import { spawn, spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 const ROOT='D:/lean'; const OUT=join(ROOT,'dag','watchdog'); mkdirSync(OUT,{recursive:true}); mkdirSync(join(OUT,'logs'),{recursive:true});
@@ -26,10 +26,18 @@ const oleanTarget=(p)=>{ const ported=ROOT+'/tmp/external/ported/';
 let running=new Map(), plan=null, taskState=new Map(), pending=[]; const retries=new Map();
 const WL=(()=>{try{return new Set(readFileSync(join(OUT,"extra-targets.txt"),"utf8").split(/\r?\n/).map(x=>x.trim().replaceAll("\\","/")).filter(Boolean));}catch{return new Set();}})();
 const getWL=()=>{try{return new Set(readFileSync(join(OUT,"extra-targets.txt"),"utf8").split(/\r?\n/).map(x=>x.trim().replaceAll("\\","/")).filter(Boolean));}catch{return new Set();}};
-const loadPlan=()=>{ if(!runTool('tools/dag_plan.mjs')||!runTool('tools/dag_plan_deps.mjs')) return false; plan=JSON.parse(readFileSync(join(OUT,'plan.json'),'utf8')); const _st=state(); pending=plan.dirty.filter(p=>{ const WL=getWL(); if(WL.size&&!WL.has(p)) return false; if(/Mzk1ABCTwoEstimatesHeightLemmasShaActual|Mzk1AcceptanceFinalChecksActual|Mzk1E4Example36ConsumerActual(?!.*Adapted)$/.test(p)||p.includes('Mzk1ABCTwoEstimatesHeightLemmasShaActual')||p.includes('Mzk1AcceptanceFinalChecksActual')||p.includes('tmp/sheaf/lana/')||(p.startsWith('tmp/sheaf/xif/paper/')&&!/Mzk1.*Actual\.lean$/.test(p)&&!WL.has(p))||p.includes('Mzk1LANA')||p.includes('A490Wall')||p.includes('A490NumericalWall')||p.includes('NumericalWallActual')||p.includes('SSIneqOfStep3115')||p.includes('VariantOfStep3115')||p.includes('Step3115AlignmentProof')) return false; try{ const e=_st[p]; if(!e||e.failed_exit===undefined) return true; const m=statSync(join(ROOT,p)).mtimeMs; return !(e.failed_mtime===m && (Date.now()-(e.failed_at||0))<600000); }catch{ return true; } }); taskState=new Map(); for(const p of pending) taskState.set(p,'pending');
+const loadPlan=()=>{ if(!runTool('tools/dag_plan.mjs')||!runTool('tools/dag_plan_deps.mjs')) return false; plan=JSON.parse(readFileSync(join(OUT,'plan.json'),'utf8')); const _st=state(); pending=plan.dirty.filter(p=>{ const WL=getWL(); if(WL.size&&!WL.has(p)) return false; if(/Mzk1ABCTwoEstimatesHeightLemmasShaActual|Mzk1AcceptanceFinalChecksActual|Mzk1E4Example36ConsumerActual(?!.*Adapted)$/.test(p)||p.includes('Mzk1ABCTwoEstimatesHeightLemmasShaActual')||p.includes('Mzk1AcceptanceFinalChecksActual')||p.includes('tmp/sheaf/lana/')||(p.startsWith('tmp/sheaf/xif/paper/')&&!/Mzk1.*Actual\.lean$/.test(p)&&!WL.has(p))||p.includes('Mzk1LANA')||p.includes('A490Wall')||p.includes('A490NumericalWall')||p.includes('NumericalWallActual')||p.includes('SSIneqOfStep3115')||p.includes('VariantOfStep3115')||p.includes('Step3115AlignmentProof')) return false; try{ const e=_st[p]; if(!e||e.failed_exit===undefined) return true; const m=statSync(join(ROOT,p)).mtimeMs; return !(e.failed_mtime===m && (Date.now()-(e.failed_at||0))<600000); }catch{ return true; } }); taskState=new Map(); for(const p of pending) taskState.set(p,'pending'); for(const p of running.keys()) taskState.set(p,'running');
   try{ const rs=JSON.parse(readFileSync(join(OUT,'runtime-status.json'),'utf8')); for(const m of (rs.mismatches||[])) for(const e of (m.evidence||[])){ const f=e.file; if(!f) continue; if(/Mzk1ABCTwoEstimatesHeightLemmasShaActual|Mzk1AcceptanceFinalChecksActual|Mzk1E4Example36ConsumerActual/.test(f)||f.startsWith('tmp/external/ported/')||f.startsWith('tmp/sheaf/n8/')||(f.startsWith('tmp/sheaf/xif/paper/')&&!/Mzk1.*Actual\.lean$/.test(f))||f.includes('belyi_pair')) continue; if((!getWL().size||getWL().has(f))&&!taskState.has(f)){ pending.push(f); taskState.set(f,'pending'); } } }catch{} return true; };
+const preflightRoots=()=>{ const rs=[join(ROOT,'.lake/build/lib/lean')]; const pkg=join(ROOT,'.lake/packages'); if(existsSync(pkg)){ for(const d of readdirSync(pkg)){ const r=join(pkg,d,'.lake/build/lib/lean'); if(existsSync(r)) rs.push(r); } } const elan='C:/Users/Administrator/.elan/toolchains'; if(existsSync(elan)){ for(const d of readdirSync(elan)){ const r=join(elan,d,'lib/lean'); if(existsSync(r)) rs.push(r); } } return rs; };
+const PF_ROOTS=preflightRoots();
+const pfModPath=(m)=>m.replace(/\./g,'/')+'.olean';
+const pfHasOlean=(m)=>PF_ROOTS.some(r=>{ try{ const q=join(r,pfModPath(m)); return existsSync(q)&&statSync(q).size>0; }catch{ return false; } });
+const pfImportsOf=(rel)=>{ try{ const s=readFileSync(join(ROOT,rel),'utf8'); return [...s.matchAll(/^\s*import\s+([^\s]+)/gm)].map(x=>x[1]); }catch{ return null; } };
+const preflightMissing=(rel)=>{ const imps=pfImportsOf(rel); if(!imps) return ['<source missing>']; return imps.filter(m=>!pfHasOlean(m)); };
+const DEFER_FILE=join(OUT,'deferred-targets.txt');
+const deferTarget=(rel,missing)=>{ try{ const old=existsSync(DEFER_FILE)?readFileSync(DEFER_FILE,'utf8').split(/\r?\n/).filter(Boolean):[]; if(!old.includes(rel)) writeFileSync(DEFER_FILE,[...old,rel].join('\n')+'\n'); }catch{} log('DEFER '+rel+' <- '+missing.slice(0,3).join(', ')); };
 const depsOf=(p)=>(plan.dirty_deps&&plan.dirty_deps[p])||[];
-const launch=(p)=>{ const {root,olean}=oleanTarget(p); const abs=join(ROOT,p); const out=join(OUT,'logs',p.replace(/[\/\\:]/g,'_')+'.log'); mkdirSync(dirname(olean),{recursive:true}); mkdirSync(dirname(out),{recursive:true});
+const launch=(p)=>{ const miss=preflightMissing(p); if(miss.length){ taskState.set(p,'deferred'); deferTarget(p,miss); return; } const {root,olean}=oleanTarget(p); const abs=join(ROOT,p); const out=join(OUT,'logs',p.replace(/[\/\\:]/g,'_')+'.log'); mkdirSync(dirname(olean),{recursive:true}); mkdirSync(dirname(out),{recursive:true});
   let logStart=0; try{ logStart=existsSync(out)?statSync(out).size:0; }catch{} const fd=openSync(out,'a'); const started=Date.now(); const child=spawn('lake',['env','lean','-R',root,'-o',olean,abs],{cwd:root,stdio:['ignore',fd,fd],windowsHide:true});
   try{ closeSync(fd); }catch{}
   taskState.set(p,'running'); running.set(p,{child,started}); log('START '+p);
@@ -41,12 +49,13 @@ const batch=async()=>{ let guard=0; const started=Date.now(); let lastMove=Date.
   if(guard>200000){ log('guard break'); break; }
   if(Date.now()-started>5400000){ log('HARD STALL BREAK'); try{ for(const [,r] of running){ r.child.kill(); } }catch{} running.clear(); for(const [p,v] of taskState) if(v==='running') taskState.set(p,'failed'); break; }
   if(Date.now()-lastMove>1200000){ log('HARD STALL KILL running='+running.size); try{ for(const [,r] of running){ r.child.kill(); } }catch{} running.clear(); for(const [p,v] of taskState) if(v==='running') taskState.set(p,'failed'); break; }
-  for(const p of pending){ const stt=taskState.get(p); if(stt!=='pending') continue; const ds=depsOf(p);
+  for(const p of pending){ const stt=taskState.get(p); if(stt!=='pending') continue; if(running.has(p)) continue; const ds=depsOf(p);
     if(ds.some(d=>['failed','skipped'].includes(taskState.get(d)))){ taskState.set(p,'skipped'); log('SKIP '+p); continue; }
     if(ds.every(d=>taskState.get(d)==='done'||!taskState.has(d)) && running.size<MAX) launch(p); }
+  // continuous refill: no early straggler batch barrier
   if(running.size===0 && [...taskState.values()].some(v=>v==='pending')){ log('DEADLOCK no-running-but-pending'); break; }
   if(running.size>0){ let alive=0; for(const [,r] of running){ if(r.child.exitCode===null && r.child.signalCode===null){ try{ process.kill(r.child.pid,0); alive++; }catch{} } } if(alive===0){ log('CHILDREN EXITED - reset batch'); for(const [p,v] of taskState) if(v==='running') taskState.set(p,'failed'); running.clear(); break; } }
-  if(running.size===0 && [...taskState.values()].every(v=>v!=='pending'&&v!=='running')) break;
+  if(![...taskState.values()].some(v=>v==='pending')) break;
   await new Promise(r=>setTimeout(r,250)); } };
 const heartbeat=()=>{ writeFileSync(join(OUT,'heartbeat.json'),JSON.stringify({at:new Date().toISOString(),running:running.size,pending:pending.length},null,2)); };
 const main=async()=>{ log('DAG WATCHDOG START max='+MAX+' once='+ONCE+' cycle='+CYCLE); let lastGraph=0;

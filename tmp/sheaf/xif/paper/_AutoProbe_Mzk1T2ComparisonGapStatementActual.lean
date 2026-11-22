@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1T2ComparisonGapStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T2ComparisonGapStatementActual.HeightRegionGap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T2ComparisonGapStatementActual.RegionWeightGap
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1T2ComparisonGapStatementActual.t2_gap_statement_iff

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullIndConsumerBundle2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullIndConsumerBundle2ActualAdapted.indBundle2_ids

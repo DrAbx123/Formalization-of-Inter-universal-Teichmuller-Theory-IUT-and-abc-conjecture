@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternalNodNonStatementsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalNodNonStatementsActual.IUTExternalStatementRow
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalNodNonStatementsActual.iutExternalStatements
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalNodNonStatementsActual.iutExternalStatements_length

@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2757CanonicalGaussianTActual
+#print axioms LeanFormal.IUT.XiFPaper.S2757CanonicalGaussianTActual.S2757_K_eq_GaussianField

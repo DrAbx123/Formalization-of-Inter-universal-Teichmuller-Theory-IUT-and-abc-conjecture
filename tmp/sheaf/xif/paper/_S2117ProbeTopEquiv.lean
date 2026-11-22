@@ -1,0 +1,9 @@
+import Mathlib.GroupTheory.Subgroup.Basic
+namespace ProbeTopEquiv
+#check Subgroup.topEquiv
+#check Subgroup.topEquiv_apply
+#check Subgroup.topEquiv_symm_apply
+#check Subgroup.subgroupOf_top
+#check Subgroup.mem_top
+#check Subgroup.coe_top
+end ProbeTopEquiv

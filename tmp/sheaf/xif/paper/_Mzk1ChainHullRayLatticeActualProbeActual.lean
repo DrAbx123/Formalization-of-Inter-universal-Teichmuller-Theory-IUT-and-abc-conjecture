@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1ChainHullRayLatticeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ChainHullRayLatticeActual.chain_hullRay_union

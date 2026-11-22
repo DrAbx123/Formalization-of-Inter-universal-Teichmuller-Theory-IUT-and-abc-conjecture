@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3128BasicOpenLocalizationUnitActual
+import tmp.sheaf.xif.paper.S3119XLinearFromClassificationActual
+import tmp.sheaf.xif.paper.S3123ObjEqActual
+#print axioms LeanFormal.IUT.XiFPaper.S3128BasicOpenLocalizationUnitActual.S3128NfInv_image_isUnit
+#print axioms LeanFormal.IUT.XiFPaper.S3119XLinearFromClassificationActual.S3119NegInvolution_x0
+#print axioms LeanFormal.IUT.XiFPaper.S3119XLinearFromClassificationActual.S3119XLinear_of_autIdOrNeg
+#print axioms LeanFormal.IUT.XiFPaper.S3123ObjEqActual.S3123Right_obj_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3123ObjEqActual.S3123Left_obj_eq

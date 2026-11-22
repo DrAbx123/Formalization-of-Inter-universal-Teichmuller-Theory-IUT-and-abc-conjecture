@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-30T09:51:47.191143+00:00",
+  "pass": true,
+  "local_links_checked": 27,
+  "source_snapshots_checked": 29,
+  "errors": [],
+  "prior_reports": [
+    {
+      "task": "gap-exploration-20261030",
+      "report_unchanged": true
+    },
+    {
+      "task": "supplement-gap-priorities-20261030",
+      "report_unchanged": true
+    },
+    {
+      "task": "compute-route-feasibility-20261030",
+      "report_unchanged": true
+    }
+  ],
+  "dag_scope": "New node and immediate dependencies only",
+  "proposed_Lean_modules": "not_created",
+  "mathematical_and_Lean_verification": "not_run",
+  "target_accepted": false
+}

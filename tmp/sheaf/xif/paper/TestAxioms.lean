@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S1637D5TorsionClauseActual
+#print axioms LeanFormal.IUT.XiFPaper.S1637D5TorsionClauseActual.s1637EvalPsiSqEqZeroIffZsmul
+#print axioms LeanFormal.IUT.XiFPaper.S1637D5TorsionClauseActual.s1637ZsmulFromAffine
+#print axioms LeanFormal.IUT.XiFPaper.S1637D5TorsionClauseActual.s1637DivisionCriterion

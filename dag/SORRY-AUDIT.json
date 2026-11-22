@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-11-10T19:54:53.163Z",
+  "modules": 36,
+  "occurrences": 45,
+  "rows": [
+    {
+      "id": "olean:tmp/sheaf/xif/paper/S1794FiberFunctorProductActual",
+      "file": "tmp/sheaf/xif/paper/S1794FiberFunctorProductActual.lean",
+      "count": 5,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C3CompleteSourceReduction",
+      "file": "tmp/sheaf/n8/closure/C3CompleteSourceReduction.lean",
+      "count": 3,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C5Native",
+      "file": "tmp/sheaf/n8/closure/C5Native.lean",
+      "count": 2,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C9PaperClosure",
+      "file": "tmp/sheaf/n8/closure/C9PaperClosure.lean",
+      "count": 2,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/N8RouteClosure",
+      "file": "tmp/sheaf/n8/closure/N8RouteClosure.lean",
+      "count": 2,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C1InfiniteUnitQuotientAttempt",
+      "file": "tmp/sheaf/n8/closure/C1InfiniteUnitQuotientAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C1QuotientConsumerProbe",
+      "file": "tmp/sheaf/n8/closure/C1QuotientConsumerProbe.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C3GaloisUnitFixedAttempt",
+      "file": "tmp/sheaf/n8/closure/C3GaloisUnitFixedAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C3SourceGaloisActionAttempt",
+      "file": "tmp/sheaf/n8/closure/C3SourceGaloisActionAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C3TensorConstruction",
+      "file": "tmp/sheaf/n8/closure/C3TensorConstruction.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/C9P6Closure",
+      "file": "tmp/sheaf/n8/closure/C9P6Closure.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/FiniteObservationHull",
+      "file": "tmp/sheaf/n8/closure/FiniteObservationHull.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/IPLFamilyData",
+      "file": "tmp/sheaf/n8/closure/IPLFamilyData.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/NativeC3",
+      "file": "tmp/sheaf/n8/closure/NativeC3.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6Bridge",
+      "file": "tmp/sheaf/n8/closure/P6Bridge.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6ChainA",
+      "file": "tmp/sheaf/n8/closure/P6ChainA.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6ChainB",
+      "file": "tmp/sheaf/n8/closure/P6ChainB.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6Comparison",
+      "file": "tmp/sheaf/n8/closure/P6Comparison.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6EllOutBridgeAttempt",
+      "file": "tmp/sheaf/n8/closure/P6EllOutBridgeAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6IndInvarianceAttempt",
+      "file": "tmp/sheaf/n8/closure/P6IndInvarianceAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6L",
+      "file": "tmp/sheaf/n8/closure/P6L.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6RelaxedGlobalReadout",
+      "file": "tmp/sheaf/n8/closure/P6RelaxedGlobalReadout.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6SHEInd",
+      "file": "tmp/sheaf/n8/closure/P6SHEInd.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/P6SourceVolumeCarrierMapAttempt",
+      "file": "tmp/sheaf/n8/closure/P6SourceVolumeCarrierMapAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/PaperNormalizedVolume",
+      "file": "tmp/sheaf/n8/closure/PaperNormalizedVolume.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/PaperValuesBoundedReduction",
+      "file": "tmp/sheaf/n8/closure/PaperValuesBoundedReduction.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/SourceAlgorithmCompatibility",
+      "file": "tmp/sheaf/n8/closure/SourceAlgorithmCompatibility.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/SourceAllowedOutputActualAttempt",
+      "file": "tmp/sheaf/n8/closure/SourceAllowedOutputActualAttempt.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/SourcePilotApproximation",
+      "file": "tmp/sheaf/n8/closure/SourcePilotApproximation.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/SourcePilotApproximationIQ",
+      "file": "tmp/sheaf/n8/closure/SourcePilotApproximationIQ.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/TargetSignature",
+      "file": "tmp/sheaf/n8/closure/TargetSignature.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/n8/closure/UnitSphereReadoutDonorActual",
+      "file": "tmp/sheaf/n8/closure/UnitSphereReadoutDonorActual.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/xif/paper/IUTExternal32GateV36Actual",
+      "file": "tmp/sheaf/xif/paper/IUTExternal32GateV36Actual.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/xif/paper/S2432PrestackCloseActual",
+      "file": "tmp/sheaf/xif/paper/S2432PrestackCloseActual.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/xif/paper/S2748AbsNormGeRationalPrimeActual",
+      "file": "tmp/sheaf/xif/paper/S2748AbsNormGeRationalPrimeActual.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    },
+    {
+      "id": "olean:tmp/sheaf/xif/paper/_S2519HIdProbe",
+      "file": "tmp/sheaf/xif/paper/_S2519HIdProbe.lean",
+      "count": 1,
+      "status": "CONDITIONAL"
+    }
+  ]
+}

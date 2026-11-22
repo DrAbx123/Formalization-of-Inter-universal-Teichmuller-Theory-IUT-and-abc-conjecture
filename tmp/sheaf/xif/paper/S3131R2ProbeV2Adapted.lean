@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3131R2ReductionV2ActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131R2ReductionV2ActualAdapted.S3131Nu_qVFamNormalizedGenerator_eq_exponent
+#print axioms LeanFormal.IUT.XiFPaper.S3131R2ReductionV2ActualAdapted.S3131QVFamTensorP_eq_natGenerator
+#print axioms LeanFormal.IUT.XiFPaper.S3131R2ReductionV2ActualAdapted.S3131RationalPlaceAbsNorm_reduction

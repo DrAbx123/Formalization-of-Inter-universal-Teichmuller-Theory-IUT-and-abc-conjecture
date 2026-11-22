@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceDataOfHypothesesActual
+import tmp.sheaf.xif.paper.GenEll17BelyiPairConversionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceDataOfHypothesesActual.stepExists_of_hypotheses
+#print axioms LeanFormal.IUT.XiFPaper.GenEll17BelyiPairConversionActual.genEll17_recast_of_bridge
+#print axioms LeanFormal.IUT.XiFPaper.GenEll17BelyiPairConversionActual.genEll17_belyi_polynomial

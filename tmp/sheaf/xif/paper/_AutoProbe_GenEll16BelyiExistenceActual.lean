@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll16BelyiExistenceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll16BelyiExistenceActual.genEll16_belyi_poly_eval
+#print axioms LeanFormal.IUT.XiFPaper.GenEll16BelyiExistenceActual.genEll16_belyi_poly_aeval
+#print axioms LeanFormal.IUT.XiFPaper.GenEll16BelyiExistenceActual.BelyiPolynomialCertificate

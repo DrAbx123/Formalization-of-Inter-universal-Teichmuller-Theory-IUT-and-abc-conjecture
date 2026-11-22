@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S734PaperCoefficientBridgeActual
+#check LeanFormal.IUT.XiFPaper.RootHullContainmentInequalityActual.qPilotClassicalLog_eq
+#check LeanFormal.IUT.XiFPaper.BadPlacePaperRootThetaHullActual.paperRootThetaHullLog

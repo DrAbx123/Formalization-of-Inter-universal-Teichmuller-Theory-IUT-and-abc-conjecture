@@ -1,0 +1,84 @@
+tmp\sheaf\n8\Group5Statements.lean:82:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  L.act1 (-g + g) (L.act1 (-g) m)
+in the target expression
+  L.right (L.act1 g (φ ((act1Equiv L g).symm (L.act1 (-g) m)))) = core2.ind1 (-g) b
+
+case mp.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act1Equiv L g).symm.trans (φ.trans (act1Equiv L g)) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = core1.ind1 g a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = b
+⊢ L.right (L.act1 g (φ ((act1Equiv L g).symm (L.act1 (-g) m)))) = core2.ind1 (-g) b
+tmp\sheaf\n8\Group5Statements.lean:89:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  L.act1 (g + -g) (L.act1 g m)
+in the target expression
+  L.right (L.act1 (-g) (φ ((act1Equiv L (-g)).symm (L.act1 g m)))) = b
+
+case mpr.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act1Equiv L g).symm.trans (φ.trans (act1Equiv L g)) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = core2.ind1 (-g) b
+⊢ L.right (L.act1 (-g) (φ ((act1Equiv L (-g)).symm (L.act1 g m)))) = b
+tmp\sheaf\n8\Group5Statements.lean:106:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  L.act2 (-g + g) (L.act2 (-g) m)
+in the target expression
+  L.right (L.act2 g (φ ((act2Equiv L g).symm (L.act2 (-g) m)))) = core2.ind2 (-g) b
+
+case mp.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act2Equiv L g).symm.trans (φ.trans (act2Equiv L g)) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = core1.ind2 g a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = b
+⊢ L.right (L.act2 g (φ ((act2Equiv L g).symm (L.act2 (-g) m)))) = core2.ind2 (-g) b
+tmp\sheaf\n8\Group5Statements.lean:113:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  L.act2 (g + -g) (L.act2 g m)
+in the target expression
+  L.right (L.act2 (-g) (φ ((act2Equiv L (-g)).symm (L.act2 g m)))) = b
+
+case mpr.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act2Equiv L g).symm.trans (φ.trans (act2Equiv L g)) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = core2.ind2 (-g) b
+⊢ L.right (L.act2 (-g) (φ ((act2Equiv L (-g)).symm (L.act2 g m)))) = b

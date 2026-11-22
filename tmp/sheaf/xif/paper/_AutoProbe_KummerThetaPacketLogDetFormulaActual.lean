@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.KummerThetaPacketLogDetFormulaActual
+
+#print axioms LeanFormal.IUT.XiFPaper.KummerThetaPacketLogDetFormulaActual.globalThetaPacket_log_scale_consumer
+#print axioms LeanFormal.IUT.XiFPaper.KummerThetaPacketLogDetFormulaActual.globalThetaPositivePacket_log_det_eq_sum_log_scale
+#print axioms LeanFormal.IUT.XiFPaper.KummerThetaPacketLogDetFormulaActual.globalThetaPositivePacket_log_det_eq_gauss_mul_log_q

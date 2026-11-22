@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.PaperRootCompletionTensorActual
+open LeanFormal.IUT
+#check PiTensorProduct.subsingletonEquiv
+#check PiTensorProduct.subsingletonEquiv_apply_tprod

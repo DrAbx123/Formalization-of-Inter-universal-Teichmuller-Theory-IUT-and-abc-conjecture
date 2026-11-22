@@ -1,0 +1,487 @@
+{
+  "task": "C9-PROCESSION-ORBIT-20261025-additive-span",
+  "all_assertions_passed": true,
+  "cases": [
+    {
+      "p": 3,
+      "M": 0,
+      "span_index_in_integral_closure": 1,
+      "span_log_volume_per_log_p": "-1/4",
+      "source_hull_log_volume_per_log_p": "0",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 3,
+      "M": 1,
+      "span_index_in_integral_closure": 2,
+      "span_log_volume_per_log_p": "-1/2",
+      "source_hull_log_volume_per_log_p": "-1/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 3,
+      "M": 2,
+      "span_index_in_integral_closure": 5,
+      "span_log_volume_per_log_p": "-5/4",
+      "source_hull_log_volume_per_log_p": "-1",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 3,
+      "M": 3,
+      "span_index_in_integral_closure": 6,
+      "span_log_volume_per_log_p": "-3/2",
+      "source_hull_log_volume_per_log_p": "-3/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 3,
+      "M": 4,
+      "span_index_in_integral_closure": 9,
+      "span_log_volume_per_log_p": "-9/4",
+      "source_hull_log_volume_per_log_p": "-2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 3,
+      "M": 5,
+      "span_index_in_integral_closure": 10,
+      "span_log_volume_per_log_p": "-5/2",
+      "source_hull_log_volume_per_log_p": "-5/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 3,
+      "M": 6,
+      "span_index_in_integral_closure": 13,
+      "span_log_volume_per_log_p": "-13/4",
+      "source_hull_log_volume_per_log_p": "-3",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 3,
+      "M": 7,
+      "span_index_in_integral_closure": 14,
+      "span_log_volume_per_log_p": "-7/2",
+      "source_hull_log_volume_per_log_p": "-7/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 3,
+      "M": 8,
+      "span_index_in_integral_closure": 17,
+      "span_log_volume_per_log_p": "-17/4",
+      "source_hull_log_volume_per_log_p": "-4",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 3,
+      "M": 9,
+      "span_index_in_integral_closure": 18,
+      "span_log_volume_per_log_p": "-9/2",
+      "source_hull_log_volume_per_log_p": "-9/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 3,
+      "M": 10,
+      "span_index_in_integral_closure": 21,
+      "span_log_volume_per_log_p": "-21/4",
+      "source_hull_log_volume_per_log_p": "-5",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 3,
+      "M": 11,
+      "span_index_in_integral_closure": 22,
+      "span_log_volume_per_log_p": "-11/2",
+      "source_hull_log_volume_per_log_p": "-11/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 3,
+      "M": 12,
+      "span_index_in_integral_closure": 25,
+      "span_log_volume_per_log_p": "-25/4",
+      "source_hull_log_volume_per_log_p": "-6",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-6"
+    },
+    {
+      "p": 5,
+      "M": 0,
+      "span_index_in_integral_closure": 1,
+      "span_log_volume_per_log_p": "-1/4",
+      "source_hull_log_volume_per_log_p": "0",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 5,
+      "M": 1,
+      "span_index_in_integral_closure": 2,
+      "span_log_volume_per_log_p": "-1/2",
+      "source_hull_log_volume_per_log_p": "-1/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 5,
+      "M": 2,
+      "span_index_in_integral_closure": 5,
+      "span_log_volume_per_log_p": "-5/4",
+      "source_hull_log_volume_per_log_p": "-1",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 5,
+      "M": 3,
+      "span_index_in_integral_closure": 6,
+      "span_log_volume_per_log_p": "-3/2",
+      "source_hull_log_volume_per_log_p": "-3/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 5,
+      "M": 4,
+      "span_index_in_integral_closure": 9,
+      "span_log_volume_per_log_p": "-9/4",
+      "source_hull_log_volume_per_log_p": "-2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 5,
+      "M": 5,
+      "span_index_in_integral_closure": 10,
+      "span_log_volume_per_log_p": "-5/2",
+      "source_hull_log_volume_per_log_p": "-5/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 5,
+      "M": 6,
+      "span_index_in_integral_closure": 13,
+      "span_log_volume_per_log_p": "-13/4",
+      "source_hull_log_volume_per_log_p": "-3",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 5,
+      "M": 7,
+      "span_index_in_integral_closure": 14,
+      "span_log_volume_per_log_p": "-7/2",
+      "source_hull_log_volume_per_log_p": "-7/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 5,
+      "M": 8,
+      "span_index_in_integral_closure": 17,
+      "span_log_volume_per_log_p": "-17/4",
+      "source_hull_log_volume_per_log_p": "-4",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 5,
+      "M": 9,
+      "span_index_in_integral_closure": 18,
+      "span_log_volume_per_log_p": "-9/2",
+      "source_hull_log_volume_per_log_p": "-9/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 5,
+      "M": 10,
+      "span_index_in_integral_closure": 21,
+      "span_log_volume_per_log_p": "-21/4",
+      "source_hull_log_volume_per_log_p": "-5",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 5,
+      "M": 11,
+      "span_index_in_integral_closure": 22,
+      "span_log_volume_per_log_p": "-11/2",
+      "source_hull_log_volume_per_log_p": "-11/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 5,
+      "M": 12,
+      "span_index_in_integral_closure": 25,
+      "span_log_volume_per_log_p": "-25/4",
+      "source_hull_log_volume_per_log_p": "-6",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-6"
+    },
+    {
+      "p": 7,
+      "M": 0,
+      "span_index_in_integral_closure": 1,
+      "span_log_volume_per_log_p": "-1/4",
+      "source_hull_log_volume_per_log_p": "0",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 7,
+      "M": 1,
+      "span_index_in_integral_closure": 2,
+      "span_log_volume_per_log_p": "-1/2",
+      "source_hull_log_volume_per_log_p": "-1/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 7,
+      "M": 2,
+      "span_index_in_integral_closure": 5,
+      "span_log_volume_per_log_p": "-5/4",
+      "source_hull_log_volume_per_log_p": "-1",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 7,
+      "M": 3,
+      "span_index_in_integral_closure": 6,
+      "span_log_volume_per_log_p": "-3/2",
+      "source_hull_log_volume_per_log_p": "-3/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 7,
+      "M": 4,
+      "span_index_in_integral_closure": 9,
+      "span_log_volume_per_log_p": "-9/4",
+      "source_hull_log_volume_per_log_p": "-2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 7,
+      "M": 5,
+      "span_index_in_integral_closure": 10,
+      "span_log_volume_per_log_p": "-5/2",
+      "source_hull_log_volume_per_log_p": "-5/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 7,
+      "M": 6,
+      "span_index_in_integral_closure": 13,
+      "span_log_volume_per_log_p": "-13/4",
+      "source_hull_log_volume_per_log_p": "-3",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 7,
+      "M": 7,
+      "span_index_in_integral_closure": 14,
+      "span_log_volume_per_log_p": "-7/2",
+      "source_hull_log_volume_per_log_p": "-7/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 7,
+      "M": 8,
+      "span_index_in_integral_closure": 17,
+      "span_log_volume_per_log_p": "-17/4",
+      "source_hull_log_volume_per_log_p": "-4",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 7,
+      "M": 9,
+      "span_index_in_integral_closure": 18,
+      "span_log_volume_per_log_p": "-9/2",
+      "source_hull_log_volume_per_log_p": "-9/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 7,
+      "M": 10,
+      "span_index_in_integral_closure": 21,
+      "span_log_volume_per_log_p": "-21/4",
+      "source_hull_log_volume_per_log_p": "-5",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 7,
+      "M": 11,
+      "span_index_in_integral_closure": 22,
+      "span_log_volume_per_log_p": "-11/2",
+      "source_hull_log_volume_per_log_p": "-11/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 7,
+      "M": 12,
+      "span_index_in_integral_closure": 25,
+      "span_log_volume_per_log_p": "-25/4",
+      "source_hull_log_volume_per_log_p": "-6",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-6"
+    },
+    {
+      "p": 101,
+      "M": 0,
+      "span_index_in_integral_closure": 1,
+      "span_log_volume_per_log_p": "-1/4",
+      "source_hull_log_volume_per_log_p": "0",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 101,
+      "M": 1,
+      "span_index_in_integral_closure": 2,
+      "span_log_volume_per_log_p": "-1/2",
+      "source_hull_log_volume_per_log_p": "-1/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "0"
+    },
+    {
+      "p": 101,
+      "M": 2,
+      "span_index_in_integral_closure": 5,
+      "span_log_volume_per_log_p": "-5/4",
+      "source_hull_log_volume_per_log_p": "-1",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 101,
+      "M": 3,
+      "span_index_in_integral_closure": 6,
+      "span_log_volume_per_log_p": "-3/2",
+      "source_hull_log_volume_per_log_p": "-3/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-1"
+    },
+    {
+      "p": 101,
+      "M": 4,
+      "span_index_in_integral_closure": 9,
+      "span_log_volume_per_log_p": "-9/4",
+      "source_hull_log_volume_per_log_p": "-2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 101,
+      "M": 5,
+      "span_index_in_integral_closure": 10,
+      "span_log_volume_per_log_p": "-5/2",
+      "source_hull_log_volume_per_log_p": "-5/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-2"
+    },
+    {
+      "p": 101,
+      "M": 6,
+      "span_index_in_integral_closure": 13,
+      "span_log_volume_per_log_p": "-13/4",
+      "source_hull_log_volume_per_log_p": "-3",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 101,
+      "M": 7,
+      "span_index_in_integral_closure": 14,
+      "span_log_volume_per_log_p": "-7/2",
+      "source_hull_log_volume_per_log_p": "-7/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-3"
+    },
+    {
+      "p": 101,
+      "M": 8,
+      "span_index_in_integral_closure": 17,
+      "span_log_volume_per_log_p": "-17/4",
+      "source_hull_log_volume_per_log_p": "-4",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 101,
+      "M": 9,
+      "span_index_in_integral_closure": 18,
+      "span_log_volume_per_log_p": "-9/2",
+      "source_hull_log_volume_per_log_p": "-9/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-4"
+    },
+    {
+      "p": 101,
+      "M": 10,
+      "span_index_in_integral_closure": 21,
+      "span_log_volume_per_log_p": "-21/4",
+      "source_hull_log_volume_per_log_p": "-5",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 101,
+      "M": 11,
+      "span_index_in_integral_closure": 22,
+      "span_log_volume_per_log_p": "-11/2",
+      "source_hull_log_volume_per_log_p": "-11/2",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-5"
+    },
+    {
+      "p": 101,
+      "M": 12,
+      "span_index_in_integral_closure": 25,
+      "span_log_volume_per_log_p": "-25/4",
+      "source_hull_log_volume_per_log_p": "-6",
+      "common_transport_depths_checked": 20,
+      "largest_observed_target_hull_log_volume_per_log_p": "-6"
+    }
+  ],
+  "totals": {
+    "ramified_tensor_lattices": 52,
+    "common_transport_composites": 1040,
+    "depth": 20
+  },
+  "exact_formula": "nu(sum(x^M D,y^M D))/log(p) = -M/2 - (1/4 if M is even else 0)",
+  "scope": {
+    "universal_common_transport_lower_bound": "proved in natural-language record",
+    "GL_diagnostics_are_source_admission_certificates": false,
+    "complete_fixed_BPS_common_transport_constructed": false,
+    "original_P6_proved": false,
+    "target_accepted": false
+  }
+}

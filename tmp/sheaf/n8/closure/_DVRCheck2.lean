@@ -1,0 +1,4 @@
+import tmp.sheaf.n8.closure.EtaUniformizerRelationActual
+import LeanFormal.IUT.Foundations.LocalFields.IntegralLogShellLattice
+import Mathlib.Topology.Algebra.Valued.LocallyCompact
+#check @Valued.integer.properSpace_iff_completeSpace_and_isDiscreteValuationRing_integer_and_finiteResidueField

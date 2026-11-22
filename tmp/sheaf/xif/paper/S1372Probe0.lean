@@ -1,0 +1,14 @@
+import LeanFormal.IUT.ABCBridge.Galois.EllipticDivisionPolynomialEvaluation
+import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
+open Polynomial
+#check WeierstrassCurve.ψ_even
+#check WeierstrassCurve.ψ_odd
+#check WeierstrassCurve.evalEval_φ_eq_eval_Φ
+#check WeierstrassCurve.Affine.addX_eq_addX_negY_sub
+#check WeierstrassCurve.Affine.Point.add_of_Y_ne
+#check WeierstrassCurve.Affine.Point.add_self_of_Y_ne
+#check WeierstrassCurve.ψ_neg
+#check WeierstrassCurve.normEDS_mul_complEDS₂
+#check WeierstrassCurve.complEDS₂
+#check WeierstrassCurve.Φ
+#check WeierstrassCurve.φ

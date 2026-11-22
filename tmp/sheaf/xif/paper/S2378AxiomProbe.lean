@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2378ActualPairTransitiveActual
+open LeanFormal.IUT.XiFPaper.S2378ActualPairTransitiveActual
+#print axioms S2378PairTransitive_of_rangeTop
+#print axioms S2378D5LargeImageFive_of_rangeTop
+#print axioms S2378D5LargeImageFive_of_exact

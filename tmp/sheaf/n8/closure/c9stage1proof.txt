@@ -1,0 +1,5 @@
+tmp/sheaf/n8/closure/C9LocalGlobalCounterexample.lean:84:44: warning: Variable name `hf` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

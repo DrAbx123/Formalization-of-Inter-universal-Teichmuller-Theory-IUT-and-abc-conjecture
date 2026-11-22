@@ -1,0 +1,757 @@
+{
+  "schema": "iut-exploration-evidence/v1",
+  "task": "gap-exploration-20261030",
+  "captured_at_utc": "2026-10-30T08:10:45.589454+00:00",
+  "workspace": "D:/lean",
+  "head": "9399e9fab4d62ea5f78a4a0d56ceecb84525a3ee",
+  "version_rule": "Uncommitted files are identified by actual SHA256 and frozen copies; HEAD alone is insufficient.",
+  "method": "single-agent source reading, bounded rg searches, PDF text/visual verification, historical log inspection",
+  "scope": "Q-BRIDGE / xi-f; no whole-project proof audit",
+  "not_run": [
+    "Lean",
+    "Project build",
+    "comparator",
+    "axiom probe",
+    "independent review"
+  ],
+  "report": {
+    "path": "D:/lean/coord/reports/gap-exploration-20261030.md",
+    "sha256": "e339f0d3db19ae2b3dcae6f42f7641602e0457e1cef90d2e8922259f92acf744"
+  },
+  "node": {
+    "path": "D:/lean/dag/nodes/gap-exploration-20261030.json",
+    "sha256": "c451aa953e44ef13f54b9cb3a40f1bc8736d79340032658ee2d37cf45e01455a"
+  },
+  "search_log": "tmp/sheaf/gap-exploration-20261030/search-results.json",
+  "source_files": [
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/WithZero.lean",
+      "relative_path": ".lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/WithZero.lean",
+      "sha256": "74838c8170838d6a8932a189c47c8ce8b23948f9eb6fdba62f80f8a12b1a0c1d",
+      "bytes": 18054,
+      "mtime_utc": "2026-07-30T15:50:40.841380+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/.lake/packages/mathlib/Mathlib/Algebra/GroupWithZero/WithZero.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/.lake/packages/mathlib/Mathlib/Analysis/Normed/Unbundled/SpectralNorm.lean",
+      "relative_path": ".lake/packages/mathlib/Mathlib/Analysis/Normed/Unbundled/SpectralNorm.lean",
+      "sha256": "402ba9fa561481af1c6892e7d802787e0d27cb2f29decf12b2a060b7d511dca1",
+      "bytes": 50007,
+      "mtime_utc": "2026-07-30T15:50:46.482546+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/.lake/packages/mathlib/Mathlib/Analysis/Normed/Unbundled/SpectralNorm.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/AGENTS.md",
+      "relative_path": "AGENTS.md",
+      "sha256": "11e54d0423833de425f55854d57d600268633636bd3965409a08823c888abda6",
+      "bytes": 4491,
+      "mtime_utc": "2026-10-21T23:18:44.541432+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/AGENTS.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/AUDIT_LEDGER.md",
+      "relative_path": "AUDIT_LEDGER.md",
+      "sha256": "ec950d891459f0f64d047f99d9e630796b085c3fe870377d4cabe2749ea4b148",
+      "bytes": 1623298,
+      "mtime_utc": "2026-10-30T08:10:00.192947+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/AUDIT_LEDGER.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/coord/queue.md",
+      "relative_path": "coord/queue.md",
+      "sha256": "a8cbcf8b0c7b55731ee5cbc224606d1251853e6ea9c32111a76f6e47c151c451",
+      "bytes": 67591,
+      "mtime_utc": "2026-10-30T08:10:00.194947+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/coord/queue.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/coord/STATE.md",
+      "relative_path": "coord/STATE.md",
+      "sha256": "dfb13484e04c6eb105a748ed6a034eaf37166cec1e62ffd5eb4f3247e265284e",
+      "bytes": 254224,
+      "mtime_utc": "2026-10-30T08:10:00.193947+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/coord/STATE.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/coord/targets-review.md",
+      "relative_path": "coord/targets-review.md",
+      "sha256": "151caf0c6d7e9226b077176f7cc93a0602aec3020b4d231cfd0daa197f084d17",
+      "bytes": 2662,
+      "mtime_utc": "2026-10-21T23:05:42.083865+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/coord/targets-review.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/coord/TASK_TEMPLATE.md",
+      "relative_path": "coord/TASK_TEMPLATE.md",
+      "sha256": "4297fcdec7e1e9f31da97379e5c906c5ee026623debbb2ca36588a029a27826c",
+      "bytes": 2477,
+      "mtime_utc": "2026-10-21T23:18:44.544431+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/coord/TASK_TEMPLATE.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/dag/nodes/xif-source-construction.json",
+      "relative_path": "dag/nodes/xif-source-construction.json",
+      "sha256": "a60123b8fe927fac3c968998450449d8e26b83fde1c53d3571fe13b158f75614",
+      "bytes": 5368,
+      "mtime_utc": "2026-10-27T19:55:38.111320+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/dag/nodes/xif-source-construction.json",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/dag/README.md",
+      "relative_path": "dag/README.md",
+      "sha256": "d3322f0f3e0588ea2ac3a048d1debb876975bb47e5860f8e57a59c71808b4cec",
+      "bytes": 3440,
+      "mtime_utc": "2026-10-21T23:07:09.187892+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/dag/README.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/GOAL.md",
+      "relative_path": "GOAL.md",
+      "sha256": "47acde6807731de236fa46b1296c3bcea2cf1a34c3e7ca66ab5eff22962a350d",
+      "bytes": 3540,
+      "mtime_utc": "2026-10-21T23:05:42.080868+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/GOAL.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean",
+      "relative_path": "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean",
+      "sha256": "9c91c3572a804fe9289d450ee72aa02c8c3f4f37ad24a7fb5fe9fbc888cc30a7",
+      "bytes": 35523,
+      "mtime_utc": "2026-10-16T02:14:30.992074+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceCompletionNormTransport.lean",
+      "relative_path": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceCompletionNormTransport.lean",
+      "sha256": "16f64ee15eec4cc08c95a4a80aee9cb42ed13392cadd1280fa096dcf90bd3ecc",
+      "bytes": 30950,
+      "mtime_utc": "2026-10-16T01:57:38.425881+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceCompletionNormTransport.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/AlgebraicGeometry/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/AlgebraicGeometry/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "sha256": "b05a5ca17ed5e665ba9d45a5031dce7427abfe2a95ec47e3b31ff418566576e2",
+      "bytes": 5720,
+      "mtime_utc": "2026-10-21T19:33:15.674807+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/AlgebraicGeometry/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/Geometry/TateUniformizationBaseChange.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/Geometry/TateUniformizationBaseChange.lean",
+      "sha256": "29950230321552b7aae6a0745baeb125ba1f2d64d4faa6cb94787a1880253670",
+      "bytes": 13240,
+      "mtime_utc": "2026-10-15T20:42:28.348405+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/Geometry/TateUniformizationBaseChange.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicHaarScaling.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicHaarScaling.lean",
+      "sha256": "c7ebd9e9bbdfd111192c1d9be51d3747490cba8db635690d1458a72db15893c4",
+      "bytes": 3059,
+      "mtime_utc": "2026-10-17T02:27:30.168828+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicHaarScaling.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorFieldDecomposition.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorFieldDecomposition.lean",
+      "sha256": "092aae6cf04d61b29f64e6409c8221a7b5e54d55ae3689204dd4df9db4c18ff5",
+      "bytes": 3558,
+      "mtime_utc": "2026-10-17T01:44:02.566242+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorFieldDecomposition.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellRealization.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellRealization.lean",
+      "sha256": "632272c5a24fd7a97c0d93ac4deab94a3bc98b14f53a8b9083d83638702035a0",
+      "bytes": 3141,
+      "mtime_utc": "2026-10-17T01:20:21.738603+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellRealization.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellTransport.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellTransport.lean",
+      "sha256": "71256f680a13bc4a03a7bb28699b94cc1cc3bb6dc43e6c2ed6949fe9744c5499",
+      "bytes": 3051,
+      "mtime_utc": "2026-10-17T01:31:27.987322+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorLogShellTransport.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorProductDistribution.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorProductDistribution.lean",
+      "sha256": "4af258b90d36d5d0dd93c9596cbb118b15d6a10098a2686e01407b5c03d423cc",
+      "bytes": 4093,
+      "mtime_utc": "2026-10-17T03:25:55.151477+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorProductDistribution.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorTopology.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorTopology.lean",
+      "sha256": "0655757109366c639ef0a4549d61f4982c95db9ff9640007c1d427a3459406f2",
+      "bytes": 4217,
+      "mtime_utc": "2026-10-17T00:58:25.381255+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/FinitePadicTensorTopology.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean",
+      "relative_path": "LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean",
+      "sha256": "1cf955141376e777bacf47cffbd4630b83751ce1549584abf29c7a9efa96a210",
+      "bytes": 3290,
+      "mtime_utc": "2026-10-17T02:04:31.309550+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/Foundations/LocalFields/NormalizedHaarTransport.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean",
+      "relative_path": "LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean",
+      "sha256": "5037acd60154afb01aa2046b1e91dcaccd30be9c36a226ea9569dbf04bed1faf",
+      "bytes": 67508,
+      "mtime_utc": "2026-10-16T00:52:04.981543+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionTransport.lean",
+      "relative_path": "LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionTransport.lean",
+      "sha256": "5c484c3e5387c4175838c328e143c33a36387a252987e87f3391bf0edb813581",
+      "bytes": 17858,
+      "mtime_utc": "2026-10-16T10:12:25.406454+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/IUTI/InitialTheta/SourceTorsionTransport.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/LeanFormal/IUT/IUTII/Kummer/SourceLogShellActualTensorSpan.lean",
+      "relative_path": "LeanFormal/IUT/IUTII/Kummer/SourceLogShellActualTensorSpan.lean",
+      "sha256": "53c6fea5695ffc12fd129c8078e781e21b083e842909c1b7721f8327d4015c30",
+      "bytes": 4178,
+      "mtime_utc": "2026-10-16T22:36:26.410228+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/LeanFormal/IUT/IUTII/Kummer/SourceLogShellActualTensorSpan.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory I.pdf",
+      "relative_path": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory I.pdf",
+      "sha256": "7360e3ed27c235b5497a0743d3ed1646fbb97688547d16b7c784fc7f127f1f03",
+      "bytes": 1280589,
+      "mtime_utc": "2026-08-01T21:18:31.498395+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory I.pdf",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "relative_path": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "sha256": "9a7ee3c77b1c7717210c0613eb39b6844649d0040dc3d9e1be7d544f8f91a0b9",
+      "bytes": 1307865,
+      "mtime_utc": "2026-08-01T21:18:34.079651+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/SETUP.md",
+      "relative_path": "SETUP.md",
+      "sha256": "49379941e77815c08e74ff06210b244680a5238dc452ad2eec4f57b443e2ccc4",
+      "bytes": 3504,
+      "mtime_utc": "2026-10-21T23:18:44.543431+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/SETUP.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/SHEAF.md",
+      "relative_path": "SHEAF.md",
+      "sha256": "158a544bc0e480161e237b8179d1b7d3e641b6467adb4cd0752418ba2956c66f",
+      "bytes": 16553,
+      "mtime_utc": "2026-10-21T23:18:44.542431+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/SHEAF.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/n8-20261018/general/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "relative_path": "tmp/n8-20261018/general/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "sha256": "38002b0ca0aef51e815892a0d18fc1a58c59aa530d9fd274f3a2f4ee9d3e4301",
+      "bytes": 8332,
+      "mtime_utc": "2026-10-21T19:34:37.108535+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/n8-20261018/general/GeneralNormalizedNormBySpectralUniqueness.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md",
+      "relative_path": "tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md",
+      "sha256": "2ffd043e680061eb4bb80429643c8c873d7f242026ad2e71ea5a3bcc94f1de42",
+      "bytes": 18758,
+      "mtime_utc": "2026-10-26T03:38:17.878097+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/n8/closure/C9-U2K2-SQ3-MARKED-TRACE-20261026.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9-XIE-SOURCE-CONDITION-AUDIT-20261026.md",
+      "relative_path": "tmp/sheaf/n8/closure/C9-XIE-SOURCE-CONDITION-AUDIT-20261026.md",
+      "sha256": "777dccbade790a951cc29494110c85bf15781c9b7019c7dc554e9c0dc36bac28",
+      "bytes": 5658,
+      "mtime_utc": "2026-10-26T00:58:35.203580+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/n8/closure/C9-XIE-SOURCE-CONDITION-AUDIT-20261026.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/n8/closure/C9QNormFactorUnconditional.lean",
+      "relative_path": "tmp/sheaf/n8/closure/C9QNormFactorUnconditional.lean",
+      "sha256": "05a469bddcdbddf6810f435506e13a62e6328b577ada90f57e4cd3587181e656",
+      "bytes": 3204,
+      "mtime_utc": "2026-10-25T00:53:41.501685+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/n8/closure/C9QNormFactorUnconditional.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/Ind1AutomorphismTensorActionActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/Ind1AutomorphismTensorActionActual.lean",
+      "sha256": "cf5ae9c0bcc6e0732347ba773f875783f1d183362c50983ccb7e9b4a61c75bf7",
+      "bytes": 3254,
+      "mtime_utc": "2026-10-28T16:50:19.966154+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Ind1AutomorphismTensorActionActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/Ind2TensorActionActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/Ind2TensorActionActual.lean",
+      "sha256": "c1ced914e74a850117a4957b74f95183be662e4c1a7af5150e032406e3b2a635",
+      "bytes": 4276,
+      "mtime_utc": "2026-10-28T16:54:36.896949+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Ind2TensorActionActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/MultiradialProcessionActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/MultiradialProcessionActual.lean",
+      "sha256": "f761c3281cd6366209994ef40bd7092b1137eb684ef30f9870ae66d62861e04b",
+      "bytes": 5910,
+      "mtime_utc": "2026-10-28T11:35:43.141838+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/MultiradialProcessionActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/NOTATION_Q_UNDERLINES.md",
+      "relative_path": "tmp/sheaf/xif/paper/NOTATION_Q_UNDERLINES.md",
+      "sha256": "bbb389f6acf4dc83f3d542a087f8d43e0c7d7bdca59286acda83dc5021629fd9",
+      "bytes": 3142,
+      "mtime_utc": "2026-10-29T15:48:04.580884+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/NOTATION_Q_UNDERLINES.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/OBJECT_ALIGNMENT_AUDIT.md",
+      "relative_path": "tmp/sheaf/xif/paper/OBJECT_ALIGNMENT_AUDIT.md",
+      "sha256": "a0fcc186bff862690c7455a98ca527c4dafeeab9cec962e8738cd63c443d275d",
+      "bytes": 4019,
+      "mtime_utc": "2026-10-29T13:13:44.151131+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/OBJECT_ALIGNMENT_AUDIT.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/Q_SYMBOL_AUDIT.md",
+      "relative_path": "tmp/sheaf/xif/paper/Q_SYMBOL_AUDIT.md",
+      "sha256": "4065e714771505e8dba8af44e707858edaf1685e1918ff407665264e24c6c6b6",
+      "bytes": 3477,
+      "mtime_utc": "2026-10-29T15:45:34.822816+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Q_SYMBOL_AUDIT.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/QPilotZeroLocusDivisorActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/QPilotZeroLocusDivisorActual.lean",
+      "sha256": "4bea4861d906bc9eceae4ef1c23be571e1a4046a90762066615bf95cfca8dcaf",
+      "bytes": 5623,
+      "mtime_utc": "2026-10-28T11:42:57.096677+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QPilotZeroLocusDivisorActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/QVFamNormalizedCoefficientOrderAuditActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/QVFamNormalizedCoefficientOrderAuditActual.lean",
+      "sha256": "bf51cc1ead8b38d0aa0e100cad0bffd3a5350ed0bc227017f7d05cd841b11851",
+      "bytes": 7876,
+      "mtime_utc": "2026-10-29T17:41:32.153135+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QVFamNormalizedCoefficientOrderAuditActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/QVFamTensorCoefficientActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/QVFamTensorCoefficientActual.lean",
+      "sha256": "5e73951c1f9f63f3f5b8891c3ca764491a5e219cec4355f9800b1777b882d832",
+      "bytes": 5750,
+      "mtime_utc": "2026-10-28T17:10:17.795728+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/QVFamTensorCoefficientActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1073RootStackPaperThetaHullActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1073RootStackPaperThetaHullActual.lean",
+      "sha256": "1a0890cdb70b827760810163794e363f50a196408ae29da4a3a4beb68c7f446a",
+      "bytes": 3951,
+      "mtime_utc": "2026-10-30T00:34:17.436388+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1073RootStackPaperThetaHullActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1080PushforwardConstructionActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1080PushforwardConstructionActual.lean",
+      "sha256": "7130a54b07f8dcba339645fcd7747277c001a6f82958cdf3dd880fbad8fc4a05",
+      "bytes": 4696,
+      "mtime_utc": "2026-10-30T00:52:37.464174+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1080PushforwardConstructionActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1086PerBQ1URootHullActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1086PerBQ1URootHullActual.lean",
+      "sha256": "ecffdeeaa892b65b409b0c9c5ca03f60ed10d6e3c6afcdac966b9514970fe391",
+      "bytes": 9516,
+      "mtime_utc": "2026-10-30T05:03:28.651120+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1086PerBQ1URootHullActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1096Q1ULogSupplyActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1096Q1ULogSupplyActual.lean",
+      "sha256": "1e7ccb586a399926603b843ce0c020d9e1f51472b1a03a801ac3eebc094b6a3e",
+      "bytes": 3591,
+      "mtime_utc": "2026-10-30T01:57:34.613343+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1096Q1ULogSupplyActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1102PushforwardHullPositivityActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1102PushforwardHullPositivityActual.lean",
+      "sha256": "d724b9e6f6e7d31fe87760e10cdac684b43c7ca835f6e3698a374414c7693e61",
+      "bytes": 3433,
+      "mtime_utc": "2026-10-30T05:01:44.791302+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1102PushforwardHullPositivityActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1106ThetaAgreesActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1106ThetaAgreesActual.lean",
+      "sha256": "0578a4fabb657e12660e5217ffa4d5d619c142bfa04c7095535515ef06270509",
+      "bytes": 3944,
+      "mtime_utc": "2026-10-30T05:01:37.151832+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1106ThetaAgreesActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1115ECharacterNormAudit.md",
+      "relative_path": "tmp/sheaf/xif/paper/S1115ECharacterNormAudit.md",
+      "sha256": "7997782bfef30f0cc8f3f1337b1e4e383dd1e4be00c9f4226c4af4dda00b6ab7",
+      "bytes": 4378,
+      "mtime_utc": "2026-10-30T05:05:38.030832+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1115ECharacterNormAudit.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1116ERootStackDVRInstanceActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1116ERootStackDVRInstanceActual.lean",
+      "sha256": "961d60280102e1603c00af9e6da478814e74cbaf2cbeb4a0eac0442c8be9270d",
+      "bytes": 5057,
+      "mtime_utc": "2026-10-30T05:29:19.352785+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1116ERootStackDVRInstanceActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1124EUnitFactorActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1124EUnitFactorActual.lean",
+      "sha256": "de01b25465d2cce83d8f4339ac7e514c0a5998e92144927480e93a8c826fc5e2",
+      "bytes": 3497,
+      "mtime_utc": "2026-10-30T05:18:30.256343+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1124EUnitFactorActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1129SourceComparisonTargetAudit.md",
+      "relative_path": "tmp/sheaf/xif/paper/S1129SourceComparisonTargetAudit.md",
+      "sha256": "dab8edd22aa8fa2d7b7afc9b415a899172af1b06788bffa3589318a1af85085b",
+      "bytes": 2961,
+      "mtime_utc": "2026-10-30T05:48:22.386605+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1129SourceComparisonTargetAudit.md",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1133PaperLVExGluingActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1133PaperLVExGluingActual.lean",
+      "sha256": "df76881725424accabaa683eebc7a07eed12b4d6739af0277f26f37f4ce3f8e0",
+      "bytes": 3327,
+      "mtime_utc": "2026-10-30T05:49:33.787528+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1133PaperLVExGluingActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean",
+      "sha256": "ee06ce2e9389998320bf130d5e6f9af1b5a8c90929d6712174b857b5ac3bc4ad",
+      "bytes": 2298,
+      "mtime_utc": "2026-10-30T05:50:16.364191+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1136SourceComparisonViaGluingActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1139EUniformizerRemainderActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1139EUniformizerRemainderActual.lean",
+      "sha256": "351575c1d271c12d3a85f6fa445fb6cf3043731b1787cef7b43fc42db4a0f6cc",
+      "bytes": 3674,
+      "mtime_utc": "2026-10-30T05:53:42.204402+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1139EUniformizerRemainderActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1142IndPaperCarrierActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1142IndPaperCarrierActual.lean",
+      "sha256": "55b5b1b14dd3eab65f88152626dfafdccd8bdc31c697d719e6c64612bb216517",
+      "bytes": 7206,
+      "mtime_utc": "2026-10-30T05:53:36.438495+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1142IndPaperCarrierActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1144QvPaperQPilotObjectActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1144QvPaperQPilotObjectActual.lean",
+      "sha256": "f587a83d8477816c0586373b05861925974f8d5a10399aec8c1d7d19650382f3",
+      "bytes": 4448,
+      "mtime_utc": "2026-10-30T05:53:06.654011+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1144QvPaperQPilotObjectActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1145GlobalKummerTensorPacketIsoActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1145GlobalKummerTensorPacketIsoActual.lean",
+      "sha256": "63c6dd83ca3d36083f2e7b099c379f639225127a082ea7d419b11689de7bb01e",
+      "bytes": 3324,
+      "mtime_utc": "2026-10-30T05:53:45.150403+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1145GlobalKummerTensorPacketIsoActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1146GeometricComparisonAuditActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1146GeometricComparisonAuditActual.lean",
+      "sha256": "a43d7023a307490543a1f7af9da2681d6857599212e3756b6da673fd015125d7",
+      "bytes": 3198,
+      "mtime_utc": "2026-10-30T05:53:19.885698+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1146GeometricComparisonAuditActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S1148MultiradialCarrierAuditActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S1148MultiradialCarrierAuditActual.lean",
+      "sha256": "0f7c664ade6be0bb0b218854a24b370ec04c8f015146c125368c366328cb8128",
+      "bytes": 4353,
+      "mtime_utc": "2026-10-30T05:53:06.609009+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S1148MultiradialCarrierAuditActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S284RootUniformizerFactorActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S284RootUniformizerFactorActual.lean",
+      "sha256": "bdc0e03d03b7c726058659782991e7161ce73fdbc4e63219cba2f15a05ecef33",
+      "bytes": 3466,
+      "mtime_utc": "2026-10-29T12:09:08.690730+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S284RootUniformizerFactorActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S342QVFamilyRootImpossibleActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S342QVFamilyRootImpossibleActual.lean",
+      "sha256": "cc786772ec0b88a601f010ad09000943da332e3521e7209880977e390b90367b",
+      "bytes": 3913,
+      "mtime_utc": "2026-10-29T12:59:15.007843+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S342QVFamilyRootImpossibleActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S438QVFamilyKSideCandidateActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S438QVFamilyKSideCandidateActual.lean",
+      "sha256": "2a62616de3f428db964b9963c3eec45128311cfef442d82076249eb7e8618111",
+      "bytes": 4384,
+      "mtime_utc": "2026-10-29T13:54:41.459164+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S438QVFamilyKSideCandidateActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S459KrootCandidateActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S459KrootCandidateActual.lean",
+      "sha256": "0b0bc5e03aa71d149fa8e5d70307f014681363932e5ac41a91568cfe7807cf08",
+      "bytes": 3962,
+      "mtime_utc": "2026-10-29T13:58:25.709206+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S459KrootCandidateActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S467KrootOrderControlAuditActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S467KrootOrderControlAuditActual.lean",
+      "sha256": "755d91177bfc9a4df6778b7b7374e6b44fa96665ea058f406ecbadf9aa9a2a75",
+      "bytes": 3310,
+      "mtime_utc": "2026-10-29T14:01:30.717896+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S467KrootOrderControlAuditActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S472TorsionKInputAuditActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S472TorsionKInputAuditActual.lean",
+      "sha256": "ecf794ea6e14f7d49964935904168aa0dc9ccb660aa2a94f55fda07271050fe9",
+      "bytes": 3034,
+      "mtime_utc": "2026-10-29T14:04:37.649663+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S472TorsionKInputAuditActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S494TateTwoTorsionConverseGapActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S494TateTwoTorsionConverseGapActual.lean",
+      "sha256": "03eec4d5aa075c263bf7bf882af3b14eaa4c43c1b4e4f315ce9e77c522572489",
+      "bytes": 2771,
+      "mtime_utc": "2026-10-29T14:16:38.765123+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S494TateTwoTorsionConverseGapActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S605KSideQVActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S605KSideQVActual.lean",
+      "sha256": "b07c194af01137cba64b0ab82761f33df8508a1196ba7e85b69c4893c7e1c714",
+      "bytes": 3133,
+      "mtime_utc": "2026-10-29T15:27:06.139658+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S605KSideQVActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S618KSideQVPlaceActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S618KSideQVPlaceActual.lean",
+      "sha256": "9834dfe1437aa5cb12fef63f0a436582a0fbd35796309899502001346cf8382f",
+      "bytes": 2778,
+      "mtime_utc": "2026-10-29T15:31:49.727116+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S618KSideQVPlaceActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S730PaperRootCarrierActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S730PaperRootCarrierActual.lean",
+      "sha256": "582774e4ed7883af851822d719ca6e655f544166170368610f30b0c035fabad3",
+      "bytes": 6361,
+      "mtime_utc": "2026-10-29T17:42:21.734181+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S730PaperRootCarrierActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S782FiniteRootStackExtensionActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S782FiniteRootStackExtensionActual.lean",
+      "sha256": "8959f3e6026275b58abe83961358e7773bd6649b2f083f276a38073d9a49d07c",
+      "bytes": 6740,
+      "mtime_utc": "2026-10-29T17:41:48.883313+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S782FiniteRootStackExtensionActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S826CNormOrderRamificationActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S826CNormOrderRamificationActual.lean",
+      "sha256": "16d025e61104c9177985bc735160e45fa026272646e46be3f322158549688032",
+      "bytes": 5514,
+      "mtime_utc": "2026-10-29T18:37:59.770412+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S826CNormOrderRamificationActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S865RootHaarFactorNormPowActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S865RootHaarFactorNormPowActual.lean",
+      "sha256": "adaa6510c6ac8eeb145cd4bdd95000d49f44d87574654f0c93c94fd068b176a0",
+      "bytes": 4192,
+      "mtime_utc": "2026-10-29T19:03:29.822468+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S865RootHaarFactorNormPowActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S885RootStackUniformizerNormActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S885RootStackUniformizerNormActual.lean",
+      "sha256": "23d72e8c8555522f4aa271d3b2f588aa81a53f90275bf12a66530763bcefb986",
+      "bytes": 3962,
+      "mtime_utc": "2026-10-29T19:13:37.587286+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S885RootStackUniformizerNormActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/S940Ind3ImageActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/S940Ind3ImageActual.lean",
+      "sha256": "addc06fc33442ae4a34d2080bc60c6bd800c05bddf5e2a95a201dfe68f8be4dc",
+      "bytes": 4819,
+      "mtime_utc": "2026-10-29T20:19:19.922068+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/S940Ind3ImageActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/sheaf/xif/paper/Theorem311KummerPacketIsoGapActual.lean",
+      "relative_path": "tmp/sheaf/xif/paper/Theorem311KummerPacketIsoGapActual.lean",
+      "sha256": "2a56c53624c1491c9d35e6babcd748e3974ee054d06d10df3f70b294d48156f9",
+      "bytes": 4075,
+      "mtime_utc": "2026-10-30T05:52:10.918704+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/sheaf/xif/paper/Theorem311KummerPacketIsoGapActual.lean",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/single-agent-iq-carrier-20261017/build-tensor-2.log",
+      "relative_path": "tmp/single-agent-iq-carrier-20261017/build-tensor-2.log",
+      "sha256": "76581a33b418770fc021ddb155c0951ce062021e0c0bdb60f63eb71e58ef07d8",
+      "bytes": 5110,
+      "mtime_utc": "2026-10-16T22:37:16.067789+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/single-agent-iq-carrier-20261017/build-tensor-2.log",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    },
+    {
+      "path": "D:/lean/tmp/source-local-log-20261017/build-finite-tensor-log-realization-3.log",
+      "relative_path": "tmp/source-local-log-20261017/build-finite-tensor-log-realization-3.log",
+      "sha256": "8b9a83e4bd0dbe361ac73fc8cf4a82d852112e3ea79d699f17cdcb0016d4f30a",
+      "bytes": 3169,
+      "mtime_utc": "2026-10-17T01:25:02.842952+00:00",
+      "snapshot": "tmp/sheaf/gap-exploration-20261030/snapshots/tmp/source-local-log-20261017/build-finite-tensor-log-realization-3.log",
+      "scope": "Evidence text, not current Lean/kernel certification"
+    }
+  ],
+  "pdf_pages": [
+    {
+      "paper": "I",
+      "printed_pages": [
+        71
+      ],
+      "visuals": [
+        "source-pages/I-p71.png"
+      ]
+    },
+    {
+      "paper": "III",
+      "printed_pages": [
+        173,
+        174,
+        183,
+        184
+      ],
+      "visuals": [
+        "source-pages/III-p173.png",
+        "source-pages/III-p174.png",
+        "source-pages/III-p183.png",
+        "source-pages/III-p184.png"
+      ]
+    }
+  ],
+  "network_note": "Official PDF links were consulted; a repeat fetch timed out. The report cites the captured local primary PDFs and records their hashes."
+}

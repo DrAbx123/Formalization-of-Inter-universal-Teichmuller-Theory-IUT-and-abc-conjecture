@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.W3RootStackTraceIndexActual
+
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.stackFiberNormalizedTrace_one
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.matrixTrace_regularPerm
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.traceCharacter_eq_delta
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.stackRootSection_toAdd_eq_normalizedTrace_qOrder
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.paperLeastLambdaOHull_eq_lambdaO_rootSection
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.paperLeastHullScaling_eq_normalizedTrace_qOrder
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.paperQLogVolume_le_paperLeastHullLogVolume
+#print axioms LeanFormal.IUT.XiFPaper.W3RootStackTraceIndexActual.leastHullCoefficient_eq_jonesNormalization_iff

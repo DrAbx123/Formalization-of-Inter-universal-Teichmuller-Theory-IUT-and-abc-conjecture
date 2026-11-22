@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128AwayFixedAlgEquivActual
+open LeanFormal.IUT.XiFPaper.S3128AwayFixedAlgEquivActual
+#print axioms S3128AwayFixedAlgEquiv

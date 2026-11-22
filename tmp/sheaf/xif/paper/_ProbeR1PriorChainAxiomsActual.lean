@@ -1,0 +1,15 @@
+/- Axiom probe for prior R1 candidate chain (sophie 2026-11-18). -/
+import tmp.sheaf.xif.paper.PaperLevelXiFTargetProofActual
+import tmp.sheaf.xif.paper.Mzk1URThetaHullActual
+import tmp.sheaf.xif.paper.Mzk1MinimalAcceptanceActual
+import tmp.sheaf.xif.paper.Mzk1PaperFaithfulHullActual
+
+#print axioms LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetProofActual.perBQPilotLog_le_perBThetaHullLog
+#print axioms LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetProofActual.globalQPilotLog_le_globalThetaHullLog
+#print axioms LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetProofActual.nativeBadLocalWeight_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaHullActual.ur_negM_le_Htheta
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1URThetaHullActual.ur_perB_containment
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MinimalAcceptanceActual.LambdaG_subset_paperRootThetaImageNZ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MinimalAcceptanceActual.LambdaG_subset_paperFaithfulThetaHullNZ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFaithfulHullActual.paperFaithfulThetaHull_eq_closure_scaledRegion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperFaithfulHullActual.ind3OutputHull_measure_pos_lt_top

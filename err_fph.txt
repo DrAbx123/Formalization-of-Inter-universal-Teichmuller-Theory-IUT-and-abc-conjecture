@@ -1,0 +1,16 @@
+LeanFormal\IUT\ABCBridge\Geometry\FinitePlaceHolomorphicDifferentBase.lean:62:6: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  Algebra.id (FractionRing A)
+inferred
+  FractionRing.liftAlgebra A (FractionRing A)
+LeanFormal\IUT\ABCBridge\Geometry\FinitePlaceHolomorphicDifferentBase.lean:64:2: error: Type mismatch
+  traceDual_one_le_one_self
+has type
+  @traceDual A (FractionRing A) (FractionRing A) A inst✝¹ (FractionRing.field A) inst✝¹ (FractionRing.field A)
+      OreLocalization.instAlgebra OreLocalization.instAlgebra (Algebra.id A) (Algebra.id (FractionRing A))
+      OreLocalization.instAlgebra ⋯ ⋯ 1 ≤
+    1
+but is expected to have type
+  @traceDual A (FractionRing A) (FractionRing A) A inst✝¹ (FractionRing.field A) inst✝¹ (FractionRing.field A)
+      OreLocalization.instAlgebra OreLocalization.instAlgebra (Algebra.id A)
+      (FractionRing.liftAlgebra A (FractionRing A)) OreLocalization.instAlgebra ⋯ ⋯ 1 ≤
+    1

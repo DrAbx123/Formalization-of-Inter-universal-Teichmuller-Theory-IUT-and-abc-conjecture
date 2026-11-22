@@ -1,0 +1,231 @@
+/- Hensel near-root existence for a complete ultrametric normed field (integral form),
+ported from Mathlib's Z_p Hensel lemma.  No PadicInt and no completion root.
+
+Hypotheses: f : L[X] has integral coefficients (all norms ≤ 1), the point a is
+integral (‖a‖ ≤ 1), and ‖f(a)‖ < ‖f'(a)‖².  Then a root b exists with
+‖b - a‖ < ‖f'(a)‖, and any two roots in that open ball coincide. -/
+import Mathlib.Algebra.Polynomial.Identities
+import Mathlib.Analysis.Normed.Field.Ultra
+import Mathlib.Analysis.Normed.Ring.Ultra
+import Mathlib.Analysis.SpecificLimits.Basic
+import Mathlib.Topology.Algebra.Polynomial
+import Mathlib.Topology.MetricSpace.Cauchy
+
+-- Performance only: the Newton estimates involve nested norm/division goals; this
+-- is not a semantic shortcut (no assumption is weakened).
+set_option maxHeartbeats 4000000
+
+noncomputable section
+open Filter Topology
+open scoped Polynomial
+
+namespace LeanFormal.IUT.XiFPaper.Mzk1LpHenselNearRootActual
+
+open Polynomial
+
+variable {L : Type*} [NormedField L] [IsUltrametricDist L]
+
+/-! ## Elementary bounds -/
+
+theorem norm_add_le_max' (x y : L) : ‖x + y‖ ≤ max ‖x‖ ‖y‖ := by
+  have h := IsUltrametricDist.dist_triangle_max (x + y) x 0
+  rw [dist_eq_norm, dist_eq_norm, dist_eq_norm] at h
+  simpa [show (x + y) - x = y by ring, max_comm] using h
+
+theorem norm_mul_le_one {x y : L} (hx : ‖x‖ ≤ 1) (hy : ‖y‖ ≤ 1) : ‖x * y‖ ≤ 1 := by
+  rw [norm_mul]
+  nlinarith [norm_nonneg x, norm_nonneg y]
+
+theorem norm_pow_le_one {x : L} (hx : ‖x‖ ≤ 1) (n : Nat) : ‖x ^ n‖ ≤ 1 := by
+  induction n with
+  | zero => simp
+  | succ n ih => rw [pow_succ]; exact norm_mul_le_one ih hx
+
+theorem norm_add_eq_left_of_norm_lt {x y : L} (h : ‖y‖ < ‖x‖) : ‖x + y‖ = ‖x‖ := by
+  refine le_antisymm ((norm_add_le_max' x y).trans (max_eq_left h.le)) ?_
+  rcases le_or_lt ‖x + y‖ ‖y‖ with hle | hlt
+  · have hx : ‖x‖ ≤ max ‖x + y‖ ‖y‖ := by
+      have h' := IsUltrametricDist.dist_triangle_max x (-y) 0
+      rw [dist_eq_norm, dist_eq_norm, dist_eq_norm] at h'
+      simpa [show x - -y = x + y by ring, max_comm] using h'
+    rw [max_eq_right hle] at hx
+    linarith
+  · have hx : ‖x‖ ≤ max ‖x + y‖ ‖y‖ := by
+      have h' := IsUltrametricDist.dist_triangle_max x (-y) 0
+      rw [dist_eq_norm, dist_eq_norm, dist_eq_norm] at h'
+      simpa [show x - -y = x + y by ring, max_comm] using h'
+    rw [max_eq_left hlt.le] at hx
+    exact hx
+
+theorem norm_sum_le_of_bound {ι : Type*} (s : Finset ι) (g : ι → L) {C : Real} (hC : 0 ≤ C)
+    (h : ∀ i ∈ s, ‖g i‖ ≤ C) : ‖∑ i ∈ s, g i‖ ≤ C := by
+  classical
+  induction s using Finset.induction with
+  | empty => simpa using hC
+  | insert a s ha ih =>
+      rw [Finset.sum_insert ha]
+      refine (norm_add_le_max' _ _).trans (max_le ?_ ?_)
+      · exact h a (Finset.mem_insert_self a s)
+      · exact ih fun i hi => h i (Finset.mem_insert_of_mem hi)
+
+theorem norm_eval_le_one_of_coeff_le_one {f : L[X]} (hf : ∀ n, ‖f.coeff n‖ ≤ 1)
+    {z : L} (hz : ‖z‖ ≤ 1) : ‖f.eval z‖ ≤ 1 := by
+  rw [eval_eq_sum]
+  unfold Polynomial.sum
+  exact norm_sum_le_of_bound f.support (fun e => f.coeff e * z ^ e) zero_le_one
+    (fun e _ => norm_mul_le_one (hf e) (norm_pow_le_one hz e))
+
+theorem norm_coeff_derivative_le_one {f : L[X]} (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (n : Nat) :
+    ‖f.derivative.coeff n‖ ≤ 1 := by
+  rw [coeff_derivative]
+  refine norm_mul_le_one (hf (n + 1)) ?_
+  exact IsUltrametricDist.norm_natCast_le_one L (n + 1)
+
+theorem norm_derivative_eval_le_one {f : L[X]} (hf : ∀ n, ‖f.coeff n‖ ≤ 1)
+    {z : L} (hz : ‖z‖ ≤ 1) : ‖f.derivative.eval z‖ ≤ 1 :=
+  norm_eval_le_one_of_coeff_le_one (norm_coeff_derivative_le_one hf) hz
+
+theorem powAddExpansion_val_norm_le_one (x y : L) (hx : ‖x‖ ≤ 1) (hy : ‖y‖ ≤ 1) :
+    ∀ n : Nat, ‖(powAddExpansion x y n).val‖ ≤ 1 := by
+  intro n
+  induction n using Nat.strong_induction_on with
+  | _ n ih =>
+      match n with
+      | 0 => simp [powAddExpansion]
+      | 1 => simp [powAddExpansion]
+      | (k + 2) =>
+          have hk : ‖(powAddExpansion x y (k + 1)).val‖ ≤ 1 := ih (k + 1) (by omega)
+          have hval : (powAddExpansion x y (k + 2)).val =
+              x * (powAddExpansion x y (k + 1)).val + ((k + 1 : Nat) : L) * x ^ k +
+                (powAddExpansion x y (k + 1)).val * y := rfl
+          rw [hval]
+          refine (norm_add_le_max' _ _).trans (max_le ?_ ?_)
+          · refine (norm_add_le_max' _ _).trans (max_le ?_ ?_)
+            · exact norm_mul_le_one hx hk
+            · exact norm_mul_le_one (IsUltrametricDist.norm_natCast_le_one L (k + 1))
+                (norm_pow_le_one hx k)
+          · exact norm_mul_le_one hk hy
+
+theorem powSubPowFactor_val_norm_le_one (x y : L) (hx : ‖x‖ ≤ 1) (hy : ‖y‖ ≤ 1) :
+    ∀ i : Nat, ‖(powSubPowFactor x y i).val‖ ≤ 1 := by
+  intro i
+  induction i using Nat.strong_induction_on with
+  | _ i ih =>
+      match i with
+      | 0 => simp [powSubPowFactor]
+      | 1 => simp [powSubPowFactor]
+      | (k + 2) =>
+          have hk : ‖(powSubPowFactor x y (k + 1)).val‖ ≤ 1 := ih (k + 1) (by omega)
+          have hval : (powSubPowFactor x y (k + 2)).val =
+              (powSubPowFactor x y (k + 1)).val * x + y ^ (k + 1) := rfl
+          rw [hval]
+          exact (norm_add_le_max' _ _).trans
+            (max_le (norm_mul_le_one hk hx) (norm_pow_le_one hy (k + 1)))
+
+theorem norm_eval_sub_eval_le {f : L[X]} (hf : ∀ n, ‖f.coeff n‖ ≤ 1) {x y : L}
+    (hx : ‖x‖ ≤ 1) (hy : ‖y‖ ≤ 1) : ‖f.eval x - f.eval y‖ ≤ ‖x - y‖ := by
+  obtain ⟨z, hz⟩ := evalSubFactor f x y
+  have hz1 : ‖z‖ ≤ 1 := by
+    have hzdef : z = f.sum fun i r => r * (powSubPowFactor x y i).val := rfl
+    rw [hzdef]
+    unfold Polynomial.sum
+    exact norm_sum_le_of_bound f.support
+      (fun i => f.coeff i * (powSubPowFactor x y i).val) zero_le_one
+      (fun i _ => norm_mul_le_one (hf i) (powSubPowFactor_val_norm_le_one x y hx hy i))
+  rw [hz, norm_mul]
+  exact (mul_le_mul_of_nonneg_right hz1 (norm_nonneg _)).trans_eq (one_mul _)
+
+/-! ## Quadratic Taylor expansion with integral remainder -/
+
+theorem exists_taylor_remainder {f : L[X]} (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (x y : L)
+    (hx : ‖x‖ ≤ 1) (hy : ‖y‖ ≤ 1) :
+    ∃ q : L, ‖q‖ ≤ 1 ∧ f.eval (x + y) = f.eval x + f.derivative.eval x * y + q * y ^ 2 := by
+  refine ⟨f.sum fun e a => a * (powAddExpansion x y e).val, ?_, ?_⟩
+  · unfold Polynomial.sum
+    exact norm_sum_le_of_bound f.support
+      (fun e => f.coeff e * (powAddExpansion x y e).val) zero_le_one
+      (fun e _ => norm_mul_le_one (hf e) (powAddExpansion_val_norm_le_one x y hx hy e))
+  · rw [eval_eq_sum]
+    trans f.sum (fun e a => a * x ^ e + (a * e * x ^ (e - 1)) * y +
+      (a * (powAddExpansion x y e).val) * y ^ 2)
+    · unfold Polynomial.sum
+      refine Finset.sum_congr rfl fun e _ => ?_
+      change f.coeff e * (x + y) ^ e =
+        f.coeff e * x ^ e + (f.coeff e * (e : L) * x ^ (e - 1)) * y +
+          (f.coeff e * (powAddExpansion x y e).val) * y ^ 2
+      rw [show (x + y) ^ e = x ^ e + (e : L) * x ^ (e - 1) * y +
+        (powAddExpansion x y e).val * y ^ 2 from (powAddExpansion x y e).property]
+      ring
+    · rw [eval_eq_sum, derivative_eval]
+      unfold Polynomial.sum
+      rw [Finset.sum_add_distrib, Finset.sum_add_distrib, Finset.sum_mul, Finset.sum_mul]
+
+/-! ## Uniqueness in the open ball -/
+
+section Unique
+
+variable (f : L[X]) (a : L) (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (ha : ‖a‖ ≤ 1)
+variable (hnorm : ‖f.eval a‖ < ‖f.derivative.eval a‖ ^ 2)
+include hf ha hnorm
+
+theorem deriv_eval_le_one : ‖f.derivative.eval a‖ ≤ 1 :=
+  norm_derivative_eval_le_one hf ha
+
+theorem deriv_norm_pos : 0 < ‖f.derivative.eval a‖ := by
+  have hpos : 0 < ‖f.derivative.eval a‖ ^ 2 := lt_of_le_of_lt (sq_nonneg _) hnorm
+  rcases (norm_nonneg (f.derivative.eval a)).lt_or_eq with h | h
+  · exact h
+  · rw [← h] at hpos
+    simp at hpos
+
+theorem root_integral {b : L} (hb : ‖b - a‖ < ‖f.derivative.eval a‖) : ‖b‖ ≤ 1 := by
+  have h : ‖b‖ = ‖a + (b - a)‖ := by rw [add_sub_cancel]
+  rw [h]
+  refine (norm_add_le_max' _ _).trans (max_le ha ?_)
+  exact hb.le.trans (deriv_eval_le_one f a hf ha hnorm)
+
+theorem deriv_root_norm {b : L} (hb : ‖b - a‖ < ‖f.derivative.eval a‖) :
+    ‖f.derivative.eval b‖ = ‖f.derivative.eval a‖ := by
+  have hb_int : ‖b‖ ≤ 1 := root_integral f a hf ha hnorm hb
+  have hdist : ‖f.derivative.eval b - f.derivative.eval a‖ ≤ ‖b - a‖ :=
+    norm_eval_sub_eval_le (f := f.derivative) (norm_coeff_derivative_le_one hf) hb_int ha
+  have hlt : ‖f.derivative.eval b - f.derivative.eval a‖ < ‖f.derivative.eval a‖ :=
+    lt_of_le_of_lt hdist hb
+  calc ‖f.derivative.eval b‖
+      = ‖f.derivative.eval a + (f.derivative.eval b - f.derivative.eval a)‖ := by ring_nf
+    _ = ‖f.derivative.eval a‖ := norm_add_eq_left_of_norm_lt hlt
+
+theorem eq_of_roots_close_aux {b1 b2 : L} (h1 : f.eval b1 = 0) (h2 : f.eval b2 = 0)
+    (hb1 : ‖b1 - a‖ < ‖f.derivative.eval a‖)
+    (hb2 : ‖b2 - a‖ < ‖f.derivative.eval a‖) : b1 = b2 := by
+  by_contra hne
+  have hb1_int : ‖b1‖ ≤ 1 := root_integral f a hf ha hnorm hb1
+  have hb2_int : ‖b2‖ ≤ 1 := root_integral f a hf ha hnorm hb2
+  have hdiff_int : ‖b1 - b2‖ ≤ 1 := by
+    exact (norm_add_le_max' b1 (-b2)).trans (max_le hb1_int (by simpa using hb2_int))
+  have hb2_deriv : ‖f.derivative.eval b2‖ = ‖f.derivative.eval a‖ :=
+    deriv_root_norm f a hf ha hnorm hb2
+  obtain ⟨q, hqle, hq⟩ := exists_taylor_remainder hf b2 (b1 - b2) hb2_int hdiff_int
+  have hzero : f.derivative.eval b2 * (b1 - b2) + q * (b1 - b2) ^ 2 = 0 := by
+    have h := hq
+    rw [show b2 + (b1 - b2) = b1 by ring, h1] at h
+    rw [h2, zero_add] at h
+    linarith
+  have hd : b1 - b2 ≠ 0 := sub_ne_zero.mpr hne
+  have hfac : (f.derivative.eval b2 + q * (b1 - b2)) * (b1 - b2) = 0 := by
+    linear_combination hzero
+  have hderiv_eq : f.derivative.eval b2 = -(q * (b1 - b2)) := by
+    rcases eq_zero_or_eq_zero_of_mul_eq_zero hfac with h | h
+    · linear_combination h
+    · exact absurd h hd
+  have hbound : ‖f.derivative.eval a‖ ≤ ‖b1 - b2‖ := by
+    rw [← hb2_deriv, hderiv_eq, norm_neg, norm_mul]
+    exact (mul_le_mul_of_nonneg_right hqle (norm_nonneg _)).trans_eq (one_mul _)
+  have hupper : ‖b1 - b2‖ ≤ max ‖b1 - a‖ ‖b2 - a‖ := by
+    have h := norm_add_le_max' (b1 - a) (-(b2 - a))
+    rw [show (b1 - a) + -(b2 - a) = b1 - b2 by ring] at h
+    exact h
+  have hmax : max ‖b1 - a‖ ‖b2 - a‖ < ‖f.derivative.eval a‖ := max_lt hb1 hb2
+  exact absurd (le_trans hbound hupper) (not_le.mpr hmax)
+
+end Unique

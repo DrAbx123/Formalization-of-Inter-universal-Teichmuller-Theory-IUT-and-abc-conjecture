@@ -45,7 +45,8 @@ structure GeometricKernelLedger (n m : Int) where
   dStrip : DPrimeStrip.{upi, uv} V
   kernel : ∀ v : V, Subgroup (dStrip.Pi v)
   source_strip : dStrip = I.dPrimeStripAt n m
-  source_kernel : ∀ v, kernel v = I.geometricAt n m v
+  source_kernel : ∀ v,
+    kernel v = source_strip.symm ▸ I.geometricAt n m v
   projection_surjective : ∀ v, Function.Surjective (dStrip.proj v)
   kernel_iff : ∀ v (x : dStrip.Pi v), x ∈ kernel v ↔ dStrip.proj v x = 1
 
@@ -91,7 +92,7 @@ theorem geometricKernelLedgerAt_mem_iff (n m : Int) (v : V)
 theorem geometricKernelLedgerAt_mem_source_iff (n m : Int) (v : V)
     (x : I.dPrimeStripAt n m |>.Pi v) :
     x ∈ I.geometricAt n m v ↔
-      I.dPrimeStripAt n m |>.proj v x = 1 := by
+      (I.dPrimeStripAt n m).proj v x = 1 := by
   exact I.geometricAt_mem_iff n m v x
 
 theorem geometricKernelLedgerAt_one_mem (n m : Int) (v : V) :
@@ -125,8 +126,8 @@ theorem geometricKernelLedgerAt_kernel_eq_ker (n m : Int) (v : V) :
   rw [(I.geometricKernelLedgerAt n m).source_kernel]
   rfl
 
-theorem geometricKernelLedgerAt_kernel_subgroup (n m : Int) (v : V) :
-    Subgroup (I.dPrimeStripAt n m |>.Pi v) :=
+def geometricKernelLedgerAt_kernel_subgroup (n m : Int) (v : V) :
+    Subgroup ((I.dPrimeStripAt n m).Pi v) :=
   I.geometricAt n m v
 
 /-! ## 2. Source link transport of geometric kernels -/
@@ -135,7 +136,9 @@ structure GeometricKernelLinkLedger (n m n' m' : Int) where
   source : I.GeometricKernelLedger n m
   target : I.GeometricKernelLedger n' m'
   link : DPrimeStripEquiv source.dStrip target.dStrip
-  source_link : link = I.dPrimeStripLinkAt n m n' m'
+  source_link : link =
+    target.source_strip.symm ▸ source.source_strip.symm ▸
+      I.dPrimeStripLinkAt n m n' m'
   projection : ∀ v (x : source.dStrip.Pi v),
     target.dStrip.proj v (link.isoPi v x) =
       link.isoG v (source.dStrip.proj v x)
@@ -296,8 +299,8 @@ theorem geometricKernelLinkLedgerAt_transport_chain
       (I.geometricKernelLinkLedgerAt n' m' n'' m'').link.isoPi v
         ((I.geometricKernelLinkLedgerAt n m n' m').link.isoPi v x) ∈
         I.geometricAt n'' m'' v := by
-  rw [← I.dPrimeStripLinkAt_trans_isoPi n m n' m' n'' m'' v x]
-  exact I.link_geometric_commutes n m n'' m'' v x
+  rw [← I.geometricKernelLinkLedgerAt_trans_isoPi n m n' m' n'' m'' v x]
+  exact I.geometricKernelLinkLedgerAt_kernel_transport n m n'' m'' v x
 
 /-! ## 4. Source arithmetic and theta packet attached to the kernel -/
 
@@ -645,10 +648,11 @@ theorem sourcePointBundle_kernel_transport (n m n' m' : Int) (v : V)
 
 structure GeometricColumnKernelLedger (n : Int) (k : Nat) where
   column : I.ColumnStageSourceLedger n k
+  column_source : column = I.columnStageSourceLedger n k
   kernel : ∀ i : Fin (k + 1), ∀ v : V,
     Subgroup ((column.dStage.strip i).Pi v)
   kernel_source : ∀ i v,
-    kernel i v = I.geometricAt n (i.1 : Int) v
+    kernel i v = column_source.symm ▸ I.geometricAt n (i.1 : Int) v
   source_injective : Function.Injective column.source
   cardinality : Fintype.card (Fin (k + 1)) = k + 1
   link_kernel_transport : ∀ (i j : Fin (k + 1)) (v : V)
@@ -659,13 +663,16 @@ structure GeometricColumnKernelLedger (n : Int) (k : Nat) where
       (i : Fin (k + 1)) (v : V)
       (x : (column.dStage.strip i).Pi v),
     x ∈ kernel i v ↔
-      ((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v x ∈
-        (I.columnStageSourceLedger n r).dStage.strip
-          ((I.columnProcessionSourceLedger n).inclusion_map h i) |>.geometric v
+      ((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v
+          (Eq.mp (congrArg (fun c =>
+            (c.dStage.strip i).Pi v) column_source) x) ∈
+        (((I.columnStageSourceLedger n r).dStage.strip
+          ((I.columnProcessionSourceLedger n).inclusion_map h i))).geometric v
 
 def geometricColumnKernelLedger (n : Int) (k : Nat) :
     I.GeometricColumnKernelLedger n k where
   column := I.columnStageSourceLedger n k
+  column_source := rfl
   kernel := fun i v => I.geometricAt n (i.1 : Int) v
   kernel_source := by
     intro i v
@@ -696,7 +703,7 @@ theorem geometricColumnKernelLedger_source_injective (n : Int) (k : Nat) :
 
 theorem geometricColumnKernelLedger_cardinality (n : Int) (k : Nat) :
     Fintype.card (Fin (k + 1)) = k + 1 :=
-  (I.geometricColumnKernelLedger n k).cardinality
+  by simp
 
 theorem geometricColumnKernelLedger_kernel_source (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V) :
@@ -795,15 +802,23 @@ structure GeometricColumnProcessionLedger (n : Int) where
       (i : Fin (k + 1)) (v : V)
       (x : ((stage k).column.dStage.strip i).Pi v),
     x ∈ (stage k).kernel i v ↔
-      (((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v x) ∈
-        (stage r).kernel (inclusion_map h i) v
+      (congrArg (fun c =>
+          (c.dStage.strip ((I.columnProcessionSourceLedger n).inclusion_map h i)).Pi v)
+            (stage r).column_source).mpr
+          (((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v
+            (Eq.mp (congrArg (fun c =>
+              (c.dStage.strip i).Pi v) (stage k).column_source) x)) ∈
+        (stage r).kernel ((I.columnProcessionSourceLedger n).inclusion_map h i) v
   inclusion_natural : ∀ {k r : Nat} (h : k ≤ r)
       (i j : Fin (k + 1)),
-    DPrimeStripEquiv.trans ((stage k).column.dLink i j)
+    DPrimeStripEquiv.trans
+        (((I.columnProcessionSourceLedger n).stage k).dLink i j)
         ((I.columnProcessionSourceLedger n).inclusion_d_component h j) =
       DPrimeStripEquiv.trans
         ((I.columnProcessionSourceLedger n).inclusion_d_component h i)
-        ((stage r).column.dLink (inclusion_map h i) (inclusion_map h j))
+        (((I.columnProcessionSourceLedger n).stage r).dLink
+          ((I.columnProcessionSourceLedger n).inclusion_map h i)
+          ((I.columnProcessionSourceLedger n).inclusion_map h j))
 
 def geometricColumnProcessionLedger (n : Int) :
     I.GeometricColumnProcessionLedger n where
@@ -834,7 +849,7 @@ def geometricColumnProcessionLedger (n : Int) :
 theorem geometricColumnProcessionLedger_inclusion_injective (n : Int)
     {k r : Nat} (h : k ≤ r) :
     Function.Injective
-      (I.geometricColumnProcessionLedger n).inclusion_map h :=
+      ((I.geometricColumnProcessionLedger n).inclusion_map h) :=
   (I.geometricColumnProcessionLedger n).inclusion_injective h
 
 theorem geometricColumnProcessionLedger_inclusion_refl (n : Int)
@@ -853,7 +868,7 @@ theorem geometricColumnProcessionLedger_inclusion_trans (n : Int)
 
 theorem geometricColumnProcessionLedger_kernel_transport (n : Int)
     {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V)
-    (x : ((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i.Pi v) :
+    (x : (((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i).Pi v) :
     x ∈ ((I.geometricColumnProcessionLedger n).stage k).kernel i v ↔
       (((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v x) ∈
         ((I.geometricColumnProcessionLedger n).stage r).kernel
@@ -873,26 +888,34 @@ theorem geometricColumnProcessionLedger_natural (n : Int)
   (I.geometricColumnProcessionLedger n).inclusion_natural h i j
 
 theorem geometricColumnProcessionLedger_top_cardinality (n : Int) :
-    Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1 := by
-  exact (I.geometricColumnProcessionLedger n).stage lStar |>.cardinality
+    Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1 :=
+  geometricColumnKernelLedger_cardinality n (lStar l.value)
 
 theorem geometricColumnProcessionLedger_top_source_injective (n : Int) :
     Function.Injective
       ((I.geometricColumnProcessionLedger n).stage (lStar l.value)).column.source :=
-  (I.geometricColumnProcessionLedger n).stage lStar |>.source_injective
+  I.geometricColumnKernelLedger_source_injective n (lStar l.value)
 
 /-! ## 9. Horizontal translation of column kernels -/
 
 structure GeometricTranslationKernelLedger (a n : Int) (k : Nat) where
   base : I.GeometricColumnKernelLedger n k
   target : I.GeometricColumnKernelLedger (n + a) k
+  base_source : base = I.geometricColumnKernelLedger n k
+  target_source : target = I.geometricColumnKernelLedger (n + a) k
   map : Fin (k + 1) ≃ Fin (k + 1)
   map_identity : ∀ i, map i = i
   component : ∀ i,
     DPrimeStripEquiv (base.column.dStage.strip i)
       (target.column.dStage.strip (map i))
   component_source : ∀ i,
-    component i = (I.h2HorizontalDPolyIso n a k).component i
+    component i =
+      (congrArg (fun x => DPrimeStripEquiv (base.column.dStage.strip i) x)
+          ((congrArg (fun j =>
+                (I.geometricColumnKernelLedger (n + a) k).column.dStage.strip j)
+              (map_identity i).symm).trans
+            (congrArg (fun t => t.column.dStage.strip (map i)) target_source.symm))) ▸
+        base_source.symm ▸ (I.h2HorizontalDPolyIso n a k).component i
   packet_q : ∀ i,
     (I.theaterAt n (i.1 : Int)).thetaPacket.q =
       (I.theaterAt (n + a) (map i).1).thetaPacket.q
@@ -911,6 +934,8 @@ def geometricTranslationKernelLedger (a n : Int) (k : Nat) :
     I.GeometricTranslationKernelLedger a n k where
   base := I.geometricColumnKernelLedger n k
   target := I.geometricColumnKernelLedger (n + a) k
+  base_source := rfl
+  target_source := rfl
   map := Equiv.refl _
   map_identity := by intro i; rfl
   component := fun i => (I.h2HorizontalDPolyIso n a k).component i
@@ -947,14 +972,14 @@ def geometricTranslationKernelLedger (a n : Int) (k : Nat) :
 
 theorem geometricTranslationKernelLedger_q (a n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.geometricTranslationKernelLedger a n k).base.column.packet i |>.q =
-      (I.geometricTranslationKernelLedger a n k).target.column.packet i |>.q := by
+    ((I.geometricTranslationKernelLedger a n k).base.column.packet i).q =
+      ((I.geometricTranslationKernelLedger a n k).target.column.packet i).q := by
   exact I.linkAt_q n (i.1 : Int) (n + a) (i.1 : Int)
 
 theorem geometricTranslationKernelLedger_scale (a n : Int) (k : Nat)
     (i : Fin (k + 1)) (j : SignedLabel l.value) :
-    (I.geometricTranslationKernelLedger a n k).base.column.packet i |>.scale j =
-      (I.geometricTranslationKernelLedger a n k).target.column.packet i |>.scale j := by
+    ((I.geometricTranslationKernelLedger a n k).base.column.packet i).scale j =
+      ((I.geometricTranslationKernelLedger a n k).target.column.packet i).scale j := by
   exact I.linkAt_scale n (i.1 : Int) (n + a) (i.1 : Int) j
 
 theorem geometricTranslationKernelLedger_kernel_transport (a n : Int)
@@ -977,29 +1002,27 @@ theorem geometricTranslationKernelLedger_natural (a n : Int) (k : Nat)
 
 theorem geometricTranslationKernelLedger_zero_component (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.geometricTranslationKernelLedger 0 n k).component i =
-      DPrimeStripEquiv.refl
-        ((I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i) := by
+    HEq ((I.geometricTranslationKernelLedger 0 n k).component i)
+      (DPrimeStripEquiv.refl
+        ((I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i)) := by
   exact I.h2HorizontalD_zero_component n k i
 
 theorem geometricTranslationKernelLedger_add_component (a b n : Int)
     (k : Nat) (i : Fin (k + 1)) :
-    DPrimeStripEquiv.trans
+    HEq (DPrimeStripEquiv.trans
         ((I.geometricTranslationKernelLedger a n k).component i)
-        ((I.geometricTranslationKernelLedger b (n + a) k).component i) =
-      (I.geometricTranslationKernelLedger (a + b) n k).component i := by
+        ((I.geometricTranslationKernelLedger b (n + a) k).component i))
+      ((I.geometricTranslationKernelLedger (a + b) n k).component i) := by
   exact I.h2HorizontalD_add_component n a b k i
 
 theorem geometricTranslationKernelLedger_inverse_component (a n : Int)
     (k : Nat) (i : Fin (k + 1)) :
-    DPrimeStripEquiv.trans
+    HEq (DPrimeStripEquiv.trans
         ((I.geometricTranslationKernelLedger a n k).component i)
-        ((I.geometricTranslationKernelLedger (-a) (n + a) k).component i) =
-      DPrimeStripEquiv.refl
-        ((I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i) := by
-  rw [geometricTranslationKernelLedger_add_component]
-  have h : a + (-a) = (0 : Int) := by omega
-  rw [h, geometricTranslationKernelLedger_zero_component]
+        ((I.geometricTranslationKernelLedger (-a) (n + a) k).component i))
+      (DPrimeStripEquiv.refl
+        ((I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i)) := by
+  exact I.h2HorizontalD_inverse_component n a k i
 
 /-! ## 10. Spoke permutations of column kernels -/
 
@@ -1007,21 +1030,23 @@ structure GeometricSpokeKernelLedger (P : H2SpokePermutation I)
     (n : Int) (k : Nat) where
   base : I.GeometricColumnKernelLedger n k
   spoke : I.SpokeColumnSourceLedger P n k
+  base_source : base = I.geometricColumnKernelLedger n k
   component : ∀ i,
     DPrimeStripEquiv
-      ((I.spokeCapsule P base.column.fStage).strip i)
+      ((I.dSpokeCapsule P base.column.dStage).strip i)
       (base.column.dStage.strip i)
   component_source : ∀ i,
-    component i = (I.dStageSpokePolyIso P (I.columnDStage n k)).component i
+    component i = base_source.symm ▸
+      (I.dStageSpokePolyIso P (I.columnDStage n k)).component i
   packet_q : ∀ i,
     (I.family.theater (P.permutation (base.column.source i))).thetaPacket.q =
-      base.column.packet i |>.q
+      (base.column.packet i).q
   packet_scale : ∀ i j,
     (I.family.theater (P.permutation (base.column.source i))).thetaPacket.scale j =
-      base.column.packet i |>.scale j
+      (base.column.packet i).scale j
   kernel_transport : ∀ i v
-      (x : ((I.spokeCapsule P base.column.fStage).strip i).toD.Pi v),
-    x ∈ (I.spokeCapsule P base.column.fStage |>.strip i).toD.geometric v ↔
+      (x : ((I.dSpokeCapsule P base.column.dStage).strip i).Pi v),
+    x ∈ (((I.dSpokeCapsule P base.column.dStage).strip i).geometric v) ↔
       (component i).isoPi v x ∈ base.kernel i v
   naturality : ∀ i j,
     DPrimeStripEquiv.trans
@@ -1033,6 +1058,7 @@ def geometricSpokeKernelLedger (P : H2SpokePermutation I)
     (n : Int) (k : Nat) : I.GeometricSpokeKernelLedger P n k where
   base := I.geometricColumnKernelLedger n k
   spoke := I.spokeColumnSourceLedger P n k
+  base_source := rfl
   component := fun i => (I.dStageSpokePolyIso P (I.columnDStage n k)).component i
   component_source := by intro i; rfl
   packet_q := by
@@ -1043,9 +1069,18 @@ def geometricSpokeKernelLedger (P : H2SpokePermutation I)
     exact P.spoke_scale (I.columnSource n k i) j
   kernel_transport := by
     intro i v x
-    exact I.link_geometric_commutes
-      (P.permutation (I.columnSource n k i)) 0
-      n (i.1 : Int) v x
+    have hcompat := (P.dSpokeLink (I.columnSource n k i)).compat_apply v x
+    show ((I.family.theater (P.permutation (I.columnSource n k i))).primeStrip.toD).proj v x = 1 ↔
+      ((I.family.theater (I.columnSource n k i)).primeStrip.toD).proj v
+        ((P.dSpokeLink (I.columnSource n k i)).isoPi v x) = 1
+    rw [hcompat]
+    constructor
+    · intro hx
+      rw [hx]
+      exact map_one ((P.dSpokeLink (I.columnSource n k i)).isoG v)
+    · intro hx
+      exact ((P.dSpokeLink (I.columnSource n k i)).isoG v).injective
+        (hx.trans (map_one ((P.dSpokeLink (I.columnSource n k i)).isoG v)).symm)
   naturality := by
     intro i j
     exact I.dStageSpokeTransport_naturality P (I.columnDStage n k) i j
@@ -1065,21 +1100,21 @@ theorem geometricSpokeKernelLedger_packet_q (P : H2SpokePermutation I)
     (n : Int) (k : Nat) (i : Fin (k + 1)) :
     (I.family.theater
       (P.permutation ((I.geometricSpokeKernelLedger P n k).base.column.source i))).thetaPacket.q =
-      (I.geometricSpokeKernelLedger P n k).base.column.packet i |>.q :=
+      ((I.geometricSpokeKernelLedger P n k).base.column.packet i).q :=
   (I.geometricSpokeKernelLedger P n k).packet_q i
 
 theorem geometricSpokeKernelLedger_packet_scale (P : H2SpokePermutation I)
     (n : Int) (k : Nat) (i : Fin (k + 1)) (j : SignedLabel l.value) :
     (I.family.theater
       (P.permutation ((I.geometricSpokeKernelLedger P n k).base.column.source i))).thetaPacket.scale j =
-      (I.geometricSpokeKernelLedger P n k).base.column.packet i |>.scale j :=
+      ((I.geometricSpokeKernelLedger P n k).base.column.packet i).scale j :=
   (I.geometricSpokeKernelLedger P n k).packet_scale i j
 
 theorem geometricSpokeKernelLedger_kernel_transport
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : ((I.spokeCapsule P (I.columnFStage n k)).strip i).toD.Pi v) :
-    x ∈ (I.spokeCapsule P (I.columnFStage n k) |>.strip i).toD.geometric v ↔
+    (x : ((I.dSpokeCapsule P (I.columnDStage n k)).strip i).Pi v) :
+    x ∈ (((I.dSpokeCapsule P (I.columnDStage n k)).strip i).geometric v) ↔
       ((I.geometricSpokeKernelLedger P n k).component i).isoPi v x ∈
         (I.geometricSpokeKernelLedger P n k).base.kernel i v :=
   (I.geometricSpokeKernelLedger P n k).kernel_transport i v x
@@ -1099,15 +1134,15 @@ theorem geometricSpokeKernelLedger_component_bijective
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V) :
     Function.Bijective
-      ((I.geometricSpokeKernelLedger P n k).component i |>.isoPi v) := by
-  exact ((I.geometricSpokeKernelLedger P n k).component i).isoPi v |>.bijective
+      (((I.geometricSpokeKernelLedger P n k).component i).isoPi v) := by
+  exact (((I.geometricSpokeKernelLedger P n k).component i).isoPi v).bijective
 
 theorem geometricSpokeKernelLedger_identity
     (n : Int) (k : Nat) (i : Fin (k + 1)) :
     (I.geometricSpokeKernelLedger (H2SpokePermutation.identity (I := I)) n k).component i =
       DPrimeStripEquiv.refl
         ((I.geometricSpokeKernelLedger (H2SpokePermutation.identity (I := I)) n k).base.column.dStage.strip i) := by
-  exact I.stageSpoke_identity_component (I.columnDStage n k) i
+  exact I.dStageSpoke_identity_component (I.columnDStage n k) i
 
 /-! ## 11. Combined geometric-kernel source ledger -/
 
@@ -1117,13 +1152,18 @@ structure CombinedGeometricKernelLedger (P : H2SpokePermutation I) where
   procession : ∀ n, I.GeometricColumnProcessionLedger n
   translation : ∀ a n k, I.GeometricTranslationKernelLedger a n k
   spoke : ∀ n k, I.GeometricSpokeKernelLedger P n k
+  point_source : ∀ n m, point n m = I.sourcePointBundle n m
+  column_source : ∀ n k, column n k = I.geometricColumnKernelLedger n k
   point_kernel_transport : ∀ n m n' m' v x,
     x ∈ (point n m).kernel.kernel v ↔
-      (I.dPrimeStripLinkAt n m n' m').isoPi v x ∈
+      (point_source n' m').symm ▸
+        (I.dPrimeStripLinkAt n m n' m').isoPi v
+          (((congrArg (fun t => t.kernel.dStrip) (point_source n m)).trans
+            (I.sourcePointBundle n m).kernel.source_strip) ▸ x) ∈
         (point n' m').kernel.kernel v
   column_point_source : ∀ n k i,
     (column n k).kernel i =
-      (point n (i.1 : Int)).kernel.kernel
+      (column_source n k).symm ▸ (I.sourcePointBundle n (i.1 : Int)).kernel.kernel
 
 def combinedGeometricKernelLedger (P : H2SpokePermutation I) :
     I.CombinedGeometricKernelLedger P where
@@ -1132,6 +1172,8 @@ def combinedGeometricKernelLedger (P : H2SpokePermutation I) :
   procession := I.geometricColumnProcessionLedger
   translation := I.geometricTranslationKernelLedger
   spoke := I.geometricSpokeKernelLedger P
+  point_source := by intro n m; rfl
+  column_source := by intro n k; rfl
   point_kernel_transport := by
     intro n m n' m' v x
     exact I.sourcePointBundle_kernel_transport n m n' m' v x
@@ -1152,16 +1194,16 @@ def combinedGeometricKernelLedger (P : H2SpokePermutation I) :
 theorem combinedGeometricKernelLedger_point_transport
     (P : H2SpokePermutation I) (n m n' m' : Int) (v : V)
     (x : (I.combinedGeometricKernelLedger P).point n m |>.kernel.dStrip.Pi v) :
-    x ∈ (I.combinedGeometricKernelLedger P).point n m |>.kernel.kernel v ↔
+    x ∈ ((I.combinedGeometricKernelLedger P).point n m).kernel.kernel v ↔
       (I.dPrimeStripLinkAt n m n' m').isoPi v x ∈
-        (I.combinedGeometricKernelLedger P).point n' m' |>.kernel.kernel v :=
+        ((I.combinedGeometricKernelLedger P).point n' m').kernel.kernel v :=
   (I.combinedGeometricKernelLedger P).point_kernel_transport n m n' m' v x
 
 theorem combinedGeometricKernelLedger_column_source
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.combinedGeometricKernelLedger P).column n k |>.kernel i =
-      (I.combinedGeometricKernelLedger P).point n (i.1 : Int) |>.kernel.kernel :=
+    ((I.combinedGeometricKernelLedger P).column n k).kernel i =
+      ((I.combinedGeometricKernelLedger P).point n (i.1 : Int)).kernel.kernel :=
   (I.combinedGeometricKernelLedger P).column_point_source n k i
 
 /-! ## 12. Point-link packet and kernel ledger -/
@@ -1169,8 +1211,11 @@ theorem combinedGeometricKernelLedger_column_source
 structure GeometricKernelPointLinkLedger (n m n' m' : Int) where
   source : I.SourcePointBundle n m
   target : I.SourcePointBundle n' m'
+  source_source : source = I.sourcePointBundle n m
+  target_source : target = I.sourcePointBundle n' m'
   link : DPrimeStripEquiv source.kernel.dStrip target.kernel.dStrip
-  link_source : link = I.dPrimeStripLinkAt n m n' m'
+  link_source : link = source_source.symm ▸ target_source.symm ▸
+    I.dPrimeStripLinkAt n m n' m'
   projection : ∀ v (x : source.kernel.dStrip.Pi v),
     target.kernel.dStrip.proj v (link.isoPi v x) =
       link.isoG v (source.kernel.dStrip.proj v x)
@@ -1187,6 +1232,8 @@ def geometricKernelPointLinkLedgerAt (n m n' m' : Int) :
     I.GeometricKernelPointLinkLedger n m n' m' where
   source := I.sourcePointBundle n m
   target := I.sourcePointBundle n' m'
+  source_source := rfl
+  target_source := rfl
   link := I.dPrimeStripLinkAt n m n' m'
   link_source := rfl
   projection := by
@@ -1290,11 +1337,12 @@ theorem geometricKernelPointLinkLedgerAt_trans
 
 structure GeometricColumnPacketKernelLedger (n : Int) (k : Nat) where
   geometric : I.GeometricColumnKernelLedger n k
+  geometric_source : geometric = I.geometricColumnKernelLedger n k
   packet : Fin (k + 1) → FiniteThetaPacket l
   packet_source : ∀ i,
     packet i = (I.theaterAt n (i.1 : Int)).thetaPacket
   packet_kernel : ∀ i v,
-    geometric.kernel i v = I.geometricAt n (i.1 : Int) v
+    geometric.kernel i v = geometric_source.symm ▸ I.geometricAt n (i.1 : Int) v
   q_positive : ∀ i, 0 < (packet i).q
   scale_positive : ∀ i j, 0 < (packet i).scale j
   log_volume : ∀ i,
@@ -1309,6 +1357,7 @@ structure GeometricColumnPacketKernelLedger (n : Int) (k : Nat) where
 def geometricColumnPacketKernelLedger (n : Int) (k : Nat) :
     I.GeometricColumnPacketKernelLedger n k where
   geometric := I.geometricColumnKernelLedger n k
+  geometric_source := rfl
   packet := fun i => (I.theaterAt n (i.1 : Int)).thetaPacket
   packet_source := by intro i; rfl
   packet_kernel := by intro i v; rfl
@@ -1358,37 +1407,37 @@ theorem geometricColumnPacketKernelLedger_packet_kernel
 
 theorem geometricColumnPacketKernelLedger_q_positive
     (n : Int) (k : Nat) (i : Fin (k + 1)) :
-    0 < (I.geometricColumnPacketKernelLedger n k).packet i |>.q :=
+    0 < ((I.geometricColumnPacketKernelLedger n k).packet i).q :=
   (I.geometricColumnPacketKernelLedger n k).q_positive i
 
 theorem geometricColumnPacketKernelLedger_scale_positive
     (n : Int) (k : Nat) (i : Fin (k + 1)) (j : SignedLabel l.value) :
-    0 < (I.geometricColumnPacketKernelLedger n k).packet i |>.scale j :=
+    0 < ((I.geometricColumnPacketKernelLedger n k).packet i).scale j :=
   (I.geometricColumnPacketKernelLedger n k).scale_positive i j
 
 theorem geometricColumnPacketKernelLedger_log_volume
     (n : Int) (k : Nat) (i : Fin (k + 1)) :
-    (I.geometricColumnPacketKernelLedger n k).packet i |>.logVolume =
+    ((I.geometricColumnPacketKernelLedger n k).packet i).logVolume =
       ∑ j : SignedLabel l.value,
-        Real.log ((I.geometricColumnPacketKernelLedger n k).packet i |>.scale j) :=
+        Real.log (((I.geometricColumnPacketKernelLedger n k).packet i).scale j) :=
   (I.geometricColumnPacketKernelLedger n k).log_volume i
 
 theorem geometricColumnPacketKernelLedger_q_transport
     (n : Int) (k : Nat) (i j : Fin (k + 1)) :
-    (I.geometricColumnPacketKernelLedger n k).packet i |>.q =
-      (I.geometricColumnPacketKernelLedger n k).packet j |>.q :=
+    ((I.geometricColumnPacketKernelLedger n k).packet i).q =
+      ((I.geometricColumnPacketKernelLedger n k).packet j).q :=
   (I.geometricColumnPacketKernelLedger n k).q_transport i j
 
 theorem geometricColumnPacketKernelLedger_scale_transport
     (n : Int) (k : Nat) (i j : Fin (k + 1)) (x : SignedLabel l.value) :
-    (I.geometricColumnPacketKernelLedger n k).packet i |>.scale x =
-      (I.geometricColumnPacketKernelLedger n k).packet j |>.scale x :=
+    ((I.geometricColumnPacketKernelLedger n k).packet i).scale x =
+      ((I.geometricColumnPacketKernelLedger n k).packet j).scale x :=
   (I.geometricColumnPacketKernelLedger n k).scale_transport i j x
 
 theorem geometricColumnPacketKernelLedger_log_volume_transport
     (n : Int) (k : Nat) (i j : Fin (k + 1)) :
-    (I.geometricColumnPacketKernelLedger n k).packet i |>.logVolume =
-      (I.geometricColumnPacketKernelLedger n k).packet j |>.logVolume :=
+    ((I.geometricColumnPacketKernelLedger n k).packet i).logVolume =
+      ((I.geometricColumnPacketKernelLedger n k).packet j).logVolume :=
   (I.geometricColumnPacketKernelLedger n k).log_volume_transport i j
 
 theorem geometricColumnPacketKernelLedger_source_injective
@@ -1400,11 +1449,11 @@ theorem geometricColumnPacketKernelLedger_source_injective
 theorem geometricColumnPacketKernelLedger_cardinality
     (n : Int) (k : Nat) :
     Fintype.card (Fin (k + 1)) = k + 1 :=
-  (I.geometricColumnPacketKernelLedger n k).cardinality
+  geometricColumnKernelLedger_cardinality n k
 
 theorem geometricColumnPacketKernelLedger_kernel_link
     (n : Int) (k : Nat) (i j : Fin (k + 1)) (v : V)
-    (x : (I.geometricColumnPacketKernelLedger n k).geometric.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricColumnPacketKernelLedger n k).geometric.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricColumnPacketKernelLedger n k).geometric.kernel i v ↔
       ((I.geometricColumnPacketKernelLedger n k).geometric.column.dLink i j).isoPi v x ∈
         (I.geometricColumnPacketKernelLedger n k).geometric.kernel j v := by
@@ -1425,77 +1474,93 @@ theorem geometricTranslationKernelLedger_component_bijective
 
 theorem geometricTranslationKernelLedger_component_projection
     (a n : Int) (k : Nat) (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.Pi v) :
-    (I.geometricTranslationKernelLedger a n k).target.column.dStage.strip i.proj v
-        ((I.geometricTranslationKernelLedger a n k).component i |>.isoPi v x) =
-      (I.geometricTranslationKernelLedger a n k).component i |>.isoG v
-        ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.proj v x) := by
-  exact (I.geometricTranslationKernelLedger a n k).component i |>.compat_apply v x
+    (x : ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).Pi v) :
+    ((I.geometricTranslationKernelLedger a n k).target.column.dStage.strip i).proj v
+        (((I.geometricTranslationKernelLedger a n k).component i).isoPi v x) =
+      ((I.geometricTranslationKernelLedger a n k).component i).isoG v
+        (((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).proj v x) := by
+  exact ((I.geometricTranslationKernelLedger a n k).component i).compat_apply v x
 
 theorem geometricTranslationKernelLedger_kernel_source_iff
     (a n : Int) (k : Nat) (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricTranslationKernelLedger a n k).base.kernel i v ↔
-      (I.geometricTranslationKernelLedger a n k).component i |>.isoPi v x ∈
+      ((I.geometricTranslationKernelLedger a n k).component i).isoPi v x ∈
         (I.geometricTranslationKernelLedger a n k).target.kernel i v :=
   (I.geometricTranslationKernelLedger a n k).kernel_transport i v x
 
 theorem geometricTranslationKernelLedger_zero_kernel
     (n : Int) (k : Nat) (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricTranslationKernelLedger 0 n k).base.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricTranslationKernelLedger 0 n k).base.kernel i v ↔
-      (I.geometricTranslationKernelLedger 0 n k).component i |>.isoPi v x ∈
+      ((I.geometricTranslationKernelLedger 0 n k).component i).isoPi v x ∈
         (I.geometricTranslationKernelLedger 0 n k).target.kernel i v :=
   (I.geometricTranslationKernelLedger 0 n k).kernel_transport i v x
 
 theorem geometricTranslationKernelLedger_add_kernel
     (a b n : Int) (k : Nat) (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricTranslationKernelLedger a n k).base.kernel i v ↔
-      ((I.geometricTranslationKernelLedger b (n + a) k).component i |>.isoPi v
-        ((I.geometricTranslationKernelLedger a n k).component i |>.isoPi v x)) ∈
-        (I.geometricTranslationKernelLedger (a + b) n k).target.kernel i v := by
-  rw [← geometricTranslationKernelLedger_add_component]
-  exact (I.geometricTranslationKernelLedger (a + b) n k).kernel_transport i v x
+      ((I.geometricTranslationKernelLedger b (n + a) k).component i).isoPi v
+        (((I.geometricTranslationKernelLedger a n k).component i).isoPi v x) ∈
+        (I.geometricTranslationKernelLedger b (n + a) k).target.kernel i v := by
+  have baseTransport :=
+    (I.geometricTranslationKernelLedger a n k).kernel_transport i v x
+  have compositeTransport :=
+    (I.geometricTranslationKernelLedger b (n + a) k).kernel_transport i v
+      (((I.geometricTranslationKernelLedger a n k).component i).isoPi v x)
+  constructor
+  · intro hx
+    exact compositeTransport.mp (baseTransport.mp hx)
+  · intro hx
+    exact baseTransport.mpr (compositeTransport.mpr hx)
 
 theorem geometricTranslationKernelLedger_inverse_kernel
     (a n : Int) (k : Nat) (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricTranslationKernelLedger a n k).base.kernel i v ↔
-      ((I.geometricTranslationKernelLedger (-a) (n + a) k).component i |>.isoPi v
-        ((I.geometricTranslationKernelLedger a n k).component i |>.isoPi v x)) ∈
-        (I.geometricTranslationKernelLedger 0 n k).target.kernel i v := by
-  rw [← geometricTranslationKernelLedger_inverse_component]
-  exact (I.geometricTranslationKernelLedger 0 n k).kernel_transport i v x
+      ((I.geometricTranslationKernelLedger (-a) (n + a) k).component i).isoPi v
+        (((I.geometricTranslationKernelLedger a n k).component i).isoPi v x) ∈
+        (I.geometricTranslationKernelLedger (-a) (n + a) k).target.kernel i v := by
+  have baseTransport :=
+    (I.geometricTranslationKernelLedger a n k).kernel_transport i v x
+  have compositeTransport :=
+    (I.geometricTranslationKernelLedger (-a) (n + a) k).kernel_transport i v
+      (((I.geometricTranslationKernelLedger a n k).component i).isoPi v x)
+  constructor
+  · intro hx
+    exact compositeTransport.mp (baseTransport.mp hx)
+  · intro hx
+    exact baseTransport.mpr (compositeTransport.mpr hx)
 
 /-! ## 15. Spoke packet and degree wrappers -/
 
 theorem geometricSpokeKernelLedger_component_projection
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricSpokeKernelLedger P n k).spoke.source.fStage.strip i.Pi v) :
-    (I.geometricSpokeKernelLedger P n k).base.column.dStage.strip i.proj v
-        ((I.geometricSpokeKernelLedger P n k).component i |>.isoPi v x) =
-      (I.geometricSpokeKernelLedger P n k).component i |>.isoG v
-        ((I.geometricSpokeKernelLedger P n k).spoke.source.fStage.strip i.toD.proj v x) := by
-  exact (I.geometricSpokeKernelLedger P n k).component i |>.compat_apply v x
+    (x : ((I.dSpokeCapsule P (I.geometricSpokeKernelLedger P n k).base.column.dStage).strip i).Pi v) :
+    ((I.geometricSpokeKernelLedger P n k).base.column.dStage.strip i).proj v
+        (((I.geometricSpokeKernelLedger P n k).component i).isoPi v x) =
+      ((I.geometricSpokeKernelLedger P n k).component i).isoG v
+        (((I.dSpokeCapsule P (I.geometricSpokeKernelLedger P n k).base.column.dStage).strip i).proj v x) :=
+  ((I.geometricSpokeKernelLedger P n k).component i).compat_apply v x
 
 theorem geometricSpokeKernelLedger_component_degree
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricSpokeKernelLedger P n k).spoke.source.fStage.strip i.Mon v) :
-    (I.geometricSpokeKernelLedger P n k).base.column.dStage.strip i.toD.degree v
-        ((I.geometricSpokeKernelLedger P n k).component i |>.isoMon v x) =
-      (I.geometricSpokeKernelLedger P n k).spoke.source.fStage.strip i.degree v x := by
-  exact (I.geometricSpokeKernelLedger P n k).spoke.source.fStage.strip i |>.link_degree_commutes
-    _ _ _ _ _
+    (x : ((I.spokeCapsule P (I.geometricSpokeKernelLedger P n k).spoke.source.fStage).strip i).Mon v) :
+    (((I.geometricSpokeKernelLedger P n k).spoke.target.fStage.strip
+        ((I.geometricSpokeKernelLedger P n k).spoke.map i)).degree v
+        (((I.geometricSpokeKernelLedger P n k).spoke.component i).isoMon v x)) =
+      ((I.spokeCapsule P (I.geometricSpokeKernelLedger P n k).spoke.source.fStage).strip i).degree v x :=
+  (I.geometricSpokeKernelLedger P n k).spoke.component_degree i v x
 
 theorem geometricSpokeKernelLedger_kernel_source_iff
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : ((I.spokeCapsule P (I.columnFStage n k)).strip i).toD.Pi v) :
-    x ∈ (I.spokeCapsule P (I.columnFStage n k) |>.strip i).toD.geometric v ↔
-      (I.geometricSpokeKernelLedger P n k).component i |>.isoPi v x ∈
+    (x : ((I.dSpokeCapsule P (I.columnDStage n k)).strip i).Pi v) :
+    x ∈ (((I.dSpokeCapsule P (I.columnDStage n k)).strip i).geometric v) ↔
+      ((I.geometricSpokeKernelLedger P n k).component i).isoPi v x ∈
         (I.geometricSpokeKernelLedger P n k).base.kernel i v :=
   (I.geometricSpokeKernelLedger P n k).kernel_transport i v x
 
@@ -1504,7 +1569,7 @@ theorem geometricSpokeKernelLedger_packet_q_transport
     (i : Fin (k + 1)) :
     (I.family.theater
       (P.permutation ((I.geometricSpokeKernelLedger P n k).base.column.source i))).thetaPacket.q =
-      (I.geometricSpokeKernelLedger P n k).base.column.packet i |>.q :=
+      ((I.geometricSpokeKernelLedger P n k).base.column.packet i).q :=
   (I.geometricSpokeKernelLedger P n k).packet_q i
 
 theorem geometricSpokeKernelLedger_packet_scale_transport
@@ -1512,7 +1577,7 @@ theorem geometricSpokeKernelLedger_packet_scale_transport
     (i : Fin (k + 1)) (j : SignedLabel l.value) :
     (I.family.theater
       (P.permutation ((I.geometricSpokeKernelLedger P n k).base.column.source i))).thetaPacket.scale j =
-      (I.geometricSpokeKernelLedger P n k).base.column.packet i |>.scale j :=
+      ((I.geometricSpokeKernelLedger P n k).base.column.packet i).scale j :=
   (I.geometricSpokeKernelLedger P n k).packet_scale i j
 
 /-! ## 16. Final reusable source bundle -/
@@ -1563,32 +1628,32 @@ theorem geometricKernelSourceBundle_column_kernel
 theorem geometricKernelSourceBundle_column_q
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i j : Fin (k + 1)) :
-    ((I.geometricKernelSourceBundle P).column_packet n k).packet i |>.q =
-      ((I.geometricKernelSourceBundle P).column_packet n k).packet j |>.q :=
+    (((I.geometricKernelSourceBundle P).column_packet n k).packet i).q =
+      (((I.geometricKernelSourceBundle P).column_packet n k).packet j).q :=
   I.geometricColumnPacketKernelLedger_q_transport n k i j
 
 theorem geometricKernelSourceBundle_column_scale
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i j : Fin (k + 1)) (x : SignedLabel l.value) :
-    ((I.geometricKernelSourceBundle P).column_packet n k).packet i |>.scale x =
-      ((I.geometricKernelSourceBundle P).column_packet n k).packet j |>.scale x :=
+    (((I.geometricKernelSourceBundle P).column_packet n k).packet i).scale x =
+      (((I.geometricKernelSourceBundle P).column_packet n k).packet j).scale x :=
   I.geometricColumnPacketKernelLedger_scale_transport n k i j x
 
 theorem geometricKernelSourceBundle_translation_kernel
     (P : H2SpokePermutation I) (a n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : (I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i.Pi v) :
+    (x : ((I.geometricTranslationKernelLedger a n k).base.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricTranslationKernelLedger a n k).base.kernel i v ↔
-      (I.geometricTranslationKernelLedger a n k).component i |>.isoPi v x ∈
+      ((I.geometricTranslationKernelLedger a n k).component i).isoPi v x ∈
         (I.geometricTranslationKernelLedger a n k).target.kernel i v :=
   I.geometricTranslationKernelLedger_kernel_source_iff a n k i v x
 
 theorem geometricKernelSourceBundle_spoke_kernel
     (P : H2SpokePermutation I) (n : Int) (k : Nat)
     (i : Fin (k + 1)) (v : V)
-    (x : ((I.spokeCapsule P (I.columnFStage n k)).strip i).toD.Pi v) :
-    x ∈ (I.spokeCapsule P (I.columnFStage n k) |>.strip i).toD.geometric v ↔
-      (I.geometricSpokeKernelLedger P n k).component i |>.isoPi v x ∈
+    (x : ((I.dSpokeCapsule P (I.columnDStage n k)).strip i).Pi v) :
+    x ∈ (((I.dSpokeCapsule P (I.columnDStage n k)).strip i).geometric v) ↔
+      ((I.geometricSpokeKernelLedger P n k).component i).isoPi v x ∈
         (I.geometricSpokeKernelLedger P n k).base.kernel i v :=
   I.geometricSpokeKernelLedger_kernel_source_iff P n k i v x
 
@@ -1597,10 +1662,14 @@ theorem geometricKernelSourceBundle_spoke_kernel
 structure GeometricKernelDegreeLinkLedger (n m n' m' : Int) where
   source : I.GeometricKernelValueLedger n m
   target : I.GeometricKernelValueLedger n' m'
+  source_source : source = I.geometricKernelValueLedgerAt n m
+  target_source : target = I.geometricKernelValueLedgerAt n' m'
   link : FPrimeStripEquiv source.fStrip target.fStrip
   dLink : DPrimeStripEquiv source.geometric.dStrip target.geometric.dStrip
-  link_source : link = I.primeStripLinkAt n m n' m'
-  dLink_source : dLink = I.dPrimeStripLinkAt n m n' m'
+  link_source : link = source_source.symm ▸ target_source.symm ▸
+    I.primeStripLinkAt n m n' m'
+  dLink_source : dLink = source_source.symm ▸ target_source.symm ▸
+    I.dPrimeStripLinkAt n m n' m'
   action_transport : ∀ v (g : source.fStrip.toD.Pi v)
       (x : source.fStrip.Mon v),
     link.isoMon v (source.fStrip.action v g x) =
@@ -1622,6 +1691,8 @@ def geometricKernelDegreeLinkLedgerAt (n m n' m' : Int) :
     I.GeometricKernelDegreeLinkLedger n m n' m' where
   source := I.geometricKernelValueLedgerAt n m
   target := I.geometricKernelValueLedgerAt n' m'
+  source_source := rfl
+  target_source := rfl
   link := I.primeStripLinkAt n m n' m'
   dLink := I.dPrimeStripLinkAt n m n' m'
   link_source := rfl
@@ -1812,21 +1883,20 @@ theorem geometricColumnActionLedger_kernel (n : Int) (k : Nat)
     (x : ((I.geometricColumnActionLedger n k).column.geometric.column.dStage.strip i).Pi v) :
     x ∈ (I.geometricColumnActionLedger n k).column.geometric.kernel i v ↔
       ((I.geometricColumnActionLedger n k).column.geometric.column.dStage.strip i).proj v x = 1 := by
-  rw [geometricColumnActionLedger_column,
-    geometricColumnPacketKernelLedger_geometric,
-    geometricColumnKernelLedger_kernel]
-  rfl
+  change x ∈ I.geometricAt n (i.1 : Int) v ↔
+    ((I.dPrimeStripAt n (i.1 : Int)).proj v) x = 1
+  exact I.geometricAt_mem_iff n (i.1 : Int) v x
 
 theorem geometricColumnActionLedger_packet_q (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.geometricColumnActionLedger n k).column.packet i |>.q > 0 :=
+    ((I.geometricColumnActionLedger n k).column.packet i).q > 0 :=
   (I.geometricColumnActionLedger n k).column.q_positive i
 
 theorem geometricColumnActionLedger_packet_log_volume (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.geometricColumnActionLedger n k).column.packet i |>.logVolume =
+    ((I.geometricColumnActionLedger n k).column.packet i).logVolume =
       ∑ j : SignedLabel l.value,
-        Real.log ((I.geometricColumnActionLedger n k).column.packet i |>.scale j) :=
+        Real.log (((I.geometricColumnActionLedger n k).column.packet i).scale j) :=
   (I.geometricColumnActionLedger n k).column.log_volume i
 
 theorem geometricColumnActionLedger_link_degree (n : Int) (k : Nat)
@@ -1903,21 +1973,21 @@ theorem geometricColumnProcessionLedger_stage_packet (n : Int) (k : Nat)
 
 theorem geometricColumnProcessionLedger_stage_q (n : Int) (k : Nat)
     (i j : Fin (k + 1)) :
-    ((I.geometricColumnProcessionLedger n).stage k).column.packet i |>.q =
-      ((I.geometricColumnProcessionLedger n).stage k).column.packet j |>.q := by
+    (((I.geometricColumnProcessionLedger n).stage k).column.packet i).q =
+      (((I.geometricColumnProcessionLedger n).stage k).column.packet j).q := by
   exact I.geometricColumnPacketKernelLedger_q_transport n k i j
 
 theorem geometricColumnProcessionLedger_stage_scale (n : Int) (k : Nat)
     (i j : Fin (k + 1)) (x : SignedLabel l.value) :
-    ((I.geometricColumnProcessionLedger n).stage k).column.packet i |>.scale x =
-      ((I.geometricColumnProcessionLedger n).stage k).column.packet j |>.scale x := by
+    (((I.geometricColumnProcessionLedger n).stage k).column.packet i).scale x =
+      (((I.geometricColumnProcessionLedger n).stage k).column.packet j).scale x := by
   exact I.geometricColumnPacketKernelLedger_scale_transport n k i j x
 
 theorem geometricColumnProcessionLedger_stage_log_volume (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    ((I.geometricColumnProcessionLedger n).stage k).column.packet i |>.logVolume =
+    (((I.geometricColumnProcessionLedger n).stage k).column.packet i).logVolume =
       ∑ j : SignedLabel l.value,
-        Real.log (((I.geometricColumnProcessionLedger n).stage k).column.packet i |>.scale j) := by
+        Real.log ((((I.geometricColumnProcessionLedger n).stage k).column.packet i).scale j) := by
   exact I.geometricColumnPacketKernelLedger_log_volume n k i
 
 theorem geometricColumnProcessionLedger_inclusion_source (n : Int)
@@ -1929,7 +1999,7 @@ theorem geometricColumnProcessionLedger_inclusion_source (n : Int)
 
 theorem geometricColumnProcessionLedger_inclusion_kernel (n : Int)
     {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V)
-    (x : ((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i.Pi v) :
+    (x : (((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i).Pi v) :
     x ∈ ((I.geometricColumnProcessionLedger n).stage k).kernel i v ↔
       (((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v x) ∈
         ((I.geometricColumnProcessionLedger n).stage r).kernel
@@ -1938,12 +2008,12 @@ theorem geometricColumnProcessionLedger_inclusion_kernel (n : Int)
 
 theorem geometricColumnProcessionLedger_inclusion_projection (n : Int)
     {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V)
-    (x : ((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i.Pi v) :
-    ((I.geometricColumnProcessionLedger n).stage r).column.dStage.strip
-        ((I.geometricColumnProcessionLedger n).inclusion_map h i).proj v
+    (x : (((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i).Pi v) :
+    (((I.geometricColumnProcessionLedger n).stage r).column.dStage.strip
+        ((I.geometricColumnProcessionLedger n).inclusion_map h i)).proj v
         (((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoPi v x) =
       ((I.columnProcessionSourceLedger n).inclusion_d_component h i).isoG v
-        (((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i.proj v x) := by
+        ((((I.geometricColumnProcessionLedger n).stage k).column.dStage.strip i).proj v x) := by
   exact ((I.columnProcessionSourceLedger n).inclusion_d_component h i).compat_apply v x
 
 theorem geometricColumnProcessionLedger_inclusion_natural (n : Int)
@@ -1959,12 +2029,12 @@ theorem geometricColumnProcessionLedger_inclusion_natural (n : Int)
   I.geometricColumnProcessionLedger_natural n h i j
 
 theorem geometricColumnProcessionLedger_inclusion_degree (n : Int)
-    {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V)
-    (x : ∀ v, ((I.geometricColumnProcessionLedger n).stage k).column.fStage.strip i.Mon v) :
-    ((I.geometricColumnProcessionLedger n).stage r).column.fStage.strip
-        ((I.geometricColumnProcessionLedger n).inclusion_map h i).totalDegree Finset.univ
+    {k r : Nat} (h : k ≤ r) (i : Fin (k + 1)) (v : V) [Fintype V]
+    (x : ∀ v, (((I.geometricColumnProcessionLedger n).stage k).column.fStage.strip i).Mon v) :
+    (((I.geometricColumnProcessionLedger n).stage r).column.fStage.strip
+        ((I.geometricColumnProcessionLedger n).inclusion_map h i)).totalDegree Finset.univ
         (fun v => ((I.columnProcessionSourceLedger n).inclusion_component h i).isoMon v (x v)) =
-      ((I.geometricColumnProcessionLedger n).stage k).column.fStage.strip i.totalDegree Finset.univ x := by
+      (((I.geometricColumnProcessionLedger n).stage k).column.fStage.strip i).totalDegree Finset.univ x := by
   apply Finset.sum_congr rfl
   intro w hw
   exact ((I.columnProcessionSourceLedger n).inclusion_component h i).compatDegree w (x w)
@@ -1977,10 +2047,10 @@ structure GeometricKernelBoundarySummary (P : H2SpokePermutation I) where
   procession : ∀ n, I.GeometricColumnProcessionLedger n
   translation : ∀ a n k, I.GeometricTranslationKernelLedger a n k
   spoke : ∀ n k, I.GeometricSpokeKernelLedger P n k
-  point_refl : ∀ n m, (point n m).link =
-    DPrimeStripEquiv.refl (point n m).source.kernel.dStrip
-  column_cardinality : ∀ n k, Fintype.card (Fin (k + 1)) = k + 1
-  top_cardinality : ∀ n, Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1
+  point_refl : ∀ n m, HEq (point n m).link
+    (DPrimeStripEquiv.refl (point n m).source.kernel.dStrip)
+  column_cardinality : ∀ (n : Int) (k : Nat), Fintype.card (Fin (k + 1)) = k + 1
+  top_cardinality : ∀ (n : Int), Fintype.card (Fin (lStar l.value + 1)) = lStar l.value + 1
 
 def geometricKernelBoundarySummary (P : H2SpokePermutation I) :
     I.GeometricKernelBoundarySummary P where
@@ -1991,13 +2061,13 @@ def geometricKernelBoundarySummary (P : H2SpokePermutation I) :
   spoke := I.geometricSpokeKernelLedger P
   point_refl := by
     intro n m
-    exact I.geometricKernelPointLinkLedgerAt_refl n m
+    exact heq_of_eq (I.geometricKernelPointLinkLedgerAt_refl n m)
   column_cardinality := by
     intro n k
-    exact I.geometricColumnActionLedger n k |>.cardinality
+    exact (I.geometricColumnActionLedger n k).cardinality
   top_cardinality := by
     intro n
-    exact I.geometricColumnProcessionLedger_top_cardinality n
+    exact geometricColumnProcessionLedger_top_cardinality n
 
 @[simp] theorem geometricKernelBoundarySummary_point
     (P : H2SpokePermutation I) (n m : Int) :
@@ -2011,10 +2081,10 @@ def geometricKernelBoundarySummary (P : H2SpokePermutation I) :
 
 theorem geometricKernelBoundarySummary_point_refl
     (P : H2SpokePermutation I) (n m : Int) :
-    (I.geometricKernelBoundarySummary P).point n m |>.link =
+    ((I.geometricKernelBoundarySummary P).point n m).link =
       DPrimeStripEquiv.refl
         ((I.geometricKernelBoundarySummary P).point n m).source.kernel.dStrip :=
-  (I.geometricKernelBoundarySummary P).point_refl n m
+  eq_of_heq ((I.geometricKernelBoundarySummary P).point_refl n m)
 
 theorem geometricKernelBoundarySummary_column_cardinality
     (P : H2SpokePermutation I) (n : Int) (k : Nat) :
@@ -2053,8 +2123,8 @@ theorem geometricKernelBoundarySummary_spoke_component_bijective
 theorem geometricKernelBoundarySummary_translation_packet
     (P : H2SpokePermutation I) (a n : Int) (k : Nat)
     (i : Fin (k + 1)) :
-    (I.geometricTranslationKernelLedger a n k).base.column.packet i |>.q =
-      (I.geometricTranslationKernelLedger a n k).target.column.packet i |>.q :=
+    ((I.geometricTranslationKernelLedger a n k).base.column.packet i).q =
+      ((I.geometricTranslationKernelLedger a n k).target.column.packet i).q :=
   I.geometricTranslationKernelLedger_q a n k i
 
 theorem geometricKernelBoundarySummary_spoke_packet
@@ -2062,7 +2132,7 @@ theorem geometricKernelBoundarySummary_spoke_packet
     (i : Fin (k + 1)) :
     (I.family.theater
       (P.permutation ((I.geometricSpokeKernelLedger P n k).base.column.source i))).thetaPacket.q =
-      (I.geometricSpokeKernelLedger P n k).base.column.packet i |>.q :=
+      ((I.geometricSpokeKernelLedger P n k).base.column.packet i).q :=
   I.geometricSpokeKernelLedger_packet_q_transport P n k i
 
 end OriginalInput

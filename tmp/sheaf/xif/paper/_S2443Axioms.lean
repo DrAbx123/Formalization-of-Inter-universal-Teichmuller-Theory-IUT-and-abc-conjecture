@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2443H1H2ClosedActual
+#print axioms LeanFormal.IUT.XiFPaper.S2443H1H2ClosedActual.S2443ActualCompatibleRepresentativeLift
+#print axioms LeanFormal.IUT.XiFPaper.S2443H1H2ClosedActual.S2443ActualH2Comparison_surjective
+#print axioms LeanFormal.IUT.XiFPaper.S2443H1H2ClosedActual.S2443S2441Lift
+#print axioms LeanFormal.IUT.XiFPaper.S2443H1H2ClosedActual.S2443ActualH1Lim1_subsingleton

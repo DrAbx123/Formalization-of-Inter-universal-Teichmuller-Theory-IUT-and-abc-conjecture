@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24BaseProviderRestatedActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BaseProviderRestatedActual.s3135_target_of_betaAvoidingBelyiBase
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24BaseProviderRestatedActual.s3135_restatedConclusion_of_providers

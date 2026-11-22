@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2537ConcreteLocalizationActual
+#print axioms LeanFormal.IUT.XiFPaper.S2537ConcreteLocalizationActual.hAL_inj
+#print axioms LeanFormal.IUT.XiFPaper.S2537ConcreteLocalizationActual.liftCL
+#print axioms LeanFormal.IUT.XiFPaper.S2537ConcreteLocalizationActual.instIsScalarTowerCSL

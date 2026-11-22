@@ -1,0 +1,7 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceCompletionQuotientPow
+
+open LeanFormal.IUT.NumberFieldFinitePlace
+
+#print axioms algebraMap_mem_maximalIdeal_pow_iff
+#print axioms exists_algebraMap_sub_mem_maximalIdeal_pow
+#print axioms adicCompletionQuotientPowEquiv

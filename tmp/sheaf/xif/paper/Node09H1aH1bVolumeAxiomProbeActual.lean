@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.Node09H1aGenericCoordinateActual
+import tmp.sheaf.xif.paper.Node09H1aProductFormulaActual
+import tmp.sheaf.xif.paper.Node09H1bVolumeActual
+import tmp.sheaf.xif.paper.Node09H1bTensorVolumeActual
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1aGenericCoordinateActual.submodule_eq_pi_coord
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1aGenericCoordinateActual.maximalIdeal_pow_eq_span_uniformizer_pow
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1aProductFormulaActual.submodule_eq_pi_coord
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bVolumeActual.residueDegree_pos
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bTensorVolumeActual.h1b_signed_volume_actual
+#print axioms LeanFormal.IUT.XiFPaper.Node09H1bTensorVolumeActual.h1b_signed_volume_eq_relativeHaarLog

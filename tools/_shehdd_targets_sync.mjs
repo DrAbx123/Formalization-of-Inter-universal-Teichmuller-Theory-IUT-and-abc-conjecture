@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
+const ROOT='D:/lean';
+const PAPER='tmp/sheaf/xif/paper';
+const extra=ROOT+'/dag/watchdog/extra-targets.txt';
+const cur=readFileSync(extra,'utf8').split('\n').map(l=>l.trim()).filter(Boolean);
+const nonProbe=cur.filter(l=>!/Probe|probe/.test(l));
+const auto=readdirSync(ROOT+'/'+PAPER).filter(f=>f.startsWith('_AutoProbe_')).map(f=>PAPER+'/'+f);
+const set=new Set([...nonProbe,...auto]);
+const out=[...set].sort();
+writeFileSync(extra,out.join('\n')+'\n');
+console.log('non_probe='+nonProbe.length+' auto_probes='+auto.length+' total='+out.length);

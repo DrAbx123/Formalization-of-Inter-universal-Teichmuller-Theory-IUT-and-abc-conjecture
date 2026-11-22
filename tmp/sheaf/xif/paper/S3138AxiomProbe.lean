@@ -1,0 +1,44 @@
+import tmp.sheaf.xif.paper.S3129SourceP1BoundariesActual
+import tmp.sheaf.xif.paper.S3129SourceP2BoundariesActual
+import tmp.sheaf.xif.paper.S3138SourceStepXIActual
+import tmp.sheaf.xif.paper.S3138SourceStepXIBoundaryActual
+import tmp.sheaf.xif.paper.S3138SourceParametricStepXIActual
+import tmp.sheaf.xif.paper.S3138StepXIInclusionResidualActual
+import tmp.sheaf.xif.paper.S3138SourceSHETransportLawsActual
+import tmp.sheaf.xif.paper.S3138SourceInternalWiringStepXIActual
+import tmp.sheaf.xif.paper.S3138SourceRoundtripRealizationActual
+
+/-!
+# S3138: axiom probe for the stepxi stream deliverables
+
+Prints the transitive axiom dependencies of the main declarations.  The
+expected output for every declaration below is a subset of
+`[propext, Classical.choice, Quot.sound]` (the three standard axioms); any
+`sorryAx` or custom axiom appearing here is a failure of the stream.
+-/
+
+open LeanFormal.IUT
+
+#print axioms LeanFormal.IUT.XiFPaper.S3129SourceP1BoundariesActual.volumeBoundaryOfRealization
+#print axioms LeanFormal.IUT.XiFPaper.S3129SourceP1BoundariesActual.volumeBoundaryOfRealization_lattice_bound
+#print axioms LeanFormal.IUT.XiFPaper.S3129SourceP1BoundariesActual.lgpBoundaryOfSourceData
+#print axioms LeanFormal.IUT.XiFPaper.S3129SourceP2BoundariesActual.S3129KummerBoundaryOfActual
+#print axioms LeanFormal.IUT.XiFPaper.S3129SourceP2BoundariesActual.S3129_corollary23_permutation
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceProcessionCoreActual.sourceStepXICore
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceProcessionProfileActual.sourceStepXIProfile
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceProcessionCarrierActual.sourceStepXIInput
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceStepXIActual.sourceStepXIWall_output_is_run
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceStepXIActual.sourceStepXIBoundaryV2Hull_contract
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceStepXIActual.sourceStepXIBoundaryV2NonnegHull_contract
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceStepXIBoundaryActual.sourceStepXIBoundaryV1Hull_contract
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceStepXIBoundaryActual.sourceStepXICertificate_profile_eq_theta
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceParametricStepXIActual.sourceStepXIAssemblyActual_contract
+#print axioms LeanFormal.IUT.XiFPaper.S3138StepXIInclusionResidualActual.SignedHullRealization.xifInclusion_iff_CTheta
+#print axioms LeanFormal.IUT.XiFPaper.S3138StepXIInclusionResidualActual.signedData_not_universal
+#print axioms LeanFormal.IUT.XiFPaper.S3138StepXIInclusionResidualActual.contractOfSignedHullRealization_conclusion
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceSHETransportLawsActual.transport_refl_refl_sheStatement
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceSHETransportLawsActual.sheSlot_evidence_transport_refl
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceInternalWiringStepXIActual.sourceStepXIInput_target_q_eq_hodge_q
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceInternalWiringStepXIActual.sourceStepXIInput_base_volume_eq_hodge_scale_sum
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceRoundtripRealizationActual.sourceStepXI_roundtripSpec_nonempty_iff_injective
+#print axioms LeanFormal.IUT.XiFPaper.S3138SourceRoundtripRealizationActual.sourceStepXI_roundtripSpec_implies_injective

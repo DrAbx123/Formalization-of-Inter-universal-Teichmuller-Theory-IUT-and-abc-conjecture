@@ -1,0 +1,10 @@
+import Mathlib
+open MeasureTheory
+#check Padic.unitEquiv
+#check Padic.unitCoeff
+#check Padic.unitOfInt
+#check Padic.unit_coeff
+#check Padic.norm_unit
+#check Padic.norm
+#check Padic.norm_eq_pow
+#check Padic.val

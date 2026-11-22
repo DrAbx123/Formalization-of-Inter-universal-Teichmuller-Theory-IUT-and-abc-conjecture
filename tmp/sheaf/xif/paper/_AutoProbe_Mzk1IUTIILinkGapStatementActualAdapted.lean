@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1IUTIILinkGapStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIILinkGapStatementActual.IUTIIDataProjection
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIILinkGapStatementActual.FrobenioidEtThLinkCompatibility
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IUTIILinkGapStatementActual.LogShellTransport

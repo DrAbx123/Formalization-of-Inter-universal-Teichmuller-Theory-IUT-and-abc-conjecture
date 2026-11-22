@@ -1,0 +1,18 @@
+import tmp.sheaf.xif.paper.S1735GeometricFiberActual
+
+open LeanFormal.IUT.XiFPaper.S1735GeometricFiberActual
+open LeanFormal.IUT.XiFPaper.S1735GeometricFiberActual.Paper
+
+#check Paper.S1735BasePoint
+#check Paper.S1735Fiber
+#check Paper.S1735FiberMap
+#check Paper.S1735GeometricFiberFunctor
+#check Paper.S1735GeometricFiberFunctor_obj_obj
+#check Paper.S1735GeometricFiberFunctor_map_apply
+#check Paper.geometricFiberFunctorOfEtaleFundamentalGroup
+#check Paper.S1735FiberFunctorOfStrictData
+#check Paper.S1735GaloisCategoryOfStrictData
+#check Paper.S1735SmallRawCoverDataRequired
+#check Paper.S1735CoverCategoryOfSmallRawData
+#check Paper.S1735GeometricFiberFintypeRequired
+#check Paper.S1735StrictDataRequired

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1BetaAvoidingThirdPointActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingThirdPointActual.exists_card_image_lt_beta_of_third_point
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BetaAvoidingThirdPointActual.thirdPointClaim_false

@@ -1,0 +1,5 @@
+
+## 2026-11-11 02:40 — 【艾比】A437 IUTI/IUTII declaration-level JSON delivered: coord/target-chain.iuti-ii.json
+
+- File coord/target-chain.iuti-ii.json (32691 B; JSON validated: nodes=31, edges=37). Schema per Lead A437: nodes with id/kind/title/status/files/declarations/note; edges from=depender -> to=dependency with kind statement|proof|interface|gap. Coverage: Hodge theater (Core/Family/ThetaLinkGraph/Definition31Carriers/GeometricCore), InitialTheta (Data/Definition31/Places/Torsion), Frobenioid (SourceModel/CurveGalois/TateUniformization/ThetaLogShell/Transport/CompletionLocal), Kummer (LogShellCarrier/LogShellAbsTopIII/Packets/Classes/Absolute GAP/MonoAnalytic/SourceThetaPilot NAMED), Theta (EtaleThetaQuotient/ThetaLink/ConcreteBridge), IUTIII interfaces (EtThRealization/LogShellHull/Cor312) and xif consumers (AbsTopIII05Refined/AbsTopIII01 PROVED; EtTh rows CONDITIONAL).
+- Only files verified by Test-Path and declarations verified by Select-String greps are listed; nodes without enumerated declarations say so in note. Statuses TREE_ASSET not re-built (per survey convention); JSON validated by ConvertFrom-Json; no gate edit; pins 14041.

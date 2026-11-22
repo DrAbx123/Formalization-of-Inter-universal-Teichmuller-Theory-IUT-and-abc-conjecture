@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2535LocalizedIntegralClosureActual
+#print axioms LeanFormal.IUT.XiFPaper.S2535LocalizedIntegralClosureActual.isIntegralClosure_localization

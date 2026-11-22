@@ -1,0 +1,9 @@
+import Mathlib.AlgebraicGeometry.Sites.Proetale
+import Mathlib.CategoryTheory.Sites.SubcanonicalOver
+open AlgebraicGeometry CategoryTheory GrothendieckTopology
+#check AlgebraicGeometry.etaleTopology_le_proetaleTopology
+#check proetaleTopology.subcanonical
+#check GrothendieckTopology.Subcanonical.of_le
+#check Subcanonical.isSheaf_of_isRepresentable
+#check Presheaf.IsSheaf
+#check Presheaf.isSheaf_of_iso_iff

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1HullAmplCertificateEquivActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HullAmplCertificateEquivActual.ampl_supply_iff_real_bound

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.AbsTopIII12AssetMapActual
+import tmp.sheaf.xif.paper.S3132ThetaSideBundleWithDataActual
+import tmp.sheaf.xif.paper.S3132ThetaSideGap2AnchorRecordActual
+import tmp.sheaf.xif.paper.AbsTopIII13PsiCnsAnchorActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideBundleWithDataActual.ThetaSideBundleWithData.canonicalReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideBundleWithDataActual.ThetaSideBundleWithData.comparisonData_corollary312

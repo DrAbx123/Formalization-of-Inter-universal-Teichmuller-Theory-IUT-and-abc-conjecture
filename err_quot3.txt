@@ -1,0 +1,7 @@
+TateCurvesTheta\TateCurve\Quotient.lean:85:6: error(lean.unknownIdentifier): Unknown constant `TateCurvesTheta.TateDatum.toAnalyticQuotient_eq_iff`
+TateCurvesTheta\TateCurve\Quotient.lean:84:63: error: unsolved goals
+K : Type u_1
+inst✝ : NormedField K
+t : TateParameter K
+u : Kˣ
+⊢ t.toAnalyticQuotient (t.q * u) = t.toAnalyticQuotient u

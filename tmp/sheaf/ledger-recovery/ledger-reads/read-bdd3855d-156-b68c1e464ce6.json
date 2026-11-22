@@ -1,0 +1,1 @@
+{"type":"tool/ptc-dispatch-start","seq":325,"time":1793511392545,"data":{"rootCallId":"call_00_6yVYkYI7V01SCDQGQSVm6075","parentCallId":"call_00_6yVYkYI7V01SCDQGQSVm6075","subCallId":"call_00_6yVYkYI7V01SCDQGQSVm6075:ptc:1","name":"grep","arguments":{"pattern":"S1904|S1902|S1880|S1913|average","path":"D:\\lean\\AUDIT_LEDGER.md"}}}

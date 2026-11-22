@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.GenEll01BasicActual
+import tmp.sheaf.xif.paper.GenEll05Theorem21Actual
+import tmp.sheaf.xif.paper.GenEll08MainReductionActual
+import tmp.sheaf.xif.paper.GenEll00NamingActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05Theorem21Actual.theorem21_i_implies_ii
+#print axioms LeanFormal.IUT.XiFPaper.GenEll08MainReductionActual.genEll_mainReduction_shape
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01BasicActual.S3131GenEllBasicCitations_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEll05Theorem21Actual.S3131GenEllTheorem21Citations_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEll00NamingActual.GenEllNamingMap_length

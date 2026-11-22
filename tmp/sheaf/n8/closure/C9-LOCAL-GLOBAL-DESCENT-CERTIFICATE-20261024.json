@@ -1,0 +1,238 @@
+{
+  "task": "C9-LOCAL-GLOBAL-DESCENT-ATTACK-20261024",
+  "scope": "Exact arithmetic line/Frobenioid submodel; not full initial Theta-data",
+  "coordinate_unit": "log(3)",
+  "places": [
+    "3",
+    "infinity"
+  ],
+  "local_only_comparison": {
+    "source": [
+      -1,
+      0
+    ],
+    "target": [
+      -2,
+      0
+    ],
+    "frobenius_degree": 1,
+    "local_multiplier_divisor": [
+      1,
+      0
+    ],
+    "effective_zero_divisor": [
+      0,
+      0
+    ],
+    "defect": "1",
+    "source_volume": "-1",
+    "target_volume": "-2"
+  },
+  "global_linear_dual_obstruction": {
+    "dual_degree_vector": [
+      1,
+      1
+    ],
+    "principal_generator": [
+      1,
+      -1
+    ],
+    "dual_on_principal_generator": 0,
+    "required_degree_of_effective_divisor": -1,
+    "effective_divisor_degree_lower_bound": 0
+  },
+  "frobenius_degree_two_arrow": {
+    "source": [
+      -1,
+      0
+    ],
+    "target": [
+      -2,
+      0
+    ],
+    "frobenius_degree": 2,
+    "local_multiplier_divisor": [
+      0,
+      0
+    ],
+    "effective_zero_divisor": [
+      0,
+      0
+    ],
+    "defect": "0",
+    "source_volume": "-1",
+    "target_volume": "-2"
+  },
+  "archimedean_repair": {
+    "source": [
+      -1,
+      0
+    ],
+    "target": [
+      -2,
+      1
+    ],
+    "frobenius_degree": 1,
+    "local_multiplier_divisor": [
+      1,
+      -1
+    ],
+    "effective_zero_divisor": [
+      0,
+      0
+    ],
+    "defect": "0",
+    "source_volume": "-1",
+    "target_volume": "-1"
+  },
+  "composition_with_global_isomorphism": {
+    "source": [
+      -1,
+      0
+    ],
+    "target": [
+      -3,
+      1
+    ],
+    "frobenius_degree": 1,
+    "local_multiplier_divisor": [
+      2,
+      -1
+    ],
+    "effective_zero_divisor": [
+      0,
+      0
+    ],
+    "defect": "1",
+    "source_volume": "-1",
+    "target_volume": "-2"
+  },
+  "composition_with_frobenius_degree_two": {
+    "source": [
+      -1,
+      0
+    ],
+    "target": [
+      -4,
+      0
+    ],
+    "frobenius_degree": 2,
+    "local_multiplier_divisor": [
+      2,
+      0
+    ],
+    "effective_zero_divisor": [
+      0,
+      0
+    ],
+    "defect": "2",
+    "source_volume": "-1",
+    "target_volume": "-4"
+  },
+  "normalization_checks": [
+    {
+      "tensor_power": 1,
+      "extension_degree": 1,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 1,
+      "extension_degree": 2,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 1,
+      "extension_degree": 3,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 1,
+      "extension_degree": 6,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 2,
+      "extension_degree": 1,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 2,
+      "extension_degree": 2,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 2,
+      "extension_degree": 3,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 2,
+      "extension_degree": 6,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 3,
+      "extension_degree": 1,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 3,
+      "extension_degree": 2,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 3,
+      "extension_degree": 3,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 3,
+      "extension_degree": 6,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 5,
+      "extension_degree": 1,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 5,
+      "extension_degree": 2,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 5,
+      "extension_degree": 3,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 5,
+      "extension_degree": 6,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 12,
+      "extension_degree": 1,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 12,
+      "extension_degree": 2,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 12,
+      "extension_degree": 3,
+      "normalized_defect": "1"
+    },
+    {
+      "tensor_power": 12,
+      "extension_degree": 6,
+      "normalized_defect": "1"
+    }
+  ],
+  "all_assertions_passed": true,
+  "infinite_tower_claim": "Proved in natural language; not inferred from enumeration",
+  "actual_IUT_refutation_certificate": false,
+  "target_accepted": false
+}

@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIConstructionIndJointActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIConstructionIndJointActual.stepXI_ind_joint

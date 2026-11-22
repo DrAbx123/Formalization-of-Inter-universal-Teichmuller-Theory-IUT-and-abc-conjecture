@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2602S1322GapDependencyActual
+#print axioms LeanFormal.IUT.XiFPaper.S2602S1322GapDependencyActual.s2602_orbicurve_actual
+#print axioms LeanFormal.IUT.XiFPaper.S2602S1322GapDependencyActual.S2602GapOfFields

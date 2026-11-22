@@ -1,0 +1,2 @@
+import tmp.sheaf.n8.closure.SourceDegreeHullBridge
+#print axioms LeanFormal.IUT.N8Closure.C8.sourceDegreeResidual_iff_actualDegree_eq_BHull_of_readout

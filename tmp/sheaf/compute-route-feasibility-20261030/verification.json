@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-30T09:38:09.384438+00:00",
+  "pass": true,
+  "local_links_checked": 29,
+  "source_snapshots_checked": 35,
+  "errors": [],
+  "prior_reports": [
+    {
+      "task": "gap-exploration-20261030",
+      "report_bytes_unchanged": true
+    },
+    {
+      "task": "supplement-gap-priorities-20261030",
+      "report_bytes_unchanged": true
+    }
+  ],
+  "dag_scope": "New node and immediate dependencies only",
+  "network_links": "Cited from this survey; no claim of a second end-of-task URL availability test",
+  "mathematical_and_Lean_verification": "not_run",
+  "solver_execution": "not_run",
+  "target_accepted": false
+}

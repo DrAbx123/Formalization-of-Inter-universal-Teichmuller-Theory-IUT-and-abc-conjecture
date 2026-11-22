@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG90MathlibAuditActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AG90MathlibAuditActual.AGMathlibCapabilityMatrix
+#print axioms LeanFormal.IUT.XiFPaper.AG90MathlibAuditActual.AGMathlibCapabilityMatrix_length
+#print axioms LeanFormal.IUT.Audit.AGMathlibCapabilityMatrixRecord

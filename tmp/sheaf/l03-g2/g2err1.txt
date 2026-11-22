@@ -1,0 +1,14 @@
+tmp\sheaf\l03-g2\SourceG2Statement.lean:60:16: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  PreGaloisCategory (Iut.OrbicurveFiniteEtaleCover X)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+tmp\sheaf\l03-g2\SourceG2Statement.lean:62:0: warning: Definition `SHEAF.L03.SourceG2Statement.preGaloisCategoryOfSourceG2` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:63:4: warning: declaration uses `sorry`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:62:0: warning: Definition `preGaloisCategoryOfSourceG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:68:0: warning: Definition `SHEAF.L03.SourceG2Statement.galoisCategoryOfSourceG2` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:70:4: warning: declaration uses `sorry`
+tmp\sheaf\l03-g2\SourceG2Statement.lean:68:0: warning: Definition `galoisCategoryOfSourceG2` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

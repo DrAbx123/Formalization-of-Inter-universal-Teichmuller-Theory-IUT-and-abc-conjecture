@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2921C3TensorBlockScalingGenericActual
+#print axioms LeanFormal.IUT.XiFPaper.S2921C3TensorBlockScalingGenericActual.c3TensorBlock_scaling_generic

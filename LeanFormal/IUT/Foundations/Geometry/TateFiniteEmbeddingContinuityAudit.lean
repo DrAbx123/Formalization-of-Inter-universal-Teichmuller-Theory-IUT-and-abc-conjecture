@@ -1,0 +1,8 @@
+import LeanFormal.IUT.Foundations.Geometry.TateFiniteEmbeddingContinuity
+
+#check LinearMap.continuous_of_finiteDimensional
+#check AlgHom.toLinearMap
+#check NormedAlgebra
+#check IUT.TateFiniteEmbeddingContinuity.continuous_of_finiteDimensional
+#print axioms IUT.TateFiniteEmbeddingContinuity.continuous_of_finiteDimensional
+

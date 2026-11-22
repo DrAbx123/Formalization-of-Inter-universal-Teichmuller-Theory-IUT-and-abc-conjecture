@@ -1,0 +1,26 @@
+import tmp.sheaf.xif.paper.S2125PresentationCoherentActual
+
+open LeanFormal.IUT.XiFPaper.S2125PresentationCoherentActual
+open LeanFormal.IUT.XiFPaper.S2123PresentationConeESActual
+
+#check S2125ExactFirstMissing
+#check S2125SufficientAPI
+#check S2125PresentationRecordedComparison_iff
+#check S2125PresentationConcreteTwist_iff_coherent
+#check S2125PresentationConcreteTwist_iff_strongTwist
+#check S2125PresentationConcreteTwistAt_iff_explicit
+#check S2125PresentationRequiredTwoCellAPI_iff_liftConeMor
+#check S2125PresentationConcreteTwist_of_requiredAndFull
+#check S2125PresentationStrongFieldAtLift_eq_refl
+#check S2125PresentationStrongFieldAtLift_indep
+#check S2125EssSurjOf_iff_strongFieldOfLift
+#check S2125PresentationConeEssSurj_iff_strongFieldOfLift
+#check S2125StrongPresentationTwist_for_strongTwoFullData
+
+#print axioms S2125ExactFirstMissing
+#print axioms S2125SufficientAPI
+#print axioms S2125PresentationRecordedComparison_iff
+#print axioms S2125PresentationConcreteTwist_iff_coherent
+#print axioms S2125PresentationRequiredTwoCellAPI_iff_liftConeMor
+#print axioms S2125PresentationStrongFieldAtLift_eq_refl
+#print axioms S2125EssSurjOf_iff_strongFieldOfLift

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3129RepresentableFiniteEtaleActual
+open LeanFormal.IUT.XiFPaper.S3129RepresentableFiniteEtaleActual
+#print axioms S3129RepresentableFiniteEtale
+#print axioms S3129Witness

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1P8ActualDisplayHeightActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8ActualDisplayHeightActual.p8ActualDisplayTerms_slack
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8ActualDisplayHeightActual.p8UniformHeightBound_iff_abc
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8ActualDisplayHeightActual.p8_node_actualDisplay_and_uniformBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P8ActualDisplayHeightActual.p8ActualGlobalData_nonempty

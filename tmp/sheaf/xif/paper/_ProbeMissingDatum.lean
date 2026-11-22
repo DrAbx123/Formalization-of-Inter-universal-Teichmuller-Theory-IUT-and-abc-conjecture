@@ -1,0 +1,10 @@
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.SourceQlThetaLineBundleFromCurve
+open LeanFormal.IUT
+#print axioms LeanFormal.IUT.sourceThetaLineBundleMissingData_length
+#print axioms LeanFormal.IUT.sourceThetaLineBundle_boundary
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.curveLineBundle
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.thetaObjectATheta
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.geometricThetaDivisor
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.unitComparisonMqMTheta
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.muTwoLDeckRootAction
+#check LeanFormal.IUT.SourceThetaLineBundleMissingDatum.conjugateSynchronization

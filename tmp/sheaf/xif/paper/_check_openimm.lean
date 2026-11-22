@@ -1,0 +1,6 @@
+import Mathlib.AlgebraicGeometry.OpenImmersion
+open AlgebraicGeometry CategoryTheory
+#check IsOpenImmersion.lift
+#check IsOpenImmersion.lift_fac
+#check IsOpenImmersion.isOpen_range
+#check IsOpenImmersion.range_pullback_to_base_of_left

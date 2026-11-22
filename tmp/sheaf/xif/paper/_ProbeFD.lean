@@ -1,0 +1,3 @@
+import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+#check LinearEquiv.finiteDimensional
+#check LinearEquiv.finiteDimensional_iff

@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S1898EllipticInvolutionActual
+open LeanFormal.IUT.XiFPaper.S1898EllipticInvolutionActual
+open LeanFormal.IUT.XiFPaper.S1886D9OrbicurveActual
+#check S1898EllipticInvolution
+#check S1898EllipticInvolution_ne_id
+#check S1898SignActionPackaging

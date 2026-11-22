@@ -1,0 +1,6 @@
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorFieldDecomposition
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorNontrivial
+#check not_isEmpty_of_nontrivial
+#check Nontrivial
+#check AlgEquiv.nontrivial
+#check Function.Surjective.nonempty

@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1E1ExplicitCounterexampleActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1ExplicitCounterexampleActual.explicitQCandidate_exponent_pos
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1ExplicitCounterexampleActual.explicitQCandidate_qSide_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E1ExplicitCounterexampleActual.bareE1_false_for_explicit_local_q

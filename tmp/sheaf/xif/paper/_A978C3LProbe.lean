@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1C3LogShellTensorLActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.C3LogShellTensorLActual
+#print axioms actualC3LogShellTensorRegionL_compact
+#print axioms actualC3LogShellTensorHaarL_isAddHaar
+#print axioms actualC3LogShellTensorHaarL_lt_top
+#print axioms actualC3LogShellTensorPacketL

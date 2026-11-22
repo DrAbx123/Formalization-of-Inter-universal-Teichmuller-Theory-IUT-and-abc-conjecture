@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2958HalfIQHullCertificateActual
+import tmp.sheaf.xif.paper.S2935HeightLeProcessionActual
+import tmp.sheaf.xif.paper.S2941HeightUpperToProcessionAttempt
+import tmp.sheaf.xif.paper.S2945S2935Equivalence
+open LeanFormal.IUT.XiFPaper.S2958HalfIQHullCertificateActual
+open LeanFormal.IUT.XiFPaper.S2935HeightLeProcessionActual
+open LeanFormal.IUT.XiFPaper.S2941HeightUpperToProcessionAttempt
+open LeanFormal.IUT.XiFPaper.S2945S2935Equivalence
+#print axioms S2958HalfIQHullCertificate
+#print axioms S2935_height_le_procession_of_elementary
+#print axioms S2941_heightUpper_to_procession

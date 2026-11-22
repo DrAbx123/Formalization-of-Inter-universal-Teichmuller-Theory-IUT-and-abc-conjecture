@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2549FunctorAssemblyActual
+#print axioms LeanFormal.IUT.XiFPaper.S2547CorrectedFunctorFullActual.S2547S2519Full
+#print axioms LeanFormal.IUT.XiFPaper.S2548S2519FullyFaithfulActual.S2548FullyFaithful
+#print axioms LeanFormal.IUT.XiFPaper.S2549FunctorAssemblyActual.S2549S2519Functor_fullyFaithful

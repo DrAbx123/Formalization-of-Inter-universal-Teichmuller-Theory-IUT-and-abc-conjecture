@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2936ThetaUpperConstantActual
+import tmp.sheaf.xif.paper.S2944ThetaLinkRealization
+open LeanFormal.IUT.XiFPaper.S2936ThetaUpperConstantActual
+open LeanFormal.IUT.XiFPaper.S2944ThetaLinkRealization
+#print axioms S2936_thetaUpper_constant_bound
+#print axioms S2944ThetaLinkRealization

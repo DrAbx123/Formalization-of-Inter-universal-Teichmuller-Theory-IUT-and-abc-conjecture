@@ -1,0 +1,76 @@
+
+/-! ## Uniqueness in the open ball -/
+
+section Unique
+
+variable (f : L[X]) (a : L)
+
+theorem deriv_eval_le_one (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (ha : ‖a‖ ≤ 1) :
+    ‖f.derivative.eval a‖ ≤ 1 :=
+  norm_derivative_eval_le_one hf ha
+
+theorem deriv_norm_pos (hnorm : ‖f.eval a‖ < ‖f.derivative.eval a‖ ^ 2) :
+    0 < ‖f.derivative.eval a‖ := by
+  have hpos : 0 < ‖f.derivative.eval a‖ ^ 2 := lt_of_le_of_lt (sq_nonneg _) hnorm
+  rcases (norm_nonneg (f.derivative.eval a)).lt_or_eq with h | h
+  · exact h
+  · rw [← h] at hpos
+    simp at hpos
+
+theorem root_integral (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (ha : ‖a‖ ≤ 1)
+    {b : L} (hb : ‖b - a‖ < ‖f.derivative.eval a‖) : ‖b‖ ≤ 1 := by
+  have h : ‖b‖ = ‖a + (b - a)‖ := by rw [add_sub_cancel]
+  rw [h]
+  refine (norm_add_le_max' _ _).trans (max_le ha ?_)
+  exact hb.le.trans (deriv_eval_le_one f a hf ha)
+
+theorem deriv_root_norm (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (ha : ‖a‖ ≤ 1)
+    (hnorm : ‖f.eval a‖ < ‖f.derivative.eval a‖ ^ 2)
+    {b : L} (hb : ‖b - a‖ < ‖f.derivative.eval a‖) :
+    ‖f.derivative.eval b‖ = ‖f.derivative.eval a‖ := by
+  have hb_int : ‖b‖ ≤ 1 := root_integral f a hf ha hb
+  have hdist : ‖f.derivative.eval b - f.derivative.eval a‖ ≤ ‖b - a‖ :=
+    norm_eval_sub_eval_le (f := f.derivative) (norm_coeff_derivative_le_one hf) hb_int ha
+  have hlt : ‖f.derivative.eval b - f.derivative.eval a‖ < ‖f.derivative.eval a‖ :=
+    lt_of_le_of_lt hdist hb
+  calc ‖f.derivative.eval b‖
+      = ‖f.derivative.eval a + (f.derivative.eval b - f.derivative.eval a)‖ := by ring_nf
+    _ = ‖f.derivative.eval a‖ := norm_add_eq_left_of_norm_lt hlt
+
+/-- Two roots in the open ball of radius ‖f'(a)‖ coincide. -/
+theorem eq_of_roots_close (hf : ∀ n, ‖f.coeff n‖ ≤ 1) (ha : ‖a‖ ≤ 1)
+    (hnorm : ‖f.eval a‖ < ‖f.derivative.eval a‖ ^ 2)
+    {b1 b2 : L} (h1 : f.eval b1 = 0) (h2 : f.eval b2 = 0)
+    (hb1 : ‖b1 - a‖ < ‖f.derivative.eval a‖)
+    (hb2 : ‖b2 - a‖ < ‖f.derivative.eval a‖) : b1 = b2 := by
+  by_contra hne
+  have hb1_int : ‖b1‖ ≤ 1 := root_integral f a hf ha hb1
+  have hb2_int : ‖b2‖ ≤ 1 := root_integral f a hf ha hb2
+  have hdiff_int : ‖b1 - b2‖ ≤ 1 :=
+    (norm_add_le_max' b1 (-b2)).trans (max_le hb1_int (by simpa using hb2_int))
+  have hb2_deriv : ‖f.derivative.eval b2‖ = ‖f.derivative.eval a‖ :=
+    deriv_root_norm f a hf ha hnorm hb2
+  obtain ⟨q, hqle, hq⟩ := exists_taylor_remainder hf b2 (b1 - b2) hb2_int hdiff_int
+  have hzero : f.derivative.eval b2 * (b1 - b2) + q * (b1 - b2) ^ 2 = 0 := by
+    have h := hq
+    rw [show b2 + (b1 - b2) = b1 by ring, h1] at h
+    rw [h2, zero_add] at h
+    linarith
+  have hd : b1 - b2 ≠ 0 := sub_ne_zero.mpr hne
+  have hfac : (f.derivative.eval b2 + q * (b1 - b2)) * (b1 - b2) = 0 := by
+    linear_combination hzero
+  have hderiv_eq : f.derivative.eval b2 = -(q * (b1 - b2)) := by
+    rcases eq_zero_or_eq_zero_of_mul_eq_zero hfac with h | h
+    · linear_combination h
+    · exact absurd h hd
+  have hbound : ‖f.derivative.eval a‖ ≤ ‖b1 - b2‖ := by
+    rw [← hb2_deriv, hderiv_eq, norm_neg, norm_mul]
+    exact (mul_le_mul_of_nonneg_right hqle (norm_nonneg _)).trans_eq (one_mul _)
+  have hupper : ‖b1 - b2‖ ≤ max ‖b1 - a‖ ‖b2 - a‖ := by
+    have h := norm_add_le_max' (b1 - a) (-(b2 - a))
+    rw [show (b1 - a) + -(b2 - a) = b1 - b2 by ring] at h
+    exact h
+  have hmax : max ‖b1 - a‖ ‖b2 - a‖ < ‖f.derivative.eval a‖ := max_lt hb1 hb2
+  exact absurd (le_trans hbound hupper) (not_le.mpr hmax)
+
+end Unique

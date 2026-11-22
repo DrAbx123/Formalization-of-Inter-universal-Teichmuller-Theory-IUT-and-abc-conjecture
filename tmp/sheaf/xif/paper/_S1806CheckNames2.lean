@@ -1,0 +1,7 @@
+import Mathlib.RingTheory.Idempotents
+
+open CategoryTheory
+
+#check AlgEquiv.prodQuotientOfIsIdempotentElem_apply
+#check AlgEquiv.prodQuotientOfIsIdempotentElem_apply_fst
+#check AlgEquiv.prodQuotientOfIsIdempotentElem_apply_snd

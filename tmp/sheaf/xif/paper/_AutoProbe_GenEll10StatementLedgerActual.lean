@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll10StatementLedgerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10StatementLedgerActual.GenEllStatementLedger
+#print axioms LeanFormal.IUT.XiFPaper.GenEll10StatementLedgerActual.GenEllStatementLedger_length
+#print axioms LeanFormal.IUT.Audit.GenEllStatementLedgerRecord

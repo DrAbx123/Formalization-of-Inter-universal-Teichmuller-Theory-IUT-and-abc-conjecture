@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteRegionReductionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteRegionReductionActual.UndilatedRegionBound
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteRegionReductionActual.regionVolumeFamily_of_raw
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteRegionReductionActual.regionVolumeFamily_of_undilated

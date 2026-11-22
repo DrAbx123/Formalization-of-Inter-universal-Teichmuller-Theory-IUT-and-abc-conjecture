@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2769RankTwoTorsionBasisActual
+import tmp.sheaf.xif.paper.S2769ProjAffineCardActual
+#print axioms LeanFormal.IUT.XiFPaper.S2769RankTwoTorsionBasisActual.S2769_rankTwoTorsionBasis
+#print axioms LeanFormal.IUT.XiFPaper.S2769RankTwoTorsionBasisActual.S2769_fiveTorsion_finrank
+#print axioms LeanFormal.IUT.XiFPaper.S2769ProjAffineCardActual.S2769_projective_fiveTorsion_card

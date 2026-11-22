@@ -1,0 +1,21 @@
+import LeanFormal.IUT.IUTIV.Estimates.ArithmeticDivisorDegree
+import LeanFormal.IUT.IUTIV.Estimates.Section1
+import LeanFormal.IUT.IUTIV.Estimates.Section2
+import LeanFormal.IUT.IUTIV.Estimates.StepVProcessionAverage
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceStepVRealBound
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.LocalFieldProductHull
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.HolomorphicHull.SourceHullCompactnessReduction
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotGlobalNormalization
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.Contract
+import LeanFormal.IUT.ABCBridge.Bridge.Cor312ToABCBridgeInterface
+
+#print axioms LeanFormal.IUT.IUTIV.Estimates.deg_pullback
+#print axioms LeanFormal.IUT.IUTIV.Estimates.ndeg_pullback
+#print axioms LeanFormal.IUT.IUTIV.Estimates.iutIVProp17
+#print axioms LeanFormal.IUT.IUTIV.Estimates.iutIVProp21ii_theta_two_sided_eventually
+#print axioms LeanFormal.IUT.IUTIV.StepVProcessionAverage.processionAverage_le
+#print axioms LeanFormal.IUT.NumberFieldFinitePlace.stepVPaperLogVolumeBound
+#print axioms LeanFormal.IUT.LocalFieldProductHull.measure_hull_lt_top
+#print axioms LeanFormal.IUT.IQHullLogVolumeInterface.hull_logVolume_lt_top
+#print axioms LeanFormal.IUT.ArithmeticQPilotGlobalNormalization.sum_completionNormDegree_eq_fieldDegree
+#print axioms LeanFormal.IUT.cor312ToABCBridge_abcConjecture

@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1GChoiceAvoidCanonicalActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoice_card_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoice_avoids
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoice_canonicalBelyi_criticalValues
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.gChoiceData_of_avoids
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GChoiceAvoidCanonicalActual.mzk1GChoiceAvoidRows

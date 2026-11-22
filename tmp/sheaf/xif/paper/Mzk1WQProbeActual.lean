@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1WQMembershipTransferActual
+import tmp.sheaf.xif.paper.Mzk1Ind1WQuotientFiveIsoActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1WQMembershipTransferActual.padicIntegersEquivZp
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1WQMembershipTransferActual.normedIntegerEquivValuative
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1WQuotientFiveIsoActual.WQuotientFiveIsoRequired
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1WQuotientFiveIsoActual.WQuotientFiveIsoPhiPsiRequired

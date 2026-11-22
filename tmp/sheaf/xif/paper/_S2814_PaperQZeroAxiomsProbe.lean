@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2814C3NormalizedRegionUnitLogVolumeActual
+import tmp.sheaf.xif.paper.PaperQZeroLimitConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2814C3NormalizedRegionUnitLogVolumeActual.c3NormalizedRegion_unit_smul_measure
+#print axioms LeanFormal.IUT.XiFPaper.S2814C3NormalizedRegionUnitLogVolumeActual.c3NormalizedRegion_unit_smul_logVolume
+#print axioms LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual.paperQZeroLimitData_support_mem_iff

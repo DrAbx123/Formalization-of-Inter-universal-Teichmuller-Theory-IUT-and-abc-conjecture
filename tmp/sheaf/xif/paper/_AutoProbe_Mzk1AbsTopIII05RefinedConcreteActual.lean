@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1AbsTopIII05RefinedConcreteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.concreteD1
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.concreteD2
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1AbsTopIII05RefinedConcreteActual.concreteD3

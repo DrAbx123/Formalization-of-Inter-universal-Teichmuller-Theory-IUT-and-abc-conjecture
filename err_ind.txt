@@ -1,0 +1,32 @@
+Pi1\Orbifold\Induced.lean:253:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Pi.single ?i ?x * Pi.single ?i ?y
+in the target expression
+  Pi.single a 1 * Pi.single a 1 = Pi.single a 1
+
+k Ω : Type u
+inst✝⁴ : Field k
+inst✝³ : Field Ω
+inst✝² : Algebra k Ω
+t : Ω
+D : GaloisData k t
+V : D.Level
+inst✝¹ : IsGalois (↥(K₀ k t)) Ω
+inst✝ : CharZero k
+g : V.X.B →ₐ[D.R] Ω
+this : Fintype D.A
+g' : V.Ind →ₐ[D.R] Ω := g.comp ↑V.e.symm
+δ : D.A → V.Ind := fun a => Pi.single a 1
+hsum : ∑ a, δ a = 1
+a : D.A
+⊢ Pi.single a 1 * Pi.single a 1 = Pi.single a 1
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    Pi.single a 1
+  has type
+    D.A → V.RU
+  but is expected to have type
+    V.Ind
+  in the application
+    HMul.hMul (Pi.single a 1)

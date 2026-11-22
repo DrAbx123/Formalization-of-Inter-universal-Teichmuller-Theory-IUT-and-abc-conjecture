@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Section0FinLinearLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0FinLinearLawsActual.FinLinear_edge_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0FinLinearLawsActual.FinLinear_edge_forward
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section0FinLinearLawsActual.FinLinear_edge_irrefl

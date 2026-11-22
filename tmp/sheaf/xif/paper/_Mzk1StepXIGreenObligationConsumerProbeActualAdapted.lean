@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1StepXIGreenObligationConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1StepXIGreenObligationConsumerActual.stepXIGreenObligationConsumer_bundle

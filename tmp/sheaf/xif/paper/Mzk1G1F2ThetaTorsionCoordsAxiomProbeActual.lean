@@ -1,0 +1,7 @@
+/- Axiom probe for Mzk1G1F2ThetaTorsionCoordsActual (sophie 2026-11-18). -/
+import tmp.sheaf.xif.paper.Mzk1G1F2ThetaTorsionCoordsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2ThetaTorsionCoordsActual.threeTorsionX
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2ThetaTorsionCoordsActual.evalDivisionPolynomial_legendre_three
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2ThetaTorsionCoordsActual.legendre_three_nsmul_eq_zero_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2ThetaTorsionCoordsActual.legendre_evalDivisionPolynomialAtPoint_three_eq_zero_iff

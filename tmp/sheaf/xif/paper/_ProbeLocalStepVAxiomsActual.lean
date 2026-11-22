@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1G1F2R2LocalStepVActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2R2LocalStepVActual.localRootLogVolume_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1G1F2R2LocalStepVActual.localRootLogVolume_eq_order

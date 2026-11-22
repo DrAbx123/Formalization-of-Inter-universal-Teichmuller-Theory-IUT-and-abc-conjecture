@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2068PsiCnsActorReduction
+#print axioms LeanFormal.IUT.XiFPaper.S2068PsiCnsActorReduction.S2068PsiCnsOne
+#print axioms LeanFormal.IUT.XiFPaper.S2068PsiCnsActorReduction.S2068PsiCns_equiv_otriFv
+#print axioms LeanFormal.IUT.XiFPaper.S2068PsiCnsActorReduction.S2068OUnitsMuActorOfAssembly

@@ -1,0 +1,42 @@
+tmp\sheaf\n8\Group5Statements.lean:98:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  core2.ind1 g (core2.ind1 (-g) b)
+in the target expression
+  core2.ind1 (- -g) (core2.ind1 (-g) b) = b
+
+case mpr.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act1Equiv L g).trans (φ.trans (act1Equiv L g).symm) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = core2.ind1 (-g) b
+⊢ core2.ind1 (- -g) (core2.ind1 (-g) b) = b
+tmp\sheaf\n8\Group5Statements.lean:122:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  core2.ind2 g (core2.ind2 (-g) b)
+in the target expression
+  core2.ind2 (- -g) (core2.ind2 (-g) b) = b
+
+case mpr.refine_2
+Label : Type u
+Choice : Type v
+inst✝ : AddGroup Label
+core1 core2 : Core Label Choice
+L : LinkSpan core1 core2
+P : Set (L.mid ≃ L.mid)
+hP : ∀ φ ∈ P, ∀ (g : Label), (act2Equiv L g).trans (φ.trans (act2Equiv L g).symm) ∈ P
+a b : Choice
+g : Label
+m : L.mid
+h1 : L.left m = a
+φ : L.mid ≃ L.mid
+hφ : φ ∈ P
+h2 : L.right (φ m) = core2.ind2 (-g) b
+⊢ core2.ind2 (- -g) (core2.ind2 (-g) b) = b

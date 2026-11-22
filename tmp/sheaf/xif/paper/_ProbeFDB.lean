@@ -1,0 +1,4 @@
+import Mathlib.NumberTheory.NumberField.CanonicalEmbedding.ConvexBody
+open NumberField MeasureTheory
+#check ZSpan.fundamentalDomain_isBounded
+#check fundamentalDomain_isBounded

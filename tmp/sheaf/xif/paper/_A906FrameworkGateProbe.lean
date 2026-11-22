@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.Mzk1E7ReductionActual
+import tmp.sheaf.xif.paper.Mzk1RouteCInternalActual
+import tmp.sheaf.xif.paper.Mzk1OurFrameworkChainAuditActual
+import tmp.sheaf.xif.paper.Mzk1CRouteAssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.e7_equiv_chain
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.frey_dictionary_logq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E7ReductionActual.rt_delta_of_product
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RouteCInternalActual.szpiro6_of_routeC
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1RouteCInternalActual.freyDisc_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkChainAuditActual.chain_closed_needs_edges
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1OurFrameworkChainAuditActual.chainEdges_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.abcConjecture_of_cRouteAssembly
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1CRouteAssemblyActual.abcConjecture_of_routeC

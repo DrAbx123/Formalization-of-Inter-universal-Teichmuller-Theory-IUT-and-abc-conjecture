@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1H7Ob9SandwichLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H7Ob9SandwichLawsActual.hull13_twoSided_lower_projection
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H7Ob9SandwichLawsActual.hull13_twoSided_sandwich
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1H7Ob9SandwichLawsActual.hull13_twoSided_lower_le_upper

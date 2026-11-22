@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S1909NormalRPrimeActual
+
+open LeanFormal.IUT.XiFPaper.S1909NormalRPrimeActual
+
+#print axioms S1909_ideal_map
+#print axioms S1909_isIntegrallyClosed_iff_coord
+#print axioms S1909_missing_of_isIntegrallyClosed
+#print axioms S1909_isIntegrallyClosed_of_missing
+#print axioms S1909_isIntegrallyClosed_iff_missing
+#check S1909NormalRPrimeMissing
+#check S1909TraceIntegral
+#check S1909FiniteEtaleIntegralClosure
+#check S1909FiniteEtaleIntegralClosureResidual

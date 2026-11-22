@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S1495IsogenyKernelActual
+
+#print axioms TauCeti.Isogeny.ker
+#print axioms TauCeti.Isogeny.ker_mulByIntIsogeny_eq_torsionBy
+#print axioms TauCeti.Isogeny.ker_mulByIntIsogeny_eq_torsionBy_point
+#print axioms TauCeti.Isogeny.ker_mulByIntIsogeny_one_eq_torsionBy
+#print axioms TauCeti.Isogeny.ker_mulByIntIsogeny_one_eq_torsionBy_point
+#print axioms TauCeti.Isogeny.mulByIntKerActual_eq_torsionBy
+#print axioms TauCeti.Isogeny.mulByIntKerActual_eq_torsionBy_point
+#print axioms TauCeti.Isogeny.mulByIntKerActual_one_eq_torsionBy
+#print axioms TauCeti.Isogeny.mulByIntKerActual_one_eq_torsionBy_point

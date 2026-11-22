@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S462Example32PhiIsoGroupLikeActual
+open LeanFormal.IUT.XiFPaper.S462Example32PhiIsoGroupLikeActual
+#check example32RationalPullback_bijective_of_isIso
+#check LeanFormal.IUT.XiFPaper.S462Example32PhiIsoGroupLikeActual.example32RationalPullback_bijective_of_isIso

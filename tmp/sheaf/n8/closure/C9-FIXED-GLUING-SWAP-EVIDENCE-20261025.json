@@ -1,0 +1,186 @@
+{
+  "task": "C9-FIXED-GLUING-SWAP-20261025",
+  "date": "2026-10-25",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "status": "Common terminal transport for the raw Ind1 family follows source-relatively from actual procession/packet constructions; exact tame tensor output spans computed; original global P6 remains open",
+  "locked_target": "For every original admissible complete C, fixed native q, BPS/gluing, target column and normalization, exclude a uniform strict deficit of the entire final source output family",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-FIXED-GLUING-SWAP-20261025.md",
+    "sha256": "f734bc7bd33d8aa605315ad7e16709908722186ac27eece0e5a5c10cb10b1b19"
+  },
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory I.txt",
+      "sha256": "5510ad77280fa8d14d2e24cc596f05a8faf7a02838a35cc0bb5c25231a666051",
+      "version": "May 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20I.pdf",
+      "loci": [
+        "section0 pp33-34",
+        "Def3.1(b)(c) pp61-62",
+        "Def4.10 pp119-120",
+        "Prop6.9",
+        "Example3.2(iv) actual q^(1/(2ell)) representative"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "version": "December 2020; checked against the local text first page",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20II.pdf",
+      "loci": [
+        "Rmk4.7.3-4.7.4 pp143-147",
+        "Cor4.10(iii)-(iv) pp159-160",
+        "Cor4.11 pp163-164"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "version": "May 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf",
+      "loci": [
+        "Cor2.3",
+        "Prop3.1-3.5",
+        "Example3.6(ii)",
+        "Prop3.7(v)",
+        "Def3.8",
+        "Prop3.9(i)-(iii)",
+        "Rmk3.10.2",
+        "Thm3.11(i)-(iii)",
+        "Rmk3.11.1(iii)-(iv)",
+        "Rmk3.11.2(ii)",
+        "Rmk3.11.4(iii)",
+        "Cor3.12 possible-image definition and proof(xi-b)"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "sha256": "9a7ee3c77b1c7717210c0613eb39b6844649d0040dc3d9e1be7d544f8f91a0b9",
+      "version": "May 2020",
+      "loci": [
+        "p152 Kummer/evaluation diagram",
+        "p154 Ind1/Ind2 and compatible procession poly-isomorphisms"
+      ],
+      "visual_check": "Local Poppler render and actual root image inspection of both pages; read-only PDF skill"
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "version": "April 2020",
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20IV.pdf",
+      "loci": [
+        "Thm1.10 hypotheses pp22-23",
+        "proof(iv)-(v) pp26-29"
+      ]
+    }
+  ],
+  "reused": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-PROCESSION-ORBIT-20261025.md",
+      "sha256": "b7a45e8c28bbe42461476ec0b4eb2acf889a0202a9439dde78b3410e34e329a5"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-PROCESSION-ORBIT-EVIDENCE-20261025.json",
+      "sha256": "7ff7b5119431e6fd86c07e931dcf277d317938b4ec2c642009d897cb176ce822"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-JH-OUTPUT-REGION-20261025.md",
+      "sha256": "21f18bdf5689c8e93e7ef9ed305cae00a1ab8169de2b76bcfecab39debadd75c"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-ALLOWED-REGIONS-NATURAL-RESEARCH-20261024.md",
+      "sha256": "03aad091be1773147a64abd1388f494cd8c947604d2d5b3ca86d295c9dce7ac5"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+      "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+    }
+  ],
+  "proved_results": [
+    "Using actual source copy isomorphisms, a specified core representative eta extends explicitly to a procession representative; the core need not be changed to obtain a chosen volume",
+    "The raw possible-image family is Ind1-saturated; full-poly composition is Cartesian, so one fixed terminal additive volume-compatible T transports identity and capsule-permutation outputs together",
+    "This is a source-relative consequence of III3.11 constructions, not a claim that the entire APT is a set map or that original anabelian dependencies have been independently reproved",
+    "Actual Gaussian multiplication on the true tensor integer lattice, or on the smaller principal-unit logarithm lattice, gives explicit full-rank output bases",
+    "For pi^e=p*u and n=q*e+t, the actual sum of factor ideals in D_r has index length q*e^r+t^r; the integral-closure index is (r-1)*(e-1)*e^(r-1)/2",
+    "The finite quotient between the actual summed lattice and one branch has length t*e^(r-1)-t^r, strictly positive for r>1 and 0<t<e and unchanged under a common additive isomorphism",
+    "For the stated same-bad-field/unramified-good local type, the exact weighted span formula and affine b-period reduce every admissible high-b threshold to finitely many residue calculations",
+    "The ell41, rho1/2, twenty-layer local type reaches its native-q local readout at b273 for the tensor order, and b1620 even for the smaller unit-log domain",
+    "The bad-local success parameter is realized by the actual Tate curve over Q_1231 with q=1231^3240, rational 30-torsion, 41-torsion field Q_1231(pi) with pi^41=1231, and qhat=pi^1620; this does not construct the good place or complete global initial data"
+  ],
+  "exact_computations": [
+    {
+      "script": {
+        "path": "tmp/sheaf/n8/closure/c9_tame_source_span_20261025.py",
+        "sha256": "8c6029feeaf002eb965b144ce1b5b4a30c467a5ba20f8b4af22ae5de93a9d81b"
+      },
+      "certificate": {
+        "path": "tmp/sheaf/n8/closure/C9-TAME-SOURCE-SPAN-CERTIFICATE-20261025.json",
+        "sha256": "d6fd277624e70c4c3760836aa98434a23056f93bd2d566ec55f558aa7c155c26"
+      },
+      "command": "python tmp/sheaf/n8/closure/c9_tame_source_span_20261025.py",
+      "exit_code": 0,
+      "all_assertions_passed": true,
+      "totals": {
+        "integer_HNF_cases": 32,
+        "HNF_calculations_per_case": 2,
+        "tuple_formula_checks": 288,
+        "prime_and_domain_threshold_cases": 24
+      },
+      "ell41": {
+        "m": 20,
+        "bad_weight": "1/2",
+        "all_bad_largest_block_rank": "7386879101213258109624223688656841",
+        "tensor_order_first_b": 273,
+        "tensor_order_sufficient_cutoff": 393,
+        "deep_unit_first_b": 1620,
+        "deep_unit_sufficient_cutoff": 1740,
+        "improvement_per_b_plus_41": "1468055/4194304"
+      },
+      "explicit_bad_local_tate_realization": {
+        "p": 1231,
+        "ell": 41,
+        "b": 1620,
+        "q_p_exponent": 3240,
+        "q_root_30_p_exponent": 108,
+        "qhat_pi_exponent": 1620,
+        "q_order_coprime_ell": true,
+        "mu_30ell_in_Qp": true,
+        "rational_30_torsion": "by the stated Tate uniformization argument",
+        "complete_global_initial_theta_datum": false
+      }
+    }
+  ],
+  "corrections_and_scope": [
+    "The previous package left common terminal transport open. It is now resolved for the original raw Ind1-saturated family relative to the cited III3.11 constructions, without asserting a set-map model for all APT",
+    "The II source date is December 2020, not the May 2020 date in this package's initial draft; source bytes unchanged",
+    "The new local type retains the tame ell-ramification compatible with coprimality of ell and bad q-orders; no complete global initial Theta datum was constructed",
+    "A positive quotient length inside the tensor order does not imply strict growth after holomorphic hull; uniform valuation profiles remain insufficient for this lower-bound certificate",
+    "The computed h_p is a lower-bound certificate, not an upper bound on the full target output hull; terminal mono-analytic transport need not commute with target holomorphic hull",
+    "Neither Cor3.12(xi-f) nor the contested mean-lambda interpretation of IV1.10(v) is used to prove the desired q comparison"
+  ],
+  "remaining_gaps": [
+    "No proof that every original admissible complete C has local profiles covered by the successful tame calculation",
+    "No global compensation theorem for residual finite-place deficits and actual archimedean contributions",
+    "No full comparison through authorized hull/determinant/approximation establishing preservation of the fixed native-q volume class",
+    "No contradiction certificate for the original complete-family uniform strict deficit",
+    "The min-versus-mean question for IV1.10(v) still requires alignment of the entire region and hypothesis package; no full IUT counterexample is claimed"
+  ],
+  "next_action": "Start from the original complete-C strict deficit; retain the actual global weights and archimedean contributions, reuse the solved local spans, and identify the first actual source operation that changes the residual integral-domain span or its target holomorphic hull. In uniform profiles, do not retry more permutations, unit rewrites or arbitrary GL matrices; compute the first genuine allowed log/Kummer branch with its exact domain and Gaussian integer scalar.",
+  "checks": {
+    "root_natural_language_self_review": "performed",
+    "exact_computations": "passed",
+    "pdf_diagram_visual_review": "performed by root only",
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "project_build": "not_run",
+    "comparator": "not_run",
+    "independent_review": "not_run",
+    "explicit_global_initial_theta_datum_constructed": false,
+    "global_archimedean_comparison_completed": false,
+    "actual_source_contradiction_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

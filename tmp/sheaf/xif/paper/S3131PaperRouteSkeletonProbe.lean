@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3131PaperRouteSkeletonActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131PaperRouteSkeletonActual.abcConjecture_of_paperRouteResiduals

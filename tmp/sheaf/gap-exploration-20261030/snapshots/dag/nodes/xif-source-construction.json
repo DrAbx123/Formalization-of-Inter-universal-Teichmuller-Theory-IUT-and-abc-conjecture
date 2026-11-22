@@ -1,0 +1,101 @@
+{
+  "schema": "iut-sheaf-node/v1",
+  "id": "xif-source-construction",
+  "kind": "statement",
+  "root_role": "milestone",
+  "statement": "Paper-level xi-f: from actual q-pilot object, signed 1,circ U hull, O-module, Ind1/2/3, SHE, IPL/APT and Theta-link data, prove -|log q| lies in R_{<= -|log Theta|} and feed the signed certificate / Cor312Conclusion.",
+  "source": "IUT III, Corollary 3.12 proof, Steps (xi-a)-(xi-f); actual project modules SourceArithmeticHolomorphicLanding, SourceKummerEvaluationArrows, SourceFTimesMuPrimeStripPolyIsomorphism, SourceImageHull(Volume), SourceHullCompactnessReduction, HullDeterminantLogVolumeReduction, CertificateHullWiringSigned.",
+  "lean": {
+    "file": "tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+    "declaration": "LeanFormal.IUT.XiFPaper.CompileGate.paperXiF_assembly_conditional",
+    "type": "for actual paper objects and explicit Theta-link identification, paperXiF (paperQParameter C3) P.signedHullLogVolume",
+    "status": "proof_body_checked_conditional"
+  },
+  "statement_dependencies": [],
+  "proof_dependencies": [
+    "tmp/sheaf/xif/paper/PaperXiFSpec.lean",
+    "tmp/sheaf/xif/paper/QPilotObjectActual.lean",
+    "tmp/sheaf/xif/paper/QPilotIdentificationActual.lean",
+    "tmp/sheaf/xif/paper/ThetaHullActual.lean",
+    "tmp/sheaf/xif/paper/ThetaHullIdentificationActual.lean",
+    "tmp/sheaf/xif/paper/SignedHullLogActual.lean",
+    "tmp/sheaf/xif/paper/SignedHullNormalizationActual.lean",
+    "tmp/sheaf/xif/paper/OModuleActual.lean",
+    "tmp/sheaf/xif/paper/DeterminantLogVolumeActual.lean",
+    "tmp/sheaf/xif/paper/IndeterminaciesActual.lean",
+    "tmp/sheaf/xif/paper/SHELandingActual.lean",
+    "tmp/sheaf/xif/paper/SHEOutputActual.lean",
+    "tmp/sheaf/xif/paper/IPLAPTActual.lean",
+    "tmp/sheaf/xif/paper/ThetaLinkActual.lean",
+    "tmp/sheaf/xif/paper/ThetaLinkLogKummerActual.lean",
+    "tmp/sheaf/xif/paper/QPilotScalarIdentificationActual.lean",
+    "tmp/sheaf/xif/paper/QPilotCanonicalConstruction.lean",
+    "tmp/sheaf/xif/paper/QPilotIdentificationConstruction.lean",
+    "tmp/sheaf/xif/paper/OneColumnActual.lean",
+    "tmp/sheaf/xif/paper/IQCarrierObligationsActual.lean",
+    "tmp/sheaf/xif/paper/SHEMissingActual.lean",
+    "tmp/sheaf/xif/paper/IndActionsActual.lean"
+  ],
+  "edge_evidence": [],
+  "dependencies_complete": false,
+  "natural_language_proof": {
+    "provenance": "tmp/sheaf/xif/FROM-SCRATCH-NOTES.md",
+    "steps": [
+      "Construct actual q-pilot object surface and q scalar from source C3/localSignedLog.",
+      "Construct actual 1,circ U hull and signed hull log-volume normalization.",
+      "Construct actual O-module/fractional-ideal line bundle and determinant/log-volume.",
+      "Construct value-layer Ind1/2/3, SHE output/landing, IPL/APT evidence, Theta-link/log-Kummer comparison.",
+      "Compose actual q-pilot scalar and signed hull ray into paperXiF; feed signed certificate and Cor312 lower bound."
+    ],
+    "gaps": [
+      "actual Theta-link link_identification and link_implies_inclusion",
+      "actual paper arithmetic line-bundle/vector-bundle identification",
+      "actual arithmetic line-bundle identification",
+      "actual paper 1,circ label binding of the finite-place one-column structure",
+      "literal IQ carrier O-module/compactness/unit-region/log-volume normalization (image containment is proved from C7 obligations)",
+      "literal IQ O-module/compactness/unit-region/log-volume normalization",
+      "SHE operational expression/IPL/APT source instances (basic SHE landing and IndActionData at the actual C4 carrier are closed)"
+    ]
+  },
+  "mathlib_search": {
+    "status": "project_local_declarations_only",
+    "records": [
+      "LeanFormal/IUT/IUTIII",
+      "tmp/sheaf/xif/paper"
+    ]
+  },
+  "stage1": "complete",
+  "proof_status": "conditional_proof_body_checked",
+  "semantic_status": "source_construction_in_progress",
+  "locked": false,
+  "candidate_connections": [],
+  "gaps": [
+    "actual Theta-link link_identification and link_implies_inclusion",
+    "actual paper arithmetic line-bundle/vector-bundle identification",
+    "actual arithmetic line-bundle identification",
+    "actual paper 1,circ label binding of the finite-place one-column structure",
+    "literal IQ carrier O-module/compactness/unit-region/log-volume normalization (image containment is proved from C7 obligations)",
+    "literal IQ O-module/compactness/unit-region/log-volume normalization",
+    "SHE operational expression/IPL/APT source instances (basic SHE landing and IndActionData at the actual C4 carrier are closed)"
+  ],
+  "evidence": [
+    "tmp/sheaf/xif/FROM-SCRATCH-NOTES.md",
+    "tmp/sheaf/xif/paper/PLAN.md",
+    "tmp/sheaf/xif/paper/PaperXiFCompileGate.lean",
+    "tmp/sheaf/xif/paper/XiFAxiomProbe.lean",
+    "tmp/sheaf/xif/paper/compile-all.ps1",
+    "tmp/sheaf/xif/paper/QPilotScalarIdentificationActual.lean",
+    "tmp/sheaf/xif/paper/QPilotCanonicalConstruction.lean",
+    "tmp/sheaf/xif/paper/QPilotIdentificationConstruction.lean",
+    "tmp/sheaf/xif/paper/OneColumnActual.lean",
+    "tmp/sheaf/xif/paper/IQCarrierObligationsActual.lean",
+    "tmp/sheaf/xif/paper/SHEMissingActual.lean",
+    "tmp/sheaf/xif/paper/IndActionsActual.lean"
+  ],
+  "statement_compiles": true,
+  "proof_body_checked": true,
+  "kernel_closed": false,
+  "target_accepted": false,
+  "comparator": "not_run",
+  "project_build": "not_run"
+}

@@ -1,0 +1,11 @@
+/- Read-only fresh probes for S3137 milestone (abc) — created after 09:22:47 -/
+import tmp.sheaf.xif.paper.Mzk1P0FinalS3137ConditionalActual
+import tmp.sheaf.xif.paper.Mzk1P0FinalNoS45AssemblyActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalPaperNormalizedComparison
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalPaperNormalizedComparison_noS45_ofNormBridge
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalLPaperInstance
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalS3137ConditionalActual.finalBridgeConditions_of
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalNoS45AssemblyActual.normPowerBridge_holds
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalNoS45AssemblyActual.finalPaperNormalizedComparison_noS45_uncond
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P0FinalNoS45AssemblyActual.finalDictionaryCombined_noS45_uncond

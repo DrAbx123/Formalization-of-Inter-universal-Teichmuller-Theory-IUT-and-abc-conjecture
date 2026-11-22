@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.GeomCore03AssemblyActual
+
+-- GeomCore03 gated assembly probe.
+
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCorePaperInput
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCoreOutputStatement
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCoreAssemblyStatement
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.GeomCoreAssemblyStatement_iff
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geometricCoreDataOfFunction
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geometricCoreDataOfFunction_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geomCore_conditional
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geomCoreCanonicalAssets
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geomCoreAssemblyPlan
+#print axioms LeanFormal.IUT.XiFPaper.GeomCore03AssemblyActual.geomCoreRemainingDischarge

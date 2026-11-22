@@ -1,0 +1,60 @@
+660	`deg = sum_b |log q_b| = order_C3 * log 5 > 0`
+661	(`paperQPilotDivisor_deg_eq_source`, `paperQPilotDivisor_deg_pos`) and
+662	q-pilot log-volume
+663	`paperQPilotLogVolume D = -deg = sourceQPilotSignedLog = -localLogMagnitude S1487Cand
+664	= -order_C3 * log 5 < 0` (`paperQPilotLogVolume_eq_neg_deg`, `_neg`).
+665	`QVDeterminedQPilotObject` packages divisor/degree/log-volume with these
+666	equalities; it is inhabited for every `S1895PaperInput`.
+667	
+668	Obstructions proved: (i) the reduced anchor is the S1487 shear strip
+669	(`reducedQPilotAnchor D = S1487Strip 1 0`), whose value monoid is
+670	`SourceHaarActualValueMonoid = Multiplicative {x : Real // x <= 0}` and whose
+671	unit group is **trivial** (x <= 0 and -x <= 0 force x = 0).  Hence
+672	`(reducedQPilotTimesMu D).timesMu v` is a subsingleton for every v
+673	(`reducedQPilotTimesMu_subsingleton`), and every candidate `P` with
+674	`Nonempty (QPilotAnchorIdentification D P)` has subsingleton times-mu fibers at
+675	every v (`r6Proper_forces_trivial_timesMu`).  The reduced anchor's x-mu layer
+676	is therefore vacuous in the current value/unit model.
+677	(ii) the tree's Hodge-theater strips are q_v-blind: changing only the initial
+678	theta data keeps `I.fPrimeStripAt n m` definitionally fixed
+679	(`withInitial`, `fPrimeStripAt_withInitial`); the witness is
+680	`S1487FaithfulInput` vs `S1487TwoPlaceInput` (same (1,0) strip and
+681	canonical lift, q-pilot log-volumes `-L` vs `-2L`; `candidate_blind`,
+682	`qPilot_scalar_differs`).  So the candidate
+683	`canonical (I.fPrimeStripAt 1 0)` (= `qPilotFTimesMuPrimeStripAt10`) cannot
+684	be certified q_v-determined.
+685	
+686	First missing (a **definition**, not a proposition): a paper-side
+687	`paperQPilotFTimesMuStrip D : SourceFTimesMuPrimeStrip PaperV` arising from
+688	`paperQPilotDivisor D` via the associated-pilot-object construction of IUT II,
+689	Def. 4.9(viii), plus its identification with that divisor.  The tree contains no
+690	functor from the global realified Frobenioid (or from an arithmetic divisor) to a
+691	prime strip; the only constructor is `SourceFTimesMuPrimeStrip.canonical`.
+692	R6 proper is **not** closed; no fake strip, arbitrary inhabitant or Prop slot was
+693	used.  The R6 interface itself is re-exported as `R6Proper` /
+694	`r6Proper_iff` (S1960's reduction) and `r6Proper_of_equivalence` is the
+695	last step a future definition has to feed.
+696	
+697	Consequence for S1967: `OUnits D v = ((lgpStrip D).Mon v)^` is a subsingleton,
+698	so any nontrivial `OUnitsMu` / x-mu Kummer construction on this strip is vacuous
+699	unless the value monoid of the strip is changed.
+700	
+701	
+702	
+703	
+704	## S1942: the prePsi_5 certificate and separability at n = 5 (2026-11-01)
+705	
+706	`tmp/sheaf/xif/paper/S1942PrePsiFiveActual.lean` proves
+707	`S1933Certificate 5` and `(W.preΨ 5).Separable` unconditionally (EXIT=0;
+708	source SHA256 `9F01ECC7B28D17B796F200C8FBD1114EFEF1B7D073E3F47979303C68B9EF70E5`;
+709	olean SHA256 `0921C5AB51A8AECE86E75E9D263560B22C5E38984EFBB5D3C128F39A4A85168A`).
+710	The 12x12 Bezout computation over Q(b2,b4,b6), with b8 eliminated by
+711	`4*b8 = b2*b6 - b4^2`, gives after clearing the content
+712	`20^55 * 5^11` and seventeen powers of `Delta_b = 4*Delta` the small identity
+713	
+714	  `A * prePsi_5 + B * (prePsi_5)' = 5120 * Delta^5`
+715	
+716	with 218 and 249 monomials in A and B.  The universal certificate is obtained by
+717	specialising along Z[a1..a6] -> FractionRing (MvPolynomial (Fin 5) Z) and
+718	descending along the injective structure map.  Axiom footprint:
+719	`propext, Classical.choice, Quot.sound`.  The expanded `ring` proof

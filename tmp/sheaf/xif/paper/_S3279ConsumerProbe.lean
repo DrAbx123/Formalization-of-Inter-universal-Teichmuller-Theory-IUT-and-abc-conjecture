@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Thm25P1CompositeConsumerActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerActual.p1CompositeRealConsumerTarget_rational
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerActual.p1Composite_mapPoints_consumer_rational

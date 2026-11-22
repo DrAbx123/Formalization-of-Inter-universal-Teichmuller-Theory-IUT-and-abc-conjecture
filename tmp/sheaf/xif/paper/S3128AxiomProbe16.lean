@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3128BasicOpenQuotientActual
+open LeanFormal.IUT.XiFPaper.S3128BasicOpenQuotientActual
+#print axioms S3128Nf_image_isUnit

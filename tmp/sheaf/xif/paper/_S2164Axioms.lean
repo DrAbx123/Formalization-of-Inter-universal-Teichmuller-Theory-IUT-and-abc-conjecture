@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2164MuActionTowerActual
+#print axioms LeanFormal.IUT.XiFPaper.S2164MuActionTowerActual.S2164RootsMulAut
+#print axioms LeanFormal.IUT.XiFPaper.S2164MuActionTowerActual.S2164PowMap_equivariant
+#print axioms LeanFormal.IUT.XiFPaper.S2164MuActionTowerActual.S2164MuActionTowerOfContinuous

@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2069GroupAlgorithmGap
+#print axioms LeanFormal.IUT.XiFPaper.S2069GroupAlgorithmGap.S2069GroupAlgorithmOfReconstruction

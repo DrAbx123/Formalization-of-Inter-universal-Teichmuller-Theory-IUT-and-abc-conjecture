@@ -1,0 +1,234 @@
+
+/-! ## 4. Item 2: preservation of pullbacks
+
+The pullback of finite etale covers is the scheme pullback, so a compatible pair
+of lifts of the geometric point to `X` and `Y` extends uniquely to the scheme
+pullback; this is exactly the universal property of the image cone. -/
+
+section Pullback
+
+variable {X Y Z : FiniteEtaleCover S}
+
+/-- The first projection of the tree's explicit pullback cone has underlying
+scheme morphism the first projection of the scheme pullback. -/
+theorem pullbackConeInCover_fst_left (f : X ⟶ Z) (g : Y ⟶ Z) :
+    Over.Hom.left (finiteEtaleCoverPullbackConeInCover f g).fst.1 =
+      pullback.fst (Over.Hom.left f.1) (Over.Hom.left g.1) := rfl
+
+/-- The second projection of the tree's explicit pullback cone has underlying
+scheme morphism the second projection of the scheme pullback. -/
+theorem pullbackConeInCover_snd_left (f : X ⟶ Z) (g : Y ⟶ Z) :
+    Over.Hom.left (finiteEtaleCoverPullbackConeInCover f g).snd.1 =
+      pullback.snd (Over.Hom.left f.1) (Over.Hom.left g.1) := rfl
+
+/-- The structure morphism of the tree's explicit pullback cover. -/
+theorem pullbackCover_hom (f : X ⟶ Z) (g : Y ⟶ Z) :
+    (finiteEtaleCoverPullbackCover f g).obj.hom =
+      pullback.fst (Over.Hom.left f.1) (Over.Hom.left g.1) ≫ X.obj.hom := rfl
+
+/-- **Item 2, cone level.**  The image under the geometric fiber functor of the
+tree's explicit pullback cone is a limit cone in `Type`. -/
+theorem pullbackCone_map_isLimit (f : X ⟶ Z) (g : Y ⟶ Z) :
+    IsLimit ((geometricFiberFunctor Omega x).mapCone
+      (finiteEtaleCoverPullbackConeInCover f g)) := by
+  classical
+  let t' : PullbackCone ((geometricFiberFunctor Omega x).map f)
+      ((geometricFiberFunctor Omega x).map g) :=
+    PullbackCone.mk ((geometricFiberFunctor Omega x).map
+        (finiteEtaleCoverPullbackConeInCover f g).fst)
+      ((geometricFiberFunctor Omega x).map (finiteEtaleCoverPullbackConeInCover f g).snd) (by
+        rw [← Functor.map_comp, ← Functor.map_comp,
+          (finiteEtaleCoverPullbackConeInCover f g).condition])
+  have hiso : (geometricFiberFunctor Omega x).mapCone
+      (finiteEtaleCoverPullbackConeInCover f g) ≅ t' := by
+    refine Cone.ext (Iso.refl _) ?_
+    intro j
+    cases j with
+    | none =>
+        simp only [Functor.mapCone_π_app, PullbackCone.mk_π_app_one, Category.id_comp,
+          PullbackCone.condition_one, Functor.map_comp]
+    | some j =>
+        cases j with
+        | left =>
+            simp only [Functor.mapCone_π_app, PullbackCone.mk_π_app_left, Category.id_comp]
+        | right =>
+            simp only [Functor.mapCone_π_app, PullbackCone.mk_π_app_right, Category.id_comp]
+  have hlim' : IsLimit t' := by
+    refine PullbackCone.isLimitAux' t' ?_
+    intro s
+    have key : ∀ w : s.pt,
+        (s.fst w).1 ≫ Over.Hom.left f.1 = (s.snd w).1 ≫ Over.Hom.left g.1 := by
+      intro w
+      have h := ConcreteCategory.congr_hom (PullbackCone.condition s) w
+      rw [ConcreteCategory.comp_apply, ConcreteCategory.comp_apply] at h
+      exact congrArg Subtype.val h
+    refine ⟨TypeCat.ofHom (fun w => ⟨pullback.lift (s.fst w).1 (s.snd w).1 (key w), ?_⟩),
+      ?_, ?_, ?_⟩
+    · show (pullback.lift (s.fst w).1 (s.snd w).1 (key w) ≫
+        pullback.fst (Over.Hom.left f.1) (Over.Hom.left g.1)) ≫ X.obj.hom = x
+      rw [pullback.lift_fst]
+      exact (s.fst w).2
+    · apply ConcreteCategory.hom_ext
+      intro w
+      rw [ConcreteCategory.comp_apply, TypeCat.ofHom_apply]
+      apply Subtype.ext
+      rw [show Over.Hom.left (finiteEtaleCoverPullbackConeInCover f g).fst.1
+        = pullback.fst (Over.Hom.left f.1) (Over.Hom.left g.1) from rfl]
+      exact pullback.lift_fst _ _ _
+    · apply ConcreteCategory.hom_ext
+      intro w
+      rw [ConcreteCategory.comp_apply, TypeCat.ofHom_apply]
+      apply Subtype.ext
+      rw [show Over.Hom.left (finiteEtaleCoverPullbackConeInCover f g).snd.1
+        = pullback.snd (Over.Hom.left f.1) (Over.Hom.left g.1) from rfl]
+      exact pullback.lift_snd _ _ _
+    · intro m hm1 hm2
+      apply ConcreteCategory.hom_ext
+      intro w
+      have hm1' : (m w).1 ≫ pullback.fst (Over.Hom.left f.1) (Over.Hom.left g.1)
+          = (s.fst w).1 := by
+        have h := ConcreteCategory.congr_hom hm1 w
+        rw [ConcreteCategory.comp_apply] at h
+        simpa only [pullbackConeInCover_fst_left] using congrArg Subtype.val h
+      have hm2' : (m w).1 ≫ pullback.snd (Over.Hom.left f.1) (Over.Hom.left g.1)
+          = (s.snd w).1 := by
+        have h := ConcreteCategory.congr_hom hm2 w
+        rw [ConcreteCategory.comp_apply] at h
+        simpa only [pullbackConeInCover_snd_left] using congrArg Subtype.val h
+      apply Subtype.ext
+      exact pullback.hom_ext (hm1'.trans (pullback.lift_fst _ _ _).symm)
+        (hm2'.trans (pullback.lift_snd _ _ _).symm)
+  exact IsLimit.ofIsoLimit hlim' hiso.symm
+
+/-- **Item 2, cospan level.**  The geometric fiber functor preserves the limit of
+every pullback cospan. -/
+theorem preservesPullbackCospan (f : X ⟶ Z) (g : Y ⟶ Z) :
+    PreservesLimit (cospan f g) (geometricFiberFunctor Omega x) :=
+  preservesLimit_of_preserves_limit_cone (finiteEtaleCoverPullbackIsLimitInCover f g)
+    (pullbackCone_map_isLimit f g)
+
+/-- **Item 2 at the Type level.**  The geometric fiber functor preserves
+pullbacks. -/
+theorem preservesPullbacks_typeLevel :
+    PreservesLimitsOfShape WalkingCospan (geometricFiberFunctor (X := S) Omega x) where
+  preservesLimit {K} := by
+    haveI : PreservesLimit (cospan (K.map WalkingCospan.Hom.inl) (K.map WalkingCospan.Hom.inr))
+        (geometricFiberFunctor Omega x) :=
+      preservesPullbackCospan (K.map WalkingCospan.Hom.inl) (K.map WalkingCospan.Hom.inr)
+    exact preservesLimit_of_iso_diagram _ (diagramIsoCospan K).symm
+
+end Pullback
+
+end Fiber
+
+/-! ## 5. The curve specialisations -/
+
+section Curve
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+/-- Item 1 for the actual curve fiber functor, Type level. -/
+theorem curve_preservesTerminalObjects :
+    PreservesLimitsOfShape (Discrete PEmpty.{1}) (curveGeometricFiberFunctor K Omega x) :=
+  preservesTerminalObjects_typeLevel (S := CurveBase K) (Omega := Omega) (x := x)
+
+/-- Item 2 for the actual curve fiber functor, Type level. -/
+theorem curve_preservesPullbacks :
+    PreservesLimitsOfShape WalkingCospan (curveGeometricFiberFunctor K Omega x) :=
+  preservesPullbacks_typeLevel (S := CurveBase K) (Omega := Omega) (x := x)
+
+end Curve
+
+/-! ## 6. Transfer of the six fields to the `FintypeCat`-valued functor -/
+
+section Lift
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+theorem preservesLimitsOfShape_of_typeLevel {J : Type*} [Category J]
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesLimitsOfShape J (curveGeometricFiberFunctor K Omega x)) :
+    PreservesLimitsOfShape J (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : PreservesLimitsOfShape J (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : PreservesLimitsOfShape J
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact preservesLimitsOfShape_of_comp_of_reflects _ FintypeCat.incl
+
+theorem preservesColimitsOfShape_of_typeLevel {J : Type*} [Category J]
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesColimitsOfShape J (curveGeometricFiberFunctor K Omega x)) :
+    PreservesColimitsOfShape J (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : PreservesColimitsOfShape J (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : PreservesColimitsOfShape J
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact preservesColimitsOfShape_of_comp_of_reflects _ FintypeCat.incl
+
+theorem preservesEpimorphisms_of_typeLevel
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x)) :
+    Functor.PreservesEpimorphisms (curveGeometricFiberFunctorFintype K hfin) := by
+  haveI h1 : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x) := h
+  haveI h2 : Functor.PreservesEpimorphisms
+      (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl) := h1
+  exact Functor.preservesEpimorphisms_of_preserves_of_reflects _ FintypeCat.incl
+
+theorem reflectsIsomorphisms_of_typeLevel
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms) :
+    (curveGeometricFiberFunctorFintype K hfin).ReflectsIsomorphisms := by
+  haveI h1 : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms := h
+  haveI h2 : (curveGeometricFiberFunctorFintype K hfin ⋙ FintypeCat.incl).ReflectsIsomorphisms := h1
+  exact reflectsIsomorphisms_of_comp _ FintypeCat.incl
+
+end Lift
+
+/-! ## 7. The six certificate fields, one theorem each -/
+
+section Fields
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+theorem certificate_preservesTerminalObjects
+    (hfin : GeometricFiberFinite K Omega x) :
+    PreservesLimitsOfShape (Discrete PEmpty.{1})
+      (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesLimitsOfShape_of_typeLevel hfin
+    (curve_preservesTerminalObjects (K := K) (Omega := Omega) (x := x))
+
+theorem certificate_preservesPullbacks
+    (hfin : GeometricFiberFinite K Omega x) :
+    PreservesLimitsOfShape WalkingCospan
+      (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesLimitsOfShape_of_typeLevel hfin
+    (curve_preservesPullbacks (K := K) (Omega := Omega) (x := x))
+
+theorem certificate_preservesFiniteCoproducts
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesFiniteCoproducts (curveGeometricFiberFunctor K Omega x)) :
+    PreservesFiniteCoproducts (curveGeometricFiberFunctorFintype K hfin) where
+  preserves n := preservesColimitsOfShape_of_typeLevel hfin (h.preserves n)
+
+theorem certificate_preservesEpis
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x)) :
+    Functor.PreservesEpimorphisms (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesEpimorphisms_of_typeLevel hfin h
+
+theorem certificate_preservesQuotientsByFiniteGroups
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : ∀ (A : Type u) [Group A] [Finite A],
+      PreservesColimitsOfShape (SingleObj A) (curveGeometricFiberFunctor K Omega x)) :
+    ∀ (A : Type u) [Group A] [Finite A],
+      PreservesColimitsOfShape (SingleObj A) (curveGeometricFiberFunctorFintype K hfin) :=
+  fun A _ _ => preservesColimitsOfShape_of_typeLevel hfin (h A)
+
+theorem certificate_reflectsIsos
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms) :
+    (curveGeometricFiberFunctorFintype K hfin).ReflectsIsomorphisms :=
+  reflectsIsomorphisms_of_typeLevel hfin h
+
+end Fields

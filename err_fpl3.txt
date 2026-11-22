@@ -1,0 +1,35 @@
+TemperedFundamentalGroups\SemistableReduction\FormalPatchLevel.lean:171:15: error: unsolved goals
+case tmul
+R : Type u
+inst✝⁸ : CommRing R
+f : R
+J : Ideal R
+n : ℕ
+hJ : J ^ n = ⊥
+P : Type u
+inst✝⁷ : CommRing P
+inst✝⁶ : Algebra R P
+inst✝⁵ : Algebra.FormallyEtale R P
+N : Type u
+inst✝⁴ : CommRing N
+inst✝³ : Algebra R N
+inst✝² : Algebra (Hat f) N
+inst✝¹ : IsScalarTower R (Hat f) N
+inst✝ : Module.Flat (Hat f) (Nf f N)
+α₀ : P →ₐ[R] Nf f N ⧸ JNf f J N
+hsurj : Function.Surjective ⇑(betaMod f J α₀)
+hinj : ∀ (x : Hat f ⊗[R] P), (betaMod f J α₀) x = 0 → x ∈ Ideal.map (algebraMap R (Hat f)) J • ⊤
+α : P →ₐ[R] Nf f N := lift f J hJ α₀
+β : Hat f ⊗[R] P →ₗ[Hat f] Nf f N := LinearMap.liftBaseChange (Hat f) α.toLinearMap
+hJS : Ideal.map (algebraMap R (Hat f)) J ^ n = ⊥
+s : Hat f
+p : P
+⊢ (algebraMap (Hat f) (Nf f N ⧸ JNf f J N)) s * (Ideal.Quotient.mk (JNf f J N)) (α p) =
+    s • (Ideal.Quotient.mk (JNf f J N)) ((lift f J hJ α₀) p)
+TemperedFundamentalGroups\SemistableReduction\FormalPatchLevel.lean:174:38: warning: This simp argument is unused:
+  Algebra.smul_def
+
+Hint: Omit it from the simp argument list.
+  simp [Ideal.Quotient.mkₐ_eq_mk,̵ ̵A̵l̵g̵e̵b̵r̵a̵.̵s̵m̵u̵l̵_̵d̵e̵f̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

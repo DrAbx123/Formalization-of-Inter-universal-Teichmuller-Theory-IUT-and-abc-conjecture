@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3131RegistryLengthActual
+import tmp.sheaf.xif.paper.S3131RegistryABCStrengthActual
+import tmp.sheaf.xif.paper.S3131RegistryGateOwnersActual
+
+#print axioms S3131FinalResidualRegistry_length
+#print axioms S3131ABCStrengthResiduals_length
+#print axioms S3131RegistryGateOwners_length

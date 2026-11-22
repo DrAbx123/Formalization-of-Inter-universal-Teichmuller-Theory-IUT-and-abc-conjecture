@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.Mzk1P1ConsumerDeepInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.ProblemDDeepInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.ProblemEDeepInputs
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.P1CompositeConsumerInputsDeep
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.P1CompositeConsumerStatementDeep
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.P1CompositeConsumerDeepStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.p1CompositeConsumerStatementDeep_of_FQ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.p1CompositeConsumerDeepStatement_of_FQ
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1ConsumerDeepInputsActual.p1ConsumerDeepInputRows

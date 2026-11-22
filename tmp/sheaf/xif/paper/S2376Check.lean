@@ -1,0 +1,6 @@
+import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+#check WeierstrassCurve.twoTorsionPolynomial
+#check @WeierstrassCurve.twoTorsionPolynomial
+#check WeierstrassCurve.twoTorsionPolynomial_discr_ne_zero_of_isElliptic
+#check @WeierstrassCurve.twoTorsionPolynomial_discr_ne_zero_of_isElliptic

@@ -1,0 +1,682 @@
+{
+  "schema": "iut-sheaf-node/v1",
+  "id": "p7-g1-p6-p8-closure-route-20261116",
+  "kind": "research_handoff",
+  "owner": "root-current-chat-single-thread",
+  "updated_at_utc": "2026-11-15 22:21:55 UTC",
+  "stage": "SHEAF stage 1 dependency decomposition and stage 2 precise natural-language construction statements; no Lean implementation or compilation",
+  "report": "coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md",
+  "git_head_observed": "a997af4b1cb2339d1e7403ef0781a16f809f4476",
+  "parent_research_nodes": [
+    "p7-global-q-hull-construction-20261115"
+  ],
+  "task_template": {
+    "actual_goal": "Deliver a single detailed, deduplicated construction roadmap from accepted arithmetic/source components through actual Fermat/noncritical geometry, a non-circular independent IV hull upper bound, genuine height/different globalization, and the existing unconditional ABC target.",
+    "quantifiers": "For every epsilon>0 choose B_epsilon before all primitive ABC triples; final producer accepts no new hCor312, FreyHeightBound, source-compatibility, or ABC-equivalent input.",
+    "consumers": [
+      "actual scheme-level G1 cover and noncritical morphisms",
+      "P6 actual hCor312 producer",
+      "P8UniformHeightBound producer",
+      "ABCFreyJProductHeightCriterion",
+      "ABCConjecture"
+    ],
+    "write_scope": [
+      "coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md",
+      "dag/nodes/p7-g1-p6-p8-closure-route-20261116.json",
+      "coord/P7-GLOBAL-Q-HULL-CONSTRUCTION-20261115.md",
+      "coord/P7-GAP-ATTACK-PLAN.md",
+      "coord/STATE.md",
+      "coord/queue.md",
+      "AUDIT_LEDGER.md"
+    ],
+    "conflicts": "New report/node owned by this chat; prior reports and coordination logs appended only; no Lean changes; existing active owners and accepted components preserved.",
+    "build_owner": "not applicable: user explicitly requests no compilation",
+    "delegation": "none: user explicitly requests single thread",
+    "stop_boundary": "Research handoff completed after artifact and metadata checks; no proof implementation or claim of kernel closure.",
+    "next_action": "Construct one actual source/packet region diagram yielding q-reading=-Q/(2*l) and theta-reading<=weighted packet volume. Reuse existing p6Phi and ord donors; use J1/J2/J3 as alternatives."
+  },
+  "accepted_scope_preserved": [
+    "P1 volume",
+    "P4 Jq and weight1",
+    "P5 node",
+    "P7 node",
+    "H1a/H1b",
+    "P6 IV/paper-bound/final consumers",
+    "P8 consumers",
+    "latest affine/root-basis and P6 Phi/ord auxiliary components"
+  ],
+  "statement_dependencies": [
+    {
+      "node": "G-A",
+      "section": "2",
+      "statement": "Actual Fermat scheme from two affine charts, finite pi of rank n^2, smooth proper geometrically integral curve.",
+      "depends_on": [],
+      "status": "ACTUAL_AFFINE_DONORS_PLUS_MODEL_CONSTRUCTION_PLAN"
+    },
+    {
+      "node": "G-B",
+      "section": "3",
+      "statement": "Actual Kahler line Omega_Y=O_Y(n-3), ramification and log-canonical pullback.",
+      "depends_on": [
+        "G-A"
+      ],
+      "status": "EXPLICIT_TRANSITION_PROOF_ROUTE_NOT_FORMALIZED"
+    },
+    {
+      "node": "G-C",
+      "section": "4",
+      "statement": "Actual noncritical Belyi morphism on Y, with branch/protected-point and line-bundle pullback theorems.",
+      "depends_on": [
+        "G-A",
+        "G-B"
+      ],
+      "status": "CONCRETE_SECTION_AND_ALGEBRAIC_INDUCTION_PLAN"
+    },
+    {
+      "node": "U-L",
+      "section": "5.2,5.4",
+      "statement": "Actual source-covered weighted packet upper H_pkt<=((l+1)/4)*(A-c_l*Q)-Q/(2*l), independent of hCor312.",
+      "depends_on": [],
+      "status": "LOCAL_BOUND_DONORS_EXIST_ACTUAL_COVERAGE_AND_GLOBAL_SUM_OPEN"
+    },
+    {
+      "node": "U-R",
+      "section": "5.3",
+      "statement": "Original source readings: q_P5=-Q/(2*l), theta_P5<=weighted actual packet reading.",
+      "depends_on": [
+        "U-L"
+      ],
+      "status": "THREE_ACTUAL_CONSTRUCTION_ROUTES_NO_COMPATIBILITY_ASSUMPTION_DISCHARGED"
+    },
+    {
+      "node": "U-C",
+      "section": "5.4",
+      "statement": "Produce scalar hCor312 by lower/upper sandwich; then apply existing P6-final.",
+      "depends_on": [
+        "U-L",
+        "U-R"
+      ],
+      "status": "ALGEBRA_EXPLICIT_PRODUCER_CONNECTIONS_OPEN"
+    },
+    {
+      "node": "L-H",
+      "section": "6",
+      "statement": "For all bounded degree and legitimate fixed local compact domains, epsilon height inequality with a constant before all points.",
+      "depends_on": [],
+      "status": "ACTUAL_DATA_INSTANTIATION_AND_ERROR_ABSORPTION_PLAN"
+    },
+    {
+      "node": "G-K",
+      "section": "7",
+      "statement": "Finite Q-defined Belyi family with disjoint boundaries and uniform local distance bound for all degree<=n^2 points.",
+      "depends_on": [
+        "G-A",
+        "G-C"
+      ],
+      "status": "DIRECT_FINITE_FAMILY_COMPACTNESS_PROOF_ROUTE"
+    },
+    {
+      "node": "H-T",
+      "section": "8.1-8.5",
+      "statement": "Actual line-bundle height, conductor and arithmetic different comparisons; Fermat lift gives radical coefficient 1.",
+      "depends_on": [
+        "G-A",
+        "G-B",
+        "G-C"
+      ],
+      "status": "EXPLICIT_LOCAL_TO_GLOBAL_PROOF_ROUTE"
+    },
+    {
+      "node": "P8-P",
+      "section": "8.6",
+      "statement": "Unconditional ABCFreyJProductHeightCriterion producer, then existing ABC equivalence.",
+      "depends_on": [],
+      "status": "FINAL_DEPENDENCY_ROUTE_NOT_AN_INHABITANT"
+    }
+  ],
+  "proof_dependencies": [
+    {
+      "node": "G-A",
+      "depends_on": [],
+      "external_reuse": [
+        "Mzk1G1FermatAffineSchemeActual",
+        "Mzk1G1FermatChartRingActual2",
+        "Mathlib Scheme.GlueData",
+        "IsFinite.SpecMap_iff",
+        "finite=>proper"
+      ],
+      "status": "ACTUAL_AFFINE_DONORS_PLUS_MODEL_CONSTRUCTION_PLAN"
+    },
+    {
+      "node": "G-B",
+      "depends_on": [
+        "G-A"
+      ],
+      "external_reuse": [
+        "Kahler polynomial/quotient/localization API"
+      ],
+      "status": "EXPLICIT_TRANSITION_PROOF_ROUTE_NOT_FORMALIZED"
+    },
+    {
+      "node": "G-C",
+      "depends_on": [
+        "G-A",
+        "G-B"
+      ],
+      "external_reuse": [
+        "AG_FLT_ProvedTheoremsPromotionActual (actual instances required)",
+        "Mzk1Consumer24AdapterUnconditionalActual (rational finite beta only)",
+        "Noncritical Belyi Maps Theorem 2.5/Lemma 2.4"
+      ],
+      "status": "CONCRETE_SECTION_AND_ALGEBRAIC_INDUCTION_PLAN"
+    },
+    {
+      "node": "U-L",
+      "depends_on": [],
+      "external_reuse": [
+        "FinitePlaceStepVAssembly.arithmeticTuple_stepV_hull_normalizedLogVolume_le_paperBound",
+        "Mzk1P6PhiActionFamilyActual",
+        "Mzk1P6PhiActionSourceActual",
+        "Mzk1P6RootParameterWeightActual",
+        "StepV averages",
+        "Section2.iutIVProp16_primeCounting_le_four_thirds_eventually",
+        "accepted H1/P7 components"
+      ],
+      "status": "LOCAL_BOUND_DONORS_EXIST_ACTUAL_COVERAGE_AND_GLOBAL_SUM_OPEN"
+    },
+    {
+      "node": "U-R",
+      "depends_on": [],
+      "external_reuse": [
+        "accepted P4/P5 source components",
+        "actual Kummer/root and region definitions"
+      ],
+      "status": "THREE_ACTUAL_CONSTRUCTION_ROUTES_NO_COMPATIBILITY_ASSUMPTION_DISCHARGED",
+      "alternatives": [
+        "J1 actual region and integral saturation",
+        "J2 determinant lines, actual matrices and index corrections",
+        "J3 finite congruence quotients and stabilized cardinality ratios"
+      ]
+    },
+    {
+      "node": "U-C",
+      "depends_on": [
+        "U-L",
+        "U-R"
+      ],
+      "external_reuse": [
+        "P5 lower bound at actual reading or direct non-strict lattice containment",
+        "S2715 scalar algebra",
+        "S3171 and P6DisplayChain only downstream"
+      ],
+      "status": "ALGEBRA_EXPLICIT_PRODUCER_CONNECTIONS_OPEN"
+    },
+    {
+      "node": "L-H",
+      "depends_on": [
+        "U-C"
+      ],
+      "external_reuse": [
+        "accepted P7 actual initial data",
+        "actual tripodal, Tate q and height dictionaries",
+        "Section2 prime supplies",
+        "P6-final downstream of U-C"
+      ],
+      "status": "ACTUAL_DATA_INSTANTIATION_AND_ERROR_ABSORPTION_PLAN"
+    },
+    {
+      "node": "G-K",
+      "depends_on": [
+        "G-A",
+        "G-C"
+      ],
+      "external_reuse": [
+        "local finite-extension classification via Eisenstein/Hensel/Krasner",
+        "compact projective point spaces"
+      ],
+      "status": "DIRECT_FINITE_FAMILY_COMPACTNESS_PROOF_ROUTE"
+    },
+    {
+      "node": "H-T",
+      "depends_on": [
+        "G-A",
+        "G-B",
+        "G-C"
+      ],
+      "external_reuse": [
+        "LocalDifferentUpperBound",
+        "product formula and local metrics",
+        "actual tame Kummer extensions"
+      ],
+      "status": "EXPLICIT_LOCAL_TO_GLOBAL_PROOF_ROUTE"
+    },
+    {
+      "node": "P8-P",
+      "depends_on": [
+        "L-H",
+        "G-K",
+        "H-T"
+      ],
+      "external_reuse": [
+        "ABCEllipticHeightCriterion.abcConjecture_iff_freyJProductHeightCriterion",
+        "Mzk1P8ActualDisplayHeightActual"
+      ],
+      "status": "FINAL_DEPENDENCY_ROUTE_NOT_AN_INHABITANT"
+    }
+  ],
+  "forbidden_proof_edges": [
+    {
+      "from": "P6-final",
+      "to": "U-L",
+      "reason": "P6-final consumes hCor312 and cannot prove its independent upper-bound premise."
+    },
+    {
+      "from": "P6-final",
+      "to": "U-C",
+      "reason": "Would infer hCor312 from a theorem already assuming it."
+    },
+    {
+      "from": "scalar uniform convergence x^2/(m+2)",
+      "to": "P8-P",
+      "reason": "No arithmetic height/different content; not a height producer."
+    }
+  ],
+  "corrections": [
+    "Current Mathlib subscheme, closed-immersion, gluing and finite=>proper APIs exist; instantiate actual Fermat objects.",
+    "Latest Section2 already proves exact 4/3 prime-count eventual bound; no duplicate PNT/Chebyshev task.",
+    "Latest PhiActionFamily/PhiActionSource and RootParameterWeight donors are reused; actual source membership and actual root instance remain distinct.",
+    "ChartRingActual2's U0/U1 are single-root factors over Q[lambda], not already-glued complete projective charts.",
+    "Original paper q magnitude is Q/(2*l), not Q.",
+    "Do not identify source symbolic singleton volume with Haar measure of a point.",
+    "Upper-bound comparison suffices; S2953 coefficient equality is stronger and unnecessary."
+  ],
+  "source_papers": [
+    {
+      "path": "papers/motizuki_corpus/text/Noncritical Belyi Maps.txt",
+      "locations": [
+        "Lemma 2.3",
+        "Lemma 2.4",
+        "Theorem 2.5",
+        "Corollaries 3.1-3.2"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "locations": [
+        "Theorem 1.10 normalizations and Steps (iii),(v),(viii)",
+        "Corollary 2.2",
+        "Corollary 2.3"
+      ]
+    }
+  ],
+  "evidence_scope": "Targeted source declarations and proof paragraphs, latest relevant audit tail, repository indices and local original papers only. Hashes are a delivery-time source snapshot, not compilation evidence. No whole-repository theorem review.",
+  "evidence": [
+    {
+      "path": "SHEAF.md",
+      "sha256": "158a544bc0e480161e237b8179d1b7d3e641b6467adb4cd0752418ba2956c66f",
+      "bytes": 16553,
+      "modified_utc": "2026-10-21T23:18:44.5424309Z"
+    },
+    {
+      "path": "GOAL.md",
+      "sha256": "47acde6807731de236fa46b1296c3bcea2cf1a34c3e7ca66ab5eff22962a350d",
+      "bytes": 3540,
+      "modified_utc": "2026-10-21T23:05:42.0808681Z"
+    },
+    {
+      "path": "SETUP.md",
+      "sha256": "49379941e77815c08e74ff06210b244680a5238dc452ad2eec4f57b443e2ccc4",
+      "bytes": 3504,
+      "modified_utc": "2026-10-21T23:18:44.5434312Z"
+    },
+    {
+      "path": "coord/TASK_TEMPLATE.md",
+      "sha256": "4297fcdec7e1e9f31da97379e5c906c5ee026623debbb2ca36588a029a27826c",
+      "bytes": 2477,
+      "modified_utc": "2026-10-21T23:18:44.5444310Z"
+    },
+    {
+      "path": "coord/LEAN-INDEX.md",
+      "sha256": "e53b937ba2e9cd150e2ad95c89a43842cd103934da6d9d2f60f20dc90460b969",
+      "bytes": 18490,
+      "modified_utc": "2026-11-15T12:03:10.5263733Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/_INDEX/README.md",
+      "sha256": "b80f1c6652d4bb78798260ac6a4eeb699fd66eba8ad6fd8ce0ed30e635676bce",
+      "bytes": 1368,
+      "modified_utc": "2026-11-15T01:39:56.7875841Z"
+    },
+    {
+      "path": "LeanFormal/_INDEX/README.md",
+      "sha256": "a95ba6910f915cfee90b853ce8b3659f24522469016ab4efe0de360542f314cf",
+      "bytes": 1072,
+      "modified_utc": "2026-11-15T01:39:56.7855841Z"
+    },
+    {
+      "path": "LeanFormal/IUT/Foundations/AlgebraicGeometry/SourcePsiProjectiveClosedModelConstruct.lean",
+      "sha256": "20727a0dca406ff3efaa58db845f0a0d1b117013bb97fcfbae18eb5a08c4096a",
+      "bytes": 12843,
+      "modified_utc": "2026-10-21T00:53:33.0803329Z"
+    },
+    {
+      "path": "LeanFormal/IUT/Foundations/LocalFields/LocalDifferentUpperBound.lean",
+      "sha256": "dc888a77043df259b28f0cec6b607ad0b6bcffa0a0aa4875c0fc7d99cf4e5b20",
+      "bytes": 9215,
+      "modified_utc": "2026-10-17T21:24:54.1178818Z"
+    },
+    {
+      "path": "LeanFormal/IUT/ABCBridge/Bridge/ABCEllipticHeightCriterion.lean",
+      "sha256": "e5c36a554da6a888167990e9863ca89539da1545a47e4bdcc58b8615d74a3db9",
+      "bytes": 9783,
+      "modified_utc": "2026-10-15T18:36:43.4365073Z"
+    },
+    {
+      "path": "LeanFormal/IUT/ABCBridge/Geometry/FinitePlaceStepVAssembly.lean",
+      "sha256": "864c372a59446e77beeb40a1925e06487a2565b8e7be729019943c8a6a192c03",
+      "bytes": 47766,
+      "modified_utc": "2026-10-17T21:36:01.6984882Z"
+    },
+    {
+      "path": "LeanFormal/IUT/IUTIV/Estimates/Section2.lean",
+      "sha256": "ae9250010dd81e89d3932dbfd21e34f0ea186b07317d63857880554fd0897e4c",
+      "bytes": 27185,
+      "modified_utc": "2026-10-16T20:50:34.4602644Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Gluing.lean",
+      "sha256": "258f15ae515cd2b5c7ade46d9a23691da8858bcf7f7d2b426be8f10c55fe127f",
+      "bytes": 40264,
+      "modified_utc": "2026-07-30T15:50:43.9678694Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/IdealSheaf/Basic.lean",
+      "sha256": "96ea7ea20f0b7f429da926be083a14f94e4568472f2feaab4598884410a19627",
+      "bytes": 41817,
+      "modified_utc": "2026-07-30T15:50:43.9698729Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/IdealSheaf/Subscheme.lean",
+      "sha256": "30e27ae20da6011485062c1a7914a22a45344488fbd3ca87016658c2d5613ae0",
+      "bytes": 38682,
+      "modified_utc": "2026-07-30T15:50:43.9923790Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Morphisms/ClosedImmersion.lean",
+      "sha256": "b187f4a4de96fb3f5373baebcef80cd45298a8be5ac0bad98d78c2fdbf7da8c8",
+      "bytes": 22940,
+      "modified_utc": "2026-07-30T15:50:44.1984723Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Morphisms/Finite.lean",
+      "sha256": "0dfc4354cf5782e47e45158cd9756f4194a6f7eb9ccb056c49061369113ab4bf",
+      "bytes": 10071,
+      "modified_utc": "2026-07-30T15:50:44.2004748Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Morphisms/Proper.lean",
+      "sha256": "04e387861a57dfb258c8499cb73709e66fe50e3573d6df72788b24d056d3e076",
+      "bytes": 6620,
+      "modified_utc": "2026-07-30T15:50:44.2094729Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean",
+      "sha256": "e670415983519ece1c7ecd6a1e48db54643bdfe4471762f14c3a3628bde58869",
+      "bytes": 19962,
+      "modified_utc": "2026-07-30T15:50:44.2154750Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/ProjectiveSpectrum/Functor.lean",
+      "sha256": "f6d4189706fb99a604db7b2c59a6afd18f695bbc567ec07d4d8cf79a28be7b6a",
+      "bytes": 9814,
+      "modified_utc": "2026-07-30T15:50:44.2274749Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/AlgebraicGeometry/Normalization.lean",
+      "sha256": "158fc7977f56ba2a7576fb83483f4931870a9971fc70e10040c99438dadc9205",
+      "bytes": 37847,
+      "modified_utc": "2026-07-30T15:50:44.2224753Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/RingTheory/Kaehler/Polynomial.lean",
+      "sha256": "01184a8be376bbaf6ee959e04f52d1efeb6700f294f1dee6548c2ca4a0d667cf",
+      "bytes": 5571,
+      "modified_utc": "2026-07-30T15:50:56.6478512Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/RingTheory/Kaehler/JacobiZariski.lean",
+      "sha256": "0ebef0d9f6ae8520a04ce528e46c48772f802d69db681da256d9557100777852",
+      "bytes": 27739,
+      "modified_utc": "2026-07-30T15:50:56.6478512Z"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/RingTheory/Smooth/StandardSmooth.lean",
+      "sha256": "42875683e14c2f10cb66554a6659407ea1ad95bc3ecd32dd7059a7a31a88c969",
+      "bytes": 7961,
+      "modified_utc": "2026-07-30T15:50:56.7875505Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatAffineSchemeActual.lean",
+      "sha256": "332b835dd163817773d2ddd05ba4c224030e4f0176cc801cc567176768b8407c",
+      "bytes": 2302,
+      "modified_utc": "2026-11-15T22:19:04.4413613Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatProjectiveSchemeActual.lean",
+      "sha256": "78399c83f905469244c950ccdfa04964c395f60a35f79597dbd8e65d2ec6bc83",
+      "bytes": 2454,
+      "modified_utc": "2026-11-15T22:19:04.4344273Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatProjMorphismActual.lean",
+      "sha256": "f1aee5cb913379fad87591c0b78e6876fce63033879e6dc1d76b23411f634e4e",
+      "bytes": 1069,
+      "modified_utc": "2026-11-15T22:11:02.2553839Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatRelativeDifferentialActual.lean",
+      "sha256": "450a0bbdbc1f7a1c65fbd0f9d666039de14814a05d09819f170d05d826a7d4c3",
+      "bytes": 826,
+      "modified_utc": "2026-11-15T21:44:14.0805573Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatRiemannHurwitzActual.lean",
+      "sha256": "ee1cc9be6389846e84be46a198b87cce45bcc8be08f8c99160a87f289094aa9c",
+      "bytes": 685,
+      "modified_utc": "2026-11-15T21:41:41.8392374Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1FermatChartRingActual2.lean",
+      "sha256": "41d35ead969cbb95ed55175f3f3bc41df0ea4d9736f0a8ff0985ee662d84afb5",
+      "bytes": 1626,
+      "modified_utc": "2026-11-15T21:54:06.9650776Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1AllCompactActual.lean",
+      "sha256": "57e2da70447d2c1a6437dc97b9fb41d2ba4c9a56ff002ab2f249676cd2be3636",
+      "bytes": 3358,
+      "modified_utc": "2026-11-15T18:02:11.5121988Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1CriterionAllActual.lean",
+      "sha256": "2b9b7da194158a59fb6c7fc16a5d8160a34cfba39b474528b773537c395f46e2",
+      "bytes": 1759,
+      "modified_utc": "2026-11-15T18:35:29.2961708Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1NoncriticalMapActual.lean",
+      "sha256": "2bd151e1d6e8c2885756a75b67078935c27dae79ead29bf3603517f8de42475e",
+      "bytes": 1004,
+      "modified_utc": "2026-11-15T21:00:38.3192117Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1Consumer24AdapterUnconditionalActual.lean",
+      "sha256": "60dc8bc22c6607489457f2c4d919473c10ef3dcb8d7d20c32346290711c5f62f",
+      "bytes": 10264,
+      "modified_utc": "2026-11-10T15:24:44.7782115Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/AG_FLT_ProvedTheoremsPromotionActual.lean",
+      "sha256": "1ae377e4f90e5466a4f0d5eff4010f3dcb89deeb7230818c8887dc3228b646fc",
+      "bytes": 3999,
+      "modified_utc": "2026-11-10T10:18:44.4907538Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/P8ProducerAttempt.lean",
+      "sha256": "df8dba279c5e776cb4303de207ab9ae73aa886963cf02fce65ec65a22834a771",
+      "bytes": 1570,
+      "modified_utc": "2026-11-15T21:26:01.6840000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P8ActualDisplayHeightActual.lean",
+      "sha256": "d7eda8465ed3973ccd24b88c69b278511b72b02a05ded55b521fee99522ca707",
+      "bytes": 2705,
+      "modified_utc": "2026-11-15T18:25:22.7180000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1G1P8DisplaySupplyActual.lean",
+      "sha256": "147b324cdc71eb8d72cc664fcc8219040445ae0b22a14d2c8a881a1c6d84c2c9",
+      "bytes": 2888,
+      "modified_utc": "2026-11-15T18:52:32.8530000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/HCor312SupplyFromP5Actual.lean",
+      "sha256": "4067a5ba86219a762480d0f5433e79f8e67099d23842769697672f12018a699a",
+      "bytes": 1480,
+      "modified_utc": "2026-11-15T21:10:59.4000000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/P6DisplayChainActual.lean",
+      "sha256": "92ed2edb5bfcd18029c37f329b0aed39ab83f0acbf7cc2f729b55d49071824d8",
+      "bytes": 869,
+      "modified_utc": "2026-11-15T21:10:59.4000000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P5InequalityCarrierGlueActual.lean",
+      "sha256": "275ae29143aa529de4ae4ef418afedd1e2a4891bf57ba83aa8b892e58f5006d3",
+      "bytes": 3114,
+      "modified_utc": "2026-11-15T16:03:11.4570000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1KummerRealizationActual.lean",
+      "sha256": "14b32c2b7dd7870fab7daf442d274cce1e14ba24e65a01f130c273c053422131",
+      "bytes": 4198,
+      "modified_utc": "2026-11-10T23:39:47.6282650Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1KummerTransportActual.lean",
+      "sha256": "75161034a0df7272b3f6d0ce04406fc3dbec24c386eaf95e5e706516ee9472ad",
+      "bytes": 9027,
+      "modified_utc": "2026-11-11T00:03:45.2232866Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S1902ActualThetaHullActual.lean",
+      "sha256": "6ce4d1a531679786f2db1a04e8c0b0a2f87c2881b1ff6599126a496e15de553b",
+      "bytes": 17507,
+      "modified_utc": "2026-11-01T06:53:46.6963298Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S3137QThetaPilotLogVolumeReadingsActual.lean",
+      "sha256": "215ca1f5810f8427df039eb696450e367ffc90d23670e50cf8864fc840a4e5b8",
+      "bytes": 7855,
+      "modified_utc": "2026-11-09T16:51:10.1606850Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6IVActual.lean",
+      "sha256": "8e7ef0e62f98e15cd55ecaddfe08070c6945139c26726025c46ae8e31e14675d",
+      "bytes": 1997,
+      "modified_utc": "2026-11-15T20:31:02.4390963Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6PaperBoundActual.lean",
+      "sha256": "853b0fa943c5d13891e6f4b90f9af8805875089312e2c89bd46969ce5f5f44b6",
+      "bytes": 1869,
+      "modified_utc": "2026-11-15T20:34:24.2935810Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1BoxReadoutLocalActual.lean",
+      "sha256": "d72389feac42992af2bc4cde2c5af76096bb9677f58ba9863fcaa139bf52442f",
+      "bytes": 5168,
+      "modified_utc": "2026-11-15T17:42:03.4282665Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1BoxConstantAuditActual.lean",
+      "sha256": "898049ce03336dbc649427cf8047e3d6d7c0d76f39426a98a3dd98667e715e66",
+      "bytes": 5287,
+      "modified_utc": "2026-11-11T17:04:05.7181347Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6PhiActionFamilyActual.lean",
+      "sha256": "f0637803dd1dc1e2e172a255111abf874aed43f6df870926a49e439165181887",
+      "bytes": 3109,
+      "modified_utc": "2026-11-15T22:03:42.4787296Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6PhiActionSourceActual.lean",
+      "sha256": "2afcb326022abf0213228eeb6004a2cb9615008e4ecc6982719248702ec80d3c",
+      "bytes": 1641,
+      "modified_utc": "2026-11-15T22:11:53.6080000Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1P6RootParameterWeightActual.lean",
+      "sha256": "8a381ee70f94beedb7a530630f1769371dd8d48f5e2648203380921c70e7f944",
+      "bytes": 1348,
+      "modified_utc": "2026-11-15T22:02:48.5259581Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/Mzk1BoxDistinguishedScalarActual.lean",
+      "sha256": "2da0bf446ede42eb819a32bde8b5f11a6e3a88b106c7a877084fbcedde3c9416",
+      "bytes": 2923,
+      "modified_utc": "2026-11-14T00:50:55.3809626Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S2953CThetaFromCertificateActual.lean",
+      "sha256": "a3b7c6ae4a4db70a390485fc3bc8a272a95dd4e6177237ffa7c473ff5b61650b",
+      "bytes": 2598,
+      "modified_utc": "2026-11-07T09:29:05.8908917Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S2715CThetaPaperScaleActual.lean",
+      "sha256": "396c9727df63d86024a93921e79e8d3208ff3ec196dd265cea204b62cdbc196a",
+      "bytes": 4665,
+      "modified_utc": "2026-11-06T16:00:19.9729880Z"
+    },
+    {
+      "path": "tmp/sheaf/xif/paper/S3171IUTIVSection1DisplayActual.lean",
+      "sha256": "e0c46bc72d6db343caeaf6b8dc761cd506237209418608918dfa7daf2dae1a94",
+      "bytes": 9635,
+      "modified_utc": "2026-11-15T01:50:27.3653035Z"
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory IV.txt",
+      "sha256": "8e6b47d21dc19e86fd4178895b773276573110fe3f16bf7e760e19f3188181fb",
+      "bytes": 245009,
+      "modified_utc": "2026-08-01T21:26:30.1341523Z"
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Noncritical Belyi Maps.txt",
+      "sha256": "2391ea9aca1c07fbee70853fedc273a0c0e618097627065dd55670538111d777",
+      "bytes": 17908,
+      "modified_utc": "2026-08-01T21:26:36.2041409Z"
+    },
+    {
+      "path": "coord/P7-G1-P6-P8-CLOSURE-ROUTE-20261116.md",
+      "sha256": "adace21606a04e441d031217b7dcfb355b8fe08b9e326f11e1d8674748cf1461",
+      "bytes": 56208,
+      "modified_utc": "2026-11-15T22:23:39.6522827Z",
+      "snapshot_note": "Report hash refreshed after final wording edit; other source hashes are the same-turn snapshot, not compiled evidence."
+    }
+  ],
+  "verification": {
+    "statement_compiles": "NOT_RUN",
+    "proof_body_checked": "NOT_RUN",
+    "kernel_closed": "NOT_RUN",
+    "target_accepted": "NOT_RUN",
+    "lean_commands_run": [],
+    "subagents_spawned": 0,
+    "lean_files_modified": [],
+    "artifact_checks": "PASSED: report exists; 9 main sections; 58 balanced display-math blocks; no duplicate equation tags or replacement characters; all 59 evidence paths existed; append markers occur exactly once in each of 5 records; JSON parsed; 10-node proof dependency graph is acyclic. These are artifact checks, not mathematical/kernel validation.",
+    "artifact_report_sha256": "adace21606a04e441d031217b7dcfb355b8fe08b9e326f11e1d8674748cf1461",
+    "proof_dependency_graph_acyclic": true
+  }
+}

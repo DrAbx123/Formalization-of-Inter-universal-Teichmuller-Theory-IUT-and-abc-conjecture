@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3131CardAMPLInstantiationAttemptActual
+import tmp.sheaf.xif.paper.S3131HunitInstantiationAttemptActual
+import tmp.sheaf.xif.paper.S3131SourceQSideInstantiationAttemptActual
+import tmp.sheaf.xif.paper.S3131SourceImageHullVolumeAttemptActual
+import tmp.sheaf.xif.paper.S3131PriorArtInstantiationReportActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131CardAMPLInstantiationAttemptActual.cardAMPL_realVolume_le
+#print axioms LeanFormal.IUT.XiFPaper.S3131HunitInstantiationAttemptActual.eps_to_sharp_reuse
+#print axioms LeanFormal.IUT.XiFPaper.S3131SourceQSideInstantiationAttemptActual.hqSlot_degenerate_reuse
+#print axioms LeanFormal.IUT.XiFPaper.S3131PriorArtInstantiationReportActual.S3131PriorArtInstantiationReport_length

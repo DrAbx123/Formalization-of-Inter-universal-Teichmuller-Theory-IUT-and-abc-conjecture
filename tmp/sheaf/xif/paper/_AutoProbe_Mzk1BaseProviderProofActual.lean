@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BaseProviderProofActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseProviderProofActual.finiteRatSet
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseProviderProofActual.mem_finiteRatSet_of_mem
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BaseProviderProofActual.ofFinite_mem_of_mem_finiteRatSet

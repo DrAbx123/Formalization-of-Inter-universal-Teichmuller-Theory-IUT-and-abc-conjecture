@@ -1,0 +1,7 @@
+/- Read-only probes for UnitInvariance green (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110UnitInvarianceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_mem_integralClosure
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_mul_mem_integralClosure
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_inv_mul_mem_integralClosure
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitInvarianceActual.algebraMap_unit_image_canonicalUnitReference_eq

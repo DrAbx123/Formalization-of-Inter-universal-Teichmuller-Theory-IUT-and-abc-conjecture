@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Cor312WiringCertificateConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312WiringCertificateConsumerActual.wiring_allRoutes

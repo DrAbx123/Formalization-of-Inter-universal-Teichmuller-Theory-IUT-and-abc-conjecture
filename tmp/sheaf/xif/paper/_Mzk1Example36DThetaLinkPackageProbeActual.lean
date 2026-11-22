@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Example36DThetaLinkPackageActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Example36DThetaLinkPackageActual.dThetaAt_package

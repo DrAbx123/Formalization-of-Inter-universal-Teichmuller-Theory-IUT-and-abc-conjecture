@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3132ConcreteGaussianPlaceSpecActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteGaussianPlaceSpecActual.packet_rationalPrime_eq_five
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteGaussianPlaceSpecActual.sourceTheater_Fmod_eq_packet
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteGaussianPlaceSpecActual.packet_completion_finrank_eq_one
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteGaussianPlaceSpecActual.concreteGaussianFiberDataSpec_holds
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteGaussianPlaceSpecActual.concreteGaussianFiberRingEquiv_of_surjective

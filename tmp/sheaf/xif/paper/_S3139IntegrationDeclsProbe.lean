@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S3139FirstTriangleIntegrationConsumerActual
+
+-- S3139 light declaration probe for the integration batch (small import set).
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleIntegrationActual.firstTriangleConditional
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleIntegrationActual.firstTriangleConditional_gluing_invariance
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleIntegrationConsumerActual.publicFirstTriangleConditional
+#print axioms LeanFormal.IUT.XiFPaper.S3139FirstTriangleIntegrationConsumerActual.firstTriangleResidualObligationIds

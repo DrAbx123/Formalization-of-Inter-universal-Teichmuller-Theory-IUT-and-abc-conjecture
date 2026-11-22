@@ -1,0 +1,6 @@
+tmp\sheaf\n8\N8Parent.lean:71:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:78:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:87:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:93:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:101:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:111:8: warning: declaration uses `sorry`

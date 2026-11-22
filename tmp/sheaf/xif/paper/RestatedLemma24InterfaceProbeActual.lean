@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.RestatedLemma24InterfaceActual
+#print axioms LeanFormal.IUT.XiFPaper.RestatedLemma24InterfaceActual.Mzk1Lemma24Target

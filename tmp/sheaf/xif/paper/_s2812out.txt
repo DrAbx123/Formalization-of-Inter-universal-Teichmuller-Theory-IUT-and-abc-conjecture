@@ -1,0 +1,10 @@
+LeanFormal.IUT.XiFPaper.S2812IsStackActual.schemeRepresentableEtalePseudofunctor_isStack.{u} (F : Type u) [Field F]
+  (X : Iut.SchemeOverField F) :
+  Pseudofunctor.IsStack (Iut.schemeRepresentableEtalePseudofunctor F X) (Iut.SchemeOverField.etaleTopology F)
+'LeanFormal.IUT.XiFPaper.S2812IsStackActual.schemeRepresentableEtalePseudofunctor_isStack' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S2812IsStackActual.essSurj_toDescentData' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.S2812IsStackActual.isStackFor_sieve' depends on axioms: [propext, Classical.choice, Quot.sound]

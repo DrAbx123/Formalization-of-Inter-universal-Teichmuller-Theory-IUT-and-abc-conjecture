@@ -1,0 +1,2 @@
+import Mathlib.Topology.Algebra.Valued.LocallyCompact
+#check @Valued.integer.properSpace_iff_completeSpace_and_isDiscreteValuationRing_integer_and_finite_residueField

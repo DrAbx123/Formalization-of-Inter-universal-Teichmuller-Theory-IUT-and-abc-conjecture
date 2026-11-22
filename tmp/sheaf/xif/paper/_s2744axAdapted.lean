@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2744PerPlaceRegionAllCoordsActual
+#print axioms LeanFormal.IUT.XiFPaper.S2744PerPlaceRegionAllCoordsActual.isCompact_perPlaceUpdateRegionAll
+#print axioms LeanFormal.IUT.XiFPaper.S2744PerPlaceRegionAllCoordsActual.measure_lt_top_perPlaceUpdateRegionAll

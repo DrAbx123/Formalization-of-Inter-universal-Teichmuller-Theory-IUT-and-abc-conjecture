@@ -222,6 +222,6 @@ def genericNodalReduction : Obligation :=
         "coefficient packet is reduced to y^2 + xy = x^3. Its tangent " ++
         "polynomial, roots, splitting, and normalization are proved without " ++
         "assuming a curve-specific geometric realization."
-    dependsOn := ["Foundations.Geometry.reduction-base-change"] }
+    dependsOn := ["Foundations.Geometry.elliptic-reduction-base-change"] }
 
 end LeanFormal.IUT.Audit

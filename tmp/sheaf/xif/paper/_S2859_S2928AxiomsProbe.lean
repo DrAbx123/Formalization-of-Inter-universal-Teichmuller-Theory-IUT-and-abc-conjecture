@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2859C3LatticeRegionComparisonConsumerActual
+import tmp.sheaf.xif.paper.S2928C3ThetaVolumeScalingConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2859C3LatticeRegionComparisonConsumerActual.C3LatticeRegionComparison_summary
+#print axioms LeanFormal.IUT.XiFPaper.S2928C3ThetaVolumeScalingConsumerActual.C3ThetaVolume_scaling_consumer

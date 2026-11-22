@@ -1,0 +1,1 @@
+tmp\sheaf\xif\paper\Mzk1SSIneqConsumerChainActual.lean:2:0: error: object file 'D:\lean\.lake\build\lib\lean\Iut\WallEquiv\Basic.olean' of module Iut.WallEquiv.Basic does not exist

@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S3139C2KummerArtinTheoremActual
+
+-- S3139 light probe: Galois-Kummer compatibility as a theorem (Brauer pairing reuse).
+
+#print axioms LeanFormal.IUT.XiFPaper.S3139C2KummerArtinTheoremActual.SourceKummerArtinPairingCompatibility
+#print axioms LeanFormal.IUT.XiFPaper.S3139C2KummerArtinTheoremActual.sourceKummerArtinPairingCompatibility
+#print axioms LeanFormal.IUT.XiFPaper.S3139C2KummerArtinTheoremActual.sourceKummerArtinPairingCompatibility_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3139C2KummerArtinTheoremActual.sourceKummerArtinPairing_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3139C2KummerArtinTheoremActual.kummerHomLevel_forces_artin_pow_trivial

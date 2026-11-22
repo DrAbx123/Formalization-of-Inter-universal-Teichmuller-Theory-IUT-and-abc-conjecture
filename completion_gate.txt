@@ -1,0 +1,12 @@
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.no_natRootSystem_of_valExp_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.completionFirstFieldObstruction_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.actualCompletionRootBlock_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LeanFormal.IUT.XiFPaper.Mzk1CompletionUnconditionalActual.oldSourcePilotWithActualCore_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

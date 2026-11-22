@@ -1,0 +1,7 @@
+/- Read-only probes for S45-free scaling route (abc) -/
+import tmp.sheaf.xif.paper.Mzk1S45FreeScalingRouteActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1S45FreeScalingRouteActual.norm_pow_eq_of_norm_eq_rpow
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1S45FreeScalingRouteActual.norm_normalizedScalingGenerator
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1S45FreeScalingRouteActual.arithmeticTuplePureFractionalScalingData_ofNormalizedRepresentative
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1S45FreeScalingRouteActual.arithmeticTupleNormalizedLogVolume_ofNormalizedRepresentative

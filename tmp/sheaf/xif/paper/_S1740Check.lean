@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S1740GaloisCorrespondenceActual
+
+open CategoryTheory
+open LeanFormal.IUT.XiFPaper.S1740GaloisCorrespondenceActual
+
+#check S1740ContEquivalence
+#check S1740FunctorToAction
+#check S1740FunctorToAction_full
+#check S1740AllActionsContinuous
+#check S1740ActionEquivalenceOfAllContinuous
+#check S1740Cover_connected_imp_transitive
+#check S1740D6ContEquivalence
+#check S1740D6BaseWitness
+#check S1740D6BaseActionEquivalence
+#print axioms S1740ContEquivalence
+#print axioms S1740FunctorToAction_smul
+#print axioms S1740D6BaseActionEquivalence

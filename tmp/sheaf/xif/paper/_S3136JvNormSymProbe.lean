@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S3136LGPJvLocalTransportActual
+import tmp.sheaf.xif.paper.S3136LGPBadWeightNormalizationActual
+import tmp.sheaf.xif.paper.S3136LGPThetaValueSymmetryActual
+import tmp.sheaf.xif.paper.S3136LGPThetaMuQuasiLatticeActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvLocalTransportActual.lgpRootZPowerHom_mem_thetaValueSubgroup
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvLocalTransportActual.lgpRootZPowerHom_twoL
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvLocalTransportActual.LGPJvLocalTransportGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadWeightNormalizationActual.lgpBadWeightSum_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadWeightNormalizationActual.lgpBadNormalizedWeight_total
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPBadWeightNormalizationActual.LGPBadWeightNormalizationGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaValueSymmetryActual.lgpThetaValue_neg
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaValueSymmetryActual.LGPThetaLabelSymmetryGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaMuQuasiLatticeActual.lgpThetaValue_quotient_root_independent
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaMuQuasiLatticeActual.lgpThetaMuQuasiLatticeCandidate
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPThetaMuQuasiLatticeActual.lgpThetaValueQuotient

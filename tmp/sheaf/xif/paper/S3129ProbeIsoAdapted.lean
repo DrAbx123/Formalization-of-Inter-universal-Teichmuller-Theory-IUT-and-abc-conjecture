@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3129CoverSchemeFiniteEtaleAttempt
+open CategoryTheory CategoryTheory.Limits
+namespace LeanFormal.IUT.XiFPaper.S3129ProbeIsoAdapted
+#check pullback_fst_iso_of_right_iso
+#check pullback_snd_iso_of_left_iso
+end LeanFormal.IUT.XiFPaper.S3129ProbeIsoAdapted
+end

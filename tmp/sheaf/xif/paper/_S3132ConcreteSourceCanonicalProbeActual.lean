@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3132ConcreteSourceCanonicalResidualActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteSourceCanonicalResidualActual.sourceRawLogVolume_eq_canonical_of_residual
+#print axioms LeanFormal.IUT.XiFPaper.S3132ConcreteSourceCanonicalResidualActual.sourceCanonicalReadout_of_residual

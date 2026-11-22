@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll01cHeightMulEstimatesActual
+import tmp.sheaf.xif.paper.GenEll02cFinitenessInputActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01cHeightMulEstimatesActual.s3135_paperHeight_mul_le
+#print axioms LeanFormal.IUT.XiFPaper.GenEll02cFinitenessInputActual.prop14_iv_of_finitenessInput

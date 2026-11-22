@@ -1,0 +1,32 @@
+import tmp.sheaf.xif.paper.PaperQZeroLimitConsumerActual
+
+noncomputable section
+
+namespace LeanFormal.IUT.XiFPaper.PaperQZeroLimitAuditActual
+
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper.EtaleThetaCoeffPairing
+open LeanFormal.IUT.XiFPaper.EtaleThetaSymmetricTruncLimitActual
+open LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual
+
+universe u
+
+#check paperQZeroLimitData
+#check paperQZeroLimitData_value
+#check paperQZeroLimitData_support_eq
+#check paperQZeroLimitData_support_encard
+#check paperQZeroLimitData_thetaCoeffAt
+#check paperQZeroLimitData_coeff_eq_trunc
+#check paperQZeroLimitData_coeff_eq_trunc_choose
+#check paperQZeroLimitData_support_eq_trunc_choose
+#check paperQZeroLimitData_support_encard_eq_trunc_choose
+
+#print axioms paperQZeroLimitData
+#print axioms paperQZeroLimitData_value
+#print axioms paperQZeroLimitData_support_encard
+#print axioms paperQZeroLimitData_thetaCoeffAt
+#print axioms paperQZeroLimitData_coeff_eq_trunc_choose
+
+end LeanFormal.IUT.XiFPaper.PaperQZeroLimitAuditActual
+
+end

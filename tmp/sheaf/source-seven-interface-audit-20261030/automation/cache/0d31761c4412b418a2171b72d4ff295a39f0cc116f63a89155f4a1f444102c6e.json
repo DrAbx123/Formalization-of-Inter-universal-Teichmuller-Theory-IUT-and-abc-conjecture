@@ -1,0 +1,20 @@
+{
+  "schema": "lean-auto/v2",
+  "file": "D:\\lean\\tmp\\sheaf\\source-seven-interface-audit-20261030\\SourceIndexBoundary.lean",
+  "fingerprint": "0d31761c4412b418a2171b72d4ff295a39f0cc116f63a89155f4a1f444102c6e",
+  "source_stamp": "8d6d44c7c4c95d414e6393948c432fa866973a2bdf786027a79ec9405a95d350",
+  "sha256": "66a0fbdd179caebd34ce0f17adfae352d98b43da1e6a40a90d4e50d4e1adbbd8",
+  "source_count": 4200,
+  "stale_modules": [],
+  "stale_module_count": 0,
+  "exit": 0,
+  "status": "green",
+  "route": "none",
+  "cached": false,
+  "errors": [],
+  "error_count": 0,
+  "forbidden": [],
+  "log": "D:\\lean\\tmp\\sheaf\\source-seven-interface-audit-20261030\\automation\\build-4443ea39472e48d3a5c29ccf326e7eaf.log",
+  "tail": [],
+  "validation_scope": "local compilation and lexical policy check; not an axiom or paper audit"
+}

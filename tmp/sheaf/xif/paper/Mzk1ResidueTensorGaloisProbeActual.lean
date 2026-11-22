@@ -1,0 +1,11 @@
+/- Read-only probes: NormalizedNormValuationResidue + Tensor placeholder + GaloisCompletion (abc) -/
+import tmp.sheaf.xif.paper.NormalizedNormValuationResidueActual
+import tmp.sheaf.xif.paper.Mzk1IVThm110TensorUnitBallActual
+import tmp.sheaf.xif.paper.Mzk1GaloisCompletionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedNormValuationResidueActual.AlgebraNormValuationPowerResidue
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedNormValuationResidueActual.NativeQRelativeNormContraction
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedNormValuationResidueActual.nativeQRelativeNormContraction_of_residue_power
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110TensorUnitBallActual.missingTensorUnitBallDonors_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GaloisCompletionActual.withValMovedSigma_val_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GaloisCompletionActual.valueGroup_comap_eq

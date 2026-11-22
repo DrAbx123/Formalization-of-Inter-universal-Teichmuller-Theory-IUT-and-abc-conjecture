@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+const ROOT='D:/lean';
+const ap=readdirSync(ROOT+'/tmp/sheaf/xif/paper').filter(f=>f.startsWith('_AutoProbe_')).length;
+const t=readFileSync(ROOT+'/dag/watchdog/extra-targets.txt','utf8').split('\n').filter(Boolean).length;
+const p=ROOT+'/coord/PROBE-AUDIT.md';
+let txt=readFileSync(p,'utf8');
+txt=txt.replace(/tmp\/sheaf\/xif\/paper\/_AutoProbe_\*\.lean: \d+ files[^\n]*/,'tmp/sheaf/xif/paper/_AutoProbe_*.lean: '+ap+' files');
+txt=txt.replace(/dag\/watchdog\/extra-targets\.txt: \d+ entries[^\n]*/,'dag/watchdog/extra-targets.txt: '+t+' entries after append-only refresh (non-probe + auto probes; dead entries for absent files removed)');
+writeFileSync(p,txt);
+console.log('audit updated: probes='+ap+' targets='+t);

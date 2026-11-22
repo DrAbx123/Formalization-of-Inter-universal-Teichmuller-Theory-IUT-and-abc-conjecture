@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2167DedekindFrobCycleActual
+#check @Fintype.card_le_of_injective
+#check @Fintype.bijective_iff_injective_and_card
+#check @Fintype.bijective_iff_injective_and_card
+#check @Function.Bijective
+#check @Fintype.card_ofFinset
+#check @Multiset.mem_erase
+#check @Multiset.dvd_prod
+#check @Splits.eval_root_derivative
+#check @Polynomial.card_roots_map_le_natDegree

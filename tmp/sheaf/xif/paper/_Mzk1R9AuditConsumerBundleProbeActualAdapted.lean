@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1R9AuditConsumerBundleActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1R9AuditConsumerBundleActualAdapted.r9AuditConsumerBundle_bundle

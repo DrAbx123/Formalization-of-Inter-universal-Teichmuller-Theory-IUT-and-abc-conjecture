@@ -1,0 +1,16 @@
+# Rename dictionary: newer-mathlib name || our pinned-mathlib name
+# Format: OLD||NEW (regex; use [regex]::Escape when the old name contains regex chars)
+Set\.mem_ofPred_eq||Set.mem_setOf_eq
+# TensorProduct induction renamed in newer mathlib
+TensorProduct\.inductionOn||TensorProduct.induction_on
+# Set predicate membership renamed in newer mathlib
+# deprecated alias -> current name (our Mathlib v4.32.2); mechanical, semantics identical
+zero_le'||zero_le
+count_associates_factors_eq||Ideal.count_associates_factors_eq
+TensorProduct\.inductionOn||TensorProduct.induction_on
+\.domRestrict\s+\(Divisor\.degZero \(K := K\) \(F := F\)\)||.comp (Divisor.degZero (K := K) (F := F)).subtype
+\.domRestrict\s*\n?\s*\(Divisor\.degZero \(K := K\) \(F := modularFunctionFieldC K N\)\)|.comp (Divisor.degZero (K := K) (F := modularFunctionFieldC K N)).subtype
+Finsupp\.mapDomain_of_notMem_range||Finsupp.mapDomain_notin_range
+Finsupp\.mapDomain_apply_of_injective||Finsupp.mapDomain_apply
+# drift: ``Eq.natDegree_le_of_dvd`` dot-notation on monic gone -> use ``Polynomial.natDegree_le_of_dvd hdvd hq.ne_zero``
+# drift: ``AlgHom.ofClass f`` gone -> build ``A →ₐ[R] B`` structure literal (toFun/map_*/commutes' := map_algebraMap f)

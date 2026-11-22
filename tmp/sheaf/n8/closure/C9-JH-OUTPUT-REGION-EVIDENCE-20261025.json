@@ -1,0 +1,174 @@
+{
+  "task": "C9-JH-OUTPUT-REGION-20261025",
+  "date": "2026-10-25",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "status": "Actual region computation complete for the J_H route; no new output gain; original P6 remains open",
+  "locked_target": "Fixed original admissible complete C, native q, gluing, target column and normalization; exclude uniform strict deficit of the entire source output family",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-JH-OUTPUT-REGION-20261025.md",
+    "sha256": "21f18bdf5689c8e93e7ef9ed305cae00a1ab8169de2b76bcfecab39debadd75c"
+  },
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "loci": [
+        "pp88-89 rational powers",
+        "p158 pilot generators"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "loci": [
+        "Prop3.4-3.5",
+        "Prop3.7(v)",
+        "Def3.8(i)",
+        "Rmk3.9.5(vii) Ob3/4"
+      ],
+      "verified_official_url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf",
+      "web_title_date": "May 2020"
+    },
+    {
+      "authors": "Darmon, Daub, Lichtenstein, Rotger",
+      "title": "Algorithms for Chow-Heegner Points via Iterated Integrals",
+      "url": "https://www.math.mcgill.ca/darmon/pub/Articles/Research/56.DDLRS-AWS/paper.pdf",
+      "loci": [
+        "section4.3 Definition4.3.1 cusp orders and eta modular-unit criterion"
+      ],
+      "accessed": "2026-10-25",
+      "hash": "not_downloaded; author-hosted PDF read with web tool"
+    }
+  ],
+  "reused": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-STRICT-DEFICIT-LOOP-20261024.md",
+      "sha256": "610aad551d02e5480b1c79460b75dc8ed040dd3fec93b8a64e0281e57d865a90"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-ALLOWED-REGIONS-NATURAL-RESEARCH-20261024.md",
+      "sha256": "03aad091be1773147a64abd1388f494cd8c947604d2d5b3ca86d295c9dce7ac5"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+      "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/c9_strict_deficit_marked_height_20261025.py",
+      "sha256": "d5a9947a454a340169652650c0f6f854488c2bc5d849c7eb83c5a880325ea387"
+    }
+  ],
+  "proved_results": [
+    "The actual kernel-discriminant J_H equals (eta(ell*tau)/eta(tau))^(6(ell-3)); the unit is explicit",
+    "Units preserve the final holomorphic fractional-ideal hull, without a claim that they preserve every intermediate log lattice",
+    "The source Gaussian ideal is root_N(J_H^(j^2) O_E), whereas root_N(J_H O_E) is the native-q ideal in this holomorphic frame",
+    "Original relative determinant, packet degrees and common tensor powers retain the j^2 coefficient",
+    "Exact rewriting of every original branch by J_H creates no new branch or output",
+    "The product over all ell+1 cyclic kernels is exactly ell^(-3ell(ell-3)); full Galois norm loses q dependence",
+    "Every modular unit on fixed X_0(ell) has a rationally proportional two-cusp divisor, so calibrated rewrites give no independent cusp slope"
+  ],
+  "exact_computation": {
+    "script": {
+      "path": "tmp/sheaf/n8/closure/c9_jh_output_region_20261025.py",
+      "sha256": "4ef5b53af018b657485f67877b228330592b7b5ee73965ebb796dcc5ed892584"
+    },
+    "certificate": {
+      "path": "tmp/sheaf/n8/closure/C9-JH-OUTPUT-REGION-CERTIFICATE-20261025.json",
+      "sha256": "5930d8fd71cc8b4eddfe6ed9c8ffc7b52eb50ed231dd7e74fcd90e67d62158b1"
+    },
+    "command": "python tmp/sheaf/n8/closure/c9_jh_output_region_20261025.py",
+    "exit_code": 0,
+    "all_assertions_passed": true,
+    "totals": {
+      "primes": 12,
+      "unit_coefficients_compared": 492,
+      "transverse_constant_checks": 24,
+      "native_valuation_cases": 48,
+      "independent_Velu_curves": 3
+    },
+    "independent_Velu_curve_checks": [
+      {
+        "ell": 5,
+        "p": 101,
+        "curve_a": 1,
+        "curve_b": 0,
+        "curve_point_count": 100,
+        "rational_ell_torsion_count": 25,
+        "J_values_from_Velu": [
+          68,
+          36,
+          24,
+          5,
+          24,
+          36
+        ],
+        "product": 84,
+        "expected_constant_mod_p": 84
+      },
+      {
+        "ell": 7,
+        "p": 197,
+        "curve_a": 1,
+        "curve_b": 0,
+        "curve_point_count": 196,
+        "rational_ell_torsion_count": 49,
+        "J_values_from_Velu": [
+          172,
+          191,
+          182,
+          1,
+          172,
+          191,
+          1,
+          182
+        ],
+        "product": 191,
+        "expected_constant_mod_p": 191
+      },
+      {
+        "ell": 11,
+        "p": 353,
+        "curve_a": 7,
+        "curve_b": 72,
+        "curve_point_count": 363,
+        "rational_ell_torsion_count": 121,
+        "J_values_from_Velu": [
+          331,
+          131,
+          185,
+          166,
+          16,
+          122,
+          22,
+          22,
+          222,
+          256,
+          213,
+          58
+        ],
+        "product": 1,
+        "expected_constant_mod_p": 1
+      }
+    ],
+    "scope": "Finite checks supplement general proofs; full IUT output family not computed"
+  },
+  "remaining_gaps": [
+    "No source-qualified branch or family reaching the fixed global native-q readout",
+    "No contradiction from the original complete-family uniform strict deficit",
+    "No new transport theorem through target-column log shift or theta-link",
+    "No right to replace a marked Gaussian generator by its componentwise 1/j^2 power"
+  ],
+  "next_action": "Use the explicit J_H calibration only to measure an actual source-qualified composite: retain its full unit domain, marked generator and target holomorphic coordinates; compute output valuation thresholds before hull and the original weighted global gain. Do not count modular-unit rewrites, common powers or full norms as new output.",
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "actual_source_contradiction_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

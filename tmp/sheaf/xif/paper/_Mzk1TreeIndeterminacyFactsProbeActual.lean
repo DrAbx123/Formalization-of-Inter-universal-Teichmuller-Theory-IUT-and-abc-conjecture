@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeIndeterminacyFactsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeIndeterminacyFactsActual.ind_facts_bundle

@@ -1,0 +1,171 @@
+{
+  "task": "C9-TAME-LOG-DOMAIN-20261025",
+  "date": "2026-10-25",
+  "owner": "current chat root; no subagents",
+  "node": "n8-c9-output-region-source-route",
+  "stage": "stage1 natural-language research",
+  "status": "Actual uniformizer output and required local hull constructed source-relatively; fixed-core target realization and stronger local comparison proved; original global P6 open",
+  "locked_target": "Every original admissible complete C, fixed native q, BPS/gluing, target column and normalization: exclude h_C<Q_C for the entire final output family",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-TAME-LOG-DOMAIN-20261025.md",
+    "sha256": "23b3514b94972de511f1b17e23ab3da832ed5bc63e89daca3875adeb07961f06"
+  },
+  "sources": [
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory I.txt",
+      "sha256": "5510ad77280fa8d14d2e24cc596f05a8faf7a02838a35cc0bb5c25231a666051",
+      "version": "May 2020",
+      "loci": [
+        "Def3.1(a)-(e)",
+        "Def4.10 pp119-120"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "version": "May 2020",
+      "loci": [
+        "Def1.1(i)",
+        "Rmk1.1.1(i)",
+        "Prop1.2(vi)",
+        "Prop3.2",
+        "Prop3.4-3.5",
+        "Thm3.11(i)-(ii)"
+      ]
+    },
+    {
+      "path": "papers/motizuki_corpus/text/Topics in Absolute Anabelian Geometry III.txt",
+      "sha256": "9926aea8b283c8c9e34750e1d3aa1618beb2650ecff5325d224c4fe627b44388",
+      "version": "November 2015",
+      "loci": [
+        "Def5.4(iii)",
+        "Prop5.8(i)-(iii)"
+      ]
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/sources/Kondo-2605.25428v2.html",
+      "sha256": "fe7c464e2ae09ffc85c4b02cad8b10b7eebef351113975a34c53a62169a27d86",
+      "version": "arXiv v2, 24 September 2026",
+      "url": "https://arxiv.org/html/2605.25428v2",
+      "loci": [
+        "section0",
+        "Thm1.2",
+        "Lem1.3/1.6",
+        "Thm2.6 log diagram",
+        "Def3.2/Lem3.3"
+      ]
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/sources/Kondo-2512.09231v1.html",
+      "sha256": "ff39006cf92ec22e1a39caa89fee9b86080953861d7ac6405e6919338c5c9e6f",
+      "version": "arXiv v1, 10 December 2025",
+      "url": "https://arxiv.org/html/2512.09231v1",
+      "loci": [
+        "Lem1.2",
+        "Thm1.3",
+        "section2 boundary-word construction",
+        "Thm2.17/Rmk2.18"
+      ]
+    }
+  ],
+  "reused": [
+    {
+      "path": "tmp/sheaf/n8/closure/C9-FIXED-GLUING-SWAP-20261025.md",
+      "sha256": "f734bc7bd33d8aa605315ad7e16709908722186ac27eece0e5a5c10cb10b1b19"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-FIXED-GLUING-SWAP-EVIDENCE-20261025.json",
+      "sha256": "f16af247473fc1e419ea3b3c023a6643d3d057af2760282e56c38473568dc5e9"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-PROCESSION-ORBIT-20261025.md",
+      "sha256": "b7a45e8c28bbe42461476ec0b4eb2acf889a0202a9439dde78b3410e34e329a5"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-FOUR-STEPS-SOURCE-ATTEMPT-20261024.md",
+      "sha256": "f3835796a4315ed5c8a0a0dce36a972fb42cbef8d1abe8e798b763644e8a8dc2"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-EVALUATION-DEFECT-ATTACK-20261024.md",
+      "sha256": "bfdad69825b86a4f1372f822117b03a0451a01af8bb404c0c4ee3f4657098912"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tmp/sheaf/n8/closure/c9_source_symplectic_span_20261025.py",
+      "sha256": "7184977189fdbc333d46df069b636ed07542a712ccdb8fe8edf50b645cfe5c8a"
+    },
+    {
+      "path": "tmp/sheaf/n8/closure/C9-SOURCE-SYMPLECTIC-SPAN-CERTIFICATE-20261025.json",
+      "sha256": "8dad68c6d38fb89bd4cc1105a81484e5fb09f0ad7e9413b4c78d143344290db0"
+    }
+  ],
+  "statement_dependencies": [
+    "Original complete C and independent native-q readout",
+    "Actual source unit domains, Gaussian action and output regions",
+    "Original processions, target hull and local/procession weights"
+  ],
+  "proof_dependencies": [
+    {
+      "kind": "observed_source",
+      "reference": "Kondo2026 Lem3.3; Kondo2025 Thm1.3",
+      "purpose": "actual symplectic action and trace-zero block"
+    },
+    {
+      "kind": "observed_source",
+      "reference": "AbsTopIII5.4/5.8; IUTIII1.2(vi),3.2,3.11; IUTI4.10",
+      "purpose": "action matching and fixed-core target branches"
+    },
+    {
+      "kind": "root_natural_language_proof",
+      "reference": "record sections3-6",
+      "purpose": "lattice orbit, actual output, target hull, finite orbit dichotomy"
+    }
+  ],
+  "proved_results": [
+    "For e<p-1, log(O_K^x)=m_K; two consecutive finite-field unit-domain log links have empty domain in this type. Ambient perfection does not enlarge the allowed unit input.",
+    "Kondo2026 Lem3.3 supplies actual Galois automorphisms with Sp_(e-1)(Z_p) additive image. Unit/reciprocity/perfection reconstruction matches the action with AbsTopIII5.8 and IUTIII1.2(vi).",
+    "For odd tame totally ramified cyclic degree e=ell, pi^e=p*u and n=s*e+t, 1<=t<e, the full actual orbit of pi^n O_K generates p^s*m_K.",
+    "The trace-zero integral lattice is a scaled standard symplectic lattice. Both pi^t and pi are primitive, so an actual source automorphism sends pi^t to pi. One genuine branch has field hull p^s*m_K, gaining (t-1)/e*log(p).",
+    "A finite direct-output witness uses at most two symplectic transvections modulo p*m_K; its output is nonzero in m_K/m_K^2. Galois lifts come from the cited source theorem, not from matrix tests.",
+    "With original core eta and terminal Phi fixed, actual field-copy maps on higher capsules together with eta on the 1-capsule form an allowed Psi. The actual source choice beta=Phi^-1*Psi fixes the core representative and satisfies T*beta=F in finite packet coordinates.",
+    "Real branches satisfy R_(beta*gamma)=F(gamma(A(S))) in the original target. Taking the authorized hull there gives the all-bad threshold s+1/e and removes the earlier coarse tensor-order loss without commuting arbitrary additive T with hull.",
+    "The full orbit-span of unmarked O_K is exactly O_K or p^-1*m_K; its actual finite action on O_K/m_K decides the branch. The larger branch has not been assumed.",
+    "For the stated local bad/good profile, the integer-domain hull reaches local native q whenever rho<=1/2. For ell41/rho1/2 the actual principal-unit-domain threshold improves from b1620 to b1347, with the infinite admissible tail certified by the affine-period argument.",
+    "p12301 gives a bad-local realization containing i and rational6-torsion: q=p^2694, qhat=pi^1347, pi^41=p. No complete global C is asserted."
+  ],
+  "corrections_and_scope": [
+    "Previous tensor-order calculations remain true lower bounds; full-Ind1 target alignment proves a stronger final-hull bound.",
+    "Prior p1231 local example did not contain i and was never complete initial data; p12301 repairs this local requirement only.",
+    "The direct uniformizer construction strengthens the orbit-span argument: a selected actual branch already has the required field hull.",
+    "No tame/degree/rho/b restriction has been added to the original global target."
+  ],
+  "remaining_gaps": [
+    "Original complete-C global P6 remains open; no local profile restriction was added to its assumptions.",
+    "Uniform bad profiles, including F_mod=Q, are not covered by the successful rho<=1/2 comparison.",
+    "The actual finite image moving O_K/m_K has not been computed; non-Hodge-Tate behavior alone does not choose the larger branch.",
+    "No comparison of all allowed rows/Theta/log operations and actual archimedean contributions with the fixed native-q volume class has been completed.",
+    "Subfamily exact values are not upper bounds on the entire source output family.",
+    "The source-relative procession/Kummer/evaluation dependencies have not been implemented or independently reviewed here."
+  ],
+  "next_action": "Keep an original complete C with F_mod=Q as the uniform-profile test; use the new target thresholds to write the exact residual deficit, then compute actual archimedean output regions and permitted column/log-Kummer composites against that quantity. If using the larger unmarked-domain branch, compute the actual finite source action on (p^-1*m)/m; do not substitute arbitrary GL matrices.",
+  "checks": {
+    "root_natural_language_self_review": "performed",
+    "exact_computations": "passed, Python exit0",
+    "finite_check_counts": {
+      "finite_span_cases": 72,
+      "threshold_cases": 24,
+      "direct_output_point_cases": 72,
+      "aligned_hull_threshold_cases": 24
+    },
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "project_build": "not_run",
+    "comparator": "not_run",
+    "independent_review": "not_run; current root only",
+    "complete_global_initial_datum_constructed": false,
+    "original_complete_family_strict_deficit_contradiction": "not_produced",
+    "target_accepted": false
+  }
+}

@@ -1,0 +1,13 @@
+import tmp.sheaf.xif.paper.S2803C3BlockCharPositivityActual
+import tmp.sheaf.xif.paper.PaperQZeroLimitConsumerActual
+import tmp.sheaf.xif.paper.S3127FreeQuotientPaperStatementActual
+import tmp.sheaf.xif.paper.S2793C3ComparisonDataThetaConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2803C3BlockCharPositivityActual.C3BlockChar_pos
+#print axioms LeanFormal.IUT.XiFPaper.S2803C3BlockCharPositivityActual.C3BlockChar_coe_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual.paperQZeroLimitData_support_mem_iff
+#print axioms LeanFormal.IUT.XiFPaper.PaperQZeroLimitConsumerActual.paperQZeroLimitData_coeff_ne_zero
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientPaperStatementActual.S3127G2PaperStatement_holds
+#print axioms LeanFormal.IUT.XiFPaper.S3127FreeQuotientPaperStatementActual.S3127FreeQuotientExists_of_paperInput_via_data
+#print axioms LeanFormal.IUT.XiFPaper.S2793C3ComparisonDataThetaConsumerActual.C3ComparisonData_qPilot_sum_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.S2793C3ComparisonDataThetaConsumerActual.C3ComparisonData_region_one_le_measure

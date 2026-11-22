@@ -3,6 +3,7 @@ import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 import LeanFormal.IUT.Foundations.Arithmetic.Radical
 import LeanFormal.IUT.Foundations.Arithmetic.PrimitiveAdditive
+import LeanFormal.IUT.Audit.Status
 
 /-!
   The integer ABC statement used as the eventual arithmetic target.
@@ -51,3 +52,18 @@ theorem abcInequality_is_explicit (epsilon K : Real) (a b c : Nat) :
   Iff.rfl
 
 end LeanFormal.IUT
+
+namespace LeanFormal.IUT.Audit
+
+def abcConjectureStatement : Obligation :=
+  { id := "ABC.statement"
+    source := "Standard integer ABC conjecture; statement layer"
+    status := VerificationStatus.interface
+    note :=
+      "The standard statement is available as `ABCConjecture` over Mathlib " ++
+        "radicals and primitive additive triples, with the elementary radical " ++
+        "lemmas proved. This entry claims only the statement layer; the global " ++
+        "epsilon proof remains open and is registered separately as " ++
+        "ABC.proof-target." }
+
+end LeanFormal.IUT.Audit

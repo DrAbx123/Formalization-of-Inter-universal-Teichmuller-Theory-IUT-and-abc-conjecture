@@ -1,0 +1,16 @@
+import Mathlib
+#check Int.negOnePow
+#check Int.negOnePow_add
+#check Int.negOnePow_eq_iff
+#check Int.negOnePow_abs
+#check Tuple.sort
+#check Tuple.monotone_sort
+#check Perm.sign
+#check add_two_le_iff_lt_of_even_sub
+#check Int.two_mul_ediv_two_of_even
+#check Int.mul_ediv_cancel'
+#check Int.ediv_lt_iff_lt_mul
+#check Int.emod_emod_of_dvd
+#check Int.dvd_sub_of_emod_eq
+#check SetLike.mem_nonZeroDivisors
+#check mem_nonZeroDivisors_of_ne_zero

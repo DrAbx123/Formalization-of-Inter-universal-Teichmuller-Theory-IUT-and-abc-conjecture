@@ -1,0 +1,9 @@
+import Mathlib.CategoryTheory.Galois.Basic
+open CategoryTheory
+#check @NatTrans.naturality_apply
+#check @NatTrans.naturality
+#check @FintypeCat.homMk_apply
+#check @CommAlgCat.FiniteEtale.fiber_obj
+#check @CommAlgCat.FiniteEtale.fiber_map
+#check @FintypeCat.of
+#check @FintypeCat.hom_ext

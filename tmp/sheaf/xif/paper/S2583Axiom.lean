@@ -1,0 +1,2 @@
+import tmp.sheaf.xif.paper.S2583FactorDegreeActual
+#print axioms LeanFormal.IUT.XiFPaper.S2583FactorDegreeActual.irreducible_dvd_X_pow_card_pow_sub_X

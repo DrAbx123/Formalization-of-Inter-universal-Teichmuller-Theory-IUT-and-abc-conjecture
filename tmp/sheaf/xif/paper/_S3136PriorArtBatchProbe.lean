@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S3136PriorArtCheckActual
+import tmp.sheaf.xif.paper.S3136ModelOriginalInputReuseActual
+import tmp.sheaf.xif.paper.S3136ModelUnitRegionHaarDataReuseActual
+import tmp.sheaf.xif.paper.S3136FactPrimeReuseActual
+import tmp.sheaf.xif.paper.S3136ClassABDClassConcreteInstancesActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136PriorArtCheckActual.lgpPriorArtCheck_length
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelOriginalInputReuseActual.lgpModelOriginalInput_primeStripAt
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelUnitRegionHaarDataReuseActual.lgpModelUnitRegionHaarData_scaling
+#print axioms LeanFormal.IUT.XiFPaper.S3136ModelUnitRegionHaarDataReuseActual.lgpModelUnitRegionHaarData_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3136FactPrimeReuseActual.lgpQVFamTensorP_prime_via_priorArt
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassABDClassConcreteInstancesActual.isBDLe_of_pointwise
+#print axioms LeanFormal.IUT.XiFPaper.S3136ClassABDClassConcreteInstancesActual.isBDLe_add

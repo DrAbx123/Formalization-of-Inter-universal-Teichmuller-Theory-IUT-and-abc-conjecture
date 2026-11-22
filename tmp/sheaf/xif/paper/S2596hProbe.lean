@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2596gResidueCompatActual
+import tmp.sheaf.xif.paper.S2591LocalizedResidueEquivActual
+#check Ideal.fintypeQuotient
+#check Fintype.card_congr
+#check Nat.card_eq_fintype_card
+#check S2591LocalizedResidueEquivActual.S2591_localized_residue_equiv
+#check S2590LocalizedPrimeContractionActual.S2590_contraction_maximal

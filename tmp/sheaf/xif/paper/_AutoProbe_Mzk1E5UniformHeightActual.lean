@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1E5UniformHeightActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5UniformHeightActual.undilatedHeightBound_of_unit_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5UniformHeightActual.heightComparisonFamily_of_unit_valuation_bound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1E5UniformHeightActual.e5UnitConsumerRows

@@ -1,58 +1,46 @@
-# Working Principles for This Project
+# IUT 项目工作入口：SHEAF
 
-## 1. Work Incrementally
+生效日期：2026-10-22。用户要求采用 [frenzymath/SHEAF](https://github.com/frenzymath/SHEAF) 并撤下旧活动方法论。本文件连同 SHEAF.md 是当前入口；历史文档中的五级调度、旧 SQLite 恢复门槛及“所有前置证完才许写上层”的流程不再生效。用户当前明确指令优先。
 
-- Do not repeatedly re-audit the same ground. Inspect what is needed for the current task and move the proof forward.
-- The IUT project is very large. No single agent can hold the entire project in mind or control it globally. Work through focused, concrete patches that improve the current area.
-- Keep changes as small and local as the task allows. Preserve working code and avoid unnecessary rewrites.
+## 启动或恢复
 
-## 2. Keep an Append-Only Research Log
+1. 读 [SHEAF.md](SHEAF.md)、[GOAL.md](GOAL.md)、[SETUP.md](SETUP.md)、[coord/STATE.md](coord/STATE.md)。
+2. 按用户当前任务从 [coord/queue.md](coord/queue.md) 取一项，只读对应 DAG 节点、必要源文件和已有研究证据；不重新全仓审查。
+3. 用 [任务模板](coord/TASK_TEMPLATE.md) 写清实际目标/消费者、量词假设、阶段、精确文件及版本。一包一个负责人；已有活动 owner 的文件先协调，不自行覆盖。
+4. 证明任务按 [SHEAF 调度方法](coord/SCHEDULING.md) 分组并行：不设固定人数或组数上限，可扩展到大量执行者；维护者管理队列/集成/构建，组负责人和 worker 自主认领就绪任务，不让 root 逐包审批成为瓶颈。规模由任务、文件冲突、集成吞吐和实际资源决定。
+5. 不经过旧多级状态握手，不自动唤醒历史任务；源码和历史记录保留。
 
-- Take notes frequently and record research as soon as it produces a useful fact, decision, failed attempt, or proof result.
-- The purpose of notes is to know exactly what was changed and why. Do not erase earlier notes and replace them with a new summary; that destroys history.
-- Treat the notes as an external memory. Do not rely on being able to remember complex investigations later. Before starting related work, consult the existing notes and reuse their conclusions.
-- Add new entries to the existing record. Correct an earlier conclusion only when there is clear evidence, and preserve the superseded entry with an explanation of the correction.
+用户在某个 chat 中要求单线程，只约束该 chat/任务，除非用户明确声明为项目设置，不得传播为项目并行限制。本次方法论编辑由 root 完成；短文档和机械检查也不为使用多 agent 而分派。
 
-## 3. Respect Verified Mathematics
+## 必须执行的证明方法
 
-- Reuse previously established lemmas, definitions, and proof strategies whenever possible.
-- Minimize overturning earlier conclusions. In Lean, code that compiles is a proved theorem; do not disturb such code without a specific mathematical or engineering reason.
-- Prefer a narrowly targeted patch over a broad refactor, especially in code that already compiles.
+- 一张 DAG，两类边：statement dependencies 与 proof dependencies。每个节点有来源、准确对象、证明步骤和复用调查；已有成果直接复用。
+- 阶段 1 从目标向下分解；阶段 2 沿陈述依赖自底向上写准确陈述；阶段 3 从目标向下证明并剪枝。阶段按节点交错，不以全项目排队阻塞局部工作。
+- SHEAF 陈述阶段允许有来源、完整自然语言证明和节点登记的具名 `sorry` 定理。真实定义不能用任意数据或空 card 替代。显式待证依赖可用于上层证明探索，但所有受影响结果保持未闭合。
+- 不得用新增假设、改对象、缩量词、假 axiom 或循环接口伪装完成。原论文允许的合格输入则保持原范围，不擅自加强为从任意弱输入构造。
+- 目标锁定包含引用定义的语义；更改目标需要用户指令，更改相关定义要重审。中间命题可随等强路线修正，连同受影响消费者一起验证。
+- 证明落地后删除不需要的 imports、更新实际依赖；无目标可达的分支退出活动队列，保留源码和研究历史。局部图未覆盖的文件不能据此判为无用。
 
-## 4. Follow the Steps Completely
+## 项目相关性与验收
 
-- Work in an explicit sequence: understand the local context, state the next subgoal, make the smallest useful change, compile it, record the result, and then proceed.
-- Do not skip difficult steps or hide unfinished work behind presentation. When a step is hard, investigate it and overcome the difficulty directly.
-- The goal is clean, completed mathematics and maintainable Lean code. Either do the requested work or state plainly that it cannot be done; do not substitute decorative process for progress.
+每包指出一个实际消费者，说明减少什么缺口。Project import、合取包装、一般性、行数和文件数不是进度。L0.3 的具体执行方法在 SHEAF.md 第 6 节；不要重复审查已经定位的测试曲线。
 
-## 5. Use Deliberate, Distinguishable Names
+分别报告 `statement_compiles`、`proof_body_checked`、`kernel_closed`、`target_accepted`。最终接受须有对应版本构建、锁定目标类型的 comparator 验收、传递公理检查及有效原文语义审查。仅允许最终闭包中的 `propext`、`Classical.choice`、`Quot.sound`；条件定理的证明与实际条件构造分开记录。
 
-- Every definition, theorem, lemma, proposition, structure, namespace, variable, and supporting declaration must have a meaningful and distinguishable name.
-- Choose names that communicate the mathematical object or result and fit the naming conventions already established in the surrounding code.
-- Do not use arbitrary, vague, disposable, or collision-prone names such as `foo`, `bar`, `test`, `tmp`, or unexplained numeric suffixes.
-- Before introducing a name, check the local namespace and nearby files for existing declarations and choose a name that cannot be confused with them.
-- If a temporary name is unavoidable during exploration, replace it with a precise permanent name before considering the work complete.
+普通编译/错误归类/重复任务先用 [零模型自动化](tools/LEAN_AUTOMATION_USAGE.md)。阶段 2 的具名 sorry 另按 SETUP.md 记录陈述编译，不篡改工具的绿色状态。全 Project 构建放到实际证明批次验收，方法论文档更改不触发全构建。
 
-## 6. State Claims Precisely and Proportionally
+## 工作纪律
 
-- Never expand a theorem, method, hypothesis, or project result beyond what has actually been proved or tested. State the exact assumptions, objects, and scope.
-- Be honest about whether a conclusion is strong or weak. Do not present a local, conditional, or partial result as a general, definitive, or project-wide result.
-- Treat generalization as a mathematical claim that requires a valid, reusable argument. Do not claim broader applicability merely because a proof works in one instance; if the method is not known to generalize, say so.
-- Research notes must be factual and proportionate. Record evidence, limitations, open cases, and failed attempts instead of using emphatic language or overstating progress.
-- Do not use absolute progress statements or predictions such as "this is the final verification" or "all changes are complete" without concrete evidence that supports that exact claim.
-- Describe status with verifiable facts: identify the files or theorems checked, the commands that passed, the cases that remain, and any uncertainty. Update the statement when new evidence changes the scope.
+- 小而相关的改动，保留已验证数学、当前用户改动和已有命名；不用无意义的临时名充当永久接口。
+- 研究事实、失败路线、反例和有效捷径及时追加 [AUDIT_LEDGER.md](AUDIT_LEDGER.md)；更正保留原结论及理由，不覆盖历史。
+- 本包结束更新节点、STATE 与 queue；明确当前证据版本、仍缺的接口和一个可执行下一步。
+- 未运行的编译、独立审查、比较器或自动化如实标为未运行；不因有计划就宣称部署。
 
-## 7. Do Not Build on Unproved Foundations
+旧方法论原字节归档见 [归档说明](coord/archive-20261022/README.md)，哈希见 [迁移清单](coord/sheaf-migration-20261022.json)。旧日志中的数学证据继续有效到其实际版本，旧流程规则不恢复为活动指令。
 
-- Do not use an unproved theorem, placeholder declaration, `sorry`, fabricated axiom, or merely promised interface field as the foundation for later mathematics.
-- An absent theorem is a real proof gap, not a component that can be made to look ready by reserving fields for it. Do not describe such scaffolding as progress toward a proved result.
-- Prove every required theorem before using it as a dependency for the next step, and compile the dependent code against that actual proof.
-- If the required theorem cannot yet be proved, record the precise mathematical gap and do not advance the dependent argument on a fictitious basis. Continue only with work that is genuinely independent and clearly separated from that gap.
 
-## 8. Build Theorems from the Bottom Up
+## Lean 编译与索引（Lead 2026-11-15）
 
-- Construct the theory in dependency order, starting with the definitions, propositions, and lemmas on which later theorems rely.
-- Before proving or using a theorem, verify that every required assumption is stated precisely and has itself been proved or otherwise validly established in the current context.
-- If any required assumption is false, unavailable, or unproved, stop the dependent line of work immediately. Do not continue by treating the assumption as if it were true.
-- Prove or repair the missing assumption first, compile that result, and only then resume the higher-level theorem.
-- Never build an upper-level theoretical model while any part of its mathematical foundation remains unsecured; keep independent work clearly separate from blocked dependent work.
+- 所有 Lean 验证一律通过 watchdog：把目标加入 `dag/watchdog/extra-targets.txt`，看 `dag/watchdog/watchdog.log` 的 DONE/FAIL；不要用 `lake env lean` 直接编译/生成 olean。
+- 先查 `coord/LEAN-INDEX.md` 和对应根目录的 `_INDEX/README.md`，避免重复找 donor。
+- 当前活动正式化：`tmp/sheaf/xif/paper/`；核心定义：`LeanFormal/IUT/`；已可 import 的 donor：`tmp/local-cft-port/PadicField/FieldNorm.lean`。

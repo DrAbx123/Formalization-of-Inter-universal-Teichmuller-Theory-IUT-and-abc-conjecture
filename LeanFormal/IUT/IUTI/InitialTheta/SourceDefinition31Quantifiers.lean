@@ -465,25 +465,37 @@ structure SourceEtaleStackScalarExtension
       (Pseudofunctor.comp
         (schemeRestrictScalarsPseudofunctor F K) X.fiber)
 
+/-- Scalar extension of the underlying etale stack from `F` to `K`, in the
+form used by the K-core of IUT I, Definition 3.1(d).
+
+The underlying stack is base-changed by `stackExtension`.  Only the
+**genus** of the associated orbicurve is preserved: the K-side objects of
+type `(1,l-tors)` and `(1,l-tors)^\pm` are obtained from the K-core by
+extracting l-th roots of the theta function ([EtTh], Definition 2.1), which
+adds l-torsion stacky structure over `K`.  Thus the stacky orders and the
+punctures need not agree with the F-side signature.  In particular this
+structure does not assert the false full signature equality
+`result.signature = X.signature` that made the F-side `(1,1)` and the
+K-side `(1,l-tors)` incompatible. -/
 structure SourceOrbicurveScalarExtension
     (F K : Type u) [Field F] [Field K] [Algebra F K]
     (X : Iut.HyperbolicOrbicurve F) where
   result : Iut.HyperbolicOrbicurve K
   stackExtension : SourceEtaleStackScalarExtension F K X.stack
   target_stack : result.stack = stackExtension.result
+  /-- The coarse genus is preserved by the K-core base change. -/
   genus_preserved : result.signature.genus = X.signature.genus
-  stackyOrders_preserved : result.signature.stackyOrders = X.signature.stackyOrders
-  punctures_preserved : result.signature.punctures = X.signature.punctures
 
-theorem SourceOrbicurveScalarExtension.signature_preserved
+/-- The only signature invariant preserved across the K-core scalar
+extension: the genus.  Full signature preservation is deliberately absent
+because the K-side `(1,l-tors)` decoration changes the stacky orders and
+punctures (Definition 3.1(d)). -/
+theorem SourceOrbicurveScalarExtension.signature_genus_preserved
     {F K : Type u} [Field F] [Field K] [Algebra F K]
     {X : Iut.HyperbolicOrbicurve F}
     (E : SourceOrbicurveScalarExtension F K X) :
-    E.result.signature = X.signature := by
-  apply Iut.OrbicurveSignature.ext
-  · exact E.genus_preserved
-  · exact E.stackyOrders_preserved
-  · exact E.punctures_preserved
+    E.result.signature.genus = X.signature.genus :=
+  E.genus_preserved
 
 structure SourceOrbicurveMorphismScalarExtension
     {F K : Type u} [Field F] [Field K] [Algebra F K]
@@ -499,7 +511,7 @@ structure SourceOrbicurveMorphismScalarExtension
   restrictedMap_app : ∀ S,
     restrictedMap.app S = f.app ((schemeRestrictScalarsPseudofunctor F K).obj S)
 
-structure SourceOrbicurveSquare
+structure SourceOrbicurveTwoIsoSquare
     {F : Type u} [Field F]
     (P X Y Z : Iut.HyperbolicOrbicurve F) where
   toX : P.Hom X
@@ -637,15 +649,44 @@ theorem xF_once_punctured (S : SourceSignQuotientData A) :
     S.xF.signature = Iut.OrbicurveSignature.oncePuncturedElliptic := by
   exact S.xF_geometry.signature
 
+/-- The K-side orbicurve carries the paper's `(1,l-tors)` signature
+(Definition 3.1(d)). -/
 theorem xK_signature (S : SourceSignQuotientData A) :
-    S.xK.signature = S.xF.signature := by
-  rw [S.xK_eq_extension]
-  exact SourceOrbicurveScalarExtension.signature_preserved S.xKExtension
+    S.xK.signature = sourceTypeOneLTorsion l :=
+  S.xKType
 
+/-- The K-core scalar extension preserves the genus of `X_F`. -/
+theorem xK_genus (S : SourceSignQuotientData A) :
+    S.xK.signature.genus = S.xF.signature.genus := by
+  calc
+    S.xK.signature.genus = S.xKExtension.result.signature.genus := by
+      rw [S.xK_eq_extension]
+    _ = S.xF.signature.genus := S.xKExtension.genus_preserved
+
+/-- The K-side orbicurve carries the paper's `(1,l-tors)^\pm` signature. -/
 theorem cK_signature (S : SourceSignQuotientData A) :
-    S.cK.signature = S.cF.signature := by
-  rw [S.cK_eq_extension]
-  exact SourceOrbicurveScalarExtension.signature_preserved S.cKExtension
+    S.cK.signature = sourceTypeOneLTorsionPlusMinus l :=
+  S.cKType
+
+/-- The K-core scalar extension preserves the genus of `C_F`. -/
+theorem cK_genus (S : SourceSignQuotientData A) :
+    S.cK.signature.genus = S.cF.signature.genus := by
+  calc
+    S.cK.signature.genus = S.cKExtension.result.signature.genus := by
+      rw [S.cK_eq_extension]
+    _ = S.cF.signature.genus := S.cKExtension.genus_preserved
+
+/-- The F-side quotient `C_F` has genus one, as forced by the K-core
+extension and the `(1,l-tors)^\pm` signature of `C_K`. -/
+theorem cF_genus (S : SourceSignQuotientData A) :
+    S.cF.signature.genus = 1 := by
+  calc
+    S.cF.signature.genus = S.cKExtension.result.signature.genus :=
+      S.cKExtension.genus_preserved.symm
+    _ = S.cK.signature.genus := by rw [S.cK_eq_extension]
+    _ = 1 := by
+      rw [S.cKType]
+      rfl
 
 theorem selected_places_spec (S : SourceSignQuotientData A) :
     S.V = S.V_section.selected := S.V_eq_section

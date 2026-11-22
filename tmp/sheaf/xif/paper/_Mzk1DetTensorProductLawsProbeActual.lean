@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1DetTensorProductLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DetTensorProductLawsActual.matrixLogDet_prod_posDef
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DetTensorProductLawsActual.matrixLogDet_laws_package

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.IUTExternal20ProofStatusActual
+
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal20ProofStatusActual.IUTExternalProofStatus
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternal20ProofStatusActual.IUTExternalProofStatus_length
+#print axioms LeanFormal.IUT.Audit.IUTExternalProofStatusRecord

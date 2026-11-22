@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1DChartDatumWitnessGreenActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1DChartDatumWitnessGreenActual.dChartDatumWitnessGreen_restated

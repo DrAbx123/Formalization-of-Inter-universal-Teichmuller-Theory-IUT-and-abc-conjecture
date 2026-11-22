@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1ExplicitEstimatesStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ExplicitEstimatesStatementActual.EffectiveErrorBound
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ExplicitEstimatesStatementActual.EffectiveConstantPositive
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ExplicitEstimatesStatementActual.FinalNumericComparison

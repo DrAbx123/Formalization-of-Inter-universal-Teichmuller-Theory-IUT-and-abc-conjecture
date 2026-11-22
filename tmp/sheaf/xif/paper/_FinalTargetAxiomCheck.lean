@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.PaperLevelXiFTargetBridgeActual
+import tmp.sheaf.xif.paper.BadPlacePaperNormalizedTargetBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetBridgeActual.actualPaperXiFTarget
+#print axioms LeanFormal.IUT.XiFPaper.BadPlacePaperNormalizedTargetBridgeActual.actualPaperXiFTargetMagnitude_actual
+#check LeanFormal.IUT.XiFPaper.PaperLevelXiFTargetActual.ActualPaperXiFTarget

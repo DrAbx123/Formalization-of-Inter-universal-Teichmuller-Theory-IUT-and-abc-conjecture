@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3132ThetaSideClauseResidualActual
+import tmp.sheaf.xif.paper.S3132ThetaSideModelClauseResidualActual
+import tmp.sheaf.xif.paper.S3132ThetaSideClauseComparisonDataActual
+import tmp.sheaf.xif.paper.S3132ThetaSideModelComparisonDataActual
+import tmp.sheaf.xif.paper.S3132ThetaSideMilestoneBRecordActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideClauseResidualActual.clauseRawLogVolume_eq_canonical
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideClauseResidualActual.clauseCanonicalReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideModelClauseResidualActual.modelCanonicalReadout
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideClauseComparisonDataActual.clauseComparisonData_thetaPilot_value
+#print axioms LeanFormal.IUT.XiFPaper.S3132ThetaSideModelComparisonDataActual.modelComparisonData_corollary312

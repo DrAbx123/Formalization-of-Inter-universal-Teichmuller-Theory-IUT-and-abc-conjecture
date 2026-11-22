@@ -1,0 +1,28 @@
+import tmp.sheaf.xif.paper.S1833ActualCoverCoproductsActual
+
+noncomputable section
+open CategoryTheory CategoryTheory.Limits
+open LeanFormal.IUT.XiFPaper.S1726OrbicurveFPrimeActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual.S1728Paper
+open LeanFormal.IUT.XiFPaper.S1733EssentiallySmallCoversActual
+open LeanFormal.IUT.XiFPaper.S1736CoverGaloisCategoryActual
+open LeanFormal.IUT.XiFPaper.S1743CoverSliceActual
+open LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual
+open LeanFormal.IUT.XiFPaper.S1833ActualCoverCoproductsActual
+
+#check @S1833FirstMissing
+#check @S1833FirstMissing_iff
+#check @S1833HasFiniteCoproducts_of_firstMissing
+#check @S1833HasFiniteCoproducts_of_comparison
+#check @S1833InitialObj
+#check @S1833InitialObj_isInitial
+#check @S1833CoproductObj
+#check @S1833CoproductCofan_isColimit
+#check @S1833PreGaloisCategoryOfFirstMissing
+#print axioms S1833HasFiniteCoproducts_of_firstMissing
+#print axioms S1833InitialObj_isInitial
+#print axioms S1833CoproductCofan_isColimit
+#print axioms S1833PreGaloisCategoryOfFirstMissing
+
+end

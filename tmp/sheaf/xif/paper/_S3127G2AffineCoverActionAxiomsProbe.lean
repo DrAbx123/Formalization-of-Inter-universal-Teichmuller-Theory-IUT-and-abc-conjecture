@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S3127G2AffineCoverActionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2AffineCoverActionActual.S3127G2AffineCoverAction

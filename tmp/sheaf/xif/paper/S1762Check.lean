@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1762CoverLimitsActual
+
+#check LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762IdentityFiniteEtaleActual
+#check LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762HasTerminalS1728
+#check LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762FirstMissingPullback
+#check LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762FirstMissingFiniteCoproduct
+#print axioms LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762IdentityFiniteEtaleActual
+#print axioms LeanFormal.IUT.XiFPaper.S1762CoverLimitsActual.S1762HasTerminalS1728

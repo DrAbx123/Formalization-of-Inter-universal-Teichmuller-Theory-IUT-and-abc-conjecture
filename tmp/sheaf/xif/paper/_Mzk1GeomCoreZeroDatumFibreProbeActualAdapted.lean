@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreZeroDatumFibreActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreZeroDatumFibreActual.fibreOverZeroEq_of_zeroDatum
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreZeroDatumFibreActual.zeroDatumFibreRows_length

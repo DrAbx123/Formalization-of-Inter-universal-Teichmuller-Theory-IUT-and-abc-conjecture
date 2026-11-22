@@ -1,0 +1,531 @@
+{
+  "meta": {
+    "generated_by": "Lead A436",
+    "purpose": "Curated declaration-level target chain for the IUT -> ABC DAG; machine-checkable against dag/generated module graph",
+    "date": "2026-11-11"
+  },
+  "nodes": [
+    {
+      "id": "T0-abc-target",
+      "kind": "target",
+      "title": "ABC conjecture (statement)",
+      "status": "DEF",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Statement.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Statement.lean": [
+          "ABCConjecture"
+        ]
+      },
+      "note": "unique final target; not locked"
+    },
+    {
+      "id": "T1-cor312-abc-bridge",
+      "kind": "theorem",
+      "title": "conditional Cor312 to ABC bridge",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "cor312ToABCBridge_abcConjecture",
+          "cor312ToABCBridge_heightBound",
+          "height_le_normalizedRegionVolume",
+          "regionVolume_le_normalizedWeight"
+        ]
+      },
+      "note": "conditional on interface fields"
+    },
+    {
+      "id": "T2-bridge-interface",
+      "kind": "interface",
+      "title": "Cor312ToABCBridgeInterface (carrier + IQHullLogVolumeInterface + per-eps comparison)",
+      "status": "NAMED",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/Cor312ToABCBridgeInterface.lean": [
+          "structure Cor312ToABCBridgeInterface"
+        ]
+      },
+      "note": "inhabited iff ABC (nonempty_iff_abcConjecture)"
+    },
+    {
+      "id": "T3-abc-frontier",
+      "kind": "theorem",
+      "title": "ABCFrontier alternative route",
+      "status": "CONDITIONAL",
+      "files": [
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/ABCBridge/Bridge/ABCFrontier.lean": [
+          "abcConjecture_of_frontier",
+          "abcFrontier_iff_abcConjecture"
+        ]
+      },
+      "note": "equivalent strength; not a shortcut"
+    },
+    {
+      "id": "T4-iut4-arithmetic-degree",
+      "kind": "tree_asset",
+      "title": "IUT IV arithmetic divisor degree estimates",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/ArithmeticDivisorDegree.lean": [
+          "deg_pullback"
+        ]
+      },
+      "note": "REAL object; reuse/extend"
+    },
+    {
+      "id": "T5-iut4-prop17",
+      "kind": "tree_asset",
+      "title": "IUT IV Section 1 Prop 1.7",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/Section1.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/Section1.lean": [
+          "iutIVProp17"
+        ]
+      },
+      "note": "REAL"
+    },
+    {
+      "id": "T6-iut4-theta-two-sided",
+      "kind": "tree_asset",
+      "title": "IUT IV Section 2 theta two-sided bound",
+      "status": "TREE_ASSET",
+      "files": [
+        "LeanFormal/IUT/IUTIV/Estimates/Section2.lean"
+      ],
+      "declarations": {
+        "LeanFormal/IUT/IUTIV/Estimates/Section2.lean": [
+          "iutIVProp21ii_theta_two_sided"
+        ]
+      },
+      "note": "REAL; explicit PNT numerics gap"
+    },
+    {
+      "id": "B1-fold",
+      "kind": "bottom",
+      "title": "Problem A fold: beta-avoiding rational Belyi for all finite S",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingFoldActual.lean": [
+          "betaAvoiding_all"
+        ]
+      },
+      "note": "axioms trio; root of rational Belyi chain"
+    },
+    {
+      "id": "B2-finite-beta-base",
+      "kind": "bottom",
+      "title": "corrected finite-beta base; original infinity-beta input refuted",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1BetaAvoidingBaseActual.lean": [
+          "betaAvoidingBelyiBaseInputCorrected_proved",
+          "not_betaAvoidingBelyiBaseInput",
+          "Mzk1Lemma24Target_finite_beta"
+        ]
+      },
+      "note": "corrected finite-beta base from fold"
+    },
+    {
+      "id": "B3-rational24-target",
+      "kind": "bottom",
+      "title": "rational 2.4 target (finite beta)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Rational24TargetBottomActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Rational24TargetBottomActual.lean": [
+          "rational24TargetFiniteBeta_proved"
+        ]
+      },
+      "note": "unconditional finite-beta"
+    },
+    {
+      "id": "B4-c-degree-measure",
+      "kind": "bottom",
+      "title": "Problem C degree/measure/termination",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionActual.lean": [
+          "measure_stepSet_lt",
+          "nested_induction_terminates"
+        ]
+      },
+      "note": "28 theorems; base provider discharged"
+    },
+    {
+      "id": "B4b-c-basecase",
+      "kind": "bottom",
+      "title": "Problem C BaseCaseProvider",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1NestedInductionBaseCaseActual.lean": [
+          "baseCaseProvider_proved"
+        ]
+      },
+      "note": "identity polynomial construction"
+    },
+    {
+      "id": "B4c-c-stepprovider",
+      "kind": "conditional",
+      "title": "Problem C StepProvider' f1/f2 (beta'=f0 beta)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1StepProviderPrimeActual.lean": [
+          "exists_maxDegP_finite",
+          "stepSetP1",
+          "mem_stepSetP1_of_mem",
+          "mem_stepSetP1_of_conj",
+          "mem_stepSetP1_of_crit",
+          "StepProvider'",
+          "StepProviderFixedBetaChoiceInput",
+          "f0MapAt",
+          "f0MapAt_eq",
+          "stepProviderPrimeRows",
+          "stepProviderPrimeRows_length"
+        ]
+      },
+      "note": "VERIFIED (results-log/olean evidence; shehdd): A424 restated beta-f0; f1/f2/f4a PROVED in file; f4b (F4NumMaxStrictInput) + f5 (F0StepTransportInput) NAMED; assembly stepProvider'_of_inputs PROVED conditional; fixed-beta equivalence named; repaired 4 compile errors (monic.ne_zero, membership defeq, calc <=, rows length 10) - watchdog recompile pending."
+    },
+    {
+      "id": "B4d-c-cvlaw",
+      "kind": "bottom",
+      "title": "F-level CV composition law",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1CVCompositionFActual.lean": [
+          "cvCompositionLawF_proved",
+          "stepTransport_of_goal_proved"
+        ]
+      },
+      "note": "named CV input discharged"
+    },
+    {
+      "id": "B5-lemma23-moebius",
+      "kind": "bottom",
+      "title": "paper Lemma 2.3 rational + P1/Moebius",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1Lemma23MoebiusActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1Lemma23MoebiusActual.lean": [
+          "s3135_mobius_separation"
+        ]
+      },
+      "note": "Qbar paper statement named; visual-grouping region edge added to fragment anchor (hierarchy; NOT a mathematical dependency)"
+    },
+    {
+      "id": "B6-d-base",
+      "kind": "bottom",
+      "title": "D-BASE: RR-independent pencil + scheme vacuity fix",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFoundationActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreFoundationActual.lean": [
+          "zero_divisor_exists"
+        ]
+      },
+      "note": "zero_divisor_exists is the RR-conditional split point in this file"
+    },
+    {
+      "id": "B6b-d-rr",
+      "kind": "bottom",
+      "title": "D-RR: zero divisor from real RR + dual vanishing",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRProvedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRProvedActual.lean": [
+          "zero_divisor_exists_proved"
+        ]
+      },
+      "note": "no named inputs; flt_core root"
+    },
+    {
+      "id": "B7-rr-proved",
+      "kind": "bottom",
+      "title": "function-field Riemann-Roch (ported FLT proof)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRProvedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRProvedActual.lean": [
+          "functionFieldRiemannRoch_proved"
+        ]
+      },
+      "note": "axioms trio; flt_core closure [A462: downgraded; watchdog EXIT0 evidence missing]"
+    },
+    {
+      "id": "B7b-rr-interface",
+      "kind": "bottom",
+      "title": "RR interface for D (ell_neg, canonical degree 2g-2)",
+      "status": "PROVED",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1RRInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1RRInterfaceActual.lean": [
+          "functionFieldRiemannRoch_interface",
+          "degree_canonicalDivisor_interface"
+        ]
+      },
+      "note": "flt_core only"
+    },
+    {
+      "id": "Dbridge-rr",
+      "kind": "bridge",
+      "title": "scheme<->function-field bridge interface (RR side)",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRBridgeActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreRRBridgeActual.lean": [
+          "zeroDivisorDatum_nonempty_of_RR"
+        ]
+      },
+      "note": "finite map to P1 + line bundle iso remaining"
+    },
+    {
+      "id": "Dbridge-abstract",
+      "kind": "bridge",
+      "title": "abstract zero-divisor/fibre bridge interface",
+      "status": "CONDITIONAL",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1GeomCoreBridgeInterfaceActual.lean": [
+          "zeroDivisorDatum_zeroSet_eq"
+        ]
+      },
+      "note": "interface only; D finite-map named"
+    },
+    {
+      "id": "E-theta-etth",
+      "kind": "tree_asset",
+      "title": "EtTh realization rows (EtTh00-13)",
+      "status": "TREE_ASSET",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1EtThRealizationConsumerActual.lean": [
+          "etThRealization_thm25Consumer_conditional"
+        ]
+      },
+      "note": "EtTh02 10 deep inputs named; EtTh11 rows 5-7 named"
+    },
+    {
+      "id": "E-hull-h5-h7",
+      "kind": "tree_asset",
+      "title": "H5 Ox / H7-Ob9 conditional assembly",
+      "status": "TREE_ASSET",
+      "files": [
+        "tmp/sheaf/xif/paper/Mzk1HullEInputsActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/Mzk1HullEInputsActual.lean": [
+          "hullE_genEll_intermediate",
+          "hullE_cor312"
+        ]
+      },
+      "note": "H5 normalization / hull<=image-volume named; H7 arbitrary iterate named"
+    },
+    {
+      "id": "E-abstopiii",
+      "kind": "tree_asset",
+      "title": "AbsTopIII05 refined deep inputs (D1-D4)",
+      "status": "TREE_ASSET",
+      "files": [
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/AbsTopIII05RefinedActual.lean": [
+          "absTopIII05Refined_with_s3171RouteSlot"
+        ]
+      },
+      "note": "Prop 5.8(i)(ii)/Cor 5.5 algorithm parts named"
+    },
+    {
+      "id": "N1-beta-base-named",
+      "kind": "named_input",
+      "title": "old BetaAvoidingBelyiBaseInput (infinite-beta; REFUTED)",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/RestatedLemma24InductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/RestatedLemma24InductionActual.lean": [
+          "BetaAvoidingBelyiBaseInput"
+        ]
+      },
+      "note": "false at beta=infty; corrected version proved; kept for history only"
+    },
+    {
+      "id": "N2-alg-nested",
+      "kind": "named_input",
+      "title": "AlgebraicNestedInductionInput (paper 163-206)",
+      "status": "NAMED",
+      "files": [
+        "tmp/sheaf/xif/paper/LayerAAlgebraicInductionActual.lean"
+      ],
+      "declarations": {
+        "tmp/sheaf/xif/paper/LayerAAlgebraicInductionActual.lean": [
+          "AlgebraicNestedInductionInput"
+        ]
+      },
+      "note": "definitionally PaperScopeLemma24Statement; C+providers partially replaces it"
+    }
+  ],
+  "edges": [
+    {
+      "from": "T1-cor312-abc-bridge",
+      "to": "T0-abc-target",
+      "kind": "statement"
+    },
+    {
+      "from": "T1-cor312-abc-bridge",
+      "to": "T2-bridge-interface",
+      "kind": "proof"
+    },
+    {
+      "from": "T3-abc-frontier",
+      "to": "T2-bridge-interface",
+      "kind": "proof"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "T5-iut4-prop17",
+      "kind": "proof"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "T4-iut4-arithmetic-degree",
+      "kind": "proof"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "T6-iut4-theta-two-sided",
+      "kind": "proof"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "E-hull-h5-h7",
+      "kind": "interface"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "E-abstopiii",
+      "kind": "interface"
+    },
+    {
+      "from": "T2-bridge-interface",
+      "to": "E-theta-etth",
+      "kind": "interface"
+    },
+    {
+      "from": "B2-finite-beta-base",
+      "to": "B1-fold",
+      "kind": "proof"
+    },
+    {
+      "from": "B3-rational24-target",
+      "to": "B2-finite-beta-base",
+      "kind": "proof"
+    },
+    {
+      "from": "B4b-c-basecase",
+      "to": "B4-c-degree-measure",
+      "kind": "proof"
+    },
+    {
+      "from": "B4c-c-stepprovider",
+      "to": "B4-c-degree-measure",
+      "kind": "proof"
+    },
+    {
+      "from": "B4c-c-stepprovider",
+      "to": "B4d-c-cvlaw",
+      "kind": "proof"
+    },
+    {
+      "from": "B6b-d-rr",
+      "to": "B7-rr-proved",
+      "kind": "proof"
+    },
+    {
+      "from": "B6b-d-rr",
+      "to": "B7b-rr-interface",
+      "kind": "proof"
+    },
+    {
+      "from": "B6b-d-rr",
+      "to": "B6-d-base",
+      "kind": "proof"
+    },
+    {
+      "from": "Dbridge-rr",
+      "to": "B6b-d-rr",
+      "kind": "interface"
+    },
+    {
+      "from": "Dbridge-abstract",
+      "to": "Dbridge-rr",
+      "kind": "interface"
+    },
+    {
+      "from": "N1-beta-base-named",
+      "to": "B1-fold",
+      "kind": "gap"
+    },
+    {
+      "from": "N2-alg-nested",
+      "to": "B4-c-degree-measure",
+      "kind": "gap"
+    },
+    {
+      "from": "B5-lemma23-moebius",
+      "to": "T2-bridge-interface",
+      "kind": "statement"
+    }
+  ]
+}

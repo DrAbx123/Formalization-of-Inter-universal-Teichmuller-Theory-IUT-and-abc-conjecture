@@ -1,0 +1,34 @@
+tmp\sheaf\n8\N8Parent.lean:62:68: error: Application type mismatch: The argument
+  ℝ
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  Type u
+of sort `Type (u + 1)` in the application
+  DetTensorPowerLogVolumeBookkeeping ℝ
+tmp\sheaf\n8\N8Parent.lean:71:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:78:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:87:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:93:8: warning: declaration uses `sorry`
+tmp\sheaf\n8\N8Parent.lean:105:15: error: Application type mismatch: The argument
+  CardIPLExchangeShape
+has type
+  (L : LinkSpan core1 core2) → CardIPLTransportSupply L → Prop
+but is expected to have type
+  Sort (max (max (max u v) (?u.24 + 1)) (?u.25 + 1))
+in the application
+  Nonempty CardIPLExchangeShape
+tmp\sheaf\n8\N8Parent.lean:112:53: error: Application type mismatch: The argument
+  ℝ
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  Type u
+of sort `Type (u + 1)` in the application
+  DetTensorPowerLogVolumeBookkeeping ℝ
+tmp\sheaf\n8\N8Parent.lean:120:49: error: Invalid argument name `l` for function `n8_k1k2Realization`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `D`: l̵D̲
+  • `Y`: l̵Y̲
+  • `f`: l̵f̲

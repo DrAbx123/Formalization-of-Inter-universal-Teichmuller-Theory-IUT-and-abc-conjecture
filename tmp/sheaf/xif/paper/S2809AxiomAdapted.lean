@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2809E6FiniteActual
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_finite_torsionBy_three
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_finite_torsionBy_two
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_finite_torsionBy_six
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_coordSet_finite
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_finiteDimensional
+#print axioms LeanFormal.IUT.XiFPaper.S2809E6FiniteActual.S2809_numberField

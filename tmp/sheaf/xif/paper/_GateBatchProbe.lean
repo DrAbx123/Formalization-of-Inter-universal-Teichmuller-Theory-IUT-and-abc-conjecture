@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22InductionActual
+import tmp.sheaf.xif.paper.Mzk1Lemma24InductionActual
+import tmp.sheaf.xif.paper.Mzk1GeometricCoreRealStructureActual
+import tmp.sheaf.xif.paper.IUTExternalCbGCStatementsActual
+import tmp.sheaf.xif.paper.IUTExternalFrdDefsActual
+import tmp.sheaf.xif.paper.IUTExternalEtThStatementsActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionActual.mzk1Lemma22Rows_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24InductionActual.mzk1Lemma24Rows_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeometricCoreRealStructureActual.Mzk1RiemannRochRows_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalCbGCStatementsActual.iutExternalCbGCStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalFrdDefsActual.iutExternalFrdStatements_length
+#print axioms LeanFormal.IUT.XiFPaper.IUTExternalEtThStatementsActual.iutExternalEtThStatements_length

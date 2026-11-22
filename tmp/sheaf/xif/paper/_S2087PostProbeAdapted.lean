@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.S2087AffineQuotientPackagingActual
+open LeanFormal.IUT.XiFPaper.S2087AffineQuotientPackagingActual
+#check affineQuotientColimitPackaging
+#print axioms affineQuotientColimitPackaging
+#check curvePreGaloisRemainingFields
+#print axioms curvePreGaloisRemainingFields

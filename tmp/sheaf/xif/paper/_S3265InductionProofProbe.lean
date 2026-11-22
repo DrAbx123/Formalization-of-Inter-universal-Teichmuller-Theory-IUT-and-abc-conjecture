@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma22InductionProofActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionProofActual.mzk1Lemma22_induction_conditional
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionProofActual.mzk1Lemma22_target_conditional
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionProofActual.BaseProviderStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma22InductionProofActual.StepProviderStatement

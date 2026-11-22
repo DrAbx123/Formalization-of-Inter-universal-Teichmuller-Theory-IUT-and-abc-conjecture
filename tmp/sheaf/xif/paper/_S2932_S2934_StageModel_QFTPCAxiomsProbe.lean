@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2932C3HvolChainSummaryActual
+import tmp.sheaf.xif.paper.S2934C3NormalizedHheightInterfaceActual
+import Iut.Foundations.SourceFrobenioidSystemStageModelSystemDataGluingActual
+import tmp.sheaf.xif.paper.S3127G2QFullTargetUnitPairConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2932C3HvolChainSummaryActual.C3Hvol_chain_summary
+#print axioms LeanFormal.IUT.XiFPaper.S2934C3NormalizedHheightInterfaceActual.c3NormalizedHheightTarget_iff
+#print axioms LeanFormal.IUT.XiFPaper.S2934C3NormalizedHheightInterfaceActual.c3NormalizedHheightTarget_holds_bound
+#print axioms LeanFormal.IUT.XiFPaper.S2934C3NormalizedHheightInterfaceActual.c3NormalizedHheightTarget_of_le
+#print axioms Iut.SourceFrobenioidSystem.StageModelSystemDataGluingActual.ofData
+#print axioms LeanFormal.IUT.XiFPaper.S3127G2QFullTargetUnitPairConsumerActual.S3127G2QFullTargetUnitPairConsumer_invariant

@@ -1,0 +1,7 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.InfinitePlacePsiCnsResidual
+open LeanFormal.IUT
+open LeanFormal.IUT.InfinitePlacePsiCnsResidual
+#check SourceDefinition31Data
+#check LeanFormal.IUT.Theorem311Source.SourceDefinition31Data
+#check LeanFormal.IUT.InfinitePlacePsiCnsResidual.SourceThetaDivisor

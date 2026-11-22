@@ -1,0 +1,14 @@
+tmp\sheaf\n8\closure\TargetSignature.lean:37:0: warning: `N8TargetInput`: universes `ui`, `umon`, `upi` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+tmp\sheaf\n8\closure\TargetSignature.lean:54:45: warning: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\n8\closure\TargetSignature.lean:58:47: warning: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tmp\sheaf\n8\closure\TargetSignature.lean:79:8: warning: declaration uses `sorry`

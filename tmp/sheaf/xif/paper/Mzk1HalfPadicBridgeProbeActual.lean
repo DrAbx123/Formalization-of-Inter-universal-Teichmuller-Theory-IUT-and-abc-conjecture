@@ -1,0 +1,16 @@
+/- Read-only probes: UnitLogNormHalf + NormalizedCompletionPadicBridge (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IVThm110UnitLogNormHalfActual
+import tmp.sheaf.xif.paper.NormalizedCompletionPadicBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IVThm110UnitLogNormHalfActual.unitLog_norm_le_one_of_principal_bound_half
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.ringOfIntegers_algebraMap_self
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.comap_self_rat
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.algebraMap_bijective
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.normalizedCompletionPadicEquiv
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.norm_algebraMap
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.norm_eq_padic
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.norm_one_normalizedCompletion
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.norm_one_class_normalizedCompletion
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.principal_unit_norm_lt_one
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.principal_unit_norm_le_inv_prime
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionPadicBridgeActual.principal_unit_norm_le_third

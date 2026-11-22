@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24WiringActual
+import tmp.sheaf.xif.paper.Mzk1Theorem25StatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24WiringActual.s3135_belyi_canonical_data
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24WiringActual.MonicGrowthBetaAvoidanceStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem25StatementActual.Mzk1GeometricCoreStatement
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Theorem25StatementActual.mzk1Thm25ReductionArchitecture_length

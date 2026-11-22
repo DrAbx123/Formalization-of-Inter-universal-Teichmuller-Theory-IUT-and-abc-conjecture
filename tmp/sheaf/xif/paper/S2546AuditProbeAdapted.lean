@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2546CorrectedFullActual
+#print axioms LeanFormal.IUT.XiFPaper.FullD3D4Agent.S2543QuotMapRSurjective_holds
+#check LeanFormal.IUT.XiFPaper.FullD3D4Agent.S2543QuotMapRSurjective_holds

@@ -1,0 +1,7 @@
+import Mathlib.CategoryTheory.Sites.DenseSubsite.InducedTopology
+import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
+open CategoryTheory
+#check CategoryTheory.ObjectProperty.FullSubcategory
+#check CategoryTheory.ObjectProperty.FullSubcategory.ι
+#check CategoryTheory.ObjectProperty.FullSubcategory.category
+#check CategoryTheory.Functor.inducedTopology

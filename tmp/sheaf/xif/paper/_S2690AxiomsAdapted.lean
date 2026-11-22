@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2690TateUniformizationEllipticityActual
+#print axioms LeanFormal.IUT.XiFPaper.S2690TateUniformizationEllipticityActual.S2690_canonicalIsElliptic
+#print axioms LeanFormal.IUT.XiFPaper.S2690TateUniformizationEllipticityActual.S2690_nonempty_iff_residual

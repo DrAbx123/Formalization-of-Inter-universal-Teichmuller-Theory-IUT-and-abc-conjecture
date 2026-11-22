@@ -1,0 +1,4 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31RootLemmas
+#check StageConstructionTrace
+#check LeanFormal.IUT.StageConstructionTrace
+#check LeanFormal.IUT.Definition31StageKernel.StageConstructionTrace

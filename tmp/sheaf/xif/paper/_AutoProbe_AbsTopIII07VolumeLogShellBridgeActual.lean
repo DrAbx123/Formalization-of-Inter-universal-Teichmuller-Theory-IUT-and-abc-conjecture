@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AbsTopIII07VolumeLogShellBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07VolumeLogShellBridgeActual.VolumeLogShellRow
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07VolumeLogShellBridgeActual.volumeLogShellRows
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII07VolumeLogShellBridgeActual.volumeLogShellRows_length

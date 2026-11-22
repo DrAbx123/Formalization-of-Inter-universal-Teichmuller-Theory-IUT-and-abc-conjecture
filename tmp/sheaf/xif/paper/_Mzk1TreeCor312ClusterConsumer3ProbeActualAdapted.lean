@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeCor312ClusterConsumer3Actual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeCor312ClusterConsumer3Actual.treeCor312ClusterConsumer3_bundle

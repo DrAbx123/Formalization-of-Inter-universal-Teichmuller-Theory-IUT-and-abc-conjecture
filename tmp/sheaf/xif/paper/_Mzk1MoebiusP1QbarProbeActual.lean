@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1MoebiusP1QbarActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MoebiusP1QbarActual.MoebiusDataAC.mapPoints_comp_of_finite
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1MoebiusP1QbarActual.MoebiusDataAC.mapPoints_nonconstant

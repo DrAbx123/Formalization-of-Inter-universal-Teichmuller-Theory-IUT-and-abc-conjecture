@@ -339,7 +339,7 @@ def concreteInitialThetaCStageAudit : Obligation :=
         "history transport. It is the strongest currently built concrete " ++
         "boundary and still intentionally stops before curve-point Tate " ++
         "uniformization and source anabelian links."
-    dependsOn := [ "IUT-I-II.concrete-c-local-arithmetic",
+    dependsOn := [ "IUT-II.concrete-initial-theta-local-arithmetic",
       "IUT-I-II.concrete-c-constructed-boundary" ] }
 
 end LeanFormal.IUT.Audit

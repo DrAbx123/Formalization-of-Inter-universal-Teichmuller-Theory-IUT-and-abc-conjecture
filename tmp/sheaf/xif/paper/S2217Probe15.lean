@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2167DedekindFrobCycleActual
+#check @Equiv.Set.image
+#check @Equiv.setCongr
+#check @Equiv.Set.ofEq
+#check @Equiv.subtypeEquiv
+#check @Equiv.subtypeEquivRight
+#check @Splits.image_rootSet_algebraMap
+#check @Polynomial.Splits.image_rootSet_algebraMap
+#check @Polynomial.Splits.image_rootSet
+#check @Set.image_eq_image
+#check @Function.Injective

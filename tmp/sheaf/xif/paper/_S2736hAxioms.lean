@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S2736hTensorCharPKFinalActual
+import tmp.sheaf.xif.paper.S3128LocalCoconeActual
+import tmp.sheaf.xif.paper.S3127G3ConditionalActual
+import tmp.sheaf.xif.paper.S3128AwayActionHomAttempt
+#print axioms LeanFormal.IUT.XiFPaper.S2736hTensorCharPKFinalActual.tensor_char_pK
+#print axioms LeanFormal.IUT.XiFPaper.S3127G3ConditionalActual.S3127G3RawCofan_of_hypothesis
+#print axioms LeanFormal.IUT.XiFPaper.S3128AwayActionHomAttempt.S3128AwayMap_mul
+#print axioms LeanFormal.IUT.XiFPaper.S3128AwayActionHomAttempt.S3128Away_smul_algebraMap

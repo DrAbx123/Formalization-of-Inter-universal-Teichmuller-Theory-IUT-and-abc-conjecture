@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2123PresentationConeESActual
+open LeanFormal.IUT.XiFPaper.S2123PresentationConeESActual
+#check S2123FirstMissing_characterisation
+#check S2123StrongPresentationTwist_of_coneCategoryAPI
+#check S2123PresentationLiftConeMorAt_iff_residual
+#print axioms S2123FirstMissing_characterisation
+#print axioms S2123StrongPresentationTwist_of_coneCategoryAPI

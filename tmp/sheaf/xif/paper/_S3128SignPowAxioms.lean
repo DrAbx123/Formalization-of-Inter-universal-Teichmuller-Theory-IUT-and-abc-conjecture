@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3128SignActionActual
+import tmp.sheaf.xif.paper.S3119PowReduceActual
+import tmp.sheaf.xif.paper.S3128QuotientMapProperties
+#print axioms LeanFormal.IUT.XiFPaper.S3128SignActionActual.S3128SignGen_smul_t
+#print axioms LeanFormal.IUT.XiFPaper.S3119PowReduceActual.S3119PowReduce_spec
+#print axioms LeanFormal.IUT.XiFPaper.S3128QuotientMapProperties.S3128_fixedSubring_isIntegral
+#print axioms LeanFormal.IUT.XiFPaper.S3128QuotientMapProperties.S3128_specQuotientMap_surjective

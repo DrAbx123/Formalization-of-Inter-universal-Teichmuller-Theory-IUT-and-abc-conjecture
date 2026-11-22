@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.S3136LGPJvPacketTransportActual
+import tmp.sheaf.xif.paper.S3136LGPRealifiedValueTransportActual
+import tmp.sheaf.xif.paper.S3136LGPQVPilotPrincipalIdealActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvPacketTransportActual.lgpLocalOLattice_coe
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvPacketTransportActual.qVAlgClosedUnit_mem_thetaValueSubgroup
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvPacketTransportActual.qVAlgClosedUnit_mem_qvPilotFractionalIdeal
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPJvPacketTransportActual.LGPJvPacketTransportGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPRealifiedValueTransportActual.lgpRealifiedLogValue_of_single
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPRealifiedValueTransportActual.lgpRealifiedValueTransport_compat
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPRealifiedValueTransportActual.LGPRealifiedValueTransportGap
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPQVPilotPrincipalIdealActual.lgpQVPilotPrimeDivisor_total
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPQVPilotPrincipalIdealActual.lgpQVPilotPrimeDivisor_mem
+#print axioms LeanFormal.IUT.XiFPaper.S3136LGPQVPilotPrincipalIdealActual.LGPQVPilotPrincipalIdealGap

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Indet05RouteMultiradialClassActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Indet05RouteMultiradialClassActual.routeMultiradial_ind1
+#print axioms LeanFormal.IUT.XiFPaper.Indet05RouteMultiradialClassActual.routeMultiradial_ind2
+#print axioms LeanFormal.IUT.XiFPaper.Indet05RouteMultiradialClassActual.routeMultiradial_ind3_logVolume_le

@@ -1,0 +1,117 @@
+/-
+Copyright (c) 2026 LANA Project. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: LANA Project
+-/
+import tmp.sheaf.lana_latest.Iut.Concrete.LocalEstimate
+/-!
+# The literal reading of IUT III, Corollary 3.12, and IUT IV's reading
+
+IUT III, Corollary 3.12 defines `−|log(Θ)|` as the procession-normalized log-volume of the
+holomorphic hull of the union of the possible images of a Θ-pilot object under the
+indeterminacies (Ind1), (Ind2), (Ind3) of Theorem 3.11. The indeterminacy (Ind1) contains the
+permutation automorphisms of the label sets `S_{j+1}` of the procession (IUT III,
+Introduction): the theta value `q^{j²}` of the capsule `S_{j+1}` may sit at any label. IUT IV,
+proof of Theorem 1.10, Steps (iv)–(v), computes with the theta value at the label `j` only.
+
+* `Cor312LiteralHolds` (`Iut/Concrete/ThetaRegion.lean`) is the variant with the union over all
+  label positions (`InitialThetaData.litLabels`), the literal reading of Corollary 3.12;
+* `Cor312VariantHolds` is the variant with the label `j` (`InitialThetaData.ivLabels`),
+  IUT IV's reading, from which the implication to ABC is proved.
+
+The literal region contains IUT IV's region, so its hull has larger log-volume, and the IV
+reading implies the literal one (`cor312Literal_of_variant`). The converse is exactly the
+step from the literal Corollary 3.12 to IUT IV, Steps (iv)–(v). The two regions coincide when
+`ord_p(q_v)` is the same for all places `v` of `F_mod` (in `V`) above each prime `p` (e.g. when
+there is a single place above `p`): then the theta values at all labels of a tuple have the
+same order. This fails in general; two bad places above `p` with different `ord_p(q_v)`
+already break it.
+
+Under the literal union over the labels, the holomorphic hull at a tuple `c` is governed by
+`min_l ord_p(q_{c(l)})` rather than by the average of `ord_p(q_v)` over the places that IUT IV,
+Step (v), obtains via Proposition 1.7. So the literal reading does not suffice for the
+Theorem 1.10 / ABC argument: the points produced by the Belyi reduction have good and bad
+places above the same prime, where `min_l ord_p(q_{c(l)}) = 0`.
+
+IUT IV's reading equals the literal one **up to (Ind1)** (`Iut/Concrete/Ind1Invariance.lean`):
+a label permutation `σ`, acting on the labels, on the tuples (`c ↦ c ∘ σ⁻¹`) and on the tensor
+packets (`LocalTheory.ind1Reindex`), preserves the weights `∏_l w(c l)`
+(`LocalTheory.tupleWeight_comp_perm`), the integral structures, log-shells, hull regions and
+log-volumes of the components (`LocalTheory.image_integral_ind1Reindex`,
+`LocalTheory.image_shell_ind1Reindex`, `LocalTheory.image_logShell_infinite_ind1Reindex`,
+`LocalTheory.image_smul_integral_ind1Reindex`, `LocalTheory.componentVol_image_ind1Reindex`),
+and maps the theta-pilot region with label positions `S` onto the one with label positions
+`σ(S)` (`InitialThetaData.image_thetaFiniteOn_ind1Reindex`); the region with the theta value at
+any label `l` is the image of IUT IV's region under the transposition `(l j)`
+(`InitialThetaData.thetaFiniteOn_singleton_eq_image`). Hence the procession-normalized
+log-volume of the hull is (Ind1)-invariant (`InitialThetaData.rhsDataOn_perm`), and every
+single-label reading gives IUT IV's value (`InitialThetaData.rhsDataOn_singleton`): IUT IV takes
+the holomorphic hull over (Ind2), (Ind3) for each (Ind1)-image separately, and the label `j` is
+a representative.
+-/
+
+namespace Iut
+
+universe u
+
+open NumberField
+
+namespace InitialThetaData
+
+variable (D : InitialThetaData.{u}) (n : ℕ)
+
+lemma thetaFiniteOn_mono (i : Fin n) {S T : Set (Lab n i)} (hST : S ⊆ T) (p : Nat.Primes)
+    (c : Lab n i → LocalTheory.Fiber D.Fmod (.finite p)) :
+    D.thetaFiniteOn n i S p c ⊆ D.thetaFiniteOn n i T p c :=
+  Set.iUnion₂_mono fun _ _ => Set.image_mono (Set.biUnion_subset_biUnion_left hST)
+
+lemma thetaComponentOn_mono (i : Fin n) {S T : Set (Lab n i)} (hST : S ⊆ T)
+    (vQ : RationalPlace) (c : Lab n i → LocalTheory.Fiber D.Fmod vQ) :
+    D.thetaComponentOn n i S vQ c ⊆ D.thetaComponentOn n i T vQ c := by
+  rcases vQ with p | _
+  · exact D.thetaFiniteOn_mono n i hST p c
+  · exact le_rfl
+
+lemma thetaPilotOn_mono {S T : ∀ i : Fin n, Set (Lab n i)} (hS : ∀ i, (S i).Nonempty)
+    (hT : ∀ i, (T i).Nonempty) (hST : ∀ i, S i ⊆ T i)
+    (i : Fin (LocalTheory.container D.placeSect n).proc.length) :
+    D.thetaPilotOn n S hS i ≤ D.thetaPilotOn n T hT i :=
+  fun vQ _ hx c => D.thetaComponentOn_mono n i (hST i) vQ c (hx c)
+
+/-- **The literal right-hand side dominates IUT IV's**: `−|log(Θ)|` in IUT IV's reading is at
+most `−|log(Θ)|` in the literal reading of IUT III, Corollary 3.12. -/
+theorem rhs_le_rhsLit : D.rhsData.rhs ≤ D.rhsDataLit.rhs := by
+  set n := (D.ℓ - 1) / 2
+  set H := LocalTheory.hull D.placeSect n
+  have hadm : ∀ (S : ∀ i : Fin n, Set (Lab n i)) (hS : ∀ i, (S i).Nonempty) i,
+      H.IsAdmissible (D.thetaPilotOn n S hS i) := fun S hS i vQ =>
+    ⟨fun c => D.thetaComponentOn n i (S i) vQ c,
+      fun c => D.thetaComponentOn_admissible n i (S i) (hS i) vQ c, rfl⟩
+  have hle : ∀ i, H.hullAdmissible (D.thetaPilotOn n (ivLabels n) (ivLabels_nonempty n) i) ≤
+      H.hullAdmissible (D.thetaPilotOn n (litLabels n) (litLabels_nonempty n) i) := fun i =>
+    H.hullAdmissible_mono (hadm _ _ i) (hadm _ _ i)
+      (D.thetaPilotOn_mono n _ _ (ivLabels_subset_litLabels n) i)
+  have hhull : ∀ (S : ∀ i : Fin n, Set (Lab n i)) (hS : ∀ i, (S i).Nonempty) i vQ,
+      (LocalTheory.packet D.placeSect (Lab n i) vQ).IsHullRegion
+        ((H.hullAdmissible (D.thetaPilotOn n S hS i)).region vQ) := fun S hS i vQ =>
+    LocalTheory.isHullRegion_of_mem_hullRegions D.placeSect _ vQ _
+      ((H.system i vQ).hull_mem_hullRegions (hadm S hS i vQ))
+  change (LocalTheory.vol D.placeSect n).processionVol
+      (H.hullFamily (D.thetaPilotOn n (ivLabels n) (ivLabels_nonempty n))) ≤
+    (LocalTheory.vol D.placeSect n).processionVol
+      (H.hullFamily (D.thetaPilotOn n (litLabels n) (litLabels_nonempty n)))
+  unfold LogVolumeData.processionVol
+  refine div_le_div_of_nonneg_right (Finset.sum_le_sum fun i _ => ?_) (Nat.cast_nonneg _)
+  unfold LogVolumeData.globalVol
+  refine finsum_le_finsum' ((LocalTheory.vol D.placeSect n).finite_support_packetVol _)
+    ((LocalTheory.vol D.placeSect n).finite_support_packetVol _) fun vQ => ?_
+  exact TowerArithmetic.packetVol_mono (D := D) i vQ _ _ (hhull _ _ i vQ) (hhull _ _ i vQ)
+    (hle i vQ)
+
+end InitialThetaData
+
+/-- **IUT IV's reading implies the literal reading of IUT III, Corollary 3.12.** -/
+theorem cor312Literal_of_variant (h : Cor312VariantHolds) : Cor312LiteralHolds :=
+  fun D => (h D).trans D.rhs_le_rhsLit
+
+end Iut

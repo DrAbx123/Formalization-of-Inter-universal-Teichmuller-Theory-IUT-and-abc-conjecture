@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S2590LocalizedPrimeContractionActual
+import tmp.sheaf.xif.paper.S2587LocalizedResidueDataActual
+open LeanFormal.IUT.XiFPaper.S2590LocalizedPrimeContractionActual
+open LeanFormal.IUT.XiFPaper.S2587LocalizedResidueDataActual
+#check Ideal.quotientMap
+#check Ideal.Quotient.surjective_quotientMap_of_maximal_of_localization
+#check Ideal.quotientMap_injective'
+#check S2590_contraction_maximal

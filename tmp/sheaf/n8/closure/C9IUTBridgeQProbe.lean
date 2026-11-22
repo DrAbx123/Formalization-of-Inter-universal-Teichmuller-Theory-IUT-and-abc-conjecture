@@ -1,0 +1,4 @@
+import LeanFormal.IUT.IUTIII.Corollary312.ArithmeticQPilotGlobalNormalization
+open LeanFormal.IUT.NumberFieldFinitePlace
+#check @LeanFormal.IUT.ArithmeticQPilotGlobalNormalization.absoluteDegreeNormalizedLowerSignedLog
+#check @LeanFormal.IUT.ArithmeticQPilotGlobalNormalization.normalizedLowerSignedLog_eq_neg_magnitude

@@ -1,0 +1,73 @@
+{
+  "task": "C9-CONTRADICTION-ATTACK-20261024",
+  "date": "2026-10-24",
+  "owner": "current chat root; no subagents",
+  "stage": "SHEAF stage 1; natural-language source attack",
+  "record": "tmp/sheaf/n8/closure/C9-CONTRADICTION-ATTACK-20261024.md",
+  "record_sha256": "bf2f92bc3e99497c1291e608cb9f6f499c4f36314a9eefb470ece529d80714ad",
+  "consumer": "n8-c9-output-region-source-route P6; actual escape or calibrated contradiction for a bad output container",
+  "sources": [
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory II.txt",
+      "version": "December 2020",
+      "sha256": "41d897e355bb39cfb23058e87fd17a77c1678c9856d0321c006365e6f8325d4f",
+      "locations": ["Definition 4.9(i)-(viii), especially (viii), p158"],
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20II.pdf"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Inter-universal Teichmuller Theory III.txt",
+      "version": "May 2020",
+      "sha256": "876ebc732cad5dca89c1446a6055018583512254e3ff5ab333797175ebe9181f",
+      "locations": ["Remark 1.1.1(i)", "Remark 2.4.2(iii)-(vi)", "Definition 3.8(i)", "Remarks 3.9.4-3.9.7", "Proposition 3.10", "Theorem 3.11(ii)-(iii)", "Remark 3.11.1(ii)-(iv)", "Remark 3.11.2(iii)-(iv)", "Corollary 3.12 proof(xi)", "Remark 3.12.2(ii)"],
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Inter-universal%20Teichmuller%20Theory%20III.pdf"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Essential Logical Structure of Inter-universal Teichmuller Theory.txt",
+      "version": "March 2024",
+      "sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "locations": ["Section 3.10 Stp7-Stp8 and DstMp/FxGl/NoCmpIss/Englf, pp151-156"],
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf"
+    },
+    {
+      "file": "papers/motizuki_corpus/text/Formalization of IUT (2026-04).txt",
+      "version": "April 2026",
+      "sha256": "4d9d62353124e9739ca1da50a083eb3f13cb227076222132e67f96413a7fe3cf",
+      "locations": ["Section 4, pp10-11"],
+      "url": "https://www.kurims.kyoto-u.ac.jp/~motizuki/Formalization%20of%20IUT%20(2026-04).pdf"
+    }
+  ],
+  "reused": {
+    "file": "tmp/sheaf/n8/closure/C9-CONTRADICTION-CONTAINERS-20261024.md",
+    "sha256": "6a0f21aa14f7044150edcab9bd753716b1e4858bcfec8a92cb9c262fbf701e9d"
+  },
+  "proved_or_expanded_in_natural_language": [
+    "Abstract pilot isomorphism class is functorial under full BPS isomorphisms by II Definition4.9(viii)",
+    "Before quotienting, ordered Picard-group isomorphisms are positive scalar maps; bad normalized outputs require a>1",
+    "III Remark2.4.2 numerical reconstruction and localization ratios admit simultaneous positive scaling",
+    "One nonzero calibrated class fixed by the same pre-quotient comparison forces scalar1",
+    "For every finite K/Q_p with odd p, small-unit log preserves volume while hull forgets the depth; iterated pointwise log then meets an empty unit domain",
+    "The collapsed negative-cut quotient admits scalar self-maps exactly for a>=1, and these are noninvertible for a>1"
+  ],
+  "local_computation": {
+    "script": "tmp/sheaf/n8/closure/c9_log_hull_probe_20261024.py",
+    "script_sha256": "727ea85e1f3787cdb19654452593ccd972b907a8dcacc5d4c2797e96a2572daf",
+    "command": "python -X utf8 tmp/sheaf/n8/closure/c9_log_hull_probe_20261024.py",
+    "exit_code": 0,
+    "certificate": "tmp/sheaf/n8/closure/C9-LOG-HULL-PROBE-CERTIFICATE-20261024.json",
+    "certificate_sha256": "3c4461cec22e3e98dd0d2acd6f6e7b342ecf2e10f470ab7a62159ad4f11f527f",
+    "precision": "Q_3 modulo3^6; 81 and27 unit residues",
+    "status": "all exact assertions passed",
+    "scope": "local log/hull obstruction; no full source Theta-data and no original IUT refutation"
+  },
+  "remaining_source_obligation": "Construct the fixed native-q class in the actual evaluation-derived local-global upper-collection, preserving original determinant/reference/log normalization; equivalently obtain the needed actual cut membership or effective structure morphism, without adding it as a hypothesis.",
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "actual_IUT_refutation_certificate": "not_produced",
+    "target_accepted": false
+  }
+}

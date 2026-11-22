@@ -1,0 +1,8 @@
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.Contract
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.SourceProcessionStepXIMinimalForm
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.ParametricStepXI
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceIQHullSignedCertificate
+
+#print axioms LeanFormal.IUT.SourceStepXIComparisonForm.stepXIContract_exists_of_singleComparison
+#print axioms LeanFormal.IUT.SourceStepXIComparisonForm.singleComparison_of_stepXIContract
+#print axioms LeanFormal.IUT.NumberFieldFinitePlace.arithmeticTupleSignedCor312Conclusion

@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.AbsTopIII07VolumeLogShellBridgeActual
+import tmp.sheaf.xif.paper.AbsTopIII08PvAdicScalingActual
+import tmp.sheaf.xif.paper.AbsTopIII09ThetaHullScalingActual
+import tmp.sheaf.xif.paper.S3132ThetaSideEndgameRowsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_log_measure_prime_smul_integralLogShell
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII08PvAdicScalingActual.absTopIII_localLogVolume_prime_smul_finrank_one
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII09ThetaHullScalingActual.absTopIII_thetaHull_log_measure_prime_smul
+#print axioms LeanFormal.IUT.XiFPaper.AbsTopIII09ThetaHullScalingActual.absTopIII_thetaPilotHullLogVolumeReal_eq_actualRegion

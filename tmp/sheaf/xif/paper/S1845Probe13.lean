@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S1831StrongSquareGeometricActual
+#print axioms LeanFormal.IUT.XiFPaper.S1831StrongSquareGeometricActual.S1831AlgEnd_eq_one_iff
+#print axioms LeanFormal.IUT.XiFPaper.S1831StrongSquareGeometricActual.S1831StrongSquare_iff_algEnd
+#print axioms LeanFormal.IUT.XiFPaper.S1831StrongSquareGeometricActual.S1831AlgEnd
+#print axioms LeanFormal.IUT.XiFPaper.S1756CoverSourceRepresentabilityActual.S1756End_projection

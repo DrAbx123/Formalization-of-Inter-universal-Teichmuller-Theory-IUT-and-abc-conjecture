@@ -1,0 +1,20 @@
+import LeanFormal.IUT.ABCBridge.Geometry.FinitePlaceFractionalAbsorption
+
+open LeanFormal.IUT.NumberFieldFinitePlace LeanFormal.IUT.LocalFieldLogarithm
+
+#print axioms arithmeticTupleTprod_mul
+#print axioms arithmeticTupleTprod_one
+#print axioms arithmeticTupleTprod_pow
+#print axioms isIntegral_arithmeticTupleTprod_of_norm_le_one
+#print axioms isIntegral_algebraMap_prime_pow
+#print axioms prod_prime_zpow
+#print axioms isIntegral_prime_zpow_smul_arithmeticTupleTprod
+#print axioms prime_zpow_smul_arithmeticTupleTprod_mem_canonicalUnitReference
+#print axioms ne_zero_of_norm_pow_eq_prime_zpow
+#print axioms arithmeticTuple_fractionalAbsorption_elementChain
+#print axioms int_mul_le_of_le_div
+#print axioms exists_prime_zpow_eq_arithmeticTupleTprod_mul
+#print axioms prime_zpow_smul_mem_arithmeticTupleTprod_mul_canonicalUnitReference
+#print axioms exists_norm_pow_logShellRamificationExponent_eq_prime_zpow
+#print axioms natCast_mul_localNormOrder_eq
+#print axioms arithmeticTuple_fractionalAbsorption_of_order

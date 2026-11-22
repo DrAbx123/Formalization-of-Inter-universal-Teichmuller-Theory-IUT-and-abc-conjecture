@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.Mzk1Thm25P1CompositeConsumerWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.wiredInputs_h24Base_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.wiredInputs_cvLaw_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.wiredInputs_h24Base_supplied
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.wiredStatement_holds
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.p1CompositeRealConsumerTarget_wired
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Thm25P1CompositeConsumerWiringActual.consumerWiringRows

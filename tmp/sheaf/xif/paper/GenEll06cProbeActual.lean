@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.GenEll06cSection3ProvableActual
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06cSection3ProvableActual.s3135_belyiAlpha_ne_one
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06cSection3ProvableActual.s3135_belyiAlpha_mul_belyiBeta

@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll01bHeightLayerActual
+import tmp.sheaf.xif.paper.GenEll04cDifferentInputsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll01bHeightLayerActual.s3135_hBox_nonneg
+#print axioms LeanFormal.IUT.XiFPaper.GenEll04cDifferentInputsActual.prop17_of_differentTheoryInput

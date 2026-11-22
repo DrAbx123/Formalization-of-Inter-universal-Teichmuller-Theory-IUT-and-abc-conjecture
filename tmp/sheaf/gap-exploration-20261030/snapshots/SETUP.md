@@ -1,0 +1,53 @@
+# SHEAF 本仓库设置
+
+2026-10-22；活动方法：[SHEAF.md](SHEAF.md)。
+
+| 项目 | 已确定设置 |
+|---|---|
+| 工程根目录 | `D:/lean`，沿用现有 Lake 工程 |
+| 源码 | `LeanFormal/IUT` 和 `Iut`；查重后复用，不创建第三套理论 |
+| Lean | `leanprover/lean4:v4.32.2` |
+| Mathlib | `v4.32.2`，manifest rev `905b95818eb32af7874a58b427f50c1711a5e96c` |
+| SHEAF 参考版本 | `6e5abd804e1b0c8d4626349e3508103c97452711` |
+| 项目执行方式 | SHEAF 分组大规模并行；总协调/维护者/组负责人/worker 按任务组织，组内自主续领，不设 agent 或组数上限 |
+| 当次并行度 | 依据就绪任务、文件/接口冲突、审查/集成/构建吞吐和实际资源；不预设少量人数配额 |
+| 当前 chat 的局部要求 | 此次方法论文档编辑由 root 单线程完成；不约束项目或后续证明团队 |
+| 工作范围 | 每包精确文件名单、一个负责人；有活动 owner 时先协调，普通任务不恢复旧多级 SQLite 协议 |
+| 研究历史 | `AUDIT_LEDGER.md` 追加；专题笔记继续保留 |
+| 当前状态/队列 | `coord/STATE.md` / `coord/queue.md`，手工维护 |
+| 陈述试验 | `tmp/sheaf/<task>/`，明确 namespace/文件/缺口；不自动导入 Project |
+| 目标锁定位置 | 计划 `coord/targets/Challenge.lean`、`TargetsCheck.lean`；尚未生成 |
+| 目标提前人工审批 | 未增加例行审批；确需改变用户目标时再确认 |
+| 分派规则 | 见 coord/SCHEDULING.md；完整独立问题才分派，短文档/机械检查直接完成，不默认启动 DSH、tmux 或后台调度 |
+
+## 现成命令
+
+闭合证明的局部修复/诊断，先用已有零模型脚本：
+
+```powershell
+python -X utf8 -B tools/lean_auto.py repair PATH.lean --build-deps
+```
+
+`PATH.lean` 替换为本包有权限的精确文件。若采用 `--apply`，仅执行既有工具支持的、验证后可回滚的重复 import 清理。详见 [工具说明](tools/LEAN_AUTOMATION_USAGE.md)。
+
+SHEAF 陈述阶段含有允许的具名 `sorry` 时，直接记录 Lean 编译结果，不把 `lean_auto` 的 proof-policy 拒绝当作类型错误，也不修改其结果：
+
+```powershell
+pwsh -NoProfile -File tools/build_guard.ps1 -Command 'lake env lean tmp/sheaf/TASK/Statements.lean' -WorkDir 'D:/lean' -WaitTimeoutSec 60
+```
+
+这里 `TASK/Statements.lean` 是需要先实际创建的精确试验路径，不是已存在工件。`WaitTimeoutSec` 只限制资源等待，不限制 Lean 运行时间；调用执行器另设有界运行预算。此命令的通过只记 `statement_compiles`。
+
+完整构建在实际证明批次验收时运行，不因修改方法论执行：
+
+```powershell
+python -X utf8 -B tools/lean_auto.py build LeanFormal.IUT.Project --timeout 1800
+```
+
+失败退出状态是失败；即使解析后的 `errors` 为空也不能报绿。现有 Lake 诊断格式解析有覆盖限制，必要时查看对应日志尾部。大依赖闭包的指纹计算可能耗时，不反复重跑同版本任务。
+
+## 尚未部署的部分
+
+本地没有因本迁移安装 SHEAF claim/landing/buildtree 工具、自动 DAG 提取/队列生成器或 Lean comparator。当前用文档、JSON 节点、手工队列和已有 Lean 工具执行方法；这些限制不能被写成“全自动 SHEAF 已部署”。
+
+比较器验收时先核对所用 comparator 版本及实际接口，再记录可复现命令。上游 Linux shell/tmux 默认值不直接套到 Windows，工具链不因框架迁移升级。

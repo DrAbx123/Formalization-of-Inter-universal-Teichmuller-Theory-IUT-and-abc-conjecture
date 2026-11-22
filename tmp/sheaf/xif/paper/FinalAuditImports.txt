@@ -1,0 +1,4 @@
+# Modules imported by the final audit probe.
+# Extend only when a paper target lives in a new module.
+tmp.sheaf.xif.paper.PaperXiFCompileGate
+tmp.sheaf.xif.paper.XiFAxiomProbe

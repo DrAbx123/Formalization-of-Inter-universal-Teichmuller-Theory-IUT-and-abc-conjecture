@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1IQHullGreenConsumerActualAdapted
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IQHullGreenConsumerActualAdapted.iqHullGreen_bundle

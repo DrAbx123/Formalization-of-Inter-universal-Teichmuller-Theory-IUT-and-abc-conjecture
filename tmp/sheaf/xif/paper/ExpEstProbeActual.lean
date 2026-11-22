@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.ExpEst02ElementaryEstimatesActual
+
+#print axioms LeanFormal.IUT.IUTIV.Estimates.iutIVThm110_e1_arithmeticMean
+#print axioms LeanFormal.IUT.XiFPaper.ExpEst02ElementaryEstimatesActual.s3135ExpEstClassAIndex_length
+#print axioms LeanFormal.IUT.XiFPaper.ExpEst02ElementaryEstimatesActual.s3135ExpEstClassBIndex_length

@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1990GenusZeroFixedSubringActual
+
+open LeanFormal.IUT.XiFPaper.S1990GenusZeroFixedSubringActual
+
+#check S1990CoarseQuotientIsAffineLine
+#check S1983CoarseQuotientIsAffineLine_holds
+#check S1990_y_sq
+#check S1990_normalForm
+#print axioms S1990CoarseQuotientIsAffineLine

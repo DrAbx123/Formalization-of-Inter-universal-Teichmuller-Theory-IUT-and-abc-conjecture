@@ -86,11 +86,18 @@ structure SourceReductionClause (Selected Bad : Type u) where
   stableReduction_proved : ∀ b, stableReduction b
   multiplicativeReduction : Bad → Prop
   multiplicativeReduction_proved : ∀ b, multiplicativeReduction b
-  splitMultiplicativeReduction : Bad → Prop
+  splitMultiplicativeReduction : Bad → Prop :=
+    fun b => multiplicativeReduction b
   splitMultiplicativeReduction_proved :
-    ∀ b, splitMultiplicativeReduction b
+    ∀ b, splitMultiplicativeReduction b := by
+      intro b
+      change multiplicativeReduction b
+      exact multiplicativeReduction_proved b
   reductionCompatibility : ∀ b,
-    splitMultiplicativeReduction b → multiplicativeReduction b
+    splitMultiplicativeReduction b → multiplicativeReduction b := by
+      intro b h
+      change multiplicativeReduction b at h
+      exact h
   qParameter : Bad → Real
   qParameter_nonzero : ∀ b, qParameter b ≠ 0
   qParameter_contracting : ∀ b, ‖qParameter b‖ < 1

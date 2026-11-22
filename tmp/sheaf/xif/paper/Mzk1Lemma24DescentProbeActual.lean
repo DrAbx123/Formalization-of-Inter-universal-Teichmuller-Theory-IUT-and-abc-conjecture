@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24DescentActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24DescentActual.s3135_descent_finite_galois
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24DescentActual.s3135_coeff_descent_finite_galois

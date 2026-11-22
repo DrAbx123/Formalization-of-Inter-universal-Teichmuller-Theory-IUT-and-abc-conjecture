@@ -1,0 +1,60 @@
+# Mechanical fix rules for porting external Lean files to our pinned Mathlib (v4.32.2).
+# Format: REGEX||REPLACEMENT (PowerShell regex; applied to ported file text).
+# Add rules only for mechanically-safe drift; semantic changes stay for LLM fixing.
+
+# mathlib >=4.33 AddMonoidHom.domRestrict (absent in 4.32.2): domain restriction = precomp with subtype
+\.domRestrict\s+\(Divisor\.degZero \(K := K\) \(F := F\)\)||.comp (Divisor.degZero (K := K) (F := F)).subtype
+
+# common scoped-open normalization (keep as-is if present)
+open scoped Pointwise||open scoped Pointwise
+
+# --- 2026-11-10 qpilot port-fix audit (FLT port; our Mathlib v4.32.2, FLT newer) ---
+# RULE (driver, not text): before compiling ported modules, pre-create
+#   .lake/build/lib/lean/<module dir>
+# for every ported .lean file.  Missing output dirs were the single largest
+# failure class (8/11 EXIT=1) and surface as:
+#   "failed to write '...olean': failed to create file '...'"
+# Mechanical text rules already present: AddMonoidHom.domRestrict drift.
+# Other observed EXIT=1 were warning-only lines adjacent to the same olean-write
+# failure; no additional mechanical text rewrite was justified by the log.
+# Deprecation warnings (zero_le', count_associates_factors_eq) do NOT fail lean.
+
+# --- A787: FLT external tree v4.35 module syntax -> v4.32 imports ---
+(?m)^module\s*$||
+(?m)^public import ||import 
+
+# A787 Mathlib 4.35 -> 4.32 Ideal isMaximal renames
+Ideal\.isMaximal_under_of_isIntegral_of_isMaximal||Ideal.isMaximal_comap_of_isIntegral_of_isMaximal
+Ideal\.isMaximal_of_isIntegral_of_isMaximal_under||Ideal.isMaximal_of_isIntegral_of_isMaximal_comap
+
+# A787 under_def for renamed isMaximal_comap bridge
+rwa \[← hQ₂\.over\]||rwa [Ideal.under_def, ← hQ₂.over]
+
+# A787 public/expose section syntax (4.35 -> 4.32)
+(?m)^@\[expose\] public section\s*$||section
+(?m)^@\[expose\] section\s*$||section
+(?m)^public section\s*$||section
+(?m)^public meta import .*$||
+
+# --- A843/A844: FLT port (v4.35 -> v4.32.2), first error after topo file 14 ---
+# mathlib >=4.34 renamed Set.mem_ofPred_eq (predicate set membership); v4.32.2 has Set.mem_setOf_eq.
+Set\.mem_ofPred_eq||Set.mem_setOf_eq
+# (warning-only) unused simp args after the rename do not fail lean.
+
+# --- A861: FLT271 backport imports a v4.35 module absent in v4.32.2 ---
+# `Mathlib.Topology.Algebra.Group.Neighborhood` is new in later Mathlib; the lemmas used
+# (`continuous_of_continuousAt_one` etc.) live in `Mathlib.Topology.Algebra.Group.Basic` in v4.32.2.
+Mathlib\.Topology\.Algebra\.Group\.Neighborhood||Mathlib.Topology.Algebra.Group.Basic
+
+# --- A861: Mathlib rename ContinuousMap.isOpen_setOfPred_mapsTo -> isOpen_setOf_mapsTo (v4.32.2) ---
+ContinuousMap\.isOpen_setOfPred_mapsTo||ContinuousMap.isOpen_setOf_mapsTo
+
+# --- A861: ENat natCast renames in v4.32.2 (Data/ENat/Basic) ---
+ENat\.natCast_lt_top||ENat.coe_lt_top
+ENat\.natCast_le_natCast||ENat.coe_le_coe
+
+# --- A861: newer mathlib lemma exists_isClopen_mem_of_isOpen = compact_exists_isClopen_in_isOpen (v4.32.2) ---
+exists_isClopen_mem_of_isOpen||compact_exists_isClopen_in_isOpen
+
+# A1010: strip UTF-8 BOM that LANA sources carry (Lean rejects BOM before `import`)
+\A\uFEFF||

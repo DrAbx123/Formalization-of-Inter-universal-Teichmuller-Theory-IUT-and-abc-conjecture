@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.PaperSourceThetaConsistencyActual
+open LeanFormal.IUT
+open LeanFormal.IUT.InitialThetaSource
+open LeanFormal.IUT.InitialThetaSource.PlacePartitionReduction
+open LeanFormal.IUT.N8Closure
+open LeanFormal.IUT.XiFPaper.PaperSourceGeometryActual
+open LeanFormal.IUT.XiFPaper.QVFamThetaImageActual
+open LeanFormal.IUT.XiFPaper.QVFamTensorCoefficientActual
+open LeanFormal.IUT.XiFPaper.QPilotZeroLocusDivisorActual
+#check qVFamily
+#print qVFamily

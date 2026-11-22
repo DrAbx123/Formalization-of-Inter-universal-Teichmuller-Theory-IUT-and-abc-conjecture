@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.GenEll03bProofActual
+
+#print axioms LeanFormal.IUT.XiFPaper.GenEll03bProofActual.prop16_of_pointwise_bound
+#print axioms LeanFormal.IUT.XiFPaper.GenEll03bProofActual.s3135Prop16ProofCitations
+#print axioms LeanFormal.IUT.XiFPaper.GenEll03bProofActual.s3135Prop16ProofCitations_length

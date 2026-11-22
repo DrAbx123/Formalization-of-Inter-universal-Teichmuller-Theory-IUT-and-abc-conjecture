@@ -1,0 +1,9 @@
+import tmp.sheaf.xif.paper.S1920PaperFaithfulXiFActual
+
+open LeanFormal.IUT.XiFPaper.S1920PaperFaithfulXiFActual
+
+#print axioms s1920PaperC3_q
+#print axioms s1920PaperC3_logVolume_eq_neg_order_mul_log_five
+#print axioms s1920_paper_linkIdentification_eq
+#print axioms s1920_paperIdentifications
+#print axioms s1920_s1880_no_stripEquiv

@@ -1,0 +1,7 @@
+import LeanFormal.IUT.IUTIII.Theorem311.SourceHodgeTheaterBridge
+open LeanFormal.IUT.Theorem311Source.SourceHodgeTheaterBridge
+open LeanFormal.IUT.Theorem311Source
+#check SourceTheorem311Realization
+#check SourceHodgeTheaterBridge.SourceTheorem311Realization
+#check OriginalInput
+#check ThetaPilotCarrier

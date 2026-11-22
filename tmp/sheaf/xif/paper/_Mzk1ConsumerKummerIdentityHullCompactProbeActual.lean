@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1ConsumerKummerIdentityHullCompactActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerKummerIdentityHullCompactActual.labelledKummerIdentity_package
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ConsumerKummerIdentityHullCompactActual.hull_compact_representation_chain

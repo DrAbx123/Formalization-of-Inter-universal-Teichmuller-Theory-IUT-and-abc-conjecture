@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1TreeClusterRollupActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeClusterRollupActual.treeClusterRollup_contract

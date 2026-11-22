@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.EtTh10ThetaQuotientLawsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.EtTh10ThetaQuotientLawsActual.etTh10_modLThetaProjection_eq
+#print axioms LeanFormal.IUT.XiFPaper.EtTh10ThetaQuotientLawsActual.etTh10_thetaPowerKernel_le_comap
+#print axioms LeanFormal.IUT.XiFPaper.EtTh10ThetaQuotientLawsActual.etTh10Rows_length

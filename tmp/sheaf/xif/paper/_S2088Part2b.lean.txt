@@ -1,0 +1,56 @@
+
+/-! ## 5. The six certificate fields, one theorem each -/
+
+section Fields
+
+variable {K : Type u} [Field K] {Omega : Type u} [Field Omega]
+  {x : Spec (CommRingCat.of Omega) ⟶ CurveBase K}
+
+/-- **Item 1 of the certificate, proved unconditionally.** -/
+theorem certificate_preservesTerminalObjects
+    (hfin : GeometricFiberFinite K Omega x) :
+    PreservesLimitsOfShape (Discrete PEmpty.{1})
+      (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesLimitsOfShape_of_typeLevel hfin
+    (curve_preservesTerminalObjects (K := K) (Omega := Omega) (x := x))
+
+/-- **Item 2 of the certificate, isolated.**  The hypothesis is the Type-level
+pullback-preservation statement for the geometric fiber functor. -/
+theorem certificate_preservesPullbacks
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesLimitsOfShape WalkingCospan (curveGeometricFiberFunctor K Omega x)) :
+    PreservesLimitsOfShape WalkingCospan
+      (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesLimitsOfShape_of_typeLevel hfin h
+
+/-- **Item 3 of the certificate, isolated.** -/
+theorem certificate_preservesFiniteCoproducts
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : PreservesFiniteCoproducts (curveGeometricFiberFunctor K Omega x)) :
+    PreservesFiniteCoproducts (curveGeometricFiberFunctorFintype K hfin) where
+  preserves n := preservesColimitsOfShape_of_typeLevel hfin (h.preserves n)
+
+/-- **Item 4 of the certificate, isolated.** -/
+theorem certificate_preservesEpis
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : Functor.PreservesEpimorphisms (curveGeometricFiberFunctor K Omega x)) :
+    Functor.PreservesEpimorphisms (curveGeometricFiberFunctorFintype K hfin) :=
+  preservesEpimorphisms_of_typeLevel hfin h
+
+/-- **Item 5 of the certificate, isolated.** -/
+theorem certificate_preservesQuotientsByFiniteGroups
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : forall (A : Type u) [Group A] [Finite A],
+      PreservesColimitsOfShape (SingleObj A) (curveGeometricFiberFunctor K Omega x)) :
+    forall (A : Type u) [Group A] [Finite A],
+      PreservesColimitsOfShape (SingleObj A) (curveGeometricFiberFunctorFintype K hfin) :=
+  fun A _ _ => preservesColimitsOfShape_of_typeLevel hfin (h A)
+
+/-- **Item 6 of the certificate, isolated.** -/
+theorem certificate_reflectsIsos
+    (hfin : GeometricFiberFinite K Omega x)
+    (h : (curveGeometricFiberFunctor K Omega x).ReflectsIsomorphisms) :
+    (curveGeometricFiberFunctorFintype K hfin).ReflectsIsomorphisms :=
+  reflectsIsomorphisms_of_typeLevel hfin h
+
+end Fields

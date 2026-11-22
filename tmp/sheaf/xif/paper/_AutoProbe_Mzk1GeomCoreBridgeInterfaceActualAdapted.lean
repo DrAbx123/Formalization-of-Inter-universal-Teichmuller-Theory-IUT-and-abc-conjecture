@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreBridgeInterfaceActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeInterfaceActual.ZeroDivisorDatum
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeInterfaceActual.FibreBridgeAbstract
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreBridgeInterfaceActual.zeroSet_eq_of_abstract

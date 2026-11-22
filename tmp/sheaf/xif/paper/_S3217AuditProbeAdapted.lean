@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.Mzk1Lemma24P1ApplicationActual
+import tmp.sheaf.xif.paper.Mzk1Lemma24GrowthActual
+import tmp.sheaf.xif.paper.Hull12Ob9BoundTransferActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24P1ApplicationActual.s3135_p1Morphism_preserves_of_belyi
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Lemma24GrowthActual.s3135_monic_growth_of_coeff_bound
+#print axioms LeanFormal.IUT.XiFPaper.Hull12Ob9BoundTransferActual.hull12_rows_length

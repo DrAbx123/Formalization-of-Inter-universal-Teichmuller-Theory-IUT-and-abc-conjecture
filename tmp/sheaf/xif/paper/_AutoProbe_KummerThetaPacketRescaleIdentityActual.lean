@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.KummerThetaPacketRescaleIdentityActual
+
+#print axioms LeanFormal.IUT.XiFPaper.KummerThetaPacketRescaleIdentityActual.globalThetaPositivePacket_rescale_comp_scale
+#print axioms LeanFormal.IUT.XiFPaper.KummerThetaPacketRescaleIdentityActual.globalThetaPositivePacket_rescale_inv_scale

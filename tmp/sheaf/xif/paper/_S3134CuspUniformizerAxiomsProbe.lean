@@ -1,0 +1,17 @@
+import tmp.sheaf.xif.paper.S3134CuspUniformizerActual
+
+/-! Axioms probe for the task-21 constructed real cusp parameter. -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspBadNonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspQMagnitudeValues_nonempty
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspEpsilonReal_pos
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspEpsilonReal_lt_one
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspEpsilonReal_le_local
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134CuspParameterConstructed
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134NativeInitialThetaInputConstructed
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134SameCContractBridgeEpsilonResidual
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134SameCContractBridgeEpsilonResidual_cusp
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134SameCContractBridgeReduced_ofEpsilonResidual
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134SameCContractBridge_ofEpsilonResidual
+#print axioms LeanFormal.IUT.XiFPaper.S3134CuspUniformizerActual.S3134Step3115_mainlineQC_le_thetaPilot_viaEpsilon
+-- probe rebuilt against the final (component-labelled) source version

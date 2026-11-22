@@ -1,0 +1,101 @@
+{
+  "target": "Brauer.ArtinTransfer",
+  "order": [
+    "Brauer.ContH2",
+    "Brauer.Cyclic",
+    "Brauer.Relative",
+    "Brauer.Absolute",
+    "Brauer.Unramified",
+    "Brauer.Restriction",
+    "Brauer.InfRes",
+    "Brauer.LocalGalois",
+    "Brauer.OrderBound",
+    "Brauer.Invariant",
+    "Brauer.KummerH2",
+    "Brauer.Duality",
+    "Brauer.ArtinPairing",
+    "Brauer.Corestriction",
+    "Brauer.CorBr",
+    "Brauer.ArtinTransfer",
+    "Brauer.DualityH1",
+    "Brauer.FundamentalClass",
+    "Brauer.KummerCompat",
+    "Brauer.H2ZHat",
+    "Brauer.MathlibBridge",
+    "Brauer.TateNakayama",
+    "Brauer.TateNakayamaDegrees"
+  ],
+  "results": [
+    {
+      "module": "Brauer.DualityH1",
+      "exit": 0,
+      "sec": "70.6",
+      "attempt": 1,
+      "srcSha": "CAA4497E42BB01E912A24EA0F2213B05619CF4DD96F5630A9E07C39A00BD0CF0",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\DualityH1.olean",
+      "oleanSha": "BBE9E8FB144A98C38B70E67CB142BBF643923E9B579D6BBB7C111335C0CAB53F",
+      "bytes": 455912
+    },
+    {
+      "module": "Brauer.FundamentalClass",
+      "exit": 0,
+      "sec": "71.5",
+      "attempt": 1,
+      "srcSha": "79720A44FEEF7C7B435ACF47D3FA687C20B7B7AB8D5019BD77A4D740C03EFB5E",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\FundamentalClass.olean",
+      "oleanSha": "0D90802466F9AC46854FFF0D6402DC9C48737C09F2C184E8AF77A2DED7977278",
+      "bytes": 553592
+    },
+    {
+      "module": "Brauer.KummerCompat",
+      "exit": 0,
+      "sec": "66.4",
+      "attempt": 1,
+      "srcSha": "1625F14DC1B8E00E8E1D0315B84C85D6CF3414E547BEC0DD1F00D245C341F7C9",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\KummerCompat.olean",
+      "oleanSha": "3E9B794431CAFCCC828876D02A9A0512C31AC63EF881FCB99570F2CC155F3E79",
+      "bytes": 558552
+    },
+    {
+      "module": "Brauer.MathlibBridge",
+      "exit": 0,
+      "sec": "65.0",
+      "attempt": 1,
+      "srcSha": "A809EE90D215592218F5FCF9504880318866911EE0AECC86E7AB79FE8523949D",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\MathlibBridge.olean",
+      "oleanSha": "C0F5168C9FCC4D335942145EEE4FB7C7583C38185D2B90808EC0A1F390835C5C",
+      "bytes": 228992
+    },
+    {
+      "module": "Brauer.H2ZHat",
+      "exit": 0,
+      "sec": "65.7",
+      "attempt": 1,
+      "srcSha": "DC0937A3599F465B90CCC845278D636CCE5CB5C8F0AD894B11F11CF6BF615094",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\H2ZHat.olean",
+      "oleanSha": "3C4FCFCF518888AB1DF0DF4FCC3FFE7F5649BA0C90C875C7995E26AD6937C116",
+      "bytes": 536408
+    },
+    {
+      "module": "Brauer.TateNakayama",
+      "exit": 0,
+      "sec": "86.7",
+      "attempt": 1,
+      "srcSha": "29DDAA4E548DBE3F2303C904217B0F343CE1813E8CF51B39F60BF80F75BBEFF4",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\TateNakayama.olean",
+      "oleanSha": "F1E5678E8C84E4F9F5432D2E6CCAF5EF17E467111B5EB4989030486F7A16A305",
+      "bytes": 1621840
+    },
+    {
+      "module": "Brauer.TateNakayamaDegrees",
+      "exit": 0,
+      "sec": "65.8",
+      "attempt": 1,
+      "srcSha": "C85A27E28D31A107205A11D61A30B6A5B49B84168EFBAB984A390F3F23B8794C",
+      "olean": "D:\\lean\\.lake\\build\\lib\\lean\\Brauer\\TateNakayamaDegrees.olean",
+      "oleanSha": "313C41E39EF1ED11EB31874DDE0171B7A9E94A87AEB7A3F0584C2C61A6998F39",
+      "bytes": 310776
+    }
+  ],
+  "failed": []
+}

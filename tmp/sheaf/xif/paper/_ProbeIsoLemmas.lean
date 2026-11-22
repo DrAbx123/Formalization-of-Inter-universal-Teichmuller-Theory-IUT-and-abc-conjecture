@@ -1,0 +1,9 @@
+import Mathlib.CategoryTheory.Category.Basic
+open CategoryTheory
+#check IsIso.inv_comp_eq
+#check IsIso.comp_inv_eq
+#check IsIso.inv_eq_of_hom_inv
+#check IsIso.hom_inv_id_assoc
+#check IsIso.inv_hom_id_assoc
+#check IsIso.eq_inv_comp
+#check IsIso.inv_comp

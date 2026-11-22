@@ -1,0 +1,78 @@
+import tmp.sheaf.xif.paper.Mzk1FourTriangleSharedActual
+import tmp.sheaf.xif.paper.Mzk1LiteralIQHullFinitenessActual
+import LeanFormal.IUT.ABCBridge.Bridge.Cor312ToABCBridgeInterface
+import LeanFormal.IUT.IUTIII.Theorem311.SourceOriginalInput
+import tmp.sheaf.n8.closure.SourcePilotRegion
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.Contract
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.CertificateHullWiring
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.ConcreteFiniteRouteColumns
+
+/-! Mainline (A484 rung R4 single assembly): the fourth triangle `(HDD) o (SHE)` on the
+  literal global IQ carrier.  Self-contained: consumes the literal global IQ interface
+  (S2723 through the hull-finiteness rung), the literal hull log-volume finiteness, the
+  `(HDD) = (hull+det) o (dsc)` decomposition data with the explicit Step (xi-f)
+  comparison residual, and the per-epsilon literal comparisons.  Concludes the Cor 3.12
+  ordered conclusion, conditional ABC, and the literal hull log-volume finiteness.
+  No value-model carrier is used. -/
+
+namespace LeanFormal.IUT.XiFPaper.Mzk1R4LiteralAssemblyActual
+
+open LeanFormal.IUT
+open LeanFormal.IUT.Theorem311Source
+open LeanFormal.IUT.Theorem311Source.OriginalInput
+open LeanFormal.IUT.N8Closure.SourcePilotRegion
+open LeanFormal.IUT.XiFPaper.S2723GlobalIQHullActual
+open LeanFormal.IUT.XiFPaper.Mzk1LiteralIQHullFinitenessActual
+open LeanFormal.IUT.XiFPaper.Mzk1FourTriangleSharedActual
+open LeanFormal.IUT.ConcreteFiniteStepXI
+open MeasureTheory
+
+noncomputable section
+
+variable {l : PrimeGeFive} {V : Type}
+variable {I : OriginalInput.{0, 0, 0, 0, 0} l V}
+variable (C3 : SourcePilotRegionData (l := l) (V := V) I)
+variable [∀ i, Fintype (C3.tensorPlaceIndex i)]
+
+/-- The literal global IQ interface (the actual `IQ(S±; n, D)` hull carrier). -/
+def literalIQInterface (j : Nat) : IQHullLogVolumeInterface (GlobalIQAmbient (C3 := C3) j) :=
+  globalIQHullInterface (C3 := C3) j
+
+/-- Certificate-wiring form of the literal hull readout: the hull log-volume is the
+  `ofReal` of the real hull volume consumed by the StepXI consumers. -/
+theorem literalIQInterface_hull_logVolume_eq_ofReal (j : Nat) :
+    (literalIQInterface (C3 := C3) j).logVolume (literalIQInterface (C3 := C3) j).hull =
+      ENNReal.ofReal (iqHullRealVolume (literalIQInterface (C3 := C3) j)) :=
+  iqHull_logVolume_hull_eq_ofReal _
+
+/-- R4 single assembly: the fourth triangle `(HDD) o (SHE)` on the literal IQ carrier.
+  Inputs: the literal per-epsilon comparison family (the two Cor 3.12 comparison clauses
+  on the literal carrier) and the four-triangle synthesis data.  Outputs: Cor 3.12
+  ordered conclusion, conditional ABC, and literal hull log-volume finiteness. -/
+theorem r4_literal_assembly {DSC SHEOut : Type*}
+    (S : FourTriangleSynthesis DSC SHEOut) (j : Nat)
+    (hcomp : ∀ epsilon : Real, 0 < epsilon →
+      Cor312EpsilonArithmeticComparison (literalIQInterface (C3 := C3) j) epsilon) :
+    Cor312Conclusion S.contract ∧ ABCConjecture ∧
+      globalIQLogVolume (C3 := C3) j (globalIQHull (C3 := C3) j) < ⊤ :=
+  ⟨cor312Conclusion_of_fourTriangleSynthesis S,
+   cor312ToABCBridge_abcConjecture
+     { carrier := GlobalIQAmbient (C3 := C3) j
+       hullData := literalIQInterface (C3 := C3) j
+       epsilonComparison := hcomp },
+   literalGlobalIQHull_logVolume_lt_top (C3 := C3) j⟩
+
+/-- The finite-route columns give a columnwise Step (xi-f) comparison whose finite
+  supremum readout matches the StepXI hull slot (ConcreteFiniteRouteColumns reuse). -/
+theorem r4_finiteColumns_comparison {α : Type*} [Fintype α] [Nonempty α]
+    (f : α → Real) (i : α) :
+    (HDD (HDDDecomp.mk (fun j : α => f j) (fun _ : α => finiteSup f)) i).1 ≤
+      (HDD (HDDDecomp.mk (fun j : α => f j) (fun _ : α => finiteSup f)) i).2 :=
+  le_finiteSup f i
+
+end
+
+end LeanFormal.IUT.XiFPaper.Mzk1R4LiteralAssemblyActual
+-- A484 retry: forced mtime refresh after stale-content compile race.
+
+-- A484 fix: Cor312EpsilonArithmeticComparison import (stepxi diagnosis).

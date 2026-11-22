@@ -1,0 +1,159 @@
+
+section Core
+
+variable {A B C : S1728Cover} {f : S1728CoverMap A C} {g : S1728CoverMap B C}
+  {S : Site} {R : Sieve S}
+
+variable (D : (sitePseudofunctor f g).DescentData (fun (i : R.arrows.category) => i.obj.hom))
+  (a : A.source.fiber.obj (U S))
+  (eA : (Pseudofunctor.toDescentData A.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj a
+      ≅ S2004FstDescentData f g D)
+  (b : B.source.fiber.obj (U S))
+  (eB : (Pseudofunctor.toDescentData B.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj b
+      ≅ S2004SndDescentData f g D)
+
+/-! ## 1. Components of isomorphisms of descent data -/
+
+/-- The component at an index of an isomorphism of descent data, as an isomorphism. -/
+noncomputable def S2026CompIso {F : Pseudofunctor (LocallyDiscrete Siteᵒᵖ) Cat.{0, 0}}
+    {D₁ D₂ : F.DescentData (fun (i : R.arrows.category) => i.obj.hom)} (e : D₁ ≅ D₂)
+    (i : R.arrows.category) : D₁.obj i ≅ D₂.obj i where
+  hom := e.hom.hom i
+  inv := e.inv.hom i
+  hom_inv_id := by
+    rw [← Pseudofunctor.DescentData.comp_hom, e.hom_inv_id, Pseudofunctor.DescentData.id_hom]
+  inv_hom_id := by
+    rw [← Pseudofunctor.DescentData.comp_hom, e.inv_hom_id, Pseudofunctor.DescentData.id_hom]
+
+/-- The componentwise inverse law for an isomorphism of descent data. -/
+theorem S2026InvComp {F : Pseudofunctor (LocallyDiscrete Siteᵒᵖ) Cat.{0, 0}}
+    {D₁ D₂ : F.DescentData (fun (i : R.arrows.category) => i.obj.hom)} (e : D₁ ≅ D₂)
+    (i : R.arrows.category) : e.inv.hom i ≫ e.hom.hom i = 𝟙 _ := by
+  have h := congrArg (fun (m : D₂ ⟶ D₂) => m.hom i) e.inv_hom_id
+  rwa [Pseudofunctor.DescentData.comp_hom, Pseudofunctor.DescentData.id_hom] at h
+
+/-! ## 2. The two C-side comparisons, explicitly -/
+
+/-- The f-side comparison of C-descent data, as the explicit composite of the general
+comparison (G1) with the functoriality (G2) applied to eA. -/
+noncomputable def S2026MidIsoF :
+    (Pseudofunctor.toDescentData C.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((f.map.app (U S)).toFunctor.obj a) ≅ S2004MidF f g D :=
+  S2021PushComparison (R := R) f.map a ≪≫ S2021PushFunctorialityIso (R := R) f.map eA
+
+/-- The g-side comparison of C-descent data. -/
+noncomputable def S2026MidIsoG :
+    (Pseudofunctor.toDescentData C.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((g.map.app (U S)).toFunctor.obj b) ≅ S2004MidG f g D :=
+  S2021PushComparison (R := R) g.map b ≪≫ S2021PushFunctorialityIso (R := R) g.map eB
+
+/-- The composite comparison through the middle comparison. -/
+noncomputable def S2026Theta :
+    (Pseudofunctor.toDescentData C.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((f.map.app (U S)).toFunctor.obj a) ≅
+      (Pseudofunctor.toDescentData C.source.fiber (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((g.map.app (U S)).toFunctor.obj b) :=
+  S2026MidIsoF (D := D) (a := a) (eA := eA) ≪≫ S2004MidComparison f g D
+    ≪≫ (S2026MidIsoG (D := D) (b := b) (eB := eB)).symm
+
+/-- The component formula for the f-side comparison. -/
+theorem S2026MidIsoF_hom (i : R.arrows.category) :
+    (S2026MidIsoF (D := D) (a := a) (eA := eA)).hom.hom i =
+      ((Cat.Hom.toNatIso (f.map.naturality (i.obj.hom.op.toLoc))).symm.app a).hom
+        ≫ (f.map.app (U i.obj.left)).toFunctor.map (eA.hom.hom i) := by
+  rfl
+
+/-- The component formula for the g-side comparison. -/
+theorem S2026MidIsoG_hom (i : R.arrows.category) :
+    (S2026MidIsoG (D := D) (b := b) (eB := eB)).hom.hom i =
+      (S1864SiteComparisonRight g (i.obj.hom.op.toLoc)).hom.app b
+        ≫ (g.map.app (U i.obj.left)).toFunctor.map (eB.hom.hom i) := by
+  rfl
+
+/-- The component formula for the middle comparison. -/
+theorem S2026MidComparison_hom (i : R.arrows.category) :
+    (S2004MidComparison f g D).hom.hom i = (D.obj i).obj.hom := by
+  rfl
+
+/-! ## 3. Full faithfulness of the C-side comparison and the iso-comma object -/
+
+/-- Full faithfulness of the C-side comparison for a covering sieve (the C-stack is a
+prestack). -/
+noncomputable def S2026CFF (hR : R ∈ J S) :
+    (Pseudofunctor.toDescentData C.source.fiber
+      (fun (i : R.arrows.category) => i.obj.hom)).FullyFaithful :=
+  letI := C.source.isStack.toIsPrestack
+  (C.source.fiber.isPrestackFor' R hR).fullyFaithful
+
+/-- The isomorphism in the C-fibre between the two comma structure objects, produced by
+full faithfulness from S2026Theta. -/
+noncomputable def S2026PsiIso (hR : R ∈ J S) :
+    ((f.map.app (U S)).toFunctor.obj a) ≅ ((g.map.app (U S)).toFunctor.obj b) :=
+  (S2026CFF (C := C) (R := R) hR).preimageIso
+    (S2026Theta (D := D) (a := a) (eA := eA) (b := b) (eB := eB))
+
+/-- **The reassembled iso-comma object** at the base test object. -/
+noncomputable def S2026X (hR : R ∈ J S) : (sitePseudofunctor f g).obj (U S) :=
+  ⟨Comma.mk a b (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom,
+    (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).isIso_hom⟩
+
+/-- The defining property of the isomorphism S2026PsiIso: its image under the C-side
+comparison is S2026Theta. -/
+theorem S2026PsiIso_map (hR : R ∈ J S) :
+    (Pseudofunctor.toDescentData C.source.fiber
+      (fun (i : R.arrows.category) => i.obj.hom)).map
+        (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom
+      = (S2026Theta (D := D) (a := a) (eA := eA) (b := b) (eB := eB)).hom :=
+  (S2026CFF (C := C) (R := R) hR).map_preimage _
+
+/-- The two projections of the reassembled object. -/
+theorem S2026X_obj_left (hR : R ∈ J S) :
+    (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left = a := rfl
+
+theorem S2026X_obj_right (hR : R ∈ J S) :
+    (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right = b := rfl
+
+theorem S2026X_obj_hom (hR : R ∈ J S) :
+    (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.hom
+      = (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom := rfl
+
+/-- The structure morphism of a restricted reassembled object: S1998ObjHom. -/
+theorem S2026X_objHom (hR : R ∈ J S) (i : R.arrows.category) :
+    (((sitePseudofunctor f g).map (i.obj.hom.op.toLoc)).toFunctor.obj
+        (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)).obj.hom
+      = (S1864SiteComparisonLeft f (i.obj.hom.op.toLoc)).hom.app
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.left
+        ≫ (C.source.fiber.map (i.obj.hom.op.toLoc)).toFunctor.map
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.hom
+        ≫ (S1864SiteComparisonRight g (i.obj.hom.op.toLoc)).hom.app
+            (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).obj.right := by
+  have h := S1998ObjHom f g (S2026X (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+    (Opposite.op (Over.mk i.obj.hom))
+  simpa only [Opposite.unop_op, Over.mk_left, Over.mk_hom] using h
+
+/-- The component of the C-side comparison of S2026PsiIso, read at an index. -/
+theorem S2026PsiIso_map_app (hR : R ∈ J S) (i : R.arrows.category) :
+    ((Pseudofunctor.toDescentData C.source.fiber
+      (fun (i : R.arrows.category) => i.obj.hom)).map
+        (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom).hom i
+      = (C.source.fiber.map (i.obj.hom.op.toLoc)).toFunctor.map
+        (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom := rfl
+
+/-- The component of S2026PsiIso, expanded through the two comparisons and the middle
+comparison. -/
+theorem S2026PsiIso_map_eq (hR : R ∈ J S) (i : R.arrows.category) :
+    (C.source.fiber.map (i.obj.hom.op.toLoc)).toFunctor.map
+        (S2026PsiIso (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR).hom
+      = (S2026MidIsoF (D := D) (a := a) (eA := eA)).hom.hom i
+        ≫ (S2004MidComparison f g D).hom.hom i
+        ≫ (S2026MidIsoG (D := D) (b := b) (eB := eB)).inv.hom i := by
+  have h := congrArg (fun (m : (Pseudofunctor.toDescentData C.source.fiber
+      (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((f.map.app (U S)).toFunctor.obj a) ⟶
+      (Pseudofunctor.toDescentData C.source.fiber
+      (fun (i : R.arrows.category) => i.obj.hom)).obj
+        ((g.map.app (U S)).toFunctor.obj b)) => m.hom i)
+    (S2026PsiIso_map (D := D) (a := a) (eA := eA) (b := b) (eB := eB) hR)
+  rw [S2026PsiIso_map_app] at h
+  simpa only [S2026Theta, Iso.trans_hom, Iso.symm_hom, Pseudofunctor.DescentData.comp_hom]
+    using h

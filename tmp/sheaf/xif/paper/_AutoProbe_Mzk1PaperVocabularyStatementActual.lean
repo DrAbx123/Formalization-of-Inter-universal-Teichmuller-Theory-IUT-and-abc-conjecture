@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1PaperVocabularyStatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperVocabularyStatementActual.PaperTerm
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperVocabularyStatementActual.PaperTerm.index
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1PaperVocabularyStatementActual.PaperTerm.index_lt_ten

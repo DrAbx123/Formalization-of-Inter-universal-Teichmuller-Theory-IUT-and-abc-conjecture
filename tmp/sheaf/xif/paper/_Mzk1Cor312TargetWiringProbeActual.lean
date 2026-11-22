@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1Cor312TargetWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.all_routes_conclusion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.cor312TargetWiringRows_length

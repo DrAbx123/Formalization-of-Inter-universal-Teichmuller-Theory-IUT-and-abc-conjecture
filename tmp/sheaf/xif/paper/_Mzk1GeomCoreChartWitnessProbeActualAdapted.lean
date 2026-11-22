@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreChartWitnessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreChartWitnessActual.chartWitnessRows_length

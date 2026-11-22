@@ -1,0 +1,12 @@
+import tmp.sheaf.xif.paper.S3133S3131GaussianModelComponentsActual
+
+/-! Axioms probe for the Gaussian model components (mainline M0/M2/M3). -/
+
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianModelArithmeticMatch_of_completion
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianStage2ArithmeticMatch_of_S1280
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianArithmeticMatch_bridge
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianModelQParameter_value
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianThetaPacket_q
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianStage2ThetaPacket_q
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianThetaValueMatch_actualGaussian
+#print axioms LeanFormal.IUT.XiFPaper.S3133S3131GaussianModelComponentsActual.S3133GaussianModelMapResidualData

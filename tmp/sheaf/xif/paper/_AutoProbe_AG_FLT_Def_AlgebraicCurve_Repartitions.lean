@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.AG_FLT_Def_AlgebraicCurve_Repartitions
+
+#print axioms AlgebraicCurve.Place.adicValuation_le_one_of_mem
+#print axioms AlgebraicCurve.Place.adicValuation_algebraMap_le_one
+#print axioms AlgebraicCurve.Place.adicValuation_eq_exp_neg_ord

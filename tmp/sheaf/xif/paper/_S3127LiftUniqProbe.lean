@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S3127G2AffineCoverMapSurjectiveActual
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.AffineGeneralQuotientG2Consumer
+import LeanFormal.IUT.Foundations.AlgebraicGeometry.AffineQuotientG2
+open LeanFormal.IUT.Foundations.AlgebraicGeometry.AffineGeneralQuotientG2Consumer
+#check ABCBridge.InvariantsGeneralAssembly.affineFixedPointQuotient_universal
+#check affineQuotientCover_liftGeneral
+#check affineQuotientCoverLiftGeneral
+#check affineQuotientCoverLiftGeneral_fac
+#check affineCoverMapOfAlgHom
+#check affineCoverMapOfAlgHom_surjective

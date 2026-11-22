@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array,booktabs,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\title{What Scalar Simplification Adds: A Source-Level Audit of IUT III and Method Class C}
+\author{}
+\date{October 27, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We audit the scalar passage from IUT III, Theorem 3.11, to Corollary 3.12, and Hayashi's transfer from a restricted method class to IUT. We do not challenge the validity of the Scholze--Stix inference under its stated diagram and identifications. We ask whether those identifications and scalar premises follow from, or faithfully represent, the constructions in IUT III. Mochizuki's direct response disputes these reductions, and his discussion report gives an elementary quotient-region example in which a log-volume ratio varies with the region. These are relevant objections to the reduced model, but they are source-author claims and a separate example; they do not establish that IUT III's specific normalized comparison fails. We therefore treat the source-transfer question as unresolved, rather than as a refutation of the complete Scholze--Stix critique. We give exact scalar-route premises and deletion witnesses, and a checked toy countermodel showing that Remark 3.12.2(atoy)--(dtoy) alone does not imply its ray-membership conclusion; the additional (etoy)/(ftoy) construction remains a separate source assertion. We compute the raw mean of the concrete $j^2$ degrees without identifying it with the source's packet/hull readout. For Hayashi's 2026 preprint, we audit transfer premises in its application to IUT: arbitrarily large finite witnesses do not supply an infinite witness, the finite-residue and witness-exhaustiveness bridges are not derived in the checked chain, and Service C's null-geometry reinforcement is not connected there to the general W2 witness definition. We do not claim IUT or ABC true, Main Theorem R false within its class, or all criticisms refuted. LANA's interim report is treated as a substantive unresolved compatibility reconstruction, not a counterproof or an undecidability result.
+\end{abstract}
+\noindent\textbf{Keywords:} IUT; pilot objects; log-volume; method class; formalization status; assumption audit.
+\section{Introduction and scope}
+Peter Scholze and Jakob Stix's 2018 manuscript challenges the final passage from IUT III, Theorem 3.11, to Corollary 3.12. It distinguishes abstract pilot objects from concrete divisors and emphasizes identifications among real lines, the $j^2$ scaling, and a noncommuting diagram \cite[Sections 2.1.6--2.2, equations (1.5)--(1.6)]{SS}. We do not dispute the internal arithmetic of this objection under the real-line diagram and identifications that it explicitly analyzes; the issue here is whether that diagram is a source-faithful representation of IUT III. The issue is whether those premises can be transferred to the original model. Mochizuki's September 2018 response characterizes the simplification as identifying the arithmetic holomorphic structures at the two ends of the $\Theta$-link and as imposing a linear law on log-volumes affected by indeterminacy \cite[(C12)--(C14), pp.~3--4]{MochizukiResponse}; his discussion report spells out an elementary volume example and the algorithm-compatibility objection \cite[SSId, SSIdFs, SSIdEx, pp.~16--19; ADItw, MlLV, LVEx, pp.~23--26]{MochizukiReport2018}. We use these as attributed source-side arguments, not as a verdict on the complete IUT proof.
+
+The public-source corpus is deliberately heterogeneous. The technical claims audited here are the 2018 Scholze--Stix manuscript, Hayashi's 2026 method-class preprint, and Project LANA's 2026 interim reconstruction report. Joshi's 2025 arXiv report is a contrary but qualified response, not an adjudication. Fesenko's peer-reviewed 2015 survey is useful background but predates the present dispute and does not independently verify the disputed Corollary 3.12 step. Mochizuki's 2018 and October 2025 reports are source-author responses, not independent assessments; the latter responds to J. D. Boyd's 2025 web article, whose original text is not in the checked corpus and is not used here as mathematical evidence. We claim no community consensus \cite{Hayashi,LANA,Joshi,Fesenko2015,MochizukiReport2025}.
+
+Our claims are narrower and are stated as implications with explicit premises. First, a point-identification contradiction needs a common scalar readout (or an equivalent compatibility theorem) in addition to an abstract isomorphism. Second, a tight-hull contradiction needs both order bounds in one ordered carrier; it is independent of identifying the two pilot points. Third, the arithmetic average of raw $j^2$-scaled degrees does not, by itself, identify the normalized log-volume of the source holomorphic hull. These statements delimit the scalar arguments; they do not decide whether the source supplies the additional compatibility data.
+
+IUT III's own toy model retains two labeled copies $q\mathbb R$ and $\Theta\mathbb R$, an abstract symbol $*$, and a set-valued ray. Paragraph (etoy) asks one to verify a compatibility construction from the $q$-side without invalidating the $q$-condition; paragraph (fitw) attributes the resulting implication to the multiradial algorithm. We treat this as a source-level assertion, not as an independently proved lemma. An objection may correctly insist that this assertion needs proof; our scalar propositions do not provide it.
+
+The Method Class C paper by Kuniyuki Hayashi is addressed in Section~\ref{sec:hayashi}. Our audit identifies missing premises in the transfer from its restricted decision-procedure theorem to the IUT derivation; it does not claim that IUT lies outside that class. We do not infer mathematical truth or falsity from formalization status, and we do not claim to answer all published criticisms.
+
+\section{Scalar models and contradiction routes}
+\subsection{Notation}
+Let $q,\theta,c\in\mathbb R$, with scalar normalization $\theta=cq$. The source-style inequality setting uses $q<0$ and $c>1$, which imply $\theta<q$.
+\begin{proposition}[Scalar separation]\label{prop:separation}
+If $q<0$, $c>1$, and $\theta=cq$, then $\theta<q$.
+\end{proposition}
+\begin{proof}
+Since $(c-1)q<0$, we have $cq<q$, hence $\theta<q$.
+\end{proof}
+\begin{definition}[Readout compatibility]
+An abstract transport is an equivalence $e:X_\Theta\to X_q$. Concrete readouts are maps $\rho_\Theta:X_\Theta\to\mathbb R$ and $\rho_q:X_q\to\mathbb R$. Readout compatibility means $\rho_\Theta=\rho_q\circ e$. An abstract equivalence alone is not this compatibility law.
+\end{definition}
+
+\subsection{Endpoint identification}
+\begin{proposition}[Exact endpoint criterion]\label{prop:endpoint}
+Let $v:X\to\mathbb R$ be one common readout and $a,b\in X$. If $q=v(a)$, $\theta=v(b)$, $a=b$, $\theta=cq$, and $c\ne1$, then $q=\theta=0$. Conversely, under $\theta=cq$ and $c\ne1$, $q=\theta$ if and only if $q=0$. Thus the endpoint route is contradictory exactly when its identification/readout premises hold and $q\ne0$.
+\end{proposition}
+\begin{proof}
+The common readout and $a=b$ give $q=v(a)=v(b)=\theta$. Substitution into $\theta=cq$ yields $(c-1)q=0$, so $q=0$ and $\theta=0$. Conversely, either equality $q=\theta$ or $q=0$ implies the other under $c\ne1$ and the scalar law.
+\end{proof}
+The sign premise $q<0$ is sufficient to exclude the only compatible value $q=0$, but it is not needed to derive $q=\theta$. No hull premise occurs. The common-readout/equal-point package is a sufficient identification package, not a claim that its members are necessary in every possible proof.
+
+\begin{proposition}[An abstract equivalence does not fix the readout]
+There are labeled carriers with an abstract equivalence identifying their pilot coordinates and with $q=-1$, $\theta=-2=2q$, but with incompatible readouts.
+\end{proposition}
+\begin{proof}
+Take $X_q=\mathbb R\times\{q\}$ and $X_\Theta=\mathbb R\times\{\Theta\}$, with $e(x,\Theta)=(x,q)$. Put the pilot coordinate at $-1$ in each carrier, and define $\rho_q(x,q)=x$ and $\rho_\Theta(x,\Theta)=2x$. Then $e$ is an equivalence identifying the underlying coordinates, while the readouts at the pilots are $-1$ and $-2$. The scalar law holds with $c=2$ and $q<0$.
+\end{proof}
+This deliberately formal toy witness shows only that abstract equivalence alone does not impose equality of arbitrary readouts. It is not source-compatible with and does not refute the concrete real-line/degree diagram in Scholze--Stix Section 2.2, which includes specific identifications and scaling maps.
+
+\subsection{Tight-hull interval}
+\begin{proposition}[Exact interval-existence criterion]\label{prop:interval}
+For $c>1$ and $q\in\mathbb R$, there exists $H\in\mathbb R$ with $q\leq H\leq cq$ if and only if $q\geq0$.
+\end{proposition}
+\begin{proof}
+If such $H$ exists, then $q\leq cq$, so $(c-1)q\geq0$, hence $q\geq0$. Conversely, if $q\geq0$, choose $H=q$; then $q\leq H$ and $H=q\leq cq$.
+\end{proof}
+\begin{corollary}[Tight-hull contradiction]\label{cor:hull}
+If $q<0$, $c>1$, and $\theta=cq$, there is no $H$ with $q\leq H\leq\theta$. This route uses no equality of pilot points.
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:separation} gives $\theta<q$, contradicting $q\leq H\leq\theta$.
+\end{proof}
+Both order bounds are used to derive $q\leq\theta$. Delete the lower bound and $H=\theta$ remains; delete the upper bound and $H=q$ remains. For $q=-1,c=2,\theta=-2$, these are explicit witnesses. The endpoint equality $a=b$ is irrelevant. A same-carrier monotone-readout argument can derive real bounds from object bounds only when the objects and readout genuinely inhabit one ordered carrier.
+
+\subsection{Quantitative set-valued indeterminacy}
+For $h,\varepsilon\in\mathbb R$, define $R_{\leq -2h+\varepsilon}:=\{x\in\mathbb R:x\leq-2h+\varepsilon\}$.
+\begin{proposition}[Exact ray-membership condition]\label{prop:ray}
+For all $h,\varepsilon\in\mathbb R$, $-h\in R_{\leq-2h+\varepsilon}$ if and only if $h\leq\varepsilon$.
+\end{proposition}
+\begin{proof}
+Membership means $-h\leq-2h+\varepsilon$; adding $2h$ gives $h\leq\varepsilon$, reversibly.
+\end{proof}
+\begin{proposition}[Bare atoy/dtoy data do not force ray membership]\label{prop:ray-countermodel}
+There exist distinct labels $q,\Theta$ and one abstract symbol $*$ with point assignments $*\mapsto q(-h)$ and $*\mapsto\Theta(-2h)$ and an alternative set-valued $\Theta$-ray assignment, with $h,\varepsilon>0$, for which forgetting labels does not force the q-value $-h$ to belong to that ray.
+\end{proposition}
+\begin{proof}
+Take $h=2$ and $\varepsilon=1$. The labels of the two point assignments are distinct, and the alternative ray is $R_{\leq-3}$; after forgetting the q label, the assigned q-value is $-2\notin R_{\leq-3}$.
+\end{proof}
+
+This model isolates the source-level non-implication: IUT III Remark 3.12.2 (atoy)--(dtoy) specifies distinct labels, the two point assignments, and the alternative set-valued ray, but by themselves these data do not assert that the q-value belongs to the ray. The accompanying standalone Lean-Core theorem \texttt{labeled\_assignments\_not\_enough\_for\_ray} kernel-checks this integer instance. Paragraph (etoy) separately supposes that the intrinsic indeterminacy assignment can be constructed while preserving the q-condition; (ftoy) then derives membership formally (PDF pp.~190--191). Thus this proves non-derivability from the bare atoy--dtoy data, not failure of the added etoy/ftoy assertion. Nor does it establish that the full S--S critique is irrelevant to Corollary 3.12: xi-d--xi-g separately assert normalized hull/q-pilot comparability (PDF pp.~183--185).
+\section{Premise dependency and source audit}
+Table~\ref{tab:dependencies} records the two contradiction routes separately. The propositions are valid under their displayed premises; the source-status column reports what the cited text says, not what this paper has reconstructed.
+\begin{longtable}{p{0.12\textwidth}p{0.25\textwidth}p{0.24\textwidth}p{0.30\textwidth}}
+\caption{Assumption dependency, deletion witnesses, and source status.}\label{tab:dependencies}\\
+\toprule Route & Premises & Consequence & Deletion witness and source status\\\midrule
+\endfirsthead
+\toprule Route & Premises & Consequence & Deletion witness and source status\\\midrule
+\endhead
+Scalar separation & $q<0$, $c>1$, $\theta=cq$. & $\theta<q$. & Remove $q<0$: $q=1,c=2$ is consistent. Remove $c>1$: $q=-1,c=1$ gives $q=\theta$. Source toy model keeps $q$ and $\Theta$ as different labels.\\\addlinespace
+Endpoint route & One common readout; $a=b$; $q=v(a)$, $\theta=v(b)$; $\theta=cq$; $c\ne1$. & $q=\theta=0$. Contradiction iff $q\ne0$; $q<0$ is sufficient, not needed for the endpoint equation. No hull is used. & Delete $q<0$: $q=\theta=0,c=2$. Delete point equality: a common readout with pilot values $-1,-2$ gives $q=-1,\theta=-2,c=2$. Delete readout compatibility: the same abstract coordinate with readouts $x$ and $2x$ gives those distinct readings. Delete $c\ne1$: $q=\theta=-1,c=1$. Delete the scalar law: $q=\theta=-1,c=2$. The source needs a separate structured compatibility assertion; abstract isomorphism alone is insufficient.\\\addlinespace
+Tight interval & One ordered real carrier; both bounds $q\leq H$ and $H\leq\theta$; $\theta=cq$, $c>1$. & $\exists H:\;q\leq H\leq cq$ iff $q\geq0$. For $q<0$ no $H$; endpoint equality is irrelevant. & Delete upper bound: $H=q$; delete lower bound: $H=\theta$. For $q=-1,c=2$ each witnesses the surviving bound. Delete $q<0$: $q=1,c=2,H=1$. Delete $c>1$: $q=-1,c=1,H=-1$. Delete the scalar law: $q=\theta=H=-1,c=2$.\\\addlinespace
+Set-valued ray & Positive $h,\varepsilon$; candidate $-h$ in $R_{\leq-2h+\varepsilon}$. & Membership iff $h\leq\varepsilon$. & $h=2,\varepsilon=1$ refutes membership, so (atoy)--(dtoy) alone do not imply it. (etoy) adds the compatibility construction and (ftoy) attributes membership to the algorithm; neither is proved by this countermodel.\\\addlinespace
+Raw $j^2$ mean & Odd prime $\ell$, $m=(\ell-1)/2$, $j=1,\ldots,m$, raw degrees $Q_j=j^2Q$. & $m^{-1}\sum_jQ_j=\ell(\ell+1)Q/12$. & IUT III explicitly asserts a $j$-suitably-normalized determinant/hull comparison in Ob3 and xi-d; this raw arithmetic neither verifies nor contradicts that source assertion.\\
+\bottomrule
+\end{longtable}
+
+The endpoint and tight-hull routes are independent. The former uses point/readout identification and the scalar law, but no monotonicity or hull. The latter uses both order bounds and a single ordered carrier, but no endpoint equality. Combining them into one undifferentiated same-space assumption would hide which premise does the work.
+
+\subsection{What IUT III states}
+IUT III Remark 3.12.2 (atoy)--(ftoy) \cite[Remark 3.12.2 (atoy)--(ftoy), pp.~190--191]{MochizukiIUTIII}, especially the ray in (dtoy) and the conditional intrinsic construction in (etoy), uses distinct labeled copies $q\mathbb R$ and $\Theta\mathbb R$, an abstract symbol $*$, and a set-valued assignment. In this toy discussion $h>0$ and $\varepsilon>0$ are schematic parameters; this note does not identify $h$ with $|\log q|$ or $\varepsilon$ with an expression in $|\log q|$ and $|\log\Theta|$. Corollary 3.12 separately defines the procession-normalized volume of the holomorphic hull of the union of possible $\Theta$-pilot images, averaged over $j$, as $-|\log\Theta|$, and the corresponding procession-normalized $q$-pilot volume as $-|\log q|$ (PDF pp.~173--174). The toy ray calculation is not a theorem about those source values; this note makes no identification between them.
+
+IUT III Theorem 3.11 and Remark 3.11.1 \cite{MochizukiIUTIII} retain full poly-isomorphisms and Ind1--Ind3. Scholze and Stix discuss those features and the abstract/concrete pilot distinction in their own manuscript. We therefore do not claim they simply omitted all source structures. The formal scalar results establish only that abstract equivalence alone does not imply concrete readout equality, and that raw averaging alone does not establish the source's normalized hull comparison. These are conditional warnings, not evidence that IUT III lacks the bridge it asserts. Whether the source construction supplies the maps and normalization remains open here.
+
+\subsection{Raw $j^2$ calculation versus normalized readout}
+Let $m=(\ell-1)/2$ and $j=1,\ldots,m$. If the $j$th concrete theta degree is $Q_j=j^2Q$, then
+\[\frac1m\sum_{j=1}^m j^2Q=\frac{(m+1)(2m+1)}6Q=\frac{\ell(\ell+1)}{12}Q.\]
+At $\ell=41$, this coefficient is $143.5$. In the convention $Q=-T/(2\ell)$ used in the Scholze--Stix displayed calculation, (1.5) has $q$-term $-(\ell+1)T/24$, whereas (1.6), which omits $j^2$, has $-T/(2\ell)$. This raw arithmetic difference is real.
+
+Scholze--Stix describe $\ell^*=(\ell-1)/2$ indexed concrete $\Theta$-pilot components; their footnote 11 suggests either a diagonal copy or averaging when extracting numerical invariants. Mochizuki objects to calling these separate pilot objects, saying there is one object with indexed components \cite[(C10), p.~3]{MochizukiResponse}. In Section 2.2 Scholze--Stix concede that the $j^2$ monodromy on the $\Theta$-side alone might arguably be overcome by averaging, but claim the full cross-theater diagram remains inconsistent under consistent real-line identifications. Their objection is therefore a specific readout/commutativity claim about the diagram, not merely an arithmetic-mean error. The remaining source question is whether the exact maps and normalizations in IUT III verify or evade that diagrammatic obstruction. The source's procession average is an average of packet-normalized log-volumes over nested capsules, not by definition the raw mean of the individual j-squared divisor degrees \cite[Section 2.1.8, footnote 11; Section 2.2, especially (1.5)--(1.6)]{SS}.
+
+The source's normalization chain is explicit in stages, but it is not the raw arithmetic mean in (1.5). The source's capsule notation is $S_{j+1}^{\pm}$ for the index set of the $(j+1)$-capsule, with $j=1,\ldots,\ell^*$; tensor packets are formed from direct sums over the associated labels (Proposition 3.4(ii), PDF pp.~102--103). Proposition 3.9(i) defines packet-normalized log-volumes using weights on local direct-summand fields, and then defines procession-normalization as the average over capsules. Remark 3.9.3 says these capsule weights must be equal to remain compatible with the inclusion maps. The underlying direct-sum weights are normalized using local field degrees and residue degrees; Remark 3.1.1(iii) cautions that such weighted sums of log-volumes need not be a positive scalar multiple of an ordinary log measure (pp.~94--97, 116--120). Thus neither the raw mean above nor a plain sum over the labels in a capsule may be substituted for the defined packet/procession value without a further calculation.
+
+As a conditional arithmetic check only, in a deliberately simplified one-sided toy capsule (not the source's $S_{j+1}^{\pm}$), if the log-volume assigned to it were the unweighted sum $C_j=\sum_{k=1}^{j} k^2 Q$, then averaging over $j=1,\ldots,r$ would give
+\[
+\frac{1}{r}\sum_{j=1}^{r}C_j=\frac{(r+1)^2(r+2)}{12}Q.
+\]
+This is not asserted to be the IUT coefficient: the source defines weighted packet log-volumes rather than $C_j$.
+
+Remark 3.9.5 then explains why the later comparison is not a direct volume comparison: (Ob1)--(Ob3) pass from possible regions to a hull, a weighted positive tensor power of its determinant, and an inverse reference determinant accounting for ramification; (Ob3-3) interprets the resulting degree as a suitably normalized log-volume. (Ob4) permits comparison with an $M$-th tensor power of the q-pilot line bundle. (Ob5)--(Ob6) use the hull of the bounded family of possible outputs and note that its log-volume may strictly exceed the input region's; (Ob7)--(Ob8) retain prime-strip/Kummer data and vertical shifts. (Ob9-1) claims that, once comparable objects are obtained via (Ob5), the formal indeterminacies from tensor-power twists, hull formalism, and arbitrary log-link iterates do not change comparability, but serve as compatibility conditions. (Ob9-2) says that prior to the ``final conclusion'' of (Ob5), the precise relationship between the a priori non-comparable algorithm outputs and comparable objects had not yet been explicitly computed. The subsequent xi-d--xi-g passages assert the construction and its consequence; this is a point for checking the construction, not a contradiction of the assertion.
+
+Step (xi-d) explicitly asserts that after a suitable determinant tensor power and log-volume normalization with respect to $j$, the output hull and q-pilot give completely comparable objects; (xi-e)--(xi-f) assert expressibility relative to the fixed q input and conclude the inclusion $-|\log q|\in\mathbb R_{\leq-|\log\Theta|}$. Step (xi-g) summarizes the algorithm, hull, and log-volume as yielding two ``tautologically equivalent'' computations of the q-pilot log-volume. We record these as source assertions, not as absent normalizations. The unresolved point in this audit is narrower: we have not independently reconstructed a per-label evaluation of the full packet-average/determinant/hull/Kummer composite on the concrete degrees $Q_j=j^2Q$, including the resulting coefficient or cancellation. This neither verifies nor contradicts the asserted special comparison \cite[Remark 3.1.1(ii)--(iv), pp.~94--97; Proposition 3.4(ii), pp.~102--103; Proposition 3.9(i), Remark 3.9.3, pp.~116--120; Remark 3.9.5(Ob1)--(Ob9), pp.~127--139; Corollary 3.12(xi-c)--(xi-g), pp.~183--185]{MochizukiIUTIII}.
+\section{What the scalar simplification adds}\label{sec:identity-simplification}
+
+Scholze--Stix's published claim is diagram-specific: under consistent identifications of the real-line copies, retaining the $j^2$ factors in (1.5) leaves monodromy around the full diagram; they therefore omit those factors in (1.6), which they call essentially content-free (Section 2.2, PDF pp.~9--10). They note that averaging might address the $\Theta$-side alone, but say it does not repair the full diagram \cite[Section 2.2]{SS}. We accept this as a conditional argument about their displayed diagram, not as proof that the original IUT comparison fails. Mochizuki characterizes the simplification as an ``id-version'' of the $\Theta$-link and says it identifies distinct arithmetic holomorphic structures \cite[(C12), pp.~3--4]{MochizukiResponse}; he further says this identification prevents applying the multiradial algorithm \cite[(C13), p.~4]{MochizukiResponse}. These are source-author claims, not independent verification. The discussion report's SSId/SSIdFs gives the same conditional account \cite[Section 10, pp.~16--17]{MochizukiReport2018}. The local scalar formalization above does not verify the IUT algorithms.
+
+The source-level result established here is narrower and exact: the point-identification conclusion does not follow from IUT III's (atoy)--(dtoy) clauses alone, as Proposition~\ref{prop:ray-countermodel} demonstrates; IUT III itself adds (etoy)'s compatibility-construction supposition and (ftoy)'s algorithm assertion. Hence the identity-only argument is not the derivation displayed by those toy clauses. This does not prove that Scholze--Stix's full diagram is irrelevant to the xi-d--xi-g comparison; that comparison is explicitly asserted in IUT III, and this paper has not shown that its maps fail.
+
+The report's Section 12 makes the disputed implication precise. It records no disagreement about the arithmetic-degree calculation within a single holomorphic structure (AD/IUAD); it says precisely for this reason that the $q$- and $\Theta$-structures at the two ends of the $\Theta$-link must be treated as distinct and related by a nontrivial computation. Its (ADItw) further says that the link is not a ring homomorphism, so degree comparisons depend on specified intertwinings of both value-group and unit-group data; the report attributes the contradiction to identifying the structures (SSADFs) \cite[Section 12, pp.~23--24]{MochizukiReport2018}. We record this as the source author's account. On Mochizuki's account, the simplified route treats a set-level identity of the underlying real carriers as compatible with the ring structures and arithmetic-degree/log-volume readouts. The cited report does not independently verify that this is what the specific IUT III maps do; the compatibility must be checked on those maps, not inferred from the labels alone.
+
+The report makes the lost structure explicit in a two-dimensional real example (SSIdEx) \cite[Section 10, pp.~17--19]{MochizukiReport2018}. Let $V=\mathbb R^2$ with basis $e_1,e_2$, and define two complex structures by $I e_1=e_2$, $I e_2=-e_1$, and $J e_1=t e_2$, $J e_2=-t^{-1}e_1$ for $0<t<1$. Keep the real lines $V_1=\mathbb R e_1$, $V_2=\mathbb R e_2$ and the same underlying real identity $\phi$. Let $\iota_I:V_2\to(V_1)_{\mathbb C}$ send $e_2\mapsto i e_1$, and let $\iota_J$ send $t e_2\mapsto i e_1$. Then $\phi_1$ and $\phi_2$ are the restrictions of $\phi$ to the two lines, and
+\[
+(\phi_1)_{\mathbb C}\circ\iota_I(e_2)=i e_1,\qquad \iota_J\circ\phi_2(e_2)=t^{-1}i e_1\ne i e_1.
+\]
+Thus the underlying real identity preserves the displayed vectors and subspaces but is not an isomorphism of the enriched data that includes the structure maps $\iota_I,\iota_J$. Forgetting those maps creates the apparent identification by deleting precisely the compatibility datum that distinguishes the complex structures. This is a verified finite-dimensional illustration of the source author's (SSIdEx), not an IUT construction and not a counterexample to the specific maps claimed in IUT III.
+
+The numerical relation at issue is also more specific than a linear map between abstract copies of $\mathbb R$. Mochizuki calls the underlying assertion (Lin): any two such copies are related by multiplication by a positive scalar. He distinguishes the linear relation on value-group coordinates from the relation between log-volumes of a rigid region and its indeterminacy-affected hull, which he says depends nonlinearly on the region \cite[(C14), p.~4]{MochizukiResponse}; the report gives the following explicit elementary model \cite[Section 12, LVEx, pp.~24--26]{MochizukiReport2018}.
+
+\begin{proposition}[No uniform scalar for the symmetrized-region example]\label{prop:no-uniform-volume-scalar}
+Let $\sigma(x,y)=(-x,y)$ on $\mathbb R^2$, and for $a,b>0$ let
+\[
+\begin{aligned}
+R_{a,b}&=\{(x,y)\in\mathbb R^2: |x|\leq1,\ |y|\leq a\}\\
+&\quad\cup\{(x,y)\in\mathbb R^2: 0\leq x\leq1,\ a\leq|y|\leq a+b\},\\
+S_{a,b}&=R_{a,b}\cup\sigma(R_{a,b}).
+\end{aligned}
+\]
+Write $\mu_{\log}(T)=\log(\operatorname{area}(T))$. Their Euclidean log-volumes are $\mu_{\log}(R_{a,b})=\log(4a+2b)$ and $\mu_{\log}(S_{a,b})=\log(4a+4b)$. There is no constant $c$ such that $\mu_{\log}(S_{a,b})=c\,\mu_{\log}(R_{a,b})$ for all $a,b>0$.
+\end{proposition}
+\begin{proof}
+The first rectangle has area $4a$, and the two additional strips have total area $2b$, giving area $4a+2b$. Reflection adds the missing reflected strips, so the symmetrized area is $4a+4b$. For $a=1$, the ratio $\log(4+4b)/\log(4+2b)$ tends to $1$ as $b\downarrow0$, but at $b=1$ it is $\log 8/\log 6>1$. Hence it is not constant.
+\end{proof}
+
+The report continues the example rather than identifying the two labels. For parameters with $\mu_{\log}(S_{a,b})>0>\lambda>\mu_{\log}(R_{a,b})$, it sets $\rho=\mu_{\log}(R_{a,b})/\lambda>1$ and uses the labeled link $\mu_{\log}(R_{a,b})_V\mapsto\lambda_W$, given by division by $\rho$. The strict inequality $\mu_{\log}(S_{a,b})_W>\mu_{\log}(R_{a,b})_V$ comes from $R_{a,b}\subset S_{a,b}$ and the region's symmetrization; the link itself is applied only to the rigid-region value. The resulting chain is consistent in the $W$-labeled line because the geometric inequality and the chosen link value coexist, not because one scalar map identifies both region volumes \cite[LVEx, pp.~24--25]{MochizukiReport2018}.
+
+The proposition proves a failure of a uniform scalar law in this explicit quotient-region model; it does not prove that the IUT hull is this region or independently establish Mochizuki's interpretation of Theorem 3.11. Its relevance is a uniform scalar condition (Lin) in Mochizuki's characterization of the identity-version route, namely one scalar governing a family of indeterminacy-affected log-volumes (response C14; report, Section 12). Scholze--Stix's own published claim is the more specific monodromy obstruction in their diagram; this audit has not shown that it is equivalent to that broad uniform law. The example refutes that uniform rule for this family, but it does not refute a scalar relation for one specific $q/\Theta$ pair or the complete Scholze--Stix argument. The formal endpoint route above additionally requires an identified point under a common readout, and the tight-hull route requires both bounds in one ordered carrier. Thus the contradiction in the reduced diagram is valid conditional on the added common-readout and scalar premises. The source-transfer question is whether IUT III's concrete maps and its special normalization satisfy or evade those premises. IUT III xi-d--xi-f asserts normalized comparability/inclusion, but this audit has not reconstructed its effect on the per-label $j^2$ degrees. That missing reconstruction is not evidence that the assertion is false, nor does it show that the identity-version diagram is unfaithful. We leave both the source interpretation and the full Scholze--Stix critique unresolved.
+
+\section{Hayashi's Method Class C: exact scope and transfer premises}\label{sec:hayashi}
+Hayashi \cite[Definition 1.1 and Theorem 1.2, PDF p.~3]{Hayashi} defines a $\mathcal C$-type method as ``a decision procedure satisfying the following four axioms'' and lists four conditions: (C1) at each stage it observes $\ell\bmod p_i^3$ for finitely many selected primes; (C2) it may adaptively enlarge that finite set; (C3) it halts after finitely many stages and decides from the observations; and (C4) its available quantities are gauge invariants computable from $\ell\bmod p^K$. Theorem 1.2 [A] states: ``No $\mathcal C$-type method can prove
+\[\#\{p:v_p(\ell^{p-1}-1)\geq3\}<\infty.\]''
+By the standard universal closure convention, the free $\ell$ in Theorem 1.2 ranges over its intended inputs; Theorem 1.2 as printed does not state that domain explicitly or specify the procedure's output contract (PDF p.~3). Section 1.1 first formulates a fixed-base estimate $\mathrm{HW}_q$ (PDF p.~2), while Theorem 1.2 gives a no-go claim about a $\mathcal C$ decision procedure (PDF p.~3). Thus we read its arithmetic target as universal over admissible $\ell$, but the procedure semantics remain under-specified: is it a pointwise Boolean decider on each $\ell\in D$, or a finite-stage method offered as a proof of the single universal finiteness assertion? A third possibility is that the intended conclusion is a uniform numerical bound. We do not choose an output contract not stated in Theorem 1.2 (PDF p.~3); the following arguments are conditional on these readings. This omission alone does not make Theorem 1.2 false.
+
+\begin{proposition}[Unbounded finite witnesses do not imply an infinite witness]\label{prop:finiteM}
+There exist an input set $X$, a constant observation map $\operatorname{Obs}:X\to\{t\}$, and a family of finite sets $(S_x)_{x\in X}$ such that
+\[\forall M\in\mathbb N\;\exists x\in X\;(\operatorname{Obs}(x)=t\ \wedge\ |S_x|\geq M),\]
+while every individual $S_x$ is finite.
+\end{proposition}
+\begin{proof}
+Take $X=\mathbb N$, let $\operatorname{Obs}(n)=t$ for every $n$, and set $S_n=\{1,\ldots,n\}$. For every $M$ choose $n=M$. Each $S_n$ is nevertheless finite.
+\end{proof}
+
+A direct same-transcript contradiction for a Boolean finite/infinite decision would be witnessed by one finite and one infinite realization of the same observations; the stated $\forall M\,\exists\ell'$ Extension Lemma alone does not supply that pair. If the procedure instead outputs a uniform finite upper bound, arbitrary $M$ would defeat that stronger output claim. C3 as stated is a finite-stage decision condition. This identifies a missing step in this displayed application, not a theorem that every possible no-go proof must use the same pair; a separate uniform-bound, diagonal, or compactness argument could suffice. Corollary 6.5.1 (Section 6.3.3; PDF p.~15) states that, for finite observed primes $p_1,\ldots,p_n$, precision $K$, prescribed residues, and any $M>0$, ``there exists a base $\ell'$ satisfying all residue conditions and possessing $M$ or more super-Wieferich primes outside $\{p_1,\ldots,p_n\}$.'' Its quantifiers are $\forall M\,\exists\ell'$, with $\ell'$ allowed to vary. The statement supplies arbitrarily many witnesses across bases; it does not itself supply one $\ell'$ with infinitely many witnesses, or a transcript realized by both a finite and an infinite witness set.
+
+The replacement-base consequences depend on the frozen target. For a pointwise claim about one fixed $\ell$, changing to $\ell'\ne\ell$ is irrelevant unless one proves an admissible same-transcript pair with opposite truth values. For the universal theorem over $D$, the new base need not preserve the original curve or $\Theta$-data: its associated curve and Hodge data may differ. A universal-input indistinguishability argument instead needs $\ell'\in D$, the same procedure uniform on $D$, and preservation of its full finite observation transcript; alternatively, one admissible $\ell'$ with an infinite witness set would directly refute universal finiteness. If the intended claim concerns one fixed IUT instance or fixed initial $\Theta$-datum, then the replacement must additionally be realized within that instance, preserving its associated Frey curve $E_{a,b,c}$, Tate parameters $q_{E,p}$, initial $\Theta$-data/Hodge theater, and pilot/hull output. The argument on the cited PDF pages 14--17 does not formalize which admissibility contract is intended. The displayed finite-$M$ lemma establishes none of these conclusions by itself.
+
+\subsection{The $p^K$-locality transfer}
+Lemma 6.5.0 (Section 6.3.3; PDF p.~14) states that any quantity formed by composing finitely many operations defined on $R_K=\mathbb Z/p^K\mathbb Z$ is a $p^{K'}$-local predicate for some finite $K'\geq K$. Its proof assumes the operations use only finite residue data; the remark says they do not reference $\ell$ itself at infinite precision or data at another prime. Proposition 6.5, Step 3 (PDF p.~14) asserts the IUT application meets those premises. In particular, the PDF says the final inequality is constructed as a ``(weighted) sum of post-Ind quantities $f_p$ at each prime $p$.''
+
+Those are the necessary transfer premises, not consequences of Lemma 6.5.0. A $p$-adic object being local to $\mathbb Q_p$ does not by itself show that its arithmetic construction factors through a fixed finite quotient $\ell\bmod p^K$. Nor does per-prime locality of $q_{E,p}$ by itself show that global prime-strip, procession, or realified-Frobenioid outputs decompose into a finite weighted sum of such predicates. IUT III Theorem 3.11 \cite{MochizukiIUTIII} starts from initial $\Theta$-data and distinct Hodge theaters, and constructs processions, log-shell packets, and global realified/non-realified Frobenioid data; APT explicitly distinguishes its arrows from set-theoretic transport of regions. These source objects do not prove that the $p^K$ factorization is false, but the reduction to it requires a projection/factorization theorem. Hayashi's IUT application assumes that bridge in Proposition 6.5, Step 3 (PDF p.~14), rather than deriving it from the displayed local-field facts. The same Lean diagnostic's \texttt{identity\_does\_not\_factor\_through\_prime\_power} theorem shows that an arbitrary exact integer-valued function need not factor through a fixed residue modulus $p^K$; it does not show that any specific IUT output has this behavior.
+
+\subsection{From $N_i$ to the proposed witnesses $W_i$}
+For precision, let $\operatorname{ABCProof}(\Pi)$, $C_i(\Pi)$, $N_i(\Pi)$, and $W_i(\Pi,w)$ be schematic predicates used in this audit; Definition 2.1 (PDF pp.~3--4) gives $N_i(\Pi):=\neg C_i(\Pi)$. Theorem 2.2 (Section 2.2; PDF p.~4) states: ``Any proof $\Pi$ of the ABC conjecture (restricted version) satisfies at least one of N1--N4.'' Its displayed content is
+\[
+\forall\Pi\;\Bigl(\operatorname{ABCProof}(\Pi)\to\bigvee_{i=1}^4N_i(\Pi)\Bigr).
+\]
+Its displayed contrapositive says that if a proof $\Pi$ satisfies none of the $N_i$, it satisfies every $C_i$, hence $\Pi\in\mathcal C$, and Main Theorem R applies. If $\Pi$ denotes an arbitrary mathematical derivation, this step needs an encoding into the domain of finite-stage residue decision procedures. If $\Pi$ already denotes a proof-method object in the domain of the $C_i$, membership in $\mathcal C$ follows by definition. The remaining question is whether every relevant hypothetical ABC proof is represented by such an object and satisfies the decision procedure's intended input/output contract. The proof displayed on PDF p.~4 supplies no encoding for the arbitrary-derivation reading, but neither observation shows that such a representation is impossible.
+
+Theorem 2.2 (PDF p.~4) yields $N_i$, not the evidence types $W_i$. Proposition 2.6 (Section 2.5, PDF p.~5) claims $\forall\Pi\,(\operatorname{ABCProof}(\Pi)\to\bigvee_{i=1}^4\exists w\,W_i(\Pi,w))$. Its complete proof is the one-line assertion: \texttt{Direct consequence of Theorem 2.2 [A].} To derive Proposition 2.6 from Theorem 2.2, one needs the universally quantified implication
+\[\forall\Pi\;\Bigl(\operatorname{ABCProof}(\Pi)\to\bigl((\bigvee_iN_i(\Pi))\to(\bigvee_i\exists w\,W_i(\Pi,w))\bigr)\Bigr).\]
+Definition 2.5 (PDF p.~5) lists the witness evidence types, but no explicit bridge of this form is stated in the cited chain. This is an unprovided written implication in the displayed proof, not a proof that Proposition 2.6 is false; another construction could establish it.
+
+
+
+This distinction also matters for Theorems B and C. Theorem 6.2 (Section 6.2, PDF p.~11) says: ``No $N_i$-witness W1--W4 is confirmed in externally verifiable form within IUT's six components E1--E6.'' Its remark explicitly says this does not prove that witnesses do not exist, but only that no externally visible witness was confirmed. This is not a proof that no $N_i$ holds. Theorem 6.6 (Section 6.4, PDF pp.~16--18) attempts to exclude hidden witnesses using Proposition 6.5 and Corollary 6.5.1. Its W4 and W1 exclusions use the $p^K$-locality application; its W2 discussion contains an arithmetic core, an IUT-component classification marked [Analysis], and a null-geometry reinforcement (Service C, PDF pp.~16--17). The E3/E5/E6 entries are marked critically undetermined in the Section 3.2 table (PDF p.~6), with corresponding questions in Section 3.4 (PDF p.~7). Theorem 6.7 (Section 6.5, PDF p.~18) and Corollary 6.8 (Section 6.6, PDF p.~19) inherit those dependencies. Theorem 6.3 (Section 6.3.1, PDF pp.~11--12)'s annihilation concerns a named list derived from $\ell^{p-1}-1$; it does not exclude a different global observable unless membership in that list or a broader classification is proved.\par\smallskip
+Hayashi calls null geometry a ``strengthening'' and says the logical core of Theorem C relies on the arithmetic results of Section 6.3 (PDF p.~16). Service C is a separate reinforcement (PDF pp.~16--17). The PDF writes $B(p,r)=\sum_{\ell}Q_p(\ell)Q_r(\ell)$, identifies $v_p\ge3$ with a null direction, states on p.~16 that $B(p,p)=0$, and on p.~17 gives $B(p,p)=\sum_{\ell}Q_p(\ell)^2\equiv0\pmod{p^2}$ and cites ``Hayashi 2026, Service C'' for $B(p,r)\equiv0\pmod p$ when $p$ is null. It also states in prose that if a W2 witness exists, some prime pair with $B(p,r)\ne0$ is needed (p.~17), and calls type-(III) inter-prime coupling the W2 pattern (p.~18). Definition 2.5 (PDF p.~5), however, defines W2 generally as a quantity for which changing input at $p$ nontrivially propagates to output at $r\ne p$. The PDF asserts the necessity of a nonzero $B$ pair, but gives no quantified factorization or classification identifying each admissible W2 output with $B$ or a specified residue of $B$. Thus the assertion is present; the concern is the unformalized scope of the asserted necessity, not its absence. Further, if $B$ is integer-valued, $B\equiv0\pmod p$ allows nonzero multiples of $p$; if the intended readout is $[B]_p\in\mathbb F_p$, the candidate W2 output and its nontriviality criterion need to be identified with that residue. The PDF does not specify the summation range/codomain here or supply a separate Service C statement or proof; Appendix D (PDF p.~22) lists a differently titled Hayashi work (DOI 10.5281/zenodo.19311094) without explicitly identifying it as Service C. The audit finding is therefore conditional: Service C excludes the residue-valued $B$-readout if that is the relevant W2 witness, while the checked PDF does not establish that this exhausts Definition-2.5 witnesses. This is a scope/justification question about the reinforcement, not a disproof of the Section 6.3 arithmetic core, Theorem 6.6, or a possible construction elsewhere.
+
+\begin{longtable}{p{0.20\textwidth}p{0.36\textwidth}p{0.34\textwidth}}
+\caption{Dependencies in the Method Class C application.}\label{tab:hayashi}\\
+\toprule Claimed step & Necessary premise & What the cited PDF supplies\\\midrule
+\endfirsthead
+\toprule Claimed step & Necessary premise & What the cited PDF supplies\\\midrule
+\endhead
+Main Theorem R applied to an arbitrary mathematical proof & Show that the proof is a C-type finite-stage decision procedure; a finite written proof is not by itself a procedure satisfying C1--C4. & Definition 1.1 (PDF p.~3) defines a restricted procedure class. The application to IUT is argued by the E1--E6 classification (Section 3.2, PDF p.~6), not by a theorem encoding every proof as a $\mathcal C$-procedure.\\\addlinespace
+Extension Lemma implies failure of a finite/infinite decision & A same-transcript finite/infinite pair, an individual infinite witness, or a stronger uniform-bound output requirement. & Corollary 6.5.1 (PDF p.~15) gives $\forall M\,\exists\ell'$ with at least $M$ witnesses and matching finite residues. It does not state one infinite $\ell'$ or the required truth-value pair.\\\addlinespace
+IUT outputs lie in the finite-residue class & Prove each relevant global output/readout factors through finite $\ell\bmod p^K$ data and the final target decomposes as asserted. & Proposition 6.5, Step 3 (PDF p.~14) asserts this for $q_{E,p}$, finite Ind operations, and weighted per-prime $f_p$; Lemma 6.5.0 (PDF p.~14) proves finite factorization only after those premises.\\\addlinespace
+Witness exhaustion & Prove the defined $W_i$ are exhaustive characterizations of the abstract $N_i=\neg C_i$. & De Morgan proves the $N_i$ disjunction. Definition 2.5 (PDF p.~5) lists $W_i$ evidence types; Proposition 2.6 (PDF p.~5) invokes Theorem 2.2 (PDF p.~4) without a proved $N_i\Rightarrow W_i$ bridge.\\\addlinespace
+Service C null geometry & Show each W2 output factors through the residue $[B(p,r)]_p$ and nontrivial propagation requires that residue to be nonzero. & Theorem 6.6 calls this a reinforcement (PDF pp.~16--17) and asserts $B(p,r)\equiv0\pmod p$ for null $p$; it states a bare necessity but gives no exhaustive W2-to-residue map. The congruence is not exact integer vanishing; Service C has no separate statement/proof in this edition.\\\addlinespace
+Theorem 6.7 excludes IUT & Establish the component classification, $p^K$-locality, hidden-witness exclusion, and the witness-exhaustion bridge. & E3/E5/E6 are marked critically undetermined in Section 3.2 (PDF p.~6); Theorem 6.2 (PDF p.~11) disclaims nonexistence; Theorem 6.6 (PDF pp.~16--18) marks W2 as partly [Analysis]. The combined unconditional conclusion is therefore not established by the checked chain.\\
+\bottomrule
+\end{longtable}
+
+The strongest replies are that the full IUT definitions may supply the missing transfer maps, a universal ABC theorem may make replacement bases admissible, and the procedure may be intended to output a uniform bound rather than a yes/no decision. That is a serious possibility, not a refutation of the audit. To close it, the argument must provide the finite-quotient/final-readout maps, identify an admissible same-transcript family with the needed finite/infinite truth-value behavior (or strengthen C3 to a uniform bound claim), and prove the $W_i$ classification. Our result is that the checked paper's stated Extension Lemma and logical definitions do not, by themselves, supply those steps. We do not claim Main Theorem R is false for methods actually in $\mathcal C$, nor prove that the IUT proof lies outside $\mathcal C$.
+
+The earlier hostile review correctly found that the initial scalar propositions alone did not refute the complete Scholze--Stix argument or Hayashi's conditional Theorem 1.2 (PDF p.~3). The source-level addition here narrows the question and illustrates a concrete way an identity-version scalar diagram could lose structure. It does not establish that the actual IUT III maps lose that structure or invalidate the source's normalized comparison. The complete Scholze--Stix interpretation and the full Hayashi application remain unsettled.
+
+
+\section{LANA: reconstruction status is not undecidability}
+Project LANA's \emph{Interim Report on IUT Theory} \cite[pp. 1, 5--7, 43, 46, 49]{LANA}, last updated 20 July 2026, is a mathematical reconstruction/status report focused on IUT III Theorem 3.11 to Corollary 3.12. Its abstract (p.~1) says: "Project LANA has not yet reconstructed a proof of the required compatibility" and "this report does not offer a final verdict on the validity of IUT theory." Section 0.2 (p.~5) says LANA "did not conclude that IUT theory is wrong" and had not decided whether the issue was a genuine gap or a lack of understanding. Sections 0.3 (pp.~6--7) state that the report does not treat IUT in its entirety, uses black boxes and simplifications, and is not a precise reorganization of IUT arguments. Section 9 (p.~43) reserves judgment on whether a proof exists for Corollary 3.12.
+
+The open point is mathematically specific. Section 9.2 (p.~46) formulates a goal of comparing
+\begin{equation}\label{eq:lana}\eta_q=\eta^{\mathrm{anab}}_S,\end{equation}
+between the native $q$-pilot construction and an anabelian/Kummer construction for suitable integral-structure data $S$. In Section 10.5 (p.~49), LANA agrees the Scholze--Stix Figure 7 diagram does not commute, but says its own analysis does not produce that diagram. It says its final inequality hinges on (9-1), which is "not manifestly false," but that it does "not have a proof of (9-1) at this time." The same section says it makes no claim about whether the issue can be remedied and records no complete consensus on whether the original paper contains a formalizable proof.
+
+\begin{proposition}[A project-status statement does not imply formal undecidability]\label{prop:undecidability}
+Let $T$ be a formal theory and $P$ a sentence. The statement that a project has not reconstructed a proof of $P$ entails neither $T\nvdash P$ nor $T\nvdash\neg P$. In particular, it does not establish that $P$ is undecidable over $T$.
+\end{proposition}
+\begin{proof}
+The statement concerns the project's current reconstruction, not all proofs in $T$. It is compatible with a proof of $P$ in $T$ that has not been found or reconstructed; it is also compatible with a proof of $\neg P$ that the project has not established. Thus it entails neither non-provability claim. Undecidability requires both $T\nvdash P$ and $T\nvdash\neg P$; neither follows from a failure to reconstruct one proof.
+\end{proof}
+
+The strongest objection is correct: one need not formalize an entire theory to expose a specific invalid inference or prove a local lemma false. A precise local proof flaw can be decisive without complete formalization or a source-compatible counterexample. Proposition~\ref{prop:undecidability} rules out only an inference from LANA's project status to falsity or formal independence. It does not answer compatibility (9-1), which may be a substantive gap. LANA's status claim and the Scholze--Stix real-line argument are related but not interchangeable: LANA expressly says its own derivation does not pass through the cited noncommuting diagram.
+
+\section{Strongest objections and limits}
+\begin{enumerate}
+\item Scholze--Stix analyze a real-line diagram, concrete divisor degrees, and $j^2$ scaling. The identity-version route additionally uses the label/holomorphic-structure identification and fixed scalar volume law described in Section~\ref{sec:identity-simplification}. Mochizuki's response and the LVEx computation motivate a concern about source-neutrality; they do not establish that the specific identifications used in IUT III fail, and they do not settle every part of the Scholze--Stix interpretation. IUT III's specific normalized readout remains an explicit but not independently reconstructed source assertion.
+\item IUT III's (etoy)/(fitw) compatibility may be insufficiently justified. If it cannot be carried out with the required compatibility, the scalar conclusion may fail. This paper treats it as an assertion and does not supply the construction.
+\item The factor $\ell(\ell+1)/12$ is substantial in the stipulated raw average. IUT III asserts a determinant-based comparison with log-volume suitably normalized with respect to $j$ (Ob3 and xi-d). This audit has not reconstructed the per-label formula connecting concrete $j^2$ degrees to the nested capsule/hull readout. This is an unresolved source-level derivation, not evidence that IUT lacks the asserted comparison.
+\item Main Theorem R is conditional on membership in the finite-local decision class $\mathcal C$. Our audit identifies missing steps in its application: finite-$M$ extensions do not themselves give a finite/infinite same-transcript pair; IUT outputs are not shown in the checked application to factor through finite $p^K$ residues; the proposed $W_i$ are not proved exhaustive for $N_i=\neg C_i$; and Service C's null-geometry reinforcement is not connected in the checked PDF to every general Definition-2.5 W2 readout. The strongest reply is that the full IUT definitions may supply these bridges; we do not prove otherwise. Kirti Joshi's report \cite{Joshi} is a direct but contrary and qualified response and also calls Mochizuki's proof incomplete, so no consensus or universal refutation is claimed.
+\end{enumerate}
+
+The endpoint and tight-hull contradictions are valid under their displayed assumptions. Mochizuki characterizes the identity-version simplification as identifying the two arithmetic holomorphic structures and imposing a uniform scalar law across indeterminacy-affected regions; his source-side response rejects that as compatible with the multiradial algorithm, and the quotient-region example disproves that uniform law in its own model. Scholze--Stix's actual published claim is the specific full-diagram monodromy obstruction, not a verbatim theorem of uniformity over arbitrary regions. The example therefore does not refute their diagram-specific claim or establish a mismatch in IUT III. This is a reason not to transfer the simplified diagram to IUT without reconstructing its maps and normalizations; it is not yet a proof that the transfer fails. We do not claim the complete Scholze--Stix critique is refuted: IUT III xi-d--xi-f asserts a special normalized hull/q-pilot comparison, but we have not reconstructed its per-label $j^2$ formula. Nor do we prove IUT or ABC. The Hayashi and LANA conclusions remain limited as stated above.
+
+\section{Lean diagnostic and verification boundary}
+The two repository diagnostics below formalize scalar/logical models, not Hodge theaters, Frobenioids, or the source construction. The independently checked repository commands were
+\begin{verbatim}
+lake env lean tmp/sheaf/n8/closure/C9-SCHOLZE-STIX-SIMPLIFICATION.lean
+lake env lean tmp/sheaf/n8/closure/C9-HAYASHI-EXTENSION-QUANTIFIERS.lean
+\end{verbatim}
+From the project workspace, both commands exited 0 with empty stdout/stderr, and neither file contains \texttt{sorry} or \texttt{axiom}. These checks depend on repository/Mathlib modules and are not standalone artifacts. Separately, the Lean 4.32.2 Core-only artifact \texttt{ScalarAudit.lean} kernel-checks \texttt{labeled\_assignments\_not\_enough\_for\_ray}; its Lake build is independently reproducible.
+
+The manuscript was compiled successfully to PDF with Tectonic 0.17.0 (XeTeX); the final pass resolved all citations and cross-references. The engine emitted layout warnings, chiefly overfull boxes in the longtable and several long paragraphs; these should be visually reviewed before submission. The PDF signature and nonzero file size were checked. No Lean source was changed in the PDF build.
+
+The Lean diagnostics distinguish scalar consequences from source applicability. The endpoint and tight-interval models check conditional implications; the finite-list and residue-factorization models check the logical limits of the Hayashi inferences; the labeled ray model proves only that atoy/dtoy data do not imply ray membership without etoy compatibility. All are abstract models, not source-specific theorems about IUT.
+
+\section{Conclusion}
+We do not challenge the Scholze--Stix inference as a conditional argument under its displayed real-line identifications. The question is whether those premises are supplied by the original IUT III construction. Mochizuki characterizes the identity-version reduction as identifying distinct arithmetic holomorphic structures and imposing a uniform scalar law on indeterminacy-affected log-volumes; the cited LVEx family shows that this law fails in its reported region model. Scholze--Stix's published argument is instead their specific full-diagram monodromy claim. This audit has not proved that the two formulations are equivalent, or that the IUT III maps violate either one. This supports the narrower conclusion that source-faithfulness requires an explicit check; it does not prove that the reduced identity-version diagram fails that check for the actual IUT construction. IUT III nevertheless asserts a specially normalized hull/q-pilot comparison, whose concrete per-label $j^2$ calculation remains unrebuilt here. The Hayashi audit identifies transfer obligations in the checked application, not a refutation of Main Theorem R within its class. We neither refute the complete Scholze--Stix critique nor prove or disprove IUT or ABC.
+
+\begin{thebibliography}{99}
+\bibitem{MochizukiIUTIII}
+S. Mochizuki, \emph{Inter-universal Teichm\"uller Theory III: Canonical Splittings of the Log-theta-lattice}, May 2020 text consulted. See Theorem 3.11, Remarks 3.11.1 and 3.12.2, Proposition 3.9, Remark 3.9.5, and Corollary 3.12. Publisher record: \url{https://ems.press/journals/prims/articles/201527}. The consulted primary text is the May 2020 version archived as \texttt{IUT-III.pdf} in the project source corpus.
+
+\bibitem{SS}
+P. Scholze and J. Stix, \emph{Why abc is still a conjecture}, manuscript/report dated 23 August 2018. Full-text hosted copy (host provenance not verified as author-hosted): \url{https://ncatlab.org/nlab/files/why_abc_is_still_a_conjecture.pdf}. No journal publication or DOI is asserted here.
+
+\bibitem{Hayashi}
+K. Hayashi, \emph{Structural Limitations of IUT's ABC Proof via Method Class C}, English PDF dated 30 March 2026 (title page, printed p.~2), Zenodo record 19322884, DOI \href{https://doi.org/10.5281/zenodo.19322884}{10.5281/zenodo.19322884}. Stable record: \url{https://zenodo.org/records/19322884}; cited English PDF: \url{https://zenodo.org/records/19322884/files/hayashi_iut_structural_impossibility_en.pdf?download=1}. No peer-reviewed venue is verified.
+
+\bibitem{LANA}
+Project LANA, \emph{Project LANA Interim Report on IUT Theory}, last updated 20 July 2026; corresponding author Fumiharu Kato. Official release: \url{https://zen.ac.jp/news/zmcpostevent0717e}; project PDF: \url{https://github.com/katobungen/LANA_report_202607/blob/pdf/LANA_report_202607.pdf}.
+
+\bibitem{Joshi}
+K. Joshi, \emph{Final Report on the Mochizuki-Scholze-Stix Controversy}, arXiv:2505.10568, submitted 29 April 2025. \url{https://arxiv.org/abs/2505.10568}. Cited as a direct but contrary and qualified report, not an adjudicated result.
+
+\bibitem{MochizukiResponse}
+S. Mochizuki, \emph{Comments on the Manuscript (2018-08 Version) by Scholze-Stix Concerning Inter-universal Teichm\"uller Theory (IUTch)}, September 2018, especially (C12)--(C14), pp.~3--4. \url{https://www.kurims.kyoto-u.ac.jp/~motizuki/Cmt2018-08.pdf}. This is a primary-source response, not an independent adjudication.
+
+\bibitem{MochizukiReport2018}
+S. Mochizuki, \emph{Report on Discussions, Held During the Period March 15--20, 2018, Concerning Inter-universal Teichm\"uller Theory (IUTch)}, February 2019, especially Sections 10 and 12, pp.~16--26. \url{http://www.kurims.kyoto-u.ac.jp/~motizuki/IUTch-discussions-2018-03.html}. The LVEx calculation is checked here as an elementary model; the report's application to IUT is attributed to its author.
+\bibitem{Fesenko2015}
+I. Fesenko, \emph{Arithmetic Deformation Theory via Arithmetic Fundamental Groups and Nonarchimedean Theta-Functions: Notes on the Work of Shinichi Mochizuki}, European Journal of Mathematics 1 (2015), 405--440. Used as a pre-controversy survey, not as an independent adjudication of Corollary 3.12.
+
+\bibitem{MochizukiReport2025}
+S. Mochizuki, \emph{Report on the Current Situation Surrounding Inter-universal Teichm\"uller Theory (IUT)}, October 2025, especially Sections 2--3. \url{https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT-report-2025-10.pdf}. This source-author report responds in part to a 2025 web article; it is not an independent assessment.
+\end{thebibliography}
+\end{document}

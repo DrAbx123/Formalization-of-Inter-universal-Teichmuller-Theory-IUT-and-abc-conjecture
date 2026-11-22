@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S3132VFormMassRestatementActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132VFormMassRestatementActual.missingVFormCanonicalIdentification_iff_haar_mass_eq
+#print axioms LeanFormal.IUT.XiFPaper.S3132VFormMassRestatementActual.canonicalTarget_iff_log_haar_eq_of_finrank_one_unitReference

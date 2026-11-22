@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Cor312ComparisonRegionV2Actual
+#print axioms LeanFormal.IUT.XiFPaper.Cor312ComparisonRegionV2Actual.cor312ToABCBridge_heightBoundV2
+#print axioms LeanFormal.IUT.XiFPaper.Cor312ComparisonRegionV2Actual.cor312ToABCBridge_abcConjectureV2

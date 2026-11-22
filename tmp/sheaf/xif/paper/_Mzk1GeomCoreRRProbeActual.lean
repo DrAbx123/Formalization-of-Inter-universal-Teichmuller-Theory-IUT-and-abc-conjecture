@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1GeomCoreRRWitnessActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRWitnessActual.rrWitnessRows_length
+#check LeanFormal.IUT.XiFPaper.Mzk1GeomCoreRRWitnessActual.zero_divisor_exists

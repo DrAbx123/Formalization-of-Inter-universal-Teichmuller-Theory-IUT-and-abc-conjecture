@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S2114CanonicalLiftTwoCellActual
+#check LeanFormal.IUT.XiFPaper.S2114CanonicalLiftTwoCellActual.S2114CanonicalLiftTwoCell_iff
+#check LeanFormal.IUT.XiFPaper.S2114CanonicalLiftTwoCellActual.S2114ToAWitness_of_toYEquation
+#check LeanFormal.IUT.XiFPaper.S2114CanonicalLiftTwoCellActual.S2114ChosenComparisonCompat
+#print axioms LeanFormal.IUT.XiFPaper.S2114CanonicalLiftTwoCellActual.S2114CanonicalLiftTwoCell_iff

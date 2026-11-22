@@ -1,0 +1,8 @@
+import tmp.sheaf.xif.paper.S1945SitePseudofunctorDataActual
+open CategoryTheory
+open CategoryTheory.Bicategory
+open scoped Pseudofunctor.StrongTrans
+#check CategoryTheory.Oplax.StrongTrans.vcomp_naturality
+#check CategoryTheory.Oplax.StrongTrans.vcomp_naturality_hom
+#check CategoryTheory.Pseudofunctor.StrongTrans.vcomp_naturality
+#check CategoryTheory.Pseudofunctor.StrongTrans.vcomp_naturality_hom

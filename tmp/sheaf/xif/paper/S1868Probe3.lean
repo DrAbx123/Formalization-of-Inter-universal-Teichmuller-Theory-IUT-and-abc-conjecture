@@ -1,0 +1,24 @@
+import tmp.sheaf.xif.paper.S1854CoherentCategoryActual
+import tmp.sheaf.xif.paper.S1816OrbicurveCoversToAffineActual
+import tmp.sheaf.xif.paper.S1814OrbicurveCoversAffineActual
+
+noncomputable section
+set_option maxHeartbeats 4000000
+namespace ProbeS1868
+open CategoryTheory CategoryTheory.Limits
+open AlgebraicGeometry
+open Iut
+open LeanFormal.IUT.XiFPaper.S1726OrbicurveFPrimeActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual
+open LeanFormal.IUT.XiFPaper.S1728CoverCategoryActual.S1728Paper
+open LeanFormal.IUT.XiFPaper.S1733EssentiallySmallCoversActual
+open LeanFormal.IUT.XiFPaper.S1799AffineFiniteEtaleEquivActual
+open LeanFormal.IUT.XiFPaper.S1814OrbicurveCoversAffineActual
+open LeanFormal.IUT.XiFPaper.S1816OrbicurveCoversToAffineActual
+open LeanFormal.IUT.XiFPaper.S1852CoherentCoverActual
+open LeanFormal.IUT.XiFPaper.S1854CoherentCategoryActual
+attribute [local instance] S1854CoherentCategory11
+#check S1854Forget11
+#check S1814AlgEquiv
+#check S1816Map
+end ProbeS1868

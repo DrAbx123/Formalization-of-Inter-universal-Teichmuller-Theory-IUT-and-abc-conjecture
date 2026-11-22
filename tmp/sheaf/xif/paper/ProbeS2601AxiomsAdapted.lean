@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2601D5LargeImageAssembleActual
+open LeanFormal.IUT.XiFPaper.S2601D5LargeImageAssembleActual
+#print axioms S2601_d5LargeImage
+#print axioms S2601_target_via_S2001

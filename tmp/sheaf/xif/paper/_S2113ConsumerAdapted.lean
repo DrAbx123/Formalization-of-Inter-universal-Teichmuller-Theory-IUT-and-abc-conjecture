@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S2113M2bTransferActual
+
+open LeanFormal.IUT.XiFPaper.S2113M2bTransferActual
+
+#check artinTransfer_fixedField
+#check TransferBridge
+#check CanonicalTransferCompat
+#check canonicalTransferCompat_of_transferBridge
+#check localReciprocityData_of_canonical
+#check muQZComparison_of_canonical
+#print axioms localReciprocityData_of_canonical

@@ -1,0 +1,14 @@
+import tmp.sheaf.xif.paper.S1372XCoordinateFormulaActual
+#check zsmul_succ'
+#check zsmul_succ
+#check succ_zsmul
+#check zsmul_sub
+#check sub_zsmul
+#check zsmul_sub_one
+#check sub_one_zsmul
+#check one_zsmul
+#check add_zsmul
+#check zsmul_add
+#check zsmul_eq_mul
+#check Int.succ_zsmul
+#check Int.zsmul_succ'

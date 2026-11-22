@@ -1,0 +1,21 @@
+import tmp.sheaf.xif.paper.PaperXiFCompileGate
+
+#print axioms LeanFormal.IUT.XiFPaper.Proof.paperXiF_of_thetaLink
+#print axioms LeanFormal.IUT.XiFPaper.CompileGate.paperXiF_assembly_conditional
+#print axioms LeanFormal.IUT.XiFPaper.paperXiF_conditional_status
+#print axioms LeanFormal.IUT.XiFPaper.paperXiF_final_bound
+#print axioms LeanFormal.IUT.XiFPaper.Proof.paperXiFResult_of_obligations
+#print axioms LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.signedQPilotLogVolume_eq_paperQPilotLogVolume
+#print axioms LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.signedQPilotLogVolume_eq_neg_abs_qParameter
+
+#print axioms LeanFormal.IUT.N8Closure.PaperQPilotIdentificationActual.qPilotIdentificationActualOfCanonical
+
+#print axioms LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.sourceOneColumnActual
+#print axioms LeanFormal.IUT.N8Closure.PaperQPilotObjectActual.paperQPilotObjectActualOfNumberField
+
+#print axioms LeanFormal.IUT.N8Closure.PaperIQCarrierActual.image_subset_c6Hull_of_obligations
+#print axioms LeanFormal.IUT.N8Closure.PaperIQCarrierActual.paperIQCarrierActualOfObligations
+
+#print axioms LeanFormal.IUT.Theorem311Source.SHELandingActual.paperSHEMissing_actual
+
+#print axioms LeanFormal.IUT.XiFPaper.paperIndActionsMissing_actual

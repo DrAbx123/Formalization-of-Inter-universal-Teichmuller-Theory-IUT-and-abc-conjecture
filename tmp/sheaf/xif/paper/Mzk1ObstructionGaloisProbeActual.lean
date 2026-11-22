@@ -1,0 +1,14 @@
+/- Read-only probes: NormalizedCompletionUnitLog + HqHtheta + GaloisCompletion new (abc) -/
+import tmp.sheaf.xif.paper.NormalizedCompletionUnitLogActual
+import tmp.sheaf.xif.paper.Mzk1HqHthetaStructuralObstructionActual
+import tmp.sheaf.xif.paper.Mzk1GaloisCompletionActual
+
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionUnitLogActual.unitLog_norm_le_one_normalizedCompletion
+#print axioms LeanFormal.IUT.XiFPaper.NormalizedCompletionUnitLogActual.unitLog_norm_le_one_normalizedCompletion_p2
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HqHthetaStructuralObstructionActual.hqHthetaAudit_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HqHthetaStructuralObstructionActual.HqGlobalSumFormula
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HqHthetaStructuralObstructionActual.HthetaLinearForm
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1HqHthetaStructuralObstructionActual.HthetaProductHaarFormula
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GaloisCompletionActual.withValMovedSigma_surjective
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GaloisCompletionActual.withValMovedSigma_val_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1GaloisCompletionActual.valueGroup_comap_eq

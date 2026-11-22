@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1BelyiMaximizerActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiMaximizerActual.belyi_max_ineq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiMaximizerActual.belyi_max_eq_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiMaximizerActual.belyiPolynomial_eval_eq_one_iff
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1BelyiMaximizerActual.belyiMaximizerStatement_proved

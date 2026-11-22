@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.Mzk1FrontierConsumerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1FrontierConsumerActual.frontierConsumer_abc

@@ -1,0 +1,1 @@
+Pi1\FundamentalGroup\FiniteEtale.lean:6:0: error: object file 'D:\lean\.lake\build\lib\lean\Pi1\FundamentalGroup\AffineAnd.olean' of module Pi1.FundamentalGroup.AffineAnd does not exist

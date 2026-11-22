@@ -1,0 +1,11 @@
+/- Read-only axiom probes for new audit targets (abc) -/
+import tmp.sheaf.xif.paper.Mzk1IutIVProp14ActualHBridgeActual
+import tmp.sheaf.xif.paper.Mzk1P1NormalizedSourceConditionalActual
+import tmp.sheaf.xif.paper.Mzk1Ind1ActualSourceUnitLayerActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IutIVProp14ActualHBridgeActual.actualGammaH_spec
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1IutIVProp14ActualHBridgeActual.volume_ratio_eq_pow_actualH
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1NormalizedSourceConditionalActual.paperNormalizedComparison_of_sourceFields
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1NormalizedSourceConditionalActual.paperXiFTargetStrict_of_sourceFields
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1P1NormalizedSourceConditionalActual.paperNormalizedComparison_with_corrections
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Ind1ActualSourceUnitLayerActual.actualSourceUnitLayer_self_nonempty

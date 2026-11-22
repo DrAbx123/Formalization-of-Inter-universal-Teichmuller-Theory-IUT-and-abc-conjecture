@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.S3132FiberExternalCompletionBridgeActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberExternalCompletionBridgeActual.fiberCompletionEquivAt_of_actualPlaceData
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberExternalCompletionBridgeActual.missingFiberAt_of_actualPlaceData
+#print axioms LeanFormal.IUT.XiFPaper.S3132FiberExternalCompletionBridgeActual.missingFiberAt_of_allPlacesData

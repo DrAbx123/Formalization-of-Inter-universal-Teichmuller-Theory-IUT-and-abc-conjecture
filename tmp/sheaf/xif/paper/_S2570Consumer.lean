@@ -1,0 +1,20 @@
+import tmp.sheaf.xif.paper.S2570FiniteEtaleNormalActual
+
+noncomputable section
+open LeanFormal.IUT.XiFPaper.S2570FiniteEtaleNormalActual
+
+#check isIntegrallyClosed_Aoc2_iff_S_le_unconditional
+#check isIntegrallyClosed_Aoc2_iff_isIntegralClosure_unconditional
+#check isIntegrallyClosed_Aoc2_of_remaining_unconditional
+#check instIsFractionRingAoc2
+#check instModuleFinite
+#check finiteEtale_normal_isIntegrallyClosed
+#check isIntegrallyClosed_of_isIntegralClosure
+
+example : IsFractionRing LeanFormal.IUT.XiFPaper.S2566AdjoinIntegralCActual.Aoc2
+    LeanFormal.IUT.XiFPaper.S2565ConcreteIntegralClosureCActual.L := inferInstance
+
+#print axioms isIntegrallyClosed_Aoc2_iff_S_le_unconditional
+#print axioms isIntegrallyClosed_Aoc2_iff_isIntegralClosure_unconditional
+
+end

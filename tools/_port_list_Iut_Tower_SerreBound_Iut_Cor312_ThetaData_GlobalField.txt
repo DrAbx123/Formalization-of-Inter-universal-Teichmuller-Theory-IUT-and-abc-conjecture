@@ -1,0 +1,5 @@
+tmp/sheaf/xif/paper/lana/iut/Iut/Cor312/ThetaData/GlobalField.lean  [Iut.Cor312.ThetaData.GlobalField]
+tmp/sheaf/xif/paper/lana/iut/Iut/Cor312/ThetaData/Places.lean  [Iut.Cor312.ThetaData.Places]
+tmp/sheaf/xif/paper/lana/iut/Iut/Tower/SerreBound.lean  [Iut.Tower.SerreBound]
+tmp/sheaf/xif/paper/lana/iut/Iut/Tower/SerreCore.lean  [Iut.Tower.SerreCore]
+tmp/sheaf/xif/paper/lana/iut/Iut/Tower/QuotientBasis.lean  [Iut.Tower.QuotientBasis]

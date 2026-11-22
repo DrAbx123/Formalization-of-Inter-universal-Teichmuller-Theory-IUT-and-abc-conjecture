@@ -1,0 +1,11 @@
+import tmp.sheaf.xif.paper.S3131Gap2ReductionReuseActual
+import tmp.sheaf.xif.paper.S3131Thm110ElementaryLayerReuseActual
+import tmp.sheaf.xif.paper.S3131HeightWeightPriorArtAdaptActual
+import tmp.sheaf.xif.paper.S3131VendorShapeAdaptationPlanActual
+import tmp.sheaf.xif.paper.S3131OldAttemptsMiningActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S3131Gap2ReductionReuseActual.S3131Gap2ReuseLines_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131Thm110ElementaryLayerReuseActual.S3131Thm110ElementaryLayer_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131HeightWeightPriorArtAdaptActual.S3131HeightWeightPriorArt_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131VendorShapeAdaptationPlanActual.S3131VendorShapeAdaptationPlan_length
+#print axioms LeanFormal.IUT.XiFPaper.S3131OldAttemptsMiningActual.S3131OldAttemptsMining_length

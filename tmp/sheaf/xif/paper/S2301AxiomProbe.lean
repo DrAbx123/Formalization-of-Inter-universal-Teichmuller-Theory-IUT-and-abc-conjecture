@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.S2301DegreeEqOrderActual
+open LeanFormal.IUT.XiFPaper.S2301DegreeEqOrderActual
+#print axioms S2301Degree_eq_imageOrder_of_iso
+#print axioms S2301Degree_eq_480_of_iso_and_hypotheses

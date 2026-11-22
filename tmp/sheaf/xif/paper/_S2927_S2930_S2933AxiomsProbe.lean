@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S2927C3ComparisonVolumeSummaryActual
+import tmp.sheaf.xif.paper.S2930C3NormalizedHvolRegionConsumerActual
+import tmp.sheaf.xif.paper.S2933C3ComparisonHvolSummaryActual
+
+#print axioms LeanFormal.IUT.XiFPaper.S2927C3ComparisonVolumeSummaryActual.C3ComparisonVolume_scaling_summary
+#print axioms LeanFormal.IUT.XiFPaper.S2930C3NormalizedHvolRegionConsumerActual.C3NormalizedHvol_region_consumer
+#print axioms LeanFormal.IUT.XiFPaper.S2933C3ComparisonHvolSummaryActual.C3Comparison_hvol_summary

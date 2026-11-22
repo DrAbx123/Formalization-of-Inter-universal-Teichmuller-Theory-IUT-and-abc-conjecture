@@ -1,0 +1,5 @@
+import tmp.external.ported.tauceti_belyi_core.TauCeti.Algebra.Polynomial.Belyi
+
+#print axioms TauCeti.exists_polynomial_aeval_mem_criticalValues_subset
+#print axioms TauCeti.exists_polynomial_eval_mem_criticalValues_subset
+#print axioms TauCeti.criticalValues_belyiPolynomial_subset

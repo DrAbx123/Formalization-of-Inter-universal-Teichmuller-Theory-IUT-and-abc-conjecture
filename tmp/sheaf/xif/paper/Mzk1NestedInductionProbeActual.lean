@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1NestedInductionActual
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.degQ_aeval_le
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.numMax_stepSet_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.measure_stepSet_lt
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.induction_with_invariant
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1NestedInductionActual.paperScopeLemma24Statement_of_providers

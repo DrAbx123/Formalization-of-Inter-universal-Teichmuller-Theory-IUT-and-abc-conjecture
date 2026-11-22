@@ -1,0 +1,5 @@
+import tmp.sheaf.xif.paper.Mzk1LayerAConsumerMobiusWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerMobiusWiringActual.mobius23StatementSlot
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerMobiusWiringActual.mobius23RowReplaced
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1LayerAConsumerMobiusWiringActual.mobius23RowProvided

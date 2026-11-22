@@ -1,0 +1,4 @@
+import tmp.sheaf.xif.paper.Mzk1TreeRouteDegreeFactsActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeRouteDegreeFactsActual.obligation_sources
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1TreeRouteDegreeFactsActual.degree_single_fact

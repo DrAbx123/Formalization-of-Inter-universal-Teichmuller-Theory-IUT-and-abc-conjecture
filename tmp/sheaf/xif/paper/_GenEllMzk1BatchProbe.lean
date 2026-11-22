@@ -1,0 +1,15 @@
+import tmp.sheaf.xif.paper.GenEll06Section3StatementsActual
+import tmp.sheaf.xif.paper.GenEll07Section4StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section1StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section2StatementsActual
+import tmp.sheaf.xif.paper.Mzk1Section3StatementsActual
+import tmp.sheaf.xif.paper.Mzk1ProvabilityClassificationActual
+open LeanFormal.IUT
+open LeanFormal.IUT.XiFPaper
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06Section3StatementsActual.genEllSection3Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.GenEll06Section3StatementsActual.genEllSection3ProvableCount_eq
+#print axioms LeanFormal.IUT.XiFPaper.GenEll07Section4StatementsActual.genEllSection4Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section1StatementsActual.mzk1_def11_reuse
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section2StatementsActual.mzk1Section2ProvableCount_eq
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Section3StatementsActual.mzk1Section3Statements_length
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1ProvabilityClassificationActual.mzk1ProvableNowCount_eq

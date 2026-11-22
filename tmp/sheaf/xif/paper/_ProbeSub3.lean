@@ -1,0 +1,5 @@
+import Mathlib.LinearAlgebra.PiTensorProduct.Basic
+import LeanFormal.IUT.Foundations.LocalFields.FinitePadicTensorTopology
+open LeanFormal.IUT.LocalFieldPadicTensor
+#check FinitePadicTensor
+#check PiTensorProduct.subsingletonEquiv

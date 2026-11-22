@@ -1,0 +1,3 @@
+import tmp.sheaf.xif.paper.S2760ElevenA1SerreTargetActual
+#print axioms LeanFormal.IUT.XiFPaper.S2760ElevenA1SerreTargetActual.E11a1Curve_discriminant
+#print axioms LeanFormal.IUT.XiFPaper.S2760ElevenA1SerreTargetActual.E11a1_jInvariant

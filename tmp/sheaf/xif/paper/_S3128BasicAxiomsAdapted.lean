@@ -1,0 +1,7 @@
+import tmp.sheaf.xif.paper.S3128BasicOpenQuotientActual
+import tmp.sheaf.xif.paper.S3128RelPullbackConeActual
+import tmp.sheaf.xif.paper.S3128HasPullbacksActual
+#print axioms LeanFormal.IUT.XiFPaper.S3128BasicOpenQuotientActual.S3128Nf_invariant
+#print axioms LeanFormal.IUT.XiFPaper.S3128BasicOpenQuotientActual.S3128Nf_image_isUnit
+#print axioms LeanFormal.IUT.XiFPaper.S3128RelPullbackConeActual.S3128RelPullbackIsLimit
+#print axioms LeanFormal.IUT.XiFPaper.S3128HasPullbacksActual.S3128HasPullbacks_witness

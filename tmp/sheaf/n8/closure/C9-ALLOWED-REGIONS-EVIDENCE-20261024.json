@@ -1,0 +1,108 @@
+{
+  "task": "N8-C9-ALLOWED-REGIONS",
+  "date": "2026-10-24",
+  "owner": "current chat root; single researcher; self-review",
+  "record": {
+    "path": "tmp/sheaf/n8/closure/C9-ALLOWED-REGIONS-NATURAL-RESEARCH-20261024.md",
+    "sha256": "03aad091be1773147a64abd1388f494cd8c947604d2d5b3ca86d295c9dce7ac5"
+  },
+  "previous_record": "tmp/sheaf/n8/closure/C9-BPS-THETA-REGION-EVIDENCE-20261024.json",
+  "sources": [
+    {
+      "name": "IUT III",
+      "version": "May 2020",
+      "pdf": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf",
+      "pdf_sha256": "9a7ee3c77b1c7717210c0613eb39b6844649d0040dc3d9e1be7d544f8f91a0b9",
+      "scope": "Rmk 1.1.1,1.2.2,2.4.2,3.1.1,3.9.4-3.9.7; Prop 3.5; Th 3.11; Cor 3.12 proof xi",
+      "remote_check": "official PDF opened; targeted local text read"
+    },
+    {
+      "name": "IUT IV",
+      "pdf": "papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory IV.pdf",
+      "pdf_sha256": "5bf4b1e0a8c2686562a6859e5009d301335044cfb5efec5d3a9edf764e4af87f",
+      "scope": "Prop 1.2 lattice sandwich; Th 1.10 proof iv-vii source uniform containers",
+      "dependency_boundary": "Uses envelope analysis, not the later Diophantine conclusion that invokes Cor 3.12."
+    },
+    {
+      "name": "Essential Logical Structure",
+      "version": "March 2024",
+      "pdf": "papers/motizuki_corpus/raw/Essential Logical Structure of Inter-universal Teichmuller Theory.pdf",
+      "pdf_sha256": "c0e63b629aa174aa065e93d08defe3e5d0837c8778aab527383798baf8ca6e32",
+      "text_sha256": "b991f631b0c4e0852c6a9f54148ed1fa32a4dde1553d02c4a7ee8656ccff63cf",
+      "scope": "3.10 Stp1-8 and 3.11",
+      "remote_check": "official PDF opened"
+    },
+    {
+      "name": "Alien Copies",
+      "pdf": "papers/motizuki_corpus/raw/Alien Copies, Gaussians, and Inter-universal Teichmuller Theory.pdf",
+      "pdf_sha256": "b2510b7276ab08f9f758e283200a4fc87205d2439d6d9b75afe8df6ccb182d1e",
+      "text_sha256": "4af93344b7fc7aa8f3596de67005e252f07192c4366b6cef4bf9e48bc206551f",
+      "scope": "3.7(ii),3.11(v)",
+      "remote_check": "official PDF opened"
+    },
+    {
+      "name": "Formalization of IUT",
+      "version": "April 2026",
+      "pdf": "papers/motizuki_corpus/raw/Formalization of IUT (2026-04).pdf",
+      "pdf_sha256": "9a32b2485b5875574d7470256d3414b88ee6ac3ed8a39a82ea7332e25072ee9c",
+      "scope": "4, pp9-11",
+      "remote_check": "official PDF opened"
+    },
+    {
+      "name": "Dupuy-Hilado",
+      "version": "arXiv:2004.13228v1",
+      "pdf": "tmp/pdfs/valuespaper-consistency-20261023/dupuy-hilado-2004.13228v1.pdf",
+      "pdf_sha256": "d2196b557d5c5d4afe2520db26df880585416c1218d939962b3a479d7ff341dc",
+      "text_sha256": "334b50edbd351ce142e189d6a4df2187ac4f9d3834b383b1910329eca809e5d0",
+      "scope": "3.9,4.8-4.11; not a proof of Cor 3.12",
+      "remote_check": "versioned arXiv PDF opened",
+      "limitation": "Referenced log-Kummer sequel not retrieved; not treated as a verified donor."
+    },
+    {
+      "name": "LANA report",
+      "commit": "293bdd89463473ae13d40834d70fb4b7ba81da1f",
+      "blob_sha": "35a2507a5bc5bfc1835067dbdb6776e4bc4a3152",
+      "text_sha256": "3e613bee63efbfa7b17178566dd837d1cd92ed21491ec6e65d534b3521fc58bf",
+      "scope": "eta construction and main goal",
+      "remote_check": "GitHub connector fetched lines 2500-2528 at fixed commit; blob SHA matched"
+    },
+    {
+      "name": "Cmt2018-05",
+      "scope": "C11-C18",
+      "snapshot": "tmp/pdfs/valuespaper-stage1-sources-20261023/source-manifest.json",
+      "status": "Prior snapshot reused; local text reread"
+    }
+  ],
+  "natural_language_results": [
+    "Source path/domain grammar for integral data is specified relative to the actual source diagram; S is coupled with the action.",
+    "Distinguished generator, raw branches, Ind3 envelope, outer inverse systems and hull enlargement are separate.",
+    "Outer-inf versus union countercheck; hull versus integral linear map countercheck.",
+    "Positive finite global hull has admissible hull subregions of every smaller finite readout via one archimedean radius.",
+    "Equal-global-volume hull approximant constructed by archimedean shrinking; local equal-volume ideals not required.",
+    "Target log-shift calibration through a small principal-unit log isometry and Rss integration; q itself need not enter log.",
+    "Actual source envelope gives a separate route to finite Theta; no individual-compactness-to-union inference.",
+    "Suitable final region existence reduces to Q<=Theta and cannot be used as its own proof."
+  ],
+  "corrections": [
+    "Do not require every final enlarged output to be the exact image of a primitive source S.",
+    "Do not replace source upper semi-compatibility by an unproved common exact integral core.",
+    "A hull/determinant numeric formula does not prove preservation of the fixed input pilot association.",
+    "Valid negative-pilot reconstruction from a volume class is distinct from reproducing the original gluing relation."
+  ],
+  "open_obligations": [
+    "Implement and prove coverage of the complete original Kummer/log/Ind relation; no arbitrary allowed-S predicate.",
+    "Connect source uniform envelope and weighted normalization to complete production objects.",
+    "Prove actual fixed-q-pilot coverage after descent, enlargement, determinant and target log-shift; numerical no-go examples here are not full IUT counterexamples."
+  ],
+  "checks": {
+    "statement_compiles": "not_run",
+    "proof_body_checked": "not_run",
+    "kernel_closed": "not_run",
+    "comparator": "not_run",
+    "project_build": "not_run",
+    "independent_review": "not_run; root self-review only",
+    "target_accepted": false
+  },
+  "code_changes": "none",
+  "next_action": "Trace fixed-input pilot marks through the actual Rmk3.10.2 composite and Rmk3.9.5 hull/determinant arrows; prove preservation rather than add an eta-compatibility field."
+}

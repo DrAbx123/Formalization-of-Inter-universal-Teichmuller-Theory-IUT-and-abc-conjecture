@@ -1,0 +1,10 @@
+import tmp.sheaf.xif.paper.S2120PresentationTwistActual
+
+namespace Consumer
+open LeanFormal.IUT.XiFPaper.S2120PresentationTwistActual
+#check S2120StrongPresentationTwist
+#check S2120FirstMissing
+#check S2120StrongPresentationTwist_of_firstMissing
+#print axioms S2120StrongPresentationTwist_of_firstMissing
+#print axioms S2120TwistAt_of_coneMor_and_twoCellFull
+end Consumer

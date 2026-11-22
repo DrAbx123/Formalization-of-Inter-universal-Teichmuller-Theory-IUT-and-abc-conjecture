@@ -1,0 +1,6 @@
+import tmp.sheaf.xif.paper.Mzk1Cor312TargetWiringActual
+
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.certificate_conclusion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.mochizuki_route_conclusion
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.q_positive_target
+#print axioms LeanFormal.IUT.XiFPaper.Mzk1Cor312TargetWiringActual.all_routes_conclusion
